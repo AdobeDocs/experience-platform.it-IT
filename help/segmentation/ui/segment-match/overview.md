@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiare dati sui segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Sono associate due autorizzazioni [!DNL Segment Match]:
 
 | Autorizzazione | Descrizione |
 | --- | --- |
-| Gestire le connessioni di Audience Share | Questa autorizzazione consente di completare il processo di handshake del partner, che collega due organizzazioni IMS per abilitare [!DNL Segment Match] flussi. |
+| Gestire le connessioni di Audience Share | Questa autorizzazione consente di completare il processo di handshake del partner, che collega due organizzazioni per abilitare [!DNL Segment Match] flussi. |
 | Gestire le condivisioni di pubblico | Questa autorizzazione consente di creare, modificare e pubblicare feed (il pacchetto di dati utilizzato per [!DNL Segment Match]) con partner attivi (partner che sono stati collegati dall&#39;utente amministratore con **[!UICONTROL Connessioni di Audience Share]** accesso). |
 
 Consulta la sezione [panoramica sul controllo degli accessi](../../../access-control/home.md) per ulteriori informazioni sul controllo degli accessi e sulle autorizzazioni.

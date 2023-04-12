@@ -4,9 +4,9 @@ description: La segmentazione ti consente di creare segmenti e tipi di pubblico 
 title: Monitorare i flussi di dati per i segmenti nell’interfaccia utente
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmenti"
->abstract="La visualizzazione dei segmenti contiene informazioni su tutti i segmenti dell’organizzazione IMS, con ulteriori informazioni sui relativi processi di attivazione e valutazione."
+>abstract="La visualizzazione dei segmenti contiene informazioni su tutti i segmenti dell’organizzazione, con ulteriori informazioni sui processi di attivazione e valutazione."
 
 Per accedere al **[!UICONTROL Segmenti]** dashboard, seleziona **[!UICONTROL Monitoraggio]** nella navigazione a sinistra. Una volta sul **[!UICONTROL Monitoraggio]** , seleziona la **[!UICONTROL Segmenti]** il Card.
 
@@ -48,7 +48,7 @@ Il dashboard stesso contiene metriche per segmenti e processi di segmento. Per i
 >
 >Attualmente, solo i segmenti a cui è stata attivata la [destinazioni batch (basate su file)](../../destinations/destination-types.md#file-based) sono supportate per il dashboard dei segmenti di monitoraggio.
 
-![Dashboard dei segmenti. Vengono visualizzate informazioni sui diversi segmenti nell’organizzazione IMS e nella sandbox.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![Dashboard dei segmenti. Vengono visualizzate informazioni sui diversi segmenti nell’organizzazione e nella sandbox.](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 Per questa vista dashboard sono disponibili le metriche seguenti:
 
@@ -109,7 +109,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Avvio esecuzione flusso di dati]** | Data e ora di inizio del processo di attivazione. |
 | **[!UICONTROL Fine del flusso di dati]** | Data e ora di fine del processo di attivazione. |
 | **[!UICONTROL ID esecuzione flusso di dati]** | ID del processo di attivazione corrente. |
-| **[!UICONTROL ID organizzazione IMS]** | ID dell’organizzazione IMS a cui appartiene il processo di attivazione. |
+| **[!UICONTROL ID organizzazione IMS]** | ID dell&#39;organizzazione a cui appartiene il processo di attivazione. |
 | **[!UICONTROL Nome destinazione]** | Nome della destinazione a cui vengono attivati i dati. |
 
 Sotto le metriche, viene visualizzato un interruttore per selezionare tra gli errori di esecuzione del flusso di dati e i segmenti.
@@ -151,7 +151,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Tipo di processo]** | Il tipo di processo del segmento. In questo caso, sarà sempre un processo di valutazione del segmento. |
 | **[!UICONTROL Tipo di valutazione]** | Tipo di valutazione in corso. Può essere **[!UICONTROL Batch]** o **[!UICONTROL Streaming]**. |
 | **[!UICONTROL ID processo]** | ID del processo di valutazione. |
-| **[!UICONTROL ID organizzazione IMS]** | ID dell’organizzazione IMS a cui appartiene il processo di valutazione. |
+| **[!UICONTROL ID organizzazione IMS]** | ID dell&#39;organizzazione a cui appartiene il processo di valutazione. |
 | **[!UICONTROL Nome del segmento]** | Nome del segmento oggetto della valutazione. |
 | **[!UICONTROL ID segmento]** | ID del segmento oggetto della valutazione. |
 

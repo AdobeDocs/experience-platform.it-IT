@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Privacy Service
 description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di privacy in diverse applicazioni Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '206'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Interfaccia utente di Privacy Service [!DNL Privacy Service] consente di coordin
 
 >[!IMPORTANT]
 >
->È necessario disporre di un Adobe ID per l’autenticazione nel [!DNL Privacy Service] Interfaccia utente. Inoltre, è necessario disporre dei privilegi di amministratore di sistema all’interno dell’organizzazione IMS.
+>È necessario disporre di un Adobe ID per l’autenticazione nel [!DNL Privacy Service] Interfaccia utente. Inoltre, è necessario disporre dei privilegi di amministratore di sistema all&#39;interno dell&#39;organizzazione.
 
 Per accedere all’interfaccia utente, accedi a [Adobe Experience Cloud](https://experience.adobe.com/) e seleziona **[!UICONTROL Interfaccia utente Privacy]** nel menu di accesso rapido.
 

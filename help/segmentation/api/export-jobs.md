@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i processi di esportazione dei segmenti
 description: I processi di esportazione sono processi asincroni utilizzati per mantenere i membri dei segmenti di pubblico nei set di dati. Puoi utilizzare l’endpoint /export/jobs nell’API del servizio di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare programmaticamente i processi di esportazione.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Gli endpoint utilizzati in questa guida fanno parte del [!DNL Adobe Experience P
 
 ## Recupera un elenco di processi di esportazione {#retrieve-list}
 
-Puoi recuperare un elenco di tutti i processi di esportazione per la tua organizzazione IMS effettuando una richiesta di GET al `/export/jobs` punto finale.
+Puoi recuperare un elenco di tutti i processi di esportazione per la tua organizzazione effettuando una richiesta di GET al `/export/jobs` punto finale.
 
 **Formato API**
 
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **Richiesta**
 
-La seguente richiesta recupererà gli ultimi due processi di esportazione all’interno dell’organizzazione IMS.
+La seguente richiesta recupererà gli ultimi due processi di esportazione all’interno della tua organizzazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

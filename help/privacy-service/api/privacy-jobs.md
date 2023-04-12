@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i processi di privacy
 description: Scopri come gestire i processi relativi alla privacy per le applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 **Richiesta**
 
-La richiesta seguente recupera un elenco impaginato di tutti i processi all’interno di un’organizzazione IMS, a partire dalla terza pagina con una dimensione di pagina pari a 50.
+La richiesta seguente recupera un elenco impaginato di tutti i processi all’interno di un’organizzazione, a partire dalla terza pagina con una dimensione di pagina pari a 50.
 
 ```shell
 curl -X GET \
@@ -159,7 +159,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `companyContexts` **(Obbligatorio)** | Matrice contenente informazioni di autenticazione per la tua organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell&#39;identificatore.</li></ul>È **obbligatorio** che uno degli identificatori utilizza `imsOrgId` come `namespace`con `value` contenente l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per prodotto (ad esempio, `Campaign`), che identifica un’integrazione con un’applicazione Adobe appartenente alla tua organizzazione. I valori potenziali includono nomi account, codici client, ID tenant o altri identificatori di applicazione. |
+| `companyContexts` **(Obbligatorio)** | Matrice contenente informazioni di autenticazione per la tua organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell&#39;identificatore.</li></ul>È **obbligatorio** che uno degli identificatori utilizza `imsOrgId` come `namespace`con `value` contenente l’ID univoco per la tua organizzazione. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per prodotto (ad esempio, `Campaign`), che identifica un’integrazione con un’applicazione Adobe appartenente alla tua organizzazione. I valori potenziali includono nomi account, codici client, ID tenant o altri identificatori di applicazione. |
 | `users` **(Obbligatorio)** | Matrice contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. È possibile fornire un massimo di 1000 ID utente in un’unica richiesta. Ogni oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati di risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente referenziata o cercata in un secondo momento.</li><li>`action`: Array che elenca le azioni desiderate da eseguire sui dati dell’utente. A seconda delle azioni che si desidera eseguire, questa matrice deve includere `access`, `delete`o entrambi.</li><li>`userIDs`: Una raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ciascuna identità è costituita da un `namespace`, `value`e un qualificatore dello spazio dei nomi (`type`). Consulta la sezione [appendice](appendix.md) per ulteriori dettagli su queste proprietà richieste.</li></ul> Per una spiegazione più dettagliata `users` e `userIDs`, vedi [guida alla risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obbligatorio)** | Matrice di prodotti Adobe da includere nell’elaborazione. Se questo valore è mancante o altrimenti vuoto, la richiesta verrà rifiutata. Includere solo i prodotti con cui l’organizzazione dispone di un’integrazione. Vedi la sezione su [valori di prodotto accettati](appendix.md) nell&#39;appendice per ulteriori informazioni. |
 | `expandIDs` | Una proprietà facoltativa che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |

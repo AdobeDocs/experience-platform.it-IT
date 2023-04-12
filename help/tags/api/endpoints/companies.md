@@ -2,16 +2,16 @@
 title: Endpoint “companies”
 description: Scopri come effettuare chiamate all’endpoint /companies nell’API di Reactor.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 97%
+source-wordcount: '239'
+ht-degree: 93%
 
 ---
 
 # Endpoint “companies”
 
-Un’azienda rappresenta un’organizzazione del cliente, in genere una divisione dell’azienza. Nell’API di Reactor, le aziende (companies) corrispondono all’ID organizzazione IMS. Gli utenti API possono vedere solo le aziende a cui hanno accesso. Un’azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene a una sola azienda.
+Un’azienda rappresenta un’organizzazione del cliente, in genere una divisione dell’azienza. Nell’API di Reactor, queste società corrispondono a 1:1 con l’ID organizzazione. Gli utenti API possono vedere solo le aziende a cui hanno accesso. Un’azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene a una sola azienda.
 
 L’endpoint `/companies` nell’API di Reactor consente di recuperare in modo programmatico le aziende a cui hai accesso all’interno dell’applicazione Experience.
 

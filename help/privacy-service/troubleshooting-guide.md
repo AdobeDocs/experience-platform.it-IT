@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Privacy Service
 description: Questo documento fornisce le risposte alle domande frequenti su Privacy Service e informazioni sugli errori più comuni nell’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
@@ -107,7 +107,7 @@ La tabella seguente illustra alcuni errori comuni in [!DNL Privacy Service], con
 | Spazio dei nomi non valido | Spazio dei nomi di identità specificato per un ID utente non valido. Vedi la sezione su [spazi dei nomi delle identità standard](./api/appendix.md#standard-namespaces) in [!DNL Privacy Service] Appendice della guida API per un elenco di namespace accettati. Se utilizzi uno spazio dei nomi personalizzato, assicurati di impostare l’ID come `type` su &quot;custom&quot;. |
 | Completato parzialmente | Il processo è stato completato correttamente, ma alcuni dati non erano applicabili per la richiesta specificata ed è stato ignorato. |
 | I dati non sono nel formato richiesto. | Formattazione errata di uno o più valori di dati per l&#39;applicazione specificata. Per ulteriori informazioni, consulta i dettagli del processo . |
-| Il provisioning dell&#39;organizzazione IMS non è stato eseguito. | Questo messaggio si verifica quando non è stato eseguito il provisioning dell’organizzazione IMS per [!DNL Privacy Service]. Per ulteriori informazioni, contatta l’amministratore. |
+| Il provisioning dell&#39;organizzazione IMS non è stato eseguito. | Questo messaggio si verifica quando non è stato eseguito il provisioning per la tua organizzazione [!DNL Privacy Service]. Per ulteriori informazioni, contatta l’amministratore. |
 | Sono necessari accesso e autorizzazioni. | Per poter utilizzare [!DNL Privacy Service]. Contatta il tuo amministratore per accedere. |
 | Si è verificato un problema durante il caricamento e l&#39;archiviazione dei dati di accesso. | Quando si verifica questo errore, ricarica i dati di accesso e riprova. |
 | Il carico di lavoro è stato superato per il limite di tasso documento corrente. | Quando si verifica questo errore, ridurre il tasso di invio e riprovare. |

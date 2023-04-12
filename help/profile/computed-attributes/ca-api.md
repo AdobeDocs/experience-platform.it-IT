@@ -6,9 +6,9 @@ description: In Adobe Experience Platform, gli attributi calcolati sono funzioni
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2274'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | Nome del campo dell&#39;attributo calcolato come stringa. |
 | `path` | Percorso del campo contenente l&#39;attributo calcolato. Questo percorso si trova all&#39;interno del `properties` Attributo dello schema e NON deve includere il nome del campo nel percorso. Quando si scrive il percorso, omettere i diversi livelli di `properties` attributi. |
 | `{TENANT_ID}` | Se non conosci il tuo ID tenant, fai riferimento ai passaggi per trovare l’ID tenant nel [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | Descrizione dell&#39;attributo calcolato. Questa funzione è particolarmente utile quando sono stati definiti più attributi calcolati, in quanto aiuterà gli altri utenti dell’organizzazione IMS a determinare l’attributo calcolato corretto da utilizzare. |
+| `description` | Descrizione dell&#39;attributo calcolato. Questa funzione è particolarmente utile quando sono stati definiti più attributi calcolati in quanto aiuterà gli altri utenti all’interno della tua organizzazione a determinare l’attributo calcolato corretto da utilizzare. |
 | `expression.value` | Una valida [!DNL Profile Query Language] (PQL) espressione. Gli attributi calcolati supportano attualmente le seguenti funzioni: sum, count, min, max e booleano. Per un elenco delle espressioni di esempio, consulta [espressioni PQL di esempio](expressions.md) documentazione. |
 | `schema.name` | Classe su cui si basa lo schema contenente il campo dell&#39;attributo calcolato. Esempio: `_xdm.context.experienceevent` per uno schema basato sulla classe ExperienceEvent XDM. |
 

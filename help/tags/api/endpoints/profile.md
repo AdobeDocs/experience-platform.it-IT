@@ -2,10 +2,10 @@
 title: Endpoint “profiles”
 description: Scopri come effettuare chiamate all’endpoint /profiles nell’API di Reactor.
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 97%
+source-wordcount: '169'
+ht-degree: 75%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 Nell’API di Reactor, un profilo rappresenta un utente di Adobe Experience Platform. L’API di Reactor non mantiene il proprio database di utenti e autorizzazioni, ma si basa sugli Adobe ID gestiti da [Adobe IMS (Identity Management System)](https://helpx.adobe.com/it/enterprise/using/identity.html).
 
-Un profilo contiene tutte le informazioni sull’utente connesso, comprese tutte le organizzazioni IMS a cui appartengono, i profili di prodotto a cui appartengono all’interno di ogni organizzazione e i diritti di cui dispongono da ciascun profilo di prodotto.
+Un profilo contiene tutte le informazioni sull’utente connesso, comprese tutte le organizzazioni a cui appartengono, i profili di prodotto a cui appartengono all’interno di ogni organizzazione e i diritti di cui dispongono da ciascun profilo di prodotto.
 
 ## Introduzione
 
@@ -51,14 +51,14 @@ In caso di esito positivo, la risposta restituisce i dettagli del profilo.
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ In caso di esito positivo, la risposta restituisce i dettagli del profilo.
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 10%
 
 ---
@@ -289,7 +289,7 @@ Per visualizzare ulteriori dettagli sull’esecuzione di un flusso di dati speci
 La pagina dei dettagli dell’esecuzione del flusso di dati, oltre ai dettagli mostrati nell’elenco delle esecuzioni del flusso di dati, visualizza informazioni più specifiche sul flusso di dati:
 
 - **[!UICONTROL ID esecuzione flusso di dati]**: ID del flusso di dati.
-- **[!UICONTROL ID organizzazione IMS]**: Organizzazione IMS a cui appartiene il flusso di dati.
+- **[!UICONTROL ID organizzazione IMS]**: Organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: L’ora dell’ultimo aggiornamento del flusso di dati.
 
 La pagina dei dettagli dispone inoltre di un pulsante di attivazione per passare da errori di esecuzione del flusso di dati a segmenti. Questa opzione è disponibile solo per le esecuzioni del flusso di dati nelle destinazioni batch.

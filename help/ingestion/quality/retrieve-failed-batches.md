@@ -1,57 +1,57 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;inserimento batch;inserimento batch;batch non riusciti;Recuperare batch non riusciti;Recuperare batch non riusciti;Scaricare batch non riusciti;scaricare batch non riusciti;
+keywords: Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;acquisizione batch;acquisizione batch;batch non riusciti;ottenere batch non riusciti;ottenere batch non riusciti;scaricare batch non riusciti;scaricare batch non riusciti;
 solution: Experience Platform
-title: Recupero dei batch non riusciti tramite l’API di accesso ai dati
+title: Recupero dei batch con errore tramite API di accesso ai dati
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare informazioni su un batch non riuscito utilizzando le API di acquisizione dati.
+description: Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando le API di acquisizione dati.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
 
-# Recupero di batch non riusciti tramite l’API di accesso ai dati
+# Recupero dei batch non riusciti utilizzando l’API di accesso ai dati
 
-Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. Puoi utilizzare l’acquisizione in batch, che consente di inserire i dati utilizzando vari tipi di file (ad esempio CSV), oppure l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
+Adobe Experience Platform fornisce due metodi per caricare e acquisire i dati. È possibile utilizzare l’acquisizione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), o l’acquisizione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzo di endpoint di streaming in tempo reale.
 
-Questa esercitazione descrive i passaggi per recuperare informazioni su un batch non riuscito utilizzando [!DNL Data Ingestion] API.
+Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando [!DNL Data Ingestion] API.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
-- [[!DNL Data Ingestion]](../home.md): metodi tramite i quali i dati possono essere inviati a [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il quadro standardizzato [!DNL Experience Platform] organizza i dati sulla customer experience.
+- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati a [!DNL Experience Platform].
 
-### Lettura delle chiamate API di esempio
+### Lettura di chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione sulle [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] API, devi prima completare l’ [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Schema Registry], sono isolate in specifiche sandbox virtuali. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
+Tutte le risorse in [!DNL Experience Platform], compresi quelli appartenenti al [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedere [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
 - `Content-Type: application/json`
 
-### Batch campione non riuscito
+### Batch di esempio non riuscito
 
-Questa esercitazione utilizzerà dati di esempio con una marca temporale formattata in modo errato che imposta il valore del mese su **00**, come illustrato di seguito:
+Questa esercitazione utilizzerà dati di esempio con una marca temporale in formato non corretto che imposta il valore del mese in modo che sia **00**, come illustrato di seguito:
 
 ```json
 {
@@ -76,7 +76,7 @@ Questa esercitazione utilizzerà dati di esempio con una marca temporale formatt
 }
 ```
 
-Il payload riportato sopra non verrà convalidato correttamente in base allo schema XDM a causa della marca temporale non valida.
+Il payload di cui sopra non verrà convalidato correttamente rispetto allo schema XDM a causa di una marca temporale non valida.
 
 ## Recupera il batch non riuscito
 
@@ -133,11 +133,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Con la risposta precedente, puoi vedere quali blocchi del batch hanno avuto esito positivo o negativo. Da questa risposta, puoi vedere che il file `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene il batch non riuscito.
+Con la risposta di cui sopra, puoi vedere quali blocchi del batch sono riusciti e non riusciti. Da questa risposta, puoi vedere che il file `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene il batch non riuscito.
 
 ## Scarica il batch non riuscito
 
-Una volta individuato il file non riuscito nel batch, è possibile scaricare il file non riuscito e visualizzare il messaggio di errore.
+Una volta che si è saputo quale file nel batch non è riuscito, è possibile scaricare il file non riuscito e vedere qual è il messaggio di errore.
 
 **Formato API**
 
@@ -148,11 +148,11 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{BATCH_ID}` | ID del batch che contiene il file non riuscito. |
-| `{FAILED_FILE}` | Nome del file con la formattazione non riuscita. |
+| `{FAILED_FILE}` | Nome del file con formattazione non riuscita. |
 
 **Richiesta**
 
-La seguente richiesta ti consente di scaricare il file che presentava errori di acquisizione.
+La seguente richiesta ti consente di scaricare il file che aveva errori di acquisizione.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **Risposta**
 
-Poiché il batch acquisito precedente aveva una data/ora non valida, verrà visualizzato il seguente errore di convalida.
+Poiché il batch precedentemente acquisito aveva una data-ora non valida, verrà visualizzato il seguente errore di convalida.
 
 ```json
 {
@@ -184,7 +184,7 @@ Poiché il batch acquisito precedente aveva una data/ora non valida, verrà visu
 
 ## Passaggi successivi
 
-Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch non riusciti. Per ulteriori informazioni sull’acquisizione batch, consulta [guida per gli sviluppatori sull’acquisizione batch](../batch-ingestion/overview.md). Per ulteriori informazioni sull’acquisizione in streaming, consulta [tutorial sulla creazione di una connessione in streaming](../tutorials/create-streaming-connection.md).
+Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch con errori. Per ulteriori informazioni sull’acquisizione in batch, consulta la sezione [guida per gli sviluppatori di batch ingestion](../batch-ingestion/overview.md). Per ulteriori informazioni sull’acquisizione in streaming, consulta la sezione [creazione di un&#39;esercitazione sulla connessione in streaming](../tutorials/create-streaming-connection.md).
 
 ## Appendice
 
@@ -192,11 +192,11 @@ Questa sezione contiene informazioni su altri tipi di errori di acquisizione che
 
 ### XDM formattato in modo errato
 
-Come l’errore di marca temporale nel flusso di esempio precedente, questi errori sono dovuti a XDM formattato in modo errato. Questi messaggi di errore variano a seconda della natura del problema. Di conseguenza, non è possibile visualizzare alcun esempio di errore specifico.
+Come l&#39;errore di marca temporale nel flusso dell&#39;esempio precedente, questi errori sono dovuti a XDM formattati in modo errato. Questi messaggi di errore variano a seconda della natura del problema. Di conseguenza, non è possibile visualizzare alcun esempio di errore specifico.
 
-### ID organizzazione IMS mancante o non valido
+### ID organizzazione mancante o non valido
 
-Questo errore viene visualizzato se l’ID dell’organizzazione IMS risulta mancante nel payload non è valido.
+Questo errore viene mostrato se l&#39;ID organizzazione mancante nel payload non è valido.
 
 ```json
 {
@@ -226,7 +226,7 @@ Questo errore viene visualizzato se `schemaRef` per `xdmMeta` è mancante.
 
 ### Nome sorgente mancante
 
-Questo errore viene visualizzato se `source` nell’intestazione manca il relativo `name`.
+Questo errore viene visualizzato se `source` nell’intestazione manca la relativa `name`.
 
 ```json
 {
@@ -242,7 +242,7 @@ Questo errore viene visualizzato se `source` nell’intestazione manca il relati
 
 ### Entità XDM mancante
 
-Questo errore viene visualizzato se non è `xdmEntity` presente.
+Questo errore viene visualizzato se non è presente `xdmEntity` presente.
 
 ```json
 {

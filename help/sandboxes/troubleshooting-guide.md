@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi delle sandbox
 description: Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Le sandbox sono partizioni isolate di una singola istanza di Platform, con ogni 
 
 ## Qual è la sandbox di produzione predefinita?
 
-La sandbox di produzione predefinita è la prima sandbox di produzione che viene creata al momento del primo provisioning di un’organizzazione IMS. La sandbox di produzione predefinita consente di acquisire o utilizzare dati da Platform, nonché di accettare richieste che non includono valori per un nome sandbox o un ID sandbox. La sandbox di produzione predefinita può essere reimpostata ma non eliminata.
+La sandbox di produzione predefinita è la prima sandbox di produzione che viene creata al momento del primo provisioning di un&#39;organizzazione. La sandbox di produzione predefinita consente di acquisire o utilizzare dati da Platform, nonché di accettare richieste che non includono valori per un nome sandbox o un ID sandbox. La sandbox di produzione predefinita può essere reimpostata ma non eliminata.
 
 ## Quante sandbox di produzione posso avere?
 
@@ -63,7 +63,7 @@ Puoi aggiornare il titolo di una sandbox di produzione. Tuttavia, non è possibi
 
 ## Quante sandbox di sviluppo posso avere?
 
-L’Experience Platform consente attualmente l’attivazione di un massimo di 75 sandbox totali (produzione e sviluppo) all’interno di un’unica organizzazione IMS.
+L’Experience Platform consente attualmente l’attività di un massimo di 75 sandbox totali (produzione e sviluppo) all’interno di un’unica organizzazione.
 
 Le sandbox di sviluppo supportano sia le funzionalità di ripristino che quelle di eliminazione.
 

@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;JupyterLab;notebook;Data Science Workspace;argomenti popolari;query service
+keywords: Experience Platform;JupyterLab;notebook;Data Science Workspace;argomenti comuni;servizio query
 solution: Experience Platform
-title: Servizio query in Jupyter Notebook
+title: Servizio query nel blocco appunti Jupyter
 type: Tutorial
-description: Adobe Experience Platform consente di utilizzare SQL (Structured Query Language) in Data Science Workspace integrando Query Service in JupyterLab come funzione standard. Questo tutorial illustra query SQL di esempio per casi d’uso comuni per esplorare, trasformare e analizzare i dati di Adobe Analytics.
+description: Adobe Experience Platform consente di utilizzare SQL (Structured Query Language) in Data Science Workspace integrando Query Service in JupyterLab come funzionalità standard. Questa esercitazione illustra query SQL di esempio per casi d'uso comuni per l'esplorazione, la trasformazione e l'analisi dei dati di Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
 
-# Servizio query in Jupyter Notebook
+# Servizio query nel blocco appunti Jupyter
 
-[!DNL Adobe Experience Platform] consente di utilizzare SQL (Structured Query Language) in [!DNL Data Science Workspace] integrando [!DNL Query Service] in [!DNL JupyterLab] come funzionalità standard.
+[!DNL Adobe Experience Platform] consente di utilizzare SQL (Structured Query Language) in [!DNL Data Science Workspace] mediante integrazione [!DNL Query Service] in [!DNL JupyterLab] come funzionalità standard.
 
-Questo tutorial illustra query SQL di esempio per casi d’uso comuni da esplorare, trasformare e analizzare [!DNL Adobe Analytics] dati.
+Questa esercitazione illustra query SQL di esempio per casi d&#39;uso comuni per l&#39;esplorazione, la trasformazione e l&#39;analisi [!DNL Adobe Analytics] dati.
 
 ## Introduzione
 
 Prima di avviare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 
-- Accesso a [!DNL Adobe Experience Platform]. Se non hai accesso a un’organizzazione IMS in [!DNL Experience Platform], contattare l&#39;amministratore di sistema prima di procedere
+- Accesso a [!DNL Adobe Experience Platform]. Se non hai accesso a un&#39;organizzazione in [!DNL Experience Platform]prima di procedere, rivolgiti all&#39;amministratore di sistema
 
 - Un [!DNL Adobe Analytics] set di dati
 
-- Una buona conoscenza dei seguenti concetti chiave utilizzati in questa esercitazione:
+- Informazioni sui seguenti concetti chiave utilizzati in questa esercitazione:
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
@@ -34,15 +34,15 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
 
 ## Accesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In entrata [[!DNL Experience Platform]](https://platform.adobe.com), passa a **[!UICONTROL Notebook]** dalla colonna di navigazione a sinistra. Attendere. Caricamento di JupyterLab.
+1. In [[!DNL Experience Platform]](https://platform.adobe.com), passa a **[!UICONTROL Notebook]** dalla colonna di navigazione a sinistra. Consenti il caricamento di JupyterLab.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >Se non viene visualizzata automaticamente una nuova scheda di avvio, aprirne una nuova facendo clic su **[!UICONTROL File]** quindi seleziona **[!UICONTROL Nuovo modulo di avvio]**.
+   >Se non viene visualizzata automaticamente una nuova scheda Avvio, apri una nuova scheda facendo clic su **[!UICONTROL File]** quindi seleziona **[!UICONTROL Nuovo modulo di avvio]**.
 
-2. Nella scheda Utilità di avvio, fai clic su **[!UICONTROL Vuoto]** in un ambiente Python 3 per aprire un notebook vuoto.
+2. Nella scheda Launcher , fai clic su **[!UICONTROL Vuoto]** in un ambiente Python 3 per aprire un blocco appunti vuoto.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
@@ -50,25 +50,25 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
    >
    >Python 3 è attualmente l’unico ambiente supportato per Query Service nei notebook.
 
-3. Nella barra di selezione a sinistra, fai clic su **[!UICONTROL Dati]** e fare doppio clic sull&#39;icona **[!UICONTROL Set di dati]** per elencare tutti i set di dati.
+3. Nella barra di selezione a sinistra, fai clic sul pulsante **[!UICONTROL Dati]** e fai doppio clic sull’icona **[!UICONTROL Set di dati]** per elencare tutti i set di dati.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Trova un [!DNL Adobe Analytics] set di dati da esplorare e fai clic con il pulsante destro del mouse sull’elenco, fai clic su **[!UICONTROL Eseguire query sui dati nel blocco appunti]** per generare query SQL nel blocco appunti vuoto.
+4. Trova un [!DNL Adobe Analytics] set di dati da esplorare e fare clic con il pulsante destro del mouse sull’elenco, fare clic su **[!UICONTROL Query dei dati nel blocco appunti]** per generare query SQL nel blocco appunti vuoto.
 
-5. Fare clic sulla prima cella generata contenente la funzione `qs_connect()` ed eseguirlo facendo clic sul pulsante play. Questa funzione crea una connessione tra l&#39;istanza del notebook e [!DNL Query Service].
+5. Fai clic sulla prima cella generata contenente la funzione `qs_connect()` e eseguirlo facendo clic sul pulsante di riproduzione. Questa funzione crea una connessione tra l&#39;istanza del blocco appunti e [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copia in basso [!DNL Adobe Analytics] nome del set di dati dalla seconda query SQL generata, sarà il valore dopo `FROM`.
+6. Copia verso il basso [!DNL Adobe Analytics] Nome del set di dati dalla seconda query SQL generata, sarà il valore dopo `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. Inserire una nuova cella del blocco appunti facendo clic sul pulsante **+** pulsante.
+7. Inserire una nuova cella del blocco appunti facendo clic sul pulsante **+** pulsante .
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. Copiare, incollare ed eseguire le istruzioni di importazione seguenti in una nuova cella. Queste istruzioni verranno utilizzate per visualizzare i dati:
+8. Copia, incolla ed esegui le seguenti istruzioni di importazione in una nuova cella. Queste istruzioni verranno utilizzate per visualizzare i dati:
 
    ```python
    import plotly.plotly as py
@@ -76,7 +76,7 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
    from plotly.offline import iplot
    ```
 
-9. Quindi, copia e incolla le seguenti variabili in una nuova cella. Modifica i valori in base alle esigenze, quindi eseguili.
+9. Quindi, copia e incolla le seguenti variabili in una nuova cella. Modifica i loro valori in base alle esigenze, quindi eseguili.
 
    ```python
    target_table = "your Adobe Analytics dataset name"
@@ -85,26 +85,26 @@ Prima di avviare questa esercitazione, è necessario disporre dei seguenti prere
    target_day = "01"
    ```
 
-   - `target_table`: nome del [!DNL Adobe Analytics] set di dati.
-   - `target_year`: anno specifico da cui provengono i dati target.
-   - `target_month`: mese specifico di provenienza del target.
-   - `target_day`: giorno specifico da cui provengono i dati target.
+   - `target_table`: Nome della [!DNL Adobe Analytics] set di dati.
+   - `target_year`: Anno specifico da cui provengono i dati di destinazione.
+   - `target_month`: Mese specifico da cui proviene il target.
+   - `target_day`: Giorno specifico da cui provengono i dati di destinazione.
 
    >[!NOTE]
    >
-   >È possibile modificare questi valori in qualsiasi momento. In questo caso, assicurati di eseguire la cella delle variabili per le modifiche da applicare.
+   >Puoi modificare questi valori in qualsiasi momento. In questo modo, assicurati di eseguire la cella delle variabili per le modifiche da applicare.
 
-## Eseguire una query sui dati {#query-your-data}
+## Query dei dati {#query-your-data}
 
-Immettere le seguenti query SQL nelle singole celle del blocco appunti. Eseguire una query selezionando la relativa cella, quindi selezionando la **[!UICONTROL play]** pulsante. I risultati della query o i registri di errore vengono visualizzati sotto la cella eseguita.
+Immettere le seguenti query SQL nelle singole celle del blocco appunti. Esegui una query selezionando sulla cella corrispondente e selezionando la **[!UICONTROL play]** pulsante . Sotto la cella eseguita vengono visualizzati i risultati delle query o i registri degli errori riusciti.
 
-Quando un notebook è inattivo per un periodo di tempo prolungato, la connessione tra il notebook e [!DNL Query Service] può rompersi. In questi casi, riavviare [!DNL JupyterLab] selezionando la **Riavvia** pulsante ![pulsante di riavvio](../images/jupyterlab/user-guide/restart_button.png) si trova nell&#39;angolo in alto a destra accanto al pulsante di alimentazione.
+Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e [!DNL Query Service] può rompersi. In questi casi, riavvia [!DNL JupyterLab] selezionando la **Riavvia** pulsante ![pulsante di riavvio](../images/jupyterlab/user-guide/restart_button.png) situato nell&#39;angolo in alto a destra accanto al pulsante di alimentazione.
 
-Il kernel del notebook viene ripristinato, ma le celle rimangono, quindi riesegui tutte le celle per continuare da dove hai lasciato.
+Il kernel del blocco appunti viene reimpostato ma le celle rimarranno, eseguire nuovamente tutte le celle per continuare dove si era lasciato fuori.
 
 ### Numero di visitatori orari {#hourly-visitor-count}
 
-La query seguente restituisce il conteggio dei visitatori orari per una data specificata:
+La seguente query restituisce il conteggio dei visitatori orari per una data specificata:
 
 #### Query
 
@@ -120,9 +120,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Nella query precedente, la marca temporale nella `WHERE` è impostata per essere il valore di `target_year`. Includi variabili nelle query SQL includendole tra parentesi graffe (`{}`).
+Nella query precedente, la marca temporale nel `WHERE` è impostato sul valore di `target_year`. Includi le variabili nelle query SQL contandole tra parentesi graffe (`{}`).
 
-La prima riga della query contiene la variabile opzionale `hourly_visitor`. I risultati della query verranno memorizzati in questa variabile come un dataframe Pandas. La memorizzazione dei risultati in un dataframe consente di visualizzare i risultati della query in un secondo momento utilizzando un [!DNL Python] pacchetto. Esegui quanto segue [!DNL Python] codice in una nuova cella per generare un grafico a barre:
+La prima riga della query contiene la variabile opzionale `hourly_visitor`. I risultati della query verranno memorizzati in questa variabile come dataframe di dati Pandas. La memorizzazione dei risultati in un dataframe consente di visualizzare in seguito i risultati della query utilizzando un [!DNL Python] pacchetto. Esegui quanto segue [!DNL Python] in una nuova cella per generare un grafico a barre:
 
 ```python
 trace = go.Bar(
@@ -141,9 +141,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Conteggio attività orarie {#hourly-activity-count}
+### Conteggio attività orario {#hourly-activity-count}
 
-La query seguente restituisce il conteggio delle azioni orarie per una data specificata:
+La seguente query restituisce il conteggio delle azioni orarie per una data specificata:
 
 #### Query <!-- omit in toc -->
 
@@ -160,13 +160,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L’esecuzione della query precedente memorizzerà i risultati in `hourly_actions` come dataframe. Esegui la funzione seguente in una nuova cella per visualizzare in anteprima i risultati:
+L’esecuzione della query di cui sopra memorizzerà i risultati in `hourly_actions` come dataframe. Esegui la seguente funzione in una nuova cella per visualizzare in anteprima i risultati:
 
 ```python
 hourly_actions.head()
 ```
 
-La query di cui sopra può essere modificata per restituire il conteggio delle azioni orarie per un intervallo di date specificato utilizzando operatori logici nella **DOVE** clausola:
+La query di cui sopra può essere modificata per restituire il conteggio delle azioni orarie per un intervallo di date specificato utilizzando gli operatori logici nel **DOVE** clausola:
 
 #### Query <!-- omit in toc -->
 
@@ -184,7 +184,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L’esecuzione della query modificata memorizza i risultati in `hourly_actions_date_range` come dataframe. Esegui la funzione seguente in una nuova cella per visualizzare in anteprima i risultati:
+L’esecuzione della query modificata memorizza i risultati in `hourly_actions_date_range` come dataframe. Esegui la seguente funzione in una nuova cella per visualizzare in anteprima i risultati:
 
 ```python
 hourly_actions_date_rage.head()
@@ -192,7 +192,7 @@ hourly_actions_date_rage.head()
 
 ### Numero di eventi per sessione visitatore {#number-of-events-per-visitor-session}
 
-La query seguente restituisce il numero di eventi per sessione visitatore per una data specificata:
+La seguente query restituisce il numero di eventi per sessione visitatore per una data specificata:
 
 #### Query <!-- omit in toc -->
 
@@ -225,7 +225,7 @@ iplot(fig)
 
 ### Pagine popolari per un dato giorno {#popular-pages-for-a-given-day}
 
-La query seguente restituisce le dieci pagine più popolari per una data specificata:
+La seguente query restituisce le dieci pagine più popolari per una data specificata:
 
 #### Query <!-- omit in toc -->
 
@@ -242,7 +242,7 @@ LIMIT  10;
 
 ### Utenti attivi per un dato giorno {#active-users-for-a-given-day}
 
-La query seguente restituisce i dieci utenti più attivi per una data specificata:
+La seguente query restituisce i dieci utenti più attivi per una data specificata:
 
 #### Query <!-- omit in toc -->
 
@@ -259,7 +259,7 @@ LIMIT  10;
 
 ### Città attive per attività utente {#active-cities-by-user-activity}
 
-La query seguente restituisce le dieci città che generano la maggior parte delle attività utente per una data specificata:
+La seguente query restituisce le dieci città che generano la maggior parte delle attività utente per una data specificata:
 
 #### Query <!-- omit in toc -->
 
@@ -276,4 +276,4 @@ LIMIT  10;
 
 ## Passaggi successivi
 
-Questo tutorial ha mostrato alcuni esempi di casi d’uso per l’utilizzo di [!DNL Query Service] in [!DNL Jupyter] notebook. Segui le [Analizzare i dati utilizzando Jupyter Notebooks](./analyze-your-data.md) esercitazione per vedere come vengono eseguite operazioni simili utilizzando l’SDK di accesso ai dati.
+Questa esercitazione illustra alcuni esempi di casi di utilizzo [!DNL Query Service] in [!DNL Jupyter] quaderni. Segui [Analizzare i dati utilizzando Jupyter Notebooks](./analyze-your-data.md) per vedere come vengono eseguite operazioni simili utilizzando l’SDK per l’accesso ai dati.

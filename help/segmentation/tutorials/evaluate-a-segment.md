@@ -5,9 +5,9 @@ title: Valutare e accedere ai risultati dei segmenti
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Se non hai ancora completato il [creare un segmento utilizzando l’API di segme
 
 ## Valutazione programmata {#scheduled-evaluation}
 
-Tramite la valutazione pianificata, l’organizzazione IMS può creare una pianificazione ricorrente per eseguire automaticamente i processi di esportazione.
+Mediante la valutazione pianificata, l&#39;organizzazione può creare una pianificazione periodica per eseguire automaticamente i processi di esportazione.
 
 >[!NOTE]
 >

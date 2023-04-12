@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;event hub;Azure event hub;Event hub;Event hub
+keywords: Experience Platform;home;argomenti popolari;hub eventi;hub eventi di Azure;hub eventi
 solution: Experience Platform
-title: Creare una connessione di origine degli hub eventi di Azure tramite l’API del servizio Flusso
+title: Creare una connessione di origine degli hub eventi di Azure utilizzando l’API del servizio di flusso
 type: Tutorial
-description: Scopri come connettere Adobe Experience Platform a un account Azure Event Hubs utilizzando l’API del servizio Flusso.
+description: Scopri come collegare Adobe Experience Platform a un account Hubs di Azure Event utilizzando l’API del servizio di flusso.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
 
 
-# Creare un [!DNL Azure Event Hubs] connessione sorgente tramite [!DNL Flow Service] API
+# Crea un [!DNL Azure Event Hubs] connessione di origine tramite [!DNL Flow Service] API
 
-Questo tutorial illustra i passaggi necessari per la connessione [!DNL Azure Event Hubs] (in seguito denominati &quot;[!DNL Event Hubs]&quot;) per l&#39;Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi per la connessione [!DNL Azure Event Hubs] (in appresso denominato &quot;[!DNL Event Hubs]&quot;) ad Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [Sorgenti](../../../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-- [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+- [Origini](../../../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
+- [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente [!DNL Event Hubs] alla piattaforma utilizzando [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente [!DNL Event Hubs] su Platform utilizzando [!DNL Flow Service] API.
 
-### Raccogli le credenziali richieste
+### Raccogli credenziali richieste
 
-Per ottenere [!DNL Flow Service] per connettersi con [!DNL Event Hubs] account, è necessario fornire valori per le seguenti proprietà di connessione:
+Per [!DNL Flow Service] per connettersi con [!DNL Event Hubs] account, è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `sasKeyName` | Il nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
-| `sasKey` | La chiave primaria della [!DNL Event Hubs] spazio dei nomi. Il `sasPolicy` che il `sasKey` corrisponde a deve avere `manage` diritti configurati per il [!DNL Event Hubs] elenco da compilare. |
-| `namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
-| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `sasKeyName` | Nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
+| `sasKey` | La chiave primaria del [!DNL Event Hubs] spazio dei nomi. La `sasPolicy` che `sasKey` corrisponde a `manage` diritti configurati per [!DNL Event Hubs] elenco da compilare. |
+| `namespace` | Lo spazio dei nomi del [!DNL Event Hubs] stai accedendo. Un [!DNL Event Hubs] Lo spazio dei nomi fornisce un contenitore di ambito univoco, in cui è possibile creare uno o più [!DNL Event Hubs]. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. La [!DNL Event Hubs] ID della specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
-Per ulteriori informazioni su questi valori, consulta [questo documento Hub eventi](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+Per ulteriori informazioni su questi valori, consulta [questo documento Hubs evento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../../landing/api-guide.md).
 
 ## Creare una connessione di base
 
-Il primo passaggio nella creazione di una connessione sorgente consiste nell’autenticare [!DNL Event Hubs] e generare un ID di connessione di base. Un ID di connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare elementi specifici da acquisire, incluse informazioni relative ai tipi di dati e ai formati.
+Il primo passaggio nella creazione di una connessione sorgente è quello di autenticare il [!DNL Event Hubs] e genera un ID di connessione di base. Un ID di connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e di identificare gli elementi specifici da acquisire, comprese le informazioni relative ai tipi di dati e ai formati corrispondenti.
 
-Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL Event Hubs] credenziali di autenticazione come parte dei parametri della richiesta.
+Per creare un ID di connessione di base, invia una richiesta POST al `/connections` l&#39;endpoint durante la fornitura del [!DNL Event Hubs] credenziali di autenticazione come parte dei parametri della richiesta.
 
 **Formato API**
 
@@ -85,14 +85,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.sasKeyName` | Il nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
-| `auth.params.sasKey` | Firma di accesso condiviso generata. |
-| `auth.params.namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. |
-| `connectionSpec.id` | Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `auth.params.sasKeyName` | Nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
+| `auth.params.sasKey` | La firma di accesso condiviso generata. |
+| `auth.params.namespace` | Lo spazio dei nomi del [!DNL Event Hubs] stai accedendo. |
+| `connectionSpec.id` | La [!DNL Event Hubs] ID della specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione è richiesto nel passaggio successivo per creare una connessione sorgente.
+Una risposta corretta restituisce i dettagli della nuova connessione di base creata, incluso il relativo identificatore univoco (`id`). Questo ID di connessione è necessario nel passaggio successivo per creare una connessione sorgente.
 
 ```json
 {
@@ -101,11 +101,11 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
 }
 ```
 
-## Creare una connessione sorgente
+## Creazione di una connessione sorgente
 
-Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati. Una connessione di origine è costituita da informazioni quali origine dati, formato dati e un ID di connessione di origine necessari per creare un flusso di dati. Un’istanza della connessione di origine è specifica per un tenant e un’organizzazione IMS.
+Una connessione di origine crea e gestisce la connessione all’origine esterna da cui vengono acquisiti i dati. Una connessione di origine è costituita da informazioni quali l’origine dati, il formato dati e un ID di connessione di origine necessari per creare un flusso di dati. Un&#39;istanza di connessione di origine è specifica per un tenant e un&#39;organizzazione.
 
-Per creare una connessione sorgente, effettua una richiesta POST al `/sourceConnections` endpoint del [!DNL Flow Service] API.
+Per creare una connessione di origine, invia una richiesta POST al `/sourceConnections` punto finale [!DNL Flow Service] API.
 
 **Formato API**
 
@@ -145,16 +145,16 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto può essere utilizzato per cercare informazioni sulla connessione sorgente. |
-| `description` | Valore facoltativo che è possibile fornire per includere ulteriori informazioni sulla connessione di origine. |
-| `baseConnectionId` | ID di connessione del tuo [!DNL Event Hubs] origine generata nel passaggio precedente. |
+| `name` | Nome della connessione di origine. Assicurati che il nome della connessione sorgente sia descrittivo, in quanto puoi utilizzarlo per cercare informazioni sulla connessione sorgente. |
+| `description` | Valore facoltativo che è possibile fornire per includere ulteriori informazioni sulla connessione sorgente. |
+| `baseConnectionId` | L&#39;ID di connessione del [!DNL Event Hubs] origine generata nel passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione fissa per [!DNL Event Hubs]. Questo ID è: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
-| `data.format` | Il formato del [!DNL Event Hubs] i dati che desideri acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
-| `params.eventHubName` | Il nome per il [!DNL Event Hubs] sorgente. |
-| `params.dataType` | Questo parametro definisce il tipo di dati che viene acquisito. I tipi di dati supportati includono: `raw` e `xdm`. |
-| `params.reset` | Questo parametro definisce la modalità di lettura dei dati. Utilizzare `latest` per iniziare a leggere dai dati più recenti e utilizzare `earliest` per iniziare a leggere dai primi dati disponibili nel flusso. Questo parametro è facoltativo e viene impostato automaticamente su `earliest` se non specificato. |
-| `params.consumerGroup` | Il meccanismo di pubblicazione o di abbonamento da utilizzare per [!DNL Event Hubs]. Questo parametro è facoltativo e viene impostato automaticamente su `$Default` se non specificato. Fai riferimento a questo [[!DNL Event Hubs] guida sui consumatori dell’evento](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) per ulteriori informazioni. |
+| `data.format` | Il formato del [!DNL Event Hubs] dati da acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
+| `params.eventHubName` | Nome del [!DNL Event Hubs] sorgente. |
+| `params.dataType` | Questo parametro definisce il tipo di dati da acquisire. I tipi di dati supportati includono: `raw` e `xdm`. |
+| `params.reset` | Questo parametro definisce come verranno letti i dati. Utilizzo `latest` per iniziare a leggere dai dati più recenti e utilizzare `earliest` per iniziare a leggere dai primi dati disponibili nel flusso. Questo parametro è facoltativo e viene impostato come impostazione predefinita su `earliest` se non fornito. |
+| `params.consumerGroup` | Meccanismo di pubblicazione o sottoscrizione da utilizzare per [!DNL Event Hubs]. Questo parametro è facoltativo e viene impostato come impostazione predefinita su `$Default` se non fornito. Fai riferimento a questo [[!DNL Event Hubs] guida all&#39;evento per i consumatori](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) per ulteriori informazioni. |
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un’ [!DNL Event Hubs] connessione sorgente tramite [!DNL Flow Service] API. Puoi utilizzare questo ID connessione sorgente nell’esercitazione successiva per [creare un flusso di dati in streaming utilizzando [!DNL Flow Service] API](../../collect/streaming.md).
+Seguendo questa esercitazione, hai creato un [!DNL Event Hubs] connessione di origine tramite [!DNL Flow Service] API. Puoi usare questo ID di connessione sorgente nell’esercitazione successiva per [creare un flusso di dati in streaming utilizzando [!DNL Flow Service] API](../../collect/streaming.md).

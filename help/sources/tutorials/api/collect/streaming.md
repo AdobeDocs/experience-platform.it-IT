@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;cloud storage data;streaming data;streaming data;streaming
+keywords: Experience Platform;home;argomenti comuni;dati di archiviazione cloud;dati in streaming;streaming
 solution: Experience Platform
-title: Creare un flusso di dati in streaming per i dati non elaborati utilizzando l’API del servizio Flusso
+title: Creare un flusso di dati in streaming per i dati non elaborati utilizzando l’API del servizio di flusso
 type: Tutorial
-description: Questo tutorial illustra i passaggi per recuperare i dati in streaming e importarli in Platform utilizzando i connettori e le API di origine.
+description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 4%
 
 ---
 
-# Creare un flusso di dati in streaming per i dati non elaborati utilizzando [!DNL Flow Service] API
+# Crea un flusso di dati in streaming per i dati non elaborati utilizzando [!DNL Flow Service] API
 
-Questa esercitazione illustra i passaggi necessari per recuperare i dati non elaborati da un connettore di origine streaming e portarli ad Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi per recuperare i dati non elaborati da un connettore di origine streaming e portarli ad Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
-   - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
-   - [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
+   - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   - [Guida per gli sviluppatori del Registro di sistema dello schema](../../../../xdm/api/getting-started.md): Include informazioni importanti da conoscere per eseguire correttamente le chiamate all’API del Registro di sistema dello schema. Questo include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l’acquisizione in streaming per Platform fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server all’Experience Platform in tempo reale.
-- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): L’acquisizione in streaming per Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
+- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../../landing/api-guide.md).
 
-### Creare una connessione sorgente {#source}
+### Creazione di una connessione sorgente {#source}
 
-Questo tutorial richiede anche un ID di connessione sorgente valido per un connettore di streaming. Se non disponi di queste informazioni, consulta le seguenti esercitazioni su come creare una connessione sorgente di streaming prima di provare questa esercitazione:
+Questa esercitazione richiede anche un ID di connessione sorgente valido per un connettore streaming. Se non disponi di queste informazioni, consulta le seguenti esercitazioni sulla creazione di una connessione sorgente di streaming prima di provare questa esercitazione:
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
@@ -41,9 +41,9 @@ Questo tutorial richiede anche un ID di connessione sorgente valido per un conne
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
-Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche XDM [!DNL Individual Profile] classe.
+Affinché i dati di origine possano essere utilizzati in Platform, è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle tue esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati di Platform in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche XDM [!DNL Individual Profile] classe.
 
-Per creare uno schema XDM di destinazione, effettua una richiesta POST al `/schemas` endpoint del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Per creare uno schema XDM di destinazione, effettua una richiesta POST al `/schemas` punto finale [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **Formato API**
 
@@ -53,7 +53,7 @@ POST /tenant/schemas
 
 **Richiesta**
 
-L’esempio di richiesta seguente crea uno schema XDM che estende XDM [!DNL Individual Profile] classe.
+La seguente richiesta di esempio crea uno schema XDM che estende XDM [!DNL Individual Profile] classe.
 
 ```shell
 curl -X POST \
@@ -87,7 +87,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli del nuovo schema creato, incluso il relativo identificatore univoco (`$id`). Questo ID è necessario nei passaggi successivi per creare un set di dati di destinazione, una mappatura e un flusso di dati.
+Una risposta corretta restituisce i dettagli dello schema appena creato, incluso il relativo identificatore univoco (`$id`). Questo ID è necessario nei passaggi successivi per creare un set di dati di destinazione, una mappatura e un flusso di dati.
 
 ```json
 {
@@ -151,7 +151,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del nuovo schema c
 
 ## Creare un set di dati di destinazione
 
-Con uno schema XDM di destinazione creato e il relativo univoco `$id` ora puoi creare un set di dati di destinazione per contenere i dati di origine. Per creare un set di dati di destinazione, effettua una richiesta POST al `dataSets` endpoint del [API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo l’ID dello schema di destinazione all’interno del payload.
+Con uno schema XDM di destinazione creato e il relativo univoco `$id` ora puoi creare un set di dati di destinazione per contenere i dati di origine. Per creare un set di dati di destinazione, effettua una richiesta POST al `dataSets` punto finale [API del servizio catalogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornendo al tempo stesso l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -189,12 +189,12 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
-| `schemaRef.id` | URI `$id` per lo schema XDM, il set di dati sarà basato su. |
-| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Consulta la sezione su [controllo delle versioni dello schema](../../../../xdm/api/getting-started.md#versioning) per ulteriori informazioni, consulta la guida dell’API XDM. |
+| `schemaRef.id` | URI `$id` per lo schema XDM su cui si baserà il set di dati. |
+| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Vedi la sezione su [versione dello schema](../../../../xdm/api/getting-started.md#versioning) nella guida API XDM per ulteriori informazioni. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un array contenente l’ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema e utilizzata per fare riferimento al set di dati nelle chiamate API. L’ID del set di dati di destinazione è richiesto nei passaggi successivi per creare una connessione di destinazione e un flusso di dati.
+Una risposta corretta restituisce un array contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API. L’ID del set di dati di destinazione è necessario nei passaggi successivi per creare una connessione di destinazione e un flusso di dati.
 
 ```json
 [
@@ -204,9 +204,9 @@ In caso di esito positivo, la risposta restituisce un array contenente l’ID de
 
 ## Creare una connessione di destinazione {#target-connection}
 
-Le connessioni di Target creano e gestiscono una connessione di destinazione a Platform o a qualsiasi posizione in cui verranno recapitati i dati trasferiti. Le connessioni di Target contengono informazioni relative alla destinazione dei dati, al formato dei dati e all’ID della connessione di Target necessari per creare un flusso di dati. Le istanze di connessione di Target sono specifiche per un tenant e un’organizzazione IMS.
+Le connessioni di Target creano e gestiscono una connessione di destinazione a Platform o qualsiasi posizione in cui i dati trasferiti verranno trasferiti. Le connessioni di Target contengono informazioni sulla destinazione dei dati, il formato dei dati e l’ID di connessione di destinazione necessari per creare un flusso di dati. Le istanze di connessione di destinazione sono specifiche per un tenant e un’organizzazione.
 
-Per creare una connessione di destinazione, effettua una richiesta POST al `/targetConnections` endpoint del [!DNL Flow Service] API. Come parte della richiesta, devi fornire il formato dati, il `dataSetId` recuperato nel passaggio precedente e l&#39;ID della specifica di connessione fissa associato a [!DNL Data Lake]. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Per creare una connessione di destinazione, invia una richiesta POST al `/targetConnections` punto finale [!DNL Flow Service] API. Come parte della richiesta, devi fornire il formato dati, il `dataSetId` recuperati nel passaggio precedente e l’ID della specifica di connessione fissa associato a [!DNL Data Lake]. Questo ID è `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato API**
 
@@ -246,13 +246,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato specificato dei dati che si stanno portando a [!DNL Data Lake]. |
+| `connectionSpec.id` | ID della specifica di connessione utilizzato per la connessione al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Il formato specificato dei dati a cui si sta portando [!DNL Data Lake]. |
 | `params.dataSetId` | ID del set di dati di destinazione recuperato nel passaggio precedente. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è richiesto nei passaggi successivi.
+Una risposta corretta restituisce l&#39;identificatore univoco della nuova connessione di destinazione (`id`). Questo ID è necessario nei passaggi successivi.
 
 ```json
 {
@@ -263,9 +263,9 @@ In caso di esito positivo, la risposta restituisce l’identificatore univoco de
 
 ## Creare una mappatura {#mapping}
 
-Per poter acquisire i dati di origine in un set di dati di destinazione, è necessario prima mapparli sullo schema di destinazione a cui il set di dati di destinazione aderisce.
+Affinché i dati di origine possano essere acquisiti in un set di dati di destinazione, devono prima essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione.
 
-Per creare un set di mappatura, effettua una richiesta POST al `mappingSets` endpoint del [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) mentre fornisci lo schema XDM di destinazione `$id` e i dettagli dei set di mappatura da creare.
+Per creare un set di mappatura, invia una richiesta POST al gruppo `mappingSets` punto finale [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) fornendo lo schema XDM di destinazione `$id` e i dettagli dei set di mappatura che desideri creare.
 
 **Formato API**
 
@@ -306,11 +306,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `xdmSchema` | Il `$id` dello schema XDM di destinazione. |
+| `xdmSchema` | La `$id` dello schema XDM di destinazione. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della mappatura appena creata, compreso l’identificatore univoco (`id`). Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
+Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -323,9 +323,9 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 }
 ```
 
-## Recuperare un elenco di specifiche del flusso di dati {#specs}
+## Recupera un elenco di specifiche del flusso di dati {#specs}
 
-Un flusso di dati è responsabile della raccolta dei dati dalle origini e della loro introduzione in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta di GET al [!DNL Flow Service] API.
+Un flusso di dati è responsabile della raccolta dei dati da origini e del loro inserimento in Platform. Per creare un flusso di dati, devi prima ottenere le specifiche del flusso di dati eseguendo una richiesta di GET al [!DNL Flow Service] API.
 
 **Formato API**
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un elenco di specifiche del flusso di dati. ID della specifica del flusso di dati da recuperare per creare un flusso di dati utilizzando uno di [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], o  [!DNL Google PubSub], è `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+Una risposta corretta restituisce un elenco di specifiche del flusso di dati. ID della specifica del flusso di dati da recuperare per creare un flusso di dati utilizzando uno qualsiasi dei [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oppure  [!DNL Google PubSub], `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -415,14 +415,14 @@ In caso di esito positivo, la risposta restituisce un elenco di specifiche del f
 
 ## Creare un flusso di dati
 
-L’ultimo passaggio per la raccolta dei dati in streaming è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
+L’ultimo passo verso la raccolta dei dati in streaming è quello di creare un flusso di dati. A questo punto sono stati preparati i seguenti valori richiesti:
 
-- [ID connessione sorgente](#source)
+- [ID connessione di origine](#source)
 - [ID connessione di destinazione](#target)
 - [ID mappatura](#mapping)
-- [ID specifica flusso di dati](#specs)
+- [ID specifica del flusso di dati](#specs)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
 
 **Formato API**
 
@@ -466,14 +466,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `flowSpec.id` | Il [ID specifica di flusso](#specs) recuperato nel passaggio precedente. |
-| `sourceConnectionIds` | Il [ID connessione sorgente](#source) recuperato in un passaggio precedente. |
-| `targetConnectionIds` | Il [ID connessione di destinazione](#target-connection) recuperato in un passaggio precedente. |
-| `transformations.params.mappingId` | Il [ID mappatura](#mapping) recuperato in un passaggio precedente. |
+| `flowSpec.id` | La [ID delle specifiche di flusso](#specs) recuperato nel passaggio precedente. |
+| `sourceConnectionIds` | La [ID connessione di origine](#source) recuperato in un passaggio precedente. |
+| `targetConnectionIds` | La [ID connessione di destinazione](#target-connection) recuperato in un passaggio precedente. |
+| `transformations.params.mappingId` | La [ID mappatura](#mapping) recuperato in un passaggio precedente. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato.
+Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena creato.
 
 ```json
 {
@@ -484,7 +484,7 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati di streaming dal connettore di streaming. I dati in arrivo possono ora essere utilizzati da servizi Platform a valle come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati in streaming dal connettore streaming. I dati in arrivo possono ora essere utilizzati dai servizi della piattaforma a valle, come [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)

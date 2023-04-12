@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio Identity
 description: Questo documento fornisce le risposte alle domande frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Questo messaggio di errore viene visualizzato quando viene visualizzata una `gra
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione IMS con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Il token del servizio gateway non è valido
 
@@ -264,7 +264,7 @@ Quando [!DNL Identity Service] persiste un&#39;identità. All&#39;ID dell&#39;id
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione IMS con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Errore interno del server
 
@@ -330,7 +330,7 @@ Questo errore viene visualizzato quando le prime 100 righe di un batch non prese
 }
 ```
 
-Questo errore viene visualizzato quando un record acquisito presenta un’identità il cui namespace associato non esiste o è inaccessibile dall’organizzazione IMS.
+Questo errore viene visualizzato quando un record acquisito presenta un&#39;identità il cui spazio dei nomi associato non esiste o non è accessibile dall&#39;organizzazione.
 
 ### L’inserimento batch non viene eseguito perché IMS Org non è disponibile per Private Identity Graph
 
@@ -342,7 +342,7 @@ Questo errore viene visualizzato quando un record acquisito presenta un’identi
 }
 ```
 
-Quando si acquisiscono dati batch, questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione IMS con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
+Quando si acquisiscono dati batch, questo messaggio di errore viene visualizzato quando non è stato eseguito il provisioning dell’organizzazione con le autorizzazioni appropriate per [!DNL Identity Service]. Per risolvere il problema, contatta l’amministratore di sistema.
 
 ### Errore interno
 

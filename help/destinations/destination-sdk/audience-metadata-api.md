@@ -1,29 +1,29 @@
 ---
-description: Questa pagina descrive tutte le operazioni API che è possibile eseguire utilizzando l’endpoint API "/authoring/audience-templates".
-title: Operazioni API per endpoint metadati pubblico
+description: Questa pagina descrive tutte le operazioni API che puoi eseguire utilizzando l'endpoint API `/authoring/audience-templates`.
+title: Operazioni API per l’endpoint dei metadati del pubblico
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '873'
 ht-degree: 5%
 
 ---
 
-# Operazioni API per endpoint metadati pubblico
+# Operazioni API per l’endpoint dei metadati del pubblico
 
 >[!IMPORTANT]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Questa pagina elenca e descrive tutte le operazioni API che è possibile eseguire utilizzando `/authoring/audience-templates` Endpoint API Per una descrizione di quando utilizzare questo endpoint, leggi [gestione dei metadati del pubblico](./audience-metadata-management.md).
+Questa pagina elenca e descrive tutte le operazioni API che puoi eseguire utilizzando `/authoring/audience-templates` Endpoint API. Per una descrizione di quando utilizzare questo endpoint, leggere [gestione dei metadati del pubblico](./audience-metadata-management.md).
 
-## Guida introduttiva alle operazioni API per i modelli di pubblico {#get-started}
+## Guida introduttiva alle operazioni API con i modelli di pubblico {#get-started}
 
-Prima di continuare, controlla [guida introduttiva](./getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
 
 ## Creare un nuovo modello di pubblico {#create}
 
-Per creare un nuovo modello di pubblico, devi effettuare una richiesta POST al `/authoring/audience-templates` endpoint.
+Puoi creare un nuovo modello di pubblico effettuando una richiesta di POST al `/authoring/audience-templates` punto finale.
 
 **Formato API**
 
@@ -33,7 +33,7 @@ POST /authoring/audience-templates
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo modello di metadati di pubblico, configurato dai parametri forniti nel payload. Il payload riportato di seguito include tutti i parametri accettati dal `/authoring/audience-templates` endpoint. Tieni presente che non è necessario aggiungere tutti i parametri alla chiamata e che il modello è personalizzabile, in base ai requisiti API.
+La seguente richiesta crea un nuovo modello di metadati del pubblico, configurato dai parametri forniti nel payload. Il payload seguente include tutti i parametri accettati dal `/authoring/audience-templates` punto finale. Non è necessario aggiungere tutti i parametri alla chiamata e il modello è personalizzabile, in base ai requisiti API.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -183,28 +183,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Proprietà | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
-| `name` | Stringa | Il nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell’interfaccia utente di Experience Platform, seguito dal messaggio di errore analizzato da `metadataTemplate.create.errorSchemaMap`. |
-| `url` | Stringa | L’URL e l’endpoint dell’API, utilizzati per creare, aggiornare, eliminare o convalidare tipi di pubblico/segmenti nella piattaforma. Due esempi di settore: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
-| `httpMethod` | Stringa | Il metodo utilizzato sull’endpoint per creare, aggiornare, eliminare o convalidare in modo programmatico il segmento o il pubblico nella destinazione. Ad esempio: `POST`, `PUT`, `DELETE` |
-| `headers.header` | Stringa | Specifica eventuali intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"Content-Type"` |
-| `headers.value` | Stringa | Specifica il valore delle intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"application/x-www-form-urlencoded"` |
-| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all’API. I parametri da aggiungere al `requestBody` L’oggetto dipende dai campi accettati dall’API. Ad esempio, consulta [primo esempio di modello](./audience-metadata-management.md#example-1) nel documento relativo alla funzionalità Metadati del pubblico. |
-| `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta [esempi di modelli](./audience-metadata-management.md#examples) nel documento relativo alla funzionalità Metadati del pubblico. |
-| `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta restituiti dall’API quando vengono chiamati. |
-| `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta [ esempi di modelli](./audience-metadata-management.md#examples) nel documento relativo alla funzionalità Metadati del pubblico. |
-| `responseErrorFields.value` | Stringa | Analizza eventuali messaggi di errore restituiti nelle risposte alle chiamate API dalla destinazione. Questi messaggi di errore verranno visualizzati dagli utenti nell’interfaccia utente di Experience Platform. |
-| `validations.field` | Stringa | Indica se è necessario eseguire le convalide per qualsiasi campo prima di effettuare chiamate API alla destinazione. Ad esempio, puoi utilizzare `{{validations.accountId}}` per convalidare l’ID account dell’utente. |
-| `validations.regex` | Stringa | Indica come deve essere strutturato il campo affinché la convalida possa passare. |
+| `name` | Stringa | Nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell’interfaccia utente di Experience Platform, seguito dal messaggio di errore analizzato da `metadataTemplate.create.errorSchemaMap`. |
+| `url` | Stringa | L’URL e l’endpoint dell’API, utilizzati per creare, aggiornare, eliminare o convalidare i tipi di pubblico/segmenti nella piattaforma. Due esempi di settore sono: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | Stringa | Il metodo utilizzato sull’endpoint per creare, aggiornare, eliminare o convalidare programmaticamente il segmento o il pubblico nella destinazione. Ad esempio: `POST`, `PUT`, `DELETE` |
+| `headers.header` | Stringa | Specifica le intestazioni HTTP da aggiungere alla chiamata all&#39;API. Ad esempio, `"Content-Type"` |
+| `headers.value` | Stringa | Specifica il valore delle intestazioni HTTP da aggiungere alla chiamata all&#39;API. Ad esempio, `"application/x-www-form-urlencoded"` |
+| `requestBody` | Stringa | Specifica il contenuto del corpo del messaggio da inviare all&#39;API. I parametri da aggiungere al `requestBody` a seconda dei campi accettati dall’API. Ad esempio, consulta [primo esempio di modello](./audience-metadata-management.md#example-1) nel documento sulla funzionalità metadati pubblico . |
+| `responseFields.name` | Stringa | Specifica tutti i campi di risposta che l&#39;API restituisce quando viene chiamata. Ad esempio, consulta [esempi di modelli](./audience-metadata-management.md#examples) nel documento sulla funzionalità metadati pubblico . |
+| `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta che l&#39;API restituisce quando viene chiamata. |
+| `responseErrorFields.name` | Stringa | Specifica tutti i campi di risposta che l&#39;API restituisce quando viene chiamata. Ad esempio, consulta [ esempi di modelli](./audience-metadata-management.md#examples) nel documento sulla funzionalità metadati pubblico . |
+| `responseErrorFields.value` | Stringa | Analizza eventuali messaggi di errore restituiti nelle risposte alle chiamate API dalla destinazione. Questi messaggi di errore verranno visualizzati agli utenti nell’interfaccia utente di Experience Platform. |
+| `validations.field` | Stringa | Indica se è necessario eseguire le convalide per qualsiasi campo prima che le chiamate API vengano effettuate alla destinazione. Ad esempio, puoi utilizzare `{{validations.accountId}}` per convalidare l’ID account dell’utente. |
+| `validations.regex` | Stringa | Indica la struttura del campo per il superamento della convalida. |
 
 {style="table-layout:auto"}
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico appena creato.
+Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico appena creato.
 
-## Aggiorna modello di pubblico {#update}
+## Aggiornare il modello di pubblico {#update}
 
-Per aggiornare un modello di pubblico esistente, devi effettuare una richiesta PUT al `/authoring/audience-templates` e fornendo l’ID istanza del modello di pubblico da aggiornare. Fornisci il modello aggiornato nel corpo della chiamata.
+Puoi aggiornare un modello di pubblico esistente effettuando una richiesta di PUT al `/authoring/audience-templates` e fornisce l’ID istanza del modello di pubblico da aggiornare. Nel corpo della chiamata , fornisci il modello aggiornato.
 
 **Formato API**
 
@@ -316,9 +316,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 }
 ```
 
-## Recuperare un elenco di modelli di pubblico {#retrieve-list}
+## Recupera un elenco di modelli di pubblico {#retrieve-list}
 
-Per recuperare un elenco di tutti i modelli di pubblico per la tua organizzazione IMS, devi effettuare una richiesta GET al `/authoring/audience-templates` endpoint.
+Puoi recuperare un elenco di tutti i modelli di pubblico per la tua organizzazione effettuando una richiesta di GET al `/authoring/audience-templates` punto finale.
 
 **Formato API**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **Richiesta**
 
-La seguente richiesta recupererà l’elenco dei modelli di pubblico a cui hai accesso, in base alla configurazione di sandbox e organizzazione IMS.
+La seguente richiesta recupererà l’elenco di modelli di pubblico a cui hai accesso, in base alla configurazione dell’organizzazione e della sandbox.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Risposta**
 
-La seguente risposta restituisce lo stato HTTP 200 con un elenco di modelli di metadati di pubblico a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `instanceId` corrisponde al modello per una destinazione. La risposta viene troncata per brevità.
+La risposta seguente restituisce lo stato HTTP 200 con un elenco di modelli di metadati del pubblico a cui hai accesso, in base all’ID organizzazione e al nome della sandbox utilizzati. Uno `instanceId` corrisponde al modello per una destinazione. La risposta viene troncata per brevità.
 
 ```json
 {
@@ -447,9 +447,9 @@ La seguente risposta restituisce lo stato HTTP 200 con un elenco di modelli di m
 }
 ```
 
-## Recuperare un modello di pubblico specifico {#get}
+## Recupera un modello di pubblico specifico {#get}
 
-Per recuperare informazioni dettagliate su un modello di pubblico specifico, effettua una richiesta GET al `/authoring/audience-templates` e fornendo l’ID istanza del modello di pubblico da recuperare.
+Puoi recuperare informazioni dettagliate su un modello di pubblico specifico effettuando una richiesta GET al `/authoring/audience-templates` e fornisce l’ID istanza del modello di pubblico che desideri recuperare.
 
 **Formato API**
 
@@ -459,7 +459,7 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | ID del modello di metadati del pubblico che desideri recuperare. |
+| `{INSTANCE_ID}` | ID del modello di metadati del pubblico da recuperare. |
 
 **Richiesta**
 
@@ -473,7 +473,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul modello di pubblico specificato.
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul modello di pubblico specificato.
 
 ```json
 {
@@ -585,7 +585,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 ## Eliminare un modello di pubblico specifico {#delete}
 
-Per eliminare il modello di pubblico specificato, devi effettuare una richiesta DELETE al `/authoring/audience-templates` e fornendo l’ID del modello di pubblico da eliminare nel percorso della richiesta.
+Puoi eliminare il modello di pubblico specificato effettuando una richiesta di DELETE al `/authoring/audience-templates` e fornisce l’ID del modello di pubblico da eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -595,7 +595,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Il `id` del modello di pubblico da eliminare. |
+| `{INSTANCE_ID}` | La `id` del modello di pubblico da eliminare. |
 
 **Richiesta**
 
@@ -609,7 +609,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
+Una risposta corretta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
 
 ## Gestione degli errori API
 
@@ -617,4 +617,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai quando utilizzare i modelli di metadati del pubblico e come configurare un modello di metadati del pubblico utilizzando `/authoring/audience-templates` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai quando utilizzare i modelli di metadati del pubblico e come configurare un modello di metadati del pubblico utilizzando `/authoring/audience-templates` Endpoint API. Leggi [come utilizzare Destination SDK per configurare la destinazione](./configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.

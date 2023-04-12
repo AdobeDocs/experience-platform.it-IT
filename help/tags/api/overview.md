@@ -2,10 +2,10 @@
 title: Guida dell’API di Reactor
 description: L’API di Reactor consente agli sviluppatori di gestire in modo programmatico tutte le risorse per i tag in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 95%
+source-wordcount: '1081'
+ht-degree: 94%
 
 ---
 
@@ -19,7 +19,7 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, consulta l
 
 ## Aziende
 
-Un’azienda rappresenta l’organizzazione di un utente di tag, in genere una divisione business. Le aziende corrispondono 1:1 agli ID organizzazione IMS. Gli utenti API hanno visibilità solo delle aziende a cui hanno accesso.
+Un’azienda rappresenta l’organizzazione di un utente di tag, in genere una divisione business. Queste aziende corrispondono a 1:1 con gli ID organizzazione. Gli utenti API hanno visibilità solo delle aziende a cui hanno accesso.
 
 Per informazioni su come visualizzare le aziende disponibili nell’API, consulta la [guida dell’endpoint “companies”](./endpoints/companies.md).
 
@@ -117,7 +117,7 @@ L’endpoint `/search` fpermette di trovare le risorse che corrispondono a un da
 
 ## Segreti
 
-Un segreto contiene credenziali che consentono l&#39;autenticazione dell&#39;inoltro eventi in un altro sistema per lo scambio sicuro dei dati. Consulta la [guida ai segreti](./guides/secrets.md) per una panoramica sul funzionamento dei segreti nell’inoltro degli eventi e [guida dell’endpoint &quot;secrets&quot;](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
+Un segreto contiene credenziali che consentono l&#39;inoltro degli eventi per l&#39;autenticazione in un altro sistema per lo scambio sicuro dei dati. Consulta la sezione [guida ai segreti](./guides/secrets.md) per una panoramica del funzionamento dei segreti nell&#39;inoltro degli eventi e [guida all’endpoint segreti](./endpoints/secrets.md) per scoprire come gestirli nell’API di Reactor.
 
 ## Passaggi successivi
 
