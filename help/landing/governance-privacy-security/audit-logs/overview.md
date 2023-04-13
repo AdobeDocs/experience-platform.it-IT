@@ -2,7 +2,7 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 28%
@@ -43,7 +43,7 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 | [Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
 | [Registri di controllo](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Esporta</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Attributo calcolato](../../../profile/computed-attributes/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| Attributo calcolato | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
 | [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
 | [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../edge/datastreams/data-prep.md)</li></ul> |
