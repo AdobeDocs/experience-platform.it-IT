@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per il profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
+source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -186,6 +186,10 @@ Per garantire che le richieste di privacy elaborino tutti gli attributi del clie
 ## Elimina elaborazione richiesta {#delete}
 
 Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. I record vengono quindi rimossi al termine del processo di privacy.
+
+>[!IMPORTANT]
+>
+>Le richieste di cancellazione della privacy non sono istantanee e possono variare a seconda dei servizi interessati e di altri fattori che incidono, come la posizione geografica. Il termine per il completamento dei lavori sulla privacy può variare da 15 a 45 giorni, ma non è garantito.
 
 A seconda che tu abbia incluso o meno il servizio Identity (`identity`) e il lago dati (`aepDataLake`) come prodotti nella richiesta di accesso a dati personali per il profilo (`ProfileService`), diversi set di dati relativi al profilo vengono rimossi dal sistema in momenti potenzialmente diversi:
 
