@@ -4,10 +4,10 @@ title: Panoramica sulle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali. Scopri quali ESP sono supportati come destinazioni di Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
+source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 3%
+source-wordcount: '371'
+ht-degree: 4%
 
 ---
 
@@ -24,9 +24,10 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
-* [Marketing Cloud Salesforce (API)](salesforce-marketing-cloud-exact-target.md)
+* [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(File) Oracle Eloqua](oracle-eloqua.md)
-* [(File) Marketing Cloud Salesforce](salesforce-marketing-cloud.md)
+* [(File) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
+* [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [SendGrid](sendgrid.md)
 
