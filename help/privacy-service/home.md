@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica di Privacy Service
 description: Privacy Service consente di facilitare la conformità automatica alle normative sulla privacy nelle operazioni sui dati di Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: e09f0598e1d8dc007d0fdfcf13da11d5cad94c54
+source-git-commit: 3296209a15a5f88ab14e16de25d554b9df712445
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1623'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Le autorizzazioni per Adobe Experience Platform Privacy Service sono state migliorate per aumentarne il livello di granularità. Queste modifiche consentono agli amministratori dell’organizzazione di concedere a più utenti l’accesso con il ruolo e il livello di autorizzazione desiderati. Gli utenti dell’account tecnico devono aggiornare le proprie autorizzazioni Privacy Service in quanto questo aggiornamento imminente rappresenta una modifica temporanea per loro. L&#39;applicazione di questa modifica delle autorizzazioni avrà luogo il **28 marzo 2023**.
+>Le autorizzazioni per Adobe Experience Platform Privacy Service sono state migliorate per aumentarne il livello di granularità. Queste modifiche consentono agli amministratori dell’organizzazione di concedere a più utenti l’accesso con il ruolo e il livello di autorizzazione desiderati. Gli utenti dell’account tecnico devono aggiornare le proprie autorizzazioni Privacy Service in quanto questo aggiornamento imminente rappresenta una modifica temporanea per loro. L&#39;applicazione di questa modifica delle autorizzazioni avrà luogo il **13 aprile 2023**. Consulta la documentazione su [migrazione delle credenziali API legacy](./permissions.md#migrate-tech-accounts) per informazioni sulla risoluzione del problema.
 >
 >Gli account tecnici sono disponibili per i clienti aziendali e creati tramite Adobe Developers Console. L’Adobe ID di un titolare di account tecnico termina in `@techacct.adobe.com`. Se non sei sicuro di essere un titolare di account tecnico, contatta l’amministratore dell’organizzazione.
 
