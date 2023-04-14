@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
+source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1620'
 ht-degree: 39%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 39%
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento illustra le note sulla versione per l&#39;estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK stesso, consulta la sezione [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=it).
+
+## Versione 2.16.1 - 14 aprile 2023
+
+* È stato risolto un problema relativo agli elementi di dati Oggetto e Variabile XDM a causa del quale non era possibile selezionare uno schema da una sandbox non predefinita.
 
 ## Versione 2.16.0 - 30 marzo 2023
 
