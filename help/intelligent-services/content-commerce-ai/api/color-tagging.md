@@ -1,29 +1,36 @@
 ---
-keywords: Experience Platform;guida introduttiva;contenuto;tagging contenuto;tagging colore;estrazione colore;
+keywords: Experience Platform;guida introduttiva;contenuto;assegnazione tag contenuti;assegnazione tag colore;estrazione colore;
 solution: Experience Platform
-title: Assegnazione di tag colore nell’API di assegnazione tag contenuto
-description: Il servizio di assegnazione tag colore, quando viene fornita un’immagine, può calcolare l’istogramma dei colori pixel e ordinarli in base ai colori dominanti in contenitori.
+title: Assegnazione di tag colore nell’API per l’assegnazione tag dei contenuti
+description: Il servizio di assegnazione dei colori, quando viene fornita un’immagine, può calcolare l’istogramma dei colori dei pixel e ordinarli in blocchi in base ai colori dominanti.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '676'
 ht-degree: 5%
 
 ---
 
-# Assegnazione di tag colore
+# Assegnazione tag colore
 
-Il servizio di assegnazione tag colore, quando viene fornita un’immagine, può calcolare un istogramma dei colori pixel e ordinarli in base ai colori dominanti in contenitori. I colori nei pixel dell’immagine sono inseriti in 40 colori predominanti che sono rappresentativi dello spettro di colori. Viene quindi calcolato un istogramma di valori di colore tra questi 40 colori. Il servizio è disponibile in due varianti:
+Il servizio di assegnazione tag colore, quando viene fornita un’immagine, può calcolare un istogramma di colori pixel e ordinarli in blocchi in base a colori dominanti. I colori nei pixel dell&#39;immagine sono inseriti in 40 colori predominanti che sono rappresentativi dello spettro di colori. Un istogramma di valori di colore viene quindi calcolato tra i 40 colori. Il servizio ha due varianti:
 
-**Assegnazione tag colore (immagine intera)**
+**Assegnazione tag colore (immagine completa)**
 
-Questo metodo estrae un istogramma a colori sull&#39;intera immagine.
+Questo metodo estrae un istogramma di colore sull&#39;intera immagine.
 
-**Applicazione di tag colore (con maschera)**
+**Assegnazione tag colore (con maschera)**
 
-Questo metodo utilizza un sistema di estrazione in primo piano basato sull&#39;apprendimento profondo per identificare gli oggetti in primo piano. Il modello viene addestrato su un catalogo di immagini di e-commerce. Una volta estratto l&#39;oggetto di primo piano, viene calcolato un istogramma sui colori dominanti come descritto in precedenza.
+Questo metodo utilizza un estrattore in primo piano basato su apprendimento profondo per identificare gli oggetti in primo piano. Una volta estratti gli oggetti in primo piano, viene calcolato un istogramma sui colori dominanti sia per le aree in primo piano che per quelle di sfondo, insieme all&#39;intera immagine.
 
-Nell&#39;esempio riportato in questo documento è stata utilizzata l&#39;immagine seguente:
+**Estrazione del tono**
+
+Oltre alle varianti sopra menzionate, è possibile configurare il servizio per recuperare un istogramma di toni per:
+
+- Immagine complessiva (quando si utilizza la variante immagine completa)
+- Immagine complessiva, aree in primo piano e di sfondo (quando si utilizza la variante con maschera)
+
+L&#39;immagine seguente è stata utilizzata nell&#39;esempio mostrato in questo documento:
 
 ![immagine di prova](../images/QQAsset1.jpg)
 
@@ -33,11 +40,9 @@ Nell&#39;esempio riportato in questo documento è stata utilizzata l&#39;immagin
 POST /services/v2/predict
 ```
 
-**Richiesta**
+**Richiesta - variante immagine completa**
 
-Nell&#39;esempio di richiesta seguente viene utilizzato il metodo full-image per l&#39;assegnazione dei tag colore.
-
-La richiesta seguente estrae i colori da un’immagine in base ai parametri di input forniti nel payload. Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella seguente il payload di esempio.
+L’esempio di richiesta seguente utilizza il metodo dell’immagine completa per l’assegnazione di tag colore ed estrae i colori da un’immagine in base ai parametri di input forniti nel payload. Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella riportata di seguito.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -46,13 +51,13 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -H "content-type: multipart/form-data" \
 -H "authorization: Bearer $API_TOKEN" \
 -F 'contentAnalyzerRequests={
-  "sensei:name": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
   "sensei:invocation_mode": "synchronous",
   "sensei:invocation_batch": false,
   "sensei:engines": [
     {
       "sensei:execution_info": {
-        "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58"
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
       "sensei:inputs": {
         "documents": [{
@@ -61,8 +66,8 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
           }]
       },
       "sensei:params": {
-        "application-id": "1234",
-        "enable_mask": 0
+        "top_n": 5,
+        "min_coverage": 0.005      
       },
       "sensei:outputs":{
         "result" : {
@@ -76,113 +81,295 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
-| Proprietà | Descrizione | Obbligatorio |
-| --- | --- | --- |
-| `application-id` | ID dell’applicazione creata. | Sì |
-| `documents` | Elenco di elementi JSON in cui ogni elemento dell’elenco rappresenta un documento. | Sì |
-| `top_n` | Numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato in combinazione con `threshold`, il numero di risultati restituiti è il minore tra i due limiti impostati. Il valore predefinito per questa proprietà è `0`. | No |
-| `min_coverage` | Soglia di copertura oltre la quale i risultati devono essere restituiti. Escludi il parametro per restituire tutti i risultati. | No |
-| `resize_image` | Indica se l&#39;immagine di input deve essere ridimensionata. Per impostazione predefinita, le immagini vengono ridimensionate a 320*320 pixel prima dell&#39;applicazione del tag colore. A scopo di debug, possiamo consentire l’esecuzione del codice anche sull’immagine intera impostandolo su False. | No |
-| `enable_mask` | Attiva/disattiva l&#39;assegnazione di tag colore nella maschera. | No |
+**Risposta - variante immagine completa**
 
-| Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
-| -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL preceduto del documento da cui estrarre le frasi chiave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo di archivio in cui viene memorizzata l’immagine. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilizzalo quando trasmetti un file immagine come argomento multipart invece di utilizzare URL prefirmati. |
-| `dc:format` | string | Sì | - | &quot;image/jpg&quot;, <br> image/jpeg <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | La codifica dell’immagine viene verificata in base ai tipi di codifica di input consentiti prima dell’elaborazione. |
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce i dettagli dei colori estratti. Ogni colore è rappresentato da un `feature_value` key, che contiene le seguenti informazioni:
+Una risposta corretta restituisce i dettagli dei colori estratti. Ogni colore è rappresentato da un `feature_value` , che contiene le seguenti informazioni:
 
 - Un nome di colore
-- Percentuale di visualizzazione del colore in relazione all&#39;immagine
+- Percentuale visualizzata in relazione all&#39;immagine
 - Valore RGB del colore
 
-Nel primo oggetto di esempio riportato di seguito, `feature_value` di `Mud_Green,0.069,102,72,95` significa che il colore trovato è verde fango, verde fango si trova nel 6,9% dell&#39;immagine, e ha un valore RGB di 102,72,95.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`significa che il colore trovato è bianco, che si trova nel 58,34% dell&#39;immagine, e ha un valore RGB medio di 254, 254, 243.
 
 ```json
 {
-  "status": 200,
-  "content_id": "test_image.jpg",
-  "cas_responses": [
-    {
-{
-  "statuses": [
-    {
-      "sensei:engine": "Feature:cintel-image-classifier:Service-60887e328ded447d86e01122a4f19c58",
-      "invocations": [
-        {
-          "sensei:outputs": {
-            "result": {
-              "sensei:multipart_field_name": "result",
-              "dc:format": "application/json"
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "bfpzaJxKDxtgxpjUj5QDrN1jasjUw2RM"
+}  
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
             }
-          },
-          "message": null,
-          "status": "200"
         }
-      ]
     }
-  ],
-  "request_id": "hsxycVq5Q9KbZ7MWrt6NXcSNWbonSLf3"
-}
+}]
+```
 
-[
-  {
-    "request_element_id": "0",
-    "colors": {
-      "Mud_Green": {
-        "coverage": 0.0694,
-        "rgb": {
-          "red": 102,
-          "blue": 72,
-          "green": 95
-        }
+Notate che il risultato qui ha il colore estratto sulla regione immagine &quot;complessiva&quot;.
+
+**Richiesta - variante immagine mascherata**
+
+L’esempio di richiesta seguente utilizza il metodo di mascheramento per l’assegnazione di tag colore. Possiamo attivarlo impostando la variabile `enable_mask` parametro a `true` nella richiesta.
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
+-H 'Prefer: respond-async, wait=59' \
+-H "x-api-key: $API_KEY" \
+-H "content-type: multipart/form-data" \
+-H "authorization: Bearer $API_TOKEN" \
+-F 'contentAnalyzerRequests={
+  "sensei:name": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+  "sensei:invocation_mode": "synchronous",
+  "sensei:invocation_batch": false,
+  "sensei:engines": [
+    {
+      "sensei:execution_info": {
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72"
       },
-      "Dark_Brown": {
-        "coverage": 0.1226,
-        "rgb": {
-          "red": 113,
-          "blue": 77,
-          "green": 84
-        }
+      "sensei:inputs": {
+        "documents": [{
+            "sensei:multipart_field_name": "infile_1",
+            "dc:format": "image/jpg"
+          }]
       },
-      "Pink": {
-        "coverage": 0.0731,
-        "rgb": {
-          "red": 234,
-          "blue": 201,
-          "green": 209
-        }
+      "sensei:params": {
+        "top_n": 5,
+        "min_coverage": 0.005,
+        "enable_mask": true,
+        "retrieve_tone": true     
       },
-      "Dark_Gray": {
-        "coverage": 0.1533,
-        "rgb": {
-          "red": 63,
-          "blue": 58,
-          "green": 59
-        }
-      },
-      "Olive": {
-        "coverage": 0.492,
-        "rgb": {
-          "red": 177,
-          "blue": 126,
-          "green": 170
-        }
-      },
-      "Brown": {
-        "coverage": 0.0896,
-        "rgb": {
-          "red": 141,
-          "blue": 85,
-          "green": 105
+      "sensei:outputs":{
+        "result" : {
+          "sensei:multipart_field_name" : "result",
+          "dc:format": "application/json"
         }
       }
     }
-  }
-]
-}
+  ]
+}' \
+-F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
+
+>Nota: Inoltre, abbiamo impostato la `retrieve_tone` parametro a `true` nella richiesta di cui sopra. Questo ci permette di recuperare un istogramma di distribuzione del tono su toni caldi, neutri e freddi nelle aree generali, in primo piano e di sfondo dell&#39;immagine.
+
+**Risposta: variante immagine mascherata**
+
+```json
+{
+    "statuses": [{
+        "sensei:engine": "Feature:autocrop:Service-af865523d46547e2b17fdf9b38e32a72",
+        "invocations": [{
+            "sensei:outputs": {
+                "result": {
+                    "sensei:multipart_field_name": "result",
+                    "dc:format": "application/json"
+                }
+            },
+            "message": null,
+            "status": "200"
+        }]
+    }],
+    "request_id": "gpeCyJsrJvOWd94WwZOyPBPrKi2BQyla"
+}  
+ 
+ 
+[{
+    "overall": {
+        "colors": {
+            "White": {
+                "coverage": 0.5834,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Orange": {
+                "coverage": 0.254,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.0817,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.0727,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0082,
+                "rgb": {
+                    "red": 253,
+                    "green": 236,
+                    "blue": 174
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.4084,
+            "neutral": 0.5916,
+            "cool": 0
+        }
+    },
+    "foreground": {
+        "colors": {
+            "Orange": {
+                "coverage": 0.6022,
+                "rgb": {
+                    "red": 249,
+                    "green": 165,
+                    "blue": 45
+                }
+            },
+            "Gold": {
+                "coverage": 0.1935,
+                "rgb": {
+                    "red": 253,
+                    "green": 188,
+                    "blue": 58
+                }
+            },
+            "Mustard": {
+                "coverage": 0.1722,
+                "rgb": {
+                    "red": 253,
+                    "green": 207,
+                    "blue": 84
+                }
+            },
+            "Cream": {
+                "coverage": 0.0173,
+                "rgb": {
+                    "red": 253,
+                    "green": 235,
+                    "blue": 170
+                }
+            },
+            "Yellow": {
+                "coverage": 0.0148,
+                "rgb": {
+                    "red": 254,
+                    "green": 229,
+                    "blue": 117
+                }
+            }
+        },
+        "tones": {
+            "warm": 0.9827,
+            "neutral": 0.0173,
+            "cool": 0
+        }
+    },
+    "background": {
+        "colors": {
+            "White": {
+                "coverage": 0.9923,
+                "rgb": {
+                    "red": 254,
+                    "green": 254,
+                    "blue": 243
+                }
+            },
+            "Dark_Brown": {
+                "coverage": 0.0077,
+                "rgb": {
+                    "red": 83,
+                    "green": 68,
+                    "blue": 57
+                }
+            }
+        },
+        "tones": {
+            "warm": 0,
+            "neutral": 1.0,
+            "cool": 0
+        }
+    }
+}]
+```
+
+Oltre ai colori dell&#39;immagine complessiva, ora è possibile vedere anche i colori provenienti dalle aree in primo piano e di sfondo. Poiché abiliteremo il recupero dei toni per ciascuna delle aree di cui sopra, possiamo anche recuperare un istogramma dei toni.
+
+**Parametri di input**
+
+| Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
+| --- | --- | --- | --- | --- | --- |
+| `documents` | array (Document-Object) | Sì | - | Vedi sotto | Elenco di elementi json con ogni elemento dell’elenco che rappresenta un documento. |
+| `top_n` | number | No | 0 | Numero intero non negativo | Numero di risultati da restituire. 0, per restituire tutti i risultati. Se utilizzato insieme alla soglia, il numero di risultati restituiti sarà inferiore a uno dei due limiti. |
+| `min_coverage` | number | No | 0.05 | Numero reale | Soglia di copertura oltre la quale è necessario restituire i risultati. Escludi parametro per restituire tutti i risultati. |
+| `resize_image` | number | No | True | True/False | Se ridimensionare o meno l’immagine di input. Per impostazione predefinita, le immagini vengono ridimensionate a 320*320 pixel prima dell’estrazione del colore. A scopo di debug possiamo consentire l’esecuzione del codice anche su immagine completa, impostando questo su False. |
+| `enable_mask` | number | No | False | True/False | Abilita/disabilita l’estrazione del colore |
+| `retrieve_tone` | number | No | False | True/False | Abilita/disabilita l’estrazione del tono |
+
+**Oggetto Document**
+
+| Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
+| -----| --------- | -------- | ------- | ------ | ----------- |
+| `repo:path` | string | - | - | - | URL del documento da cui estrarre le frasi chiave. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene memorizzato il documento. |
+| `sensei:multipart_field_name` | string | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multiparte anziché utilizzare URL prefirmati. |
+| `dc:format` | string | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/mspada&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.description&quot; | La codifica del documento viene controllata in base ai tipi di codifica di input consentiti prima di essere elaborata. |

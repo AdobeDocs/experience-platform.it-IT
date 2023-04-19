@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;guida introduttiva;contenuto;assegnazione tag contenuto;tag parole chiave;assegnazione tag parole chiave
+keywords: Experience Platform;guida introduttiva;contenuto;assegnazione tag contenuti;tag parole chiave;assegnazione tag parole chiave
 solution: Experience Platform
-title: Assegnazione di tag alle parole chiave nell’API di assegnazione tag contenuto
-description: Il servizio di assegnazione tag parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono meglio l'oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità denominate (NER) e di tag delle parole chiave non supervisionati.
+title: Assegnazione di tag alle parole chiave nell’API per l’assegnazione tag dei contenuti
+description: Il servizio di assegnazione tag parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono meglio l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e assegnazione di tag alle parole chiave senza supervisione.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 6%
+source-wordcount: '447'
+ht-degree: 5%
 
 ---
 
 # Assegnazione tag parole chiave
 
-Quando viene fornito un documento di testo, il servizio di assegnazione tag parole chiave estrae automaticamente parole chiave o frasi chiave che descrivono meglio l&#39;oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità denominate (NER) e di tag delle parole chiave non supervisionati.
+Se viene fornito un documento di testo, il servizio di assegnazione tag per parola chiave estrae automaticamente parole chiave o frasi chiave che descrivono al meglio l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e assegnazione di tag alle parole chiave senza supervisione.
 
-Nella tabella seguente sono elencate le entità denominate che [!DNL Content Tagging] ha identificato:
+Nella tabella seguente sono elencate le entità denominate che [!DNL Content Tagging] può identificare:
 
 | Nome entità | Descrizione |
 | --- | --- |
-| PERSONA | Persone, anche fittizie. |
+| PERSONA | Persone, anche immaginarie. |
 | GPE | Paesi, città e stati. |
-| LOC | Località non-GPE, catene montuose e corpi idrici. |
+| LOC | Posizioni non GPE, catene montuose e corpi idrici. |
 | FAC | Edifici, aeroporti, autostrade, ponti, ecc. |
-| ORG | Società, agenzie, istituzioni, ecc. |
+| ORO | Aziende, agenzie, istituzioni, ecc. |
 | PRODOTTO | Oggetti, veicoli, alimenti, ecc. (Non servizi.) |
-| EVENTO | Chiamati uragani, battaglie, guerre, eventi sportivi, ecc. |
+| EVENTO | Uragani, battaglie, guerre, eventi sportivi, ecc. |
 | WORK_OF_ART | Titoli di libri, canzoni, ecc. |
-| LEGGE | Documenti nominativi trasformati in leggi. |
-| LINGUA | Qualsiasi lingua denominata. |
+| LEGGE | Documenti denominati creati in leggi. |
+| LINGUA | Qualsiasi linguaggio denominato. |
 
 **Formato API**
 
@@ -40,9 +40,9 @@ POST /services/v2/predict
 
 La richiesta seguente estrae parole chiave da un documento in base ai parametri di input forniti nel payload.
 
-Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella seguente il payload di esempio.
+Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella riportata di seguito.
 
-Questo [pdf di esempio](../pdf-files/simple-text.pdf) file è stato utilizzato nell&#39;esempio riportato in questo documento.
+Questo [pdf campione](../pdf-files/simple-text.pdf) file utilizzato nell&#39;esempio mostrato in questo documento.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -86,26 +86,29 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**Parametri di input**
+
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `application-id` | ID dell’applicazione creata. | Sì |
-| `top_n` | Numero di risultati da restituire. 0, per restituire tutti i risultati. Se utilizzato insieme alla soglia, il numero di risultati restituiti sarà inferiore a entrambi i limiti. | No |
-| `min_relevance` | Soglia di punteggio al di sotto della quale devono essere restituiti i risultati. Escludi il parametro per restituire tutti i risultati. | No |
+| `top_n` | Numero di risultati da restituire. 0, per restituire tutti i risultati. Se utilizzato insieme alla soglia, il numero di risultati restituiti sarà inferiore a uno dei due limiti. | No |
+| `min_relevance` | Soglia punteggio al di sotto della quale devono essere restituiti i risultati. Escludi il parametro per restituire tutti i risultati. | No |
 | `min_key_phrase_length` | Numero minimo di parole richieste nelle frasi chiave. | No |
 | `max_key_phrase_length` | Numero massimo di parole richieste nelle frasi chiave. | No |
-| `last_semantic_unit_type` | Restituisce solo le unità semantiche fino al livello specificato nella risposta gerarchica. &quot;key_phrase&quot; restituisce solo frasi chiave, &quot;linked_entity&quot; restituisce solo frasi chiave e le entità collegate corrispondenti e &quot;concept&quot; restituisce frasi chiave, entità collegate e concetti. | No |
+| `last_semantic_unit_type` | Restituisce solo le unità semantiche fino al livello specificato nella risposta gerarchica. &quot;key_phrase&quot; restituisce solo frasi chiave, &quot;linked_entity&quot; restituisce solo frasi chiave ed entità collegate corrispondenti e &quot;concept&quot; restituisce frasi chiave, entità collegate e concetti. | No |
 | `entity_types` | Tipi di entità da restituire come frasi chiave. | No |
+
+**Oggetto Document**
 
 | Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL preceduto del documento da cui estrarre le frasi chiave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene archiviato il documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multipart anziché utilizzare URL prefirmati. |
-| `dc:format` | string | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;<br>&quot;application/rtf&quot;<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;<br>&quot;application/vnd.ms-powerpoint&quot;<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | La codifica del documento viene verificata in base ai tipi di codifica di input consentiti prima dell&#39;elaborazione. |
+| `repo:path` | string | - | - | - | URL del documento da cui estrarre le frasi chiave. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene memorizzato il documento. |
+| `sensei:multipart_field_name` | string | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multiparte anziché utilizzare URL prefirmati. |
+| `dc:format` | string | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/mspada&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.description&quot; | La codifica del documento viene controllata in base ai tipi di codifica di input consentiti prima di essere elaborata. |
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un oggetto JSON contenente parole chiave estratte nel `response` array.
+Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nel `response` array.
 
 ```json
 {
