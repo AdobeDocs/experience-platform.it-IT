@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Assegnazione di tag colore nell’API per l’assegnazione tag dei contenuti
 description: Il servizio di assegnazione dei colori, quando viene fornita un’immagine, può calcolare l’istogramma dei colori dei pixel e ordinarli in blocchi in base ai colori dominanti.
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -21,11 +21,11 @@ Questo metodo estrae un istogramma di colore sull&#39;intera immagine.
 
 **Assegnazione tag colore (con maschera)**
 
-Questo metodo utilizza un estrattore in primo piano basato su apprendimento profondo per identificare gli oggetti in primo piano. Una volta estratti gli oggetti in primo piano, viene calcolato un istogramma sui colori dominanti sia per le aree in primo piano che per quelle di sfondo, insieme all&#39;intera immagine.
+Questo metodo utilizza un estrattore in primo piano basato su apprendimento profondo per identificare gli oggetti in primo piano. Una volta estratti gli oggetti in primo piano, viene calcolato un istogramma sui colori dominanti sia per le aree in primo piano che per quelle di sfondo, insieme all’intera immagine.
 
 **Estrazione del tono**
 
-Oltre alle varianti sopra menzionate, è possibile configurare il servizio per recuperare un istogramma di toni per:
+Oltre alle varianti sopra menzionate, puoi configurare il servizio per recuperare un istogramma di toni per:
 
 - Immagine complessiva (quando si utilizza la variante immagine completa)
 - Immagine complessiva, aree in primo piano e di sfondo (quando si utilizza la variante con maschera)
@@ -161,7 +161,7 @@ Notate che il risultato qui ha il colore estratto sulla regione immagine &quot;c
 
 **Richiesta - variante immagine mascherata**
 
-L’esempio di richiesta seguente utilizza il metodo di mascheramento per l’assegnazione di tag colore. Possiamo attivarlo impostando la variabile `enable_mask` parametro a `true` nella richiesta.
+L’esempio di richiesta seguente utilizza il metodo di mascheramento per l’assegnazione di tag colore. Questa opzione è abilitata impostando la variabile `enable_mask` parametro a `true` nella richiesta.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->Nota: Inoltre, abbiamo impostato la `retrieve_tone` parametro a `true` nella richiesta di cui sopra. Questo ci permette di recuperare un istogramma di distribuzione del tono su toni caldi, neutri e freddi nelle aree generali, in primo piano e di sfondo dell&#39;immagine.
+>[!NOTE]
+>
+>Inoltre, la `retrieve_tone` anche il parametro è impostato su `true` nella richiesta di cui sopra. Questo ci permette di recuperare un istogramma di distribuzione del tono su toni caldi, neutri e freddi nelle aree generali, in primo piano e di sfondo dell&#39;immagine.
 
 **Risposta: variante immagine mascherata**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-Oltre ai colori dell&#39;immagine complessiva, ora è possibile vedere anche i colori provenienti dalle aree in primo piano e di sfondo. Poiché abiliteremo il recupero dei toni per ciascuna delle aree di cui sopra, possiamo anche recuperare un istogramma dei toni.
+Oltre ai colori dell&#39;immagine complessiva, ora è possibile vedere anche i colori provenienti dalle aree in primo piano e di sfondo. Poiché il recupero dei toni è abilitato per ciascuna delle aree di cui sopra, puoi anche recuperare l’istogramma di un tono.
 
 **Parametri di input**
 
 | Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Sì | - | Vedi sotto | Elenco di elementi json con ogni elemento dell’elenco che rappresenta un documento. |
+| `documents` | array (Document-Object) | Sì | - | Vedi sotto | Elenco di elementi JSON con ogni elemento dell’elenco che rappresenta un documento. |
 | `top_n` | number | No | 0 | Numero intero non negativo | Numero di risultati da restituire. 0, per restituire tutti i risultati. Se utilizzato insieme alla soglia, il numero di risultati restituiti sarà inferiore a uno dei due limiti. |
 | `min_coverage` | number | No | 0.05 | Numero reale | Soglia di copertura oltre la quale è necessario restituire i risultati. Escludi parametro per restituire tutti i risultati. |
-| `resize_image` | number | No | True | True/False | Se ridimensionare o meno l’immagine di input. Per impostazione predefinita, le immagini vengono ridimensionate a 320*320 pixel prima dell’estrazione del colore. A scopo di debug possiamo consentire l’esecuzione del codice anche su immagine completa, impostando questo su False. |
+| `resize_image` | number | No | True | True/False | Se ridimensionare o meno l’immagine di input. Per impostazione predefinita, le immagini vengono ridimensionate a 320*320 pixel prima dell’estrazione del colore. A scopo di debug possiamo consentire l’esecuzione del codice anche su immagine completa, impostando questo su `False`. |
 | `enable_mask` | number | No | False | True/False | Abilita/disabilita l’estrazione del colore |
 | `retrieve_tone` | number | No | False | True/False | Abilita/disabilita l’estrazione del tono |
 
@@ -369,7 +371,7 @@ Oltre ai colori dell&#39;immagine complessiva, ora è possibile vedere anche i c
 
 | Nome | Tipo di dati | Obbligatorio | Impostazione predefinita | Valori | Descrizione |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | string | - | - | - | URL del documento da cui estrarre le frasi chiave. |
-| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene memorizzato il documento. |
-| `sensei:multipart_field_name` | string | - | - | - | Utilizzare questa opzione quando si passa il documento come argomento multiparte anziché utilizzare URL prefirmati. |
-| `dc:format` | string | Sì | - | &quot;text/plain&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/mspada&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.description&quot; | La codifica del documento viene controllata in base ai tipi di codifica di input consentiti prima di essere elaborata. |
+| `repo:path` | string | - | - | - | URL del documento firmato. |
+| `sensei:repoType` | string | - | - | HTTPS | Tipo di repository in cui viene memorizzata l&#39;immagine. |
+| `sensei:multipart_field_name` | string | - | - | - | Utilizzalo quando trasmetti il file immagine come argomento multiparte invece di utilizzare gli URL prefirmati. |
+| `dc:format` | string | Sì | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | La codifica delle immagini viene controllata in base ai tipi di codifica di input consentiti prima di essere elaborata. |
