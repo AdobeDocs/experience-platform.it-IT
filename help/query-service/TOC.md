@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 17%
+source-wordcount: '270'
+ht-degree: 18%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 17%
       - [Creare attributi derivati basati su decile](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - Casi d’uso {#use-cases}
    - [Sfoglia abbandonato](use-cases/abandoned-browse.md)
-   - [Analisi delle attività con Adobe Target](use-cases/activity-analysis-with-adobe-target.md)
    - [Analisi di attribuzione](use-cases/attribution-analysis.md)
    - [Filtro bot](use-cases/bot-filtering.md)
    - [Creare un rapporto con tendenze degli eventi](use-cases/trended-report-of-events.md)
