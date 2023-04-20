@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '968'
 ht-degree: 10%
 
 ---
@@ -90,7 +90,8 @@ ht-degree: 10%
       - [Connettore Snowflake](connectors/databases/snowflake.md)
       - [Connettore Vantage teradata](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
-      - [Connettore Shopify](connectors/ecommerce/shopify.md)
+      - [Shopificante](connectors/ecommerce/shopify.md)
+      - [Streaming Shopify](connectors/ecommerce/shopify-streaming.md)
    - Sistema locale {#local-system}
       - [Connettore di caricamento file locale](connectors/local-system/local-file-upload.md)
    - Automazione del marketing {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 10%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Shopificante](tutorials/api/create/ecommerce/shopify.md)
+         - [Streaming Shopify](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automazione del marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 10%
          - [Vantaggio teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - eCommerce {#ecommerce}
          - [Shopificante](tutorials/ui/create/ecommerce/shopify.md)
+         - [Streaming Shopify](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema locale {#local-system}
          - [Caricamento file locale](tutorials/ui/create/local-system/local-file-upload.md)
       - Automazione del marketing {#marketing-automation}
