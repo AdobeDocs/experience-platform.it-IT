@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Connettore origine Analytics;Connettore Analytics;Origine Analytics;Analytics;filtro;filtro per profilo;profilo cliente in tempo reale;filtro;filtrare dati profilo;filtro a livello di riga;filtro a livello di colonna
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
+source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
-source-wordcount: '2380'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
