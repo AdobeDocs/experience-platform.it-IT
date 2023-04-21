@@ -4,8 +4,8 @@ title: (Beta) Configurare le opzioni di formattazione per le destinazioni basate
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
