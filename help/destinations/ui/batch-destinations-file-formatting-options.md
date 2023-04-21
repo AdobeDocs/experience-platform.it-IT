@@ -2,10 +2,10 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati nelle destinazioni basate su file
 title: (Beta) Configurare le opzioni di formattazione per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ L&#39;opzione per configurare varie opzioni di formattazione per i file esportat
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## Configurazione della formattazione dei file {#file-configuration}
+## Configurazione della formattazione dei file per i file CSV {#file-configuration}
 
 Per visualizzare le opzioni di formattazione del file, avvia la [connessione a destinazione](/help/destinations/ui/connect-destination.md) workflow. Seleziona **Tipo di dati: Segmenti** e **Tipo di file: CSV** per visualizzare le impostazioni di formattazione disponibili per l&#39;esportazione `CSV` file.
 
@@ -41,7 +41,12 @@ Per visualizzare le opzioni di formattazione del file, avvia la [connessione a d
 
 ### Delimitatore {#delimiter}
 
-Imposta un separatore per ciascun campo e valore. Le opzioni disponibili sono:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="Delimitatore"
+>abstract="Utilizzare questo controllo per impostare un separatore per ciascun campo e valore. Visualizza la documentazione relativa agli esempi per ogni selezione."
+
+Usa questo controllo per impostare un separatore per ciascun campo e valore nei file CSV esportati. Le opzioni disponibili sono:
 
 * Due punti `(:)`
 * Virgola `(,)`
@@ -49,29 +54,108 @@ Imposta un separatore per ciascun campo e valore. Le opzioni disponibili sono:
 * Punto e virgola `(;)`
 * Tab `(\t)`
 
-### Carattere di citazione
+#### Esempi
 
-Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette in cui il separatore può far parte del valore.
+Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, con ciascuna selezione nell’interfaccia utente.
 
-### Carattere di escape
+* Esempio di output con **[!UICONTROL Due punti`(:)`]** selezionato: `male:John:Doe`
+* Esempio di output con **[!UICONTROL Virgola`(,)`]** selezionato: `male,John,Doe`
+* Esempio di output con **[!UICONTROL Tubo`(|)`]** selezionato: `male|John|Doe`
+* Esempio di output con **[!UICONTROL Punto e virgola`(;)`]** selezionato: `male;John;Doe`
+* Esempio di output con **[!UICONTROL Scheda`(\t)`]** selezionato: `male \t John \t Doe`
 
-Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato.
+### Carattere di citazione {#quote-character}
 
-### Output valore vuoto
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="Carattere di citazione"
+>abstract="Utilizzare questa opzione se si desidera rimuovere le virgolette doppie dalle stringhe esportate. Visualizza la documentazione relativa agli esempi per ogni selezione."
 
-Imposta la rappresentazione stringa di un valore vuoto.
+Utilizzare questa opzione se si desidera rimuovere le virgolette doppie dalle stringhe esportate. Le opzioni disponibili sono:
 
-### Output valore Null
+* **[!UICONTROL Carattere Null (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
+* **[!UICONTROL Virgolette doppie (&quot;)]**. Utilizza questa opzione per mantenere le virgolette doppie nei file CSV esportati.
 
-Imposta la rappresentazione stringa di un valore nullo all’interno dei file esportati.
+#### Esempi
 
-Esempio di output con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`
-Esempio di output con **&quot;&quot;** selezionato: `male,"",TestLastName`
-Esempio di output con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`
+Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, con ciascuna selezione nell’interfaccia utente.
 
-### Formato di compressione
+* Esempio di output con **[!UICONTROL Carattere Null (\0000)]** selezionato: `Test,John,LastName`
+* Esempio di output con **[!UICONTROL Virgolette doppie (&quot;)]** selezionato: `"Test","John","LastName"`
 
-Imposta il codec di compressione da utilizzare per il salvataggio dei dati su file. Le opzioni supportate sono GZIP e NONE.
+### Carattere di escape {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="Carattere di escape"
+>abstract="Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato. Visualizza la documentazione relativa agli esempi per ogni selezione."
+
+Utilizzare questa opzione per impostare un singolo carattere per l&#39;escape delle virgolette all&#39;interno di un valore già citato. Ad esempio, questa opzione è utile quando una stringa è racchiusa tra virgolette doppie in cui parte della stringa è già racchiusa tra virgolette doppie. Questa opzione determina con quale carattere sostituire le virgolette doppie interne. Le opzioni disponibili sono:
+
+* Barra rovesciata `(\)`
+* Virgoletta singola `(')`
+
+#### Esempi
+
+Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, con ciascuna selezione nell’interfaccia utente.
+
+* Esempio di output con **[!UICONTROL Barra rovesciata`(\)`]** selezionato: `"Test,\"John\",LastName"`
+* Esempio di output con **[!UICONTROL Virgoletta singola`(')`]** selezionato: `"Test,'"John'",LastName"`
+
+### Output valore vuoto {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="Output valore vuoto"
+>abstract="Utilizza questa opzione per impostare come devono essere rappresentati i valori vuoti nei file CSV esportati. Visualizza la documentazione relativa agli esempi per ogni selezione."
+
+Utilizzare questo controllo per impostare la rappresentazione stringa di un valore vuoto. Questa opzione determina il modo in cui i valori vuoti vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Stringa vuota]**
+
+#### Esempi
+
+Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, con ciascuna selezione nell’interfaccia utente.
+
+* Esempio di output con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in un valore null.
+* Esempio di output con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in una coppia di virgolette doppie.
+* Esempio di output con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`. In questo caso, l’Experience Platform mantiene il valore vuoto ed lo esporta così com’è (senza virgolette doppie).
+
+>[!TIP]
+>
+>La differenza tra l&#39;output del valore vuoto e l&#39;output del valore nullo nella sezione seguente è che un valore vuoto ha un valore effettivo vuoto. Il valore NULL non ha alcun valore. Considera il valore vuoto come un vetro vuoto sulla tabella e il valore nullo come non avere il vetro affatto sulla tavola.
+
+### Output valore Null {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Output valore Null"
+>abstract="Utilizzare questo controllo per impostare la rappresentazione stringa di un valore null all&#39;interno dei file esportati. Visualizza la documentazione relativa agli esempi per ogni selezione."
+
+Utilizzare questo controllo per impostare la rappresentazione stringa di un valore null all&#39;interno dei file esportati. Questa opzione determina il modo in cui i valori nulli vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL Stringa vuota]**
+
+#### Esempi
+
+Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, con ciascuna selezione nell’interfaccia utente.
+
+* Esempio di output con **[!UICONTROL null]** selezionato: `male,NULL,TestLastName`. In questo caso, non si verifica alcuna trasformazione e il file CSV contiene il valore null.
+* Esempio di output con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, l&#39;Experience Platform sostituisce il valore nullo con virgolette doppie intorno a una stringa vuota.
+* Esempio di output con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`. In questo caso, l&#39;Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
+
+### Formato di compressione {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="Formato di compressione"
+>abstract="Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Visualizza la documentazione relativa agli esempi per ogni selezione."
+
+Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Questa opzione determina se esportare o meno i file compressi.
 
 ### Codifica
 
