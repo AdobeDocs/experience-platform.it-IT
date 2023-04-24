@@ -36,7 +36,7 @@ Ad esempio, due frammenti di profilo possono contenere ID primari diversi, ma co
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Specificare il tipo di identità"
->abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafico delle identità. Gli identificatori non-people non verranno memorizzati, e tutti gli altri tipi di identità lo faranno."
+>abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafo identità. Gli identificatori che non si riferiscono a persone non verranno memorizzati, mentre tutti gli altri tipi di identità sì."
 >text="Learn more in documentation"
 
 I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi identità e controlla se i dati sono persistenti o meno nel grafico identità, nonché eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non personale** segui lo stesso comportamento di unione di uno spazio dei nomi e del relativo valore ID a un cluster di grafico delle identità. I dati non vengono uniti quando si utilizza **Identificatore non personale**.
@@ -83,7 +83,7 @@ I seguenti namespace standard vengono forniti per l’utilizzo da parte di tutte
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="Visualizzare le identità di integrazione"
->abstract="Le identità di integrazione sono spazi dei nomi utilizzati per connettersi con altri sistemi e non vengono utilizzati nella risoluzione delle identità o per unire le identità. <br> Queste identità sono nascoste per impostazione predefinita. Utilizza l’interruttore per visualizzare gli spazi dei nomi dell’integrazione."
+>abstract="Le identità di integrazione sono spazi dei nomi utilizzati per collegarsi ad altri sistemi e non utilizzati nella risoluzione delle identità o per unire le identità. <br> Queste identità sono nascoste per impostazione predefinita. Utilizza l’interruttore per visualizzare gli spazi dei nomi dell’integrazione."
 
 Per visualizzare i namespace delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identità]** nella navigazione a sinistra e seleziona **[!UICONTROL Sfoglia]**.
 

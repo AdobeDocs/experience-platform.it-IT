@@ -7,7 +7,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="Limitare l’utilizzo dei dati"
->abstract="Il tipo di criterio di utilizzo dati valuta azioni di marketing specifiche applicate alle etichette di governance dei dati per limitare l’utilizzo dei dati per le attività di marketing."
+>abstract="Il tipo di criterio di utilizzo dei dati valuta azioni di marketing specifiche applicate alle etichette di governance dei dati per limitare l’utilizzo dei dati nelle attività di marketing."
 
 Affinché le etichette per l’utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare i criteri per l’utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform].
 

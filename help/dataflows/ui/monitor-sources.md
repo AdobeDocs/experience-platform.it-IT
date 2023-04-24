@@ -8,11 +8,11 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
-# Monitorare i flussi di dati per le sorgenti nell’interfaccia utente
+# Monitorare i flussi di dati per le origini nell’interfaccia utente
 
 >[!IMPORTANT]
 >
@@ -39,14 +39,14 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
->title="Acquisizione sorgente"
->abstract="La visualizzazione Acquisizione origine contiene informazioni sullo stato e le metriche dell’attività dati nel servizio Data Lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>title="Acquisizione di origine"
+>abstract="La vista Acquisizione di origine contiene informazioni sullo stato e le metriche delle attività dui dati nel servizio Data Lake, compresi i record acquisiti e quelli con errori. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafi."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="L&#39;elaborazione delle origini contiene informazioni sullo stato e le metriche dell&#39;attività dati nel servizio data lake, compresi i record acquisiti e i record non riusciti. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>abstract="L’elaborazione delle origini contiene informazioni sullo stato e le metriche delle attività sui dati nel servizio Data Lake, compresi i record acquisiti e quelli con errori. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafi."
 >text="Learn more in documentation"
 
 In [Interfaccia utente della piattaforma](https://platform.adobe.com), seleziona **[!UICONTROL Monitoraggio]** dalla navigazione a sinistra per accedere al [!UICONTROL Monitoraggio] dashboard. La [!UICONTROL Monitoraggio] dashboard contiene metriche e informazioni su tutti i flussi di dati di origine, comprese informazioni sullo stato del traffico dei dati da un’origine a [!DNL Identity Service]e a [!DNL Profile].
@@ -67,10 +67,10 @@ I grafici sono attivati per impostazione predefinita ed è possibile disattivarl
 
 ![metriche e grafici](../assets/ui/monitor-sources/metrics-graphs.png)
 
-| Acquisizione sorgente | Descrizione |
+| Acquisizione di origine | Descrizione |
 | ---------------- | ----------- |
 | [!UICONTROL Record acquisiti ] | Numero totale di record acquisiti. |
-| [!UICONTROL Record non elaborati] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
+| [!UICONTROL Record con errori] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
 | [!UICONTROL Totale flussi di dati non riusciti] | Il numero totale di flussi di dati con un `failed` stato. |
 
 Nell’elenco di acquisizione di origine sono visualizzate tutte le origini che contengono almeno un account esistente. L’elenco include inoltre informazioni sul tasso di acquisizione di ogni origine, sul numero di record con errore e sul numero totale di flussi di dati con errore in base all’intervallo di tempo applicato.

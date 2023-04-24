@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
 source-wordcount: '806'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -72,7 +72,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
 >title="ID account"
->abstract="Il tuo ID account Twitter Ads. Questo si trova nelle impostazioni di Twitter Ads."
+>abstract="ID del tuo account Twitter Ads. Si trova nelle impostazioni di Twitter Ads."
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 

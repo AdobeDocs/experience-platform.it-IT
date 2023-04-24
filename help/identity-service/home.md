@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ Prima di immergersi nei dettagli di [!DNL Identity Service], ecco una breve sint
 | --- | --- |
 | Identità | Un’identità è un dato univoco per un’entità, in genere una singola persona. Un&#39;identità, ad esempio un ID di accesso, un ECID o un ID fedeltà, viene anche definita &quot;identità nota&quot;. |
 | ECID | Experience Cloud ID (ECID) è uno spazio dei nomi di identità condivisa utilizzato nelle applicazioni Experience Platform e Adobe Experience Cloud. ECID fornisce una base per l’identità del cliente e viene utilizzato come ID principale per i dispositivi e come nodo di base per i grafici di identità. Consulta la sezione [Panoramica ECID](./ecid.md) per ulteriori informazioni. |
-| Spazio dei nomi identità | Uno spazio dei nomi di identità serve a distinguere il contesto o il tipo di un&#39;identità. Ad esempio, un&#39;identità distingue &quot;nome&quot;<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico. I namespace Identity vengono utilizzati per cercare le singole identità e fornire il contesto per i valori di identità. Questo consente di determinare che due [!DNL Profile] frammenti che contengono ID primari diversi, ma condividono lo stesso valore per `email` lo spazio dei nomi delle identità, infatti, è lo stesso individuo. Consulta la sezione [panoramica dello spazio dei nomi identità](./namespaces.md) per ulteriori informazioni. |
+| Spazio dei nomi identità | Uno spazio dei nomi delle identità consente di distinguere il contesto o il tipo di un’identità. Ad esempio, un’identità distingue “nome<span>@e-mail.com” come indirizzo e-mail o “443522” come ID CRM numerico. I namespace Identity vengono utilizzati per cercare le singole identità e fornire il contesto per i valori di identità. Questo consente di determinare che due [!DNL Profile] frammenti che contengono ID primari diversi, ma condividono lo stesso valore per `email` lo spazio dei nomi delle identità, infatti, è lo stesso individuo. Consulta la sezione [panoramica dello spazio dei nomi identità](./namespaces.md) per ulteriori informazioni. |
 | Grafico di identità | Un grafico delle identità è una mappa delle relazioni tra identità diverse, che ti consente di visualizzare e comprendere meglio quali identità dei clienti sono unite e come. Guarda l’esercitazione su [utilizzo del visualizzatore grafico delle identità](./ui/identity-graph-viewer.md) per ulteriori informazioni. |
 | Informazioni personali (PII) | Le informazioni PII sono informazioni che possono identificare direttamente un cliente, ad esempio un indirizzo e-mail o un numero di telefono. I valori PII vengono spesso utilizzati per la corrispondenza. identità multiple di un cliente tra diversi sistemi. |
 | Identità sconosciute o anonime | Le identità sconosciute o anonime sono indicatori che isolano i dispositivi senza identificare la persona effettiva che utilizza il dispositivo. Le identità sconosciute e anonime includono informazioni quali l&#39;indirizzo IP di un visitatore e l&#39;ID cookie. Sebbene le identità sconosciute e anonime possano fornire dati comportamentali, sono limitate fino a quando un cliente non fornisce i propri dati PII. |
@@ -66,14 +66,14 @@ Esempi di [!DNL Identity Service] le implementazioni includono:
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
->title="Namespace Identity"
->abstract="Uno spazio dei nomi di identità serve a distinguere il contesto o il tipo di un&#39;identità. Ad esempio, un&#39;identità distingue &quot;nome&quot;<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico."
+>title="Spazi dei nomi delle identità"
+>abstract="Uno spazio dei nomi delle identità consente di distinguere il contesto o il tipo di un’identità. Ad esempio, un’identità distingue “nome<span>@e-mail.com” come indirizzo e-mail o “443522” come ID CRM numerico."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Valori identità"
->abstract="Un valore di identità è un identificatore che rappresenta una singola, organizzazione o risorsa univoca. Il contesto o il tipo di identità che il valore rappresenta è definito da uno spazio dei nomi di identità corrispondente. Quando i dati dei record corrispondono a diversi frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere. Quando i dati dei record corrispondono a frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere."
+>abstract="Un valore di identità è un identificatore che rappresenta una persona, organizzazione o risorsa univoca. Il contesto o il tipo di identità che il valore rappresenta è definito da uno spazio dei nomi delle identità corrispondente. Quando si abbinano i dati dei record a frammenti di profilo, lo spazio dei nomi e il valore di identità devono corrispondere."
 >text="Learn more in documentation"
 
 Se hai chiesto a una persona &quot;Qual è il tuo ID?&quot; senza ulteriore contesto, sarebbe difficile per loro fornire una risposta utile. Per la stessa logica, un valore stringa che rappresenta un valore di identità, sia che si tratti di un ID generato dal sistema o di un indirizzo e-mail, è completo solo se viene fornito con un qualificatore che fornisce il contesto del valore stringa: lo spazio dei nomi identity.

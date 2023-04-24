@@ -5,8 +5,8 @@ description: Scopri come creare una connessione sorgente Mixpanel utilizzando l�
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '874'
+ht-degree: 10%
 
 ---
 
@@ -68,9 +68,9 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quin
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="Imposta un fuso orario per l’acquisizione da pannello multiplo"
->abstract="Il fuso orario deve essere lo stesso dell’impostazione del fuso orario del profilo Mixpanel, perché Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Il pannello misto regolerà il relativo fuso orario in modo da coordinarsi con il fuso orario del progetto prima di registrare l’evento in un archivio dati Mixpanel."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Ulteriori informazioni nella documentazione"
+>title="Impostare un fuso orario per l’acquisizione da Mixpanel"
+>abstract="Il fuso orario deve corrispondere a quello impostato nel tuo profilo Mixpanel, poiché Platform utilizza il fuso orario del progetto designato per acquisire i dati rilevanti da Mixpanel. Prima di registrare l’evento in un suo archivio dati, Mixpanel regolerà il proprio fuso orario in base a quello del tuo progetto."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=it#project-id-and-timezone" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 Dopo l’autenticazione della sorgente, specifica l’ID e il fuso orario del progetto, quindi seleziona **[!UICONTROL Seleziona]**.
 

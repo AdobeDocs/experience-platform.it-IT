@@ -66,31 +66,31 @@ Viene visualizzata l’area di lavoro Autorizzazioni per l’interfaccia utente 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Cosa sono le etichette?"
->abstract="Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Platform fornisce diverse etichette di utilizzo dei dati “core” definite da Adobe, che coprono un’ampia varietà di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette sensibili “S” come RHD (Regulated Health Data, dati sanitari regolamentati) consentono di categorizzare i dati che si riferiscono alle informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
+>abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce diverse etichette di utilizzo dei dati principali definite da Adobe, che coprono un’ampia gamma di restrizioni comuni applicabili alla governance dei dati. Ad esempio, le etichette “S” per dati sensibili (ad esempio, dati RHD, Regulated Health Data) consentono di classificare i dati che fanno riferimento a informazioni sanitarie protette (PHI, Protected Health Information). Puoi anche definire etichette personalizzate che soddisfino le esigenze della tua organizzazione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#understanding-data-usage-labels" text="Panoramica delle etichette di utilizzo dei dati"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Creare una nuova etichetta"
->abstract="Puoi creare etichette personalizzate in base alle esigenze della tua organizzazione. Puoi utilizzare etichette personalizzate per applicare ai dati le configurazioni di governance dei dati e controllo degli accessi."
+>abstract="Puoi creare etichette personalizzate per adattarle alle esigenze della tua organizzazione. Le etichette personalizzate possono essere utilizzate per applicare ai dati sia le configurazioni di governance dei dati che di controllo degli accessi."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it#manage-labels" text="Gestire le etichette personalizzate"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Cosa sono i ruoli?"
->abstract="I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Platform e sono blocchi predefiniti dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno."
+>abstract="I ruoli consentono di classificare i tipi di utenti che interagiscono con l’istanza Platform e sono elementi fondamentali nei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it" text="Gestire i ruoli"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Creare un nuovo ruolo"
->abstract="Puoi creare un nuovo ruolo per categorizzare meglio gli utenti che accedono all’istanza Platform. Ad esempio, puoi creare un ruolo per un team di marketing interno e applicare l’etichetta RHD a tale ruolo, consentendo al team di marketing interno di accedere a Informazioni sanitarie protette (PHI). In alternativa, è possibile creare un ruolo per un’Agenzia esterna e negare a tale ruolo l’accesso ai dati PHI non applicando l’etichetta RHD a tale ruolo."
+>abstract="Puoi creare un nuovo ruolo per classificare meglio gli utenti che accedono all’istanza Platform. Ad esempio, puoi creare un ruolo per un gruppo marketing interno e applicare l’etichetta RHD a tale ruolo, consentendo al gruppo di accedere a informazioni sanitarie protette (PHI). In alternativa, puoi anche creare un ruolo per un ente esterno e negargli l’accesso ai dati PHI non applicando l’etichetta RHD a quel ruolo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=it#create-a-new-role" text="Creare un nuovo ruolo"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="Panoramica del ruolo"
->abstract="La finestra di dialogo di panoramica del ruolo visualizza le risorse e le sandbox a cui un determinato ruolo può accedere."
+>abstract="Nella finestra di dialogo della panoramica del ruolo vengono visualizzate le risorse e le sandbox a cui un determinato ruolo può accedere."
 
 I ruoli sono modi per classificare i tipi di utenti che interagiscono con la tua istanza di Platform e sono blocchi costitutivi dei criteri di controllo degli accessi. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di cui hanno bisogno.
 

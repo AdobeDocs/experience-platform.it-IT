@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
->title="Relazioni dello schema"
->abstract="Gli schemi appartenenti a classi diverse possono essere collegati contestualmente tramite campi di relazione, per creare regole di segmentazione più complesse. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
+>title="Relazioni tra gli schemi"
+>abstract="Gli schemi appartenenti a classi diverse possono essere collegati contestualmente tramite campi di relazione, per creare regole di segmentazione più complesse. Per ulteriori informazioni sulle relazioni tra gli schemi, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
 >title="Schema di riferimento"
->abstract="Selezionare lo schema con cui si desidera stabilire una relazione. Questo schema può essere una classe diversa dallo schema corrente. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
+>abstract="Seleziona lo schema con cui desideri stabilire una relazione. Questo schema può avere una classe diversa dallo schema attuale. Per ulteriori informazioni sulle relazioni tra gli schemi, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
 >title="Spazio dei nomi delle identità di riferimento"
->abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione. Per ulteriori informazioni sulle relazioni con gli schemi, consulta la documentazione ."
+>abstract="Spazio dei nomi (tipo) per il campo di identità primaria dello schema di riferimento. Per poter partecipare a una relazione, nello schema di riferimento deve essere stato stabilito un campo di identità primaria. Per ulteriori informazioni sulle relazioni tra gli schemi, consulta la documentazione."
 
 La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all’interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) ti consentono di ottenere informazioni complesse sui dati dei clienti.
 

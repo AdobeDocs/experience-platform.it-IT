@@ -7,7 +7,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -40,12 +40,12 @@ Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla s
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
 >title="Nome sandbox"
->abstract="Il nome della sandbox è il testo utilizzato sul back-end per creare un ID univoco per questa sandbox."
+>abstract="Il nome della sandbox è il testo utilizzato nel back-end per creare un ID univoco per questa sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="Titolo sandbox"
->abstract="Il titolo della sandbox è il nome visualizzato che rappresenta la sandbox nei menu e nei menu a discesa nell’interfaccia utente di Experience Platform."
+>abstract="Il titolo della sandbox è il nome visualizzato che rappresenta la sandbox nei menu e nei menu a discesa nell’interfaccia di Experience Platform."
 
 >[!NOTE]
 >

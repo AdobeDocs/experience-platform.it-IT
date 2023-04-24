@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
 source-wordcount: '1856'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -145,13 +145,13 @@ Il video seguente illustra anche i passaggi per configurare un [!DNL Facebook] d
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
 >title="ID account"
->abstract="L&#39;ID del tuo account Facebook Ad. Puoi trovare questo ID nel tuo account Facebook Ads Manager . Quando immetti questo ID, devi sempre prescriverlo con `act_`."
+>abstract="ID del tuo account per Inserzioni Facebook. Puoi trovare questo ID nel tuo account Gestione inserzioni di Facebook. Quando immetti questo ID, devi sempre aggiungere il prefisso `act_`."
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: Le [!DNL Facebook Ad Account ID]. Puoi trovare questo ID nel tuo [!DNL Facebook Ads Manager] conto. Quando immetti questo ID, devi sempre prescriverlo con `act_`.
+* **[!UICONTROL ID account]**: Le [!DNL Facebook Ad Account ID]. Puoi trovare questo ID nel tuo [!DNL Facebook Ads Manager] conto. Quando immetti questo ID, devi sempre aggiungere il prefisso `act_`.
 
 ### Abilitare gli avvisi {#enable-alerts}
 
@@ -164,7 +164,7 @@ Una volta completati i dettagli della connessione di destinazione, seleziona **[
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine del pubblico"
->abstract="Scegli come sono stati raccolti i dati cliente nel segmento. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
+>abstract="Scegli come sono stati originariamente raccolti i dati cliente nel segmento. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Questa guida utente richiede una buona comprensione dei seguenti componenti di A
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="Numeri negativi nell’attività dei set di dati"
+>title="Numeri negativi nelle attività sui set di dati"
 >abstract="I numeri negativi nei record acquisiti indicano che un utente ha eliminato alcuni batch in un intervallo di tempo selezionato."
 >text="Learn more in documentation"
 

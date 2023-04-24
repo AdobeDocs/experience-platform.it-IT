@@ -5,7 +5,7 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
 source-wordcount: '1763'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -41,14 +41,14 @@ Questa guida presuppone che tu abbia già familiarità con le modalità di gesti
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
 >title="Ambienti per segreti"
->abstract="Affinché un segreto possa essere utilizzato dall&#39;inoltro eventi, deve essere assegnato a un ambiente esistente. Se non sono stati creati ambienti per la proprietà di inoltro eventi, è necessario configurarli prima di continuare."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Panoramica sugli ambienti"
+>abstract="Affinché un segreto possa essere utilizzato dall’inoltro eventi, deve essere assegnato a un ambiente esistente. Se non sono stati creati ambienti per la proprietà di inoltro eventi, devi configurarli prima di continuare."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=it" text="Panoramica sugli ambienti"
 
 Per creare un segreto, seleziona **[!UICONTROL Inoltro eventi]** nel menu di navigazione a sinistra, apri la proprietà di inoltro eventi in cui desideri aggiungere il segreto. Quindi, seleziona **[!UICONTROL Segreti]** nella navigazione a sinistra, seguita da **[!UICONTROL Crea nuovo segreto]**.
 
 ![Crea nuovo segreto](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-La schermata successiva ti consente di configurare i dettagli del segreto. Affinché un segreto possa essere utilizzato dall&#39;inoltro eventi, deve essere assegnato a un ambiente esistente. Se non sono stati creati ambienti per la proprietà di inoltro eventi, consulta la guida in [ambienti](../publishing/environments.md) per informazioni su come configurarli prima di continuare.
+La schermata successiva ti consente di configurare i dettagli del segreto. Affinché un segreto possa essere utilizzato dall’inoltro eventi, deve essere assegnato a un ambiente esistente. Se non sono stati creati ambienti per la proprietà di inoltro eventi, consulta la guida in [ambienti](../publishing/environments.md) per informazioni su come configurarli prima di continuare.
 
 >[!NOTE]
 >

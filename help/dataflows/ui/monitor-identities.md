@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -28,14 +28,14 @@ Il dashboard di monitoraggio fornisce una rappresentazione visiva dell’attivit
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
->title="Elaborazione identità"
->abstract="La visualizzazione di elaborazione Identity contiene informazioni sui record acquisiti nel servizio Identity, tra cui il numero di identità aggiunte, i grafici creati e i grafici aggiornati. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafici."
+>title="Elaborazione delle identità"
+>abstract="La vista Elaborazione delle identità contiene informazioni sui record acquisiti in Identity Service, tra cui il numero di identità aggiunte, i grafi creati e i grafi aggiornati. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafi."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="Nella pagina dei dettagli dell’esecuzione del flusso di dati di Identity sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati di Identity, inclusi l’ID organizzazione e l’ID di esecuzione del flusso di dati."
+>abstract="Nella pagina Dettagli dell’esecuzione del flusso di dati sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati di Identità, inclusi l’ID organizzazione e l’ID di esecuzione del flusso di dati."
 
 Per accedere al **[!UICONTROL Identità]** dashboard, seleziona **[!UICONTROL Monitoraggio]** nella navigazione a sinistra. Una volta sul **[!UICONTROL Monitoraggio]** , seleziona la **[!UICONTROL Identità]** il Card.
 
@@ -54,7 +54,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | Metriche di identità | Descrizione |
 | ---------------- | ----------- |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record con errori]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
 | **[!UICONTROL Record saltati]** | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Il numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Identità aggiunte]** | Numero di nuovi identificatori netti aggiunti a [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Set di dati]** | Nome del set di dati a cui il flusso di dati sta inserendo. |
 | **[!UICONTROL Nome origine]** | Nome dell&#39;origine a cui appartiene il flusso di dati. |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record con errori]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
 | **[!UICONTROL Record saltati]** | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Il numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Record totali]** | Il conteggio totale di tutti i record, inclusi quelli non riusciti, i record saltati, le identità aggiunte e i record duplicati. |
@@ -100,7 +100,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | Metrica | Descrizione |
 | -------| ----------- |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
+| **[!UICONTROL Record con errori]** | Il numero di record che non sono stati acquisiti in Platform a causa di errori nei dati. |
 | **[!UICONTROL Record saltati]** | Il numero di record acquisiti, ma non in [!DNL Identity Service] perché nella riga record era presente un solo identificatore. |
 | **[!UICONTROL Record acquisiti]** | Il numero di record acquisiti in [!DNL Identity Service]. |
 | **[!UICONTROL Identità aggiunte]** | Numero di nuovi identificatori netti aggiunti a [!DNL Identity Service]. |

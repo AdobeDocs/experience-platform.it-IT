@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
->title="ID ordine di lavoro"
->abstract="Quando una richiesta di igiene dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico di igiene dei dati, che include il suo stato attuale e altri dettagli correlati. A ogni ordine di lavoro viene assegnato automaticamente il proprio ID univoco al momento della creazione."
+>title="ID degli ordini di lavoro"
+>abstract="Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico di igiene dei dati, che include il suo stato attuale e altri dettagli correlati. Al momento della creazione di ogni ordine di lavoro, gli viene assegnato automaticamente un ID univoco."
 >text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
 >Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
 
-Quando una richiesta di igiene dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. Un ordine di lavoro rappresenta un processo specifico di igiene dei dati, ad esempio una scadenza pianificata del set di dati, che include il suo stato corrente e altri dettagli correlati.
+Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. Un ordine di lavoro rappresenta un processo specifico di igiene dei dati, ad esempio una scadenza pianificata del set di dati, che include il suo stato corrente e altri dettagli correlati.
 
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti nell’interfaccia utente di Adobe Experience Platform.
 
@@ -69,17 +69,17 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Stato per servizio"
->abstract="Le richieste di igiene dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. In questa sezione viene illustrato lo stato di elaborazione corrente della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="Le richieste di igiene dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. Questa sezione riassume lo stato di elaborazione attuale della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Numero di identità"
->abstract="Numero di identità i cui record sono stati richiesti per essere aggiornati o eliminati nell&#39;ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="Numero di identità per i cui record è stato richiesto l’aggiornamento o l’eliminazione nell’ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="Risposta di eliminazione record"
->abstract="Quando un processo di eliminazione dei record riceve una risposta dal sistema, questi messaggi vengono visualizzati sotto il **[!UICONTROL Risultato]** sezione . Se si verifica un problema durante l&#39;elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti verranno visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>title="Risposta per eliminazione dei record"
+>abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 

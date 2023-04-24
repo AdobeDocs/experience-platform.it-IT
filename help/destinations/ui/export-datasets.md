@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
 source-wordcount: '1359'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -88,7 +88,7 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Opzioni di esportazione dei file per i set di dati"
->abstract="Seleziona **Esportare file incrementali** per esportare solo i dati aggiunti al set di dati dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, fungendo da backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dalla prima esportazione."
+>abstract="Seleziona **Esporta file incrementali** per esportare solo i dati aggiunti al set di dati dopo l’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i dati del set di dati, agendo come backfill. I file incrementali futuri includono solo i dati aggiunti al set di dati dopo la prima esportazione."
 
 In **[!UICONTROL Pianificazione]** puoi impostare una data di inizio e una cadenza di esportazione per le esportazioni dei set di dati.
 

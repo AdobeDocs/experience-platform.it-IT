@@ -6,7 +6,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -64,12 +64,12 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
 >title="Chiave pubblica RSA"
->abstract="Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave formattata correttamente nel collegamento alla documentazione seguente."
+>abstract="Facoltativamente, puoi collegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Nel collegamento alla documentazione qui di seguito, trovi un esempio di chiave formattata correttamente."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Chiave SSH privata"
->abstract="La chiave SSH privata deve essere formattata come stringa codificata Base64 e non deve essere protetta da password."
+>abstract="La chiave SSH privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password."
 
 Se selezioni la **[!UICONTROL Autenticazione di base]** digita per connetterti al tuo percorso SFTP:
 
@@ -90,7 +90,7 @@ Se selezioni la **[!UICONTROL SFTP con chiave SSH]** tipo di autenticazione per 
 * **[!UICONTROL Dominio]**: Inserisci l’indirizzo IP o il nome di dominio del tuo account SFTP
 * **[!UICONTROL Porta]**: La porta utilizzata dal percorso di archiviazione SFTP;
 * **[!UICONTROL Nome utente]**: Nome utente per accedere al percorso di archiviazione SFTP;
-* **[!UICONTROL Chiave SSH]**: Chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa codificata Base64 e non deve essere protetta da password.
+* **[!UICONTROL Chiave SSH]**: Chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password.
 * **[!UICONTROL Chiave di crittografia]**: Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
 
    ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)

@@ -44,12 +44,12 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Elaborazione | La `Processing` lo stato indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | La `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
-### Il flusso di dati viene eseguito per le destinazioni di streaming {#dataflow-runs-for-streaming-destinations}
+### Esecuzioni del flusso di dati per le destinazioni di streaming {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche estratte da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche."
+>abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -59,17 +59,17 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identità attivate"
->abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati."
+>abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Identità escluse"
->abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
+>abstract="Conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identità non riuscite"
->abstract="Numero di singole identità di profilo non riuscite per la destinazione selezionata. Per ulteriori informazioni, consulta la diagnostica degli errori."
+>abstract="Conteggio delle singole identità di profilo non riuscite per la destinazione selezionata. Per informazioni, controlla la diagnostica degli errori."
 
 Per le destinazioni di streaming, l’ [!UICONTROL Corse del flusso di dati] La scheda fornisce un aggiornamento orario per i dati delle metriche in esecuzione nel flusso di dati. Le statistiche più importanti etichettate sono quelle sulle identità.
 
@@ -77,7 +77,7 @@ Le identità rappresentano i diversi facet di un profilo. Ad esempio, se un prof
 
 Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
-- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
 - **[!UICONTROL Identità escluse]**: Numero totale di identità di profilo saltate per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
 - **[!UICONTROL Identità non riuscite]**: Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 
@@ -90,7 +90,7 @@ Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
    - Per **[!UICONTROL completato]** in esecuzione, la metrica del tempo di elaborazione mostra sempre un’ora.
    - Per le esecuzioni di flussi di dati che si trovano ancora in una **[!UICONTROL elaborazione]** la finestra per acquisire tutte le metriche rimane aperta per più di un&#39;ora, per elaborare tutte le metriche corrispondenti all&#39;esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviato alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta chiusa la finestra di elaborazione e lo stato dell&#39;esecuzione del flusso di dati si aggiorna a **completato**, il tempo di elaborazione visualizzato viene modificato in un’ora.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati.
-- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata come parte dell&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata come parte dell&#39;esecuzione del flusso di dati. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
 - **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse dall’attivazione in base agli attributi mancanti e alla violazione del consenso.
 - **[!UICONTROL Identità non riuscite]** Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 - **[!UICONTROL Tasso di attivazione]**: Percentuale di identità ricevute che sono state attivate o saltate correttamente. La formula seguente illustra come viene calcolato questo valore:
@@ -112,8 +112,8 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche estratte da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=it#dataflow-runs-for-streaming-destinations" text="Il flusso di dati viene eseguito per le destinazioni di streaming"
+>abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, consulta la guida alle definizioni delle metriche."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=it#dataflow-runs-for-streaming-destinations" text="Esecuzioni del flusso di dati per le destinazioni di streaming"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -123,16 +123,16 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identità attivate"
->abstract="Numero di singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati."
+>abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Identità escluse"
->abstract="Il conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
+>abstract="Conteggio dei singoli record di profilo esclusi dall’attivazione per la destinazione selezionata in base agli attributi mancanti e alla violazione del consenso."
 
 Per le destinazioni batch, [!UICONTROL Corse del flusso di dati] fornisce i dati delle metriche sulle esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
 
-- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
 - **[!UICONTROL Identità escluse]**: Il conteggio delle singole identità di profilo escluse dall’attivazione per la destinazione selezionata, in base agli attributi mancanti e alla violazione del consenso.
 
 ![Visualizzazione delle esecuzioni del flusso di dati per le destinazioni batch](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -143,7 +143,7 @@ Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
 - **[!UICONTROL Segmento]**: Nome del segmento associato a ogni esecuzione del flusso di dati.
 - **[!UICONTROL Tempo di elaborazione]**: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
-- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata come parte dell&#39;esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata come parte dell&#39;esecuzione del flusso di dati. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
 - **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse dall’attivazione in base agli attributi mancanti e alla violazione del consenso.
 - **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati. Può essere uno dei tre stati seguenti: [!UICONTROL Completato], [!UICONTROL Non riuscito]e [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che il flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. [!UICONTROL Non riuscito] significa che l’attivazione dei dati è stata sospesa a causa di errori. [!UICONTROL Elaborazione] significa che il flusso di dati non è ancora attivo e viene generalmente rilevato quando viene creato un nuovo flusso di dati.
 
@@ -176,7 +176,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="La vista di attivazione della destinazione contiene informazioni sullo stato di attivazione del segmento e metriche prese da Real-Time Customer Profile per generare identità univoche."
+>abstract="La vista Attivazione della destinazione contiene informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche."
 
 Per accedere al [!UICONTROL Monitoraggio] dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona [!UICONTROL Destinazioni]. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di esecuzione di destinazione.
 

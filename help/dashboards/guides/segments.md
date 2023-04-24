@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -86,7 +86,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tendenza delle dimensioni del pubblico in base all’identità]](#audience-size-trend-by-identity)
 * [[!UICONTROL Sovrapposizione del pubblico]](#audience-overlap)
 * [[!UICONTROL Rapporto di sovrapposizione del pubblico]](#audience-overlap-report)
-* [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
+* [[!UICONTROL Sovrapposizione di identità]](#identity-overlap)
 * [[!UICONTROL Profili per identità]](#profiles-by-identity)
 * [[!UICONTROL Attivazioni pianificate]](#scheduled-activations)
 
@@ -95,7 +95,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="Dimensione del pubblico"
->abstract="Questo widget visualizza il numero totale di profili uniti all’interno del segmento selezionato. Questo numero dipende dal criterio di unione applicato ai dati ed è corretto al momento dell&#39;istantanea più recente."
+>abstract="Questo widget visualizza il numero totale di profili uniti all’interno del segmento selezionato. Questo numero dipende dal criterio di unione applicato ai dati ed è esatto al momento dello snapshot più recente."
 
 La **[!UICONTROL Dimensione del pubblico]** widget visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione dei criteri di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni individuo nel segmento.
 
@@ -108,7 +108,7 @@ Per ulteriori informazioni sui frammenti e i profili uniti, consulta la [Panoram
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
 >title="Tendenza delle dimensioni del pubblico"
->abstract="Questo widget fornisce informazioni sul numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento, acquisita durante l’istantanea giornaliera, per gli ultimi 30 giorni, 90 giorni o 12 mesi."
+>abstract="Questo widget fornisce informazioni sul numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento, acquisito durante lo snapshot giornaliero, per gli ultimi 30 giorni, 90 giorni o 12 mesi."
 
 La **[!UICONTROL Tendenza delle dimensioni del pubblico]** widget fornisce un grafico a linee illustrativo del numero totale di profili che soddisfano i criteri di **qualsiasi** definizione del segmento in un determinato periodo di tempo. La tendenza della dimensione del pubblico può essere visualizzata per periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. La dimensione del pubblico si riflette sull’asse y e il tempo sull’asse x.
 
@@ -176,12 +176,12 @@ Seleziona una riga dal rapporto per aprire un diagramma di Venn dell’analisi d
 
 Seleziona **[!UICONTROL Chiudi]** per tornare al [!UICONTROL Segmenti] dashboard.
 
-### [!UICONTROL Sovrapposizione identità] {#identity-overlap}
+### [!UICONTROL Sovrapposizione di identità] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
->title="Sovrapposizione identità"
->abstract="Questo widget mostra la sovrapposizione di profili nel segmento contenente entrambe le identità selezionate. I cerchi mostrano la dimensione relativa di ogni identità. Il numero di profili contenenti entrambi i namespace è rappresentato dalla sovrapposizione tra i cerchi."
+>title="Sovrapposizione di identità"
+>abstract="Questo widget mostra la sovrapposizione di profili nel segmento contenente entrambe le identità selezionate. I cerchi mostrano la dimensione relativa di ogni identità. Il numero di profili contenenti entrambi gli spazi dei nomi è rappresentato dalla sovrapposizione tra i cerchi."
 
 La **[!UICONTROL Sovrapposizione identità]** Il widget visualizza un diagramma di Venn, o diagramma di set, che mostra la sovrapposizione di profili nel segmento contenente più identità.
 
@@ -198,7 +198,7 @@ Per saperne di più sulle identità, visita il [Documentazione del servizio Adob
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profili per identità"
->abstract="Questo widget visualizza la suddivisione delle identità per ogni profilo unito nel segmento selezionato."
+>abstract="Questo widget visualizza il raggruppamento delle identità per ogni profilo unito nel segmento selezionato."
 
 La **[!UICONTROL Profili per identità]** widget visualizza la suddivisione delle identità in ogni profilo unito del segmento selezionato. Il numero totale di profili per identità può essere superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associate più identità. In altre parole, l’aggiunta dei valori mostrati per ogni identità può avere un totale superiore alla dimensione totale del pubblico nel segmento, perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associate più identità.
 

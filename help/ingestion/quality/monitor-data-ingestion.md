@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -21,10 +21,10 @@ Questa guida utente descrive come monitorare i dati all’interno dell’interfa
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"
->title="Tasso di ingestione"
->abstract="Il numero di eventi elaborati correttamente al secondo."
+>title="Tasso di acquisizione"
+>abstract="Numero di eventi elaborati correttamente al secondo."
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="Monitorare i flussi di dati per le sorgenti nell’interfaccia utente"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=it" text="Monitorare i flussi di dati per le origini nell’interfaccia utente"
 
 >[!TIP]
 >

@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 0%
+ht-degree: 37%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="Stato delle richieste di igiene dei dati"
->abstract="Questo widget mostra i conteggi totali dei processi di eliminazione dei record Data Hygiene creati, non riusciti e completati. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
+>abstract="Questo widget mostra i conteggi totali dei processi di eliminazione dei record per l’igiene dei dati creati, completati e con errori. Per ulteriori informazioni sui processi di pulizia dei dati, seleziona **Igiene dei dati** nella barra di navigazione a sinistra."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Ordini di lavoro per l’igiene dei dati recenti"
->abstract="Questo widget mostra i cinque ordini di lavoro di igiene dati creati o aggiornati più di recente, a seconda dell&#39;opzione selezionata in alto a destra. Per ulteriori informazioni sui processi di igiene dei dati, seleziona **Igiene dei dati** nella navigazione a sinistra."
+>title="Ordini di lavoro recenti di igiene dei dati"
+>abstract="Questo widget gli ultimi cinque ordini di lavoro di igiene dei dati creati o aggiornati, a seconda dell’opzione selezionata in alto a destra. Per ulteriori informazioni sui processi di pulizia dei dati, seleziona **Igiene dei dati** nella barra di navigazione a sinistra."
 
 La **[!UICONTROL Igiene dei dati]** workspace nell’interfaccia utente di Adobe Experience Platform consente di creare e monitorare varie attività di igiene dei dati, tra cui l’eliminazione dei record e la pianificazione delle scadenze dei set di dati.
 

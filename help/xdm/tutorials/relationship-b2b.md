@@ -5,7 +5,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Schema di riferimento"
->abstract="Selezionare lo schema con cui si desidera stabilire una relazione. A seconda della classe dello schema, potrebbe avere anche relazioni esistenti con altre entità nel contesto B2B. Consulta la documentazione per scoprire in che modo le classi di schema B2B si relazionano tra loro."
+>abstract="Seleziona lo schema con cui desideri stabilire una relazione. A seconda della classe dello schema, potrebbe avere anche relazioni esistenti con altre entità nel contesto B2B. Per capire in che modo le classi di schema B2B si relazionano tra loro, consulta la documentazione."
 
 Adobe Real-time Customer Data Platform B2B Edition fornisce diverse classi Experience Data Model (XDM) che acquisiscono entità dati B2B fondamentali, tra cui [account](../classes/b2b/business-account.md), [opportunità](../classes/b2b/business-opportunity.md), [campagne](../classes/b2b/business-campaign.md)e altro ancora. Creando schemi basati su queste classi e abilitandoli per l’utilizzo in [Profilo cliente in tempo reale](../../profile/home.md), è possibile unire dati provenienti da origini diverse in una rappresentazione unificata denominata schema di unione.
 
@@ -51,7 +51,7 @@ Le relazioni dello schema sono rappresentate da un campo dedicato all’interno 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Spazio dei nomi delle identità di riferimento"
->abstract="Spazio dei nomi (tipo) per il campo di identità principale dello schema di riferimento. Lo schema di riferimento deve avere un campo di identità principale stabilito per poter partecipare a una relazione. Per ulteriori informazioni sulle identità nelle relazioni B2B, consulta la documentazione ."
+>abstract="Spazio dei nomi (tipo) per il campo di identità primaria dello schema di riferimento. Per poter partecipare a una relazione, nello schema di riferimento deve essere stato stabilito un campo di identità primaria. Per ulteriori informazioni sulle identità nelle relazioni B2B, consulta la documentazione."
 
 Per stabilire una relazione, lo schema di riferimento deve avere un&#39;identità primaria definita. Quando imposti un’identità primaria per un’entità B2B, ricorda che gli ID di entità basati su stringhe possono sovrapporsi se li raccogli tra sistemi o posizioni diversi, il che potrebbe causare conflitti di dati in Platform.
 
@@ -83,13 +83,13 @@ Schema di riferimento &quot;[!DNL Accounts]&quot; si basa sul [!UICONTROL Accoun
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
->title="Nome di relazione dallo schema corrente"
->abstract="Etichetta che descrive la relazione dallo schema corrente allo schema di riferimento (ad esempio, &quot;Account correlato&quot;). Questa etichetta viene utilizzata in Profilo e segmentazione per fornire contesto ai dati provenienti da entità B2B correlate. Consulta la documentazione per ulteriori informazioni sulla creazione di relazioni tra schemi B2B."
+>title="Nome della relazione dallo schema attuale"
+>abstract="Etichetta che descrive la relazione dallo schema attuale allo schema di riferimento (ad esempio, “Account correlato”). Questa etichetta viene utilizzata nel profilo e nella segmentazione per fornire contesto ai dati provenienti da entità B2B correlate. Per ulteriori informazioni sulla creazione di relazioni tra schemi B2B, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
->title="Nome di relazione dallo schema di riferimento"
->abstract="Etichetta che descrive la relazione dallo schema di riferimento allo schema corrente (ad esempio, &quot;Opportunità correlate&quot;). Questa etichetta viene utilizzata in Profilo e segmentazione per fornire contesto ai dati provenienti da entità B2B correlate. Consulta la documentazione per ulteriori informazioni sulla creazione di relazioni tra schemi B2B."
+>title="Nome della relazione dallo schema di riferimento"
+>abstract="Etichetta che descrive la relazione dallo schema di riferimento allo schema attuale (ad esempio, “Opportunità correlate”). Questa etichetta viene utilizzata nel profilo e nella segmentazione per fornire contesto ai dati provenienti da entità B2B correlate. Per ulteriori informazioni sulla creazione di relazioni tra schemi B2B, consulta la documentazione."
 
 Per definire una relazione tra due schemi, lo schema di origine deve disporre di un campo dedicato che indichi l’identità primaria dello schema di riferimento. Le classi B2B standard includono campi chiave sorgente dedicati per le entità business comunemente correlate. Ad esempio, il [!UICONTROL Opportunità aziendali XDM] la classe contiene i campi della chiave di origine di un account correlato (`accountKey`) e una campagna correlata (`campaignKey`). Tuttavia, puoi anche aggiungere altri [!UICONTROL Origine B2B] allo schema utilizzando i gruppi di campi personalizzati se sono necessari più componenti di quelli predefiniti.
 

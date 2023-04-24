@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -252,7 +252,7 @@ Dopo aver applicato le modifiche, il nuovo campo viene visualizzato nello spazio
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Abilitare uno schema per il profilo"
->abstract="Quando uno schema è abilitato per Profilo, tutti i set di dati creati da questo schema partecipano a Profilo cliente in tempo reale, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta utilizzato uno schema per acquisire dati in Profilo, non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione dello strumento."
+>abstract="Quando uno schema è abilitato per il profilo, tutti i set di dati creati da questo schema partecipano a Real-Time Customer Profile, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta che uno schema viene utilizzato per acquisire dati nel profilo, non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione dello strumento."
 
 [Profilo cliente in tempo reale](../../../profile/home.md) unisce i dati provenienti da fonti diverse per creare una visione completa di ogni singolo cliente. Se si desidera che i dati acquisiti da uno schema partecipino a questo processo, è necessario abilitare lo schema da utilizzare in [!DNL Profile].
 

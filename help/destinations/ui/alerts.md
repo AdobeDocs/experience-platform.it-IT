@@ -6,7 +6,7 @@ exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -30,8 +30,8 @@ Questo documento richiede una buona comprensione dei seguenti componenti di Adob
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
->title="Iscriviti agli avvisi di destinazione"
->abstract="Gli avvisi ti consentono di ricevere notifiche in base allo stato dei flussi di dati di destinazione. Puoi impostare le notifiche di avviso per ottenere aggiornamenti se il flusso di dati è stato avviato, se ha avuto esito positivo, se non è riuscito o se non ha inviato dati alla destinazione."
+>title="Iscriversi agli avvisi di destinazione"
+>abstract="Gli avvisi consentono di ricevere notifiche in base allo stato dei flussi di dati di destinazione. Puoi impostare le notifiche di avviso per ottenere aggiornamenti se il flusso di dati è stato avviato, ha avuto esito positivo o negativo o non ha inviato dati alla destinazione."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

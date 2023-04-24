@@ -6,7 +6,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
@@ -60,7 +60,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="Chiave pubblica RSA"
->abstract="Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave formattata correttamente nel collegamento alla documentazione seguente."
+>abstract="Facoltativamente, puoi collegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Nel collegamento alla documentazione qui di seguito, trovi un esempio di chiave formattata correttamente."
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
@@ -73,14 +73,14 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
->title="Nome blocco"
->abstract="Deve essere lungo tra 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini ( - ). Non deve essere formattato come indirizzo IP (ad esempio, 192.100.1.1)."
+>title="Nome del bucket"
+>abstract="Deve contenere da 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini (-). Non deve essere formattato come un indirizzo IP (ad esempio, 192.100.1.1)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
->title="Percorso cartella"
->abstract="Deve contenere solo caratteri A-Z, a-z, 0-9 e può includere i seguenti caratteri speciali: `/!-_.'()"^[]+$%.*"`. Per creare una cartella per file di segmento, inserire la macro `/%SEGMENT_NAME%` o `/%SEGMENT_ID%` o `/%SEGMENT_NAME%/%SEGMENT_ID%` nel campo di testo. Le macro possono essere inserite solo alla fine del percorso della cartella. Visualizzare esempi di macro nella documentazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Utilizzare le macro per creare una cartella nel percorso di archiviazione"
+>title="Percorso della cartella"
+>abstract="Deve contenere solo caratteri A-Z, a-z, 0-9 e può includere i seguenti caratteri speciali: `/!-_.'()"^[]+$%.*"`. Per creare una cartella per file di segmento, inserisci la macro `/%SEGMENT_NAME%` o `/%SEGMENT_ID%` o `/%SEGMENT_NAME%/%SEGMENT_ID%` nel campo di testo. Le macro possono essere inserite solo alla fine del percorso della cartella. Nella documentazione trovi alcuni esempi di macro."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=it#use-macros" text="Utilizzare le macro per creare una cartella nel percorso di archiviazione"
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 

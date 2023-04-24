@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="Tipi di etichette"
->abstract="Esistono diverse categorie di etichette di utilizzo dei dati. Le etichette definite in Adobe includono etichette di contratto, etichette di identità ed etichette sensibili. Le etichette definite dall&#39;organizzazione vengono classificate come etichette personalizzate."
+>abstract="Esistono diverse categorie di etichette di utilizzo dei dati. Le etichette definite da Adobe includono etichette per contratti, per identità e per dati sensibili. Le etichette definite dalla tua organizzazione vengono classificate come etichette personalizzate."
 >text="See the data usage labels glossary for more information on these label types."
 
 Le etichette di utilizzo dei dati ti consentono di classificare set di dati e campi in base a [politiche di governance](../policies/overview.md) e [criteri di controllo accessi](../../access-control/abac/overview.md) che si applicano a quei dati. Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati di base pronte all’uso che puoi utilizzare per iniziare a categorizzare i tuoi dati.

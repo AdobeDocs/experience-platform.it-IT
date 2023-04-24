@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -37,8 +37,8 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="Modifica delle etichette di governance"
->abstract="Applicare un&#39;etichetta a un campo dello schema per indicare i criteri di utilizzo applicati ai dati contenuti in quel campo specifico."
+>title="Modificare le etichette di governance"
+>abstract="Applica un’etichetta a un campo dello schema per indicare i criteri di utilizzo applicati ai dati contenuti in quel campo specifico."
 
 Per iniziare ad aggiungere etichette, devi prima [selezionare uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [creare un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell’Editor di schema.
 

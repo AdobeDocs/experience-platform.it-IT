@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -84,7 +84,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Processo completato]** | La data e l’ora in cui il processo del segmento è stato completato. |
 | **[!UICONTROL Tempo di elaborazione]** | Il tempo necessario al completamento del processo del segmento. |
 | **[!UICONTROL Stato del processo]** | Lo stato del processo del segmento. I valori supportati includono **[!UICONTROL Completato]**, **[!UICONTROL In corso]** e **[!UICONTROL Non riuscito]**. |
-| **[!UICONTROL Conteggio profili]** | Il numero di profili che il processo del segmento sta valutando. Ogni utente deve avere un profilo univoco. |
+| **[!UICONTROL Conteggio dei profili]** | Il numero di profili che il processo del segmento sta valutando. Ogni utente deve avere un profilo univoco. |
 | **[!UICONTROL Numero di identità]** | Il numero di identità che il processo del segmento sta attivando. Ogni profilo può avere più identità. Ad esempio, un profilo potrebbe avere un’e-mail, un numero di telefono e un numero fedeltà come identità. |
 | **[!UICONTROL Nome destinazione]** | Nome della destinazione a cui viene attivato il processo del segmento. |
 
@@ -166,14 +166,14 @@ Per la sezione dei segmenti sono disponibili le metriche seguenti:
 | Metrica | Descrizione |
 | ------ | ----------- |
 | **[!UICONTROL Nome]** | Nome del segmento oggetto della valutazione. |
-| **[!UICONTROL Conteggio profili]** | Il numero di profili in fase di valutazione. |
+| **[!UICONTROL Conteggio dei profili]** | Il numero di profili in fase di valutazione. |
 
 ## Dashboard dei processi dei segmenti {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Processi dei segmenti"
->abstract="La visualizzazione Processi del segmento contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
+>abstract="La vista Processi dei segmenti contiene informazioni sui processi di valutazione ed esportazione per tutti i segmenti."
 
 Per accedere al **[!UICONTROL Processi dei segmenti]** dashboard, seleziona **[!UICONTROL Monitoraggio]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nella navigazione a sinistra. Una volta sul [!UICONTROL Monitoraggio] pagina, seleziona **[!UICONTROL Processi dei segmenti]**. La [!UICONTROL Monitoraggio] il dashboard contiene metriche e informazioni sui processi di valutazione dei segmenti e di esportazione.
 

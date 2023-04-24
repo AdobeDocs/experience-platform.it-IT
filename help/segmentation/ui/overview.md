@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
 source-wordcount: '2650'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -54,12 +54,12 @@ Per ulteriori informazioni, visita il [guida al dashboard dei segmenti](../../da
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Metodo di valutazione"
->abstract="I metodi di valutazione per i segmenti includono batch, streaming e edge."
+>abstract="I metodi di valutazione per i segmenti includono batch, streaming ed Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Aggiungi tutti i segmenti alla pianificazione"
->abstract="Abilita l&#39;inclusione di tutti i segmenti di valutazione batch nell&#39;aggiornamento pianificato giornaliero. Disabilita la rimozione di tutti i segmenti dall&#39;aggiornamento pianificato."
+>abstract="Abilita questa opzione per includere tutti i segmenti di valutazione in batch nell’aggiornamento giornaliero pianificato. Disabilita questa opzione per rimuovere tutti i segmenti dall’aggiornamento pianificato."
 
 Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per la tua organizzazione.
 
@@ -211,7 +211,7 @@ Viene visualizzato un puntatore in cui sono elencati tutti i campi che è possib
 | Campo | Descrizione |
 | ----- | ----------- | 
 | [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Conteggio profili] | Il numero totale di profili idonei per il pubblico. |
+| [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
 | [!UICONTROL Origin] | Origine del pubblico. Se questo pubblico è stato generato da Platform, avrà un’origine del servizio di segmentazione. |
 | [!UICONTROL Stato del ciclo di vita] | Lo stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`e `Archived`. |
 | [!UICONTROL Frequenza di aggiornamento] | Un valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono `On Demand`, `Scheduled`e `Continuous`. |

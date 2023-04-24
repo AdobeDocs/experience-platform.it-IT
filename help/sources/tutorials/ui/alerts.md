@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -34,8 +34,8 @@ Questo documento richiede una buona comprensione dei seguenti componenti di Adob
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
->title="Iscriviti agli avvisi di origine"
->abstract="Gli avvisi consentono di ricevere notifiche in base allo stato dei flussi di dati sorgente. Puoi impostare le notifiche di avviso per ottenere aggiornamenti se il flusso di dati è stato avviato, ha avuto esito positivo, non è riuscito o non ha acquisito dati."
+>title="Iscriversi agli avvisi delle origini"
+>abstract="Gli avvisi consentono di ricevere notifiche in base allo stato dei flussi di dati delle origini. Puoi impostare le notifiche di avviso per ottenere aggiornamenti se il flusso di dati è stato avviato, ha avuto esito positivo o negativo o non ha acquisito dati."
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

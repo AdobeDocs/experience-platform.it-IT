@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
 source-wordcount: '2431'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo di credenziali client"
->abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta o **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza gli esempi nella documentazione."
+>abstract="Seleziona **Codificato nel corpo del modulo** per includere l’ID client e il segreto client nel corpo della richiesta, oppure seleziona **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Puoi trovare alcuni esempi nella documentazione."
 
 #### Autenticazione token portatore {#bearer-token-authentication}
 
@@ -143,7 +143,7 @@ Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="Intestazioni"
->abstract="Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato: `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, nel formato seguente: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
@@ -153,17 +153,17 @@ Se selezioni la **[!UICONTROL Credenziali client OAuth 2]** tipo di autenticazio
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
->title="Includi marche temporali del segmento"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+>title="Includi timestamp dei segmenti"
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché il timestamp UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
->title="Parametri query"
->abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
+>title="Parametri di query"
+>abstract="Facoltativamente, puoi aggiungere dei parametri di query all’URL dell’endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`."
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -173,7 +173,7 @@ Per configurare i dettagli della destinazione, compila i campi obbligatori e fac
 * **[!UICONTROL Descrizione]**: Immetti una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Intestazioni]**: Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, in questo formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Endpoint HTTP]**: URL dell’endpoint HTTP a cui desideri inviare i dati del profilo.
-* **[!UICONTROL Parametri query]**: Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Parametri query]**: Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Includi nomi dei segmenti]**: Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Includi marche temporali del segmento]**: Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, consulta [Dati esportati](#exported-data) più avanti.
 

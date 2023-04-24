@@ -4,8 +4,8 @@ description: Scopri come creare una connessione sorgente Adobe Analytics nell’
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2352'
+ht-degree: 5%
 
 ---
 
@@ -161,7 +161,7 @@ La seguente documentazione fornisce ulteriori risorse sulla preparazione dei dat
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="Creare regole di filtro"
->abstract="Definisci regole di filtro a livello di riga e colonna quando invii dati a Profilo cliente in tempo reale. Utilizza il filtro a livello di riga per applicare condizioni e dettare a quali dati **include per l’acquisizione di profili**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati che desideri **escludi per l’acquisizione di profili**. Le regole di filtro non si applicano ai dati inviati a data lake."
+>abstract="Quando invii dati al profilo cliente in tempo reale, puoi definire regole di filtro a livello di riga e colonna. Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati da **escludere dall’acquisizione per il profilo**. Le regole di filtro non si applicano ai dati inviati al Data Lake."
 
 Una volta completate le mappature per [!DNL Analytics] dati della suite di rapporti, puoi applicare regole e condizioni di filtro per includere o escludere in modo selettivo i dati dall’acquisizione al Profilo del cliente in tempo reale. Il supporto per il filtro è disponibile solo per [!DNL Analytics] i dati e i dati vengono filtrati solo prima dell&#39;immissione [!DNL Profile.] Tutti i dati vengono acquisiti nel lago dati.
 
@@ -169,7 +169,7 @@ Una volta completate le mappature per [!DNL Analytics] dati della suite di rappo
 
 >[!IMPORTANT]
 >
->Utilizza il filtro a livello di riga per applicare condizioni e dettare a quali dati **include per l’acquisizione di profili**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati che desideri **escludi per l’acquisizione di profili**.
+>Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati da **escludere dall’acquisizione per il profilo**.
 
 Puoi filtrare i dati per [!DNL Profile] inserimento a livello di riga e di colonna. Il filtro a livello di riga consente di definire criteri quali la stringa contiene, è uguale a, inizia o termina con. Puoi anche utilizzare il filtro a livello di riga per unire le condizioni utilizzando `AND` nonché `OR`e nega le condizioni utilizzando `NOT`.
 

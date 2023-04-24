@@ -128,7 +128,7 @@ Guarda l’esercitazione su [gestione delle etichette a livello di schema](../..
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Create labels (Creare etichette)"
->abstract="Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
+>abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
 
 Puoi creare etichette di utilizzo personalizzate all’interno di **[!UICONTROL Criteri]** nell&#39;area di lavoro [!DNL Experience Platform] Interfaccia utente. Seleziona **[!UICONTROL Criteri]** nella navigazione a sinistra, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco delle etichette esistenti. Da qui, seleziona **[!UICONTROL Crea etichetta]**.
 

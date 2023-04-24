@@ -6,7 +6,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
 source-wordcount: '2062'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -85,12 +85,12 @@ Se selezioni la **[!UICONTROL Autenticazione standard]** digita per connettersi 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Includi marche temporali del segmento"
->abstract="Attiva/disattiva se desideri che l’esportazione dei dati includa la marca temporale UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché la marca temporale UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione dei dati con questa opzione selezionata."
+>title="Includi timestamp dei segmenti"
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché il timestamp UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 

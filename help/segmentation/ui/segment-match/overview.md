@@ -7,7 +7,7 @@ exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1997'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -117,8 +117,8 @@ Per collegare un partner utilizzando i relativi [!UICONTROL connect ID], inseris
 
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"
->title="Casi d’uso limitati del marketing"
->abstract="I casi di utilizzo limitati del marketing forniscono indicazioni ai partner per garantire che i segmenti condivisi vengano utilizzati correttamente in base alle restrizioni di governance dei dati."
+>title="Casi d’uso di marketing con restrizioni"
+>abstract="I casi d’uso di marketing con restrizioni forniscono indicazioni ai partner per garantire che i segmenti condivisi vengano utilizzati correttamente in base alle restrizioni di governance dei dati."
 >text="Learn more in documentation"
 
 A **feed** è un raggruppamento di dati (segmenti), le regole per la modalità di esposizione o utilizzo di tali dati e le configurazioni che determinano la corrispondenza dei dati con i dati dei partner. Un feed può essere gestito in modo indipendente e scambiato con altri utenti di Platform tramite [!DNL Segment Match].

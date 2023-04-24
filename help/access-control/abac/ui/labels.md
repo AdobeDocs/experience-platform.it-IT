@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -18,8 +18,8 @@ Le etichette consentono di classificare set di dati e campi in base ai criteri d
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
->title="Utilizzo etichetta"
->abstract="Puoi utilizzare etichette personalizzate per applicare ai dati configurazioni di governance dei dati e controllo accessi."
+>title="Utilizzo delle etichette"
+>abstract="Puoi utilizzare etichette personalizzate per applicare ai dati configurazioni di governance dei dati e di controllo degli accessi."
 
 >[!NOTE]
 >

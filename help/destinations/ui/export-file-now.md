@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -25,12 +25,12 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
->title="Esporta file ora"
->abstract="Selezionare questo controllo per fornire un’esportazione completa di file oltre a qualsiasi esportazione pianificata in precedenza. L’esportazione del file viene attivata immediatamente e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform."
+>title="Esporta subito i file"
+>abstract="Seleziona questa opzione per fornire un’esportazione di file completa in aggiunta a eventuali esportazioni già pianificate. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform."
 
 Questo articolo spiega come utilizzare l’interfaccia utente di Experience Platform per esportare file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [marketing via e-mail](/help/destinations/catalog/email-marketing/overview.md) destinazioni.
 
-La **[!UICONTROL Esporta file ora]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un segmento pianificato in precedenza. Questa esportazione si verifica oltre alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del segmento. L’esportazione del file viene attivata immediatamente e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
+La **[!UICONTROL Esporta file ora]** consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un segmento pianificato in precedenza. Questa esportazione si verifica oltre alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del segmento. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
 
 Puoi inoltre utilizzare le API di Experience Platform a questo scopo. Scopri come [attivare segmenti di pubblico su richiesta per destinazioni batch tramite l’API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 

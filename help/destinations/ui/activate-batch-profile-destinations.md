@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '3629'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -58,7 +58,7 @@ Utilizza le caselle di controllo a sinistra dei nomi dei segmenti per selezionar
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="Pianificazione"
->abstract="Utilizza l’icona a forma di matita per impostare il tipo di esportazione del file (file completi o incrementali) e la frequenza di esportazione."
+>abstract="Utilizza l’icona della matita per impostare il tipo di esportazione dei file (file completi o incrementali) e la frequenza di esportazione."
 
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni di marketing e archiviazione cloud sotto forma di [!DNL CSV] file. In **[!UICONTROL Pianificazione]** È possibile configurare la pianificazione e i nomi dei file per ciascun segmento che si sta esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
 
@@ -77,18 +77,18 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al segmento da 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opzioni di esportazione file"
->abstract="Seleziona **Esportare file completi** per esportare uno snapshot completo di tutti i profili idonei per il segmento. Seleziona **Esportare file incrementali** per esportare solo i profili qualificati per il segmento dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i profili idonei per il segmento, che agiscono come backfill. I file incrementali futuri includono solo i profili qualificati per il segmento a partire dalla prima esportazione di file incrementali."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Esportare file incrementali"
+>abstract="Seleziona **Esporta file completi** per esportare uno snapshot completo di tutti i profili idonei per il segmento. Seleziona **Esporta file incrementali** per esportare solo i profili qualificati per il segmento dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i profili idonei per il segmento, agendo come backfill. I file incrementali futuri includono solo i profili qualificati per il segmento successivamente alla prima esportazione di file incrementali."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#export-incremental-files" text="Esportare file incrementali"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Attiva dopo la valutazione dei segmenti"
->abstract="L’attivazione viene eseguita immediatamente dopo il completamento del processo di segmentazione giornaliera. In questo modo i profili più aggiornati vengono esportati."
+>title="Attivare dopo la valutazione dei segmenti"
+>abstract="L’attivazione viene eseguita subito dopo il completamento del processo di segmentazione giornaliera, affinché vengano esportati i profili più aggiornati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Attivazione pianificata"
->abstract="L&#39;attivazione viene eseguita a un&#39;ora fissa del giorno."
+>abstract="L’attivazione viene eseguita a un orario fisso della giornata."
 
 Seleziona **[!UICONTROL Esportare file completi]** per attivare l’esportazione di un file contenente uno snapshot completo di tutte le qualifiche di profilo per il segmento selezionato.
 
@@ -159,8 +159,8 @@ Seleziona **[!UICONTROL Esportare file incrementali]** per attivare un’esporta
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
->title="Configura nome file"
->abstract="Per le destinazioni basate su file, viene generato un nome file univoco per segmento. Utilizza l’editor dei nomi file per creare e modificare un nome file univoco o per mantenere il nome predefinito."
+>title="Configurare il nome file"
+>abstract="Per le destinazioni basate su file, viene generato un nome di file univoco per segmento. Utilizza l’editor dei nomi dei file per creare e modificare un nome di file univoco oppure mantieni il nome predefinito."
 
 Per la maggior parte delle destinazioni, i nomi file predefiniti sono costituiti dal nome di destinazione, dall’ID del segmento e da un indicatore di data e ora. Ad esempio, puoi modificare i nomi dei file esportati per distinguere tra campagne diverse o per far sì che il tempo di esportazione dei dati sia aggiunto ai file. Tieni presente che alcuni sviluppatori di destinazione potrebbero scegliere di visualizzare opzioni di aggiunta di nomi file predefiniti diverse per le rispettive destinazioni.
 
@@ -237,7 +237,7 @@ Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembers
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="Informazioni sugli attributi obbligatori"
->abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione . Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dai relativi attributi."
+>abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione. Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dagli attributi."
 
 Un attributo obbligatorio è una casella di controllo abilitata dall’utente che assicura che tutti i record del profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail. &#x200B;
 
@@ -252,7 +252,7 @@ Se non selezioni un attributo obbligatorio, vengono esportati tutti i profili qu
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="Informazioni sulle chiavi di deduplicazione"
->abstract="Elimina più record dello stesso profilo nei file di esportazione selezionando una chiave di deduplicazione. Seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM come chiave di deduplicazione. La mancata selezione di una chiave di deduplicazione può causare la presenza di voci di profilo duplicate nei file di esportazione."
+>abstract="Seleziona una chiave di deduplicazione per elimina più record dello stesso profilo nei file di esportazione. Come chiave di deduplicazione, seleziona un singolo spazio dei nomi o fino a due attributi di schema XDM. Se non selezioni una chiave di deduplicazione, i file di esportazione potrebbero contenere voci di profilo duplicate."
 
 Una chiave di deduplicazione è una chiave primaria definita dall’utente che determina l’identità in base alla quale gli utenti desiderano che i loro profili vengano deduplicati. &#x200B;
 
@@ -472,10 +472,10 @@ Sulla **[!UICONTROL Revisione]** per visualizzare un riepilogo della selezione. 
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Visualizza criteri di consenso applicabili"
->abstract="Se l’organizzazione ha acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**, seleziona **[!UICONTROL Visualizza criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi nell’attivazione in seguito a tali criteri. Questo controllo è disabilitato se la tua azienda non ha accesso agli SKU di cui sopra."
+>title="Visualizzare i criteri di consenso applicabili"
+>abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
 
-Se l’organizzazione ha acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**, seleziona **[!UICONTROL Visualizza criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi nell’attivazione in seguito a tali criteri. Leggi [valutazione politica del consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi [valutazione politica del consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 

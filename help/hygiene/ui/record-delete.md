@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -64,13 +64,13 @@ Se desideri eliminare i record da tutti i set di dati, seleziona **[!UICONTROL T
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identità principale"
->abstract="Un&#39;identità primaria è un attributo che, ad Experience Platform, collega un record al profilo di un consumatore. Il campo di identità principale per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per l&#39;identità principale del record, ad esempio `email` per gli indirizzi e-mail e `ecid` ad Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia utente di Data Hygiene ."
+>title="Identità primaria"
+>abstract="Un’identità primaria è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo di identità primaria per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per l’identità primaria del record, ad esempio `email` per gli indirizzi e-mail e `ecid` per gli Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valore identità"
->abstract="In questa colonna è necessario fornire il valore per l&#39;identità principale del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di identità principale è `email`, il valore deve corrispondere all&#39;indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia utente per l’igiene dei dati ."
+>abstract="In questa colonna è necessario fornire il valore per l’identità primaria del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di identità primaria è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
 Quando si eliminano i record, è necessario fornire informazioni di identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base alla **identità principale** campo definito dallo schema del set di dati.
 

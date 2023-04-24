@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
 source-wordcount: '972'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -80,12 +80,12 @@ Alcune destinazioni di streaming di segmenti richiedono di selezionare gli attri
 
 1. Per aggiungere altre mappature, ripeti i passaggi da 1 a 5.
 
-### Applica trasformazione {#apply-transformation}
+### Applicar trasformazione {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Applica trasformazione"
->abstract="Seleziona questa opzione quando utilizzi campi sorgente con hash non crittografati per fare in modo che Adobe Experience Platform li hash automaticamente all’attivazione."
+>title="Applicar trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione."
 
 Quando mappi attributi di origine con hash non crittografati su attributi di destinazione per cui si prevede di eseguire l’hashing della destinazione (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla il **Applica trasformazione** per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi di origine all’attivazione.
 
@@ -112,11 +112,11 @@ Per visualizzare tutti i segmenti che vengono attivati nella destinazione, utili
 
    * Alcune destinazioni richiedono la selezione del **[!UICONTROL Origine del pubblico]** per ogni segmento, utilizzando il menu a discesa sotto i selettori del calendario. Se la destinazione non include questo selettore, salta questo passaggio.
 
-      ![ID mappatura](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+      ![ID di mappatura](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Alcune destinazioni richiedono la mappatura manuale [!DNL Platform] segmenti alla loro controparte nella destinazione di destinazione. A questo scopo, seleziona ogni segmento, quindi inserisci l’ID del segmento corrispondente dalla piattaforma di destinazione nel **[!UICONTROL ID mappatura]** campo . Se la destinazione non include questo campo, salta questo passaggio.
 
-      ![ID mappatura](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+      ![ID di mappatura](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Alcune destinazioni richiedono l’immissione di un **[!UICONTROL ID app]** quando si attiva [!DNL IDFA] o [!DNL GAID] segmenti. Se la destinazione non include questo campo, salta questo passaggio.
 
@@ -132,7 +132,7 @@ Sulla **[!UICONTROL Revisione]** per visualizzare un riepilogo della selezione. 
 
 ### Valutazione politica del consenso {#consent-policy-evaluation}
 
-Se l’organizzazione ha acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**, seleziona **[!UICONTROL Visualizza criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi nell’attivazione in seguito a tali criteri. Leggi [valutazione politica del consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Leggi [valutazione politica del consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 

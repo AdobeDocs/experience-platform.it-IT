@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -44,14 +44,14 @@ Sotto la **[!UICONTROL Applicazioni di Adobe]** categoria, seleziona **[!UICONTR
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Mappatura del target"
->abstract="Le mappature di destinazione sono oggetti tecnici utilizzati da Campaign per inviare messaggi e contengono tutte le impostazioni tecniche necessarie per inviare consegne (indirizzi, numeri di telefono, indicatori di consenso, identificatori aggiuntivi..)."
+>title="Mappatura target"
+>abstract="Le mappature target sono oggetti tecnici utilizzati da Campaign per consegnare i messaggi e contengono tutte le impostazioni tecniche necessarie per l’invio (indirizzi, numeri di telefono, indicatori di consenso, identificatori aggiuntivi e così via)."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
 >title="Nome dello schema"
->abstract="Nome dell’entità definita nel database Adobe Campaign."
+>abstract="Nome dell’entità definita nel database di Adobe Campaign."
 >text="Learn more in documentation"
 
 La [!UICONTROL Seleziona dati] viene visualizzato un passaggio che fornisce un’interfaccia per configurare il [!UICONTROL Istanza Adobe Campaign], [!UICONTROL Mappatura del target]e [!UICONTROL Nome dello schema].
@@ -59,7 +59,7 @@ La [!UICONTROL Seleziona dati] viene visualizzato un passaggio che fornisce un�
 | Proprietà | Descrizione |
 | --- | --- |
 | Istanza Adobe Campaign | Nome dell’istanza dell’ambiente Adobe Campaign in uso. |
-| Mappatura del target | Gli oggetti tecnici utilizzati da Campaign per inviare i messaggi e contengono tutte le impostazioni tecniche necessarie per l’invio delle consegne. |
+| Mappatura target | Gli oggetti tecnici utilizzati da Campaign per inviare i messaggi e contengono tutte le impostazioni tecniche necessarie per l’invio delle consegne. |
 | Nome dello schema | Nome dell’entità schema che stai portando in Platform. Le opzioni includono Log di consegna e Registro di tracciamento. |
 
 ![Interfaccia in cui puoi configurare l’istanza Adobe Campaign, la mappatura della destinazione e il nome dello schema.](../../../../images/tutorials/create/campaign/select-data.png)

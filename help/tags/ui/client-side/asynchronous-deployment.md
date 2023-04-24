@@ -5,7 +5,7 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 92%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="Implementazione asincrona"
->abstract="Se questa opzione è abilitata, quando questo tag script viene analizzato il browser inizierà a caricare il file JavaScript, ma invece di attendere che la libreria venga caricata ed eseguita, continuerà ad analizzare ed eseguire il rendering del resto del documento. Questo può migliorare le prestazioni della pagina web, ma ha importanti implicazioni quando si tratta di come vengono eseguite determinate regole. Per ulteriori informazioni, consulta la documentazione ."
+>abstract="Se questa opzione è abilitata, quando questo tag di script viene analizzato il browser inizia a caricare il file JavaScript, ma invece di attendere il caricamento e l’esecuzione della libreria, continua ad analizzare ed eseguire il rendering del resto del documento. Questo può migliorare le prestazioni della pagina web, ma ha importanti conseguenze in merito a come vengono eseguite determinate regole. Per informazioni, consulta la documentazione."
 
 >[!NOTE]
 >

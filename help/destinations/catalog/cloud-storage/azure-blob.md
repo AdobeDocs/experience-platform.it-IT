@@ -6,7 +6,7 @@ exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -75,7 +75,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_blob_rsa"
 >title="Chiave pubblica RSA"
->abstract="Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave formattata correttamente nel collegamento alla documentazione seguente."
+>abstract="Facoltativamente, puoi collegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Nel collegamento alla documentazione qui di seguito, trovi un esempio di chiave formattata correttamente."
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e seleziona **[!UICONTROL Connetti alla destinazione]**.
 

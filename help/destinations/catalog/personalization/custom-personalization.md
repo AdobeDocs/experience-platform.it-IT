@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -75,9 +75,9 @@ Il giorno successivo, l&#39;utente ritorna allo stesso sito web del cliente. I s
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Informazioni sugli ID di datastream"
->abstract="Questa opzione determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. È necessario configurare un datastream prima di poter configurare la destinazione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Scopri come configurare un datastream"
+>title="Informazioni sugli ID di stream di dati"
+>abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i segmenti nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=it" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
 > 
@@ -92,7 +92,7 @@ Quando [configurazione](../../ui/connect-destination.md) questa destinazione, de
 * **[!UICONTROL Nome]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione. Questo campo è facoltativo.
 * **[!UICONTROL Alias di integrazione]**: Questo valore viene inviato all’Experience Platform Web SDK come nome di oggetto JSON.
-* **[!UICONTROL ID Datastream]**: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo i datastreams con la configurazione di destinazione abilitata. Vedi [Configurazione di un datastream](../../../edge/datastreams/overview.md) per ulteriori dettagli.
+* **[!UICONTROL ID Datastream]**: Questo determina in quale datastream di raccolta dati i segmenti verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Vedi [Configurazione di un datastream](../../../edge/datastreams/overview.md) per ulteriori dettagli.
 
 ### Abilitare gli avvisi {#enable-alerts}
 

@@ -7,7 +7,7 @@ exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
 source-wordcount: '1257'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="Enum e valori consigliati"
->abstract="Un **Enum** vincola un campo stringa affinché consenta l’acquisizione solo dei dati che corrispondono a un set predefinito di valori. A ogni vincolo enum può essere assegnato un **Nome visualizzato** popola i menu a discesa degli attributi nell’interfaccia utente Segmentazione. **Valori consigliati** per un campo non limitare l’acquisizione e determinare solo i nomi visualizzati visualizzati in Segmentazione. Se si dispone di più schemi che condividono un campo appartenente a una classe o a un gruppo di campi comune e si definiscono enum o valori consigliati diversi per quel campo tra ogni schema, tali valori vengono uniti e aggiunti nello schema di unione."
+>abstract="Un **Enum** vincola un campo stringa affinché possano essere acquisiti solo i dati che corrispondono a un set predefinito di valori. A ogni vincolo enum può essere assegnato un **Nome visualizzato** che popola i menu a discesa degli attributi nell’interfaccia di Segmentazione. I **Valori consigliati** per un campo non limitano l’acquisizione e determinano solo i nomi visualizzati in Segmentazione. Se più schemi condividono un campo appartenente a una classe o a un gruppo di campi comune e definisci enum o valori consigliati diversi per quel campo tra ogni schema, tali valori vengono uniti e aggiunti nello schema di unione."
 
 In Experience Data Model (XDM), è possibile assegnare a un campo stringa un set predefinito di valori accettati o consigliati per controllare meglio quali valori vengono acquisiti in quel campo o come si comporterà nella segmentazione.
 

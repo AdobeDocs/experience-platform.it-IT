@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -72,19 +72,19 @@ La metà inferiore della pagina visualizza informazioni sul numero di record ric
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
 >title="Record acquisiti"
->abstract="La metrica Record ingestito indica il numero totale di record acquisiti in data lake."
+>abstract="La metrica Record acquisiti indica il numero totale di record acquisiti nel Data Lake."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="Record non elaborati"
->abstract="La metrica Record non riusciti indica il conteggio totale dei record che non sono stati acquisiti nel data lake a causa di errori nei dati."
+>title="Record con errori"
+>abstract="La metrica Record con errori indica il conteggio totale dei record che non sono stati acquisiti nel Data Lake a causa di errori nei dati."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
->title="Record con avvisi"
->abstract="I record con avvisi indicano il numero totale di record acquisiti con avvisi di trasformazione mappatura. Tutti gli errori di trasformazione della mappatura sono segnalati come avvisi e le righe parzialmente ingerite sono considerate corrette con un avviso"
+>title="Record con avvertenze"
+>abstract="La metrica Record con avvertenze indica il numero totale di record acquisiti che presentano avvertenze relative alla trasformazione della mappatura. Tutti gli errori di trasformazione della mappatura sono segnalati come avvertenze; le righe acquisite parzialmente sono considerate corrette con un’avvertenza."
 >text="Learn more in documentation"
 
 Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:

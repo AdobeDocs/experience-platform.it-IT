@@ -8,7 +8,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -46,8 +46,8 @@ Questa esercitazione richiede una comprensione approfondita dei seguenti compone
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
->title="Selezionare il tipo di business"
->abstract="Seleziona il tipo di business appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
+>title="Selezionare il tipo di azienda"
+>abstract="Seleziona il tipo di azienda appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it" text="Panoramica di Real-Time CDP"
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] visualizza un catalogo di origini disponibili in Experience Platform.
@@ -128,9 +128,9 @@ Al termine della configurazione della pianificazione dell’acquisizione, selezi
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_review"
 >title="Esamina le risorse generate automaticamente"
->abstract="La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di lasciare la pagina, riceverai una notifica da restituire una volta completate le risorse. Puoi rivedere le risorse una volta generate e configurare ulteriormente il flusso di dati in qualsiasi momento."
+>abstract="La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di uscire dalla pagina, una notifica ti chiederà di tornare una volta completate le risorse. Puoi esaminare le risorse generate e configurare ulteriormente il flusso di dati in qualsiasi momento."
 
-La [!UICONTROL Esaminare le risorse dei modelli] In questa pagina vengono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, i namespace di identità e i flussi di dati generati automaticamente associati alla connessione di origine. La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di lasciare la pagina, riceverai una notifica da restituire una volta completate le risorse. Puoi rivedere le risorse una volta generate e configurare ulteriormente il flusso di dati in qualsiasi momento.
+La [!UICONTROL Esaminare le risorse dei modelli] In questa pagina vengono visualizzate le risorse generate automaticamente come parte del modello. In questa pagina puoi visualizzare gli schemi, i set di dati, i namespace di identità e i flussi di dati generati automaticamente associati alla connessione di origine. La generazione di tutte le risorse può richiedere fino a cinque minuti. Se scegli di uscire dalla pagina, una notifica ti chiederà di tornare una volta completate le risorse. Puoi esaminare le risorse generate e configurare ulteriormente il flusso di dati in qualsiasi momento.
 
 I flussi di dati generati automaticamente sono abilitati per impostazione predefinita. Seleziona i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona **[!UICONTROL Mappature di anteprima]** per visualizzare i set di mappatura creati per il flusso di dati.
 

@@ -53,7 +53,7 @@ Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:i
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identità negli schemi"
->abstract="Le identità sono campi chiave all’interno di uno schema che possono essere utilizzati per identificare un oggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafico delle identità per ogni individuo e per creare i profili dei clienti. Consulta la documentazione per ulteriori informazioni sulle identità negli schemi."
+>abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafo delle identità per ogni singolo utente e generare profili cliente. Per ulteriori informazioni sulle identità negli schemi, consulta la documentazione."
 
 Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola visualizzazione unificata di una singola entità. Pertanto, è importante, quando pensi agli schemi, pensare alle identità dei clienti e a quali campi può essere utilizzato per identificare un soggetto indipendentemente da dove i dati potrebbero provenire.
 
@@ -170,7 +170,7 @@ Gli schemi sono composti con la seguente formula:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Ogni schema è basato su una singola classe. La classe definisce il comportamento dello schema e le proprietà comuni che tutti gli schemi basati su tale classe devono contenere. Per ulteriori informazioni sulle modalità di coinvolgimento delle classi nella composizione dello schema, consulta la documentazione."
+>abstract="Ogni schema è basato su una singola classe. La classe definisce il comportamento dello schema e le proprietà comuni che tutti gli schemi basati su tale classe devono contenere. Per ulteriori informazioni sul ruolo delle classi nella composizione dello schema, consulta la documentazione."
 
 La composizione di uno schema inizia con l’assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
@@ -189,12 +189,12 @@ Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare rif
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Gruppo di campi"
->abstract="I gruppi di campi sono componenti riutilizzabili che consentono di estendere gli schemi con attributi aggiuntivi. La maggior parte dei gruppi di campi è compatibile solo con determinate classi. È possibile utilizzare i gruppi di campi standard definiti da Adobe oppure definire manualmente gruppi di campi personalizzati. Per ulteriori informazioni sul modo in cui i gruppi di campi vengono coinvolti nella composizione dello schema, consulta la documentazione."
+>abstract="I gruppi di campi sono componenti riutilizzabili che consentono di estendere gli schemi con attributi aggiuntivi. La maggior parte dei gruppi di campi è compatibile solo con determinate classi. È possibile utilizzare i gruppi di campi standard definiti da Adobe oppure definire manualmente gruppi di campi personalizzati. Per ulteriori informazioni sul ruolo dei gruppi di campi nella composizione dello schema, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
->title="Gruppo di campi obbligatorio"
->abstract="Questo gruppo di campi è obbligatorio per l’origine in uso. Per questo motivo, non è possibile eliminarlo dallo schema."
+>title="Gruppo di campi richiesto"
+>abstract="Questo gruppo di campi è richiesto dall’origine in uso. Per questo motivo, non è possibile eliminarlo dallo schema."
 
 Un gruppo di campi è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni quali dettagli personali, preferenze alberghiere o indirizzo. I gruppi di campi devono essere inclusi come parte di uno schema che implementa una classe compatibile.
 

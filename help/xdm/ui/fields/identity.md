@@ -28,7 +28,7 @@ I campi di identità sono un componente fondamentale per la creazione dei grafic
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
 >title="Restrizioni all’identità primaria"
->abstract="Questo schema utilizza un gruppo di campi da utilizzare in una connessione di origine specifica. La connessione richiede che identityMap sia utilizzato come identità primaria e l’ha impostato automaticamente."
+>abstract="Questo schema utilizza un gruppo di campi destinato a essere utilizzato in una connessione di origine specifica. La connessione richiede che identityMap sia utilizzata come identità primaria e la imposta automaticamente."
 
 Quando [definizione di un nuovo campo](./overview.md#define) nell’interfaccia utente, puoi impostarla come campo di identità selezionando la **[!UICONTROL Identità]** nella barra a destra.
 

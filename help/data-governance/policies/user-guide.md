@@ -113,8 +113,8 @@ I criteri di consenso sono formati da due componenti logici:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condizione Se"
->abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette di governance dei dati o una combinazione di entrambe."
+>title="Condizione “Se”"
+>abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette per la governance dei dati o una combinazione di entrambe."
 
 Sotto la **[!UICONTROL Se]** seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Seleziona **[!UICONTROL Visualizza tutto]** e **[!UICONTROL Seleziona etichette]** per visualizzare l’elenco completo delle azioni di marketing e delle etichette disponibili, rispettivamente.
 
@@ -130,10 +130,10 @@ Se selezioni più di una condizione, puoi utilizzare l’icona visualizzata tra 
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condizione Allora"
->abstract="Una volta definita la condizione “Se”, utilizza la sezione “Allora” per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio."
+>title="Condizione “Allora”"
+>abstract="Una volta definita la condizione “Se”, utilizza la sezione “Allora” per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili vengano inclusi nell’azione gestita da questo criterio."
 
-Sotto la **[!UICONTROL Then]** seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio. È possibile scegliere una delle opzioni fornite dall’elenco oppure selezionare **[!UICONTROL Visualizza tutto]** per scegliere l&#39;attributo direttamente dallo schema di unione.
+Sotto la **[!UICONTROL Then]** seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili vengano inclusi nell’azione gestita da questo criterio. È possibile scegliere una delle opzioni fornite dall’elenco oppure selezionare **[!UICONTROL Visualizza tutto]** per scegliere l&#39;attributo direttamente dallo schema di unione.
 
 Quando selezioni l&#39;attributo di consenso, scegli i valori per l&#39;attributo per il quale desideri che questo criterio verifichi.
 

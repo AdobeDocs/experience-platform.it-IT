@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -69,9 +69,9 @@ Una società di noleggio e vendita di casa vuole personalizzare la propria home 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="Informazioni sugli ID di datastream"
->abstract="Questa opzione determina in quale datastream di raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo i datastreams con la configurazione di Target abilitata. Per utilizzare la segmentazione Edge, è necessario selezionare un ID datastream. Selezionando Nessuno vengono disattivati tutti i casi d’uso che utilizzano la segmentazione dei bordi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Ulteriori informazioni sulla selezione dei datastreams"
+>title="Informazioni sugli ID di stream di dati"
+>abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo gli stream di dati in cui la configurazione Destinazione è abilitata. Per utilizzare la segmentazione Edge, devi selezionare un ID di stream di dati. Se selezioni Nessuno, tutti i casi d’uso che utilizzano la segmentazione Edge vengono disabilitati."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=it#parameters" text="Ulteriori informazioni sulla selezione degli stream di dati"
 
 >[!IMPORTANT]
 > 

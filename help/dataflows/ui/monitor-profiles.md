@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
@@ -30,14 +30,14 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
->title="Elaborazione del profilo"
->abstract="La visualizzazione Elaborazione profilo contiene informazioni sui record acquisiti nel servizio Profilo, tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo."
+>title="Elaborazione dei profili"
+>abstract="La vista Elaborazione dei profili contiene informazioni sui record acquisiti in Profile Service, tra cui il numero di frammenti di profilo creati, i frammenti di profilo aggiornati e il numero totale di frammenti di profilo."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="Nella pagina dei dettagli dell’esecuzione del flusso di dati di un flusso di dati di profilo sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati, inclusi l’ID organizzazione e l’ID di esecuzione del flusso di dati."
+>abstract="Nella pagina Dettagli dell’esecuzione del flusso di dati sono visualizzate ulteriori informazioni sull’esecuzione del flusso di dati Profilo, inclusi l’ID organizzazione e l’ID di esecuzione del flusso di dati."
 
 Per accedere al **[!UICONTROL Profili]** dashboard, seleziona **[!UICONTROL Monitoraggio]** nella navigazione a sinistra. Una volta sul **[!UICONTROL Monitoraggio]** , seleziona la **[!UICONTROL Profili]** il Card.
 
@@ -57,7 +57,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | -------| ----------- |
 | **[!UICONTROL Nome origine]** | Nome dell&#39;origine. |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
+| **[!UICONTROL Record con errori]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
 | **[!UICONTROL Frammenti di profilo creati]** | Numero di nuove reti [!DNL Profile] frammenti aggiunti. |
 | **[!UICONTROL Frammenti di profilo aggiornati]** | Numero di [!DNL Profile] frammenti aggiornati. |
 | **[!UICONTROL Frammenti di profilo totali]** | Numero totale di record scritti in [!DNL Profile], compresi tutti gli [!DNL Profile] frammenti aggiornati e nuovi [!DNL Profile] frammenti creati. |
@@ -79,7 +79,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Set di dati]** | Nome del set di dati a cui il flusso di dati sta inserendo. |
 | **[!UICONTROL Nome origine]** | Nome dell&#39;origine a cui appartiene il flusso di dati. |
 | **[!UICONTROL Record ricevuti**] | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
+| **[!UICONTROL Record con errori]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
 | **[!UICONTROL Frammenti di profilo creati]** | Numero di nuove reti [!DNL Profile] frammenti aggiunti. |
 | **[!UICONTROL Frammenti di profilo aggiornati]** | Numero di [!DNL Profile] frammenti aggiornati |
 | **[!UICONTROL Frammenti di profilo totali]** | Numero totale di record scritti in [!DNL Profile], compresi tutti gli [!DNL Profile] frammenti aggiornati e nuovi [!DNL Profile] frammenti creati. |
@@ -99,7 +99,7 @@ Per questa vista dashboard sono disponibili le metriche seguenti:
 | Metrica | Descrizione |
 | -------| ----------- |
 | **[!UICONTROL Record ricevuti]** | Numero di record ricevuti da data lake. |
-| **[!UICONTROL Record non elaborati]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
+| **[!UICONTROL Record con errori]** | Il numero di record acquisiti, ma non in [!DNL Profile] a causa di errori. |
 | **[!UICONTROL Frammenti di profilo creati]** | Numero di nuove reti [!DNL Profile] frammenti aggiunti. |
 | **[!UICONTROL Frammenti di profilo aggiornati]** | Numero di [!DNL Profile] frammenti aggiornati. |
 | **[!UICONTROL Stato]** | Definisce lo stato generale di un flusso di dati. I possibili valori di stato sono: <ul><li>`Success`: Indica che un flusso di dati è attivo e sta acquisendo i dati in base alla pianificazione fornita.</li><li>`Failed`: Indica che il processo di attivazione di un flusso di dati è stato interrotto a causa di errori. </li><li>`Processing`: Indica che il flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati.</li></ul> |

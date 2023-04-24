@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 Questo documento fornisce le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi Platform, consulta la sezione [Guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
-Le sandbox suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale. Consulta la sezione [panoramica sulle sandbox](home.md) per ulteriori informazioni.
+Le sandbox suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale. Per ulteriori informazioni, consulta la [panoramica delle sandbox](home.md).
 
 ## Cos&#39;è una sandbox?
 
-Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox. Consulta la sezione [panoramica sulle sandbox](home.md) per ulteriori informazioni.
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox. Per ulteriori informazioni, consulta la [panoramica delle sandbox](home.md).
 
 ## Quali tipi di sandbox sono disponibili e quali sono le loro differenze? {#sandbox-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"
 >title="Tipo di sandbox"
->abstract="Il tipo di sandbox indica se si tratta di una sandbox di produzione o di sviluppo. Le sandbox di produzione includono dati live e sandbox di sviluppo vengono utilizzate per il test e lo sviluppo."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="Creare una sandbox nell’interfaccia utente"
+>abstract="Il tipo di sandbox indica se si tratta di una sandbox di produzione o di sviluppo. Le sandbox di produzione includono dati in tempo reale; quelle di sviluppo vengono utilizzate a scopo di test e sviluppo."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=it#create" text="Creare una sandbox nell’interfaccia utente"
 
 Nell’Experience Platform sono disponibili due tipi di sandbox:
 
@@ -37,7 +37,7 @@ Nell’Experience Platform sono disponibili due tipi di sandbox:
    * Un processo di segmentazione batch al giorno, per sandbox di sviluppo;
    * Una media di 120 [!DNL Profile] Chiamate API, per [!DNL Profile], per anno (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate.
 
-Consulta la sezione [panoramica sulle sandbox](./home.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la [panoramica delle sandbox](./home.md).
 
 ## Posso accedere a una risorsa da più di una sandbox?
 

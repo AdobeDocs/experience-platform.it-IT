@@ -7,7 +7,7 @@ exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '922'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Mappature dei campi sorgente Marketo"
->abstract="Per stabilire una connessione sorgente tra Marketo e Platform, i campi dei dati di origine Marketo devono essere mappati sui campi XDM di destinazione appropriati prima di essere acquisiti in Platform."
+>title="Mappature dei campi di origine di Marketo"
+>abstract="Per stabilire una connessione di origine tra Marketo e Platform, i campi dei dati di origine di Marketo devono essere mappati sui campi XDM di destinazione appropriati prima di essere acquisiti in Platform."
 
 Le tabelle seguenti contengono le mappature tra i campi nei nove [!DNL Marketo] set di dati e i campi XDM (Experience Data Model) corrispondenti.
 
@@ -36,7 +36,7 @@ Consulta la documentazione su [Classe evento esperienza XDM](../../../../xdm/cla
 | `"Marketo"` | `personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -144,7 +144,7 @@ Leggi la sezione [Panoramica di XDM Business Campaign](../../../../xdm/classes/b
 | `"Marketo"` | `campaignKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | La  `extSourceSystemAudit.externalKey` è l&#39;identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
@@ -175,7 +175,7 @@ Leggi la sezione [Panoramica dei membri della campagna aziendale XDM](../../../.
 | `"Marketo"` | `campaignMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Relazione |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -208,7 +208,7 @@ Leggi la sezione [Panoramica account aziendale XDM](../../../../xdm/classes/b2b/
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | La `extSourceSystemAudit.externalKey` è l&#39;identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -240,7 +240,7 @@ Leggi la sezione [Panoramica dell’elenco marketing aziendale XDM](../../../../
 | `"Marketo"` | `marketingListKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API Esplora . |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -258,7 +258,7 @@ Leggi la sezione [Panoramica dei membri dell&#39;elenco marketing aziendale XDM]
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Relazione |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -279,7 +279,7 @@ Leggi la sezione [Panoramica account aziendale XDM](../../../../xdm/classes/b2b/
 | `"Marketo"` | `accountKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | La `extSourceSystemAudit.externalKey` è l&#39;identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -307,7 +307,7 @@ Leggi la sezione [Panoramica sulle opportunità aziendali XDM](../../../../xdm/c
 | `"Marketo"` | `opportunityKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | Identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | Relazione |
 | `description` | `opportunityDescription` |
@@ -344,7 +344,7 @@ Leggi la sezione [Panoramica sulla relazione tra persone opportunità aziendali 
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API Esplora . |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito come parte dell’API Esplora . |
 | `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | La `extSourceSystemAudit.externalKey` è l&#39;identità secondaria. I valori per `{CRM_ORG_ID}` e `{CRM_TYPE}` verrà sostituito automaticamente. |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relazione |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relazione |
@@ -365,7 +365,7 @@ Leggi la sezione [Panoramica del profilo individuale XDM](../../../../xdm/classe
 | `"Marketo"` | `b2b.personKey.sourceType` |
 | `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identità principale. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Identità primaria. Valore per `"${MUNCHKIN_ID}"` verrà sostituito automaticamente. |
 | `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Se l’abbonamento viene annullato `true` (ad esempio, value = `1`), quindi imposta `consents.marketing.email.val` come (`n`). Se l’abbonamento viene annullato `false` (ad esempio, value = `0`), quindi imposta `consents.marketing.email.val` come `null`. |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
