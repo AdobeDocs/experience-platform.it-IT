@@ -5,9 +5,9 @@ title: API di Experience Platform di autenticazione e accesso
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1581'
 ht-degree: 8%
 
 ---
@@ -198,8 +198,70 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 [Postman](https://www.postman.com/) è uno strumento popolare che consente agli sviluppatori di esplorare e testare le API RESTful. Questo [Media post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descrive come configurare Postman per eseguire automaticamente l’autenticazione JWT e utilizzarla per utilizzare le API di Platform.
 
+## Controllo degli accessi per sviluppatori e API con autorizzazioni di Experience Platform
+
+>[!NOTE]
+>
+>Solo gli amministratori di sistema possono visualizzare e gestire le credenziali API in Autorizzazioni.
+
+Prima di creare integrazioni sulla console Adobe Developer, il tuo account deve disporre delle autorizzazioni per sviluppatori e utenti per un profilo di prodotto di Experience Platform in Adobe Admin Console.
+
+### Aggiungere sviluppatori al profilo di prodotto
+
+Vai a [[!DNL Admin Console]](https://adminconsole.adobe.com/) e accedi con il tuo Adobe ID.
+
+Seleziona **[!UICONTROL Prodotti]**, quindi seleziona **[!UICONTROL Adobe Experience Platform]** dall&#39;elenco dei prodotti.
+
+![Elenco prodotti in Admin Console](././images/api-authentication/products.png)
+
+Da **[!UICONTROL Profili di prodotto]** scheda , seleziona **[!UICONTROL AEP-Default-All-Users]**. In alternativa, utilizza la barra di ricerca per cercare il profilo di prodotto inserendo il nome .
+
+![Cerca il profilo di prodotto](././images/api-authentication/select-product-profile.png)
+
+Seleziona la **[!UICONTROL Sviluppatori]** , quindi seleziona **[!UICONTROL Aggiungi sviluppatore]**.
+
+![Aggiungi uno sviluppatore dalla scheda Sviluppatori](././images/api-authentication/add-developer1.png)
+
+Inserisci il **[!UICONTROL Email o nome utente]**. Una valida [!UICONTROL Email o nome utente] visualizza i dettagli per gli sviluppatori. Seleziona **[!UICONTROL Salva]**.
+
+![Aggiungi uno sviluppatore utilizzando il proprio indirizzo e-mail o nome utente](././images/api-authentication/add-developer-email.png)
+
+Lo sviluppatore è stato aggiunto correttamente e viene visualizzato nel [!UICONTROL Sviluppatori] scheda .
+
+![Sviluppatori elencati nella scheda Sviluppatori](././images/api-authentication/developer-added.png)
+
+### Configurare un’API
+
+Uno sviluppatore può aggiungere e configurare un’API all’interno di un progetto nella console Adobe Developer.
+
+Seleziona il progetto, quindi seleziona **[!UICONTROL Aggiungi API]**.
+
+![Aggiungere un’API a un progetto](././images/api-authentication/add-api-project.png)
+
+In **[!UICONTROL Aggiungere un’API]** selezione finestra di dialogo **[!UICONTROL Adobe Experience Platform]**, quindi seleziona **[!UICONTROL API Experience Platform]**.
+
+![Aggiungere un’API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In **[!UICONTROL Configurare l’API]** schermata, seleziona **[!UICONTROL AEP-Default-All-Users]**.
+
+### Assegnare l’API a un ruolo
+
+Un amministratore di sistema può assegnare le API ai ruoli nell’interfaccia utente di Experience Platform.
+
+Seleziona **[!UICONTROL Autorizzazioni]** e il ruolo a cui desideri aggiungere l’API. Seleziona la **[!UICONTROL Credenziali API]** , quindi seleziona **[!UICONTROL Aggiungi credenziali API]**.
+
+![Scheda delle credenziali API nel ruolo selezionato](././images/api-authentication/api-credentials.png)
+
+Seleziona l’API da aggiungere al ruolo, quindi seleziona **[!UICONTROL Salva]**.
+
+![Elenco delle API disponibili per la selezione](././images/api-authentication/select-api.png)
+
+Viene restituito al [!UICONTROL Credenziali API] , in cui è elencata la nuova API aggiunta.
+
+![Scheda delle credenziali API con l’API appena aggiunta](././images/api-authentication/api-credentials-with-added-api.png)
+
 ## Passaggi successivi
 
 Leggendo questo documento, hai raccolto e verificato con successo le credenziali di accesso per le API di Platform. Ora puoi seguire l’esempio di chiamate API fornite in [documentazione](../landing/documentation/overview.md).
 
-Oltre ai valori di autenticazione raccolti in questa esercitazione, molte API di Platform richiedono anche una valida `{SANDBOX_NAME}` da fornire come intestazione. Consulta la sezione [panoramica sulle sandbox](../sandboxes/home.md) per ulteriori informazioni.
+Oltre ai valori di autenticazione raccolti in questa esercitazione, molte API di Platform richiedono anche una valida `{SANDBOX_NAME}` da fornire come intestazione. Per ulteriori informazioni, consulta la [panoramica delle sandbox](../sandboxes/home.md).
