@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2406'
 ht-degree: 5%
 
 ---
@@ -31,6 +31,14 @@ Questa esercitazione richiede una comprensione approfondita dei seguenti compone
 * **Nomi descrittivi**: I nomi descrittivi sono etichette fornite dall&#39;utente per variabili personalizzate in un [!DNL Analytics] implementazione. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sui nomi descrittivi.
 
 ## Creare una connessione sorgente con Adobe Analytics
+
+>[!NOTE]
+>
+>Quando crei un flusso di dati di origine Analytics in una sandbox di produzione, vengono creati due flussi di dati:
+>
+>* Flusso di dati che esegue un backfill di 13 mesi dei dati storici della suite di rapporti in data lake. Questo flusso di dati termina quando il backfill è completo.
+>* Un flusso di flusso di dati che invia dati live a Data Lake e a [!DNL Real-Time Customer Profile]. Questo flusso di dati viene eseguito continuamente.
+
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Origini]** dalla navigazione a sinistra per accedere al [!UICONTROL Origini] workspace. La [!UICONTROL Catalogo] in questa schermata vengono visualizzate diverse sorgenti con cui è possibile creare un account.
 

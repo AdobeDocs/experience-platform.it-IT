@@ -1,10 +1,9 @@
 ---
 title: Creare una connessione sorgente di streaming e un flusso di dati per la visualizzazione di dati in modo casuale utilizzando l’API del servizio di flusso
 description: Scopri come creare una connessione sorgente in streaming e un flusso di dati per Shopify data utilizzando l’API del servizio di flusso.
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%
@@ -237,7 +236,7 @@ Ultimo passo verso l&#39;inserimento dei dati [!DNL Shopify] su Platform viene c
 
 * [ID connessione di origine](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori precedentemente menzionati all’interno del payload.
 

@@ -2,9 +2,9 @@
 title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
+source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1112'
 ht-degree: 6%
 
 ---
@@ -54,7 +54,12 @@ La latenza prevista per i dati di Analytics su Platform è descritta nella tabel
 | Nuovi dati su Data Lake | &lt; 90 minuti |
 | Recupero di meno di 10 miliardi di eventi | &lt; 4 settimane |
 
-Per impostazione predefinita, Analytics esegue il backfills a 13 mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza attesa.
+Per impostazione predefinita, il backfill di Analytics per le sandbox di produzione è di 13 mesi. Per i dati di Analytics nelle sandbox non di produzione, il backfill è impostato su tre mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza attesa.
+
+Quando crei un flusso di dati di origine Analytics in una sandbox di produzione, vengono creati due flussi di dati:
+
+* Flusso di dati che esegue un backfill di 13 mesi dei dati storici della suite di rapporti in data lake. Questo flusso di dati termina quando il backfill è completo.
+* Un flusso di flusso di dati che invia dati live a Data Lake e a [!DNL Real-Time Customer Profile]. Questo flusso di dati viene eseguito continuamente.
 
 >[!NOTE]
 >

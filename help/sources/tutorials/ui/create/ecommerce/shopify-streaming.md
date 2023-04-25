@@ -1,10 +1,9 @@
 ---
 title: Creare Una Connessione E Un Flusso Di Dati Di Streaming Ridotti Nell’Interfaccia Utente
 description: Scopri come creare una connessione sorgente e un flusso di dati Shopify Streaming utilizzando l’interfaccia utente di Platform
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -95,4 +94,3 @@ Per recuperare l’endpoint di streaming, vai a [!UICONTROL Attività del flusso
 ## Passaggi successivi
 
 Seguendo questa esercitazione, hai stabilito una connessione sorgente e un flusso di dati per il tuo [!DNL Shopify Streaming] conto. Per istruzioni su come collegare le [!DNL Shopify Streaming] utilizzando l&#39;API, leggi l&#39;esercitazione su [creazione di una connessione sorgente e di un flusso di dati per lo streaming [!DNL Shopify] dati utilizzando l’API del servizio di flusso](../../../api/create/ecommerce/shopify-streaming.md).
-
