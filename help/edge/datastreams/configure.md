@@ -1,138 +1,139 @@
 ---
-title: Configurare uno stream di dati
-description: Connetti l’integrazione lato client di Experience Platform SDK con i prodotti Adobe e le destinazioni di terze parti.
+title: Configurare un datastream
+description: Scopri come collegare l’integrazione dell’SDK web sul lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
+source-git-commit: 611b80f2444ea86ef008f761c5d46976c55b864d
 workflow-type: tm+mt
-source-wordcount: '1658'
-ht-degree: 3%
+source-wordcount: '2020'
+ht-degree: 2%
 
 ---
 
-# Configurare uno stream di dati
+# Configurare un datastream
 
-Questo documento descrive i passaggi per la configurazione di una [flusso di dati](./overview.md) nell’interfaccia utente.
+Questo documento descrive i passaggi per la configurazione di un [datastream](./overview.md) nell’interfaccia utente di .
 
-## Accedere a [!UICONTROL Flussi di dati] workspace
+## Accedere al [!UICONTROL Datastreams] workspace
 
-Puoi creare e gestire gli stream di dati nell’interfaccia utente di Data Collection o in quella di Experience Platform selezionando **[!UICONTROL Flussi di dati]** nel menu di navigazione a sinistra.
+Puoi creare e gestire i datastreams nell’interfaccia utente di raccolta dati o di Experience Platform selezionando **[!UICONTROL Datastreams]** nella navigazione a sinistra.
 
-![Scheda Flussi di dati nell’interfaccia utente di Data Collection](../assets/datastreams/configure/datastreams-tab.png)
+![Scheda Datastreams nell’interfaccia utente di raccolta dati](../assets/datastreams/configure/datastreams-tab.png)
 
-Il [!UICONTROL Flussi di dati] Nella scheda viene visualizzato un elenco degli stream di dati esistenti, con il nome descrittivo, l’ID e la data dell’ultima modifica. Seleziona il nome di uno stream di dati da [visualizzarne i dettagli e configurare i servizi](#view-details).
+La **[!UICONTROL Datastreams]** visualizza un elenco dei datastreams esistenti, con il relativo nome descrittivo, ID e data dell’ultima modifica. Selezionare il nome di un datastream in [visualizzare i dettagli e configurare i servizi](#view-details).
 
-Seleziona l’icona &quot;altro&quot; (**...**) per un particolare flusso di dati per visualizzare più opzioni. Seleziona **[!UICONTROL Modifica]** per aggiornare [configurazione di base](#configure) per lo stream di dati, oppure seleziona **[!UICONTROL Elimina]** per rimuovere lo stream di dati.
+Seleziona l’icona &quot;Altro&quot; (**...**) per un particolare datastream per rivelare più opzioni. Seleziona **[!UICONTROL Modifica]** per aggiornare [configurazione di base](#configure) per il datastream, oppure seleziona **[!UICONTROL Elimina]** per rimuovere il datastream.
 
-![Opzioni per modificare o eliminare uno stream di dati esistente](../assets/datastreams/configure/edit-datastream.png)
+![Opzioni per modificare o eliminare un datastream esistente](../assets/datastreams/configure/edit-datastream.png)
 
-## Creare un nuovo flusso di dati {#create}
+## Crea un nuovo datastream {#create}
 
-Per creare un flusso di dati, inizia selezionando **[!UICONTROL Nuovo flusso di dati]**.
+Per creare un datastream, inizia selezionando **[!UICONTROL Nuovo Datastream]**.
 
-![Seleziona nuovo flusso di dati](../assets/datastreams/configure/new-datastream-button.png)
+![Seleziona nuovo archivio dati](../assets/datastreams/configure/new-datastream-button.png)
 
-Viene visualizzato il flusso di lavoro per la creazione dello stream di dati, a partire dal passaggio di configurazione. Da qui, devi fornire un nome e una descrizione facoltativa per lo stream di dati.
+Viene visualizzato il flusso di lavoro di creazione del datastream, a partire dal passaggio di configurazione. Da qui, devi fornire un nome e una descrizione facoltativa per il datastream.
 
-Se configuri questo flusso di dati per l’utilizzo in Experience Platform e utilizzi Platform Web SDK, devi anche selezionare un’ [Schema Experience Data Model (XDM) basato su eventi](../../xdm/classes/experienceevent.md) per rappresentare i dati che intendi acquisire.
+Se stai configurando questo datastream per l’utilizzo in Experience Platform e stai utilizzando l’SDK per web di Platform, devi anche selezionare un [schema Experience Data Model (XDM) basato su eventi](../../xdm/classes/experienceevent.md) per rappresentare i dati che intendi acquisire.
 
-![Configurazione di base per uno stream di dati](../assets/datastreams/configure/configure.png)
+![Configurazione di base per un datastream](../assets/datastreams/configure/configure.png)
 
-Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare ulteriori controlli per configurare lo stream di dati.
+Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare controlli aggiuntivi per configurare il datastream.
 
 ![Opzioni di configurazione avanzate](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Geolocalizzazione] | Determina se le ricerche geografiche si verificano in base all’indirizzo IP dell’utente. Impostazione predefinita **[!UICONTROL Nessuno]** disabilita le ricerche Geo, mentre il **[!UICONTROL Città]** fornisce le coordinate GPS con due posizioni decimali. |
-| [!UICONTROL Cookie ID di prima parte] | Quando è abilitata, questa impostazione comunica a Edge Network di fare riferimento a un cookie specificato durante la ricerca di un [ID dispositivo di prime parti](../identity/first-party-device-ids.md), anziché cercare questo valore in Identity Map.<br><br>Quando abiliti questa impostazione, devi fornire il nome del cookie in cui si prevede che l’ID venga memorizzato. |
-| [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire di eseguire diverse sincronizzazioni ID in momenti diversi. Quando è abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per questo flusso di dati. |
-| [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione accettato dalla rete Edge per lo stream di dati. <ul><li>**[!UICONTROL Autenticazione mista]**: quando questa opzione è selezionata, la rete Edge accetta sia richieste autenticate che non autenticate. Seleziona questa opzione quando intendi utilizzare l’SDK per web o [SDK per dispositivi mobili](https://aep-sdks.gitbook.io/docs/), insieme al [API server](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticato]**: quando questa opzione è selezionata, la rete Edge accetta solo richieste autenticate. Selezionare questa opzione quando si intende utilizzare solo l&#39;API server e si desidera impedire l&#39;elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
+| [!UICONTROL Posizione geografica] | Determina se si verificano ricerche di geolocalizzazione in base all&#39;indirizzo IP dell&#39;utente. Impostazione predefinita **[!UICONTROL Nessuno]** disabilita eventuali ricerche di geolocalizzazione, mentre il **[!UICONTROL Città]** fornisce le coordinate GPS a due posizioni decimali. La geolocalizzazione si verifica prima [!UICONTROL Offuscamento IP] e non è influenzato dal  [!UICONTROL Offuscamento IP] impostazione. |
+| [!UICONTROL Offuscamento IP] | Indica il tipo di offuscamento IP da applicare al datastream. Qualsiasi elaborazione basata sull’IP del cliente sarà influenzata dall’impostazione di oscuramento dell’IP. Questo include tutti i servizi Experience Cloud che ricevono i dati dal tuo datastream. <p>Opzioni disponibili:</p> <ul><li>**[!UICONTROL Nessuno]**: Disattiva l’offuscamento dell’IP. L&#39;indirizzo IP dell&#39;utente completo verrà inviato tramite il datastream.</li><li>**[!UICONTROL Parziale]**: Per gli indirizzi IPv4, offusca l’ultimo ottetto dell’indirizzo IP dell’utente. Per gli indirizzi IPv6, offusca gli ultimi 80 bit dell’indirizzo. <p>Esempi:</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Completo]**: Offusca l’intero indirizzo IP. <p>Esempi:</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `::/128`</li></ul></li></ul> Impatto dell’offuscamento dell’IP su altri prodotti Adobe: <ul><li>**Adobe Target**: Livello datastream [!UICONTROL Offuscamento IP] ha la precedenza su qualsiasi opzione di offuscamento dell’IP impostata in Adobe Target. Ad esempio, se il livello di datastream [!UICONTROL Offuscamento IP] è impostata su **[!UICONTROL Completo]** e l&#39;opzione di offuscamento dell&#39;IP di Adobe Target è impostata su **[!UICONTROL Ultima offuscamento dell&#39;ottetto]**, Adobe Target riceverà un IP completamente offuscato. Consulta la documentazione di Adobe Target su [Offuscamento IP](https://developer.adobe.com/target/before-implement/privacy/privacy/) e [geolocalizzazione](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) per ulteriori dettagli.</li><li>**Audience Manager**: L’impostazione di offuscamento dell’IP a livello di datastream ha la precedenza su qualsiasi opzione di offuscamento dell’IP impostata nell’Audience Manager e viene applicata a tutti gli indirizzi IP. Qualsiasi ricerca di geolocalizzazione eseguita da Audience Manager è influenzata dal livello del datastream [!UICONTROL Offuscamento IP] opzione . Una ricerca di geolocalizzazione in Audience Manager, basata su un IP completamente offuscato, comporterà una regione sconosciuta e tutti i segmenti basati sui dati di geolocalizzazione risultanti non verranno realizzati. Vedi la documentazione di Audience Manager su [Offuscamento IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) per ulteriori dettagli.</li><li>**Adobe Analytics**: I dati inviati ad Adobe Analytics non sono interessati dal livello di datastream [!UICONTROL Offuscamento IP] impostazione. Al momento Adobe Analytics riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, devi configurare l’offuscamento dell’IP separatamente, in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future. Vedi Adobe Analytics [documentazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) per informazioni dettagliate su come abilitare l’offuscamento dell’IP in Analytics.</li></ul> |
+| [!UICONTROL Cookie ID di prime parti] | Quando questa impostazione è abilitata, indica alla rete Edge di fare riferimento a un cookie specificato durante la ricerca di un [ID dispositivo di prime parti](../identity/first-party-device-ids.md), anziché cercare questo valore nella mappa identità.<br><br>Quando abiliti questa impostazione, devi fornire il nome del cookie in cui deve essere memorizzato l’ID. |
+| [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire l’esecuzione di sincronizzazioni ID diverse in momenti diversi. Quando abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per questo datastream. |
+| [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione che la rete Edge accetta per il datastream. <ul><li>**[!UICONTROL Autenticazione mista]**: Quando questa opzione è selezionata, la rete Edge accetta richieste autenticate e non autenticate. Seleziona questa opzione quando intendi usare l’SDK per web o [SDK per dispositivi mobili](https://aep-sdks.gitbook.io/docs/), insieme al [API server](../../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticazione]**: Quando questa opzione è selezionata, la rete Edge accetta solo richieste autenticate. Selezionare questa opzione quando si intende utilizzare solo l&#39;API server e si desidera impedire l&#39;elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
 
-Da qui, se ad Experience Platform stai configurando lo stream di dati, segui l’esercitazione su [Preparazione per la raccolta dati](./data-prep.md) per mappare i dati su uno schema di eventi di Platform, prima di tornare a questa guida. In caso contrario, seleziona **[!UICONTROL Salva]** e passare alla sezione successiva.
+Da qui, se stai configurando il tuo datastream per Experience Platform, segui l&#39;esercitazione su [Preparazione per la raccolta dei dati](./data-prep.md) per mappare i dati su uno schema evento Platform prima di tornare a questa guida. In caso contrario, seleziona **[!UICONTROL Salva]** e passa alla sezione successiva.
 
-## Visualizzare i dettagli dello stream di dati {#view-details}
+## Visualizza i dettagli del datastream {#view-details}
 
-Dopo aver configurato un nuovo stream di dati o selezionato uno esistente da visualizzare, viene visualizzata la pagina dei dettagli dello stream di dati. Qui puoi trovare ulteriori informazioni sullo stream di dati, incluso il relativo ID.
+Dopo aver configurato un nuovo datastream o selezionato uno esistente da visualizzare, viene visualizzata la pagina dei dettagli per quel datastream. Qui puoi trovare ulteriori informazioni sul datastream, compreso il relativo ID.
 
-![Pagina dei dettagli per uno stream di dati creato](../assets/datastreams/configure/view-details.png)
+![Pagina dei dettagli per un datastream creato](../assets/datastreams/configure/view-details.png)
 
-Dalla schermata dei dettagli dello stream di dati, puoi [aggiungi servizi](#add-services) per abilitare le funzionalità dei prodotti Adobe Experience Cloud a cui hai accesso. Puoi anche modificare i [configurazione di base](#create), aggiorna i [regole di mappatura](./data-prep.md), [copiare lo stream di dati](#copy)o eliminarlo completamente.
+Dalla schermata dei dettagli del datastream, puoi [aggiungi servizi](#add-services) per abilitare le funzionalità dei prodotti Adobe Experience Cloud a cui hai accesso. È inoltre possibile modificare il [configurazione di base](#create), aggiorna [regole di mappatura](./data-prep.md), [copia il datastream](#copy)oppure eliminalo completamente.
 
-## Aggiungere servizi a un flusso di dati {#add-services}
+## Aggiungere servizi a un datastream {#add-services}
 
-Nella pagina dei dettagli di un flusso di dati, seleziona **[!UICONTROL Aggiungi servizio]** per iniziare ad aggiungere i servizi disponibili per lo stream di dati.
+Nella pagina dei dettagli di un datastream, seleziona **[!UICONTROL Aggiungi servizio]** per iniziare ad aggiungere i servizi disponibili per quel datastream.
 
 ![Seleziona Aggiungi servizio per continuare](../assets/datastreams/configure/add-service.png)
 
-Nella schermata successiva, utilizza il menu a discesa per selezionare un servizio da configurare per questo flusso di dati. In questo elenco verranno visualizzati solo i servizi a cui si ha accesso.
+Nella schermata successiva, utilizza il menu a discesa per selezionare un servizio da configurare per questo datastream. In questo elenco verranno visualizzati solo i servizi a cui hai accesso.
 
-![Seleziona un servizio dall’elenco](../assets/datastreams/configure/service-selection.png)
+![Selezionare un servizio dall&#39;elenco](../assets/datastreams/configure/service-selection.png)
 
-Seleziona il servizio desiderato, compila le opzioni di configurazione visualizzate e quindi seleziona **[!UICONTROL Salva]** per aggiungere il servizio allo stream di dati. Tutti i servizi aggiunti vengono visualizzati nella vista dei dettagli dello stream di dati.
+Seleziona il servizio desiderato, compila le opzioni di configurazione visualizzate, quindi seleziona **[!UICONTROL Salva]** per aggiungere il servizio al datastream. Tutti i servizi aggiunti vengono visualizzati nella visualizzazione dei dettagli del datastream.
 
-![Servizi aggiunti a uno stream di dati](../assets/datastreams/configure/services-added.png)
+![Servizi aggiunti a un datastream](../assets/datastreams/configure/services-added.png)
 
-Le sottosezioni seguenti descrivono le opzioni di configurazione per ciascun servizio.
+Le sottosezioni seguenti descrivono le opzioni di configurazione per ogni servizio.
 
 >[!NOTE]
 >
->Ogni configurazione del servizio contiene un **[!UICONTROL Abilitato]** che viene attivata automaticamente quando il servizio viene selezionato. Per disabilitare il servizio selezionato per questo flusso di dati, seleziona il **[!UICONTROL Abilitato]** attiva di nuovo.
+>Ogni configurazione del servizio contiene un **[!UICONTROL Abilitato]** attiva automaticamente quando il servizio è selezionato. Per disabilitare il servizio selezionato per questo datastream, seleziona il **[!UICONTROL Abilitato]** scattare di nuovo.
 
 ### Impostazioni di Adobe Analytics {#analytics}
 
-Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella guida su [invio di dati ad Analytics](../data-collection/adobe-analytics/analytics-overview.md).
+Questo servizio controlla se e come i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella guida all&#39;indirizzo [invio di dati ad Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Blocco impostazioni Adobe Analytics](../assets/datastreams/configure/analytics-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL ID suite di rapporti] | **(Obbligatorio)** ID della suite di rapporti di Analytics a cui desideri inviare i dati. Questo ID si trova nell’interfaccia utente di Adobe Analytics in [!UICONTROL Amministratore] > [!UICONTROL ReportSuites]. Se sono specificate più suite di rapporti, i dati vengono copiati in ogni suite di rapporti. |
+| [!UICONTROL ID suite di rapporti] | **(Obbligatorio)** ID della suite di rapporti di Analytics a cui desideri inviare i dati. Questo ID si trova nell&#39;interfaccia utente di Adobe Analytics in [!UICONTROL Amministratore] > [!UICONTROL ReportSuites]. Se sono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti. |
 
 ### Impostazioni Adobe Audience Manager {#audience-manager}
 
-Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Manager. Per inviare dati ad Audience Manager, è sufficiente abilitare questa sezione. Le altre impostazioni sono facoltative ma consigliate.
+Questo servizio controlla se e come i dati vengono inviati a Adobe Audience Manager. Tutto ciò che è necessario per inviare dati ad Audience Manager è quello di abilitare questa sezione. Le altre impostazioni sono facoltative ma incoraggiate.
 
-![Adobe di blocco delle impostazioni di Audience Manager](../assets/datastreams/configure/audience-manager-config.png)
+![Adobe Blocco delle impostazioni di Gestione dell&#39;audience](../assets/datastreams/configure/audience-manager-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Destinazioni cookie abilitate] | Consente all&#39;SDK di condividere le informazioni sui segmenti tramite [destinazioni dei cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) da [!DNL Audience Manager]. |
-| [!UICONTROL Destinazioni URL abilitate] | Consente all&#39;SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) da [!DNL Audience Manager]. |
+| [!UICONTROL Destinazioni cookie abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [destinazioni cookie](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) da [!DNL Audience Manager]. |
+| [!UICONTROL Destinazioni URL abilitate] | Consente all’SDK di condividere le informazioni sui segmenti tramite [Destinazioni URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) da [!DNL Audience Manager]. |
 
 ### Impostazioni Adobe Experience Platform {#aep}
 
 >[!IMPORTANT]
 >
->Quando abiliti un flusso di dati per Platform, prendi nota della sandbox Platform attualmente in uso, come mostrato nella barra multifunzione superiore dell’interfaccia utente.
+>Quando abiliti un datastream per Platform, prendi nota della sandbox di Platform che stai utilizzando, come visualizzata nella barra multifunzione superiore dell’interfaccia utente.
 >
->![Sandbox selezionata](../assets/datastreams/configure/platform-sandbox.png)
+>![Sandbox selezionato](../assets/datastreams/configure/platform-sandbox.png)
 >
->Le sandbox sono partizioni virtuali in Adobe Experience Platform che consentono di isolare i dati e le implementazioni da altri nell’organizzazione. Una volta creato uno stream di dati, la relativa sandbox non può essere modificata. Per ulteriori dettagli sul ruolo delle sandbox in Experience Platform, vedi [documentazione sulle sandbox](../../sandboxes/home.md).
+>Le sandbox sono partizioni virtuali in Adobe Experience Platform che ti consentono di isolare i dati e le implementazioni da altre parti della tua organizzazione. Una volta creato un datastream, la relativa sandbox non può essere modificata. Per ulteriori dettagli sul ruolo delle sandbox in Experience Platform, consulta la sezione [documentazione sandbox](../../sandboxes/home.md).
 
 Questo servizio controlla se e come i dati vengono inviati a Adobe Experience Platform.
 
-![Blocco impostazioni Adobe Experience Platform](../assets/datastreams/configure/platform-config.png)
+![Blocco delle impostazioni Adobe Experience Platform](../assets/datastreams/configure/platform-config.png)
 
 | Impostazione | Descrizione |
 |---| --- |
-| [!UICONTROL Set di dati evento] | **(Obbligatorio)** Seleziona il set di dati di Platform a cui verranno inviati in streaming i dati dell’evento cliente. Questo schema deve utilizzare [Classe XDM ExperienceEvent](../../xdm/classes/experienceevent.md). |
-| [!UICONTROL Set di dati profilo] | Seleziona il set di dati di Platform a cui verranno inviati i dati degli attributi del cliente. Questo schema deve utilizzare [Classe profilo individuale XDM](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Seleziona questa casella di controllo per abilitare l’Offer decisioning per un’implementazione Platform Web SDK. Consulta la guida su [offer decisioning di utilizzo con Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) per ulteriori dettagli sull’implementazione.<br><br>Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta [Documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=it). |
-| [!UICONTROL Segmentazione Edge] | Seleziona questa casella di controllo per abilitare [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) per questo flusso di dati. Quando l’SDK invia i dati tramite uno stream di dati abilitato per la segmentazione edge, tutte le appartenenze al segmento aggiornate per il profilo in questione vengono rimandate nella risposta.<br><br>Questa opzione può essere utilizzata in combinazione con [!UICONTROL Destinazioni di personalizzazione] per [casi di utilizzo della personalizzazione della pagina successiva](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Destinazioni di personalizzazione] | Quando si attiva questa opzione dopo aver attivato [!UICONTROL Segmentazione Edge] , questa opzione consente allo stream di dati di connettersi alle destinazioni di personalizzazione, ad esempio [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).<br><br>Consulta la documentazione sulle destinazioni per i passaggi specifici su [configurazione delle destinazioni di personalizzazione](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Adobe Journey Optimizer] | Seleziona questa casella di controllo per abilitare [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) per questo flusso di dati. <br><br> L’abilitazione di questa opzione consente allo stream di dati di restituire contenuto personalizzato da campagne in entrata basate sul web e sull’app in [!DNL Adobe Journey Optimizer]. Questa opzione richiede [!UICONTROL Segmentazione Edge] per essere attivi. Se [!UICONTROL Segmentazione Edge] è deselezionata, questa opzione è disattivata. |
+| [!UICONTROL Set di dati evento] | **(Obbligatorio)** Seleziona il set di dati della piattaforma a cui verranno inviati i dati evento cliente. Questo schema deve utilizzare [Classe ExperienceEvent XDM](../../xdm/classes/experienceevent.md). |
+| [!UICONTROL Set di dati del profilo] | Seleziona il set di dati della piattaforma a cui verranno inviati i dati degli attributi del cliente. Questo schema deve utilizzare [Classe di profilo individuale XDM](../../xdm/classes/individual-profile.md). |
+| [!UICONTROL Offer Decisioning] | Seleziona questa casella di controllo per abilitare l’Offer decisioning per un’implementazione Platform Web SDK. Consulta la guida su [utilizzo di Offer Decisioning con Platform Web SDK](../personalization/offer-decisioning/offer-decisioning-overview.md) per ulteriori dettagli sull’implementazione.<br><br>Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta la [Documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=it). |
+| [!UICONTROL Segmentazione Edge] | Seleziona questa casella di controllo per abilitare [segmentazione dei bordi](../../segmentation/ui/edge-segmentation.md) per questo datastream. Quando l’SDK invia i dati tramite un datastream abilitato per la segmentazione edge, nella risposta vengono restituite tutte le appartenenze di segmenti aggiornate per il profilo in questione.<br><br>Questa opzione può essere utilizzata in combinazione con [!UICONTROL Destinazioni personalizzazione] per [casi d’uso per la personalizzazione di pagine successive](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Destinazioni personalizzazione] | Quando si attiva questa opzione dopo aver abilitato la [!UICONTROL Segmentazione Edge] questa opzione consente al datastream di connettersi a destinazioni di personalizzazione, ad esempio [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md).<br><br>Fai riferimento alla documentazione sulle destinazioni per i passaggi specifici su [configurazione delle destinazioni di personalizzazione](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | Seleziona questa casella di controllo per abilitare [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) per questo datastream. <br><br> L’abilitazione di questa opzione consente al datastream di restituire contenuti personalizzati da campagne in entrata basate su web e app in [!DNL Adobe Journey Optimizer]. Questa opzione richiede [!UICONTROL Segmentazione Edge] essere attivo. Se [!UICONTROL Segmentazione Edge] non è selezionata, questa opzione è disattivata. |
 
 ### Impostazioni di Adobe Target {#target}
 
 Questo servizio controlla se e come i dati vengono inviati ad Adobe Target.
 
-![Blocco impostazioni Adobe Target](../assets/datastreams/configure/target-config.png)
+![Blocco delle impostazioni di Adobe Target](../assets/datastreams/configure/target-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Token proprietà] | [!DNL Target] consente ai clienti di controllare le autorizzazioni tramite l’utilizzo di proprietà. Per ulteriori informazioni sulle proprietà, consulta la guida su [configurazione delle autorizzazioni enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) nel [!DNL Target] documentazione.<br><br>Il token di proprietà si trova nell’interfaccia utente di Adobe Target in [!UICONTROL Configurazione] > [!UICONTROL Proprietà]. |
-| [!UICONTROL ID ambiente di destinazione] | [Ambienti in Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) aiuta a gestire la tua implementazione attraverso tutte le fasi di sviluppo. Questa impostazione specifica l’ambiente da utilizzare con questo flusso di dati.<br><br>Si consiglia di impostare questo parametro in modo diverso per ogni `dev`, `stage`, e `prod` ambienti di stream di dati per semplificare le operazioni. Tuttavia, se hai già definito ambienti Adobe Target, puoi utilizzarli. |
-| [!UICONTROL Spazio dei nomi ID di terze parti di Target] | Lo spazio dei nomi dell’identità per `mbox3rdPartyId` desideri utilizzare per questo flusso di dati. Consulta la guida su [implementazione `mbox3rdPartyId` con Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) per ulteriori informazioni. |
+| [!UICONTROL Token di proprietà] | [!DNL Target] consente ai clienti di controllare le autorizzazioni tramite l’uso delle proprietà. Per ulteriori informazioni sulle proprietà, consulta la guida su [configurazione delle autorizzazioni Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) in [!DNL Target] documentazione.<br><br>Il token di proprietà si trova nell’interfaccia utente di Adobe Target in [!UICONTROL Configurazione] > [!UICONTROL Proprietà]. |
+| [!UICONTROL ID ambiente di destinazione] | [Ambienti in Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) ti aiuta a gestire la tua implementazione in tutte le fasi di sviluppo. Questa impostazione specifica l&#39;ambiente da utilizzare con questo datastream.<br><br>Si consiglia di impostare questo valore in modo diverso per ogni `dev`, `stage`e `prod` ambienti datastream per semplificare le operazioni. Tuttavia, se hai già definito ambienti Adobe Target, puoi utilizzarli. |
+| [!UICONTROL Spazio dei nomi ID di terze parti di Target] | Spazio dei nomi di identità per `mbox3rdPartyId` si desidera utilizzare per questo datastream. Consulta la guida su [implementazione `mbox3rdPartyId` con l’SDK per web](../personalization/adobe-target/using-mbox-3rdpartyid.md) per ulteriori informazioni. |
 
 ### [!UICONTROL Inoltro eventi] impostazioni
 
@@ -142,35 +143,35 @@ Questo servizio controlla se e come i dati vengono inviati a [inoltro eventi](..
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Launch, proprietà] | **(Obbligatorio)** La proprietà di inoltro degli eventi a cui desideri inviare i dati. |
-| [!UICONTROL Ambiente Launch] | **(Obbligatorio)** L’ambiente all’interno della proprietà selezionata a cui desideri inviare i dati. |
+| [!UICONTROL Launch, proprietà] | **(Obbligatorio)** Proprietà di inoltro eventi a cui si desidera inviare i dati. |
+| [!UICONTROL Ambiente Launch] | **(Obbligatorio)** Ambiente all’interno della proprietà selezionata a cui si desidera inviare i dati. |
 
 >[!NOTE]
 >
->Puoi selezionare **[!UICONTROL Immetti manualmente gli ID]** per digitare i nomi delle proprietà e degli ambienti invece di utilizzare i menu a discesa.
+>È possibile selezionare **[!UICONTROL Immetti manualmente gli ID]** digitare i nomi delle proprietà e dell’ambiente anziché utilizzare i menu a discesa.
 
-## Copiare un flusso di dati {#copy}
+## Copiare un datastream {#copy}
 
-Puoi creare una copia di un flusso di dati esistente e modificarne i dettagli, se necessario.
+Puoi creare una copia di un datastream esistente e modificarne i dettagli in base alle esigenze.
 
 >[!NOTE]
 >
->Gli stream di dati possono essere copiati solo all’interno dello stesso [sandbox](../../sandboxes/home.md). In altre parole, non è possibile copiare un flusso di dati da una sandbox all’altra.
+>I datastreams possono essere copiati solo all&#39;interno dello stesso [sandbox](../../sandboxes/home.md). In altre parole, non è possibile copiare un datastream da una sandbox all’altra.
 
-Dalla pagina principale in [!UICONTROL Flussi di dati] , seleziona i puntini di sospensione (**....**) per lo stream di dati in questione, quindi seleziona **[!UICONTROL Copia]**.
+Dalla pagina principale nel [!UICONTROL Datastreams] area di lavoro, seleziona i puntini di sospensione (**....**) per il datastream in questione, quindi seleziona **[!UICONTROL Copia]**.
 
-![Immagine che mostra [!UICONTROL Copia] opzione selezionata dalla vista elenco dello stream di dati](../assets/datastreams/configure/copy-datastream-list.png)
+![Immagine che mostra [!UICONTROL Copia] opzione selezionata dalla visualizzazione elenco datastream](../assets/datastreams/configure/copy-datastream-list.png)
 
-In alternativa, è possibile selezionare **[!UICONTROL Copia flusso di dati]** dalla visualizzazione dei dettagli di un dato stream di dati.
+In alternativa, è possibile selezionare **[!UICONTROL Copia Datastream]** dalla visualizzazione dettagliata di un dato datastream.
 
-![Immagine che mostra [!UICONTROL Copia] opzione selezionata dalla vista dettagli dello stream di dati](../assets/datastreams/configure/copy-datastream-details.png)
+![Immagine che mostra [!UICONTROL Copia] opzione selezionata dalla visualizzazione dei dettagli del datastream](../assets/datastreams/configure/copy-datastream-details.png)
 
-Viene visualizzata una finestra di dialogo di conferma in cui viene richiesto di fornire un nome univoco per il nuovo flusso di dati da creare, insieme ai dettagli sulle opzioni di configurazione che verranno copiate. Quando è pronto, seleziona **[!UICONTROL Copia]**.
+Viene visualizzata una finestra di dialogo di conferma che richiede di specificare un nome univoco per il nuovo datastream da creare, insieme a dettagli sulle opzioni di configurazione che verranno copiate. Quando è pronto, seleziona **[!UICONTROL Copia]**.
 
-![Immagine della finestra di dialogo di conferma per copiare un flusso di dati](../assets/datastreams/configure/copy-datastream-confirm.png)
+![Immagine della finestra di dialogo di conferma per la copia di un datastream](../assets/datastreams/configure/copy-datastream-confirm.png)
 
-La pagina principale della sezione [!UICONTROL Flussi di dati] workspace viene nuovamente visualizzato con il nuovo stream di dati elencato.
+La pagina principale del [!UICONTROL Datastreams] riappare l&#39;area di lavoro con il nuovo datastream elencato.
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire gli stream di dati nell’interfaccia utente di Data Collection. Per ulteriori informazioni su come installare e configurare Web SDK dopo la configurazione di un flusso di dati, consulta [Guida all’E2E di Data Collection](../../collection/e2e.md#install).
+Questa guida illustra come gestire i datastreams nell’interfaccia utente di raccolta dati. Per ulteriori informazioni su come installare e configurare l’SDK web dopo aver configurato un datastream, consulta la [Guida alla raccolta dati E2E](../../collection/e2e.md#install).
