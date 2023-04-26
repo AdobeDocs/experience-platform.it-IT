@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare schemi nell’interfaccia utente
 description: Scopri le nozioni di base su come creare e modificare schemi nell’interfaccia utente di Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,18 @@ Per modificare uno schema esistente, seleziona **[!UICONTROL Sfoglia]** quindi s
 
 Una volta selezionato uno schema, la [!DNL Schema Editor] viene visualizzata con la struttura dello schema mostrata nell&#39;area di lavoro. Ora puoi [aggiungere gruppi di campi](#add-field-groups) allo schema (o [aggiungere campi singoli](#add-individual-fields) da tali gruppi), [modificare i nomi visualizzati dei campi](#display-names)oppure [modifica gruppi di campi personalizzati esistenti](./field-groups.md#edit) se lo schema ne utilizza uno.
 
+## Icona del nome visualizzato {#display-name-toggle}
+
+Per comodità, l’Editor schema consente di alternare i nomi dei campi originali ai nomi visualizzati più leggibili. Questa flessibilità consente di migliorare la reperibilità dei campi e la modifica degli schemi. L’opzione si trova in alto a destra nella vista Editor schema.
+
+>[!NOTE]
+>
+>La modifica dai nomi dei campi ai nomi visualizzati è puramente cosmetica e non modifica le risorse downstream.
+
+![Editor di schema con [!UICONTROL Mostra nomi visualizzati per i campi] evidenziato.](../../images/ui/resources/schemas/display-name-toggle.png)
+
+I nomi visualizzati per i gruppi di campi standard sono generati dal sistema ma possono essere personalizzati, come descritto in [nomi visualizzati](#display-names) sezione . I nomi visualizzati si riflettono in più visualizzazioni dell’interfaccia utente, tra cui le anteprime di mappatura e set di dati. L&#39;impostazione predefinita è disattivata e mostra i nomi dei campi in base ai valori originali.
+
 ## Aggiunta di gruppi di campi a uno schema {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ Una volta selezionato uno schema, la [!DNL Schema Editor] viene visualizzata con
 
 Una volta aperto uno schema all&#39;interno di [!DNL Schema Editor], è possibile aggiungere campi allo schema utilizzando gruppi di campi. Per iniziare, seleziona **[!UICONTROL Aggiungi]** accanto a **[!UICONTROL Gruppi di campi]** nella barra a sinistra.
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![Editor di schema con [!UICONTROL Aggiungi] dal [!UICONTROL Gruppi di campi] sezione evidenziata.](../../images/ui/resources/schemas/add-field-group-button.png)
 
 Viene visualizzata una finestra di dialogo in cui viene visualizzato un elenco di gruppi di campi selezionabili per lo schema. Poiché i gruppi di campi sono compatibili solo con una classe, verranno elencati solo i gruppi di campi associati alla classe selezionata dello schema. Per impostazione predefinita, i gruppi di campi elencati sono ordinati in base alla loro popolarità d’uso all’interno dell’organizzazione.
 
