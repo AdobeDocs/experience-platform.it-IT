@@ -2,10 +2,10 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzati per creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 4%
+source-wordcount: '1608'
+ht-degree: 3%
 
 ---
 
@@ -112,6 +112,20 @@ Aggiungendo un attributo come filtro, puoi selezionare i valori da includere o e
 
 ![Finestra di dialogo del filtro per filtrare i valori dal widget.](./images/user-defined-dashboards/filter-dialog.png)
 
+#### Filtrare i dati storici {#filter-historical-data}
+
+Per filtrare i dati storici dalle informazioni generate dal widget, aggiungi `date_key` come filtro e seleziona **[!UICONTROL Data recente]** seguito da **[!UICONTROL Applica]**. Questo filtro assicura che i dati utilizzati per ricavare informazioni siano ricavati dallo snapshot di sistema più recente.
+
+![La [!UICONTROL Filtro: date_key] dialogo con [!UICONTROL Data recente] e [!UICONTROL Applica] evidenziato.](./images/user-defined-dashboards/recent-date.png)
+
+In alternativa, puoi creare un periodo personalizzato per filtrare i dati in base a. Seleziona **[!UICONTROL Seleziona date]** per estendere la finestra di dialogo con un elenco di date disponibili. Utilizza la **[!UICONTROL Seleziona tutto]** per abilitare o disabilitare tutte le opzioni disponibili, oppure seleziona la casella di controllo per ogni singolo giorno. Infine, seleziona **[!UICONTROL Applica]** per confermare le scelte.
+
+>[!NOTE]
+>
+>Se la `date_key` l’attributo è già stato aggiunto come filtro, seleziona i puntini di sospensione seguiti da **[!UICONTROL Modifica]** dalle opzioni del menu a discesa per modificare il periodo del filtro.
+
+![La [!UICONTROL Filtro: date_key] finestra di dialogo con le caselle di controllo dei singoli giorni entrambe selezionate e deselezionate.](./images/user-defined-dashboards/select-dates.png)
+
 ### Proprietà dei widget
 
 Seleziona l’icona delle proprietà (![Icona delle proprietà.](./images/user-defined-dashboards/properties-icon.png)) nella barra a destra per aprire il pannello proprietà. In [!UICONTROL Proprietà] , immetti un nome per il widget nel [!UICONTROL Titolo del widget] campo di testo.
@@ -135,6 +149,22 @@ I widget possono essere riorganizzati e ridimensionati in questa area di lavoro.
 ![Dashboard definito dall&#39;utente con widget personalizzato e pulsante Salva evidenziato.](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 Per garantire che ogni query per un dashboard di Adobe Real-time Customer Data Platform insights disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando spazi di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee e quindi quattro slot di query simultanee sono disponibili in un dato momento. Le query vengono inserite in una coda basata sugli slot di concorrenza, quindi attendono in coda finché non sono disponibili slot di concorrenza sufficienti.
+
+### Duplicare un widget
+
+Una volta creato un widget, puoi duplicare l&#39;intero widget e personalizzarne gli attributi per creare un widget univoco senza dover iniziare da zero. Per duplicare un widget, prima di tutto, accedi all&#39;inventario del dashboard. Quindi selezionare il nome del dashboard dall&#39;elenco delle scorte. Viene visualizzata la dashboard personalizzata.
+
+![Interfaccia utente di Platform con dashboard e nome di dashboard personalizzato evidenziato.](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+Seleziona l’icona a forma di matita (![Icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png)) dall’alto a destra del dashboard personalizzato per accedere alla modalità di modifica.
+
+![Dashboard personalizzato con l&#39;icona a forma di matita evidenziata.](./images/user-defined-dashboards/edit-mode.png)
+
+Quindi, seleziona i puntini di sospensione in alto a destra del widget che desideri copiare, seguiti da **[!UICONTROL Duplica]** dall’elenco delle opzioni disponibili.
+
+![Un widget in un dashboard definito dall&#39;utente con i puntini di sospensione e i widget Duplica evidenziati.](./images/user-defined-dashboards/duplicate.png)
+
+Un widget duplicato viene visualizzato nel dashboard definito dall&#39;utente. Seleziona i puntini di sospensione del nuovo widget, seguiti da **[!UICONTROL Modifica]**, per personalizzare il nuovo widget.
 
 ## Passaggi successivi e risorse aggiuntive
 
