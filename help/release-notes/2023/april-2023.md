@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
-source-git-commit: 9f50ca4b2a4c576af5ce8ee5c085a7603fed2560
+source-git-commit: 938b4ba7affadc7ad0eca086d7cc2c9ce1a54a83
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 6%
+source-wordcount: '780'
+ht-degree: 5%
 
 ---
 
@@ -14,8 +14,25 @@ ht-degree: 6%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Dashboard](#dashboards)
 - [Preparazione dei dati](#data-prep)
+- [Experience Data Model](#xdm)
+- [Profilo cliente in tempo reale](#profile)
 - [Origini](#sources)
+
+## Dashboard {#dashboards}
+
+Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visualizzare informazioni importanti sui dati dell’organizzazione, acquisiti durante le istantanee giornaliere.
+
+**Funzioni nuove o aggiornate** {#dashboards-new-updated-features}
+
+| Funzione | Descrizione |
+| --- | --- |
+| Dashboard definiti dall&#39;utente | Ora puoi **filtrare i dati storici** dalle informazioni sui widget e utilizza dati recenti o un periodo di analisi personalizzato.<br>È inoltre possibile **duplica i widget esistenti**. Personalizzando un duplicato e modificandone gli attributi, puoi evitare di riavviare dall’inizio la creazione di un nuovo widget univoco. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulle dashboard, tra cui come concedere autorizzazioni di accesso e creare widget personalizzati, inizia leggendo il [panoramica delle dashboard](../../dashboards/home.md).
 
 ## Preparazione dei dati {#data-prep}
 
@@ -31,6 +48,30 @@ Data Prep consente ai data engineer di mappare, trasformare e convalidare i dati
 {style="table-layout:auto"}
 
 Per ulteriori informazioni su Data Prep, consulta la sezione [Panoramica sulla preparazione dei dati](../../data-prep/home.md).
+
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Mostra/Nascondi nomi | L’Editor schema ora consente di alternare tra i nomi dei campi originali e i nomi visualizzati più leggibili. Questa flessibilità consente di migliorare la reperibilità dei campi e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard vengono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni su XDM in Platform, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md).
+
+## Profilo cliente in tempo reale {#profile}
+
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Profilo cliente in tempo reale puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Scadenza dati profilo pseudonimi | La scadenza dei dati del profilo pseudonimo è ora disponibile in generale! Questa versione rimuoverà continuamente dall’istanza di Experience Platform i profili pseudonimi non aggiornati una volta abilitati. Per saperne di più su questa funzione e su Profili pseudonimi, si prega di leggere [Guida alla scadenza dei dati di profilo pseudonimo](../../profile/pseudonymous-profiles.md). |
 
 ## Origini {#sources}
 
