@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1284'
 ht-degree: 4%
 
 ---
@@ -61,7 +61,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | Funzione | Descrizione |
 | --- | --- |
 | Offuscamento dell’indirizzo IP per i datastreams | È ora possibile definire opzioni di offuscamento dell’IP a livello di datastream parziali o complete nella sezione [interfaccia utente per la configurazione del datastream](../../edge/datastreams/configure.md). <br><br>L’impostazione di offuscamento dell’IP a livello di datastream ha la precedenza su qualsiasi offuscamento dell’IP configurato in Adobe Target e Audience Manager. <br><br>I dati inviati ad Adobe Analytics non sono interessati dal livello di datastream [!UICONTROL Offuscamento IP] impostazione. Al momento Adobe Analytics riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, devi configurare l’offuscamento dell’IP separatamente, in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future.<br><br> Per ulteriori dettagli sull’offuscamento dell’IP e istruzioni su come configurarlo, consulta la sezione [documentazione sulla configurazione di datastream](../../edge/datastreams/configure.md#advanced-options). |
-| Ignorare le impostazioni di configurazione del Datastream | Ora puoi definire opzioni di configurazione aggiuntive per i datastreams, che puoi utilizzare per sostituire impostazioni specifiche, come set di dati evento, token di proprietà di Target, contenitori di sincronizzazione ID e suite di rapporti di Analytics. <br><br>L&#39;override delle configurazioni del datastream è un processo in due fasi. Innanzitutto, devi definire le impostazioni locali della configurazione del datastream nell’interfaccia utente di datastreams. Quindi devi inviare le sostituzioni alla rete Edge tramite un comando SDK per web. |
+| [Ignorare le impostazioni di configurazione del Datastream](../../edge/datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i datastreams, che puoi utilizzare per sostituire impostazioni specifiche, come set di dati evento, token di proprietà di Target, contenitori di sincronizzazione ID e suite di rapporti di Analytics. <br><br>L&#39;override delle configurazioni di datastream è un processo in due fasi: <ol><li>Innanzitutto, devi definire le sostituzioni della configurazione del datastream nel [pagina di configurazione di datastream](../../edge/datastreams/configure.md).</li><li>Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando SDK per web o utilizzando l’SDK per web [estensione tag](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 
