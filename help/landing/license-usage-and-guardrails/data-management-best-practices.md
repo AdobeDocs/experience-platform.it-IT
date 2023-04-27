@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti comuni;gestione dati;adesione licen
 title: Tecniche consigliate per l’abilitazione delle licenze di gestione dei dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 2%
 
 ---
@@ -122,8 +122,6 @@ L’archivio profili è composto dai seguenti componenti:
 
 {style="table-layout:auto"}
 
-
-
 #### Rapporti composizione archivio profili
 
 Sono disponibili diversi rapporti per comprendere la composizione dell’archivio profili. Questi rapporti ti aiutano a prendere decisioni informate su come e dove impostare la scadenza dell’evento esperienza per ottimizzare meglio l’utilizzo della licenza:
@@ -132,6 +130,10 @@ Sono disponibili diversi rapporti per comprendere la composizione dell’archivi
 * **API del rapporto di sovrapposizione identità**: Espone i namespace di identità che contribuiscono maggiormente al pubblico indirizzabile. Guarda l’esercitazione su [generazione del rapporto di sovrapposizione identità](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) per ulteriori informazioni.
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### Scadenze dei dati di profilo pseudonime {#pseudonymous-profile-expirations}
+
+Questa funzionalità ti consente di rimuovere automaticamente i profili pseudonimi non aggiornati dall’archivio profili. Per ulteriori informazioni su questa funzione, consulta la sezione [Panoramica sulla scadenza dei dati del profilo pseudonimo](../../profile/pseudonymous-profiles.md).
 
 #### Scadenza eventi esperienza {#event-expirations}
 
@@ -144,7 +146,7 @@ Di seguito è riportato un elenco di alcune best practice consigliate da seguire
 * Utilizza la [dashboard di utilizzo della licenza](../../dashboards/guides/license-usage.md) per monitorare e monitorare le tendenze di utilizzo dei clienti. Questo ti consente di superare eventuali overage potenziali che potrebbero verificarsi.
 * Configura [filtri di acquisizione](#ingestion-filters) identificando gli eventi necessari per i casi d’uso di segmentazione e personalizzazione. Questo consente di inviare solo gli eventi importanti richiesti per i casi d’uso.
 * Assicurati di avere solo [set di dati abilitati per il profilo](#ingestion-filters) necessari per i casi d’uso di segmentazione e personalizzazione.
-* Configura un [Scadenza degli eventi esperienza](#event-expirations) per dati ad alta frequenza come i dati web.
+* Configura [Scadenza eventi esperienza](#event-expirations) e [Scadenze dei dati di profilo pseudonime](#pseudonymous-profile-expirations) per dati ad alta frequenza come i dati web.
 * Controlla periodicamente il [Rapporti sulla composizione dei profili](#profile-store-composition-reports) per comprendere la composizione dell’archivio profili. Ciò ti consente di comprendere le origini dati che contribuiscono maggiormente al consumo di licenze.
 
 ## Riepilogo delle funzioni e disponibilità {#feature-summary}
