@@ -3,7 +3,7 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Not
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per le sostituzioni della configurazione del datastream.
+* È stato aggiunto il supporto per [sostituzioni della configurazione di datastream](datastreams/overrides.md).
 
 ## Versione 2.15.0 - 30 marzo 2023
 

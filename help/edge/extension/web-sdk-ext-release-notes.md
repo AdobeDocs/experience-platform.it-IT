@@ -2,7 +2,7 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 38%
@@ -18,7 +18,7 @@ Questo documento illustra le note sulla versione per l&#39;estensione tag Adobe 
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per le sostituzioni della configurazione del datastream.
+* È stato aggiunto il supporto per [sostituzioni della configurazione di datastream](../datastreams/overrides.md).
 * Aggiungi un avviso di elementi obsoleti al `datasetId` l&#39;opzione `sendEvent` comando.
 
 **Correzioni e miglioramenti**
