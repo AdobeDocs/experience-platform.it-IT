@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1373'
+source-wordcount: '1422'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform offre diverse dashboard attraverso le quali puoi visua
 
 | Funzione | Descrizione |
 | --- | --- |
-| Dashboard definiti dall&#39;utente | Ora puoi **filtrare i dati storici** dalle informazioni sui widget e utilizza dati recenti o un periodo di analisi personalizzato.<br>È inoltre possibile **duplica i widget esistenti**. Personalizzando un duplicato e modificandone gli attributi, puoi evitare di riavviare dall’inizio la creazione di un nuovo widget univoco. |
+| Dashboard definiti dall&#39;utente | Ora puoi **filtrare i dati storici** dalle informazioni sui widget e utilizza dati recenti o un periodo di analisi personalizzato. Consulta la sezione [guida alle dashboard definite dall&#39;utente](../../dashboards/user-defined-dashboards.md#filter-historical-data) per ulteriori informazioni.<br>È inoltre possibile **duplica i widget esistenti**. Personalizzando un duplicato e modificandone gli attributi, puoi evitare di riavviare dall’inizio la creazione di un nuovo widget univoco. Leggi la sezione [guida alla duplicazione dei widget](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) per saperne di più. |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM è una specifica open source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Mostra/Nascondi nomi | L’Editor schema ora consente di alternare tra i nomi dei campi originali e i nomi visualizzati più leggibili. Questa flessibilità consente di migliorare la reperibilità dei campi e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard vengono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. |
+| Mostra/Nascondi nomi | L’Editor schema ora consente di alternare tra i nomi dei campi originali e i nomi visualizzati più leggibili.<br>![L’Editor schema con il nome visualizzato evidenziato.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Icona dell’Editor di schema"){width="100" zoomable="yes"}<br>Questa flessibilità consente di migliorare la reperibilità dei campi e la modifica degli schemi. I nomi visualizzati per i gruppi di campi standard vengono generati dal sistema, ma possono anche essere personalizzati tramite l’interfaccia utente, se necessario. Per piacere, leggi le [documentazione di attivazione/disattivazione nome visualizzato](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) per saperne di più. |
 
 {style="table-layout:auto"}
 
