@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1491'
 ht-degree: 4%
 
 ---
@@ -62,6 +62,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di 
 | --- | --- |
 | Offuscamento dell’indirizzo IP per i datastreams | È ora possibile definire opzioni di offuscamento dell’IP a livello di datastream parziali o complete nella sezione [interfaccia utente per la configurazione del datastream](../../edge/datastreams/configure.md). <br><br>L’impostazione di offuscamento dell’IP a livello di datastream ha la precedenza su qualsiasi offuscamento dell’IP configurato in Adobe Target e Audience Manager. <br><br>I dati inviati ad Adobe Analytics non sono interessati dal livello di datastream [!UICONTROL Offuscamento IP] impostazione. Al momento Adobe Analytics riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, devi configurare l’offuscamento dell’IP separatamente, in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future.<br><br> Per ulteriori dettagli sull’offuscamento dell’IP e istruzioni su come configurarlo, consulta la sezione [documentazione sulla configurazione di datastream](../../edge/datastreams/configure.md#advanced-options). |
 | [Ignorare le impostazioni di configurazione del Datastream](../../edge/datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i datastreams, che puoi utilizzare per sostituire impostazioni specifiche, come set di dati evento, token di proprietà di Target, contenitori di sincronizzazione ID e suite di rapporti di Analytics. <br><br>L&#39;override delle configurazioni di datastream è un processo in due fasi: <ol><li>Innanzitutto, devi definire le sostituzioni della configurazione del datastream nel [pagina di configurazione di datastream](../../edge/datastreams/configure.md).</li><li>Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando SDK per web o utilizzando l’SDK per web [estensione tag](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| Segreto JWT OAuth | La [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) consente ai clienti di utilizzare token Adobe e Google Service per supportare le interazioni server-to-server in Event Forwarding. |
+| [!DNL Pinterest Conversions API] Estensione | La [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’estensione di inoltro eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e inviarli a [!DNL Pinterest] sotto forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 

@@ -2,14 +2,22 @@
 title: Note sulla versione per tag e inoltro eventi
 description: Le ultime note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '798'
 ht-degree: 4%
 
 ---
 
 # Note sulla versione per tag e inoltro eventi
+
+## 26 aprile 2023
+
+* **Segreto JWT OAuth**: La [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) consente ai clienti di utilizzare token Adobe e Google Service per supportare le interazioni server-to-server in Event Forwarding.
+
+È stata rilasciata la seguente nuova estensione:
+
+* **[!DNL Pinterest Conversions API]estensione**: La [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’estensione di inoltro eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e inviarli a [!DNL Pinterest] sotto forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API].
 
 ## 29 marzo 2023
 
