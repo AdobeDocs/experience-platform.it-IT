@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '984'
 ht-degree: 37%
 
 ---
@@ -229,6 +229,8 @@ ht-degree: 37%
       * [!DNL Mixpanel] {#mixpanel}
          * [Panoramica](./extensions/server/mixpanel/overview.md)
       * [Hub decisionale cliente Pega](https://exchange.adobe.com/apps/ec/107597)
+      * [!DNL Pinterest] {#pinterest}
+         * [Panoramica](./extensions/server/pinterest/overview.md)
       * [API per le conversioni di snap](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
          * [Panoramica](./extensions/server/splunk/overview.md)

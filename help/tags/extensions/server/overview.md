@@ -2,7 +2,7 @@
 title: Riferimento per le estensioni di inoltro eventi
 description: Trova documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -39,6 +39,7 @@ Di seguito è riportato un elenco di documentazione per le estensioni di inoltro
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Hub decisionale cliente Pega](https://exchange.adobe.com/apps/ec/107597)*
+* [[!DNL Pinterest]](./pinterest/overview.md)
 * [API per le conversioni di snap](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Zendesk] API eventi](./zendesk/overview.md)
