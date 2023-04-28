@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 4%
@@ -122,6 +122,8 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Scadenza dati profilo pseudonimi | La scadenza dei dati del profilo pseudonimo è ora disponibile in generale! Questa versione rimuoverà continuamente dall’istanza di Experience Platform i profili pseudonimi non aggiornati una volta abilitati. Per saperne di più su questa funzione e su Profili pseudonimi, si prega di leggere [Guida alla scadenza dei dati di profilo pseudonimo](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## Origini {#sources}
 
