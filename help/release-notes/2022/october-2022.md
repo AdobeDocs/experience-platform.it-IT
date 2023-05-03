@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
+source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 4%
+source-wordcount: '1328'
+ht-degree: 3%
 
 ---
 
@@ -14,16 +14,11 @@ ht-degree: 4%
 **Data di rilascio: 26 ottobre 2022**
 
 - [Chiavi gestite dal cliente](#cmk)
-
-Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
-
-- [Note sulla versione di Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Chiavi gestite dal cliente {#cmk}](#customer-managed-keys-cmk)
-   - [Raccolta dati {#data-collection}](#data-collection-data-collection)
-   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
-   - [Experience Data Model (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Servizio query {#query-service}](#query-service-query-service)
-   - [Origini {#sources}](#sources-sources)
+- [Raccolta dati](#data-collection)
+- [Destinazioni](#destinations)
+- [Experience Data Model](#xdm)
+- [Servizio query](#query-service)
+- [Origini](#sources-sources)
 
 ## Chiavi gestite dal cliente {#cmk}
 
