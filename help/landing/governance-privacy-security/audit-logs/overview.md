@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 28%
+ht-degree: 49%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 28%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="Monitorare le attività degli utenti in Platform"
->abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform sotto forma di registri di controllo. Questi registri formano un audit trail che registra <b>chi</b> eseguito <b>cosa</b> e <b>quando</b>. I registri di controllo possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p>"
+>abstract="<h2>Descrizione</h2><p>Puoi monitorare l’attività degli utenti per vari servizi e funzionalità di Platform in forma di registri di audit. Questi registri formano un audit trail che registra <b>chi</b> ha eseguito <b>quale</b> azione e <b>quando</b>. I registri di audit possono essere utili per risolvere eventuali problemi relativi a Platform e aiutare la tua azienda a rispettare in modo efficace le politiche di gestione dei dati aziendali e i requisiti normativi.</p>"
 
 Al fine di aumentare la trasparenza e la visibilità delle attività eseguite nel sistema, Adobe Experience Platform consente di controllare l’attività degli utenti per vari servizi e funzionalità sotto forma di &quot;registri di controllo&quot;. Questi registri formano un audit trail che può essere utile per risolvere i problemi su Platform e aiutare la tua azienda a rispettare efficacemente le politiche di gestione dei dati aziendali e i requisiti normativi.
 
@@ -50,7 +50,7 @@ La tabella seguente indica le azioni sulle quali le risorse vengono registrate d
 | [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attiva set di dati</li><li>Rimozione set di dati</li><li>Attiva profilo</li><li>Rimuovi profilo</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Grafico di identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
+| [Grafico delle identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
 | [Spazio dei nomi identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crea</li><li>Aggiornamento</li></ul> |
 | [Criteri di unione](../../../profile/merge-policies/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
@@ -75,7 +75,7 @@ Per visualizzare ed esportare i registri di controllo, è necessario disporre de
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="Istruzioni"
->abstract="<ul><li>Seleziona <b>Audit</b> nella navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: I registri di controllo vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se devi guardare indietro ai dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti della politica interna. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona funnel per visualizzare un elenco di controlli filtro per limitare i risultati. Vengono visualizzati solo gli ultimi 1000 record, indipendentemente dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di controllo, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di controllo</a> Experience League.</li></ul>"
+>abstract="<ul><li>Seleziona <b>Audit</b> nel pannello di navigazione a sinistra. L’area di lavoro Audit mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.</li>   <li> NOTA: i registri di audit vengono conservati per 365 giorni dopo i quali verranno cancellati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se è necessario esaminare i dati più vecchi di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti dei criteri interni. </li><li>Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra. </li><li>Seleziona l’icona a imbuto (filtro) per visualizzare un elenco di filtri con cui limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, a prescindere dai filtri selezionati. </li><li>Per esportare l’elenco corrente dei registri di audit, seleziona **Scarica registro**.</li><li>Per ulteriori informazioni su questa funzione, consulta la sezione <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=it">panoramica dei registri di audit</a> su Experience League.</li></ul>"
 
 Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform all’interno di **[!UICONTROL Audit]** nell’interfaccia utente di Platform. L&#39;area di lavoro mostra un elenco di registri registrati, ordinati per impostazione predefinita dalla più recente alla meno recente.
 
@@ -113,7 +113,7 @@ Per rimuovere un filtro, seleziona la &quot;X&quot; sull&#39;icona della pillola
 
 ### Esportare i registri di controllo
 
-Per esportare l’elenco corrente dei registri di controllo, seleziona **[!UICONTROL Scarica registro]**.
+Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL Scarica registro]**.
 
 ![Scarica registro](../../images/audit-logs/download.png)
 

@@ -4,8 +4,8 @@ title: (Beta) Configurare le opzioni di formattazione per le destinazioni basate
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1214'
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,7 @@ Per visualizzare le opzioni di formattazione del file, avvia la [connessione a d
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_delimiter"
 >title="Delimitatore"
->abstract="Utilizzare questo controllo per impostare un separatore per ciascun campo e valore. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>abstract="Utilizza questo controllo per impostare un separatore per ciascun campo e valore. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
 Usa questo controllo per impostare un separatore per ciascun campo e valore nei file CSV esportati. Le opzioni disponibili sono:
 
@@ -64,14 +64,14 @@ Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, co
 * Esempio di output con **[!UICONTROL Punto e virgola`(;)`]** selezionato: `male;John;Doe`
 * Esempio di output con **[!UICONTROL Scheda`(\t)`]** selezionato: `male \t John \t Doe`
 
-### Carattere di citazione {#quote-character}
+### Carattere virgolette {#quote-character}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
->title="Carattere di citazione"
->abstract="Utilizzare questa opzione se si desidera rimuovere le virgolette doppie dalle stringhe esportate. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>title="Carattere virgolette"
+>abstract="Utilizza questa opzione se desideri rimuovere le virgolette doppie dalle stringhe esportate. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
-Utilizzare questa opzione se si desidera rimuovere le virgolette doppie dalle stringhe esportate. Le opzioni disponibili sono:
+Utilizza questa opzione se desideri rimuovere le virgolette doppie dalle stringhe esportate. Le opzioni disponibili sono:
 
 * **[!UICONTROL Carattere Null (\0000)]**. Utilizza questa opzione per rimuovere le virgolette doppie dai file CSV esportati.
 * **[!UICONTROL Virgolette doppie (&quot;)]**. Utilizza questa opzione per mantenere le virgolette doppie nei file CSV esportati.
@@ -88,7 +88,7 @@ Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_escapeCharacter"
 >title="Carattere di escape"
->abstract="Imposta un singolo carattere utilizzato per l&#39;escape delle virgolette all&#39;interno di un valore già citato. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>abstract="Imposta un singolo carattere utilizzato per eseguire l’escape delle virgolette all’interno di un valore già tra virgolette. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
 Utilizzare questa opzione per impostare un singolo carattere per l&#39;escape delle virgolette all&#39;interno di un valore già citato. Ad esempio, questa opzione è utile quando una stringa è racchiusa tra virgolette doppie in cui parte della stringa è già racchiusa tra virgolette doppie. Questa opzione determina con quale carattere sostituire le virgolette doppie interne. Le opzioni disponibili sono:
 
@@ -107,7 +107,7 @@ Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_emptyValueOutput"
 >title="Output valore vuoto"
->abstract="Utilizza questa opzione per impostare come devono essere rappresentati i valori vuoti nei file CSV esportati. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>abstract="Utilizza questa opzione per impostare come devono essere rappresentati i valori vuoti nei file CSV esportati. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
 Utilizzare questo controllo per impostare la rappresentazione stringa di un valore vuoto. Questa opzione determina il modo in cui i valori vuoti vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
@@ -127,14 +127,14 @@ Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, co
 >
 >La differenza tra l&#39;output del valore vuoto e l&#39;output del valore nullo nella sezione seguente è che un valore vuoto ha un valore effettivo vuoto. Il valore NULL non ha alcun valore. Considera il valore vuoto come un vetro vuoto sulla tabella e il valore nullo come non avere il vetro affatto sulla tavola.
 
-### Output valore Null {#null-value-output}
+### Output valore nullo {#null-value-output}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_nullValueOutput"
->title="Output valore Null"
->abstract="Utilizzare questo controllo per impostare la rappresentazione stringa di un valore null all&#39;interno dei file esportati. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>title="Output valore nullo"
+>abstract="Utilizza questo controllo per impostare la rappresentazione stringa di un valore nullo all’interno dei file esportati. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
-Utilizzare questo controllo per impostare la rappresentazione stringa di un valore null all&#39;interno dei file esportati. Questa opzione determina il modo in cui i valori nulli vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
+Utilizza questo controllo per impostare la rappresentazione stringa di un valore nullo all’interno dei file esportati. Questa opzione determina il modo in cui i valori nulli vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
 * **[!UICONTROL null]**
 * **&quot;&quot;**
@@ -153,7 +153,7 @@ Di seguito sono riportati alcuni esempi del contenuto dei file CSV esportati, co
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="Formato di compressione"
->abstract="Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Visualizza la documentazione relativa agli esempi per ogni selezione."
+>abstract="Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Consulta la documentazione per vedere degli esempi di ogni selezione."
 
 Imposta il tipo di compressione da utilizzare per il salvataggio dei dati nel file. Le opzioni supportate sono GZIP e NONE. Questa opzione determina se esportare o meno i file compressi.
 

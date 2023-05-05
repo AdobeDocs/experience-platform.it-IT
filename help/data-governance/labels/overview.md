@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '794'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="Controllare l&#39;accesso ai dati sensibili e protetti"
->abstract="<h2>Descrizione</h2><p>Controlla l’accesso ad attributi di dati e/o segmenti specifici, consentendoti di progettare flussi di lavoro flessibili per i vari casi d’uso per utenti tipo e team operativi.</p>"
+>title="Controllare l’accesso ai dati sensibili e protetti"
+>abstract="<h2>Descrizione</h2><p>Controllare l’accesso ad attributi di dati e/o segmenti specifici consente di progettare flussi di lavoro flessibili per i vari utenti tipo e team coinvolti nei casi d’uso di Experience Platform.</p>"
 
 Adobe Experience Platform ti consente di applicare etichette di utilizzo dei dati ai set di dati e ai campi, suddividerle in categorie in base alle relative [criteri di governance dei dati](../policies/overview.md) e [criteri di controllo accessi](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Per un riferimento su come specifiche etichette di utilizzo dei dati in Controll
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="Istruzioni"
->abstract="<ul><li>Etichettare i campi XDM e i segmenti per classificare i campi e o i segmenti a cui si desidera limitare l’accesso.</li><li>Ruoli etichetta, l’aggiunta di etichette a un ruolo consente di definire le etichette su cui i membri di questo ruolo devono essere soggetti a restrizioni.</li><li>Crea criteri, un criterio crea una relazione tra le etichette sugli oggetti etichettati come campi XDM e Segmenti e le etichette sui ruoli. Se le etichette corrispondono, è possibile definire un&#39;autorizzazione o un accesso limitato.</li></ul>"
+>abstract="<ul><li>Etichetta i segmenti e i campi XDM per classificare i campi e i segmenti a cui desideri limitare l’accesso.</li><li>Etichetta i ruoli: l’aggiunta di etichette a un ruolo consente di definire le etichette relative alle limitazioni a cui devono essere soggetti gli utenti a cui è stato assegnato questo ruolo.</li><li>Crea i criteri: un criterio crea una relazione tra le etichette applicate agli oggetti etichettati, come segmenti e campi XDM, e le etichette applicate ai ruoli. Se le etichette corrispondono, è possibile definire se l’accesso è autorizzato o meno.</li></ul>"
 
 Puoi gestire le etichette di utilizzo dei dati utilizzando [!DNL Experience Platform] API o interfaccia utente. Fai riferimento alle sottosezioni seguenti per i dettagli su ciascuna.
 

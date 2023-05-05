@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
 source-wordcount: '1529'
-ht-degree: 3%
+ht-degree: 17%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Gestione dell’utilizzo dei dati in Platform"
->abstract="<h2>Descrizione</h2><p>Il framework per la governance dei dati in Experience Platform ti consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
+>title="Gestire l’utilizzo dei dati in Platform"
+>abstract="<h2>Descrizione</h2><p>Il framework per la governance dei dati in Experience Platform consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
 
 Questa guida utente descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno di [!DNL Experience Platform] interfaccia utente.
 
@@ -87,7 +87,7 @@ La **[!UICONTROL Mostra etichette ereditate]** per impostazione predefinita, l�
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Istruzioni"
->abstract="<ol><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">Set di dati</a> nella navigazione a sinistra, seleziona il set di dati di cui desideri limitare i dati.</li><li>Dalla visualizzazione dei dettagli del set di dati, seleziona la <b>Governance dei dati</b> scheda .</li><li>Seleziona i campi del set di dati che desideri limitare, quindi seleziona <b>Modifica delle etichette di governance</b> per etichettare i dati in base a restrizioni di utilizzo.</li><li>Dopo aver etichettato i dati, seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nel menu di navigazione a sinistra, seleziona <b>Crea criterio</b>.</li><li>Scegli di creare un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Politica di governance dei dati</a>, quindi seleziona le etichette di utilizzo dei dati che il criterio applicherà al criterio.</li><li>Seleziona le azioni di marketing che il criterio negherà per i dati contenenti tali etichette. Dopo aver creato il criterio, selezionalo dall’elenco e attivalo utilizzando l’interruttore nella barra a destra.</li><li>Per ogni criterio abilitato, Platform impedisce l’utilizzo di dati contenenti le etichette specificate per le azioni di marketing definite. Questa applicazione viene eseguita automaticamente quando tenti di attivare i dati con etichetta in una destinazione con le azioni di marketing associate (casi d’uso).</li></ol>"
+>abstract="<ol><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=it">Set di dati</a> nella barra di navigazione a sinistra, quindi seleziona il set di dati a cui desideri imporre limitazioni.</li><li>Dalla visualizzazione dei dettagli del set di dati, seleziona la scheda <b>Governance dei dati</b>.</li><li>Seleziona i campi del set di dati che desideri limitare, quindi seleziona <b>Modifica etichette di governance</b> per etichettare i dati in base a restrizioni di utilizzo.</li><li>Dopo aver etichettato i dati, seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nella barra di navigazione a sinistra, quindi seleziona <b>Crea criterio</b>.</li><li>Scegli di creare un <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#create-governance-policy">Criterio di governance dei dati</a>, quindi seleziona le etichette di utilizzo dei dati applicabili al criterio.</li><li>Seleziona le azioni di marketing che il criterio dovrà rifiuterà per i dati contenenti tali etichette. Dopo aver creato il criterio, selezionalo dall’elenco e abilitalo utilizzando l’interruttore nella barra a destra.</li><li>Per ogni criterio abilitato, Platform impedisce che i dati contenenti le etichette specificate possano essere utilizzati nelle azioni di marketing definite. Questo viene eseguito automaticamente quando si tenta di attivare i dati con la relativa etichetta in una destinazione a cui sono associate le specifiche azioni di marketing (casi d’uso).</li></ol>"
 
 >[!IMPORTANT]
 >

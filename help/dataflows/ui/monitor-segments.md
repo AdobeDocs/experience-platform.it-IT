@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="Segmenti"
->abstract="La visualizzazione dei segmenti contiene informazioni su tutti i segmenti dell’organizzazione, con ulteriori informazioni sui processi di attivazione e valutazione."
+>abstract="La vista Segmenti contiene informazioni su tutti i segmenti dell’organizzazione, con ulteriori informazioni sui relativi processi di attivazione e valutazione."
 
 Per accedere al **[!UICONTROL Segmenti]** dashboard, seleziona **[!UICONTROL Monitoraggio]** nella navigazione a sinistra. Una volta sul **[!UICONTROL Monitoraggio]** , seleziona la **[!UICONTROL Segmenti]** il Card.
 
