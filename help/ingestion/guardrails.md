@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;protezioni;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Questo documento fornisce indicazioni sulle protezioni per l’inserimento dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
+source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Nella tabella seguente sono illustrate le protezioni da considerare quando si ut
 
 | Tipo di ingestione | Linee guida | Note |
 | --- | --- | --- |
-| Acquisizione in streaming | <ul><li>La dimensione massima del record è di 1 MB, con la dimensione consigliata pari a 10 KB.</li><li>Puoi elaborare 20000 richieste al secondo su Profilo in meno di un minuto.</li><li>Puoi elaborare fino a 20000 richieste al secondo per Data Lake in meno di 15 minuti.</li></ul> | Utilizza l’API di acquisizione batch se hai bisogno di un throughput di dati più elevato. |
+| Acquisizione in streaming | <ul><li>La dimensione massima del record è di 1 MB, con la dimensione consigliata pari a 10 KB.</li><li>Puoi elaborare fino a 2500 richieste al secondo su Profilo.</li><li>Puoi elaborare fino a 20000 richieste al secondo per Data Lake in meno di 15 minuti.</li></ul> | Utilizza l’API di acquisizione batch se hai bisogno di un throughput di dati più elevato. |
 | Sorgenti di streaming | <ul><li>La dimensione massima del record è di 1 MB, con la dimensione consigliata pari a 10 KB.</li><li>Le origini in streaming supportano da 4000 a 5000 richieste al secondo al momento della creazione di una nuova connessione sorgente. **Nota**: Possono trascorrere fino a 30 minuti prima che i dati in streaming vengano elaborati completamente sul data lake.</li><li>Puoi elaborare da 4000 a 5000 richieste al secondo a data lake. **Nota**: Possono trascorrere fino a 30 minuti prima che i dati in streaming vengano elaborati completamente sul data lake.</li></ul> | Sorgenti di streaming come [!DNL Kafka], [!DNL Azure Event Hubs]e [!DNL Amazon Kinesis] non utilizzare [!DNL Data Collection Core Service] (DCCS) instradare e può avere limiti di throughput diversi. Consulta la sezione [panoramica di origini](../sources/home.md) per un catalogo di origini da utilizzare per l’inserimento dei dati. |
 
 ## Passaggi successivi
