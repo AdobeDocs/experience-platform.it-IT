@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dei dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
+source-wordcount: '4916'
 ht-degree: 3%
 
 ---
@@ -246,6 +246,8 @@ Una delle funzioni dell’agente utente contenute nella tabella seguente può re
 * Telefono: un dispositivo mobile con un piccolo schermo (solitamente &lt; 7&quot;)
 * Mobile : dispositivo mobile che non è ancora stato identificato. Questo dispositivo mobile può essere un eReader, un tablet, un telefono, un orologio, ecc.
 
+Per ulteriori informazioni sui valori dei campi del dispositivo, consulta la sezione [elenco dei valori dei campi del dispositivo](#device-field-values) nell&#39;appendice del presente documento.
+
 >[!NOTE]
 >
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
@@ -343,5 +345,36 @@ La tabella seguente delinea un elenco di caratteri riservati e i corrispondenti 
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### Valori dei campi del dispositivo {#device-field-values}
+
+La tabella seguente delinea un elenco di valori dei campi del dispositivo e le relative descrizioni.
+
+| Dispositivo | Descrizione |
+| --- | --- |
+| Desktop | Tipo di dispositivo Desktop o Laptop. |
+| Anonimizzato | Un dispositivo anonimo. In alcuni casi, `useragents` che sono stati modificati da un software di anonimizzazione. |
+| Sconosciuto | Dispositivo sconosciuto. Di solito `useragents` che non contengono informazioni sul dispositivo. |
+| Dispositivi mobili | Un dispositivo mobile che deve ancora essere identificato. Questo dispositivo mobile può essere un eReader, un tablet, un telefono, un orologio, ecc. |
+| Tablet | Un dispositivo mobile con un grande schermo (solitamente > 7&quot;). |
+| Telefono | Un dispositivo mobile con un piccolo schermo (solitamente &lt; 7&quot;). |
+| Guarda | Un dispositivo mobile con un piccolo schermo (solitamente &lt; 2&quot;). Questi dispositivi normalmente funzionano come schermo aggiuntivo per un tipo di dispositivo telefono/tablet. |
+| Realtà aumentata | Un dispositivo mobile con funzionalità AR. |
+| Realtà virtuale | Un dispositivo mobile con funzionalità VR. |
+| eReader | Un dispositivo simile a un tablet, ma solitamente con un [!DNL eInk] schermo. |
+| Set-top box | Dispositivo collegato che consente l&#39;interazione attraverso uno schermo a dimensioni TV. |
+| TV | Un dispositivo simile al set-top box, ma incorporato nel televisore. |
+| Apparecchiatura domestica | Un elettrodomestico (di solito grande), come un frigorifero. |
+| Console giochi | Un sistema di gioco fisso come un [!DNL Playstation] o [!DNL XBox]. |
+| Console di gioco portatile | Un sistema di gioco mobile come un [!DNL Nintendo Switch]. |
+| Voce | Un dispositivo vocale come un [!DNL Amazon Alexa] o [!DNL Google Home]. |
+| Auto | Un browser basato su veicoli. |
+| Robot | Robot che visitano un sito web. |
+| Dispositivi mobili robot | I robot che visitano un sito web ma indicano che desiderano essere visti come visitatori mobili. |
+| Imitatore robot | Robot che visitano un sito web, fingendo che siano robot come [!DNL Google]Ma non lo sono. **Nota**: Nella maggior parte dei casi, gli imitatori robot sono davvero robot. |
+| Cloud | Applicazione basata su cloud. Questi non sono robot né hacker, ma sono applicazioni che hanno bisogno di connettersi. Ciò include [!DNL Mastodon] server. |
+| Hacker | Questo valore del dispositivo viene utilizzato nel caso in cui venga rilevato uno script nel `useragent` stringa. |
 
 {style="table-layout:auto"}
