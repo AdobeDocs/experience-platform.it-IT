@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -98,7 +98,7 @@ Within **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** cercare [!DNL (
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Nome società\Nome utente"
->abstract="Compila questo campo con il nome società e il nome utente di Oracle Eloqua nel modulo `{COMPANY_NAME}\{USERNAME}`"
+>abstract="Compila questo campo con il nome della tua società e il nome utente di Oracle Eloqua nel modulo `{COMPANY_NAME}\{USERNAME}`"
 
 Compila i campi richiesti di seguito. Fai riferimento a [Raccogli [!DNL Oracle Eloqua] credenziali](#gather-credentials) sezione per eventuali indicazioni.
 * **[!UICONTROL Password]**: La password della [!DNL Oracle Eloqua] conto.
@@ -114,8 +114,8 @@ Se i dettagli forniti sono validi, l’interfaccia utente visualizza un **[!UICO
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Per trovare il numero del tuo pod, accedi all&#39;Oracle Eloqua. Osserva l’URL nel browser dopo aver effettuato l’accesso. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge Base - scopri il tuo numero di Pod"
+>abstract="Per trovare il numero del tuo pod, accedi a Oracle Eloqua. Osserva l’URL nel browser dopo aver effettuato correttamente l’accesso. "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge Base: trova il tuo numero di pod"
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 ![Schermata dell’interfaccia utente della piattaforma che mostra i dettagli della destinazione.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
