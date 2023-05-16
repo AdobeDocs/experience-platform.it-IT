@@ -1,7 +1,8 @@
 ---
 title: Comportamento dell’esportazione del profilo
 description: Scopri in che modo il comportamento di esportazione del profilo varia tra i diversi pattern di integrazione supportati nelle destinazioni di Experience Platform.
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -26,16 +27,16 @@ Le destinazioni di Experience Platform esportano i dati nelle integrazioni basat
 
 Viene chiamato il processo tramite il quale i profili vengono aggregati in messaggi HTTPS prima di essere inviati agli endpoint API di destinazione *microbatch*.
 
-Prendi la [Destinazione facebook](/help/destinations/catalog/social/facebook.md) con *[aggregazione configurabile](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* policy come esempio: i dati vengono inviati in modo aggregato, dove il servizio destinazioni raccoglie tutti i dati in arrivo dal servizio profilo a monte e li aggrega in uno dei modi seguenti, prima di inviarli a Facebook:
+Prendi la [Destinazione facebook](/help/destinations/catalog/social/facebook.md) con *[aggregazione configurabile](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy come esempio: i dati vengono inviati in modo aggregato, dove il servizio destinazioni raccoglie tutti i dati in arrivo dal servizio profilo a monte e li aggrega in uno dei modi seguenti, prima di inviarli a Facebook:
 
 * Numero di record (massimo 10.000) o
 * Intervallo della finestra temporale (30 minuti)
 
 Una delle soglie sopra soddisfatte determina l’attivazione di un’esportazione in Facebook. Quindi, nella [!DNL Facebook Custom Audiences] dashboard, potresti vedere i tipi di pubblico provenienti da Experience Platform con incrementi di 10.000 record. Potresti visualizzare 10.000 record ogni 10-15 minuti perché i dati vengono elaborati e aggregati più velocemente rispetto all&#39;intervallo di esportazione di 30 minuti, e vengono inviati più velocemente, quindi ogni 10-15 minuti circa fino a quando tutti i record non sono stati elaborati. Se i record non sono sufficienti per creare un batch da 10.000, il numero corrente di record verrà inviato così come avviene quando viene soddisfatta la soglia della finestra temporale, pertanto potresti visualizzare batch più piccoli inviati anche a Facebook.
 
-Un altro esempio: [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md)che ha *[aggregazione dello sforzo migliore](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* con `maxUsersPerRequest: 10`. Ciò significa che un massimo di dieci profili saranno aggregati prima che una chiamata HTTP venga attivata a questa destinazione, ma Experience Platform tenta di inviare profili alla destinazione non appena il servizio di destinazioni riceve informazioni di rivalutazione aggiornate da un servizio a monte.
+Un altro esempio: [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md)che ha *[aggregazione dello sforzo migliore](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* con `maxUsersPerRequest: 10`. Ciò significa che un massimo di dieci profili saranno aggregati prima che una chiamata HTTP venga attivata a questa destinazione, ma Experience Platform tenta di inviare profili alla destinazione non appena il servizio di destinazioni riceve informazioni di rivalutazione aggiornate da un servizio a monte.
 
-Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione possono decidere come configurare il criterio di aggregazione in modo da soddisfare al meglio le limitazioni di tasso degli endpoint API a valle. Ulteriori informazioni [criterio di aggregazione](/help/destinations/destination-sdk/destination-configuration.md#aggregation) nella documentazione Destination SDK.
+Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione possono decidere come configurare il criterio di aggregazione in modo da soddisfare al meglio le limitazioni di tasso degli endpoint API a valle. Ulteriori informazioni [criterio di aggregazione](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) nella documentazione Destination SDK.
 
 ## Destinazioni di esportazione del profilo di streaming (enterprise) {#streaming-profile-destinations}
 

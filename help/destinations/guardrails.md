@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sui limiti di utilizzo e di tasso predefiniti per l’attivazione dei dati.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -102,7 +102,7 @@ Le protezioni sotto riportate si applicano all&#39;attivazione tramite [destinaz
 | Guardrail | Limite | Tipo di limite | Descrizione |
 | --- | --- | --- | --- |
 | Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Morbido | Puoi creare un massimo di 5 destinazioni personalizzate di streaming o batch private utilizzando Destination SDK. Rivolgiti a un rappresentante dell’Assistenza clienti personalizzato se hai bisogno di creare più di 5 destinazioni di questo tipo. |
-| Criteri di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1 800 e massimo 3 600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Duro | Quando utilizzi [aggregazione configurabile](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) Per la destinazione , fai attenzione ai valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e quanti profili devono includere nei messaggi. |
+| Criteri di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1 800 e massimo 3 600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Duro | Quando utilizzi [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) Per la destinazione , fai attenzione ai valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e quanti profili devono includere nei messaggi. |
 
 {style="table-layout:auto"}
 

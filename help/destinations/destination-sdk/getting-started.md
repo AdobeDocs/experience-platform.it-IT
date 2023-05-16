@@ -2,9 +2,9 @@
 description: Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione di Adobe I/O, un nome sandbox e l’autorizzazione per il controllo degli accessi per l’authoring di destinazione.
 title: Guida introduttiva a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '627'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ Il team Adobe Exchange ti fornisce il nome della sandbox, che devi utilizzare ne
 
 ## Controllo dell&#39;accesso basato sul ruolo (RBAC) {#rbac}
 
-Per utilizzare gli endpoint API Destination SDK descritti in [documentazione di riferimento](./configuration-options.md), è necessario **[!UICONTROL Authoring delle destinazioni]** autorizzazione di controllo accessi. Collabora con il team di Adobe Exchange per ottenere questa autorizzazione assegnata a [Adobe Admin Console](https://adminconsole.adobe.com/).
+Per utilizzare gli endpoint API Destination SDK descritti in [documentazione di riferimento](functionality/configuration-options.md), è necessario **[!UICONTROL Authoring delle destinazioni]** autorizzazione di controllo accessi. Collabora con il team di Adobe Exchange per ottenere questa autorizzazione assegnata a [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Autorizzazione per l’authoring delle destinazioni](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ Per ulteriori informazioni, consultare i seguenti documenti di Experience Platfo
 
 ## Considerazioni aggiuntive {#additional-considerations}
 
-* Qualsiasi modifica apportata alle configurazioni di destinazione, sia che crei o modifichi una configurazione di destinazione, deve essere rivista e approvata mediante Adobe. Le modifiche si riflettono nelle destinazioni solo dopo la revisione.
+* Per le destinazioni prodotte/pubbliche, tutte le modifiche apportate alle configurazioni di destinazione, sia che crei o modifichi una configurazione di destinazione, devono essere esaminate e approvate in base all’Adobe. Le modifiche si riflettono nelle destinazioni solo dopo la revisione. Questo non si applica alle destinazioni private disponibili solo per te.
 * Solo gli utenti che appartengono alla stessa organizzazione e hanno accesso alla sandbox possono modificare la configurazione di destinazione.
 
 ## Passaggi successivi {#next-steps}
@@ -77,8 +77,8 @@ Seguendo i passaggi descritti in questo articolo, hai ottenuto le credenziali di
 
 * Leggi le seguenti guide di configurazione, a seconda del tipo di destinazione:
 
-   * [Utilizza Destination SDK per configurare una destinazione di streaming](./configure-destination-instructions.md)
-   * [Utilizzare Destination SDK per configurare una destinazione basata su file](./configure-file-based-destination-instructions.md)
+   * [Utilizza Destination SDK per configurare una destinazione di streaming](guides/configure-destination-instructions.md)
+   * [Utilizzare Destination SDK per configurare una destinazione basata su file](guides/configure-file-based-destination-instructions.md)
 
 * Per tutte le operazioni, fai riferimento alla sezione [Documentazione API per l’authoring delle destinazioni](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilizza la [Raccolta Postman API per l’authoring delle destinazioni](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) per configurare la destinazione utilizzando gli endpoint API Destination SDK. Per iniziare a utilizzare Postman, consulta la sezione [passaggi per importare ambienti e raccolte](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) e [guida video per la creazione dell’ambiente Postman](https://video.tv.adobe.com/v/28832).

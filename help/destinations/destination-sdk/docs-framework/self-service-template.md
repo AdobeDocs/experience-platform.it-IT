@@ -2,7 +2,7 @@
 title: Modello self-service della documentazione // Sostituisci con il nome della destinazione
 description: Utilizza questo modello per creare una documentazione pubblica per la tua destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* Compila tutte le sezioni di questo modello, nell&#39;ordine in cui sono descritte nel modello.
->* Questo modello viene aggiornato raramente, in base al feedback del partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato il [versione più recente del modello](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* Questo modello viene aggiornato raramente, in base al feedback del partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato il [versione più recente del modello](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## Panoramica {#overview}
@@ -103,7 +103,7 @@ Per connettersi a questa destinazione, segui i passaggi descritti in [esercitazi
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-![Schermata di esempio che mostra come eseguire l’autenticazione nella destinazione](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![Schermata di esempio che mostra come eseguire l’autenticazione nella destinazione](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL Token portatore]**: Compila il token portatore per l’autenticazione alla destinazione.
 
@@ -113,7 +113,7 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti e 
 
 Per configurare i dettagli della destinazione, compila i campi obbligatori e facoltativi riportati di seguito. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata di esempio che mostra come inserire i dettagli della destinazione](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![Schermata di esempio che mostra come inserire i dettagli della destinazione](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL Nome]**: Nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: Una descrizione che ti aiuterà a identificare questa destinazione in futuro.
