@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Le note sulla versione di aprile 2023 per Adobe Experience Platform.
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2084'
 ht-degree: 4%
 
 ---
@@ -190,7 +190,7 @@ L’Experience Platform fornisce un’API RESTful e un’interfaccia utente inte
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto API per il filtraggio dei dati a livello di riga per Microsoft Dynamics, Salesforce CRM e il Marketing Cloud Salesforce | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per le origini di Marketing Cloud Microsoft Dynamics, Salesforce CRM e Salesforce. Leggi la guida su [filtraggio dei dati per una sorgente tramite API](../../sources/tutorials/api/filter.md) per ulteriori informazioni. |
+| Supporto API per il filtraggio dei dati a livello di riga per l’origine CRM Salesforce. | Utilizza gli operatori logici e di confronto per filtrare i dati a livello di riga per l&#39;origine CRM Salesforce. Leggi la guida su [filtraggio dei dati per una sorgente tramite API](../../sources/tutorials/api/filter.md) per ulteriori informazioni. |
 | Disponibilità beta dello streaming Shopify | La [Shopify Streaming source](../../sources/connectors/ecommerce/shopify-streaming.md) è ora disponibile in versione beta. Utilizza l’origine Shopify Streaming per inviare ad Experience Platform i dati dall’account Shopify Partners. |
 | Disponibilità generale dell&#39;integrazione OneTrust | La [Origine integrazione OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) è ora GA. Utilizza l&#39;origine di integrazione OneTrust per fornire ad Experience Platform i dati di consenso e preferenze dall&#39;account di integrazione OneTrust. |
 | Disponibilità generale di Oracle Service Cloud | La [Origine Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) è ora GA. Utilizza l’origine Oracle Service Cloud per riportare ad Experience Platform i dati di Oracle Service Cloud . |
