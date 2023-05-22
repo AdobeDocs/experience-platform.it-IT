@@ -1,25 +1,20 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;salesforce marketing cloud;Marketing Cloud Salesforce;automazione marketing
 solution: Experience Platform
 title: Panoramica sull’origine del Marketing Cloud Salesforce
 description: Scopri come collegare il Marketing Cloud Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Salesforce Marketing Cloud]
-
->[!NOTE]
->
->Il [!DNL Salesforce Marketing Cloud] sorgente in versione beta. Consulta la [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# [!DNL Salesforce Marketing Cloud]
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-[!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da sistemi di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Salesforce Marketing Cloud].
+Experience Platform fornisce supporto per l’acquisizione di dati da sistemi di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Salesforce Marketing Cloud].
 
 ## Prerequisiti
 
@@ -28,9 +23,13 @@ Prima di collegare il [!DNL Salesforce Marketing Cloud] da sorgente a Platform, 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Puoi richiedere gli ambiti effettuando una chiamata al `v2/userinfo` risorsa del [!DNL Salesforce Marketing Cloud] API. Consulta la [[!DNL Salesforce Marketing Cloud] Documento Ambiti di autorizzazione dell’integrazione API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html) per informazioni su come richiedere e confrontare gli ambiti.
+Puoi richiedere gli ambiti effettuando una chiamata al `v2/userinfo` risorsa del [!DNL Salesforce Marketing Cloud] API. Consulta la [[!DNL Salesforce Marketing Cloud] Documento Ambiti di autorizzazione dell’integrazione API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) per informazioni su come richiedere e confrontare gli ambiti.
 
-Per ulteriori informazioni sugli ambiti, incluso un elenco delle autorizzazioni e dei comportamenti correlati, consulta [[!DNL Salesforce Marketing Cloud] Documento REST API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html).
+Per ulteriori informazioni sugli ambiti, incluso un elenco delle autorizzazioni e dei comportamenti correlati, consulta [[!DNL Salesforce Marketing Cloud] Documento REST API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+
+>[!IMPORTANT]
+>
+>L’acquisizione di oggetti personalizzati non è attualmente supportata da [!DNL Salesforce Marketing Cloud] integrazione sorgente.
 
 ## ELENCO CONSENTITI di indirizzo IP
 
