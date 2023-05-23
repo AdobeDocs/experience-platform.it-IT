@@ -2,16 +2,16 @@
 title: Creare una connessione sorgente PubSub di Google utilizzando l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a un account Google PubSub utilizzando l’API del servizio Flow.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 371947cff518c16816692210054680367fd6504c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
 
 # Creare un [!DNL Google PubSub] Connessione sorgente tramite l’API del servizio Flusso
 
-Questo tutorial illustra i passaggi necessari per la connessione [!DNL Google PubSub] (in seguito denominati &quot;[!DNL PubSub]&quot;) per l&#39;Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial illustra i passaggi necessari per la connessione [!DNL Google PubSub] (in seguito denominati &quot;[!DNL PubSub]&quot;) per l&#39;Experience Platform, utilizzando [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introduzione
 
@@ -30,8 +30,8 @@ Per ottenere [!DNL Flow Service] per connettersi a [!DNL PubSub], è necessario 
 | ---------- | ----------- |
 | `projectId` | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
 | `credentials` | Credenziali o chiave necessarie per l&#39;autenticazione [!DNL PubSub]. |
-| `topicId` | ID per [!DNL PubSub] risorsa che rappresenta un feed di messaggi. È necessario specificare un ID argomento se si desidera fornire l&#39;accesso a un flusso di dati specifico nel [!DNL Google PubSub] sorgente. |
-| `subscriptionId` | L’ID del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. |
+| `topicName` | Nome della risorsa che rappresenta un feed di messaggi. È necessario specificare un nome di argomento se si desidera fornire l&#39;accesso a un flusso di dati specifico nel [!DNL PubSub] sorgente. Il formato del nome dell&#39;argomento è: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. Il formato del nome dell’abbonamento è: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di destinazione di origine. Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 Per ulteriori informazioni su questi valori, vedere [[!DNL PubSub] autenticazione](https://cloud.google.com/pubsub/docs/authentication) documento. Per utilizzare l&#39;autenticazione basata sull&#39;account del servizio, vedere [[!DNL PubSub] guida alla creazione di account di servizio](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
@@ -50,11 +50,11 @@ Il primo passaggio nella creazione di una connessione sorgente consiste nell’a
 
 Per creare un ID di connessione di base, effettua una richiesta POST al `/connections` endpoint durante la fornitura del [!DNL PubSub] credenziali di autenticazione come parte dei parametri della richiesta.
 
-Durante questo passaggio, puoi definire i dati a cui il tuo account ha accesso fornendo un ID argomento. Solo gli abbonamenti associati a tale ID argomento saranno accessibili.
+Il [!DNL PubSub] origine consente di specificare il tipo di accesso da consentire durante l&#39;autenticazione. Puoi impostare l’account in modo che abbia accesso root o limitare l’accesso a un particolare [!DNL PubSub] argomento e abbonamento.
 
 >[!NOTE]
 >
->Le entità (ruoli) assegnate a un progetto pubsub vengono ereditate in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera aggiungere un&#39;entità principale (ruolo) per poter accedere a un argomento specifico, è necessario aggiungere anche tale entità principale (ruolo) alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](https://cloud.google.com/pubsub/docs/access-control).
+>Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere tale entità principale (ruolo) anche alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **Formato API**
 
@@ -63,6 +63,10 @@ POST /connections
 ```
 
 **Richiesta**
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su progetto]
 
 ```shell
 curl -X POST \
@@ -76,12 +80,10 @@ curl -X POST \
       "name": "Google PubSub connection",
       "description": "Google PubSub connection",
       "auth": {
-          "specName": "Google PubSub authentication credentials",
+          "specName": "Project Based Authentication",
           "params": {
-              "projectId": "acme-project",
-              "credentials": "{CREDENTIALS}",
-              "topicId": "acmeProjectAPI",
-              "subscriptionId": "acme-project-api-new"
+              "projectId": "{PROJECT_ID}",
+              "credentials": "{CREDENTIALS}"
           }
       },
       "connectionSpec": {
@@ -95,9 +97,44 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
 | `auth.params.credentials` | Credenziali o chiave necessarie per l&#39;autenticazione [!DNL PubSub]. |
-| `auth.params.topicId` | L’ID dell’argomento [!DNL PubSub] origine a cui desideri fornire accesso. |
-| `auth.params.subscriptionId` | L’ID dell’abbonamento rispetto al tuo [!DNL PubSub] argomento. |
 | `connectionSpec.id` | Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google PubSub connection",
+      "description": "Google PubSub connection",
+      "auth": {
+          "specName": "Topic & Subscription Based Authentication",
+          "params": {
+              "credentials": "{CREDENTIALS}",
+              "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+              "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}"
+          }
+      },
+      "connectionSpec": {
+          "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `auth.params.credentials` | Credenziali o chiave necessarie per l&#39;autenticazione [!DNL PubSub]. |
+| `auth.params.topicName` | La coppia ID progetto e ID argomento per [!DNL PubSub] origine a cui desideri fornire accesso. |
+| `auth.params.subscriptionName` | La coppia ID progetto e ID abbonamento per [!DNL PubSub] origine a cui desideri fornire accesso. |
+| `connectionSpec.id` | Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 **Risposta**
 
@@ -144,8 +181,8 @@ curl -X POST \
           "format": "json"
       },
       "params": {
-          "topicId": "acme-project",
-          "subscriptionId": "{SUBSCRIPTION_ID}",
+          "topicName": "projects/{PROJECT_ID}/topics/{TOPIC_ID}",
+          "subscriptionName": "projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}",
           "dataType": "raw"
       }
   }'
@@ -158,8 +195,8 @@ curl -X POST \
 | `baseConnectionId` | L’ID della connessione di base [!DNL PubSub] origine generata nel passaggio precedente. |
 | `connectionSpec.id` | ID della specifica di connessione fissa per [!DNL PubSub]. Questo ID è: `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | Il formato del [!DNL PubSub] i dati che desideri acquisire. Attualmente, l’unico formato di dati supportato è `json`. |
-| `params.topicId` | Il nome o l’ID del [!DNL PubSub] argomento. In entrata [!DNL PubSub], un argomento è una risorsa denominata che rappresenta un feed di messaggi. |
-| `params.subscriptionId` | L’ID abbonamento che corrisponde a un dato argomento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di leggere i messaggi da un argomento. È possibile assegnare una o più sottoscrizioni a un singolo argomento. |
+| `params.topicName` | Il nome del tuo [!DNL PubSub] argomento. In entrata [!DNL PubSub], un argomento è una risorsa denominata che rappresenta un feed di messaggi. |
+| `params.subscriptionName` | Il nome della sottoscrizione che corrisponde a un determinato argomento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di leggere i messaggi da un argomento. È possibile assegnare una o più sottoscrizioni a un singolo argomento. |
 | `params.dataType` | Questo parametro definisce il tipo di dati che viene acquisito. I tipi di dati supportati includono: `raw` e `xdm`. |
 
 **Risposta**

@@ -2,10 +2,10 @@
 title: Creare una connessione sorgente PubSub di Google nell’interfaccia utente
 description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 1%
+source-wordcount: '1010'
+ht-degree: 0%
 
 ---
 
@@ -30,8 +30,8 @@ Per connettersi [!DNL PubSub] In Platform, devi fornire un valore valido per le 
 | ---------- | ----------- |
 | Progetto ID | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
 | Credenziali  | ID della chiave privata o delle credenziali richiesto per l&#39;autenticazione [!DNL PubSub]. |
-| ID argomento | ID per [!DNL PubSub] risorsa che rappresenta un feed di messaggi. È necessario specificare un ID argomento se si desidera fornire l&#39;accesso a un flusso di dati specifico nel [!DNL Google PubSub] sorgente. |
-| ID abbonamento | L’ID del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. |
+| Nome argomento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. |
+| Nome abbonamento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. |
 
 Per ulteriori informazioni su questi valori, vedi quanto segue [Autenticazione PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se si utilizza l&#39;autenticazione basata sull&#39;account del servizio, vedere [Guida di PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
 
@@ -61,16 +61,60 @@ Per utilizzare un account esistente, seleziona la [!DNL PubSub] account con cui 
 
 ### Nuovo account
 
-Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]**, quindi fornisci un nome, una descrizione facoltativa e il tuo [!DNL PubSub] credenziali di autenticazione nel modulo di input. Durante questo passaggio, puoi definire i dati a cui il tuo account ha accesso fornendo un ID argomento. Solo gli abbonamenti associati a tale ID argomento saranno accessibili.
+>[!TIP]
+>
+>Quando crei un account con accesso limitato, devi fornire almeno uno dei tuoi nomi di argomento o di abbonamento. L’autenticazione non riuscirà se mancano entrambi i valori.
+
+Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi fornisci un nome e una descrizione facoltativa per il nuovo [!DNL PubSub] account.
+
+![Nuova interfaccia account per l&#39;origine PubSub di Google nel flusso di lavoro delle origini](../../../../images/tutorials/create/google-pubsub/new.png)
+
+Il [!DNL PubSub] origine consente di specificare il tipo di accesso da consentire durante l&#39;autenticazione. Puoi impostare l’account in modo che disponga di autenticazione basata su progetto o su argomento e autenticazione basata su abbonamento. L’autenticazione basata sul progetto consente di concedere l’accesso al progetto a livello principale nel tuo account, mentre l’autenticazione basata su argomento e su sottoscrizione ti consente di limitare l’accesso a un particolare [!DNL PubSub] argomento e abbonamento.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su progetto]
+
+Per creare un account con accesso alla directory principale [!DNL PubSub] cartella del progetto. Seleziona **[!UICONTROL Credenziali di autenticazione Google PubSub]** come tipo di autenticazione e fornisci l’ID progetto e le credenziali. Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e quindi lascia un po’ di tempo per stabilire la nuova connessione.
+
+![La nuova interfaccia dell&#39;account per l&#39;origine Google PubSub con l&#39;accesso root selezionato.](../../../../images/tutorials/create/google-pubsub/root.png)
+
+>[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+Per creare un account con accesso limitato solo a un determinato [!DNL PubSub] argomento e abbonamento, seleziona **[!UICONTROL Credenziali di autenticazione con ambito PubSub di Google]** e quindi fornire le credenziali, il nome dell&#39;argomento e/o il nome dell&#39;abbonamento. Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e quindi lascia un po’ di tempo per stabilire la nuova connessione.
+
+![La nuova interfaccia dell&#39;account per l&#39;origine Google PubSub con l&#39;accesso con ambito selezionato.](../../../../images/tutorials/create/google-pubsub/scoped.png)
+
+>[!ENDTABS]
 
 >[!NOTE]
 >
->Le entità (ruoli) assegnate a un progetto pubsub vengono ereditate in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera aggiungere un&#39;entità principale (ruolo) per poter accedere a un argomento specifico, è necessario aggiungere anche tale entità principale (ruolo) alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](https://cloud.google.com/pubsub/docs/access-control).
+>Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere tale entità principale (ruolo) anche alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
 
-Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e quindi lascia un po’ di tempo per stabilire la nuova connessione.
+## Selezionare i dati
 
-![La nuova interfaccia account nel flusso di lavoro origini.](../../../../images/tutorials/create/google-pubsub/new.png)
+Se l’autenticazione viene eseguita correttamente, accedi al [!UICONTROL Seleziona dati] passaggio, in cui è possibile navigare tra [!DNL PubSub] gerarchia dei dati e selezionare i dati da portare all&#39;Experience Platform.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su progetto]
+
+Se hai eseguito l’autenticazione con l’accesso basato su progetto, il [!UICONTROL Seleziona dati] L’interfaccia visualizzerà tutte le sottoscrizioni all’interno del progetto a cui è associato un argomento.
+
+![Il passaggio di dati di selezione del flusso di lavoro sorgenti con autenticazione basata su progetto.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+
+>[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+Se ti sei autenticato con un argomento e un accesso basato su abbonamento, il [!UICONTROL Seleziona dati] La visualizzazione dell&#39;interfaccia può variare a seconda delle informazioni fornite.
+
+* Se si specifica solo il nome dell&#39;argomento, nell&#39;interfaccia verranno visualizzate tutte le coppie di argomenti-sottoscrizione corrispondenti all&#39;argomento specificato.
+* Se fornisci solo il nome dell’abbonamento, l’interfaccia visualizza tutte le coppie di argomenti-abbonamento che corrispondono al nome dell’abbonamento fornito.
+* Se vengono forniti sia i nomi degli argomenti che quelli delle sottoscrizioni, l&#39;interfaccia visualizza la coppia argomento-sottoscrizione che corrisponde a entrambi i valori specificati.
+
+![Il passaggio Seleziona dati del flusso di lavoro sorgenti con autenticazione basata su argomenti e sottoscrizioni.](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+
+>[!ENDTABS]
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è possibile creare una connessione tra [!DNL PubSub] e Platform. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per portare i dati in streaming dall’archiviazione cloud a Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguendo questa esercitazione, hai creato una connessione tra [!DNL PubSub] e Platform. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per portare i dati in streaming dall’archiviazione cloud a Platform](../../dataflow/streaming/cloud-storage-streaming.md).
