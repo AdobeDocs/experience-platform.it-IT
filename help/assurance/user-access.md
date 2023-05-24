@@ -1,50 +1,32 @@
 ---
 title: Accesso utente di Adobe Experience Platform Assurance
-description: Questa guida spiega come mantenere l’accesso degli utenti a Adobe Experience Platform Assurance gestendolo tramite l’Admin Console.
-source-git-commit: 6aee145c6c778730d1c2728d7463e8b54a7aab8e
+description: Questa guida spiega come mantenere l’accesso degli utenti a Adobe Experience Platform Assurance gestendolo attraverso l’Admin Console.
+exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
+source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 5%
+source-wordcount: '203'
+ht-degree: 3%
 
 ---
-
 
 # Accesso utente
 
 >[!WARNING]
 >
->L&#39;accesso dell&#39;utente a Assurance sta cambiando. Poiché la versione beta (Project Griffon) viene lasciata disponibile al pubblico (come Assurance) per tutti i clienti Adobe Experience Cloud, l’accesso a Assurance verrà gestito tramite [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+>L’accesso utente a Assurance sta cambiando. Poiché Assurance lascia la versione beta (Project Griffon) ad essere generalmente disponibile (come Assurance) per tutti i clienti Adobe Experience Cloud, l’accesso ad Assurance sarà gestito tramite il [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 >
->Per assistenza, contatta l’amministratore Adobe Experience Cloud della tua azienda.
+>Se hai bisogno di assistenza, contatta l’amministratore Adobe Experience Cloud della tua azienda.
 
-Per ricevere o mantenere l’accesso ininterrotto a Assurance, assicurati che nell’Admin Console siano completati i seguenti passaggi:
+Per ricevere o mantenere un accesso ininterrotto a Assurance, assicurati che i seguenti passaggi siano completati nell’Admin Console:
 
-## Creare un profilo prodotto
+## Aggiunta di utenti all’Experience Platform tramite un profilo di prodotto
 
->[!NOTE]
->
->Se utilizzi un profilo esistente, puoi passare alla sezione successiva.
+Per aggiungere un utente a un profilo di prodotto, accedi all’Admin Console e seleziona **Aggiungi utenti**.
 
-Accedi al [Admin Console](https://adminconsole.adobe.com/) e crea un nuovo profilo di prodotto Adobe Experience Platform.
+![Viene evidenziato il pulsante Aggiungi utenti.](./images/get-access/product-profile-add-users.png)
 
-Seleziona la **Prodotti** , seguita dalla scheda prodotto Adobe Experience Platform .
+Il **Aggiungere utenti al team** viene visualizzata. In questa finestra di dialogo è possibile immettere i dettagli dell&#39;utente che si desidera aggiungere. Immettere l&#39;indirizzo di posta elettronica, il nome (facoltativo) e il cognome (facoltativo) dell&#39;utente.
 
-![Vista analisi di Adobe Experience Platform Assurance](./images/get-access/analytics-view.png)
+Seleziona l’icona a forma di matita per scegliere i prodotti e i gruppi di utenti. Da qui, seleziona **Adobe Experience Platform**, quindi **AEP-Default-All-Users**, seguito da **Salva**.
 
-## Aggiungere utenti al profilo di prodotto
-
-Dopo aver effettuato l’accesso alla scheda prodotto, fornisci un nome e seleziona **Salva**.
-
->[!NOTE]
->
->Il profilo di prodotto che si intende utilizzare per l&#39;accesso a Assurance **not** richiedere eventuali autorizzazioni aggiuntive.
-
-![Profilo di prodotto Adobe Experience Platform](./images/get-access/product-profile.png)
-
-Dopo aver creato la scheda prodotto, puoi assegnare gli utenti al profilo di prodotto Adobe Experience Platform. Seleziona la **Prodotti** scheda , seguita da **Assegna utenti** sulla scheda Adobe Experience Platform.
-
-![Assegnazione di utenti al profilo di prodotto](./images/get-access/assign-users.png)
-
-Aggiungi uno o più utenti al profilo di prodotto e salva.
-
-![Aggiunta di utenti al profilo di prodotto](./images/get-access/add-users.png)
+![Viene visualizzata la finestra di dialogo che mostra come aggiungere il profilo di prodotto.](./images/get-access/product-profile-add-profile.png)
