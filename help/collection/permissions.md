@@ -2,9 +2,9 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1274'
 ht-degree: 6%
 
 ---
@@ -41,11 +41,6 @@ Le autorizzazioni in Adobe Experience Platform includono l’accesso a flussi di
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
-
 ### Autorizzazioni di Adobe Experience Platform Data Collection
 
 Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’accesso ai tag e le funzionalità di inoltro degli eventi, tra cui proprietà, estensioni e ambienti. Per informazioni su come configurare le autorizzazioni di Adobe Experience Platform Data Collection, consulta [sezione successiva](#manage).
@@ -73,16 +68,16 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’
 
 ## Gestire le autorizzazioni {#manage}
 
-Come descritto nella sezione precedente, le autorizzazioni per la raccolta dati sono gestite attraverso due designazioni di prodotto, ad Admin Console: **Adobe Experience Platform** e **Raccolta dati di Adobe Experience Platform**.
+Le autorizzazioni per la raccolta dei dati vengono gestite tramite due designazioni di prodotto: **Adobe Experience Platform** e **Raccolta dati di Adobe Experience Platform**.
 
-Per gestire queste autorizzazioni, accedi a [Admin Console](https://adminconsole.adobe.com/) e seleziona **[!UICONTROL Prodotti]** dalla navigazione in alto. Da qui, seleziona la scheda prodotto per le autorizzazioni da configurare. Consulta le sottosezioni seguenti per i passaggi su come gestire le autorizzazioni pertinenti per ciascun prodotto in Admin Console:
+Consulta le sottosezioni seguenti per i passaggi su come gestire le autorizzazioni pertinenti per ciascun prodotto in Admin Console:
 
 * [Autorizzazioni Adobe Experience Platform](#manage-platform)
 * [Autorizzazioni di Adobe Experience Platform Data Collection](#manage-collection)
 
 ### Gestire le autorizzazioni in Adobe Experience Platform {#manage-platform}
 
-Dalla sezione **[!UICONTROL Prodotti]** visualizza in Admin Console, seleziona **[!UICONTROL Raccolta dati di Adobe Experience Platform]**. Seleziona il profilo di prodotto per il quale desideri modificare le autorizzazioni, quindi accedi al **[!UICONTROL Autorizzazioni]** scheda.
+Dalla sezione **[!UICONTROL Autorizzazioni]** in Adobe Experience Platform selezionare il ruolo che si desidera modificare.
 
 Per accedere alle funzionalità di raccolta dati, devi abilitare tutte le autorizzazioni in **[!UICONTROL Sandbox]**, **[!UICONTROL Modellazione dati]**, **[!UICONTROL Identity Management]**, e **[!UICONTROL Raccolta dati]** categorie.
 
@@ -96,7 +91,7 @@ Consulta la [guida all’interfaccia utente per il controllo degli accessi](../a
 
 ### Gestire le autorizzazioni in Raccolta dati di Adobe Experience Platform {#manage-collection}
 
-Dalla sezione **[!UICONTROL Prodotti]** visualizza in Admin Console, seleziona **[!UICONTROL Raccolta dati di Adobe Experience Platform]**.
+Per gestire queste autorizzazioni, accedi a Admin Console e seleziona **[!UICONTROL Prodotti]** dalla navigazione in alto, quindi seleziona **[!UICONTROL Raccolta dati di Adobe Experience Platform]**.
 
 ![Immagine che mostra la scheda prodotto Raccolta dati in Admin Console](./images/permissions/data-collection-card.png)
 
