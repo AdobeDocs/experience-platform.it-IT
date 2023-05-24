@@ -66,7 +66,7 @@ Ci sono diverse considerazioni importanti da fare quando si decide un nome per l
 * I nomi degli schemi devono essere univoci, ovvero devono essere sufficientemente specifici da non poter essere riutilizzati in futuro. Ad esempio, se l’organizzazione dispone di programmi fedeltà separati per marchi diversi, sarebbe opportuno denominare lo schema &quot;Membri fedeltà per marchio&quot; per semplificare la distinzione da altri schemi relativi alla fedeltà che potresti definire in un secondo momento.
 * È inoltre possibile utilizzare la descrizione dello schema per fornire eventuali informazioni contestuali aggiuntive relative allo schema.
 
-Questa esercitazione crea uno schema per acquisire i dati relativi ai membri di un programma fedeltà e pertanto lo schema si chiama &quot;[!DNL Loyalty Members]&quot;.
+Questa esercitazione crea uno schema per acquisire i dati relativi ai membri di un programma fedeltà e pertanto lo schema è denominato &quot;[!DNL Loyalty Members]&quot;.
 
 ## Aggiungi un gruppo di campi {#field-group}
 

@@ -47,7 +47,7 @@ Viene visualizzato un menu a discesa che fornisce le opzioni per modificare la p
 
 Seleziona **[!UICONTROL Elimina]** per eliminare il flusso di dati.
 
-![eliminare](../../images/tutorials/delete/delete.png)
+![delete](../../images/tutorials/delete/delete.png)
 
 Viene visualizzata una finestra di dialogo di conferma finale. Seleziona **[!UICONTROL Elimina]** per completare il processo.
 

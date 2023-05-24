@@ -5,7 +5,7 @@ exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -45,7 +45,7 @@ I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboar
 | [!UICONTROL Destinazioni attive per piattaforma di destinazione] | Destinazioni | Questo widget utilizza una tabella a due colonne per mostrare un elenco di piattaforme di destinazione attive e il numero totale di destinazioni attive per ogni piattaforma di destinazione. |
 | [!UICONTROL Tipi di pubblico attivati su tutte le destinazioni] | Destinazioni | Questo widget fornisce in un’unica metrica il numero totale di tipi di pubblico attivati su tutte le destinazioni. |
 | [!UICONTROL Ordine di attivazione pubblico] | Segmenti | Questo widget fornisce una tabella a tre colonne che elenca il nome della destinazione, la piattaforma e la data di attivazione del pubblico. |
-| [!UICONTROL Tendenza dimensione pubblico] | Segmenti | Questo widget fornisce un’illustrazione del grafico a linee per il numero totale di profili che soddisfano i criteri di qualsiasi definizione di segmento per periodi di 30 giorni, 90 giorni e 12 mesi. |
+| [!UICONTROL Tendenza delle dimensioni del pubblico] | Segmenti | Questo widget fornisce un’illustrazione del grafico a linee per il numero totale di profili che soddisfano i criteri di qualsiasi definizione di segmento per periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza di modifica della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili idonei per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza dimensione pubblico per identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 

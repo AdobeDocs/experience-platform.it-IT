@@ -11,44 +11,44 @@ ht-degree: 2%
 
 # Aggiornare una configurazione di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per aggiornare una configurazione di destinazione esistente utilizzando `/authoring/destinations` Endpoint API.
+Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per aggiornare una configurazione di destinazione esistente utilizzando `/authoring/destinations` Endpoint API
 
 >[!TIP]
 >
->Qualsiasi operazione di aggiornamento su destinazioni produttivizzate/pubbliche è visibile solo dopo l’utilizzo del [pubblicazione API](../../publishing-api/create-publishing-request.md) e invia l&#39;aggiornamento ad Adobe revisione.
+>Qualsiasi operazione di aggiornamento su destinazioni pubbliche/di produzione è visibile solo dopo l’utilizzo di [API di pubblicazione](../../publishing-api/create-publishing-request.md) e invia l’aggiornamento per la revisione di Adobi.
 
 Per una descrizione dettagliata delle funzionalità di una configurazione di destinazione, leggi i seguenti articoli:
 
-* [Configurazione dell’autenticazione cliente](../../functionality/destination-configuration/customer-authentication.md)
+* [Configurazione autenticazione cliente](../../functionality/destination-configuration/customer-authentication.md)
 * [Autenticazione OAuth2](../../functionality/destination-configuration/oauth2-authentication.md)
 * [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md)
-* [Attributi dell&#39;interfaccia utente](../../functionality/destination-configuration/ui-attributes.md)
+* [Attributi dell’interfaccia utente](../../functionality/destination-configuration/ui-attributes.md)
 * [Configurazione dello schema](../../functionality/destination-configuration/schema-configuration.md)
-* [Configurazione dello spazio dei nomi identità](../../functionality/destination-configuration/identity-namespace-configuration.md)
-* [Consegna delle destinazioni](../../functionality/destination-configuration/destination-delivery.md)
+* [Configurazione dello spazio dei nomi dell’identità](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [Consegna della destinazione](../../functionality/destination-configuration/destination-delivery.md)
 * [Configurazione dei metadati del pubblico](../../functionality/destination-configuration/audience-metadata-configuration.md)
 * [Configurazione dei metadati del pubblico](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [Criteri di aggregazione](../../functionality/destination-configuration/aggregation-policy.md)
+* [Criterio di aggregazione](../../functionality/destination-configuration/aggregation-policy.md)
 * [Configurazione batch](../../functionality/destination-configuration/batch-configuration.md)
-* [Qualifiche di profilo storiche](../../functionality/destination-configuration/historical-profile-qualifications.md)
+* [Qualifiche del profilo storico](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API di configurazione della destinazione {#get-started}
+## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Aggiornare una configurazione di destinazione {#update}
 
-È possibile aggiornare un [esistente](create-destination-configuration.md) configurazione di destinazione effettuando una `PUT` richiesta al `/authoring/destinations` endpoint con il payload aggiornato.
+È possibile aggiornare una [esistente](create-destination-configuration.md) configurazione di destinazione effettuando una `PUT` richiesta al `/authoring/destinations` con il payload aggiornato.
 
 >[!TIP]
 >
 >Endpoint API: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Per ottenere una configurazione di destinazione esistente e i relativi `{INSTANCE_ID}`, consulta l’articolo [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
+Per ottenere una configurazione di destinazione esistente e la corrispondente `{INSTANCE_ID}`, consulta l’articolo su [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
 
 **Formato API**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | ID della configurazione di destinazione da aggiornare. Per ottenere una configurazione di destinazione esistente e i relativi `{INSTANCE_ID}`, vedi [Recupera una configurazione di destinazione](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | ID della configurazione di destinazione che desideri aggiornare. Per ottenere una configurazione di destinazione esistente e la corrispondente `{INSTANCE_ID}`, vedi [Recuperare una configurazione di destinazione](retrieve-destination-configuration.md). |
 
 +++Richiesta
 
-La seguente richiesta aggiorna la destinazione creata in [questo esempio](create-destination-configuration.md#create) con diversi `filenameConfig` opzioni.
+La richiesta seguente aggiorna la destinazione creata in [questo esempio](create-destination-configuration.md#create) con diversi `filenameConfig` opzioni.
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione aggiornata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione aggiornata.
 
 +++
 
@@ -211,10 +211,10 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come aggiornare una configurazione di destinazione attraverso la Destination SDK `/authoring/destinations` Endpoint API.
+Dopo aver letto questo documento, ora sai come aggiornare una configurazione di destinazione tramite la Destination SDK `/authoring/destinations` Endpoint API
 
-Per ulteriori informazioni sulle operazioni che è possibile eseguire con questo endpoint, consulta i seguenti articoli:
+Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 
 * [Creare una configurazione di destinazione](create-destination-configuration.md)
-* [Recupera una configurazione di destinazione](retrieve-destination-configuration.md)
+* [Recuperare una configurazione di destinazione](retrieve-destination-configuration.md)
 * [Eliminare una configurazione di destinazione](delete-destination-configuration.md)

@@ -6,15 +6,15 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# Gestisci ruoli
+# Gestire i ruoli
 
-I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
 
-## Crea un nuovo ruolo
+## Creare un nuovo ruolo
 
 Per creare un nuovo ruolo, selezionare **[!UICONTROL Ruoli]** nella barra laterale e seleziona **[!UICONTROL Crea Ruolo]**.
 

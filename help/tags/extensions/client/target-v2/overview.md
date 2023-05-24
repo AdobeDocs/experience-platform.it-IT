@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Utilizza questo riferimento per informazioni sulle opzioni disponibili quando utilizzi questa estensione per creare una regola.
 
@@ -37,7 +37,7 @@ Sono disponibili le seguenti configurazioni:
 
 #### Codice client
 
-Il codice client è l&#39;identificatore account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato tramite elementi di dati.
+Il codice client è l’identificatore dell’account di Target. Questo valore dovrebbe essere quasi sempre lasciato come predefinito. Può essere modificato tramite elementi di dati.
 
 #### ID organizzazione
 
@@ -133,8 +133,8 @@ Di seguito sono riportati alcuni aspetti da tenere presenti quando si utilizza l
    * Quando è stata ricevuta la risposta di caricamento della pagina
    * Quando la richiesta di caricamento della pagina scade
    * Quando lo stesso frammento scade
-* L’azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
-* L’opzione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
+* L&#39;azione &quot;Fire Page Load Request&quot; deve essere utilizzata in tutte le pagine che utilizzano il frammento pre-hiding per ridurne la durata.
+* L’impostazione Nascondi corpo deve essere abilitata anche nell’azione Page Load Request nella regola Page Load utilizzata per Target; in caso contrario, tutti i caricamenti di pagina rimangono nascosti per il periodo di timeout.
 
 Il frammento di codice pre-hiding è il seguente e può essere ridotto. Le opzioni configurabili sono alla fine:
 

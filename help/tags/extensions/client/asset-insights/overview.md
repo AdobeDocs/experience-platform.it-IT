@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Questa estensione è pensata per essere utilizzata insieme a [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=it). In particolare, sostituisce il processo “pageTracker” e il codice da incorporare. Una volta configurata, questa estensione invia ad Adobe Analytics le metriche *Impressioni* e *Clic* delle risorse, che verranno poi importate nei rapporti di AEM Asset Insights. È quindi possibile generare rapporti sulle metriche delle risorse utilizzando AEM Asset Insights o Adobe Analytics Project Workspaces.
 

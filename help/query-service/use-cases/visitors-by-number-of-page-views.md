@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;experienceevent query;experienceevent query;Experience Event query;
 title: Elencare i visitatori in base al loro numero di visualizzazioni di pagina
 description: Scopri come scrivere query che utilizzano gli eventi esperienza per recuperare un elenco di visitatori organizzati in base al numero di visualizzazioni di pagina.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 1%

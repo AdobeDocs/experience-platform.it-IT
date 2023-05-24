@@ -21,7 +21,7 @@ Questa guida illustra come utilizzare Adobe Developer Console per raccogliere i 
 
 ## Accesso degli sviluppatori a Adobe Experience Platform
 
-Prima di poter generare i valori di autenticazione per l’API di Reactor, devi disporre dell’accesso ad Experience Platform come sviluppatore. Per ottenere l’accesso come sviluppatore, segui i passaggi iniziali descritti nel [tutorial sull’autenticazione per Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Una volta completato il passaggio &quot;Accesso utente guadagno&quot;, torna a questa esercitazione per generare le credenziali specifiche dell’API del reattore.
+Prima di poter generare i valori di autenticazione per l’API di Reactor, devi disporre dell’accesso ad Experience Platform come sviluppatore. Per ottenere l’accesso come sviluppatore, segui i passaggi iniziali descritti nel [tutorial sull’autenticazione per Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Dopo aver completato il passaggio &quot;Ottieni accesso utente&quot;, torna a questo tutorial per generare le credenziali specifiche per l’API di Reactor.
 
 ## Generare le credenziali di accesso
 
@@ -31,7 +31,7 @@ Utilizzando Adobe Developer Console, è necessario generare le tre credenziali d
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-L&#39;ID della tua organizzazione (`{ORG_ID}`) e chiave API (`{API_KEY}`) può essere riutilizzato nelle future chiamate API dopo che sono state generate inizialmente. Il token di accesso (`{ACCESS_TOKEN}`) è invece temporaneo e deve essere rigenerato ogni 24 ore.
+ID della tua organizzazione (`{ORG_ID}`) e chiave API (`{API_KEY}`) possono essere riutilizzate nelle chiamate API future dopo che sono state generate inizialmente. Il token di accesso (`{ACCESS_TOKEN}`) è invece temporaneo e deve essere rigenerato ogni 24 ore.
 
 I passaggi per generare questi valori sono descritti in dettaglio di seguito.
 

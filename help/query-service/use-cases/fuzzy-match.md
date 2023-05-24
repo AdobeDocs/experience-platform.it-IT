@@ -1,28 +1,29 @@
 ---
-title: Corrispondenza fuzzy nel servizio query
-description: Scopri come eseguire una corrispondenza sui dati di Platform che combina i risultati di più set di dati facendo corrispondere approssimativamente una stringa di tua scelta.
-source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
+title: Corrispondenza fuzzy in Query Service
+description: Scopri come eseguire una corrispondenza sui dati di Platform che combina i risultati di più set di dati approssimativamente corrispondendo una stringa di tua scelta.
+exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# Corrispondenza fuzzy nel servizio query
+# Corrispondenza fuzzy in Query Service
 
-Utilizza una corrispondenza &quot;sfocata&quot; sui dati Adobe Experience Platform per restituire le corrispondenze più probabili e approssimative senza la necessità di cercare stringhe con caratteri identici. Ciò consente una ricerca dei dati molto più flessibile e rende i dati più accessibili risparmiando tempo e fatica.
+Utilizza una corrispondenza &quot;fuzzy&quot; nei dati Adobe Experience Platform per restituire le corrispondenze più probabili e approssimative senza dover cercare stringhe con caratteri identici. Questo consente una ricerca molto più flessibile dei dati e li rende più accessibili risparmiando tempo e fatica.
 
-Invece di cercare di riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) è consigliato per questo processo in quanto le sue funzioni sono più adatte per aiutare a far corrispondere stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
+Invece di provare a riformattare le stringhe di ricerca per farle corrispondere, la corrispondenza sfocata analizza il rapporto di somiglianza tra due sequenze e restituisce la percentuale di somiglianza. [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) è consigliato per questo processo, in quanto le sue funzioni sono più adatte per aiutare a far corrispondere le stringhe in situazioni più complesse rispetto a [!DNL regex] o [!DNL difflib].
 
-L&#39;esempio fornito in questo caso d&#39;uso si concentra sulla corrispondenza di attributi simili da una ricerca in una stanza d&#39;albergo tra due diversi set di dati dell&#39;agenzia di viaggio. Il documento illustra come associare le stringhe in base al loro grado di somiglianza rispetto a grandi origini dati separate. In questo esempio, la corrispondenza fuzzy confronta i risultati della ricerca per le caratteristiche di una stanza dalle agenzie di viaggio Luma e Acme.
+L’esempio fornito in questo caso d’uso si concentra sulla corrispondenza di attributi simili da una ricerca nella camera d’albergo in due diversi set di dati dell’agenzia di viaggio. Il documento illustra come far corrispondere le stringhe in base al loro grado di somiglianza da grandi origini dati separate. In questo esempio, fuzzy match confronta i risultati della ricerca per le caratteristiche di una stanza delle agenzie di viaggio Luma e Acme.
 
 ## Introduzione {#getting-started}
 
-Come parte di questo processo richiede la formazione di un modello di apprendimento automatico, in questo documento si presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
+Poiché parte di questo processo richiede la formazione di un modello di apprendimento automatico, il presente documento presuppone una conoscenza operativa di uno o più ambienti di apprendimento automatico.
 
-Questo esempio utilizza [!DNL Python] e [!DNL Jupyter Notebook] ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliato perché si tratta di un&#39;applicazione web open-source con requisiti di elaborazione ridotti. Può essere scaricato da [il sito ufficiale di Jupyter](https://jupyter.org/).
+Questo esempio utilizza [!DNL Python] e [!DNL Jupyter Notebook] ambiente di sviluppo. Sebbene siano disponibili molte opzioni, [!DNL Jupyter Notebook] è consigliata in quanto si tratta di un&#39;applicazione web open-source con requisiti di calcolo ridotti. Può essere scaricato da [il sito ufficiale di Jupyter](https://jupyter.org/).
 
-Prima di iniziare, è necessario importare le librerie necessarie. [!DNL FuzzyWuzzy] è un [!DNL Python] libreria basata su [!DNL difflib] e utilizzato per far corrispondere le stringhe. Usa [!DNL Levenshtein Distance] per calcolare le differenze tra sequenze e pattern. [!DNL FuzzyWuzzy] presenta i seguenti requisiti:
+Prima di iniziare, è necessario importare le librerie necessarie. [!DNL FuzzyWuzzy] è un open-source [!DNL Python] libreria basata su [!DNL difflib] e utilizzati per associare le stringhe. Utilizza [!DNL Levenshtein Distance] per calcolare le differenze tra sequenze e serie. [!DNL FuzzyWuzzy] ha i seguenti requisiti:
 
 - [!DNL Python] 2.4 (o superiore)
 - [!DNL Python-Levenshtein]
@@ -39,19 +40,19 @@ Oppure usa il seguente comando per installare [!DNL Python-Levenshtein] inoltre:
 pip install fuzzywuzzy[speedup]
 ```
 
-Ulteriori informazioni tecniche su [!DNL Fuzzywuzzy] si trova nella [documentazione ufficiale](https://pypi.org/project/fuzzywuzzy/).
+Ulteriori informazioni tecniche su [!DNL Fuzzywuzzy] possono essere trovati nelle loro [documentazione ufficiale](https://pypi.org/project/fuzzywuzzy/).
 
-### Connessione al servizio query
+### Connetti a Query Service
 
-È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile specificare sia le credenziali in scadenza che quelle non in scadenza. Vedi la [guida alle credenziali](../ui/credentials.md) per ulteriori informazioni su come acquisire le credenziali necessarie. Se utilizzi [!DNL Jupyter Notebook], leggi la guida completa su [come connettersi al servizio query](../clients/jupyter-notebook.md).
+È necessario collegare il modello di apprendimento automatico a Query Service fornendo le credenziali di connessione. È possibile fornire credenziali sia in scadenza che non in scadenza. Consulta la sezione [guida alle credenziali](../ui/credentials.md) per ulteriori informazioni su come acquisire le credenziali necessarie. Se sta usando [!DNL Jupyter Notebook], leggi la guida completa su [come connettersi a Query Service](../clients/jupyter-notebook.md).
 
-Inoltre, assicurati di importare il [!DNL numpy] inserisci nel pacchetto [!DNL Python] per abilitare l&#39;algebra lineare.
+Inoltre, assicurati di importare [!DNL numpy] nel tuo pacchetto [!DNL Python] per consentire l&#39;algebra lineare.
 
 ```python
 import numpy as np
 ```
 
-I comandi seguenti sono necessari per connettersi al servizio query da [!DNL Jupyter Notebook]:
+I comandi seguenti sono necessari per connettersi a Query Service da [!DNL Jupyter Notebook]:
 
 ```python
 import psycopg2
@@ -66,11 +67,11 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Le [!DNL Jupyter Notebook] L’istanza è ora connessa al servizio query. Se la connessione ha esito positivo, non verrà visualizzato alcun messaggio. Se la connessione non è riuscita, viene visualizzato un errore.
+Il tuo [!DNL Jupyter Notebook] L’istanza è ora connessa a Query Service. Se la connessione ha esito positivo, non viene visualizzato alcun messaggio. Se la connessione non è riuscita, viene visualizzato un errore.
 
 ### Disegnare dati dal set di dati Luma {#luma-dataset}
 
-I dati da analizzare sono ricavati dal primo set di dati con i seguenti comandi. Per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
+I dati per l’analisi vengono estratti dal primo set di dati con i seguenti comandi. Per brevità, gli esempi sono stati limitati ai primi 10 risultati della colonna.
 
 ```python
 cur.execute('''SELECT * FROM luma;
@@ -80,7 +81,7 @@ luma = np.array([r[0] for r in cur])
 luma[:10]
 ```
 
-Seleziona **Uscita** per visualizzare la matrice restituita.
+Seleziona **Output** per visualizzare l&#39;array restituito.
 
 +++Output
 
@@ -107,7 +108,7 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-Seleziona **Uscita** per visualizzare la matrice restituita.
+Seleziona **Output** per visualizzare l&#39;array restituito.
 
 +++Output
 
@@ -122,11 +123,11 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Creare una funzione di punteggio sfocato {#fuzzy-scoring}
+### Creare una funzione di punteggio fuzzy {#fuzzy-scoring}
 
-Successivamente, devi importare `fuzz` dalla libreria FuzzyWuzzy ed esegui un confronto del rapporto parziale delle stringhe. La funzione del rapporto parziale consente di eseguire la corrispondenza della sottostringa. La stringa più breve viene presa in considerazione e corrisponde a tutte le sottostringhe della stessa lunghezza. La funzione restituisce un rapporto di somiglianza percentuale fino al 100%. Ad esempio, la funzione del rapporto parziale confronterebbe le seguenti stringhe &quot;Camera Deluxe&quot;, &quot;1 letto King&quot; e &quot;Camera King Deluxe&quot; e restituirebbe un punteggio di similarità del 69%.
+Quindi, devi importare `fuzz` dalla libreria FuzzyWuzzy ed eseguire un confronto delle proporzioni parziali delle stringhe. La funzione di rapporto parziale consente di eseguire la corrispondenza della sottostringa. Questa opzione consente di prendere la stringa più breve e di farla corrispondere a tutte le sottostringhe della stessa lunghezza. La funzione restituisce un rapporto di somiglianza percentuale fino al 100%. Ad esempio, la funzione di rapporto parziale confronta le seguenti stringhe &quot;Camera Deluxe&quot;, &quot;1 Letto King&quot; e &quot;Camera Re Deluxe&quot; e restituisce un punteggio di somiglianza del 69%.
 
-Nel caso d&#39;uso di abbinamento della stanza dell&#39;hotel, questo viene fatto utilizzando i seguenti comandi:
+Nel caso di utilizzo di corrispondenza della camera di hotel, questa operazione viene eseguita utilizzando i seguenti comandi:
 
 ```python
 from fuzzywuzzy import fuzz
@@ -134,16 +135,16 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Quindi, importa `cdist` dal [!DNL SciPy] per calcolare la distanza tra ciascuna coppia nelle due raccolte di input. Questo calcola i punteggi tra tutte le coppie di camere dell&#39;hotel fornite da ciascuna agenzia di viaggio.
+Avanti, importa `cdist` dal [!DNL SciPy] per calcolare la distanza tra ciascuna coppia nelle due raccolte di input. In questo modo vengono calcolati i punteggi di tutte le coppie di camere di hotel fornite da ciascuna agenzia di viaggio.
 
 ```python
 from scipy.spatial.distance import cdist
 pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
-### Crea mappature tra le due colonne utilizzando il punteggio di join sfumato
+### Creare mappature tra le due colonne utilizzando il punteggio di join fuzzy
 
-Ora che le colonne sono state valutate in base alla distanza, è possibile indicizzare le coppie e mantenere solo le corrispondenze con un punteggio superiore a una determinata percentuale. In questo esempio vengono mantenute solo le coppie che corrispondono a un punteggio pari o superiore al 70%.
+Ora che le colonne sono state valutate in base alla distanza, puoi indicizzare le coppie e mantenere solo le corrispondenze con un punteggio superiore a una determinata percentuale. In questo esempio vengono mantenute solo le coppie corrispondenti a un punteggio pari o superiore al 70%.
 
 ```python
 matched_pairs = []
@@ -159,7 +160,7 @@ I risultati possono essere visualizzati con il seguente comando. Per brevità, i
 matched_pairs[:10]
 ```
 
-Seleziona **Uscita** per vedere i risultati.
+Seleziona **Output** per visualizzare i risultati.
 
 +++Output
 
@@ -178,7 +179,7 @@ Seleziona **Uscita** per vedere i risultati.
 
 +++
 
-I risultati vengono quindi confrontati utilizzando SQL con il seguente comando:
+I risultati vengono quindi associati utilizzando SQL con il seguente comando:
 
 <!-- Q) Why and is this accurate? -->
 
@@ -186,9 +187,9 @@ I risultati vengono quindi confrontati utilizzando SQL con il seguente comando:
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## Applicare le mappature per eseguire un join fuzzy nel servizio query {#mappings-for-query-service}
+## Applicare le mappature per eseguire un join fuzzy in Query Service {#mappings-for-query-service}
 
-Successivamente, le coppie di corrispondenza con punteggio elevato vengono unite utilizzando SQL per creare un nuovo set di dati.
+Successivamente, le coppie corrispondenti con punteggio elevato vengono unite utilizzando SQL per creare un nuovo set di dati.
 
 ```python
 :
@@ -201,7 +202,7 @@ WHERE
 [r for r in cur]
 ```
 
-Seleziona **Uscita** per vedere i risultati di questo join.
+Seleziona **Output** per visualizzare i risultati di questo join.
 
 +++Output
 
@@ -349,9 +350,9 @@ Seleziona **Uscita** per vedere i risultati di questo join.
 
 +++
 
-### Salvare i risultati della corrispondenza approssimativa su Platform {#save-to-platform}
+### Salva risultati di corrispondenza approssimativi in Platform {#save-to-platform}
 
-Infine, i risultati della corrispondenza approssimativa possono essere salvati come set di dati da utilizzare in Adobe Experience Platform utilizzando SQL.
+Infine, i risultati della corrispondenza fuzzy possono essere salvati come set di dati da utilizzare in Adobe Experience Platform utilizzando SQL.
 
 ```python
 cur.execute(''' 
@@ -363,5 +364,3 @@ WHERE
 {})
 '''.format(matching_sql))
 ```
-
-

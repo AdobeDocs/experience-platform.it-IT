@@ -5,15 +5,15 @@ exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
 # Visualizzatore del grafico delle identità
 
-Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi. Tutti i grafici di identità dei clienti sono gestiti e aggiornati collettivamente dal servizio Adobe Experience Platform Identity in tempo quasi reale, in risposta all’attività del cliente.
+Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi. Tutti i grafici dell’identità del cliente vengono gestiti e aggiornati collettivamente da Adobe Experience Platform Identity Service in tempo quasi reale, in risposta all’attività del cliente.
 
-Il visualizzatore del grafico delle identità nell’interfaccia utente di Platform consente di visualizzare e comprendere meglio quali identità dei clienti sono unite tra loro e in quali modi. Il visualizzatore consente di trascinare e interagire con diverse parti del grafico, consentendo di esaminare relazioni di identità complesse, eseguire il debug in modo più efficiente e beneficiare di una maggiore trasparenza con il modo in cui vengono utilizzate le informazioni.
+Il visualizzatore del grafico delle identità nell’interfaccia utente di Platform consente di visualizzare e comprendere meglio quali identità dei clienti sono unite tra loro e in quali modi. Il visualizzatore consente di trascinare e interagire con diverse parti del grafico, consentendoti di esaminare relazioni di identità complesse, eseguire il debug in modo più efficiente e beneficiare di una maggiore trasparenza nell’utilizzo delle informazioni.
 
 Il documento seguente illustra come accedere e utilizzare il visualizzatore del grafico delle identità nell’interfaccia utente di Platform.
 
@@ -85,7 +85,7 @@ La tabella seguente fornisce informazioni aggiuntive sulle proprietà dell’ori
 | ID batch | L’identificatore generato automaticamente che corrisponde ai dati batch. |
 | ID set di dati | L’identificatore generato automaticamente che corrisponde al set di dati. |
 | Nome del set di dati | Nome del set di dati che contiene i dati batch. |
-| Nome schema | Nome dello schema. Lo schema fornisce un set di regole che rappresentano e convalidano la struttura e il formato dei dati. |
+| Nome dello schema | Nome dello schema. Lo schema fornisce un set di regole che rappresentano e convalidano la struttura e il formato dei dati. |
 
 ![La barra a destra, che mostra i dati di identità, nonché l’origine dati delle informazioni.](../images/graph-viewer/right-rail.png)
 

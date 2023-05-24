@@ -1,6 +1,6 @@
 ---
 title: Importa endpoint API
-description: L’endpoint /import nell’API del Registro di sistema dello schema consente di condividere risorse XDM tra organizzazioni e sandbox.
+description: L’endpoint /import nell’API Schema Registry consente di condividere risorse XDM tra organizzazioni e sandbox.
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 2%
 
 ---
 
-# Endpoint di importazione
+# Importa endpoint
 
-La `/rpc/import` punto finale [!DNL Schema Registry] L’API ti consente di creare risorse Experience Data Model (XDM) dai payload di esportazione generati. I payload di esportazione possono essere creati da due origini:
+Il `/rpc/import` endpoint nella [!DNL Schema Registry] API consente di creare risorse Experience Data Model (XDM) dai payload di esportazione generati. I payload di esportazione possono essere creati da due origini:
 
-* La [`/rpc/export` endpoint](./export.md) crea payload di esportazione dalle risorse XDM esistenti, che consentono di condividere risorse tra le sandbox.
-* La [`/rpc/csv2schema` endpoint](./csv-to-schema.md) crea payload di esportazione dai modelli CSV.
+* Il [`/rpc/export` endpoint](./export.md) crea payload di esportazione dalle risorse XDM esistenti, consentendo di condividere le risorse tra sandbox diverse.
+* Il [`/rpc/csv2schema` endpoint](./csv-to-schema.md) crea payload di esportazione dai modelli CSV.
 
-Una volta creato un payload di esportazione, puoi utilizzare il `/rpc/import` per generare la risorsa (e tutte le risorse dipendenti) nella sandbox desiderata.
+Dopo aver creato un payload di esportazione, puoi utilizzare `/rpc/import` endpoint per generare la risorsa (e tutte le risorse dipendenti) nella sandbox desiderata.
 
 ## Introduzione
 
-La `/rpc/import` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e importanti informazioni sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Il `/rpc/import` l&#39;endpoint fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
 
-La `/rpc/import` l&#39;endpoint fa parte delle chiamate di routine remote (RPC) supportate dal [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`e non utilizzano un `CONTAINER_ID`. Invece, devono utilizzare il `/rpc` namespace, come illustrato nelle chiamate API riportate di seguito.
+Il `/rpc/import` l&#39;endpoint fa parte delle chiamate di procedura remota (RPC) supportate dalla [!DNL Schema Registry]. A differenza di altri endpoint nel [!DNL Schema Registry] API, gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type`, e non utilizzare un `CONTAINER_ID`. Devono invece utilizzare il `/rpc` dello spazio dei nomi, come dimostrato nelle chiamate API di seguito.
 
 ## Importare una risorsa {#import}
 
-Una volta generato un payload di esportazione per una risorsa XDM, puoi utilizzarlo in una richiesta POST per `/import` per importare la risorsa in un&#39;organizzazione e una sandbox di destinazione.
+Dopo aver generato un payload di esportazione per una risorsa XDM, puoi utilizzarlo in una richiesta POST a `/import` per importare tale risorsa in un’organizzazione di destinazione e in una sandbox.
 
 **Formato API**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Richiesta**
 
-La seguente richiesta prende il payload restituito da una chiamata al [`/rpc/export` endpoint](./export.md) per importare un gruppo di campi (`Restaurant`) in una nuova organizzazione e sandbox, come determinato dal `x-gw-ims-org-id` e `x-sandbox-name` intestazioni, rispettivamente.
+La seguente richiesta accetta il payload restituito da una chiamata al [`/rpc/export` endpoint](./export.md) per importare un gruppo di campi (`Restaurant`) in una nuova organizzazione e sandbox, come determinato dalla `x-gw-ims-org-id` e `x-sandbox-name` rispettivamente le intestazioni.
 
 ```shell
 curl -X POST \
@@ -187,7 +187,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco delle risorse importate, con l’ID tenant e i valori organizzazione appropriati applicati.
+In caso di esito positivo, la risposta restituisce un elenco delle risorse importate, con l’applicazione dell’ID tenant e dei valori organizzazione appropriati.
 
 ```json
 [

@@ -1,7 +1,8 @@
 ---
 title: Eliminazioni nel servizio Identity
 description: Questo documento fornisce una panoramica dei vari meccanismi che puoi utilizzare per eliminare i dati di identità in Experience Platform e per fornire chiarezza su come i grafici di identità possono essere interessati.
-source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
+exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 1%

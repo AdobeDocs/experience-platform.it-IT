@@ -7,7 +7,7 @@ feature: Schemas
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '518'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 16%
 * [Panoramica del sistema XDM](home.md)
 * Schemi {#schema}
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
-   * [Best practice per la modellazione dei dati](schema/best-practices.md)
+   * [Procedure consigliate per la modellazione dati](schema/best-practices.md)
    * [Dati sensibili e personali](./schema/sensitive-and-personal-data.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
    * [Spazio dei nomi in XDM](./schema/namespaces.md)

@@ -41,7 +41,7 @@ Per connettersi a [!DNL SFTP], è necessario fornire valori per le seguenti prop
 | `privateKeyContent` | Il contenuto della chiave privata SSH con codifica Base64. Il tipo di chiave OpenSSH deve essere classificato come RSA o DSA. |
 | `passPhrase` | La passphrase o password per decrittografare la chiave privata se il file di chiave o il contenuto della chiave è protetto da una passphrase. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase di PrivateKeyContent come valore. |
 | `maxConcurrentConnections` | Questo parametro consente di specificare un limite massimo per il numero di connessioni simultanee che Platform creerà durante la connessione al server SFTP. Devi impostare questo valore su un valore inferiore al limite impostato da SFTP. **Nota**: quando questa impostazione è abilitata per un account SFTP esistente, influirà solo sui flussi di dati futuri e non sui flussi di dati esistenti. |
-| Percorso cartella | Percorso della cartella a cui desideri fornire l’accesso. [!DNL SFTP] origine, è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
+| Percorso della cartella | Percorso della cartella a cui desideri fornire l’accesso. [!DNL SFTP] origine, è possibile specificare il percorso della cartella per specificare l&#39;accesso utente alla sottocartella desiderata. |
 
 Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per creare una nuova [!DNL SFTP] per la connessione a Platform.
 

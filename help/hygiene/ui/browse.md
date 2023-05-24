@@ -1,6 +1,6 @@
 ---
-title: Cerca ordini di lavoro di igiene dati
-description: Scopri come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Adobe Experience Platform.
+title: Sfogliare gli ordini di lavoro per l’igiene dei dati
+description: Scopri come visualizzare e gestire gli ordini di lavoro di igiene dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 25%
 
 ---
 
-# Sfoglia gli ordini di lavoro per l&#39;igiene dei dati {#browse-work-orders}
+# Sfogliare gli ordini di lavoro per l’igiene dei dati {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
@@ -19,37 +19,37 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe** o **Adobe Privacy e sicurezza scudo**.
+>Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
 
-Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. Un ordine di lavoro rappresenta un processo specifico di igiene dei dati, ad esempio una scadenza pianificata del set di dati, che include il suo stato corrente e altri dettagli correlati.
+Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. Un ordine di lavoro rappresenta un processo di igiene dei dati specifico, ad esempio una scadenza pianificata del set di dati, che include lo stato corrente e altri dettagli correlati.
 
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti nell’interfaccia utente di Adobe Experience Platform.
 
-## Elencare e filtrare gli ordini di lavoro esistenti
+## Elenca e filtra gli ordini di lavoro esistenti
 
-Quando accedi per la prima volta al **[!UICONTROL Igiene dei dati]** nell’interfaccia utente viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
+La prima volta che accedi a **[!UICONTROL Igiene dei dati]** nell’interfaccia utente di, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
 
-![Immagine che mostra [!UICONTROL Igiene dei dati] Area di lavoro nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
+![Immagine che mostra [!UICONTROL Igiene dei dati] Workspace nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
 
-L&#39;elenco mostra solo gli ordini di lavoro per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco delle attività di eliminazione dei record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
+Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco di attività di eliminazione record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
 
 ![Immagine che mostra [!UICONTROL Set di dati] scheda](../images/ui/browse/dataset-tab.png)
 
 Seleziona l’icona funnel (![Immagine dell’icona funnel](../images/ui/browse/funnel-icon.png)) per visualizzare un elenco di filtri per gli ordini di lavoro visualizzati.
 
-![Immagine dei filtri dell&#39;ordine di lavoro visualizzati](../images/ui/browse/filters.png)
+![Immagine dei filtri ordine di lavoro visualizzati](../images/ui/browse/filters.png)
 
-A seconda del tipo di ordine di lavoro visualizzato, sono disponibili diverse opzioni di filtro.
+A seconda del tipo di ordine di lavoro visualizzato, sono disponibili opzioni di filtro diverse.
 
-### Filtri per le cancellazioni dei record
+### Filtri per eliminazioni record
 
 I seguenti filtri si applicano alle richieste di cancellazione dei record:
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavoro:<ul><li>**[!UICONTROL Completato]**: Il processo è stato completato.</li><li>**[!UICONTROL Non riuscito]**: Errore del processo. Impossibile completare il processo.</li><li>**[!UICONTROL Elaborazione]**: La richiesta è stata avviata ed è in corso l’elaborazione.</li></ul> |
+| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL Non riuscito]**: il processo ha rilevato un errore e non è stato completato.</li><li>**[!UICONTROL Elaborazione]**: la richiesta è iniziata ed è in fase di elaborazione.</li></ul> |
 | [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stato effettuato l’ordine di lavoro. |
-| [!UICONTROL Data di aggiornamento] | Filtra in base alla data dell’ultimo aggiornamento dell’ordine di lavoro. Le creazioni vengono conteggiate come aggiornamenti. |
+| [!UICONTROL Data aggiornamento] | Filtra in base al momento dell&#39;ultimo aggiornamento dell&#39;ordine di lavoro. Le creazioni vengono conteggiate come aggiornamenti. |
 
 ### Filtri per le scadenze dei set di dati
 
@@ -57,14 +57,14 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 
 | Filtro | Descrizione |
 | --- | --- |
-| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavoro:<ul><li>**[!UICONTROL Completato]**: Il processo è stato completato.</li><li>**[!UICONTROL In sospeso]**: Il processo è stato creato ma non è ancora stato eseguito. A [richiesta di scadenza del set di dati](./dataset-expiration.md) assume questo stato prima della data di eliminazione pianificata. Una volta che la data di eliminazione arriva, lo stato si aggiorna a [!UICONTROL In esecuzione] a meno che il lavoro non venga annullato in anticipo.</li><li>**[!UICONTROL In esecuzione]**: La richiesta di scadenza del set di dati è iniziata ed è in corso di elaborazione.</li><li>**[!UICONTROL Annullato]**: Il processo è stato annullato come parte di una richiesta utente manuale.</li></ul> |
+| [!UICONTROL Stato] | Filtra in base allo stato corrente dell&#39;ordine di lavorazione:<ul><li>**[!UICONTROL Completato]**: processo completato.</li><li>**[!UICONTROL In sospeso]**: il processo è stato creato ma non è ancora stato eseguito. A [richiesta di scadenza del set di dati](./dataset-expiration.md) assume questo stato prima della data di eliminazione pianificata. Una volta arrivata la data di eliminazione, lo stato si aggiorna a [!UICONTROL In esecuzione] a meno che il processo non venga annullato in precedenza.</li><li>**[!UICONTROL In esecuzione]**: la richiesta di scadenza del set di dati è iniziata e è attualmente in elaborazione.</li><li>**[!UICONTROL Annullato]**: il processo è stato annullato come parte di una richiesta manuale dell’utente.</li></ul> |
 | [!UICONTROL Data di creazione] | Filtra in base al momento in cui è stato effettuato l’ordine di lavoro. |
 | [!UICONTROL Data di scadenza] | Filtra le richieste di scadenza dei set di dati in base alla data di eliminazione pianificata per il set di dati in questione. |
-| [!UICONTROL Data di aggiornamento] | Filtra in base alla data dell’ultimo aggiornamento dell’ordine di lavoro. Le creazioni e le scadenze vengono conteggiate come aggiornamenti. |
+| [!UICONTROL Data aggiornamento] | Filtra in base al momento dell&#39;ultimo aggiornamento dell&#39;ordine di lavoro. Le creazioni e le scadenze vengono conteggiate come aggiornamenti. |
 
 {style="table-layout:auto"}
 
-## Visualizza i dettagli di un ordine di lavorazione {#view-details}
+## Visualizzare i dettagli di un ordine di lavoro {#view-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
@@ -89,19 +89,19 @@ A seconda del tipo di ordine di lavoro selezionato, vengono fornite informazioni
 
 ### Dettagli eliminazione record {#record-delete}
 
-I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dalla richiesta. Ogni richiesta include anche **[!UICONTROL Stato per servizio]** sezione che fornisce informazioni sullo stato individuale di ciascun servizio a valle coinvolto nella cancellazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
+I dettagli di una richiesta di cancellazione del record includono lo stato corrente e il tempo trascorso dall&#39;invio della richiesta. Ogni richiesta include anche un **[!UICONTROL Stato per servizio]** sezione che fornisce dettagli sullo stato di ciascun servizio a valle coinvolto nell’eliminazione. Nella barra a destra è possibile utilizzare i controlli per aggiornare il nome e la descrizione dell&#39;ordine di lavoro.
 
 ![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di eliminazione record](../images/ui/browse/record-delete-details.png)
 
-### Dettagli di scadenza del set di dati {#dataset-expiration}
+### Dettagli scadenza set di dati {#dataset-expiration}
 
-La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni sui suoi attributi di base, inclusa la data di scadenza pianificata nei giorni rimanenti prima dell’eliminazione. Nella barra a destra, puoi utilizzare i controlli per modificare o annullare la scadenza.
+La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni sui relativi attributi di base, inclusa la data di scadenza pianificata nei giorni rimanenti prima che si verifichi l’eliminazione. Nella barra a destra, puoi utilizzare i controlli per modificare o annullare la scadenza.
 
-![Immagine che mostra la pagina dei dettagli di un ordine di lavoro di scadenza di un set di dati](../images/ui/browse/ttl-details.png)
+![Immagine che mostra la pagina dei dettagli per un ordine di lavoro di scadenza del set di dati](../images/ui/browse/ttl-details.png)
 
 ## Passaggi successivi
 
-Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti in materia di igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consulta la seguente documentazione:
+Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti per l’igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consultare la seguente documentazione:
 
 * [Gestire le scadenze dei set di dati](./dataset-expiration.md)
 <!-- * [Manage record deletes](./record-delete.md) -->

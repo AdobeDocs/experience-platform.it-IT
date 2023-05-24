@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;preparazione dati;guida api;dati di esempio;
+keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;dati di esempio;
 solution: Experience Platform
-title: Endpoint API per i dati di esempio
-description: Puoi utilizzare l'endpoint `/amples` nell'API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i dati di esempio di mappatura.
+title: Endpoint API dati di esempio
+description: Puoi utilizzare l’endpoint "/samples" nell’API di Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i dati di esempio per la mappatura.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '399'
@@ -11,17 +11,17 @@ ht-degree: 7%
 ---
 
 
-# Endpoint dati di esempio
+# Endpoint di dati di esempio
 
-I dati di esempio possono essere utilizzati durante la creazione di uno schema per il set di mappatura. È possibile utilizzare `/samples` nell’API di preparazione dati per recuperare, creare e aggiornare programmaticamente i dati di esempio.
+È possibile utilizzare dati di esempio durante la creazione di uno schema per il set di mappatura. È possibile utilizzare `/samples` nell’API di preparazione dati per recuperare, creare e aggiornare in modo programmatico i dati di esempio.
 
-## Elenca dati di esempio
+## Elencare dati di esempio
 
-Puoi recuperare un elenco di tutti i dati di esempio di mappatura per la tua organizzazione effettuando una richiesta di GET al `/samples` punto finale.
+Per recuperare un elenco di tutti i dati di mappatura di esempio per la tua organizzazione, devi effettuare una richiesta GET al `/samples` endpoint.
 
 **Formato API**
 
-La `/samples` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Al momento è necessario includere entrambi i `start` e `limit` come parte della richiesta.
+Il `/samples` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Attualmente, è necessario includere sia `start` e `limit` come parte della richiesta.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -30,11 +30,11 @@ GET /samples?limit={LIMIT}&start={START}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{LIMIT}` | **Obbligatorio**. Specifica il numero di dati di esempio di mappatura restituiti. |
-| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina di risultati, imposta il valore su `start=0`. |
+| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
 
 **Richiesta**
 
-La richiesta seguente recupererà gli ultimi due dati di esempio di mappatura all’interno della tua organizzazione.
+La richiesta seguente recupererà gli ultimi due dati di mappatura dei campioni all’interno della tua organizzazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -46,7 +46,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sugli ultimi due oggetti di mappatura dei dati di esempio.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sugli ultimi due oggetti di mappatura dei dati di esempio.
 
 ```json
 {
@@ -86,7 +86,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sugli ul
 
 ## Creare dati di esempio
 
-Puoi creare dati di esempio effettuando una richiesta POST al `/samples` punto finale.
+Per creare dati di esempio, devi effettuare una richiesta POST al `/samples` endpoint.
 
 ```http
 POST /samples
@@ -110,7 +110,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuovi dati di esempio creati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sui dati di esempio appena creati.
 
 ```json
 {
@@ -125,9 +125,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuov
 }
 ```
 
-## Crea dati di esempio caricando un file
+## Creare dati di esempio caricando un file
 
-È possibile creare dati di esempio utilizzando un file effettuando una richiesta di POST al `/samples/upload` punto finale.
+Per creare dati di esempio utilizzando un file, devi effettuare una richiesta POST al `/samples/upload` endpoint.
 
 **Formato API**
 
@@ -149,7 +149,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuovi dati di esempio creati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sui dati di esempio appena creati.
 
 ```json
 {
@@ -166,7 +166,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui nuov
 
 ## Cercare un oggetto dati di esempio specifico
 
-Puoi cercare un oggetto specifico di dati di esempio fornendo il relativo ID nel percorso di una richiesta di GET al `/samples` punto finale.
+Per cercare un oggetto specifico di dati di esempio, devi fornire il relativo ID nel percorso di una richiesta GET al `/samples` endpoint.
 
 **Formato API**
 
@@ -176,7 +176,7 @@ GET /samples/{SAMPLE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | ID dell’oggetto dati di esempio che si desidera recuperare. |
+| `{SAMPLE_ID}` | ID dell’oggetto dati di esempio che desideri recuperare. |
 
 **Richiesta**
 
@@ -190,7 +190,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni dell’oggetto dati di esempio che si desidera recuperare.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con le informazioni dell’oggetto dati di esempio che desideri recuperare.
 
 ```json
 {
@@ -205,9 +205,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni dell’o
 }
 ```
 
-## Aggiornare dati di esempio
+## Aggiorna dati di esempio
 
-È possibile aggiornare un oggetto dati di esempio specifico fornendo il relativo ID nel percorso di una richiesta PUT al `/samples` punto finale.
+Per aggiornare un oggetto dati di esempio specifico, devi fornire il relativo ID nel percorso di una richiesta PUT a `/samples` endpoint.
 
 **Formato API**
 
@@ -217,11 +217,11 @@ PUT /samples/{SAMPLE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | L&#39;ID dell&#39;oggetto dati di esempio che si desidera aggiornare. |
+| `{SAMPLE_ID}` | ID dell’oggetto dati di esempio da aggiornare. |
 
 **Richiesta**
 
-La richiesta seguente aggiorna i dati di esempio specificati. Nello specifico, aggiorna il cognome da &quot;Smith&quot; a &quot;Lee&quot;.
+La richiesta seguente aggiorna i dati di esempio specificati. In particolare, aggiorna il cognome da &quot;Smith&quot; a &quot;Lee&quot;.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
@@ -238,7 +238,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sui dati di esempio aggiornati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sui dati di esempio aggiornati.
 
 ```json
 {

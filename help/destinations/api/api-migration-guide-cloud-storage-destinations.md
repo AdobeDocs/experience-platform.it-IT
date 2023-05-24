@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: Guida alla migrazione API per le destinazioni di archiviazione cloud
+title: Guida alla migrazione delle API per le destinazioni dell’archiviazione cloud
 description: Scopri le modifiche nel flusso di lavoro per attivare le destinazioni di archiviazione cloud come parte della migrazione alle nuove schede di destinazione di archiviazione cloud con funzionalità aggiuntive.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
@@ -11,21 +11,21 @@ ht-degree: 0%
 
 ---
 
-# Guida alla migrazione API per le destinazioni di archiviazione cloud
+# Guida alla migrazione delle API per le destinazioni dell’archiviazione cloud
 
 >[!IMPORTANT]
 >
->* La funzionalità descritta in questa pagina è disponibile per i clienti che hanno acquistato i pacchetti Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il tuo rappresentante Adobe.
+>* La funzionalità descritta in questa pagina è disponibile per i clienti che hanno acquistato i pacchetti Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 
 
-## Contesto della migrazione {#migration-context}
+## Contesto di migrazione {#migration-context}
 
-Avvio [Ottobre 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), è possibile utilizzare le nuove funzionalità di esportazione dei file per accedere a funzionalità di personalizzazione avanzate durante l’esportazione dei file da un Experience Platform:
+Avvio [Ottobre 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), puoi utilizzare le nuove funzionalità di esportazione dei file per accedere a funzionalità di personalizzazione avanzate durante l’esportazione di file, ad Experience Platform:
 
 * Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [nuova fase di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilità di selezionare la [tipo di file](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del file esportato.
-* Capacità di [personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [nuovo passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* Possibilità di selezionare [tipo di file](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del file esportato.
+* Possibilità di [personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Questa funzionalità è supportata dalle schede di archiviazione cloud beta elencate di seguito:
 
@@ -43,23 +43,23 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Attualmente, nell’interfaccia utente di Experience Platform, puoi vedere due schede di destinazione affiancate delle tre destinazioni. Di seguito sono riportati i [!DNL Amazon S3] destinazioni legacy e nuove. In tutti i casi, le carte contrassegnate con **Beta** sono le nuove carte di destinazione.
+Tieni presente che attualmente nell’interfaccia utente di Experience Platform puoi visualizzare due schede di destinazione affiancate delle tre destinazioni. Di seguito sono riportati i [!DNL Amazon S3] destinazioni legacy e nuove. In tutti i casi, le schede contrassegnate con **Beta** sono le nuove schede di destinazione.
 
-![Immagine delle due schede di destinazione Amazon S3 affiancate.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![Immagine delle due schede di destinazione Amazon S3 in una visualizzazione affiancata.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Anche se queste destinazioni con funzionalità avanzate sono state inizialmente offerte come beta, *Adobe sta ora spostando tutti i clienti Real-Time CDP nelle nuove destinazioni di archiviazione cloud*. Per i clienti che utilizzavano già [!DNL Amazon S3], [!DNL Azure Blob], o SFTP, significa che i flussi di dati esistenti verranno migrati nelle nuove schede. Continua a leggere per ulteriori informazioni sulle modifiche specifiche nell’ambito della migrazione.
+Anche se queste destinazioni con funzionalità avanzate sono state inizialmente offerte come versione beta, *Adobe sta ora spostando tutti i clienti Real-Time CDP nelle nuove destinazioni di archiviazione cloud*. Per i clienti che utilizzavano già [!DNL Amazon S3], [!DNL Azure Blob], o SFTP, significa che i flussi di dati esistenti verranno migrati alle nuove schede. Continua a leggere per ulteriori informazioni sulle modifiche specifiche come parte della migrazione.
 
 ## A chi si applica questa pagina {#who-this-applies-to}
 
-Se utilizzi già [API del servizio di flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/) per esportare profili nelle destinazioni di archiviazione cloud Amazon S3, Azure Blob o SFTP, consulta questa guida alla migrazione API .
+Se utilizzi già il [API del servizio Flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/) per esportare i profili nelle destinazioni dell’archiviazione cloud Amazon S3, Azure Blob o SFTP, questa guida alla migrazione API è applicabile al tuo caso.
 
-Se gli script sono in esecuzione nel [!DNL Amazon S3], [!DNL Azure Blob], o posizioni di archiviazione cloud SFTP sopra i file esportati da Experience Platform, tieni presente che alcuni parametri stanno cambiando per quanto riguarda le specifiche di connessione e flusso delle nuove schede, nonché per quanto riguarda la fase di mappatura.
+Se gli script sono in esecuzione in [!DNL Amazon S3], [!DNL Azure Blob], o le posizioni di archiviazione cloud SFTP sopra i file esportati da Experience Platform, tieni presente che alcuni parametri stanno cambiando per quanto riguarda le specifiche di connessione e flusso delle nuove schede, nonché per quanto riguarda il passaggio di mappatura.
 
-Ad esempio, se utilizzi uno script per filtrare i flussi di dati di destinazione in [!DNL Amazon S3] in base alle specifiche di connessione del [!DNL Amazon S3] destinazione , tieni presente che le specifiche di connessione cambieranno e dovrai aggiornare i filtri.
+Ad esempio, se utilizzi uno script per filtrare i flussi di dati di destinazione in [!DNL Amazon S3] destinazione, in base alla specifica di connessione del [!DNL Amazon S3] destinazione, tieni presente che la specifica di connessione cambierà, pertanto dovrai aggiornare i filtri.
 
 ## Collegamenti alla documentazione pertinente {#relevant-documentation-links}
 
-Questa sezione include l’esercitazione API pertinente e la documentazione di riferimento per le funzionalità migliorate per l’esportazione di dati verso destinazioni di archiviazione cloud.
+Questa sezione include il tutorial API pertinente e la documentazione di riferimento per la funzionalità avanzata di esportazione dei dati nelle destinazioni di archiviazione cloud.
 
 <!--
 
@@ -68,31 +68,31 @@ TBD if we keep this link but will likely remove it
 [Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
 
 -->
-* [Esercitazione API per esportare segmenti in destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md)
-* [Documentazione di riferimento API per il servizio Flusso delle destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/)
+* [Tutorial API per esportare segmenti nelle destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md)
+* [Documentazione di riferimento API del servizio Flusso delle destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
 ## Riepilogo delle modifiche non compatibili con le versioni precedenti {#summary-backwards-incompatible-changes}
 
-Con la migrazione alle nuove destinazioni, tutti i tuoi dati esistenti vengono inviati a [!DNL Amazon S3], [!DNL Azure Blob], alle destinazioni SFTP e verranno assegnate nuove connessioni di destinazione e di base. Viene modificata anche la fase di mappatura del profilo. Le modifiche non compatibili con le versioni precedenti sono riepilogate nelle sezioni seguenti per ogni destinazione. Visualizza anche [glossario delle destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) per ulteriori informazioni sui termini nel diagramma seguente.
+Con la migrazione alle nuove destinazioni, tutti i flussi di dati esistenti vengono [!DNL Amazon S3], [!DNL Azure Blob]Alle destinazioni SFTP e, ora verranno assegnate nuove connessioni di destinazione e connessioni di base. Anche il passaggio di mappatura del profilo cambia. Le modifiche non compatibili con le versioni precedenti sono riepilogate nelle sezioni seguenti per ciascuna destinazione. Visualizza anche [glossario delle destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) per ulteriori informazioni sui termini del diagramma seguente.
 
-![Panoramica della guida alla migrazione](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
+![Immagine panoramica della guida alla migrazione](/help/destinations/assets/api/api-migration-guide/migration-guide-diagram.png)
 
 ### Modifiche non compatibili con le versioni precedenti di [!DNL Amazon S3] destinazione {#changes-amazon-s3-destination}
 
-Le modifiche non compatibili con le versioni precedenti per gli utenti API sono aggiornate `connection spec ID` e `flow spec ID` come illustrato nella tabella seguente:
+Le modifiche non compatibili con le versioni precedenti per gli utenti API sono un aggiornamento `connection spec ID` e `flow spec ID` come indicato nella tabella seguente:
 
 | [!DNL Amazon S3] | Legacy | Nuova |
 |---------|----------|---------|
-| Specifiche di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
-| Specifiche di connessione | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
+| Specifica di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
+| Specifica di connessione | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-Visualizza gli esempi completi di connessione di base e di destinazione legacy e nuovi per [!DNL Amazon S3] nelle schede seguenti. Parametri necessari per creare connessioni di base per [!DNL Amazon S3] le destinazioni non cambiano.
+Visualizza gli esempi completi di connessione di base e di connessione di destinazione legacy e nuova per [!DNL Amazon S3] nelle schede seguenti. Parametri necessari per creare connessioni di base per [!DNL Amazon S3] le destinazioni non cambiano.
 
-Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei parametri necessari per creare connessioni di destinazione.
+Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei parametri necessari per creare connessioni target.
 
 >[!BEGINTABS]
 
->[!TAB Connessione di base e destinazione legacy]
+>[!TAB Connessione di base legacy e connessione di destinazione]
 
 +++Visualizza legacy [!DNL base connection] per [!DNL Amazon S3]
 
@@ -251,20 +251,20 @@ Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei
 
 ### Modifiche non compatibili con le versioni precedenti di [!DNL Azure Blob] destinazione {#changes-azure-blob-destination}
 
-Le modifiche non compatibili con le versioni precedenti per gli utenti API sono aggiornate `connection spec ID` e `flow spec ID` come illustrato nella tabella seguente:
+Le modifiche non compatibili con le versioni precedenti per gli utenti API sono un aggiornamento `connection spec ID` e `flow spec ID` come indicato nella tabella seguente:
 
 | [!DNL Azure Blob] | Legacy | Nuova |
 |---------|----------|---------|
-| Specifiche di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
-| Specifiche di connessione | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Specifica di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
+| Specifica di connessione | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
-Visualizza gli esempi completi di connessione di base e di destinazione legacy e nuovi per [!DNL Azure Blob] nelle schede seguenti. I parametri necessari per creare connessioni di base per le destinazioni BLOB di Azure non cambiano.
+Visualizza gli esempi completi di connessione di base e di connessione di destinazione legacy e nuova per [!DNL Azure Blob] nelle schede seguenti. I parametri necessari per creare connessioni di base per le destinazioni BLOB di Azure non cambiano.
 
-Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei parametri necessari per creare connessioni di destinazione.
+Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei parametri necessari per creare connessioni target.
 
 >[!BEGINTABS]
 
->[!TAB Connessione di base e destinazione legacy]
+>[!TAB Connessione di base legacy e connessione di destinazione]
 
 +++Visualizza legacy [!DNL base connection] per [!DNL Azure Blob]
 
@@ -421,25 +421,25 @@ Analogamente, non vi sono modifiche incompatibili con le versioni precedenti nei
 
 >[!ENDTABS]
 
-### Modifiche non compatibili con le versioni precedenti alla destinazione SFTP {#changes-sftp-destination}
+### Modifiche alla destinazione SFTP non compatibili con le versioni precedenti {#changes-sftp-destination}
 
-Le modifiche non compatibili con le versioni precedenti per gli utenti API sono aggiornate `connection spec ID` e `flow spec ID` come illustrato nella tabella seguente:
+Le modifiche non compatibili con le versioni precedenti per gli utenti API sono un aggiornamento `connection spec ID` e `flow spec ID` come indicato nella tabella seguente:
 
 | SFTP | Legacy | Nuova |
 |---------|----------|---------|
-| Specifiche di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeb799 |
-| Specifiche di connessione | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
+| Specifica di flusso | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeeb799 |
+| Specifica di connessione | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
-Oltre alle specifiche di flusso e connessione aggiornate di cui sopra, durante la creazione di connessioni di base SFTP sono necessarie modifiche ai parametri richiesti.
+Oltre al flusso aggiornato e alle specifiche di connessione di cui sopra, vengono apportate modifiche ai parametri necessari per la creazione delle connessioni di base SFTP.
 
-* In precedenza, la connessione di base per le destinazioni SFTP richiedeva un `host` parametro . Questo parametro è stato rinominato in `domain`.
-* Per l’opzione di autenticazione con chiave SSH , i parametri di autenticazione nella connessione di base richiedevano un `port` opzione . Questo parametro è ora obsoleto e non è più richiesto.
+* In precedenza, la connessione di base per le destinazioni SFTP richiedeva una `host` parametro. Questo parametro è stato rinominato in `domain`.
+* Per l’opzione di autenticazione con chiave SSH, i parametri di autenticazione nella connessione di base richiedevano un’ `port` opzione. Questo parametro è ora obsoleto e non è più richiesto.
 
-Visualizza gli esempi completi di connessione di base e nuovi e di connessione di destinazione per SFTP nelle schede seguenti, con le righe che cambiano evidenziate. I parametri necessari per creare connessioni di destinazione per le destinazioni SFTP non cambiano.
+Visualizza gli esempi completi di connessione di base nuova e legacy e di connessione di destinazione per SFTP nelle schede seguenti, evidenziando le righe che cambiano. I parametri necessari per creare connessioni di destinazione per le destinazioni SFTP non cambiano.
 
 >[!BEGINTABS]
 
->[!TAB Connessione di base e destinazione legacy]
+>[!TAB Connessione di base legacy e connessione di destinazione]
 
 +++Visualizza legacy [!DNL base connection] per SFTP - autenticazione tramite password
 
@@ -667,21 +667,21 @@ Visualizza gli esempi completi di connessione di base e nuovi e di connessione d
 
 >[!ENDTABS]
 
-### Modifiche non compatibili con le versioni precedenti comuni a [!DNL Amazon S3], [!DNL Azure Blob]e destinazioni SFTP {#changes-all-destinations}
+### Modifiche non compatibili con le versioni precedenti comuni a [!DNL Amazon S3], [!DNL Azure Blob]Destinazioni SFTP e {#changes-all-destinations}
 
-Il passaggio del selettore di profilo in tutte e tre le destinazioni viene sostituito da un passaggio di mappatura che ti consente di rinominare le intestazioni di colonna nei file esportati, se necessario. Vedi l&#39;immagine affiancata seguente con il vecchio passaggio del selettore di attributi a sinistra e il nuovo passaggio di mappatura a destra.
+Il passaggio del selettore di profilo in tutte e tre le destinazioni viene sostituito da un passaggio di mappatura che consente di rinominare, se necessario, le intestazioni di colonna nei file esportati. Osserva l’immagine affiancata seguente con il vecchio passaggio del selettore di attributi a sinistra e il nuovo passaggio di mappatura a destra.
 
-![Panoramica della guida alla migrazione](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
+![Immagine panoramica della guida alla migrazione](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
-Osserva come `profileSelectors` negli esempi legacy viene sostituito dal nuovo `profileMapping` oggetto.
+Osserva come `profileSelectors` negli esempi precedenti viene sostituito dal nuovo `profileMapping` oggetto.
 
-Trova informazioni complete sulla configurazione del `profileMapping` nell&#39;oggetto [Esercitazione API per esportare i dati nelle destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
+Trova informazioni complete sulla configurazione di `profileMapping` oggetto in [Tutorial API per esportare i dati nelle destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 >[!BEGINTABS]
 
 >[!TAB Parametri di trasformazione precedenti]
 
-+++Visualizza un esempio dei vecchi parametri di trasformazione
++++Visualizza un esempio di parametri di trasformazione precedenti
 
 ```json{line-numbers="true" start-line="1" highlight="4-40, 45-53"}
 {
@@ -781,26 +781,26 @@ Osserva nell’esempio di configurazione seguente come `profileSelectors` i camp
 
 >[!ENDTABS]
 
-## Timeline ed elementi azione di migrazione {#timeline-and-action-items}
+## Timeline di migrazione e azioni {#timeline-and-action-items}
 
-La migrazione dei flussi di dati legacy alle nuove schede di destinazione per [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni SFTP non appena la tua organizzazione è pronta per la migrazione e al più tardi **30 giugno 2023**.
+Migrazione dei flussi di dati legacy alle nuove schede di destinazione per [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni SFTP si verificheranno non appena la tua organizzazione sarà pronta per la migrazione e non più tardi di **30 giugno 2023**.
 
-Riceverai e-mail di promemoria da Adobe con l’approssimarsi della data di migrazione. In preparazione, leggi la sezione Elementi azione qui sotto per prepararti alla migrazione.
+Riceverai e-mail di promemoria da Adobe con l’avvicinarsi della data di migrazione. In preparazione, leggi la sezione Azioni di seguito per prepararti alla migrazione.
 
-### Elementi dell&#39;azione {#action-items}
+### Elementi azione {#action-items}
 
-In preparazione della migrazione del [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni di archiviazione cloud SFTP per le nuove schede, ti preghiamo di preparare l&#39;aggiornamento degli script e delle chiamate API automatizzate come suggerito di seguito.
+In preparazione della migrazione del [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni dell’archiviazione cloud SFTP nelle nuove schede, prepara l’aggiornamento degli script e delle chiamate API automatizzate come suggerito di seguito.
 
-1. Aggiorna eventuali script o chiamate API automatiche esistenti [!DNL Amazon S3], [!DNL Azure Blob], o destinazioni di archiviazione cloud SFTP entro il 30 giugno 2023. Eventuali chiamate o script API automatizzati che sfruttano le specifiche di connessione o di flusso legacy devono essere aggiornati alle nuove specifiche di connessione o alle nuove specifiche di flusso.
-2. Rivolgiti al rappresentante dell’account Adobe quando i tuoi script sono stati aggiornati prima del 30 giugno.
-3. Ad esempio, il `targetConnectionSpecId` può essere utilizzato come flag per determinare se il flusso di dati è stato migrato nella nuova scheda di destinazione. È possibile aggiornare gli script con un `if` condizione per esaminare le specifiche di connessione di destinazione legacy e aggiornate in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` e determinare se il flusso di dati è stato migrato. Puoi visualizzare gli ID legacy e nuovi ID delle specifiche di connessione nelle sezioni specifiche di questa pagina per ogni destinazione.
-4. Il team del tuo account Adobe contatterà ulteriori informazioni su quando verrà effettuata la migrazione dei flussi di dati.
-5. Dopo il 30 giugno, tutti i flussi di dati verranno migrati. Tutti i flussi di dati esistenti avranno ora nuove entità di flusso (specifiche di connessione, specifiche di flusso, connessioni di base e connessioni di destinazione). Eventuali script o chiamate API sul lato dell’utente che utilizzano entità di flusso legacy cesseranno di funzionare.
+1. Aggiornare script o chiamate API automatizzate per qualsiasi [!DNL Amazon S3], [!DNL Azure Blob], o le destinazioni dell’archiviazione cloud SFTP entro il 30 giugno 2023. Tutte le chiamate o gli script API automatizzati che sfruttano le specifiche di connessione o di flusso legacy devono essere aggiornati alle nuove specifiche di connessione o di flusso.
+2. Rivolgiti al rappresentante del tuo account Adobe quando gli script saranno stati aggiornati prima del 30 giugno.
+3. Ad esempio, il `targetConnectionSpecId` può essere utilizzato come flag per determinare se il flusso di dati è stato migrato alla nuova scheda di destinazione. È possibile aggiornare gli script con un `if` condizione per esaminare le specifiche di connessione di destinazione legacy e aggiornate in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` e determinare se il flusso di dati è stato migrato. Puoi visualizzare gli ID delle specifiche di connessione nuovi e precedenti nelle sezioni specifiche di questa pagina per ogni destinazione.
+4. Il team del tuo account Adobe riceverà ulteriori informazioni su quando verrà effettuata la migrazione dei flussi di dati.
+5. Dopo il 30 giugno, tutti i flussi di dati verranno migrati. Tutti i flussi di dati esistenti avranno ora nuove entità di flusso (specifiche di connessione, specifiche di flusso, connessioni di base e connessioni di destinazione). Qualsiasi script o chiamata API sul tuo lato che utilizzi le entità di flusso legacy cesserà di funzionare.
 
 ## Altre considerazioni sulla migrazione {#other-considerations}
 
-Non vi è alcun impatto sulla pianificazione esistente per le esportazioni durante o dopo la migrazione.
+Tieni presente che non vi è alcun impatto sulla pianificazione esistente per le esportazioni durante o dopo la migrazione.
 
 ## Passaggi successivi {#next-steps}
 
-Leggendo questa pagina, ora sai se è necessario intervenire in preparazione alla migrazione delle destinazioni di archiviazione cloud. Inoltre, sai a quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare i file dall’Experience Platform alle destinazioni di archiviazione cloud preferite. Quindi, puoi visualizzare l’esercitazione API su [esportare dati in destinazioni di archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).
+Una volta letta questa pagina, saprai se è necessario intraprendere un’azione in preparazione alla migrazione delle destinazioni dell’archiviazione cloud. Saprai anche quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare file da Experience Platform nelle destinazioni di archiviazione cloud preferite. Ora puoi visualizzare l’esercitazione API per [esportare i dati nelle destinazioni dell’archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).

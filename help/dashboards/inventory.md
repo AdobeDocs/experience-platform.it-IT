@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Visualizza dashboard configurati
 
-Se nell’organizzazione sono disponibili più dashboard in Adobe Experience Platform, puoi esaminare l’inventario dei dashboard nell’interfaccia utente.
+Se nell’organizzazione sono disponibili più dashboard in Adobe Experience Platform, puoi esaminarne l’inventario nell’interfaccia utente.
 
 Per visualizzare le dashboard configurate dalla tua organizzazione, seleziona **[!UICONTROL Dashboard]** nel menu di navigazione a sinistra, quindi seleziona la **[!UICONTROL Sfoglia]** scheda.
 

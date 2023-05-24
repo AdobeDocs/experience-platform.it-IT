@@ -1,112 +1,113 @@
 ---
 keywords: estensione inoltro eventi;mixpanel;estensione inoltro eventi mixpanel
-title: Estensione di inoltro eventi API di tracciamento eventi di Mixpanel
-description: Questa estensione di inoltro eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Mixpanel.
+title: Estensione inoltro eventi API Mixpanel Track Events
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
 
 ---
 
-# [!DNL Mixpanel Track Events] Estensione di inoltro eventi API
+# [!DNL Mixpanel Track Events] Estensione di inoltro degli eventi API
 
-[[!DNL Mixpanel]](https://www.mixpanel.com) è uno strumento di analisi del prodotto che consente di acquisire dati su come gli utenti interagiscono con un prodotto digitale. Puoi analizzare i dati dei prodotti con report semplici e interattivi che ti consentono di eseguire query e visualizzare i dati con pochi clic. [!DNL Mixpanel] progettato per rendere i team più efficienti, consentendo a tutti di analizzare i dati degli utenti in tempo reale per identificare le tendenze, comprendere il comportamento degli utenti e prendere decisioni sul prodotto.
+[[!DNL Mixpanel]](https://www.mixpanel.com) è uno strumento di analisi dei prodotti che consente di acquisire dati sul modo in cui gli utenti interagiscono con un prodotto digitale. Puoi analizzare i dati dei prodotti con rapporti semplici e interattivi che ti consentono di eseguire query e visualizzare i dati con pochi clic. [!DNL Mixpanel] progettato per rendere i team più efficienti, consentendo a tutti di analizzare i dati degli utenti in tempo reale per identificare le tendenze, comprendere il comportamento degli utenti e prendere decisioni sul prodotto.
 
-[!DNL Mixpanel] utilizza un modello basato su eventi e incentrato sull’utente che collega ogni interazione a un singolo utente. La [!DNL Mixpanel] il modello dati è basato sui concetti di utenti, eventi e proprietà.
+[!DNL Mixpanel] utilizza un modello basato su eventi e incentrato sull’utente che collega ogni interazione a un singolo utente. Il [!DNL Mixpanel] Il modello dati è basato sui concetti di utenti, eventi e proprietà.
 
 >[!NOTE]
 >
->Fai riferimento a [!DNL Mixpanel] documentazione [gestione delle identità](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) per comprendere come [!DNL Mixpanel] unisce gli eventi per creare cluster di identità. Si consiglia inoltre di rivedere il documento in [ID distinti](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) per capire come vengono utilizzati per identificare gli utenti nei dati dell’evento.
+>Consulta la sezione [!DNL Mixpanel] documentazione su [gestione delle identità](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management) per capire come [!DNL Mixpanel] unisce gli eventi per creare cluster di identità. Si consiglia inoltre di rivedere il documento su [ID distinti](https://help.mixpanel.com/hc/en-us/articles/115004509426-Distinct-ID-Creation-JavaScript-iOS-Android-) per capire come vengono utilizzati per identificare gli utenti nei dati evento.
 
 ## Casi d’uso
 
-Usa questa estensione se desideri utilizzare i dati di Edge Network in [!DNL Mixpanel] per sfruttare le funzionalità di analisi dei prodotti.
+Utilizza questa estensione se desideri utilizzare i dati provenienti dalla rete Edge in [!DNL Mixpanel] per sfruttare le funzionalità di analisi dei prodotti.
 
-Ad esempio, considera un’organizzazione retail con una presenza multicanale (sito web e dispositivi mobili). L’organizzazione acquisisce l’input transazionale o conversazionale come dati evento dalle proprie piattaforme e lo carica in [!DNL Mixpanel] utilizzo dell&#39;estensione di inoltro eventi.
+Ad esempio, considera un’organizzazione di vendita al dettaglio con una presenza multicanale (sito web e dispositivi mobili). L’organizzazione acquisisce input transazionali o conversazionali come dati evento dalle proprie piattaforme e li carica in [!DNL Mixpanel] utilizzando l’estensione per l’inoltro degli eventi.
 
-I team di analisi possono quindi sfruttare [!DNL Mixpanel's] capacità di elaborare i set di dati e ricavare informazioni aziendali, che possono essere utilizzate per generare grafici, dashboard o altre visualizzazioni per informare le parti interessate del business.
+I team di analisi possono quindi sfruttare [!DNL Mixpanel's] funzionalità per elaborare i set di dati e derivare informazioni aziendali, che possono essere utilizzate per generare grafici, dashboard o altre visualizzazioni per informare le parti interessate.
 
-Per ulteriori informazioni sui casi di utilizzo specifici per [!DNL Mixpanel], consulta la seguente documentazione:
+Per ulteriori informazioni sui casi d’uso specifici per [!DNL Mixpanel], consulta la seguente documentazione:
 
-* [Da nuovo a [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Nuovo a [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
 * [Che cosa è [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
-* [12 must-try [!DNL Mixpanel] caratteristiche](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
+* [12 must-try [!DNL Mixpanel] funzioni](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
 ## [!DNL Mixpanel] prerequisiti {#prerequisites-mixpanel}
 
-È necessario disporre di un [!DNL Mixpanel] per utilizzare questa estensione. Vai a [[!DNL Mixpanel] pagina di registrazione](https://mixpanel.com/register/) per registrare e creare un account, se non ne hai già uno.
+È necessario disporre di un [!DNL Mixpanel] per utilizzare questa estensione. Vai a [[!DNL Mixpanel] pagina di registrazione](https://mixpanel.com/register/) per registrarti e creare un account, se non ne hai già uno.
 
-Assicurati che [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) è abilitata per il progetto. Passa a **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]** e attivare/disattivare l&#39;impostazione.
+Assicurati che [[!DNL Identity Merge]](https://help.mixpanel.com/hc/en-us/articles/9648680824852-ID-Merge-Implementation-Best-Practices) l&#39;impostazione è abilitata per il progetto. Accedi a **[!DNL Settings]** > **[!DNL Project Setting]** > **[!DNL Identity Merge]** e attivare/disattivare l&#39;impostazione.
 
 ### Informazioni sui cluster di identità in [!DNL Mixpanel]
 
-In [!DNL Mixpanel], un cluster di identità contiene una raccolta di `distinct_id` valori collegati a un singolo utente. [!DNL Mixpanel] gestisce il cluster di identità per ogni utente, risolvendo un singolo canale `distinct_id` da ogni cluster da utilizzare nel reporting. Puoi anche includere un identificatore personalizzato (denominato locale) `distinct_id`) per gli eventi anonimi che si verificano prima di un evento di identificazione utente.
+In entrata [!DNL Mixpanel], un cluster di identità contiene una raccolta di `distinct_id` valori che si connettono a un singolo utente. [!DNL Mixpanel] gestisce il cluster di identità per ogni utente, risolvendo un singolo canonico `distinct_id` da ciascun cluster da utilizzare nei rapporti. Puoi anche includere un identificatore personalizzato, denominato locale `distinct_id`) per eventi anonimi che si verificano prima di un evento di identificazione utente.
 
 [!DNL Mixpanel] risolve i cluster di identità tramite due metodi:
 
-* **Identifica** : [!DNL Mixpanel] connette l&#39;identificatore scelto a un anonimo `distinct_id`. Se il tuo sito web ha [!DNL Mixpanel] SDK abilitato, Platform utilizzerà l’ `distinct_id` assegnato all&#39;utente attualmente connesso.
-* **Alias**: [!DNL Mixpanel] combina due non anonimi `distinct id`è insieme se vengono soddisfatti criteri di unione aggiuntivi.
+* **Identificare** : [!DNL Mixpanel] connette l&#39;identificatore scelto a un anonimo `distinct_id`. Se il sito Web include [!DNL Mixpanel] SDK abilitato, Platform utilizzerà `distinct_id` assegnato all&#39;utente attualmente connesso.
+* **Alias**: [!DNL Mixpanel] combina due elementi non anonimi `distinct id`s insieme se sono soddisfatti ulteriori criteri di unione.
 
 >[!NOTE]
 >
->Fai riferimento a [!DNL Mixpanel] documento [gestione delle identità](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) per ulteriori dettagli su questi metodi.
+>Consulta la sezione [!DNL Mixpanel] documento su [gestione delle identità](https://help.mixpanel.com/hc/en-us/articles/360041039771-Getting-Started-with-Identity-Management#user-identification) per ulteriori dettagli su questi metodi.
 >
->Conferma di aver abilitato la [[!DNL Mixpanel] feature di unione delle identità](#prerequisites-mixpanel) per garantire una corretta risoluzione dei cluster di identità.
+>Conferma di aver abilitato [[!DNL Mixpanel] feature di unione identità](#prerequisites-mixpanel) per garantire che i cluster di identità siano risolti in modo appropriato.
 
-### Raccogli i dettagli di configurazione richiesti {#configuration-details}
+### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 
-Per collegare l&#39;Experience Platform a [!DNL Mixpanel] è necessario disporre dei seguenti input:
+Per collegare Experience Platform a [!DNL Mixpanel] è necessario disporre dei seguenti input:
 
 | Tipo di chiave | Descrizione | Esempio |
 | --- | --- | --- |
-| Token di progetto | Token di progetto associato al [!DNL Mixpanel] conto. Fai riferimento a [!DNL Mixpanel] documentazione [ricerca del token di progetto](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) a titolo indicativo. | `25470xxxxxxxxxxxxxxxxxxx1289` |
+| Token progetto | Il token di progetto associato al tuo [!DNL Mixpanel] account. Consulta la sezione [!DNL Mixpanel] documentazione su [ricerca del token del progetto](https://help.mixpanel.com/hc/en-us/articles/115004502806-Find-Project-Token-) a titolo indicativo. | `25470xxxxxxxxxxxxxxxxxxx1289` |
 
-## Installa e configura il [!DNL Mixpanel] estensione {#install}
+## Installare e configurare [!DNL Mixpanel] estensione {#install}
 
-Per installare l&#39;estensione, [creare una proprietà di inoltro eventi](../../../ui/event-forwarding/overview.md#properties) oppure scegli una proprietà esistente da modificare.
+Per installare l&#39;estensione: [creare una proprietà di inoltro degli eventi](../../../ui/event-forwarding/overview.md#properties) oppure scegli una proprietà esistente da modificare.
 
-Seleziona **[!UICONTROL Estensioni]** nella navigazione a sinistra. In **[!UICONTROL Catalogo]** scheda , seleziona **[!UICONTROL Installa]** sulla scheda per [!DNL Mixpanel] estensione.
+Seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. In **[!UICONTROL Catalogo]** , seleziona **[!UICONTROL Installa]** sulla scheda per [!DNL Mixpanel] estensione.
 
 ![Installazione di [!DNL Mixpanel] estensione.](../../../images/extensions/server/mixpanel/install-extension.png)
 
-## Crea un [!DNL Send Event] regola
+## Creare un [!DNL Send Event] regola
 
-Inizia a creare una nuova regola nella proprietà di inoltro eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Pannello misto]**. Quindi, imposta il tipo di azione su **[!UICONTROL Evento Track]** per inviare eventi di Adobe Experience Edge Network a [!DNL Mixpanel].
+Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Mixpanel]**. Quindi, imposta il tipo di azione su **[!UICONTROL Traccia evento]** per inviare eventi Adobe Experience Edge Network a [!DNL Mixpanel].
 
-| Ingresso | Descrizione | Obbligatorio |
+| Input | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| [!UICONTROL Token di progetto] | Questo campo deve essere mappato al token di progetto associato al [!DNL Mixpanel] conto. | Sì |
-| [!UICONTROL Tipo evento] | Nome dell&#39;evento. | Sì |
+| [!UICONTROL Token progetto] | Questo campo deve essere mappato al token di progetto associato al [!DNL Mixpanel] account. | Sì |
+| [!UICONTROL Tipo evento] | Il nome dell’evento. | Sì |
 | [!UICONTROL Ora evento] | Ora dell’evento. |  |
-| [!UICONTROL ID distinto del pannello multiplo] | Identificatore univoco dell&#39;utente che ha eseguito l&#39;evento. |  |
-| [!UICONTROL Inserisci ID] | Identificatore univoco per l&#39;evento, utilizzato per la deduplicazione. |  |
-| [!UICONTROL Proprietà evento] | Un oggetto JSON contenente proprietà personalizzate dell’evento. Scegli se fornire JSON non elaborato o utilizzare un set semplificato di input chiave-valore. |  |
+| [!UICONTROL ID distinto mixpanel] | L’identificatore univoco dell’utente che ha eseguito l’evento. |  |
+| [!UICONTROL Inserisci ID] | Un identificatore univoco dell’evento, utilizzato per la deduplicazione. |  |
+| [!UICONTROL Proprietà evento] | Oggetto JSON contenente le proprietà personalizzate dell’evento. Scegli se fornire JSON non elaborato o utilizzare un set semplificato di input chiave-valore. |  |
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui campi standard di un [!DNL Mixpanel] evento , fai riferimento al [documentazione ufficiale](https://developer.mixpanel.com/reference/import-events#event).
+>Per ulteriori informazioni sui campi standard per [!DNL Mixpanel] , fare riferimento al [documentazione ufficiale](https://developer.mixpanel.com/reference/import-events#event).
 
-![Aggiungi una configurazione di azione della regola di inoltro eventi.](../../../images/extensions/server/mixpanel/track-event-action.png)
+![Aggiungi una configurazione dell’azione della regola di inoltro degli eventi.](../../../images/extensions/server/mixpanel/track-event-action.png)
 
-Una volta che [!UICONTROL Evento Track] viene aggiunta alla regola, puoi configurare le condizioni della regola in modo che si attivi solo per determinati eventi, oppure puoi lasciare vuota la sezione condizioni per attivare la regola per tutti gli eventi.
+Una volta [!UICONTROL Traccia evento] viene aggiunta alla regola, puoi configurare le condizioni della regola in modo che venga attivata solo per determinati eventi, oppure puoi lasciare vuota la sezione condizioni affinché la regola venga attivata per tutti gli eventi.
 
 >[!IMPORTANT]
 >
->Se il sito web utilizza la [!DNL Mixpanel] SDK, puoi continuare al passaggio successivo di [convalida dei dati in [!DNL Mixpanel]](#validate). Se non utilizzi il [!DNL Mixpanel] SDK, devi [creare una regola di tracciamento identità separata](#create-an-identity-tracking-rule) garantire che gli eventi appropriati e `distinct_id` vengono inviati a [!DNL Mixpanel] quando si verifica un evento di identificazione utente.
+>Se il sito web utilizza [!DNL Mixpanel] SDK, puoi procedere al passaggio successivo di [convalida dei dati in [!DNL Mixpanel]](#validate). Se non si utilizza [!DNL Mixpanel] SDK, devi [creare una regola di tracciamento identità separata](#create-an-identity-tracking-rule) garantire che eventi e `distinct_id` i valori vengono inviati a [!DNL Mixpanel] quando si verifica un evento di identificazione utente.
 
-## Convalida dei dati all’interno di [!DNL Mixpanel] {#validate}
+## Convalidare i dati in [!DNL Mixpanel] {#validate}
 
-Se l’implementazione ha esito positivo e gli eventi vengono raccolti, visualizzerai gli eventi all’interno del [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
+Se l&#39;implementazione ha esito positivo e gli eventi vengono raccolti, gli eventi all&#39;interno di [[!DNL Mixpanel] console](https://help.mixpanel.com/hc/en-us/articles/4402837164948).
 
-Controlla se [!DNL Mixpanel] ha unito gli eventi di accesso al post con i valori e-mail e gli eventi creati durante l’utilizzo di **[!UICONTROL Invia evento]**. Se implementato correttamente, [!DNL Mixpanel] li associerà a un singolo [profilo utente](https://help.mixpanel.com/hc/en-us/articles/115004501966).
+Controlla se [!DNL Mixpanel] ha unito gli eventi di post-accesso compilati con valori e-mail e gli eventi creati quando si utilizza **[!UICONTROL Invia evento]**. Se correttamente implementato, [!DNL Mixpanel] li assocerà a un singolo [profilo utente](https://help.mixpanel.com/hc/en-us/articles/115004501966).
 
 ## Passaggi successivi
 
-Questa guida spiega come inviare eventi di conversione a [!DNL Mixpanel] utilizzo dell&#39;inoltro eventi. Questa estensione di inoltro eventi sfrutta la [!DNL Mixpanel] SDK e API JavaScript. Per ulteriori informazioni su queste tecnologie sottostanti, consulta la documentazione ufficiale:
+Questa guida illustra come inviare eventi di conversione a [!DNL Mixpanel] utilizzando l’inoltro degli eventi. Questa estensione di inoltro degli eventi sfrutta [!DNL Mixpanel] SDK e API JavaScript. Per ulteriori informazioni su queste tecnologie di base, consulta la documentazione ufficiale:
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] API JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Per ulteriori informazioni sulle funzionalità di inoltro eventi in Experience Platform, consulta la [panoramica sull&#39;inoltro eventi](../../../ui/event-forwarding/overview.md).
+Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).

@@ -609,7 +609,7 @@ L’ultimo passaggio per la raccolta dei dati consiste nel creare un flusso di d
 
 * [ID connessione sorgente](#source)
 * [ID connessione di destinazione](#target)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 * [ID specifica flusso di dati](#specs)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.

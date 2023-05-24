@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Guida dell’interfaccia utente per la segmentazione Edge
+# Guida all’interfaccia utente per la segmentazione Edge
 
 >[!NOTE]
 >

@@ -6,7 +6,7 @@ exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1826'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -29,12 +29,12 @@ Il controllo dell’accesso basato su attributi include i seguenti componenti:
 | Terminologia | Definizione |
 | --- | --- |
 | Attributi | Gli attributi sono gli identificatori che indicano la correlazione tra un utente e le risorse di Platform a cui ha accesso. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti. |
-| Etichette | Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform. |
+| Etichette | Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform. |
 | Autorizzazioni | Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare le funzioni di Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati. |
 | Set di autorizzazioni | I set di autorizzazioni rappresentano un gruppo di autorizzazioni che un amministratore può applicare a un ruolo. Un amministratore può assegnare set di autorizzazioni a un ruolo, invece di assegnare singole autorizzazioni. In questo modo è possibile creare ruoli personalizzati da un ruolo predefinito contenente un gruppo di autorizzazioni. |
-| Criteri | Le politiche sono dichiarazioni che riuniscono attributi per stabilire azioni ammissibili e inammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. |
+| Criteri | I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. |
 | Risorsa | Una risorsa è la risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere segmenti o campi schema. |
-| Ruoli | I ruoli sono modi per categorizzare i tipi di utenti che interagiscono con l’istanza Platform e sono blocchi predefiniti dei criteri di controllo degli accessi. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno. |
+| Ruoli | I ruoli consentono di classificare i tipi di utenti che interagiscono con l’istanza Platform e sono elementi fondamentali nei criteri di controllo degli accessi. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. |
 | Oggetto | Un oggetto è l’utente che richiede l’accesso a una risorsa per eseguire un’azione. |
 | Gruppi utente | I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno l’accesso per eseguire le stesse funzioni. |
 

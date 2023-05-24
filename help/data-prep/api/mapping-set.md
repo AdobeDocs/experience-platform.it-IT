@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;set di mappatura;
 solution: Experience Platform
-title: Endpoint API per set di mappature
-description: Puoi utilizzare l'endpoint `/mappingSets` nell'API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
+title: Endpoint API per set di mappatura
+description: Puoi utilizzare l’endpoint "/mappingSets" nell’API di Adobe Experience Platform per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 5%
 
 ---
 
-# Endpoint di mapping
+# Endpoint set di mappatura
 
-I set di mapping possono essere utilizzati per definire il modo in cui i dati di uno schema di origine vengono mappati su quello di uno schema di destinazione. È possibile utilizzare `/mappingSets` nell’API di preparazione dati per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
+I set di mappatura possono essere utilizzati per definire il modo in cui i dati in uno schema di origine vengono mappati a quelli di uno schema di destinazione. È possibile utilizzare `/mappingSets` nell’API della preparazione dati per recuperare, creare, aggiornare e convalidare in modo programmatico i set di mappatura.
 
-## Set di mappature elenco
+## Elenca set di mappatura
 
-Puoi recuperare un elenco di tutti i set di mappatura per la tua organizzazione effettuando una richiesta di GET al `/mappingSets` punto finale.
+È possibile recuperare un elenco di tutti i set di mappatura per l’organizzazione effettuando una richiesta di GET al `/mappingSets` endpoint.
 
 **Formato API**
 
-La `/mappingSets` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere entrambi i `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciale (`&`).
+Il `/mappingSets` l’endpoint supporta diversi parametri di query per aiutare a filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -32,15 +32,15 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{LIMIT}` | (**Obbligatorio**) Specifica il numero di set di mapping restituiti. |
-| `{START}` | (**Obbligatorio**) Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina di risultati, imposta il valore su `start=0`. |
+| `{LIMIT}` | (**Obbligatorio**) Specifica il numero di set di mappatura restituiti. |
+| `{START}` | (**Obbligatorio**) Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
 | `{NAME}` | Filtra i set di mappatura per nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. Gli unici campi supportati sono `createdDate` e `updatedDate`. Puoi anteporre la proprietà con `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
 | `{EXPAND_SCHEMA}` | Valore booleano che determina se lo schema di output completo viene restituito come parte della risposta. |
 
 **Richiesta**
 
-Nella richiesta seguente vengono recuperati gli ultimi due set di mappature all’interno dell’organizzazione.
+La richiesta seguente recupererà gli ultimi due set di mappatura all’interno dell’organizzazione.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -165,7 +165,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## Creare un set di mappatura
 
-Puoi creare un nuovo set di mappature effettuando una richiesta di POST al `/mappingSets` punto finale.
+Per creare un nuovo set di mappatura, devi effettuare una richiesta POST al `/mappingSets` endpoint.
 
 **Formato API**
 
@@ -175,7 +175,7 @@ POST /mappingSets
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo set di mappature, configurato dai parametri forniti nel payload.
+La richiesta seguente crea un nuovo set di mappatura, configurato dai parametri forniti nel payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -217,14 +217,14 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | ID dello schema XDM a cui si fa riferimento. |
-| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall&#39;origine alla destinazione. Il tipo di origine supporta due possibili valori: <ul><li>`ATTRIBUTE`: Tipo di origine `ATTRIBUTE` viene utilizzato quando l&#39;attributo di input proviene da uno schema di origine.</li><li>`EXPRESSION`: Tipo di origine `EXPRESSION` viene utilizzato quando la mappatura viene completata utilizzando un campo calcolato.</li></ul> **AVVISO**: L&#39;impostazione errata dei valori del tipo di origine può rendere non modificabili i set di mappatura. |
+| `outputSchema.schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [Guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | Il tipo di origine descrive come il valore verrà estratto dall’origine alla destinazione. Il tipo di origine supporta due valori possibili: <ul><li>`ATTRIBUTE`: tipo di origine `ATTRIBUTE` viene utilizzato quando l’attributo di input proviene da uno schema di origine.</li><li>`EXPRESSION`: tipo di origine `EXPRESSION` viene utilizzato quando la mappatura viene completata utilizzando un campo calcolato.</li></ul> **AVVISO**: un’impostazione errata dei valori del tipo di origine può impedire la modifica dei set di mappatura. |
 | `mappings.source` | La posizione da cui desideri mappare i dati. |
-| `mappings.destination` | Posizione in cui si desidera mappare i dati. |
+| `mappings.destination` | La posizione in cui desideri mappare i dati. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul set di mappatura appena creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul set di mappatura appena creato.
 
 ```json
 {
@@ -239,7 +239,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul set 
 
 ## Convalida mappature
 
-Puoi verificare che le mappature funzionino correttamente effettuando una richiesta POST al `/mappingSets/validate` punto finale.
+Per verificare il corretto funzionamento delle mappature, effettua una richiesta POST al `/mappingSets/validate` endpoint.
 
 **Formato API**
 
@@ -249,7 +249,7 @@ POST /mappingSets/validate
 
 **Richiesta**
 
-La seguente richiesta convalida le mappature fornite nel payload.
+La richiesta seguente convalida le mappature fornite nel payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -290,7 +290,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni di convalida per la mappatura proposta.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni di convalida per la mappatura proposta.
 
 ```json
 {
@@ -311,9 +311,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni di conva
 }
 ```
 
-## Anteprima dei dati per le mappature
+## Anteprima dati per mappature
 
-Puoi visualizzare in anteprima a cosa saranno mappati i tuoi dati effettuando una richiesta di POST al `/mappingSets/preview` punto finale.
+Per visualizzare in anteprima a cosa verranno mappati i dati, effettua una richiesta POST al `/mappingSets/preview` endpoint.
 
 **Formato API**
 
@@ -371,7 +371,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un&#39;anteprima dei dati mappati.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un’anteprima dei dati mappati.
 
 ```json
 [
@@ -390,9 +390,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un&#39;anteprima dei dat
 ]
 ```
 
-## Cercare un set di mappature
+## Cercare un set di mappatura
 
-Puoi recuperare un set di mappatura specifico fornendo il relativo ID nel percorso di una richiesta GET al `/mappingSets` punto finale. Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappature specificata.
+Per recuperare un set di mappatura specifico, devi fornire il relativo ID nel percorso di una richiesta GET al `/mappingSets` endpoint. Questo endpoint supporta anche diversi parametri di query per consentire il recupero dei dettagli sulla versione del set di mappatura specificato.
 
 **Formato API**
 
@@ -404,13 +404,13 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Obbligatorio**) L&#39;ID del set di mappature che desideri recuperare. |
-| `{EXPAND_SCHEMA}` | Parametro di query booleano che determina se restituire lo schema di output come parte della risposta. |
-| `{VERSION}` | Parametro di query integer che determina la versione del set di mappatura da recuperare. |
+| `{MAPPING_SET_ID}` | (**Obbligatorio**) ID del set di mappatura da recuperare. |
+| `{EXPAND_SCHEMA}` | Un parametro di query booleano che determina se restituire lo schema di output come parte della risposta. |
+| `{VERSION}` | Parametro di query intero che determina la versione del set di mappatura da recuperare. |
 
 **Richiesta**
 
-La richiesta seguente recupera informazioni dettagliate su un set di mappature specificato.
+La richiesta seguente recupera informazioni dettagliate su un set di mappatura specificato.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
@@ -422,11 +422,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul set di mappatura che si desidera recuperare.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul set di mappatura che desideri recuperare.
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio.
+>La seguente risposta è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -581,9 +581,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-## Aggiornare un set di mappature
+## Aggiornare un set di mappatura
 
-Puoi aggiornare un set di mappatura fornendo il relativo ID nel percorso di un `PUT` richiesta al `mappingSets` punto finale.
+Per aggiornare un set di mappatura, devi fornire il relativo ID nel percorso di un `PUT` richiesta al `mappingSets` endpoint.
 
 **Formato API**
 
@@ -593,7 +593,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID del set di mappature che desideri aggiornare. |
+| `{MAPPING_SET_ID}` | ID del set di mappatura da aggiornare. |
 
 **Richiesta**
 
@@ -641,11 +641,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sul set di mappature appena aggiornato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul set di mappatura appena aggiornato.
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio.
+>La seguente risposta è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -808,9 +808,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-## Elencare le mappature per un set di mappature
+## Elencare le mappature per un set di mappatura
 
-Puoi visualizzare tutte le mappature che appartengono a un set di mappatura specifico fornendo il relativo ID nel percorso di una richiesta di GET al seguente endpoint.
+Per visualizzare tutte le mappature che appartengono a un set di mappatura specifico, devi fornire il relativo ID nel percorso di una richiesta GET all’endpoint seguente.
 
 **Formato API**
 
@@ -820,11 +820,11 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID del set di mappature per il quale desideri recuperare le mappature. |
+| `{MAPPING_SET_ID}` | ID del set di mappatura per il quale si desidera recuperare le mappature. |
 
 **Richiesta**
 
-La richiesta seguente restituisce tutte le mappature nel set di mappature specificato.
+La richiesta seguente restituisce tutti i mapping nel set di mapping specificato.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
@@ -911,9 +911,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## Cercare una mappatura all&#39;interno di un set di mappatura
+## Cercare una mappatura all’interno di un set di mappatura
 
-Puoi recuperare una mappatura specifica per un set di mappatura fornendo i relativi ID nel percorso di una richiesta di GET all’endpoint seguente.
+Per recuperare una mappatura specifica per un set di mappatura, devi fornire i relativi ID nel percorso di una richiesta GET all’endpoint seguente.
 
 **Formato API**
 
@@ -923,12 +923,12 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | ID del set di mappatura di cui si desidera cercare le informazioni di mappatura. |
+| `{MAPPING_SET_ID}` | ID del set di mappatura di cui desideri cercare le informazioni di mappatura. |
 | `{MAPPING_ID}` | ID della mappatura da cercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera informazioni su una mappatura specifica nel set di mappature specificato.
+La richiesta seguente recupera informazioni su un mapping specifico nel set di mapping specificato.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
@@ -940,7 +940,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla mappatura specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla mappatura specificata.
 
 ```json
 {

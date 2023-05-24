@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;scrittura query;scrittura query;
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;scrittura query;scrittura query;home;popular topic;query service;Query service;writing queries;writing query;
 solution: Experience Platform
-title: Guida generale per l’esecuzione delle query nel servizio query
+title: Linee guida generali per l’esecuzione di query in Query Service
 type: Tutorial
-description: Questo documento delinea dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
+description: Questo documento illustra dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
@@ -12,41 +12,41 @@ ht-degree: 3%
 
 ---
 
-# Indicazioni generali per l’esecuzione delle query in [!DNL Query Service]
+# Linee guida generali per l’esecuzione delle query in [!DNL Query Service]
 
 Questo documento descrive dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform [!DNL Query Service].
 
-Per informazioni dettagliate sulla sintassi SQL utilizzata in [!DNL Query Service], leggi la [Documentazione sulla sintassi SQL](../sql/syntax.md).
+Per informazioni dettagliate sulla sintassi SQL utilizzata in [!DNL Query Service], leggi le [Documentazione sulla sintassi SQL](../sql/syntax.md).
 
 ## Modelli di esecuzione delle query
 
-Adobe Experience Platform [!DNL Query Service] dispone di due modelli di esecuzione delle query: interattivo e non interattivo. L’esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
+Adobe Experience Platform [!DNL Query Service] dispone di due modelli di esecuzione delle query: interattivo e non interattivo. L’esecuzione interattiva viene utilizzata per lo sviluppo delle query e la generazione di rapporti negli strumenti di business intelligence, mentre la modalità non interattiva viene utilizzata per processi e query operative di grandi dimensioni come parte di un flusso di lavoro di elaborazione dei dati.
 
 ### Esecuzione di query interattive
 
-Le query possono essere eseguite in modo interattivo inviandole tramite [!DNL Query Service] Interfaccia o [tramite un client connesso](../clients/overview.md). In esecuzione [!DNL Query Service] attraverso un client connesso, una sessione attiva viene eseguita tra il client e [!DNL Query Service] fino a quando la query inviata non restituisce o non scade.
+Le query possono essere eseguite in modo interattivo inviandole tramite [!DNL Query Service] UI o [tramite un client connesso](../clients/overview.md). Durante l’esecuzione [!DNL Query Service] tramite un client connesso, viene eseguita una sessione attiva tra il client e [!DNL Query Service] finché non viene restituita la query inviata o non si verifica un timeout.
 
-L’esecuzione della query interattiva presenta le seguenti limitazioni:
+L’esecuzione di query interattive presenta le seguenti limitazioni:
 
 | Parametro | Limitazione |
 | --------- | ---------- |
 | Timeout query | 10 minuti |
 | Numero massimo di righe restituite | 50.000 |
-| Numero massimo di query simultanee | 5 |
+| Numero massimo di query concorrenti | 5 |
 
 >[!NOTE]
 >
->Per ignorare la limitazione massima delle righe, includi `LIMIT 0` nella query. Si applica ancora il timeout della query di 10 minuti.
+>Per ignorare il limite massimo di righe, includi `LIMIT 0` nella query. Il timeout della query di 10 minuti è ancora valido.
 
-Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e sono **not** persistente. Per mantenere i risultati come set di dati in [!DNL Experience Platform], la query deve utilizzare `CREATE TABLE AS SELECT` sintassi.
+Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e sono **non** persistente. Per mantenere i risultati come set di dati in [!DNL Experience Platform], la query deve utilizzare `CREATE TABLE AS SELECT` sintassi.
 
-### Esecuzione di query non interattive
+### Esecuzione di query non interattiva
 
-Query inviate tramite [!DNL Query Service] Le API vengono eseguite in modo non interattivo. Per esecuzione non interattiva si intende [!DNL Query Service] riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo set di dati in [!DNL Experience Platform] per ricevere i risultati o l’inserimento di nuove righe in un set di dati esistente.
+Query inviate tramite [!DNL Query Service] Le API vengono eseguite in modo non interattivo. Esecuzione non interattiva significa che [!DNL Query Service] riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo set di dati in [!DNL Experience Platform] per ricevere i risultati o per inserire nuove righe in un set di dati esistente.
 
 ## Accesso a un campo specifico all’interno di un oggetto
 
-Per accedere a un campo all’interno di un oggetto nella query, è possibile utilizzare la notazione del punto (`.`) o la notazione parentesi graffa (`[]`). L&#39;istruzione SQL seguente utilizza la notazione del punto per scorrere il `endUserIds` fino a `mcid` oggetto.
+Per accedere a un campo all’interno di un oggetto nella query, puoi utilizzare la notazione del punto (`.`) o notazione tra parentesi quadre (`[]`). L&#39;istruzione SQL seguente utilizza la notazione del punto per analizzare `endUserIds` oggetto fino al `mcid` oggetto.
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | Nome della tabella di analisi. |
 
-L&#39;istruzione SQL seguente utilizza la notazione tra parentesi graffe per scorrere il `endUserIds` fino a `mcid` oggetto.
+L&#39;istruzione SQL seguente utilizza la notazione tra parentesi per scorrere `endUserIds` oggetto fino al `mcid` oggetto.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -80,9 +80,9 @@ LIMIT 1
 
 >[!NOTE]
 >
->Poiché ogni tipo di notazione restituisce gli stessi risultati, quello che si sceglie di utilizzare dipende dalle proprie preferenze.
+>Poiché ogni tipo di notazione restituisce gli stessi risultati, quello che si sceglie di utilizzare corrisponde alle proprie preferenze.
 
-Entrambe le query di esempio sopra restituiscono un oggetto appiattito, anziché un singolo valore:
+Entrambe le query di esempio di cui sopra restituiscono un oggetto appiattito, anziché un singolo valore:
 
 ```console
               endUserIds._experience.mcid   
@@ -91,13 +91,13 @@ Entrambe le query di esempio sopra restituiscono un oggetto appiattito, anziché
 (1 row)
 ```
 
-Il restituito `endUserIds._experience.mcid` l&#39;oggetto contiene i valori corrispondenti per i seguenti parametri:
+Il restituito `endUserIds._experience.mcid` L&#39;oggetto contiene i valori corrispondenti per i seguenti parametri:
 
 - `id`
 - `namespace`
 - `primary`
 
-Quando la colonna viene dichiarata solo verso il basso all’oggetto, restituisce l’intero oggetto come stringa. Per visualizzare solo l&#39;ID, utilizza:
+Quando la colonna viene dichiarata solo per l&#39;oggetto, restituisce l&#39;intero oggetto come stringa. Per visualizzare solo l’ID, utilizza:
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -114,15 +114,15 @@ LIMIT 1
 (1 row)
 ```
 
-## Preventivi
+## Virgolette
 
-Le virgolette singole, le virgolette doppie e le virgolette posteriori hanno utilizzi diversi all’interno delle query Query Service.
+Le virgolette singole, le virgolette doppie e le virgolette posteriori hanno utilizzi diversi nelle query di Query Service.
 
 ### Virgolette singole
 
-Il preventivo unico (`'`) viene utilizzata per creare stringhe di testo. Ad esempio, può essere utilizzato nella `SELECT` per restituire un valore di testo statico nel risultato e nel `WHERE` per valutare il contenuto di una colonna.
+Virgoletta singola (`'`) viene utilizzato per creare stringhe di testo. Ad esempio, può essere utilizzato nel `SELECT` per restituire un valore di testo statico nel risultato e nel `WHERE` per valutare il contenuto di una colonna.
 
-La seguente query dichiara un valore di testo statico (`'datasetA'`) per una colonna:
+La query seguente dichiara un valore di testo statico (`'datasetA'`) per una colonna:
 
 ```sql
 SELECT 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-La seguente query utilizza una stringa tra virgolette singole (`'homepage'`) nella relativa clausola WHERE per restituire gli eventi per una pagina specifica.
+La query seguente utilizza una stringa tra virgolette singole (`'homepage'`) nella clausola WHERE per restituire gli eventi per una pagina specifica.
 
 ```sql
 SELECT 
@@ -150,7 +150,7 @@ LIMIT 10
 
 Virgolette doppie (`"`) viene utilizzato per dichiarare un identificatore con spazi.
 
-La query seguente utilizza virgolette doppie per restituire i valori delle colonne specificate quando una colonna contiene uno spazio nel relativo identificatore:
+La query seguente utilizza le virgolette doppie per restituire i valori dalle colonne specificate quando una colonna contiene uno spazio nel relativo identificatore:
 
 ```sql
 SELECT
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->Virgolette doppie **impossibile** viene utilizzato con l’accesso al campo della notazione del punto.
+>Virgolette doppie **non può** essere utilizzato con accesso al campo con notazione del punto.
 
 ### Virgolette posteriori
 
-La citazione posteriore `` ` `` viene utilizzato per l&#39;escape dei nomi di colonne riservate **only** quando si utilizza la sintassi della notazione del punto. Ad esempio, dal `order` è una parola riservata in SQL, per accedere al campo è necessario utilizzare le virgolette posteriori `commerce.order`:
+Citazione posteriore `` ` `` viene utilizzato per l’escape dei nomi di colonna riservati **solo** quando si utilizza la sintassi con notazione del punto. Ad esempio, poiché `order` è una parola riservata in SQL, è necessario utilizzare le virgolette per accedere al campo `commerce.order`:
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Le virgolette posteriori vengono utilizzate anche per accedere a un campo che inizia con un numero. Ad esempio, per accedere al campo `30_day_value`, è necessario utilizzare la notazione delle virgolette.
+Le virgolette posteriori vengono inoltre utilizzate per accedere a un campo che inizia con un numero. Ad esempio, per accedere al campo `30_day_value`, sarà necessario utilizzare la notazione di virgolette posteriori.
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-Le virgolette posteriori sono **not** necessaria se si utilizza la notazione tra parentesi.
+Le virgolette posteriori sono **non** necessario se si utilizza la notazione tra parentesi quadre.
 
 ```sql
  SELECT
@@ -199,13 +199,13 @@ Le virgolette posteriori sono **not** necessaria se si utilizza la notazione tra
  LIMIT 10
 ```
 
-## Visualizzazione delle informazioni sulle tabelle
+## Visualizzazione delle informazioni della tabella
 
 Dopo la connessione a Query Service, puoi visualizzare tutte le tabelle disponibili su Platform utilizzando `\d` o `SHOW TABLES` comandi.
 
-### Vista a tabella standard
+### Vista tabella standard
 
-La `\d` mostra il comando standard [!DNL PostgreSQL] visualizzazione per l&#39;elenco delle tabelle. Di seguito è riportato un esempio dell&#39;output di questo comando:
+Il `\d` Il comando mostra lo standard [!DNL PostgreSQL] visualizzazione per l&#39;elenco delle tabelle. Di seguito è riportato un esempio dell&#39;output di questo comando:
 
 ```sql
              List of relations
@@ -228,11 +228,11 @@ La `\d` mostra il comando standard [!DNL PostgreSQL] visualizzazione per l&#39;e
 (2 rows)
 ```
 
-### Informazioni sullo schema
+### Informazioni schema
 
-Per visualizzare informazioni più dettagliate sugli schemi all’interno della tabella, puoi utilizzare la `\d {TABLE_NAME}` comando, dove `{TABLE_NAME}` è il nome della tabella di cui si desidera visualizzare le informazioni sullo schema.
+Per visualizzare informazioni più dettagliate sugli schemi all’interno della tabella, puoi utilizzare `\d {TABLE_NAME}` comando, dove `{TABLE_NAME}` è il nome della tabella di cui si desidera visualizzare le informazioni sullo schema.
 
-L&#39;esempio seguente mostra le informazioni dello schema per `luma_midvalues` tabella, che verrebbe visualizzata utilizzando `\d luma_midvalues`:
+L&#39;esempio seguente mostra le informazioni sullo schema per `luma_midvalues` tabella, che può essere visualizzata utilizzando `\d luma_midvalues`:
 
 ```sql
                          Table "public.luma_midvalues"
@@ -255,9 +255,9 @@ L&#39;esempio seguente mostra le informazioni dello schema per `luma_midvalues` 
  search            | search                      |           |          | 
 ```
 
-È inoltre possibile ottenere ulteriori informazioni su una particolare colonna aggiungendo il nome della colonna al nome della tabella. Questo sarebbe scritto nel formato `\d {TABLE_NAME}_{COLUMN}`.
+È inoltre possibile ottenere ulteriori informazioni su una colonna specifica aggiungendo il nome della colonna al nome della tabella. Questo sarebbe scritto nel formato `\d {TABLE_NAME}_{COLUMN}`.
 
-L’esempio seguente mostra informazioni aggiuntive per il `web` e viene richiamato utilizzando il seguente comando: `\d luma_midvalues_web`:
+L&#39;esempio seguente mostra informazioni aggiuntive per `web` e verrebbe richiamato utilizzando il comando seguente: `\d luma_midvalues_web`:
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -269,9 +269,9 @@ L’esempio seguente mostra informazioni aggiuntive per il `web` e viene richiam
 
 ## Unione di set di dati
 
-Puoi unire più set di dati per includere nella query i dati provenienti da altri set di dati.
+Puoi unire più set di dati per includere nella query dati provenienti da altri set di dati.
 
-L&#39;esempio seguente potrebbe unire i due set di dati seguenti (`your_analytics_table` e `custom_operating_system_lookup`) e crea un `SELECT` per i primi 50 sistemi operativi in base al numero di visualizzazioni di pagina.
+L’esempio seguente unisce i seguenti due set di dati (`your_analytics_table` e `custom_operating_system_lookup`) e crea un `SELECT` per i primi 50 sistemi operativi in base al numero di visualizzazioni di pagina.
 
 **Query**
 
@@ -290,14 +290,14 @@ LIMIT 50;
 
 **Risultati**
 
-| Sistema operativo | PageViews |
+| OperatingSystem | PageViews |
 | --------------- | --------- |
 | Windows 7 | 2781979.0 |
 | Windows XP | 1669824.0 |
 | Windows 8 | 420024.0 |
 | Adobe AIR | 315032.0 |
 | Windows Vista | 173566.0 |
-| Mobile iOS 6.1.3 | 119069.0 |
+| IOS per dispositivi mobili 6.1.3 | 119069.0 |
 | Linux | 56516.0 |
 | OSX 10.6.8 | 53652.0 |
 | Android 4.0.4 | 46167.0 |
@@ -311,20 +311,20 @@ LIMIT 50;
 
 ## Deduplica
 
-Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, consulta la sezione [Guida alla deduplicazione di Query Service](../essential-concepts/deduplication.md).
+Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, leggere [Guida alla deduplicazione di Query Service](../essential-concepts/deduplication.md).
 
-## Calcolo del fuso orario nel servizio query
+## Calcoli del fuso orario in Query Service
 
-Query Service standardizza i dati persistenti in Adobe Experience Platform utilizzando il formato di marca temporale UTC. Per ulteriori informazioni su come tradurre il requisito del fuso orario in e da una marca temporale UTC, consulta la [Sezione Domande frequenti su come cambiare il fuso orario in e da una marca temporale UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
+Query Service standardizza i dati persistenti in Adobe Experience Platform utilizzando il formato di marca temporale UTC. Per ulteriori informazioni su come tradurre il requisito del fuso orario da e verso una marca temporale UTC, consulta la sezione [Sezione Domande frequenti su come modificare il fuso orario in e da un timestamp UTC](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## Passaggi successivi
 
-La lettura di questo documento ti ha introdotto ad alcune importanti considerazioni quando scrivi query utilizzando [!DNL Query Service]. Per ulteriori informazioni su come utilizzare la sintassi SQL per scrivere le proprie query, leggere il [Documentazione sulla sintassi SQL](../sql/syntax.md).
+Dopo aver letto questo documento, avrai acquisito alcune importanti considerazioni durante la scrittura di query utilizzando [!DNL Query Service]. Per ulteriori informazioni su come utilizzare la sintassi SQL per scrivere query personalizzate, leggere [Documentazione sulla sintassi SQL](../sql/syntax.md).
 
-Per ulteriori esempi di query utilizzabili in Query Service, consulta la seguente documentazione del caso d’uso:
+Per ulteriori esempi di query che possono essere utilizzate in Query Service, consulta la seguente documentazione sul caso d’uso:
 
-- [Informazioni approfondite su Analytics](../use-cases/analytics-insights.md)
+- [Informazioni su Analytics](../use-cases/analytics-insights.md)
 - [Creare un rapporto con tendenze degli eventi](../use-cases/trended-report-of-events.md)
-- [Visualizzare un rapporto roll-up di un visitatore](../use-cases/roll-up-report-of-a-visitor.md)
+- [Visualizzare un rapporto aggregato di un visitatore](../use-cases/roll-up-report-of-a-visitor.md)
 - [Elencare le visualizzazioni di pagina di un utente](../use-cases/list-visitor-sessions.md)
-- [Elencare i visitatori per numero di visualizzazioni di pagina](../use-cases/visitors-by-number-of-page-views.md)
+- [Elencare i visitatori in base al numero di visualizzazioni di pagina](../use-cases/visitors-by-number-of-page-views.md)

@@ -11,7 +11,7 @@ ht-degree: 93%
 
 # Endpoint “companies”
 
-Un’azienda rappresenta un’organizzazione del cliente, in genere una divisione dell’azienza. Nell’API di Reactor, queste società corrispondono a 1:1 con l’ID organizzazione. Gli utenti API possono vedere solo le aziende a cui hanno accesso. Un’azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene a una sola azienda.
+Un’azienda rappresenta un’organizzazione del cliente, in genere una divisione dell’azienza. Nell’API di Reactor, queste aziende corrispondono 1:1 all’ID organizzazione. Gli utenti API possono vedere solo le aziende a cui hanno accesso. Un’azienda può contenere molte [proprietà](./properties.md). Una proprietà appartiene a una sola azienda.
 
 L’endpoint `/companies` nell’API di Reactor consente di recuperare in modo programmatico le aziende a cui hai accesso all’interno dell’applicazione Experience.
 

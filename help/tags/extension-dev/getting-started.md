@@ -13,7 +13,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per imparare a creare estensioni, utilizzeremo lo strumento di scaffolding open source, fornito da ingegneri Adobe per creare i file e la struttura di file necessari per il pacchetto di estensione. Non ti resterà quindi che occuparti della parte importante: scrivere di fatto il codice.
 
@@ -63,4 +63,4 @@ Lo strumento di scaffolding fornirà quindi le opzioni per la creazione della st
 
 ## Passaggi successivi
 
-* Segui [Panoramica del processo di invio](./submit/overview.md) e si preparano a [validate](./submit/upload-and-test.md#validate) e [caricare](./submit/upload-and-test.md#integration) l’estensione per il test all’interno dell’ecosistema di tag.
+* Segui le [Panoramica del processo di invio](./submit/overview.md) e prepararsi a [convalida](./submit/upload-and-test.md#validate) e [caricare](./submit/upload-and-test.md#integration) l’estensione per il test all’interno dell’ecosistema di tag.

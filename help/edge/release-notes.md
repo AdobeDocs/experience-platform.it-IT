@@ -13,78 +13,78 @@ ht-degree: 3%
 
 # Note sulla versione
 
-Questo documento illustra le note sulla versione dell’SDK Web per Adobe Experience Platform.
-Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Note sulla versione dell’estensione del tag SDK per web](extension/web-sdk-ext-release-notes.md).
+Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
+Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note sulla versione dell’estensione tag Web SDK](extension/web-sdk-ext-release-notes.md).
 
 ## Versione 2.16.0 - 25 aprile 2023
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per [sostituzioni della configurazione di datastream](datastreams/overrides.md).
+* È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](datastreams/overrides.md).
 
 ## Versione 2.15.0 - 30 marzo 2023
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) clic sul callback del collegamento.
+* È stato aggiunto il supporto per [`onBeforeLinkClickSend`](fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) link click callback.
 * È stato aggiunto il supporto per il tracciamento dei clic di Adobe Journey Optimizer.
 
 **Correzioni e miglioramenti**
 
-* La raccolta collegamenti ora include il nome del collegamento e l&#39;area geografica del visitatore.
-* È stato rimosso l’errore della console per le destinazioni URL non riuscite.
+* La raccolta di collegamenti ora include il nome del collegamento e l’area del visitatore.
+* Errore della console rimosso per le destinazioni URL non riuscite.
 
 ## Versione 2.14.0 - 25 gennaio 2023
 
-* (Beta) È stato aggiunto il supporto per le superfici e le proposizioni Adobe Journey Optimizer.
+* (Beta) È stato aggiunto il supporto per superfici e proposte Adobe Journey Optimizer.
 
 **Correzioni e miglioramenti**
 
-* È stato risolto un problema relativo alle azioni del codice personalizzato VEC di Adobe Target a causa del quale il codice veniva inserito in una posizione alternativa rispetto a con [!DNL at.js].
-* È stato risolto un problema a causa del quale, in alcuni casi edge, l’intestazione &quot;referer&quot; non veniva impostata correttamente sulle richieste alla rete Edge.
-* È stato risolto un problema in cui [hint client agente utente](fundamentals/user-agent-client-hints.md) le proprietà potrebbero essere impostate su un tipo errato.
-* È stato risolto un problema in cui `placeContext.localTime` schema non corrispondente.
+* È stato risolto un problema relativo alle azioni del codice personalizzato del Compositore esperienza visivo di Adobe Target a causa del quale il codice veniva inserito in una posizione alternativa rispetto a con [!DNL at.js].
+* È stato risolto un problema a causa del quale, in alcuni casi, l’intestazione &quot;referer&quot; non veniva impostata correttamente nelle richieste inviate alla rete Edge.
+* È stato risolto un problema a causa del quale [user agent client hint](fundamentals/user-agent-client-hints.md) le proprietà potrebbero essere impostate su un tipo errato.
+* È stato risolto un problema a causa del quale `placeContext.localTime` non corrisponde allo schema.
 
 ## Versione 2.13.1 - 13 ottobre 2022
 
-* È stato risolto un problema a causa del quale la migrazione dei visitatori non funzionava se window.Visitor era definito dopo la configurazione. Questo è un problema in particolare quando si esegue con i tag di Adobe.
-* È stato risolto un problema in cui `device.screenWidth` e `device.screenHeight` in alcuni ambienti venivano compilati come stringhe.
+* È stato risolto un problema che impediva il funzionamento della migrazione dei visitatori se window.Visitor veniva definito dopo la configurazione. Questo è un problema soprattutto quando si esegue con tag Adobe.
+* È stato risolto un problema a causa del quale `device.screenWidth` e `device.screenHeight` sono state compilate come stringhe in alcuni ambienti.
 
 ## Versione 2.13.0 - 28 settembre 2022
 
 **Nuove funzioni**
 
-* È stato aggiunto il supporto per [Migrazione completa per pagina](home.md#migrating-to-web-sdk). Il profilo Adobe Target viene ora mantenuto quando un visitatore si sposta tra le pagine at.js e l’SDK per web.
-* È stato aggiunto il supporto configurabile per [Hint client entropy high-Agent](fundamentals/user-agent-client-hints.md#high-entropy).
-* È stato aggiunto il supporto per il nuovo `applyResponse` comando. Ciò consente la personalizzazione ibrida tramite la funzione [API server di rete Edge](../server-api/overview.md).
-* I collegamenti in modalità Controllo qualità ora funzionano su più pagine.
+* È stato aggiunto il supporto per [Migrazione completa pagina per pagina](home.md#migrating-to-web-sdk). Il profilo Adobe Target verrà ora mantenuto quando un visitatore si sposta tra le pagine at.js e Web SDK.
+* È stato aggiunto il supporto configurabile per [User-Agent Client Hints entropici elevati](fundamentals/user-agent-client-hints.md#high-entropy).
+* È stato aggiunto il supporto per il nuovo `applyResponse` comando. Questo abilita la personalizzazione ibrida tramite [API server di rete Edge](../server-api/overview.md).
+* I collegamenti in modalità di controllo qualità ora funzionano su più pagine.
 
 **Correzioni e miglioramenti**
 
 * È stato risolto un problema a causa del quale le metriche di tracciamento dei clic di personalizzazione non venivano aggiornate quando il tracciamento dei collegamenti era disabilitato.
 * Sono stati aggiornati i comandi per generare un errore di convalida quando sono specificate opzioni sconosciute.
-* La `_experience.decisioning.propositionEventType` viene ora compilata quando si inviano automaticamente eventi di personalizzazione visualizzazione e interazione.
-* È stata aggiunta la convalida duplicata dello spazio dei nomi per `getIdentity` comando.
-* Aggiunta convalida dell&#39;ambito decisionale duplicato per il `sendEvent` comando.
+* Il `_experience.decisioning.propositionEventType` La proprietà ora viene compilata quando si inviano automaticamente eventi di personalizzazione di visualizzazione e interazione.
+* Aggiunta della convalida dello spazio dei nomi duplicato per `getIdentity` comando.
+* È stata aggiunta la convalida dell’ambito di decisione duplicata per `sendEvent` comando.
 
 ## Versione 2.12.0 - 29 giugno 2022
 
-* Modifica le richieste in Edge Network per utilizzare il `cluster` hint di posizione cookie come parte dell’URL. In questo modo gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) a metà sessione hanno lo stesso perimetro e lo stesso profilo di personalizzazione.
-* Rafforzare le funzioni configurate nella risposta del comando getLibraryInfo.
+* Modifica le richieste in Edge Network per utilizzare `cluster` suggerimento sulla posizione del cookie come parte dell’URL. In questo modo, gli utenti che cambiano posizione (ad esempio tramite una VPN o guidando con dispositivi mobili, ecc.) durante una sessione raggiungono lo stesso limite e hanno lo stesso profilo di personalizzazione.
+* Stringif ha configurato le funzioni nella risposta del comando getLibraryInfo.
 
 ## Versione 2.11.0 - 13 giugno 2022
 
 **Nuove funzioni**
 
-* È ora possibile fornire esperienze personalizzate con maggiore precisione, condividendo ID visitatore tra app mobili e contenuti web per dispositivi mobili, e tra domini diversi. Consulta la sezione [documentazione dedicata](identity/id-sharing.md) per saperne di più.
-* Ora è possibile eseguire il rendering o l&#39;esecuzione di un array di proposizioni da [!DNL Adobe Target] nelle applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza dell’analisi. Consulta la sezione [documentazione dedicata](personalization/rendering-personalization-content.md#applypropositions) per saperne di più.
-* Sono state aggiunte ulteriori informazioni alla sezione `getLibraryInfo` Compresi i comandi disponibili e la configurazione finale per l&#39;istanza.
+* Ora puoi distribuire esperienze personalizzate in modo più accurato, condividendo gli ID visitatore tra le app mobili e i contenuti web per dispositivi mobili e tra più domini. Consulta la [documentazione dedicata](identity/id-sharing.md) per ulteriori informazioni.
+* Ora puoi eseguire il rendering o l’esecuzione di un array di proposte da [!DNL Adobe Target] nelle applicazioni a pagina singola, senza incrementare le metriche di analisi. Questo riduce gli errori di reporting e aumenta l’accuratezza delle analisi. Consulta la [documentazione dedicata](personalization/rendering-personalization-content.md#applypropositions) per ulteriori informazioni.
+* Sono state aggiunte ulteriori informazioni al `getLibraryInfo` comando che include i comandi disponibili e la configurazione finale per l&#39;istanza.
 
 **Correzioni e miglioramenti**
 
-* Sono state aggiornate le impostazioni dei cookie da utilizzare `sameSite="none"` e `secure` flag su [!DNL HTTPS] pagine.
-* È stato risolto un problema a causa del quale il contenuto personalizzato non veniva applicato correttamente quando si utilizzava il comando `eq` pseudo selettore.
-* È stato risolto un problema in cui `localTimezoneOffset` potrebbe non riuscire a convalidare l&#39;Experience Platform.
+* Sono state aggiornate le impostazioni dei cookie da utilizzare `sameSite="none"` e `secure` contrassegno attivo [!DNL HTTPS] pagine.
+* È stato risolto un problema a causa del quale il contenuto personalizzato non veniva applicato correttamente quando si utilizzava il `eq` pseudo selettore.
+* È stato risolto un problema a causa del quale `localTimezoneOffset` potrebbe non superare la convalida dell’Experience Platform.
 
 ## Versione 2.10.1 - 3 maggio 2022
 
@@ -92,90 +92,90 @@ Per le ultime note sulla versione dell&#39;estensione tag SDK per web, vedi [Not
 
 ## Versione 2.10.0 - 22 aprile 2022
 
-* Utilizza un iframe permanente per tutte le sincronizzazioni ID e le destinazioni dei segmenti.
-* È stato risolto un problema a causa del quale le proposizioni delle metriche unite venivano duplicate nel `sendEvent` risultato.
+* Utilizza un iframe persistente per tutte le sincronizzazioni ID e le destinazioni dei segmenti.
+* È stato risolto un problema a causa del quale le proposte di metriche unite venivano duplicate in `sendEvent` risultato.
 
 ## Versione 2.9.0 - 10 marzo 2022
 
-* È stato aggiunto il supporto per il tracciamento [!DNL control (default)] Esperienze Adobe Target.
-* Ottimizzazione degli eventi di visualizzazione e modifica per le applicazioni a pagina singola. La notifica di visualizzazione è ora inclusa con l’evento di visualizzazione cambiamento quando si esegue il rendering di esperienze personalizzate.
-* Avviso della console rimosso in caso di assenza `eventType` è presente.
-* È stato risolto un problema che causava la `propositions` è stata restituita solo da un `sendEvent` quando le esperienze sono state richieste o recuperate dalla cache. La `propositions` ora viene sempre definita come array.
+* Aggiunto supporto per il tracciamento [!DNL control (default)] Esperienze Adobe Target.
+* Sono stati ottimizzati gli eventi di modifica della visualizzazione per le applicazioni a pagina singola. La notifica di visualizzazione ora è inclusa nell’evento di modifica della visualizzazione quando vengono riprodotte esperienze personalizzate.
+* Avviso della console rimossa se non `eventType` è presente.
+* È stato risolto un problema a causa del quale `propositions` proprietà restituita solo da un `sendEvent` quando le esperienze sono state richieste o recuperate dalla cache. Il `propositions` La proprietà ora sarà sempre definita come un array.
 * È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito da Adobe Experience Edge.
-* È stato risolto un problema che impediva il conteggio degli eventi interattivi in Adobe Target. Questo problema è stato risolto aggiungendo il nome della visualizzazione a XDM in web.webPageDetails.viewName.
-* Correggere i collegamenti interrotti alla documentazione nei messaggi della console.
+* È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Per risolvere questo problema, aggiungi il nome della visualizzazione all’XDM in web.webPageDetails.viewName.
+* Correggi i collegamenti interrotti alla documentazione nei messaggi della console.
 
 ## Versione 2.8.0 - 19 gennaio 2022
 
-* Supporta i selettori DOM ombra per la personalizzazione.
-* Tipi di eventi di personalizzazione rinominati. (`display` e `click` diventare `decisioning.propositionDisplay` e `decisioning.propositionInteract`)
-* È stato risolto un problema a causa del quale le offerte HTML con tag script in linea aggiungevano due volte i tag script alla pagina anche se lo script veniva eseguito una sola volta.
+* Supporta i selettori DOM shadow per la personalizzazione.
+* Tipi di eventi di personalizzazione rinominati. (`display` e `click` diventa `decisioning.propositionDisplay` e `decisioning.propositionInteract`)
+* È stato risolto un problema a causa del quale le offerte HTML con tag di script in linea aggiungevano i tag di script due volte alla pagina, anche se lo script veniva eseguito una sola volta.
 
 ## Versione 2.7.0 - 26 ottobre 2021
 
-* Esporre informazioni aggiuntive da Experience Edge nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà può cambiare in quanto queste funzioni vengono attualmente distribuite come parte di una versione beta. Per ulteriori informazioni, consulta [Tracciamento degli eventi.](fundamentals/tracking-events.md)
+* Esponi informazioni aggiuntive da Experience Edge nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta. Per ulteriori informazioni, consulta [Tracciamento degli eventi.](fundamentals/tracking-events.md)
 
 ## Versione 2.6.4 - 7 settembre 2021
 
-* È stato risolto un problema che causava l’impostazione di azioni HTML Adobe Target applicate al `head` stavano sostituendo l&#39;intero `head` contenuto. Ora imposta le azioni di HTML applicate al `head` vengono modificati per aggiungere HTML.
+* È stato risolto un problema a causa del quale impostavano le azioni HTML Adobe Target applicabili al `head` sostituivano l&#39;intero `head` contenuto. Ora imposta le azioni HTML applicate al `head` vengono modificati in append HTML.
 
 ## Versione 2.6.3 - 16 agosto 2021
 
-* È stato risolto un problema a causa del quale gli oggetti non destinati all’uso pubblico venivano esposti tramite la promessa risolta dal `configure` comando.
+* È stato risolto un problema a causa del quale oggetti non destinati a uso pubblico venivano esposti tramite la promessa risolta da `configure` comando.
 
 ## Versione 2.6.2 - 4 agosto 2021
 
-* È stato risolto un problema che causava un avviso di elementi obsoleti di `result.decisions` (forniti `sendEvent` viene registrato nella console anche quando `result.decisions` non è stato effettuato l&#39;accesso alla proprietà. Non verrà registrato alcun avviso quando si accede al `result.decisions` , ma la proprietà rimane obsoleta.
+* È stato risolto un problema a causa del quale veniva visualizzato un avviso relativo alla rimozione di `result.decisions` (fornito da `sendEvent` ) verrebbe registrato nella console anche quando il `result.decisions` non era possibile accedere alla proprietà. Non verrà registrato alcun avviso quando si accede al `result.decisions` , ma la proprietà è ancora obsoleta.
 
 ## Versione 2.6.1 - 29 luglio 2021
 
-* È stato risolto un problema a causa del quale il rendering della personalizzazione per una visualizzazione di app a pagina singola senza contenuto di personalizzazione generava un errore e causava la restituzione della promessa dal `sendEvent` comando da rifiutare.
+* È stato risolto un problema a causa del quale il rendering della personalizzazione per una visualizzazione app a pagina singola priva di contenuto di personalizzazione generava un errore e causava la promessa restituita dal `sendEvent` da rifiutare.
 
 ## Versione 2.6.0 - 27 luglio 2021
 
-* Fornisce più contenuto di personalizzazione nel `sendEvent` promessa risolta, inclusi i token di risposta di Adobe Target. Quando il `sendEvent` viene eseguito un comando, viene restituita una promessa, che alla fine viene risolta con un `result` oggetto contenente le informazioni ricevute dal server. In precedenza, questo oggetto risultato includeva una proprietà denominata `decisions`. Questo `decisions` La proprietà è stata dichiarata obsoleta. Una nuova proprietà, `propositions`è stato aggiunto . Questa nuova proprietà consente ai clienti di accedere a più contenuti di personalizzazione, tra cui [token di risposta](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
+* Fornisce ulteriori contenuti di personalizzazione nel `sendEvent` promessa risolta, inclusi i token di risposta di Adobe Target. Quando `sendEvent` viene eseguito il comando, viene restituita una promessa che viene infine risolta con un `result` oggetto contenente informazioni ricevute dal server. In precedenza, questo oggetto risultato includeva una proprietà denominata `decisions`. Questo `decisions` La proprietà è stata dichiarata obsoleta. Una nuova proprietà, `propositions`, è stato aggiunto. Questa nuova proprietà consente ai clienti di accedere a più contenuti di personalizzazione, tra cui [token di risposta](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
 
-## Versione 2.5.0 - giugno 2021
+## Versione 2.5.0 - Giugno 2021
 
 * È stato aggiunto il supporto per le offerte di personalizzazione di reindirizzamento.
-* Le larghezze e le altezze del riquadro di visualizzazione raccolte automaticamente con valori negativi non verranno più inviate al server.
-* Quando un evento viene annullato restituendo `false` da `onBeforeEventSend` callback, ora viene registrato un messaggio.
+* Le larghezze e le altezze dei riquadri di visualizzazione raccolti automaticamente che sono valori negativi non verranno più inviate al server.
+* Quando un evento viene annullato restituendo `false` da un `onBeforeEventSend` callback, ora viene registrato un messaggio.
 * È stato risolto un problema a causa del quale parti specifiche di dati XDM destinate a un singolo evento venivano incluse in più eventi.
 
-## Versione 2.4.0 - marzo 2021
+## Versione 2.4.0 - Marzo 2021
 
-* L&#39;SDK può ora essere [installato come pacchetto npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=it).
-* È stato aggiunto il supporto per un `out` opzione quando [configurazione del consenso predefinito](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), che rilascia tutti gli eventi finché non viene ricevuto il consenso (il `pending` mette in coda gli eventi e li invia una volta ricevuto il consenso).
-* La [callback onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) può ora essere utilizzato per impedire l’invio di un evento.
-* Ora utilizza un gruppo di campi di schema XDM anziché `meta.personalization` quando si inviano eventi relativi a contenuti personalizzati di cui si sta eseguendo il rendering o si fa clic su di essi.
-* La [getIdentity, comando](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) ora restituisce l&#39;ID della regione perimetrale accanto all&#39;identità.
+* Ora l’SDK può essere [installato come pacchetto npm](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=it).
+* È stato aggiunto il supporto per `out` opzione quando [configurazione del consenso predefinito](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), che rilascia tutti gli eventi fino alla ricezione del consenso (il `pending` option accoda gli eventi e li invia dopo aver ricevuto il consenso).
+* Il [callback onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) ora può essere utilizzato per impedire l’invio di un evento.
+* Ora utilizza un gruppo di campi dello schema XDM invece di `meta.personalization` durante l’invio di eventi relativi a contenuti personalizzati di cui viene eseguito il rendering o su cui si fa clic.
+* Il [comando getIdentity](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) ora restituisce l’ID dell’area edge insieme all’identità.
 * Gli avvisi e gli errori ricevuti dal server sono stati migliorati e vengono gestiti in modo più appropriato.
-* È stato aggiunto il supporto per [Standard Adobe Consent 2.0](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
-* Quando vengono ricevute, le preferenze di consenso vengono hashing e memorizzate nell’archivio locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Platform Edge Network. Se raccogli le preferenze di consenso, ti invitiamo a chiamare `setConsent` a ogni caricamento di pagina.
-* Due [ganci di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`, sono stati aggiunti.
-* Correzione bug: Gli eventi di notifica dell’interazione di personalizzazione conterrebbero informazioni duplicate sulla stessa attività quando un utente passava a una nuova visualizzazione di app a pagina singola, tornava alla visualizzazione originale e faceva clic su un elemento idoneo alla conversione.
-* Correzione bug: Se il primo evento inviato dall’SDK era `documentUnloading` impostato su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) viene utilizzato per inviare l&#39;evento, con conseguente errore relativo a un&#39;identità non stabilita.
+* È stato aggiunto il supporto per [Consenso Adobe 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Platform Edge Network. Se raccogli le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
+* Due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`, sono state aggiunte.
+* Correzione bug: gli eventi di notifica dell’interazione di personalizzazione contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
+* Correzione bug: se il primo evento inviato dall’SDK aveva `documentUnloading` imposta su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l’evento, causando un errore relativo a un’identità non stabilita.
 
 ## Versione 2.3.0 - novembre 2020
 
-* È stato aggiunto il supporto nonce per consentire criteri di sicurezza dei contenuti più rigorosi.
-* È stato aggiunto il supporto per la personalizzazione per le applicazioni a pagina singola.
-* È stata migliorata la compatibilità con altri codici JavaScript on-page che potrebbero essere sovrascritti `window.console` API.
-* Correzione bug: `sendBeacon` non è stato utilizzato quando `documentUnloading` è impostato su `true` o quando i clic sul collegamento sono stati tracciati automaticamente.
-* Correzione bug: Un collegamento non viene tracciato automaticamente se l’elemento di ancoraggio contiene contenuto HTML.
-* Correzione bug: Alcuni errori del browser contenenti una sola lettura `message` la proprietà non è stata gestita in modo appropriato e si è verificato un errore diverso.
-* Correzione bug: L&#39;esecuzione dell&#39;SDK all&#39;interno di un iframe genererebbe un errore se la pagina HTML dell&#39;iframe proveniva da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
+* È stato aggiunto il supporto nonce per consentire criteri di sicurezza dei contenuti più severi.
+* È stato aggiunto il supporto alla personalizzazione per le applicazioni a pagina singola.
+* È stata migliorata la compatibilità con altri codici JavaScript su pagina che potrebbero essere in sovrascrittura `window.console` API.
+* Correzione bug: `sendBeacon` non veniva utilizzato quando `documentUnloading` è stato impostato su `true` o quando i clic dei collegamenti venivano tracciati automaticamente.
+* Correzione bug: se l’elemento di ancoraggio conteneva contenuto HTML, non veniva tracciato automaticamente alcun collegamento.
+* Correzione bug: alcuni errori del browser contenenti un valore di sola lettura `message` proprietà non sono state gestite in modo appropriato, causando un errore diverso esposto al cliente.
+* Correzione bug: l’esecuzione dell’SDK all’interno di un iframe generava un errore se la pagina HTML dell’iframe proveniva da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
 
 ## Versione 2.2.0 - ottobre 2020
 
-* Correzione bug: L&#39;oggetto Opt-in impediva ad Alloy di effettuare chiamate quando `idMigrationEnabled` è `true`.
-* Correzione bug: Presta attenzione alle richieste che dovrebbero restituire le offerte di personalizzazione per evitare un problema di sfarfallio.
+* Correzione bug: l&#39;oggetto Opt-in impediva ad Alloy di effettuare chiamate quando `idMigrationEnabled` è `true`.
+* Correzione bug: per evitare problemi di sfarfallio, rendi Alloy consapevole delle richieste che devono restituire offerte di personalizzazione.
 
-## Versione 2.1.0 - agosto 2020
+## Versione 2.1.0 - Agosto 2020
 
-* Rimuovi `syncIdentity` e supportano il passaggio di tali ID nel `sendEvent` comando.
+* Rimuovi il `syncIdentity` e supportare il passaggio di tali ID nel `sendEvent` comando.
 * Supporto dello standard di consenso IAB 2.0.
-* Supporto per il passaggio di ID aggiuntivi nella `setConsent` comando.
-* Supporto per ignorare i `datasetId` in `sendEvent` comando.
-* Supporta i monitor della lega ([Leggi tutto](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
-* Pass `environment: browser` nei dettagli di implementazione dati contestuali.
+* È supportato il passaggio di ID aggiuntivi nella `setConsent` comando.
+* Supporto per la sostituzione di `datasetId` nel `sendEvent` comando.
+* Supporto di monitor in lega ([Ulteriori informazioni](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Superato `environment: browser` nei dettagli sull’implementazione, dati contestuali.

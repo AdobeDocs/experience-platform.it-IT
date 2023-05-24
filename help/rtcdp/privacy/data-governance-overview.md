@@ -6,13 +6,13 @@ exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Governance dei dati in Real-Time CDP
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) riunisce dati provenienti da più sistemi aziendali, consentendo agli addetti al marketing di identificare, comprendere e coinvolgere meglio i propri clienti. Questi dati possono essere soggetti a restrizioni d’uso definite dalla tua organizzazione o da normative legali. Pertanto, è importante assicurarsi che Real-Time CDP sia conforme ai criteri di utilizzo durante la gestione dei dati.
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP) riunisce dati provenienti da più sistemi aziendali, consentendo agli addetti al marketing di identificare, comprendere e coinvolgere meglio i propri clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. Pertanto, è importante assicurarsi che Real-Time CDP sia conforme ai criteri di utilizzo durante la gestione dei dati.
 
 La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave in Real-Time CDP, consentendoti di definire i criteri di utilizzo, classificare i dati in base a tali criteri e verificare la presenza di violazioni dei criteri durante l’esecuzione di determinate azioni di marketing.
 

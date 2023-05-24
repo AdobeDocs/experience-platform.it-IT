@@ -14,7 +14,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe Experience Platform Edge Network utilizzando una o più delle tre opzioni seguenti:
 
@@ -29,7 +29,7 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 
 ## Prerequisiti
 
-* Adobe Experience Platform Collection Enterprise (Contatta il team del tuo account Adobe per informazioni sui prezzi)
+* Adobe Experience Platform Collection Enterprise (contatta il team del tuo account Adobe per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
 * Adobe Experience Platform Web SDK o Mobile SDK, configurato per inviare i dati a Edge Network
 * Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
@@ -54,7 +54,7 @@ Per ulteriori informazioni sugli schemi, consulta la [guida del sistema Experien
 
 ## Creare una proprietà di inoltro degli eventi
 
-In **[!UICONTROL Tag]** area di lavoro, creare una proprietà di tipo **[!UICONTROL Bordo]**.
+In **[!UICONTROL Tag]** workspace, crea una proprietà di tipo **[!UICONTROL Bordo]**.
 
 1. Seleziona **[!UICONTROL Nuova proprietà]**.
 
@@ -65,13 +65,13 @@ In **[!UICONTROL Tag]** area di lavoro, creare una proprietà di tipo **[!UICONT
 1. Seleziona **[!UICONTROL Salva]**.
 
 Dopo aver creato la proprietà, passa alla scheda **[!UICONTROL Ambienti]** per la nuova proprietà e annota
-gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel datastream è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente dall’ **[!UICONTROL Ambienti]** e incollalo durante la creazione di un datastream. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
+gli ID dell’ambiente. Se l’organizzazione Adobe utilizzata nel flusso di dati è diversa dall’organizzazione Adobe utilizzata nell’inoltro degli eventi, puoi copiare l’ID ambiente da **[!UICONTROL Ambienti]** e incollarlo durante la creazione di un flusso di dati. In alternativa, è possibile selezionare l’ambiente da un menu a discesa.
 
 ## Creare un flusso di dati
 
 Per creare il flusso di dati in Adobe Experience Platform, utilizza l’ID ambiente generato quando hai creato la proprietà di inoltro degli eventi.
 
-1. Seleziona **[!UICONTROL Datastreams]** nella navigazione a sinistra.
+1. Seleziona **[!UICONTROL Flussi di dati]** nel menu di navigazione a sinistra.
 
 1. Assegna un nome alla configurazione e fornisci una descrizione facoltativa.
 La descrizione è utile per identificare le configurazioni, qualora ne siano elencate diverse.
@@ -82,7 +82,7 @@ La descrizione è utile per identificare le configurazioni, qualora ne siano ele
 
 Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad altri prodotti Adobe.
 
-1. In **[!UICONTROL Datastreams]** workspace, seleziona la proprietà creata.
+1. In **[!UICONTROL Flussi di dati]** Workspace, seleziona la proprietà creata.
 
 1. Seleziona l&#39;ambiente di sviluppo, di produzione oppure di gestione temporanea.
 
@@ -96,11 +96,11 @@ Quindi configura Edge Network per inviare i dati all’inoltro di eventi e ad al
 
 Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
-## Configura l’estensione Platform Web SDK per inviare dati al datastream creato in precedenza
+## Configura l’estensione Platform Web SDK per inviare dati allo stream di dati creato in precedenza
 
-Crea la tua proprietà in **[!UICONTROL Tag]** area di lavoro, quindi passare a **[!UICONTROL Estensioni]** e seleziona l&#39;estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
+Crea la proprietà in **[!UICONTROL Tag]** , quindi vai a **[!UICONTROL Estensioni]** e seleziona l’estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
 
-Consulta la sezione [Documentazione sull&#39;estensione dell&#39;SDK per web](../../extensions/client/sdk/overview.md) per informazioni dettagliate sulle opzioni di configurazione.
+Consulta la [Documentazione dell’estensione Web SDK](../../extensions/client/sdk/overview.md) per informazioni dettagliate sulle opzioni di configurazione.
 
 ## Creare una regola di tag per inviare dati all’SDK per web di Platform
 

@@ -5,7 +5,7 @@ exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -38,7 +38,7 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 
 * Questa versione contiene la versione più recente di Visitor 5.3.0, con i seguenti nuovi aggiornamenti:
 
-   * Algoritmo aggiornato per generare ECID locale
+   * È stato aggiornato l’algoritmo per generare l’ECID locale
    * Opt-in più recente con `Secure` e `SameSite` flag per il cookie di privacy
    * Risoluzione di un problema del browser Firefox quando una pagina viene caricata in un iFrame secondario
 

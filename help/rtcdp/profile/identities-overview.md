@@ -16,7 +16,7 @@ Adobe Experience Platform [!DNL Identity Service] consente di ottenere una visio
 
 Ora, invece di cinque clienti distinti che interagiscono con il tuo marchio attraverso cinque canali diversi, puoi vedere che si tratta dello stesso cliente e assicurarti che essi ricevano un’esperienza coerente, personalizzata e rilevante tramite ogni interazione. Man mano che si scoprono ulteriori informazioni sul cliente (ad esempio, un browser anonimo del sito web decide di registrarsi a un account e di effettuare l’accesso), tali informazioni vengono unite insieme e l’immagine del cliente diventa sempre più chiara.
 
-## Spazi dei nomi delle identità
+## Spazio dei nomi delle identità
 
 Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service] e fungono da indicatori che forniscono ulteriore contesto alle identità dei clienti. Un esempio di spazio dei nomi ID comunemente utilizzato è &quot;E-mail&quot;, dove l’utilizzo dello stesso indirizzo e-mail su più siti web consente di unire diverse identità, ciascuna con un ID cliente univoco, come appartenenti in realtà allo stesso cliente. [!DNL Experience Platform] consente di utilizzare gli spazi dei nomi ID per cercare singoli profili all’interno dell’interfaccia utente. Per ulteriori informazioni sulla visualizzazione dei profili, consulta [panoramica sulla navigazione del profilo](profile-browse.md). Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md).
 

@@ -1,8 +1,9 @@
 ---
-title: Utilizza il sondaggio di auto-identificazione per generare il tuo profilo personale Experience Platform
-description: Scopri come utilizzare l’interfaccia utente del sondaggio di identificazione automatica per ricevere contenuti pertinenti in base alle funzioni del lavoro e agli obiettivi correlati.
-badge: "Beta"
-source-git-commit: 30fdad7f84a49a8e0db6fdf6571d1742de53ac2d
+title: Utilizza il sondaggio di auto-identificazione per creare il tuo profilo personale Experience Platform
+description: Scopri come utilizzare l’interfaccia utente di sondaggio per l’identificazione automatica per ricevere contenuti rilevanti in base alle funzioni lavorative e agli obiettivi correlati.
+badge: Beta
+exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 1%
@@ -13,83 +14,83 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Il sondaggio di identificazione automatica è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+>L’indagine di auto-identificazione è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
 
-Il sondaggio di identificazione automatica è un breve questionario presentato nella home page dell’interfaccia utente di Adobe Experience Platform. È possibile compilare il sondaggio per fornire informazioni sulle funzioni del lavoro e sugli obiettivi generali. Queste informazioni vengono quindi utilizzate per allineare meglio le guide all’interno del prodotto e infine per fornire contenuti più rilevanti per i tuoi obiettivi.
+Il sondaggio di auto-identificazione è un breve questionario presentato nella home page dell’interfaccia utente di Adobe Experience Platform. È possibile compilare il sondaggio per fornire informazioni sulle funzioni lavorative e sugli obiettivi generali. Queste informazioni vengono quindi utilizzate per allineare meglio le guide interne al prodotto e, infine, per fornire contenuti più rilevanti per i tuoi obiettivi.
 
-Questo documento fornisce informazioni su come utilizzare il sondaggio di identificazione automatica nell’interfaccia utente di Platform per ricevere contenuti pertinenti in base a obiettivi e attività, nonché su come riconfigurare gli attributi del profilo personale utilizzando l’interfaccia utente.
+Questo documento fornisce informazioni su come utilizzare il sondaggio di auto-identificazione nell’interfaccia utente di Platform per ricevere contenuti rilevanti in base agli obiettivi e alle attività, nonché su come riconfigurare gli attributi del profilo personale utilizzando l’interfaccia utente.
 
-Per ulteriori informazioni su Adobe Experience Platform, consulta la sezione [Panoramica di Experience Platform](home.md).
+Per ulteriori informazioni su Adobe Experience Platform, leggere [Panoramica Experience Platform](home.md).
 
-## Sondaggio di identificazione automatica nell’interfaccia utente di Platform
+## Sondaggio di auto-identificazione nell’interfaccia utente di Platform
 
-Il prompt del sondaggio di identificazione automatica viene visualizzato in basso a destra della home page dell’interfaccia utente di Platform al momento dell’accesso.
+All’accesso, la richiesta di sondaggio di identificazione automatica viene visualizzata in basso a destra nella home page dell’interfaccia utente di Platform.
 
 Per iniziare il sondaggio, seleziona **[!UICONTROL Inizio]**.
 
-![La home page dell’interfaccia utente di Platform con il messaggio toast che ti chiede di avviare il sondaggio di identificazione automatica.](./images/survey/survey-prompt.png)
+![La home page dell’interfaccia utente di Platform con il messaggio popup che richiede di avviare il sondaggio di identificazione automatica.](./images/survey/survey-prompt.png)
 
-Per la prima domanda del sondaggio, seleziona la funzione che meglio descrive il tuo lavoro.
+Per la prima domanda di sondaggio, selezionare la funzione che meglio descrive il proprio lavoro.
 
 Opzioni disponibili:
 
 * Amministrazione
-* Ingegneria
+* Progettazione
 * Privacy e governance
 * Marketing
 * Altro
 
 >[!NOTE]
 >
->È possibile selezionare più funzioni dall’elenco delle opzioni. Se si seleziona [!UICONTROL Altro], ti verrà richiesto di fornire dettagli sull&#39;obiettivo.
+>È possibile selezionare più di una funzione dall&#39;elenco delle opzioni. Se si seleziona [!UICONTROL Altro], ti verrà chiesto di fornire dettagli sull’obiettivo.
 
-Per continuare, selezionare le funzioni che descrivono al meglio il lavoro corrente, quindi selezionare **[!UICONTROL Successivo]**.
+Per continuare, seleziona le funzioni che meglio descrivono il lavoro corrente, quindi fai clic su **[!UICONTROL Successivo]**.
 
-![Il sondaggio di identificazione automatica con due funzioni di lavoro selezionate.](./images/survey/select-functions.png)
+![Il sondaggio di identificazione automatica con due funzioni lavorative selezionate.](./images/survey/select-functions.png)
 
-Quindi, seleziona gli obiettivi specifici più adatti al tuo lavoro.
+Quindi, seleziona gli obiettivi specifici che si applicano meglio al tuo lavoro.
 
 L&#39;elenco degli obiettivi disponibili comprende:
 
 * Creare e gestire gli utenti
 * Assegnare ruoli, autorizzazioni e profili di prodotto
-* Gestione di utilizzo delle licenze, sandbox e avvisi
-* Configurare il sistema per l’inserimento dei dati
+* Gestire l’utilizzo delle licenze, le sandbox e gli avvisi
+* Configurare il sistema per l’acquisizione dei dati
 * Modellare la struttura dati della mia organizzazione
-* Eseguire query, filtrare e ottimizzare i dati per generare informazioni
-* Configurare i criteri di consenso e dati
-* Governance dei dati e conformità in materia di privacy
+* Esegui query, filtra e ottimizza i dati per generare insights
+* Configurare il consenso e le policy dei dati
+* Governance dei dati e conformità alla privacy
 * Sviluppare strategie di marketing
 * Creare, gestire e segmentare i tipi di pubblico
-* Configurare dashboard per analizzare l’impatto aziendale
-* Attivare i dati nelle destinazioni per il targeting a valle
+* Configurare dashboard per analizzare l’impatto sulle aziende
+* Attiva i dati nelle destinazioni per il targeting a valle
 
 Al termine, seleziona **[!UICONTROL Invia]**.
 
-![Il sondaggio di identificazione automatica presenta un elenco di obiettivi tra cui è possibile selezionare.](./images/survey/select-objectives.png)
+![Il sondaggio di identificazione automatica che mostra un elenco di obiettivi selezionabili.](./images/survey/select-objectives.png)
 
-Completato il sondaggio di identificazione automatica, seleziona **[!UICONTROL Fine]**.
+Una volta completato il sondaggio di identificazione automatica, seleziona **[!UICONTROL Fine]**.
 
-![La fase finale di conferma del sondaggio di auto-identificazione.](./images/survey/survey-complete.png)
+![Fase finale di conferma del sondaggio di auto-identificazione.](./images/survey/survey-complete.png)
 
 >[!NOTE]
 >
->Gli obiettivi e le raccomandazioni (se presenti) cambieranno in base alle funzioni selezionate del lavoro.
+>Gli obiettivi e le raccomandazioni (se presenti) cambieranno in base alle funzioni di lavoro selezionate.
 
-## Aggiornare le risposte al sondaggio
+## Aggiorna le risposte al sondaggio
 
-Aggiornare le funzioni e gli oggetti del lavoro utilizzando il menu delle preferenze di Experience Cloud. Per accedere al menu delle preferenze, seleziona l’icona del profilo nella navigazione in alto e seleziona **[!UICONTROL Preferenze]**.
+Aggiorna le funzioni e gli oggetti del processo utilizzando il menu delle preferenze di Experience Cloud. Per accedere al menu delle preferenze, seleziona l’icona del profilo nella navigazione superiore, quindi fai clic su **[!UICONTROL Preferenze]**.
 
 ![La home page dell’interfaccia utente di Platform con l’icona del profilo e i pulsanti delle preferenze selezionati.](./images/survey/preferences.png)
 
-Nella sezione [!UICONTROL Generale] nel menu delle preferenze del profilo, seleziona **[!UICONTROL Aggiornare le funzioni e gli obiettivi del lavoro]**.
+Quindi, nella [!UICONTROL Generale] sezione del menu delle preferenze del profilo, seleziona **[!UICONTROL Aggiorna le tue funzioni lavorative e i tuoi obiettivi]**.
 
-![Sezione generale della pagina delle preferenze del profilo dell’interfaccia utente di Platform](./images/survey/update.png)
+![La sezione generale della pagina delle preferenze del profilo dell’interfaccia utente di Platform](./images/survey/update.png)
 
-Viene visualizzato il sondaggio di identificazione automatica, che consente di riconfigurare le risposte e aggiornare il profilo.
+Viene visualizzato un sondaggio di identificazione automatica che consente di riconfigurare le risposte e aggiornare il profilo.
 
-![Nella pagina delle preferenze del profilo dell’interfaccia utente della piattaforma viene visualizzato il sondaggio di identificazione automatica per consentire a un utente di aggiornare il proprio profilo personale.](./images/survey/new-survey.png)
+![Nella pagina delle preferenze del profilo dell’interfaccia utente di Platform viene visualizzato il sondaggio di identificazione automatica che consente a un utente di aggiornare il proprio profilo personale.](./images/survey/new-survey.png)
 
 ## Passaggi successivi
 
-Leggendo questo documento, ora hai inviato e aggiornato informazioni sulle funzioni e sugli obiettivi del tuo lavoro per ricevere contenuti più rilevanti quando utilizzi l’interfaccia utente di Platform. Per ulteriori informazioni sull’interfaccia utente di Platform, consulta la sezione [Panoramica di Experience Platform](home.md).
+Dopo aver letto questo documento, hai inviato e aggiornato le informazioni relative alle funzioni lavorative e agli obiettivi, per ricevere contenuti più rilevanti quando utilizzi l’interfaccia utente di Platform. Per ulteriori informazioni sull’interfaccia utente di Platform, consulta [Panoramica Experience Platform](home.md).

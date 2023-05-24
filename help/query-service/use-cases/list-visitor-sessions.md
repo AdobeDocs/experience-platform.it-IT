@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;experienceevent query;experienceevent query;Experience Event query;
 title: Elencare le visualizzazioni di pagina di un utente
 description: Scopri come scrivere query che utilizzano Eventi esperienza per creare un elenco delle ultime 100 pagine utilizzate da un utente specifico.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%

@@ -13,7 +13,7 @@ ht-degree: 64%
 
 # Tag unificati (beta){#administrative-tags}
 
-* [Panoramica dei tag unificati (versione beta)](overview.md)
+* [Panoramica sui tag unificati (versione beta)](overview.md)
 * Interfaccia utente tag unificata {#ui}
    * [Gestione dei tag](ui/managing-tags.md)
    * [Categorie di tag](ui/tags-categories.md)

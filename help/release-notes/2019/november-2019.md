@@ -8,7 +8,7 @@ exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -111,7 +111,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] consente ai data scienti
 | Funzione | Descrizione |
 | -----------| ---------- |
 | Accesso ai dati tramite [!DNL Platform] SDK | Ricette e notebook di avvio predefiniti in [!DNL Python] ora utilizza [!DNL Platform] SDK per accedere ai dati. |
-| Supporto per sandbox | Supporto per le future funzionalità sandbox (attualmente in versione beta), inclusa la possibilità di isolare blocchi appunti e ricette in sandbox di sviluppo o produzione. Consulta la [panoramica sulle sandbox](../../sandboxes/home.md) per ulteriori informazioni. |
+| Supporto per sandbox | Supporto per le future funzionalità sandbox (attualmente in versione beta), inclusa la possibilità di isolare blocchi appunti e ricette in sandbox di sviluppo o produzione. Per ulteriori informazioni, consulta la [panoramica delle sandbox](../../sandboxes/home.md). |
 
 Per ulteriori informazioni, vedere [Panoramica di Data Science Workspace](../../data-science-workspace/home.md).
 

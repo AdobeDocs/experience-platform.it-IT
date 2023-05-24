@@ -11,11 +11,11 @@ ht-degree: 90%
 
 # Note sulla versione dell’estensione Adobe Analytics
 
-Di seguito è riportato un elenco di note sulla versione per l’estensione tag di Adobe Analytics.
+Di seguito è riportato un elenco delle note sulla versione dell’estensione tag Adobe Analytics.
 
 >[!NOTE]
 >
->L’estensione tag di Analytics viene spesso aggiornata in risposta agli aggiornamenti apportati al [Libreria JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it). Fai riferimento a [Note sulla versione di AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it) per informazioni dettagliate sulle versioni specifiche menzionate di seguito.
+>L’estensione tag Analytics, se spesso aggiornata in risposta agli aggiornamenti del [Libreria JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it). Consulta la sezione [Note sulla versione di AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it) per informazioni dettagliate sulle versioni specifiche menzionate di seguito.
 
 ## 23 settembre 2022
 
@@ -23,8 +23,8 @@ Di seguito è riportato un elenco di note sulla versione per l’estensione tag 
 
 **Funzioni**:
 
-* Aggiornamento ad AppMeasurement v2.23.0.
-* L&#39;estensione ora può raccogliere entropia elevata [suggerimenti client agente utente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) come supportato dall’ultima versione di AppMeasurement.
+* Aggiornato ad AppMeasurement v2.23.0.
+* L&#39;estensione può ora raccogliere entropia elevata [user-agent client hints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) come supportato dall’ultima versione di AppMeasurement.
 
 ## 28 febbraio 2022
 
@@ -40,7 +40,7 @@ Di seguito è riportato un elenco di note sulla versione per l’estensione tag 
 
 **Correzioni di bug**:
 
-* È stato aggiornato AppMeasurement alla versione v2.22.3.
+* AppMeasurement è stato aggiornato alla versione v2.22.3.
 
 ## 16 settembre 2021
 
@@ -48,8 +48,8 @@ Di seguito è riportato un elenco di note sulla versione per l’estensione tag 
 
 **Correzioni di bug**:
 
-* È stato aggiornato AppMeasurement alla versione v2.22.2.
-* BuildInfo.environment è stato rimosso
+* AppMeasurement è stato aggiornato alla versione v2.22.2.
+* BuildInfo.environment obsoleto rimosso
 
 ## 24 agosto 2021
 
@@ -57,8 +57,8 @@ Di seguito è riportato un elenco di note sulla versione per l’estensione tag 
 
 **Correzioni di bug**:
 
-* Aggiornato [AppMeasurement alla versione 2.2.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it).
-* È stato aggiornato fallback linkName per eseguire il mirroring della logica Activity Map invece di utilizzare innerHTML.
+* Aggiornato [AppMeasurement alla versione v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it).
+* LinkName di fallback aggiornato per riflettere la logica Activity Map anziché utilizzare innerHTML.
 
 ## 6 agosto 2020
 
@@ -172,7 +172,7 @@ Di seguito è riportato un elenco di note sulla versione per l’estensione tag 
 * Aggiornamento dell&#39;estensione Adobe Analytics per supportare DIL 9.2 per Audience Manager
 
 * Estensione aggiornata per supportare [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it#version-2.15.0)
-* È stata rimossa la seguente casella di controllo perché non è più supportata: &quot;Non allegare la destinazione che pubblica IFRAME al DOM o alle destinazioni di attivazione&quot;
+* È stata rimossa la seguente casella di controllo perché non è più supportata: &quot;Do not attach the destination publishing IFRAME to the DOM or fire destinations&quot;
 
 ## 4 giugno 2019
 

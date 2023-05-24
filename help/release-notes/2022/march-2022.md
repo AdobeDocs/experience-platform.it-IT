@@ -5,7 +5,7 @@ exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -84,8 +84,8 @@ Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (rec
 | Funzione | Descrizione |
 | --- | --- |
 | Widget profili non segmentati | Il widget fornisce il numero totale di tutti i profili non collegati a nessun segmento. Il numero generato è preciso all’ultima istantanea e rappresenta l’opportunità di attivazione del profilo nell’organizzazione. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
-| Widget tendenza profili non segmentati | Questo widget fornisce un’illustrazione del grafico a linee per il numero di profili che non sono collegati a nessun segmento in un determinato periodo di tempo. La tendenza può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
-| Widget Profili non segmentati per identità | Questo widget categorizza il numero totale di profili non segmentati in base al loro identificatore univoco. I dati vengono visualizzati in un grafico a barre. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
+| Widget tendenza profili non segmentati | Questo widget fornisce un grafico a linee illustrativo del numero di profili non collegati ad alcun segmento in un dato periodo di tempo. La tendenza può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
+| Widget Profili non segmentati per identità | Questo widget classifica il numero totale di profili non segmentati in base al loro identificatore univoco. I dati vengono visualizzati in un grafico a barre. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
 | Widget per profili di identità singoli | Questo widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che crea la loro identità, tramite e-mail o ECID. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
@@ -100,7 +100,7 @@ Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni
 
 | Funzione | Descrizione |
 | --- | --- |
-| Widget conteggio destinazioni | Il widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e distribuito all’interno del sistema. Questo numero include sia destinazioni attive che inattive. Consulta la [documentazione widget standard destinazioni](../../dashboards/guides/destinations.md#standard-widgets) per ulteriori informazioni. |
+| Widget conteggio destinazioni | Il widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e distribuito all’interno del sistema. Questo numero include sia le destinazioni attive che quelle inattive. Consulta la [documentazione widget standard destinazioni](../../dashboards/guides/destinations.md#standard-widgets) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
 

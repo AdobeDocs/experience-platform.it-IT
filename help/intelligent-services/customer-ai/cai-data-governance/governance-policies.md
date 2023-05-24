@@ -3,13 +3,13 @@ keywords: Experience Platform;guida utente;ia clienti;argomenti popolari;control
 feature: Customer AI
 title: Criteri di governance per IA per l’analisi dei clienti
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati delle esperienze raccolte.
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
-
 
 # Criteri di governance
 

@@ -215,7 +215,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del gruppo di camp
 }
 ```
 
-## Creare un gruppo di campi {#create}
+## Crea un gruppo di campi {#create}
 
 Puoi definire un gruppo di campi personalizzato sotto `tenant` effettuando una richiesta POST.
 

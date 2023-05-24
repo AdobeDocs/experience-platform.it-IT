@@ -4,13 +4,13 @@ solution: Experience Platform
 feature: Customer AI
 title: Controllo dell’accesso per IA per l’analisi dei clienti
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi per IA per l’analisi dei clienti.
-source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
+exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
 
 ---
-
 
 # Controllo dell’accesso basato su attributi
 

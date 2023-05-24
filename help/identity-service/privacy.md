@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;argomenti popolari
-title: Elaborazione della richiesta di privacy nel servizio Identity
-description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
+title: Elaborazione delle richieste di privacy nel servizio Identity
+description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per il servizio Identity.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -10,49 +10,49 @@ ht-degree: 0%
 
 ---
 
-# Elaborazione della richiesta di privacy in [!DNL Identity Service]
+# Elaborazione della richiesta di accesso a dati personali in [!DNL Identity Service]
 
-Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti per accedere, rinunciare alla vendita o cancellare i propri dati personali come delineato dalle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD) e [!DNL California Consumer Privacy Act] (CCPA).
+Adobe Experience Platform [!DNL Privacy Service] tratta le richieste dei clienti di accedere ai propri dati personali, di rinunciarvi o di cancellarli, come definito dalle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD) e [!DNL California Consumer Privacy Act] (CCPA)
 
-Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Identity Service] in Adobe Experience Platform.
+Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per [!DNL Identity Service] in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di accesso a dati personali per l’archivio dati di Identity in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-Time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati nel lago dati](../catalog/privacy.md) e alla guida [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di accesso ai dati personali per l’archivio dati di identità in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-Time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati personali nel data lake](../catalog/privacy.md) e alla guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introduzione
 
-Si consiglia di avere una comprensione operativa dei seguenti elementi [!DNL Experience Platform] servizi prima di leggere questa guida:
+È consigliabile avere una buona conoscenza dei seguenti aspetti [!DNL Experience Platform] servizi prima di leggere questa guida:
 
-* [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
-* [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
-* [[!DNL Real-Time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Privacy Service]](../privacy-service/home.md): gestisce le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o eliminarli nelle applicazioni Adobe Experience Cloud.
+* [[!DNL Identity Service]](../identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
+* [[!DNL Real-Time Customer Profile]](home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi delle identità** fornire un contesto ai valori d&#39;identità collegandoli al loro sistema d&#39;origine. Uno spazio dei nomi può rappresentare un concetto generico, ad esempio un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] collega i dati di identità del cliente tra sistemi e dispositivi. [!DNL Identity Service] utilizza **spazi dei nomi di identità** fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, come un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
-Identity Service conserva un archivio di namespace di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; ed &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
+Identity Service gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle sue esigenze specifiche.
 
-Per ulteriori informazioni sugli spazi dei nomi delle identità in [!DNL Experience Platform], vedi [panoramica dello spazio dei nomi identità](../identity-service/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi di identità in [!DNL Experience Platform], vedere [panoramica dello spazio dei nomi delle identità](../identity-service/namespaces.md).
 
 ## Invio di richieste {#submit}
 
-Le sezioni seguenti illustrano come effettuare richieste di accesso a dati personali per [!DNL Identity Service] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, si consiglia vivamente di rivedere il [API Privacy Service](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione completa sui passaggi per l’invio di un processo relativo alla privacy, inclusa la modalità di formattazione corretta dei dati utente nei payload della richiesta.
+Le sezioni seguenti descrivono come effettuare richieste di accesso a dati personali per [!DNL Identity Service] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, è consigliabile rivedere [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione relativa ai passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati utente nei payload delle richieste.
 
 ### Mediante l’API
 
-Quando crei richieste di lavoro nell&#39;API, qualsiasi ID fornito in `userIDs` deve utilizzare un `namespace` e `type`. Una valida [spazio dei nomi identità](#namespaces) riconosciuti [!DNL Identity Service] devono essere previste `namespace` , mentre `type` deve `standard` o `unregistered` (per namespace standard e personalizzati, rispettivamente).
+Durante la creazione di richieste di lavoro nell’API, tutti gli ID forniti in `userIDs` deve utilizzare uno specifico `namespace` e `type`. Un valore valido [spazio dei nomi delle identità](#namespaces) riconosciuto da [!DNL Identity Service] deve essere fornito per `namespace` valore, mentre il `type` deve essere `standard` o `unregistered` (rispettivamente per spazi dei nomi standard e personalizzati).
 
-Inoltre, il `include` la matrice del payload della richiesta deve includere i valori di prodotto per i diversi archivi di dati in cui viene effettuata la richiesta. Durante l’esecuzione di richieste a [!DNL Identity], la matrice deve includere il valore `Identity`.
+Inoltre, la `include` l’array del payload della richiesta deve includere i valori del prodotto per i diversi archivi di dati a cui viene effettuata la richiesta. Quando si inviano richieste a [!DNL Identity], l’array deve includere il valore `Identity`.
 
-La seguente richiesta crea un nuovo processo per la privacy in base al RGPD per i dati di un singolo cliente nel [!DNL Identity] archiviare. Per il cliente vengono forniti due valori di identità nel `userIDs` array; uno che utilizza lo standard `Email` spazio dei nomi dell&#39;identità e l&#39;altro tramite un `ECID` Lo spazio dei nomi include anche il valore di prodotto per [!DNL Identity] (`Identity`) nel `include` array:
+La seguente richiesta crea un nuovo processo di privacy in base al RGPD per i dati di un singolo cliente in [!DNL Identity] archiviare. Due valori di identità sono forniti per il cliente nel `userIDs` array; uno che utilizza lo standard `Email` dello spazio dei nomi dell’identità e l’altro utilizzando un `ECID` , include anche il valore del prodotto per [!DNL Identity] (`Identity`) in `include` array:
 
 >[!TIP]
 >
->Quando si elimina uno spazio dei nomi personalizzato utilizzando l’API, è necessario specificare il simbolo di identità come spazio dei nomi, anziché come nome visualizzato.
+>Quando elimini uno spazio dei nomi personalizzato utilizzando l’API, devi specificare il simbolo di identità come spazio dei nomi, invece del nome visualizzato.
 
 ```shell
 curl -X POST \
@@ -92,31 +92,31 @@ curl -X POST \
 }'
 ```
 
-### Utilizzo dell’interfaccia
+### Utilizzo dell’interfaccia utente
 
 >[!TIP]
 >
->Quando si elimina uno spazio dei nomi personalizzato utilizzando l’interfaccia utente, è necessario specificare il simbolo di identità come spazio dei nomi, anziché come nome visualizzato. Inoltre, non è possibile eliminare i namespace personalizzati nell’interfaccia utente per le sandbox non di produzione.
+>Quando elimini uno spazio dei nomi personalizzato tramite l’interfaccia utente, è necessario specificare il simbolo di identità come spazio dei nomi, anziché il nome visualizzato. Inoltre, non è possibile eliminare spazi dei nomi personalizzati nell’interfaccia utente per le sandbox non di produzione.
 
-Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL Identità]** sotto **[!UICONTROL Prodotti]** al fine di elaborare i processi per i dati memorizzati in [!DNL Identity Service].
+Quando crei richieste di lavoro nell’interfaccia utente, assicurati di selezionare **[!UICONTROL Identità]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati memorizzati in [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 
-## Elimina elaborazione richiesta
+## Elaborazione richiesta di eliminazione
 
-Quando [!DNL Experience Platform] riceve una richiesta di cancellazione da [!DNL Privacy Service], [!DNL Platform] invia conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e i dati interessati sono stati contrassegnati per l’eliminazione. L’eliminazione della singola identità si basa sul namespace e/o sul valore ID fornito. Inoltre, l’eliminazione avviene per tutte le sandbox associate a una determinata organizzazione.
+Quando [!DNL Experience Platform] riceve una richiesta di eliminazione da [!DNL Privacy Service], [!DNL Platform] invia una conferma a [!DNL Privacy Service] che la richiesta è stata ricevuta e che i dati interessati sono stati contrassegnati per l’eliminazione. L’eliminazione della singola identità si basa sullo spazio dei nomi e/o sul valore ID fornito. Inoltre, l’eliminazione avviene per tutte le sandbox associate a una determinata organizzazione.
 
-A seconda che tu abbia incluso anche Profilo cliente in tempo reale (`ProfileService`) e il lago dati (`aepDataLake`) come prodotti nella richiesta di accesso a dati personali per il servizio Identity (`identity`), diversi set di dati relativi all&#39;identità vengono rimossi dal sistema in momenti potenzialmente diversi:
+A seconda che tu abbia incluso anche Real-Time Customer Profile (`ProfileService`) e il data lake (`aepDataLake`) come prodotti nella richiesta di accesso a dati personali per il servizio Identity (`identity`), diversi set di dati relativi all’identità vengono rimossi dal sistema in momenti potenzialmente diversi:
 
 | Prodotti inclusi | Effetti |
 | --- | --- |
-| `identity` only | Il grafico dell’identità associato all’identità fornita viene eliminato immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. Il profilo creato da quel grafico di identità rimane, ma non verrà aggiornato man mano che vengono acquisiti nuovi dati, poiché le associazioni di identità vengono rimosse. Anche i dati associati al profilo rimangono nel lago dati. |
-| `identity` e `ProfileService` | Il grafico delle identità e il relativo profilo associato vengono eliminati immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. I dati associati al profilo rimangono nel data lake. |
-| `identity` e `aepDataLake` | Il grafico dell’identità associato all’identità fornita viene eliminato immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione. Il profilo creato da quel grafico di identità rimane, ma non verrà aggiornato man mano che vengono acquisiti nuovi dati, poiché le associazioni di identità vengono rimosse.<br><br>Quando il prodotto data lake risponde che la richiesta è stata ricevuta e sta attualmente elaborando, i dati associati al profilo vengono eliminati in modo morbido e non sono quindi accessibili da alcun [!DNL Platform] servizio. Una volta completato il lavoro, i dati vengono rimossi completamente dal data lake. |
-| `identity`, `ProfileService`, e `aepDataLake` | Il grafico delle identità e il relativo profilo associato vengono eliminati immediatamente non appena Platform invia la conferma della ricezione della richiesta di eliminazione.<br><br>Quando il prodotto data lake risponde che la richiesta è stata ricevuta e sta attualmente elaborando, i dati associati al profilo vengono eliminati in modo morbido e non sono quindi accessibili da alcun [!DNL Platform] servizio. Una volta completato il lavoro, i dati vengono rimossi completamente dal data lake. |
+| `identity` solo | Il grafo delle identità associato all’identità fornita viene immediatamente eliminato non appena Platform invia la conferma di ricezione della richiesta di eliminazione. Il profilo costruito da tale grafo di identità rimane ancora, ma non verrà aggiornato quando vengono acquisiti nuovi dati, in quanto le associazioni di identità vengono ora rimosse. Anche i dati associati al profilo rimangono nel data lake. |
+| `identity` e `ProfileService` | Il grafo delle identità e il profilo associato vengono eliminati immediatamente non appena Platform invia la conferma di ricezione della richiesta di eliminazione. I dati associati al profilo rimangono nel data lake. |
+| `identity` e `aepDataLake` | Il grafo delle identità associato all’identità fornita viene immediatamente eliminato non appena Platform invia la conferma di ricezione della richiesta di eliminazione. Il profilo costruito da tale grafo di identità rimane ancora, ma non verrà aggiornato quando vengono acquisiti nuovi dati, in quanto le associazioni di identità vengono ora rimosse.<br><br>Quando il prodotto del data lake risponde che la richiesta è stata ricevuta e che è in fase di elaborazione, i dati associati al profilo vengono eliminati in modo non permanente e non sono quindi accessibili a nessuno [!DNL Platform] servizio. Una volta completato il processo, i dati vengono rimossi completamente dal data lake. |
+| `identity`, `ProfileService`, e `aepDataLake` | Il grafo delle identità e il profilo associato vengono eliminati immediatamente non appena Platform invia la conferma di ricezione della richiesta di eliminazione.<br><br>Quando il prodotto del data lake risponde che la richiesta è stata ricevuta e che è in fase di elaborazione, i dati associati al profilo vengono eliminati in modo non permanente e non sono quindi accessibili a nessuno [!DNL Platform] servizio. Una volta completato il processo, i dati vengono rimossi completamente dal data lake. |
 
-Fai riferimento a [[!DNL Privacy Service] documentazione](../privacy-service/home.md#monitor) per ulteriori informazioni sul tracciamento degli stati dei processi.
+Consulta la sezione [[!DNL Privacy Service] documentazione](../privacy-service/home.md#monitor) per ulteriori informazioni sul tracciamento degli stati dei processi.
 
 ## Passaggi successivi
 
-Leggendo questo documento, ti sono stati introdotti i concetti importanti relativi all’elaborazione delle richieste di privacy in [!DNL Identity Service]. Per informazioni sull’elaborazione delle richieste di accesso a dati personali per altri [!DNL Experience Cloud] applicazioni, vedere il documento in [[!DNL Privacy Service] and [!DNL Experience Cloud] applicazioni](../privacy-service/experience-cloud-apps.md).
+Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali in [!DNL Identity Service]. Per informazioni sull’elaborazione delle richieste di accesso a dati personali per altri [!DNL Experience Cloud] applicazioni, consulta il documento su [[!DNL Privacy Service] and [!DNL Experience Cloud] applicazioni](../privacy-service/experience-cloud-apps.md).

@@ -40,8 +40,8 @@ Per accedere al tuo [!DNL Google Cloud Storage] dati su Platform, è necessario 
 | ---------- | ----------- |
 | ID chiave di accesso | Una stringa alfanumerica di 61 caratteri utilizzata per autenticare il [!DNL Google Cloud Storage] da un account a Platform. |
 | Chiave di accesso segreta | Una stringa con codifica base 64 di 40 caratteri utilizzata per autenticare il [!DNL Google Cloud Storage] da un account a Platform. |
-| Nome bucket | Il nome del tuo [!DNL Google Cloud Storage] secchio. Se desideri fornire l’accesso a una sottocartella specifica nell’archiviazione cloud, devi specificare un nome di bucket. |
-| Percorso cartella | Percorso della cartella a cui desideri fornire l’accesso. |
+| Nome del bucket | Il nome del tuo [!DNL Google Cloud Storage] secchio. Se desideri fornire l’accesso a una sottocartella specifica nell’archiviazione cloud, devi specificare un nome di bucket. |
+| Percorso della cartella | Percorso della cartella a cui desideri fornire l’accesso. |
 
 Per ulteriori informazioni su questi valori, vedere [Chiavi HMAC di Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guida. Per i passaggi su come generare il proprio ID chiave di accesso e la propria chiave di accesso segreta, consulta [[!DNL Google Cloud Storage] panoramica](../../../../connectors/cloud-storage/google-cloud-storage.md).
 

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;ora di vita;ttl;time-to-live;pseudonimo;profili pseudonimi;scadenza dati;scadenza;
+keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;durata;ttl;durata;pseudonimo;profili pseudonimi;scadenza dati;scadenza dati;
 solution: Experience Platform
-title: Scadenza dei dati del profilo
-description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili Pseudonimi all’interno di Adobe Experience Platform.
+title: Scadenza dati profilo pseudonimo
+description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
 workflow-type: tm+mt
@@ -11,73 +11,73 @@ ht-degree: 0%
 
 ---
 
-# Scadenza dati dei profili pseudonimi
+# Scadenza dati profili pseudonimi
 
-In Adobe Experience Platform, puoi configurare i tempi di scadenza per i profili Pseudonimi, consentendo di rimuovere automaticamente dall’archivio profili i dati non più validi o utili per i casi d’uso.
+In Adobe Experience Platform, puoi configurare i tempi di scadenza per i profili pseudonimi, consentendoti di rimuovere automaticamente dall’archivio profili i dati che non sono più validi o utili per i tuoi casi d’uso.
 
 ## Profilo pseudonimo {#pseudonymous-profile}
 
-Un profilo viene considerato per la scadenza di dati Pseudonimi se soddisfa le seguenti condizioni:
+Un profilo viene considerato per la scadenza dei dati pseudonimi se soddisfa le seguenti condizioni:
 
-- I namespace di identità del profilo unione corrispondono a quello specificato dal cliente come spazio dei nomi di identità pseudonimo o sconosciuto.
-   - Ad esempio, se lo spazio dei nomi di identità del profilo è `ECID`, `GAID`oppure `AAID`. Il profilo vincolato non dispone di ID da alcun altro namespace Identity. In questo esempio, un profilo con unione fa **not** avere un&#39;identità e-mail o CRM.
-- Nessuna attività ha avuto luogo in un periodo di tempo definito dall&#39;utente. L’attività è definita da qualsiasi evento esperienza acquisito o dagli aggiornamenti degli attributi del profilo avviati dal cliente.
-   - Ad esempio, un nuovo evento di visualizzazione della pagina o l’aggiornamento dell’attributo dell’età è considerato un’attività. Tuttavia, un aggiornamento dell’appartenenza a un segmento non avviato dall’utente è **not** considerata un’attività . Al momento, per calcolare la scadenza dei dati, il tracciamento a livello di profilo è basato sul momento dell’evento per gli eventi di esperienza e sull’ora dell’acquisizione per gli attributi di profilo.
+- Gli spazi dei nomi delle identità del profilo unito corrispondono a quelli specificati dal cliente come spazio dei nomi di identità pseudonimo o sconosciuto.
+   - Ad esempio, se lo spazio dei nomi dell’identità del profilo è `ECID`, `GAID`, o `AAID`. Il profilo unito non dispone di ID da altri spazi dei nomi di identità. In questo esempio, un profilo unito **non** hanno un’identità e-mail o CRM.
+- Non è stata eseguita alcuna attività in un periodo di tempo definito dall&#39;utente. L’attività è definita da qualsiasi evento esperienza acquisito o dagli aggiornamenti degli attributi del profilo avviati dal cliente.
+   - Ad esempio, un nuovo evento di visualizzazione della pagina o un aggiornamento dell’attributo age è considerato un’attività. Tuttavia, un aggiornamento dell’iscrizione a un segmento non avviato dall’utente è **non** considerata come un’attività. Attualmente, per calcolare la scadenza dei dati, il tracciamento a livello di profilo si basa sul momento dell’evento per gli eventi esperienza e sul momento di acquisizione per gli attributi del profilo.
 
 ## Accedere ad {#access}
 
-La scadenza dei dati del profilo pseudonimo non può essere configurata tramite l’interfaccia utente o le API di Platform. Per abilitare questa funzione, contatta invece il supporto . Quando contatti il supporto, includi le seguenti informazioni:
+La scadenza dei dati del profilo pseudonimo non può essere configurata tramite l’interfaccia utente o le API di Platform. Per abilitare questa funzione, è necessario contattare il supporto tecnico. Quando si contatta l’assistenza, includere le seguenti informazioni:
 
-- Gli spazi dei nomi di identità da considerare per le eliminazioni di profili Pseudonimi.
-   - Ad esempio: `ECID` solo `AAID` o una combinazione di `ECID` e `AAID`.
-- Tempo di attesa prima di eliminare un profilo pseudonimo. Il consiglio predefinito per i clienti è 14 giorni. Tuttavia, questo valore può variare a seconda del caso d’uso.
+- Gli spazi dei nomi delle identità da considerare per le eliminazioni di profili pseudonimi.
+   - Ad esempio: `ECID` solo, `AAID` solo, o una combinazione di `ECID` e `AAID`.
+- Quantità di tempo di attesa prima di eliminare un profilo pseudonimo. Il consiglio predefinito per i clienti è di 14 giorni. Tuttavia, questo valore può variare in base al caso d’uso.
 
 ## Domande frequenti {#faq}
 
-Nella sezione seguente sono elencate le domande frequenti sulla scadenza dei dati dei profili Pseudonimi:
+Nella sezione seguente sono elencate le domande frequenti relative alla scadenza dei dati dei profili pseudonimi:
 
-### In che modo la scadenza dei dati del profilo Pseudonimo differisce dalla scadenza dei dati di Experience Event?
+### Quali sono le differenze tra la scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza?
 
-La scadenza dei dati Pseudonimi dei profili e la scadenza dei dati Experience Event sono caratteristiche complementari.
+La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza sono funzioni complementari.
 
 #### Granularità
 
-La scadenza dei dati del profilo pseudonimo funziona su un **sandbox** livello. Di conseguenza, la scadenza dei dati influenzerà tutti i profili nella sandbox.
+La scadenza dei dati del profilo pseudonimo funziona su una **sandbox** livello. Di conseguenza, la scadenza dei dati influirà su tutti i profili nella sandbox.
 
-La scadenza dei dati dell’evento esperienza funziona su un **set di dati** livello. Di conseguenza, ogni set di dati può avere un’impostazione di scadenza dei dati diversa.
+La scadenza dei dati di Experience Event funziona su un **set di dati** livello. Di conseguenza, ogni set di dati può avere un’impostazione di scadenza dati diversa.
 
 #### Tipi di identità
 
-Scadenza dei dati del profilo **only** considera i profili con grafici di identità contenenti spazi dei nomi di identità selezionati dal cliente, ad esempio `ECID`, `AAID`o altri tipi di cookie. Se il profilo contiene **qualsiasi** spazio dei nomi di identità aggiuntivo **not** nell’elenco selezionato del cliente, il profilo **not** essere soppressa.
+Scadenza dati profilo pseudonimo **solo** considera i profili con grafici di identità contenenti spazi dei nomi di identità selezionati dal cliente, ad esempio `ECID`, `AAID`, o altri tipi di cookie. Se il profilo contiene **qualsiasi** spazio dei nomi di identità aggiuntivo **non** nell’elenco selezionato del cliente, il profilo **non** essere soppressa.
 
-La scadenza dei dati dell’evento esperienza rimuove gli eventi **only** in base alla marca temporale del record dell&#39;evento. Gli spazi dei nomi delle identità inclusi sono **ignorato** a fini di scadenza.
+La scadenza dei dati dell’evento esperienza rimuove gli eventi **solo** in base alla marca temporale del record evento. Gli spazi dei nomi delle identità inclusi sono **ignorato** a scopo di scadenza.
 
 #### Elementi rimossi
 
-La scadenza dei dati del profilo pseudonimo rimuove **entrambi** record evento e profilo. Di conseguenza, verranno rimossi anche i dati della classe di profilo.
+La scadenza dei dati del profilo pseudonimo rimuove **entrambi** record di eventi e profili. Di conseguenza, verranno rimossi anche i dati della classe di profilo.
 
-Scadenza dati evento esperienza **only** rimuove eventi e esegue **not** rimuovere i dati della classe di profilo. I dati della classe di profilo vengono rimossi solo quando tutti i dati vengono rimossi **tutto** set di dati e sono disponibili **no** record della classe di profilo rimanenti per il profilo.
+Scadenza dati evento esperienza **solo** rimuove eventi e non **non** rimuovere i dati della classe di profilo. I dati della classe profilo vengono rimossi solo quando tutti i dati vengono rimossi in **tutto** set di dati e sono **no** record della classe di profilo rimanenti per il profilo.
 
-### Come può essere utilizzata la scadenza dei dati del profilo Pseudonimo insieme alla scadenza dei dati di Experience Event?
+### In che modo la scadenza dei dati di profilo pseudonimo può essere utilizzata insieme alla scadenza dei dati di Experience Event?
 
-La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza possono essere utilizzati per completarsi a vicenda.
+La scadenza dei dati del profilo pseudonimo e la scadenza dei dati dell’evento esperienza possono essere utilizzate per completarsi a vicenda.
 
-Dovrebbe **sempre** imposta la scadenza dei dati Experience Event nei set di dati in base alle tue esigenze di conservazione dei dati sui clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo Pseudonimo per rimuovere automaticamente i profili Pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi di esperienza.
+Dovresti **sempre** imposta la scadenza dei dati Experience Event nei set di dati, in base alle tue esigenze di conservazione dei dati sui tuoi clienti noti. Una volta impostata la scadenza dei dati di Experience Event, puoi utilizzare la scadenza dei dati di profilo pseudonimo per rimuovere automaticamente i profili pseudonimi. In genere, il periodo di scadenza dei dati per i profili pseudonimi è inferiore al periodo di scadenza dei dati per gli eventi esperienza.
 
-Per un caso d’uso tipico, puoi impostare la scadenza dei dati dell’Experience Event in base ai valori dei tuoi dati utente noti e impostare la scadenza dei dati del profilo Pseudonimo su una durata molto più breve per limitare l’impatto dei profili Pseudonimi sulla conformità della licenza Platform.
+Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event in base ai valori dei dati utente noti e impostare la scadenza dei dati del profilo pseudonimo su una durata molto più breve per limitare l’impatto dei profili pseudonimi sulla conformità della licenza di Platform.
 
 ### Quali utenti dovrebbero utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- Se utilizzi l’SDK per web per inviare direttamente i dati a Platform.
-- Se hai un sito web che serve in massa clienti non autenticati.
-- Se nei set di dati sono presenti conteggi di profilo eccessivi e hai confermato che questo conteggio eccessivo di profili è dovuto allo spazio dei nomi di identità anonimo basato su cookie.
-   - Per determinarlo, utilizza il rapporto di sovrapposizione dello spazio dei nomi identità. Ulteriori informazioni su questo rapporto sono disponibili nella sezione [sezione report di sovrapposizione identità](./api/preview-sample-status.md#identity-overlap-report) della guida API di stato dell’anteprima di esempio.
+- Se utilizzi Web SDK per inviare direttamente i dati a Platform.
+- Se disponi di un sito web che serve in massa clienti non autenticati.
+- Se nei set di dati sono presenti conteggi di profilo eccessivi e hai confermato che tali conteggi sono dovuti a uno spazio dei nomi di identità anonimo basato su cookie.
+   - Per determinare ciò, è necessario utilizzare il rapporto di sovrapposizione dello spazio dei nomi delle identità. Ulteriori informazioni su questo rapporto sono disponibili nella sezione [sezione report di sovrapposizione identità](./api/preview-sample-status.md#identity-overlap-report) della guida all’API per lo stato del campione di anteprima.
 
-### Quali sono alcune avvertenze di cui dovresti essere a conoscenza prima di utilizzare la scadenza dei dati dei profili Pseudonimi?
+### Quali sono alcune avvertenze di cui dovresti essere a conoscenza prima di utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- La scadenza dei dati di profilo pseudonimi verrà eseguita il **produzione** sandbox.
-- Dopo aver attivato questa funzione, l’eliminazione dei profili è **permanente**. C&#39;è **no** modo per ripristinare o ripristinare i profili eliminati.
-- Questo è **not** un lavoro di pulizia una tantum. La scadenza dei dati di profilo pseudonimi viene eseguita continuamente una volta al giorno ed elimina i profili che corrispondono all’input del cliente.
-- **Tutto** i profili definiti come profili Pseudonimi saranno interessati dalla scadenza dei dati di profilo Pseudonimi. Lo fa **not** ha importanza se il profilo è solo Experience Event o se contiene solo attributi di profilo.
-- Questa pulizia **only** si verifica in Profilo. Il servizio Identity può continuare a mostrare le identità eliminate all’interno del grafico dopo la pulizia, nei casi in cui il profilo abbia due o più identità pseudonime associate (ad esempio `AAID` e `ECID`). Questa discrepanza verrà affrontata nel prossimo futuro.
+- La scadenza dei dati del profilo pseudonimo verrà eseguita il **produzione** sandbox.
+- Dopo aver attivato questa funzione, l’eliminazione dei profili avviene **permanente**. È presente **no** modo per ripristinare o ripristinare i profili eliminati.
+- Questo è **non** un processo di pulizia una tantum. La scadenza dei dati del profilo pseudonimo viene continuamente eseguita una volta al giorno ed elimina i profili che corrispondono all’input del cliente.
+- **Tutti** I profili definiti come profili pseudonimi saranno interessati dalla scadenza dei dati del profilo pseudonimo. È vero **non** è importante se il profilo è solo Evento esperienza o se contiene solo attributi di profilo.
+- Questa pulizia **solo** verificarsi in Profilo. Il servizio Identity può continuare a mostrare le identità eliminate all’interno del grafico dopo la pulizia nei casi in cui al profilo siano associate due o più identità pseudonime (ad esempio `AAID` e `ECID`). Questa discrepanza sarà affrontata nel prossimo futuro.
 

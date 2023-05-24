@@ -7,13 +7,13 @@ exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '296'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
 # [!UICONTROL Schemi] Panoramica dell’interfaccia utente
 
-Il [!UICONTROL Schemi] Workspace nell’interfaccia utente di Adobe Experience Platform consente di gestire le risorse Experience Data Model (XDM), inclusi schemi, classi, gruppi di campi di schema e tipi di dati. Puoi visualizzare ed esplorare le risorse core fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
+Il [!UICONTROL Schemi] Workspace nell’interfaccia utente di Adobe Experience Platform consente di gestire le risorse Experience Data Model (XDM), inclusi schemi, classi, gruppi di campi di schema e tipi di dati. Puoi visualizzare ed esplorare le risorse di base fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
 
 Per accedere all’area di lavoro nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nella barra a sinistra.
 

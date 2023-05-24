@@ -1,6 +1,6 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
-title: Recupera una configurazione di destinazione
+title: Recuperare una configurazione di destinazione
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '365'
@@ -9,21 +9,21 @@ ht-degree: 3%
 ---
 
 
-# Recupera una configurazione di destinazione
+# Recuperare una configurazione di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per recuperare informazioni su una configurazione di destinazione esistente, utilizzando `/authoring/destination` Endpoint API.
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per recuperare informazioni su una configurazione di destinazione esistente, utilizzando `/authoring/destination` Endpoint API
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API di configurazione della destinazione {#get-started}
+## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
-## Recupera una configurazione di destinazione {#retrieve}
+## Recuperare una configurazione di destinazione {#retrieve}
 
-Puoi recuperare un [esistente](create-destination-configuration.md) configurazione di destinazione effettuando una `GET` richiesta al `/authoring/destination` punto finale.
+È possibile recuperare un [esistente](create-destination-configuration.md) configurazione di destinazione effettuando una `GET` richiesta al `/authoring/destination` endpoint.
 
 >[!TIP]
 >
@@ -38,15 +38,15 @@ Utilizza il seguente formato API per recuperare tutte le configurazioni di desti
 GET /authoring/destinations
 ```
 
-Utilizza il seguente formato API per recuperare una configurazione di destinazione specifica, definita dalla `{INSTANCE_ID}` parametro .
+Utilizza il seguente formato API per recuperare una configurazione di destinazione specifica, definita da `{INSTANCE_ID}` parametro.
 
 ```http
 GET /authoring/destinations/{INSTANCE_ID}
 ```
 
-Le due richieste seguenti recuperano tutte le configurazioni di destinazione per la tua organizzazione IMS o una configurazione di destinazione specifica, a seconda che passi o meno la `INSTANCE_ID` nella richiesta.
+Le due richieste seguenti recuperano tutte le configurazioni di destinazione per l’organizzazione IMS o una configurazione di destinazione specifica, a seconda che venga passato o meno il `INSTANCE_ID` nella richiesta.
 
-Seleziona ciascuna scheda qui sotto per visualizzare il payload corrispondente.
+Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
 >[!BEGINTABS]
 
@@ -66,7 +66,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di configurazioni di destinazione a cui hai accesso, in base al [!DNL IMS Org ID] e nome della sandbox utilizzata. Uno `instanceId` corrisponde a una configurazione di destinazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di configurazioni di destinazione a cui hai accesso, in base al [!DNL IMS Org ID] e il nome della sandbox che hai utilizzato. Uno `instanceId` corrisponde a una configurazione di destinazione.
 
 ```json
 {
@@ -174,7 +174,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di configurazi
 
 +++
 
->[!TAB Recupera una configurazione di destinazione specifica]
+>[!TAB Recuperare una configurazione di destinazione specifica]
 
 +++Richiesta
 
@@ -194,7 +194,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione corrispondenti al `{INSTANCE_ID}` nella chiamata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione di destinazione corrispondenti al `{INSTANCE_ID}` fornite nella chiamata.
 
 ```json
 {
@@ -310,9 +310,9 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come recuperare una configurazione di destinazione attraverso la Destination SDK `/authoring/destinations` Endpoint API.
+Dopo aver letto questo documento, ora sai come recuperare una configurazione di destinazione tramite la Destination SDK `/authoring/destinations` Endpoint API
 
-Per ulteriori informazioni sulle operazioni che è possibile eseguire con questo endpoint, consulta i seguenti articoli:
+Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 
 * [Creare una configurazione di destinazione](create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](update-destination-configuration.md)

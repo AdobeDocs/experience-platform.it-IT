@@ -5,7 +5,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -53,7 +53,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 - **[!UICONTROL Nome]**: inserisci il nome preferito per questa destinazione.
 - **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
 - **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experience Platform come nome di oggetto JSON.
-- **[!UICONTROL ID flusso di dati]**: questo determina quale flusso di dati di Raccolta dati contiene i tipi di pubblico inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati per i quali è abilitata la configurazione di destinazione. Consulta [Configurazione di uno stream di dati](../../../edge/datastreams/overview.md) per ulteriori dettagli.
+- **[!UICONTROL ID flusso di dati]**: questo determina quale flusso di dati di Raccolta dati contiene i tipi di pubblico inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Consulta [Configurazione di uno stream di dati](../../../edge/datastreams/overview.md) per ulteriori dettagli.
 
 ### Abilita avvisi {#enable-alerts}
 

@@ -300,7 +300,7 @@ La tabella seguente illustra i valori accettati per `preferred`:
 
 | Valore | Descrizione |
 | --- | --- |
-| `email` | Messaggi e-mail. |
+| `email` | E-mail messages. |
 | `push` | Notifiche push. |
 | `inApp` | Messaggi in-app. |
 | `sms` | Messaggi SMS. |

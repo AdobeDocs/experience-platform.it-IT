@@ -14,19 +14,19 @@ ht-degree: 63%
 
 # Adobe Experience Platform Assurance {#assurance}
 
-- [Panoramica sulla garanzia](./home.md)
+- [Panoramica di Assurance](./home.md)
 - [Accesso utente](./user-access.md)
 - Viste {#view}
    - [Transazioni evento](./views/event-transactions.md)
-   - [Versioni di estensione](./views/extension-versions.md)
+   - [Versioni dell&#39;estensione](./views/extension-versions.md)
    - [Messaggistica in-app](./views/in-app-messaging.md)
-   - [Visualizzazioni del dispositivo](./views/on-device-views.md)
+   - [Sulle Visualizzazioni Del Dispositivo](./views/on-device-views.md)
    - [Servizio Places](./views/places-service.md)
    - [Visualizzazione debug push](./views/push-debug-view.md)
    - [Riepilogo convalida](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
    - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutorial {#tutorials}
-   - [Implementare la garanzia](./tutorials/implement-assurance.md)
-   - [Usa affidabilità](./tutorials/using-assurance.md)
+   - [Implementare Assurance](./tutorials/implement-assurance.md)
+   - [Utilizzare Assurance](./tutorials/using-assurance.md)
 - [Risoluzione dei problemi](./troubleshooting.md)

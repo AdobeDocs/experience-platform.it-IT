@@ -9,7 +9,7 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
@@ -89,7 +89,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Ambiente </p> </td> 
-   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> ambiente</a> utilizzato dalla libreria di tag </p> </td> 
+   <td colname="col2"> <p>Il <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=it" format="https" scope="external"> ambiente</a> utilizzato dalla libreria di tag </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Estensioni </p> </td> 

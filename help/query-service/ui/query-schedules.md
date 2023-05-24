@@ -1,7 +1,8 @@
 ---
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -67,5 +68,3 @@ Selezionare una pianificazione dalle righe delle pianificazioni disponibili. Puo
 Seleziona **[!UICONTROL Eliminare una pianificazione]** per eliminare la pianificazione disabilitata.
 
 ![Area di lavoro pianificazioni con le opzioni Disattiva pianificazione ed Elimina pianificazione evidenziate.](../images/ui/query-schedules/delete-schedule.png)
-
-

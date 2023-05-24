@@ -15,34 +15,34 @@ ht-degree: 31%
 
 # Adobe Experience Platform Web SDK {#edge}
 
-* [Panoramica dell’SDK per web di Platform](home.md)
-* Nozioni fondamentali {#fundamentals}
+* [Panoramica di Platform Web SDK](home.md)
+* Nozioni di base {#fundamentals}
    * [Casi d’uso supportati](fundamentals/supported-use-cases.md)
    * [Prerequisiti](fundamentals/prerequisite.md)
    * [Installare l’SDK](fundamentals/installing-the-sdk.md)
-   * [Configurare l&#39;SDK](fundamentals/configuring-the-sdk.md)
+   * [Configurare l’SDK](fundamentals/configuring-the-sdk.md)
    * [Esegui comandi](fundamentals/executing-commands.md)
    * [Tracciare gli eventi](fundamentals/tracking-events.md)
    * [Eseguire il debug di](fundamentals/debugging.md)
    * [Configurare un CSP](fundamentals/configuring-a-csp.md)
    * [Interagire con più proprietà](fundamentals/interacting-with-multiple-properties.md)
-   * [Suggerimenti client utente-agente](fundamentals/user-agent-client-hints.md)
+   * [User-Agent Client Hints](fundamentals/user-agent-client-hints.md)
 * Stream di dati {#datastreams}
    * [Panoramica](./datastreams/overview.md)
-   * [Configurare un datastream](./datastreams/configure.md)
-   * [Configurare le sostituzioni di datastream](./datastreams/overrides.md)
+   * [Configurare uno stream di dati](./datastreams/configure.md)
+   * [Configurare le sostituzioni dello stream di dati](./datastreams/overrides.md)
    * [Preparazione per la raccolta dati](./datastreams/data-prep.md)
    * Arricchimento dei dati {#data-enrichment}
-      * [Dati meteo per canale meteo](./datastreams/data-enrichment/weather.md)
-      * [Mappature dei campi dati meteo](./datastreams/data-enrichment/weather-reference.md)
+      * [Dati meteo per il canale meteo](./datastreams/data-enrichment/weather.md)
+      * [Mappature campi dati meteo](./datastreams/data-enrichment/weather-reference.md)
 * Identità {#identity}
    * [Panoramica](identity/overview.md)
    * [ID dispositivo di prime parti](identity/first-party-device-ids.md)
-   * [Condivisione di ID da mobile a web e tra domini diversi](identity/id-sharing.md)
+   * [Condivisione ID da dispositivo mobile a web e tra domini](identity/id-sharing.md)
 * Raccolta dati {#data-collection}
    * [Informazioni raccolte automaticamente](data-collection/automatic-information.md)
    * [Tracciare i collegamenti](data-collection/track-links.md)
-   * [Raccogliere dati su prodotti e soluzioni commerce](data-collection/collect-commerce-data.md)
+   * [Raccogliere dati su prodotti e commerce](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Utilizzo di Adobe Analytics con Platform Web SDK](data-collection/adobe-analytics/analytics-overview.md)
       * [Mappatura delle variabili di Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -51,13 +51,13 @@ ht-degree: 31%
 * Personalizzazione {#personalization}
    * [Rendering di contenuti personalizzati](personalization/rendering-personalization-content.md)
    * [Personalizzazione tramite implementazione ibrida](personalization/hybrid-personalization.md)
-   * [Gestione della visualizzazione momentanea di altri contenuti](personalization/manage-flicker.md)
+   * [Gestisci visualizzazione momentanea di altri contenuti](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Panoramica](personalization/adobe-target/target-overview.md)
       * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
       * [Accesso ai token di risposta](personalization/adobe-target/accessing-response-tokens.md)
-      * [Utilizzo dell’ID di terze parti di mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
-      * [Confronto della libreria at.js con l’SDK web](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * [Utilizzo dell’ID di terze parti mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
+      * [Confronto della libreria at.js con Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Registrazione di Analytics for Target (A4T) {#a4t}
          * [Panoramica ](personalization/adobe-target/analytics-logging/overview.md)
          * [Lato client  registrazione](personalization/adobe-target/analytics-logging/client-side.md)
@@ -70,15 +70,15 @@ ht-degree: 31%
    * [Consenso di supporto](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Panoramica](consent/iab-tcf/overview.md)
-      * [Integrazione con i tag](consent/iab-tcf/with-launch.md)
-      * [Integrazione senza tag](consent/iab-tcf/without-launch.md)
-* Estensione tag SDK per web {#extension}
-   * [Estensione SDK per web](extension/web-sdk-extension-configuration.md)
+      * [Integrare con i tag](consent/iab-tcf/with-launch.md)
+      * [Integrare senza tag](consent/iab-tcf/without-launch.md)
+* Estensione tag Web SDK {#extension}
+   * [Estensione Web SDK](extension/web-sdk-extension-configuration.md)
    * [Tipi di evento](extension/event-types.md)
    * [Tipi di azioni](extension/action-types.md)
    * [Tipi di elementi dati](extension/data-element-types.md)
    * [Accesso all’ECID](extension/accessing-the-ecid.md)
-   * [Note sulla versione dell&#39;estensione dell&#39;SDK per web](extension/web-sdk-ext-release-notes.md)
+   * [Note sulla versione dell’estensione Web SDK](extension/web-sdk-ext-release-notes.md)
 * [Note sulla versione](release-notes.md)
 * [Domande frequenti](web-sdk-faq.md)
 * [Risorse](resources.md)

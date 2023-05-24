@@ -13,14 +13,14 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
-Prima di iniziare con `extension_package`, è necessario impostare i membri del team con account utente e autorizzazioni.  Puoi eseguire questa operazione in [Adobe Admin Console](https://adminconsole.adobe.com/).
+Prima di iniziare a utilizzare `extension_package`, è necessario configurare i membri del gruppo con account utente e autorizzazioni.  Puoi eseguire questa operazione in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-## Configurare le autorizzazioni utente per Experience Platform e raccolta dati
+## Configurare le autorizzazioni utente per Experience Platform e Data Collection
 
-Affinché un utente possa accedere alle funzioni dei tag, un amministratore deve aggiungere i propri account a un profilo di prodotto in Adobe Admin Console, che consenta all’utente l’accesso a proprietà e funzionalità specifiche di raccolta dati. Per ulteriori informazioni su come concedere autorizzazioni per la raccolta dati, consulta la [Guida alle autorizzazioni per la raccolta dati](../../../collection/permissions.md).
+Per consentire a un utente di accedere alle funzioni dei tag, un amministratore deve aggiungere i propri account a un profilo di prodotto in Adobe Admin Console, che consente all’utente di accedere a proprietà e funzionalità specifiche di raccolta dati. Per ulteriori informazioni su come concedere le autorizzazioni per la raccolta dati, consulta [Guida alle autorizzazioni della raccolta dati](../../../collection/permissions.md).
 
 ## Confermare il provisioning
 
-Dopo aver effettuato il provisioning della tua azienda con accesso ai tag e aver configurato i tuoi utenti come descritto in precedenza, dovresti essere in grado di accedere all’interfaccia utente di raccolta dati e all’interfaccia utente di Experience Platform da [Dashboard di Adobe Experience Cloud](https://experience.adobe.com/). Se non riesci ancora ad accedere a nessuna delle due interfacce utente dopo aver completato i passaggi precedenti, contatta il team del tuo account Adobe o l’Assistenza clienti.
+Dopo aver fornito all’azienda l’accesso ai tag e aver impostato gli utenti come descritto sopra, dovresti poter accedere all’interfaccia utente di Data Collection e a quella di Experience Platform dalla sezione [Dashboard di Adobe Experience Cloud](https://experience.adobe.com/). Se dopo aver completato i passaggi precedenti non riesci ancora ad accedere a nessuna delle due interfacce, contatta il team del tuo account Adobe o l’Assistenza clienti.

@@ -30,7 +30,7 @@ Con i modelli, puoi:
 * Riduci al minimo gli errori che possono verificarsi durante il processo manuale di acquisizione dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
-Il seguente tutorial descrive come utilizzare i modelli nell’interfaccia utente di Platform.
+Il seguente tutorial illustra i passaggi da seguire per utilizzare i modelli nell’interfaccia utente di Platform.
 
 ## Introduzione
 

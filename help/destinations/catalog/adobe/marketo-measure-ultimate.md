@@ -2,13 +2,13 @@
 title: Destinazione Marketo Measure Ultimate
 description: Scopri come collegare e attivare i dati alla destinazione Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
+exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
 
 ---
-
 
 # Destinazione Marketo Measure Ultimate {#mmu-destination}
 
@@ -83,5 +83,3 @@ Per convalidare un’esportazione corretta del set di dati, puoi verificare che 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
 Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
-
-

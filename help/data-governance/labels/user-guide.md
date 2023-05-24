@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;governance dei dati;etichetta di utilizzo dei dati;servizio criteri;guida utente per le etichette di utilizzo dei dati
+keywords: Experience Platform;home;argomenti popolari;governance dei dati;etichetta utilizzo dati;servizio criteri;guida utente etichette utilizzo dati
 solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
-description: Questa guida descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno dell’interfaccia utente di Adobe Experience Platform.
+description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
@@ -18,49 +18,49 @@ ht-degree: 17%
 >title="Gestire l’utilizzo dei dati in Platform"
 >abstract="<h2>Descrizione</h2><p>Il framework per la governance dei dati in Experience Platform consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
 
-Questa guida utente descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno di [!DNL Experience Platform] interfaccia utente.
+Questa guida utente descrive i passaggi per lavorare con le etichette di utilizzo dei dati in [!DNL Experience Platform] dell&#39;utente.
 
 ## Gestire le etichette a livello di set di dati
 
 >[!IMPORTANT]
 >
->L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
+>L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se si desidera creare criteri di accesso per i dati, è necessario [applica etichette allo schema](../../xdm/tutorials/labels.md) su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
-Per gestire le etichette di utilizzo dei dati a livello di set di dati, devi selezionare un set di dati esistente o crearne uno nuovo. Dopo aver effettuato l’accesso a Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nella navigazione a sinistra per aprire il **[!UICONTROL Set di dati]** workspace. In questa pagina sono elencati tutti i set di dati creati appartenenti all’organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
+Per gestire le etichette di utilizzo dei dati a livello di set di dati, è necessario selezionare un set di dati esistente o crearne uno nuovo. Dopo aver effettuato l’accesso a Adobe Experience Platform, seleziona **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra per aprire **[!UICONTROL Set di dati]** Workspace. Questa pagina elenca tutti i set di dati creati appartenenti alla tua organizzazione, insieme a dettagli utili relativi a ciascun set di dati.
 
-![Scheda Set di dati in Area di lavoro dati](../images/labels/datasets-tab.png)
+![Scheda Set di dati nell’area di lavoro dati](../images/labels/datasets-tab.png)
 
-La sezione successiva descrive i passaggi necessari per creare un nuovo set di dati a cui applicare le etichette. Per modificare le etichette di un set di dati esistente, selezionalo dall’elenco e passa a [aggiunta di etichette di utilizzo dati al set di dati](#add-labels).
+La sezione successiva descrive i passaggi necessari per creare un nuovo set di dati a cui applicare le etichette. Se desideri modificare le etichette per un set di dati esistente, seleziona il set di dati dall’elenco e passa a [aggiunta di etichette di utilizzo dati al set di dati](#add-labels).
 
 ### Creare un nuovo set di dati
 
 >[!NOTE]
 >
->In questo esempio, un set di dati viene creato utilizzando una [!DNL Experience Data Model] Schema (XDM). Per ulteriori informazioni sugli schemi XDM, consulta la sezione [Panoramica del sistema XDM](../../xdm/home.md) e [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md).
+>In questo esempio, un set di dati viene creato utilizzando un [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sugli schemi XDM, vedi [Panoramica del sistema XDM](../../xdm/home.md) e [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md).
 
-Per creare un nuovo set di dati, seleziona **[!UICONTROL Crea set di dati]** nell&#39;angolo in alto a destra del **[!UICONTROL Set di dati]** workspace.
+Per creare un nuovo set di dati, seleziona **[!UICONTROL Crea set di dati]** nell&#39;angolo in alto a destra del **[!UICONTROL Set di dati]** Workspace.
 
 ![](../images/labels/create-dataset.png)
 
-La **[!UICONTROL Crea set di dati]** viene visualizzata la schermata . Da qui, seleziona **[!UICONTROL Crea set di dati da schema]**.
+Il **[!UICONTROL Crea set di dati]** viene visualizzata la schermata. Da qui, seleziona **[!UICONTROL Crea set di dati dallo schema]**.
 
-![Crea set di dati da schema](../images/labels/create-from-dataset.png)
+![Crea set di dati dallo schema](../images/labels/create-from-dataset.png)
 
-La **[!UICONTROL Seleziona schema]** viene visualizzata una schermata in cui sono elencati tutti gli schemi disponibili che è possibile utilizzare per creare un set di dati. Selezionare il pulsante di scelta accanto a uno schema per selezionarlo. La **[!UICONTROL Schemi]** nella sezione a destra vengono visualizzati ulteriori dettagli sullo schema selezionato. Dopo aver selezionato uno schema, seleziona **[!UICONTROL Successivo]**.
+Il **[!UICONTROL Seleziona schema]** viene visualizzata una schermata che elenca tutti gli schemi disponibili che è possibile utilizzare per creare un set di dati. Seleziona il pulsante di opzione accanto a uno schema per selezionarlo. Il **[!UICONTROL Schemi]** sul lato destro mostra ulteriori dettagli sullo schema selezionato. Dopo aver selezionato uno schema, seleziona **[!UICONTROL Successivo]**.
 
 ![Seleziona schema set di dati](../images/labels/select-schema.png)
 
-La **[!UICONTROL Configura set di dati]** viene visualizzata la schermata . Specifica un nome (obbligatorio) e una descrizione (facoltativa, ma consigliata) per il nuovo set di dati, quindi seleziona **[!UICONTROL Fine]**.
+Il **[!UICONTROL Configurare il set di dati]** viene visualizzata la schermata. Specifica un nome (obbligatorio) e una descrizione (facoltativa ma consigliata) per il nuovo set di dati, quindi seleziona **[!UICONTROL Fine]**.
 
-![Configura set di dati con nome e descrizione](../images/labels/configure-dataset.png)
+![Configurare il set di dati con nome e descrizione](../images/labels/configure-dataset.png)
 
-La **[!UICONTROL Attività set di dati]** viene visualizzata una pagina contenente informazioni sul set di dati appena creato. In questo esempio, il set di dati è denominato &quot;Membri fedeltà&quot;, quindi viene visualizzata la navigazione superiore **Set di dati > Membri fedeltà**.
+Il **[!UICONTROL Attività set di dati]** viene visualizzata una pagina contenente informazioni sul set di dati appena creato. In questo esempio, il set di dati è denominato &quot;Membri fedeltà&quot;, pertanto la navigazione superiore mostra **Set di dati > Membri fedeltà**.
 
 ![Pagina Attività set di dati](../images/labels/dataset-created.png)
 
-### Aggiungere etichette di utilizzo dei dati al set di dati {#add-labels}
+### Aggiungere etichette di utilizzo dati al set di dati {#add-labels}
 
-Dopo aver creato un nuovo set di dati o aver selezionato un set di dati esistente dall’elenco in **[!UICONTROL Set di dati]** area di lavoro, seleziona **[!UICONTROL Governance dei dati]** per aprire **[!UICONTROL Governance dei dati]** workspace. L’area di lavoro consente di gestire le etichette di utilizzo dei dati a livello di set di dati e di campo.
+Dopo aver creato un nuovo set di dati o selezionato un set di dati esistente dall’elenco in **[!UICONTROL Set di dati]** workspace, seleziona **[!UICONTROL Governance dei dati]** per aprire **[!UICONTROL Governance dei dati]** Workspace. L’area di lavoro ti consente di gestire le etichette di utilizzo dei dati a livello di set di dati e di campo.
 
 ![Scheda Governance dei dati del set di dati](../images/labels/dataset-governance.png)
 
@@ -68,19 +68,19 @@ Per modificare le etichette di utilizzo dei dati a livello di set di dati, inizi
 
 ![Modificare le etichette a livello di set di dati](../images/labels/dataset-level-edit.png)
 
-La **[!UICONTROL Modificare le etichette di governance]** viene visualizzata la finestra di dialogo . Nella finestra di dialogo , seleziona le caselle accanto alle etichette da applicare al set di dati. Tieni presente che queste etichette verranno ereditate da tutti i campi all’interno del set di dati. La **[!UICONTROL Etichette applicate]** l&#39;intestazione viene aggiornata mentre controlli ogni casella, mostrando le etichette selezionate. Dopo aver selezionato le etichette desiderate, seleziona **[!UICONTROL Salva modifiche]**.
+Il **[!UICONTROL Modifica etichette di governance]** viene visualizzata una finestra di dialogo. Nella finestra di dialogo, seleziona le caselle accanto alle etichette da applicare al set di dati. Ricorda che queste etichette verranno ereditate da tutti i campi all’interno del set di dati. Il **[!UICONTROL Etichette applicate]** l’intestazione viene aggiornata quando selezioni ogni casella, mostrando le etichette scelte. Dopo aver selezionato le etichette desiderate, seleziona **[!UICONTROL Salva modifiche]**.
 
 ![Applicare le etichette di governance a livello di set di dati](../images/labels/apply-labels-dataset.png)
 
-La **[!UICONTROL Governance dei dati]** viene visualizzata nuovamente l&#39;area di lavoro, mostrando le etichette applicate a livello di set di dati. Inoltre, puoi vedere che le etichette vengono ereditate fino a ciascuno dei campi all’interno del set di dati.
+Il **[!UICONTROL Governance dei dati]** viene nuovamente visualizzato l’area di lavoro, con le etichette applicate a livello di set di dati. Puoi anche vedere che le etichette vengono ereditate fino a ciascuno dei campi all’interno del set di dati.
 
-![Etichette set di dati ereditate dai campi](../images/labels/dataset-labels-applied.png)
+![Etichette del set di dati ereditate dai campi](../images/labels/dataset-labels-applied.png)
 
-Nota che accanto alle etichette a livello di set di dati viene visualizzata una &quot;x&quot; che consente di rimuovere le etichette. Le etichette ereditate accanto a ciascun campo non dispongono di una &quot;x&quot; accanto a esse e vengono visualizzate in grigio senza possibilità di rimuovere o modificare. Questo perché **i campi ereditati sono di sola lettura**, ovvero non possono essere rimosse a livello di campo.
+Accanto alle etichette a livello di set di dati viene visualizzata una &quot;x&quot; che consente di rimuovere le etichette. Le etichette ereditate accanto a ciascun campo non hanno una &quot;x&quot; accanto e appaiono &quot;disattivate&quot; senza possibilità di rimozione o modifica. Questo perché **i campi ereditati sono di sola lettura**, il che significa che non possono essere rimossi a livello di campo.
 
-La **[!UICONTROL Mostra etichette ereditate]** per impostazione predefinita, l’opzione è attivata e consente di visualizzare nei relativi campi le etichette ereditate dal set di dati. Quando si disattiva l’opzione , vengono nascoste tutte le etichette ereditate all’interno del set di dati.
+Il **[!UICONTROL Mostra etichette ereditate]** l’opzione è attivata per impostazione predefinita, consente di visualizzare tutte le etichette ereditate dal set di dati ai relativi campi. Se si disattiva l’opzione, vengono nascoste tutte le etichette ereditate all’interno del set di dati.
 
-![Nascondere le etichette ereditate](../images/labels/inherited-labels.png)
+![Nascondi etichette ereditate](../images/labels/inherited-labels.png)
 
 ## Gestire le etichette a livello di campo del set di dati {#manage-labels-at-dataset-field-level}
 
@@ -91,37 +91,37 @@ La **[!UICONTROL Mostra etichette ereditate]** per impostazione predefinita, l�
 
 >[!IMPORTANT]
 >
->L’applicazione di etichette a livello di campo set di dati è supportata solo per i casi di utilizzo della governance dei dati. Se stai cercando di creare criteri di accesso per i dati, devi [applicare etichette allo schema](../../xdm/tutorials/labels.md) che il set di dati è basato su. Vedi la panoramica su [controllo dell&#39;accesso basato sugli attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
+>L’applicazione di etichette a livello di campo del set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se si desidera creare criteri di accesso per i dati, è necessario [applica etichette allo schema](../../xdm/tutorials/labels.md) su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
-Continua del flusso di lavoro per [aggiunta e modifica di etichette di utilizzo dati a livello di set di dati](#add-labels), puoi anche gestire le etichette a livello di campo all’interno della **[!UICONTROL Governance dei dati]** area di lavoro per quel set di dati.
+Continuazione del flusso di lavoro per [aggiunta e modifica di etichette di utilizzo dei dati a livello di set di dati](#add-labels), è inoltre possibile gestire le etichette a livello di campo all&#39;interno del **[!UICONTROL Governance dei dati]** dell’area di lavoro per quel set di dati.
 
-Per applicare le etichette di utilizzo dei dati a un singolo campo, seleziona la casella di controllo accanto al nome del campo, quindi seleziona **[!UICONTROL Modificare le etichette di governance]**.
+Per applicare le etichette di utilizzo dei dati a un singolo campo, seleziona la casella di controllo accanto al nome del campo, quindi seleziona **[!UICONTROL Modifica etichette di governance]**.
 
-![Modifica etichette campo](../images/labels/field-label-edit.png)
+![Modifica etichette campi](../images/labels/field-label-edit.png)
 
-La **[!UICONTROL Modificare le etichette di governance]** viene visualizzata la finestra di dialogo . Nella finestra di dialogo vengono visualizzate intestazioni che mostrano i campi selezionati, le etichette applicate e le etichette ereditate. Le etichette ereditate (C2 e C5) sono disattivate nella finestra di dialogo. Sono etichette di sola lettura ereditate dal livello di set di dati e sono quindi modificabili solo a livello di set di dati.
+Il **[!UICONTROL Modifica etichette di governance]** viene visualizzata. La finestra di dialogo visualizza le intestazioni che mostrano i campi selezionati, le etichette applicate e le etichette ereditate. Le etichette ereditate (C2 e C5) sono disattivate nella finestra di dialogo. Sono etichette di sola lettura ereditate dal livello del set di dati e sono quindi modificabili solo a livello di set di dati.
 
 ![Modificare le etichette di governance per un singolo campo](../images/labels/field-label-inheritance.png)
 
-Seleziona le etichette a livello di campo selezionando la casella di controllo accanto a ciascuna etichetta da utilizzare. Quando selezioni le etichette, **[!UICONTROL Etichette applicate]** aggiornamenti dell’intestazione per mostrare le etichette applicate ai campi visualizzati nella **[!UICONTROL Campi selezionati]** intestazione. Dopo aver selezionato le etichette a livello di campo, seleziona **[!UICONTROL Salva modifiche]**.
+Seleziona le etichette a livello di campo selezionando la casella di controllo accanto a ogni etichetta che desideri utilizzare. Quando si selezionano le etichette, **[!UICONTROL Etichette applicate]** l’intestazione viene aggiornata per mostrare le etichette applicate ai campi mostrati nella **[!UICONTROL Campi selezionati]** intestazione. Dopo aver selezionato le etichette a livello di campo, seleziona **[!UICONTROL Salva modifiche]**.
 
-![Applicare etichette a livello di campo](../images/labels/apply-labels-field.png)
+![Applica etichette a livello di campo](../images/labels/apply-labels-field.png)
 
-La **[!UICONTROL Governance dei dati]** viene visualizzata nuovamente l’area di lavoro, che ora visualizza le etichette a livello di campo selezionate nella riga accanto al nome del campo. L’etichetta a livello di campo ha una &quot;x&quot; accanto a essa, che consente di rimuovere l’etichetta.
+Il **[!UICONTROL Governance dei dati]** workspace, che ora visualizza le etichette a livello di campo selezionate nella riga accanto al nome del campo. L’etichetta a livello di campo è affiancata da una &quot;x&quot;, che consente di rimuoverla.
 
 ![Campo che mostra le etichette a livello di campo](../images/labels/field-labels-applied.png)
 
-Puoi ripetere questi passaggi per continuare ad aggiungere e modificare etichette a livello di campo per altri campi, inclusa la selezione di più campi per applicare etichette a livello di campo contemporaneamente.
+È possibile ripetere questi passaggi per continuare ad aggiungere e modificare etichette a livello di campo per campi aggiuntivi, inclusa la selezione di più campi per applicare etichette a livello di campo contemporaneamente.
 
-![Selezionare più campi per applicare etichette a livello di campo contemporaneamente.](../images/labels/multiple-fields.png)
+![Selezionare più campi per applicare le etichette a livello di campo contemporaneamente.](../images/labels/multiple-fields.png)
 
-È importante ricordare che l’ereditarietà si sposta solo dall’alto verso il basso (set di dati → campi), il che significa che le etichette applicate a livello di campo non vengono propagate ad altri campi o set di dati.
+È importante ricordare che l’ereditarietà si sposta solo dal livello superiore verso il basso (campi di → di set di dati), il che significa che le etichette applicate a livello di campo non vengono propagate ad altri campi o set di dati.
 
-## Gestione delle etichette a livello di schema
+## Gestire le etichette a livello di schema
 
-È possibile aggiungere etichette direttamente a uno schema o più campi all&#39;interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
+Puoi aggiungere etichette direttamente a uno schema o a campi all’interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
 
-Guarda l’esercitazione su [gestione delle etichette a livello di schema](../../xdm/tutorials/labels.md) per ulteriori informazioni.
+Guarda il tutorial su [gestione delle etichette a livello di schema](../../xdm/tutorials/labels.md) per ulteriori informazioni.
 
 ## Gestire le etichette personalizzate {#manage-custom-labels}
 
@@ -130,36 +130,36 @@ Guarda l’esercitazione su [gestione delle etichette a livello di schema](../..
 >title="Create labels (Creare etichette)"
 >abstract="Le etichette consentono di classificare set di dati e campi in base ai criteri di utilizzo applicati a tali dati. Platform fornisce un set standard di etichette da utilizzare, ma puoi anche creare etichette personalizzate specifiche per la tua organizzazione."
 
-Puoi creare etichette di utilizzo personalizzate all’interno di **[!UICONTROL Criteri]** nell&#39;area di lavoro [!DNL Experience Platform] Interfaccia utente. Seleziona **[!UICONTROL Criteri]** nella navigazione a sinistra, seleziona **[!UICONTROL Etichette]** per visualizzare un elenco delle etichette esistenti. Da qui, seleziona **[!UICONTROL Crea etichetta]**.
+Puoi creare etichette di utilizzo personalizzate all&#39;interno del **[!UICONTROL Criteri]** area di lavoro in [!DNL Experience Platform] UI. Seleziona **[!UICONTROL Criteri]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Etichette]** per visualizzare un elenco di etichette esistenti. Da qui, seleziona **[!UICONTROL Crea etichetta]**.
 
 ![](../images/labels/create-label-btn.png)
 
-La **[!UICONTROL Crea etichetta]** viene visualizzata la finestra di dialogo . Da qui, fornisci le seguenti informazioni per la nuova etichetta:
+Il **[!UICONTROL Crea etichetta]** viene visualizzata. Da qui, fornisci le seguenti informazioni per la nuova etichetta:
 
-* **[!UICONTROL Identificatore]**: Identificatore univoco dell&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e deve quindi essere breve e conciso.
-* **[!UICONTROL Nome]**: Un nome visualizzato descrittivo per l’etichetta.
-* **[!UICONTROL Descrizione]**: (Facoltativo) Una descrizione dell’etichetta per fornire ulteriore contesto.
+* **[!UICONTROL Identificatore]**: identificatore univoco dell’etichetta. Questo valore viene utilizzato a scopo di ricerca e deve quindi essere breve e conciso.
+* **[!UICONTROL Nome]**: nome visualizzato descrittivo per l’etichetta.
+* **[!UICONTROL Descrizione]**: (facoltativo) descrizione dell’etichetta per fornire ulteriore contesto.
 
 Al termine, seleziona **[!UICONTROL Crea]**.
 
 ![](../images/labels/create-label.png)
 
-La finestra di dialogo viene chiusa e l’etichetta personalizzata appena creata viene visualizzata nell’elenco sotto la **[!UICONTROL Etichette]** scheda .
+La finestra di dialogo si chiude e l’etichetta personalizzata appena creata viene visualizzata nell’elenco sotto **[!UICONTROL Etichette]** scheda.
 
 ![](../images/labels/label-created.png)
 
-L’etichetta può ora essere selezionata in **[!UICONTROL Etichette personalizzate]** durante la modifica delle etichette di utilizzo per set di dati e campi o durante la creazione di criteri di utilizzo dei dati.
+L’etichetta ora può essere selezionata in **[!UICONTROL Etichette personalizzate]** durante la modifica delle etichette di utilizzo per set di dati e campi o durante la creazione di criteri di utilizzo dei dati.
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Passaggi successivi
 
-Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a inserire i dati in [!DNL Experience Platform]. Per saperne di più, inizia leggendo il [documentazione sull’acquisizione dei dati](../../ingestion/home.md).
+Ora che hai aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare ad acquisire i dati in [!DNL Experience Platform]. Per ulteriori informazioni, consulta la sezione [documentazione sull’acquisizione dei dati](../../ingestion/home.md).
 
-È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, consulta la sezione [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
+Ora puoi anche definire i criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
 
 ## Risorse aggiuntive
 
-Il video seguente ha lo scopo di comprendere la governance dei dati e illustra come applicare le etichette a un set di dati e a singoli campi.
+Il video seguente ha lo scopo di aiutarti a comprendere la governance dei dati e illustra come applicare le etichette a un set di dati e ai singoli campi.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

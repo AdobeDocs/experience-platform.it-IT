@@ -15,21 +15,21 @@ ht-degree: 2%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per recuperare un modello di metadati per il pubblico, utilizzando `/authoring/audience-templates` Endpoint API.
+Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per recuperare un modello di metadati di pubblico, utilizzando `/authoring/audience-templates` Endpoint API
 
-Per una descrizione dettagliata delle funzionalità che puoi configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
+Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API con i modelli di pubblico {#get-started}
+## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Recuperare un modello di pubblico {#retrieve}
 
-Puoi recuperare un modello di pubblico esistente creando un `GET` richiesta al `/authoring/audience-templates` punto finale.
+Per recuperare un modello di pubblico esistente, devi effettuare una `GET` richiesta al `/authoring/audience-templates` endpoint.
 
 **Formato API**
 
@@ -39,21 +39,21 @@ Utilizza il seguente formato API per recuperare tutti i modelli di pubblico per 
 GET /authoring/audience-templates
 ```
 
-Utilizza il seguente formato API per recuperare un modello di pubblico specifico, definito dalla `{INSTANCE_ID}` parametro .
+Utilizza il seguente formato API per recuperare un modello di pubblico specifico, definito da `{INSTANCE_ID}` parametro.
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-Le due richieste seguenti recuperano tutti i modelli di pubblico per la tua organizzazione IMS o un modello di pubblico specifico, a seconda che passi o meno il `INSTANCE_ID` nella richiesta.
+Le due richieste seguenti recuperano tutti i modelli di pubblico per l’organizzazione IMS, o un modello di pubblico specifico, a seconda che venga passato o meno il `INSTANCE_ID` nella richiesta.
 
-Seleziona ciascuna scheda qui sotto per visualizzare il payload corrispondente.
+Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
 >[!BEGINTABS]
 
 >[!TAB Recupera tutti i modelli di pubblico]
 
-La seguente richiesta recupera l’elenco di modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La seguente richiesta recupererà l’elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
 
 +++Richiesta
 
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di pubblico a cui hai accesso, in base al [!DNL IMS Org ID] e nome della sandbox utilizzata. Uno `instanceId` corrisponde a un modello di pubblico.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di modelli di pubblico a cui hai accesso, in base al [!DNL IMS Org ID] e il nome della sandbox che hai utilizzato. Uno `instanceId` corrisponde a un modello di pubblico.
 
 ```json
 {
@@ -180,9 +180,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
 
 +++
 
->[!TAB Recupera un modello di pubblico specifico]
+>[!TAB Recuperare un modello di pubblico specifico]
 
-La seguente richiesta recupera l’elenco di modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La seguente richiesta recupererà l’elenco dei modelli di pubblico a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
 
 +++Richiesta
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico corrispondente al `{INSTANCE_ID}` fornito sulla chiamata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del modello di pubblico corrispondenti al `{INSTANCE_ID}` fornite durante la chiamata.
 
 ```json
 {
@@ -321,4 +321,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come recuperare i dettagli sulla configurazione del server di destinazione utilizzando `/authoring/destination-servers` Endpoint API. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come recuperare i dettagli sulla configurazione del server di destinazione utilizzando `/authoring/destination-servers` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

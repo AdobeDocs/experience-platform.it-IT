@@ -184,7 +184,7 @@ Per creare un set di dati, segui le istruzioni riportate nella sezione [guida ut
 
 Dopo aver creato il set di dati, continua a seguire le istruzioni riportate nella sezione [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per Real-Time Customer Profile.
 
-![L’opzione per abilitare lo schema per il profilo è evidenziata nel flusso di lavoro Crea set di dati.](../images/tutorials/external-audiences/dataset-profile.png)
+![L’interruttore per abilitare lo schema per il profilo viene evidenziato nel flusso di lavoro per la creazione dei set di dati.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Impostare e importare i dati di iscrizione del pubblico esterno
 

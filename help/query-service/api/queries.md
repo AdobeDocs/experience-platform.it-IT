@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio query;guida api;query;query;servizio query;
 solution: Experience Platform
-title: Endpoint API query
-description: Nelle sezioni seguenti sono descritte le chiamate dettagliate che è possibile effettuare utilizzando l’endpoint /query nell’API del servizio query.
+title: Endpoint API per query
+description: Le sezioni seguenti descrivono le chiamate che puoi effettuare utilizzando l’endpoint /queries nell’API del servizio di query.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 3%
 
 ---
 
-# Endpoint query
+# Endpoint &quot;query&quot;
 
 ## Chiamate API di esempio
 
-Nelle sezioni seguenti vengono descritte le chiamate che è possibile effettuare utilizzando `/queries` punto finale [!DNL Query Service] API. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Nelle sezioni seguenti vengono esaminate le chiamate che è possibile effettuare utilizzando `/queries` endpoint nella [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-### Recupera un elenco di query
+### Recuperare un elenco di query
 
-Puoi recuperare un elenco di tutte le query per la tua organizzazione effettuando una richiesta di GET al `/queries` punto finale.
+Per recuperare un elenco di tutte le query per l’organizzazione, effettua una richiesta GET al `/queries` endpoint.
 
 **Formato API**
 
@@ -28,21 +28,21 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciale (`&`). I parametri disponibili sono elencati di seguito.
+- `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito.
 
 **Parametri query**
 
-Di seguito è riportato un elenco dei parametri di query disponibili per l’elenco delle query. Tutti questi parametri sono facoltativi. Effettuare una chiamata a questo endpoint senza parametri recupererà tutte le query disponibili per la tua organizzazione.
+Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query disponibili per la tua organizzazione.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` ordinerà i risultati in base a quelli creati in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordina gli elementi in base a quelli creati in ordine decrescente. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Esegue l&#39;offset dell&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **deve** essere HTML fuggito. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (inferiore a), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da), e `~` (contiene). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
-| `excludeSoftDeleted` | Indica se includere una query che è stata eliminata tramite soft. Ad esempio: `excludeSoftDeleted=false` sarà **include** query eliminate soft. (*Valore booleano predefinito: true*) |
-| `excludeHidden` | Indica se visualizzare query non basate su utenti. Se questo valore viene impostato su false, verrà **include** query non basate su utenti, ad esempio definizioni CURSOR, FETCH o query con metadati. (*Valore booleano predefinito: true*) |
-| `isPrevLink` | La `isPrevLink` il parametro query viene utilizzato per l’impaginazione. I risultati della chiamata API vengono ordinati in base ai rispettivi `created` la marca temporale e `orderby` proprietà. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Annulla l’ordine della query. Vedi i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
+| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`, e `id`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da), e `~` (contiene). Ad esempio: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l’ID specificato. |
+| `excludeSoftDeleted` | Indica se deve essere inclusa una query che è stata eliminata temporaneamente. Ad esempio: `excludeSoftDeleted=false` will **include** query soft eliminate. (*Booleano, valore predefinito: true*) |
+| `excludeHidden` | Indica se devono essere visualizzate le query non guidate dall&#39;utente. Se questo valore è impostato su false, **include** query non guidate dall&#39;utente, come le definizioni CURSOR, FETCH o query di metadati. (*Booleano, valore predefinito: true*) |
+| `isPrevLink` | Il `isPrevLink` parametro query utilizzato per la paginazione. I risultati della chiamata API sono ordinati in base al loro `created` timestamp e `orderby` proprietà. Durante la navigazione nelle pagine dei risultati, `isPrevLink` è impostato su true quando si esegue il paging all&#39;indietro. Inverte l’ordine della query. Consulta i collegamenti &quot;successivo&quot; e &quot;precedente&quot; come esempi. |
 
 **Richiesta**
 
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query per l&#39;organizzazione specificata come JSON. La risposta seguente restituisce la query più recente creata per la tua organizzazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di query per l’organizzazione specificata come JSON. La risposta seguente restituisce la query più recente creata per l’organizzazione.
 
 ```json
 {
@@ -119,7 +119,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query per l
 
 ### Creare una query
 
-Puoi creare una nuova query effettuando una richiesta POST al `/queries` punto finale.
+Per creare una nuova query, devi eseguire una richiesta POST al `/queries` endpoint.
 
 **Formato API**
 
@@ -129,7 +129,7 @@ POST /queries
 
 **Richiesta**
 
-La seguente richiesta crea una nuova query con un&#39;istruzione SQL fornita nel payload:
+La richiesta seguente crea una nuova query, con un’istruzione SQL fornita nel payload:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -168,18 +168,18 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `dbName` | Nome del database per cui si sta creando una query SQL. |
-| `sql` | Query SQL da creare. |
+| `dbName` | Nome del database per il quale si sta creando una query SQL. |
+| `sql` | La query SQL da creare. |
 | `name` | Nome della query SQL. |
 | `description` | Descrizione della query SQL. |
-| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È richiesto solo **if** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;SQL fornito. Per queste coppie di valori chiave non verrà eseguito alcun controllo del tipo di valore. |
-| `templateId` | Identificatore univoco per una query preesistente. È possibile specificare questo anziché un&#39;istruzione SQL. |
-| `insertIntoParameters` | (Facoltativo) Se questa proprietà è definita, questa query verrà convertita in una query INSERT INTO. |
+| `queryParameters` | Associazione di valori chiave per sostituire eventuali valori con parametri nell&#39;istruzione SQL. È solo obbligatorio **se** si stanno utilizzando sostituzioni di parametri all&#39;interno dell&#39;istruzione SQL fornita. Su queste coppie chiave-valore non verrà eseguito alcun controllo del tipo di valore. |
+| `templateId` | L’identificatore univoco di una query preesistente. È possibile fornire questa istruzione anziché un&#39;istruzione SQL. |
+| `insertIntoParameters` | (Facoltativo) Se questa proprietà è definita, la query verrà convertita in una query INSERT INTO. |
 | `ctasParameters` | (Facoltativo) Se questa proprietà è definita, questa query verrà convertita in una query CTAS. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli della query appena creata. Al termine dell’attivazione della query e dell’esecuzione della query, la `state` cambia da `SUBMITTED` a `SUCCESS`.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con i dettagli della query appena creata. Una volta che la query è stata attivata ed eseguita correttamente, il `state` cambierà da `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -222,11 +222,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (accettato) con i dettagli d
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [annulla query creata](#cancel-a-query).
+>Puoi utilizzare il valore di `_links.cancel` a [annullare la query creata](#cancel-a-query).
 
-### Recupera una query per ID
+### Recuperare una query per ID
 
-È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
+Per recuperare informazioni dettagliate su una query specifica, effettua una richiesta GET al `/queries` e fornendo i `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -236,7 +236,7 @@ GET /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | La `id` valore della query da recuperare. |
+| `{QUERY_ID}` | Il `id` valore della query da recuperare. |
 
 **Richiesta**
 
@@ -250,7 +250,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla query specificata.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla query specificata.
 
 ```json
 {
@@ -293,11 +293,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 >[!NOTE]
 >
->Puoi utilizzare il valore di `_links.cancel` a [annulla query creata](#cancel-a-query).
+>Puoi utilizzare il valore di `_links.cancel` a [annullare la query creata](#cancel-a-query).
 
-### Annullare o eliminare in modo soft una query
+### Annullare o eliminare temporaneamente una query
 
-È possibile richiedere l’annullamento o l’eliminazione soft di una query specificata effettuando una richiesta di PATCH al `/queries` endpoint e fornitura della query `id` nel percorso della richiesta.
+È possibile richiedere l&#39;annullamento o l&#39;eliminazione temporanea di una query specificata effettuando una richiesta PATCH al `/queries` e fornendo i `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -307,12 +307,12 @@ PATCH /queries/{QUERY_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | La `id` valore della query su cui si desidera eseguire l&#39;operazione. |
+| `{QUERY_ID}` | Il `id` valore della query su cui desideri eseguire l’operazione. |
 
 
 **Richiesta**
 
-Questa richiesta API utilizza la sintassi della patch JSON per il relativo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento di base API .
+Questa richiesta API utilizza la sintassi Patch JSON per il suo payload. Per ulteriori informazioni sul funzionamento della patch JSON, consulta il documento API Fundals.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -328,11 +328,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `op` | Tipo di operazione da eseguire sulla risorsa. I valori accettati sono `cancel` e `soft_delete`. Per annullare la query, è necessario impostare il parametro op con il valore `cancel `. L’operazione di eliminazione soft impedisce la restituzione della query sulle richieste GET ma non la elimina dal sistema. |
+| `op` | Tipo di operazione da eseguire sulla risorsa. I valori accettati sono `cancel` e `soft_delete`. Per annullare la query, è necessario impostare il parametro op con il valore `cancel `. L’operazione di eliminazione temporanea interrompe la restituzione della query nelle richieste di GET, ma non la elimina. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente messaggio:
+In caso di esito positivo, la risposta restituisce lo stato HTTP 202 (Accepted) con il seguente messaggio:
 
 ```json
 {

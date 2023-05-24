@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da [!DNL Verizon Media/Yahoo]di [!DNL DataX] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Questa pagina della documentazione è stata creata da [!DNL Verizon Media/Yahoo]di [!DNL DataX] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Prerequisiti {#prerequisites}
 

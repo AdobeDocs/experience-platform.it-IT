@@ -1,6 +1,6 @@
 ---
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
-title: Configurazione dello schema dei partner
+title: Configurazione schema partner
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
 workflow-type: tm+mt
 source-wordcount: '1715'
@@ -9,53 +9,53 @@ ht-degree: 4%
 ---
 
 
-# Configurazione dello schema dei partner
+# Configurazione schema partner
 
-Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Quando i dati vengono acquisiti in Platform, sono strutturati in base a uno schema XDM. Per ulteriori informazioni sul modello di composizione dello schema, inclusi i principi di progettazione e le best practice, consulta la sezione [nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md).
+Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Quando i dati vengono acquisiti in Platform, sono strutturati in base a uno schema XDM. Per ulteriori informazioni sul modello di composizione dello schema, inclusi i principi di progettazione e le best practice, vedi [nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md).
 
-Quando crei una destinazione con Destination SDK, puoi definire il tuo schema partner da utilizzare per la piattaforma di destinazione. Questo consente agli utenti di mappare gli attributi di profilo da Platform a campi specifici riconosciuti dalla piattaforma di destinazione, il tutto all’interno dell’interfaccia utente di Platform.
+Quando crei una destinazione con Destination SDK, puoi definire il tuo schema partner da utilizzare per la piattaforma di destinazione. Questo consente agli utenti di mappare gli attributi del profilo da Platform a campi specifici riconosciuti dalla piattaforma di destinazione, il tutto all’interno dell’interfaccia utente di Platform.
 
-Durante la configurazione dello schema del partner per la destinazione, è possibile ottimizzare la mappatura dei campi supportata dalla piattaforma di destinazione, ad esempio:
+Durante la configurazione dello schema partner per la destinazione, puoi ottimizzare la mappatura dei campi supportata dalla piattaforma di destinazione, ad esempio:
 
-* Consenti agli utenti di mappare un `phoneNumber` Attributo XDM a un `phone` attributo supportato dalla piattaforma di destinazione.
-* Crea schemi di partner dinamici che Experience Platform può richiamare in modo dinamico per recuperare un elenco di tutti gli attributi supportati all’interno della destinazione.
-* Definisci le mappature dei campi obbligatorie richieste dalla piattaforma di destinazione.
+* Consenti agli utenti di mappare un `phoneNumber` Attributo XDM a una `phone` supportato dalla piattaforma di destinazione.
+* Crea schemi partner dinamici che Experience Platform può richiamare in modo dinamico per recuperare un elenco di tutti gli attributi supportati all’interno della destinazione.
+* Definisci le mappature dei campi obbligatorie necessarie per la piattaforma di destinazione.
 
-Per capire dove si trova questo componente in un’integrazione creata con Destination SDK, consulta il diagramma nella sezione [opzioni di configurazione](../configuration-options.md) documentazione o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
-Puoi configurare le impostazioni dello schema tramite `/authoring/destinations` punto finale. Per esempi dettagliati sulle chiamate API , consulta le pagine di riferimento API seguenti dove puoi configurare i componenti mostrati in questa pagina.
+È possibile configurare le impostazioni dello schema tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutte le opzioni di configurazione dello schema supportate che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Platform.
+Questo articolo descrive tutte le opzioni di configurazione dello schema supportate che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Platform.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
-Per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina, consulta la tabella seguente.
+Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina.
 
-| Tipo di integrazione | Supporta funzionalità |
+| Tipo di integrazione | Supporta la funzionalità |
 |---|---|
 | Integrazioni in tempo reale (streaming) | Sì |
 | Integrazioni basate su file (batch) | Sì |
 
 ## Configurazione dello schema supportata {#supported-schema-types}
 
-Destination SDK supporta più configurazioni dello schema:
+Destination SDK supporta più configurazioni di schema:
 
-* Gli schemi statici sono definiti tramite `profileFields` nella `schemaConfig` sezione . In uno schema statico, definisci ogni attributo di destinazione da visualizzare nell’interfaccia utente di Experience Platform nel `profileFields` array. Se devi aggiornare lo schema, devi [aggiorna la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Gli schemi dinamici utilizzano un tipo di server di destinazione aggiuntivo, denominato [server schema dinamico](../../authoring-api/destination-server/create-destination-server.md), per generare in modo dinamico schemi basati sulla tua API. Gli schemi dinamici non utilizzano il `profileFields` array. Se devi aggiornare lo schema, non è necessario [aggiorna la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md). Il server schema dinamico recupera invece lo schema aggiornato dall’API.
-* All’interno della configurazione dello schema, puoi aggiungere mappature obbligatorie (o predefinite). Si tratta di mappature che gli utenti possono visualizzare nell’interfaccia utente di Platform, ma che non possono modificare quando si configura una connessione alla destinazione. Ad esempio, puoi applicare il campo dell’indirizzo e-mail affinché venga sempre inviato alla destinazione.
+* Gli schemi statici sono definiti tramite `profileFields` array in `schemaConfig` sezione. In uno schema statico, puoi definire ogni attributo di destinazione che deve essere visualizzato nell’interfaccia utente di Experience Platform nel `profileFields` array. Se devi aggiornare lo schema, devi [aggiornare la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md).
+* Gli schemi dinamici utilizzano un tipo di server di destinazione aggiuntivo, denominato [server schema dinamico](../../authoring-api/destination-server/create-destination-server.md), per generare dinamicamente gli schemi in base alla tua API. Gli schemi dinamici non utilizzano `profileFields` array. Se devi aggiornare lo schema, non è necessario [aggiornare la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md). Il server con schema dinamico recupera invece lo schema aggiornato dall’API.
+* All’interno della configurazione dello schema, puoi aggiungere mappature richieste (o predefinite). Si tratta di mappature che gli utenti possono visualizzare nell’interfaccia utente di Platform, ma che non possono modificare quando si imposta una connessione alla destinazione. Ad esempio, puoi applicare che il campo dell’indirizzo e-mail venga sempre inviato alla destinazione.
 
-La `schemaConfig` La sezione utilizza più parametri di configurazione, a seconda del tipo di schema necessario, come illustrato nelle sezioni seguenti.
+Il `schemaConfig` Questa sezione utilizza più parametri di configurazione, a seconda del tipo di schema necessario, come illustrato nelle sezioni seguenti.
 
 ## Creare uno schema statico {#attributes-schema}
 
-Per creare uno schema statico con gli attributi di profilo, definisci gli attributi di destinazione nel `profileFields` come illustrato di seguito.
+Per creare uno schema statico con attributi di profilo, definisci gli attributi di destinazione in `profileFields` come mostrato di seguito.
 
 ```json
 "schemaConfig":{
@@ -97,19 +97,19 @@ Per creare uno schema statico con gli attributi di profilo, definisci gli attrib
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---------|----------|------|---|
-| `profileFields` | Array | Facoltativo | Definisce la matrice degli attributi di destinazione accettati dalla piattaforma di destinazione a cui i clienti possono mappare i loro attributi di profilo. Quando si utilizza un `profileFields` è possibile omettere `useCustomerSchemaForAttributeMapping` interamente. |
-| `useCustomerSchemaForAttributeMapping` | Booleano | Facoltativo | Abilita o disabilita la mappatura degli attributi dallo schema del cliente agli attributi definiti nella `profileFields` array. <ul><li>Se impostato su `true`, gli utenti visualizzano solo la colonna sorgente nel campo di mappatura . `profileFields` non sono applicabili in questo caso.</li><li>Se impostato su `false`, gli utenti possono mappare gli attributi di origine dal proprio schema agli attributi definiti nella `profileFields` array.</li></ul> Il valore predefinito è `false`. |
-| `profileRequired` | Booleano | Facoltativo | Utilizzo `true` se gli utenti devono essere in grado di mappare gli attributi di profilo dall’Experience Platform agli attributi personalizzati sulla piattaforma di destinazione. |
-| `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto da Destination SDK e deve sempre essere impostato su `true`. |
-| `identityRequired` | Booleano | Obbligatorio | Imposta su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) dall’Experience Platform agli attributi definiti nella `profileFields` array . |
+| `profileFields` | Array | Facoltativo | Definisce l’array di attributi di destinazione accettati dalla piattaforma di destinazione alla quale i clienti possono mappare i propri attributi di profilo. Quando si utilizza una `profileFields` , è possibile omettere `useCustomerSchemaForAttributeMapping` parametro completo. |
+| `useCustomerSchemaForAttributeMapping` | Booleano | Facoltativo | Abilita o disabilita la mappatura degli attributi dallo schema del cliente agli attributi definiti nell&#39; `profileFields` array. <ul><li>Se impostato su `true`, gli utenti visualizzano solo la colonna di origine nel campo di mappatura. `profileFields` non sono applicabili in questo caso.</li><li>Se impostato su `false`, gli utenti possono mappare gli attributi di origine dal proprio schema agli attributi definiti nell&#39; `profileFields` array.</li></ul> Il valore predefinito è `false`. |
+| `profileRequired` | Booleano | Facoltativo | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sulla piattaforma di destinazione. |
+| `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto dalla Destination SDK e deve essere sempre impostato su `true`. |
+| `identityRequired` | Booleano | Obbligatorio | Imposta su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) dall&#39;Experience Platform agli attributi definiti nella `profileFields` array. |
 
 {style="table-layout:auto"}
 
-L’esperienza utente risultante viene mostrata nelle immagini seguenti.
+L’esperienza dell’interfaccia utente risultante viene mostrata nelle immagini seguenti.
 
 Quando gli utenti selezionano la mappatura di destinazione, possono visualizzare i campi definiti nella `profileFields` array.
 
-![Immagine dell’interfaccia utente che mostra la schermata degli attributi di destinazione.](../../assets/functionality/destination-configuration/select-attributes.png)
+![Immagine dell’interfaccia utente che mostra la schermata attributi di destinazione.](../../assets/functionality/destination-configuration/select-attributes.png)
 
 Dopo aver selezionato gli attributi, possono visualizzarli nella colonna del campo di destinazione.
 
@@ -117,13 +117,13 @@ Dopo aver selezionato gli attributi, possono visualizzarli nella colonna del cam
 
 ## Creare uno schema dinamico {#dynamic-schema-configuration}
 
-Destination SDK supporta la creazione di schemi di partner dinamici. Invece di uno schema statico, uno schema dinamico non utilizza un `profileFields` array. Al contrario, gli schemi dinamici utilizzano un server di schema dinamico che si connette all’API da cui recupera la configurazione dello schema.
+Destination SDK supporta la creazione di schemi partner dinamici. A differenza di uno schema statico, uno schema dinamico non utilizza `profileFields` array. Gli schemi dinamici utilizzano invece un server di schema dinamico che si connette alla tua API da dove recupera la configurazione dello schema.
 
 >[!IMPORTANT]
 >
->Prima di creare uno schema dinamico, è necessario [creare un server schema dinamico](../../authoring-api/destination-server/create-destination-server.md).
+>Prima di creare uno schema dinamico, è necessario [creare un server di schema dinamico](../../authoring-api/destination-server/create-destination-server.md).
 
-In una configurazione di schema dinamico, il `profileFields` viene sostituito dal `dynamicSchemaConfig` , come illustrato di seguito.
+In una configurazione di schema dinamico, il `profileFields` è sostituito da `dynamicSchemaConfig` come illustrato di seguito.
 
 ```json
 "schemaConfig":{
@@ -143,38 +143,38 @@ In una configurazione di schema dinamico, il `profileFields` viene sostituito da
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | Stringa | Obbligatorio | Indica come [!DNL Platform] i clienti si connettono alla destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzo `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md). </li><li> Utilizzo `PLATFORM_AUTHENTICATION` se esiste un sistema di autenticazione globale tra l’Adobe e la destinazione e [!DNL Platform] il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, devi [creare un oggetto credentials](../../credentials-api/create-credential-configuration.md) utilizzando l&#39;API delle credenziali. </li><li>Utilizzo `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
-| `dynamicEnum.destinationServerId` | Stringa | Obbligatorio | La `instanceId` del server schema dinamico. Questo server di destinazione include l&#39;endpoint API che Experience Platform chiamerà per recuperare lo schema dinamico. |
-| `dynamicEnum.value` | Stringa | Obbligatorio | Nome dello schema dinamico, come definito nella configurazione del server schema dinamico. |
+| `dynamicEnum.authenticationRule` | Stringa | Obbligatorio | Indica come [!DNL Platform] i clienti si connettono alla tua destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzare `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al sistema tramite uno dei metodi di autenticazione descritti [qui](customer-authentication.md). </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la tua destinazione e il [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, devi [creare un oggetto credenziali](../../credentials-api/create-credential-configuration.md) utilizzando l’API Credentials. </li><li>Utilizzare `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
+| `dynamicEnum.destinationServerId` | Stringa | Obbligatorio | Il `instanceId` del server di schema dinamico. Questo server di destinazione include l’endpoint API che Experience Platform chiamerà per recuperare lo schema dinamico. |
+| `dynamicEnum.value` | Stringa | Obbligatorio | Il nome dello schema dinamico, come definito nella configurazione del server di schema dinamico. |
 | `dynamicEnum.responseFormat` | Stringa | Obbligatorio | Sempre impostato su `SCHEMA` durante la definizione di uno schema dinamico. |
-| `profileRequired` | Booleano | Facoltativo | Utilizzo `true` se gli utenti devono essere in grado di mappare gli attributi di profilo dall’Experience Platform agli attributi personalizzati sulla piattaforma di destinazione. |
-| `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto da Destination SDK e deve sempre essere impostato su `true`. |
-| `identityRequired` | Booleano | Obbligatorio | Imposta su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) dall’Experience Platform agli attributi definiti nella `profileFields` array . |
+| `profileRequired` | Booleano | Facoltativo | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sulla piattaforma di destinazione. |
+| `segmentRequired` | Booleano | Obbligatorio | Questo parametro è richiesto dalla Destination SDK e deve essere sempre impostato su `true`. |
+| `identityRequired` | Booleano | Obbligatorio | Imposta su `true` se gli utenti devono essere in grado di mappare [tipi di identità](identity-namespace-configuration.md) dall&#39;Experience Platform agli attributi definiti nella `profileFields` array. |
 
 {style="table-layout:auto"}
 
 ## Mappature richieste {#required-mappings}
 
-Nella configurazione dello schema, oltre allo schema statico o dinamico, è possibile aggiungere mappature obbligatorie (o predefinite). Si tratta di mappature che gli utenti possono visualizzare nell’interfaccia utente di Platform, ma che non possono modificare quando si configura una connessione alla destinazione.
+All’interno della configurazione dello schema, oltre allo schema statico o dinamico, puoi aggiungere mappature richieste (o predefinite). Si tratta di mappature che gli utenti possono visualizzare nell’interfaccia utente di Platform, ma che non possono modificare quando si imposta una connessione alla destinazione.
 
-Ad esempio, puoi applicare il campo dell’indirizzo e-mail affinché venga sempre inviato alla destinazione.
+Ad esempio, puoi applicare che il campo dell’indirizzo e-mail venga sempre inviato alla destinazione.
 
 >[!NOTE]
 >
 >Sono attualmente supportate le seguenti combinazioni di mappature richieste:
->* È possibile configurare un campo di origine obbligatorio e un campo di destinazione obbligatorio. In questo caso, gli utenti non possono modificare o selezionare nessuno dei due campi e possono solo visualizzare la selezione.
->* È possibile configurare solo un campo di destinazione obbligatorio. In questo caso, gli utenti potranno selezionare un campo di origine da mappare alla destinazione.
+>* Puoi configurare un campo di origine e un campo di destinazione obbligatori. In questo caso, gli utenti non possono modificare o selezionare nessuno dei due campi e possono solo visualizzare la selezione.
+>* Puoi configurare solo un campo di destinazione richiesto. In questo caso, gli utenti saranno autorizzati a selezionare un campo di origine da mappare alla destinazione.
 >
-> La configurazione di un solo campo di origine richiesto è attualmente *not* supportato.
+> La configurazione di un solo campo di origine obbligatorio è attualmente *non* supportati.
 
-Di seguito sono riportati due esempi di una configurazione dello schema con le mappature richieste e di come si presentano nel passaggio di mappatura [attiva i dati nel flusso di lavoro destinazioni batch](../../../ui/activate-batch-profile-destinations.md).
+Di seguito sono riportati due esempi di configurazione di schema con mappature richieste e del loro aspetto nel passaggio di mappatura della [flusso di lavoro per l&#39;attivazione dei dati nelle destinazioni batch](../../../ui/activate-batch-profile-destinations.md).
 
 
 >[!BEGINTABS]
 
 >[!TAB Mappature di origine e destinazione richieste]
 
-L’esempio seguente mostra le mappature di origine e destinazione richieste. Quando i campi di origine e di destinazione sono specificati come mappature richieste, gli utenti non possono selezionare o modificare nessuno dei due campi e possono visualizzare solo la selezione predefinita.
+L’esempio seguente mostra le mappature di origine e di destinazione richieste. Quando i campi di origine e di destinazione sono specificati come mappature obbligatorie, gli utenti non possono selezionare o modificare nessuno dei due campi e possono solo visualizzare la selezione predefinita.
 
 ```json
 "schemaConfig": {
@@ -191,20 +191,20 @@ L’esempio seguente mostra le mappature di origine e destinazione richieste. Qu
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---|---|---|---|
-| `requiredMappingsOnly` | Booleano | Facoltativo | Quando questa impostazione è impostata su true , gli utenti non possono mappare altri attributi e identità nel flusso di attivazione, a parte le mappature richieste definite nella `requiredMappings` array. |
-| `requiredMappings.sourceType` | Stringa | Obbligatorio | Indica il tipo di `source` campo . Valori supportati: <ul><li>`text/x.schema-path`: Utilizza questo valore quando `source` è un attributo di profilo da uno schema XDM.</li><li>`text/x.aep-xl`: Utilizza questo valore quando `source` è definito da un&#39;espressione regolare. Esempio: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`: Utilizza questo valore quando `source` è definito da un modello macro. Attualmente, l&#39;unico modello di macro supportato è `metadata.segment.alias`.</li></ul> |
-| `requiredMappings.source` | Stringa | Obbligatorio | Indica il valore del campo di origine. Tipi di valori supportati: <ul><li>Attributi del profilo XDM. Esempio: `personalEmail.address`. Quando l’attributo di origine è un attributo di profilo XDM, imposta la variabile `sourceType` parametro a `text/x.schema-path`.</li><li>Espressioni regolari. Esempio: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. Quando l&#39;attributo di origine è un&#39;espressione regolare, imposta la variabile `sourceType` parametro a `text/x.aep-xl`.</li><li>Modelli macro. Esempio:`metadata.segment.alias`. Quando l&#39;attributo di origine è un modello macro, impostare `sourceType` parametro a `text/plain`. Attualmente, l&#39;unico modello di macro supportato è `metadata.segment.alias`.</li></ul> |
-| `requiredMappings.destination` | Stringa | Obbligatorio | Indica il valore del campo di destinazione. Quando i campi di origine e di destinazione sono specificati come mappature richieste, gli utenti non possono selezionare o modificare nessuno dei due campi e possono solo visualizzare la selezione. |
+| `requiredMappingsOnly` | Booleano | Facoltativo | Quando è impostato su true, gli utenti non possono mappare altri attributi e identità nel flusso di attivazione, a parte le mappature richieste definite in `requiredMappings` array. |
+| `requiredMappings.sourceType` | Stringa | Obbligatorio | Indica il tipo di `source` campo. Valori supportati: <ul><li>`text/x.schema-path`: utilizza questo valore quando `source` è un attributo di profilo da uno schema XDM.</li><li>`text/x.aep-xl`: utilizza questo valore quando `source` è definito da un&#39;espressione regolare. Esempio: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`: utilizza questo valore quando `source` è definito da un modello di macro. Attualmente, l&#39;unico modello di macro supportato è `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.source` | Stringa | Obbligatorio | Indica il valore del campo di origine. Tipi di valore supportati: <ul><li>Attributi di profilo XDM. Esempio: `personalEmail.address`. Quando l’attributo sorgente è un attributo di profilo XDM, imposta il `sourceType` parametro a `text/x.schema-path`.</li><li>Espressioni regolari. Esempio: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. Quando l&#39;attributo di origine è un&#39;espressione regolare, impostare `sourceType` parametro a `text/x.aep-xl`.</li><li>Modelli di macro. Esempio:`metadata.segment.alias`. Quando l&#39;attributo di origine è un modello di macro, impostare `sourceType` parametro a `text/plain`. Attualmente, l&#39;unico modello di macro supportato è `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.destination` | Stringa | Obbligatorio | Indica il valore del campo di destinazione. Quando i campi di origine e di destinazione sono specificati come mappature obbligatorie, gli utenti non possono selezionare o modificare nessuno dei due campi e possono solo visualizzare la selezione. |
 
 {style="table-layout:auto"}
 
-Di conseguenza, entrambe le **[!UICONTROL Campo di origine]** e **[!UICONTROL Campo di destinazione]** le sezioni nell’interfaccia utente di Platform sono disattivate.
+Di conseguenza, sia il **[!UICONTROL Campo di origine]** e **[!UICONTROL Campo di destinazione]** Le sezioni nell’interfaccia utente di Platform sono disattivate.
 
 ![Immagine delle mappature richieste nel flusso di attivazione dell’interfaccia utente.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
->[!TAB Mapping di destinazione richiesto]
+>[!TAB Mappatura di destinazione richiesta]
 
-L’esempio seguente mostra una mappatura di destinazione obbligatoria. Se viene specificato solo il campo di destinazione, gli utenti possono selezionare il campo di origine da mappare.
+L’esempio seguente mostra una mappatura di destinazione richiesta. Se si specifica solo il campo di destinazione come richiesto, gli utenti possono selezionare il campo di origine da mappare.
 
 ```json
 "schemaConfig": {
@@ -221,14 +221,14 @@ L’esempio seguente mostra una mappatura di destinazione obbligatoria. Se viene
 
 | Parametro | Tipo | Obbligatorio/facoltativo | Descrizione |
 |---|---|---|---|
-| `requiredMappingsOnly` | Booleano | Facoltativo | Quando questa impostazione è impostata su true , gli utenti non possono mappare altri attributi e identità nel flusso di attivazione, a parte le mappature richieste definite nella `requiredMappings` array. |
-| `requiredMappings.destination` | Stringa | Obbligatorio | Indica il valore del campo di destinazione. Quando viene specificato solo il campo di destinazione, gli utenti possono selezionare un campo di origine da mappare alla destinazione. |
+| `requiredMappingsOnly` | Booleano | Facoltativo | Quando è impostato su true, gli utenti non possono mappare altri attributi e identità nel flusso di attivazione, a parte le mappature richieste definite in `requiredMappings` array. |
+| `requiredMappings.destination` | Stringa | Obbligatorio | Indica il valore del campo di destinazione. Quando si specifica solo il campo di destinazione, gli utenti possono selezionare un campo di origine da mappare alla destinazione. |
 | `mandatoryRequired` | Booleano | Facoltativo | Indica se la mappatura deve essere contrassegnata come [attributo obbligatorio](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `primaryKeyRequired` | Booleano | Facoltativo | Indica se la mappatura deve essere contrassegnata come [chiave di deduplicazione](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 
 {style="table-layout:auto"}
 
-Di conseguenza, il **[!UICONTROL Campo di destinazione]** la sezione nell’interfaccia utente di Platform è disattivata, mentre la **[!UICONTROL Campo di origine]** è attiva e gli utenti possono interagire con essa. La **[!UICONTROL Chiave obbligatoria]** e **[!UICONTROL Chiave di deduplicazione]** le opzioni sono attive e gli utenti non possono modificarle.
+Di conseguenza, il **[!UICONTROL Campo di destinazione]** nell’interfaccia utente di Platform è disattivata, mentre il **[!UICONTROL Campo di origine]** è attiva e gli utenti possono interagire con essa. Il **[!UICONTROL Chiave obbligatoria]** e **[!UICONTROL Chiave di deduplicazione]** le opzioni sono attive e gli utenti non possono modificarle.
 
 ![Immagine delle mappature richieste nel flusso di attivazione dell’interfaccia utente.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -236,18 +236,18 @@ Di conseguenza, il **[!UICONTROL Campo di destinazione]** la sezione nell’inte
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti avere una migliore comprensione dei tipi di schema supportati da Destination SDK e di come configurare lo schema.
+Dopo aver letto questo articolo, sarai in grado di comprendere meglio quali tipi di schema sono supportati da Destination SDK e come configurarli.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
-* [Autenticazione dei clienti](customer-authentication.md)
+* [Autenticazione del cliente](customer-authentication.md)
 * [Autenticazione OAuth2](oauth2-authentication.md)
-* [Attributi dell&#39;interfaccia utente](ui-attributes.md)
+* [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Campi dati cliente](customer-data-fields.md)
-* [Configurazione dello spazio dei nomi identità](identity-namespace-configuration.md)
+* [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)
 * [Configurazioni di mappatura supportate](supported-mapping-configurations.md)
-* [Consegna delle destinazioni](destination-delivery.md)
+* [Consegna della destinazione](destination-delivery.md)
 * [Configurazione dei metadati del pubblico](audience-metadata-configuration.md)
-* [Criteri di aggregazione](aggregation-policy.md)
+* [Criterio di aggregazione](aggregation-policy.md)
 * [Configurazione batch](batch-configuration.md)
-* [Qualifiche di profilo storiche](historical-profile-qualifications.md)
+* [Qualifiche del profilo storico](historical-profile-qualifications.md)

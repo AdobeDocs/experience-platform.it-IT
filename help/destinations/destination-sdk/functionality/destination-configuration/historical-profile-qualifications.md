@@ -1,6 +1,6 @@
 ---
-description: Scopri le qualifiche di profilo storiche supportate dalle destinazioni create con Destination SDK.
-title: Qualifiche di profilo storiche
+description: Scopri le qualifiche storiche dei profili supportate dalle destinazioni create con Destination SDK.
+title: Qualifiche del profilo storico
 source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
 workflow-type: tm+mt
 source-wordcount: '214'
@@ -9,21 +9,21 @@ ht-degree: 1%
 ---
 
 
-# Qualifiche di profilo storiche
+# Qualifiche del profilo storico
 
-Per impostazione predefinita, tutte le destinazioni create tramite Destination SDK supportano le qualifiche dei profili storici. Ciò significa che quando gli utenti impostano per la prima volta un flusso di dati di attivazione sulle tue destinazioni, la prima esportazione contiene tutti i membri del segmento che si sono qualificati per quel segmento.
+Per impostazione predefinita, tutte le destinazioni create tramite Destination SDK supportano le qualifiche storiche dei profili. Ciò significa che quando gli utenti impostano per la prima volta un flusso di dati di attivazione per le destinazioni, la prima esportazione contiene tutti i membri del segmento che si sono mai qualificati per quel segmento.
 
-Questo comportamento è definito dalla `"backfillHistoricalProfileData":true` nella configurazione di destinazione.
+Questo comportamento è definito da `"backfillHistoricalProfileData":true` nella configurazione di destinazione.
 
 >[!IMPORTANT]
 >
->Le qualifiche di profilo storiche sono abilitate per tutte le destinazioni create tramite la Destination SDK e `backfillHistoricalProfileData` Il parametro non è configurabile dall&#39;utente.
+>Le qualifiche storiche dei profili sono abilitate per tutte le destinazioni create tramite Destination SDK e `backfillHistoricalProfileData` Il parametro non è configurabile dall&#39;utente.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
-Per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina, consulta la tabella seguente.
+Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina.
 
-| Tipo di integrazione | Supporta funzionalità |
+| Tipo di integrazione | Supporta la funzionalità |
 |---|---|
 | Integrazioni in tempo reale (streaming) | Sì |
 | Integrazioni basate su file (batch) | Sì |
@@ -40,18 +40,18 @@ Per informazioni dettagliate sui tipi di integrazioni che supportano le funziona
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti sapere che Experience Platform esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un segmento attivato quando il segmento viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experience Platform.
+Dopo aver letto questo Experience Platform, dovresti sapere che esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un segmento attivato quando il segmento viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experience Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
-* [Autenticazione dei clienti](customer-authentication.md)
+* [Autenticazione del cliente](customer-authentication.md)
 * [Autenticazione OAuth2](oauth2-authentication.md)
 * [Campi dati cliente](customer-data-fields.md)
-* [Attributi dell&#39;interfaccia utente](ui-attributes.md)
+* [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)
-* [Configurazione dello spazio dei nomi identità](identity-namespace-configuration.md)
+* [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)
 * [Configurazioni di mappatura supportate](supported-mapping-configurations.md)
-* [Consegna delle destinazioni](destination-delivery.md)
+* [Consegna della destinazione](destination-delivery.md)
 * [Configurazione dei metadati del pubblico](audience-metadata-configuration.md)
-* [Criteri di aggregazione](aggregation-policy.md)
+* [Criterio di aggregazione](aggregation-policy.md)
 * [Configurazione batch](batch-configuration.md)

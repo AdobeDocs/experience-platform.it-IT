@@ -13,7 +13,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 ## Proprietà web
 
@@ -25,7 +25,7 @@ Un tipo di proprietà mobile può contenere più applicazioni. Ad esempio, in un
 
 ## Best practice per la pianificazione delle proprietà {#best-practices-for-planning-properties}
 
-Ogni implementazione di tag in Adobe Experience Platform può essere molto diversa. Possiedono un’ampia varietà di esigenze di raccolta dati, utilizzo delle variabili, estensioni, tag di terze parti, altri sistemi e tecnologie, persone, team, aree geografiche e così via. Devi strutturare le proprietà in modo che corrispondano al flusso di lavoro e ai processi della tua organizzazione.
+Ogni implementazione di tag in Adobe Experience Platform può essere molto diversa. Possiedono un’ampia varietà di esigenze di raccolta dati, utilizzo delle variabili, estensioni, tag di terze parti, altri sistemi e tecnologie, persone, team, aree geografiche e così via. È consigliabile strutturare le proprietà in modo che corrispondano al flusso di lavoro e ai processi dell’organizzazione.
 
 Considera quanto segue durante la pianificazione delle proprietà:
 
@@ -67,7 +67,7 @@ Ad esempio, se distribuisci [!DNL Adobe Analytics], [!DNL Target] e le stesse es
 
 I singoli utenti, i team e le organizzazioni che lavorano in Adobe Experience Platform avranno bisogno dell’accesso a tutti i tuoi siti web e applicazioni, ad alcuni di essi o solo a uno?
 
-Le funzioni di User Management ti consentono di assegnare ruoli diversi a utenti diversi per tutte le proprietà o in base alle proprietà. Se un utente dispone di diritti sufficienti può eseguire azioni amministrative in tutte le proprietà di tale organizzazione Platform. Tutti gli altri ruoli possono essere assegnati in base alla singola proprietà. Puoi anche nascondere una proprietà per determinati utenti (non amministratori) non assegnando loro alcun ruolo nella proprietà.
+Le funzioni di User Management ti consentono di assegnare ruoli diversi a utenti diversi per tutte le proprietà o in base alle proprietà. Se un utente dispone dei diritti sufficienti può eseguire azioni amministrative in tutte le proprietà di tale organizzazione Platform. Tutti gli altri ruoli possono essere assegnati in base alla singola proprietà. Puoi anche nascondere una proprietà per determinati utenti (non amministratori) non assegnando loro alcun ruolo nella proprietà.
 
 ## Pagina Proprietà
 

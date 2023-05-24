@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;esportazione;esportazione
+keywords: Experience Platform;home;argomenti popolari;esportare;Esportare
 solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
-description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di privacy in diverse applicazioni Experience Cloud.
+description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
@@ -18,31 +18,31 @@ ht-degree: 14%
 >title="Rispettare le richieste sulla privacy dell’interessato"
 >abstract="<h2>Descrizione</h2><p>Adobe Experience Platform Privacy Service ti consente di creare e gestire le richieste sulla privacy per conto dei clienti che desiderano accedere o cancellare i propri dati personali in conformità alle normative legali sulla privacy.</p>"
 
-Questo documento descrive i passaggi necessari per creare e gestire le richieste di accesso a dati personali tramite [!DNL Privacy Service] interfaccia utente.
+Questo documento descrive i passaggi da seguire per creare e gestire le richieste di accesso a dati personali tramite [!DNL Privacy Service] dell&#39;utente.
 
 >[!IMPORTANT]
 >
->Privacy Service è destinato solo alle richieste relative ai dati interessati e ai diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. L&#39;Adobe ha l&#39;obbligo giuridico di rispettarli in tempo utile. Di conseguenza, il test di caricamento su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
+>Privacy Service è destinato solo alle richieste degli interessati e dei diritti dei consumatori. Qualsiasi altro utilizzo di Privacy Service per la pulizia o la manutenzione dei dati non è supportato o consentito. L&#39;Adobe ha l&#39;obbligo giuridico di adempiere tali obblighi in modo tempestivo. Di conseguenza, il test di carico su Privacy Service non è consentito in quanto si tratta di un ambiente di sola produzione e crea un backlog inutile di richieste di privacy valide.
 >
->È ora disponibile un limite di caricamento giornaliero per evitare abusi del servizio. Gli utenti che hanno riscontrato abusi del sistema avranno disattivato l’accesso al servizio. In seguito si terrà una riunione successiva con le parti interessate per discutere le loro azioni e l&#39;uso accettabile di Privacy Service.
+>È ora disponibile un limite massimo di caricamento giornaliero per evitare abusi del servizio. Se gli utenti rilevano un abuso del sistema, l’accesso al servizio verrà disattivato. Successivamente si terrà una riunione con i Privacy Service per discutere le loro azioni e l&#39;uso accettabile di tali strumenti.
 
-## Sfoglia il [!DNL Privacy Service] Dashboard dell&#39;interfaccia utente
+## Sfoglia [!DNL Privacy Service] Dashboard interfaccia utente
 
-Il dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widget che ti consentono di visualizzare lo stato dei processi relativi alla privacy: &quot;[!UICONTROL Rapporto sullo stato]&quot; e &quot;[!UICONTROL Richieste di lavoro]&quot;. Il dashboard visualizza anche il regolamento selezionato corrente per i lavori visualizzati.
+Dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widget che ti consentono di visualizzare lo stato dei processi relativi alla privacy: &quot;[!UICONTROL Rapporto di stato]&quot; e &quot;[!UICONTROL Richieste di lavoro]&quot;. Il dashboard visualizza anche il regolamento corrente selezionato per i job visualizzati.
 
-![Dashboard dell&#39;interfaccia utente](../images/user-guide/dashboard.png)
+![Dashboard interfaccia utente](../images/user-guide/dashboard.png)
 
 ### Tipo di regolamento
 
-[!DNL Privacy Service] supporta le richieste di lavoro per diverse normative sulla privacy. Nella tabella seguente sono elencati i regolamenti supportati e la relativa etichetta corrispondente come rappresentata nell’interfaccia utente:
+[!DNL Privacy Service] supporta le richieste di lavoro per diverse normative sulla privacy. Nella tabella seguente sono elencate le normative supportate e l’etichetta corrispondente, come rappresentata nell’interfaccia utente:
 
-| Etichetta dell’interfaccia utente | Regolamento |
+| Etichetta interfaccia utente | Regolamento |
 | --- | --- |
 | [!UICONTROL CCPA] | Le selezioni del menu [!DNL California Consumer Privacy Act] |
-| [!UICONTROL RGPD] | L&#39;Unione europea [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | Thailandia [!DNL Personal Data Protection Act] |
-| [!UICONTROL LGPD_BRA] | Brasile [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL NZPA_NZL] | Nuova Zelanda [!DNL Privacy Act] |
+| [!UICONTROL RGPD] | dell&#39;Unione europea [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | thailandese [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | del Brasile [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | La Nuova Zelanda [!DNL Privacy Act] |
 | [!UICONTROL VCDPA_USA] | Le selezioni del menu [!DNL Virginia Consumer Data Protection Act] |
 | [!UICONTROL CPRA_USA] | Le selezioni del menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL APA_AUS] | Le selezioni del menu [!DNL Australia Privacy Act (Privacy Act)] |
@@ -52,57 +52,57 @@ Il dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widg
 
 >[!NOTE]
 >
->Vedi la panoramica su [normative sulla privacy supportate](../regulations/overview.md) per ulteriori informazioni sul contesto giuridico di ciascun regolamento.
+>Consulta la panoramica su [normative sulla privacy supportate](../regulations/overview.md) per maggiori informazioni sul contesto giuridico di ciascun regolamento.
 
-I lavori per ciascun tipo di regolamento sono tracciati separatamente. Per passare da un tipo di regolamento all&#39;altro, seleziona la **[!UICONTROL Tipo di regolamento]** menu a discesa e selezionare il regolamento desiderato dall&#39;elenco.
+I processi per ogni tipo di regolamento vengono tracciati separatamente. Per passare da un tipo di regolamento all&#39;altro, selezionare **[!UICONTROL Tipo di regolamento]** e selezionare il regolamento desiderato dall&#39;elenco.
 
 ![Menu a discesa Tipo di regolamento](../images/user-guide/regulation.png)
 
-Quando si modifica il tipo di regolamento, il dashboard viene aggiornato per mostrare tutte le operazioni, i filtri, i widget e le finestre di dialogo per la creazione di posti di lavoro che si applicano al regolamento selezionato.
+Quando si modifica il tipo di regolamento, il dashboard viene aggiornato in modo da visualizzare tutte le operazioni, i filtri, i widget e le finestre di dialogo per la creazione di posti di lavoro che si applicano al regolamento selezionato.
 
 ![Dashboard aggiornato](../images/user-guide/dashboard-update.png)
 
-### Rapporto sullo stato
+### Rapporto di stato
 
-Il grafico a sinistra del widget Rapporto di stato tiene traccia dei processi inviati rispetto a quelli che potrebbero aver segnalato errori. Il grafico a destra traccia i lavori che si avvicinano alla fine della finestra di conformità di 30 giorni.
+Il grafico sul lato sinistro del widget Rapporto di stato tiene traccia dei processi inviati rispetto a quelli che potrebbero essere stati segnalati con errori. Il grafico sul lato destro traccia i processi che si avvicinano alla fine dell’intervallo di conformità di 30 giorni.
 
 Seleziona uno dei due pulsanti di attivazione/disattivazione sopra il grafico per mostrare o nascondere le rispettive metriche.
 
 ![](../images/user-guide/hide-errors.png)
 
-È possibile visualizzare il numero esatto di processi associati a qualsiasi punto dati dei grafici passando il mouse sul punto dati in questione.
+Puoi visualizzare il numero esatto di processi associati a qualsiasi punto dati sui grafici passando il mouse sopra il punto dati in questione.
 
-![Punti dati del passaggio del mouse](../images/user-guide/mouse-over.png)
+![Punti dati passando con il mouse](../images/user-guide/mouse-over.png)
 
-Per visualizzare ulteriori dettagli su un dato punto dati, seleziona il punto dati in questione per visualizzare i processi associati nel widget Richieste di lavoro. Prendi nota del filtro applicato appena sopra l’elenco dei processi.
+Per visualizzare ulteriori dettagli su un dato punto dati, selezionare il punto dati in questione per visualizzare i job associati nel widget Richieste di job. Prendi nota del filtro applicato appena sopra l’elenco dei processi.
 
-![Filtro applicato dal widget](../images/user-guide/apply-filter.png)
+![Filtro applicato da widget](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->Quando un filtro è stato applicato al widget Richieste di lavoro, puoi rimuovere il filtro selezionando la **X** sulla pillola del filtro. Le richieste di lavoro vengono quindi riportate all’elenco di tracciamento predefinito.
+>Quando un filtro è stato applicato al widget Richieste di lavoro, è possibile rimuoverlo selezionando il **X** sulla pillola del filtro. Le richieste di lavoro quindi tornano all&#39;elenco di tracciamento predefinito.
 
 ### Richieste di lavoro
 
-Il widget Richieste di lavoro elenca tutte le richieste di lavoro disponibili nell’organizzazione, inclusi dettagli quali tipo di richiesta, stato corrente, data di scadenza e e-mail del richiedente.
+Il widget Richieste di lavoro elenca tutte le richieste di lavoro disponibili nell&#39;organizzazione, inclusi dettagli quali il tipo di richiesta, lo stato corrente, la data di scadenza e l&#39;e-mail del richiedente.
 
 >[!NOTE]
 >
 >I dati per i processi creati in precedenza sono accessibili solo per 30 giorni dopo la data di completamento.
 
-Puoi filtrare l’elenco digitando le parole chiave nella barra di ricerca sotto il titolo Richieste di lavoro. L’elenco filtra automaticamente durante la digitazione, mostrando le richieste contenenti valori che corrispondono ai termini di ricerca. È inoltre possibile utilizzare **[!UICONTROL Richiesto il]** menu a discesa per selezionare un intervallo di tempo per i processi elencati.
+Per filtrare l’elenco, digita le parole chiave nella barra di ricerca sotto il titolo Richieste di lavoro. L’elenco filtra automaticamente durante la digitazione, mostrando le richieste che contengono valori che corrispondono ai termini di ricerca. È inoltre possibile utilizzare **[!UICONTROL Richiesto il]** per selezionare un intervallo di tempo per i job elencati.
 
-![Opzioni di ricerca per la richiesta di lavoro](../images/user-guide/job-search.png)
+![Opzioni di ricerca della richiesta di lavoro](../images/user-guide/job-search.png)
 
-Per visualizzare i dettagli di una particolare richiesta di processo, seleziona l’ID del processo della richiesta dall’elenco per aprire la **[!UICONTROL Dettagli processo]** pagina.
+Per visualizzare i dettagli di una particolare richiesta di processo, seleziona l’ID processo della richiesta dall’elenco per aprire **[!UICONTROL Dettagli processo]** pagina.
 
-![Dettagli sul lavoro nell’interfaccia utente RGPD](../images/user-guide/job-details.png)
+![Dettagli processo interfaccia utente RGPD](../images/user-guide/job-details.png)
 
-Questa finestra di dialogo contiene informazioni sullo stato di ogni [!DNL Experience Cloud] la soluzione e il suo stato attuale rispetto al lavoro complessivo. Poiché ogni processo di privacy è asincrono, la pagina visualizza la data e l’ora di comunicazione più recente (GMT) da ogni soluzione, in quanto alcuni richiedono più tempo di altri per elaborare la richiesta.
+Questa finestra di dialogo contiene informazioni sullo stato di ciascuna [!DNL Experience Cloud] e il suo stato attuale in relazione al lavoro complessivo. Poiché ogni processo di privacy è asincrono, la pagina visualizza la data e l’ora di comunicazione più recente (GMT) di ogni soluzione, in quanto alcune richiedono più tempo di altre per elaborare la richiesta.
 
-Se una soluzione ha fornito dati aggiuntivi, questi possono essere visualizzati in questa finestra di dialogo. Puoi visualizzare questi dati selezionando le singole righe di prodotto.
+Se una soluzione ha fornito dati aggiuntivi, questi sono visualizzabili in questa finestra di dialogo. Puoi visualizzare questi dati selezionando singole righe di prodotto.
 
-Per scaricare come file CSV i dati completi del processo, seleziona **[!UICONTROL Esportazione in formato CSV]** in alto a destra nella finestra di dialogo.
+Per scaricare i dati del processo completo come file CSV, seleziona **[!UICONTROL Esporta in CSV]** in alto a destra nella finestra di dialogo.
 
 ## Crea una nuova richiesta di processo per la privacy {#create-a-new-privacy-job-request}
 
@@ -113,28 +113,28 @@ Per scaricare come file CSV i dati completi del processo, seleziona **[!UICONTRO
 
 >[!NOTE]
 >
->Per creare una richiesta di lavoro per la privacy, è necessario fornire informazioni di identità per i clienti specifici i cui dati devono essere accessibili o eliminati. Consulta il documento in [dati di identità per le richieste di privacy](../identity-data.md) prima di continuare con questa sezione.
+>Per creare una richiesta di processo per la privacy, devi fornire informazioni sull’identità per i clienti specifici i cui dati devono essere accessibili o eliminati. Rivedi il documento su [dati di identità per le richieste di privacy](../identity-data.md) prima di continuare con questa sezione.
 
-La [!DNL Privacy Service] L’interfaccia utente fornisce due metodi per creare nuove richieste di lavoro:
+Il [!DNL Privacy Service] L’interfaccia utente fornisce due metodi per creare nuove richieste di processi:
 
-* [Utilizza Request Builder](#request-builder)
+* [Utilizzare Request Builder](#request-builder)
 * [Caricare un file JSON](#json)
 
 I passaggi per l’utilizzo di ciascuno di questi metodi sono descritti nelle sezioni seguenti.
 
-### Utilizza Request Builder {#request-builder}
+### Utilizzare Request Builder {#request-builder}
 
-Utilizzando Request Builder, puoi creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste viene utilizzato meglio per set di richieste semplici e più piccoli, perché il Generatore di richieste limita le richieste ad avere solo un tipo di ID per utente. Per richieste più complicate, potrebbe essere meglio [caricare un file JSON](#json) invece.
+Utilizzando il Generatore di richieste, puoi creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Request Builder (Generatore di richieste) è indicato per set di richieste più semplici e piccoli, perché il Generatore di richieste limita le richieste in modo che abbiano solo il tipo ID per utente. Per richieste più complicate, potrebbe essere meglio [caricare un file JSON](#json) invece.
 
 Per iniziare a utilizzare il Generatore di richieste, seleziona **[!UICONTROL Crea richiesta]** sotto il widget Rapporto di stato sul lato destro dello schermo.
 
 ![Seleziona Crea richiesta](../images/user-guide/create-request.png)
 
-La **[!UICONTROL Crea richiesta]** viene visualizzata la finestra di dialogo con le opzioni disponibili per l&#39;invio di una richiesta di processo di privacy per il tipo di regolamento attualmente selezionato.
+Il **[!UICONTROL Crea richiesta]** viene visualizzata una finestra di dialogo in cui sono visualizzate le opzioni disponibili per l’invio di una richiesta di processo di privacy per il tipo di regolamento attualmente selezionato.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Seleziona la **[!UICONTROL Tipo di processo]** della richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e di uno o più prodotti disponibili dall’elenco.
+Seleziona la **[!UICONTROL Tipo di processo]** della richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e uno o più prodotti disponibili dall’elenco.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -142,11 +142,11 @@ Sotto **[!UICONTROL Tipo di spazio dei nomi]**, seleziona il tipo di spazio dei 
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Quando utilizzi il tipo di spazio dei nomi standard, seleziona uno spazio dei nomi dal menu a discesa (e-mail, ECID o AAID), quindi digita i valori ID nella casella di testo a destra, premendo **\&lt;enter>** per ogni ID da aggiungere all’elenco.
+Quando utilizzi il tipo di spazio dei nomi standard, seleziona uno spazio dei nomi dal menu a discesa (e-mail, ECID o AAID), quindi digita i valori ID nella casella di testo a destra, premendo **\&lt;enter>** per ogni ID per aggiungerlo all’elenco.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Quando utilizzi il tipo di namespace personalizzato, devi digitare manualmente lo spazio dei nomi prima di fornire i valori ID seguenti.
+Quando utilizzi il tipo di spazio dei nomi personalizzato, devi immettere manualmente lo spazio dei nomi prima di fornire i valori ID seguenti.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -154,32 +154,32 @@ Al termine, seleziona **[!UICONTROL Crea]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
-La finestra di dialogo scompare e il nuovo processo (o processi) viene elencato nel widget Richieste di lavoro insieme al relativo stato di elaborazione corrente.
+La finestra di dialogo scompare e il nuovo job (o job) viene elencato nel widget Richieste di job insieme al relativo stato di elaborazione corrente.
 
 ### Caricare un file JSON {#json}
 
-Quando crei richieste più complesse, ad esempio quelle che utilizzano più tipi di ID per ogni persona interessata da elaborare, puoi creare una richiesta caricando un file JSON.
+Quando crei richieste più complicate, ad esempio quelle che utilizzano più tipi di ID per ogni persona interessata elaborata, puoi creare una richiesta caricando un file JSON.
 
-Seleziona la freccia accanto a **[!UICONTROL Crea richiesta]**, sotto il widget Rapporto di stato sul lato destro dello schermo. Dall’elenco delle opzioni visualizzate, seleziona **[!UICONTROL Carica JSON]**.
+Seleziona la freccia accanto a **[!UICONTROL Crea richiesta]**, sotto il widget Rapporto di stato sul lato destro dello schermo. Dall&#39;elenco delle opzioni visualizzate, selezionare **[!UICONTROL Carica JSON]**.
 
-![Opzioni di creazione richieste](../images/user-guide/create-options.png)
+![Opzioni di creazione delle richieste](../images/user-guide/create-options.png)
 
-La **[!UICONTROL Carica JSON]** viene visualizzata una finestra di dialogo in cui puoi trascinare e rilasciare il file JSON.
+Il **[!UICONTROL Carica JSON]** viene visualizzata una finestra di dialogo che consente di trascinare e rilasciare il file JSON in.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Se non hai un file JSON da caricare, seleziona **[!UICONTROL Scarica Adobe-GDPR-Request.json]** per scaricare un modello che è possibile compilare in base ai valori raccolti dalle persone interessate.
+Se non hai un file JSON da caricare, seleziona **[!UICONTROL Scarica Adobe-GDPR-Request.json]** per scaricare un modello che puoi compilare in base ai valori raccolti dalle persone interessate.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
-Individua il file JSON sul tuo computer e trascinalo nella finestra di dialogo. Se il caricamento ha esito positivo, il nome del file viene visualizzato nella finestra di dialogo. Puoi continuare ad aggiungere altri file JSON, se necessario, trascinandoli nella finestra di dialogo.
+Individua il file JSON sul computer e trascinalo nella finestra di dialogo. Se il caricamento ha esito positivo, il nome del file viene visualizzato nella finestra di dialogo. Puoi continuare ad aggiungere altri file JSON, se necessario, trascinandoli nella finestra di dialogo.
 
-Al termine, seleziona **[!UICONTROL Crea]**. La finestra di dialogo scompare e il nuovo processo (o processi) viene elencato nel widget Richieste di lavoro insieme al relativo stato di elaborazione corrente.
+Al termine, seleziona **[!UICONTROL Crea]**. La finestra di dialogo scompare e il nuovo job (o job) viene elencato nel widget Richieste di job insieme al relativo stato di elaborazione corrente.
 
 ### Passaggi successivi
 
-Leggendo questo documento, hai imparato a utilizzare il [!DNL Privacy Service] Interfaccia utente per creare un processo di privacy, visualizzare i dettagli di un processo e monitorarne lo stato di elaborazione e scaricare i risultati una volta completato.
+Dopo aver letto questo documento, hai imparato a utilizzare [!DNL Privacy Service] Interfaccia utente per creare un processo di privacy, visualizzarne i dettagli e monitorarne lo stato di elaborazione e scaricare i risultati al termine del processo.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando il [!DNL Privacy Service] API, fai riferimento al [Guida all’API](../api/overview.md).
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando [!DNL Privacy Service] API, fare riferimento al [Guida API](../api/overview.md).

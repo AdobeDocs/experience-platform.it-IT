@@ -15,23 +15,23 @@ ht-degree: 3%
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per eliminare un modello di pubblico utilizzando `/authoring/audience-templates` Endpoint API.
+Questa pagina illustra la richiesta API e il payload che puoi utilizzare per eliminare un modello di pubblico, utilizzando `/authoring/audience-templates` Endpoint API
 
-Per una descrizione dettagliata delle funzionalità che puoi configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
+Per una descrizione dettagliata delle funzionalità che è possibile configurare tramite questo endpoint, vedi [gestione dei metadati del pubblico](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API con i modelli di pubblico {#get-started}
+## Guida introduttiva alle operazioni API dei modelli di pubblico {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare un modello di pubblico {#delete}
 
-È possibile eliminare un [esistente](create-audience-template.md) modello di pubblico creando un `DELETE` richiesta al `/authoring/audience-templates` punto finale con `{INSTANCE_ID}`del modello di pubblico da eliminare.
+È possibile eliminare un [esistente](create-audience-template.md) modello di pubblico creando un `DELETE` richiesta al `/authoring/audience-templates` endpoint con `{INSTANCE_ID}`del modello di pubblico da eliminare.
 
-Per ottenere un modello di pubblico esistente e il relativo `{INSTANCE_ID}`, consulta l’articolo [recupero di un modello di pubblico](retrieve-audience-template.md).
+Per ottenere un modello di pubblico esistente e i corrispondenti `{INSTANCE_ID}`, consulta l’articolo su [recupero di un modello di pubblico](retrieve-audience-template.md).
 
 **Formato API**
 
@@ -41,7 +41,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | La `ID` del modello di pubblico da eliminare. |
+| `{INSTANCE_ID}` | Il `ID` del modello di pubblico da eliminare. |
 
 +++Richiesta
 
@@ -57,7 +57,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
 
 +++
 
@@ -67,4 +67,4 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come eliminare un modello di pubblico utilizzando `/authoring/audience-templates` Endpoint API. Leggi [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire dove si adatta questo passaggio al processo di configurazione della destinazione.
+Dopo aver letto questo documento, ora sai come eliminare un modello di pubblico utilizzando `/authoring/audience-templates` Endpoint API Letto [come utilizzare Destination SDK per configurare la destinazione](../guides/configure-destination-instructions.md) per capire in che modo questo passaggio si inserisce nel processo di configurazione della destinazione.

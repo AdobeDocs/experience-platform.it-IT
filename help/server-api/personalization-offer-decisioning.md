@@ -5,7 +5,7 @@ exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '555'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../edge/datas
 
 ![Immagine dell’interfaccia utente che mostra la schermata di configurazione del servizio di stream di dati, con Offer decisioning selezionato](assets/aep-od-datastream.png)
 
-## Creazione di pubblico {#audience-creation}
+## Creazione di un pubblico {#audience-creation}
 
 [!DNL Offer Decisioning] si basa sul servizio di segmentazione di Adobe Experience Platform per la creazione di tipi di pubblico. Puoi trovare la documentazione di [!DNL Segmentation Service] [qui](../segmentation/home.md).
 

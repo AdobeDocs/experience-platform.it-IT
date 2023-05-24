@@ -11,25 +11,25 @@ ht-degree: 3%
 
 # Eliminare una configurazione di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per eliminare una configurazione di destinazione esistente utilizzando `/authoring/destinations` Endpoint API.
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per eliminare una configurazione di destinazione esistente, utilizzando `/authoring/destinations` Endpoint API
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API di configurazione della destinazione {#get-started}
+## Guida introduttiva alle operazioni API di configurazione di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Eliminare una configurazione di destinazione {#delete}
 
-È possibile eliminare un [esistente](create-destination-configuration.md) configurazione del server di destinazione effettuando una `DELETE` richiesta al `/authoring/destinations` punto finale con `{INSTANCE_ID}`della configurazione di destinazione che desideri eliminare.
+È possibile eliminare un [esistente](create-destination-configuration.md) configurazione del server di destinazione effettuando una `DELETE` richiesta al `/authoring/destinations` endpoint con `{INSTANCE_ID}`della configurazione di destinazione che desideri eliminare.
 
 >[!TIP]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-Per ottenere una configurazione di destinazione esistente e i relativi `{INSTANCE_ID}`, consulta l’articolo [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
+Per ottenere una configurazione di destinazione esistente e la corrispondente `{INSTANCE_ID}`, consulta l’articolo su [recupero di una configurazione di destinazione](retrieve-destination-configuration.md).
 
 **Formato API**
 
@@ -39,7 +39,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | La `ID` della configurazione di destinazione che desideri eliminare. |
+| `{INSTANCE_ID}` | Il `ID` della configurazione di destinazione da eliminare. |
 
 +++Richiesta
 
@@ -53,7 +53,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme a una risposta HTTP vuota.
 
 
 ## Gestione degli errori API {#error-handling}
@@ -62,11 +62,11 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come eliminare una configurazione di destinazione esistente attraverso la Destination SDK `/authoring/destinations` Endpoint API.
+Dopo aver letto questo documento, ora sai come eliminare una configurazione di destinazione esistente tramite la Destination SDK `/authoring/destinations` Endpoint API
 
-Per ulteriori informazioni sulle operazioni che è possibile eseguire con questo endpoint, consulta i seguenti articoli:
+Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 
 * [Creare una configurazione di destinazione](create-destination-configuration.md)
-* [Recupera una configurazione di destinazione](retrieve-destination-configuration.md)
+* [Recuperare una configurazione di destinazione](retrieve-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](update-destination-configuration.md)
 

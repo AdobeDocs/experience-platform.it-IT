@@ -52,7 +52,7 @@ Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ulti
 
 ![Vengono visualizzate ed evidenziate le metriche Profilo.](../images/user-guide/browse-metrics.png)
 
-### Conteggio profili {#profile-count}
+### Conteggio dei profili {#profile-count}
 
 Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
 

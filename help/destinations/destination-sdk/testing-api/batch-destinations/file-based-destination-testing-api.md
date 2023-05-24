@@ -1,6 +1,6 @@
 ---
-description: Questa pagina spiega come utilizzare l'endpoint API /testing/destinationInstance per verificare se la destinazione basata su file è configurata correttamente e per verificare l'integrità dei dati scorre nella destinazione configurata.
-title: Verifica la destinazione basata su file con profili di esempio
+description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
+title: Test della destinazione basata su file con profili di esempio
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
 source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
@@ -9,32 +9,32 @@ ht-degree: 2%
 
 ---
 
-# Verifica la destinazione basata su file con profili di esempio
+# Test della destinazione basata su file con profili di esempio
 
 ## Panoramica {#overview}
 
-Questa pagina spiega come utilizzare il `/testing/destinationInstance` Endpoint API per verificare se la destinazione basata su file è configurata correttamente e l’integrità dei dati scorre nella destinazione configurata.
+Questa pagina spiega come utilizzare il `/testing/destinationInstance` Endpoint API per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 
-È possibile inviare richieste all’endpoint di test con o senza l’aggiunta di [profili di esempio](file-based-sample-profile-generation-api.md) alla chiamata. Se non invii profili sulla richiesta, l’API genera automaticamente un profilo di esempio e lo aggiunge alla richiesta.
+Puoi effettuare richieste all’endpoint di test con o senza aggiunta di [profili di esempio](file-based-sample-profile-generation-api.md) alla chiamata. Se non invii profili nella richiesta, l’API genera automaticamente un profilo di esempio e lo aggiunge alla richiesta.
 
-I profili di esempio generati automaticamente contengono dati generici. Se desideri testare la destinazione con dati di profilo personalizzati e più intuitivi, utilizza la funzione [API di generazione di profili di esempio](file-based-sample-profile-generation-api.md) per generare un profilo di esempio, personalizzane la risposta e includilo nella richiesta al `/testing/destinationInstance` punto finale.
+I profili di esempio generati automaticamente contengono dati generici. Se desideri testare la destinazione con dati di profilo personalizzati e più intuitivi, utilizza [API di generazione del profilo di esempio](file-based-sample-profile-generation-api.md) per generare un profilo di esempio, personalizzane la risposta e includila nella richiesta al `/testing/destinationInstance` endpoint.
 
 ## Introduzione {#getting-started}
 
-Prima di continuare, controlla la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter utilizzare il `/testing/destinationInstance` endpoint, assicurarsi di soddisfare le seguenti condizioni:
+Prima di utilizzare il `/testing/destinationInstance` endpoint, assicurati di soddisfare le seguenti condizioni:
 
-* Una destinazione basata su file esistente creata tramite la Destination SDK può essere visualizzata nella [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
-* Hai creato almeno un flusso di attivazione per la destinazione nell’interfaccia utente di Experience Platform.
-* Per effettuare correttamente la richiesta API, devi disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione che stai testando. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API quando esplori una connessione con la destinazione nell’interfaccia utente di Platform.
+* Hai già una destinazione basata su file creata tramite la Destination SDK e puoi visualizzarla nel tuo [catalogo delle destinazioni](../../../ui/destinations-workspace.md).
+* Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione.
+* Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
 
    ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
-* *Facoltativo*: Se desideri testare la configurazione di destinazione con un profilo di esempio aggiunto alla chiamata API, utilizza [/sample-profiles](file-based-sample-profile-generation-api.md) per generare un profilo di esempio basato sullo schema di origine esistente. Se non fornisci un profilo di esempio, l’API ne genererà uno e lo restituirà nella risposta.
+* *Facoltativo*: se desideri testare la configurazione di destinazione con un profilo di esempio aggiunto alla chiamata API, utilizza [/sample-profiles](file-based-sample-profile-generation-api.md) per generare un profilo di esempio basato sullo schema di origine esistente. Se non fornisci un profilo di esempio, l’API ne genererà uno e lo restituirà nella risposta.
 
-## Verifica la configurazione di destinazione senza aggiungere profili alla chiamata . {#test-without-adding-profiles}
+## Verifica la configurazione di destinazione senza aggiungere profili alla chiamata {#test-without-adding-profiles}
 
 **Formato API**
 
@@ -55,11 +55,11 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parametri del percorso | Descrizione |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | ID dell’istanza di destinazione per la quale stai generando profili di esempio. Consulta la sezione [prerequisiti](#prerequisites) per informazioni dettagliate su come ottenere questo ID. |
+| `{DESTINATION_INSTANCE_ID}` | ID dell’istanza di destinazione per la quale stai generando profili di esempio. Consulta la [prerequisiti](#prerequisites) per informazioni dettagliate su come ottenere questo ID. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 insieme al payload di risposta.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al payload di risposta.
 
 ```json
 {
@@ -111,15 +111,15 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme al payload di rispos
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione di flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull&#39;istanza di destinazione. <br><br> Esempio: Se hai mappato due segmenti all’istanza di destinazione, la variabile `activations` la matrice conterrà due voci. Ogni segmento attivato corrisponde a un file esportato. |
-| `results` | Restituisce l&#39;ID dell&#39;istanza di destinazione e gli ID di esecuzione di flusso che puoi utilizzare per chiamare il [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l&#39;integrazione. |
+| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione del flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due segmenti all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni segmento attivato corrisponderà a un file esportato. |
+| `results` | Restituisce l’ID dell’istanza di destinazione e gli ID di esecuzione del flusso che è possibile utilizzare per chiamare [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l’integrazione. |
 | `inputProfiles` | Restituisce i profili di esempio generati automaticamente dall’API. |
 
 {style="table-layout:auto"}
 
-## Verifica la configurazione di destinazione con i profili aggiunti alla chiamata . {#test-with-added-profiles}
+## Verifica la configurazione di destinazione con i profili aggiunti alla chiamata {#test-with-added-profiles}
 
-Per testare la destinazione con dati di profilo personalizzati e più intuitivi, puoi personalizzare la risposta ottenuta dalla [/sample-profiles](file-based-sample-profile-generation-api.md) endpoint con valori selezionati e includere il profilo personalizzato nella richiesta al `/testing/destinationInstance` punto finale.
+Per testare la destinazione con dati di profilo personalizzati e più intuitivi, puoi personalizzare la risposta ottenuta da [/sample-profiles](file-based-sample-profile-generation-api.md) con i valori desiderati e includere il profilo personalizzato nella richiesta al `/testing/destinationInstance` endpoint.
 
 **Formato API**
 
@@ -175,12 +175,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | L&#39;ID dell&#39;istanza di destinazione della destinazione che stai testando.  ID dell’istanza di destinazione per la quale stai generando profili di esempio. Consulta la sezione [prerequisiti](#prerequisites) per informazioni dettagliate su come ottenere questo ID. |
-| `profiles` | Array che può includere uno o più profili. Utilizza la [endpoint API di profilo di esempio](file-based-sample-profile-generation-api.md) per generare profili da utilizzare in questa chiamata API. |
+| `{DESTINATION_INSTANCE_ID}` | ID dell’istanza di destinazione della destinazione da testare.  ID dell’istanza di destinazione per la quale stai generando profili di esempio. Consulta la [prerequisiti](#prerequisites) per informazioni dettagliate su come ottenere questo ID. |
+| `profiles` | Array che può includere uno o più profili. Utilizza il [endpoint API del profilo di esempio](file-based-sample-profile-generation-api.md) per generare profili da utilizzare in questa chiamata API. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 insieme al payload di risposta.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al payload di risposta.
 
 ```json
 {
@@ -232,8 +232,8 @@ Una risposta corretta restituisce lo stato HTTP 200 insieme al payload di rispos
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione di flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull&#39;istanza di destinazione. <br><br> Esempio: Se hai mappato due segmenti all’istanza di destinazione, la variabile `activations` la matrice conterrà due voci. Ogni segmento attivato corrisponde a un file esportato. |
-| `results` | Restituisce l&#39;ID dell&#39;istanza di destinazione e gli ID di esecuzione di flusso che puoi utilizzare per chiamare il [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l&#39;integrazione. |
+| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione del flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due segmenti all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni segmento attivato corrisponderà a un file esportato. |
+| `results` | Restituisce l’ID dell’istanza di destinazione e gli ID di esecuzione del flusso che è possibile utilizzare per chiamare [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l’integrazione. |
 | `inputProfiles` | Restituisce i profili di esempio personalizzati passati nella richiesta API. |
 
 ## Gestione degli errori API {#api-error-handling}
@@ -242,8 +242,8 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora sai come verificare la configurazione di destinazione basata su file.
+Dopo aver letto questo documento, ora sai come verificare la configurazione della destinazione basata su file.
 
-Se hai ricevuto una risposta API valida, la destinazione funziona correttamente. Per visualizzare informazioni più dettagliate sul flusso di attivazione, puoi utilizzare la funzione `results` dalla risposta a [visualizzare i risultati dettagliati dell’attivazione](file-based-destination-results-api.md).
+Se hai ricevuto una risposta API valida, la destinazione funziona correttamente. Se desideri visualizzare informazioni più dettagliate sul flusso di attivazione, puoi utilizzare `results` proprietà dalla risposta a [visualizzare i risultati dettagliati dell’attivazione](file-based-destination-results-api.md).
 
-Se stai costruendo una destinazione pubblica, ora puoi [invia la configurazione di destinazione](../../guides/submit-destination.md) all&#39;Adobe per la revisione.
+Se stai creando una destinazione pubblica, ora puoi [invia la configurazione di destinazione](../../guides/submit-destination.md) all&#39;Adobe per la revisione.

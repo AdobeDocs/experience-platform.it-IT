@@ -19,7 +19,7 @@ Questo documento funge da guida per l’interazione con le informazioni approfon
 
 ## Introduzione
 
-Per utilizzare informazioni approfondite su Attribution AI, è necessario disporre di un’istanza del servizio con stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Guida all’interfaccia utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio che sta ancora formando e assegnando un punteggio, attendi 24 ore prima del termine dell’esecuzione.
+Per utilizzare informazioni approfondite su Attribution AI, è necessario disporre di un’istanza del servizio con stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Guida all’interfaccia utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
 
 ## Panoramica di Service Instance Insights
 

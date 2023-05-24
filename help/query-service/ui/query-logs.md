@@ -1,7 +1,8 @@
 ---
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%

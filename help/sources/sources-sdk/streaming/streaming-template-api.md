@@ -3,10 +3,11 @@ title: Modello self-service della documentazione per l’API Streaming SDK
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’API del servizio Flusso.
 hide: true
 hidefromtoc: true
-source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
+exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -256,7 +257,7 @@ L’ultimo passaggio per importare dati da *YOUR SOURCE* In Platform è necessar
 
 * [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 

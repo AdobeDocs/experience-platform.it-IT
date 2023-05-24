@@ -1,119 +1,119 @@
 ---
-title: Configurare le sostituzioni di datastream
-description: Scopri come configurare le sostituzioni del datastream nell’interfaccia utente di Datastreams e attivarle tramite l’SDK per web.
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+title: Configurare le sostituzioni dello stream di dati
+description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web.
+exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
+source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
+# Configurare le sostituzioni dello stream di dati
 
-# Configurare le sostituzioni di datastream
+Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati alla rete Edge tramite l’SDK per web.
 
-Le sostituzioni di Datastream consentono di definire configurazioni aggiuntive per i datastreams, che vengono passate alla rete Edge tramite l’SDK per web.
+Questo consente di attivare comportamenti diversi dello stream di dati rispetto a quelli predefiniti, senza creare un nuovo stream di dati o modificare le impostazioni esistenti.
 
-Questo consente di attivare comportamenti diversi del datastream rispetto a quelli predefiniti, senza creare un nuovo datastream o modificare le impostazioni esistenti.
+La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
-L&#39;override della configurazione di Datastream è un processo in due fasi:
+1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](configure.md).
+2. Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando Web SDK o utilizzando Web SDK [estensione tag](../extension/web-sdk-extension-configuration.md).
 
-1. Innanzitutto, devi definire le sostituzioni della configurazione del datastream nel [pagina di configurazione di datastream](configure.md).
-2. Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando SDK per web o utilizzando l’SDK per web [estensione tag](../extension/web-sdk-extension-configuration.md).
+Questo articolo spiega il processo di sostituzione della configurazione dello stream di dati end-to-end per ogni tipo di sostituzione supportata.
 
-Questo articolo spiega il processo di sostituzione della configurazione del datastream end-to-end per ogni tipo di override supportato.
+## Configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati {#configure-overrides}
 
-## Configurare le sostituzioni del datastream nell’interfaccia utente di Datastreams {#configure-overrides}
+Le sostituzioni della configurazione dello stream di dati consentono di modificare le seguenti configurazioni dello stream di dati:
 
-Le sostituzioni della configurazione Datastream consentono di modificare le seguenti configurazioni del datastream:
-
-* Experience Platform di set di dati evento
+* Set di dati evento Experience Platform
 * Token di proprietà di Adobe Target
-* Contenitori di sincronizzazione ID di Audience Manager
-* Suite di rapporti Adobe Analytics
+* Contenitori di sincronizzazione ID Audience Manager
+* Suite di rapporti di Adobe Analytics
 
-### Ignorare le impostazioni locali di Datastream per Adobe Target {#target-overrides}
+### Override dello stream di dati per Adobe Target {#target-overrides}
 
-Per configurare le sostituzioni del datastream per un datastream Adobe Target, devi prima aver creato un datastream Adobe Target. Segui le istruzioni per [configurare un datastream](configure.md) con [Adobe Target](configure.md#target) servizio.
+Per configurare le sostituzioni dello stream di dati per uno stream di dati di Adobe Target, devi prima aver creato uno stream di dati di Adobe Target. Seguire le istruzioni per [configurare uno stream di dati](configure.md) con [Adobe Target](configure.md#target) servizio.
 
-Dopo aver creato il datastream, modifica il [Adobe Target](configure.md#target) il servizio aggiunto e l&#39;utente utilizza **[!UICONTROL Sostituzioni dei token di proprietà]** per aggiungere le sostituzioni del datastream desiderato, come illustrato nell’immagine seguente. Aggiungi un token di proprietà per riga.
+Dopo aver creato lo stream di dati, modifica il [Adobe Target](configure.md#target) servizio aggiunto e utilizza **[!UICONTROL Override del token di proprietà]** per aggiungere le sostituzioni dello stream di dati desiderate, come illustrato nell’immagine seguente. Aggiungi un token di proprietà per riga.
 
-![Schermata dell’interfaccia utente dei Datastreams che mostra le impostazioni del servizio Adobe Target, evidenziando le sostituzioni dei token di proprietà.](../assets/datastreams/overrides/override-target.png)
+![La schermata dell’interfaccia utente Datastreams mostra le impostazioni del servizio Adobe Target, con le sostituzioni del token di proprietà evidenziate.](../assets/datastreams/overrides/override-target.png)
 
-Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni del datastream.
+Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni dello stream di dati.
 
-È ora necessario configurare le sostituzioni del datastream di Adobe Target. Ora puoi [inviare le sostituzioni alla rete Edge tramite l’SDK per web](#send-overrides).
+Ora dovresti avere configurato le sostituzioni dello stream di dati di Adobe Target. Ora puoi [inviare le sostituzioni alla rete Edge tramite Web SDK](#send-overrides).
 
-### Ignorare le impostazioni locali di Datastream per Adobe Analytics {#analytics-overrides}
+### Override dello stream di dati per Adobe Analytics {#analytics-overrides}
 
-Per configurare le sostituzioni del datastream per un datastream Adobe Analytics, devi prima disporre di un [Adobe Analytics](configure.md#analytics) creazione di datastream. Segui le istruzioni per [configurare un datastream](configure.md) con [Adobe Analytics](configure.md#analytics) servizio.
+Per configurare le sostituzioni dello stream di dati per uno stream di dati di Adobe Analytics, devi prima disporre di un’ [Adobe Analytics](configure.md#analytics) flusso di dati creato. Seguire le istruzioni per [configurare uno stream di dati](configure.md) con [Adobe Analytics](configure.md#analytics) servizio.
 
-Dopo aver creato il datastream, modifica il [Adobe Analytics](configure.md#target) il servizio aggiunto e l&#39;utente utilizza **[!UICONTROL Override suite di rapporti]** per aggiungere le sostituzioni del datastream desiderato, come illustrato nell’immagine seguente.
+Dopo aver creato lo stream di dati, modifica il [Adobe Analytics](configure.md#target) servizio aggiunto e utilizza **[!UICONTROL Sostituzioni suite di rapporti]** per aggiungere le sostituzioni dello stream di dati desiderate, come illustrato nell’immagine seguente.
 
-Seleziona **[!UICONTROL Mostra modalità batch]** per abilitare la modifica batch delle sostituzioni della suite di rapporti. Puoi copiare e incollare un elenco di sostituzioni delle suite di rapporti, inserendo una suite di rapporti per riga.
+Seleziona **[!UICONTROL Mostra modalità batch]** per abilitare la modifica in batch delle sostituzioni della suite di rapporti. Puoi copiare e incollare un elenco di sostituzioni della suite di rapporti, inserendo una suite di rapporti per riga.
 
-![Schermata dell’interfaccia utente di Datastreams che mostra le impostazioni del servizio Adobe Analytics, evidenziando le sostituzioni della suite di rapporti.](../assets/datastreams/overrides/override-analytics.png)
+![La schermata dell’interfaccia utente Datastreams mostra le impostazioni del servizio Adobe Analytics, con le sostituzioni della suite di rapporti evidenziate.](../assets/datastreams/overrides/override-analytics.png)
 
-Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni del datastream.
+Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni dello stream di dati.
 
-È ora necessario configurare le sostituzioni del datastream di Adobe Analytics. Ora puoi [inviare le sostituzioni alla rete Edge tramite l’SDK per web](#send-overrides).
+Ora dovresti avere configurato le sostituzioni dello stream di dati di Adobe Analytics. Ora puoi [inviare le sostituzioni alla rete Edge tramite Web SDK](#send-overrides).
 
-### Sostituzioni di Datastream per Experience Platform i set di dati evento {#event-dataset-overrides}
+### Override dello stream di dati per i set di dati evento di Experience Platform {#event-dataset-overrides}
 
-Per configurare le sostituzioni del datastream per i set di dati evento di Experience Platform, devi prima disporre di un [Adobe Experience Platform](configure.md#aep) creazione di datastream. Segui le istruzioni per [configurare un datastream](configure.md) con [Adobe Experience Platform](configure.md#aep) servizio.
+Per configurare le sostituzioni dello stream di dati per i set di dati evento di Experience Platform, devi prima disporre di un’ [Adobe Experience Platform](configure.md#aep) flusso di dati creato. Seguire le istruzioni per [configurare uno stream di dati](configure.md) con [Adobe Experience Platform](configure.md#aep) servizio.
 
-Dopo aver creato il datastream, modifica il [Adobe Experience Platform](configure.md#aep) il servizio aggiunto e seleziona il **[!UICONTROL Aggiungi set di dati evento]** per aggiungere uno o più set di dati evento di sostituzione, come illustrato nell’immagine seguente.
+Dopo aver creato lo stream di dati, modifica il [Adobe Experience Platform](configure.md#aep) servizio aggiunto e seleziona il **[!UICONTROL Aggiungi set di dati evento]** per aggiungere uno o più set di dati evento di sostituzione, come illustrato nell’immagine seguente.
 
-![Schermata dell’interfaccia utente dei Datastreams che mostra le impostazioni del servizio Adobe Experience Platform, evidenziando le sostituzioni dei set di dati dell’evento.](../assets/datastreams/overrides/override-aep.png)
+![La schermata dell’interfaccia utente dei flussi di dati mostra le impostazioni del servizio Adobe Experience Platform, con le sostituzioni del set di dati dell’evento evidenziate.](../assets/datastreams/overrides/override-aep.png)
 
-Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni del datastream.
+Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni dello stream di dati.
 
-È ora necessario configurare le sostituzioni del datastream Adobe Experience Platform. Ora puoi [inviare le sostituzioni alla rete Edge tramite l’SDK per web](#send-overrides).
+Ora dovresti aver configurato le sostituzioni dello stream di dati di Adobe Experience Platform. Ora puoi [inviare le sostituzioni alla rete Edge tramite Web SDK](#send-overrides).
 
-### Ignorare il datastream per i contenitori di sincronizzazione ID di terze parti {#container-overrides}
+### Override dello stream di dati per contenitori di sincronizzazione ID di terze parti {#container-overrides}
 
-Per configurare le sostituzioni del datastream per i contenitori di sincronizzazione ID di terze parti, devi prima aver creato un datastream. Segui le istruzioni per [configurare un datastream](configure.md) per crearne una.
+Per configurare le sostituzioni dello stream di dati per i contenitori di sincronizzazione ID di terze parti, devi prima aver creato uno stream di dati. Seguire le istruzioni per [configurare uno stream di dati](configure.md) per crearne uno.
 
-Una volta creato il datastream, vai a **[!UICONTROL Opzioni avanzate]** e **[!UICONTROL Sincronizzazione ID di terze parti]** opzione .
+Dopo aver creato lo stream di dati, vai a **[!UICONTROL Opzioni avanzate]** e abilita **[!UICONTROL Sincronizzazione ID di terze parti]** opzione.
 
-Quindi, utilizza il **[!UICONTROL Ignorare gli ID contenitore]** per aggiungere gli ID del contenitore che desideri ignorare l’impostazione predefinita, come illustrato di seguito.
+Quindi, utilizza **[!UICONTROL Override ID contenitore]** per aggiungere gli ID dei contenitori che dovranno sovrascrivere l’impostazione predefinita, come illustrato nell’immagine seguente.
 
 >[!IMPORTANT]
 >
->Gli ID contenitore devono essere valori numerici, come `1234567`e non stringhe quali `"1234567"`. Se invii un valore stringa tramite l&#39;SDK per web come override di ID contenitore, riceverai un errore.
+>Gli ID contenitore devono essere valori numerici, come `1234567`, e non stringhe, come `"1234567"`. Se invii un valore stringa tramite Web SDK come sostituzione dell’ID contenitore, riceverai un errore.
 
-![Schermata dell’interfaccia utente Datastreams che mostra le impostazioni del datastream, evidenziando le sostituzioni del contenitore di sincronizzazione ID di terze parti.](../assets/datastreams/overrides/override-container.png)
+![La schermata dell’interfaccia utente per i flussi di dati mostra le impostazioni del flusso di dati, con le sostituzioni del contenitore di sincronizzazione ID di terze parti evidenziate.](../assets/datastreams/overrides/override-container.png)
 
-Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni del datastream.
+Dopo aver aggiunto le sostituzioni desiderate, salva le impostazioni dello stream di dati.
 
-A questo punto è necessario configurare le sostituzioni del contenitore di sincronizzazione ID. Ora puoi [inviare le sostituzioni alla rete Edge tramite l’SDK per web](#send-overrides).
+Ora dovresti aver configurato le sostituzioni del contenitore di sincronizzazione ID. Ora puoi [inviare le sostituzioni alla rete Edge tramite Web SDK](#send-overrides).
 
-## Inviare le sostituzioni alla rete Edge tramite l’SDK per web {#send-overrides}
+## Inviare le sostituzioni alla rete Edge tramite Web SDK {#send-overrides}
 
 >[!NOTE]
 >
->In alternativa all’invio delle sostituzioni di configurazione tramite i comandi SDK per web, puoi aggiungere le sostituzioni di configurazione all’SDK per web. [estensione tag](../extension/web-sdk-extension-configuration.md).
+>In alternativa all’invio delle sostituzioni di configurazione tramite comandi Web SDK, puoi aggiungere le sostituzioni di configurazione all’SDK per web [estensione tag](../extension/web-sdk-extension-configuration.md).
 
-Dopo [configurazione delle sostituzioni di datastream](#configure-overrides) nell’interfaccia utente di raccolta dati, ora puoi inviare le sostituzioni alla rete Edge tramite l’SDK per web.
+Dopo [configurazione delle sostituzioni dello stream di dati](#configure-overrides) Nell’interfaccia utente di Data Collection, ora puoi inviare le sostituzioni alla rete Edge tramite Web SDK.
 
-L’invio delle sostituzioni alla rete Edge tramite l’SDK per web è il secondo e ultimo passaggio dell’attivazione delle sostituzioni di configurazione del datastream.
+L’invio delle sostituzioni alla rete Edge tramite Web SDK è il secondo e ultimo passaggio dell’attivazione delle sostituzioni della configurazione dello stream di dati.
 
-Le sostituzioni della configurazione del datastream vengono inviate alla rete Edge tramite `edgeConfigOverrides` Comando SDK per web. Questo comando crea sostituzioni del datastream che vengono passate al [!DNL Edge Network] sul comando successivo, oppure, nel caso di `configure` per ogni richiesta.
+Le sostituzioni della configurazione dello stream di dati vengono inviate alla rete Edge tramite `edgeConfigOverrides` Comando Web SDK. Questo comando crea le sostituzioni dello stream di dati che vengono passate al [!DNL Edge Network] al comando successivo o, nel caso di `configure` per ogni richiesta.
 
-La `edgeConfigOverrides` crea sostituzioni del datastream che vengono passate al [!DNL Edge Network] sul comando successivo, oppure, nel caso di `configure`, per ogni richiesta.
+Il `edgeConfigOverrides` crea le sostituzioni dello stream di dati che vengono passate al [!DNL Edge Network] al comando successivo o, nel caso di `configure`, per ogni richiesta.
 
-Quando viene inviata una sostituzione di configurazione con il comando `configure` è incluso nei seguenti comandi supportati.
+Quando viene inviata una sostituzione della configurazione con `configure` è incluso nei seguenti comandi supportati.
 
 * [sendEvent](../fundamentals/tracking-events.md)
 * [setConsent](../consent/iab-tcf/overview.md)
 * [getIdentity](../identity/overview.md)
 * [appendIdentityToUrl](../identity/id-sharing.md#cross-domain-sharing)
-* [configurare](../fundamentals/configuring-the-sdk.md)
+* [configura](../fundamentals/configuring-the-sdk.md)
 
-Le opzioni specificate a livello globale possono essere sostituite dall’opzione di configurazione su singoli comandi.
+Le opzioni specificate a livello globale possono essere ignorate dall&#39;opzione di configurazione relativa ai singoli comandi.
 
-### Invio di sostituzioni di configurazione tramite `sendEvent` command {#send-event}
+### Invio delle sostituzioni di configurazione tramite `sendEvent` comando {#send-event}
 
-L’esempio seguente mostra l’aspetto di una sostituzione di configurazione su un `sendEvent` comando.
+L’esempio seguente mostra l’aspetto di una sostituzione della configurazione su una `sendEvent` comando.
 
 ```js {line-numbers="true" highlight="5-25"}
 alloy("sendEvent", {
@@ -148,9 +148,9 @@ alloy("sendEvent", {
 });
 ```
 
-### Invio di sostituzioni di configurazione tramite `configure` command {#send-configure}
+### Invio delle sostituzioni di configurazione tramite `configure` comando {#send-configure}
 
-L’esempio seguente mostra l’aspetto di una sostituzione di configurazione su un `configure` comando.
+L’esempio seguente mostra l’aspetto di una sostituzione della configurazione su una `configure` comando.
 
 ```js {line-numbers="true" highlight="8-30"}
 alloy("configure", {
@@ -191,7 +191,7 @@ alloy("configure", {
 
 ### Esempio di payload {#payload-example}
 
-Gli esempi di cui sopra generano un [!DNL Edge Network] payload simile al seguente:
+Gli esempi precedenti generano un [!DNL Edge Network] payload simile al seguente:
 
 ```json
 {
@@ -233,4 +233,3 @@ Gli esempi di cui sopra generano un [!DNL Edge Network] payload simile al seguen
   }
 }
 ```
-

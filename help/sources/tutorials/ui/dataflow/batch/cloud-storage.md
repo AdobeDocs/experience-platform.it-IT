@@ -83,7 +83,7 @@ In [!UICONTROL Seleziona dati] fase, seleziona un file compresso per l’acquisi
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-Per portare un file specifico in Platform, seleziona una cartella e quindi il file da acquisire. Durante questo passaggio, potete anche visualizzare in anteprima il contenuto di altri file all&#39;interno di una determinata cartella utilizzando l&#39;icona di anteprima accanto al nome di un file.
+Per portare un file specifico su Platform, seleziona una cartella e quindi il file da acquisire. Durante questo passaggio, potete anche visualizzare in anteprima il contenuto di altri file all&#39;interno di una determinata cartella utilizzando l&#39;icona di anteprima accanto al nome di un file.
 
 Al termine, seleziona **[!UICONTROL Successivo]**.
 

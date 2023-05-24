@@ -5,7 +5,7 @@ exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -239,7 +239,7 @@ FROM
 
 #### Caso di utilizzo dei segmenti attivati di recente
 
-La logica per [!UICONTROL Segmenti attivati di recente] Il widget fornisce un elenco degli ultimi segmenti mappati su una destinazione. Questo elenco fornisce un’istantanea dei segmenti e delle destinazioni che sono attivamente in uso nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la [[!UICONTROL Segmenti attivati di recente] documentazione widget](./guides/destinations.md#recently-activated-segments) per ulteriori informazioni.
+La logica per [!UICONTROL Segmenti attivati di recente] Il widget fornisce un elenco degli ultimi segmenti mappati su una destinazione. Questo elenco fornisce uno snapshot dei segmenti e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la [[!UICONTROL Segmenti attivati di recente] documentazione widget](./guides/destinations.md#recently-activated-segments) per ulteriori informazioni.
 
 SQL che genera il codice [!UICONTROL Segmenti attivati di recente] Il widget è visibile nella sezione comprimibile sottostante.
 

@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Best practice per la modellazione dei dati
+# Procedure consigliate per la modellazione dati
 
 [!DNL Experience Data Model] (XDM) è il framework principale che standardizza i dati sull’esperienza del cliente, fornendo strutture e definizioni comuni da utilizzare nei servizi Adobe Experience Platform a valle. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che consente di ottenere informazioni preziose dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti ed esprimere gli attributi dei clienti a scopo di personalizzazione.
 

@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 I Criteri sulla sicurezza dei contenuti (CSP) sono una funzione di sicurezza che aiuta a prevenire attacchi alla vulnerabilità cross-site scripting (XSS). Questo accade quando il browser viene indotto a eseguire contenuti dannosi che sembrano avere origini affidabili, ma provengono in realtà da una posizione diversa. I CSP consentono al browser di verificare (per conto dell’utente) che lo script provenga effettivamente da una sorgente affidabile.
 

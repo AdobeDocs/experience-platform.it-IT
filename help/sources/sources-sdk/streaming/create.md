@@ -3,7 +3,8 @@ title: Creare una nuova specifica di connessione per Streaming SDK utilizzando l
 description: Il documento seguente descrive come creare una specifica di connessione utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service.
 hide: true
 hidefromtoc: true
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 1%

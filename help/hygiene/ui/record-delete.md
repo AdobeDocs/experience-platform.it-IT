@@ -13,26 +13,26 @@ ht-degree: 10%
 
 # Elimina record
 
-La [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform è possibile eliminare i record che partecipano al servizio Identity e al profilo cliente in tempo reale. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico dell&#39;identità.
+Il [[!UICONTROL Igiene dei dati] workspace](./overview.md) nell’interfaccia utente di Adobe Experience Platform consente di eliminare i record che partecipano al servizio Identity e al profilo cliente in tempo reale. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico delle identità.
 
 >[!IMPORTANT]
 >
->Le richieste di eliminazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Scudo sanitario Adobe**.
+>Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe**.
 >
 >
->Le eliminazioni dei record sono intese per la pulizia, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **not** da utilizzare per le richieste di diritti delle persone interessate (conformità) in relazione alle normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo della conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
+>Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Prerequisiti
 
-Per eliminare i record è necessario comprendere in modo approfondito il funzionamento dei campi di identità in Experience Platform. In particolare, è necessario conoscere i valori di identità principali delle entità da cui si desidera eliminare i record, a seconda del set di dati (o dei set di dati) da cui si sta eliminando.
+L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experience Platform. In particolare, è necessario conoscere i valori di identità primari delle entità di cui si desidera eliminare i record, a seconda del set di dati (o dei set di dati) da cui li si sta eliminando.
 
 Per ulteriori informazioni sulle identità in Platform, consulta la seguente documentazione:
 
-* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): Collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
-   * [Namespace Identity](../../identity-service/namespaces.md): Gli spazi dei nomi delle identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ciascun campo di identità.
-* [Profilo cliente in tempo reale](../../profile/home.md): Sfrutta i grafici di identità per fornire profili di consumatore unificati basati su dati aggregati provenienti da più sorgenti, aggiornati in tempo quasi reale.
-* [Experience Data Model (XDM)](../../xdm/home.md): Fornisce definizioni e strutture standard per i dati di Platform tramite l’utilizzo di schemi. Tutti i set di dati di Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
-   * [Campi di identità](../../xdm/ui/fields/identity.md): Scopri come viene definito un campo di identità in uno schema XDM.
+* [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui si conformano.
+   * [Spazi dei nomi delle identità](../../identity-service/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ogni campo di identità.
+* [Profilo cliente in tempo reale](../../profile/home.md): sfrutta i grafici di identità per fornire profili di consumatori unificati basati su dati aggregati provenienti da più origini, aggiornati in tempo quasi reale.
+* [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Platform tramite l’utilizzo di schemi. Tutti i set di dati di Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
+   * [Campi di identità](../../xdm/ui/fields/identity.md): scopri come viene definito un campo di identità in uno schema XDM.
 
 ## Crea una nuova richiesta
 
@@ -40,27 +40,27 @@ Per avviare il processo, seleziona **[!UICONTROL Crea richiesta]** dalla pagina 
 
 ![Immagine che mostra [!UICONTROL Crea richiesta] pulsante selezionato](../images/ui/record-delete/create-request-button.png)
 
-Viene visualizzata la finestra di dialogo per la creazione della richiesta. Per impostazione predefinita, la **[!UICONTROL Elimina consumatore]** è selezionata sotto la **[!UICONTROL Azione richiesta]** sezione . Lascia selezionata questa opzione.
+Viene visualizzata la finestra di dialogo per la creazione della richiesta. Per impostazione predefinita, il **[!UICONTROL Elimina consumatore]** è selezionata sotto il **[!UICONTROL Azione richiesta]** sezione. Lascia selezionata questa opzione.
 
 ![Immagine che mostra l’opzione Elimina consumatore selezionata nella finestra di dialogo di creazione](../images/ui/record-delete/consumer-action.png)
 
 ## Seleziona set di dati
 
-Sotto la **[!UICONTROL Dettagli del consumatore]** il passaggio successivo consiste nel determinare se si desidera eliminare i record da un singolo set di dati o da tutti i set di dati.
+Sotto **[!UICONTROL Dettagli consumatore]** sezione, il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati.
 
-Se scegli **[!UICONTROL Seleziona set di dati]**, seleziona l’icona del database (![Immagine dell’icona del database](../images/ui/record-delete/database-icon.png)) e viene visualizzata una finestra di dialogo che consente di selezionare il set di dati desiderato dall’elenco.
+Se si sceglie **[!UICONTROL Seleziona set di dati]**, selezionare l&#39;icona del database (![Immagine dell&#39;icona del database](../images/ui/record-delete/database-icon.png)) e viene visualizzata una finestra di dialogo che consente di selezionare il set di dati desiderato dall’elenco.
 
 ![Immagine che mostra la finestra di dialogo per la selezione del set di dati](../images/ui/record-delete/select-dataset.png)
 
-Se desideri eliminare i record da tutti i set di dati, seleziona **[!UICONTROL Tutti i set di dati]**.
+Se desideri eliminare record da tutti i set di dati, seleziona **[!UICONTROL Tutti i set di dati]**.
 
 ![Immagine che mostra [!UICONTROL Tutti i set di dati] opzione selezionata](../images/ui/record-delete/all-datasets.png)
 
 >[!NOTE]
 >
->Selezione della **[!UICONTROL Tutti i set di dati]** L’opzione può causare un tempo maggiore per l’operazione di eliminazione e potrebbe non causare un’eliminazione accurata dei record.
+>Selezione del **[!UICONTROL Tutti i set di dati]** potrebbe richiedere più tempo e non consentire l&#39;eliminazione accurata dei record.
 
-## Fornire identità {#provide-identities}
+## Fornisci identità {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
@@ -72,30 +72,30 @@ Se desideri eliminare i record da tutti i set di dati, seleziona **[!UICONTROL T
 >title="Valore identità"
 >abstract="In questa colonna è necessario fornire il valore per l’identità primaria del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di identità primaria è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
 
-Quando si eliminano i record, è necessario fornire informazioni di identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base alla **identità principale** campo definito dallo schema del set di dati.
+Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al **identità primaria** campo definito dallo schema del set di dati.
 
-Come tutti i campi di identità in Platform, un&#39;identità primaria è composta da due elementi: a **type** (a volte denominato namespace di identità) e **value**. Il tipo di identità fornisce il contesto in cui il campo identifica un record (ad esempio un indirizzo e-mail) e il valore rappresenta l&#39;identità specifica di un record per quel tipo (ad esempio, `jdoe@example.com` per `email` tipo di identità). I campi comuni utilizzati come identità includono informazioni sull&#39;account, ID dispositivo e ID cookie.
+Come tutti i campi di identità in Platform, un’identità primaria è composta da due elementi: **tipo** (talvolta denominati spazi dei nomi delle identità) e **valore**. Il tipo di identità fornisce contesto sul modo in cui il campo identifica un record (ad esempio un indirizzo e-mail) e il valore rappresenta l’identità specifica di un record per quel tipo (ad esempio, `jdoe@example.com` per `email` tipo di identità). I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
 
 >[!TIP]
 >
->Se non conosci l’identità principale per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il puntatore del mouse sul nome dello schema del set di dati nella barra a destra. Viene visualizzata l&#39;identità principale insieme al nome e alla descrizione dello schema.
+>Se non conosci l’identità primaria di un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** Workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. L’identità primaria viene visualizzata insieme al nome e alla descrizione dello schema.
 >
->![Immagine che mostra l’identità principale di un set di dati evidenziato nell’interfaccia utente](../images/ui/record-delete/dataset-primary-identity.png)
+>![Immagine che mostra l’identità principale di un set di dati evidenziata nell’interfaccia utente](../images/ui/record-delete/dataset-primary-identity.png)
 
-Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere una sola identità primaria. Se esegui l’eliminazione da tutti i set di dati, puoi includere più tipi di identità, in quanto i diversi set di dati possono avere identità principali diverse.
+Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere una sola identità primaria. Se elimini da tutti i set di dati, puoi includere più tipi di identità in quanto set di dati diversi possono avere identità primarie diverse.
 
-Esistono due opzioni per fornire le identità durante l&#39;eliminazione dei record:
+Esistono due opzioni per fornire le identità quando si eliminano i record:
 
 * [Caricare un file JSON](#upload-json)
-* [Immetti i valori di identità manualmente](#manual-identity)
+* [Immetti manualmente i valori di identità](#manual-identity)
 
 ### Caricare un file JSON {#upload-json}
 
-Per caricare un file JSON, puoi trascinarlo e rilasciarlo nell’area di fornitura oppure selezionare **[!UICONTROL Scegliere i file]** per sfogliare e selezionare dalla directory locale.
+Per caricare un file JSON, puoi trascinarlo e rilasciarlo nell’area fornita, oppure selezionare **[!UICONTROL Scegli i file]** per sfogliare e selezionare dalla directory locale.
 
 ![Immagine che mostra i metodi per caricare JSON nell’interfaccia utente](../images/ui/record-delete/upload-json.png)
 
-Il file JSON deve essere formattato come una matrice di oggetti, ogni oggetto rappresenta un&#39;identità.
+Il file JSON deve essere formattato come un array di oggetti, ogni oggetto che rappresenta un’identità.
 
 ```json
 [
@@ -112,43 +112,43 @@ Il file JSON deve essere formattato come una matrice di oggetti, ogni oggetto ra
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `namespaceCode` | Tipo di identità. |
-| `value` | Il valore di identità indicato dal tipo. |
+| `namespaceCode` | Il tipo di identità. |
+| `value` | Il valore di identità come indicato dal tipo. |
 
-Una volta caricato il file, puoi continuare a [invia la richiesta](#submit).
+Una volta caricato il file, puoi continuare con [invia la richiesta](#submit).
 
 ### Immetti le identità manualmente {#manual-identity}
 
-Per immettere le identità manualmente, seleziona **[!UICONTROL Aggiungi identità]**.
+Per immettere manualmente le identità, seleziona **[!UICONTROL Aggiungi identità]**.
 
 ![Immagine che mostra [!UICONTROL Aggiungi identità] pulsante selezionato](../images/ui/record-delete/add-identity.png)
 
-Vengono visualizzati controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL Identità principale]**, utilizza il menu a discesa per selezionare il tipo di identità. Sotto **[!UICONTROL Valore identità]**, fornisce il valore di identità principale per il record.
+Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL Identità primaria]**, utilizza il menu a discesa per selezionare il tipo di identità. Sotto **[!UICONTROL Valore identità]**, fornisci il valore di identità primaria del record.
 
 ![Immagine che mostra un campo di identità aggiunto manualmente](../images/ui/record-delete/identity-added.png)
 
-Per aggiungere altre identità, seleziona l’icona più (![Immagine dell’icona più](../images/ui/record-delete/plus-icon.png)) accanto a una delle righe, oppure seleziona **[!UICONTROL Aggiungi identità]**.
+Per aggiungere altre identità, seleziona l’icona più (![Immagine dell&#39;icona più](../images/ui/record-delete/plus-icon.png)) accanto a una delle righe, oppure seleziona **[!UICONTROL Aggiungi identità]**.
 
-![Immagine che mostra come aggiungere più identità alla richiesta](../images/ui/record-delete/more-identities.png)
+![Immagine che mostra come aggiungere altre identità alla richiesta](../images/ui/record-delete/more-identities.png)
 
 ## Invia la richiesta (#submit)
 
-Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni richieste]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Invia]**.
+Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni richiesta]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Invia]**.
 
 ![Immagine che mostra [!UICONTROL Invia] pulsante selezionato](../images/ui/record-delete/submit.png)
 
-Viene richiesto di confermare l’elenco delle identità di cui si desidera eliminare i dati. Seleziona **[!UICONTROL Invia]** per confermare la selezione.
+Ti viene chiesto di confermare l’elenco delle identità di cui desideri eliminare i dati. Seleziona **[!UICONTROL Invia]** per confermare la selezione.
 
 ![Immagine che mostra la finestra di dialogo di conferma](../images/ui/record-delete/confirm-request.png)
 
-Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro e viene visualizzato nel [!UICONTROL Consumatore] della scheda [!UICONTROL Igiene dei dati] workspace. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
+Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene visualizzato nel [!UICONTROL Consumatore] scheda di [!UICONTROL Igiene dei dati] Workspace. Da qui è possibile monitorare lo stato dell&#39;ordine di lavoro durante l&#39;elaborazione della richiesta.
 
 >[!NOTE]
 >
->Consulta la sezione panoramica su [Tempistiche e trasparenza](../home.md#record-delete-transparency) per informazioni dettagliate sull&#39;elaborazione delle eliminazioni dei record una volta eseguite.
+>Consulta la sezione panoramica su [tempistiche e trasparenza](../home.md#record-delete-transparency) per informazioni dettagliate sulla modalità di elaborazione delle eliminazioni dei record dopo l&#39;esecuzione.
 
 ## Passaggi successivi
 
-Questo documento illustra come eliminare i record nell’interfaccia utente di Experience Platform. Per informazioni su come eseguire altre attività di igiene dei dati nell’interfaccia utente, consulta [panoramica dell&#39;interfaccia utente per l&#39;igiene dei dati](./overview.md).
+Questo documento illustra come eliminare i record nell’interfaccia utente di Experience Platform. Per informazioni su come eseguire altre attività di igiene dei dati nell’interfaccia utente, consulta [panoramica dell’interfaccia utente di igiene dei dati](./overview.md).
 
-Per scoprire come eliminare i record utilizzando l’API di igiene dati, consulta [guida all’endpoint dell’ordine di lavoro](../api/workorder.md).
+Per informazioni su come eliminare i record utilizzando l’API di igiene dei dati, consulta [guida dell’endpoint dell’ordine di lavoro](../api/workorder.md).

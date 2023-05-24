@@ -1,6 +1,6 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione del server di destinazione tramite Adobe Experience Platform Destination SDK.
-title: Recupera una configurazione del server di destinazione
+title: Recuperare una configurazione del server di destinazione
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '464'
@@ -9,28 +9,28 @@ ht-degree: 3%
 ---
 
 
-# Recupera una configurazione del server di destinazione
+# Recuperare una configurazione del server di destinazione
 
-Questa pagina esemplifica la richiesta API e il payload che puoi utilizzare per recuperare informazioni su una configurazione del server di destinazione esistente utilizzando `/authoring/destination-servers` Endpoint API.
+Questa pagina esemplifica la richiesta API e il payload che è possibile utilizzare per recuperare informazioni su una configurazione del server di destinazione esistente utilizzando `/authoring/destination-servers` Endpoint API
 
 Per una descrizione dettagliata delle funzionalità utilizzate dai server di destinazione, leggi i seguenti articoli:
 
-* [Specifiche server per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Specifiche dei modelli per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Specifiche del server per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Specifiche di modello per le destinazioni create con Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Formato del messaggio](../../../destination-sdk/functionality/destination-server/message-format.md)
-* [Configurazione della formattazione dei file](../../../destination-sdk/functionality/destination-server/file-formatting.md)
+* [Configurazione formattazione file](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Guida introduttiva alle operazioni API del server di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
-## Recupera una configurazione del server di destinazione {#retrieve}
+## Recuperare una configurazione del server di destinazione {#retrieve}
 
-È possibile recuperare una configurazione del server di destinazione esistente effettuando una `GET` richiesta al `/authoring/destination-servers` punto finale.
+È possibile recuperare una configurazione server di destinazione esistente effettuando una `GET` richiesta al `/authoring/destination-servers` endpoint.
 
 >[!TIP]
 >
@@ -44,21 +44,21 @@ Utilizza il seguente formato API per recuperare tutte le configurazioni del serv
 GET /authoring/destination-servers
 ```
 
-Utilizza il seguente formato API per recuperare una configurazione specifica del server di destinazione, definita dal `{INSTANCE_ID}` parametro .
+Utilizza il seguente formato API per recuperare una configurazione server di destinazione specifica, definita da `{INSTANCE_ID}` parametro.
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-Le due richieste seguenti recuperano tutte le configurazioni del server di destinazione per la tua organizzazione IMS o una configurazione specifica del server di destinazione, a seconda che tu passi o meno la `INSTANCE_ID` nella richiesta.
+Le due richieste seguenti recuperano tutte le configurazioni del server di destinazione per l’organizzazione IMS o una configurazione del server di destinazione specifica, a seconda che venga passato o meno il `INSTANCE_ID` nella richiesta.
 
-Seleziona ciascuna scheda qui sotto per visualizzare il payload corrispondente e le relative risposte.
+Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente e le relative risposte.
 
 >[!BEGINTABS]
 
 >[!TAB Recupera tutte le configurazioni del server di destinazione]
 
-La seguente richiesta recupererà l&#39;elenco delle configurazioni del server di destinazione a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La richiesta seguente recupererà l’elenco delle configurazioni del server di destinazione a cui hai accesso, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
 
 +++Richiesta
 
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di configurazioni del server di destinazione a cui hai accesso, in base al [!DNL IMS Org ID] e nome della sandbox utilizzata. Uno `instanceId` corrisponde a un server di destinazione. La risposta di esempio seguente include due configurazioni del server di destinazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco delle configurazioni del server di destinazione a cui hai accesso, in base al [!DNL IMS Org ID] e il nome della sandbox che hai utilizzato. Uno `instanceId` corrisponde a un server di destinazione. La risposta di esempio seguente include due configurazioni del server di destinazione.
 
 ```json
 {
@@ -151,9 +151,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di configurazi
 
 +++
 
->[!TAB Recupera una configurazione specifica del server di destinazione]
+>[!TAB Recuperare una configurazione server di destinazione specifica]
 
-La seguente richiesta recupererà una specifica configurazione del server di destinazione definita dalla `{INSTANCE_ID}` parametro .
+La richiesta seguente recupererà una specifica configurazione del server di destinazione definita da `{INSTANCE_ID}` parametro.
 
 +++Richiesta
 
@@ -167,13 +167,13 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | ID della configurazione del server di destinazione da recuperare. |
+| `{INSTANCE_ID}` | ID della configurazione del server di destinazione che desideri recuperare. |
 
 +++
 
 +++Risposta
 
-Una risposta corretta restituisce lo stato HTTP 200 con la configurazione del server di destinazione corrispondente al `{INSTANCE_ID}` lei ha fornito.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con la configurazione del server di destinazione corrispondente al `{INSTANCE_ID}` hai fornito.
 
 ```json
 {
@@ -225,9 +225,9 @@ Gli endpoint API di Destination SDK seguono i principi generali dei messaggi di 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come recuperare una configurazione del server di destinazione tramite la Destination SDK `/authoring/destination-servers` Endpoint API.
+Dopo aver letto questo documento, ora sai come recuperare una configurazione del server di destinazione tramite Destination SDK `/authoring/destination-servers` Endpoint API
 
-Per ulteriori informazioni sulle operazioni che è possibile eseguire con questo endpoint, consulta i seguenti articoli:
+Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consulta i seguenti articoli:
 
 * [Creare una configurazione del server di destinazione](create-destination-server.md)
 * [Aggiornare una configurazione del server di destinazione](update-destination-server.md)

@@ -2,7 +2,8 @@
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
 title: Panoramica dei registri di controllo in Attribution AI
 description: Scopri come visualizzare e gestire i registri di audit in Attribution AI.
-source-git-commit: a68d4634c6341f27673fdd70d96f7e214032b5a9
+exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 29%
@@ -22,4 +23,3 @@ In un certo senso, un registro di audit comunica chi ha eseguito quale azione, e
 Se questa funzione è abilitata per la tua organizzazione, i registri di audit vengono raccolti automaticamente quando si verifica un’attività. Non è necessario abilitare manualmente la raccolta dei registri.
 
 Per visualizzare ed esportare i registri di audit, è necessario disporre dell’autorizzazione di controllo dell’accesso in Adobe Console. Per informazioni su come gestire le singole autorizzazioni per le funzioni di Attribution AI, consulta [documentazione sul controllo degli accessi](../aai-data-governance/access-controls.md).
-

@@ -3,7 +3,8 @@ title: Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove dest
 description: Scopri come utilizzare l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud in versione beta
 hidefromtoc: y
 hide: y
-source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
+exl-id: d077ea10-5ff2-4acc-8ee6-78ea6cd752d1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%

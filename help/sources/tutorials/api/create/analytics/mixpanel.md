@@ -590,7 +590,7 @@ L’ultimo passaggio per importare dati da [!DNL Mixpanel] In Platform è necess
 
 * [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 

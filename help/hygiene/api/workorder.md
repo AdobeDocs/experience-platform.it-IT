@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | ID organizzazione. |
+| `orgId` | Il tuo ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
@@ -187,7 +187,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’operazione 
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | ID organizzazione. |
+| `orgId` | Il tuo ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
@@ -275,7 +275,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | ID organizzazione. |
+| `orgId` | Il tuo ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |

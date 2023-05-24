@@ -3,7 +3,8 @@ title: Modello self-service della documentazione per l’interfaccia utente di S
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’interfaccia utente.
 hide: true
 hidefromtoc: true
-source-git-commit: eba86ab8aa7d4deac967f5dfb13b2a691bc7c773
+exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1193'
 ht-degree: 1%
@@ -24,7 +25,7 @@ Questo tutorial descrive i passaggi necessari per creare *YOUR SOURCE* connettor
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
+>Questa pagina della documentazione è stata creata da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
 
 ## Prerequisiti
 

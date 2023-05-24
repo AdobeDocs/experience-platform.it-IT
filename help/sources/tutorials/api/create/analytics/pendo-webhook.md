@@ -1,8 +1,9 @@
 ---
 title: Creare una connessione sorgente e un flusso di dati per Pendo utilizzando l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a Pendo utilizzando l’API del servizio Flow.
-badge: "Beta"
-source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
+badge: Beta
+exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 2%
@@ -249,7 +250,7 @@ L’ultimo passaggio per importare dati da [!DNL Pendo] In Platform è necessari
 
 * [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 

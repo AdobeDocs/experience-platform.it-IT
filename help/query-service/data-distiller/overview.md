@@ -1,7 +1,8 @@
 ---
 title: Panoramica di Data Distiller
-description: Riepilogo dei limiti di utilizzo di Data Distiller per i dati di Query Service in relazione all’adesione alla licenza.
-source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
+description: Riepilogo dei limiti di utilizzo di Data Distiller per i dati di Query Service in relazione ai diritti di licenza.
+exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # Panoramica di Data Distiller
 
-Data Distiller è un pacchetto che include un sottoinsieme delle funzionalità di Adobe Experience Platform. Con Data Distiller è possibile eseguire la preparazione dei dati post-acquisizione (ad esempio la pulizia, la modellazione e la manipolazione) per casi d’uso in tempo reale del profilo del cliente o analitici eseguendo query batch in Query Service. L’utilizzo di Data Distiller dipende dall’adesione alle applicazioni basate su Platform.
+Data Distiller è un pacchetto che include un sottoinsieme delle funzionalità di Adobe Experience Platform. Con Data Distiller puoi eseguire la preparazione dei dati di post-acquisizione (ad esempio la pulizia, la modellazione e la manipolazione) per i casi d’uso analitici o di profilo cliente in tempo reale, eseguendo query batch in Query Service. L’utilizzo di Data Distiller dipende dalla licenza di per le applicazioni basate su Platform.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -34,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Guardrail
 
-Consulta la sezione [Garanzie del servizio query](../guardrails.md) documento relativo ai limiti di utilizzo predefiniti per i dati del servizio query in relazione al diritto di licenza.
+Consulta la [Guardrail di Query Service](../guardrails.md) documento relativo ai limiti di utilizzo predefiniti per i dati di Query Service in relazione al diritto di licenza.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits
@@ -49,4 +50,3 @@ A static limit is the usage limit that relates to the functional boundaries of A
     * To generate meaningful insights from your data.
 * **Reporting API Call**: To ensure queries run on aggregated data using the reporting API have enough resources to execute efficiently. This includes queries that enhance existing data models such as those provided by Real-Time Customer Data Platform. The reporting API tracks resource utilization by assigning concurrency slots to each query. A maximum of four reporting API calls are available concurrently. If you access the reporting API through a BI tool and require more concurrency slots, a BI server is required.
 -->
-

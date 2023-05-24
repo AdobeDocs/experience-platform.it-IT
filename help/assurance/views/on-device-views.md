@@ -1,19 +1,19 @@
 ---
-title: Visualizzazioni sul dispositivo
-description: Questa guida mostra l’aspetto delle diverse visualizzazioni su un dispositivo che utilizza Adobe Experience Platform Assurance.
-source-git-commit: e054c8a605557a8c78d89c1a9bf562b9298cc260
+title: Visualizzazioni su dispositivo
+description: Questa guida mostra l’aspetto delle diverse visualizzazioni su un dispositivo con Adobe Experience Platform Assurance.
+exl-id: aa0b09e6-88e0-4f06-be57-df7536a9fa2f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
-
-# Visualizzazioni sul dispositivo
+# Visualizzazioni su dispositivo
 
 ## Connesso
 
-(indicato con Adobe rosso &quot;A&quot;)
+(indicato dall&#39;Adobe &quot;A&quot; rosso)
 
 ![](./images/on-device-views/connected.png)
 

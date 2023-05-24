@@ -20,7 +20,7 @@ Questo documento funge da guida per l’interazione con le informazioni approfon
 
 ## Introduzione
 
-Per utilizzare le informazioni per IA per l’analisi dei clienti, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Configurazione di un’istanza di Customer AI](./configure.md). Se di recente è stata creata un’istanza del servizio che sta ancora formando e assegnando un punteggio, attendi 24 ore prima del termine dell’esecuzione.
+Per utilizzare le informazioni per IA per l’analisi dei clienti, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Configurazione di un’istanza di Customer AI](./configure.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
 
 ## Panoramica dell’istanza del servizio
 

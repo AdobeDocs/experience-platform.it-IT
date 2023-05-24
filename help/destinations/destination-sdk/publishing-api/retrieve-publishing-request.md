@@ -1,6 +1,6 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per recuperare i dettagli su una richiesta di pubblicazione di destinazione tramite Adobe Experience Platform Destination SDK.
-title: Recupera una richiesta di pubblicazione di destinazione
+description: Questa pagina esemplifica la chiamata API utilizzata per recuperare i dettagli di una richiesta di pubblicazione di destinazione tramite Adobe Experience Platform Destination SDK.
+title: Recuperare una richiesta di pubblicazione di destinazione
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '834'
@@ -9,34 +9,34 @@ ht-degree: 3%
 ---
 
 
-# Recupera una richiesta di pubblicazione di destinazione
+# Recuperare una richiesta di pubblicazione di destinazione
 
 >[!IMPORTANT]
 >
->È necessario utilizzare questo endpoint API solo se si invia una destinazione di prodotto (pubblico) da utilizzare per altri clienti Experience Platform. Se crei una destinazione privata per tuo uso, non devi inviare formalmente la destinazione utilizzando l’API di pubblicazione.
+>Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), che dovrà essere utilizzata da altri clienti Experience Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
 
 >[!IMPORTANT]
 >
 >**Endpoint API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Dopo aver configurato e verificato la destinazione, puoi inviarla ad Adobe per la revisione e la pubblicazione. Leggi [Invia per la revisione di una destinazione creata in Destination SDK](../guides/submit-destination.md) per tutti gli altri passaggi è necessario eseguire questa operazione come parte del processo di invio della destinazione.
+Dopo aver configurato e testato la destinazione, puoi inviarla ad Adobe per la revisione e la pubblicazione. Letto [Invia per la revisione una destinazione creata in Destination SDK](../guides/submit-destination.md) per tutte le altre operazioni da eseguire nell&#39;ambito del processo di invio della destinazione.
 
-Utilizza l’endpoint API delle destinazioni di pubblicazione per inviare una richiesta di pubblicazione quando:
+Utilizza l’endpoint API per la pubblicazione delle destinazioni per inviare una richiesta di pubblicazione quando:
 
-* In qualità di partner di Destination SDK, vuoi rendere disponibile la tua destinazione di prodotto in tutte le organizzazioni Experience Platform affinché tutti i clienti di Experience Platform possano utilizzarla;
-* Fai *qualsiasi aggiornamento* alle tue configurazioni. Gli aggiornamenti di configurazione si riflettono nella destinazione solo dopo aver inviato una nuova richiesta di pubblicazione, approvata dal team di Experience Platform.
+* In qualità di partner di Destination SDK, desideri rendere la tua destinazione prodotta disponibile in tutte le organizzazioni di Experienci Platform per tutti i clienti di Experienci Platform da utilizzare;
+* Fai *qualsiasi aggiornamento* alle configurazioni. Gli aggiornamenti della configurazione vengono rispecchiati nella destinazione solo dopo l’invio di una nuova richiesta di pubblicazione, approvata dal team di Experienci Platform.
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
-## Guida introduttiva alle operazioni API di pubblicazione della destinazione {#get-started}
+## Guida introduttiva alle operazioni API di pubblicazione di destinazione {#get-started}
 
-Prima di continuare, controlla la [guida introduttiva](../getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’API, tra cui come ottenere l’autorizzazione di authoring di destinazione richiesta e le intestazioni richieste.
+Prima di continuare, controlla [guida introduttiva](../getting-started.md) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all’API, tra cui come ottenere l’autorizzazione di authoring della destinazione richiesta e le intestazioni richieste.
 
-## Elenca richieste di pubblicazione di destinazione {#retrieve-list}
+## Elencare richieste di pubblicazione di destinazione {#retrieve-list}
 
-Puoi recuperare un elenco di tutte le destinazioni inviate per la pubblicazione per la tua organizzazione IMS effettuando una richiesta di GET al `/authoring/destinations/publish` punto finale.
+Per recuperare un elenco di tutte le destinazioni inviate per la pubblicazione per la tua organizzazione IMS, devi effettuare una richiesta GET al `/authoring/destinations/publish` endpoint.
 
 **Formato API**
 
@@ -46,7 +46,7 @@ Utilizza il seguente formato API per recuperare tutte le richieste di pubblicazi
 GET /authoring/destinations/publish
 ```
 
-Utilizza il seguente formato API per recuperare una richiesta di pubblicazione specifica, definita dalla `{DESTINATION_ID}` parametro .
+Utilizza il seguente formato API per recuperare una richiesta di pubblicazione specifica, definita da `{DESTINATION_ID}` parametro.
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -54,9 +54,9 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 **Richiesta**
 
-Le due richieste seguenti recuperano tutte le richieste di pubblicazione per la tua organizzazione IMS o una richiesta di pubblicazione specifica, a seconda che passi o meno la `DESTINATION_ID` nella richiesta.
+Le due richieste seguenti recuperano tutte le richieste di pubblicazione per l’organizzazione IMS o una richiesta di pubblicazione specifica, a seconda che venga passata o meno la `DESTINATION_ID` nella richiesta.
 
-Seleziona ciascuna scheda qui sotto per visualizzare il payload corrispondente.
+Seleziona ciascuna scheda di seguito per visualizzare il payload corrispondente.
 
 >[!BEGINTABS]
 
@@ -64,7 +64,7 @@ Seleziona ciascuna scheda qui sotto per visualizzare il payload corrispondente.
 
 +++Richiesta
 
-La seguente richiesta recupererà l’elenco delle richieste di pubblicazione inviate, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
+La richiesta seguente recupererà l’elenco delle richieste di pubblicazione inviate, in base a [!DNL IMS Org ID] e la configurazione della sandbox.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -78,7 +78,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-La risposta seguente restituisce lo stato HTTP 200 con un elenco di tutte le destinazioni inviate per la pubblicazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `configId` corrisponde alla richiesta di pubblicazione per una destinazione.
+La risposta che segue restituisce lo stato HTTP 200 con un elenco di tutte le destinazioni inviate per la pubblicazione a cui hai accesso, in base all’ID organizzazione IMS e al nome della sandbox utilizzati. Uno `configId` corrisponde alla richiesta di pubblicazione per una destinazione.
 
 ```json
 {
@@ -117,17 +117,17 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di tutte le des
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `destinationId` | Stringa | ID di destinazione della configurazione di destinazione inviata per la pubblicazione. |
-| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione della destinazione per la destinazione inviata. |
-| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali la destinazione è disponibile. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni di Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l&#39;ID organizzazione dell&#39;organizzazione utilizzato per creare e testare la destinazione.</li></ul> |
-| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione della destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
-| `publishDetailsList.destinationType` | Stringa | Tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Pensa a queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
-| `publishDetailsList.publishedDate` | Stringa | Data in cui la destinazione è stata inviata per la pubblicazione, in epoch time. |
+| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione di destinazione per la destinazione inviata. |
+| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali è disponibile la destinazione. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l’ID organizzazione dell’organizzazione utilizzata per l’authoring e il test della destinazione.</li></ul> |
+| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione di destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
+| `publishDetailsList.destinationType` | Stringa | Il tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Considera queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
+| `publishDetailsList.publishedDate` | Stringa | La data in cui la destinazione è stata inviata per la pubblicazione, in tempo reale. |
 
 {style="table-layout:auto"}
 
 +++
 
->[!TAB Recupera una richiesta di pubblicazione specifica]
+>[!TAB Recuperare una richiesta di pubblicazione specifica]
 
 +++Richiesta
 
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++Risposta
 
-Se hai passato un `DESTINATION_ID` nella chiamata API , la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla richiesta di pubblicazione della destinazione specificata.
+Se ha superato un `DESTINATION_ID` nella chiamata API, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sulla richiesta Publish di destinazione specificata.
 
 ```json
 {
@@ -169,11 +169,11 @@ Se hai passato un `DESTINATION_ID` nella chiamata API , la risposta restituisce 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `destinationId` | Stringa | ID di destinazione della configurazione di destinazione inviata per la pubblicazione. |
-| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione della destinazione per la destinazione inviata. |
-| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali la destinazione è disponibile. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni di Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l&#39;ID organizzazione dell&#39;organizzazione utilizzato per creare e testare la destinazione.</li></ul> |
-| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione della destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
-| `publishDetailsList.destinationType` | Stringa | Tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Pensa a queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
-| `publishDetailsList.publishedDate` | Stringa | Data in cui la destinazione è stata inviata per la pubblicazione, in epoch time. |
+| `publishDetailsList.configId` | Stringa | ID univoco della richiesta di pubblicazione di destinazione per la destinazione inviata. |
+| `publishDetailsList.allowedOrgs` | Stringa | Restituisce le organizzazioni di Experience Platform per le quali è disponibile la destinazione. <br> <ul><li> Per `"destinationType": "PUBLIC"`, questo parametro restituisce `"*"`, il che significa che la destinazione è disponibile per tutte le organizzazioni Experience Platform.</li><li> Per `"destinationType": "DEV"`, questo parametro restituisce l’ID organizzazione dell’organizzazione utilizzata per l’authoring e il test della destinazione.</li></ul> |
+| `publishDetailsList.status` | Stringa | Lo stato della richiesta di pubblicazione di destinazione. I valori possibili sono `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Destinazioni con il valore `PUBLISHED` sono live e possono essere utilizzate dai clienti Experience Platform. |
+| `publishDetailsList.destinationType` | Stringa | Il tipo di destinazione. I valori possono essere `DEV` e `PUBLIC`. `DEV` corrisponde alla destinazione nell’organizzazione Experience Platform. `PUBLIC` corrisponde alla destinazione inviata per la pubblicazione. Considera queste due opzioni in termini Git, dove `DEV` rappresenta il ramo di authoring locale e il `PUBLIC` version rappresenta il ramo principale remoto. |
+| `publishDetailsList.publishedDate` | Stringa | La data in cui la destinazione è stata inviata per la pubblicazione, in tempo reale. |
 
 {style="table-layout:auto"}
 

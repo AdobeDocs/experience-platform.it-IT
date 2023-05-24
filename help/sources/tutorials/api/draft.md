@@ -1,50 +1,51 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
-title: Flussi Di Dati Bozza Utilizzando L’API Del Servizio Di Flusso
-description: Scopri come impostare i flussi di dati in uno stato di bozza utilizzando l’API del servizio di flusso.
-badge: label="Nuova funzione" type="Positiva"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
+title: Flussi Di Dati Bozza Utilizzando L’API Del Servizio Flusso
+description: Scopri come impostare i flussi di dati in stato di bozza utilizzando l’API del servizio Flusso.
+badge: label="New Feature" type="Positivo"
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 3%
 
 ---
 
-# Flussi di dati Bozza tramite l’API del servizio di flusso
+# Flussi di dati in bozza utilizzando l’API del servizio Flusso
 
-Salva i flussi di dati come bozze quando utilizzi l’API del servizio di flusso fornendo il `mode=draft` parametro query durante la chiamata di creazione del flusso. Le bozze possono essere aggiornate in un secondo momento con nuove informazioni e quindi pubblicate una volta pronte. Questa esercitazione descrive i passaggi per impostare i flussi di dati in uno stato di bozza utilizzando l’API del servizio di flusso.
+Salva i flussi di dati come bozze quando utilizzi l’API del servizio Flusso fornendo il `mode=draft` parametro query durante la chiamata di creazione del flusso. Le bozze possono essere aggiornate in un secondo momento con nuove informazioni e quindi pubblicate quando sono pronte. Questo tutorial illustra i passaggi necessari per impostare i flussi di dati in stato di bozza utilizzando l’API del servizio Flusso.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 ### Prerequisiti
 
-Questa esercitazione richiede di aver già generato le risorse necessarie per creare un flusso di dati. Ciò include i seguenti elementi:
+Questo tutorial richiede di aver già generato le risorse necessarie per creare un flusso di dati. Ciò include quanto segue:
 
-* Connessione di base autenticata
-* Connessione sorgente
+* Una connessione di base autenticata
+* Una connessione sorgente
 * Uno schema XDM di destinazione
 * Un set di dati di destinazione
-* Connessione di destinazione
-* Mappatura
+* Una connessione di destinazione
+* Una mappatura
 
-Se questi valori non sono ancora disponibili, selezionare un&#39;origine da [il catalogo nella panoramica delle origini](../../home.md). Quindi, segui le istruzioni di quella determinata origine per generare le risorse necessarie per creare un flusso di dati.
+Se non disponi ancora di questi valori, seleziona un’origine da [il catalogo nella panoramica delle origini](../../home.md). Quindi, segui le istruzioni di quella determinata origine per generare le risorse necessarie per la bozza di un flusso di dati.
 
 ### Utilizzo delle API di Platform
 
-Per informazioni su come effettuare correttamente le chiamate alle API di Platform, consulta la guida su [guida introduttiva alle API di Platform](../../../landing/api-guide.md).
+Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
 
-## Impostare un flusso di dati su stato bozza
+## Impostare un flusso di dati sullo stato Bozza
 
-Le sezioni seguenti descrivono il processo per impostare un flusso di dati come bozza, aggiornare il flusso di dati, pubblicare il flusso di dati e infine eliminare il flusso di dati.
+Le sezioni seguenti descrivono il processo per impostare un flusso di dati come bozza, aggiornarlo, pubblicarlo e infine eliminarlo.
 
-### Bozza un flusso di dati
+### Creare un flusso di dati
 
-Per impostare un flusso di dati come bozza, invia una richiesta POST al `/flows` endpoint durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
+Per impostare un flusso di dati come bozza, effettua una richiesta POST al `/flows` endpoint durante l&#39;aggiunta di `mode=draft` come parametro di query. Questo consente di creare un flusso di dati e salvarlo come bozza.
 
 **Formato API**
 
@@ -54,11 +55,11 @@ POST /flows?mode=draft
 
 | Parametro | Descrizione |
 | --- | --- |
-| `mode` | Parametro di query fornito dall&#39;utente che determina lo stato del flusso di dati. Per impostare un flusso di dati come bozza, imposta `mode` a `draft`. |
+| `mode` | Parametro di query fornito dall’utente che determina lo stato del flusso di dati. Per impostare un flusso di dati come sformo, impostate `mode` a `draft`. |
 
 **Richiesta**
 
-La seguente richiesta crea un flusso di dati di bozza.
+La richiesta seguente crea un flusso di dati bozza.
 
 ```shell
   'https://platform-int.adobe.io/data/foundation/flowservice/flows?mode=draft' \
@@ -84,7 +85,7 @@ La seguente richiesta crea un flusso di dati di bozza.
 
 **Risposta**
 
-Una risposta corretta restituisce il `id` e il corrispondente `etag` del flusso di dati.
+Una risposta corretta restituisce `id` e il corrispondente `etag` del flusso di dati.
 
 ```json
 {
@@ -95,7 +96,7 @@ Una risposta corretta restituisce il `id` e il corrispondente `etag` del flusso 
 
 ### Aggiornare un flusso di dati
 
-Per aggiornare la bozza, invia una richiesta PATCH al `/flows` durante la fornitura dell&#39;ID del flusso di dati che si desidera aggiornare. Durante questo passaggio, devi anche fornire un `If-Match` parametro header , che corrisponde al `etag` del flusso di dati da aggiornare.
+Per aggiornare la bozza, effettua una richiesta PATCH al `/flows` fornendo l’ID del flusso di dati che desideri aggiornare. Durante questo passaggio, devi anche fornire un `If-Match` parametro di intestazione, che corrisponde al `etag` del flusso di dati che desideri aggiornare.
 
 **Formato API**
 
@@ -105,7 +106,7 @@ PATCH /flows/{FLOW_ID}
 
 **Richiesta**
 
-Le richieste seguenti aggiungono trasformazioni di mappatura al flusso di dati di bozza.
+Le seguenti richieste aggiungono trasformazioni di mappatura al flusso di dati di bozza.
 
 ```shell
 curl -X PATCH \
@@ -134,7 +135,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID di flusso e `etag`. Per verificare la modifica, puoi effettuare una richiesta GET al `/flows` durante la fornitura dell&#39;ID flusso.
+In caso di esito positivo, la risposta restituisce l’ID di flusso e `etag`. Per verificare la modifica, puoi effettuare una richiesta GET al `/flows` mentre fornisci l’ID di flusso.
 
 ```json
 {
@@ -145,7 +146,7 @@ Una risposta corretta restituisce l&#39;ID di flusso e `etag`. Per verificare la
 
 ### Pubblicare un flusso di dati
 
-Una volta che la bozza è pronta per essere pubblicata, invia una richiesta a POST `/flows` fornendo l&#39;ID del flusso di dati bozza da pubblicare, nonché un&#39;operazione di pubblicazione.
+Quando la bozza è pronta per la pubblicazione, invia una richiesta POST al `/flows` endpoint, fornendo l’ID del flusso di dati bozza da pubblicare e un’operazione di pubblicazione.
 
 **Formato API**
 
@@ -155,11 +156,11 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | Parametro | Descrizione |
 | --- | --- |
-| `op` | Operazione che aggiorna lo stato del flusso di dati interrogato. Per pubblicare un flusso di dati bozza, imposta `op` a `publish`. |
+| `op` | Operazione che aggiorna lo stato del flusso di dati sottoposto a query. Per pubblicare un flusso di dati 2D, impostate `op` a `publish`. |
 
 **Richiesta**
 
-La seguente richiesta pubblica il flusso di dati della bozza.
+La richiesta seguente pubblica il flusso di dati della bozza.
 
 ```shell
 curl -X POST \
@@ -172,7 +173,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID e il corrispondente `etag` del flusso di dati.
+In caso di esito positivo, la risposta restituisce l’ID e i corrispondenti `etag` del flusso di dati.
 
 ```json
 {
@@ -183,4 +184,4 @@ Una risposta corretta restituisce l&#39;ID e il corrispondente `etag` del flusso
 
 ### Eliminare un flusso di dati
 
-Per eliminare il flusso di dati, invia una richiesta DELETE al `/flows` durante la fornitura dell&#39;ID del flusso di dati da eliminare. Per passaggi dettagliati su come eliminare un flusso di dati utilizzando l’API del servizio di flusso, consulta la guida su [eliminazione di un flusso di dati nell’API](./delete-dataflows.md).
+Per eliminare il flusso di dati, effettua una richiesta DELETE al `/flows` endpoint, fornendo l’ID del flusso di dati da eliminare. Per i passaggi dettagliati su come eliminare un flusso di dati utilizzando l’API del servizio Flusso, consulta la guida su [eliminazione di un flusso di dati nell’API](./delete-dataflows.md).

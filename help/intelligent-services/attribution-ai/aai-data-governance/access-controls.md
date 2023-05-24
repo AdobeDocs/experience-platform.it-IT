@@ -4,13 +4,13 @@ solution: Experience Platform
 feature: Attribution AI
 title: Controllo dell’accesso per le Attribution AI
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi per Attribution AI.
-source-git-commit: d82fd8dd5efbe314c09d32905f8ab964640cc11a
+exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 1%
 
 ---
-
 
 # Controllo degli accessi
 

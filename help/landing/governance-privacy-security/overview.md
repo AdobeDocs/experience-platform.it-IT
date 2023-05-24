@@ -7,7 +7,7 @@ exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Platform è stato sviluppato per arricchire le applicazioni di esperi
 
 Per soddisfare la necessità di flessibilità di sviluppo, Experience Platform fornisce sandbox che suddividono una singola istanza Platform in ambienti virtuali separati, utili per sviluppare le applicazioni di esperienza digitale in base al proprio ciclo di vita di sviluppo.
 
-Consulta la [panoramica sulle sandbox](../../sandboxes/home.md) per ulteriori informazioni.
+Per ulteriori informazioni, consulta la [panoramica delle sandbox](../../sandboxes/home.md).
 
 ## Passaggi successivi
 

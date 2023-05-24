@@ -1,7 +1,8 @@
 ---
 title: Creare una connessione di origine e un flusso di dati per gli account e i contatti di SugarCRM tramite l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform agli account e ai contatti di SugarCRM utilizzando l’API del servizio Flusso.
-source-git-commit: e3ae650c70b07e8682ea77f94791d5b320d89425
+exl-id: 2b422b39-5b86-4313-a214-725044d9812c
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 2%
@@ -890,7 +891,7 @@ L’ultimo passaggio per importare dati da [!DNL SugarCRM Accounts & Contacts] I
 
 * [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 

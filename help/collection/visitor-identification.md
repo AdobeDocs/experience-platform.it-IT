@@ -1,8 +1,8 @@
 ---
 title: Identificazione visitatore
-description: Scopri come l’API di Adobe Experience Platform Edge Network Server identifica i visitatori
+description: Scopri come l’API del server di rete Edge di Adobe Experience Platform identifica i visitatori
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
-keywords: rete perimetrale;gateway;api;visitatore;identificazione
+keywords: rete edge;gateway;api;visitatore;identificazione
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 5%
 
 # Identificazione visitatore
 
-L’API server di rete Edge supporta [identificazione del visitatore tramite ID di prime parti ([!DNL FPID])](visitor-identification-fpid.md).
+L&#39;API del server di rete Edge supporta [identificazione del visitatore tramite ID di prime parti ([!DNL FPID])](visitor-identification-fpid.md).
 
-Tutte le identità utente devono essere fornite nella `identityMap` gruppo di campi. Questo gruppo di campi è incluso nell’SDK web AEP `ExperienceEvent` mixin.
+Tutte le identità utente devono essere fornite nel `identityMap` gruppo di campi. Questo gruppo di campi è incluso in AEP Web SDK `ExperienceEvent` mixin.
 
 ```json
 {
@@ -36,13 +36,13 @@ Tutte le identità utente devono essere fornite nella `identityMap` gruppo di ca
 }
 ```
 
-## Identificatori dei dispositivi {#identifiers}
+## Identificatori dispositivo {#identifiers}
 
-Ci sono diversi modi in cui un dispositivo può essere identificato all&#39;interno della rete Edge. Per una panoramica degli ID supportati consulta la tabella seguente.
+È possibile identificare un dispositivo all’interno della rete Edge in diversi modi. Per una panoramica degli ID supportati, consulta la tabella seguente.
 
 | Spazio dei nomi ID | Gestito da | Descrizione |
 | --- | --- | --- |
-| `FPID` | Customer | `FPID` viene codificato automaticamente in un `ECID` da Edge Network, quindi soluzioni che richiedono un `ECID` Funzionerà anche.  <br><br> Per un’identificazione coerente dei dispositivi, questi ID devono essere mantenuti sul dispositivo e forniti su ogni richiesta. Per le interazioni web, ciò comporta l’archiviazione dei cookie come browser. |
+| `FPID` | Customer | `FPID` verrà codificato automaticamente in un `ECID` dalla rete Edge, pertanto le soluzioni che richiedono un `ECID` funzionerà.  <br><br> Per un’identificazione coerente dei dispositivi, questi ID devono essere mantenuti sul dispositivo e forniti su ogni richiesta. Per le interazioni web, ciò comporta memorizzarle come cookie del browser. |
 | `IDFA`/`GAID` | Experience Platform | Può identificare gli utenti tra le applicazioni, in modo che questi ID non siano codificati in `ECID` dalla rete Edge. |
 
 <!--

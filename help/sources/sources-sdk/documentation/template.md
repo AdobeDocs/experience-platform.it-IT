@@ -6,7 +6,7 @@ exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
 source-git-commit: 74e9774009d086a04351c8ff04cde29348c90c09
 workflow-type: tm+mt
 source-wordcount: '2134'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -449,7 +449,7 @@ L’ultimo passaggio per importare dati da *YOUR SOURCE* In Platform è necessar
 
 * [ID connessione sorgente](#source-connection)
 * [ID connessione di destinazione](#target-connection)
-* [ID mappatura](#mapping)
+* [ID di mappatura](#mapping)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta di dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST e fornendo i valori precedentemente menzionati all’interno del payload.
 

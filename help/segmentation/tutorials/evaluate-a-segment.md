@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;valutazione dei segmenti;servizio di segmentazione;segmentazione;segmentazione;valutazione di un segmento;risultati dei segmenti di accesso;valutazione e segmento di accesso;
+keywords: Experience Platform;home;argomenti popolari;valutazione segmento;Segmentation Service;segmentation;segmentation;evaluate a segment;access segment results;evaluate and access segment; (Segmentazione;segmentazione;valutare un segmento;accedere ai risultati del segmento;valutare e accedere al segmento;
 solution: Experience Platform
 title: Valutare e accedere ai risultati dei segmenti
 type: Tutorial
@@ -14,94 +14,94 @@ ht-degree: 0%
 
 # Valutare e accedere ai risultati dei segmenti
 
-Questo documento fornisce un&#39;esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando [[!DNL Segmentation API]](../api/getting-started.md).
+Questo documento fornisce un’esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Introduzione
 
-Questa esercitazione richiede una comprensione approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questo tutorial richiede una buona conoscenza delle varie [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questo tutorial, consulta la documentazione dei seguenti servizi:
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Consente di creare segmenti di pubblico da [!DNL Real-Time Customer Profile] dati.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience. Per utilizzare al meglio la segmentazione, assicurati che i tuoi dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che suddividono un singolo [!DNL Platform] in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): consente di creare segmenti di pubblico da [!DNL Real-Time Customer Profile] dati.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato tramite il quale Platform organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 ### Intestazioni richieste
 
-Questa esercitazione richiede anche di aver completato il [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate a [!DNL Platform] API. Il completamento dell’esercitazione sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Questo tutorial richiede anche di aver completato [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente chiamate a [!DNL Platform] API. Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
+- Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolati in specifiche sandbox virtuali. Richieste a [!DNL Platform] Le API richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedi [documentazione panoramica su sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedere [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste di POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
 
-- Tipo di contenuto: application/json
+- Content-Type: application/json
 
 ## Valutare un segmento {#evaluate-a-segment}
 
-Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valutarlo tramite una valutazione programmata o on demand.
+Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valutarlo tramite valutazione pianificata o su richiesta.
 
-[Valutazione programmata](#scheduled-evaluation) (nota anche come &quot;segmentazione pianificata&quot;) consente di creare una pianificazione periodica per l’esecuzione di un processo di esportazione in un momento specifico, mentre [valutazione a richiesta](#on-demand-evaluation) comporta la creazione di un lavoro di segmento per creare il pubblico immediatamente. I passaggi per ciascuno di essi sono descritti di seguito.
+[Valutazione programmata](#scheduled-evaluation) (nota anche come &quot;segmentazione pianificata&quot;) consente di creare una pianificazione ricorrente per l’esecuzione di un processo di esportazione in un momento specifico, mentre [valutazione on-demand](#on-demand-evaluation) implica la creazione di un processo di segmentazione per generare immediatamente il pubblico. Di seguito sono descritti i passaggi per ciascuno di essi.
 
-Se non hai ancora completato il [creare un segmento utilizzando l’API di segmentazione](./create-a-segment.md) creare un&#39;esercitazione o una definizione di segmento utilizzando [Generatore di segmenti](../ui/overview.md), effettua questa operazione prima di procedere con questa esercitazione.
+Se non hai ancora completato [creare un segmento utilizzando l’API di segmentazione](./create-a-segment.md) esercitazione o ha creato una definizione di segmento utilizzando [Generatore di segmenti](../ui/overview.md), esegui questa operazione prima di procedere con questa esercitazione.
 
 ## Valutazione programmata {#scheduled-evaluation}
 
-Mediante la valutazione pianificata, l&#39;organizzazione può creare una pianificazione periodica per eseguire automaticamente i processi di esportazione.
+Tramite la valutazione pianificata, l’organizzazione può creare una pianificazione ricorrente per eseguire automaticamente i processi di esportazione.
 
 >[!NOTE]
 >
->La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se l&#39;organizzazione dispone di più di cinque criteri di unione per [!DNL XDM Individual Profile] in un unico ambiente sandbox, non potrai utilizzare valutazioni pianificate.
+>La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se nell’organizzazione sono presenti più di cinque criteri di unione per [!DNL XDM Individual Profile] in un singolo ambiente sandbox non puoi utilizzare la valutazione pianificata.
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST al `/config/schedules` endpoint, puoi creare una pianificazione e includere l’ora specifica in cui deve essere attivata la pianificazione.
+Effettuando una richiesta POST al `/config/schedules` endpoint, puoi creare una pianificazione e includere l’ora specifica in cui attivare la pianificazione.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida agli endpoint programmati](../api/schedules.md#create)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;schedule&quot;](../api/schedules.md#create)
 
-### Abilita pianificazione
+### Abilitare una pianificazione
 
-Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che il `state` è impostata su `active` nel corpo della richiesta create (POST). Puoi abilitare una pianificazione (imposta la `state` a `active`) effettuando una richiesta PATCH al `/config/schedules` e l’ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione non è attiva al momento della creazione, a meno che `state` proprietà impostata su `active` nel corpo della richiesta create (POST). È possibile abilitare una pianificazione (impostare `state` a `active`) inoltrando una richiesta PATCH al `/config/schedules` e l&#39;ID della pianificazione nel percorso.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida agli endpoint programmati](../api/schedules.md#update-state)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;schedule&quot;](../api/schedules.md#update-state)
 
 ### Aggiornare l’ora di pianificazione
 
-È possibile aggiornare la tempistica della pianificazione effettuando una richiesta di PATCH al `/config/schedules` e l’ID della pianificazione nel percorso.
+È possibile aggiornare la pianificazione effettuando una richiesta PATCH al `/config/schedules` e l&#39;ID della pianificazione nel percorso.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida agli endpoint programmati](../api/schedules.md#update-schedule)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;schedule&quot;](../api/schedules.md#update-schedule)
 
-## Valutazione su richiesta
+## Valutazione a richiesta
 
-La valutazione su richiesta consente di creare un processo di segmento per generare un segmento di pubblico ogni volta che lo desideri. A differenza della valutazione pianificata, ciò si verifica solo quando richiesto e non è ricorrente.
+La valutazione su richiesta consente di creare un processo di segmentazione per generare un segmento di pubblico ogni volta che necessario. A differenza della valutazione pianificata, questa si verifica solo quando richiesto e non è ricorrente.
 
-### Creare un processo di segmento
+### Creare un processo di segmentazione
 
-Un processo di segmento è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlla come [!DNL Real-Time Customer Profile] unisce attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico. Un processo di segmento deve essere eseguito ogni volta che desideri aggiornare il pubblico attualmente idoneo per la definizione del segmento.
+Un processo di segmentazione è un processo asincrono che crea un segmento di pubblico su richiesta. Fa riferimento a una definizione di segmento, nonché a eventuali criteri di unione che controllano come [!DNL Real-Time Customer Profile] unisce attributi sovrapposti tra i frammenti di profilo. Al termine di un processo di segmentazione, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l’elaborazione e le dimensioni finali del pubblico. È necessario eseguire un processo di segmentazione ogni volta che desideri aggiornare il pubblico attualmente idoneo per la definizione del segmento.
 
-Puoi creare un nuovo processo di segmento effettuando una richiesta di POST al `/segment/jobs` punto finale [!DNL Real-Time Customer Profile] API.
+Per creare un nuovo processo di segmentazione, devi effettuare una richiesta POST al `/segment/jobs` endpoint nella [!DNL Real-Time Customer Profile] API.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida all’endpoint dei processi di segmento](../api/segment-jobs.md#create)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;segment jobs&quot;](../api/segment-jobs.md#create)
 
-### Cerca lo stato del processo del segmento
+### Cercare lo stato del processo di segmento
 
-È possibile utilizzare `id` per eseguire una richiesta di ricerca (GET) per un processo di segmento specifico per visualizzare lo stato corrente del processo.
+È possibile utilizzare `id` per un processo di segmento specifico per eseguire una richiesta di ricerca (GET) per visualizzare lo stato corrente del processo.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida all’endpoint dei processi di segmento](../api/segment-jobs.md#get)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;segment jobs&quot;](../api/segment-jobs.md#get)
 
 ## Interpretare i risultati dei segmenti
 
-Quando i processi di segmento vengono eseguiti correttamente, la `segmentMembership` La mappa viene aggiornata per ogni profilo incluso all’interno del segmento. `segmentMembership` memorizza anche eventuali segmenti di pubblico valutati in precedenza acquisiti in [!DNL Platform], consentendo l&#39;integrazione con altre soluzioni come [!DNL Adobe Audience Manager].
+Quando i processi di segmentazione vengono eseguiti correttamente, il `segmentMembership` La mappa viene aggiornata per ogni profilo incluso nel segmento. `segmentMembership` memorizza anche eventuali segmenti di pubblico pre-valutati che vengono acquisiti in [!DNL Platform], consentendo l&#39;integrazione con altre soluzioni come [!DNL Adobe Audience Manager].
 
-L’esempio seguente mostra cosa `segmentMembership` l’attributo è simile a ciascun record di profilo individuale:
+Nell&#39;esempio seguente viene illustrato il `segmentMembership` per ogni singolo record di profilo:
 
 ```json
 {
@@ -128,46 +128,46 @@ L’esempio seguente mostra cosa `segmentMembership` l’attributo è simile a c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `lastQualificationTime` | La marca temporale in cui è stata rilasciata l’asserzione dell’appartenenza al segmento e il profilo è entrato o uscito dal segmento. |
-| `status` | Lo stato della partecipazione al segmento come parte della richiesta corrente. Deve essere uguale a uno dei seguenti valori noti: <ul><li>`realized`: L’entità è idonea per il segmento.</li><li>`exited`: L&#39;entità sta uscendo dal segmento.</li></ul> |
+| `lastQualificationTime` | La marca temporale in cui è stata effettuata l’asserzione di appartenenza al segmento e il profilo è entrato o uscito dal segmento. |
+| `status` | Lo stato di partecipazione al segmento come parte della richiesta corrente. Deve essere uguale a uno dei seguenti valori noti: <ul><li>`realized`: entità qualificata per il segmento.</li><li>`exited`: uscita dell’entità dal segmento.</li></ul> |
 
 >[!NOTE]
 >
->Qualsiasi appartenenza al segmento presente nella `exited` stato per più di 30 giorni, in base alla `lastQualificationTime`, sarà soggetto a cancellazione.
+>Qualsiasi appartenenza a un segmento presente in `exited` per più di 30 giorni, in base al `lastQualificationTime`, sarà soggetto a cancellazione.
 
 ## Accedere ai risultati dei segmenti
 
-È possibile accedere ai risultati di un processo di segmento in uno dei due modi seguenti: puoi accedere a singoli profili o esportare un intero pubblico in un set di dati.
+È possibile accedere ai risultati di un processo di segmentazione in uno dei due modi seguenti: accedere a singoli profili o esportare un intero pubblico in un set di dati.
 
-Le sezioni seguenti descrivono più dettagliatamente queste opzioni.
+Le sezioni seguenti descrivono queste opzioni in modo più dettagliato.
 
 ## Cercare un profilo
 
-Se conosci il profilo specifico a cui desideri accedere, puoi farlo utilizzando il [!DNL Real-Time Customer Profile] API. I passaggi completi per accedere ai singoli profili sono disponibili nella sezione [Accedere ai dati del profilo cliente in tempo reale tramite l’API del profilo](../../profile/api/entities.md) esercitazione.
+Se conosci il profilo specifico a cui desideri accedere, utilizza [!DNL Real-Time Customer Profile] API. I passaggi completi per accedere ai singoli profili sono disponibili nella sezione [Accedere ai dati del profilo cliente in tempo reale utilizzando l’API del profilo](../../profile/api/entities.md) esercitazione.
 
 ## Esportare un segmento {#export}
 
-Dopo che un processo di segmentazione è stato completato correttamente (il valore di `status` attribute is &quot;SUCCEEDED&quot;), puoi esportare il pubblico in un set di dati a cui è possibile accedere e su cui agisce.
+Dopo il completamento di un processo di segmentazione (il valore della `status` è &quot;RIUSCITO&quot;), puoi esportare il pubblico in un set di dati in cui è possibile accedervi e agire di conseguenza.
 
-Per esportare il pubblico sono necessari i seguenti passaggi:
+Per esportare il pubblico, sono necessari i seguenti passaggi:
 
-- [Creare un set di dati di destinazione](#create-a-target-dataset) - Crea il set di dati per i membri del pubblico.
-- [Generare profili di pubblico nel set di dati](#generate-profiles) - Compilare il set di dati con i singoli profili XDM in base ai risultati di un processo di segmento.
+- [Creare un set di dati di destinazione](#create-a-target-dataset) : crea il set di dati per includere i membri del pubblico.
+- [Generare profili di pubblico nel set di dati](#generate-profiles) : popola il set di dati con i singoli profili XDM in base ai risultati di un processo di segmentazione.
 - [Monitorare l’avanzamento dell’esportazione](#monitor-export-progress) - Controllare l&#39;avanzamento corrente del processo di esportazione.
-- [Leggere i dati sul pubblico](#next-steps) - Recupera i singoli profili XDM risultanti che rappresentano i membri del pubblico.
+- [Lettura dei dati sul pubblico](#next-steps) : recupera i profili individuali XDM risultanti che rappresentano i membri del pubblico.
 
 ### Creare un set di dati di destinazione {#create-dataset}
 
-Quando si esporta un pubblico, è necessario creare prima un set di dati di destinazione. È importante che il set di dati sia configurato correttamente per garantire che l’esportazione abbia esito positivo.
+Durante l’esportazione di un pubblico, è necessario creare prima un set di dati di destinazione. È importante che il set di dati sia configurato correttamente per garantire l’esportazione in modo corretto.
 
-Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API di seguito). Per esportare un segmento, il set di dati deve essere basato su [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema generato dal sistema e di sola lettura che aggrega i campi degli schemi che condividono la stessa classe, in questo caso si tratta della classe Profilo individuale XDM. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, consulta la sezione [Sezione Profilo cliente in tempo reale della guida per gli sviluppatori del registro dello schema](../../xdm/api/getting-started.md).
+Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API (di seguito). Per esportare un segmento, il set di dati deve essere basato su [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe, in questo caso la classe XDM Individual Profile. Per ulteriori informazioni sugli schemi di visualizzazione unione, consulta la [Sezione Profilo cliente in tempo reale della guida per gli sviluppatori del registro dello schema](../../xdm/api/getting-started.md).
 
 Esistono due modi per creare il set di dati necessario:
 
-- **Utilizzo delle API:** I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che fa riferimento a [!DNL XDM Individual Profile Union Schema] utilizzando [!DNL Catalog] API.
-- **Utilizzo dell’interfaccia utente:** Per utilizzare [!DNL Adobe Experience Platform] per creare un set di dati che faccia riferimento allo schema di unione, segui i passaggi descritti in [Esercitazione sull’interfaccia utente](../ui/overview.md) quindi torna a questa esercitazione per procedere con i passaggi per [generazione di profili di pubblico](#generate-profiles).
+- **Utilizzo delle API:** I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che faccia riferimento a [!DNL XDM Individual Profile Union Schema] utilizzando [!DNL Catalog] API.
+- **Utilizzo dell’interfaccia utente:** Per utilizzare [!DNL Adobe Experience Platform] per creare un set di dati che faccia riferimento allo schema di unione, segui i passaggi descritti in [Esercitazione sull’interfaccia utente](../ui/overview.md) e quindi tornare a questo tutorial per procedere con i passaggi per [generazione di profili di pubblico](#generate-profiles).
 
-Se disponi già di un set di dati compatibile e ne conosci l’ID, puoi procedere direttamente al passaggio per [generazione di profili di pubblico](#generate-profiles).
+Se disponi già di un set di dati compatibile e conosci il relativo ID, puoi procedere direttamente al passaggio per [generazione di profili di pubblico](#generate-profiles).
 
 **Formato API**
 
@@ -177,7 +177,7 @@ POST /dataSets
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo set di dati, fornendo parametri di configurazione nel payload.
+La richiesta seguente crea un nuovo set di dati, fornendo i parametri di configurazione nel payload.
 
 ```shell
 curl -X POST \
@@ -198,12 +198,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Un nome descrittivo per il set di dati. |
-| `schemaRef.id` | ID della visualizzazione unione (schema) a cui sarà associato il set di dati. |
+| `name` | Nome descrittivo del set di dati. |
+| `schemaRef.id` | ID della visualizzazione unione (schema) a cui verrà associato il set di dati. |
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l’ID univoco generato dal sistema di sola lettura del set di dati appena creato. Per esportare correttamente i membri del pubblico è necessario un ID set di dati configurato correttamente.
+In caso di esito positivo, la risposta restituisce un array contenente l’ID univoco di sola lettura generato dal sistema per il set di dati appena creato. Per esportare correttamente i membri del pubblico è necessario un ID set di dati configurato correttamente.
 
 ```json
 [
@@ -213,21 +213,21 @@ Una risposta corretta restituisce un array contenente l’ID univoco generato da
 
 ### Generare profili per i membri del pubblico {#generate-profiles}
 
-Una volta che disponi di un set di dati persistente nell’unione, puoi creare un processo di esportazione per mantenere i membri del pubblico nel set di dati effettuando una richiesta di POST al gruppo di dati `/export/jobs` punto finale [!DNL Real-Time Customer Profile] API e fornisce l’ID del set di dati e le informazioni sul segmento per i segmenti che desideri esportare.
+Una volta che hai un set di dati persistente nell’unione, puoi creare un processo di esportazione per rendere persistenti i membri del pubblico nel set di dati effettuando una richiesta POST al `/export/jobs` endpoint nella [!DNL Real-Time Customer Profile] e fornendo l’ID del set di dati e le informazioni sul segmento per i segmenti che desideri esportare.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida all’endpoint dei processi di esportazione](../api/export-jobs.md#create)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;export jobs&quot;](../api/export-jobs.md#create)
 
 ### Monitorare l’avanzamento dell’esportazione
 
-Come processo di esportazione, puoi monitorarne lo stato effettuando una richiesta di GET al `/export/jobs` l&#39;endpoint e `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che il `status` restituisce il valore &quot;SUCCEEDED&quot;.
+Durante l’elaborazione di un processo di esportazione, puoi monitorarne lo stato effettuando una richiesta GET al `/export/jobs` e che include `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che `status` restituisce il valore &quot;SUCCESSEDED&quot;.
 
-Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella sezione [guida all’endpoint dei processi di esportazione](../api/export-jobs.md#get)
+Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella sezione [guida dell’endpoint &quot;export jobs&quot;](../api/export-jobs.md#get)
 
 ## Passaggi successivi
 
-Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno della [!DNL Data Lake] in [!DNL Experience Platform]. È quindi possibile utilizzare la [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni del segmento, i dati possono essere in blocchi e il batch può essere costituito da più file.
+Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno di [!DNL Data Lake] in [!DNL Experience Platform]. È quindi possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni del segmento, i dati possono essere in blocchi e il batch può essere costituito da diversi file.
 
-Per istruzioni dettagliate sull’utilizzo del [!DNL Data Access] API per accedere e scaricare file batch, segui [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
+Per istruzioni dettagliate su come utilizzare il [!DNL Data Access] API per accedere e scaricare i file batch, seguire la [Tutorial sull’accesso ai dati](../../data-access/tutorials/dataset-data.md).
 
 Puoi anche accedere ai dati dei segmenti esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. Utilizzando l’interfaccia utente o l’API RESTful, [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno di [!DNL Data Lake].
 

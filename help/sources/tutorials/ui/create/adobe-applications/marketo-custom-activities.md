@@ -1,7 +1,8 @@
 ---
 title: Creare una connessione sorgente di Marketo Engage e un flusso di dati per i dati di attività personalizzati nell’interfaccia utente
 description: Questo tutorial descrive i passaggi necessari per creare una connessione di origine del Marketo Engage e un flusso di dati nell’interfaccia utente per inserire dati personalizzati sulle attività in Adobe Experience Platform.
-source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
+exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%

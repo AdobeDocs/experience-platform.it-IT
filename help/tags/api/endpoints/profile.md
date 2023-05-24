@@ -13,7 +13,7 @@ ht-degree: 75%
 
 Nell’API di Reactor, un profilo rappresenta un utente di Adobe Experience Platform. L’API di Reactor non mantiene il proprio database di utenti e autorizzazioni, ma si basa sugli Adobe ID gestiti da [Adobe IMS (Identity Management System)](https://helpx.adobe.com/it/enterprise/using/identity.html).
 
-Un profilo contiene tutte le informazioni sull’utente connesso, comprese tutte le organizzazioni a cui appartengono, i profili di prodotto a cui appartengono all’interno di ogni organizzazione e i diritti di cui dispongono da ciascun profilo di prodotto.
+Un profilo contiene tutte le informazioni sull’utente connesso, comprese tutte le organizzazioni a cui appartiene, i profili di prodotto a cui appartiene all’interno di ogni organizzazione e i diritti di cui dispone da ciascun profilo di prodotto.
 
 ## Introduzione
 

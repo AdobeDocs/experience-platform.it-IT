@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
-title: Endpoint API per processi di esportazione del profilo
+title: Endpoint API per processi di esportazione profilo
 type: Documentation
-description: Il Profilo del cliente in tempo reale consente di creare una singola visualizzazione dei singoli clienti all’interno di Adobe Experience Platform raggruppando i dati provenienti da più sorgenti, inclusi i dati degli attributi e i dati comportamentali. I dati del profilo possono quindi essere esportati in un set di dati per un’ulteriore elaborazione.
+description: Real-Time Customer Profile consente di creare una singola visualizzazione dei singoli clienti all’interno di Adobe Experience Platform riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,35 +11,35 @@ ht-degree: 2%
 
 ---
 
-# Endpoint processi di esportazione del profilo
+# Endpoint &quot;profile export jobs&quot;
 
-[!DNL Real-Time Customer Profile] consente di creare un’unica visualizzazione dei singoli clienti raggruppando i dati provenienti da più sorgenti, inclusi i dati degli attributi e i dati comportamentali. I dati del profilo possono quindi essere esportati in un set di dati per un’ulteriore elaborazione. Ad esempio, segmenti di pubblico da [!DNL Profile] i dati possono essere esportati per l’attivazione e gli attributi di profilo possono essere esportati per la generazione di rapporti.
+[!DNL Real-Time Customer Profile] consente di creare una singola vista dei singoli clienti riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione. Ad esempio, segmenti di pubblico da [!DNL Profile] i dati possono essere esportati per l’attivazione e gli attributi del profilo possono essere esportati per il reporting.
 
-Questo documento fornisce istruzioni dettagliate per la creazione e la gestione dei processi di esportazione utilizzando [API del profilo](https://www.adobe.com/go/profile-apis-en).
+Questo documento fornisce istruzioni dettagliate per la creazione e la gestione dei processi di esportazione mediante [API profilo](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->Questa guida riguarda l’utilizzo dei posti di lavoro per le esportazioni [!DNL Profile API]. Per informazioni su come gestire i lavori di esportazione per il servizio di segmentazione di Adobe Experience Platform, consulta la guida su [esportazione di lavori nell’API Segmentazione](../../profile/api/export-jobs.md).
+>Questa guida descrive l’utilizzo dei processi di esportazione nel [!DNL Profile API]. Per informazioni su come gestire i processi di esportazione per Adobe Experience Platform Segmentation Service, consulta la guida su [processi di esportazione nell’API di segmentazione](../../profile/api/export-jobs.md).
 
-Oltre a creare un processo di esportazione, puoi anche accedere a [!DNL Profile] i dati che utilizzano `/entities` endpoint, noto anche come &quot;[!DNL Profile Access]&quot;. Consulta la sezione [guida all’endpoint entità](./entities.md) per ulteriori informazioni. Per i passaggi su come accedere a [!DNL Profile] i dati che utilizzano l&#39;interfaccia utente, fare riferimento alla [guida utente](../ui/user-guide.md).
+Oltre a creare un processo di esportazione, puoi anche accedere a [!DNL Profile] dati utilizzando `/entities` endpoint, noto anche come &quot;[!DNL Profile Access]&quot;. Consulta la [guida dell’endpoint &quot;entities&quot;](./entities.md) per ulteriori informazioni. Per i passaggi su come accedere a [!DNL Profile] dati tramite l’interfaccia utente, consulta [guida utente](../ui/user-guide.md).
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte del [!DNL Real-Time Customer Profile] API. Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio presenti in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi [!DNL Experience Platform] API.
+Gli endpoint API utilizzati in questa guida fanno parte del [!DNL Real-Time Customer Profile] API. Prima di continuare, controlla [guida introduttiva](getting-started.md) per collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a [!DNL Experience Platform] API.
 
 ## Creare un processo di esportazione
 
-Esportazione [!DNL Profile] i dati richiedono innanzitutto la creazione di un set di dati in cui verranno esportati i dati, quindi l’avvio di un nuovo processo di esportazione. Entrambi questi passaggi possono essere eseguiti utilizzando API di Experience Platform, con le API di servizi di catalogo utilizzate per le prime e le API di profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ogni passaggio sono descritte nelle sezioni seguenti.
+Esportazione [!DNL Profile] I dati richiedono innanzitutto la creazione di un set di dati in cui esportare i dati, quindi l’avvio di un nuovo processo di esportazione. Entrambi i passaggi possono essere eseguiti utilizzando le API Experience Platform, con la prima che utilizza l’API Catalog Service e la seconda che utilizza l’API Profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ciascun passaggio sono descritte nelle sezioni che seguono.
 
 ### Creare un set di dati di destinazione
 
-Durante l&#39;esportazione [!DNL Profile] data, è prima necessario creare un set di dati di destinazione. È importante che il set di dati sia configurato correttamente per garantire che l’esportazione abbia esito positivo.
+Durante l’esportazione [!DNL Profile] dati, è prima necessario creare un set di dati di destinazione. È importante che il set di dati sia configurato correttamente per garantire l’esportazione in modo corretto.
 
-Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API di seguito). Per esportare i dati di profilo, il set di dati deve essere basato su [!DNL XDM Individual Profile] Schema dell&#39;unione (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema generato dal sistema e di sola lettura che aggrega i campi degli schemi che condividono la stessa classe. In questo caso, la [!DNL XDM Individual Profile] classe. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, consulta la sezione [sezione unione nella guida di base sulla composizione dello schema](../../xdm/schema/composition.md#union).
+Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API (di seguito). Per esportare i dati del profilo, il set di dati deve essere basato su [!DNL XDM Individual Profile] Schema di unione (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe. In questo caso, è il [!DNL XDM Individual Profile] classe. Per ulteriori informazioni sugli schemi di visualizzazione unione, consulta la [sezione union nella guida di base della composizione dello schema](../../xdm/schema/composition.md#union).
 
-I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che fa riferimento a [!DNL XDM Individual Profile] Schema dell&#39;Unione utilizzando [!DNL Catalog] API. È inoltre possibile utilizzare [!DNL Platform] interfaccia utente per creare un set di dati che fa riferimento allo schema di unione. I passaggi per l’utilizzo dell’interfaccia utente sono descritti in [questa esercitazione sull&#39;interfaccia utente per l&#39;esportazione di segmenti](../../segmentation/tutorials/create-dataset-export-segment.md) ma sono applicabili anche qui. Una volta completato, puoi tornare a questa esercitazione per procedere con i passaggi per [avvio di un nuovo processo di esportazione](#initiate).
+I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che faccia riferimento a [!DNL XDM Individual Profile] Unione dello schema tramite [!DNL Catalog] API. È inoltre possibile utilizzare il [!DNL Platform] per creare un set di dati che faccia riferimento allo schema di unione. I passaggi per utilizzare l’interfaccia utente sono descritti in [questo tutorial sull’interfaccia utente per esportare i segmenti](../../segmentation/tutorials/create-dataset-export-segment.md) ma sono applicabili anche qui. Una volta completato, puoi tornare a questa esercitazione per procedere con i passaggi per [avvio di un nuovo processo di esportazione](#initiate).
 
-Se disponi già di un set di dati compatibile e ne conosci l’ID, puoi procedere direttamente al passaggio per [avvio di un nuovo processo di esportazione](#initiate).
+Se disponi già di un set di dati compatibile e conosci il relativo ID, puoi procedere direttamente al passaggio per [avvio di un nuovo processo di esportazione](#initiate).
 
 **Formato API**
 
@@ -49,7 +49,7 @@ POST /dataSets
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo set di dati, fornendo parametri di configurazione nel payload.
+La richiesta seguente crea un nuovo set di dati, fornendo i parametri di configurazione nel payload.
 
 ```shell
 curl -X POST \
@@ -70,12 +70,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `name` | Un nome descrittivo per il set di dati. |
-| `schemaRef.id` | ID della visualizzazione unione (schema) a cui sarà associato il set di dati. |
+| `name` | Nome descrittivo del set di dati. |
+| `schemaRef.id` | ID della visualizzazione unione (schema) a cui verrà associato il set di dati. |
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l’ID univoco di sola lettura, generato dal sistema, del set di dati appena creato. Per esportare correttamente i dati del profilo, è necessario un ID di set di dati configurato correttamente.
+In caso di esito positivo, la risposta restituisce un array contenente l’ID univoco di sola lettura generato dal sistema del set di dati appena creato. Per esportare correttamente i dati profilo è necessario un ID set di dati configurato correttamente.
 
 ```json
 [
@@ -85,7 +85,7 @@ Una risposta corretta restituisce un array contenente l’ID univoco di sola let
 
 ### Avvia processo di esportazione {#initiate}
 
-Una volta che disponi di un set di dati persistente nell’unione, puoi creare un processo di esportazione per mantenere i dati del profilo nel set di dati effettuando una richiesta di POST al gruppo di dati `/export/jobs` nell’API del profilo cliente in tempo reale e fornendo i dettagli dei dati che desideri esportare nel corpo della richiesta.
+Una volta che hai un set di dati persistente nell’unione, puoi creare un processo di esportazione per rendere persistenti i dati del profilo nel set di dati effettuando una richiesta POST al `/export/jobs` nell’API del profilo cliente in tempo reale e fornendo i dettagli dei dati che desideri esportare nel corpo della richiesta.
 
 **Formato API**
 
@@ -95,7 +95,7 @@ POST /export/jobs
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo processo di esportazione, fornendo i parametri di configurazione nel payload.
+La richiesta seguente crea un nuovo processo di esportazione, fornendo i parametri di configurazione nel payload.
 
 ```shell
 curl -X POST \
@@ -131,21 +131,21 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `fields` | *(Facoltativo)* Limita i campi di dati da includere nell’esportazione solo a quelli forniti in questo parametro. Se si omette questo valore, tutti i campi verranno inclusi nei dati esportati. |
-| `mergePolicy` | *(Facoltativo)* Specifica il criterio di unione per la gestione dei dati esportati. Includi questo parametro quando sono in corso l’esportazione di più segmenti. |
+| `fields` | *(Facoltativo)* Limita i campi dati da includere nell’esportazione a quelli forniti in questo parametro. Omettendo questo valore, tutti i campi verranno inclusi nei dati esportati. |
+| `mergePolicy` | *(Facoltativo)* Specifica il criterio di unione da applicare ai dati esportati. Includi questo parametro quando vengono esportati più segmenti. |
 | `mergePolicy.id` | ID del criterio di unione. |
-| `mergePolicy.version` | Versione specifica del criterio di unione da utilizzare. L’eliminazione di questo valore viene eseguita per impostazione predefinita nella versione più recente. |
-| `additionalFields.eventList` | *(Facoltativo)* Controlla i campi evento serie temporale esportati per oggetti secondari o associati fornendo una o più delle seguenti impostazioni:<ul><li>`eventList.fields`: Controlla i campi da esportare.</li><li>`eventList.filter`: Specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Si attende un valore minimo necessario per l’esportazione, in genere una data.</li><li>`eventList.filter.fromIngestTimestamp`: Filtra gli eventi delle serie temporali in quelli che sono stati acquisiti dopo la marca temporale fornita. Questo non è il momento dell’evento stesso, ma il momento dell’acquisizione degli eventi.</li></ul> |
-| `destination` | **(Obbligatorio)** Informazioni sulla destinazione per i dati esportati:<ul><li>`destination.datasetId`: **(Obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`destination.segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non viene fornito, utilizza per impostazione predefinita `false`. Un valore di `false` esporta tutti gli ID segmento in un singolo ID batch. Un valore di `true` esporta un ID segmento in un ID batch. Tieni presente che l’impostazione del valore deve essere `true` possono influire sulle prestazioni dell&#39;esportazione batch.</li></ul> |
+| `mergePolicy.version` | Versione specifica del criterio di unione da utilizzare. Se si omette questo valore, per impostazione predefinita viene utilizzata la versione più recente. |
+| `additionalFields.eventList` | *(Facoltativo)* Controlla i campi evento della serie temporale esportati per gli oggetti figlio o associati fornendo una o più delle seguenti impostazioni:<ul><li>`eventList.fields`: controlla i campi da esportare.</li><li>`eventList.filter`: specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Prevede un valore minimo richiesto per l&#39;esportazione, in genere una data.</li><li>`eventList.filter.fromIngestTimestamp`: filtra gli eventi della serie temporale con quelli che sono stati acquisiti dopo la marca temporale fornita. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li></ul> |
+| `destination` | **(Obbligatorio)** Informazioni sulla destinazione dei dati esportati:<ul><li>`destination.datasetId`: **(Obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`destination.segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non specificato, utilizza per impostazione predefinita `false`. Un valore di `false` esporta tutti gli ID segmento in un singolo ID batch. Un valore di `true` esporta un ID segmento in un ID batch. Tieni presente che impostando il valore su `true` può influire sulle prestazioni di esportazione in batch.</li></ul> |
 | `schema.name` | **(Obbligatorio)** Nome dello schema associato al set di dati in cui devono essere esportati i dati. |
 
 >[!NOTE]
 >
->Per esportare solo i dati di profilo e non includere i dati relativi alle serie temporali, rimuovi l’oggetto &quot;additionalFields&quot; dalla richiesta.
+>Per esportare solo i dati di profilo e non includere i dati di serie temporali correlati, rimuovere l&#39;oggetto &quot;additionalFields&quot; dalla richiesta.
 
 **Risposta**
 
-Una risposta corretta restituisce un set di dati popolato con dati di profilo come specificato nella richiesta.
+In caso di esito positivo, la risposta restituisce un set di dati popolato con dati di profilo come specificato nella richiesta.
 
 ```json
 {
@@ -180,7 +180,7 @@ Una risposta corretta restituisce un set di dati popolato con dati di profilo co
 
 ## Elenca tutti i processi di esportazione
 
-È possibile restituire un elenco di tutti i processi di esportazione per una particolare organizzazione eseguendo una richiesta di GET a `export/jobs` punto finale. La richiesta supporta anche i parametri di query `limit` e `offset`, come illustrato di seguito.
+È possibile restituire un elenco di tutti i processi di esportazione per una particolare organizzazione eseguendo una richiesta di GET al `export/jobs` endpoint. La richiesta supporta anche i parametri di query `limit` e `offset`, come illustrato di seguito.
 
 **Formato API**
 
@@ -191,10 +191,10 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `start` | Offset la pagina dei risultati restituiti, in base al tempo di creazione della richiesta. Esempio: `start=4` |
+| `start` | Offset della pagina dei risultati restituiti, in base all’ora di creazione della richiesta. Esempio: `start=4` |
 | `limit` | Limita il numero di risultati restituiti. Esempio: `limit=10` |
-| `page` | Restituisce una pagina specifica di risultati, in base al tempo di creazione della richiesta. Esempio: `page=2` |
-| `sort` | Ordina i risultati per un campo specifico in ascendente ( **`asc`** ) o decrescente ( **`desc`** ). Il parametro di ordinamento non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=updateTime:asc` |
+| `page` | Restituisce una pagina di risultati specifica, in base all’ora di creazione della richiesta. Esempio: `page=2` |
+| `sort` | Ordinare i risultati in base a un campo specifico in modo crescente ( **`asc`** ) o decrescente ( **`desc`** ). Il parametro sort non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=updateTime:asc` |
 
 **Richiesta**
 
@@ -209,7 +209,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include un `records` oggetto contenente i processi di esportazione creati dall&#39;organizzazione.
+La risposta include una `records` oggetto contenente i processi di esportazione creati dall’organizzazione.
 
 ```json
 {
@@ -326,7 +326,7 @@ La risposta include un `records` oggetto contenente i processi di esportazione c
 
 ## Monitorare l’avanzamento dell’esportazione
 
-Per visualizzare i dettagli di un processo di esportazione specifico o monitorarne lo stato durante il processo, puoi effettuare una richiesta di GET al `/export/jobs` e include `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che il `status` restituisce il valore &quot;SUCCEEDED&quot;.
+Per visualizzare i dettagli di un processo di esportazione specifico o monitorarne lo stato durante l&#39;elaborazione, è possibile effettuare una richiesta di GET al `/export/jobs` e includere `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che `status` restituisce il valore &quot;SUCCESSEDED&quot;.
 
 **Formato API**
 
@@ -336,7 +336,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | La `id` del processo di esportazione a cui si desidera accedere. |
+| `{EXPORT_JOB_ID}` | Il `id` del processo di esportazione a cui desideri accedere. |
 
 **Richiesta**
 
@@ -399,11 +399,11 @@ curl -X GET \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `batchId` | Identificatore dei batch creati da un&#39;esportazione riuscita, da utilizzare a scopo di ricerca durante la lettura dei dati del profilo. |
+| `batchId` | Identificatore dei batch creati da un’esportazione riuscita, da utilizzare a scopo di ricerca durante la lettura dei dati del profilo. |
 
 ## Annullare un processo di esportazione
 
-L’Experience Platform ti consente di annullare un processo di esportazione esistente, che può essere utile per una serie di motivi, tra cui se il processo di esportazione non è stato completato o è rimasto bloccato nella fase di elaborazione. Per annullare un processo di esportazione, è possibile eseguire una richiesta di DELETE al `/export/jobs` e include `id` del processo di esportazione che si desidera annullare nel percorso della richiesta.
+Experience Platform consente di annullare un processo di esportazione esistente. Ciò può essere utile per diversi motivi, tra cui se il processo di esportazione non è stato completato o si è bloccato nella fase di elaborazione. Per annullare un processo di esportazione, è possibile eseguire una richiesta DELETE al `/export/jobs` e includere `id` del processo di esportazione che desideri annullare nel percorso della richiesta.
 
 **Formato API**
 
@@ -413,7 +413,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | La `id` del processo di esportazione a cui si desidera accedere. |
+| `{EXPORT_JOB_ID}` | Il `id` del processo di esportazione a cui desideri accedere. |
 
 **Richiesta**
 
@@ -428,27 +428,27 @@ curl -X POST \
 
 **Risposta**
 
-Una richiesta di eliminazione corretta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo di risposta vuoto, a indicare che l&#39;operazione di annullamento è riuscita.
+In caso di esito positivo, la richiesta di eliminazione restituisce lo stato HTTP 204 (nessun contenuto) e un corpo di risposta vuoto, a indicare che l’operazione di annullamento è riuscita.
 
 ## Passaggi successivi
 
-Una volta completata correttamente l’esportazione, i dati sono disponibili nell’Experience Platform Data Lake . È quindi possibile utilizzare la [API di accesso ai dati](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni dell&#39;esportazione, i dati possono essere in blocchi e il batch può essere costituito da più file.
+Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno del Data Lake in Experience Platform. È quindi possibile utilizzare [API di accesso ai dati](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da diversi file.
 
-Per istruzioni dettagliate su come utilizzare l’API di accesso ai dati per accedere e scaricare file batch, segui il [Esercitazione sull&#39;accesso ai dati](../../data-access/tutorials/dataset-data.md).
+Per istruzioni dettagliate sull’utilizzo dell’API di accesso ai dati per accedere e scaricare file batch, segui la [Tutorial sull’accesso ai dati](../../data-access/tutorials/dataset-data.md).
 
-Puoi anche accedere ai dati del profilo cliente in tempo reale esportati correttamente utilizzando il servizio Query Adobe Experience Platform. Utilizzando l’interfaccia utente o l’API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all’interno del Data Lake.
+Puoi anche accedere ai dati Real-Time Customer Profile esportati correttamente tramite Adobe Experience Platform Query Service. Utilizzando l’interfaccia utente o l’API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all’interno del Data Lake.
 
-Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la [Documentazione del servizio query](../../query-service/home.md).
+Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la sezione [Documentazione di Query Service](../../query-service/home.md).
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sui lavori di esportazione nell’API del profilo.
+La sezione seguente contiene informazioni aggiuntive relative ai processi di esportazione nell’API di profilo.
 
-### Esempi aggiuntivi di payload per l’esportazione
+### Ulteriori esempi di payload di esportazione
 
-La chiamata API di esempio mostrata nella sezione su [avvio di un processo di esportazione](#initiate) crea un processo che contiene sia i dati del profilo (record) che quelli dell’evento (serie temporale). Questa sezione fornisce esempi di payload di richiesta aggiuntivi per limitare l’esportazione in modo che contenga un tipo di dati o l’altro.
+L’esempio di chiamata API mostrato nella sezione su [avvio di un processo di esportazione](#initiate) crea un processo che contiene sia dati di profilo (record) che dati di evento (serie temporali). Questa sezione fornisce ulteriori esempi di payload di richiesta per limitare l’esportazione in modo che contenga un tipo di dati o l’altro.
 
-Il seguente payload crea un processo di esportazione che contiene solo i dati di profilo (nessun evento):
+Il seguente payload crea un processo di esportazione che contiene solo dati di profilo (nessun evento):
 
 ```json
 {
@@ -467,7 +467,7 @@ Il seguente payload crea un processo di esportazione che contiene solo i dati di
   }
 ```
 
-Per creare un processo di esportazione che contiene solo i dati evento (nessun attributo di profilo), il payload potrebbe essere simile al seguente:
+Per creare un processo di esportazione che contenga solo dati evento (senza attributi di profilo), il payload potrebbe essere simile al seguente:
 
 ```json
 {
@@ -496,4 +496,4 @@ Per creare un processo di esportazione che contiene solo i dati evento (nessun a
 
 ### Esportazione di segmenti
 
-Puoi anche utilizzare l’endpoint per i processi di esportazione per esportare i segmenti di pubblico invece di [!DNL Profile] dati. Consulta la guida su [esportazione di lavori nell’API Segmentazione](../../segmentation/api/export-jobs.md) per ulteriori informazioni.
+Puoi anche utilizzare l’endpoint &quot;export jobs&quot; per esportare segmenti di pubblico invece di [!DNL Profile] dati. Consulta la guida su [processi di esportazione nell’API di segmentazione](../../segmentation/api/export-jobs.md) per ulteriori informazioni.

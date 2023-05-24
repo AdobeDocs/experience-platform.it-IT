@@ -69,7 +69,7 @@ La finestra di dialogo si espande per includere opzioni di configurazione aggiun
 | --- | --- |
 | [!UICONTROL Non utilizzare collegamenti simbolici] | Per impostazione predefinita, tutti gli host SFTP utilizzano collegamenti simbolici (symlink) per fare riferimento alla libreria [build](../builds.md) salvate nel server. Tuttavia, non tutti i server supportano l&#39;utilizzo di symlink. Quando questa opzione è selezionata, l’host utilizza un’operazione di copia per aggiornare direttamente le risorse della build invece di utilizzare i symlink. |
 | [!UICONTROL URL del server SFTP] | Percorso URL di base per il server. |
-| [!UICONTROL Path] | Percorso da aggiungere all&#39;URL del server base per questo host. |
+| [!UICONTROL Percorso] | Percorso da aggiungere all&#39;URL del server base per questo host. |
 | [!UICONTROL Porta ] | Per la porta, scegli una delle seguenti possibilità:<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Come best practice per la sicurezza, Adobe limita il numero di porte che possono essere utilizzate per il traffico in uscita. Le porte selezionate sono solitamente consentite dai firewall aziendali e includono alcuni intervalli per garantire flessibilità. |
 | [!UICONTROL Nome utente] | Nome utente da utilizzare per l&#39;accesso al server. |
 | [!UICONTROL Chiave privata crittografata] | La chiave privata crittografata creata in un [passaggio precedente](#access-key). |

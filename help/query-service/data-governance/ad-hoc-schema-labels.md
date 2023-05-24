@@ -5,7 +5,7 @@ exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ Questo documento fornisce un tutorial per gestire l’accesso ai dati sensibili 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sistema Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
+   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=it): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): scopri come [!DNL Data Governance] consente di gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati.
 * [Controllo degli accessi basato su attributi](../../access-control/abac/overview.md): il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo schema ad hoc o normale. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
@@ -50,7 +50,7 @@ Seleziona il nome dello schema ad hoc creato di recente dall’elenco disponibil
 
 ![Esempio di diagramma ad hoc della struttura dello schema.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
-## Modifica etichette di governance
+## Modificare le etichette di governance
 
 Per modificare le etichette dati per lo schema ad hoc, seleziona la [!UICONTROL Etichette] scheda. L’area di lavoro etichette consente di applicare, creare e modificare le etichette nei campi dello schema ad hoc e di controllare le autorizzazioni di accesso tramite l’interfaccia utente. Tutti i campi all’interno dello schema ad hoc sono rappresentati qui.
 

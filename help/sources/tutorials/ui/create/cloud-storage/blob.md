@@ -41,7 +41,7 @@ Per accedere al tuo [!DNL Blob] su Platform, è necessario fornire un valore val
 | Stringa di connessione | Stringa contenente le informazioni di autorizzazione necessarie per l&#39;autenticazione [!DNL Blob] all&#39;Experience Platform. Il [!DNL Blob] modello di stringa di connessione: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Per ulteriori informazioni sulle stringhe di connessione, vedere [!DNL Blob] documento su [configurazione delle stringhe di connessione](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | URI SAS | URI della firma di accesso condiviso che è possibile utilizzare come tipo di autenticazione alternativo per connettere [!DNL Blob] account. Il [!DNL Blob] Criterio URI SAS: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Per ulteriori informazioni, consulta [!DNL Blob] documento su [URI della firma di accesso condiviso](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | Contenitore | Nome del contenitore a cui si desidera designare l&#39;accesso. Quando crei un nuovo account con [!DNL Blob] sorgente, puoi fornire un nome contenitore per specificare l’accesso utente alla sottocartella desiderata. |
-| Percorso cartella | Percorso della cartella a cui desideri fornire l’accesso. |
+| Percorso della cartella | Percorso della cartella a cui desideri fornire l’accesso. |
 
 Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Blob] da un account a Platform.
 

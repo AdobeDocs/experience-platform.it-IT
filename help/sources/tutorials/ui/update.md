@@ -8,7 +8,7 @@ exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ Seleziona l’origine con cui vuoi lavorare per visualizzare un elenco dei suoi 
 
 Viene visualizzato un menu a discesa che fornisce le opzioni per **[!UICONTROL Aggiungi dati]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]**. Seleziona **[!UICONTROL Modifica dettagli]** dal menu per aggiornare l’account.
 
-![aggiorna](../../images/tutorials/update/update.png)
+![update](../../images/tutorials/update/update.png)
 
 Il **[!UICONTROL Modifica dettagli account]** consente di aggiornare il nome, la descrizione e le credenziali di autenticazione di un account. Dopo aver aggiornato le informazioni desiderate, seleziona **[!UICONTROL Salva]**.
 

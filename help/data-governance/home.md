@@ -7,13 +7,13 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
 # Panoramica sulla governance dei dati
 
-Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere i clienti. Questi dati possono essere soggetti a restrizioni d’uso definite dalla tua organizzazione o da normative legali. È quindi importante garantire che le operazioni sui dati in [!DNL Platform] sono conformi ai criteri di utilizzo dei dati.
+Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere i clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. È quindi importante garantire che le operazioni sui dati in [!DNL Platform] sono conformi ai criteri di utilizzo dei dati.
 
 La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave in [!DNL Experience Platform] a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
 

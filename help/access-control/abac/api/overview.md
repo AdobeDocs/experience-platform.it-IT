@@ -7,7 +7,7 @@ exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 5%
+ht-degree: 15%
 
 ---
 
@@ -25,11 +25,11 @@ Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consult
 
 ## Ruoli
 
-I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno. Consulta la [guida dell’endpoint &quot;roles&quot;](./roles.md) per ulteriori informazioni sull’utilizzo dei ruoli nell’API.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. Consulta la [guida dell’endpoint &quot;roles&quot;](./roles.md) per ulteriori informazioni sull’utilizzo dei ruoli nell’API.
 
 ## Criteri
 
-Le politiche sono dichiarazioni che riuniscono attributi per stabilire azioni ammissibili e inammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. Il `/policies` l’endpoint ti consente di gestire in modo programmatico i criteri dell’organizzazione. Consulta la [guida dell’endpoint &quot;policies&quot;](./policies.md) per ulteriori informazioni sull’utilizzo dei criteri nell’API.
+I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. Il `/policies` l’endpoint ti consente di gestire in modo programmatico i criteri dell’organizzazione. Consulta la [guida dell’endpoint &quot;policies&quot;](./policies.md) per ulteriori informazioni sull’utilizzo dei criteri nell’API.
 
 ## Prodotti
 

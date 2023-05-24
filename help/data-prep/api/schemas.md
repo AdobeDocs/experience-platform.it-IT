@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;schemi;
 solution: Experience Platform
 title: Endpoint API per gli schemi
-description: Puoi utilizzare l’endpoint `/schemas` nell’API Adobe Experience Platform per recuperare, creare e aggiornare programmaticamente gli schemi da utilizzare con Mapper in Platform.
+description: Puoi utilizzare l’endpoint "/schemas" nell’API di Adobe Experience Platform per recuperare, creare e aggiornare in modo programmatico gli schemi da utilizzare con Mapper in Platform.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '611'
@@ -12,21 +12,21 @@ ht-degree: 5%
 
 
 
-# Endpoint degli schemi
+# Endpoint &quot;schema&quot;
 
-Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quanto si desidera acquisire. È possibile utilizzare `/schemas` per creare, elencare e ottenere schemi personalizzati da utilizzare con Mapper in Platform a livello di programmazione.
+Gli schemi possono essere utilizzati con Mapper per garantire che i dati acquisiti in Adobe Experience Platform corrispondano a quelli che desideri acquisire. È possibile utilizzare `/schemas` per creare, elencare e ottenere schemi personalizzati da utilizzare con Mapper in Platform a livello di programmazione.
 
 >[!NOTE]
 >
->Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set Mapper e di mappatura. Per creare schemi accessibili da altri servizi Platform, consulta la sezione [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/schemas.md).
+>Gli schemi creati utilizzando questo endpoint vengono utilizzati esclusivamente con i set di mappatura e mappatura. Per creare schemi accessibili da altri servizi Platform, leggi la sezione [Guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md).
 
 ## Ottieni tutti gli schemi
 
-Puoi recuperare un elenco di tutti gli schemi mappatore disponibili per la tua organizzazione effettuando una richiesta di GET al `/schemas` punto finale.
+Per recuperare un elenco di tutti gli schemi mapper disponibili per la tua organizzazione, effettua una richiesta GET al `/schemas` endpoint.
 
 **Formato API**
 
-La `/schemas` l’endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se la maggior parte di questi parametri sono opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Tuttavia, è necessario includere entrambi i `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciale (`&`).
+Il `/schemas` l’endpoint supporta diversi parametri di query per aiutarti a filtrare i risultati. Anche se la maggior parte di questi parametri sono facoltativi, si consiglia vivamente di utilizzarli per ridurre i costi operativi. Tuttavia, è necessario includere entrambi `start` e `limit` come parte della richiesta. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -37,9 +37,9 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{LIMIT}` | **Obbligatorio**. Specifica il numero di schemi restituiti. |
-| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina di risultati, imposta il valore su `start=0`. |
+| `{START}` | **Obbligatorio**. Specifica l&#39;offset delle pagine dei risultati. Per ottenere la prima pagina dei risultati, imposta il valore su `start=0`. |
 | `{NAME}` | Filtra lo schema in base al nome. |
-| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. Puoi anteporre la proprietà a `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
+| `{ORDER_BY}` | Ordina l’ordine dei risultati. I campi supportati sono `modifiedDate` e `createdDate`. Puoi anteporre la proprietà con `+` o `-` per ordinarlo rispettivamente in ordine crescente o decrescente. |
 
 **Richiesta**
 
@@ -55,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **Risposta**
 
-La risposta seguente restituisce lo stato HTTP 200 con un elenco degli schemi richiesti.
+La seguente risposta restituisce lo stato HTTP 200 con un elenco degli schemi richiesti.
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio.
+>La seguente risposta è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -132,7 +132,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco degli schemi ri
 
 ## Creare uno schema
 
-È possibile creare uno schema su cui eseguire la convalida effettuando una richiesta di POST al `/schemas` punto finale. Esistono tre modi per creare uno schema: invio di un [Schema JSON](https://json-schema.org/), utilizzando dati di esempio o facendo riferimento a uno schema XDM esistente.
+Per creare uno schema in base al quale eseguire la convalida, devi effettuare una richiesta POST al `/schemas` endpoint. Esistono tre modi per creare uno schema: inviare un [Schema JSON](https://json-schema.org/), utilizzando dati di esempio o facendo riferimento a uno schema XDM esistente.
 
 ```http
 POST /schemas
@@ -142,7 +142,7 @@ POST /schemas
 
 **Richiesta**
 
-La seguente richiesta ti consente di creare uno schema inviando un [Schema JSON](https://json-schema.org/).
+La richiesta seguente ti consente di creare uno schema inviando un [Schema JSON](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuovo schema creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sullo schema appena creato.
 
 ```json
 {
@@ -177,11 +177,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
 }
 ```
 
-### Utilizzo di dati di esempio
+### Utilizzo dei dati di esempio
 
 **Richiesta**
 
-La richiesta seguente ti consente di creare uno schema utilizzando dati di esempio precedentemente caricati.
+La seguente richiesta consente di creare uno schema utilizzando dati di esempio caricati in precedenza.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `sampleId` | ID dei dati di esempio di cui si basa lo schema. |
+| `sampleId` | ID dei dati di esempio su cui si basa lo schema. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuovo schema creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sullo schema appena creato.
 
 ```json
 {
@@ -246,7 +246,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
 
 **Richiesta**
 
-La richiesta seguente ti consente di creare uno schema facendo riferimento a uno schema XDM esistente.
+La seguente richiesta consente di creare uno schema facendo riferimento a uno schema XDM esistente.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -268,16 +268,16 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `name` | Nome dello schema che si desidera creare. |
-| `schemaRef.id` | ID dello schema a cui si fa riferimento. |
-| `schemaRef.contentType` | Determina il formato di risposta dello schema a cui si fa riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [guida per gli sviluppatori del registro di sistema](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.id` | ID dello schema a cui si sta facendo riferimento. |
+| `schemaRef.contentType` | Determina il formato di risposta dello schema di riferimento. Ulteriori informazioni su questo campo sono disponibili nella sezione [guida per gli sviluppatori del registro dello schema](../../xdm/api/schemas.md#lookup) |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuovo schema creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sullo schema appena creato.
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio.
+>La seguente risposta è stata troncata per motivi di spazio.
 
 ```json
 {
@@ -292,7 +292,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
 }
 ```
 
-## Creare uno schema utilizzando il caricamento di file
+## Creare uno schema tramite il caricamento di file
 
 Puoi creare uno schema caricando un file JSON da cui convertire.
 
@@ -318,7 +318,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuovo schema creato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sullo schema appena creato.
 
 ```json
 {
@@ -332,9 +332,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sul nuov
 }
 ```
 
-## Recupera uno schema specifico
+## Recuperare uno schema specifico
 
-È possibile recuperare informazioni su uno schema specifico effettuando una richiesta di GET al `/schemas` e fornisce l’ID dello schema che desideri recuperare nel percorso della richiesta.
+Per recuperare informazioni su uno schema specifico, effettua una richiesta GET al `/schemas` e fornendo l’ID dello schema da recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -360,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con le informazioni sullo schema specificato.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sullo schema specificato.
 
 ```json
 {

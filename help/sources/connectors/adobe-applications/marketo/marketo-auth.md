@@ -83,7 +83,7 @@ Il **[!DNL Installed services]** contiene un elenco dei servizi esistenti; per c
 
 Fornisci al nuovo servizio un nome visualizzato descrittivo, quindi seleziona **[!DNL Custom]** dal **[!DNL Service]** menu a discesa. Fornisci una descrizione appropriata, quindi seleziona l’utente da attivare dal menu **[!DNL API Only User]** menu a discesa. Dopo aver inserito i dettagli necessari, seleziona **[!DNL Create]** per creare il nuovo servizio personalizzato.
 
-![creare](../images/marketo/create.png)
+![create](../images/marketo/create.png)
 
 ## Ottieni l’ID client e il segreto client
 

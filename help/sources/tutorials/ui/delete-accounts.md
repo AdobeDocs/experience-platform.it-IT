@@ -8,7 +8,7 @@ exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -57,7 +57,7 @@ Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che 
 
 Viene visualizzata una finestra di dialogo di conferma finale, seleziona **[!UICONTROL Elimina]** per completare il processo.
 
-![eliminare](../../images/tutorials/delete-accounts/confirm.png)
+![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## Passaggi successivi
 

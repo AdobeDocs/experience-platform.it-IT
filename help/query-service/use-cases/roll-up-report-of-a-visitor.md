@@ -2,7 +2,8 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query;experienceevent query;experienceevent query;Experience Event query;
 title: Visualizzare un rapporto di aggregazione per un visitatore specifico
 description: Il documento seguente fornisce esempi di query che coinvolgono eventi di esperienza in Adobe Experience Platform Query Service.
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%

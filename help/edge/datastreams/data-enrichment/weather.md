@@ -1,13 +1,13 @@
 ---
 title: Usa i dati meteo da DNL The Weather Channel
 description: Utilizza i dati meteo da DNL The Weather Channel per migliorare i dati raccolti attraverso gli stream di dati.
-source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 3%
 
 ---
-
 
 # Utilizza i dati meteo da [!DNL The Weather Channel]
 

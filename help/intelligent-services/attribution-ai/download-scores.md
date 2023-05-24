@@ -17,9 +17,9 @@ Questo documento funge da guida per il download dei punteggi per le Attribution 
 
 ## Introduzione
 
-Attribution AI consente di scaricare i punteggi nel formato di file Parquet. Questo tutorial richiede di aver letto e completato il download della sezione dei punteggi di Attribution AI in [introduzione](./getting-started.md) guida.
+Attribution AI consente di scaricare i punteggi nel formato di file Parquet. Questo tutorial richiede di aver letto e terminato il download della sezione dei punteggi di Attribution AI in [introduzione](./getting-started.md) guida.
 
-Inoltre, per accedere ai punteggi di Attribution AI, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Guida utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio che sta ancora formando e assegnando un punteggio, attendi 24 ore prima del termine dell’esecuzione.
+Inoltre, per accedere ai punteggi di Attribution AI, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Guida utente di Attribution AI](./user-guide.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
 
 ## Trovare l’ID del set di dati {#dataset-id}
 

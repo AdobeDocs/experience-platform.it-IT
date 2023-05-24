@@ -1,6 +1,6 @@
 ---
-title: Sorgente in streaming ridotta
-description: Scopri come creare una connessione sorgente e un flusso di dati per acquisire i dati in streaming dalla tua istanza Shopify su Adobe Experience Platform
+title: Shopify Streaming Source
+description: Scopri come creare una connessione di origine e un flusso di dati per acquisire i dati in streaming dall’istanza di Shopify a Adobe Experience Platform
 badge: Beta
 exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
 source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
@@ -14,25 +14,25 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->La [!DNL Shopify Streaming] la sorgente è in versione beta. Per piacere, leggi le [panoramica di origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di origini con etichetta beta.
+>Il [!DNL Shopify Streaming] sorgente in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-Adobe Experience Platform supporta l’acquisizione di dati da applicazioni di streaming. Il supporto per i provider di streaming include [!DNL Shopify].
+Adobe Experience Platform fornisce supporto per l’acquisizione di dati da applicazioni di streaming. Il supporto per i provider di streaming include [!DNL Shopify].
 
 ## Prerequisiti {#prerequisites}
 
-La sezione seguente illustra i passaggi preliminari da completare prima di utilizzare [!DNL Shopify Streaming] sorgente.
+La sezione seguente illustra i passaggi prerequisiti da completare prima di utilizzare il [!DNL Shopify Streaming] sorgente.
 
 È necessario disporre di un [!DNL Shopify] account partner per connettersi al [!DNL Shopify] API. Se non disponi già di un account partner, registrati utilizzando [[!DNL Shopify] dashboard dei partner](https://www.shopify.com/partners).
 
-### Creare l&#39;applicazione
+### Creare l’applicazione
 
-Con un valore valido [!DNL Shopify] account partner, ora puoi procedere e creare l’app utilizzando il dashboard partner. Per passaggi completi su come creare l’app in [!DNL Shopify], leggi [[!DNL Shopify] guida introduttiva](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+Con un [!DNL Shopify] account partner, ora puoi procedere e creare la tua app utilizzando la dashboard dei partner. Per passaggi completi su come creare l’app in [!DNL Shopify], leggi [[!DNL Shopify] guida introduttiva](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
-Una volta creata l’app, recupera la **ID client** e **segreto client** dal **credenziali client** della scheda [!DNL Shopify] dashboard partner. L’ID client e il segreto client verranno utilizzati nei passaggi successivi per recuperare il codice di autorizzazione e il token di accesso.
+Una volta creata l’app, recupera **ID client** e **segreto client** dal **credenziali client** scheda di [!DNL Shopify] dashboard dei partner. L’ID client e il segreto client verranno utilizzati nei passaggi successivi per recuperare il codice di autorizzazione e il token di accesso.
 
-### Recupera il codice di autorizzazione
+### Recuperare il codice di autorizzazione
 
-Quindi, recupera il codice di autorizzazione inserendo il dominio `myshopify.com` URL nel browser, insieme a stringhe di query che definiscono la chiave API, gli ambiti e l’URI di reindirizzamento.
+Quindi, recupera il codice di autorizzazione immettendo il `myshopify.com` URL nel browser, insieme a stringhe di query che definiscono la chiave API, gli ambiti e l’URI di reindirizzamento.
 
 Il formato di questo URL è il seguente:
 
@@ -44,10 +44,10 @@ https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SC
 
 | Parametro | Descrizione |
 | --- | --- |
-| `shop` | Il sottodominio `myshopify.com` URL. |
-| `api_key` | Le [!DNL Shopify] ID client. Puoi recuperare l’ID client da **credenziali client** della scheda [!DNL Shopify] dashboard partner. |
-| `scopes` | Tipo di accesso da definire. Ad esempio, puoi impostare gli ambiti come `scope=write_orders,read_customers` per consentire le autorizzazioni per modificare gli ordini e leggere i clienti. |
-| `redirect_uri` | URL per lo script che genererà il token di accesso. |
+| `shop` | Il tuo sottodominio `myshopify.com` URL. |
+| `api_key` | Il tuo [!DNL Shopify] ID client. Puoi recuperare l’ID client da **credenziali client** scheda di [!DNL Shopify] dashboard dei partner. |
+| `scopes` | Tipo di accesso che si desidera definire. Ad esempio, puoi impostare gli ambiti come `scope=write_orders,read_customers` per consentire le autorizzazioni per modificare gli ordini e leggere i clienti. |
+| `redirect_uri` | URL dello script che genererà il token di accesso. |
 
 **Richiesta**
 
@@ -57,15 +57,15 @@ https://connnectors-test.myshopify.com/admin/oauth/authorize?client_id=l6fivierm
 
 **Risposta**
 
-Una risposta corretta restituisce l’URL di reindirizzamento, incluso il codice di autorizzazione necessario per generare il token di accesso.
+In caso di esito positivo, la risposta restituisce l’URL di reindirizzamento, incluso il codice di autorizzazione necessario per generare il token di accesso.
 
 ```http
 https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecbc8848c90f695bca0460899c125af897a6d2b0ebbd59d3a43b&shop=connnectors-test.myshopify.com&state=123456×tamp=1658305460
 ```
 
-### Recupera il token di accesso
+### Recuperare il token di accesso
 
-Ora che disponi del tuo ID client, del segreto client e del codice di autorizzazione, puoi recuperare il token di accesso. Per recuperare il token di accesso, effettua una richiesta POST al dominio `myshopify.com` URL durante l’aggiunta di questo URL con [!DNL Shopify's] Endpoint API: `/admin/oauth/access_token`.
+Ora che disponi del tuo ID client, del segreto client e del codice di autorizzazione, puoi recuperare il token di accesso. Per recuperare il token di accesso, effettua una richiesta POST al `myshopify.com` URL durante l’aggiunta di questo URL a [!DNL Shopify's] Endpoint API: `/admin/oauth/access_token`.
 
 **Formato API**
 
@@ -75,7 +75,7 @@ POST /{SHOP}.myshopify.com/admin/oauth/access_token
 
 **Richiesta**
 
-La seguente richiesta genera un token di accesso per il tuo [!DNL Shopify] istanza.
+La richiesta seguente genera un token di accesso per il [!DNL Shopify] dell&#39;istanza.
 
 ```shell
 curl -X POST \
@@ -92,7 +92,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce il token di accesso e gli ambiti delle autorizzazioni.
+In caso di esito positivo, la risposta restituisce il token di accesso e gli ambiti delle autorizzazioni.
 
 ```json
 {
@@ -101,13 +101,13 @@ Una risposta corretta restituisce il token di accesso e gli ambiti delle autoriz
 }
 ```
 
-## Crea un webhook per lo streaming [!DNL Shopify] dati {#webhook}
+## Creare un webhook per lo streaming [!DNL Shopify] dati {#webhook}
 
-I webhook consentono alle applicazioni di rimanere sincronizzati con i [!DNL Shopify] o eseguire un&#39;azione dopo che un particolare evento si verifica in un negozio. Per lo streaming [!DNL Shopify] ad Experience Platform, i webhook possono essere utilizzati per definire l’endpoint http e gli argomenti per la sottoscrizione.
+I webhook consentono alle applicazioni di rimanere sincronizzate con [!DNL Shopify] o eseguire un&#39;azione dopo che si è verificato un particolare evento in un negozio. Per lo streaming [!DNL Shopify] ad Experience Platform, i webhook possono essere utilizzati per definire l’endpoint http e gli argomenti per la sottoscrizione.
 
 **Richiesta**
 
-La seguente richiesta crea un webhook per il tuo [!DNL Shopify Streaming] dati.
+La richiesta seguente crea un webhook per [!DNL Shopify Streaming] dati.
 
 ```shell
 curl -X POST \
@@ -126,12 +126,12 @@ curl -X POST \
 | Parametro | Descrizione |
 | --- | --- | 
 | `webhook.address` | L’endpoint http in cui vengono inviati i messaggi in streaming. |
-| `webhook.topic` | L&#39;argomento del tuo abbonamento a webhook. Per ulteriori informazioni, consulta la sezione [[!DNL Shopify] guida agli argomenti dell&#39;evento webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
+| `webhook.topic` | L’argomento dell’abbonamento al webhook. Per ulteriori informazioni, leggere [[!DNL Shopify] guida agli argomenti dell’evento webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Il formato dei dati. |
 
 **Risposta**
 
-Una risposta corretta restituisce informazioni sul webhook, incluso il corrispondente `id`, indirizzo e altre informazioni di metadati.
+In caso di esito positivo, la risposta restituisce informazioni sul webhook, incluso il relativo `id`Informazioni su, indirizzo e altri metadati.
 
 ```json
 {
@@ -152,15 +152,15 @@ Una risposta corretta restituisce informazioni sul webhook, incluso il corrispon
 
 ### Limitazioni  {#limitations}
 
-Di seguito è riportato un elenco delle limitazioni note che si possono incontrare quando si utilizzano i webhook con [!DNL Shopify Streaming] sorgente.
+Di seguito è riportato un elenco delle limitazioni note che è possibile incontrare durante l’utilizzo dei webhook con [!DNL Shopify Streaming] sorgente.
 
-* Non è garantito che sia possibile organizzare l’ordine di consegna di diversi argomenti per la stessa risorsa. Ad esempio, è possibile che un `products/update` il webhook viene consegnato prima di un `products/create` gancio.
-* Puoi impostare il tuo webhook per consegnare eventi webhook a un endpoint almeno una volta. Ciò significa che un endpoint potrebbe ricevere lo stesso evento più di una volta. Puoi cercare eventi webhook duplicati confrontando `X-Shopify-Webhook-Id` intestazione degli eventi precedenti.
-* [!DNL Shopify] considera le risposte allo stato di HTTP 2xx come notifiche di successo. Qualsiasi altra risposta del codice di stato viene considerata un errore. [!DNL Shopify] fornisce un meccanismo di esecuzione di un nuovo tentativo per le notifiche webhook non riuscite. Se esiste **nessuna risposta dopo cinque secondi di attesa**, [!DNL Shopify] prova nuovamente la connessione **19 volte** nel corso del successivo **48 ore**. Se non vi sono ancora risposte entro la fine del periodo di esecuzione dei nuovi tentativi, allora [!DNL Shopify] elimina il webhook.
+* Non è garantito che puoi organizzare l’ordine di consegna di diversi argomenti per la stessa risorsa. Ad esempio, è possibile che un `products/update` webhook viene consegnato prima di un `products/create` webhook.
+* Puoi impostare il webhook in modo che distribuisca gli eventi del webhook a un endpoint almeno una volta. Ciò significa che un endpoint può ricevere lo stesso evento più di una volta. Puoi cercare eventi webhook duplicati confrontando i `X-Shopify-Webhook-Id` agli eventi precedenti.
+* [!DNL Shopify] considera le risposte HTTP 2xx sullo stato come notifiche di successo. Qualsiasi altra risposta al codice di stato è considerata un errore. [!DNL Shopify] fornisce un meccanismo di esecuzione di un nuovo tentativo per le notifiche del webhook non riuscite. Se è presente **nessuna risposta dopo cinque secondi di attesa**, [!DNL Shopify] ritenta la connessione **19 volte** nel corso del prossimo **48 ore**. Se non ci sono ancora risposte entro la fine del periodo di esecuzione dei nuovi tentativi, [!DNL Shopify] elimina il webhook.
 
 ## Passaggi successivi
 
-Le seguenti esercitazioni forniscono passaggi su come collegare i [!DNL Shopify Streaming] da sorgente ad Experience Platform utilizzando l’API e l’interfaccia utente:
+I seguenti tutorial illustrano i passaggi necessari per collegare [!DNL Shopify Streaming] da sorgente ad Experience Platform utilizzando l’API e l’interfaccia utente:
 
-* [Creare una connessione sorgente e un flusso di dati Shopify Streaming utilizzando l’API del servizio di flusso](../../tutorials/api/create/ecommerce/shopify-streaming.md)
-* [Creare una connessione sorgente e un flusso di dati Shopify Streaming nell&#39;interfaccia utente](../../tutorials/ui/create/ecommerce/shopify-streaming.md)
+* [Creare una connessione e un flusso di dati di origine di Shopify Streaming utilizzando l’API del servizio Flusso](../../tutorials/api/create/ecommerce/shopify-streaming.md)
+* [Creare una connessione e un flusso di dati Shopify Streaming nell’interfaccia utente](../../tutorials/ui/create/ecommerce/shopify-streaming.md)

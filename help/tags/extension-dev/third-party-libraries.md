@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch è stato classificato come una suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+>Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
 
 Uno degli scopi principali delle estensioni tag in Adobe Experience Platform è quello di facilitare l’implementazione di tecnologie di marketing (librerie) esistenti nel sito web. Utilizzando le estensioni, è possibile implementare le librerie fornite da reti CDN (content delivery network) di terze parti senza dover modificare manualmente il codice HTML del sito web.
 

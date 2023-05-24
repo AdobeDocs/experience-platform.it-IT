@@ -1,5 +1,5 @@
 ---
-description: Configurare le opzioni di formattazione per le destinazioni basate su file
+description: Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 title: Scopri come utilizzare Destination SDK per configurare le opzioni di formattazione per le destinazioni basate su file.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
@@ -9,28 +9,28 @@ ht-degree: 1%
 
 ---
 
-# Configurare le opzioni di formattazione per le destinazioni basate su file
+# Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 
 ## Panoramica {#overview}
 
-La Destination SDK consente di regolare ampiamente le opzioni di formattazione e compressione dei file esportati, in modo da soddisfare qualsiasi requisito a valle nel percorso di archiviazione.
+Destination SDK consente di regolare in modo approfondito le opzioni di formattazione e compressione dei file esportati, in base ai requisiti downstream della posizione di archiviazione.
 
-Questa pagina descrive come utilizzare Destination SDK per configurare le opzioni di formattazione per le destinazioni basate su file.
+Questa pagina descrive come utilizzare Destination SDK per configurare le opzioni di formattazione dei file per le destinazioni basate su file.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di passare ai passaggi descritti di seguito, leggere il [Guida introduttiva alla Destination SDK](../../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione necessarie per l’Adobe I/O e altri prerequisiti per l’utilizzo con le API Destination SDK.
+Prima di procedere con i passaggi descritti di seguito, leggere la [Destination SDK introduzione](../../getting-started.md) per informazioni su come ottenere le credenziali di autenticazione Adobe I/O necessarie e altri prerequisiti per lavorare con le API Destination SDK.
 
 L’Adobe consiglia inoltre di leggere e acquisire familiarità con la seguente documentazione prima di procedere:
 
-* Ogni opzione di formattazione del file disponibile è documentata a lungo in [configurazione della formattazione dei file](../../functionality/destination-server/file-formatting.md) sezione .
-* Completa i passaggi per [configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md) utilizzando Destination SDK.
+* Ogni opzione di formattazione file disponibile è documentata a lungo nel [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) sezione.
+* Completa i passaggi per [configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md) utilizzo di Destination SDK.
 
-## Creare una configurazione del server e del file {#create-server-file-configuration}
+## Creare una configurazione di server e file {#create-server-file-configuration}
 
-Inizia utilizzando `/destination-server` endpoint per determinare quali opzioni di configurazione della formattazione file si desidera impostare per i file esportati.
+Iniziare utilizzando `/destination-server` per determinare quali opzioni di configurazione della formattazione file si desidera impostare per i file esportati.
 
-Di seguito è riportato un esempio di configurazione di un server di destinazione per un [!DNL Amazon S3] destinazione, con diverse opzioni di formattazione selezionate.
+Di seguito è riportato un esempio di configurazione del server di destinazione per un [!DNL Amazon S3] destinazione, con diverse opzioni di formattazione selezionate.
 
 **Formato API**
 
@@ -102,21 +102,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Verificare l’interfaccia utente di Experience Platform**. Quando configuri le opzioni di formattazione dei file con le configurazioni illustrate nelle sezioni seguenti, controlla l’interfaccia utente di Experience Platform per sapere come viene eseguito il rendering di queste opzioni.
+>**Verificare l’interfaccia utente di Experience Platform**. Quando configuri le opzioni di formattazione del file con le configurazioni illustrate nelle sezioni seguenti, controlla nell’interfaccia utente di Experience Platform come vengono visualizzate queste opzioni.
 
-Dopo aver aggiunto le opzioni di formattazione desiderate al server di destinazione e alla configurazione di formattazione del file nel passaggio precedente, è ora possibile utilizzare il `/destinations` Endpoint API per aggiungere i campi desiderati come campi di dati del cliente alla configurazione di destinazione.
+Dopo aver aggiunto le opzioni di formattazione del file desiderate al server di destinazione e la configurazione di formattazione del file nel passaggio precedente, ora puoi utilizzare `/destinations` Endpoint API per aggiungere i campi desiderati come campi dati del cliente alla configurazione di destinazione.
 
 >[!IMPORTANT]
 >
->Questo passaggio è facoltativo e determina solo quali opzioni di formattazione devono essere visualizzate agli utenti nell’interfaccia utente di Experience Platform. Se non si impostano le opzioni di formattazione dei file come campi di dati del cliente, le esportazioni dei file procederanno con i valori predefiniti configurati in [configurazione del server e dei file](#create-server-file-configuration).
+>Questo passaggio è facoltativo e determina solo le opzioni di formattazione del file da rendere visibili agli utenti nell’interfaccia utente di Experience Platform. Se non imposti le opzioni di formattazione del file come campi dati del cliente, l’esportazione dei file proseguirà con i valori predefiniti configurati in [configurazione di server e file](#create-server-file-configuration).
 
-In questo passaggio è possibile raggruppare le opzioni visualizzate nell’ordine desiderato, creare raggruppamenti personalizzati, campi a discesa e raggruppamenti condizionali in base ai tipi di file selezionati. Tutte queste impostazioni vengono visualizzate nella registrazione e nelle sezioni più avanti.
+In questo passaggio è possibile raggruppare le opzioni visualizzate in qualsiasi ordine desiderato, nonché creare raggruppamenti personalizzati, campi a discesa e raggruppamenti condizionali in base ai tipi di file selezionati. Tutte queste impostazioni sono mostrate nella registrazione e nelle sezioni seguenti.
 
-![Registrazione su schermo che mostra varie opzioni di formattazione per i file batch.](../../assets/guides/batch/file-formatting-options.gif)
+![Registrazione schermata che mostra varie opzioni di formattazione dei file per i file batch.](../../assets/guides/batch/file-formatting-options.gif)
 
 ### Ordinare le opzioni di formattazione del file {#ordering}
 
-L’ordine in cui si aggiungono le opzioni di formattazione dei file come campi di dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente. Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfaccia utente, con le opzioni visualizzate nell’ordine **[!UICONTROL Delimitatore]**, **[!UICONTROL Carattere preventivo]**, **[!UICONTROL Carattere di escape]**, **[!UICONTROL Valore vuoto]**, **[!UICONTROL Valore Null]**.
+L’ordine in cui aggiungi le opzioni di formattazione del file come campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente. Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfaccia utente, con le opzioni visualizzate nell’ordine **[!UICONTROL Delimitatore]**, **[!UICONTROL Carattere offerta]**, **[!UICONTROL Carattere di escape]**, **[!UICONTROL Valore vuoto]**, **[!UICONTROL Valore nullo]**.
 
 ![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -239,9 +239,9 @@ L’ordine in cui si aggiungono le opzioni di formattazione dei file come campi 
 
 ### Raggruppa le opzioni di formattazione del file {#grouping}
 
-È possibile raggruppare diverse opzioni di formattazione all&#39;interno di una sezione. Quando si imposta la connessione alla destinazione nell’interfaccia utente, l’utente può visualizzare e beneficiare di un raggruppamento visivo di campi simili.
+È possibile raggruppare diverse opzioni di formattazione dei file all&#39;interno di una sezione. Quando si imposta la connessione alla destinazione nell’interfaccia utente di, l’utente può visualizzare e beneficiare di un raggruppamento visivo di campi simili.
 
-A questo scopo, utilizza `"type": "object"` per creare il gruppo e raccogliere le opzioni di formattazione desiderate in un `properties` , come mostrato nell’esempio seguente, dove il raggruppamento **[!UICONTROL Opzioni CSV]** viene evidenziato.
+A tale scopo, utilizza `"type": "object"` per creare il gruppo e raccogliere le opzioni di formattazione del file desiderate all&#39;interno di un `properties` come mostrato nell&#39;esempio seguente, dove il raggruppamento **[!UICONTROL Opzioni CSV]** viene evidenziato.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -281,11 +281,11 @@ A questo scopo, utilizza `"type": "object"` per creare il gruppo e raccogliere l
 
 ![Immagine che mostra il raggruppamento delle opzioni CSV nell’interfaccia utente.](../../assets/guides/batch/file-formatting-grouping.png)
 
-### Crea selettori a discesa per le opzioni di formattazione del file {#dropdown-selectors}
+### Creare selettori a discesa per le opzioni di formattazione del file {#dropdown-selectors}
 
-Per le situazioni in cui desideri consentire agli utenti di selezionare tra più opzioni, ad esempio quale carattere deve essere utilizzato per delimitare i campi nei file CSV, puoi aggiungere campi a discesa all’interfaccia utente.
+Nelle situazioni in cui desideri consentire agli utenti di selezionare tra diverse opzioni, ad esempio il carattere da utilizzare per delimitare i campi nei file CSV, puoi aggiungere campi a discesa all’interfaccia utente.
 
-Per eseguire questa operazione, utilizza la variabile `namedEnum` come mostrato di seguito e configura un `default` per le opzioni che l&#39;utente può selezionare.
+A tale scopo, utilizza `namedEnum` come mostrato di seguito e configurare un `default` valore per le opzioni che l’utente può selezionare.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ Per eseguire questa operazione, utilizza la variabile `namedEnum` come mostrato 
 ]
 ```
 
-![Registrazione su schermo che mostra un esempio di selettori a discesa creati con la configurazione mostrata sopra.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![Registrazione dello schermo che mostra un esempio di selettori a discesa creati con la configurazione mostrata sopra.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### Creare opzioni di formattazione dei file condizionali {#conditional-options}
+### Creare opzioni di formattazione condizionale dei file {#conditional-options}
 
-È possibile creare opzioni di formattazione condizionale dei file, che vengono visualizzate nel flusso di lavoro di attivazione solo quando l’utente seleziona un determinato tipo di file da esportare. Ad esempio, la configurazione seguente crea un raggruppamento condizionale per le opzioni di file CSV. Le opzioni del file CSV vengono visualizzate solo quando l’utente seleziona CSV come tipo di file desiderato da esportare.
+È possibile creare opzioni di formattazione condizionale per i file, visualizzate nel flusso di lavoro di attivazione solo quando l&#39;utente seleziona un determinato tipo di file per l&#39;esportazione. Ad esempio, la configurazione seguente crea un raggruppamento condizionale per le opzioni del file CSV. Le opzioni del file CSV vengono visualizzate solo quando l’utente seleziona CSV come tipo di file desiderato per l’esportazione.
 
-Per impostare un campo come condizionale, utilizza la variabile `conditional` come mostrato di seguito:
+Per impostare un campo come condizionale, utilizzare `conditional` come mostrato di seguito:
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ Per impostare un campo come condizionale, utilizza la variabile `conditional` co
             }
 ```
 
-In un contesto più ampio, puoi vedere le `conditional` campo utilizzato nella configurazione di destinazione seguente, accanto al `fileType` la stringa e `csvOptions` oggetto in cui è definito.
+In un contesto più ampio, è possibile visualizzare `conditional` nella configurazione di destinazione seguente, insieme al campo `fileType` stringa e `csvOptions` oggetto in cui è definito.
 
 ```json
         {
@@ -483,11 +483,11 @@ In un contesto più ampio, puoi vedere le `conditional` campo utilizzato nella c
         }
 ```
 
-Di seguito è riportata la schermata risultante dell’interfaccia utente, in base alla configurazione di cui sopra. Quando l’utente seleziona il tipo di file CSV, nell’interfaccia utente vengono visualizzate altre opzioni di formattazione che fanno riferimento al tipo di file CSV.
+Di seguito è riportata la schermata risultante dell’interfaccia utente, in base alla configurazione precedente. Quando l’utente seleziona il tipo di file CSV, nell’interfaccia utente vengono visualizzate ulteriori opzioni di formattazione relative al tipo di file CSV.
 
-![Registrazione su schermo che mostra l’opzione di formattazione condizionale dei file CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
+![Registrazione schermata che mostra l’opzione di formattazione del file condizionale per i file CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Richiesta API completa che include tutte le opzioni visualizzate sopra
+### Richiesta API completa che include tutte le opzioni mostrate sopra
 
 La richiesta API seguente combina in un’unica configurazione tutte le opzioni descritte nelle sezioni precedenti.
 
@@ -711,11 +711,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-Una risposta corretta restituisce la configurazione di destinazione, incluso l’identificatore univoco (`instanceId`) della configurazione.
+In caso di esito positivo, la risposta restituisce la configurazione di destinazione, incluso l’identificatore univoco (`instanceId`) della configurazione.
 
 ## Limitazioni note {#known-limitations}
 
-Una certa combinazione di opzioni di formattazione dei file può portare a risultati di esportazione indesiderati dei file.
+Una determinata combinazione di opzioni di formattazione dei file può portare a risultati di esportazione indesiderati.
 L’Adobe consiglia di non selezionare la seguente combinazione di opzioni CSV:
 
 ```
@@ -724,7 +724,7 @@ quote -> "
 emptyValue -> ""
 ```
 
-Per esemplificare la limitazione, considera l’esportazione di un file con i valori seguenti:
+Per esemplificare la limitazione, prendere in considerazione l&#39;esportazione di un file con i valori seguenti:
 
 | nome | cognome | paese | Stato |
 |---------|----------|---------|--------|
@@ -733,7 +733,7 @@ Per esemplificare la limitazione, considera l’esportazione di un file con i va
 
 {style="table-layout:auto"}
 
-In questo modo si otterrebbe un output come mostrato di seguito. Il valore nullo della tabella viene esportato in modo errato come virgolette di escape.
+Questo si tradurrebbe in un output come mostrato di seguito. Il valore null della tabella viene esportato in modo errato come virgolette di escape.
 
 ```csv
 Michael,Rose,USA,NY 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Passaggi successivi {#next-steps}
 
-Leggendo questo articolo, ora sai come impostare opzioni di formattazione personalizzata per i file esportati, utilizzando Destination SDK. Successivamente, il team può utilizzare [flusso di lavoro di attivazione per destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.
+Dopo aver letto questo articolo, saprai come impostare le opzioni di formattazione dei file personalizzati per i file esportati utilizzando Destination SDK. Successivamente, il tuo team può utilizzare [flusso di lavoro di attivazione per destinazioni basate su file](../../../ui/activate-batch-profile-destinations.md) per esportare i dati nella destinazione.

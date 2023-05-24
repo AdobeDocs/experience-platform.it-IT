@@ -2,7 +2,8 @@
 keywords: insights;customer ai;customer ai insights;AAI query service;customer ai queries;customer ai scores; chiavi gestite dal cliente in CAI
 title: Chiavi gestite dal cliente in IA per l’analisi dei clienti.
 description: Scopri come impostare le chiavi gestite dal cliente per IA per l’analisi dei clienti.
-source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
+exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 21%

@@ -3,7 +3,8 @@ title: Documentare l’origine (Streaming SDK)
 description: L’ultimo passaggio prima che la nuova origine possa essere pubblicata in Adobe Experience Platform è documentarne la nuova.
 hide: true
 hidefromtoc: true
-source-git-commit: a9879530a8911d77dfc4cde3824834e03fa5e0a9
+exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%

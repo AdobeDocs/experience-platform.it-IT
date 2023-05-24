@@ -7,7 +7,7 @@ exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
 source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
 source-wordcount: '1606'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 >
 >Se viene passato un token utente, l’utente del token deve avere un ruolo &quot;amministratore organizzazione&quot; per l’organizzazione richiesta.
 
-I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario.
 
 Il `/roles` L’endpoint nell’API di controllo degli accessi basata su attributi consente di gestire in modo programmatico i ruoli all’interno dell’organizzazione.
 

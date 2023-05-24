@@ -11,15 +11,15 @@ ht-degree: 2%
 
 # Configurazione dei metadati del pubblico
 
-Durante l’esportazione dei dati da Experience Platform alla destinazione, potrebbe essere necessario condividere metadati specifici del pubblico, come i nomi di segmento o gli ID di segmento, tra l’Experience Platform e la destinazione.
+Durante l’esportazione dei dati da Experience Platform alla destinazione, potrebbe essere necessario che metadati specifici del pubblico, come i nomi dei segmenti o gli ID dei segmenti, siano condivisi tra Experience Platform e la destinazione.
 
 Destination SDK offre strumenti che puoi utilizzare per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella piattaforma di destinazione.
 
-Per capire dove si trova questo componente in un’integrazione creata con Destination SDK, consulta il diagramma nella sezione [opzioni di configurazione](../configuration-options.md) documentazione o consulta la guida su come [utilizza Destination SDK per configurare una destinazione streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Puoi configurare il modello di metadati del pubblico tramite `/authoring/audience-templates` punto finale. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare `/authoring/destinations` per configurare l&#39;endpoint `audienceMetadataConfig` sezione . Questa sezione indica alla destinazione i metadati del segmento da mappare al modello di pubblico.
+Puoi configurare il modello di metadati del pubblico tramite `/authoring/audience-templates` endpoint. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare `/authoring/destinations` endpoint per configurare `audienceMetadataConfig` sezione. Questa sezione indica alla destinazione i metadati del segmento da mappare sul modello di pubblico.
 
-Per esempi dettagliati sulle chiamate API , consulta le pagine di riferimento API seguenti dove puoi configurare i componenti mostrati in questa pagina.
+Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -28,13 +28,13 @@ Per esempi dettagliati sulle chiamate API , consulta le pagine di riferimento AP
 
 >[!IMPORTANT]
 >
->Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione tra maiuscole e minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
+>Tutti i nomi e i valori dei parametri supportati da Destination SDK sono **distinzione maiuscole/minuscole**. Per evitare errori di distinzione tra maiuscole e minuscole, utilizza i nomi e i valori dei parametri esattamente come mostrato nella documentazione.
 
 ## Tipi di integrazione supportati {#supported-integration-types}
 
-Per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina, consulta la tabella seguente.
+Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazioni che supportano le funzionalità descritte in questa pagina.
 
-| Tipo di integrazione | Supporta funzionalità |
+| Tipo di integrazione | Supporta la funzionalità |
 |---|---|
 | Integrazioni in tempo reale (streaming) | Sì |
 | Integrazioni basate su file (batch) | Sì |
@@ -54,27 +54,27 @@ Quando crei la configurazione dei metadati del pubblico, puoi utilizzare i param
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booleano | Indica se la [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere il nome Experience Platform del segmento. |
-| `mapExperiencePlatformSegmentId` | Booleano | Indica se la [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione deve essere l’ID del segmento di Experience Platform. |
-| `mapUserInput` | Booleano | Abilita o disabilita l&#39;input dell&#39;utente per [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
-| `audienceTemplateId` | Booleano | La `instanceId` del [modello di metadati del pubblico](../../metadata-api/create-audience-template.md) utilizzato per la destinazione. |
+| `mapExperiencePlatformSegmentName` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere il nome del segmento di Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere l’ID del segmento Experience Platform. |
+| `mapUserInput` | Booleano | Attiva o disattiva l&#39;input dell&#39;utente per [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
+| `audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per la tua destinazione. |
 
 {style="table-layout:auto"}
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti avere una migliore comprensione di come configurare i metadati del pubblico per la tua destinazione.
+Dopo aver letto questo articolo, avrai una migliore comprensione di come configurare i metadati del pubblico per la tua destinazione.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
-* [Configurazione dell’autenticazione cliente](customer-authentication.md)
+* [Configurazione autenticazione cliente](customer-authentication.md)
 * [Autenticazione OAuth2](oauth2-authentication.md)
 * [Campi dati cliente](customer-data-fields.md)
-* [Attributi dell&#39;interfaccia utente](ui-attributes.md)
+* [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)
-* [Configurazione dello spazio dei nomi identità](identity-namespace-configuration.md)
+* [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)
 * [Configurazioni di mappatura supportate](supported-mapping-configurations.md)
-* [Consegna delle destinazioni](destination-delivery.md)
-* [Criteri di aggregazione](aggregation-policy.md)
+* [Consegna della destinazione](destination-delivery.md)
+* [Criterio di aggregazione](aggregation-policy.md)
 * [Configurazione batch](batch-configuration.md)
-* [Qualifiche di profilo storiche](historical-profile-qualifications.md)
+* [Qualifiche del profilo storico](historical-profile-qualifications.md)
