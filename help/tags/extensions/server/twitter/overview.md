@@ -2,7 +2,8 @@
 keywords: estensione inoltro eventi;twitter;estensione inoltro eventi twitter
 title: Estensione twitter per l’inoltro degli eventi
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire eventi in Twitter in base ai requisiti aziendali.
-source-git-commit: d51dae024da0cce770be91601c52b8c2958c3f64
+last-substantial-update: 2023-05-24T00:00:00Z
+source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 3%
