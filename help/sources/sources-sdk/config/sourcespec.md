@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Configurare le specifiche di origine per le origini self-service (SDK batch)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 0%
 
 ---
 
@@ -439,9 +439,11 @@ Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numer
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
@@ -451,8 +453,13 @@ Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numer
 | `type` | Tipo di impaginazione utilizzato per restituire i dati. |
 | `limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. |
 | `limitValue` | Il numero di record da recuperare in una pagina. |
+| `initialPageIndex` | (Facoltativo) L’indice della pagina iniziale definisce il numero di pagina da cui inizierà l’impaginazione. Questo campo può essere utilizzato per le origini in cui l’impaginazione non inizia da 0. Se non specificato, l’indice della pagina iniziale sarà 0 per impostazione predefinita. Questo campo richiede un numero intero. |
+| `endPageIndex` | (Facoltativo) L’indice della pagina finale ti consente di stabilire una condizione di fine e di interrompere l’impaginazione. Questo campo può essere utilizzato quando le condizioni di fine predefinite per interrompere l’impaginazione non sono disponibili. Questo campo può essere utilizzato anche se il numero di pagine da acquisire o l’ultimo numero di pagina viene fornito tramite l’intestazione di risposta, che è comune quando si utilizza `PAGE` impaginazione di tipo. Il valore per l’indice della pagina finale può essere l’ultimo numero di pagina o un valore di espressione di tipo stringa dall’intestazione di risposta. Ad esempio, puoi utilizzare `headers.x-pagecount` per assegnare l&#39;indice della pagina finale a `x-pagecount` valore dalle intestazioni di risposta. **Nota**: `x-pagecount` è un’intestazione di risposta obbligatoria per alcune origini e contiene il valore numero di pagine da acquisire. |
 | `pageParamName` | Il nome del parametro che è necessario accodare ai parametri di query per poter attraversare pagine diverse dei dati restituiti. Ad esempio: `https://abc.com?pageIndex=1` restituisce la seconda pagina del payload di ritorno di un’API. |
 | `maximumRequest` | Il numero massimo di richieste che un’origine può effettuare per una determinata esecuzione incrementale. Il limite predefinito corrente è 10000. |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
