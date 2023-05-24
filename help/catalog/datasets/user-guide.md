@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;abilitare set di dati;set di dati;dataset;dataset;home;popular topic;enable dataset;Dataset;dataset
+keywords: Experience Platform;home;argomenti comuni;abilitare set di dati;set di dati;dataset;dataset;home;popular topic;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1485'
 ht-degree: 7%
 
 ---
@@ -122,9 +122,9 @@ Per abilitare un set di dati per il profilo, accedi ai relativi **[!UICONTROL At
 
 ![L’opzione Profilo è evidenziata all’interno della pagina dei dettagli del set di dati.](../images/datasets/user-guide/enable-dataset-profiles.png)
 
-## Gestire e applicare la governance dei dati su un set di dati
+## Gestire e applicare la governance dei dati su un set di dati {#manage-and-enforce-data-governance}
 
-Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette ai set di dati.
+Le etichette di utilizzo dei dati, applicate a livello di schema, ti consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette agli schemi per la propagazione ai set di dati.
 
 ## Eliminare un set di dati {#delete}
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 description: Scopri come le etichette di utilizzo dei dati vengono utilizzate per contribuire a rafforzare la conformità alla governance dei dati in Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 15%
+source-wordcount: '802'
+ht-degree: 14%
 
 ---
 
@@ -57,21 +57,17 @@ Puoi gestire le etichette di utilizzo dei dati utilizzando [!DNL Experience Plat
 
 ### Utilizzo dell’interfaccia utente
 
-Il **[!UICONTROL Criteri]** area di lavoro in [!DNL Experience Platform] L’interfaccia utente ti consente di visualizzare e gestire le etichette core e personalizzate per la tua organizzazione. È possibile utilizzare **[!UICONTROL Schemi]** area di lavoro a [applicare etichette agli schemi Experience Data Model (XDM)](../../xdm/tutorials/labels.md), oppure puoi utilizzare il **[!DNL Datasets]** area di lavoro a [applicare etichette ai set di dati](./user-guide.md) invece.
+Il **[!UICONTROL Criteri]** area di lavoro in [!DNL Experience Platform] L’interfaccia utente ti consente di visualizzare e gestire le etichette core e personalizzate per la tua organizzazione. È possibile utilizzare **[!UICONTROL Schemi]** area di lavoro a [applicare etichette agli schemi Experience Data Model (XDM)](../../xdm/tutorials/labels.md)o imparare a [creare e gestire etichette personalizzate nel **[!UICONTROL Criteri] UI](./user-guide.md) consultando invece la guida utente delle etichette di utilizzo dei dati.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se tenti di creare criteri di accesso per i dati, devi applicare etichette allo schema su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
+>Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto del set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Consulta la sezione su [migrazione di etichette applicate in precedenza](../e2e.md#migrate-labels) per istruzioni su come eseguire questa operazione.
 
 ### Utilizzo delle API
 
 Il `/labels` endpoint nella [API del servizio criteri](https://www.adobe.io/experience-platform-apis/references/policy-service/) consente di gestire in modo programmatico le etichette di utilizzo dei dati, inclusa la creazione di etichette personalizzate. Consulta la sezione [guida dell’endpoint &quot;labels&quot;](../api/labels.md) per ulteriori informazioni.
 
 Il [API servizio set di dati](https://www.adobe.io/experience-platform-apis/references/dataset-service/) viene utilizzato per gestire le etichette per set di dati e campi. Consulta la guida su [gestione delle etichette dei set di dati](./dataset-api.md) per ulteriori informazioni.
-
->[!NOTE]
->
->L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se si desidera creare criteri di accesso per i dati, è necessario [applica etichette allo schema](../../xdm/tutorials/labels.md) su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 

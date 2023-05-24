@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei set di dati
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '843'
 ht-degree: 9%
 
 ---
@@ -37,15 +37,13 @@ L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi met
 
 Consulta la [Panoramica sull’acquisizione dei dati](../../ingestion/home.md) per ulteriori informazioni.
 
-## Applicazione delle etichette di utilizzo ai set di dati
+## Etichette applicate ai set di dati dagli schemi
 
-La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti al fine di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Il framework di governance dei dati consente di applicare le etichette di utilizzo per categorizzare i dati in base ai criteri di utilizzo applicabili a tali dati.
+La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti al fine di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Il framework di governance dei dati consente di applicare le etichette di utilizzo per categorizzare i dati in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate a singoli schemi, campi all’interno di tali schemi e interi set di dati individuali. Quando le etichette vengono applicate direttamente a uno schema, vengono propagate a tutti i set di dati esistenti e futuri basati su tale schema.
 
 >[!IMPORTANT]
 >
->L’applicazione di etichette a livello di set di dati è supportata solo per i casi di utilizzo di governance dei dati. Se si desidera creare criteri di accesso per i dati, è necessario [applica etichette allo schema](../../xdm/tutorials/labels.md) su cui si basa il set di dati. Consulta la panoramica su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md) per ulteriori informazioni.
-
-Le etichette di utilizzo dei dati possono essere applicate a set di dati interi o a campi di singoli set di dati. Le etichette aggiunte a livello di set di dati vengono ereditate da tutti i campi all’interno di tale set di dati.
+>Le etichette non possono più essere applicate ai campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Eventuali etichette applicate in precedenza a livello di oggetto del set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Consulta la sezione su [migrazione di etichette applicate in precedenza](../../data-governance/e2e.md#migrate-labels) per istruzioni su come eseguire questa operazione.
 
 Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sul servizio. Per i passaggi su come lavorare con le etichette di utilizzo in [!DNL Platform], consulta le seguenti guide:
 

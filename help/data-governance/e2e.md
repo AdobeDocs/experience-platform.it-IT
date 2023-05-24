@@ -2,9 +2,9 @@
 title: Guida end-to-end alla governance dei dati
 description: Segui il processo completo per applicare i vincoli di utilizzo dei dati per campi e set di dati in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Per controllare quali azioni di marketing possono essere eseguite su determinati set di dati e campi in Adobe Experience Platform, è necessario impostare quanto segue:
 
-1. [Applica etichette](#labels) ai set di dati e ai campi di cui desideri limitare l’utilizzo.
+1. [Applica etichette](#labels) ai campi degli schemi o all’intero set di dati, di cui desideri limitare l’utilizzo.
 1. [Configurare e abilitare i criteri di governance dei dati](#policy) che determinano quali tipi di dati con etichetta possono essere utilizzati per determinate azioni di marketing.
 1. [Applicare azioni di marketing alle destinazioni](#destinations) per indicare quali criteri si applicano ai dati inviati a tali destinazioni.
 
@@ -32,6 +32,12 @@ Questa guida illustra l’intero processo di configurazione e applicazione di un
 
 ## Applica etichette {#labels}
 
+>[!IMPORTANT]
+>
+>Le etichette non possono più essere applicate ai singoli campi a livello di set di dati. Questo flusso di lavoro è stato dichiarato obsoleto a favore dell’applicazione di etichette a livello di schema. Tuttavia, puoi ancora etichettare un intero set di dati. Eventuali etichette applicate in precedenza ai singoli campi dei set di dati continueranno a essere supportate tramite l’interfaccia utente di Platform fino al 31 maggio 2024. Per garantire che le etichette siano coerenti in tutti gli schemi, tutte le etichette precedentemente associate ai campi a livello di set di dati devono essere migrate a livello di schema da te nel corso dell’anno successivo. Consulta la sezione su [migrazione di etichette applicate in precedenza](#migrate-labels) per istruzioni su come eseguire questa operazione.
+
+È possibile [applicare etichette a uno schema](#schema-labels) in modo che tutti i set di dati basati su tale schema ereditino le stesse etichette. Questo consente di gestire le etichette per la governance dei dati, il consenso e il controllo degli accessi in un’unica posizione. Applicando vincoli di utilizzo dei dati a livello di schema, l’effetto si propaga a valle a tutti i set di dati basati su tale schema. Le etichette applicate a livello di campo dello schema supportano casi di utilizzo di governance dei dati e sono rilevabili nell’area di lavoro Set di dati [!UICONTROL Governance dei dati] sotto il [!UICONTROL Nome campo] come etichette di sola lettura.
+
 Se è presente un set di dati specifico su cui desideri applicare vincoli di utilizzo dei dati, puoi [applica le etichette direttamente a tale set di dati](#dataset-labels) o campi specifici all’interno di tale set di dati.
 
 In alternativa, è possibile: [applicare etichette a uno schema](#schema-labels) in modo che tutti i set di dati basati su tale schema ereditino le stesse etichette.
@@ -40,27 +46,19 @@ In alternativa, è possibile: [applicare etichette a uno schema](#schema-labels)
 >
 >Per ulteriori informazioni sulle diverse etichette di utilizzo dei dati e sul loro utilizzo previsto, vedi [riferimento etichette utilizzo dati](./labels/reference.md). Se le etichette core disponibili non coprono tutti i casi d’uso desiderati, puoi [definire etichette personalizzate](./labels/user-guide.md#manage-custom-labels) anche.
 
-### Applicare etichette a un set di dati {#dataset-labels}
+### Applicare etichette a un intero set di dati {#dataset-labels}
 
 Seleziona **[!UICONTROL Set di dati]** nella barra di navigazione a sinistra, seleziona il nome del set di dati a cui desideri applicare le etichette. Facoltativamente, puoi utilizzare il campo di ricerca per limitare l’elenco dei set di dati visualizzati.
 
-![Immagine che mostra un set di dati selezionato nell’interfaccia utente di Platform](./images/e2e/select-dataset.png)
+![Scheda Sfoglia dell’area di lavoro Set di dati con Set di dati ed evidenziata una riga di set di dati.](./images/e2e/select-dataset.png)
 
-Viene visualizzata la vista dei dettagli per il set di dati. Seleziona la **[!UICONTROL Governance dei dati]** per visualizzare un elenco dei campi del set di dati ed eventuali etichette già applicate. Seleziona le caselle di controllo accanto ai campi a cui desideri aggiungere le etichette, quindi seleziona **[!UICONTROL Modifica etichette di governance]** nella barra a destra.
+Viene visualizzata la vista dei dettagli per il set di dati. Seleziona la **[!UICONTROL Governance dei dati]** per visualizzare un elenco dei campi del set di dati ed eventuali etichette già applicate. Seleziona l’icona a forma di matita per modificare le etichette dei set di dati.
 
-![Immagine che mostra diversi campi del set di dati selezionati per l’etichettatura](./images/e2e/dataset-field-label.png)
+![Scheda Governance dei dati per il set di dati Membri fedeltà con l’icona a forma di matita evidenziata.](./images/e2e/edit-dataset-labels.png)
 
->[!NOTE]
->
->Se desideri aggiungere etichette all’intero set di dati, seleziona la casella di controllo accanto a **[!UICONTROL Nome campo]** per evidenziare tutti i campi prima di selezionare **[!UICONTROL Modifica etichette di governance]**.
->
->![Immagine che mostra tutti i campi evidenziati per un set di dati](./images/e2e/label-whole-dataset.png)
+Il [!UICONTROL Modifica etichette di governance] viene visualizzata. Seleziona l’etichetta di governance appropriata e seleziona **[!UICONTROL Salva]**.
 
-Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi del set di dati scelti in precedenza. Al termine, seleziona **[!UICONTROL Salva modifiche]**.
-
-![Immagine che mostra tutti i campi evidenziati per un set di dati](./images/e2e/save-dataset-labels.png)
-
-Continua a seguire i passaggi precedenti per applicare etichette a campi diversi (o set di dati diversi), in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione dei criteri di governance dei dati](#policy).
+![La finestra di dialogo Modifica etichette di governance con la casella di controllo dell’etichetta e Salva evidenziata.](./images/e2e/edit-dataset-governance-labels.png)
 
 ### Applicare le etichette a uno schema {#schema-labels}
 
@@ -72,9 +70,9 @@ Seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra, seleziona 
 >
 >![Immagine che mostra un collegamento allo schema di un set di dati](./images/e2e/schema-from-dataset.png)
 
-La struttura dello schema viene visualizzata nell&#39;Editor di schema. Da qui, seleziona la **[!UICONTROL Etichette]** per visualizzare una vista a elenco dei campi dello schema e delle etichette già applicate. Seleziona le caselle di controllo accanto ai campi a cui desideri aggiungere le etichette, quindi seleziona **[!UICONTROL Modifica etichette di governance]** nella barra a destra.
+La struttura dello schema viene visualizzata nell&#39;Editor di schema. Da qui, seleziona la **[!UICONTROL Etichette]** per visualizzare una vista a elenco dei campi dello schema e delle etichette già applicate. Seleziona le caselle di controllo accanto ai campi a cui desideri aggiungere le etichette, quindi seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]** nella barra a destra.
 
-![Immagine che mostra un singolo campo schema selezionato per le etichette di governance](./images/e2e/schema-field-label.png)
+![La scheda Etichette dell’area di lavoro Schema con un singolo campo schema selezionato ed evidenziate Applica etichette di accesso e governance dei dati.](./images/e2e/schema-field-label.png)
 
 >[!NOTE]
 >
@@ -82,11 +80,30 @@ La struttura dello schema viene visualizzata nell&#39;Editor di schema. Da qui, 
 >
 >![Immagine che mostra l’icona della matita selezionata dalla vista etichette schema](./images/e2e/label-whole-schema.png)
 
-Nella finestra di dialogo successiva, seleziona le etichette da applicare ai campi schema selezionati in precedenza. Al termine, seleziona **[!UICONTROL Salva]**.
+Il [!UICONTROL Applica etichette di accesso e governance dei dati] viene visualizzata. Seleziona le etichette da applicare al campo schema selezionato. Al termine, seleziona **[!UICONTROL Salva]**.
 
-![Immagine che mostra più etichette aggiunte a un campo schema](./images/e2e/save-schema-labels.png)
+![La finestra di dialogo Applica etichette di accesso e governance dei dati mostra più etichette aggiunte a un campo schema.](./images/e2e/save-schema-labels.png)
 
 Continua a seguire i passaggi precedenti per applicare le etichette a campi diversi (o a schemi diversi), in base alle esigenze. Al termine, puoi continuare con il passaggio successivo di [abilitazione dei criteri di governance dei dati](#policy).
+
+### Etichette di migrazione applicate in precedenza a livello di set di dati {#migrate-labels}
+
+Seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra, seleziona il nome del set di dati da cui desideri eseguire la migrazione delle etichette. Facoltativamente, puoi utilizzare il campo di ricerca per limitare l’elenco dei set di dati visualizzati.
+
+![Scheda Sfoglia dell’area di lavoro Set di dati con il set di dati Membri fedeltà evidenziato.](./images/e2e/select-dataset.png)
+
+Viene visualizzata la vista dei dettagli per il set di dati. Seleziona la **[!UICONTROL Governance dei dati]** per visualizzare un elenco dei campi del set di dati ed eventuali etichette già applicate. Seleziona l’icona Annulla accanto a qualsiasi etichetta che desideri rimuovere da un campo. Viene visualizzata una finestra di dialogo di conferma, seleziona [!UICONTROL Rimuovi etichetta] per confermare le scelte effettuate.
+
+![Scheda Governance dei dati dell’area di lavoro Set di dati con un’etichetta per un campo evidenziato per la rimozione.](./images/e2e/remove-label.png)
+
+Dopo aver rimosso l’etichetta dal campo del set di dati, passa all’Editor di schema per aggiungerla allo schema. Le istruzioni su come eseguire questa operazione, sono reperibili nella sezione [sezione sull’applicazione di etichette a uno schema](#schema-labels).
+
+>[!TIP]
+>
+>Puoi selezionare il nome dello schema nella barra a destra, seguito dal collegamento nella finestra di dialogo che consente di passare allo schema appropriato.
+>![Scheda Governance dei dati dell’area di lavoro Set di dati con il nome dello schema nella barra laterale e il collegamento della finestra di dialogo evidenziati.](./images/e2e/navigate-to-schema.png)
+
+Dopo aver eseguito la migrazione delle etichette necessarie, assicurati di disporre della [criteri di governance dei dati abilitati](#policy).
 
 ## Abilitare i criteri di governance dei dati {#policy}
 

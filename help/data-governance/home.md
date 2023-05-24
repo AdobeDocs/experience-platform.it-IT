@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla governance dei dati
 description: La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1495'
 ht-degree: 5%
 
 ---
@@ -57,7 +57,7 @@ Il framework per la governance dei dati include tre elementi chiave: Etichette, 
 
 ## Etichette di utilizzo dati
 
-La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di set di dati e di campo per categorizzare i dati in base al tipo di criteri applicati.
+La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di campo schema e di set di dati per categorizzare i dati in base al tipo di criteri applicati.
 
 Il framework per la governance dei dati include etichette di utilizzo dei dati predefinite che possono essere utilizzate per categorizzare i dati in tre modi:
 
@@ -75,11 +75,11 @@ Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilit
 
 Consulta la panoramica su [etichette di utilizzo dei dati](./labels/overview.md) per ulteriori informazioni.
 
-## Criteri di utilizzo dei dati
+## Criteri di utilizzo dei dati {#data-usage-policies}
 
 Affinché le etichette di utilizzo dei dati supportino in modo efficace la conformità, è necessario implementare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform].
 
-Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se esiste una politica in vigore che indica che non è possibile esportare informazioni personali (PII, Personally Identifiable Information) ed è stata applicata un’etichetta &quot;I&quot; (dati di identità) al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che potrebbe esportare questo set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, Policy Service invia un messaggio per informarti che un criterio di utilizzo dei dati è stato violato.
+Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se è in vigore una politica che dichiara che non è possibile esportare informazioni personali (PII, Personally Identifiable Information) ed è stata applicata un’etichetta &quot;I&quot; (dati di identità) al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che potrebbe esportare questo set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, Policy Service invia un messaggio per informarti che un criterio di utilizzo dei dati è stato violato.
 
 Sono disponibili due tipi di criteri:
 
@@ -100,7 +100,7 @@ Questo documento fornisce un’introduzione di alto livello alla governance dei 
 
 La sezione seguente fornisce ulteriori informazioni sulla governance dei dati.
 
-### Terminologia per la governance dei dati
+### Terminologia per la governance dei dati {#data-governance-terminology}
 
 La tabella seguente illustra i termini chiave relativi alla governance dei dati e al framework per la governance dei dati.
 
@@ -111,13 +111,14 @@ La tabella seguente illustra i termini chiave relativi alla governance dei dati 
 | **Governance dei dati** | La governance dei dati include le strategie e le tecnologie utilizzate per garantire la conformità dei dati alle normative e alle politiche aziendali in relazione all’utilizzo dei dati. |
 | **Amministratore dati** | L’amministratore dei dati è la persona responsabile della gestione, della supervisione e dell’applicazione delle risorse di dati di un’organizzazione. Un data steward garantisce inoltre che i criteri di governance dei dati siano salvaguardati e mantenuti in modo da essere conformi alle normative governative e ai criteri organizzativi. |
 | **Etichette di utilizzo dati** | Le etichette di utilizzo dei dati consentono agli utenti di categorizzare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e alle politiche aziendali. |
-| **Etichette set di dati** | È possibile aggiungere etichette a un set di dati. Tutti i campi di un set di dati ereditano le etichette del set di dati. |
-| **Etichette campo** | Le etichette dei campi sono etichette di governance dei dati ereditate da un set di dati o applicate direttamente a un campo.  Le etichette di governance dei dati applicate a un campo non vengono ereditate fino a un set di dati. |
+| **Etichette set di dati** | È possibile aggiungere etichette a uno schema. Tutti i campi all’interno di un set di dati ereditano le etichette dello schema. |
+| **Etichette campo** | Le etichette dei campi sono etichette di governance dei dati ereditate da uno schema o applicate direttamente a un campo. Le etichette di governance dei dati applicate a un campo non vengono ereditate fino al livello dello schema. |
 | **Recinto geografico** | Un recinto geografico è un confine geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area. |
 | **Etichette di identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per categorizzare i dati che possono identificare o contattare una persona specifica. |
 | **Targeting basato sugli interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte le tre condizioni seguenti: i dati raccolti sul sito sono utilizzati per trarre conclusioni sull’interesse di un utente, sono utilizzati in un altro contesto, ad esempio su un altro sito o un’altra app (fuori sito) e vengono utilizzati per selezionare quali contenuti o annunci vengono distribuiti in base a tali conclusioni. |
 | **Azione di marketing** | Un’azione di marketing, nel contesto del framework di governance dei dati, è un’azione che [!DNL Experience Platform] dati richiesti dal consumatore, per i quali è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, un criterio è una regola che descrive il tipo di azioni di marketing consentite o meno da intraprendere su dati specifici. |
+| **Etichette schema** | Gestisci le etichette per la governance dei dati, il consenso e il controllo degli accessi a livello di schema. In questo modo le etichette vengono propagate a ogni set di dati che utilizza tale schema. |
 | **Etichette sensibili** | Le etichette sensibili &quot;S&quot; vengono utilizzate per categorizzare i dati considerati sensibili dall’utente e dall’organizzazione. |
 
 ## Risorse aggiuntive
@@ -126,6 +127,8 @@ Il video seguente ha lo scopo di aiutarti a comprendere il framework di governan
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Il video seguente fornisce un’introduzione a varie funzioni di governance dei dati in Experience Platform.
+<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
 
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
+The following video provides an introduction to various Data Governance features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
