@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3406'
+source-wordcount: '3706'
 ht-degree: 2%
 
 ---
@@ -568,7 +568,7 @@ Per restituire il valore per qualsiasi impostazione, utilizza `SET [property key
 
 Le sottosezioni seguenti descrivono [!DNL PostgreSQL] comandi supportati da Query Service.
 
-### ANALIZZARE LA TABELLA
+### ANALIZZARE LA TABELLA {#analyze-table}
 
 Il `ANALYZE TABLE` Il comando calcola le statistiche per una tabella nell&#39;archivio accelerato. Le statistiche sono calcolate sulle query CTAS o ITAS eseguite per una determinata tabella in un archivio accelerato.
 
@@ -591,6 +591,61 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 | `min` | Valore minimo della tabella analizzata. |
 | `mean` | Valore medio della tabella analizzata. |
 | `stdev` | Deviazione standard della tabella analizzata. |
+
+#### STATISTICHE DI CALCOLO {#compute-statistics}
+
+È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
+
+`COMPUTE STATISTICS` estende `ANALYZE TABLE` comando. Tuttavia, il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` comandi non supportati nelle tabelle data warehouse. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS.
+
+**Esempio**
+
+```sql
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
+```
+
+>[!NOTE]
+>
+>`FILTER CONTEXT` calcola le statistiche su un sottoinsieme del set di dati in base alla condizione del filtro fornita; e `FOR COLUMNS` esegue il targeting di colonne specifiche per l’analisi.
+
+L’output della console viene visualizzato come segue.
+
+```console
+  Statistics ID 
+------------------
+ ULKQiqgUlGbTJWhO
+(1 row)
+```
+
+Puoi quindi utilizzare l’ID delle statistiche restituito per cercare le statistiche calcolate con `SHOW STATISTICS` comando.
+
+```sql
+SHOW STATISTICS FOR <statistics_ID>
+```
+
+>[!NOTE]
+>
+>`COMPUTE STATISTICS` non supporta i tipi di dati array o map. È possibile impostare un `skip_stats_for_complex_datatypes` contrassegno da notificare o errore se il dataframe di input ha colonne con array e tipi di dati mappa. Per impostazione predefinita, il flag è impostato su true. Per abilitare le notifiche o gli errori, utilizza il comando seguente: `SET skip_stats_for_complex_datatypes = false`.
+
+Consulta la [documentazione delle statistiche dei set di dati](../essential-concepts/dataset-statistics.md) per ulteriori informazioni.
+
+#### TABELLAMPIO {#tablesample}
+
+Adobe Experience Platform Query Service fornisce set di dati di esempio come parte delle sue funzionalità di elaborazione delle query approssimative.
+È consigliabile utilizzare gli esempi di set di dati quando non è necessaria una risposta esatta per un’operazione di aggregazione su un set di dati. Questa funzione consente di eseguire query esplorative più efficienti su set di dati di grandi dimensioni tramite l’emissione di una query approssimativa per restituire una risposta approssimativa.
+
+I set di dati di esempio vengono creati con campioni casuali uniformi da quelli esistenti [!DNL Azure Data Lake Storage] (ADLS), utilizzando solo una percentuale di record dall’originale. La funzione di esempio per il set di dati estende `ANALYZE TABLE` comando con `TABLESAMPLE` e `SAMPLERATE` Comandi SQL.
+
+Negli esempi seguenti, la riga 1 illustra come calcolare un campione del 5% della tabella. La riga 2 illustra come calcolare un campione del 5% da una visualizzazione filtrata dei dati all’interno della tabella.
+
+**esempio**
+
+```sql {line-numbers="true"}
+ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
+```
+
+Consulta la [documentazione sugli esempi di set di dati](../essential-concepts/dataset-samples.md) per ulteriori informazioni.
 
 ### INIZIO
 
