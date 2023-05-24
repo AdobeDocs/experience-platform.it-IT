@@ -2,9 +2,9 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 876339019b324d4483152ed6f24bd6ad749ea7ba
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1318'
 ht-degree: 6%
 
 ---
@@ -54,6 +54,7 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’
 | --- | --- | --- |
 | Piattaforme | Web | Consente l’accesso a [proprietà web](../tags/ui/administration/companies-and-properties.md) quando combinato con altri diritti di proprietà. |
 | Piattaforme | Dispositivi mobili | Consente l’accesso a [proprietà mobili](../tags/ui/administration/companies-and-properties.md) quando combinato con altri diritti di proprietà. |
+| Piattaforme | Edge | Consente l’accesso a [Proprietà di Event Forwarding Edge](../tags/ui/event-forwarding/getting-started.md) quando combinato con altri diritti di proprietà. |
 | Proprietà | (N/D) | A seconda delle proprietà create nell’organizzazione, puoi controllare l’accesso a ciascuna di esse tramite questa categoria di autorizzazioni in Admin Console.<br><br>I diritti di proprietà assegnati a un utente si applicano solo alle proprietà a cui è stato concesso l’accesso tramite questa categoria di autorizzazioni. |
 | Diritti di proprietà | Approvazione | Consente di approvare una build della libreria come parte della [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Sviluppa | Consente di sviluppare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
