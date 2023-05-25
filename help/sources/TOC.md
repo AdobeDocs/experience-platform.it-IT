@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 11%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 11%
       - [Connettore Oracle](connectors/databases/oracle.md)
       - [Connettore Phoenix](connectors/databases/phoenix.md)
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
+      - [Connettore streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connettore Snowflake](connectors/databases/snowflake.md)
       - [Connettore Teradata Vantage](connectors/databases/teradata-vantage.md)
    - eCommerce {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 11%
          - [ Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Streaming Snowflake](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
