@@ -2,9 +2,8 @@
 title: Panoramica sull'origine Customer.io
 description: Scopri come collegare Customer.io a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
 badge: Beta
-last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%

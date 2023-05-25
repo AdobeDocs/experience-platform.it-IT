@@ -2,8 +2,9 @@
 keywords: Experience Platform;home;argomenti popolari;Oracle Service Cloud;oracle service cloud
 title: Panoramica del connettore di origine di Oracle Service Cloud
 description: Scopri come collegare Oracle Service Cloud a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

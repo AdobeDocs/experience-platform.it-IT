@@ -2,9 +2,8 @@
 title: Panoramica dell’origine del catalogo
 description: Scopri come collegare Chatlio a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
 badge: Beta
-last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
