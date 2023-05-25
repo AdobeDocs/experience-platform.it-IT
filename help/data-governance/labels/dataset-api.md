@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati per i set di dati utilizzando le API
 description: L’API Servizio set di dati consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separata dall’API Catalog Service che gestisce i metadati dei set di dati.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -103,7 +103,7 @@ L’esempio di richiesta POST seguente aggiorna l’intero set di dati con un `C
 
 >[!NOTE]
 >
->Se attualmente esistono etichette per il set di dati in questione, è possibile aggiungere nuove etichette solo tramite una richiesta PUT, che richiede un `If-Match` intestazione. Una volta aggiunte le etichette a un set di dati, viene `etag` viene assegnato un valore che può essere utilizzato per aggiornare o rimuovere le etichette in un secondo momento.
+>Se attualmente esistono etichette per il set di dati in questione, è possibile aggiungere nuove etichette solo tramite una richiesta PUT, che richiede un `If-Match` intestazione. Una volta aggiunte le etichette a un set di dati, viene `etag` per aggiornare o rimuovere le etichette in un secondo momento, è necessario specificare un valore.
 
 Per recuperare la versione più recente dell’entità etichetta del set di dati, esegui una [richiesta GET](#look-up) al `/datasets/{DATASET_ID}/labels` endpoint. Il valore corrente viene restituito nella risposta in un `etag` intestazione. Quando si aggiornano le etichette dei set di dati esistenti, si consiglia di eseguire prima una richiesta di ricerca per il set di dati per recuperarne l’ultima `etag` valore prima di utilizzare tale valore in `If-Match` dell’intestazione della richiesta PUT successiva.
 
