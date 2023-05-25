@@ -2,7 +2,7 @@
 title: Best practice per l’organizzazione delle risorse dati in Query Service
 description: Questo documento illustra un modo logico di organizzare i dati per facilitarne l’utilizzo con Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -45,13 +45,13 @@ Una volta creato uno schema che funge da contenitore per le risorse di dati, ogn
 L’esempio seguente aggiunge `dataset1`, `dataset2`, `dataset3` e `v1` al `databaseA.schema1` contenitore creato nell’esempio precedente.
 
 ```SQL
-ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset2 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset2 ADD SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset3 SET SCHEMA databaseA.schema1;
+ALTER TABLE dataset3 ADD SCHEMA databaseA.schema1;
  
-ALTER VIEW v1  SET SCHEMA databaseA.schema1;
+ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
 ```
 
 ## Accesso alle risorse di dati dal contenitore dati

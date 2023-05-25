@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3761'
 ht-degree: 2%
 
 ---
@@ -570,7 +570,11 @@ Le sottosezioni seguenti descrivono [!DNL PostgreSQL] comandi supportati da Quer
 
 ### ANALIZZARE LA TABELLA {#analyze-table}
 
-Il `ANALYZE TABLE` Il comando calcola le statistiche per una tabella nell&#39;archivio accelerato. Le statistiche sono calcolate sulle query CTAS o ITAS eseguite per una determinata tabella in un archivio accelerato.
+Il `ANALYZE TABLE` esegue un&#39;analisi di distribuzione e calcoli statistici per la tabella o le tabelle denominate. L&#39;uso di `ANALYZE TABLE` varia a seconda che i set di dati siano memorizzati sul [archivio accelerato](#compute-statistics-accelerated-store) o [data lake](#compute-statistics-data-lake). Per ulteriori informazioni sull’uso di questa variabile, consulta le rispettive sezioni.
+
+#### STATISTICHE DI CALCOLO sull&#39;archivio accelerato {#compute-statistics-accelerated-store}
+
+Il `ANALYZE TABLE` Il comando calcola le statistiche per una tabella nell&#39;archivio accelerato. Le statistiche sono calcolate sulle query CTAS o ITAS eseguite per una determinata tabella nell’archivio accelerato.
 
 **Esempio**
 
@@ -592,7 +596,7 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 | `mean` | Valore medio della tabella analizzata. |
 | `stdev` | Deviazione standard della tabella analizzata. |
 
-#### STATISTICHE DI CALCOLO {#compute-statistics}
+#### STATISTICHE DI CALCOLO sul data lake {#compute-statistics-data-lake}
 
 È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
 
@@ -608,7 +612,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` calcola le statistiche su un sottoinsieme del set di dati in base alla condizione del filtro fornita; e `FOR COLUMNS` esegue il targeting di colonne specifiche per l’analisi.
 
-L’output della console viene visualizzato come segue.
+L’output della console viene visualizzato come illustrato di seguito.
 
 ```console
   Statistics ID 

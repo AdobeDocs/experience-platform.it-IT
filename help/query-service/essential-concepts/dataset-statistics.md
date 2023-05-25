@@ -1,16 +1,16 @@
 ---
 title: Calcolo delle statistiche dei set di dati
 description: In questo documento viene descritto come calcolare le statistiche a livello di colonna sui set di dati di Azure Data Lake Storage (ADLS) con comandi SQL.
-source-git-commit: b063bcf7b3d2079715ac18fde55f47cea078b609
+source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
 # Calcolo delle statistiche del set di dati
 
-È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. I comandi SQL che calcolano le statistiche dei set di dati sono un&#39;estensione del `ANALYZE TABLE` comando. Dettagli completi sulla `ANALYZE TABLE` Il comando si trova nel [Documentazione di riferimento SQL](../sql/syntax.md#analyze-table).
+È ora possibile calcolare le statistiche a livello di colonna per [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. I comandi SQL che calcolano le statistiche dei set di dati sono un&#39;estensione del `ANALYZE TABLE` comando. Dettagli completi sulla `ANALYZE TABLE` Il comando si trova nel [Documentazione di riferimento SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 Puoi combinare il limite di colonne e il filtro per creare query computazionali altamente specifiche per le colonne dei set di dati. Ad esempio, la query seguente calcola le statistiche sulle colonne `commerce`, `id`, e `timestamp` per il set di dati `tableName`, in cui la marca temporale della colonna ha valori compresi tra l’intervallo specificato di `2023-04-01 00:00:00` e `2023-04-05 00:00:00`.
 
 ```sql
-ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR (columns commerce, id, timestamp);
+ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
 <!-- ## Create an alias name {#alias-name}
@@ -125,7 +125,6 @@ Un output potrebbe essere simile all’esempio seguente.
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
 ------------------------------------------------------------+----------------+----------------+----------------+-------------------+---------------------+-----------+-----------
  marketing.trackingcode                                     |            0.0 |            0.0 |            0.0 |               0.0 |              1213.0 |         0 | String
- _experience.analytics.session.timestamp                    |            450 |          -2313 |          21903 |               7.0 |                 0.0 |         0 | Long
  _experience.analytics.customdimensions.evars.evar13        |            0.0 |            0.0 |            0.0 |               0.0 |              8765.0 |        20 | String
  _experience.analytics.customdimensions.evars.evar74        |            0.0 |            0.0 |            0.0 |               0.0 |                11.0 |         0 | String
  web.webpagedetails.name                                    |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
@@ -137,7 +136,7 @@ Un output potrebbe essere simile all’esempio seguente.
  _experience.analytics.customdimensions.props.prop45        |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | String
  environment.browserdetails.javaenabled                     |            0.0 |            0.0 |            0.0 |               0.0 |                 1.0 |         0 | Boolean
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
-(13 rows)
+(12 rows)
 ```
 
 ## Passaggi successivi {#next-steps}
