@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
+source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1181'
 ht-degree: 5%
 
 ---
@@ -140,6 +140,7 @@ ht-degree: 5%
       * [Panoramica delle destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connessione Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
+      * [Categorie di interesse Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(File) Oracle di connessione Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connessione Responsys Oracle](./catalog/email-marketing/oracle-responsys.md)
