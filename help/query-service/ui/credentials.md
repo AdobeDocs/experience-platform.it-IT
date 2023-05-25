@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1462'
 ht-degree: 2%
 
 ---
@@ -42,11 +42,15 @@ Il **[!UICONTROL Credenziali in scadenza]** La sezione fornisce le seguenti info
 >
 >![La scheda delle impostazioni di Admin Console con Privacy e sicurezza, Impostazioni autenticazione e Durata massima sessione evidenziate.](../images/ui/credentials/max-session-life.png)
 >
->Consulta la documentazione di Adobe per ulteriori informazioni sulla [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console.
+>Consulta la documentazione di Adobe per ulteriori informazioni su [Impostazioni avanzate](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) offerte da Admin Console.
 
 ## Credenziali senza scadenza {#non-expiring-credentials}
 
 È possibile utilizzare credenziali senza scadenza per impostare una connessione più permanente a un client esterno.
+
+>[!NOTE]
+>
+>Le credenziali senza scadenza presentano le seguenti limitazioni:<br><ul><li>Gli utenti devono effettuare l&#39;accesso con il proprio nome utente e password, che comprende `{technicalAccountId}:{credential}`. Ulteriori informazioni sono disponibili nella sezione [Genera credenziali](#generate-credentials) sezione.</li><li>Al momento della creazione delle credenziali in scadenza, viene creato un nuovo ruolo con un set di autorizzazioni di base che consente agli utenti di visualizzare schemi e set di dati. A questo ruolo viene inoltre assegnata l’autorizzazione &quot;manage queries&quot; (gestisci query), utilizzabile con Query Service.</li><li>I client di terze parti possono ottenere prestazioni diverse da quelle previste quando si elencano oggetti di query. Ad esempio, alcuni clienti di terze parti come [!DNL DB Visualizer] non visualizza il nome della vista nel pannello sinistro. Tuttavia, il nome della visualizzazione è accessibile se chiamato all’interno di una query SELECT. Analogamente, [!DNL PowerUI] potrebbe non elencare le viste temporanee create tramite l&#39;istruzione SQL da selezionare per la creazione del dashboard.</li></ul>
 
 ### Prerequisiti
 
@@ -63,7 +67,7 @@ Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la docu
 
 Tutte le autorizzazioni necessarie sono ora configurate nella console di Adobe Developer affinché l’utente possa utilizzare la funzione delle credenziali in scadenza.
 
-### Genera credenziali
+### Genera credenziali {#generate-credentials}
 
 Per creare un set di credenziali senza scadenza, torna all’interfaccia utente di Platform e seleziona **[!UICONTROL Query]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Query] Workspace. Quindi, seleziona la **[!UICONTROL Credenziali]** scheda seguita da **[!UICONTROL Genera credenziali]**.
 
