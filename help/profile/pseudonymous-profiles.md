@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07ed7eb9644b2e8cc4da02743c48037afc247614
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,8 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 
 ### Quali sono alcune avvertenze di cui dovresti essere a conoscenza prima di utilizzare la scadenza dei dati dei profili pseudonimi?
 
-- La scadenza dei dati del profilo pseudonimo verrà eseguita il **produzione** sandbox.
+- La scadenza dei dati del profilo pseudonimo viene eseguita a un **sandbox** livello. Puoi scegliere di avere diverse configurazioni per le sandbox di produzione e di sviluppo.
 - Dopo aver attivato questa funzione, l’eliminazione dei profili avviene **permanente**. È presente **no** modo per ripristinare o ripristinare i profili eliminati.
 - Questo è **non** un processo di pulizia una tantum. La scadenza dei dati del profilo pseudonimo viene continuamente eseguita una volta al giorno ed elimina i profili che corrispondono all’input del cliente.
 - **Tutti** I profili definiti come profili pseudonimi saranno interessati dalla scadenza dei dati del profilo pseudonimo. È vero **non** è importante se il profilo è solo Evento esperienza o se contiene solo attributi di profilo.
 - Questa pulizia **solo** verificarsi in Profilo. Il servizio Identity può continuare a mostrare le identità eliminate all’interno del grafico dopo la pulizia nei casi in cui al profilo siano associate due o più identità pseudonime (ad esempio `AAID` e `ECID`). Questa discrepanza sarà affrontata nel prossimo futuro.
-
