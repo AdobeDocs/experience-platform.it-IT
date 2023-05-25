@@ -2,7 +2,7 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -29,10 +29,10 @@ Viene chiamato il processo tramite il quale i profili vengono aggregati in messa
 
 Prendi il [Destinazione facebook](/help/destinations/catalog/social/facebook.md) con un *[aggregazione configurabile](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* criterio come esempio: i dati vengono inviati in modo aggregato, dove il servizio destinazioni prende tutti i dati in arrivo dal servizio profilo a monte e li aggrega in base a una delle seguenti opzioni, prima di inviarli a Facebook:
 
-* Numero di record (massimo 10.000) o
+* Numero di record (massimo 10,000) o
 * Intervallo intervallo di tempo (30 minuti)
 
-Il primo caso in cui viene raggiunta una delle soglie sopra indicate determina un’esportazione in Facebook. Quindi, nella [!DNL Facebook Custom Audiences] dashboard, potresti vedere tipi di pubblico provenienti da Experience Platform con incrementi di record di 10.000. Potresti visualizzare 10.000 record ogni 10-15 minuti perché i dati vengono elaborati e aggregati più rapidamente dell’intervallo di esportazione di 30 minuti e vengono inviati più rapidamente, quindi circa ogni 10-15 minuti finché tutti i record non vengono elaborati. Se non ci sono record sufficienti per comporre un batch di 10.000, il numero corrente di record verrà inviato così com&#39;è quando viene raggiunta la soglia dell&#39;intervallo di tempo, in modo da poter vedere anche i batch più piccoli inviati a Facebook.
+Il primo caso in cui viene raggiunta una delle soglie sopra indicate determina un’esportazione in Facebook. Quindi, nella [!DNL Facebook Custom Audiences] dashboard, i tipi di pubblico potrebbero provenire da Experience Platform con incrementi di 10.000 record. Potresti visualizzare 10.000 record ogni 10-15 minuti perché i dati vengono elaborati e aggregati più rapidamente dell’intervallo di esportazione di 30 minuti e vengono inviati più rapidamente, quindi circa ogni 10-15 minuti finché tutti i record non vengono elaborati. Se non ci sono record sufficienti per comporre un batch di 10.000, il numero corrente di record verrà inviato così com&#39;è quando viene raggiunta la soglia dell&#39;intervallo di tempo, in modo da poter vedere anche i batch più piccoli inviati a Facebook.
 
 Un altro esempio è dato dalla [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md), che ha un *[aggregazione della migliore fatica](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, con `maxUsersPerRequest: 10`. Ciò significa che un massimo di dieci profili verranno aggregati prima che venga avviata una chiamata HTTP a questa destinazione, ma Experience Platform tenta di inviare profili alla destinazione non appena il servizio delle destinazioni riceve informazioni di rivalutazione aggiornate da un servizio a monte.
 
