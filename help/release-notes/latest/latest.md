@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di maggio 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
+source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1360'
 ht-degree: 4%
 
 ---
@@ -33,6 +33,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Governance dei dati](#data-governance)
 - [Acquisizione dei dati](#data-ingestion)
 - [Destinazioni](#destinations)
+- [Servizio Identity](#identity-service)
 - [Servizio query](#query-service)
 - [Origini](#sources)
 
@@ -108,6 +109,18 @@ Per ulteriori informazioni sull’acquisizione dei dati, consulta la sezione [pa
 
 Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
+## Servizio Identity {#identity-service}
+
+Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale.
+
+**Aggiornare le funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Supporto per gli ID partner nelle applicazioni Adobe Experience Cloud | Gli ID partner sono ora disponibili in Identity Service. Gli ID partner sono identificatori utilizzati dai partner dati per rappresentare le persone. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati. Gli ID partner non sono memorizzati nel grafico delle identità. Per ulteriori informazioni, consulta la documentazione su [tipi di identità](../../identity-service/namespaces.md#identity-types). |
+
+Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servizio Identity](../../identity-service/home.md)
+
 ## Servizio query {#query-service}
 
 Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL data lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire in Real-Time Customer Profile.
@@ -132,6 +145,7 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
+| Supporto API per lo streaming di dati da una [!DNL Snowflake] database | Ora puoi inviare dati in streaming da un [[!DNL Snowflake] sorgente](../../sources/connectors/databases/snowflake-streaming.md) utilizzando [!DNL Flow Service] API. |
 | Supporto API esteso per la modalità bozza | È ora possibile mettere in pausa e salvare l’avanzamento durante il flusso di lavoro delle origini quando si utilizza [!DNL Flow Service] API in qualsiasi momento. Utilizza il `mode=draft` per salvare le connessioni di base, di origine e di destinazione come bozze. Tutte le entità 2D possono essere riesaminate per il completamento in un secondo momento. Leggi la guida su [impostazione [!DNL Flow Service] entità a stato bozza](../../sources/tutorials/api/draft.md) per ulteriori informazioni. |
 | Disponibilità generale del [!DNL Salesforce Marketing Cloud] sorgente | Il [[!DNL Salesforce Marketing Cloud source] è ora in GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). Utilizza questa origine per portare [!DNL Salesforce Marketing Cloud] dati di Experience Platform. |
 | [!DNL Google Ads] aggiornamenti di autenticazione | Ora puoi fornire un ID cliente di accesso al momento dell’autenticazione del [!DNL Google Ads] conto di origine per recuperare i dati del rapporto da un cliente operativo specifico. Leggi le [[!DNL Google Ads] documentazione di origine](../../sources/connectors/advertising/ads.md) per ulteriori informazioni. |
@@ -142,5 +156,3 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sulle origini, leggere [panoramica sulle origini](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
