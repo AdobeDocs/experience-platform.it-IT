@@ -2,9 +2,9 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Gli spazi dei nomi dele identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1719'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ I seguenti tipi di identità sono disponibili in [!DNL Platform]:
 | ID dispositivo | Gli ID dispositivo identificano i dispositivi hardware, come IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e possono essere condivisi da più persone nelle famiglie. |
 | Indirizzo e-mail | Gli indirizzi e-mail sono spesso associati a una singola persona e possono quindi essere utilizzati per identificarla tra canali diversi. Le identità di questo tipo includono informazioni personali (PII, personally identifiable information). Questo è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | Identificatore non personale | Gli ID non-people vengono utilizzati per memorizzare gli identificatori che richiedono spazi dei nomi ma non sono connessi a un cluster di persone. Ad esempio, uno SKU di prodotto, dati relativi a prodotti, organizzazioni o negozi. |
-| ID partner | Gli ID partner sono identificatori utilizzati dai partner dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti deterministici del grafico delle identità. |
+| ID partner [!BADGE Beta]{type=Informative} | Gli ID partner sono identificatori utilizzati dai partner dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti deterministici del grafico delle identità. |
 | Numero di telefono | I numeri di telefono sono spesso associati a una singola persona e possono quindi essere utilizzati per identificare tale persona su canali diversi. Le identità di questo tipo includono PII. Questa è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 
 ### Spazi dei nomi standard {#standard}

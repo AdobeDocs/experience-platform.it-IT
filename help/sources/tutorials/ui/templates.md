@@ -3,14 +3,19 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 9%
+source-wordcount: '1601'
+ht-degree: 8%
 
 ---
 
-# Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
+# Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Modelli per origini nell’interfaccia utente di Platform"
+>abstract="I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine all’Experience Platform. Puoi aggiornare le risorse generate automaticamente per la personalizzazione in base ai tuoi casi d’uso."
 
 >[!IMPORTANT]
 >
@@ -30,7 +35,7 @@ Con i modelli, puoi:
 * Riduci al minimo gli errori che possono verificarsi durante il processo manuale di acquisizione dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
-Il seguente tutorial illustra i passaggi da seguire per utilizzare i modelli nell’interfaccia utente di Platform.
+Il seguente tutorial descrive come utilizzare i modelli nell’interfaccia utente di Platform.
 
 ## Introduzione
 

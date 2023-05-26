@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di maggio 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
@@ -117,7 +117,7 @@ Il servizio Adobe Experience Platform Identity offre una panoramica completa dei
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto per gli ID partner nelle applicazioni Adobe Experience Cloud | Gli ID partner sono ora disponibili in Identity Service. Gli ID partner sono identificatori utilizzati dai partner dati per rappresentare le persone. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati. Gli ID partner non sono memorizzati nel grafico delle identità. Per ulteriori informazioni, consulta la documentazione su [tipi di identità](../../identity-service/namespaces.md#identity-types). |
+| Supporto per gli ID partner nelle applicazioni Adobe Experience Cloud [!BADGE Beta]{type=Informative} | Gli ID partner sono ora disponibili in Identity Service. Gli ID partner sono identificatori utilizzati dai partner dati per rappresentare le persone. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati. Gli ID partner non sono memorizzati nel grafico delle identità. Per ulteriori informazioni, consulta la documentazione su [tipi di identità](../../identity-service/namespaces.md#identity-types). |
 
 Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servizio Identity](../../identity-service/home.md)
 
