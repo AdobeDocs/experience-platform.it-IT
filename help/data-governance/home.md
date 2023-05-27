@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla governance dei dati
 description: La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Consulta la panoramica su [etichette di utilizzo dei dati](./labels/overview.md)
 
 Affinché le etichette di utilizzo dei dati supportino in modo efficace la conformità, è necessario implementare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in [!DNL Experience Platform].
 
-Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se è in vigore una politica che dichiara che non è possibile esportare informazioni personali (PII, Personally Identifiable Information) ed è stata applicata un’etichetta &quot;I&quot; (dati di identità) al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che potrebbe esportare questo set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, Policy Service invia un messaggio per informarti che un criterio di utilizzo dei dati è stato violato.
+Un esempio di azione di marketing potrebbe essere il desiderio di esportare un set di dati in un servizio di terze parti. Se è in vigore una politica che dichiara che non è possibile esportare informazioni personali (PII, Personally Identifiable Information) ed è stata applicata un’etichetta &quot;I&quot; (dati di identità) al livello di campo o al set di dati, [!DNL Policy Service] impedisce qualsiasi azione che potrebbe esportare questo set di dati in una destinazione di terze parti. Se si verifica uno di questi tentativi di azione, Policy Service invia un messaggio per informarti che un criterio di utilizzo dei dati è stato violato.
 
 Sono disponibili due tipi di criteri:
 
