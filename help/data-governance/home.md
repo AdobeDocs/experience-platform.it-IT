@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla governance dei dati
 description: La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
+source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1518'
 ht-degree: 5%
 
 ---
@@ -127,8 +127,6 @@ Il video seguente ha lo scopo di aiutarti a comprendere il framework di governan
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi e ai set di dati in Experience Platform.
 
-The following video provides an introduction to various Data Governance features in Experience Platform.
-
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
