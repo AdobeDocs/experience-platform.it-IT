@@ -3,7 +3,7 @@ title: Creare una connessione di origine e un flusso di dati per Customer.io uti
 description: Scopri come collegare Adobe Experience Platform a Customer.io utilizzando l’API del servizio Flow.
 badge: Beta
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 2%

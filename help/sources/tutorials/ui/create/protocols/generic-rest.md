@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;API REST generica
 title: Creare una connessione sorgente REST generica nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente REST API generica utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%

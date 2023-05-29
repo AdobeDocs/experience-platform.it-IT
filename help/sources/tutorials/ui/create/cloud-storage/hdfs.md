@@ -5,7 +5,7 @@ title: Creare una connessione sorgente Apache HDFS nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente del file system distribuito di Hadoop Apache utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

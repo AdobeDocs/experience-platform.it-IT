@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore di origine API REST generico
 description: Scopri come connettere l’API REST generica a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

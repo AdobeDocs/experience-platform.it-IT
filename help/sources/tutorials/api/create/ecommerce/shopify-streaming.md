@@ -3,7 +3,7 @@ title: Creare una connessione sorgente di streaming e un flusso di dati per i da
 description: Scopri come creare una connessione e un flusso di dati di origine in streaming per i dati di Shopify utilizzando l’API del servizio Flusso.
 badge: Beta
 exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%

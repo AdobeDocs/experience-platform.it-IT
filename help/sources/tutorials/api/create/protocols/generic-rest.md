@@ -5,7 +5,7 @@ title: Creare una connessione di base API REST generica utilizzando l’API del 
 type: Tutorial
 description: Scopri come collegare l’API REST generica a Adobe Experience Platform utilizzando l’API del servizio Flow.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

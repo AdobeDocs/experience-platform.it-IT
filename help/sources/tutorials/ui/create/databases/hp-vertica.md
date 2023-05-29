@@ -5,7 +5,7 @@ title: Creare una connessione sorgente HP Vertica nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente HP Vertica utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%

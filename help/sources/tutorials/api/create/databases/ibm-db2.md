@@ -5,7 +5,7 @@ title: Creare un’IBM [!DNL IBM DB2] Connessione di base tramite l’API del se
 type: Tutorial
 description: Scopri come connettere IBM [!DNL IBM DB2] a Adobe Experience Platform utilizzando l’API del servizio Flusso.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 2%

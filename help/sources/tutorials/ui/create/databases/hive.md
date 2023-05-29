@@ -5,7 +5,7 @@ title: Creare un hive Apache sulla connessione sorgente di Azure HDInsights nell
 type: Tutorial
 description: Scopri come creare una connessione sorgente Apache Hive su Azure HDInsights utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%

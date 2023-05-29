@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore di origine di IBM DB2
 description: Scopri come collegare IBM DB2 a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

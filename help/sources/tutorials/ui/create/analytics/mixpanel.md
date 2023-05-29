@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: (Beta) Creare una connessione sorgente Mixpanel nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Mixpanel utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 10%

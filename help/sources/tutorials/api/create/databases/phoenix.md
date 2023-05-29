@@ -5,7 +5,7 @@ title: Creare una connessione di base Phoenix utilizzando l’API del servizio F
 type: Tutorial
 description: Scopri come collegare un database Phoenix a Adobe Experience Platform utilizzando l’API del servizio Flow.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%

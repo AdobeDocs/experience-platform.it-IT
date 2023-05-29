@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore di origine HP Vertica
 description: Scopri come collegare HP Vertica a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
