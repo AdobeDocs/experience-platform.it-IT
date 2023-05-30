@@ -2,10 +2,10 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
+source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 18%
+source-wordcount: '169'
+ht-degree: 17%
 
 ---
 
@@ -31,10 +31,12 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [Connettore Adobe Experience Platform Cloud](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
+* [Connettore cloud per la Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
 * [Core](./core/overview.md)
 * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversioni avanzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
+* [[!DNL Meta] API di conversione](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
