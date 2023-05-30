@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '256'
 ht-degree: 21%
 
 ---
@@ -38,7 +38,13 @@ L’interfaccia utente di Platform è attualmente disponibile nelle seguenti lin
 * Inglese
 * Francese
 * Tedesco
+* Spagnolo
 * Giapponese
+* Italiano
+* Coreano
+* Cinese (taiwanese)
+* Cinese (tradizionale)
+* Brasiliano
 
 ### Cambia lingua predefinita
 
