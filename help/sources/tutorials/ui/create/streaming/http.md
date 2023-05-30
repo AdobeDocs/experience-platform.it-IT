@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;connessione streaming;creare una connessione streaming;guida interfaccia utente;tutorial;creare una connessione streaming;acquisizione streaming;acquisizione;
-solution: Experience Platform
 title: Creare una connessione in streaming API HTTP tramite l’interfaccia utente
-type: Tutorial
 description: Questa guida dell’interfaccia utente ti aiuterà a creare una connessione in streaming utilizzando Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ Con i dati caricati, puoi utilizzare il lato destro dell’interfaccia per visua
 
 Il [!UICONTROL Mappatura] viene visualizzato un passaggio che fornisce un’interfaccia per mappare i dati di origine su un set di dati di Platform.
 
-I file Parquet devono essere conformi a XDM e non richiedono la configurazione manuale della mappatura, mentre i file CSV richiedono di configurare esplicitamente la mappatura, ma consentono di scegliere quali campi dati di origine mappare. I file JSON, se contrassegnati come reclamo XDM, non richiedono la configurazione manuale. Tuttavia, se non è contrassegnato come conforme a XDM, sarà necessario configurare esplicitamente la mappatura.
+Il [!DNL HTTP API] L’origine supporta l’acquisizione di file JSON. I file JSON non richiedono la configurazione manuale se sono contrassegnati come XDM-complaints. In caso contrario, devi configurare esplicitamente la mappatura.
 
 Scegli un set di dati per i dati in entrata da acquisire in. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -88,7 +85,6 @@ Per utilizzare un set di dati esistente, seleziona **[!UICONTROL Set di dati esi
 ![existing-dataset](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### Mappare i campi standard
-
 
 In base alle tue esigenze, puoi scegliere di mappare i campi direttamente o utilizzare le funzioni di preparazione dati per trasformare i dati sorgente in modo da derivare valori calcolati o calcolati. Per i passaggi completi sull’utilizzo dell’interfaccia mapper e dei campi calcolati, vedi la [Guida dell’interfaccia utente per la preparazione dati](../../../../../data-prep/ui/mapping.md).
 
