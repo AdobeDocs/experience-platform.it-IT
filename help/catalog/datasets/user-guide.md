@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;abilitare set di dati;set di dati;dataset;dataset;home;popular topic;enable dataset;Dataset;dataset
+keywords: Experience Platform;home;argomenti popolari;abilitare set di dati;set di dati;dataset;dataset;home;popular topic;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f0cd059683531993398f0a81d6eda486276853e2
+source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1504'
 ht-degree: 7%
 
 ---
@@ -33,6 +33,11 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 >title="Numeri negativi nelle attività sui set di dati"
 >abstract="I numeri negativi nei record acquisiti indicano che un utente ha eliminato alcuni batch in un intervallo di tempo selezionato."
 >text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_daysRemaining"
+>title="Scadenza set di dati"
+>abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica."
 
 In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Set di dati]** dashboard. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, compreso il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione di acquisizione più recente.
 
