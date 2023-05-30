@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire i campi XDM nell’interfaccia utente
 description: Scopri come definire i campi XDM nell’interfaccia utente di Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Quando definisci un nuovo campo, nella barra a destra possono essere visualizzat
 
 | Field, proprietà | Tipi compatibili | Descrizione |
 | --- | --- | --- |
-| [!UICONTROL Valore predefinito] | [!UICONTROL Stringa], [!UICONTROL Doppio], [!UICONTROL Lungo], [!UICONTROL Intero], [!UICONTROL Breve], [!UICONTROL Byte], [!UICONTROL Booleano] | Valore predefinito che verrà assegnato a questo campo se non viene fornito alcun altro valore durante l’acquisizione. Questo valore deve essere conforme al tipo selezionato del campo. |
+| [!UICONTROL Valore predefinito] | [!UICONTROL Stringa], [!UICONTROL Doppio], [!UICONTROL Lungo], [!UICONTROL Intero], [!UICONTROL Breve], [!UICONTROL Byte], [!UICONTROL Booleano] | Valore predefinito assegnato a questo campo se non viene fornito alcun altro valore durante l’acquisizione. Questo valore deve essere conforme al tipo selezionato del campo.<br><br>I valori predefiniti non vengono salvati nel set di dati al momento dell’acquisizione, in quanto possono cambiare nel tempo. I valori predefiniti impostati nello schema vengono dedotti dai servizi e dalle applicazioni Platform a valle quando leggono i dati dal set di dati. Ad esempio, quando si esegue una query sui dati utilizzando Query Service, se l’attributo ha un valore NULL, ma il valore predefinito è impostato su `5` a livello di schema, è previsto che Query Service restituisca `5` invece di NULL. Tieni presente che al momento questo comportamento non è uniforme in tutti i servizi AEP. |
 | [!UICONTROL Pattern] | [!UICONTROL Stringa] | A [espressione regolare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) che il valore di questo campo deve essere conforme a per essere accettato durante l’acquisizione. |
 | [!UICONTROL Formato] | [!UICONTROL Stringa] | Seleziona da un elenco di formati predefiniti per le stringhe a cui il valore deve essere conforme. I formati disponibili includono: <ul><li>[[!UICONTROL data-ora]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL e-mail]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL nome host]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL riferimento uri]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL modello url]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL puntatore json]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Lunghezza minima] | [!UICONTROL Stringa] | Numero minimo di caratteri che la stringa deve contenere per consentire l’accettazione del valore durante l’acquisizione. |
