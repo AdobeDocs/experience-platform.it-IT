@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare le impostazioni di esportazione dei file per le destinazioni create con Destination SDK.
 title: Configurazione batch
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '1073'
 ht-degree: 4%
 
 ---
@@ -82,6 +82,7 @@ I valori impostati qui vengono visualizzati in [Pianificare l’esportazione di 
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
       },
+   "segmentGroupingEnabled": true
    }
 ```
 
@@ -97,6 +98,7 @@ I valori impostati qui vengono visualizzati in [Pianificare l’esportazione di 
 | `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID segmento, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall&#39;ordine in cui si definiscono le macro, l&#39;interfaccia utente di Experience Platform le visualizzerà sempre nell&#39;ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` l&#39;elenco deve contenere almeno una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro dei nomi di file predefiniti preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi di file predefiniti per i file esportati. Non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` verrà aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
+| `segmentGroupingEnabled` | Booleano | Definisce se i tipi di pubblico attivati devono essere esportati in un singolo file o in più file, in base al pubblico [criterio di unione](../../../../profile/merge-policies/overview.md). Valori supportati: <ul><li>`true`: esporta un file per criterio di unione.</li><li>`false`: esporta un file per pubblico, indipendentemente dal criterio di unione. Questo è il comportamento predefinito. È possibile ottenere lo stesso risultato omettendo completamente questo parametro.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -120,6 +122,8 @@ Utilizzare le macro di configurazione dei nomi di file per definire i nomi di fi
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Data e ora] | `DATETIME` e `TIMESTAMP` entrambi definiscono quando il file è stato generato, ma in formati diversi. <br><br><ul><li>`DATETIME` utilizza il seguente formato: YYYYMMDD_HHMMSS.</li><li>`TIMESTAMP` utilizza il formato Unix a 10 cifre. </li></ul> `DATETIME` e `TIMESTAMP` si escludono a vicenda e non possono essere utilizzate simultaneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Testo personalizzato] | Testo personalizzato definito dall&#39;utente da includere nel nome del file. Non può essere utilizzato in `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL Data e ora] | Timestamp a 10 cifre dell’ora in cui è stato generato il file, in formato Unix. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL ID criterio di unione] | ID del [criterio di unione](../../../../profile/merge-policies/overview.md) utilizzato per generare il pubblico esportato. Utilizzare questa macro per raggruppare i segmenti esportati in file in base al criterio di unione. Utilizzare questa macro insieme a `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Nome criterio di unione] | Il nome del [criterio di unione](../../../../profile/merge-policies/overview.md) utilizzato per generare il pubblico esportato. Utilizzare questa macro per raggruppare i segmenti esportati in file in base al criterio di unione. Utilizzare questa macro insieme a `segmentGroupingEnabled:true`. | Il mio criterio di unione personalizzato |
 
 {style="table-layout:auto"}
 
