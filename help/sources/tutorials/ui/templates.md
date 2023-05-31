@@ -3,10 +3,10 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
+source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 8%
+source-wordcount: '2258'
+ht-degree: 6%
 
 ---
 
@@ -91,6 +91,83 @@ Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi f
 >[!ENDTABS]
 
 ### Seleziona modelli
+
+Con l’account autenticato, ora puoi selezionare il modello da utilizzare per il flusso di dati.
+
++++[!DNL Marketo Engage] modelli Nella tabella seguente sono illustrati i modelli disponibili per [!DNL Marketo Engage] sorgente.
+
+| [!DNL Marketo Engage] modelli | Descrizione |
+| --- | --- |
+| Attività | Il modello Attività acquisisce istantanee basate su eventi di attività quali interazioni e-mail, interazioni con siti web e chiamate di vendita. |
+| Aziende | Il modello Aziende acquisisce i dettagli dell&#39;account aziendale, ad esempio informazioni sul firmware aziendale, sulla posizione e sulla fatturazione. |
+| Account denominati | Il modello Conti denominati acquisisce i dettagli dei conti che sono stati determinati come conti target da perseguire. |
+| Opportunità | Il modello Opportunità acquisisce i dettagli dell&#39;opportunità di business quali tipo, fase di vendita e conti correlati. |
+| Ruoli contatto opportunità | Il modello Ruoli contatto opportunità acquisisce i dettagli sui ruoli dei lead associati a una particolare opportunità. |
+| Persone | Il modello Persone acquisisce attributi per le singole persone, ad esempio dettagli demografici, informazioni di contatto e preferenze di consenso. |
+| Iscrizioni al programma | Il modello Iscrizioni al programma acquisisce i dettagli dei contatti associati a una campagna aziendale, include cadenze di crescita e risposte di contatto. |
+| Programmi | Il modello Programmi acquisisce i dettagli della campagna aziendale come stato, canali, timeline e costi. |
+| Appartenenze a elenchi statici | Il modello Appartenenze a elenchi statici acquisisce le relazioni tra gli utenti e la loro appartenenza a elenchi statici. |
+| Elenchi statici | Il modello Elenco statico acquisisce elenchi di persone con istanze per casi d’uso specifici. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modelli B2B La tabella seguente illustra i modelli B2B disponibili per [!DNL Salesforce] sorgente.
+
+| [!DNL Salesforce] Modelli B2B | Descrizione |
+| --- | --- |
+| Relazione contatto account | Il modello Relazione contatto account acquisisce la relazione tra un contatto e uno o più account. |
+| Account | Il modello Account acquisisce i dettagli dell&#39;account aziendale, ad esempio informazioni sul firmware aziendale, sull&#39;ubicazione e sulla fatturazione. |
+| Membri della campagna | Il modello Membri della campagna acquisisce la relazione tra un singolo lead o contatto e uno specifico [!DNL Salesforce] campagna. |
+| Campagne | Il modello Campagne acquisisce i dettagli dell’account aziendale, ad esempio informazioni sul firmware aziendale, sulla posizione e sulla fatturazione. |
+| Contatti | Il modello Contatto acquisisce gli attributi dei contatti, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Lead | Il modello Lead acquisisce gli attributi dei lead, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Opportunità | Il modello Opportunità acquisisce i dettagli dell&#39;opportunità di business quali tipo, fase di vendita e account correlato. |
+| Ruoli contatto opportunità | Il modello Ruoli contatto opportunità acquisisce i dettagli sui ruoli dei lead associati a una particolare opportunità. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Salesforce] Modelli B2C Nella tabella seguente sono illustrati i modelli B2C disponibili per [!DNL Salesforce] sorgente.
+
+| [!DNL Salesforce] Modelli B2C | Descrizione |
+| --- | --- |
+| Contatto | Il modello Contatto acquisisce gli attributi dei contatti, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Lead | Il modello di lead acquisisce gli attributi dei lead, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modelli B2B La tabella seguente illustra i modelli B2B disponibili per [!DNL Microsoft Dynamics] sorgente.
+
+| [!DNL Microsoft Dynamics] Modelli B2B | Descrizione |
+| --- | --- |
+| Account | Il modello Account acquisisce i dettagli dell&#39;account aziendale, ad esempio informazioni sul firmware aziendale, sull&#39;ubicazione e sulla fatturazione. |
+| Campagne | Il modello Campagne acquisisce i dettagli dell’account aziendale, ad esempio informazioni sul firmware aziendale, sulla posizione e sulla fatturazione. |
+| Contatti | Il modello Contatto acquisisce gli attributi dei contatti, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Lead | Il modello Lead acquisisce gli attributi dei lead, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Elenco marketing | Il modello Elenco di marketing acquisisce un gruppo di clienti esistenti o potenziali creati per una campagna di marketing o altre finalità di vendita. |
+| Membri di elenco marketing | I membri dell’elenco di marketing acquisiscono i dettagli di qualsiasi tipo di record cliente, ad esempio lead, account o contatti, in un elenco di marketing. |
+| Opportunità | Il modello Opportunità acquisisce i dettagli dell&#39;opportunità di business quali tipo, fase di vendita e account correlato. |
+| Ruoli contatto opportunità | Il modello Ruoli contatto opportunità acquisisce i dettagli sui ruoli dei lead associati a una particolare opportunità. |
+
+{style="table-layout:auto"}
+
++++
+
++++[!DNL Microsoft Dynamics] Modelli B2C Nella tabella seguente sono illustrati i modelli B2C disponibili per [!DNL Microsoft Dynamics] sorgente.
+
+| [!DNL Microsoft Dynamics] Modelli B2C | Descrizione |
+| --- | --- |
+| Contatto | Il modello Contatto acquisisce gli attributi dei contatti, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+| Lead | Il modello di lead acquisisce gli attributi dei lead, ad esempio i dettagli demografici, le informazioni di contatto e le entità aziendali correlate. |
+
+{style="table-layout:auto"}
+
++++
 
 A seconda del tipo di azienda selezionato, viene visualizzato un elenco di modelli. Seleziona l’icona di anteprima ![icona anteprima](../../images/tutorials/templates/preview-icon.png) accanto al nome di un modello per visualizzare in anteprima i dati di esempio del modello.
 
