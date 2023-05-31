@@ -4,10 +4,10 @@ title: Attivare i segmenti nelle destinazioni basate su file utilizzando l’API
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
-ht-degree: 2%
+source-wordcount: '4442'
+ht-degree: 3%
 
 ---
 
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Proprietà | Descrizione |
+| --------- | ----------- |
+| `specName` | Seleziona `SFTP with Password`. |
+| `domain` | L’indirizzo IP o il nome di dominio della posizione di archiviazione SFTP. |
+| `username` | Il nome utente per accedere al percorso di archiviazione SFTP. |
+| `password` | Password per accedere al percorso di archiviazione SFTP. |
+| `port` | La porta utilizzata dal percorso di archiviazione SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| Proprietà | Descrizione |
+| --------- | ----------- |
+| `specName` | Seleziona `SFTP with Password`. |
+| `domain` | L’indirizzo IP o il nome di dominio della posizione di archiviazione SFTP. |
+| `username` | Il nome utente per accedere al percorso di archiviazione SFTP. |
+| `sshKey` | La chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password. |
+| `port` | La porta utilizzata dal percorso di archiviazione SFTP. |
+
+{style="table-layout:auto"}
 
 +++
 

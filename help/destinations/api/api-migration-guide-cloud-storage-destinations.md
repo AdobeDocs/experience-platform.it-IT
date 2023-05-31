@@ -4,9 +4,9 @@ title: Guida alla migrazione delle API per le destinazioni dell’archiviazione 
 description: Scopri le modifiche nel flusso di lavoro per attivare le destinazioni di archiviazione cloud come parte della migrazione alle nuove schede di destinazione di archiviazione cloud con funzionalità aggiuntive.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -433,7 +433,6 @@ Le modifiche non compatibili con le versioni precedenti per gli utenti API sono 
 Oltre al flusso aggiornato e alle specifiche di connessione di cui sopra, vengono apportate modifiche ai parametri necessari per la creazione delle connessioni di base SFTP.
 
 * In precedenza, la connessione di base per le destinazioni SFTP richiedeva una `host` parametro. Questo parametro è stato rinominato in `domain`.
-* Per l’opzione di autenticazione con chiave SSH, i parametri di autenticazione nella connessione di base richiedevano un’ `port` opzione. Questo parametro è ora obsoleto e non è più richiesto.
 
 Visualizza gli esempi completi di connessione di base nuova e legacy e di connessione di destinazione per SFTP nelle schede seguenti, evidenziando le righe che cambiano. I parametri necessari per creare connessioni di destinazione per le destinazioni SFTP non cambiano.
 
@@ -567,7 +566,8 @@ Visualizza gli esempi completi di connessione di base nuova e legacy e di connes
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

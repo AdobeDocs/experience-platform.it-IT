@@ -2,9 +2,9 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati in destinazioni basate su file
 title: (Beta) Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1226'
 ht-degree: 19%
 
 ---
@@ -111,8 +111,8 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 Utilizzare questo controllo per impostare la rappresentazione di stringa di un valore vuoto. Questa opzione determina il modo in cui i valori vuoti vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Stringa vuota tra virgolette (&quot;&quot;)**
 * **[!UICONTROL Stringa vuota]**
 
 #### Esempi
@@ -136,8 +136,8 @@ Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna
 
 Utilizza questo controllo per impostare la rappresentazione stringa di un valore nullo all’interno dei file esportati. Questa opzione determina il modo in cui i valori Null vengono rappresentati nei file CSV esportati. Le opzioni disponibili sono:
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **Stringa vuota tra virgolette (&quot;&quot;)**
 * **[!UICONTROL Stringa vuota]**
 
 #### Esempi

@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinazioni e-mail;salesforce;destinazione salesforce
 title: Connessione Marketing Cloud Salesforce
 description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la propria esperienza.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 1%
+source-wordcount: '748'
+ht-degree: 2%
 
 ---
 
@@ -53,15 +53,15 @@ Questa destinazione supporta i seguenti tipi di connessione:
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
 * Per **[!UICONTROL SFTP con password]** connessioni, devi fornire:
-   * [!UICONTROL Dominio]
-   * [!UICONTROL Porta ]
-   * [!UICONTROL Nome utente]
-   * [!UICONTROL Password]
+   * **[!UICONTROL Dominio]**: indirizzo IP o nome di dominio dell’account SFTP;
+   * **[!UICONTROL Porta]**: porta utilizzata dalla posizione di archiviazione SFTP;
+   * **[!UICONTROL Nome utente]**: nome utente per accedere al percorso di archiviazione SFTP;
+   * **[!UICONTROL Password]**: password per accedere al percorso di archiviazione SFTP.
 * Per **[!UICONTROL SFTP con chiave SSH]** connessioni, devi fornire:
-   * [!UICONTROL Dominio]
-   * [!UICONTROL Porta ]
-   * [!UICONTROL Nome utente]
-   * [!UICONTROL Chiave SSH]
+   * **[!UICONTROL Dominio]**: indirizzo IP o nome di dominio dell’account SFTP;
+   * **[!UICONTROL Porta]**: porta utilizzata dalla posizione di archiviazione SFTP;
+   * **[!UICONTROL Nome utente]**: nome utente per accedere al percorso di archiviazione SFTP;
+   * **[!UICONTROL Chiave SSH]**: chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password.
 
 * In alternativa, è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati in **[!UICONTROL Chiave]** sezione. La chiave pubblica deve essere scritta come [!DNL Base64] stringa codificata.
 * **[!UICONTROL Nome]**: scegli un nome pertinente per la destinazione.
