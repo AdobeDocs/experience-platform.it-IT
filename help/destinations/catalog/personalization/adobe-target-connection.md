@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 8%
 
 ---
 
@@ -14,18 +14,21 @@ ht-degree: 7%
 
 ## Registro modifiche destinazione {#changelog}
 
->[!IMPORTANT]
->
->Con la versione beta del connettore di destinazione avanzato Adobe Target V2, potresti vedere due schede Adobe Target nel catalogo delle destinazioni.
->Il connettore di destinazione Adobe Target V2 è attualmente in versione beta e disponibile solo per un determinato numero di clienti. Oltre alla funzionalità fornita dalla scheda Adobe V1, il connettore Target V2 aggiunge [passaggio di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo ad Adobe Target, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.
+| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+|---|---|---|
+| Aprile 2023 | Aggiornamento della funzionalità e della documentazione | A partire da aprile 2023, la **[!UICONTROL Adobe Target]** supporto di connessione [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
 
-![Immagine delle due schede di destinazione di Adobe Target affiancata.](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## Panoramica {#overview}
 
 Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 
 Adobe Target è una connessione di personalizzazione nel catalogo delle destinazioni di Adobe Experience Platform.
+
+Per una breve panoramica su come configurare la connessione Adobe Target in Experience Platform, guarda il video seguente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## Prerequisiti {#prerequisites}
 
@@ -37,7 +40,7 @@ Per configurare la connessione Adobe Target senza utilizzare un ID dello stream 
 
 >[!IMPORTANT]
 >
->Prima di creare un’ [!DNL Adobe Target] connessione, leggi la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform. La personalizzazione della stessa pagina e della pagina successiva richiede l’utilizzo di un ID dello stream di dati durante la configurazione della connessione Adobe Target.
+>Prima di creare un’ [!DNL Adobe Target] connessione, leggi la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform. La personalizzazione della stessa pagina e della pagina successiva richiede l’utilizzo di un ID dello stream di dati durante la configurazione della connessione Adobe Target.
 
 ### Prerequisiti in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
-
-## Casi d’uso {#use-cases}
-
-**Personalizzazione di un banner di una home page**
-
-Un’azienda di noleggio e vendita di immobili desidera personalizzare la propria home page con un banner, in base alle qualifiche del segmento di clienti in Adobe Experience Platform. L’azienda può selezionare i tipi di pubblico che dovranno ottenere un’esperienza personalizzata e inviarla ad Adobe Target come criterio di targeting per l’offerta Target.
 
 ## Connetti alla destinazione {#connect}
 
@@ -92,7 +89,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 | Nessun flusso di dati selezionato | Stream di dati selezionato |
 |---|---|
-| <ul><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere segmenti con la connessione Adobe Target solo per *sandbox di produzione predefinita*.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
+| <ul><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere segmenti con la connessione Adobe Target solo per *sandbox di produzione predefinita*.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -106,7 +103,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni delle richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attivare profili e segmenti nelle destinazioni delle richieste di profilo](../../ui/activate-edge-personalization-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 

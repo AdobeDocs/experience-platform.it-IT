@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: 991cd22bc28a72593512a36636806e6a8a4b2820
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1173'
 ht-degree: 5%
 
 ---
@@ -40,8 +40,7 @@ ht-degree: 5%
       * [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](./ui/activate-segment-streaming-destinations.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md)
       * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md)
-      * [Attivare i dati del pubblico nelle destinazioni delle richieste di profilo](./ui/activate-profile-request-destinations.md)
-      * [Configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](./ui/configure-personalization-destinations.md)
+      * [Attivare i dati del pubblico nelle destinazioni di personalizzazione Edge](./ui/activate-edge-personalization-destinations.md)
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
       * [(Beta) Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)

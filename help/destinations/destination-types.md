@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Le destinazioni di esportazione dei segmenti ricevono i dati dei segmenti di Exp
 
 Le destinazioni di personalizzazione Edge in Experience Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destinazione di personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare per i clienti i casi di utilizzo della personalizzazione della stessa pagina e della pagina successiva.
 
-Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/configure-personalization-destinations.md).
+Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## Destinazioni di esportazione di profili e segmenti: panoramica video {#video}
 

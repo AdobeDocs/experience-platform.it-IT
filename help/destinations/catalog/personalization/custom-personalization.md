@@ -3,33 +3,31 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito per recuperare informazioni sui segmenti da Adobe Experience Platform. Questa destinazione fornisce personalizzazione in tempo reale in base all’iscrizione al segmento del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
+source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 6%
+source-wordcount: '879'
+ht-degree: 9%
 
 ---
+
 
 # Connessione di personalizzazione personalizzata {#custom-personalization-connection}
 
 ## Registro modifiche destinazione {#changelog}
 
-Con la versione beta di **[!UICONTROL Personalizzazione personalizzata]** connettore di destinazione, è possibile che siano presenti due **[!UICONTROL Personalizzazione personalizzata]** nel catalogo delle destinazioni.
+| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+|---|---|---|
+| Maggio 2023 | Aggiornamento della funzionalità e della documentazione | A partire da maggio 2023, la **[!UICONTROL Personalizzazione personalizzata]** supporto di connessione [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
 
-Il **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore è attualmente in versione beta e disponibile solo per un numero selezionato di clienti. Oltre alle funzionalità fornite dal **[!UICONTROL Personalizzazione personalizzata]**, il **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** il connettore aggiunge un [passaggio di mappatura](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) al flusso di lavoro di attivazione, che consente di mappare gli attributi del profilo alla destinazione di personalizzazione personalizzata, abilitando la personalizzazione della stessa pagina e della pagina successiva basata su attributi.
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione Personalizzata Con Attributi]** La destinazione richiede l&#39;utilizzo di [API server di rete Edge](/help/server-api/overview.md) per la raccolta di dati. Inoltre, tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione personalizzata]** La destinazione richiede l&#39;utilizzo di [API server di rete Edge](/help/server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
 >
->Se utilizzi già Web SDK o Mobile SDK per l’integrazione, puoi recuperare gli attributi tramite l’API server in due modi:
+><br>Se utilizzi già Web SDK o Mobile SDK per l’integrazione, puoi recuperare gli attributi tramite l’API server aggiungendo un’integrazione lato server.
 >
-> * Aggiungi un’integrazione lato server che recupera gli attributi tramite l’API server.
-> * Aggiorna la configurazione lato client con un codice JavaScript personalizzato per recuperare gli attributi tramite l’API server.
->
-> Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al segmento, identica all’esperienza offerta da **[!UICONTROL Personalizzazione personalizzata]** connettore.
-
-![Immagine delle due schede di destinazione di personalizzazione personalizzata in una visualizzazione affiancata.](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+><br>Se non segui i requisiti di cui sopra, la personalizzazione sarà basata solo sull’iscrizione al segmento.
 
 ## Panoramica {#overview}
 
@@ -41,35 +39,14 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 >[!IMPORTANT]
 >
->Prima di creare una connessione di personalizzazione personalizzata, consulta la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/configure-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
+>Prima di creare una connessione di personalizzazione personalizzata, consulta la guida su come [attivare i dati del pubblico nelle destinazioni di personalizzazione edge](../../ui/activate-edge-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform.
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**Richiesta profilo** : stai richiedendo tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile impostare diverse destinazioni di personalizzazione personalizzate per diversi [Adobe di flussi di dati di Raccolta dati](../../../edge/datastreams/overview.md).
-
-## Casi d’uso {#use-cases}
-
-Il [!DNL Custom Personalization Connection] consente di utilizzare piattaforme di personalizzazione partner personalizzate (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché i sistemi proprietari (ad esempio, CMS interno), sfruttando al contempo le funzionalità di raccolta e segmentazione dei dati di Experience Platform Edge Network, per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita.
-
-I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
-
-Per abilitare questi casi d’uso, i clienti hanno bisogno di un modo rapido e semplificato per recuperare le informazioni sui segmenti da Experience Platform e inviarle ai sistemi designati che hanno configurato come connessioni di personalizzazione personalizzate nell’interfaccia utente di Experience Platform.
-
-Questi sistemi possono essere piattaforme di personalizzazione esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione nelle proprietà web e mobili dei clienti.
-
-### Personalizzazione stessa pagina {#same-page}
-
-Un utente visita una pagina del sito web. Il cliente può utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l’azione o la decisione successiva (ad esempio, personalizzazione), utilizzando la connessione di personalizzazione personalizzata per piattaforme non di Adobe (ad esempio, [!DNL Pega], [!DNL Optimizely], ecc.).
-
-### Personalizzazione della pagina successiva {#next-page}
-
-Un utente visita la pagina A del sito web. In base a questa interazione, l’utente si è qualificato per un set di segmenti. L’utente fa quindi clic su un collegamento che li porta dalla pagina A alla pagina B. I segmenti per i quali l’utente si era qualificato durante la precedente interazione sulla pagina A, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per potenziare l’azione/decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
-
-### Personalizzazione sessione successiva {#next-session}
-
-Un utente visita diverse pagine del sito web. In base a queste interazioni, l’utente si è qualificato per un set di segmenti. L’utente termina quindi la sessione di navigazione corrente.
-
-Il giorno successivo, l’utente ritorna allo stesso sito web del cliente. I segmenti per i quali erano qualificati durante la precedente interazione con tutte le pagine del sito web visitate, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per selezionare l’azione/decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
+| Elemento | Tipo | Note |
+---------|----------|---------|
+| Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo tutti i segmenti mappati nella destinazione di personalizzazione personalizzata per un singolo profilo. È possibile impostare diverse destinazioni di personalizzazione personalizzate per diversi [Adobe di flussi di dati di Raccolta dati](../../../edge/datastreams/overview.md). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Connetti alla destinazione {#connect}
 
@@ -106,7 +83,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni delle richieste di profilo](../../ui/activate-profile-request-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attivare profili e segmenti e destinazioni di personalizzazione Edge](../../ui/activate-edge-personalization-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 
