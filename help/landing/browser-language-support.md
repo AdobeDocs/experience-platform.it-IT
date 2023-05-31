@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;CJA;analisi percorso;analisi percorso clienti;orchestrazione campagna;orchestrazione;percorso clienti;percorso;orchestrazione percorso;capacità;area geografica
 solution: Experience Platform
 title: Supporto di browser e lingue per l’interfaccia utente di Experience Platform
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che guidano la customer experience. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 74e6c2a56da8455bbecd301ed7e5ad10c0366dc5
+source-git-commit: 20cb7afe6338f1ca79e86558f1f0cbec54790212
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 21%
+source-wordcount: '236'
+ht-degree: 24%
 
 ---
 
@@ -42,9 +41,9 @@ L’interfaccia utente di Platform è attualmente disponibile nelle seguenti lin
 * Giapponese
 * Italiano
 * Coreano
-* Cinese (taiwanese)
+* Cinese (semplificato)
 * Cinese (tradizionale)
-* Brasiliano
+* Portoghese brasiliano
 
 ### Cambia lingua predefinita
 
