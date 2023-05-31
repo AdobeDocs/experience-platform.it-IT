@@ -3,10 +3,10 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 4%
+source-wordcount: '1364'
+ht-degree: 3%
 
 ---
 
@@ -104,3 +104,53 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 **In che tipo di identità posso attivare [!DNL LinkedIn]?**
 
 [!DNL LinkedIn Matched Audiences] supporta l’attivazione delle seguenti identità: e-mail con hash, [!DNL GAID], e [!DNL IDFA].
+
+## Personalizzazione della stessa pagina e della pagina successiva tramite le destinazioni Adobe Target e Personalizzazione personalizzata {#same-next-page-personalization}
+
+**È necessario utilizzare Experience Platform Web SDK per inviare tipi di pubblico e attributi ad Adobe Target?**
+
+No, [SDK per web](../edge/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+Tuttavia, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) viene utilizzato al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
+
+Per [personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md) casi d’uso, è necessario utilizzare [SDK per web](../edge/home.md) o [API server di rete Edge](../server-api/overview.md). Consulta la documentazione su [attivazione di tipi di pubblico nelle destinazioni edge](ui/activate-edge-personalization-destinations.md) per ulteriori dettagli sull’implementazione.
+
+**Esiste un limite al numero di attributi che posso inviare da Real-time Customer Data Platform ad Adobe Target o a una destinazione di personalizzazione personalizzata?**
+
+Sì, i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva supportano un massimo di 30 attributi per sandbox, quando si attivano tipi di pubblico in Adobe Target o destinazioni di personalizzazione personalizzata. Per ulteriori informazioni sui guardrail di attivazione, consulta [documentazione sui guardrail](guardrails.md#edge-destinations-activation).
+
+**Quali tipi di attributi sono supportati per l&#39;attivazione (ad esempio array, mappe, ecc.)?**
+
+Attualmente, per l&#39;attivazione sono supportati solo gli attributi di livello foglia.
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**Dopo aver creato un pubblico in Experience Platform, quanto tempo ci vorrà per rendere tale pubblico disponibile per i casi di utilizzo della segmentazione Edge?**
+
+Le definizioni del pubblico vengono propagate al [Rete Edge](../edge/home.md) entro un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
+
+**Dove posso visualizzare gli attributi attivati in Adobe Target?**
+
+Gli attributi saranno disponibili per l’utilizzo in Target in [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=it) offerte.
+
+**È possibile creare una destinazione senza un flusso di dati e quindi aggiungere un flusso di dati alla stessa destinazione in un secondo momento?**
+
+Attualmente questo non è supportato tramite l’interfaccia utente Destinazioni. Se hai bisogno di assistenza in questo caso, contatta il rappresentante del tuo Adobe.
+
+**Cosa succede se elimino una destinazione Adobe Target?**
+
+Quando elimini una destinazione, tutti i tipi di pubblico e gli attributi mappati nella destinazione vengono eliminati da Adobe Target e rimossi anche dalla rete Edge.
+
+**L’integrazione funziona utilizzando l’API del server di rete Edge?**
+
+Sì, l’API del server di rete Edge funziona con la destinazione Personalizzazione personalizzata. Poiché gli attributi del profilo possono contenere dati sensibili, per proteggere tali dati la destinazione Personalizzazione personalizzata richiede l’utilizzo dell’API del server di rete Edge per la raccolta dei dati. Inoltre, tutte le chiamate API devono essere effettuate in un [contesto autenticato](../server-api/authentication.md).
+
+**È possibile disporre di un solo criterio di unione attivo su Edge. Posso creare tipi di pubblico che utilizzano un criterio di unione diverso e inviarli comunque ad Adobe Target come segmenti di streaming?**
+
+No. Tutti i tipi di pubblico che desideri attivare in Adobe Target devono utilizzare un pubblico attivo su Edge [criterio di unione](../profile/merge-policies/ui-guide.md).
+
+**L’etichettatura e l’applicazione dell’utilizzo dati (DULE) e i criteri di consenso sono applicati?**
+
+Sì.  Il [Governance dei dati e criteri di consenso](../data-governance/home.md) creato e associato alle azioni di marketing selezionate regolerà l’attivazione degli attributi selezionati.
