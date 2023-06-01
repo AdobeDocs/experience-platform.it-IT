@@ -1,17 +1,16 @@
 ---
-keywords: Indirizzo IP, intervallo IP, destinazioni elenco consentiti, inserisce nell'elenco Consentiti di
-title: ELENCO CONSENTITI di indirizzo IP per le destinazioni di archiviazione cloud
+title: Destinazioni SFTP di elenco consentiti di indirizzo IP
 type: Documentation
-description: Questa pagina fornisce intervalli IP che puoi aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform al server SFTP, all’archiviazione Amazon S3 o Azure Blob.
+description: Questa pagina fornisce intervalli IP che puoi aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experience Platform al server SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
-# INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni di archiviazione cloud {#ip-address-allow-list}
+# INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP {#ip-address-allow-list-sftp}
 
 >[!IMPORTANT]
 >
