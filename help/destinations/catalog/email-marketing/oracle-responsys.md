@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;Destinazioni e-mail;Destinazione oracle responsys
 title: Connessione Responsys Oracle
 description: Responsys è uno strumento di e-mail marketing aziendale per campagne di marketing cross-channel offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social network.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP all’elenco consentiti.
 
-Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per le destinazioni di archiviazione cloud](../cloud-storage/ip-address-allow-list.md) se devi aggiungere degli IP di Adobe all’elenco consentiti.
+Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere degli IP di Adobe all’elenco consentiti.
 
 ## Connetti alla destinazione {#connect}
 
