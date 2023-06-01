@@ -3,9 +3,9 @@ title: Pubblico Experience Cloud (Beta)
 description: Scopri come condividere segmenti da Experience Platform a varie soluzioni di Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1576'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,14 @@ Osserva le seguenti limitazioni note e callout importanti nella versione beta de
 * Quando ti connetti alla destinazione, puoi vedere un’opzione per [abilitare gli avvisi del flusso di dati](#enable-alerts). Anche se visibile nell’interfaccia utente, il **l’opzione abilita avvisi non è supportata** nella versione beta.
 * **Backfill non supportati**. La prima esportazione nell’Audience Manager o in altre soluzioni di Experience Cloud non include una popolazione storica dei segmenti.
 * Nella versione beta, puoi creare **una singola connessione di destinazione alla destinazione Experience Cloud Audiences**, in tutte le sandbox appartenenti alla tua organizzazione Experience Platform.
-* È presente un **latenza di quattro ore** tra il momento in cui i dati vengono attivati in Experience Platform e il momento in cui i dati sono pronti per essere utilizzati in Audience Manager e in altre soluzioni Experience Cloud.
+
+### Latenza durante l’attivazione dei tipi di pubblico {#audience-activation-latency}
+
+Esiste una latenza di quattro ore tra il momento in cui i tipi di pubblico vengono attivati per la prima volta in Experience Platform e il momento in cui sono pronti per essere utilizzati in Audience Manager e in altre soluzioni di Experience Cloud per determinati casi d’uso.
+
+Possono essere necessarie fino a 24 ore affinché i tipi di pubblico siano completamente disponibili in Audience Manager per tutti i casi d’uso e fino a 48 ore affinché i tipi di pubblico di Experience Cloud Audiences vengano visualizzati nei rapporti di Audience Manager.
+
+I metadati, come i nomi dei segmenti, sono disponibili in Audience Manager entro pochi minuti dalla configurazione dell’esportazione nella destinazione Audiences di Experience Cloud.
 
 ## Identità supportate {#supported-identities}
 
