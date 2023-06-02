@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 17%
+source-wordcount: '1462'
+ht-degree: 16%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 17%
 
 Questa guida utente descrive i passaggi per lavorare con le etichette di utilizzo dei dati in [!DNL Experience Platform] dell&#39;utente.
 
+## Gestisci etichette {#manage-labels}
+
+Per applicare le etichette ai dati, è necessario **[!UICONTROL Gestisci etichette di utilizzo]** autorizzazione per l’utilizzo nella sandbox di produzione. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili e al momento l’eliminazione delle etichette non è supportata.
+
+Consulta la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni su come assegnare un&#39;autorizzazione. Se non hai accesso all’Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
+
 ## Gestire le etichette a livello di schema
+
+Puoi aggiungere etichette direttamente a uno schema o a campi all’interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
 
 Per gestire le etichette di utilizzo dei dati a livello di schema, è necessario selezionare uno schema esistente o crearne uno nuovo. Dopo aver effettuato l’accesso a Adobe Experience Platform, seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire **[!UICONTROL Schemi]** Workspace. Questa pagina elenca tutti gli schemi creati appartenenti alla tua organizzazione, insieme a dettagli utili relativi a ciascuno schema.
 
@@ -32,7 +40,7 @@ La sezione successiva descrive i passaggi necessari per creare un nuovo schema a
 
 Per creare un nuovo schema, seleziona **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra del **[!UICONTROL Schemi]** Workspace. Consulta la guida su [come creare uno schema tramite l’Editor di schema](../../xdm/tutorials/create-schema-ui.md#create) per istruzioni complete. In alternativa, è possibile: [creare uno schema utilizzando l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) se necessario.
 
-### Aggiungere etichette di utilizzo dati allo schema {#add-labels-to-schema}
+### Aggiungere etichette di utilizzo dati a uno schema {#add-labels-to-schema}
 
 Dopo la creazione di un nuovo schema o la selezione di uno schema esistente dall&#39;elenco in [!UICONTROL Sfoglia] scheda di [!UICONTROL Schemi] nell’area di lavoro, seleziona un campo dallo schema nell’Editor di schema. In [!UICONTROL Proprietà campo] barra laterale, seleziona **[!UICONTROL Applica etichette di accesso e governance dei dati]**.
 
@@ -98,12 +106,6 @@ Il **[!UICONTROL Mostra etichette ereditate]** l’opzione è attivata per impos
 >Le etichette applicate prima che la funzione di etichettatura del set di dati diventasse obsoleta possono essere rimosse dal set di dati individuando il set di dati pertinente e selezionando l’icona Annulla sull’etichetta.
 >![Scheda Governance dei dati dell’area di lavoro Set di dati con un’etichetta eliminabile evidenziata.](../images/labels/remove-governance-labels.png)
 >Per istruzioni su, consulta la documentazione di [come migrare le etichette applicate in precedenza dal set di dati al livello dello schema](../e2e.md#migrate-labels).
-
-## Gestire le etichette a livello di schema
-
-Puoi aggiungere etichette direttamente a uno schema o a campi all’interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
-
-Guarda il tutorial su [gestione delle etichette a livello di schema](../../xdm/tutorials/labels.md) per ulteriori informazioni.
 
 ## Gestire le etichette personalizzate {#manage-custom-labels}
 
