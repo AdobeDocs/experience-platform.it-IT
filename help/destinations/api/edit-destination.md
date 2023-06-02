@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Modificare le connessioni di destinazione utilizzando l’API del servizio Flusso
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -329,11 +329,11 @@ In caso di esito positivo, la risposta restituisce l’ID connessione di destina
 
 ## Modifica dei componenti di connessione di base (parametri di autenticazione e altri componenti) {#patch-base-connection}
 
-I componenti di una connessione di base differiscono a seconda della destinazione. Ad esempio, per [!DNL Amazon S3] destinazioni, puoi aggiornare la chiave di accesso e la chiave segreta alla tua [!DNL Amazon S3] posizione.
+Modificare la connessione di base per aggiornare le credenziali di una destinazione. I componenti di una connessione di base differiscono a seconda della destinazione. Ad esempio, per [!DNL Amazon S3] destinazioni, puoi aggiornare la chiave di accesso e la chiave segreta alla tua [!DNL Amazon S3] posizione.
 
 Per aggiornare i componenti di una connessione di base, eseguire una richiesta PATCH al `/connections` mentre fornisci l’ID connessione di base, la versione e i nuovi valori che desideri utilizzare.
 
-Ricorda che hai ottenuto l’ID connessione di base in un passaggio precedente, quando hai ispezionato un flusso di dati esistente nella destinazione desiderata.
+Ricorda che hai ottenuto l’ID di connessione di base in un [passaggio precedente](#look-up-dataflow-details), quando hai ispezionato un flusso di dati esistente nella destinazione desiderata per il parametro `baseConnection`.
 
 >[!IMPORTANT]
 >
