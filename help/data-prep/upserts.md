@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe Al Servizio Profili Tramite La Preparazione Dati
 description: Questo documento fornisce informazioni su come inviare aggiornamenti parziali delle righe al servizio profili tramite la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d167975c9c7a267f2888153a05c5857748367822
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -37,20 +37,20 @@ Questa panoramica richiede una buona conoscenza dei seguenti componenti di Adobe
 
 Upsert in streaming [!DNL Data Prep] funziona come segue:
 
-* Devi innanzitutto creare e abilitare un set di dati per [!DNL Profile] consumo. Consulta la guida su [abilitazione di un set di dati per [!DNL Profile]](../catalog/datasets/enable-for-profile.md) per ulteriori informazioni;
-* Se devi collegare nuove identità, devi anche creare un set di dati aggiuntivo **con lo stesso schema** come [!DNL Profile] serie di dati;
+* Devi innanzitutto creare e abilitare un set di dati per [!DNL Profile] consumo. Consulta la guida su [abilitazione di un set di dati per [!DNL Profile]](../catalog/datasets/enable-for-profile.md) per ulteriori informazioni.
+* Se devi collegare nuove identità, devi anche creare un set di dati aggiuntivo **con lo stesso schema** come [!DNL Profile] set di dati.
 * Una volta preparati i set di dati, devi creare un flusso di dati per mappare la richiesta in ingresso su [!DNL Profile] serie di dati;
 * Successivamente, devi aggiornare la richiesta in ingresso per includere le intestazioni necessarie. Queste intestazioni definiscono:
-   * L’operazione sui dati da eseguire con [!DNL Profile]: `create`, `merge`, e `delete`;
+   * L’operazione sui dati da eseguire con [!DNL Profile]: `create`, `merge`, e `delete`.
    * Operazione di identità facoltativa da eseguire con [!DNL Identity Service]: `create`.
 
 ### Configurare il set di dati di identità
 
 Se è necessario collegare nuove identità, devi creare e trasmettere un set di dati aggiuntivo nel payload in ingresso. Quando crei un set di dati di identità, devi assicurarti che siano soddisfatti i seguenti requisiti:
 
-* Il set di dati di identità deve avere lo schema associato come [!DNL Profile] set di dati. Una mancata corrispondenza degli schemi può portare a un comportamento incoerente del sistema;
-* Tuttavia, devi assicurarti che il set di dati di identità sia diverso da [!DNL Profile] set di dati. Se i set di dati sono gli stessi, i dati verranno sovrascritti anziché aggiornati;
-* Mentre il set di dati iniziale deve essere abilitato per [!DNL Profile], il set di dati di identità **non deve** essere abilitato per [!DNL Profile]. In caso contrario, anche i dati verranno sovrascritti anziché aggiornati.
+* Il set di dati di identità deve avere lo schema associato come [!DNL Profile] set di dati. Una mancata corrispondenza degli schemi può causare un comportamento di sistema incoerente.
+* Tuttavia, devi assicurarti che il set di dati di identità sia diverso da [!DNL Profile] set di dati. Se i set di dati sono uguali, i dati verranno sovrascritti anziché aggiornati.
+* Mentre il set di dati iniziale deve essere abilitato per [!DNL Profile], il set di dati di identità **non deve essere abilitato** per [!DNL Profile]. In caso contrario, anche i dati verranno sovrascritti anziché aggiornati. Tuttavia, il set di dati di identità **deve essere abilitato** per [!DNL Identity Service].
 
 #### Campi obbligatori negli schemi associati al set di dati di identità {#identity-dataset-required-fileds}
 
@@ -64,9 +64,17 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "tags":{
-        "acp_validationContext": ["disabled"]
-        }
+    "tags": {
+        "acp_validationContext": [
+            "disabled"
+        ],
+        "unifiedProfile": [
+            "enabled:false"
+        ],
+        "unifiedIdentity": [
+            "enabled:true"
+        ]
+    }
 }'
 ```
 
