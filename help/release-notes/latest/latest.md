@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di maggio 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 09d8014eea2d31649eed3814ad07172027b2c435
+source-git-commit: bf4c39c311bf206ba9113804e0a2fd5f3610d8dc
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 6%
+source-wordcount: '1993'
+ht-degree: 5%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 6%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Dashboard](#dashboards)
 - [Raccolta dati](#data-collection)
 - [Governance dei dati](#data-governance)
 - [Acquisizione dei dati](#data-ingestion)
@@ -38,6 +39,32 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Servizio query](#query-service)
 - [Origini](#sources)
 
+## Dashboard {#dashboards}
+
+Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+
+<!-- 
+The [!UICONTROL License Usage] dashboard and individual license data for customers has been updated to resolve previous discrepancies between the license entitlements recorded in the Sales Orders and those originally reported in the Experience Platform [!UICONTROL License Usage] dashboard. The updates of individual license data will happen in phases between June 2023 and June 11, 2023. Your actual usage values remain accurate.<br><br>Experience Platform provides multiple capabilities to manage the usage volume:<br><ul><li>[Review and apply best practices to manage data and license usage](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html)</li><li>Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.</li><li>[Contact Adobe support to apply expiration times for Pseudonymous Profiles.](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contact Adobe support to enable Experience Event expirations on desired datasets.](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Contact your Adobe representative to discuss options to increase your license entitlements.</li></ul>
+ 
+
+<br><ul><li></li></ul><br><br>
+
+Adobe has corrected erroneous entries in your product's associated TermSheets to match their corresponding [Product Descriptions](https://helpx.adobe.com/legal/product-descriptions.html). Discrepancies in base quantities for the **Average Profile Richness** add-on packs will be corrected on **June 9, 2023**. This will provide an accurate representation of your license usage and ensure contractual compliance for your organization. Note that it can take up to 24-36 hours for the licence usage reports to reflect the update.
+
+As a result of this update, you may notice a one-time drop in your license usage for **Average Profile Richness** and **total consumed storage** metrics. If this update brings you close to your licensed limit there are several measures you can take to mitigate your usage.
+
+-[Apply expiration times for Pseudonymous Profiles](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)
+-[Contact support in order to enable Experience Event expirations on your required datasets. Adobe support representatives can configure expiration times for all Experience Events that are ingested into a dataset enabled for Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)
+-Apply filtering rules and conditions to [selectively include or exclude data from ingestion to the Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) for Analytics data before it is ingested into Profile.
+
+Contact your Adobe Support representative to discuss options to reduce your usage or increase your license limits.
+ -->
+
+| Funzione | Descrizione |
+| --- | --- |
+| Correzione diritti licenza | Il [!UICONTROL Utilizzo licenze] La dashboard e i dati delle singole licenze per i clienti sono stati aggiornati per risolvere le discrepanze precedenti tra i diritti di licenza registrati negli ordini di vendita e quelli riportati originariamente nell’Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Gli aggiornamenti dei dati delle singole licenze avverranno in più fasi tra giugno 2023 e l’11 giugno 2023. I valori di utilizzo effettivi rimangono accurati.<br><br>Experience Platform fornisce diverse funzionalità per gestire il volume di utilizzo:<br><ul><li>[Rivedi e applica le best practice per gestire i dati e l’utilizzo delle licenze](https://experienceleague.adobe.com/docs/experience-platform/landing/license/data-management-best-practices.html).</li><li>Applicare regole e condizioni di filtro a [includere o escludere selettivamente i dati dall’acquisizione nel Real-Time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html#filtering-for-profile) per i dati di Analytics prima che vengano acquisiti nel profilo.</li><li>[Contatta il supporto Adobe per applicare i tempi di scadenza per i profili pseudonimi.](https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html)</li><li>[Contatta il supporto di Adobe per abilitare le scadenze degli eventi esperienza sui set di dati desiderati.](https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html)</li><li>Contatta il rappresentante del tuo Adobe per discutere le opzioni per aumentare i diritti alla licenza.</li></ul> |
+
+Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzazioni di accesso e creare widget personalizzati, leggi [panoramica delle dashboard](../../dashboards/home.md).
 
 ## Raccolta dati {#data-collection}
 
