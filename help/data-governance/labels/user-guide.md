@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1465'
 ht-degree: 16%
 
 ---
@@ -22,7 +22,7 @@ Questa guida utente descrive i passaggi per lavorare con le etichette di utilizz
 
 ## Gestisci etichette {#manage-labels}
 
-Per applicare le etichette ai dati, è necessario **[!UICONTROL Gestisci etichette di utilizzo]** autorizzazione per l’utilizzo nella sandbox di produzione. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili e al momento l’eliminazione delle etichette non è supportata.
+Per applicare le etichette ai dati, è necessario **[!UICONTROL Gestisci etichette di utilizzo]** autorizzazione per l’utilizzo nella sandbox di produzione predefinita denominata &quot;prod&quot;. Per creare un’etichetta personalizzata, devi anche disporre di diritti di amministrazione sul profilo del prodotto. Ogni organizzazione dispone di un solo elenco di etichette applicabili e al momento l’eliminazione delle etichette non è supportata.
 
 Consulta la guida su come [configurare le autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) o [panoramica sul controllo degli accessi](../../access-control/home.md) per ulteriori informazioni su come assegnare un&#39;autorizzazione. Se non hai accesso all’Admin Console per la tua organizzazione, contatta l’amministratore della tua organizzazione.
 
