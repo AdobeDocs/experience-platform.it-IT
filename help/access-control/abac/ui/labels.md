@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Etichette di gestione del controllo dell'accesso basate su attributi
 description: Questo documento fornisce informazioni sulla gestione delle etichette tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 10%
+source-wordcount: '190'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ Le etichette consentono di categorizzare set di dati e campi in base ai criteri 
 
 >[!NOTE]
 >
->Per creare un&#39;etichetta personalizzata è necessario disporre di diritti di amministratore. Attualmente, l’eliminazione di etichette non è supportata.
+>Esiste un unico elenco di etichette per un’intera organizzazione. Per creare un’etichetta personalizzata, è necessario **[!UICONTROL Gestisci etichette di utilizzo]** autorizzazioni sulla sandbox di produzione. L&#39;eliminazione delle etichette non è attualmente supportata.
 
 Per creare una nuova etichetta, seleziona la **[!UICONTROL Etichette]** nella barra laterale e seleziona **[!UICONTROL Crea etichetta]**.
 
