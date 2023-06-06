@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparazione dati;streaming;upsert;streaming upsert
-title: Inviare Aggiornamenti Parziali Delle Righe Al Servizio Profili Tramite La Preparazione Dati
-description: Questo documento fornisce informazioni su come inviare aggiornamenti parziali delle righe al servizio profili tramite la preparazione dati.
+title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
+description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d167975c9c7a267f2888153a05c5857748367822
+source-git-commit: 15aa27e19f287a39242860b91eedae87aace3d27
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1175'
 ht-degree: 1%
 
 ---
 
-# Invia aggiornamenti riga parziali a [!DNL Profile Service] utilizzo [!DNL Data Prep]
+# Invia aggiornamenti riga parziali a [!DNL Real-Time Customer Profile] utilizzo [!DNL Data Prep]
 
-Upsert in streaming [!DNL Data Prep] consente di inviare aggiornamenti di riga parziali a [!DNL Profile Service] e allo stesso tempo creare e stabilire nuovi collegamenti di identità con una singola richiesta API.
+Upsert in streaming [!DNL Data Prep] consente di inviare aggiornamenti di riga parziali a [!DNL Real-Time Customer Profile] e allo stesso tempo creare e stabilire nuovi collegamenti di identità con una singola richiesta API.
 
-Gli aggiornamenti in streaming consentono di mantenere il formato dei dati durante la traduzione [!DNL Profile Service] Richieste PATCH durante l’acquisizione. In base agli input forniti, [!DNL Data Prep] consente di inviare un singolo payload API e tradurre i dati in entrambi [!DNL Profile Service] PATCH e [!DNL Identity Service] Creare le richieste.
+Gli aggiornamenti in streaming consentono di mantenere il formato dei dati durante la traduzione [!DNL Real-Time Customer Profile] Richieste PATCH durante l’acquisizione. In base agli input forniti, [!DNL Data Prep] consente di inviare un singolo payload API e tradurre i dati in entrambi [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] Creare le richieste.
 
 Questo documento fornisce informazioni su come eseguire lo streaming degli upsert in [!DNL Data Prep].
 
@@ -110,19 +110,19 @@ Di seguito è riportato un esempio di struttura di payload in ingresso che stabi
 | `imsOrgId` | L’ID che corrisponde alla tua organizzazione. |
 | `datasetId` | ID del [!DNL Profile]set di dati di destinazione del flusso di dati abilitato. **Nota**: questo è lo stesso ID del [!DNL Profile]ID del set di dati di destinazione abilitato trovato nel flusso di dati. |
 | `operations` | Questo parametro delinea le azioni che [!DNL Data Prep] utilizzerà in base alla richiesta in ingresso. |
-| `operations.data` | Definisce le azioni da eseguire in [!DNL Profile Service]. |
+| `operations.data` | Definisce le azioni da eseguire in [!DNL Real-Time Customer Profile]. |
 | `operations.identity` | Definisce le operazioni consentite sui dati da [!DNL Identity Service]. |
 | `operations.identityDatasetId` | (Facoltativo) L’ID del set di dati di identità necessario solo se è necessario collegare nuove identità. |
 
 #### Operazioni supportate
 
-Le seguenti operazioni sono supportate da [!DNL Profile Service]:
+Le seguenti operazioni sono supportate da [!DNL Real-Time Customer Profile]:
 
 | Operazioni | Descrizione |
 | --- | --- | 
-| `create` | Operazione predefinita. Questo genera un metodo di creazione di entità XDM per [!DNL Profile Service]. |
-| `merge` | Viene generato un metodo di aggiornamento dell’entità XDM per [!DNL Profile Service]. |
-| `delete` | Viene generato un metodo di eliminazione dell’entità XDM per [!DNL Profile Service] e rimuove definitivamente i dati dal [!DNL Profile Store]. |
+| `create` | Operazione predefinita. Questo genera un metodo di creazione di entità XDM per [!DNL Real-Time Customer Profile]. |
+| `merge` | Viene generato un metodo di aggiornamento dell’entità XDM per [!DNL Real-Time Customer Profile]. |
+| `delete` | Viene generato un metodo di eliminazione dell’entità XDM per [!DNL Real-Time Customer Profile] e rimuove definitivamente i dati dal [!DNL Profile Store]. |
 
 Le seguenti operazioni sono supportate da [!DNL Identity Service]:
 
@@ -132,7 +132,7 @@ Le seguenti operazioni sono supportate da [!DNL Identity Service]:
 
 ### Payload senza configurazione identità
 
-Se non è necessario collegare nuove identità, puoi omettere `identity` e `identityDatasetId` parametri nelle operazioni. In questo modo i dati vengono inviati solo a [!DNL Profile Service] e salta la [!DNL Identity Service]. Per un esempio, consulta il payload seguente:
+Se non è necessario collegare nuove identità, puoi omettere `identity` e `identityDatasetId` parametri nelle operazioni. In questo modo i dati vengono inviati solo a [!DNL Real-Time Customer Profile] e salta la [!DNL Identity Service]. Per un esempio, consulta il payload seguente:
 
 ```shell
 {
@@ -157,7 +157,7 @@ Per gli aggiornamenti XDM, lo schema deve essere abilitato per [!DNL Profile] e 
 
 ### Designare un campo statico come campo di identità principale nello schema XDM
 
-Nell’esempio seguente, `state`, `homePhone.number` e gli altri attributi vengono inseriti con i rispettivi valori specificati nel [!DNL Profile] con l’identità primaria di `sampleEmail@gmail.com`. Il messaggio di aggiornamento di un’entità XDM viene quindi generato dal flusso [!DNL Data Prep] componente. [!DNL Profile Service] quindi conferma che il messaggio di aggiornamento XDM esegue l’upsert del record del profilo.
+Nell’esempio seguente, `state`, `homePhone.number` e gli altri attributi vengono inseriti con i rispettivi valori specificati nel [!DNL Profile] con l’identità primaria di `sampleEmail@gmail.com`. Il messaggio di aggiornamento di un’entità XDM viene quindi generato dal flusso [!DNL Data Prep] componente. [!DNL Real-Time Customer Profile] quindi conferma che il messaggio di aggiornamento XDM esegue l’upsert del record del profilo.
 
 >[!NOTE]
 >
@@ -206,7 +206,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### Designa uno dei campi di identità come identità principale tramite il gruppo di campi della mappa di identità nello schema XDM
 
-In questo esempio, l’intestazione contiene `operations` attributo con `identity` e `identityDatasetId` proprietà. Questo consente di unire i dati con [!DNL Profile Service] e anche per le identità da trasmettere a [!DNL Identity Service].
+In questo esempio, l’intestazione contiene `operations` attributo con `identity` e `identityDatasetId` proprietà. Questo consente di unire i dati con [!DNL Real-Time Customer Profile] e anche per le identità da trasmettere a [!DNL Identity Service].
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -255,10 +255,10 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 Di seguito è riportato un elenco delle limitazioni note da considerare quando si esegue lo streaming degli aggiornamenti con [!DNL Data Prep]:
 
-* Il metodo di streaming upserts deve essere utilizzato solo quando si inviano aggiornamenti parziali delle righe a [!DNL Profile Service]. Gli aggiornamenti parziali delle righe sono **non** consumato dal data lake.
+* Il metodo di streaming upserts deve essere utilizzato solo quando si inviano aggiornamenti parziali delle righe a [!DNL Real-Time Customer Profile]. Gli aggiornamenti parziali delle righe sono **non** consumato dal data lake.
 * Il metodo degli aggiornamenti in streaming non supporta l’aggiornamento, la sostituzione e la rimozione di identità. Se non esistono, vengono create nuove identità. Da qui la `identity` L&#39;operazione deve essere sempre impostata su create. Se esiste già un’identità, l’operazione è no-op.
 * Il metodo di streaming upserts attualmente non supporta [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=it) e [SDK di Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
 
 ## Passaggi successivi
 
-Una volta letto questo documento, sarai in grado di eseguire lo streaming degli upsert in [!DNL Data Prep] per inviare aggiornamenti di riga parziali al [!DNL Profile Service] e di creare e collegare le identità con una singola richiesta API. Per ulteriori informazioni su altri [!DNL Data Prep] , leggi le [[!DNL Data Prep] panoramica](./home.md). Per informazioni su come utilizzare i set di mappatura all&#39;interno di [!DNL Data Prep] API, leggi le [[!DNL Data Prep] guida per sviluppatori](./api/overview.md).
+Una volta letto questo documento, sarai in grado di eseguire lo streaming degli upsert in [!DNL Data Prep] per inviare aggiornamenti di riga parziali al [!DNL Real-Time Customer Profile] e di creare e collegare le identità con una singola richiesta API. Per ulteriori informazioni su altri [!DNL Data Prep] , leggi le [[!DNL Data Prep] panoramica](./home.md). Per informazioni su come utilizzare i set di mappatura all&#39;interno di [!DNL Data Prep] API, leggi le [[!DNL Data Prep] guida per sviluppatori](./api/overview.md).
