@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 60bab17d2ecb2e68bf500aea2d68587a125b35bb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '520'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Il grafo delle identità non verrà aggiornato una volta raggiunto il limite. **Nota**: numero massimo di identità in un grafico delle identità **per un singolo profilo unito** è 50. I profili uniti basati su grafici di identità con più di 50 identità sono esclusi dal profilo cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [guardrail per i dati profilo](../profile/guardrails.md). |
+| Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Quando il numero di identità raggiunge 150 o più, non vengono aggiunte nuove identità e il grafico delle identità non viene aggiornato. I grafici possono mostrare identità maggiori di 150 come risultato del collegamento di uno o più grafici con meno di 150 identità. **Nota**: numero massimo di identità in un grafico delle identità **per un singolo profilo unito** è 50. I profili uniti basati su grafici di identità con più di 50 identità sono esclusi dal profilo cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [guardrail per i dati profilo](../profile/guardrails.md). |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di grafici | Nessuna | Non esistono limiti al numero di grafi di identità che è possibile creare. |
