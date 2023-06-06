@@ -2,10 +2,10 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 49%
+source-wordcount: '1294'
+ht-degree: 44%
 
 ---
 
@@ -79,13 +79,13 @@ Per visualizzare ed esportare i registri di audit, è necessario disporre del **
 
 Puoi visualizzare i registri di controllo per diverse funzioni di Experience Platform all’interno di **[!UICONTROL Audit]** nell’interfaccia utente di Platform. Nell’area di lavoro viene visualizzato un elenco dei registri registrati, per impostazione predefinita ordinati dal più recente al meno recente.
 
-![Dashboard dei registri di controllo](../../images/audit-logs/audits.png)
+![La dashboard Audit evidenzia Audit nel menu a sinistra.](../../images/audit-logs/audits.png)
 
 I registri di audit vengono conservati per 365 giorni dopo i quali verranno eliminati dal sistema. Pertanto, puoi tornare indietro solo per un periodo massimo di 365 giorni. Se hai bisogno di dati per più di 365 giorni, devi esportare i registri a cadenza regolare per soddisfare i requisiti delle politiche interne.
 
 Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a destra.
 
-![Dettagli evento](../../images/audit-logs/select-event.png)
+![Controlla la scheda del registro attività della dashboard evidenziando il pannello dei dettagli dell’evento.](../../images/audit-logs/select-event.png)
 
 ### Filtrare i registri di audit
 
@@ -95,31 +95,43 @@ Poiché si tratta di una nuova funzione, i dati visualizzati risalgono solo a ma
 
 Seleziona l’icona funnel (![Icona Filtro](../../images/audit-logs/icon.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, indipendentemente dai filtri selezionati.
 
-![Filtri](../../images/audit-logs/filters.png)
+![La dashboard Audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filters.png)
 
 Nell’interfaccia utente sono disponibili i seguenti filtri per gli eventi di audit:
 
 | Filtro | Descrizione |
 | --- | --- |
 | [!UICONTROL Categoria] | Utilizza il menu a discesa per filtrare i risultati visualizzati in base a [categoria](#category). |
-| [!UICONTROL Azione] | Filtra per azione. Attualmente solo [!UICONTROL Crea] e [!UICONTROL Elimina] Le azioni possono essere filtrate. |
+| [!UICONTROL Azione] | Filtra per azione. Le azioni disponibili per ciascun servizio sono riportate nella tabella delle risorse precedente. |
 | [!UICONTROL Utente] | Inserisci l’ID utente completo (ad esempio, `johndoe@acme.com`) per filtrare in base all&#39;utente. |
 | [!UICONTROL Stato] | Filtra in base al fatto che l’azione sia stata consentita (completata) o negata per mancanza di [controllo degli accessi](../../../access-control/home.md) autorizzazioni. |
 | [!UICONTROL Data] | Seleziona una data di inizio e/o una data di fine per definire un intervallo di date in base al quale filtrare i risultati. I dati possono essere esportati con un periodo di lookback di 90 giorni (ad esempio, da 2021-12-15 a 2022-03-15). Questo può variare a seconda del tipo di evento. |
 
 Per rimuovere un filtro, seleziona la &quot;X&quot; sull’icona della pillola per il filtro in questione, oppure seleziona **[!UICONTROL Cancella tutto]** per rimuovere tutti i filtri.
 
-![Cancella filtri](../../images/audit-logs/clear-filters.png)
+![Il dashboard Audit con il filtro di cancellazione evidenziato.](../../images/audit-logs/clear-filters.png)
+
+I dati del registro di controllo restituiti contengono le seguenti informazioni su tutte le query che soddisfano i criteri di filtro selezionati.
+
+| Nome colonna | Descrizione |
+|---|---|
+| [!UICONTROL Marca temporale] | Data e ora esatte dell’azione eseguita in un `month/day/year hour:minute AM/PM` formato. |
+| [!UICONTROL Nome risorsa] | Il valore per [!UICONTROL Nome risorsa] dipende dalla categoria scelta come filtro. |
+| [!UICONTROL Categoria] | Questo campo corrisponde alla categoria selezionata nel menu a discesa del filtro. |
+| [!UICONTROL Azione] | Le azioni disponibili dipendono dalla categoria scelta come filtro. |
+| [!UICONTROL Utente] | Questo campo fornisce l’ID utente che ha eseguito la query. |
+
+![La dashboard Audit con il registro attività filtrato evidenziato.](../../images/audit-logs/filtered.png)
 
 ### Esportare i registri di audit
 
 Per esportare l’elenco corrente dei registri di audit, seleziona **[!UICONTROL Scarica registro]**.
 
-![Scarica registro](../../images/audit-logs/download.png)
+![La dashboard Audit con [!UICONTROL Scarica registro] evidenziato.](../../images/audit-logs/download.png)
 
 Nella finestra di dialogo visualizzata, seleziona il formato preferito (scegliendo **[!UICONTROL CSV]** o **[!UICONTROL JSON]**), quindi seleziona **[!UICONTROL Scarica]**. Il browser scarica il file generato e lo salva nel computer.
 
-![Seleziona formato di download](../../images/audit-logs/select-download-format.png)
+![La finestra di dialogo per la selezione del formato del file con [!UICONTROL Scarica] evidenziato.](../../images/audit-logs/select-download-format.png)
 
 ## Gestione dei registri di audit nell’API
 
