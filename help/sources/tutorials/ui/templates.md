@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modelli per origini nell’interfaccia utente di Platform"
+>title="Modelli per origini nell’interfaccia di Platform"
 >abstract="I modelli includono risorse generate automaticamente come schemi, set di dati, identità, regole di mappatura, spazi dei nomi delle identità e flussi di dati che è possibile utilizzare per importare dati da un’origine all’Experience Platform. Puoi aggiornare le risorse generate automaticamente per la personalizzazione in base ai tuoi casi d’uso."
 
 >[!IMPORTANT]

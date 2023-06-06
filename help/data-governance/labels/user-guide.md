@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="Gestire l’utilizzo dei dati in Platform"
->abstract="<h2>Descrizione</h2><p>Il framework per la governance dei dati nell’Experience Platform consente di etichettare attributi e schemi in base alle restrizioni di utilizzo dei dati e di impostare criteri che identificano e rispettano tali restrizioni per specifiche azioni di marketing.</p>"
+>abstract="<h2>Descrizione</h2><p>Il framework della governance dei dati in Experience Platform consente di etichettare gli attributi e i set di dati in base alle restrizioni di utilizzo dei dati e di impostare criteri che identifichino e rispettino tali restrizioni per azioni di marketing specifiche.</p>"
 
 Questa guida utente descrive i passaggi per lavorare con le etichette di utilizzo dei dati in [!DNL Experience Platform] dell&#39;utente.
 

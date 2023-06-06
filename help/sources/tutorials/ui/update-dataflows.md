@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="Scadenza set di dati"
->abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica.<br>Un flusso di dati avrà esito negativo se il set di dati di destinazione è scaduto. Per evitare che un flusso di dati non riesca, assicurati che un set di dati di destinazione sia impostato per scadere nella data corretta. Consulta la documentazione per scoprire come aggiornare le date di scadenza."
+>abstract="Questa colonna indica il numero di giorni rimanenti al set di dati di destinazione prima della scadenza automatica.<br>Un flusso di dati avrà esito negativo se il set di dati di destinazione è scaduto. Per evitare che un flusso di dati sia di esito negativo, assicurati che la scadenza del set di dati di destinazione sia impostata sulla data corretta. Consulta la documentazione per scoprire come aggiornare le date di scadenza."
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Seleziona **[!UICONTROL Flussi dati]** dall’intestazione in alto per visualizzare un elenco dei flussi di dati esistenti.
 
