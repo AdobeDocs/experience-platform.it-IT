@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sull’DSP di Amazon.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1401'
 ht-degree: 1%
 
 ---
@@ -18,11 +18,9 @@ Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettiv
 
 L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sull’DSP di Amazon.
 
-Questa connessione supporta la creazione di tipi di pubblico nei seguenti Marketplace Amazon: `US`, `CA`, `MX`, `BR`.
-
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *Amazon Ads* team. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *`amc-support@amazon.com`.*
+>Questa pagina della documentazione è stata creata da *Amazon Ads* team. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo *`amc-support@amazon.com`.*
 
 ## Casi d’uso {#use-cases}
 
@@ -30,11 +28,11 @@ Per aiutarti a capire meglio come e quando utilizzare il *Amazon Ads* destinazio
 
 ### Attivazione e targeting {#activation-and-targeting}
 
-Questa integrazione con l’DSP di Amazon consente agli inserzionisti di Amazon Ads di trasmettere i segmenti CDP dell’inserzionista da Adobe Experience Platform all’DSP di Amazon per creare tipi di pubblico dell’inserzionista per il targeting pubblicitario. I tipi di pubblico possono essere selezionati nell’DSP di Amazon per il targeting positivo e negativo (soppressione). Inoltre, utilizzando i segnali generati dal Marketing Cloud Amazon, gli inserzionisti possono ottimizzare il pubblico degli inserzionisti, sincronizzando le modifiche del pubblico con l&#39;DSP di Amazon.
+Questa integrazione con l’DSP di Amazon consente agli inserzionisti di Amazon Ads di trasmettere i segmenti CDP dell’inserzionista da Adobe Experience Platform all’DSP di Amazon per creare tipi di pubblico dell’inserzionista per il targeting pubblicitario. I tipi di pubblico possono essere selezionati nell’DSP di Amazon per il targeting positivo e negativo (soppressione).
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare la connessione Amazon Ads con Adobe Experience Platform, gli utenti devono prima avere accesso a un account Amazon DSP Advertiser (Inserzionista).  Per effettuare il provisioning di queste istanze, visita la seguente pagina sul sito web di Amazon Ads:
+Per utilizzare la connessione Amazon Ads con Adobe Experience Platform, gli utenti devono prima avere accesso a un account Amazon DSP Advertiser (Inserzionista). Per eseguire il provisioning di queste istanze, visita la pagina seguente sul sito web di Amazon Ads:
 
 * [Introduzione all’DSP di Amazon](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
@@ -72,7 +70,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-Verrai indirizzato all’interfaccia di connessione di Amazon Ads dove prima verranno selezionati gli account dell’inserzionista a cui desideri connetterti.  Al momento della connessione, verrai reindirizzato a Adobe Experience Platform con una nuova connessione, fornita con l’ID dell’account inserzionista selezionato. Seleziona l’Account dell’inserzionista appropriato nella schermata di configurazione della destinazione per procedere.
+Viene visualizzata l’interfaccia di connessione di Amazon Ads, dove puoi selezionare per la prima volta gli account dell’inserzionista a cui desideri connetterti. Al momento della connessione, verrai reindirizzato a Adobe Experience Platform con una nuova connessione, fornita con l’ID dell’account inserzionista selezionato. Seleziona l’Account dell’inserzionista appropriato nella schermata di configurazione della destinazione per procedere.
 
 * **[!UICONTROL Token Bearer]**: inserisci il token Bearer per l’autenticazione nella destinazione.
 
@@ -83,10 +81,14 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL ID inserzionista di Amazon Ads]**: seleziona l’ID per l’account Amazon Ads di destinazione utilizzato per la destinazione.
+>[!NOTE]
+>
+>Dopo aver salvato la configurazione di destinazione, non potrai modificare l’ID inserzionista di Amazon Ads, anche se esegui di nuovo l’autenticazione tramite il tuo account Amazon. Per utilizzare un diverso ID inserzionista di Amazon Ads, devi creare una nuova connessione di destinazione.
+* **[!UICONTROL Area Inserzionista]**: seleziona l’area appropriata in cui è ospitato l’inserzionista. Per ulteriori informazioni sui mercati supportati da ogni area geografica, visita [Documentazione di Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
-Nota: dopo aver selezionato questo ID inserzionista di Amazon Ads, dovrai creare una nuova destinazione per modificare questo valore. Se autentichi nuovamente le credenziali OAuth e selezioni un nuovo ID inserzionista, le modifiche non verranno applicate.
 
-![Configurare una nuova destinazione](../../assets/catalog/advertising/amazon_ads_image_1.png)
+
+![Configurare una nuova destinazione](../../assets/catalog/advertising/amazon_ads_image_4.png)
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -104,7 +106,7 @@ Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segment
 
 ### Mappare attributi e identità {#map}
 
-La connessione di Amazon Ads supporta l’indirizzo e-mail con hash e i numeri di telefono con hash a scopo di corrispondenza delle identità.  La schermata seguente fornisce un esempio di corrispondenza compatibile con la connessione Amazon Ads:
+La connessione di Amazon Ads supporta l’indirizzo e-mail con hash e i numeri di telefono con hash a scopo di corrispondenza delle identità. La schermata seguente fornisce un esempio di corrispondenza compatibile con la connessione Amazon Ads:
 
 ![Adobe di mappatura di Amazon Ads](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
@@ -112,7 +114,7 @@ La connessione di Amazon Ads supporta l’indirizzo e-mail con hash e i numeri d
 * Per mappare i numeri di telefono con hash, seleziona la `Phone_SHA256` spazio dei nomi dell’identità come campo di origine.
 * Per mappare indirizzi e-mail o numeri di telefono senza hash, seleziona gli spazi dei nomi di identità corrispondenti come campi sorgente e seleziona la `Apply Transformation` opzione per fare in modo che Platform esegua l’hashing delle identità al momento dell’attivazione.
 
-Si consiglia vivamente di mappare tutti i campi disponibili. Se è disponibile un solo attributo di origine, è possibile mappare un singolo campo.  La destinazione di Amazon Ads utilizzerà tutti i campi mappati a scopo di mappatura, ottenendo percentuali di corrispondenza più elevate se vengono forniti più campi. Per ulteriori informazioni sugli identificatori accettati, consulta [Pagina della guida del pubblico con hash di Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+Si consiglia vivamente di mappare tutti i campi disponibili. Se è disponibile un solo attributo di origine, è possibile mappare un singolo campo. La destinazione di Amazon Ads utilizza tutti i campi mappati a scopo di mappatura, ottenendo percentuali di corrispondenza più elevate se vengono forniti più campi. Per ulteriori informazioni sugli identificatori accettati, consulta [Pagina della guida del pubblico con hash di Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
@@ -120,7 +122,7 @@ Dopo aver caricato il pubblico, puoi verificare che sia stato creato e caricato 
 
 **Per Amazon DSP**
 
-Passa all’ID inserzionista → tipi di pubblico → inserzionisti. Se il pubblico è stato creato correttamente e soddisfa il numero minimo di membri del pubblico, verrà visualizzato lo stato `Active`.  Ulteriori dettagli sulle dimensioni e sulla portata del pubblico sono disponibili nel pannello Previsioni di portata sul lato destro dell’interfaccia utente di Amazon DSP.
+Passa all’ID inserzionista → tipi di pubblico → inserzionisti. Se il pubblico è stato creato correttamente e soddisfa il numero minimo di membri del pubblico, verrà visualizzato lo stato `Active`. Ulteriori dettagli sulle dimensioni e sulla portata del pubblico sono disponibili nel pannello Previsioni di portata sul lato destro dell’interfaccia utente di Amazon DSP.
 
 ![Convalida della creazione di un pubblico Amazon DSP](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
@@ -132,4 +134,19 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 
 Per ulteriore documentazione, consulta le seguenti risorse di aiuto di Amazon Ads:
 
-* [Centro assistenza DSP di Amazon](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+* [Centro assistenza DSP di Amazon](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+
+### Changelog {#changelog}
+
+Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
+
++++ Visualizza changelog
+
+| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+|---|---|---|
+| Maggio 2023 | Aggiornamento della funzionalità e della documentazione | <ul><li>È stato aggiunto il supporto per la selezione dell’area dell’inserzionista nel flusso di lavoro della connessione di destinazione.</li><li>È stata aggiornata la documentazione per riflettere l’aggiunta della selezione per Regione inserzionista. Per ulteriori informazioni sulla selezione dell&#39;area dell&#39;inserzionista corretta, vedere [Documentazione di Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| Marzo 2023 | Versione iniziale | Versione di destinazione iniziale e documentazione pubblicata. |
+
+{style="table-layout:auto"}
+
++++
