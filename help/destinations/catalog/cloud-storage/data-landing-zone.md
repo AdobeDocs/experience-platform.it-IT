@@ -2,9 +2,9 @@
 title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare segmenti ed esportare set di dati.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1265'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 1%
 
 Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati in una [!DNL Data Landing Zone] contenitore. Tutti i file vengono eliminati dopo sette giorni.
 
+## Connetti al tuo [!UICONTROL Data Landing Zone] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
+
+* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
+* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione a livello di programmazione, leggere [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
@@ -43,7 +48,7 @@ Prima di poter utilizzare il [!DNL Data Landing Zone] destinazione.
 
 ### Connetti [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer]
 
-È possibile utilizzare [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) per gestire il contenuto del [!DNL Data Landing Zone] contenitore. Per iniziare a utilizzare [!DNL Data Landing Zone], devi innanzitutto recuperare le credenziali e inserirle in [!DNL Azure Storage Explorer], e collegare [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer].
+È possibile utilizzare [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) per gestire il contenuto del [!DNL Data Landing Zone] contenitore. Per iniziare a utilizzare [!DNL Data Landing Zone], devi prima recuperare le credenziali, inserirle in [!DNL Azure Storage Explorer], e collegare [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer].
 
 In [!DNL Azure Storage Explorer] UI, seleziona l’icona della connessione nella barra di navigazione a sinistra. Il **Seleziona risorsa** viene visualizzata una finestra che fornisce le opzioni per la connessione. Seleziona **[!DNL Blob container]** per connettersi al tuo [!DNL Data Landing Zone] archiviazione.
 
@@ -83,7 +88,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta seguente restituisce le informazioni sulle credenziali per la zona di destinazione, incluso l’attuale `SASToken` e `SASUri`, nonché `storageAccountName` che corrisponde al contenitore della zona di destinazione.
+La risposta seguente restituisce le informazioni sulle credenziali per la zona di destinazione, incluso l’attuale `SASToken` e `SASUri`e `storageAccountName` che corrisponde al contenitore della zona di destinazione.
 
 ```json
 {
@@ -163,7 +168,10 @@ In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di 
 
 ## (Beta) Esportare i set di dati {#export-datasets}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, leggi [tutorial sull’esportazione dei set di dati](/help/destinations/ui/export-datasets.md).
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 

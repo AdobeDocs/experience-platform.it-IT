@@ -2,9 +2,9 @@
 title: (Beta) Connessione a Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare segmenti o esportare set di dati.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## Panoramica {#overview}
 
 Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform nei bucket personali.
+
+## Connetti al tuo [!DNL Google Cloud Storage] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
+
+* Per connettersi al tuo [!DNL Google Cloud Storage] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
+* Per connettersi al tuo [!DNL Google Cloud Storage] percorso di archiviazione a livello di programmazione, leggere [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -102,7 +107,10 @@ In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di 
 
 ## (Beta) Esportare i set di dati {#export-datasets}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, leggi [tutorial sull’esportazione dei set di dati](/help/destinations/ui/export-datasets.md).
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 

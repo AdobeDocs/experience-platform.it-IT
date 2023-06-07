@@ -2,9 +2,9 @@
 title: (Beta) Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare segmenti ed esportare set di dati.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## Panoramica {#overview}
 
 Leggi questa pagina per scoprire come creare una connessione in uscita al tuo [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake per esportare periodicamente file di dati da Experience Platform.
+
+## Connetti al tuo [!DNL ADLS Gen2] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
+
+* Per connettersi al tuo [!DNL ADLS Gen2] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
+* Per connettersi al tuo [!DNL ADLS Gen2] percorso di archiviazione a livello di programmazione, leggere [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -87,7 +92,10 @@ In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di 
 
 ## (Beta) Esportare i set di dati {#export-datasets}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, leggi [tutorial sull’esportazione dei set di dati](/help/destinations/ui/export-datasets.md).
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 

@@ -2,10 +2,10 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 14%
+source-wordcount: '1054'
+ht-degree: 13%
 
 ---
 
@@ -32,6 +32,11 @@ Miglioramenti nel nuovo [!DNL Amazon S3] la scheda di destinazione include:
 ## Panoramica {#overview}
 
 Crea una connessione in uscita al tuo [!DNL Amazon S3] archiviazione per esportare periodicamente i file di dati da Adobe Experience Platform nei bucket S3.
+
+## Connetti al tuo [!DNL Amazon S3] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
+
+* Per connettersi al tuo [!DNL Amazon S3] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
+* Per connettersi al tuo [!DNL Amazon S3] percorso di archiviazione a livello di programmazione, leggere [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -132,7 +137,10 @@ Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pr
 
 ## (Beta) Esportare i set di dati {#export-datasets}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, leggi [tutorial sull’esportazione dei set di dati](/help/destinations/ui/export-datasets.md).
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
 
 ## Dati esportati {#exported-data}
 
