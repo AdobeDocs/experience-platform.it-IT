@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un set di dati utilizzando le API
 description: Questo documento descrive i passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e per il popolamento del set di dati utilizzando un file.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1303'
 ht-degree: 2%
 
 ---
@@ -45,9 +45,7 @@ Tutte le risorse in [!DNL Experience Platform] sono isolati in specifiche sandbo
 >
 >Per ulteriori informazioni sulle sandbox in [!DNL Platform], vedere [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
-
-* Content-Type: application/json
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un ulteriore `Content-Type: application/json` intestazione. Per le richieste JSON+PATCH, il `Content-Type` dovrebbe essere `application/json-patch+json`.
 
 ## Tutorial
 
@@ -254,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, inclusi i relativi `id`, una stringa generata dal sistema di sola lettura.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta. L’oggetto di risposta è costituito da un array contenente l’ID del batch appena creato nel formato `"@/batches/{BATCH_ID}"`. L’ID batch è una stringa di sola lettura generata dal sistema e utilizzata per fare riferimento al batch nelle chiamate API.
 
 ```JSON
 {
@@ -355,12 +353,12 @@ Un batch completato correttamente restituisce un corpo di risposta vuoto e lo st
 
 ## Monitorare l’acquisizione
 
-A seconda delle dimensioni dei dati, l’acquisizione dei batch richiede tempi diversi. È possibile monitorare lo stato di un batch aggiungendo un `batch` parametro di richiesta contenente l’ID del batch a un `GET /batches` richiesta. L’API esegue il polling del set di dati per lo stato del batch dall’acquisizione fino al `status` nella risposta indica il completamento (&quot;success&quot; o &quot;failure&quot;).
+A seconda delle dimensioni dei dati, l’acquisizione dei batch richiede tempi diversi. Per monitorare lo stato di un batch, devi aggiungere l’ID di un batch a una `GET /batches` richiesta.
 
 **Formato API**
 
 ```HTTP
-GET /batches?batch={BATCH_ID}
+GET /batches/{BATCH_ID}
 ```
 
 | Parametro | Descrizione |
