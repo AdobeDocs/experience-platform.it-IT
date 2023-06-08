@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell’area di lavoro Criteri nell’interfaccia utente di Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 19%
+source-wordcount: '1788'
+ht-degree: 17%
 
 ---
 
@@ -59,7 +59,19 @@ A seconda che tu faccia parte della versione beta dei criteri di consenso, si ve
 
 * Se non fai parte della versione beta, vieni immediatamente portato al flusso di lavoro per [creazione di un criterio di governance dei dati](#create-governance-policy).
 * Se fai parte della versione beta, una finestra di dialogo fornisce un’opzione aggiuntiva per [creare un criterio di consenso](#consent-policy).
-   ![](../images/policies/choose-policy-type.png)
+  ![](../images/policies/choose-policy-type.png)
+
+### Utilizzare insieme la governance dei dati e i criteri di consenso {#combine-policies}
+
+>[!NOTE]
+>
+>I criteri di consenso sono attualmente disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
+
+I criteri di governance e di consenso possono essere utilizzati insieme per creare regole solide per la gestione dei tipi di pubblico mappati su una destinazione. I criteri di consenso sono di natura inclusiva, il che significa che determinano quali profili possono essere inclusi in ogni esperienza di marketing. Al contrario, i criteri di governance escludono l’utilizzo di attributi con etichetta specifici dalla configurazione per l’attivazione.
+
+Utilizzando questo comportamento, puoi impostare una combinazione di criteri e regole di consenso che includono i profili corretti, ma impedisce di includere dati in contrasto con le regole organizzative impostate. Uno scenario esemplificativo potrebbe essere quello di escludere i dati sensibili dall’inclusione, ma comunque in grado di eseguire il targeting degli utenti autorizzati per il marketing tramite social media. I passaggi necessari per questo scenario sono descritti nell’infografica seguente.
+
+![Un’infografica che illustra i passaggi per utilizzare insieme i criteri di governance e di consenso al fine di creare regole solide per la gestione dei tipi di pubblico.](../images/policies/governance-and-consent-policies-infographic.png)
 
 ### Creare un criterio di governance dei dati {#create-governance-policy}
 
