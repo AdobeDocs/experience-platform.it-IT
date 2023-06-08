@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Panoramica sui playbook
+title: Panoramica sui playbook di casi d’uso
 description: Scopri come utilizzare la funzione Playbook di casi di utilizzo in Experience Platform per iniziare a utilizzare vari casi di utilizzo di marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 Cosa troverai in questa guida alla documentazione:
 
 * **[Panoramica dei playbook dei casi d’uso](#overview)**
-* [Visualizzare un playbook e generare le risorse](ui-guide.md#view-playbook-generate-assets)
-* [Abilitare, utilizzare e riutilizzare un&#39;istanza di un playbook ](ui-guide.md#enable-playbook)
+* [Scopri il playbook più adatto](/help/use-case-playbooks/playbooks/discover.md)
+* [Creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Risoluzione dei problemi e limitazioni note](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -46,9 +46,9 @@ Crea un’istanza di un playbook per generare risorse specifiche, come schemi, s
 
 Alcuni [!UICONTROL Playbook di casi d’uso] sono personalizzati per i casi di utilizzo di Real-time CDP, mentre altri sono più adatti per i clienti che utilizzano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso.
 
-## Guida all’interfaccia utente
+## Guide dell’interfaccia utente
 
-Dopo aver deciso il playbook da utilizzare, selezionalo dall’interfaccia utente e inizia a utilizzarlo. Leggi la guida dell’interfaccia utente su [come abilitare e riutilizzare i playbook](/help/use-case-playbooks/playbooks/ui-guide.md) per informazioni complete su come creare istanze e sfruttare al meglio un playbook.
+Dopo aver deciso il playbook da utilizzare, selezionalo dall’interfaccia utente e inizia a utilizzarlo. Leggi le guide dell’interfaccia utente su [come scoprire il playbook giusto](/help/use-case-playbooks/playbooks/discover.md) per te e [come creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) per informazioni complete su come creare istanze e sfruttare al meglio un playbook.
 
 ## Risoluzione dei problemi e limitazioni note
 
