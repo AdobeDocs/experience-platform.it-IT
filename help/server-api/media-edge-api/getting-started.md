@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 5%
 
 ---
@@ -206,6 +206,8 @@ Nell’esempio di richiesta precedente, lo stesso `sessionId` che viene restitui
 
 Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint di avvio del buffer, vedi il file Media Edge Swagger.
 
+La risposta corretta indica uno stato di 200 e non include alcun contenuto.
+
 ## Riproduci richiesta evento
 
 L’evento Play viene inviato quando il lettore multimediale passa allo stato di &quot;riproduzione&quot; da un altro stato, ad esempio &quot;buffering&quot;, &quot;messo in pausa&quot; o &quot;errore&quot;. Per effettuare una richiesta di evento Play, utilizza `sessionId` nel payload di una chiamata al seguente endpoint:
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 
 Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint Play, consulta il file Media Edge Swagger.
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint &quot;Session Complete&quot;, vedi il file Media Edge Swagger.
+La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 
 ## Codici di risposta
 
