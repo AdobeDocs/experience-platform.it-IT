@@ -3,9 +3,9 @@ keywords: Experience Platform;media edge;argomenti popolari;intervallo di date
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '979'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ Questa guida fornisce istruzioni per eseguire con successo le interazioni inizia
 * sessionComplete
 * statesUpdate
 
-Ogni evento ha il proprio endpoint. Tutti gli endpoint API di Media Edge sono metodi POST, con corpi di richiesta JSON per i dati evento. Per ulteriori informazioni sugli endpoint, i parametri e gli esempi dell’API Media Edge, vedi il file Media Edge Swagger.
+Ogni evento ha il proprio endpoint. Tutti gli endpoint API di Media Edge sono metodi POST, con corpi di richiesta JSON per i dati evento. Per ulteriori informazioni sugli endpoint API di Media Edge, sui parametri e sugli esempi, consulta la sezione [File Media Edge Swagger](swagger.md).
 
 Questa guida illustra come tenere traccia dei seguenti eventi dopo l’avvio della sessione:
 
@@ -43,7 +43,7 @@ Questa guida illustra come tenere traccia dei seguenti eventi dopo l’avvio del
 
 ## Implementazione dell’API
 
-A parte lievi differenze nel modello e nei percorsi denominati, l’API Media Edge è la stessa dell’API Media Collection. I dettagli di implementazione di Media Collection rimangono validi per l’API Media Edge, come descritto nella seguente documentazione:
+A parte lievi differenze nel modello e nei percorsi denominati, l’API Media Edge ha la stessa implementazione dell’API Media Collection. I dettagli di implementazione di Media Collection rimangono validi per l’API Media Edge, come descritto nella seguente documentazione:
 
 * [Impostazione del tipo di richiesta HTTP nel lettore](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Invio di eventi ping ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -61,7 +61,7 @@ Per avviare la sessione multimediale sul server, utilizzare l&#39;endpoint di in
 
 Prima di effettuare la richiesta di avvio della sessione, è necessario disporre dei seguenti elementi:
 
-* Il `datastreamId` è un parametro obbligatorio per la richiesta di avvio della sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
 
 * Un oggetto JSON per il payload della richiesta che contiene i dati minimi richiesti (come mostrato nella richiesta di esempio seguente).
 
@@ -98,7 +98,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-Nell’esempio di richiesta precedente, il `eventType` il valore contiene il prefisso `media` in base al [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it) per specificare i domini.
+Nell’esempio di richiesta precedente, il `eventType` il valore contiene il prefisso `media.` in base al [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it) per specificare i domini.
 
 Inoltre, la mappatura dei tipi di dati per `eventType` nell’esempio precedente sono i seguenti:
 
@@ -165,7 +165,7 @@ x-content-type-options: nosniff
 
 Nell’esempio di risposta precedente, il `sessionId` viene visualizzato come `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. Utilizzerai questo ID nelle richieste di eventi successive come parametro obbligatorio.
 
-Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint di inizio sessione, vedi il file Media Edge Swagger.
+Per ulteriori informazioni sui parametri e sugli esempi dell&#39;endpoint di inizio sessione, vedere [Media Edge Swagger](swagger.md) file.
 
 Per ulteriori informazioni sui parametri dei dati multimediali XDM, consulta [Schema informazioni sui dettagli dei contenuti multimediali](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
@@ -203,9 +203,10 @@ curl -X 'POST' \
 
 Nell’esempio di richiesta precedente, lo stesso `sessionId` che viene restituito nella chiamata precedente viene utilizzato come parametro obbligatorio nella richiesta di avvio del buffer.
 
-Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint di avvio del buffer, vedi il file Media Edge Swagger.
-
 La risposta corretta indica uno stato di 200 e non include alcun contenuto.
+
+Per ulteriori informazioni sui parametri e sugli esempi dell&#39;endpoint di avvio del buffer, vedere [Media Edge Swagger](swagger.md) file.
+
 
 ## Riproduci richiesta evento
 
@@ -240,7 +241,7 @@ curl -X 'POST' \
 
 La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 
-Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint Play, consulta il file Media Edge Swagger.
+Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint Play, vedi [Media Edge Swagger](swagger.md) file.
 
 ## Richiesta evento sessione completata
 
@@ -275,6 +276,8 @@ curl -X 'POST' \
 
 La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 
+Per ulteriori informazioni sui parametri e sugli esempi dell&#39;endpoint Session Complete, vedere [Media Edge Swagger](swagger.md) file.
+
 ## Codici di risposta
 
 La tabella seguente mostra i possibili codici di risposta risultanti dalle richieste API Media Edge:
@@ -282,10 +285,10 @@ La tabella seguente mostra i possibili codici di risposta risultanti dalle richi
 | Stato | Descrizione |
 | ---------- | --------- |
 | 200 | La sessione è stata creata |
-| 207 | Problema con uno dei servizi che si connettono a Experience Edge Network (per ulteriori informazioni, consulta la guida alla risoluzione dei problemi) |
+| 207 | Problema con uno dei servizi che si connettono a Experience Edge Network (per ulteriori informazioni, vedere [guida alla risoluzione dei problemi](troubleshooting.md)) |
 | 400 livelli | Richiesta non valida |
 | Livello 500 | Errore del server |
 
-Per ulteriori informazioni sulla gestione degli errori e dei codici di risposta non riusciti, consulta la guida alla risoluzione dei problemi di Media Edge.
+Per ulteriori informazioni sulla gestione degli errori e dei codici di risposta non riusciti, vedi [Guida alla risoluzione dei problemi di Media Edge](troubleshooting.md).
 
 

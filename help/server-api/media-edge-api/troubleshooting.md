@@ -3,9 +3,9 @@ keywords: Experience Platform;media edge;argomenti popolari;intervallo di date
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida alla risoluzione dei problemi delle API Media Edge
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questa guida fornisce istruzioni per la risoluzione dei problemi relativi alla g
 
 ## Utilizzo di strumenti di risposta agli errori
 
-Per facilitare la risoluzione dei problemi relativi a risposte non riuscite, gli errori sono accompagnati da un corpo di risposta contenente un oggetto errore. In questo caso, il corpo della risposta contiene i dettagli del problema, definiti da [RFC 7807 - Dettagli del problema per le API HTTP](https://datatracker.ietf.org/doc/html/rfc7807). Per migliorare l’esperienza utente dell’API, i dettagli del problema sono descrittivi (i dettagli delle chiavi dell’array vengono visualizzati utilizzando JsonPath nel campo mancante o non valido). Sono anche cumulativi (tutti i campi non validi verranno segnalati nella stessa richiesta).
+Per facilitare la risoluzione dei problemi delle risposte non riuscite, gli errori sono accompagnati da un corpo di risposta contenente un oggetto errore. In questo caso, il corpo della risposta contiene i dettagli del problema, definiti da [RFC 7807 - Dettagli del problema per le API HTTP](https://datatracker.ietf.org/doc/html/rfc7807). Per migliorare l’esperienza utente dell’API, i dettagli del problema sono descrittivi (i dettagli delle chiavi dell’array vengono visualizzati utilizzando JsonPath nel campo mancante o non valido). Sono anche cumulativi (tutti i campi non validi verranno segnalati nella stessa richiesta).
 
 
 ## Convalida degli avvii della sessione
@@ -110,17 +110,17 @@ Nella tabella seguente vengono fornite istruzioni per la gestione degli errori d
 
 | Codice di errore | Descrizione |
 | ---------- | --------- |
-| 4xx Richiesta non valida | La maggior parte degli errori 4xx (ad esempio 400, 403, 404) non deve essere ritentata dall’utente. Se la richiesta viene ritentata, la risposta non riesce. L’utente deve risolvere l’errore prima di ritentare la richiesta. Gli eventi che causano codici di stato 4xx non vengono tracciati, il che potrebbe potenzialmente influenzare la precisione dei dati nelle sessioni che hanno ricevuto risposte 4xx. |
-| 410 Non più disponibile | Indica che la sessione destinata al tracciamento non viene più calcolata sul lato server. Il motivo più comune è che la sessione è più lunga di 24 ore. Dopo aver ricevuto il numero 410, prova ad avviare una nuova sessione e a tracciarla. |
+| 4xx Richiesta non valida | La maggior parte degli errori 4xx (ad es. `400`, `403`, `404`) non devono essere ritentati dall&#39;utente. Se la richiesta viene ritentata, la risposta non riesce. L’utente deve risolvere l’errore prima di ritentare la richiesta. Gli eventi che causano codici di stato 4xx non vengono tracciati, il che potrebbe potenzialmente influenzare la precisione dei dati nelle sessioni che hanno ricevuto risposte 4xx. |
+| 410 Non più disponibile | Indica che la sessione destinata al tracciamento non viene più calcolata sul lato server. Il motivo più comune è che la sessione è più lunga di 24 ore. Dopo aver ricevuto un `410`, provare ad avviare una nuova sessione e tenerne traccia. |
 | 429 Troppe richieste | Questo codice di risposta indica che il server limita la velocità delle richieste. Segui le **Riprova dopo** nell’intestazione della risposta. Tutte le risposte che tornano devono contenere il codice di risposta HTTP con un codice di errore specifico del dominio. |
-| 500 Errore interno del server | 500 errori sono errori generici e onnicomprensivi. Gli errori 500 non devono essere ritentati, ad eccezione degli errori 502, 503 e 504. |
+| 500 Errore interno del server | `500` gli errori sono generici e onnicomprensivi. `500` gli errori non devono essere ritentati, ad eccezione di `502`, `503` e `504`. |
 | 502 Gateway non valido | Questo codice di errore indica che il server, mentre funge da gateway, ha ricevuto una risposta non valida dai server upstream. Ciò può verificarsi a causa di problemi di rete tra i server. Il problema di rete temporaneo può risolversi da solo, pertanto ritentare la richiesta potrebbe risolvere il problema. |
-| Servizio non disponibile | Questo codice di errore indica che il servizio non è al momento disponibile. Ciò può verificarsi durante i periodi di manutenzione. I destinatari di errori 503 possono ritentare la richiesta, ma devono anche seguire la **Riprova dopo** istruzioni per l’intestazione. |
+| Servizio 503 non disponibile | Questo codice di errore indica che il servizio non è al momento disponibile. Ciò può verificarsi durante i periodi di manutenzione. Destinatari di `503` Gli errori possono ritentare la richiesta, ma devono anche seguire la **Riprova dopo** istruzioni per l’intestazione. |
 
 
-Eventi in coda quando le risposte della sessione sono lente
+## Eventi in coda quando le risposte della sessione sono lente
 
-Dopo aver avviato una sessione di tracciamento dei contenuti multimediali, il lettore multimediale può attivarsi prima che venga restituita la risposta di Avvio sessione (con il parametro ID sessione) dal backend. In questo caso, l’app deve mettere in coda tutti gli eventi di tracciamento che arrivano tra la richiesta di sessione e la relativa risposta. Quando la Risposta sessioni arriva, devi prima elaborare tutti gli eventi in coda, quindi puoi iniziare l’elaborazione degli eventi live.
+Dopo aver avviato una sessione di tracciamento dei contenuti multimediali, il lettore multimediale può attivarsi prima che venga restituita la risposta di Avvio sessione (con il parametro ID sessione) dal backend. In questo caso, l’app deve mettere in coda tutti gli eventi di tracciamento che arrivano tra la richiesta di avvio della sessione e la relativa risposta. Quando la Risposta sessioni arriva, devi prima elaborare tutti gli eventi in coda, quindi puoi iniziare l’elaborazione degli eventi live.
 
 Per ottenere risultati ottimali, consulta il Lettore di riferimento nella tua distribuzione per istruzioni su come elaborare gli eventi prima di ricevere un ID sessione.
 
