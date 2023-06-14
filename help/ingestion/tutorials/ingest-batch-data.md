@@ -5,7 +5,7 @@ title: Acquisire dati in Experience Platform
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file Parquet o dati conformi a uno schema Experience Data Model (XDM) noto.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Per iniziare ad aggiungere dati al set di dati, fai clic sul pulsante **[!UICONT
 
 ![Scheda Aggiungi dati](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## Carica un file
+## Carica un file {#upload-file}
 
 Una volta trascinato (o sfogliato e selezionato) un file Parquet o JSON da caricare, [!DNL Platform] inizierà immediatamente a elaborare il file e un **[!UICONTROL Carica]** verrà visualizzata sulla **[!UICONTROL Aggiungi dati]** che mostra l’avanzamento del caricamento del file.
 

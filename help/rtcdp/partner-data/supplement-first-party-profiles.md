@@ -1,12 +1,12 @@
 ---
-title: (Beta) Integrazione di profili di prime parti con attributi forniti dai partner
-description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla base dei clienti e ottimizzare meglio il pubblico
+title: (Beta) Integrazione dei profili di prime parti con gli attributi forniti dai partner
+description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla base dei clienti e ottimizzare meglio il pubblico.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Leggi le sezioni seguenti, che includono collegamenti a ulteriore documentazione
 
 ### Attributi di licenza dal partner {#license-attributes-from-partner}
 
-Questo passaggio è trattato nei prerequisiti e l’Adobe presuppone che tu abbia stipulato i giusti accordi contrattuali con fornitori di dati affidabili per migliorare i profili di prime parti.
+Questa fase è descritta nella sezione [prerequisiti](#prerequisites-and-planning) e Adobe presuppone che tu abbia stipulato i giusti accordi contrattuali con fornitori di dati affidabili per migliorare i profili di prime parti.
 
 ### Estendi i dati del profilo e il modello di governance per adattarli agli attributi forniti dai partner. {#extend-governance-model}
 
@@ -58,7 +58,7 @@ A questo punto, stai estendendo il framework di gestione dati in Real-Time CDP p
 
 È possibile creare un nuovo schema del **[!UICONTROL Profilo individuale XDM]** o estendere uno schema esistente dello stesso tipo per includere gli attributi forniti dal partner. L’Adobe consiglia vivamente di creare un nuovo schema con un nuovo set di gruppi di campi che rappresentino al meglio gli attributi aggiuntivi del fornitore dei dati. In questo modo gli schemi di dati sono puliti e possono evolvere indipendentemente l’uno dall’altro.
 
-Per includere in uno schema gli attributi forniti dal partner, è possibile creare un nuovo gruppo di campi con gli attributi previsti oppure utilizzare uno dei gruppi di campi predefiniti forniti da Adobe.
+Per includere in uno schema gli attributi forniti dal partner, è possibile creare un nuovo gruppo di campi con gli attributi previsti oppure utilizzare uno dei gruppi di campi preconfigurati forniti da Adobe.
 
 Per ulteriori informazioni, consulta le pagine della documentazione seguenti:
 
@@ -79,7 +79,7 @@ Commenting out links for now
 Anche in questo passaggio, pensa a come cambia il modello di governance dei dati quando espandi la tua strategia di gestione dati per includere i dati di terze parti forniti dal partner. Consulta le considerazioni riportate nei collegamenti alla documentazione riportati di seguito:
 
 * (**Disponibile a breve**) Mantieni i dati di terze parti in un set di dati separato in modo che sia facile eliminarli e annullare le integrazioni.
-* (**Disponibile a breve**) Utilizza Time-to-live (TTL) sul set di dati per i clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
+* (**Disponibile a breve**) Utilizzare [Time-to-live (TTL)](/help/hygiene/ui/dataset-expiration.md) sul set di dati per i clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
 * (**Disponibile a breve**) Presta attenzione quando crei set di dati derivati che estraggono dati di terze parti, perché una volta combinati, l’unica soluzione per rimuovere i dati di terze parti è quella di eliminare l’intero set di dati derivati.
 
 >[!TIP]
@@ -87,10 +87,9 @@ Anche in questo passaggio, pensa a come cambia il modello di governance dei dati
 >Se scegli di integrare i profili dei clienti con un identificatore basato su persona del fornitore di dati, puoi creare un nuovo tipo di identità **[[!UICONTROL ID partner]](/help/identity-service/namespaces.md)**.
 >
 >Per ulteriori informazioni sull&#39;ID partner, consulta [sezione tipi di identità](/help/identity-service/namespaces.md).
-> Ulteriori informazioni [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
+>Ulteriori informazioni [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
 
-
-### Esporta i tipi di pubblico che desideri arricchire in base ai dati personali identificabili (PII, Personal Identifiable Information) o ai dati PII con hash {#export-audiences}
+### Esporta i tipi di pubblico che desideri arricchire quando vengono ricavati dai dati PII (Personal Identifiable Information) o PII con hash {#export-audiences}
 
 Esporta i tipi di pubblico che desideri arricchire con il partner. Utilizza le destinazioni dell’archiviazione cloud fornite da Real-time CDP, ad esempio Amazon S3 o SFTP. Per completare questo passaggio, leggi le seguenti pagine della documentazione:
 
@@ -99,10 +98,9 @@ Esporta i tipi di pubblico che desideri arricchire con il partner. Utilizza le d
 * Procedura [connettersi a una destinazione](/help/destinations/ui/connect-destination.md)
 * Procedura [esportare i dati in una destinazione di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### Il partner dati aggiunge attributi con licenza per i profili che è in grado di confrontare {#partner-appends-attributes}
 
-### Il partner aggiunge gli attributi con licenza per i profili che è in grado di confrontare {#partner-appends-attributes}
-
-In questo passaggio, il partner aggiunge gli attributi con licenza per il pubblico esportato. L’output è generalmente disponibile come file flat che può essere acquisito nuovamente in Real-Time CDP.
+In questo passaggio, il partner dati aggiunge gli attributi con licenza per il pubblico esportato. L’output è generalmente disponibile come file flat che può essere acquisito nuovamente in Real-Time CDP. Ulteriori informazioni su [acquisizione di file in Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP aggiunge attributi arricchiti al profilo cliente {#ingest-data}
 
@@ -117,7 +115,7 @@ Alcuni connettori di origine consigliati a questo scopo possono essere:
 
 Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni presente le seguenti limitazioni:
 
-Se scegli di utilizzare gli ID partner, tieni presente che non vengono utilizzati durante la creazione [grafo delle identità](/help/identity-service/ui/identity-graph-viewer.md).
+* Se scegli di utilizzare gli ID partner, tieni presente che non vengono utilizzati durante la creazione [grafo delle identità](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 
