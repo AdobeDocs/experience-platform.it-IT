@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida all’interfaccia utente Sandbox
 description: In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 8%
+source-wordcount: '953'
+ht-degree: 7%
 
 ---
 
@@ -77,7 +77,30 @@ Una volta completata la creazione della sandbox, aggiorna la pagina e la nuova s
 
 >[!WARNING]
 >
->Di seguito è riportato un elenco di eccezioni che possono impedire la reimpostazione della sandbox di produzione predefinita o di una sandbox di produzione creata dall&#39;utente: <ul><li>Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Analytics per il [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.</li><li>Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Audience Manager per il [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).</li><li>Non è possibile ripristinare la sandbox di produzione predefinita se contiene dati per entrambe le funzioni CDA e PBD.</li><li>Una sandbox di produzione creata dall’utente e utilizzata per la condivisione bidirezionale dei segmenti con Adobe Audience Manager o Audience Core Service può essere reimpostata dopo un messaggio di avviso.</li></ul>
+>Di seguito è riportato un elenco di eccezioni che possono impedire la reimpostazione della sandbox di produzione predefinita o di una sandbox di produzione creata dall&#39;utente:
+>* Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Analytics per il [Analisi multidispositivo (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=it) funzionalità.
+>* Non è possibile reimpostare la sandbox di produzione predefinita se il grafo delle identità ospitato nella sandbox è utilizzato anche da Adobe Audience Manager per il [Destinazioni basate su persone (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=it).
+>* Non è possibile ripristinare la sandbox di produzione predefinita se contiene dati per entrambe le funzioni CDA e PBD.
+>* Una sandbox di produzione creata dall’utente e utilizzata per la condivisione bidirezionale dei segmenti con Adobe Audience Manager o Audience Core Service può essere reimpostata dopo un messaggio di avviso.
+>* Prima di avviare il ripristino di una sandbox, ti verrà richiesto di eliminare manualmente le composizioni per assicurarti che i dati del pubblico associato siano puliti correttamente.
+
+### Eliminare le composizioni del pubblico
+
+La composizione del pubblico non è attualmente integrata con la funzionalità di ripristino della sandbox, pertanto i tipi di pubblico dovranno essere eliminati manualmente prima di eseguire il ripristino della sandbox.
+
+Seleziona **[!UICONTROL Tipi di pubblico]** dal menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Composizioni]**.
+
+![Il [!UICONTROL Composizioni] scheda in [!UICONTROL Tipi di pubblico] Workspace.](../images/ui/audiences.png)
+
+Quindi, seleziona i puntini di sospensione (`...`) accanto al primo pubblico, quindi seleziona **[!UICONTROL Elimina]**.
+
+![Il menu del pubblico evidenzia [!UICONTROL Elimina] opzione.](../images/ui/delete-composition.png)
+
+Viene visualizzata una conferma della corretta eliminazione e l&#39;utente viene reindirizzato al **[!UICONTROL Composizioni]** scheda.
+
+Ripeti i passaggi precedenti con tutte le tue composizioni. Questo eliminerà tutti i tipi di pubblico dall’inventario dei tipi di pubblico. Una volta rimossi tutti i tipi di pubblico, puoi continuare a reimpostare la sandbox.
+
+### Reimpostazione di una sandbox
 
 Se si ripristina una sandbox di produzione o di sviluppo, vengono eliminate anche tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le autorizzazioni associate. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
 
