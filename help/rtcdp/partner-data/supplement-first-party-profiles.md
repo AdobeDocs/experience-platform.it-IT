@@ -1,12 +1,12 @@
 ---
-title: (Beta) Integrazione dei profili di prime parti con gli attributi forniti dai partner
+title: (Beta) Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla base dei clienti e ottimizzare meglio il pubblico.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 Anche in questo passaggio, pensa a come cambia il modello di governance dei dati quando espandi la tua strategia di gestione dati per includere i dati di terze parti forniti dal partner. Consulta le considerazioni riportate nei collegamenti alla documentazione riportati di seguito:
 
 * (**Disponibile a breve**) Mantieni i dati di terze parti in un set di dati separato in modo che sia facile eliminarli e annullare le integrazioni.
-* (**Disponibile a breve**) Utilizzare [Time-to-live (TTL)](/help/hygiene/ui/dataset-expiration.md) sul set di dati per i clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
+* (**Disponibile a breve** a) Utilizzare [scadenza set di dati](/help/hygiene/ui/dataset-expiration.md) funzionalità del set di dati per i clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
 * (**Disponibile a breve**) Presta attenzione quando crei set di dati derivati che estraggono dati di terze parti, perché una volta combinati, l’unica soluzione per rimuovere i dati di terze parti è quella di eliminare l’intero set di dati derivati.
 
 >[!TIP]
