@@ -2,10 +2,10 @@
 title: Categorie di interesse Mailchimp
 description: Mailchimp (noto anche come Intuit Mailchimp) è un popolare piattaforma di automazione del marketing e servizio di e-mail marketing utilizzato dalle aziende per gestire e parlare con i contatti (clienti, clienti o altre parti interessate) utilizzando mailing list e campagne di e-mail marketing. Utilizza questo connettore per ordinare i contatti in base ai loro interessi e preferenze.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: cdbbd7fa3e8c0a2128823db7279dcb606f3c74db
+source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
 workflow-type: tm+mt
-source-wordcount: '2371'
-ht-degree: 0%
+source-wordcount: '2357'
+ht-degree: 1%
 
 ---
 
@@ -110,9 +110,9 @@ Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL Mai
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti di seguito e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-| [!DNL Mailchimp] destinazione | [!DNL Mailchimp] |
+| Campo | Descrizione |
 | --- | --- |
-| **[!UICONTROL Nome utente]** | Il tuo [!DNL Salesforce Marketing Cloud] prefisso del dominio. <br>Ad esempio, se il dominio è<br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*,<br> devi fornire `mcq4jrssqdlyc4lph19nnqgzzs84` come valore del nome utente. |
+| **[!UICONTROL Nome utente]** | Il tuo [!DNL Mailchimp Interest Categories] nome utente. |
 | **[!UICONTROL Password]** | Il tuo [!DNL Mailchimp] **Chiave API**, che hai annotato in [Raccogli [!DNL Mailchimp] credenziali](#gather-credentials) sezione.<br> La chiave API assume la forma di `{KEY}-{DC}`, in cui `{KEY}` porzione si riferisce al valore annotato in basso nel [[!DNL Mailchimp] Chiave API](#gather-credentials) sezione e `{DC}` porzione si riferisce al [[!DNL Mailchimp] data center](#identify-data-center). <br>È possibile specificare `{KEY}` parte o l&#39;intero modulo.<br> Ad esempio, se la chiave API è <br>*`0123456789abcdef0123456789abcde-us14`*,<br> puoi fornire *`0123456789abcdef0123456789abcde`*o *`0123456789abcdef0123456789abcde-us14`*come valore. |
 
 {style="table-layout:auto"}
