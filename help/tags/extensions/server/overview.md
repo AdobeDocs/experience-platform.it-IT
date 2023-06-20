@@ -2,10 +2,10 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
+source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 17%
+source-wordcount: '180'
+ht-degree: 19%
 
 ---
 
@@ -32,6 +32,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Connettore cloud per la Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Connettore cloud per Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [Core](./core/overview.md)
 * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversioni avanzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
