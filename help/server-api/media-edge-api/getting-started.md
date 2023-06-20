@@ -1,61 +1,60 @@
 ---
-keywords: Experience Platform;media edge;argomenti popolari;intervallo di date
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
-source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 5%
+source-wordcount: '960'
+ht-degree: 4%
 
 ---
 
 
 # Guida introduttiva all’API Media Edge
 
-Questa guida fornisce istruzioni per eseguire con successo le interazioni iniziali con il servizio API Media Edge. Ciò include l’avvio di una sessione multimediale e quindi il tracciamento degli eventi inviati a una soluzione Adobe Experience Platform (AEP) come Customer Journey Analytics (CJA). Il servizio API Media Edge viene avviato con l’endpoint di inizio sessione. Una volta avviata la sessione, è possibile tenere traccia di uno o più dei seguenti eventi:
+Questa guida fornisce istruzioni per eseguire con successo le interazioni iniziali con il servizio API Media Edge. Ciò include l’avvio di una sessione multimediale e quindi il tracciamento degli eventi inviati a una soluzione Adobe Experience Platform come Customer Journey Analytics (CJA). Il servizio API Media Edge viene avviato con l’endpoint di inizio sessione. Una volta avviata la sessione, è possibile tenere traccia di uno o più dei seguenti eventi:
 
-* play
-* ping
-* bitrateChange
-* bufferStart
-* pauseStart
-* adBreakStart
-* adStart
-* adComplete
-* adSkip
-* adBreakComplete
-* chapterStart
-* chapterComplete
-* chapterSkip
-* error
-* sessionEnd
-* sessionComplete
-* statesUpdate
+* `play`
+* `ping`
+* `bitrateChange`
+* `bufferStart`
+* `pauseStart`
+* `adBreakStart`
+* `adStart`
+* `adComplete`
+* `adSkip`
+* `adBreakComplete`
+* `chapterStart`
+* `chapterComplete`
+* `chapterSkip`
+* `error`
+* `sessionEnd`
+* `sessionComplete`
+* `statesUpdate`
 
 Ogni evento ha il proprio endpoint. Tutti gli endpoint API di Media Edge sono metodi POST, con corpi di richiesta JSON per i dati evento. Per ulteriori informazioni sugli endpoint API di Media Edge, sui parametri e sugli esempi, consulta la sezione [File Media Edge Swagger](swagger.md).
 
 Questa guida illustra come tenere traccia dei seguenti eventi dopo l’avvio della sessione:
 
-* Avvio buffer
-* Play
-* Sessione completata
+* [Avvio buffer](#buffer-start-event-request)
+* [Play](#play-event-request)
+* [Sessione completata](#session-complete-event-request)
 
-## Implementazione dell’API
+## Implementazione dell’API {#implement-api}
 
-A parte lievi differenze nel modello e nei percorsi denominati, l’API Media Edge ha la stessa implementazione dell’API Media Collection. I dettagli di implementazione di Media Collection rimangono validi per l’API Media Edge, come descritto nella seguente documentazione:
+A parte lievi differenze nel modello e nei percorsi chiamati, l’API Media Edge ha la stessa implementazione del [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). I dettagli di implementazione di Media Collection rimangono validi per l’API Media Edge, come descritto nella seguente documentazione:
 
 * [Impostazione del tipo di richiesta HTTP nel lettore](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Invio di eventi ping ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [Condizioni di timeout ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
 * [Controllo dell’ordine degli eventi ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
 
-## Authorization
+## Authorization {#authorization}
 
 Attualmente, le API Media Edge non richiedono intestazioni di autorizzazione nelle richieste.
 
 
-## Avvio della sessione
+## Avvio della sessione {#start-session}
 
 Per avviare la sessione multimediale sul server, utilizzare l&#39;endpoint di inizio sessione. Una risposta corretta include `sessionId`, che è un parametro obbligatorio per le richieste di eventi successive.
 
@@ -104,7 +103,7 @@ Inoltre, la mappatura dei tipi di dati per `eventType` nell’esempio precedente
 
 | eventType | tipi di dati |
 | -------- | ------ |
-| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
 | media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
@@ -170,7 +169,7 @@ Per ulteriori informazioni sui parametri e sugli esempi dell&#39;endpoint di ini
 Per ulteriori informazioni sui parametri dei dati multimediali XDM, consulta [Schema informazioni sui dettagli dei contenuti multimediali](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
-## Richiesta evento di avvio buffer
+## Richiesta evento di avvio buffer {#buffer-start}
 
 L’evento di avvio del buffer viene segnalato all’avvio del buffering sul lettore multimediale. La riattivazione del buffer non è un evento nel servizio API, ma viene dedotta quando un evento di riproduzione viene inviato dopo l’avvio del buffer. Per effettuare una richiesta di evento di avvio del buffer, utilizzare `sessionId` nel payload di una chiamata al seguente endpoint:
 
@@ -208,7 +207,7 @@ La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 Per ulteriori informazioni sui parametri e sugli esempi dell&#39;endpoint di avvio del buffer, vedere [Media Edge Swagger](swagger.md) file.
 
 
-## Riproduci richiesta evento
+## Riproduci richiesta evento {#play-event}
 
 L’evento Play viene inviato quando il lettore multimediale passa allo stato di &quot;riproduzione&quot; da un altro stato, ad esempio &quot;buffering&quot;, &quot;messo in pausa&quot; o &quot;errore&quot;. Per effettuare una richiesta di evento Play, utilizza `sessionId` nel payload di una chiamata al seguente endpoint:
 
@@ -243,7 +242,7 @@ La risposta corretta indica uno stato di 200 e non include alcun contenuto.
 
 Per ulteriori informazioni sui parametri e sugli esempi dell’endpoint Play, vedi [Media Edge Swagger](swagger.md) file.
 
-## Richiesta evento sessione completata
+## Richiesta evento sessione completata {#session-complete}
 
 L’evento Sessione completata viene inviato quando viene raggiunta la fine del contenuto principale. Per effettuare una richiesta di evento Sessione completa, utilizza `sessionId` nel payload di una chiamata al seguente endpoint:
 
@@ -289,6 +288,9 @@ La tabella seguente mostra i possibili codici di risposta risultanti dalle richi
 | 400 livelli | Richiesta non valida |
 | Livello 500 | Errore del server |
 
-Per ulteriori informazioni sulla gestione degli errori e dei codici di risposta non riusciti, vedi [Guida alla risoluzione dei problemi di Media Edge](troubleshooting.md).
+## Ulteriori informazioni su questa funzione
+
+* [Guida alla risoluzione dei problemi di Media Edge](troubleshooting.md)
+* [Panoramica API di Media Edge](overview.md)
 
 

@@ -1,9 +1,8 @@
 ---
-keywords: Experience Platform;media edge;argomenti popolari;intervallo di date
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Le API Media Edge consentono agli sviluppatori di raccogliere dati per Media Edge Analytics e Customer Journey Analytics.
-source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
+source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -15,6 +14,7 @@ ht-degree: 0%
 
 Questo documento include una specifica API aperta JSON (OAS) o un riferimento a &quot;Swagger&quot;. Puoi copiare e incollare questa specifica in uno strumento di rendering, ad esempio editor.swagger.io, per visualizzare le informazioni API di Media Edge. Questa specifica include parametri, esempi e schemi per ogni endpoint.
 
++++ Seleziona questa opzione per visualizzare e copiare le specifiche API aperte
 
 ```
 {
@@ -3908,3 +3908,5 @@ Questo documento include una specifica API aperta JSON (OAS) o un riferimento a 
   }
 }
 ```
+
++++

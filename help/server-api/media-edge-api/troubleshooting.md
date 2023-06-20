@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;media edge;argomenti popolari;intervallo di date
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida alla risoluzione dei problemi delle API Media Edge
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -22,10 +21,10 @@ Per facilitare la risoluzione dei problemi delle risposte non riuscite, gli erro
 
 ## Convalida degli avvii della sessione
 
-La maggior parte dei problemi nella creazione delle richieste di avvio sessione si traduce in una risposta 207 con più stati.
+La maggior parte dei problemi relativi alle richieste di avvio sessione si traduce in una risposta 207 con più stati.
 Il payload è simile agli errori non irreversibili dell’API del server di rete Experience Edge. Tutti gli errori di Media Analytics hanno il seguente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. I numeri visualizzati nella risposta corrispondono allo stato di errore.
 
-L’esempio seguente mostra un corpo di risposta per una richiesta di inizio sessione privo di un campo obbligatorio e con un campo non valido.
+L’esempio seguente mostra un corpo di risposta per una richiesta di inizio sessione privo di un campo obbligatorio e con uno non valido.
 
 ```
 {
