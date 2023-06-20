@@ -3,15 +3,20 @@ keywords: Experience Platform;home;argomenti popolari;Amazon Redshift;Amazon red
 solution: Experience Platform
 title: Panoramica del connettore di origine del Snowflake
 description: Scopri come collegare il Snowflake a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
 # [!DNL Snowflake] sorgente
+
+>[!IMPORTANT]
+>
+>Il [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 

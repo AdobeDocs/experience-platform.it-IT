@@ -1,15 +1,20 @@
 ---
 title: Creare una connessione sorgente PubSub di Google nell’interfaccia utente
 description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
 
 # Creare un [!DNL Google PubSub] connessione sorgente nell’interfaccia utente
+
+>[!IMPORTANT]
+>
+>Il [!DNL Google PubSub] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL Google PubSub] (in seguito denominati &quot;[!DNL PubSub]&quot;) tramite l’interfaccia utente di Platform.
 

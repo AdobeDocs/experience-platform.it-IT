@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Snowflake
 title: Creare una connessione sorgente del Snowflake nell’interfaccia utente
 type: Tutorial
 description: Scopri come creare una connessione sorgente del Snowflake utilizzando l’interfaccia utente di Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '457'
 ht-degree: 2%
 
 ---
 
 # Creare un [!DNL Snowflake] connessione sorgente nell’interfaccia utente
+
+>[!IMPORTANT]
+>
+>Il [!DNL Snowflake] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL Snowflake] connettore di origine che utilizza l’interfaccia utente di Adobe Experience Platform.
 

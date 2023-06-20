@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;redshift;Redshift;Amazon Redshift;amazon redshift
-solution: Experience Platform
 title: Creare una connessione di base Amazon Redshift utilizzando l’API del servizio Flow
-type: Tutorial
 description: Scopri come collegare Adobe Experience Platform ad Amazon Redshift utilizzando l’API del servizio Flow.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
 
 # Creare un [!DNL Amazon Redshift] connessione di base tramite [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>Il [!DNL Amazon Redshift] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -34,6 +36,7 @@ Per ottenere [!DNL Flow Service] per connettersi con [!DNL Amazon Redshift], è 
 | **Credenziali** | **Descrizione** |
 | -------------- | --------------- |
 | `server` | Il server associato al tuo [!DNL Amazon Redshift] account. |
+| `port` | La porta TCP che [!DNL Amazon Redshift] il server utilizza per l&#39;ascolto delle connessioni client. |
 | `username` | Il nome utente associato al tuo [!DNL Amazon Redshift] account. |
 | `password` | La password associata al tuo [!DNL Amazon Redshift] account. |
 | `database` | Il [!DNL Amazon Redshift] database a cui si sta effettuando l&#39;accesso. |
@@ -67,34 +70,36 @@ La richiesta seguente crea una connessione di base per [!DNL Amazon Redshift]:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Proprietà | Descrizione |
 | ------------- | --------------- |
 | `auth.params.server` | Il tuo [!DNL Amazon Redshift] server. |
+| `auth.params.port` | La porta TCP che [!DNL Amazon Redshift] il server utilizza per l&#39;ascolto delle connessioni client. |
 | `auth.params.database` | Il database associato al tuo [!DNL Amazon Redshift] account. |
 | `auth.params.password` | La password associata al tuo [!DNL Amazon Redshift] account. |
 | `auth.params.username` | Il nome utente associato al tuo [!DNL Amazon Redshift] account. |

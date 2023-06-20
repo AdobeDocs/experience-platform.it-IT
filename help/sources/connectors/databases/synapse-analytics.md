@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Azure synapse Analytics;azure synapse analisi;Synapse;synapse
-solution: Experience Platform
 title: Panoramica dell’Azure synapse del connettore di origine di Analytics
 description: Scopri come collegare Azure synapse Analytics a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-# [!DNL Azure Synapse Analytics] connettore
+# [!DNL Azure Synapse Analytics] sorgente
+
+>[!IMPORTANT]
+>
+>Il [!DNL Azure Synapse Analytics] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform consente di acquisire dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
