@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 11%
+source-wordcount: '988'
+ht-degree: 10%
 
 ---
 
@@ -61,6 +61,7 @@ ht-degree: 11%
       - [Integrazione OneTrust](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
+      - [Connettore SAP Hybris](connectors/crm/sap-hybris.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
       - [Connettore SugarCRM](connectors/crm/sugarcrm.md)
       - [Connettore CRM Veeva](connectors/crm/veeva.md)
@@ -138,6 +139,7 @@ ht-degree: 11%
          - [Integrazione OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [Ibrido SAP](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Account e contatti SugarCRM](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventi SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
@@ -258,6 +260,7 @@ ht-degree: 11%
          - [Integrazione OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Ibrido SAP](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Account e contatti SugarCRM](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [Eventi SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
