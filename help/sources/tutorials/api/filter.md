@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;servizio di flusso;API ser
 title: Filtrare I Dati A Livello Di Riga Per Un’Origine Utilizzando L’API Del Servizio Flusso
 description: Questo tutorial illustra i passaggi necessari per filtrare i dati a livello di origine utilizzando l’API del servizio Flow
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 3%
 >Il supporto per il filtro dei dati a livello di riga è attualmente disponibile solo per le seguenti origini:
 >
 >* [BigQuery Google](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 Questo tutorial illustra come filtrare i dati a livello di riga per un’origine utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come creare una connessione sorgente del Snowflake utilizzando l’interfaccia utente di Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -37,9 +37,14 @@ Per accedere al tuo account di Snowflake su [!DNL Platform], è necessario forni
 | Database | Il [!DNL Snowflake] Il database contiene i dati che desideri inserire in Platform. |
 | Nome utente | Nome utente per [!DNL Snowflake] account. |
 | Password | La password per [!DNL Snowflake] account utente. |
+| Ruolo | Ruolo di controllo di accesso predefinito da utilizzare nel [!DNL Snowflake] sessione. Il ruolo deve essere esistente e già assegnato all&#39;utente specificato. Il ruolo predefinito è `PUBLIC`. |
 | Stringa di connessione | Stringa di connessione utilizzata per la connessione al [!DNL Snowflake] dell&#39;istanza. Schema della stringa di connessione per [!DNL Snowflake] è `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 Per ulteriori informazioni su questi valori, consulta [questo documento di Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>È necessario impostare `PREVENT_UNLOAD_TO_INLINE_URL` contrassegna per `FALSE` per consentire lo scaricamento dei dati dal [!DNL Snowflake] database di cui eseguire l&#39;Experience Platform.
 
 ## Connetti l’account di Snowflake
 
