@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 10%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 10%
       - [Origine di Analytics](connectors/adobe-applications/analytics.md)
       - [Sorgente Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Origine Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
+      - [Origine Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origine attributi cliente](connectors/adobe-applications/customer-attributes.md)
       - [Origine raccolta dati](connectors/adobe-applications/data-collection.md)
       - [Origine Workfront](connectors/adobe-applications/workfront.md)

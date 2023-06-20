@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1324'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,7 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
    - [Creare una connessione sorgente Adobe Analytics nell’interfaccia utente](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Panoramica origine Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Creare una connessione sorgente Adobe Campaign Managed Cloud Services nell’interfaccia utente](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Panoramica sull’origine di Adobe Commerce](connectors/adobe-applications/commerce.md)
 - [Panoramica sull’origine di Adobe Data Collection](connectors/adobe-applications/data-collection.md)
    - [Creare una connessione sorgente Attributi del cliente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] panoramica dell’origine](connectors/adobe-applications/marketo/marketo.md)
@@ -192,7 +193,7 @@ La tabella seguente illustra il comportamento dell’interfaccia utente in base 
 
 Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite Autorizzazioni di Adobe, vedi [panoramica sul controllo degli accessi](../access-control/home.md).
 
-### Controllo dell’accesso basato su attributi
+### Controllo degli accessi basato su attributi
 
 Il controllo dell’accesso basato su attributi in Adobe Experience Platform consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi.
 
