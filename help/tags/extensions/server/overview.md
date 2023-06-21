@@ -2,10 +2,10 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 9470be59f8c84cb2b41e09010998de1ff8e5e7d9
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 19%
+source-wordcount: '184'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [Core](./core/overview.md)
 * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversioni avanzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
+* [Piattaforma Google Cloud](./google-cloud-platform/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API di conversione](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
@@ -43,6 +44,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [Pega Customer Decision Hub](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [API Snap Conversions](https://exchange.adobe.com/apps/ec/108550)*
+* [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] API Eventi](./zendesk/overview.md)
