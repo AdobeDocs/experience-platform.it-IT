@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1001'
 ht-degree: 37%
 
 ---
@@ -235,7 +235,7 @@ ht-degree: 37%
       * [!DNL Pinterest] {#pinterest}
          * [Panoramica](./extensions/server/pinterest/overview.md)
       * [API Snap Conversions](https://exchange.adobe.com/apps/ec/108550)
-      * [Snowflake] {#snowflake}
+      * [!DNL Snowflake] {#snowflake}
          * [Panoramica](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [Panoramica](./extensions/server/splunk/overview.md)
