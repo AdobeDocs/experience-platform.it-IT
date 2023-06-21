@@ -1,12 +1,12 @@
 ---
 title: Acquisizione di dati crittografati
-description: Adobe Experience Platform consente di acquisire file crittografati tramite origini batch di archiviazione cloud.
+description: Scopri come acquisire i file crittografati tramite le origini batch di archiviazione cloud utilizzando l’API.
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,29 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 ### Utilizzo delle API di Platform
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
+
+### Estensioni di file supportate per i file crittografati
+
+Di seguito è riportato l&#39;elenco delle estensioni di file supportate per i file crittografati:
+
+* .csv
+* .tsv
+* .json
+* parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* parquet, gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* gpg
+* .pgp
+
+>[!NOTE]
+>
+>L’acquisizione di file crittografati in Adobe Experience Platform Sources supporta openPGP e non qualsiasi versione proprietaria specifica di PGP.
 
 ## Crea coppia di chiavi di crittografia {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ Dopo aver creato una connessione di base, è necessario seguire i passaggi descr
 >[!NOTE]
 >
 >Per creare un flusso di dati per l’acquisizione di dati crittografati, è necessario disporre dei seguenti elementi:
+>
 >* [ID chiave pubblica](#create-encryption-key-pair)
 >* [ID connessione sorgente](../api/collect/cloud-storage.md#source)
 >* [ID connessione di destinazione](../api/collect/cloud-storage.md#target)
 >* [ID di mappatura](../api/collect/cloud-storage.md#mapping)
-
 
 Per creare un flusso di dati, effettua una richiesta POST al `/flows` endpoint del [!DNL Flow Service] API. Per acquisire i dati crittografati, è necessario aggiungere una `encryption` sezione al `transformations` e includere `publicKeyId` creato in un passaggio precedente.
 
