@@ -5,7 +5,7 @@ description: L’endpoint "audiences" nell’API del servizio di segmentazione d
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 4%
@@ -62,7 +62,7 @@ La seguente coppia richiesta/risposta viene utilizzata quando `withMetrics` para
 La richiesta seguente recupera gli ultimi cinque tipi di pubblico creati nell’organizzazione.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | ID del pubblico. Viene utilizzato da un pubblico esterno |
 | `name` | Il nome del pubblico. |
-| `namespace` |  |
+| `namespace` | |
 | `description` | Una descrizione del pubblico. |
 | `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalAudience` fa riferimento a un pubblico non generato in Platform. |
 | `lifecycle` | Stato del pubblico. I valori possibili includono `draft`, `published`, `inactive`, e `archived`. `draft` rappresenta quando viene creato il pubblico, `published` quando il pubblico viene pubblicato, `inactive` quando il pubblico non è più attivo, e `archived` se il pubblico viene eliminato. |

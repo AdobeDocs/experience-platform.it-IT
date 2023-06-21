@@ -3,10 +3,10 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 2%
+source-wordcount: '963'
+ht-degree: 1%
 
 ---
 
@@ -20,17 +20,17 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visitare i
 
 Per una guida all’utilizzo di [!DNL Real-Time Customer Profile] dati in [!DNL Experience Platform] Interfaccia utente, fare riferimento a [Guida utente del profilo](../ui/user-guide.md).
 
-<!-- ## (Alpha) Computed attributes {#computed-attributes}
+## [!BADGE Beta]Attributi calcolati {type=Informative} {#computed-attributes}
 
 >[!IMPORTANT]
 >
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+>La funzionalità degli attributi calcolati è disponibile in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative ad aspetti quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza dover eseguire manualmente calcoli complessi ogni volta che sono necessarie le informazioni. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un segmento o accessibili tramite diversi modelli di accesso.
 
-You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
+È possibile creare, visualizzare, modificare ed eliminare attributi calcolati utilizzando `ca/attributes/` endpoint. Per informazioni su come utilizzare gli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per le operazioni API, visita [guida dell’endpoint API per attributi calcolati](../computed-attributes/api.md).
 
 ## Proiezioni spigolo {#edge-projections}
 

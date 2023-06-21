@@ -1,29 +1,33 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
-title: Introduzione agli attributi calcolati
-type: Documentation
+title: Panoramica degli attributi calcolati
 description: Gli attributi calcolati sono funzioni per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
-exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-hide: true
-hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+badge: "Beta"
+source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
 
-# (Alfa) Panoramica degli attributi calcolati
+# Panoramica degli attributi calcolati
 
 >[!IMPORTANT]
 >
->La funzionalità degli attributi calcolati è attualmente in formato alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+>Gli attributi calcolati sono attualmente in **beta** ed è **non** disponibile per tutti gli utenti.
 
-Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
+La personalizzazione basata sul comportamento degli utenti è un requisito chiave affinché gli esperti di marketing massimizzino l’impatto della personalizzazione. Ad esempio, puoi personalizzare l’e-mail di marketing con il prodotto visualizzato più di recente per favorire la conversione o la pagina web in base al totale degli acquisti effettuati dagli utenti per promuovere la fidelizzazione.
 
-Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative ad aspetti quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza dover eseguire manualmente calcoli complessi ogni volta che sono necessarie le informazioni. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un segmento o accessibili tramite diversi modelli di accesso.
+Gli attributi calcolati consentono di convertire rapidamente i dati comportamentali del profilo in valori aggregati a livello di profilo senza dipendere dalle risorse tecniche per:
 
-Questa guida ti aiuterà a comprendere meglio il ruolo degli attributi calcolati all’interno di Adobe Experience Platform.
+- Abilitazione della personalizzazione mirata con attivazione di aggregati comportamentali nelle destinazioni Real-time Customer Data Platform, utilizzo in Adobe Journey Optimizer o nella segmentazione
+- Standardizzazione dei dati comportamentali aggregati del profilo da utilizzare su piattaforme e app diverse
+- Migliore gestione dei dati con consolidamento dei dati dei vecchi eventi di profilo in informazioni comportamentali significative
+
+Questi aggregati vengono calcolati in base ai set di dati Experience Event abilitati per il profilo e acquisiti in Adobe Experience Platform. Ogni attributo calcolato è un attributo di profilo creato nello schema di unione profili e viene raggruppato nel gruppo di campi &quot;Attributo calcolato&quot; nello schema di unione.
+
+I casi d’uso di esempio includono la personalizzazione degli annunci con il nome dell’ultimo prodotto visualizzato per le persone che non hanno effettuato acquisti negli ultimi 7 giorni, la personalizzazione delle e-mail di marketing con punti premio totali ottenuti per congratularsi con gli utenti per essere stati promossi a un livello premium o il calcolo del valore del ciclo di vita di ciascun cliente per favorire un targeting migliore.
+
+Questa guida ti aiuterà a comprendere meglio il ruolo degli attributi calcolati in Platform, oltre a spiegare le nozioni di base degli attributi calcolati.
 
 ## Informazioni sugli attributi calcolati
 
@@ -31,28 +35,55 @@ Adobe Experience Platform consente di importare e unire facilmente i dati proven
 
 Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili durante la lettura diretta dei campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l’esecuzione di più calcoli o l’affidamento su altri campi e valori per generare le informazioni (ad esempio, &quot;totale acquisti per tutta la durata della vita&quot;). Per semplificare la comprensione immediata di questi dati, [!DNL Platform] consente di creare attributi calcolati che eseguono automaticamente questi riferimenti e calcoli, restituendo il valore nel campo appropriato.
 
-Gli attributi calcolati includono la creazione di un’espressione, o &quot;regola&quot;, che funziona sui dati in arrivo e memorizza il valore risultante in un attributo di profilo. Le espressioni possono essere definite in più modi diversi, consentendo di specificare che una regola valuta solo gli eventi in arrivo, un evento in arrivo e i dati del profilo oppure un evento in arrivo, i dati del profilo e gli eventi storici.
+Gli attributi calcolati includono la creazione di un’espressione, o &quot;regola&quot;, che funziona sui dati in arrivo e memorizza il valore risultante in un attributo di profilo. Le espressioni possono essere definite in più modi diversi, consentendoti di specificare su quali eventi aggregare, funzioni di aggregazione o le durate del lookback.
 
-### Casi d’uso
+### Funzioni
 
-I casi di utilizzo per gli attributi calcolati possono variare da calcoli semplici a riferimenti molto complessi. Di seguito sono riportati alcuni esempi di casi di utilizzo per attributi calcolati:
+Gli attributi calcolati consentono di definire gli aggregati di eventi in modo autonomo sfruttando funzioni predefinite. I dettagli su queste funzioni sono disponibili qui sotto:
 
-1. **[!UICONTROL Percentuali]:** Un semplice attributo calcolato può includere l’inserimento di due campi numerici in un record e la loro divisione per creare una percentuale. Ad esempio, puoi prendere il numero totale di e-mail inviate a un individuo e dividerlo per il numero di e-mail che il singolo individuo apre. Osservando il campo attributo calcolato risultante, verrebbe rapidamente visualizzata la percentuale del totale di e-mail aperte dall’utente.
-1. **[!UICONTROL Utilizzo dell’applicazione]:** Un altro esempio include la possibilità di aggregare il numero di volte in cui un utente apre l’applicazione. Tracciando il numero totale di aperture di applicazioni, in base a singoli eventi aperti, puoi offrire offerte o messaggi speciali agli utenti sulla 100a apertura, incoraggiando un coinvolgimento più profondo con il tuo marchio.
-1. **[!UICONTROL Valori ciclo di vita]:** Raccogliere i totali correnti, ad esempio il valore di acquisto del ciclo di vita di un cliente, può essere molto difficile. A tal fine è necessario aggiornare il totale storico ogni volta che si verifica un nuovo evento di acquisto. Un attributo calcolato consente di eseguire questa operazione in modo molto più semplice mantenendo il valore &quot;lifetime&quot; del ciclo di vita in un singolo campo che viene aggiornato automaticamente dopo ogni evento di acquisto riuscito correlato al cliente.
+| Funzione | Descrizione | Tipi di dati supportati | Esempio di utilizzo |
+| -------- | ----------- | -------------------- | ------------- |
+| SOMMA | Una funzione che **somme** il valore specificato per gli eventi qualificati. | Interi, numeri, lunghezze | Somma di tutti gli acquisti degli ultimi 7 giorni |
+| COUNT | Una funzione che **conteggi** il numero di eventi che si sono verificati per la regola specificata. | N/D | Numero di acquisti negli ultimi 3 mesi |
+| MIN | Una funzione che trova **minimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Dati del primo acquisto negli ultimi 7 giorni<br/>Importo minimo dell’ordine nelle ultime 4 settimane |
+| MAX | Una funzione che trova **massimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Ultimi dati di acquisto negli ultimi 7 giorni<br/>Importo massimo dell’ordine nelle ultime 4 settimane |
+| MOST_RECENT | Funzione che trova il valore di attributo specificato dall’evento qualificato più recente. | Tutti i valori primitivi, matrici di valori primitivi | Ultimo prodotto visualizzato negli ultimi 7 giorni |
 
-## Limitazioni note
+### Periodi di lookback
 
-### Disponibilità ritardata di nuovi attributi calcolati
+Gli attributi calcolati vengono calcolati in batch, consentendo di mantenere aggiornati gli aggregati e utilizzando gli eventi più recenti. Per supportare questi scenari quasi in tempo reale, la frequenza di aggiornamento varia a seconda del periodo di lookback dell’evento.
 
-La disponibilità dei nuovi attributi calcolati può essere ritardata fino a 2 ore dopo l’aggiunta dell’attributo schema corrispondente allo schema di unione.
+Il periodo di lookback si riferisce alla quantità di tempo che viene esaminata durante l’aggregazione di Eventi esperienza per l’attributo calcolato. Questo periodo di tempo può essere definito in ore, giorni, settimane o mesi.
 
-Questo ritardo è dovuto alla configurazione di caching corrente. La frequenza di aggiornamento della cache potrebbe essere aumentata dopo l’esecuzione del comando Alpha.
+La frequenza di aggiornamento si riferisce alla frequenza con cui gli attributi calcolati vengono aggiornati. Questo valore dipende dal periodo di lookback e viene impostato automaticamente.
 
-### Tracciamento delle dipendenze nei segmenti
+| Periodo di lookback | Refresh frequency (Frequenza di aggiornamento) |
+| --------------- | ----------------- |
+| Fino a 24 ore | Oraria |
+| Fino a 7 giorni | Giornaliero |
+| Fino a 4 settimane | Settimanale |
+| Fino a 6 mesi | Mensile |
 
-Gli attributi dello schema già utilizzati in un’espressione di definizione di segmento, ma successivamente trasformati in un attributo calcolato, non verranno tracciati come una dipendenza di quel segmento.
+Ad esempio, se l’attributo calcolato ha un periodo di lookback degli ultimi 7 giorni, questo valore verrà calcolato in base ai valori degli ultimi 7 giorni e quindi aggiornato su base giornaliera.
 
-Poiché non è stata rilevata alcuna dipendenza, Experience Platform non valuta automaticamente l’attributo calcolato associato ogni volta che viene valutata la definizione del segmento.
+>[!NOTE]
+>
+>Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi.
 
-In alternativa, la creazione di attributi calcolati può essere gestita tramite un gruppo di campi dello schema specifico che aggiunge nuovi attributi calcolati che non sono in conflitto con gli attributi esistenti. Un’altra alternativa consiste nel ricreare semplicemente il segmento con il tracciamento delle dipendenze corretto per i nuovi attributi calcolati.
+**Aggiornamento rapido**
+
+>[!IMPORTANT]
+>
+>Massimo di **cinque** per gli attributi, in base alla sandbox, può essere abilitato l’aggiornamento rapido.
+
+L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi. Questo consente di reagire alle attività degli utenti quasi in tempo reale. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale.
+
+>[!NOTE]
+>
+>L’abilitazione dell’aggiornamento rapido varia la durata del lookback dell’evento, in quanto il periodo di lookback viene riavviato rispettivamente su base settimanale o mensile.
+>
+>Ad esempio, se crei un attributo calcolato con un periodo di lookback di due settimane con aggiornamento rapido abilitato, il periodo di lookback iniziale sarà di due settimane. Tuttavia, con ogni aggiornamento giornaliero, il periodo di lookback includerà gli eventi del giorno aggiuntivo. L’aggiunta di giorni continuerà fino all’inizio della settimana di calendario successiva, durante la quale l’intervallo di lookback verrà rinnovato e tornerà a due settimane.
+
+## Passaggi successivi
+
+Per ulteriori informazioni sulla creazione e la gestione degli attributi calcolati, consultare [guida API per attributi calcolati](./api.md) o [guida dell’interfaccia utente per attributi calcolati](./ui.md).
