@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Panoramica sui playbook di casi d’uso
 description: Scopri come utilizzare la funzione Playbook di casi di utilizzo in Experience Platform per iniziare a utilizzare vari casi di utilizzo di marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 Cosa troverai in questa guida alla documentazione:
 
 * **[Panoramica dei playbook dei casi d’uso](#overview)**
+* [Introduzione](/help/use-case-playbooks/playbooks/get-started.md)
 * [Scopri il playbook più adatto](/help/use-case-playbooks/playbooks/discover.md)
 * [Creare, condividere e riutilizzare le istanze del playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Risoluzione dei problemi e limitazioni note](troubleshooting.md)

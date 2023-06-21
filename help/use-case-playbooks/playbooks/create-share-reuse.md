@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Creare, condividere e riutilizzare le istanze del playbook
 description: Scopri come creare, condividere e riutilizzare le istanze del playbook per eseguire il caso di utilizzo di marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -64,11 +64,11 @@ Il comportamento descritto sopra è vero per tutte le risorse create, ad eccezio
 >
 >Una volta generati gli oggetti, puoi continuare a testarli nelle sandbox di sviluppo aggiungendo dati. Puoi testare le risorse per tutto il tempo che desideri nella sandbox di sviluppo e replicare la logica delle risorse (definizioni di segmenti, percorsi, schemi e così via) nella sandbox di produzione quando lo desideri.
 
-### Riutilizzare i playbook {#reuse-playbooks}
+## Riutilizzare i playbook {#reuse-playbooks}
 
 Creando più istanze dello stesso playbook, puoi implementare lo stesso caso d’uso in un secondo momento, senza modificare i dettagli della precedente implementazione del caso d’uso.
 
-### Condividere il playbook e le risorse generate con altri membri del team {#share-playbook}
+## Condividere il playbook e le risorse generate con altri membri del team {#share-playbook}
 
 Puoi condividere l’istanza e le risorse generate con altri membri del gruppo. A questo scopo, copia il collegamento URL dal browser e condividilo con il tuo team per offrire una panoramica delle risorse generate.
 
