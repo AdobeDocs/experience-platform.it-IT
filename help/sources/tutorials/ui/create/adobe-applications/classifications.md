@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Creare una connessione sorgente Adobe Analytics per i dati delle classificazioni nell’interfaccia utente
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 6%
+source-wordcount: '628'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Il Connettore dati per le classificazioni di Analytics richiede che i dati siano
 
 Accedi a [Adobe Experience Platform](https://platform.adobe.com) e quindi seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere all’area di lavoro origini. Il **[!UICONTROL Catalogo]** nella schermata vengono visualizzate le origini disponibili con cui creare connessioni in entrata. Ogni scheda sorgente mostra un’opzione per configurare un nuovo account o aggiungere dati a un account esistente.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
 
 Sotto **[!UICONTROL applicazioni Adobe]** categoria, seleziona la **[!UICONTROL Adobe Analytics]** e quindi selezionare **[!UICONTROL Aggiungi dati]** per iniziare a lavorare con i dati delle classificazioni di Analytics.
 
@@ -72,12 +72,7 @@ Seleziona la **[!UICONTROL Set di dati di destinazione]** desideri accedere a.
 
 Il **[!UICONTROL Attività set di dati]** Questa pagina visualizza informazioni sul set di dati di destinazione selezionato, inclusi dettagli sullo stato del batch, l’ID del set di dati e lo schema.
 
->[!IMPORTANT]
->
->L’eliminazione dei set di dati è possibile per altri connettori di origine, tuttavia al momento non è supportato per il connettore dati per le classificazioni di Analytics. Se elimini un set di dati per errore, contatta l’Assistenza clienti Adobe.
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## Passaggi successivi
 
