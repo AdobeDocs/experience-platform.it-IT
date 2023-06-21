@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di giugno 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 72a1ab9203d7cafac5d445f5ca3d2e65bcd1a45c
+source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '768'
 ht-degree: 6%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Estensione  | [!DNL Google Cloud Platform] estensione di inoltro eventi | Il [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) l’estensione per l’inoltro degli eventi consente di inoltrare i dati degli eventi a Google per l’attivazione tramite [!DNL Google Pub/Sub]. |
 | Estensione  | [!DNL Cloud connector for Google Analytics 4 (ga4)] Estensione | Il [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) l’estensione di inoltro degli eventi consente di tenere traccia di analytics tramite il nuovo [!DNL Google Analytics 4 (ga4)] standard. |
 | Segreto | Segreto JWT OAuth 2 | Il [Segreto JWT OAuth 2](../../tags/ui/event-forwarding/secrets.md) consente di utilizzare Adobe e [!DNL Google] Token di servizio per supportare le interazioni server-server nell’inoltro degli eventi. |
-| Tag e inoltro eventi | Attribuzione utente | L’attribuzione degli utenti fornisce dati chiave sulle attività in [Tag](../../tags/home.md) e [Inoltro eventi](../../tags/ui/event-forwarding/overview.md) UI.<br><br>I dati includono chi ha apportato modifiche e in che momento. Questi dati sono visibili nell’interfaccia utente di Tag ed Inoltro eventi nelle seguenti schermate:<br><br>* Panoramica delle proprietà<br><br><ul><li> Panoramica delle proprietà</li><li> Estensioni installate</li><li>Confronto e revisione delle regole</li><li>Revisione del confronto degli elementi dati</li><li>Revisione del confronto delle estensioni</li><li>Modifiche alle risorse della libreria</li><li>Ultima build e pubblicazione della libreria</li></ul> |
+| Tag e inoltro eventi | Attribuzione utente | L’attribuzione degli utenti fornisce dati chiave sulle attività in [Tag](../../tags/home.md) e [Inoltro eventi](../../tags/ui/event-forwarding/overview.md) UI.<br><br>I dati includono chi ha apportato modifiche e in che momento. Questi dati sono visibili nell’interfaccia utente di Tag ed Inoltro eventi nelle seguenti schermate:<br><ul><li> Panoramica delle proprietà</li><li> Estensioni installate</li><li>Confronto e revisione delle regole</li><li>Revisione del confronto degli elementi dati</li><li>Revisione del confronto delle estensioni</li><li>Modifiche alle risorse della libreria</li><li>Ultima build e pubblicazione della libreria</li></ul> |
 
 {style="table-layout:auto"}
 
