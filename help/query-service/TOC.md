@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '278'
 ht-degree: 17%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 17%
    - [Utilizzo delle strutture di dati nidificate](essential-concepts/nested-data-structures.md)
    - [Appiattire le strutture di dati nidificate](essential-concepts/flatten-nested-data.md)
    - [Blocco anonimo](essential-concepts/anonymous-block.md)
+   - [Modello in linea](essential-concepts/inline-templates.md)
    - [Caricamento incrementale](essential-concepts/incremental-load.md)
    - [Deduplicazione dei dati](essential-concepts/deduplication.md)
    - [Esempi di set di dati](essential-concepts/dataset-samples.md)
