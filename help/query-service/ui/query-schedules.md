@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,18 @@ Per il set di dati di output, puoi utilizzare un set di dati esistente o crearne
 >[!IMPORTANT]
 >
 > Poiché si utilizza un set di dati esistente o si crea un nuovo set di dati, **non** devono includere `INSERT INTO` o `CREATE TABLE AS SELECT` come parte della query, poiché i set di dati sono già impostati. Inclusione di `INSERT INTO` o `CREATE TABLE AS SELECT` come parte delle query pianificate genererà un errore.
+
+Se non hai accesso alle query con parametri, continua con [eliminare o disattivare una pianificazione](#delete-schedule) sezione.
+
+### Impostare i parametri per una query con parametri pianificata {#set-parameters}
+
+>[!IMPORTANT]
+>
+>La funzione per l’interfaccia con parametri per query è attualmente disponibile in una **solo versione limitata** e non è disponibile per tutti i clienti.
+
+Se si crea una query pianificata per una query con parametri, è necessario impostare i valori dei parametri per queste esecuzioni della query.
+
+![La sezione Dettagli pianificazione del flusso di lavoro di creazione della pianificazione con la sezione Parametri query evidenziata.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 Dopo aver confermato tutti questi dettagli, seleziona **[!UICONTROL Salva]** per creare una pianificazione. L&#39;utente viene reindirizzato all&#39;area di lavoro pianificazioni che visualizza i dettagli della pianificazione appena creata, inclusi l&#39;ID pianificazione, la pianificazione stessa e il set di dati di output della pianificazione. Puoi utilizzare l’ID pianificazione per cercare ulteriori informazioni sulle esecuzioni della query pianificata stessa. Per ulteriori informazioni, leggere [guida degli endpoint di esecuzione delle query pianificate](../api/runs-scheduled-queries.md).
 

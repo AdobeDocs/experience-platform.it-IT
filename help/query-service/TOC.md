@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: a2b4ddae00ecdf33a12119810eca1ed19ace0c2f
+source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '276'
 ht-degree: 17%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 17%
    - [Panoramica dell’interfaccia utente](ui/overview.md)
    - [Guida utente di Query Editor](ui/user-guide.md)
    - [Modelli di query](ui/query-templates.md)
+   - [Query con parametri (limitate)](ui/parameterized-queries.md)
    - [Pianificazioni query](ui/query-schedules.md)
    - [Registri query](ui/query-logs.md)
    - [Monitorare le query pianificate](ui/monitor-queries.md)
