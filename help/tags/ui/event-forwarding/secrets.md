@@ -2,10 +2,10 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione negli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 5%
+source-wordcount: '2182'
+ht-degree: 4%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 5%
 
 Nell’inoltro degli eventi, un segreto è una risorsa che rappresenta una credenziale di autenticazione per un altro sistema, consentendo lo scambio sicuro di dati. I segreti possono essere creati solo all’interno delle proprietà di inoltro degli eventi.
 
-Al momento sono disponibili tre tipi di segreto supportati:
+Sono attualmente supportati i seguenti tipi di segreto:
 
 | Tipo di segreto | Descrizione |
 | --- | --- |
-| [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione noto e compreso da entrambi i sistemi. |
+| [!UICONTROL Google OAuth 2] | Contiene diversi attributi per supportare [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) specifica di autenticazione da utilizzare in [API di Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL HTTP] | Contiene due attributi di stringa rispettivamente per nome utente e password. |
 | [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare [tipo di concessione credenziali client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) specifica di autenticazione. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
-| [!UICONTROL Google OAuth 2] | Contiene diversi attributi per supportare [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) specifica di autenticazione da utilizzare in [API di Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL OAuth 2 JWT] | Contiene diversi attributi per supportare il profilo JSON Web Token (JWT) per [Autorizzazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) sovvenzioni. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
+| [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione noto e compreso da entrambi i sistemi. |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ Da qui, i passaggi per creare il segreto variano a seconda del tipo di segreto c
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -116,6 +118,40 @@ Ad esempio, se l&#39;offset di aggiornamento è impostato sul valore predefinito
 Al termine, seleziona **[!UICONTROL Crea segreto]** per salvare il segreto.
 
 ![Salva offset OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+Per creare un segreto JWT OAuth 2, seleziona **[!UICONTROL OAuth 2 JWT]** dal **[!UICONTROL Tipo]** a discesa.
+
+![Il [!UICONTROL Crea segreto] con il segreto JWT di OAuth 2 evidenziato nella [!UICONTROL Tipo] a discesa.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>L&#39;unico [!UICONTROL Algoritmo] attualmente supportato per la firma del file JWT: RS256.
+
+Fornisci il tuo [!UICONTROL Emittente], [!UICONTROL Oggetto], [!UICONTROL Pubblico], [!UICONTROL Attestazioni personalizzate], [!UICONTROL TTL], quindi seleziona la [!UICONTROL Algoritmo] dal menu a discesa. Quindi, immetti il [!UICONTROL ID chiave privata], nonché [[!UICONTROL URL token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) per l’integrazione OAuth. Il [!UICONTROL URL token] non è un campo obbligatorio. Se viene fornito un valore, il JWT viene scambiato con un token di accesso. Il segreto verrà aggiornato in base al `expires_in` dalla risposta e dall&#39;attributo [!UICONTROL Aggiorna offset] valore. Se non viene fornito un valore, il segreto inviato al bordo è il JWT. Il JWT verrà aggiornato in base al [!UICONTROL TTL] e [!UICONTROL Aggiorna offset] valori.
+
+![Il [!UICONTROL Crea segreto] con una selezione di campi di input evidenziati.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+Sotto **[!UICONTROL Opzioni credenziali]**, è possibile fornire altre opzioni per le credenziali, ad esempio `jwt_param` sotto forma di coppie chiave-valore. Per aggiungere altre coppie chiave-valore, seleziona **[!UICONTROL Aggiungi un altro]**.
+
+![Il [!UICONTROL Crea segreto] scheda che evidenzia [!UICONTROL Opzioni credenziali] campi.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+Infine, puoi configurare il **[!UICONTROL Aggiorna offset]** valore per il segreto. Rappresenta il numero di secondi prima della scadenza del token durante i quali il sistema eseguirà un aggiornamento automatico. Il tempo equivalente in ore e minuti viene visualizzato a destra del campo e viene aggiornato automaticamente durante la digitazione.
+
+![Il [!UICONTROL Crea segreto] scheda che evidenzia [!UICONTROL Aggiorna offset] campo.](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+Ad esempio, se l&#39;offset di aggiornamento è impostato sul valore predefinito `1800` (30 minuti) e il token di accesso ha un `expires_in` valore di `3600` (un&#39;ora), il sistema aggiornerà automaticamente il segreto in un&#39;ora.
+
+>[!IMPORTANT]
+>
+>Un segreto JWT OAuth 2 richiede almeno 30 minuti tra un aggiornamento e l’altro e deve anche essere valido per almeno un’ora. Questa limitazione ti consente di intervenire per un minimo di 30 minuti in caso di problemi con il token generato.
+>
+>Ad esempio, se l&#39;offset è impostato su `1800` (30 minuti) e il token di accesso ha un `expires_in` di `2700` (45 minuti), lo scambio non sarebbe riuscito perché la differenza risultante era inferiore a 30 minuti.
+
+Al termine, seleziona **[!UICONTROL Crea segreto]** per salvare il segreto.
+
+![Il [!UICONTROL Crea segreto] evidenziazione scheda [!UICONTROL Crea segreto]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
