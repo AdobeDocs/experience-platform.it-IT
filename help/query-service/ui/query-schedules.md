@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Puoi automatizzare l’esecuzione delle query creando pianificazioni di query. L
 
 >[!IMPORTANT]
 >
->Di seguito è riportato un elenco di limitazioni per le query pianificate quando si utilizza l’editor di query. Non si applicano al [!DNL Query Service] API:<br/>È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.<br/>Tu **non può** aggiungere una pianificazione a una query con parametri.<br/>Query pianificate **non può** contiene un blocco anonimo.
+>È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.
 
 Tutte le query pianificate vengono aggiunte all’elenco in [!UICONTROL Query pianificate] scheda. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Il giorno [!UICONTROL Query pianificate] scheda puoi trovare informazioni importanti sull’esecuzione della query e abbonarti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore di esecuzione. Consulta la [Monitorare il documento delle query pianificate](./monitor-queries.md) per ulteriori informazioni.
 
@@ -69,7 +69,9 @@ Dopo aver confermato tutti questi dettagli, seleziona **[!UICONTROL Salva]** per
 
 ## Eliminare o disattivare una pianificazione {#delete-schedule}
 
-È possibile eliminare o disattivare una pianificazione dall&#39;area di lavoro pianificazioni. È necessario selezionare un modello di query da [!UICONTROL Modelli] scheda o [!UICONTROL Query pianificate] per passare all’editor delle query e selezionare **[!UICONTROL Pianificazione]** per accedere all&#39;area di lavoro pianificazioni.
+È possibile eliminare o disabilitare una pianificazione dall&#39;area di lavoro pianificazioni di una particolare query o dall&#39; [!UICONTROL Query pianificate] area di lavoro che elenca tutte le query pianificate.
+
+Per accedere al [!UICONTROL Schedules] della query scelta, è necessario selezionare il nome di un modello di query dalla scheda [!UICONTROL Modelli] scheda o [!UICONTROL Query pianificate] scheda. Consente di passare all&#39;editor delle query per la query. Dall’editor delle query, seleziona **[!UICONTROL Schedules]** per accedere all&#39;area di lavoro pianificazioni.
 
 Selezionare una pianificazione dalle righe delle pianificazioni disponibili. Puoi utilizzare l’interruttore per disabilitare o abilitare la query pianificata.
 
@@ -80,3 +82,5 @@ Selezionare una pianificazione dalle righe delle pianificazioni disponibili. Puo
 Seleziona **[!UICONTROL Eliminare una pianificazione]** per eliminare la pianificazione disabilitata.
 
 ![Area di lavoro pianificazioni con le opzioni Disattiva pianificazione ed Elimina pianificazione evidenziate.](../images/ui/query-schedules/delete-schedule.png)
+
+In alternativa, [!UICONTROL Query pianificate] La scheda offre una raccolta di azioni in linea per ogni query pianificata. Le azioni in linea disponibili includono [!UICONTROL Disattiva pianificazione] o [!UICONTROL Abilita pianificazione], [!UICONTROL Elimina pianificazione], e [!UICONTROL Abbonati] agli avvisi per la query pianificata. Per istruzioni complete su come eliminare o disabilitare una query pianificata tramite la scheda Query pianificate, vedi [monitoraggio della guida con query pianificata](./monitor-queries.md#inline-actions).

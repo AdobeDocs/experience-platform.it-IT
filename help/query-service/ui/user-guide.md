@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -113,11 +113,7 @@ Questo pannello mostra anche metadati utili, come l’ultima volta che la query 
 
 Le query salvate come modello possono essere pianificate dall&#39;Editor query. Questo consente di automatizzare l’esecuzione di query su una cadenza personalizzata. Puoi pianificare le query in base a frequenza, data e ora e, se necessario, scegliere anche un set di dati di output per i risultati. Le pianificazioni delle query possono anche essere disabilitate o eliminate tramite l’interfaccia utente.
 
-Le pianificazioni vengono impostate dall&#39;editor delle query. Di seguito è riportato un elenco di limitazioni per le query pianificate quando si utilizza l’editor di query. Non si applicano al [!DNL Query Service] API:
-
-- È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.
-- Tu **non può** aggiungere una pianificazione a una query con parametri.
-- Query pianificate **non può** contiene un blocco anonimo.
+Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. Questo non si applica al [!DNL Query Service] API:
 
 Consulta la documentazione sulle pianificazioni delle query per scoprire come [creare pianificazioni di query nell’interfaccia utente](./query-schedules.md). In alternativa, per scoprire come aggiungere pianificazioni utilizzando l’API, leggi [guida dell’endpoint &quot;scheduled queries&quot;](../api/scheduled-queries.md).
 

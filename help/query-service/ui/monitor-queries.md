@@ -2,16 +2,16 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 87b530c0ee509d9f24fc7af63507ff0567779d26
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1812'
 ht-degree: 0%
 
 ---
 
 # Monitorare le query pianificate
 
-Adobe Experience Platform fornisce una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. Da [!UICONTROL Query pianificate] scheda ora puoi trovare informazioni importanti sulle esecuzioni della query, tra cui lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di esito negativo. È inoltre possibile abbonarsi agli avvisi per le query basate sul loro stato tramite l’interfaccia utente per una di queste query tramite [!UICONTROL Query pianificate] scheda.
+Adobe Experience Platform fornisce una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. Dalla sezione [!UICONTROL Query pianificate] , è ora possibile trovare informazioni importanti sulle esecuzioni delle query, tra cui lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di esito negativo. È inoltre possibile abbonarsi agli avvisi per le query basate sul loro stato tramite l’interfaccia utente per una di queste query tramite [!UICONTROL Query pianificate] scheda.
 
 ## [!UICONTROL Query pianificate]
 
@@ -29,24 +29,29 @@ La tabella seguente descrive ogni colonna disponibile.
 
 | Colonna | Descrizione |
 |---|---|
-| **[!UICONTROL Nome]** | Il campo del nome corrisponde al nome del modello o ai primi caratteri della query SQL. Tutte le query create tramite l’interfaccia utente con l’editor delle query sono denominate all’inizio. Se la query è stata creata tramite l’API, il suo nome diventa un frammento dell’istruzione SQL iniziale utilizzata per creare la query. Seleziona un elemento dal [!UICONTROL Nome] per visualizzare un elenco di tutte le esecuzioni associate alla query. Per ulteriori informazioni, consulta [la query esegue i dettagli della pianificazione](#query-runs) sezione. |
+| **[!UICONTROL Nome]** | Il campo del nome corrisponde al nome del modello o ai primi caratteri della query SQL. Tutte le query create tramite l’interfaccia utente con l’editor delle query sono denominate all’inizio. Se la query è stata creata tramite l’API, il nome diventa un frammento dell’istruzione SQL iniziale utilizzata per creare la query. Per visualizzare un elenco di tutte le esecuzioni associate alla query, selezionare un elemento dal [!UICONTROL Nome] colonna. Per ulteriori informazioni, vedere [la query esegue i dettagli della pianificazione](#query-runs) sezione. |
 | **[!UICONTROL Modello]** | Nome del modello della query. Selezionate un nome di modello per passare all&#39;editor di query. Il modello di query viene visualizzato nell’editor delle query per comodità. Se non è presente alcun nome di modello, la riga viene contrassegnata con un trattino e non è possibile reindirizzare all’editor delle query per visualizzare la query. |
 | **[!UICONTROL SQL]** | Frammento della query SQL. |
-| **[!UICONTROL Frequenza di esecuzione]** | Questa è la frequenza con cui la query è impostata per l&#39;esecuzione. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
+| **[!UICONTROL Frequenza di esecuzione]** | La frequenza con cui la query è impostata per l&#39;esecuzione. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
 | **[!UICONTROL Creato da]** | Nome dell&#39;utente che ha creato la query. |
 | **[!UICONTROL Creato]** | La marca temporale in formato UTC in cui è stata creata la query. |
 | **[!UICONTROL Timestamp dell’ultima esecuzione]** | Il timestamp più recente in cui è stata eseguita la query. In questa colonna viene evidenziato se una query è stata eseguita in base alla pianificazione corrente. |
 | **[!UICONTROL Stato ultima esecuzione]** | Stato dell’esecuzione della query più recente. I valori dello stato sono: `Success`, `Failed`, `In progress`, e `No runs`. |
+| **[!UICONTROL Stato pianificazione]** | Stato corrente della query pianificata. Esistono cinque valori potenziali, [!UICONTROL Registrazione], [!UICONTROL Attivo], [!UICONTROL Inattivo], [!UICONTROL Eliminato]e un trattino. <ul><li>Il trattino indica che la query pianificata è una query occasionale non ricorrente.</li><li>Il [!UICONTROL Registrazione] Lo stato indica che il sistema sta ancora elaborando la creazione della nuova pianificazione per la query. Non è possibile disattivare o eliminare una query pianificata durante la registrazione.</li><li>Il [!UICONTROL Attivo] lo stato indica che la query pianificata ha **non ancora passato** la data e l’ora di completamento.</li><li>Il [!UICONTROL Inattivo] lo stato indica che la query pianificata ha **passato** la data e l’ora di completamento.</li><li>Il [!UICONTROL Eliminato] lo stato indica che la pianificazione della query è stata eliminata.</li></ul> |
 
 >[!TIP]
 >
 >Se si passa all&#39;editor delle query, è possibile selezionare **[!UICONTROL Query]** per tornare al [!UICONTROL Modelli] scheda.
 
-### Personalizzare le impostazioni della tabella per le query pianificate
+## Personalizzare le impostazioni della tabella per le query pianificate {#customize-table}
 
-È possibile regolare le colonne nel [!UICONTROL Query pianificate] in base alle tue esigenze. Seleziona l’icona delle impostazioni (![Un&#39;icona delle impostazioni.](../images/ui/monitor-queries/settings-icon.png)) per aprire [!UICONTROL Personalizza tabella] impostazioni e modificare le colonne disponibili.
+È possibile regolare le colonne nel [!UICONTROL Query pianificate] in base alle tue esigenze. Per aprire [!UICONTROL Personalizza tabella] impostazioni e modificare le colonne disponibili, seleziona l’icona impostazioni (![Un&#39;icona delle impostazioni.](../images/ui/monitor-queries/settings-icon.png)) in alto a destra.
 
-![Icona Personalizza impostazioni tabella.](../images/ui/monitor-queries/customze-table-settings-icon.png)
+>[!NOTE]
+>
+>Il [!UICONTROL Creato] La colonna che fa riferimento alla data di creazione della pianificazione è nascosta per impostazione predefinita.
+
+![Scheda Query pianificate con l’icona Personalizza impostazioni tabella evidenziata.](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 Per rimuovere o aggiungere una colonna di tabella, attiva o disattiva le caselle di controllo corrispondenti. Quindi, seleziona **[!UICONTROL Applica]** per confermare le scelte effettuate.
 
@@ -56,21 +61,51 @@ Per rimuovere o aggiungere una colonna di tabella, attiva o disattiva le caselle
 
 ![Finestra di dialogo Personalizza impostazioni tabella.](../images/ui/monitor-queries/customize-table-dialog.png)
 
+## Gestire le query pianificate con azioni in linea {#inline-actions}
+
+Il [!UICONTROL Query pianificate] visualizza offre diverse azioni in linea per gestire tutte le query pianificate da un’unica posizione. Le azioni in linea sono indicate con puntini di sospensione in ogni riga. Selezionare i puntini di sospensione di una query pianificata che si desidera gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le opzioni disponibili includono [[!UICONTROL Disattiva pianificazione]](#disable) o [!UICONTROL Abilita pianificazione], [[!UICONTROL Elimina pianificazione]](#delete), e [[!UICONTROL Abbonati]](#alert-subscription) per eseguire query sugli avvisi.
+
+![Scheda Query pianificate con i puntini di sospensione delle azioni in linea e il menu a comparsa evidenziati.](../images/ui/monitor-queries/disable-inline.png)
+
+### Disattivare o attivare una query pianificata {#disable}
+
+Per disabilitare una query pianificata, seleziona i puntini di sospensione di una query pianificata da gestire, quindi fai clic su **[!UICONTROL Disattiva pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Disattiva]** per confermare l&#39;impostazione.
+
+Dopo aver disabilitato una query pianificata, puoi abilitare la pianificazione attraverso lo stesso processo. Seleziona i puntini di sospensione, quindi seleziona **[!UICONTROL Abilita pianificazione]** dalle opzioni disponibili.
+
+### Eliminare una query pianificata {#delete}
+
+Per eliminare una query pianificata, seleziona i puntini di sospensione di una query pianificata da gestire, quindi fai clic su **[!UICONTROL Elimina pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Elimina]** per confermare l&#39;impostazione.
+
+Una volta eliminata, la query pianificata **non** è stato rimosso dall’elenco delle query pianificate. Le azioni in linea fornite dai puntini di sospensione vengono rimosse e sostituite dall’icona di aggiunta avviso disattivata. Non è possibile sottoscrivere avvisi per la pianificazione eliminata. La riga rimane nell’interfaccia utente per fornire informazioni sulle esecuzioni eseguite come parte della query pianificata.
+
+![La scheda Query pianificate con una query pianificata eliminata ed un&#39;icona di avviso disattivata evidenziata.](../images/ui/monitor-queries/post-delete.png)
+
+Se si desidera pianificare le esecuzioni per tale modello di query, selezionare il nome del modello dalla riga appropriata per passare all&#39;editor di query, quindi seguire la [istruzioni per aggiungere una pianificazione a una query](./query-schedules.md#create-schedule) come descritto nella documentazione.
+
 ### Iscriviti agli avvisi {#alert-subscription}
 
-È possibile abbonarsi agli avvisi dal [!UICONTROL Query pianificate] scheda. Seleziona l’icona di notifica dell’avviso (![Un&#39;icona di avviso.](../images/ui/monitor-queries/alerts-icon.png)) accanto al nome di una query per aprire [!UICONTROL Avvisi] . Il [!UICONTROL Avvisi] La finestra di dialogo si abbona sia alle notifiche dell’interfaccia utente che agli avvisi e-mail. Gli avvisi si basano sullo stato della query. Sono disponibili tre opzioni: `start`, `success`, e `failure`. Seleziona la casella o le caselle appropriate e seleziona **[!UICONTROL Salva]** per iscriversi.
+Per attivare gli avvisi relativi alle esecuzioni delle query pianificate, seleziona i puntini di sospensione di una query pianificata da gestire, quindi seleziona **[!UICONTROL Abbonati]** dalle opzioni del menu a comparsa.
+
+Il [!UICONTROL Avvisi] viene visualizzata una finestra di dialogo. Il [!UICONTROL Avvisi] La finestra di dialogo ti consente di ricevere notifiche tramite interfaccia utente e avvisi e-mail. Gli avvisi si basano sullo stato della query. Sono disponibili tre opzioni: `start`, `success`, e `failure`. Seleziona la casella o le caselle appropriate e seleziona **[!UICONTROL Salva]** per iscriversi. È possibile iscriversi agli avvisi se non dispongono di un [!UICONTROL Timestamp ultima esecuzione] valore.
 
 ![Finestra di dialogo Sottoscrizioni avvisi.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
 Consulta la [documentazione API per le sottoscrizioni di avvisi](../api/alert-subscriptions.md) per ulteriori informazioni.
 
-### Filtrare le query {#filter}
+### Visualizzare i dettagli della query {#query-details}
+
+Seleziona l’icona delle informazioni (![Icona delle informazioni.](../images/ui/monitor-queries/information-icon.png)) per visualizzare il pannello dei dettagli della query. Il pannello dei dettagli contiene tutte le informazioni rilevanti sulla query oltre ai fatti inclusi nella tabella delle query pianificate. Le informazioni aggiuntive includono l’ID della query, la data dell’ultima modifica, l’SQL della query, l’ID della pianificazione e la pianificazione del set corrente.
+
+![La scheda Query pianificate con l’icona delle informazioni ed evidenziato il pannello dei dettagli.](../images/ui/monitor-queries/details-panel.png)
+
+## Filtrare le query {#filter}
 
 Puoi filtrare le query in base alla frequenza di esecuzione. Dalla sezione [!UICONTROL Query pianificate] , seleziona l’icona del filtro (![Icona filtro](../images/ui/monitor-queries/filter-icon.png)) per aprire la barra laterale del filtro.
 
 ![Scheda Query pianificate con l’icona del filtro evidenziata.](../images/ui/monitor-queries/filter-queries.png)
 
-Seleziona una delle seguenti opzioni **[!UICONTROL Pianificato]** o **[!UICONTROL Esegui una volta]** per filtrare l’elenco delle query, esegui le caselle di controllo relative ai filtri di frequenza.
+Per filtrare l’elenco delle query in base alla loro frequenza di esecuzione, seleziona la **[!UICONTROL Pianificato]** o **[!UICONTROL Esegui una volta]** caselle di controllo filtro.
 
 >[!NOTE]
 >
@@ -82,7 +117,7 @@ Dopo aver abilitato i criteri di filtro, seleziona **[!UICONTROL Nascondi filtri
 
 ## La query esegue i dettagli della pianificazione {#query-runs}
 
-Selezionare un nome di query per passare alla pagina dei dettagli della pianificazione. Questa vista fornisce un elenco di tutte le esecuzioni eseguite come parte della query pianificata. Le informazioni fornite includono l’ora di inizio e di fine, lo stato e il set di dati utilizzati.
+Per aprire la pagina dei dettagli della pianificazione, selezionare un nome di query dal [!UICONTROL Query pianificate] scheda. Questa vista fornisce un elenco di tutte le esecuzioni eseguite come parte della query pianificata. Le informazioni fornite includono l’ora di inizio e di fine, lo stato e il set di dati utilizzati.
 
 ![La pagina dei dettagli della pianificazione.](../images/ui/monitor-queries/schedule-details.png)
 
@@ -91,8 +126,8 @@ Queste informazioni sono fornite in una tabella a cinque colonne. Ogni riga indi
 | Nome colonna | Descrizione |
 |---|---|
 | **[!UICONTROL ID esecuzione query]** | ID esecuzione query per l’esecuzione giornaliera. Seleziona la **[!UICONTROL ID esecuzione query]** per passare al [!UICONTROL Panoramica sull’esecuzione delle query]. |
-| **[!UICONTROL Inizio esecuzione query]** | Il timestamp in cui è stata eseguita la query. In formato UTC. |
-| **[!UICONTROL Esecuzione query completata]** | La marca temporale in cui è stata completata la query. In formato UTC. |
+| **[!UICONTROL Inizio esecuzione query]** | Il timestamp in cui è stata eseguita la query. Il timestamp è in formato UTC. |
+| **[!UICONTROL Esecuzione query completata]** | La marca temporale in cui è stata completata la query. Il timestamp è in formato UTC. |
 | **[!UICONTROL Stato]** | Stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
 | **[!UICONTROL Set di dati]** | Il set di dati coinvolto nell’esecuzione. |
 
@@ -114,19 +149,19 @@ La sezione sullo stato della query fornisce il codice di errore e il messaggio d
 
 ![La schermata dei dettagli dell’esecuzione con la sezione errori evidenziata.](../images/ui/monitor-queries/failed-query.png)
 
-Da questa vista è possibile copiare l&#39;istruzione SQL per query negli Appunti. Selezionare l&#39;icona Copia in alto a destra dello snippet SQL per copiare la query. Un messaggio a comparsa conferma che il codice è stato copiato.
+Da questa vista è possibile copiare l&#39;istruzione SQL per query negli Appunti. Per copiare la query, selezionare l&#39;icona Copia in alto a destra del frammento SQL. Un messaggio a comparsa conferma che il codice è stato copiato.
 
 ![La schermata dei dettagli dell&#39;esecuzione con l&#39;icona Copia SQL evidenziata.](../images/ui/monitor-queries/copy-sql.png)
 
 ### Eseguire i dettagli per le query con blocco anonimo {#anonymous-block-queries}
 
-Le query che utilizzano blocchi anonimi per comporre le istruzioni SQL vengono separate nelle singole sottoquery. Questo consente di esaminare i dettagli di esecuzione per ogni blocco di query singolarmente.
+Le query che utilizzano blocchi anonimi per comporre le istruzioni SQL vengono separate nelle singole sottoquery. La separazione in sottoquery consente di esaminare singolarmente i dettagli di esecuzione per ogni blocco di query.
 
 >[!NOTE]
 >
 >I dettagli di esecuzione di un blocco anonimo che utilizza il comando DROP **non** essere segnalato come sottoquery separata. Sono disponibili dettagli di esecuzione separati per le query CTAS, le query ITAS e le istruzioni COPY utilizzate come sottoquery di blocco anonime. I dettagli di esecuzione del comando DROP non sono attualmente supportati.
 
-I blocchi anonimi sono identificati mediante l’uso di un `$$` prima della query. Consulta la [documento blocco anonimo](../essential-concepts/anonymous-block.md) per ulteriori informazioni sui blocchi anonimi in query service.
+I blocchi anonimi sono identificati mediante l’uso di un `$$` prima della query. Per ulteriori informazioni sui blocchi anonimi nel servizio di query, consulta [documento blocco anonimo](../essential-concepts/anonymous-block.md).
 
 Le sottoquery di blocco anonime dispongono di schede a sinistra dello stato di esecuzione. Selezionare una scheda per visualizzare i dettagli dell&#39;esecuzione.
 
