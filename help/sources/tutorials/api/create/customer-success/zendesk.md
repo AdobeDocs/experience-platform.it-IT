@@ -1,23 +1,17 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgente connettori;sorgenti sdk;sdk;SDK
-solution: Experience Platform
 title: Creare un flusso di dati per Zendesk utilizzando l’API del servizio Flow
 description: Scopri come collegare Adobe Experience Platform a Zendesk utilizzando l’API del servizio Flow.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1966'
 ht-degree: 2%
 
 ---
 
-# (Beta) Crea un flusso di dati per [!DNL Zendesk] utilizzando [!DNL Flow Service] API
+# Creare un flusso di dati per [!DNL Zendesk] utilizzando [!DNL Flow Service] API
 
->[!NOTE]
->
->Il [!DNL Zendesk] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
-
-Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati da portare [!DNL Zendesk] dati a Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Il seguente tutorial illustra i passaggi necessari per creare una connessione di origine e un flusso di dati da portare [!DNL Zendesk] dati a Platform utilizzando [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introduzione
 
