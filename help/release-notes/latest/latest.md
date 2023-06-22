@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di giugno 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
+source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 6%
+source-wordcount: '1055'
+ht-degree: 5%
 
 ---
 
@@ -58,17 +58,13 @@ Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla r
 
 {style="table-layout:auto"}
 
-<!-- 
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+| Supporto di Workspace per [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinazioni. | Durante la configurazione di una nuova connessione di destinazione di Adobe Target, ora puoi selezionare l’area di lavoro di Adobe Target in cui desideri condividere i tipi di pubblico. Consulta la [parametri di connessione](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) per ulteriori informazioni. Inoltre, consulta l’esercitazione su [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
 
 {style="table-layout:auto"}
-
--->
 
 <!--
 
