@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -101,7 +101,7 @@ Per rimuovere un utente da un ruolo, selezionare **X** accanto al nome dell’ut
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## Gestione delle credenziali API per il ruolo
+## Gestione delle credenziali API per il ruolo {#manage-api-credentials-for-role}
 
 Seleziona la **[!UICONTROL Credenziali API]** per aprire la pagina ruoli: Credenziali API, quindi seleziona **[!UICONTROL Aggiungi credenziali API]** per assegnare le credenziali API al ruolo.
 
