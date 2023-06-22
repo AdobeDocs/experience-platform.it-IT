@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4309'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 Consulta anche la documentazione per istruzioni su come eseguire [query pianificate nell’interfaccia utente](./ui/user-guide.md#scheduled-queries) e attraverso [l’API](./api/scheduled-queries.md).
 
-Di seguito è riportato un elenco di considerazioni per le query pianificate quando si utilizza [!DNL Query Editor]. Non si applicano al [!DNL Query Service] API:<br/>È possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita.<br/>Tu **non può** aggiungere una pianificazione a una query con parametri.<br/>Query pianificate **non può** contiene un blocco anonimo.<br/>Puoi solo pianificare **uno** modello di query tramite l’interfaccia utente. Per aggiungere pianificazioni aggiuntive a un modello di query, è necessario utilizzare l’API. Se è già stata aggiunta una pianificazione utilizzando l’API, non sarà possibile aggiungere ulteriori pianificazioni utilizzando l’interfaccia utente di.
+Tieni presente che quando utilizzi [!DNL Query Editor] è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. Questo non si applica al [!DNL Query Service] API.
 +++
 
 ### Cosa significa l’errore &quot;Limite di sessione raggiunto&quot;?

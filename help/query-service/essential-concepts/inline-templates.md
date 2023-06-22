@@ -1,9 +1,9 @@
 ---
 title: Modelli in linea
 description: Scopri come riutilizzare più condizioni in numerose query con modelli in linea.
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Durante l’esecuzione della query, Query Service sostituisce il nome del modell
 
 >
 >
->Nell’interfaccia utente di Adobe Experience Platform, i modelli in linea sotto forma di query con parametri sono supportati solo a livello principale. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. Il modello figlio deve essere statico e non può avere parametri dinamici.
+>Nell’interfaccia utente di Adobe Experience Platform, i modelli in linea sotto forma di query con parametri sono supportati solo a livello principale. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. Il modello figlio deve essere statico e non può avere parametri dinamici. Consulta la [documentazione sulle query con parametri](../ui/parameterized-queries.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 
