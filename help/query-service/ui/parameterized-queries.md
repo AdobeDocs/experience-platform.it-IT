@@ -1,9 +1,9 @@
 ---
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ Utilizza il `'$'` per immettere un parametro di query nella query nell’editor 
 
 Se si rimuove un parametro e si tenta di eseguire di nuovo la query dopo che è già stata eseguita, nella viene visualizzato un messaggio di errore [!UICONTROL Parametri di query] sezione per avvisarti.
 
+>[!NOTE]
+>
+>Se la query non accetta parametri, è comunque possibile immettere parametri non necessari nell&#39;editor di query. L’editor delle query ignora tutte le coppie chiave-valore non necessarie e non ha alcun effetto sull’esecuzione o sui risultati della query.
+
 ![L’editor delle query con un campo valore vuoto e l’errore Parametri query sono evidenziati.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Utilizzare i dettagli dei registri di query per verificare i valori dei parametri {#check-parameter-values}
@@ -77,4 +81,4 @@ I valori dei parametri vengono salvati quando si pianifica una query con paramet
 
 Dopo aver letto questo documento, hai imparato a parametrizzare le query nell’interfaccia utente di Adobe Experience Platform e a utilizzarle nelle esecuzioni pianificate delle query. Nel documento è anche evidenziato come verificare nei registri i valori dei parametri utilizzati nelle esecuzioni delle query.
 
-Se non lo hai già fatto, ti consigliamo di leggere la guida [monitoraggio delle query pianificate](./monitor-queries.md) per comprendere meglio lo stato di tutti i processi di query tramite l’interfaccia utente di Platform.
+Successivamente, si consiglia di leggere la guida [monitoraggio delle query pianificate](./monitor-queries.md) per comprendere meglio lo stato di tutti i processi di query tramite l’interfaccia utente di Platform.
