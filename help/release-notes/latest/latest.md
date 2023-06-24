@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di giugno 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
+source-git-commit: 5ee919390d759cc2a9418f636a46a516560fd5f0
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 6%
@@ -121,12 +121,14 @@ Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema 
 Query Service consente di utilizzare SQL standard per eseguire query sui dati nel data lake di Adobe Experience Platform. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire in Real-Time Customer Profile.
 
 **Funzioni aggiornate**
+
 | Funzione | Descrizione |
 | --- | --- |
 | Modelli in linea | Query Service ora supporta l’utilizzo di modelli che fanno riferimento ad altri modelli all’interno dell’SQL. Riduci il carico di lavoro ed evita errori sfruttando i modelli in linea nelle query. È possibile riutilizzare istruzioni o condizioni e fare riferimento a modelli nidificati per una maggiore flessibilità nell&#39;SQL. Non esiste alcun limite nelle dimensioni delle query che possono essere memorizzate come modelli o nel numero di modelli a cui è possibile fare riferimento dalla query originale. Per ulteriori informazioni, leggere [guida ai modelli in linea](../../query-service/essential-concepts/inline-templates.md). |
-| Aggiornamenti pianificati dell’interfaccia utente query | Gestisci tutte le query pianificate da un’unica posizione nell’interfaccia utente con [[!UICONTROL Scheda Query pianificate]](../../query-service/ui/monitor-queries.md#inline-actions). Il [!UICONTROL Query pianificate] L’interfaccia utente è stata migliorata con l’aggiunta di azioni di query in linea e la nuova colonna relativa allo stato della query. Le aggiunte recenti includono la possibilità di abilitare, disabilitare ed eliminare una pianificazione, o di abbonarsi agli avvisi per le esecuzioni delle query imminenti direttamente dal [!UICONTROL Query pianificate] visualizzazione. <p>![Azioni in linea evidenziate nel [!UICONTROL Query pianificate] visualizzazione.](../../query-service/images/ui/monitor-queries/disable-inline.png "Azioni in linea evidenziate nel [!UICONTROL Query pianificate] visualizzazione."){width="100" zoomable="yes"}</p> |
+| Aggiornamenti pianificati dell’interfaccia utente per le query | Gestisci tutte le query pianificate da un’unica posizione nell’interfaccia utente con [[!UICONTROL Scheda Query pianificate]](../../query-service/ui/monitor-queries.md#inline-actions). Il [!UICONTROL Query pianificate] L’interfaccia utente è stata migliorata con l’aggiunta di azioni di query in linea e la nuova colonna relativa allo stato della query. Le aggiunte recenti includono la possibilità di abilitare, disabilitare ed eliminare una pianificazione, o di abbonarsi agli avvisi per le esecuzioni delle query imminenti direttamente dal [!UICONTROL Query pianificate] visualizzazione. <p>![Azioni in linea evidenziate nel [!UICONTROL Query pianificate] visualizzazione.](../../query-service/images/ui/monitor-queries/disable-inline.png "Azioni in linea evidenziate nel [!UICONTROL Query pianificate] visualizzazione."){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
+
 Per ulteriori informazioni su Query Service, consulta [Panoramica di Query Service](../../query-service/home.md).
 
 ## Origini {#sources}
