@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida API di Identity Service
 description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti in tempo quasi reale tra dispositivi e canali diversi, utilizzando i grafici delle identità in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 3%
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Identity Service] gestisce l’identificazione d
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Identity Service]](../home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati del profilo cliente. Lo fa collegando le identità tra dispositivi e sistemi in cui i clienti interagiscono con il tuo marchio.
+- [[!DNL Identity Service]](../home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati del profilo cliente. Ciò avviene collegando le identità tra dispositivi e sistemi in cui i clienti interagiscono con il tuo marchio.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
 
@@ -60,7 +60,7 @@ La tabella seguente mostra alcuni percorsi di esempio che utilizzano le regioni:
 | Servizio | Regione: VA7 | Regione: NLD2 |
 | ------ | -------- |--------- |
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
-| [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
+| [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/namespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
 >[!NOTE]
 >
