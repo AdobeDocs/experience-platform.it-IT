@@ -3,9 +3,9 @@ title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1425'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 5%
 >* La funzionalità per esportare i set di dati è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 >* Questa funzionalità beta supporta l’esportazione di dati di prima generazione, come definito in Real-time Customer Data Platform [descrizione del prodotto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
-
 
 Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage] utilizzando l’interfaccia utente di Experience Platform.
 
@@ -135,11 +134,22 @@ Il nome di file predefinito viene generato in modo casuale e garantisce che i no
 
 La presenza di questi file nel percorso di archiviazione conferma la riuscita dell’esportazione. Per comprendere come sono strutturati i file esportati, puoi scaricare un esempio [file .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [file .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### File di set di dati compressi {#compressed-dataset-files}
+
+In [connetti al flusso di lavoro di destinazione](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), puoi selezionare i file del set di dati esportati da comprimere, come illustrato di seguito:
+
+![Tipo di file e selezione della compressione durante la connessione a una destinazione per esportare i set di dati.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+Quando vengono compressi, si noti la differenza di formato tra i due tipi di file:
+
+* Durante l’esportazione di file JSON compressi, il formato del file esportato è `json.gz`
+* Quando si esportano file parquet compressi, il formato di file esportato è `gz.parquet`
+
 ## Rimuovi set di dati dalla destinazione {#remove-dataset}
 
 Per rimuovere un set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
+1. Accedi a [Interfaccia utente Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Visualizzazione Sfoglia destinazione con una connessione di destinazione visualizzata e il resto sfocato.](../assets/ui/export-datasets/browse-dataset-connections.png)
 

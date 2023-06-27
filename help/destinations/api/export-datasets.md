@@ -4,9 +4,9 @@ title: (Beta) Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
+source-wordcount: '3524'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 4%
 >* La funzionalità per esportare i set di dati è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 >* Questa funzionalità beta supporta l’esportazione di dati di prima generazione, come definito in Real-time Customer Data Platform [descrizione del prodotto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Questa funzionalità è disponibile per i clienti che hanno acquistato Real-Time CDP Prime o Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
-
 
 Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow Service API] per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage].
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 Puoi trovare informazioni sulla funzione [vari parametri restituiti dal flusso di dati eseguono l’API](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) nella documentazione di riferimento API.
+
+## Verificare l’esportazione del set di dati {#verify}
+
+Durante l’esportazione dei set di dati, Experience Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. Si prevede che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita quando [creazione di un flusso di dati](#create-dataflow).
+
+In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+Il nome di file predefinito viene generato in modo casuale e garantisce che i nomi di file esportati siano univoci.
+
+### File di set di dati di esempio {#sample-files}
+
+La presenza di questi file nel percorso di archiviazione conferma la riuscita dell’esportazione. Per comprendere come sono strutturati i file esportati, puoi scaricare un esempio [file .parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) o [file .json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### File di set di dati compressi {#compressed-dataset-files}
+
+Nel passaggio a [creare una connessione di destinazione](#create-target-connection), puoi selezionare i file del set di dati esportati da comprimere.
+
+Quando vengono compressi, si noti la differenza di formato tra i due tipi di file:
+
+* Durante l’esportazione di file JSON compressi, il formato del file esportato è `json.gz`
+* Quando si esportano file parquet compressi, il formato di file esportato è `gz.parquet`
 
 ## Gestione degli errori API {#api-error-handling}
 
