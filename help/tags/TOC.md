@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 37%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 37%
    * [Standard di compatibilità con le versioni precedenti](./extension-dev/backwards-compatibility.md)
 * API di Reactor {#api}
    * [Panoramica](./api/overview.md)
-   * [Introduzione](./api/getting-started.md)
+   * [Autenticazione e accesso all’API di Reactor](./api/getting-started.md)
    * Endpoint {#endpoints}
       * [Aziende](./api/endpoints/companies.md)
       * [Proprietà](./api/endpoints/properties.md)
