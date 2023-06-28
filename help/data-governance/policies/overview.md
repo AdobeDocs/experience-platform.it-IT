@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei criteri di utilizzo dei dati
 description: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -94,6 +94,7 @@ La tabella seguente descrive le azioni di marketing di base fornite per Adobe e 
 | Combinare con dati direttamente identificabili | Azione che combina qualsiasi PII (Personally Identifiable Information) con dati anonimi. I contratti per i dati provenienti da reti di annunci, server di annunci e fornitori di dati di terze parti spesso includono divieti contrattuali specifici sull’utilizzo di tali dati con dati direttamente identificabili. |
 | Targeting tra siti | Azione che utilizza i dati per il targeting di annunci tra siti. La combinazione di dati provenienti da diversi siti, compresa una combinazione di dati nel sito e dati esterni al sito o una combinazione di dati provenienti da diverse fonti esterne al sito, è definita dati intersito. I dati tra siti vengono generalmente raccolti ed elaborati per trarre conclusioni sugli interessi degli utenti. |
 | Data Science | Azione che utilizza i dati per i flussi di lavoro di data science. Alcuni contratti includono divieti espliciti sull’uso dei dati per la scienza dei dati. A volte queste sono formulate in termini che vietano l’uso di dati per l’intelligenza artificiale (IA), l’apprendimento automatico (ML) o la modellazione. |
+| Esportazione dati | Azione che esporta dati in qualsiasi posizione o destinazione al di fuori di prodotti e servizi di Adobe. Ad esempio, puoi scaricare i dati nel computer locale, copiarli dalla schermata, pianificare la consegna dei dati a una posizione esterna a Adobe, progetti pianificati dal Customer Journey Analytics, scaricare rapporti, API di reporting e così via. |
 | Targeting e-mail | Azione che utilizza i dati nelle campagne di targeting e-mail. |
 | Esporta a terze parti | Azione che esporta dati a processori ed entità che non hanno relazioni dirette con i clienti. Molti fornitori di dati hanno clausole nei contratti che vietano l&#39;esportazione di dati da dove sono stati raccolti originariamente. Ad esempio, i contratti per social network spesso limitano il trasferimento dei dati che ricevi da loro. |
 | Pubblicità on-site | Azione che utilizza i dati per gli annunci nel sito, inclusa la selezione e la consegna di annunci sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci. |
