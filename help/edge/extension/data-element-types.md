@@ -2,10 +2,10 @@
 title: Tipi di elementi dati nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di elementi dati forniti dall’estensione tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 5%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # Tipi di elementi dati
 
 Dopo aver impostato [tipi di azioni](action-types.md) nel [Estensione tag Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md), è necessario configurare i tipi di elementi dati. Questa pagina descrive i tipi di elementi dati disponibili.
-
-## ID unione evento {#event-merge-id}
-
-Quando viene utilizzato, questo elemento dati fornisce un ID unione evento. Per questo elemento dati non è necessaria alcuna configurazione. L’elemento dati fornito rimane lo stesso finché il visitatore non esce dalla pagina o finché il **[!UICONTROL Reimposta ID unione evento]** tipo di azione utilizzato.
 
 ## Mappa identità {#identity-map}
 
@@ -48,7 +44,7 @@ Tieni presente che quando apri alcuni campi dello schema, ad esempio `web.webPag
 >
 >Compila solo le informazioni che sei interessato a raccogliere. Tutto ciò che non viene compilato viene omesso quando i dati vengono inviati alle soluzioni.
 
-## Variabile (Beta) {#variable}
+## Variable {#variable}
 
 >[!IMPORTANT]
 >

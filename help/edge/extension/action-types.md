@@ -3,9 +3,9 @@ title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '778'
 ht-degree: 1%
 
 ---
@@ -35,11 +35,7 @@ Dopo aver ricevuto il consenso dell’utente, questo deve essere comunicato a Ad
 
 In questa azione, ti viene fornito anche un campo facoltativo per includere una Identity Map, in modo che le identità possano essere sincronizzate una volta ricevuto il consenso. La sincronizzazione è utile quando il consenso è configurato come &quot;In sospeso&quot; o &quot;Out&quot; perché la chiamata di consenso è probabilmente la prima chiamata da attivare.
 
-## Reimposta ID unione evento {#reset-event-merge-id}
-
-Se desideri ripristinare l’ID unione evento sulla pagina, puoi farlo con questa azione. Per reimpostare l’ID, seleziona l’ID unione da reimpostare e attiva l’azione come necessario.
-
-## (Beta) Aggiorna variabile {#update-variable}
+## Aggiorna variabile {#update-variable}
 
 >[!IMPORTANT]
 >
