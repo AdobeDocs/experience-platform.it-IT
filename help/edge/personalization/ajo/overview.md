@@ -3,7 +3,7 @@ title: Utilizzo di Adobe Journey Optimizer con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con l’SDK per web di Experience Platform utilizzando Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe percorsi optimizer;renderDecisions;superfici;decisioni;proposte;ambito;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Per iniziare a utilizzare [!DNL Adobe Journey Optimizer], segui la procedura ind
    })
    ```
 
-3. Facoltativamente, specificare superfici aggiuntive negli eventi. Per impostazione predefinita, Web SDK genera automaticamente la superficie web per la pagina web corrente e la include nella richiesta alla rete Edge. Se necessario, è possibile includere superfici aggiuntive nella richiesta specificandole nella `personalization.surfaces` opzione del `sendEvent` o nel corrispondente **[!UICONTROL Superfici]** [[!UICONTROL Invia evento] azione](../../extension/action-types.md#send-event) configurazione dell’estensione Web SDK.
+3. Facoltativamente, specificare superfici aggiuntive negli eventi. Per impostazione predefinita, Web SDK genera automaticamente la superficie web per la pagina web corrente e la include nella richiesta alla rete Edge. Se necessario, è possibile includere superfici aggiuntive nella richiesta specificandole nella `personalization.surfaces` opzione del `sendEvent` o nel corrispondente **[!UICONTROL Superfici]** [[!UICONTROL Invia evento] azione](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configurazione dell’estensione Web SDK.
 
    ```javascript
    alloy("sendEvent", {

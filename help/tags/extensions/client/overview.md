@@ -2,7 +2,7 @@
 title: Riferimento estensioni tag
 description: Trova la documentazione relativa alle estensioni tag in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 9%
@@ -39,7 +39,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Servizio Adobe Experience Cloud ID](./id-service/overview.md)
 * [Demo Adobe Experience Platform](./platform-demo/overview.md)
-* [Adobe Experience Platform Web SDK](./sdk/overview.md)
+* [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Informazioni su risorse Adobe Experience Manager](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [Adobi Medium di Analytics per audio e video](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Esperienze Cheetah](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Plugin comuni di Analytics](./plugins/overview.md)
-* [Plug-in comuni di Web SDK](./web-sdk-plugins/overview.md)
+* [Plug-in comuni di Web SDK](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Gestione del consenso per i cookie da parte di CMP utente v2](https://exchange.adobe.com/apps/ec/*107037)

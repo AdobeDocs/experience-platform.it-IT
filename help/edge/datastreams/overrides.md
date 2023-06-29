@@ -2,7 +2,7 @@
 title: Configurare le sostituzioni dello stream di dati
 description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
 1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](configure.md).
-2. Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando Web SDK o utilizzando Web SDK [estensione tag](../extension/web-sdk-extension-configuration.md).
+2. Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando Web SDK o utilizzando Web SDK [estensione tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Questo articolo spiega il processo di sostituzione della configurazione dello stream di dati end-to-end per ogni tipo di sostituzione supportata.
 
@@ -91,7 +91,7 @@ Ora dovresti aver configurato le sostituzioni del contenitore di sincronizzazion
 
 >[!NOTE]
 >
->In alternativa all’invio delle sostituzioni di configurazione tramite comandi Web SDK, puoi aggiungere le sostituzioni di configurazione all’SDK per web [estensione tag](../extension/web-sdk-extension-configuration.md).
+>In alternativa all’invio delle sostituzioni di configurazione tramite comandi Web SDK, puoi aggiungere le sostituzioni di configurazione all’SDK per web [estensione tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 Dopo [configurazione delle sostituzioni dello stream di dati](#configure-overrides) Nell’interfaccia utente di Data Collection, ora puoi inviare le sostituzioni alla rete Edge tramite Web SDK.
 

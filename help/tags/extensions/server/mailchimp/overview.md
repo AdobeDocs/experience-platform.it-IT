@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 5%
@@ -103,7 +103,7 @@ L&#39;estensione è ora installata e configurata per l&#39;utilizzo nella propri
 
 ## Raccolta dati
 
-Quando utilizzi questa estensione in una [regola](../../../ui/managing-resources/rules.md), con ogni evento l’estensione invia a Mailchimp diversi valori di dati. Per un’implementazione tipica, puoi configurare il [Estensione Adobe Experience Platform Web SDK](../../client/sdk/overview.md) per inviare tali dati a [!DNL Platform Edge Network] da utilizzare dall’estensione nella proprietà di inoltro degli eventi.
+Quando utilizzi questa estensione in una [regola](../../../ui/managing-resources/rules.md), con ogni evento l’estensione invia a Mailchimp diversi valori di dati. Per un’implementazione tipica, puoi configurare il [Estensione Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) per inviare tali dati a [!DNL Platform Edge Network] da utilizzare dall’estensione nella proprietà di inoltro degli eventi.
 
 I dati richiesti da questa estensione possono essere inviati da Web SDK come dati XDM o come dati non XDM. Per ulteriori informazioni, consulta la documentazione di [invio di dati XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
