@@ -4,9 +4,9 @@ title: Abilitare un set di dati per gli aggiornamenti del profilo tramite API
 type: Tutorial
 description: Questa esercitazione mostra come utilizzare le API di Adobe Experience Platform per abilitare un set di dati con funzionalità di "upsert" per apportare aggiornamenti ai dati del profilo cliente in tempo reale.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Questa esercitazione illustra il processo di abilitazione di un set di dati con 
 
 >[!NOTE]
 >
->Il flusso di lavoro upsert funziona solo per l’acquisizione batch. L’acquisizione in streaming è **non** supportati.
+>Il flusso di lavoro descritto in questa esercitazione funziona solo per l’acquisizione in batch. Per i programmi upsert di acquisizione in streaming, consulta la guida su [invio di aggiornamenti parziali delle righe a Real-Time Customer Profile tramite la preparazione dati](../../data-prep/upserts.md).
 
 ## Introduzione
 
