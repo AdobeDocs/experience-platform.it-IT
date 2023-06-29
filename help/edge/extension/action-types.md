@@ -3,9 +3,9 @@ title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,6 @@ Dopo aver ricevuto il consenso dell’utente, questo deve essere comunicato a Ad
 In questa azione, ti viene fornito anche un campo facoltativo per includere una Identity Map, in modo che le identità possano essere sincronizzate una volta ricevuto il consenso. La sincronizzazione è utile quando il consenso è configurato come &quot;In sospeso&quot; o &quot;Out&quot; perché la chiamata di consenso è probabilmente la prima chiamata da attivare.
 
 ## Aggiorna variabile {#update-variable}
-
->[!IMPORTANT]
->
->Questa è attualmente una funzionalità beta ed è soggetta a modifiche. Le versioni future possono contenere modifiche che causano interruzioni.
 
 Utilizza questa azione per modificare un oggetto XDM come risultato di un evento. Questa azione ha lo scopo di creare un oggetto a cui è possibile fare successivamente riferimento da un **[!UICONTROL Invia evento]** per registrare l’oggetto XDM dell’evento.
 
