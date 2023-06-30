@@ -4,7 +4,7 @@ title: Guida alla migrazione delle API per le destinazioni dell’archiviazione 
 description: Scopri le modifiche nel flusso di lavoro per attivare le destinazioni di archiviazione cloud come parte della migrazione alle nuove schede di destinazione di archiviazione cloud con funzionalità aggiuntive.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -16,7 +16,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >* La funzionalità descritta in questa pagina è disponibile per i clienti che hanno acquistato i pacchetti Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
-
 
 ## Contesto di migrazione {#migration-context}
 
@@ -783,7 +782,7 @@ Osserva nell’esempio di configurazione seguente come `profileSelectors` i camp
 
 ## Timeline di migrazione e azioni {#timeline-and-action-items}
 
-Migrazione dei flussi di dati legacy alle nuove schede di destinazione per [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni SFTP si verificheranno non appena la tua organizzazione sarà pronta per la migrazione e non più tardi di **30 giugno 2023**.
+Migrazione dei flussi di dati legacy alle nuove schede di destinazione per [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni SFTP si verificheranno non appena la tua organizzazione sarà pronta per la migrazione e non più tardi di **26 luglio 2023**.
 
 Riceverai e-mail di promemoria da Adobe con l’avvicinarsi della data di migrazione. In preparazione, leggi la sezione Azioni di seguito per prepararti alla migrazione.
 
@@ -791,11 +790,11 @@ Riceverai e-mail di promemoria da Adobe con l’avvicinarsi della data di migraz
 
 In preparazione della migrazione del [!DNL Amazon S3], [!DNL Azure Blob], e le destinazioni dell’archiviazione cloud SFTP nelle nuove schede, prepara l’aggiornamento degli script e delle chiamate API automatizzate come suggerito di seguito.
 
-1. Aggiornare script o chiamate API automatizzate per qualsiasi [!DNL Amazon S3], [!DNL Azure Blob], o le destinazioni dell’archiviazione cloud SFTP entro il 30 giugno 2023. Tutte le chiamate o gli script API automatizzati che sfruttano le specifiche di connessione o di flusso legacy devono essere aggiornati alle nuove specifiche di connessione o di flusso.
-2. Rivolgiti al rappresentante del tuo account Adobe quando gli script saranno stati aggiornati prima del 30 giugno.
+1. Aggiornare script o chiamate API automatizzate per qualsiasi [!DNL Amazon S3], [!DNL Azure Blob], o le destinazioni di archiviazione cloud SFTP entro il 26 luglio 2023. Tutte le chiamate o gli script API automatizzati che sfruttano le specifiche di connessione o di flusso legacy devono essere aggiornati alle nuove specifiche di connessione o di flusso.
+2. Rivolgiti al rappresentante del tuo account Adobe quando gli script saranno stati aggiornati prima del 26 luglio.
 3. Ad esempio, il `targetConnectionSpecId` può essere utilizzato come flag per determinare se il flusso di dati è stato migrato alla nuova scheda di destinazione. È possibile aggiornare gli script con un `if` condizione per esaminare le specifiche di connessione di destinazione legacy e aggiornate in `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` e determinare se il flusso di dati è stato migrato. Puoi visualizzare gli ID delle specifiche di connessione nuovi e precedenti nelle sezioni specifiche di questa pagina per ogni destinazione.
 4. Il team del tuo account Adobe riceverà ulteriori informazioni su quando verrà effettuata la migrazione dei flussi di dati.
-5. Dopo il 30 giugno, tutti i flussi di dati verranno migrati. Tutti i flussi di dati esistenti avranno ora nuove entità di flusso (specifiche di connessione, specifiche di flusso, connessioni di base e connessioni di destinazione). Qualsiasi script o chiamata API sul tuo lato che utilizzi le entità di flusso legacy cesserà di funzionare.
+5. Dopo il 26 luglio, tutti i flussi di dati verranno migrati. Tutti i flussi di dati esistenti avranno ora nuove entità di flusso (specifiche di connessione, specifiche di flusso, connessioni di base e connessioni di destinazione). Qualsiasi script o chiamata API sul tuo lato che utilizzi le entità di flusso legacy cesserà di funzionare.
 
 ## Altre considerazioni sulla migrazione {#other-considerations}
 
