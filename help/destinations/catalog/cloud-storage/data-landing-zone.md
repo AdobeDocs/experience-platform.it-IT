@@ -2,9 +2,9 @@
 title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare segmenti ed esportare set di dati.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1378'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 1%
 >
 >* Questa destinazione è attualmente in versione beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Data Landing Zone] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL Organization ID].
 >* Questa pagina della documentazione fa riferimento a [!DNL Data Landing Zone] *destinazione*. È inoltre disponibile un [!DNL Data Landing Zone] *sorgente* nel catalogo delle origini. Per ulteriori informazioni, leggere [[!DNL Data Landing Zone] sorgente](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentazione.
-
 
 
 ## Panoramica {#overview}
@@ -72,6 +71,12 @@ Devi utilizzare le API di Platform per recuperare [!DNL Data Landing Zone] crede
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| Parametri query | Descrizione |
+| --- | --- |
+| `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
+
+{style="table-layout:auto"}
+
 **Richiesta**
 
 L’esempio di richiesta seguente recupera le credenziali per una zona di destinazione esistente.
@@ -104,6 +109,52 @@ La risposta seguente restituisce le informazioni sulle credenziali per la zona d
 | `containerName` | Il nome della zona di destinazione. |
 | `SASToken` | Il token di firma di accesso condiviso per la tua zona di destinazione. Questa stringa contiene tutte le informazioni necessarie per autorizzare una richiesta. |
 | `SASUri` | URI della firma di accesso condiviso per la zona di destinazione. Questa stringa è una combinazione dell&#39;URI della zona di destinazione per la quale si sta effettuando l&#39;autenticazione e del token SAS corrispondente, |
+
+{style="table-layout:auto"}
+
+## Aggiorna [!DNL Data Landing Zone] credenziali
+
+Se necessario, puoi anche aggiornare le credenziali. È possibile aggiornare `SASToken` facendo una richiesta POST al `/credentials` endpoint del [!DNL Connectors] API.
+
+**Formato API**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| Parametri query | Descrizione |
+| --- | --- |
+| `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
+| `refresh` | Il `refresh` consente di reimpostare le credenziali della zona di destinazione e generare automaticamente un nuovo `SASToken`. |
+
+{style="table-layout:auto"}
+
+**Richiesta**
+
+La richiesta seguente aggiorna le credenziali della zona di destinazione.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**Risposta**
+
+La seguente risposta restituisce valori aggiornati per il `SASToken` e `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
