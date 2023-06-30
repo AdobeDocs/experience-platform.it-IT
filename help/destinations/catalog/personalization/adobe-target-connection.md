@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 7%
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 | Mese di rilascio | Tipo di aggiornamento | Descrizione |
 |---|---|---|
-| Giugno 2023 | Aggiornamento della funzionalità e della documentazione | A partire da giugno 2023, quando configuri una nuova connessione di destinazione Adobe Target, puoi selezionare l’area di lavoro di Adobe Target a cui desideri condividere i tipi di pubblico. Consulta la [parametri di connessione](#parameters) per ulteriori informazioni. Inoltre, consulta l’esercitazione su [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
+| Giugno 2023 | Aggiornamento della funzionalità e della documentazione | A partire da giugno 2023, quando configuri una nuova connessione di destinazione Adobe Target, puoi selezionare l’area di lavoro di Adobe Target a cui desideri condividere i tipi di pubblico. Consulta la sezione [parametri di connessione](#parameters) per ulteriori informazioni. Inoltre, consulta il tutorial sulla [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
 | Maggio 2023 | Aggiornamento della funzionalità e della documentazione | A partire da maggio 2023, la **[!UICONTROL Adobe Target]** supporto di connessione [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
 
 {style="table-layout:auto"}
@@ -84,8 +84,8 @@ Adobe Experience Platform si connette automaticamente all’istanza Adobe Target
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="Informazioni sulle aree di lavoro di Adobe Target"
->abstract="Seleziona l’area di lavoro di Adobe Target in cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono instradati all’area di lavoro selezionata seguendo le etichette di utilizzo dei dati di Experience Platform applicabili."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="Ulteriori informazioni sulle aree di lavoro di Adobe Target"
+>abstract="Seleziona l’area di lavoro di Adobe Target in cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione ad Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo le etichette di utilizzo dei dati di Experience Platform applicabili."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it" text="Ulteriori informazioni sulle aree di lavoro di Adobe Target"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -93,7 +93,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 * **Descrizione**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
 * **ID flusso di dati**: questo determina in quale flusso di dati di Raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo gli stream di dati in cui sono abilitati i servizi Target e Adobe Experience Platform. Consulta [configurazione di uno stream di dati](../../../edge/datastreams/configure.md#aep) per informazioni dettagliate su come configurare un flusso di dati per Adobe Experience Platform e Adobe Target.
    * **[!UICONTROL Nessuno]**: seleziona questa opzione se devi configurare la personalizzazione Adobe Target ma non puoi implementare [Experience Platform Web SDK](../../../edge/home.md). Quando si utilizza questa opzione, i segmenti esportati da Experience Platform a Target supportano solo la personalizzazione della sessione successiva e la segmentazione Edge è disabilitata. Per ulteriori informazioni, consulta la tabella seguente.
-* **Workspace**: seleziona l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) a cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo la [Experience Platform di etichette di utilizzo dei dati](../../../data-governance/labels/overview.md).
+* **Workspace**: seleziona l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it) a cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione ad Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo la [Experience Platform di etichette di utilizzo dei dati](../../../data-governance/labels/overview.md).
 
 | Nessun flusso di dati selezionato | Stream di dati selezionato |
 |---|---|
