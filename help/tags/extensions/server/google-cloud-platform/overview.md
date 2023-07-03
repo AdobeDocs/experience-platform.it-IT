@@ -2,14 +2,14 @@
 title: Estensione Inoltro eventi di Google Cloud Platform
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 1%
+source-wordcount: '570'
+ht-degree: 2%
 
 ---
 
-# [!DNL Google Cloud Platform] estensione di inoltro eventi
+# Estensione [!DNL Google Cloud Platform] per l’inoltro degli eventi
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) è una piattaforma di cloud computing che offre un’ampia gamma di servizi, tra cui elaborazione distribuita, archiviazione di database, distribuzione di contenuti e servizi di integrazione software-as-a-service (SaaS) per la gestione delle relazioni con i clienti (CRM) e la pianificazione delle risorse aziendali (ERP).
 
@@ -17,7 +17,7 @@ Il [!DNL Google Cloud Platform] [inoltro eventi](../../../ui/event-forwarding/ov
 
 ## Prerequisiti
 
-Per utilizzare questa estensione, è necessario disporre di un [!DNL Google Cloud Platform] account con esistente [!DNL Cloud Pub/Sub] argomento. Se non disponi di un flusso di dati preesistente, vedi [!DNL AWS] documentazione su [creazione di un nuovo flusso di dati utilizzando [!DNL AWS] Console di gestione](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+Per utilizzare questa estensione, è necessario disporre di un [!DNL Google Cloud Platform] account con esistente [!DNL Cloud Pub/Sub] argomento. Se non hai un argomento preesistente, vedi [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) documentazione sulla creazione e la gestione di argomenti.
 
 ### Creare un segreto e un elemento dati
 
