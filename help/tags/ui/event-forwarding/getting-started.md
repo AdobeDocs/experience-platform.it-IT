@@ -3,9 +3,9 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '875'
 ht-degree: 79%
 
 ---
@@ -29,7 +29,7 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 
 ## Prerequisiti
 
-* Adobe Experience Platform Collection Enterprise (contatta il team del tuo account Adobe per informazioni sui prezzi)
+* Adobe Real-Time CDP Connections, Prime o Ultimate (contatta il team del tuo account Adobe per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
 * Adobe Experience Platform Web SDK o Mobile SDK, configurato per inviare i dati a Edge Network
 * Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
