@@ -3,10 +3,10 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: eb9d2f9a233f4214057db5136f32fc1290ece63c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 9%
+source-wordcount: '1047'
+ht-degree: 8%
 
 ---
 
@@ -26,7 +26,7 @@ Questo documento fornisce una panoramica di alto livello sull’inoltro degli ev
 >
 >Per informazioni su come l’inoltro degli eventi si inserisce nell’ecosistema di raccolta dati di Platform, consulta la sezione [panoramica sulla raccolta dati](../../../collection/home.md).
 
-Inoltro di eventi in combinazione con Adobe Experience Platform [SDK per web](../../../edge/home.md) e [SDK per dispositivi mobili](https://aep-sdks.gitbook.io/docs/) offre i seguenti vantaggi:
+Inoltro di eventi in combinazione con Adobe Experience Platform [SDK per web](../../../edge/home.md) e [SDK per dispositivi mobili](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
 
 **Prestazioni**:
 
@@ -57,7 +57,7 @@ Elenco di tutte le proprietà di inoltro eventi **[!UICONTROL Bordo]** come piat
 
 ### Estensioni {#extensions}
 
-L’inoltro degli eventi dispone di un proprio catalogo di estensioni compatibili, ad esempio [Core](../../extensions/server/core/overview.md) estensione e [Connettore cloud Adobe](../../extensions/server/cloud-connector/overview.md) estensione. Puoi visualizzare le estensioni disponibili per le proprietà di inoltro degli eventi nell’interfaccia utente selezionando **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Catalogo]**.
+L’inoltro degli eventi dispone di un catalogo di estensioni compatibili, ad esempio [Core](../../extensions/server/core/overview.md) estensione e [Connettore cloud Adobe](../../extensions/server/cloud-connector/overview.md) estensione. Puoi visualizzare le estensioni disponibili per le proprietà di inoltro degli eventi nell’interfaccia utente selezionando **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Catalogo]**.
 
 ![Estensioni di inoltro degli eventi nell’interfaccia utente di Data Collection](../../images/ui/event-forwarding/overview/extensions.png)
 

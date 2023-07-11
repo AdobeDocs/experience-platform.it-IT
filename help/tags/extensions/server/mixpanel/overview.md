@@ -4,9 +4,9 @@ title: Estensione inoltro eventi API Mixpanel Track Events
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ I team di analisi possono quindi sfruttare [!DNL Mixpanel's] funzionalità per e
 
 Per ulteriori informazioni sui casi d’uso specifici per [!DNL Mixpanel], consulta la seguente documentazione:
 
-* [Nuovo a [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [Nuovo a [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [Che cosa è [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
 * [12 must-try [!DNL Mixpanel] funzioni](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. Sotto
 | --- | --- | --- |
 | [!UICONTROL Token progetto] | Questo campo deve essere mappato al token di progetto associato al [!DNL Mixpanel] account. | Sì |
 | [!UICONTROL Tipo evento] | Il nome dell’evento. | Sì |
-| [!UICONTROL Ora evento] | Ora dell’evento. |  |
-| [!UICONTROL ID distinto mixpanel] | L’identificatore univoco dell’utente che ha eseguito l’evento. |  |
-| [!UICONTROL Inserisci ID] | Un identificatore univoco dell’evento, utilizzato per la deduplicazione. |  |
-| [!UICONTROL Proprietà evento] | Oggetto JSON contenente le proprietà personalizzate dell’evento. Scegli se fornire JSON non elaborato o utilizzare un set semplificato di input chiave-valore. |  |
+| [!UICONTROL Ora evento] | Ora dell’evento. | |
+| [!UICONTROL ID distinto mixpanel] | L’identificatore univoco dell’utente che ha eseguito l’evento. | |
+| [!UICONTROL Inserisci ID] | Un identificatore univoco dell’evento, utilizzato per la deduplicazione. | |
+| [!UICONTROL Proprietà evento] | Oggetto JSON contenente le proprietà personalizzate dell’evento. Scegli se fornire JSON non elaborato o utilizzare un set semplificato di input chiave-valore. | |
 
 >[!NOTE]
 >

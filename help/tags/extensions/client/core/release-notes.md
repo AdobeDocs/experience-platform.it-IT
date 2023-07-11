@@ -2,10 +2,10 @@
 title: Note sulla versione dell’estensione Core
 description: Note aggiornate sulla versione dell’estensione Core in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 71%
+source-wordcount: '1644'
+ht-degree: 62%
 
 ---
 
@@ -117,13 +117,13 @@ v2.0.4
 
 * Supporto per elementi dati per vari campi. Il supporto per gli elementi dati è stato aggiunto ai seguenti eventi: “Tempo sulla pagina”, “Entra in viewport”, “Passaggio del mouse” e “Tempo file multimediale riprodotto”; e alle seguenti condizioni: “Tempo sul sito” e “Confronto valori”.
 * È stato aggiunto il supporto del comportamento predefinito per Ctrl/Comando + clic e per clic del pulsante centrale del mouse quando si utilizza Ritardo collegamento.
-* **Ritardo collegamento contrassegnato sull’evento clic come “non più supportato”.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
+* **Ritardo collegamento contrassegnato sull’evento clic come &quot;non più supportato&quot;.** - Ulteriori informazioni sono disponibili sul [Blog di Data Collection](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) per Adobe Experience Platform.
 
 ## 6 gennaio 2021
 
 v1.9.0
 
-* **Nuova azione &quot;Trigger Direct Call&quot;**: l&#39;estensione Core ora include un nuovo tipo di azione denominato `Trigger Direct Call`. Può essere utilizzato quando si desidera attivare una regola di chiamata diretta tramite un&#39;azione di una regola diversa. Viene mappato direttamente sul metodo `_satellite.track()`. Ringraziamo [Jan Exner](https://twitter.com/jexner) per questo contributo.
+* **Nuova azione &quot;Trigger Direct Call&quot;** : l&#39;estensione Core ora include un nuovo tipo di azione denominato `Trigger Direct Call`.  Può essere utilizzato quando si desidera attivare una regola di chiamata diretta tramite un&#39;azione di una regola diversa. Viene mappato direttamente sul metodo `_satellite.track()`. Ringraziamo Jan Exner per questo contributo.
 
 ## 8 dicembre 2020
 
@@ -163,25 +163,25 @@ Per informazioni più dettagliate, consulta il [riferimento all’estensione cor
 
 v1.7.3
 
-* **Aumento della lunghezza del campo di testo**: i campi di input di testo ora hanno un layout flex per utilizzare al meglio la larghezza dello schermo degli utenti e dare più spazio a stringhe di testo più lunghe.
+* **Campi di testo più lunghi**: ai campi per l’immissione di testo è stato applicato un layout flessibile che consente di utilizzare meglio la larghezza dello schermo dell’utente e offre più spazio per l’immissione di stringhe di testo più lunghe.
 
 ## 1 novembre 2019
 
 v1.7.0
 
-* **Accesso a `event` Variable Within Custom Code Data Element**: È ora possibile fare riferimento all&#39;evento dall&#39;interno di un elemento dati con codice personalizzato quando viene eseguito facendo riferimento a una regola. L&#39;oggetto conterrà informazioni utili sull&#39;evento che ha attivato la regola. Ringraziamo [Stewart Schilling](https://twitter.com/sdi_stewart) per questo contributo.
+* **Accesso a `event` Variable Within Custom Code Data Element**: È ora possibile fare riferimento all&#39;evento dall&#39;interno di un elemento dati con codice personalizzato quando viene eseguito facendo riferimento a una regola. L&#39;oggetto conterrà informazioni utili sull&#39;evento che ha attivato la regola. Ringraziamo Stewart Schilling per questo contributo.
 
 ## 7 ottobre 2019
 
 v1.6.2
 
-* **Nuovo tipo di elemento dati “Constant”**: l’estensione core ora include un nuovo tipo di elemento dati chiamato `Constant`. Può essere utilizzato quando devi memorizzare un valore costante a cui verrà fatto riferimento in varie condizioni, azioni o codice personalizzato. Ringraziamo [Jan Exner](https://twitter.com/jexner) per questo contributo.
+* **Nuovo tipo di elemento dati: “Costante”** - L&#39;estensione Core ora include un nuovo tipo di elemento dati denominato `Constant`. Può essere utilizzato quando devi memorizzare un valore costante a cui verrà fatto riferimento in varie condizioni, azioni o codice personalizzato. Ringraziamo Jan Exner per questo contributo.
 
 ## 11 settembre 2019
 
 v1.6.1
 
-* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti alla pagina da un tag usano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce, in modo che gli script tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
+* **Supporto per nonce CSP**: l&#39;estensione core presenta ora un parametro di configurazione opzionale. È possibile aggiungere un elemento dati che faccia riferimento a un nonce. Se configurati, tutti gli script in linea aggiunti da un tag alla pagina utilizzano il nonce configurato. Questa modifica supporta l’utilizzo di criteri sulla sicurezza dei contenuti con un nonce, in modo che gli script tag possano essere caricati in un ambiente CSP. Per ulteriori informazioni sull’utilizzo dei tag con CSP, consulta [qui](../../../ui/client-side/content-security-policy.md).
 
 ## 18 giugno 2019
 
@@ -194,8 +194,8 @@ v1.5.0
 v1.4.3
 
 * **Campi di input**: i campi di input ora sono molto più lunghi.
-* **Custom Event**: ora è possibile utilizzare il tipo di evento personalizzato con gli eventi inviati dalla finestra.
-* **Correzione bug**: è stato corretto un bug a causa del quale il valore della condizione Value Comparison non supportava il valore 0.
+* **Evento personalizzato**: ora è possibile utilizzare il tipo di evento personalizzato con gli eventi inviati dalla finestra.
+* **Correzione bug**: è stato corretto un bug a causa del quale Value Comparison Condition non conteneva un valore 0.
 * **Correzione bug**: exchange\_ url è stato aggiornato, quindi puoi visualizzare l&#39;elenco delle estensioni principali in Adobe Exchange.
 
 ## 8 gennaio 2019
@@ -208,9 +208,9 @@ v1.4.2
 
 ## 8 novembre 2018
 
-* **Opzione Persist Cohort**: l&#39;opzione di mantenere una coorte è stata aggiunta alla condizione Sampling. Ciò ha l&#39;effetto di mantenere un utente dentro o fuori la coorte di campionamento tra le diverse sessioni. Ad esempio, se la casella di controllo “persist cohort” è selezionata e la condizione restituisce true la prima volta che viene eseguita per un visitatore specifico, restituirà true su tutte le esecuzioni successive della condizione per lo stesso visitatore. Analogamente, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce false la prima volta che viene eseguita per un visitatore specifico, restituirà false su tutte le esecuzioni successive della condizione per lo stesso visitatore.
+* **Opzione Persist Cohort**: l&#39;opzione di mantenere una coorte è stata aggiunta alla condizione Sampling. Ciò ha l&#39;effetto di mantenere un utente dentro o fuori la coorte di campionamento tra le diverse sessioni. Ad esempio, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce true la prima volta che viene eseguita per un visitatore specifico, restituirà true su tutte le esecuzioni successive della condizione per lo stesso visitatore. Analogamente, se la casella di controllo &quot;persist cohort&quot; è selezionata e la condizione restituisce false la prima volta che viene eseguita per un visitatore specifico, restituirà false su tutte le esecuzioni successive della condizione per lo stesso visitatore.
 * **Correzione di bug**: è stato risolto un problema che causava la cancellazione del contenuto del sito Web da parte di una regola con un evento Page Bottom e un’azione Custom Code su una pagina in cui i tag venivano caricati in modo sincrono ma non erano installati correttamente (nessuna chiamata a `_satellite.pageBottom()`).
-* **Correzione di bug**: è stato risolto un problema che causava il mancato funzionamento di Enters Viewport se la libreria di tag veniva caricata in modo asincrono e il caricamento veniva completato dopo che l’evento DOMContentLoaded del browser era stato avviato.
+* **Correzione bug** - È stato risolto un problema che causava il mancato funzionamento di Enters Viewport se la libreria di tag veniva caricata in modo asincrono e il caricamento veniva completato dopo che l’evento DOMContentLoaded del browser era stato avviato.
 
 ## 24 maggio 2018
 
