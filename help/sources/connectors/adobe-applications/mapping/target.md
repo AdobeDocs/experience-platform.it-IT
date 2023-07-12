@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;mappatura target;Mappatura target;Home;popular topic;target mapping;Target mapping
 solution: Experience Platform
 title: Mappatura dei dati evento di Adobe Target su XDM
 description: Scopri come mappare i campi evento di Adobe Target a uno schema Experience Data Model (XDM) da utilizzare in Adobe Experience Platform.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # Mappature dei campi di mappatura target
 
-Adobe Experience Platform consente di acquisire dati Adobe Target tramite il connettore di origine Target. Quando si utilizza il connettore, tutti i dati di Target devono essere mappati sul [Experience Data Model (XDM)](../../../../xdm/home.md) campi associati alla classe XDM ExperienceEvent.
-
-La tabella seguente illustra i campi di uno schema Experience Event (*Campo ExperienceEvent XDM*) e i campi di destinazione corrispondenti a cui devono essere mappati (*Campo richiesta target*). Vengono inoltre fornite note aggiuntive per alcune mappature.
+La tabella seguente illustra i campi di uno schema Experience Data Model (XDM) e i campi corrispondenti di Adobe Target a cui devono essere mappati. Vengono inoltre fornite note aggiuntive per alcune mappature.
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ La tabella seguente illustra i campi di uno schema Experience Event (*Campo Expe
 | Campo ExperienceEvent XDM | Campo richiesta target | Note |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Un identificatore di richiesta univoco |
-| **`dataSource`** |  | Configurato su &quot;1&quot; per tutti i client. |
+| **`dataSource`** | | Configurato su &quot;1&quot; per tutti i client. |
 | `dataSource._id` | Valore generato dal sistema che non può essere passato con la richiesta. | ID univoco di questa origine dati. Questo verrebbe fornito dall’individuo o dal sistema che ha creato l’origine dati. |
 | `dataSource.code` | Valore generato dal sistema che non può essere passato con la richiesta. | Collegamento all&#39;@id. completa È possibile utilizzare almeno uno dei codici o dei @id. A volte, questo codice viene indicato come codice di integrazione dell’origine dati. |
 | `dataSource.tags` | Valore generato dal sistema che non può essere passato con la richiesta. | I tag vengono utilizzati per indicare come gli alias rappresentati da una determinata origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.<br><br>Esempi:<br><ul><li>`isAVID`: origini dati che rappresentano gli ID visitatore di Analytics.</li><li>`isCRSKey`: origini di dati che rappresentano alias da utilizzare come chiavi in CRS.</li></ul>I tag vengono impostati al momento della creazione dell’origine dati, ma sono anche inclusi nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. |
@@ -76,7 +73,7 @@ La tabella seguente illustra i campi di uno schema Experience Event (*Campo Expe
 | `placeContext.geo.postalCode` | Il codice postale è stato risolto in base all’indirizzo IP della richiesta. |
 | `placeContext.geo.stateProvince` | Stato o provincia risolto in base all&#39;indirizzo IP della richiesta. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Imposta solo se i dettagli dell’ordine sono presenti nella richiesta. |
+| **`commerce`** | | Imposta solo se i dettagli dell’ordine sono presenti nella richiesta. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
