@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
+source-git-commit: 2c3a70df57af2045f03c8d4a22cdc33f3c449fb3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 17%
+source-wordcount: '1121'
+ht-degree: 16%
 
 ---
 
@@ -93,11 +93,18 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 * **Descrizione**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
 * **ID flusso di dati**: questo determina in quale flusso di dati di Raccolta dati verranno inclusi i segmenti. Il menu a discesa mostra solo gli stream di dati in cui sono abilitati i servizi Target e Adobe Experience Platform. Consulta [configurazione di uno stream di dati](../../../edge/datastreams/configure.md#aep) per informazioni dettagliate su come configurare un flusso di dati per Adobe Experience Platform e Adobe Target.
    * **[!UICONTROL Nessuno]**: seleziona questa opzione se devi configurare la personalizzazione Adobe Target ma non puoi implementare [Experience Platform Web SDK](../../../edge/home.md). Quando si utilizza questa opzione, i segmenti esportati da Experience Platform a Target supportano solo la personalizzazione della sessione successiva e la segmentazione Edge è disabilitata. Per ulteriori informazioni, consulta la tabella seguente.
+
+  | Nessun flusso di dati selezionato | Stream di dati selezionato |
+  |---|---|
+  | <ul><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere segmenti con la connessione Adobe Target solo per *sandbox di produzione predefinita*.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
+
 * **Workspace**: seleziona l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it) a cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione ad Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo la [Experience Platform di etichette di utilizzo dei dati](../../../data-governance/labels/overview.md).
 
-| Nessun flusso di dati selezionato | Stream di dati selezionato |
-|---|---|
-| <ul><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere segmenti con la connessione Adobe Target solo per *sandbox di produzione predefinita*.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) sono supportati.</li><li>La condivisione dei segmenti è supportata per altre sandbox.</li></ul> |
+>[!NOTE]
+>
+>Quando si utilizza un’area di lavoro di Target personalizzata per [personalizzazione della stessa pagina e della pagina successiva con attributi](../../ui/activate-edge-personalization-destinations.md), solo il [pubblico selezionato](../../ui/activate-edge-personalization-destinations.md#select-audiences) vengono inviati all’area di lavoro di Target selezionata. Il [attributi mappati](../../ui/activate-edge-personalization-destinations.md#mapping) vengono inviati all’area di lavoro di Target predefinita.
+><br>
+>Questo comportamento cambierà in un aggiornamento futuro.
 
 ### Abilita avvisi {#enable-alerts}
 
