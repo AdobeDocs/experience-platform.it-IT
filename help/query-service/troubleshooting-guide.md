@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -231,7 +231,7 @@ AS SELECT '1' as _id,
 
 ### Perché esiste una differenza tra i numeri visualizzati nell’interfaccia utente del profilo e i numeri calcolati dal set di dati di esportazione del profilo?
 
-+++Risposta I numeri visualizzati nel dashboard dei profili sono accurati all&#39;ultima istantanea. I numeri generati nella tabella di esportazione del profilo dipendono interamente dalla query di esportazione. Di conseguenza, l’esecuzione di query sul numero di profili idonei per un particolare segmento è una causa comune di questa discrepanza.
++++Risposta I numeri visualizzati nel dashboard dei profili sono accurati all&#39;ultima istantanea. I numeri generati nella tabella di esportazione del profilo dipendono interamente dalla query di esportazione. Di conseguenza, l’esecuzione di query sul numero di profili idonei per un determinato pubblico è una causa comune di questa discrepanza.
 
 >[!NOTE]
 >
@@ -512,7 +512,7 @@ WHERE T2.ID IS NULL
 
 - Query Service supporta il controllo degli accessi basato su attributi. Puoi limitare l’accesso ai dati a livello di colonna/foglia e/o di struttura. Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la documentazione.
 
-### È possibile specificare una modalità SSL per la connessione a un client di terze parti? È possibile, ad esempio, utilizzare &quot;verify-full&quot; con Power BI?
+### È possibile specificare una modalità SSL per la connessione a un client di terze parti? È possibile, ad esempio, utilizzare &#39;verify-full&#39; con Power BI?
 
 +++Risposta Sì, sono supportate le modalità SSL. Consulta la [Documentazione sulle modalità SSL](./clients/ssl-modes.md) suddividendo le diverse modalità SSL disponibili e il livello di protezione che offrono.
 +++

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]
 
 Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell’acquisizione dei dati, i dati contenuti in tali campi vengono inseriti nel file &quot;[!UICONTROL Grafico delle identità]&quot; per quell’individuo. È quindi possibile accedere ai dati del grafico tramite [[!DNL Real-Time Customer Profile]](../../profile/home.md) e altro [!DNL Experience Platform] per fornire una visualizzazione combinata di ogni singolo cliente.
 
-Campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; include: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Dovresti anche considerare eventuali identificatori univoci specifici per la tua organizzazione, in quanto potrebbero essere buoni &quot;.[!UICONTROL Identità]&quot;.
+Campi comunemente contrassegnati come &quot;[!UICONTROL Identità]&quot; include: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=it), ID CRM o altri campi ID univoci. Dovresti anche considerare eventuali identificatori univoci specifici per la tua organizzazione, in quanto potrebbero essere validi &quot;.[!UICONTROL Identità]&quot;.
 
 È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, al fine di garantire che i dati vengano raccolti per creare il profilo più solido possibile. Consulta la panoramica su [Servizio Adobe Experience Platform Identity](../../identity-service/home.md) per ulteriori informazioni su come le informazioni sulle identità possono aiutarti a fornire esperienze digitali ai tuoi clienti.
 
@@ -271,7 +271,7 @@ Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascu
 
 ![](../images/schema-composition/composition.png)
 
-### Unione {#union}
+### Union {#union}
 
 Mentre [!DNL Experience Platform] consente di comporre schemi per casi d’uso particolari, e di visualizzare un’&quot;unione&quot; di schemi per un tipo di classe specifico. Il diagramma precedente mostra due schemi basati sulla classe ExperienceEvent XDM e due schemi basati su [!DNL XDM Individual Profile] classe. L’unione, illustrata di seguito, aggrega i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] e [!DNL XDM Individual Profile], rispettivamente).
 
@@ -285,12 +285,12 @@ Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile], vedere [Panorami
 
 Tutti i file di dati acquisiti in [!DNL Experience Platform] deve essere conforme alla struttura di uno schema XDM. Per ulteriori informazioni su come formattare i file di dati per rispettare le gerarchie XDM (inclusi i file di esempio), consulta il documento su [esempio di trasformazioni ETL](../../etl/transformations.md). Per informazioni generali sull’acquisizione di file di dati in [!DNL Experience Platform], vedere [panoramica dell’acquisizione batch](../../ingestion/batch-ingestion/overview.md).
 
-## Schemi per segmenti esterni
+## Schemi per tipi di pubblico esterni
 
-Se porti segmenti da sistemi esterni in Platform, devi utilizzare i seguenti componenti per acquisirli negli schemi:
+Se stai inserendo in Platform tipi di pubblico da sistemi esterni, devi utilizzare i seguenti componenti per acquisirli negli schemi:
 
 * [[!UICONTROL Definizione del segmento] classe](../classes/segment-definition.md): utilizza questa classe standard per acquisire gli attributi chiave di una definizione di segmento esterna.
-* [[!UICONTROL Dettagli sull’iscrizione al segmento] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi al tuo [!UICONTROL Profilo individuale XDM] per associare i profili dei clienti a segmenti specifici.
+* [[!UICONTROL Dettagli sull’iscrizione al segmento] gruppo di campi](../field-groups/profile/segmentation.md): aggiungi questo gruppo di campi al tuo [!UICONTROL Profilo individuale XDM] per associare i profili dei clienti a tipi di pubblico specifici.
 
 ## Passaggi successivi
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;servizio query;servizio query;query service;query 
 title: Caso di utilizzo di esempio per Adobe Experience Platform Query Service
 description: Un esempio end-to-end per dimostrare la versatilità e i vantaggi di Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Questo documento e la relativa presentazione video forniscono un flusso di lavor
 * Modi per creare la query in base all’architettura dati esistente.
 * Assicurati una qualità dei dati che soddisfi le tue esigenze e metodi per ridurre le carenze.
 * Processo per pianificare l’esecuzione di una query a una frequenza impostata per l’utilizzo a valle nella segmentazione e nelle destinazioni per la personalizzazione.
-* La facilità con cui gli addetti al marketing possono includere attributi derivati nei propri segmenti grazie alla potenza di [!DNL Query Service].
+* La facilità con cui gli esperti di marketing includono attributi derivati nei propri tipi di pubblico grazie alla potenza di [!DNL Query Service].
 
 ## Obiettivi {#objectives}
 
@@ -63,9 +63,9 @@ La presentazione video riportata di seguito fornisce un caso d’uso olistico e 
 
 ## Vantaggi di [!DNL Query Service] {#benefits}
 
-Le funzioni fornite da [!DNL Query Service] ha molti scopi. Puoi utilizzarlo per adattarsi a logiche complesse per la segmentazione, per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei segmenti.
+Le funzioni fornite da [!DNL Query Service] ha molti scopi. Puoi utilizzarlo per adattarsi a logiche complesse per la segmentazione, per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei tipi di pubblico.
 
-[!DNL Query Service] consente di includere vincoli nelle query per semplificare il processo di creazione dei segmenti. Ciò migliora la qualità dei dati garantendo che i dati giusti siano idonei per i segmenti e crea tipi di pubblico più precisi. Mantenere la qualità dei risultati delle query in un pubblico accurato e aiuta con l’affidabilità dei dati. Puoi anche salvare il pubblico creando schemi e tabelle personalizzate in base agli attributi derivati dalla query. È possibile abilitare una tabella personalizzata per Profilo e utilizzare questi punti dati per la segmentazione e la personalizzazione. Questa funzione aiuta gli esperti di marketing che desiderano creare un pubblico di persone chiaro.
+[!DNL Query Service] consente di includere vincoli nelle query per semplificare il processo di creazione del pubblico. Ciò migliora la qualità dei dati garantendo che i dati giusti siano idonei per i tipi di pubblico. Mantenere la qualità dei risultati delle query in un pubblico accurato e aiuta con l’affidabilità dei dati. Puoi anche salvare il pubblico creando schemi e tabelle personalizzate in base agli attributi derivati dalla query. È possibile abilitare una tabella personalizzata per Profilo e utilizzare questi punti dati per la segmentazione e la personalizzazione. Questa funzione aiuta gli esperti di marketing che desiderano creare un pubblico di persone chiaro.
 
 Inoltre, includendo nella query una logica che soddisfi eventuali condizioni ricorrenti o statiche, [!DNL Query Service] estrae il carico di una segmentazione complessa.
 

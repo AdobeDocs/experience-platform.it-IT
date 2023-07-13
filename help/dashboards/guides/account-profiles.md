@@ -2,7 +2,7 @@
 title: Guida al dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Dalla sezione [!UICONTROL Profili account] dashboard è possibile: [sfoglia i pr
 
 ## Sfogliare i profili account {#browse-account-profiles}
 
-Il [!UICONTROL Sfoglia] Questa scheda ti consente di cercare e visualizzare i profili di account di sola lettura acquisiti nell’organizzazione utilizzando un ID account da un’origine enterprise connessa o immettendo direttamente i dettagli dell’origine. Da qui puoi vedere informazioni importanti appartenenti al profilo dell’account, tra cui nome, settore, ricavi e segmento.
+Il [!UICONTROL Sfoglia] Questa scheda ti consente di cercare e visualizzare i profili di account di sola lettura acquisiti nell’organizzazione utilizzando un ID account da un’origine enterprise connessa o immettendo direttamente i dettagli dell’origine. Da qui puoi vedere informazioni importanti appartenenti al profilo dell’account, tra cui nome, settore, ricavi e pubblico.
 
 Seleziona la [!UICONTROL ID profilo] dai risultati visualizzati sul [!UICONTROL Sfoglia] per aprire [!UICONTROL Dettagli] per il profilo dell’account.
 

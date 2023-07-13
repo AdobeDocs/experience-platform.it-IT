@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Query Service
 type: Documentation
-description: Scopri come utilizzare Query Service per esplorare ed elaborare i set di dati non elaborati che alimentano le dashboard di profilo, segmento e destinazione in Experience Platform.
+description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profilo, pubblico e destinazione in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 # Esplora, verifica ed elabora i set di dati del dashboard tramite [!DNL Query Service]
 
-Adobe Experience Platform fornisce informazioni importanti sui dati di profilo, segmento e destinazioni della tua organizzazione tramite dashboard disponibili nell’interfaccia utente di Experience Platform. Puoi quindi utilizzare Adobe Experience Platform [!DNL Query Service] esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
+Adobe Experience Platform fornisce informazioni importanti sui dati di profilo, pubblico e destinazioni della tua organizzazione tramite dashboard disponibili nell’interfaccia utente di Experience Platform. Puoi quindi utilizzare Adobe Experience Platform [!DNL Query Service] esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
 
 ## Guida introduttiva a [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Per ulteriori informazioni su [!DNL Query Service] e il suo ruolo all&#39;intern
 
 ## Accesso ai set di dati disponibili
 
-È possibile utilizzare [!DNL Query Service] per eseguire query sui set di dati non elaborati per i dashboard di profilo, segmento e destinazioni. Per visualizzare i set di dati disponibili, nell’interfaccia utente di Experience Platform seleziona **Set di dati** nel menu di navigazione a sinistra per aprire il dashboard Set di dati. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
+È possibile utilizzare [!DNL Query Service] per eseguire query sui set di dati non elaborati per i dashboard di profilo, pubblico e destinazioni. Per visualizzare i set di dati disponibili, nell’interfaccia utente di Experience Platform seleziona **Set di dati** nel menu di navigazione a sinistra per aprire il dashboard Set di dati. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
 ![Dashboard di Sfoglia set di dati con la scheda Set di dati evidenziata nel menu di navigazione a sinistra.](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ Il `adwh_dim_merge_policies` il set di dati contiene i campi seguenti:
 
 Questo set di dati può essere esaminato utilizzando l’interfaccia utente dell’editor delle query in Experience Platform. Per ulteriori informazioni sull&#39;utilizzo dell&#39;editor delle query, consultare [Guida dell’interfaccia utente di Query Editor](../query-service/ui/user-guide.md).
 
-### Set di dati metadati segmento
+### Set di dati metadati pubblico
 
-Nel data lake è disponibile un set di dati di metadati di segmento contenente i metadati di ciascuno dei segmenti dell’organizzazione.
+Nel data lake è disponibile un set di dati di metadati del pubblico che contiene i metadati per ciascun pubblico dell’organizzazione.
 
 La convenzione di denominazione di questo set di dati è **Segmentdefinition-Snapshot-Export** seguito da un valore alfanumerico. Ad esempio: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 Per comprendere lo schema completo di ogni set di dati di esportazione dello snapshot della definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
-
-![Anteprima del set di dati Segmentdefinition-Snapshot-Export.](images/query/segment-metadata.png)
 
 ### Set di dati metadati di destinazione
 
@@ -92,7 +90,7 @@ Per comprendere lo schema completo del set di dati di destinazione DIM, puoi vis
 
 La funzione CDP Insights Data Models espone l’SQL che potenzia le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQl per creare rapporti CDP per i casi d’uso di marketing e KPI.
 
-Il reporting di CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con segmenti e destinazioni. Per informazioni dettagliate su come eseguire questa operazione, consulta la documentazione di CDP Insights Data Model. [applicare i modelli di dati CDP Insights ai tuoi casi d’uso specifici dei KPI](./cdp-insights-data-model.md).
+Il reporting di CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con il pubblico e le destinazioni. Per informazioni dettagliate su come eseguire questa operazione, consulta la documentazione di CDP Insights Data Model. [applicare i modelli di dati CDP Insights ai tuoi casi d’uso specifici dei KPI](./cdp-insights-data-model.md).
 
 ## Query di esempio
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### Numero di profili per segmento
+### Numero di profili per pubblico
 
-Questa informazione sul pubblico fornisce il numero totale di profili uniti all’interno di ciascun segmento nel set di dati. Questo numero è il risultato dell’applicazione del criterio di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni individuo nel segmento.
+Questa informazione sul pubblico fornisce il numero totale di profili uniti all’interno di ogni pubblico nel set di dati. Questo numero è il risultato dell’applicazione del criterio di unione del pubblico ai dati del profilo per unire i frammenti di profilo in modo da formare un singolo profilo per ogni individuo nel pubblico.
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## Passaggi successivi
 
-Leggendo questa guida, ora puoi utilizzare [!DNL Query Service] per eseguire diverse query per esplorare ed elaborare i set di dati non elaborati su cui si basano le dashboard di profili, segmenti e destinazioni.
+Leggendo questa guida, ora puoi utilizzare [!DNL Query Service] per eseguire diverse query per esplorare ed elaborare i set di dati non elaborati su cui si basano le dashboard di profilo, pubblico e destinazioni.
 
 Per ulteriori informazioni su ciascuna dashboard e sulle relative metriche, seleziona una dashboard dall’elenco delle dashboard disponibili nella navigazione alla documentazione.

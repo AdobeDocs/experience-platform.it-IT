@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dei criteri di utilizzo dei dati
 description: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati in Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 4%
@@ -55,7 +55,7 @@ Per un elenco delle opzioni disponibili, vedere l&#39;appendice del presente doc
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ La tabella seguente descrive le azioni di marketing di base fornite per Adobe e 
 | Esporta a terze parti | Azione che esporta dati a processori ed entità che non hanno relazioni dirette con i clienti. Molti fornitori di dati hanno clausole nei contratti che vietano l&#39;esportazione di dati da dove sono stati raccolti originariamente. Ad esempio, i contratti per social network spesso limitano il trasferimento dei dati che ricevi da loro. |
 | Pubblicità on-site | Azione che utilizza i dati per gli annunci nel sito, inclusa la selezione e la consegna di annunci sui siti web o sulle app della tua organizzazione, o per misurare la consegna e l’efficacia di tali annunci. |
 | Personalizzazione nel sito | Azione che utilizza i dati per la personalizzazione del contenuto nel sito. Per personalizzazione nel sito si intende qualsiasi dato utilizzato per trarre conclusioni sugli interessi degli utenti e per selezionare i contenuti o gli annunci da distribuire in base a tali conclusioni. |
-| Corrispondenza segmento | Azione che utilizza i dati per Adobe Experience Platform Segment Match, che consente a due o più utenti di Platform di scambiarsi i dati dei segmenti. Attivando i criteri che fanno riferimento a questa azione, puoi limitare i dati utilizzati per Segment Match. Ad esempio, se il criterio principale &quot;Limita la condivisione dei dati&quot; è abilitato, tutti i dati con un [Etichetta C11](../labels/reference.md#c11) non può essere utilizzato per Segment Match. |
+| Corrispondenza segmento | Azione che utilizza i dati per Adobe Experience Platform Segment Match, che consente a due o più utenti di Platform di scambiarsi i dati sul pubblico. Attivando i criteri che fanno riferimento a questa azione, puoi limitare i dati utilizzati per Segment Match. Ad esempio, se il criterio principale &quot;Limita la condivisione dei dati&quot; è abilitato, tutti i dati con un [Etichetta C11](../labels/reference.md#c11) non può essere utilizzato per Segment Match. |
 | Personalizzazione di una singola identità | Azione che richiede che una singola identità sia utilizzata a scopo di personalizzazione invece di unire le identità da più origini. |

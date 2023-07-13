@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2709'
 ht-degree: 1%
 
 ---
 
 # Procedure consigliate per la modellazione dati
 
-[!DNL Experience Data Model] (XDM) è il framework principale che standardizza i dati sull’esperienza del cliente, fornendo strutture e definizioni comuni da utilizzare nei servizi Adobe Experience Platform a valle. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che consente di ottenere informazioni preziose dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti ed esprimere gli attributi dei clienti a scopo di personalizzazione.
+[!DNL Experience Data Model] (XDM) è il framework principale che standardizza i dati sull’esperienza del cliente, fornendo strutture e definizioni comuni da utilizzare nei servizi Adobe Experience Platform a valle. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che consente di ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti ed esprimere gli attributi dei clienti a scopo di personalizzazione.
 
 Poiché XDM è estremamente versatile e personalizzabile dalla progettazione, è importante seguire le best practice per la modellazione dei dati durante la progettazione degli schemi. Questo documento descrive le decisioni chiave e le considerazioni da fare durante la mappatura dei dati sulla customer experience in XDM.
 
@@ -92,24 +92,24 @@ Se desideri analizzare il modo in cui determinati attributi all’interno di un�
 
 #### Casi di utilizzo della segmentazione
 
-Quando categorizzi le entità, è importante considerare i segmenti di pubblico che potresti voler creare per affrontare casi di utilizzo aziendali specifici.
+Quando categorizzi le entità, è importante considerare i tipi di pubblico che puoi creare per affrontare casi d’uso aziendali specifici.
 
-Ad esempio, un’azienda vuole conoscere tutti i membri &quot;Gold&quot; o &quot;Platinum&quot; del proprio programma fedeltà che hanno effettuato più di cinque acquisti nell’ultimo anno. In base a questa logica di segmento, è possibile trarre le seguenti conclusioni in merito a come dovrebbero essere rappresentate le entità rilevanti:
+Ad esempio, un’azienda vuole conoscere tutti i membri &quot;Gold&quot; o &quot;Platinum&quot; del proprio programma fedeltà che hanno effettuato più di cinque acquisti nell’ultimo anno. In base a questa logica di segmentazione, è possibile trarre le seguenti conclusioni in merito a come dovrebbero essere rappresentate le entità rilevanti:
 
-* &quot;Gold&quot; e &quot;Platinum&quot; rappresentano gli stati di fedeltà applicabili a un singolo cliente. Poiché la logica del segmento riguarda solo lo stato di fedeltà corrente dei clienti, questi dati possono essere modellati come parte di uno schema di profilo. Se desideri tenere traccia delle modifiche allo stato di fedeltà nel tempo, puoi anche creare uno schema di evento aggiuntivo per le modifiche allo stato di fedeltà.
-* Gli acquisti sono eventi che si verificano in un momento particolare e la logica del segmento si basa su eventi di acquisto entro un intervallo di tempo specificato. Questi dati devono quindi essere modellati come schema di eventi.
+* &quot;Gold&quot; e &quot;Platinum&quot; rappresentano gli stati di fedeltà applicabili a un singolo cliente. Poiché la logica di segmentazione riguarda solo lo stato di fedeltà corrente dei clienti, questi dati possono essere modellati come parte di uno schema di profilo. Se desideri tenere traccia delle modifiche allo stato di fedeltà nel tempo, puoi anche creare uno schema di evento aggiuntivo per le modifiche allo stato di fedeltà.
+* Gli acquisti sono eventi che si verificano in un determinato momento e la logica di segmentazione riguarda gli eventi di acquisto entro un intervallo di tempo specificato. Questi dati devono quindi essere modellati come schema di eventi.
 
 #### Casi di utilizzo dell’attivazione
 
-Oltre alle considerazioni relative ai casi di utilizzo della segmentazione, è necessario esaminare anche i casi di utilizzo dell’attivazione per tali segmenti al fine di identificare ulteriori attributi rilevanti.
+Oltre alle considerazioni relative ai casi di utilizzo della segmentazione, è necessario esaminare i casi di utilizzo dell’attivazione per tali tipi di pubblico al fine di identificare ulteriori attributi rilevanti.
 
-Ad esempio, un’azienda ha creato un segmento di pubblico in base alla regola che `country = US`. Quindi, quando attiva quel segmento in determinati target a valle, l’azienda vuole filtrare tutti i profili esportati in base allo stato predefinito. Pertanto, un `state` L&#39;attributo deve essere acquisito anche nell&#39;entità profilo applicabile.
+Ad esempio, un’azienda ha creato un pubblico in base alla regola che `country = US`. Quindi, quando attiva il pubblico su determinati target a valle, l’azienda vuole filtrare tutti i profili esportati in base allo stato dell’abitazione. Pertanto, un `state` L&#39;attributo deve essere acquisito anche nell&#39;entità profilo applicabile.
 
 #### Valori aggregati
 
 In base al caso d’uso e alla granularità dei dati, è necessario decidere se alcuni valori devono essere preaggregati prima di essere inclusi in un profilo o in un’entità evento.
 
-Ad esempio, un’azienda desidera creare un segmento in base al numero di acquisti effettuati nel carrello. Puoi scegliere di incorporare questi dati con la granularità più bassa includendo ogni evento di acquisto con marca temporale come propria entità. Tuttavia, a volte questo può aumentare esponenzialmente il numero di eventi registrati. Per ridurre il numero di eventi acquisiti, puoi creare un valore aggregato `numberOfPurchases` in un periodo di una settimana o di un mese. Altre funzioni di aggregazione come MIN e MAX possono essere applicate a queste situazioni.
+Ad esempio, un’azienda desidera creare un pubblico in base al numero di acquisti effettuati nel carrello. Puoi scegliere di incorporare questi dati con la granularità più bassa includendo ogni evento di acquisto con marca temporale come propria entità. Tuttavia, a volte questo può aumentare esponenzialmente il numero di eventi registrati. Per ridurre il numero di eventi acquisiti, puoi creare un valore aggregato `numberOfPurchases` in un periodo di una settimana o di un mese. Altre funzioni di aggregazione come MIN e MAX possono essere applicate a queste situazioni.
 
 >[!CAUTION]
 >
@@ -173,7 +173,7 @@ Il secondo approccio consiste nell’utilizzare gli schemi evento per rappresent
 
 **Contro**
 
-* La segmentazione diventa più complessa per il caso d’uso originale (identificando lo stato degli abbonamenti più recenti dei clienti). Il segmento ora necessita di logica aggiuntiva per contrassegnare l’ultimo evento di abbonamento di un cliente al fine di verificarne lo stato.
+* La segmentazione diventa più complessa per il caso d’uso originale (identificando lo stato degli abbonamenti più recenti dei clienti). Il pubblico ora ha bisogno di una logica aggiuntiva per contrassegnare l’ultimo evento di abbonamento di un cliente per verificarne lo stato.
 * Gli eventi hanno un rischio maggiore di scadere automaticamente ed essere eliminati dall’archivio dei profili. Consulta la guida su [Scadenze degli eventi esperienza](../../profile/event-expirations.md) per ulteriori informazioni.
 
 ## Creare schemi in base alle entità categorizzate

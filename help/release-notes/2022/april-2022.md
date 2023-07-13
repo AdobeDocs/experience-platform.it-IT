@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Note sulla versione di aprile 2022 per Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -49,7 +49,7 @@ I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboar
 | [!UICONTROL Tendenza di modifica della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili idonei per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza dimensione pubblico per identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 
-**Nuove funzioni** {#new-features}
+**Nuove funzionalità** {#new-features}
 
 | Funzione | Dashboard di | Descrizione |
 | ------- | --------- | ----------- |
@@ -57,7 +57,7 @@ I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboar
 
 {style="table-layout:auto"}
 
-Consulta la documentazione per ulteriori informazioni su [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), e [[!DNL Segments]](../../dashboards/guides/segments.md) dashboard.
+Consulta la documentazione per ulteriori informazioni su [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md), e [[!DNL Segments]](../../dashboards/guides/audiences.md) dashboard.
 
 ## Flussi di dati {#dataflows}
 
@@ -88,7 +88,7 @@ Per ulteriori informazioni su [!DNL Data Prep], consultare il [[!DNL Data Prep] 
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Funzioni nuove o aggiornate**
 
@@ -216,7 +216,7 @@ Per ulteriori informazioni sulla versione B2B di Real-time Customer Data Platfor
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Funzioni aggiornate**
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API Unions
 description: L’endpoint /unions nell’API Schema Registry consente di gestire in modo programmatico gli schemi di unione XDM nell’applicazione Experience.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '897'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Il `timeSeriesEvents` array è un elenco di eventi di serie temporali correlati 
 
 ### Mappa di iscrizione al segmento
 
-Il `segmentMembership` map memorizza i risultati delle valutazioni dei segmenti. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando [API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` archivia anche eventuali segmenti di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Guarda il tutorial su [creazione di segmenti tramite API](../../segmentation/tutorials/create-a-segment.md) per ulteriori informazioni.
+Il `segmentMembership` map memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando [API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` archivia anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Guarda il tutorial su [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md) per ulteriori informazioni.
 
 ## Recuperare un elenco di unioni {#list}
 

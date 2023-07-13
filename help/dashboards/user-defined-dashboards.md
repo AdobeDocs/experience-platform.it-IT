@@ -2,7 +2,7 @@
 title: Dashboard definiti dall'utente
 description: Scopri come creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 3%
@@ -170,7 +170,7 @@ Nel dashboard definito dall&#39;utente viene visualizzato un widget duplicato. S
 
 La lettura di questo documento consente di comprendere meglio come creare un dashboard personalizzato e come creare, modificare e aggiornare i widget personalizzati per tale dashboard.
 
-Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per [profili](./guides/profiles.md#standard-widgets), [segmenti](./guides/segments.md#standard-widgets), e [destinazioni](./guides/destinations.md#standard-widgets) dashboard, consulta l’elenco dei widget standard nella rispettiva documentazione.
+Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per [profili](./guides/profiles.md#standard-widgets), [segmenti](./guides/audiences.md#standard-widgets), e [destinazioni](./guides/destinations.md#standard-widgets) dashboard, consulta l’elenco dei widget standard nella rispettiva documentazione.
 
 Per comprendere meglio le dashboard definite dall’utente in questo Experience Platform, guarda il video seguente:
 

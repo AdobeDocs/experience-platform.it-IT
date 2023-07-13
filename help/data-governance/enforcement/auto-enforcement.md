@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Applicazione automatica;Imposizione basata su API;governance dei dati
 solution: Experience Platform
 title: Applicazione automatica dei criteri
-description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i segmenti nelle destinazioni in Experience Platform.
+description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1899'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >L’applicazione automatica dei criteri è disponibile solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
 
-Una volta etichettati i dati e definiti i criteri di utilizzo dei dati, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo in caso di violazioni.
+Una volta etichettati i dati e definiti i criteri di utilizzo dei dati, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i tipi di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni.
 
 >[!NOTE]
 >
@@ -29,28 +29,27 @@ Questa guida richiede una buona conoscenza dei servizi Platform coinvolti nell�
 
 * [Governance dei dati Adobe Experience Platform](../home.md): framework tramite il quale Platform applica la conformità dell’utilizzo dei dati tramite l’utilizzo di etichette e criteri.
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): il motore di segmentazione in [!DNL Platform] utilizzato per creare segmenti di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
+* [Servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md): il motore di segmentazione in [!DNL Platform] utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
 * [Destinazioni](../../destinations/home.md): le destinazioni sono integrazioni predefinite con applicazioni di uso comune che consentono l’attivazione diretta dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
 
 ## Flusso di applicazione {#flow}
 
-Il diagramma seguente illustra come l’applicazione dei criteri viene integrata nel flusso di dati dell’attivazione dei segmenti:
+Il diagramma seguente illustra come l’applicazione dei criteri viene integrata nel flusso di dati di Audience Activation:
 
-![](../images/enforcement/enforcement-flow.png)
+![Un’illustrazione di come l’applicazione delle policy viene integrata nel flusso di dati di Audience Activation.](../images/enforcement/enforcement-flow.png)
 
-Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica delle politiche applicabili sulla base dei seguenti fattori:
+Quando un pubblico viene attivato per la prima volta, [!DNL Policy Service] verifica delle politiche applicabili sulla base dei seguenti fattori:
 
-* Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
+* Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del pubblico da attivare.
 * Lo scopo di marketing della destinazione.
-* I profili che hanno acconsentito a essere inclusi nell’attivazione del segmento, in base ai criteri di consenso configurati.
+* I profili che hanno acconsentito a essere inclusi nell’attivazione del pubblico, in base ai criteri di consenso configurati.
 
 >[!NOTE]
 >
 >Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene solo nelle seguenti condizioni:
 >
->* I campi vengono utilizzati nella definizione del segmento.
+>* I campi vengono utilizzati nel pubblico.
 >* I campi sono configurati come attributi previsti per la destinazione target.
-
 
 ## Derivazione dei dati {#lineage}
 
@@ -62,23 +61,23 @@ Ad Experience Platform, l’applicazione delle policy riguarda la seguente deriv
 
 1. I dati vengono acquisiti in Platform e memorizzati in **set di dati**.
 1. I profili dei clienti sono identificati e costruiti da tali set di dati unendo i frammenti di dati in base al **criterio di unione**.
-1. I gruppi di profili sono suddivisi in **segmenti** in base agli attributi comuni.
-1. I segmenti vengono attivati a valle **destinazioni**.
+1. I gruppi di profili sono suddivisi in **audience** in base agli attributi comuni.
+1. I tipi di pubblico vengono attivati a valle **destinazioni**.
 
 Ciascuna fase del calendario di cui sopra rappresenta un’entità che può contribuire all’applicazione delle politiche, come indicato nella tabella seguente:
 
 | Fase di derivazione dei dati | Ruolo nell’applicazione dei criteri |
 | --- | --- |
-| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di campo schema o di intero set di dati) che definiscono i casi di utilizzo per i quali è possibile utilizzare l’intero set di dati o campi specifici. Se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio, si verificheranno violazioni dei criteri.<br><br>Nei set di dati vengono memorizzati anche tutti gli attributi di consenso raccolti dai clienti. Se hai accesso ai criteri di consenso, tutti i profili che non soddisfano i requisiti di attributo del consenso dei tuoi criteri verranno esclusi dai segmenti attivati per una destinazione. |
+| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di campo schema o di intero set di dati) che definiscono i casi di utilizzo per i quali è possibile utilizzare l’intero set di dati o campi specifici. Se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio, si verificheranno violazioni dei criteri.<br><br>Nei set di dati vengono memorizzati anche tutti gli attributi di consenso raccolti dai clienti. Se hai accesso ai criteri di consenso, tutti i profili che non soddisfano i requisiti di attributo del consenso dei tuoi criteri verranno esclusi dai tipi di pubblico attivati per una destinazione. |
 | Criterio di unione | I criteri di unione sono le regole utilizzate da Platform per determinare il modo in cui assegnare la priorità ai dati quando si uniscono frammenti da più set di dati. Se i criteri di unione sono configurati in modo che i set di dati con etichette con restrizioni vengano attivati in una destinazione, si verificheranno violazioni dei criteri. Consulta la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. |
-| Segmento | Le regole del segmento definiscono quali attributi devono essere inclusi dai profili cliente. A seconda dei campi inclusi in una definizione di segmento, il segmento erediterà tutte le etichette di utilizzo applicate per tali campi. Se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione target, in base al caso di utilizzo di marketing, si verificheranno violazioni dei criteri. |
-| Destinazione | Durante la configurazione di una destinazione, è possibile definire un’azione di marketing (talvolta denominata caso di utilizzo di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, l’azione di marketing che definisci per una destinazione determina quali criteri di utilizzo dei dati e criteri di consenso sono applicabili a tale destinazione.<br><br>Le violazioni dei criteri di utilizzo dei dati si verificano se si attiva un segmento le cui etichette di utilizzo sono limitate per l’azione di marketing della destinazione target.<br><br>(Beta) Quando un segmento viene attivato, tutti i profili che non contengono gli attributi di consenso richiesti per l’azione di marketing (come definiti dai criteri di consenso) vengono esclusi dal pubblico attivato. |
+| Destinatari | Le regole di segmentazione definiscono quali attributi devono essere inclusi dai profili dei clienti. A seconda dei campi inclusi in una definizione di segmento, il pubblico erediterà tutte le etichette di utilizzo applicate per tali campi. Se attivi un pubblico le cui etichette ereditate sono limitate dai criteri applicabili della destinazione target, in base al caso di utilizzo di marketing, si verificheranno violazioni dei criteri. |
+| Destinazione | Durante la configurazione di una destinazione, è possibile definire un’azione di marketing (talvolta denominata caso di utilizzo di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, l’azione di marketing che definisci per una destinazione determina quali criteri di utilizzo dei dati e criteri di consenso sono applicabili a tale destinazione.<br><br>Le violazioni dei criteri di utilizzo dei dati si verificano se si attiva un pubblico le cui etichette di utilizzo sono limitate per l’azione di marketing della destinazione.<br><br>(Beta) Quando un pubblico viene attivato, tutti i profili che non contengono gli attributi di consenso richiesti per l’azione di marketing (come definiti dai criteri di consenso) vengono esclusi dal pubblico attivato. |
 
 >[!IMPORTANT]
 >
 >Alcuni criteri di utilizzo dati possono specificare due o più etichette con una relazione AND. Ad esempio, un criterio potrebbe limitare un’azione di marketing se le etichette `C1` E `C2` sono entrambi presenti, ma non limita la stessa azione se è presente solo una di tali etichette.
 >
->Per quanto riguarda l’applicazione automatica, il framework di governance dei dati non considera l’attivazione di segmenti separati a una destinazione come una combinazione di dati. Pertanto, l’esempio `C1 AND C2` il criterio è **NOT** applicato se queste etichette sono incluse in segmenti separati. Questo criterio viene invece applicato solo quando entrambe le etichette sono presenti nello stesso segmento al momento dell’attivazione.
+>Per quanto riguarda l’applicazione automatica, il framework di governance dei dati non considera l’attivazione di tipi di pubblico separati a una destinazione come una combinazione di dati. Pertanto, l’esempio `C1 AND C2` il criterio è **NOT** applicato se queste etichette sono incluse in tipi di pubblico separati. Questo criterio viene invece applicato solo quando entrambe le etichette sono presenti nello stesso pubblico al momento dell’attivazione.
 
 Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati nell’interfaccia utente forniscono utili strumenti per esplorare la derivazione dei dati che contribuiscono alla violazione e contribuire alla risoluzione del problema. Maggiori dettagli sono forniti nella sezione successiva.
 
@@ -91,7 +90,7 @@ Le sezioni seguenti descrivono i diversi messaggi di applicazione dei criteri vi
 
 ### Violazione dei criteri di utilizzo dei dati {#data-usage-violation}
 
-Se si verifica una violazione dei criteri dal tentativo di attivare un segmento (o [apportare modifiche a un segmento già attivato](#policy-enforcement-for-activated-segments)) l&#39;azione è impedita e viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, **[!UICONTROL Salva]** il pulsante è disattivato per l’entità da modificare finché i componenti appropriati non vengono aggiornati per conformarsi ai criteri di utilizzo dei dati.
+Se si verifica una violazione dei criteri dal tentativo di attivare un pubblico (o [apportare modifiche a un pubblico già attivato](#policy-enforcement-for-activated-audiences)) l&#39;azione è impedita e viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, **[!UICONTROL Salva]** il pulsante è disattivato per l’entità da modificare finché i componenti appropriati non vengono aggiornati per conformarsi ai criteri di utilizzo dei dati.
 
 Selezionare una violazione dei criteri nella colonna sinistra del popover per visualizzare i dettagli relativi a tale violazione.
 
@@ -101,7 +100,7 @@ Il messaggio di violazione fornisce un riepilogo del criterio violato, incluse l
 
 ![](../images/enforcement/violation-summary.png)
 
-Sotto il riepilogo delle violazioni viene visualizzato un grafico di derivazione dei dati che consente di visualizzare i set di dati, i criteri di unione, i segmenti e le destinazioni coinvolti nella violazione dei criteri. L’entità che stai modificando viene evidenziata nel grafico, indicando quale punto del flusso sta causando la violazione. Puoi selezionare un nome di entità all’interno del grafico per aprire la pagina dei dettagli dell’entità in questione.
+Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazione dei dati che consente di visualizzare i set di dati, i criteri di unione, i tipi di pubblico e le destinazioni coinvolti nella violazione dei criteri. L’entità che stai modificando viene evidenziata nel grafico, indicando quale punto del flusso sta causando la violazione. Puoi selezionare un nome di entità all’interno del grafico per aprire la pagina dei dettagli dell’entità in questione.
 
 ![](../images/enforcement/data-lineage.png)
 
@@ -115,7 +114,7 @@ Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati c
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-Se è stato [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quando attivi un segmento in una destinazione, puoi vedere in che modo i tuoi criteri di consenso influiscono sulla percentuale di profili inclusi nell’attivazione.
+Se è stato [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quando attivi un pubblico su una destinazione, puoi vedere in che modo i tuoi criteri di consenso influiscono sulla percentuale di profili inclusi nell’attivazione.
 
 #### Miglioramento dei criteri di consenso per gli elementi multimediali a pagamento {#consent-policy-enhancement}
 
@@ -133,25 +132,25 @@ Una volta raggiunta la **[!UICONTROL Revisione]** passaggio quando [attivazione 
 
 ![Pulsante Visualizza criteri applicati nel flusso di lavoro di attivazione della destinazione](../images/enforcement/view-applied-policies.png)
 
-Viene visualizzata una finestra di dialogo di verifica dei criteri, con un’anteprima di come i criteri di consenso influiscono sul pubblico autorizzato dei segmenti attivati.
+Viene visualizzata una finestra di dialogo di verifica dei criteri, con un’anteprima di come i criteri di consenso influiscono sul pubblico autorizzato dei tipi di pubblico attivati.
 
 ![Finestra di dialogo di controllo dei criteri di consenso nell’interfaccia utente di Platform](../images/enforcement/consent-policy-check.png)
 
-La finestra di dialogo mostra il pubblico autorizzato per un segmento alla volta. Per visualizzare la valutazione dei criteri per un segmento diverso, utilizza il menu a discesa sopra il diagramma per selezionarne uno dall’elenco.
+La finestra di dialogo mostra il pubblico autorizzato per un pubblico alla volta. Per visualizzare la valutazione dei criteri per un pubblico diverso, utilizza il menu a discesa sopra il diagramma per selezionarne uno dall’elenco.
 
-![Selettore di segmenti nella finestra di dialogo di controllo dei criteri](../images/enforcement/segment-switcher.png)
+![Il commutatore del pubblico nella finestra di dialogo di controllo dei criteri.](../images/enforcement/audience-switcher.png)
 
-Utilizza la barra a sinistra per passare dai criteri di consenso applicabili per il segmento selezionato a quelli applicabili. I criteri non selezionati sono rappresentati nella sezione &quot;[!UICONTROL Altre politiche]&quot; del diagramma.
+Utilizza la barra a sinistra per passare dai criteri di consenso applicabili per il pubblico selezionato. I criteri non selezionati sono rappresentati nella sezione &quot;[!UICONTROL Altre politiche]&quot; del diagramma.
 
 ![Selettore criteri nella finestra di dialogo di controllo criteri](../images/enforcement/policy-switcher.png)
 
 Il diagramma mostra la sovrapposizione tra tre gruppi di profili:
 
-1. Profili idonei per il segmento selezionato
+1. Profili idonei per il pubblico selezionato
 1. Profili idonei per il criterio di consenso selezionato
-1. Profili idonei per gli altri criteri di consenso applicabili per il segmento (denominati &quot;[!UICONTROL Altre politiche]&quot;).
+1. Profili idonei per gli altri criteri di consenso applicabili per il pubblico (denominati &quot;[!UICONTROL Altre politiche]&quot;).
 
-I profili idonei per tutti e tre i gruppi di cui sopra rappresentano il pubblico autorizzato per il segmento selezionato, riepilogato nella barra a destra.
+I profili idonei per tutti e tre i gruppi di cui sopra rappresentano il pubblico consentito, riassunto nella barra a destra.
 
 ![Sezione Riepilogo nella finestra di dialogo di controllo dei criteri](../images/enforcement/summary.png)
 
@@ -169,16 +168,16 @@ Quando i dati vengono attivati su una destinazione, i dettagli di esecuzione del
 
 ![Metriche delle identità escluse per un’esecuzione di flusso di dati](../images/enforcement/dataflow-run-enforcement.png)
 
-## Applicazione dei criteri per i segmenti attivati {#policy-enforcement-for-activated-segments}
+## Applicazione dei criteri per il pubblico attivato {#policy-enforcement-for-activated-audiences}
 
-L’applicazione dei criteri si applica comunque ai segmenti dopo la loro attivazione, limitando eventuali modifiche a un segmento o alla sua destinazione che potrebbero causare una violazione dei criteri. Per come [derivazione dati](#lineage) funziona nell’applicazione dei criteri e una qualsiasi delle seguenti azioni può potenzialmente attivare una violazione:
+L’applicazione dei criteri viene comunque applicata ai tipi di pubblico dopo la loro attivazione, limitando eventuali modifiche a un pubblico o alla sua destinazione che potrebbero causare una violazione dei criteri. Per come [derivazione dati](#lineage) funziona nell’applicazione dei criteri e una qualsiasi delle seguenti azioni può potenzialmente attivare una violazione:
 
 * Aggiornamento delle etichette di utilizzo dei dati
-* Modifica dei set di dati per un segmento
-* Modifica dei predicati dei segmenti
+* Modifica dei set di dati di un pubblico
+* Modifica dei predicati del pubblico
 * Modifica delle configurazioni di destinazione
 
-Se una delle azioni di cui sopra attiva una violazione, tale azione non può essere salvata e viene visualizzato un messaggio di violazione dei criteri, per garantire che i segmenti attivati continuino a essere conformi ai criteri di utilizzo dei dati durante la modifica.
+Se una delle azioni di cui sopra attiva una violazione, tale azione non può essere salvata e viene visualizzato un messaggio di violazione dei criteri, per garantire che i tipi di pubblico attivati continuino a rispettare i criteri di utilizzo dei dati durante la modifica.
 
 ## Passaggi successivi
 

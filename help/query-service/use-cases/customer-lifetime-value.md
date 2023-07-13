@@ -2,9 +2,9 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ L’infografica seguente illustra il ciclo di raccolta, manipolazione, analisi e
 
 ![L’infografica di andata e ritorno dei dati dall’osservazione all’analisi all’azione.](../images/use-cases/infographic-use-case-cycle.png)
 
-Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi attributi derivati possono quindi essere applicati ai dati del profilo Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare l’attributo derivato da CLV e le informazioni della dashboard per creare un nuovo segmento e attivarlo nella destinazione desiderata. Questi segmenti possono quindi essere utilizzati per creare tipi di pubblico ad alte prestazioni per potenziare la tua prossima campagna di marketing.
+Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi attributi derivati possono quindi essere applicati ai dati del profilo Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare l’attributo derivato da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
 
 Questa guida è stata progettata per aiutarti a comprendere meglio la customer experience misurando i segnali di dati tra i punti di contatto chiave che guidano CLV e implementando un caso d’uso simile nell’ambiente. L’intero processo è riassunto nell’immagine seguente.
 
@@ -28,7 +28,7 @@ Questa guida è stata progettata per aiutarti a comprendere meglio la customer e
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Servizio query](../home.md): fornisce un’interfaccia utente e un’API RESTful in cui è possibile utilizzare query SQL per analizzare e arricchire i dati.
-* [Servizio di segmentazione](../../segmentation/home.md): consente di creare segmenti e generare tipi di pubblico dai dati dei profili cliente in tempo reale.
+* [Servizio di segmentazione](../../segmentation/home.md): consente di generare tipi di pubblico dai dati Profilo cliente in tempo reale.
 
 ## Prerequisiti
 
@@ -71,23 +71,23 @@ Di seguito sono riportati alcuni esempi di widget CLV personalizzati che utilizz
 
 ![Raccolta di widget CLTV personalizzati basati su decile.](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## Creare e attivare segmenti per creare tipi di pubblico ad alte prestazioni {#create-and-activate-segments}
+## Creare e attivare tipi di pubblico ad alte prestazioni {#create-and-activate-audiences}
 
-Il passaggio successivo consiste nel creare segmenti e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come effettuare le seguenti operazioni, consulta la guida dell’interfaccia utente di Segment Builder [creare e attivare segmenti in Platform](../../segmentation/ui/segment-builder.md). La guida fornisce sezioni su come:
+Il passaggio successivo consiste nel creare una definizione di segmento e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Per informazioni su come effettuare le seguenti operazioni, consulta la guida dell’interfaccia utente di Segment Builder [creare e attivare tipi di pubblico in Platform](../../segmentation/ui/segment-builder.md). La guida fornisce sezioni su come:
 
 * Crea definizioni di segmenti utilizzando una combinazione di attributi, eventi e tipi di pubblico esistenti come blocchi predefiniti.
-* Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole dei segmenti.
+* Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole di segmentazione.
 * Visualizza le stime del tuo pubblico potenziale, consentendoti di regolare le definizioni dei segmenti in base alle esigenze.
 * Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
 * Abilita le definizioni di segmenti specificate per la segmentazione in streaming.
 
-In alternativa, è possibile [tutorial video sul generatore di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) disponibile per ulteriori informazioni.
+In alternativa, è possibile [tutorial video sul generatore di segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponibile per ulteriori informazioni.
 
-## Attivare il segmento per una campagna e-mail {#activate-segment-for-campaign}
+## Attivare il pubblico per una campagna e-mail {#activate-audience-for-campaign}
 
-Una volta creato il segmento, puoi attivarlo in una destinazione. Platform supporta diversi provider di servizi e-mail (ESP) che consentono di gestire le attività di marketing e-mail, ad esempio l’invio di campagne e-mail promozionali.
+Una volta creato il pubblico, puoi attivarlo in una destinazione. Platform supporta diversi provider di servizi e-mail (ESP) che consentono di gestire le attività di marketing e-mail, ad esempio l’invio di campagne e-mail promozionali.
 
-Controlla la [panoramica delle destinazioni di e-mail marketing](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) per un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio [Eloqua Oracle](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) page).
+Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinations/catalog/email-marketing/overview.md#connect-destination) per un elenco delle destinazioni supportate in cui desideri esportare i dati (ad esempio [Eloqua Oracle](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) page).
 
 ## Visualizzare i dati di analisi restituiti dalla campagna {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ I dati provenienti dalle origini ora possono essere [elaborato in modo increment
 
 Una volta aggiornato il modello dati, i widget del dashboard personalizzati forniscono segnali significativi che consentono di misurare e visualizzare il valore del ciclo di vita del cliente.
 
-![Un widget personalizzato per mostrare il numero di e-mail aperte in base al segmento e alla campagna e-mail.](../images/use-cases/post-activation-and-email-response-kpis.png)
+![Un widget personalizzato per mostrare il numero di e-mail aperte in base al pubblico e alla campagna e-mail.](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 Sono disponibili diverse opzioni di visualizzazione per l’analisi personalizzata.
 

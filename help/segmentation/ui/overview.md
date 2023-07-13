@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5950713c33bfb2893f24f35136acf2707ad35f1f
+source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi d
 
 Il **[!UICONTROL Tipi di pubblico]** la dashboard illustra le metriche chiave relative ai dati sul pubblico della tua organizzazione.
 
-Per ulteriori informazioni, visita [guida della dashboard di audiences](../../dashboards/guides/segments.md).
+Per ulteriori informazioni, visita [guida della dashboard di audiences](../../dashboards/guides/audiences.md).
 
 ![Viene visualizzato il dashboard del pubblico. Mostra vari widget, tra cui la dimensione del pubblico, i profili per identità, la sovrapposizione delle identità e la tendenza di modifica della dimensione del pubblico.](../../dashboards/images/segments/dashboard-overview.png)
 

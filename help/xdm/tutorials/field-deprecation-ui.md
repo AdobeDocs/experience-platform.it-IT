@@ -2,7 +2,7 @@
 title: Deprecare un campo XDM nell’interfaccia utente
 description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) utilizzando l’Editor di schema in Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Experience Data Model (XDM) offre la flessibilità di gestire il modello dati in base alle esigenze aziendali, rendendo obsoleti i campi dello schema dopo l’acquisizione dei dati. I campi indesiderati possono essere dichiarati obsoleti per rimuoverli dalla vista dell’interfaccia utente e nasconderli anche dalle interfacce a valle. Una casella di controllo nell’Editor schema consente di visualizzare i campi obsoleti e, se necessario, di annullarli.
 
-Poiché i campi obsoleti sono nascosti dall’interfaccia utente per impostazione predefinita, questa funzione semplifica lo schema nell’Editor di schema e impedisce l’aggiunta di campi indesiderati alle dipendenze a valle, ad esempio il generatore di segmenti, il progettista di percorsi e così via. Il campo obsoleto è compatibile anche con le versioni precedenti. Altri sistemi che utilizzano campi obsoleti, come segmenti e query, continueranno a valutarli come previsto. Se un campo obsoleto viene utilizzato in un segmento esistente, viene trattato normalmente, il che significa che il campo viene visualizzato come previsto nell’area di lavoro del generatore di segmenti o viene valutato in base a qualsiasi dato disponibile nei campi obsoleti. Si tratta di una modifica non definitiva che non influisce negativamente sui flussi di dati esistenti.
+Poiché i campi obsoleti sono nascosti dall’interfaccia utente per impostazione predefinita, questa funzione semplifica lo schema nell’Editor di schema e impedisce l’aggiunta di campi indesiderati alle dipendenze a valle, ad esempio il Generatore di segmenti, il progettista di percorsi e così via. Il campo obsoleto è compatibile anche con le versioni precedenti. Altri sistemi che utilizzano campi obsoleti, come tipi di pubblico e query, continueranno a valutarli come previsto. Se un campo obsoleto viene utilizzato in un pubblico esistente, viene trattato normalmente, il che significa che il campo viene visualizzato come previsto nell’area di lavoro del Generatore di segmenti o viene valutato in base a qualsiasi dato disponibile nei campi obsoleti. Si tratta di una modifica non definitiva che non influisce negativamente sui flussi di dati esistenti.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Il campo viene ora rimosso dalla vista dell’interfaccia utente.
 
 >[!NOTE]
 >
->Una volta dichiarati obsoleti, le interfacce utente a valle come Segmentation dashboards, Customer Journey Analytics e Adobe Journey Optimizer non visualizzano più i campi obsoleti come parte del flusso di lavoro. Tuttavia, le interfacce utente a valle hanno la possibilità di mostrare i campi obsoleti se necessario e continuare a trattare il campo obsoleto come normale. Per ulteriori informazioni, consulta la relativa documentazione. Le query e i segmenti che utilizzano il campo obsoleto continueranno a essere eseguiti come previsto.
+>Una volta dichiarati obsoleti, le interfacce utente a valle come Segmentation dashboards, Customer Journey Analytics e Adobe Journey Optimizer non visualizzano più i campi obsoleti come parte del flusso di lavoro. Tuttavia, le interfacce utente a valle hanno la possibilità di mostrare i campi obsoleti se necessario e continuare a trattare il campo obsoleto come normale. Per ulteriori informazioni, consulta la relativa documentazione. Le query e i tipi di pubblico che utilizzano il campo obsoleto continueranno a essere eseguiti come previsto.
 
 ## Mostra campi obsoleti {#show-deprecated}
 

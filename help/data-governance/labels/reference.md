@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario delle etichette di utilizzo dati
 description: Questo documento illustra tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -134,11 +134,11 @@ Alcuni contratti includono divieti espliciti sull’uso dei dati per la scienza 
 
 #### C10 {#c10}
 
-Alcuni criteri di governance dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. L’etichetta C10 viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l’opzione &quot;Private Graph&quot;.
+Alcuni criteri di governance dei dati limitano l’utilizzo di dati di identità uniti per la personalizzazione. L’etichetta C10 viene applicata automaticamente ai tipi di pubblico se i loro criteri di unione utilizzano l’opzione &quot;Private Graph&quot; (grafico privato).
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match consente di abbinare segmenti di prime parti con preferenze di privacy e consenso, facilitando l’arricchimento dei profili e le informazioni a valle. L’etichetta C11 indica i dati che non devono essere utilizzati in [!DNL Segment Match] processi. Dopo aver determinato i set di dati e/o i campi da escludere da Segment Match e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match.
+Adobe Experience Platform Segment Match consente di abbinare i tipi di pubblico generati da Platform con le preferenze di privacy e consenso, facilitando l’arricchimento dei profili e le informazioni a valle. L’etichetta C11 indica i dati che non devono essere utilizzati in [!DNL Segment Match] processi. Dopo aver determinato i set di dati e/o i campi da escludere da Segment Match e aggiunto di conseguenza l’etichetta C11, l’etichetta viene applicata automaticamente dal flusso di lavoro Segment Match.
 
 #### C12 {#c12}
 

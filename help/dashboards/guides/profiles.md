@@ -4,10 +4,10 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 10%
+source-wordcount: '3393'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria widget e vi
 
 ![Panoramica del dashboard Profili con l’evidenziazione Aggiungi widget.](../images/profiles/profiles-overview-add-widget.png)
 
-Dalla libreria di widget è possibile sfogliare la selezione di widget di segmenti standard e personalizzati.Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
+Dalla libreria dei widget è possibile sfogliare la selezione di widget di pubblico standard e personalizzati. Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,7 +67,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## Sfoglia profili {#browse-profiles}
 
-Il [!UICONTROL Sfoglia] Questa scheda ti consente di cercare e visualizzare i profili di sola lettura acquisiti nell’organizzazione. Da qui puoi vedere informazioni importanti appartenenti al profilo sulle loro preferenze, eventi passati, interazioni e segmenti
+Il [!UICONTROL Sfoglia] Questa scheda ti consente di cercare e visualizzare i profili di sola lettura acquisiti nell’organizzazione. Da qui puoi vedere informazioni importanti appartenenti al profilo sulle loro preferenze, eventi passati, interazioni e tipi di pubblico.
 
 Per ulteriori informazioni sulle funzionalità di visualizzazione del profilo fornite nell’interfaccia utente di Platform, consulta la documentazione su [esplorazione dei profili in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
 
@@ -256,9 +256,9 @@ Passa il puntatore del mouse su singole barre per visualizzare una finestra di d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Profili non segmentati"
->abstract="Questo widget fornisce il numero totale di tutti i profili non collegati ad alcun segmento e rappresenta l’opportunità per l’attivazione dei profili in tutta l’organizzazione."
+>abstract="Questo widget fornisce il numero totale di tutti i profili non associati ad alcun pubblico e rappresenta l’opportunità di attivazione profilo nell’organizzazione."
 
-Il [!UICONTROL Profili non segmentati] Il widget fornisce il numero totale di tutti i profili non collegati a nessun segmento. Il numero generato è preciso all’ultima istantanea e rappresenta l’opportunità di attivazione del profilo nell’organizzazione. Indica anche l’opportunità di eliminare i profili che non forniscono un ROI adeguato.
+Il [!UICONTROL Profili non segmentati] Il widget fornisce il numero totale di tutti i profili non associati ad alcun pubblico. Il numero generato è preciso all’ultima istantanea e rappresenta l’opportunità di attivazione del profilo nell’organizzazione. Indica anche l’opportunità di eliminare i profili che non forniscono un ROI adeguato.
 
 ![Il widget Profili non segmentati.](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ Il [!UICONTROL Profili non segmentati] Il widget fornisce il numero totale di tu
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendenza dei profili non segmentati"
->abstract="Questo widget fornisce un grafico a linee illustrativo del numero di profili non collegati ad alcun segmento in un dato periodo di tempo. La tendenza dei profili non associati ad alcun segmento può essere visualizzata su periodi di 30 giorni, 90 giorni e 12 mesi."
+>abstract="Questo widget fornisce un’illustrazione del grafico a linee per il numero di profili che non sono associati ad alcun pubblico in un determinato periodo di tempo. La tendenza dei profili non allegati a un pubblico può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi."
 
-Il [!UICONTROL Tendenza di modifica dei profili non segmentati] il widget utilizza un grafico a linee per illustrare il numero di profili aggiunti dall’ultima istantanea giornaliera che non sono associati ad alcun segmento. La tendenza alla modifica dei profili non collegati a nessun segmento può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. Il conteggio dei profili si riflette sull’asse y e il tempo sull’asse x.
+Il [!UICONTROL Tendenza di modifica dei profili non segmentati] il widget utilizza un grafico a linee per illustrare il numero di profili aggiunti dall’ultima istantanea giornaliera che non sono associati ad alcun pubblico. La tendenza alla modifica dei profili non allegati ad alcun pubblico può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. Il conteggio dei profili si riflette sull’asse y e il tempo sull’asse x.
 
 ![I profili non segmentati modificano il widget tendenza.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -292,7 +292,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ### [!UICONTROL Tipi di pubblico] {#audiences}
 
-Questo widget fornisce il numero totale di segmenti pronti per essere attivati, in base al criterio di unione scelto applicato ai dati del profilo.
+Questo widget fornisce il numero totale di tipi di pubblico pronti per essere attivati, in base al criterio di unione scelto applicato ai dati del profilo.
 
 Seleziona **[!UICONTROL Tipi di pubblico]** per passare al [!UICONTROL Segmenti] dashboard [!UICONTROL Sfoglia] scheda. Da qui puoi visualizzare un elenco di tutte le definizioni dei segmenti per la tua organizzazione.
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Rapporto di sovrapposizione pubblico] {#audience-overlap-report}
 
-Questo widget tabula i dati di sovrapposizione del pubblico da tutti i segmenti disponibili filtrati dai criteri di unione. Per il criterio di unione scelto dal menu a discesa nella parte superiore dello schermo viene fornito un elenco di cinque tipi di pubblico, classificati dalla percentuale di sovrapposizione più alta a quella più bassa. I due segmenti analizzati sono elencati nel [!UICONTROL NOME SEGMENTO A] e [!UICONTROL NOME SEGMENTO B] colonne. La sovrapposizione percentuale è indicata nella terza colonna con precisione di dodici cifre decimali.
+Questo widget tabula la sovrapposizione dei dati da tutti i tipi di pubblico disponibili filtrati dai criteri di unione. Per il criterio di unione scelto dal menu a discesa nella parte superiore dello schermo viene fornito un elenco di cinque tipi di pubblico, classificati dalla percentuale di sovrapposizione più alta a quella più bassa. I due tipi di pubblico analizzati sono elencati nel [!UICONTROL NOME DEL PUBBLICO] e [!UICONTROL NOME PUBBLICO B] colonne. La sovrapposizione percentuale è indicata nella terza colonna con precisione di dodici cifre decimali.
 
-Il rapporto di sovrapposizione del pubblico consente di creare nuovi segmenti ad alte prestazioni. Osservare percentuali di sovrapposizione elevate consente di eliminare i tipi di pubblico e impedire l’invio dello stesso pubblico a destinazioni diverse. Inoltre, ti aiutano a identificare informazioni nascoste che potrebbero essere utili per una migliore segmentazione. Una sovrapposizione in percentuale bassa consente di individuare profili univoci da perseguire.
+Il rapporto di sovrapposizione del pubblico consente di creare nuovi tipi di pubblico ad alte prestazioni. Osservare percentuali di sovrapposizione elevate consente di eliminare i tipi di pubblico e impedire l’invio dello stesso pubblico a destinazioni diverse. Inoltre, ti aiutano a identificare informazioni nascoste che potrebbero essere utili per una migliore segmentazione. Una sovrapposizione in percentuale bassa consente di individuare profili univoci da perseguire.
 
 Seleziona **[!UICONTROL Visualizza altro]** per aprire una finestra di dialogo a schermo intero che contiene più dati di sovrapposizione del pubblico.
 
@@ -347,23 +347,23 @@ I conteggi individuali per i tipi di pubblico mappati o non mappati vengono visu
 
 ### [!UICONTROL Dimensione pubblico] {#audiences-size}
 
-Il [!UICONTROL Dimensione pubblico] widget fornisce una tabella a due colonne che elenca fino a 20 segmenti e il numero totale di tipi di pubblico contenuti in ciascun segmento. L’elenco viene ordinato da alto a basso in base al numero totale di tipi di pubblico. Il numero totale di dimensioni del pubblico dipende dal criterio di unione applicato.
+Il [!UICONTROL Dimensione pubblico] widget fornisce una tabella a due colonne che elenca i nomi di un massimo di 20 tipi di pubblico e il numero totale di profili contenuti in ciascun pubblico. L’elenco viene ordinato da alto a basso in base al numero totale di profili all’interno del pubblico. Il conteggio delle dimensioni totali del pubblico dipende dal criterio di unione applicato.
 
 ![Il widget dimensione Tipi di pubblico.](../images/profiles/audiences-size.png)
 
-Per visualizzare informazioni complete su un segmento, seleziona un nome di segmento dall’elenco fornito per passare alla [!UICONTROL Segmenti] [!UICONTROL Dettaglio] pagina. Inoltre, selezionando **[!UICONTROL Visualizza tutti i segmenti]** dalla fine del widget, puoi passare alla [!UICONTROL Segmenti] [!UICONTROL Sfoglia] per trovare un segmento esistente.
+Per visualizzare informazioni complete su un pubblico, seleziona un nome di pubblico dall’elenco fornito per passare alla [!UICONTROL Tipi di pubblico] [!UICONTROL Dettaglio] pagina. Inoltre, selezionando **[!UICONTROL Visualizza tutti i tipi di pubblico]** dalla fine del widget, puoi passare alla [!UICONTROL Tipi di pubblico] [!UICONTROL Sfoglia] per trovare un pubblico esistente.
 
-![Il widget dimensione Tipi di pubblico con un nome di segmento e visualizza tutto il testo dei segmenti evidenziato.](../images/profiles/audiences-size-view-all-segments.png)
+![Il widget dimensione Tipi di pubblico con un nome di pubblico e il testo Visualizza tutti i tipi di pubblico evidenziato.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulta la documentazione per ulteriori informazioni su [[!UICONTROL Segmenti] [!UICONTROL  Sfoglia] scheda](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulta la documentazione per ulteriori informazioni su [[!UICONTROL Tipi di pubblico] [!UICONTROL  Sfoglia] scheda](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL Sovrapposizione del pubblico con criterio di unione] {#audience-overlap-by-merge-policy}
 
-Questo widget utilizza un diagramma di Venn per visualizzare la sovrapposizione di due segmenti selezionati. Il criterio di unione viene scelto dal menu a discesa Panoramica nella parte superiore della pagina e i segmenti per l’analisi vengono selezionati da due menu a discesa all’interno del widget. Il numero totale di profili all’interno della definizione del segmento pertinente può essere visualizzato passando il cursore sopra un cerchio o l’intersezione.
+Questo widget utilizza un diagramma di Venn per visualizzare la sovrapposizione di due tipi di pubblico selezionati. Il criterio di unione viene scelto dal menu a discesa Panoramica nella parte superiore della pagina e i tipi di pubblico per l’analisi vengono selezionati da due menu a discesa all’interno del widget. Il numero totale di profili all’interno della definizione del segmento pertinente può essere visualizzato passando il cursore sopra un cerchio o l’intersezione.
 
 Quando il widget mostra il crossover visivo delle definizioni dei segmenti, puoi ottimizzare la strategia di segmentazione studiando le somiglianze tra le definizioni dei segmenti.
 
-![Il dashboard dei profili dell’interfaccia utente di Platform con il menu a discesa dei criteri di unione e gli elenchi a discesa dei segmenti dei widget evidenziati.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Il dashboard dei profili dell’interfaccia utente di Platform con il menu a discesa dei criteri di unione e gli elenchi a discesa dei tipi di pubblico dei widget evidenziati.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

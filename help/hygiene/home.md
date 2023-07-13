@@ -2,7 +2,7 @@
 title: Panoramica sull’igiene dei dati
 description: L’igiene dei dati Adobe Experience Platform consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Quando si verifica una [richiesta di scadenza del set di dati](./ui/dataset-expi
 | Richiesta inviata | 0 ore | Un amministratore di dati o un analista della privacy invia una richiesta affinché un set di dati scada in un determinato momento. La richiesta è visibile in [!UICONTROL Interfaccia utente di igiene dei dati] dopo l’invio, rimane in sospeso fino alla scadenza pianificata, dopo la quale la richiesta verrà eseguita. |
 | Set di dati eliminato | 1 ora | Il set di dati viene eliminato da [pagina inventario set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente. I dati all’interno del data lake vengono eliminati solo in modo non permanente e rimangono tali fino alla fine del processo, dopo di che verranno eliminati in modo definitivo. |
 | Conteggio profili aggiornato | 30 ore | A seconda del contenuto del set di dati da eliminare, alcuni profili possono essere rimossi dal sistema se tutti gli attributi dei loro componenti sono associati a tale set di dati. 30 ore dopo l’eliminazione del set di dati, eventuali modifiche risultanti nei conteggi complessivi dei profili vengono riportate in [widget dashboard](../dashboards/guides/profiles.md#profile-count-trend) e altri rapporti. |
-| Segmenti aggiornati | 48 ore | Una volta aggiornati tutti i profili interessati, tutti i relativi [segmenti](../segmentation/home.md) vengono aggiornati per riflettere le nuove dimensioni. A seconda del set di dati rimosso e degli attributi su cui stai eseguendo la segmentazione, la dimensione di ciascun segmento potrebbe aumentare o diminuire in seguito all’eliminazione. |
+| Tipi di pubblico aggiornati | 48 ore | Una volta aggiornati tutti i profili interessati, tutti i relativi [audience](../segmentation/home.md) vengono aggiornati per riflettere le nuove dimensioni. A seconda del set di dati rimosso e degli attributi su cui stai effettuando la segmentazione, la dimensione di ciascun pubblico potrebbe aumentare o diminuire a seguito dell’eliminazione. |
 | Percorsi e destinazioni aggiornati | 50 ore | [Percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), e [destinazioni](../destinations/home.md) vengono aggiornati in base alle modifiche nei segmenti correlati. |
 | Eliminazione definitiva completata | 14 giorni | Tutti i dati relativi al set di dati vengono eliminati dal data lake. Il [stato del processo di igiene](./ui/browse.md#view-details) che ha eliminato il set di dati viene aggiornato di conseguenza. |
 

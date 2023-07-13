@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Query Service
 description: Questo documento fornisce una panoramica del ruolo di Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] utilizza l’apprendimen
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di suddividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi segmenti possono essere successivamente valutati per fornire un’analisi migliore sulla [!DNL Real-Time Customer Profile] dati. [!DNL Query Service] può essere utilizzato per fornire questa analisi eseguendo query su questi dati di segmento all’interno del [!DNL Data Lake]. Leggi le [!DNL Segmentation Service] panoramica per ulteriori informazioni sulla segmentazione e [!DNL Profile Query Language] (PQL) per ulteriori informazioni su come analizzare i segmenti.
+Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di suddividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi tipi di pubblico possono essere successivamente valutati per fornire migliori analisi sulle [!DNL Real-Time Customer Profile] dati. [!DNL Query Service] può essere utilizzato per fornire questa analisi eseguendo query su questi dati di pubblico all’interno di [!DNL Data Lake]. Leggi le [!DNL Segmentation Service] panoramica per ulteriori informazioni sulla segmentazione e [!DNL Profile Query Language] (PQL) per ulteriori informazioni su come analizzare i tipi di pubblico.
 
 ## Casi d’uso
 
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di su
 
 ### Abbandono navigazione Adobe Analytics
 
-Questo [Adobe di abbandono navigazione [!DNL Analytics]](./use-cases/abandoned-browse.md) dati per creare un pubblico specifico actionable. [!DNL Query Service] supporta una logica complessa per la segmentazione per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei segmenti.
+Questo [Adobe di abbandono navigazione [!DNL Analytics]](./use-cases/abandoned-browse.md) dati per creare un pubblico specifico actionable. [!DNL Query Service] supporta una logica complessa per la segmentazione per calcolare vari attributi personalizzati da utilizzare a valle o per semplificare notevolmente la modalità di creazione dei tipi di pubblico.
 
 ### Cruscotti Looker BI
 

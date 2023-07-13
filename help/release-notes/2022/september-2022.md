@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2940'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Nuove funzioni di Adobe Experience Platform:
 
-- [Controllo dell’accesso basato su attributi](#abac)
+- [Controllo degli accessi basato su attributi](#abac)
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -29,7 +29,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Servizio query](#query-service)
 - [Origini](#sources)
 
-## Controllo dell’accesso basato su attributi {#abac}
+## Controllo degli accessi basato su attributi {#abac}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Tramite il controllo dell’accesso basato su attributi, gli amministratori dell
 
 | Funzione | Descrizione |
 | --- | --- |
-| Controllo dell’accesso basato su attributi | Il controllo dell’accesso basato su attributi consente di etichettare i campi e i segmenti dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso che coprono i campi e i segmenti dello schema XDM per gestire meglio l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). |
+| Controllo degli accessi basato su attributi | Il controllo dell’accesso basato su attributi consente di etichettare i campi e i segmenti dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. In parallelo, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso che coprono i campi e i segmenti dello schema XDM per gestire meglio l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Per ulteriori informazioni, vedere [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). |
 | Autorizzazioni | Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto. Tramite le Autorizzazioni, puoi creare e gestire i ruoli, assegnare le autorizzazioni per le risorse desiderate per questi ruoli e creare criteri per sfruttare le etichette e definire quali ruoli utente hanno accesso a risorse Platform specifiche. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere [Guida dell’interfaccia utente Autorizzazioni](../../access-control/abac/ui/browse.md). |
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere [panoramica sul controllo degli accessi basato su attributi](../../access-control/abac/overview.md). Per una guida completa sul flusso di lavoro di controllo degli accessi basato su attributi, leggi [guida end-to-end per il controllo degli accessi basato su attributi](../../access-control/abac/end-to-end-guide.md).
@@ -95,13 +95,13 @@ Adobe Experience Platform fornisce più dashboard attraverso i quali è possibil
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in uso identifica facilmente la presenza di widget esistenti nel dashboard. Questo consente di evitare facilmente la duplicazione, anche se è comunque possibile aggiungere lo stesso widget più di una volta, se lo si desidera. |
 | Dashboard definiti dall&#39;utente | Le dashboard definite dall’utente consentono di velocizzare le informazioni approfondite e personalizzare le visualizzazioni creando e gestendo dashboard personalizzate. Con le dashboard definite dall’utente puoi creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Leggi le [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per ulteriori informazioni. |
 | Modello dati di Customer Data Platform Insights | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i casi di utilizzo degli indicatori di prestazioni chiave e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Leggi le [Guida alle funzioni del modello dati di approfondimenti CDP](../../dashboards/cdp-insights-data-model.md) per ulteriori informazioni. |
-| Widget report di sovrapposizione pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Dalla sezione [!UICONTROL Profili] dashboard puoi filtrare e visualizzare la sovrapposizione dei tipi di pubblico tramite il criterio di unione da tutti i segmenti disponibili. Il [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico in base a un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evitare di inviare lo stesso pubblico a destinazioni diverse. Il rapporto consente inoltre di identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. Leggi le rispettive [profili](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmenti](../../dashboards/guides/segments.md#audience-overlap-report) guide per ulteriori informazioni. |
+| Widget report di sovrapposizione pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Dalla sezione [!UICONTROL Profili] dashboard puoi filtrare e visualizzare la sovrapposizione dei tipi di pubblico tramite il criterio di unione da tutti i segmenti disponibili. Il [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico in base a un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evitare di inviare lo stesso pubblico a destinazioni diverse. Il rapporto consente inoltre di identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. Leggi le rispettive [profili](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmenti](../../dashboards/guides/audiences.md#audience-overlap-report) guide per ulteriori informazioni. |
 
 Per ulteriori informazioni su [!DNL Dashboards], consultare il [[!DNL Dashboards] panoramica](../../dashboards/home.md).
 
 ## Raccolta dati {#data-collection}
 
-Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobi o non Adobi.
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
 
 **Funzioni nuove o aggiornate**
 
@@ -120,7 +120,7 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Funzioni nuove o aggiornate**
 
@@ -225,7 +225,7 @@ Consulta la [documentazione degli avvisi di query](../../query-service/api/alert
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Funzioni aggiornate**
 
@@ -237,4 +237,4 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Supporto API per il nuovo tentativo di esecuzione del flusso di dati non riuscito per le origini batch | Utilizza il `re-trigger` operazione per ritentare il flusso di dati non riuscito tramite l’API. Leggi la guida su [nuovo tentativo di esecuzione del flusso di dati non riuscito tramite l’API](../../sources/tutorials/api/retry-flows.md) per ulteriori informazioni. |
 | Supporto API per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] sorgenti | Utilizzare gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] origini. Leggi la guida su [filtrare i dati per un’origine utilizzando l’API](../../sources/tutorials/api/filter.md) per ulteriori informazioni. |
 
-Per ulteriori informazioni sulle origini, leggere [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni sulle origini, leggi la [panoramica sulle origini](../../sources/home.md).
