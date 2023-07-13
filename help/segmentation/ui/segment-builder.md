@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Segmentation Service;segmentation service;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 6%
+source-wordcount: '3308'
+ht-degree: 4%
 
 ---
 
@@ -15,14 +14,14 @@ ht-degree: 6%
 
 [!DNL Segment Builder] fornisce un’area di lavoro ricca che consente di interagire con [!DNL Profile] elementi dati. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 
-![Viene visualizzata l’interfaccia utente del generatore di segmenti.](../images/ui/segment-builder/segment-builder.png)
+![Viene visualizzata l’interfaccia utente del Generatore di segmenti.](../images/ui/segment-builder/segment-builder.png)
 
 ## Blocchi predefiniti di definizione del segmento {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campi"
->abstract="I tre tipi di campi che compongono un segmento sono attributi, eventi e pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; il pubblico consente di utilizzare tipi di pubblico importati da origini esterne."
+>abstract="I tre tipi di campo che compongono una definizione di segmento sono attributi, eventi e tipi di pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; il pubblico consente di utilizzare tipi di pubblico importati da origini esterne."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -38,7 +37,7 @@ Il **[!UICONTROL Attributi]** consente di navigare [!DNL Profile] attributi appa
 
 ### Eventi
 
-Il **[!UICONTROL Eventi]** consente di creare un pubblico in base a eventi o azioni che hanno avuto luogo utilizzando [!DNL XDM ExperienceEvent] elementi dati. Puoi anche trovare i Tipi di evento su **[!UICONTROL Eventi]** , ovvero una raccolta di eventi di uso comune che ti consentono di creare i segmenti più rapidamente.
+Il **[!UICONTROL Eventi]** consente di creare un pubblico in base a eventi o azioni che hanno avuto luogo utilizzando [!DNL XDM ExperienceEvent] elementi dati. Puoi anche trovare i Tipi di evento su **[!UICONTROL Eventi]** , una raccolta di eventi di uso comune per accelerare la creazione delle definizioni dei segmenti.
 
 Oltre a poter cercare [!DNL ExperienceEvent] , è inoltre possibile cercare Tipi di evento. I tipi di evento utilizzano la stessa logica di codifica [!DNL ExperienceEvents], senza richiedere di eseguire ricerche attraverso [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, se si utilizza la barra di ricerca per cercare &quot;carrello&quot;, vengono restituiti i Tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RimuoviCarrello]&quot;, che sono due azioni del carrello molto comunemente utilizzate durante la creazione delle definizioni dei segmenti.
 
@@ -116,7 +115,7 @@ Per aggiungere una nuova regola alla definizione del segmento, trascina una tess
 
 >[!IMPORTANT]
 >
->Le ultime modifiche apportate a Adobe Experience Platform hanno aggiornato l’utilizzo di `OR` e `AND` operatori logici tra eventi. Questi aggiornamenti non influiranno sui segmenti esistenti. Tuttavia, tutti gli aggiornamenti successivi ai segmenti esistenti e alle creazioni di nuovi segmenti saranno interessati da queste modifiche. Leggi le [aggiornamento costanti di tempo](./segment-refactoring.md) per ulteriori informazioni.
+>Le ultime modifiche apportate a Adobe Experience Platform hanno aggiornato l’utilizzo di `OR` e `AND` operatori logici tra eventi. Questi aggiornamenti non influiranno sulle definizioni dei segmenti esistenti. Tuttavia, queste modifiche interesseranno tutti gli aggiornamenti successivi alle definizioni di segmenti esistenti e alle nuove definizioni di segmenti create. Leggi le [aggiornamento costanti di tempo](./segment-refactoring.md) per ulteriori informazioni.
 
 Quando selezioni un valore per l’attributo, visualizzerai un elenco di valori enum possibili per l’attributo.
 
@@ -144,7 +143,7 @@ In alternativa, puoi aggiungere manualmente valori separati da virgole.
 
 ### Aggiunta di tipi di pubblico
 
-Puoi trascinare e rilasciare un pubblico dalla sezione **[!UICONTROL Pubblico]** scheda nell’area di lavoro del generatore di regole per fare riferimento all’appartenenza al pubblico nella nuova definizione di segmento. Ciò ti consente di includere o escludere l’iscrizione al pubblico come attributo nella nuova regola del segmento.
+Puoi trascinare e rilasciare un pubblico dalla sezione **[!UICONTROL Pubblico]** scheda nell’area di lavoro del generatore di regole per fare riferimento all’appartenenza al pubblico nella nuova definizione di segmento. Ciò ti consente di includere o escludere l’iscrizione al pubblico come attributo nelle nuove regole di definizione del segmento.
 
 Per [!DNL Platform] tipi di pubblico creati con [!DNL Segment Builder], è possibile convertire il pubblico nell’insieme di regole utilizzate nella definizione del segmento per quel pubblico. Questa conversione crea una copia della logica della regola, che può quindi essere modificata senza influire sulla definizione del segmento originale. Assicurati di aver salvato le modifiche recenti alla definizione del segmento prima di convertirla nella logica della regola.
 
@@ -158,11 +157,11 @@ Se insorgono conflitti durante la conversione dei tipi di pubblico in regole, [!
 
 ### Vista Codice
 
-In alternativa, puoi visualizzare una versione basata su codice di una regola creata in [!DNL Segment Builder]. Dopo aver creato la regola nell’area di lavoro del generatore di regole, puoi selezionare **[!UICONTROL Vista Codice]** per visualizzare il segmento come PQL.
+In alternativa, puoi visualizzare una versione basata su codice di una regola creata in [!DNL Segment Builder]. Dopo aver creato la regola nell’area di lavoro del generatore di regole, puoi selezionare **[!UICONTROL Vista Codice]** per visualizzare la definizione del segmento come PQL.
 
-![Viene evidenziato il pulsante di visualizzazione del codice, che consente di visualizzare il segmento come PQL.](../images/ui/segment-builder/code-view.png)
+![Viene evidenziato il pulsante di visualizzazione del codice, che consente di visualizzare la definizione del segmento come PQL.](../images/ui/segment-builder/code-view.png)
 
-La vista Codice fornisce un pulsante che consente di copiare il valore del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente del segmento, assicurati di aver salvato le modifiche più recenti apportate al segmento.
+La vista Codice fornisce un pulsante che consente di copiare il valore della definizione del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente della definizione del segmento, assicurati di aver salvato le modifiche più recenti alla definizione del segmento.
 
 ![Viene evidenziato il pulsante Copia codice, che consente di: ](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ Dopo aver inserito l’evento nel contenitore Eventi, seleziona l’icona con i 
 
 ![Il testo aggregato viene evidenziato. Selezionando questa opzione è possibile selezionare le funzioni di aggregazione.](../images/ui/segment-builder/add-aggregation.png)
 
-L’aggregazione viene ora aggiunta. È ora possibile selezionare la funzione di aggregazione, scegliere l&#39;attributo da aggregare, la funzione di uguaglianza e il valore. Per l’esempio seguente, questo segmento qualificherebbe qualsiasi profilo con una somma di valori acquistati superiore a $ 100, anche se ogni singolo acquisto è inferiore a $ 100.
+L’aggregazione viene ora aggiunta. È ora possibile selezionare la funzione di aggregazione, scegliere l&#39;attributo da aggregare, la funzione di uguaglianza e il valore. Per l’esempio seguente, questa definizione del segmento qualificherebbe qualsiasi profilo con una somma di valori acquistati superiore a $ 100, anche se ogni singolo acquisto è inferiore a $ 100.
 
 ![Le regole di evento, che visualizzano una funzione di aggregazione.](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -222,6 +221,11 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]** il contenito
 
 ## Criteri di unione
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="Criteri di unione"
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+
 [!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizza per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare un profilo.
 
 Puoi selezionare un criterio di unione corrispondente allo scopo di marketing per questo pubblico o utilizzare il criterio di unione predefinito fornito da [!DNL Platform]. È possibile creare più criteri di unione specifici per l’organizzazione, inclusa la creazione di un criterio di unione predefinito. Per istruzioni dettagliate sulla creazione di criteri di unione per l&#39;organizzazione, leggere [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
@@ -230,40 +234,40 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![Il selettore dei criteri di unione viene evidenziato. Questo consente di scegliere quale criterio di unione selezionare per la definizione del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà segmento {#segment-properties}
+## Proprietà di definizione del segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Proprietà segmento"
->abstract="Nella sezione Proprietà segmento viene visualizzata una stima della dimensione del segmento risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
+>title="Proprietà di definizione del segmento"
+>abstract="La sezione delle proprietà di definizione del segmento visualizza una stima delle dimensioni della definizione del segmento risultante, visualizzando il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Aggiornare le stime"
->abstract="Puoi aggiornare le stime del segmento per visualizzare subito un’anteprima del numero di profili idonei per il segmento proposto. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
+>abstract="Puoi aggiornare le stime della definizione del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per la definizione del segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=it#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
-Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
+Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
-Il **[!UICONTROL Proprietà segmento]** Questa sezione consente inoltre di specificare informazioni importanti sulla definizione del segmento, tra cui nome, descrizione e tipo di valutazione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
+Il **[!UICONTROL Proprietà segmento]** Questa sezione consente inoltre di specificare informazioni importanti sulla definizione del segmento, tra cui nome, descrizione e tipo di valutazione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare la definizione del segmento tra quelle definite dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
 
 Continuando a creare la definizione del segmento, puoi visualizzare un’anteprima impaginata del pubblico selezionando **[!UICONTROL Visualizza profili]**.
 
-![Viene evidenziata la sezione delle proprietà di definizione del segmento. Le proprietà del segmento includono, tra l’altro, il nome del segmento, la descrizione e il metodo di valutazione.](../images/ui/segment-builder/segment-properties.png)
+![Viene evidenziata la sezione delle proprietà di definizione del segmento. Le proprietà di definizione del segmento includono, tra l’altro, il nome, la descrizione e il metodo di valutazione della definizione del segmento.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione dei segmenti.
+>Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime per le definizioni dei segmenti sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione di definizioni di segmenti.
 
-Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se desideri conoscere i tipi di valutazione per i quali questo segmento si qualifica, puoi selezionare l’icona Sfoglia ![icona cartella con lente di ingrandimento](../images/ui/segment-builder/segment-evaluation-select-icon.png) per visualizzare un elenco dei metodi di valutazione dei segmenti disponibili.
+Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se desideri conoscere i tipi di valutazione per i quali è qualificata questa definizione di segmento, puoi selezionare l’icona Sfoglia ![icona cartella con lente di ingrandimento](../images/ui/segment-builder/segment-evaluation-select-icon.png) per visualizzare un elenco dei metodi di valutazione delle definizioni dei segmenti disponibili.
 
 Il [!UICONTROL Idoneità al metodo di valutazione] viene visualizzato popover. In questo popover vengono visualizzati i metodi di valutazione disponibili, ovvero batch, streaming e edge. Il popover mostra quali metodi di valutazione sono idonei e non idonei. A seconda dei parametri utilizzati nella definizione del segmento, questo potrebbe non essere idoneo per alcuni metodi di valutazione. Per ulteriori informazioni sui requisiti di ciascun metodo di valutazione, consultare la [segmentazione in streaming](./streaming-segmentation.md#query-types) o [segmentazione Edge](./edge-segmentation.md#query-types) panoramiche.
 
-![Viene visualizzata la finestra a comparsa per l’idoneità del metodo di valutazione. Questo mostra quali metodi di valutazione del segmento sono idonei e non idonei per il segmento.](../images/ui/segment-builder/select-evaluation-method.png)
+![Viene visualizzata la finestra a comparsa per l’idoneità del metodo di valutazione. Questo mostra quali metodi di valutazione sono idonei e non idonei per la definizione del segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
 Se selezioni un metodo di valutazione non valido, ti verrà richiesto di modificare le regole di definizione del segmento o il metodo di valutazione.
 
-![Viene visualizzato il metodo di valutazione. Se è selezionato un metodo di valutazione del segmento non idoneo, il pop-up spiega perché non è idoneo.](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![Viene visualizzato il metodo di valutazione. Se viene selezionato un metodo di valutazione non idoneo, il pop-up spiega perché non è idoneo.](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 Ulteriori informazioni sui diversi metodi di valutazione delle definizioni dei segmenti sono disponibili nella sezione [panoramica sulla segmentazione](../home.md#evaluate-segments).
 

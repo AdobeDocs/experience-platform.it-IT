@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
-user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
+user-guide-description: Crea tipi di pubblico dai dati dei profili cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o fonti esterne.
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 30%
+source-wordcount: '176'
+ht-degree: 24%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 30%
    - [Segmentazione in streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
    - [Panoramica](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [Composizione del pubblico](ui/audience-composition.md)
    - [Dashboard dei segmenti](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
    - [Segmentazione Edge](ui/edge-segmentation.md)
@@ -47,7 +47,7 @@ ht-degree: 30%
    - [Funzioni booleane](pql/boolean-functions.md)
    - [Funzioni di confronto](pql/comparison-functions.md)
    - [Funzioni array, list e set](pql/array-functions.md)
-   - [Mappare le funzioni](pql/map-functions.md)
+   - [Funzioni di mappatura](pql/map-functions.md)
    - [Funzioni stringa](pql/string-functions.md)
    - [Funzioni oggetto](pql/object-functions.md)
    - [Funzioni aritmetiche](pql/arithmetic-functions.md)
@@ -65,5 +65,6 @@ ht-degree: 30%
    - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
    - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applicazione della conformità all’utilizzo dei dati per i segmenti](tutorials/governance.md)
+- [Domande frequenti](./faq.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)

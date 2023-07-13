@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione edge;segmentazione;servizio di segmentazione;servizio di segmentazione;guida interfaccia utente;streaming edge;
 solution: Experience Platform
 title: Guida dell’interfaccia utente per la segmentazione di Edge
-description: La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente al limite, abilitando casi d’uso di personalizzazione della pagina corrente e successiva.
+description: Scopri come utilizzare la segmentazione Edge per valutare le definizioni dei segmenti in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->La segmentazione Edge è ora generalmente disponibile per tutti gli utenti di Platform. Se hai creato segmenti edge durante la versione beta, questi segmenti continueranno a essere operativi.
+>La segmentazione Edge è ora generalmente disponibile per tutti gli utenti di Platform. Se hai creato definizioni di segmenti edge durante la versione beta, queste definizioni di segmenti continueranno a essere operative.
 
 La segmentazione Edge consente di valutare i segmenti in Adobe Experience Platform istantaneamente [sul bordo](../../edge/home.md), abilitando i casi d’uso per la personalizzazione della pagina stessa e successiva.
 
@@ -52,19 +51,19 @@ Una query può essere valutata con segmentazione Edge se soddisfa uno qualsiasi 
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. | Persone che vivono negli Stati Uniti e si trovano nel segmento &quot;esistente&quot;. | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | Query che fa riferimento a una mappa | Qualsiasi definizione di segmento che fa riferimento a una mappa di proprietà. | Persone che sono state aggiunte al carrello in base ai dati dei segmenti esterni. | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-Una definizione di segmento **non** essere abilitato per la segmentazione Edge nei seguenti scenari:
+Una definizione di segmento **non** essere abilitato per la segmentazione Edge nel seguente scenario:
 
 - La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
-   - Tuttavia, se il segmento contenuto in `inSegment` evento è solo profilo, la definizione del segmento **will** essere abilitato per la segmentazione Edge.
+   - Tuttavia, se la definizione del segmento contenuta nel `inSegment` evento è solo profilo, la definizione del segmento **will** essere abilitato per la segmentazione Edge.
 
 ## Passaggi successivi
 
-Questa guida spiega come valutare i segmenti con segmentazione Edge in Adobe Experience Platform. Per ulteriori informazioni sull’utilizzo dell’interfaccia utente di Experience Platform, consulta la sezione [Guida utente alla segmentazione](./overview.md). Per scoprire come eseguire azioni simili e lavorare con i segmenti utilizzando le API Experience Platform, visita il [guida dell’API per la segmentazione Edge](../api/edge-segmentation.md).
+Questa guida spiega come valutare le definizioni dei segmenti con la segmentazione Edge in Adobe Experience Platform. Per ulteriori informazioni sull’utilizzo dell’interfaccia utente di Experience Platform, consulta la sezione [Guida utente alla segmentazione](./overview.md). Per scoprire come eseguire azioni simili e lavorare con le definizioni dei segmenti utilizzando le API di Experience Platform, visita il [guida dell’API per la segmentazione Edge](../api/edge-segmentation.md).
 
 ## Appendice
 
 Nella sezione seguente sono elencate le domande frequenti relative alla segmentazione Edge:
 
-### Quanto tempo ci vuole affinché un segmento sia disponibile sulla rete Edge?
+### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile sulla rete Edge?
 
-È necessaria fino a un’ora affinché un segmento sia disponibile sulla rete Edge.
+È necessaria fino a un’ora perché la definizione di un segmento sia disponibile sulla rete Edge.

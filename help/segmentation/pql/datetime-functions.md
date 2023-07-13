@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
 solution: Experience Platform
 title: Funzioni data e ora PQL
 description: Le funzioni di data e ora vengono utilizzate per eseguire operazioni di data e ora sui valori in PQL (Profile Query Language).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---

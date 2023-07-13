@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;segmentation;segment builder;Segment builder
 solution: Experience Platform
 title: Guida dell’interfaccia utente per i vincoli di tempo di segmentazione con refactoring
 description: Segment Builder offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;segmentazione streaming;segmentazione streaming;valutazione continua;
 solution: Experience Platform
 title: Valutazione degli eventi in tempo quasi reale con segmentazione in streaming
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1992'
 ht-degree: 2%
 
 ---
@@ -25,14 +24,14 @@ Segmentazione in streaming su [!DNL Adobe Experience Platform] consente ai clien
 >
 >La segmentazione in streaming funziona su tutti i dati acquisiti utilizzando un’origine di streaming. I segmenti acquisiti utilizzando un’origine basata su batch vengono valutati di notte, anche se è idoneo per la segmentazione in streaming.
 >
->Inoltre, i segmenti valutati con la segmentazione in streaming possono spostarsi tra l’appartenenza ideale e quella effettiva se il segmento è basato su un altro segmento valutato utilizzando la segmentazione batch. Ad esempio, se il segmento A è basato sul segmento B e il segmento B viene valutato utilizzando la segmentazione batch, poiché il segmento B viene aggiornato solo ogni 24 ore, il segmento A si allontanerà ulteriormente dai dati effettivi fino a sincronizzarsi nuovamente con l’aggiornamento del segmento B.
+>Inoltre, le definizioni dei segmenti valutate con la segmentazione in streaming possono spostarsi tra l’appartenenza ideale e quella effettiva se la definizione del segmento è basata su un’altra definizione di segmento valutata utilizzando la segmentazione batch. Ad esempio, se il segmento A è basato sul segmento B e il segmento B viene valutato utilizzando la segmentazione batch, poiché il segmento B viene aggiornato solo ogni 24 ore, il segmento A si allontanerà ulteriormente dai dati effettivi fino a sincronizzarsi nuovamente con l’aggiornamento del segmento B.
 
 ## Introduzione
 
 Questa guida per sviluppatori richiede una buona conoscenza delle varie [!DNL Adobe Experience Platform] servizi coinvolti nella segmentazione in streaming. Prima di iniziare questo tutorial, consulta la documentazione dei seguenti servizi:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-- [[!DNL Segmentation]](../home.md): consente di creare segmenti e tipi di pubblico dalla [!DNL Real-Time Customer Profile] dati.
+- [[!DNL Segmentation]](../home.md): consente di creare tipi di pubblico utilizzando le definizioni dei segmenti e altre origini esterne dal tuo [!DNL Real-Time Customer Profile] dati.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente le chiamate a [!DNL Platform] API.
@@ -69,7 +68,7 @@ Per completare richieste specifiche possono essere necessarie intestazioni aggiu
 >
 >Affinché la segmentazione in streaming funzioni, devi abilitare la segmentazione pianificata per l’organizzazione. Le informazioni sull’abilitazione della segmentazione pianificata sono disponibili nella sezione [sezione abilita segmentazione pianificata](#enable-scheduled-segmentation)
 
-Per poter valutare un segmento utilizzando la segmentazione in streaming, la query deve essere conforme alle seguenti linee guida.
+Affinché una definizione di segmento possa essere valutata utilizzando la segmentazione in streaming, la query deve essere conforme alle seguenti linee guida.
 
 | Tipo di query | Dettagli |
 | ---------- | ------- |
@@ -98,15 +97,15 @@ Tieni presente che le seguenti linee guida sono applicabili quando esegui la seg
 
 Se una definizione di segmento viene modificata in modo da non soddisfare più i criteri per la segmentazione in streaming, la definizione del segmento passerà automaticamente da &quot;Streaming&quot; a &quot;Batch&quot;.
 
-Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla qualificazione del segmento, avviene in tempo reale. Di conseguenza, se un pubblico non è più idoneo per un segmento, non sarà immediatamente qualificato. Ad esempio, se la definizione del segmento richiede &quot;Tutti gli utenti che hanno acquistato scarpe rosse nelle ultime tre ore&quot;, dopo tre ore tutti i profili che si sono inizialmente qualificati per la definizione del segmento non saranno qualificati.
+Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla qualificazione del segmento, avviene in tempo reale. Di conseguenza, se un profilo non è più idoneo per la definizione di un segmento, non potrà più essere qualificato immediatamente. Ad esempio, se la definizione del segmento richiede &quot;Tutti gli utenti che hanno acquistato scarpe rosse nelle ultime tre ore&quot;, dopo tre ore tutti i profili che si sono inizialmente qualificati per la definizione del segmento non saranno qualificati.
 
-## Recupera tutti i segmenti abilitati per la segmentazione in streaming
+## Recupera tutte le definizioni di segmento abilitate per la segmentazione in streaming
 
-Per recuperare un elenco di tutti i segmenti abilitati per la segmentazione in streaming all’interno della tua organizzazione, effettua una richiesta GET al `/segment/definitions` endpoint.
+Per recuperare un elenco di tutte le definizioni di segmenti abilitate per la segmentazione in streaming all’interno della tua organizzazione, effettua una richiesta GET al `/segment/definitions` endpoint.
 
 **Formato API**
 
-Per recuperare i segmenti abilitati per lo streaming, devi includere il parametro di query `evaluationInfo.continuous.enabled=true` nel percorso della richiesta.
+Per recuperare le definizioni dei segmenti abilitati per lo streaming, devi includere il parametro di query `evaluationInfo.continuous.enabled=true` nel percorso della richiesta.
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -126,7 +125,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce un array di segmenti dell’organizzazione abilitati per la segmentazione in streaming.
+In caso di esito positivo, la risposta restituisce un array di definizioni di segmenti nell’organizzazione abilitate per la segmentazione in streaming.
 
 ```json
 {
@@ -213,9 +212,9 @@ In caso di esito positivo, la risposta restituisce un array di segmenti dell’o
 }
 ```
 
-## Creare un segmento abilitato allo streaming
+## Creare una definizione di segmento abilitata per lo streaming
 
-Un segmento sarà automaticamente abilitato allo streaming se corrisponde a uno dei [tipi di segmentazione in streaming elencati sopra](#query-types).
+Una definizione di segmento sarà automaticamente abilitata per lo streaming se corrisponde a una delle [tipi di segmentazione in streaming elencati sopra](#query-types).
 
 **Formato API**
 
@@ -261,7 +260,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Si tratta di una richiesta standard di &quot;creazione di un segmento&quot;. Per ulteriori informazioni sulla creazione di una definizione di segmento, consulta l’esercitazione su [creazione di un segmento](../tutorials/create-a-segment.md).
+>Si tratta di una richiesta standard di &quot;creazione di una definizione di segmento&quot;. Per ulteriori informazioni sulla creazione di una definizione di segmento, consulta l’esercitazione su [creazione di una definizione di segmento](../tutorials/create-a-segment.md).
 
 **Risposta**
 
@@ -307,7 +306,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova defini
 
 ## Abilita valutazione pianificata {#enable-scheduled-segmentation}
 
-Una volta abilitata la valutazione in streaming, è necessario creare una linea di base (dopo di che il segmento sarà sempre aggiornato). La valutazione pianificata (nota anche come segmentazione pianificata) deve prima essere abilitata affinché il sistema esegua automaticamente la baseline. Con la segmentazione pianificata, la tua organizzazione può rispettare una pianificazione ricorrente per eseguire automaticamente processi di esportazione per valutare i segmenti.
+Una volta abilitata la valutazione in streaming, è necessario creare una linea di base (dopo di che la definizione del segmento sarà sempre aggiornata). La valutazione pianificata (nota anche come segmentazione pianificata) deve prima essere abilitata affinché il sistema esegua automaticamente la baseline. Con la segmentazione pianificata, la tua organizzazione può rispettare una pianificazione ricorrente per eseguire automaticamente processi di esportazione per valutare le definizioni dei segmenti.
 
 >[!NOTE]
 >
@@ -351,7 +350,7 @@ curl -X POST \
 | `name` | **(Obbligatorio)** Nome della pianificazione. Deve essere una stringa. |
 | `type` | **(Obbligatorio)** Tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **(Obbligatorio quando `type` è uguale a `batch_segmentation`)** Utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **(Obbligatorio quando `type` è uguale a `batch_segmentation`)** Utilizzo di `["*"]` si assicura che siano incluse tutte le definizioni dei segmenti. |
 | `schedule` | **(Obbligatorio)** Stringa contenente la pianificazione del processo. È possibile programmare l&#39;esecuzione dei job solo una volta al giorno, pertanto non è possibile programmare l&#39;esecuzione di un job più di una volta in un periodo di 24 ore. L&#39;esempio mostrato (`0 0 1 * * ?`) significa che il processo viene attivato ogni giorno alle 1:00:00 UTC Per ulteriori informazioni, consulta l’appendice sulla [formato espressione cron](./schedules.md#appendix) all’interno della documentazione sulle pianificazioni all’interno di segmentazione. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato della pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un’organizzazione può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
@@ -385,7 +384,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della pianificazio
 
 ### Abilitare una pianificazione
 
-Per impostazione predefinita, una pianificazione non è attiva al momento della creazione, a meno che `state` proprietà impostata su `active` nel corpo della richiesta create (POST). È possibile abilitare una pianificazione (impostare `state` a `active`) inoltrando una richiesta PATCH al `/config/schedules` e l&#39;ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione non è attiva al momento della creazione, a meno che `state` proprietà impostata su `active` nel corpo della richiesta create (POST). È possibile abilitare una pianificazione (impostare `state` a `active`) inoltrando una richiesta PATCH al `/config/schedules` e l’ID della pianificazione nel percorso.
 
 **Formato API**
 
@@ -422,9 +421,9 @@ La stessa operazione può essere utilizzata per disabilitare una pianificazione 
 
 ## Passaggi successivi
 
-Ora che hai abilitato sia i segmenti nuovi che quelli esistenti per la segmentazione in streaming e che hai abilitato la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare segmenti abilitati per lo streaming per la tua organizzazione.
+Ora che hai abilitato sia le definizioni di segmenti nuove che quelle esistenti per la segmentazione in streaming, sia la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare definizioni di segmenti abilitati per lo streaming per la tua organizzazione.
 
-Per scoprire come eseguire azioni simili e lavorare con i segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita il [Guida utente di Segment Builder](../ui/segment-builder.md).
+Per scoprire come eseguire azioni simili e lavorare con le definizioni dei segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita il [Guida utente di Segment Builder](../ui/segment-builder.md).
 
 ## Appendice
 
@@ -432,26 +431,26 @@ Nella sezione seguente sono elencate le domande frequenti sulla segmentazione in
 
 ### La segmentazione in streaming &quot;unqualification&quot; (non qualificazione) si verifica anche in tempo reale?
 
-Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, i segmenti di streaming che utilizzano segmenti di segmenti lo fanno **non** non qualificato in tempo reale, ma non qualificato dopo 24 ore.
+Nella maggior parte dei casi, l’annullamento della qualifica per segmentazione in streaming avviene in tempo reale. Tuttavia, le definizioni dei segmenti in streaming che utilizzano segmenti di segmenti **non** non qualificato in tempo reale, ma non qualificato dopo 24 ore.
 
 ### Su quali dati funziona la segmentazione in streaming?
 
 La segmentazione in streaming funziona su tutti i dati acquisiti utilizzando un’origine di streaming. I segmenti acquisiti utilizzando un’origine basata su batch vengono valutati di notte, anche se è idoneo per la segmentazione in streaming. Gli eventi inviati in streaming al sistema con una marca temporale precedente alle 24 ore verranno elaborati nel processo batch successivo.
 
-### Come vengono definiti i segmenti come segmentazione in batch o in streaming?
+### Come vengono definite le definizioni dei segmenti come segmentazione in batch o in streaming?
 
-Un segmento è definito come segmentazione in batch o in streaming basata su una combinazione di tipo di query e durata della cronologia degli eventi. Un elenco dei segmenti che verranno valutati come segmenti di streaming si trova in [sezione tipi di query di segmentazione in streaming](#query-types).
+Una definizione di segmento è definita come segmentazione in batch o in streaming in base a una combinazione di tipo di query e durata della cronologia degli eventi. Un elenco delle definizioni dei segmenti da valutare come segmento di streaming si trova in [sezione tipi di query di segmentazione in streaming](#query-types).
 
-Tieni presente che se un segmento contiene **entrambi** un `inSegment` e una catena di eventi singola diretta, non può qualificarsi per la segmentazione in streaming. Se desideri che questo segmento sia idoneo per la segmentazione in streaming, devi rendere la catena di eventi singoli diretti un suo segmento.
+Tieni presente che se un segmento contiene **entrambi** un `inSegment` e una catena di eventi singola diretta, non può qualificarsi per la segmentazione in streaming. Se desideri che questa definizione di segmento sia idonea per la segmentazione in streaming, devi rendere la catena di eventi singoli diretta la propria definizione di segmento.
 
-### Perché il numero di segmenti &quot;qualificati totali&quot; continua a crescere mentre il numero in &quot;Ultimi X giorni&quot; rimane pari a zero all’interno della sezione dei dettagli del segmento?
+### Perché il numero di definizioni di segmenti &quot;qualificati totali&quot; continua a crescere mentre il numero in &quot;Ultimi X giorni&quot; rimane pari a zero nella sezione dei dettagli di definizione del segmento?
 
-Il numero di segmenti qualificati totali viene ricavato dal processo di segmentazione giornaliero, che include tipi di pubblico idonei sia per i segmenti in batch che per quelli in streaming. Questo valore viene visualizzato sia per i segmenti batch che per quelli in streaming.
+Il numero totale di definizioni di segmenti qualificati viene ricavato dal processo di segmentazione giornaliero, che include i tipi di pubblico idonei per le definizioni di segmenti in batch e in streaming. Questo valore viene visualizzato sia per le definizioni dei segmenti batch che per quelle dei segmenti in streaming.
 
-Il numero sotto &quot;Ultimi X giorni&quot; **solo** include tipi di pubblico qualificati per la segmentazione in streaming e **solo** aumenta se i dati sono stati inviati in streaming al sistema e vengono conteggiati per tale definizione di streaming. Questo valore è **solo** mostrato per i segmenti di streaming. Di conseguenza questo valore **maggio** visualizza come 0 per i segmenti batch.
+Il numero sotto &quot;Ultimi X giorni&quot; **solo** include tipi di pubblico qualificati per la segmentazione in streaming e **solo** aumenta se i dati sono stati inviati in streaming al sistema e vengono conteggiati per tale definizione di streaming. Questo valore è **solo** mostrato per le definizioni dei segmenti in streaming. Di conseguenza questo valore **maggio** visualizza come 0 per le definizioni dei segmenti batch.
 
-Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e anche il grafico a linee riporta zero, hai **non** ha inviato in streaming nel sistema tutti i profili idonei per quel segmento.
+Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e anche il grafico a linee riporta zero, hai **non** ha inviato in streaming nel sistema tutti i profili idonei per la definizione di quel segmento.
 
-### Quanto tempo ci vuole per rendere disponibile un segmento?
+### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile?
 
-È necessaria fino a un’ora perché un segmento sia disponibile.
+È necessaria fino a un’ora perché la definizione di un segmento sia disponibile.

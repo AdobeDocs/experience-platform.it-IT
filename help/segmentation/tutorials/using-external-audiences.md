@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questo tutorial per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
 
 # Importazione e utilizzo di tipi di pubblico esterni
 
-Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per una nuova definizione di segmento. Questo documento fornisce un tutorial per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
+>[!IMPORTANT]
+>
+>Questa documentazione contiene informazioni provenienti da una versione precedente della documentazione di Audiences e, di conseguenza, è obsoleta.
+
+Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per un nuovo pubblico. Questo documento fornisce un tutorial per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
 
 ## Introduzione
 
-Questo tutorial richiede una buona conoscenza delle varie [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questo tutorial, consulta la documentazione dei seguenti servizi:
+Questo tutorial richiede una buona conoscenza delle varie [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di tipi di pubblico. Prima di iniziare questo tutorial, consulta la documentazione dei seguenti servizi:
 
-- [Servizio di segmentazione](../home.md): consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
+- [Servizio di segmentazione](../home.md): consente di creare tipi di pubblico dai dati Profilo cliente in tempo reale.
 - [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale Platform organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 - [Set di dati](../../catalog/datasets/overview.md): il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
 - [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): come Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
-### Dati dei segmenti e metadati dei segmenti
+### Tipi di pubblico e definizioni dei segmenti
 
-Prima di iniziare a importare e utilizzare tipi di pubblico esterni, è importante comprendere la differenza tra i dati dei segmenti e i metadati dei segmenti.
+Prima di iniziare a importare e utilizzare tipi di pubblico esterni, è importante comprendere la differenza tra i tipi di pubblico e le definizioni dei segmenti.
 
-I dati dei segmenti si riferiscono ai profili che soddisfano i criteri di qualificazione dei segmenti e che fanno quindi parte del pubblico.
+I tipi di pubblico si riferiscono al gruppo di profili a cui stai tentando di filtrare. Quando utilizzi le definizioni dei segmenti, puoi creare un pubblico creando una definizione di segmento che filtra i profili al sottoinsieme che soddisfa i criteri di qualificazione dei segmenti.
 
-I metadati del segmento sono informazioni sul segmento stesso, che includono il nome, la descrizione, l’espressione (se applicabile), la data di creazione, la data dell’ultima modifica e un ID. L’ID collega i metadati del segmento ai singoli profili che soddisfano la qualifica del segmento e che fanno parte del pubblico risultante.
+Le definizioni dei segmenti includono informazioni quali il nome, la descrizione, l’espressione (se applicabile), la data di creazione, la data dell’ultima modifica e un ID. L’ID collega i metadati del segmento ai singoli profili che soddisfano la qualifica del segmento e che fanno parte del pubblico risultante.
 
-| Dati del segmento | Metadati del segmento |
-| ------------ | ---------------- |
-| Profili che soddisfano la qualifica del segmento | Informazioni sul segmento stesso |
+| Tipi di pubblico | Definizione del segmento |
+| --------- | ---------------- |
+| Il gruppo di profili che stai tentando di trovare. Quando si utilizzano le definizioni dei segmenti, ciò significa che sarà il gruppo di profili che soddisfa la qualifica del segmento. | Il gruppo di regole utilizzato per segmentare il pubblico che stai cercando. |
 
 ## Creare uno spazio dei nomi delle identità per il pubblico esterno
 
-Il primo passaggio per utilizzare tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi delle identità. Gli spazi dei nomi di identità consentono a Platform di associare da dove ha origine un segmento.
+Il primo passaggio per utilizzare tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi delle identità. Gli spazi dei nomi di identità consentono a Platform di associarsi da dove proviene un pubblico.
 
 Per creare uno spazio dei nomi delle identità, segui le istruzioni riportate nella sezione [guida allo spazio dei nomi delle identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi dell’identità, aggiungi i dettagli dell’origine allo spazio dei nomi dell’identità e contrassegnala [!UICONTROL Tipo] as a **[!UICONTROL Identificatore non persone]**.
 

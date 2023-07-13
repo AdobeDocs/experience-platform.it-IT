@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;conformità utilizzo dati;applicare;applicazione conformità utilizzo dati;servizio di segmentazione;segmentazione;segmentazione;
 solution: Experience Platform
 title: Applicare la conformità dell’utilizzo dati per un segmento di pubblico utilizzando le API
 type: Tutorial
-description: Questa esercitazione illustra i passaggi necessari per applicare la conformità sull’utilizzo dei dati per i segmenti di pubblico di Real-Time Customer Profile tramite API.
+description: Questo tutorial illustra i passaggi necessari per applicare le definizioni dei segmenti di conformità per l’utilizzo dei dati utilizzando le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1355'
 ht-degree: 2%
 
 ---
 
-# Imporre la conformità dell’utilizzo dei dati per un segmento di pubblico utilizzando le API
+# Applicare la conformità dell’utilizzo dei dati per una definizione di segmento utilizzando le API
 
-Questo tutorial illustra i passaggi necessari per applicare la conformità all’utilizzo dei dati per [!DNL Real-Time Customer Profile] segmenti di pubblico utilizzando le API.
+Questo tutorial illustra i passaggi necessari per applicare la conformità all’utilizzo dei dati per le definizioni dei segmenti utilizzando le API.
 
 ## Introduzione
 
@@ -57,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Cercare un criterio di unione per una definizione di segmento {#merge-policy}
 
-Questo flusso di lavoro inizia con l’accesso a un segmento di pubblico noto. Segmenti abilitati per l’utilizzo in [!DNL Real-Time Customer Profile] contengono un ID del criterio di unione nella loro definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
+Questo flusso di lavoro inizia con l’accesso a una definizione di segmento nota. Definizioni di segmenti abilitate per l’utilizzo in [!DNL Real-Time Customer Profile] contengono un ID del criterio di unione nella loro definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nella definizione del segmento, che a sua volta contengono eventuali etichette di utilizzo dei dati applicabili.
 
 Utilizzo di [!DNL Segmentation] API, puoi cercare una definizione di segmento in base al relativo ID per trovare il relativo criterio di unione associato.
 
@@ -367,20 +366,20 @@ Utilizzando i dati restituiti nella risposta API, puoi impostare i protocolli al
 
 ## Filtrare i campi dati
 
-Se il segmento di pubblico non supera la valutazione, puoi regolare i dati inclusi nel segmento tramite uno dei due metodi descritti di seguito.
+Se la definizione del segmento non supera la valutazione, puoi regolare i dati inclusi nella definizione del segmento tramite uno dei due metodi descritti di seguito.
 
 ### Aggiornare il criterio di unione della definizione del segmento
 
 L’aggiornamento del criterio di unione di una definizione di segmento adeguerà i set di dati e i campi che verranno inclusi durante l’esecuzione del processo di segmentazione. Consulta la sezione su [aggiornamento di un criterio di unione esistente](../../profile/api/merge-policies.md#update) per ulteriori informazioni, consulta l’esercitazione sui criteri di unione API.
 
-### Limita campi di dati specifici durante l’esportazione del segmento
+### Limita campi di dati specifici durante l’esportazione della definizione del segmento
 
-Quando si esporta un segmento in un set di dati utilizzando [!DNL Segmentation] API, puoi filtrare i dati inclusi nell’esportazione utilizzando il `fields` parametro. Tutti i campi dati aggiunti a questo parametro verranno inclusi nell’esportazione, mentre tutti gli altri campi dati verranno esclusi.
+Quando si esporta una definizione di segmento in un set di dati utilizzando [!DNL Segmentation] API, puoi filtrare i dati inclusi nell’esportazione utilizzando il `fields` parametro. Tutti i campi dati aggiunti a questo parametro verranno inclusi nell’esportazione, mentre tutti gli altri campi dati verranno esclusi.
 
-Considera un segmento con campi dati denominati &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se desideri esportare solo il campo &quot;C&quot;, il campo `fields` Il parametro conterrebbe solo il campo &quot;C&quot;. In questo modo, i campi &quot;A&quot; e &quot;B&quot; verrebbero esclusi durante l’esportazione del segmento.
+Considera una definizione di segmento con campi di dati denominati &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se desideri esportare solo il campo &quot;C&quot;, il campo `fields` Il parametro conterrebbe solo il campo &quot;C&quot;. In questo modo, i campi &quot;A&quot; e &quot;B&quot; verrebbero esclusi durante l’esportazione della definizione del segmento.
 
-Consulta la sezione su [esportazione di un segmento](./evaluate-a-segment.md#export) per ulteriori informazioni, consulta l’esercitazione sulla segmentazione.
+Consulta la sezione su [esportazione di una definizione di segmento](./evaluate-a-segment.md#export) per ulteriori informazioni, consulta l’esercitazione sulla segmentazione.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e le hai testate per verificare la presenza di violazioni dei criteri rispetto a specifiche azioni di marketing. Per ulteriori informazioni sulla governance dei dati in [!DNL Experience Platform], leggi la panoramica per [Governance dei dati](../../data-governance/home.md).
+Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a una definizione di segmento e le hai testate per verificare la presenza di violazioni dei criteri rispetto a specifiche azioni di marketing. Per ulteriori informazioni sulla governance dei dati in [!DNL Experience Platform], leggi la panoramica per [Governance dei dati](../../data-governance/home.md).

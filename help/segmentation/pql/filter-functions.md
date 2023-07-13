@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;filter functions;filter;
 solution: Experience Platform
 title: Funzioni filtro PQL
 description: Le funzioni di filtro vengono utilizzate per filtrare i dati all’interno di array in PQL (Profile Query Language).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '203'
 ht-degree: 4%
 
 ---

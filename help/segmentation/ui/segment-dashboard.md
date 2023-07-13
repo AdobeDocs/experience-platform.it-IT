@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;profilo;segmento;segmenti;segmentazione;interfaccia utente;personalizzazione;dashboard segmenti;dashboard
 title: Dashboard dei segmenti
 description: L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare metriche importanti relative ai segmenti creati e gestiti dalla tua organizzazione.
 type: Documentation
 exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -19,4 +18,4 @@ Per istruzioni dettagliate su come accedere e interagire con la dashboard dei se
 
 Per una panoramica di tutte le funzioni del dashboard nell’interfaccia utente di Experience Platform, leggi innanzitutto [panoramica delle dashboard](../../dashboards/home.md).
 
-![Il dashboard dei segmenti. Vengono visualizzati tre widget: il widget dimensione pubblico, il widget tendenza modifica dimensione pubblico e i profili per widget identità.](../images/ui/segment-dashboard/dashboard-overview.png)
+![Il dashboard dei segmenti. Vengono visualizzati tre widget: il widget dimensione pubblico, il widget tendenza modifica dimensione pubblico e i profili per widget identità.](../../dashboards/images/segments/dashboard-overview.png)

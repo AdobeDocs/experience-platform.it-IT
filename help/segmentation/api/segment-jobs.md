@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
 title: Endpoint API per processi di segmento
 description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i processi di segmento per la tua organizzazione.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 3%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di segmenti all’interno del processo di segmentazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione specificata come JSON. Tuttavia, la risposta sarà diversa, a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Minore o uguale a 1500 segmenti nel processo di segmentazione**
+**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
 
-Se nel processo di segmentazione vengono eseguiti meno di 1500 segmenti, all’interno del processo verrà visualizzato un elenco completo di tutti i segmenti `children.segments` attributo.
+Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, all’interno di verrà visualizzato un elenco completo di tutte le definizioni di segmento `children.segments` attributo.
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ Se nel processo di segmentazione vengono eseguiti meno di 1500 segmenti, all’i
 }
 ```
 
-**Più di 1500 segmenti**
+**Più di 1500 definizioni di segmenti**
 
-Se nel processo di segmentazione vengono eseguiti più di 1500 segmenti, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutti i segmenti vengono valutati.
+Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutte le definizioni dei segmenti vengono valutate.
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ Se nel processo di segmentazione vengono eseguiti più di 1500 segmenti, il `chi
 | `metrics.totalTime` | Oggetto che contiene informazioni sulle ore di inizio e fine del processo di segmentazione, nonché sul tempo totale impiegato. |
 | `metrics.profileSegmentationTime` | Oggetto che contiene informazioni sulle ore di inizio e fine della valutazione della segmentazione, nonché sul tempo totale impiegato. |
 | `metrics.segmentProfileCounter` | Il numero di profili qualificati per segmento. |
-| `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni spazio dei nomi delle identità per segmento. |
-| `metrics.segmentProfileByStatusCounter` | Il conteggio dei profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realized&quot; (realizzati): numero di profili idonei per il segmento.</li><li>&quot;exited&quot;: il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni spazio dei nomi delle identità in base alla definizione dei singoli segmenti. |
+| `metrics.segmentProfileByStatusCounter` | Il conteggio dei profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realized&quot; (realizzato): numero di profili idonei per la definizione del segmento.</li><li>&quot;exited&quot;: il numero di profili che non esistono più nella definizione del segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti per criterio di unione. |
 
 ## Crea un nuovo processo di segmentazione {#create}
@@ -286,9 +285,9 @@ Per creare un nuovo processo di segmentazione, devi effettuare una richiesta POS
 POST /segment/jobs
 ```
 
-Quando crei un nuovo processo di segmentazione, la richiesta e la risposta variano a seconda del numero di segmenti all’interno del processo di segmentazione.
+Quando crei un nuovo processo di segmentazione, la richiesta e la risposta variano a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Minore o uguale a 1500 segmenti nel processo di segmentazione**
+**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
 
 **Richiesta**
 
@@ -411,13 +410,13 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 | `segments.segment.id` | ID della definizione di segmento fornita. |
 | `segments.segment.expression` | Oggetto contenente informazioni sull’espressione della definizione del segmento, scritta in PQL. |
 
-**Più di 1500 segmenti**
+**Più di 1500 definizioni di segmenti**
 
 **Richiesta**
 
 >[!NOTE]
 >
->Anche se è possibile creare un processo di segmentazione con più di 1500 segmenti, **altamente non consigliato**.
+>Anche se è possibile creare un processo di segmentazione con più di 1500 definizioni di segmenti, **altamente non consigliato**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `schema.name` | Nome dello schema per i segmenti. |
+| `schema.name` | Nome dello schema per le definizioni dei segmenti. |
 | `segments.segmentId` | Quando si esegue un processo di segmentazione con più di 1500 segmenti, è necessario trasmettere `*` come ID del segmento per indicare che desideri eseguire un processo di segmentazione con tutti i segmenti. |
 
 **Risposta**
@@ -528,7 +527,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 | `id` | Identificatore di sola lettura generato dal sistema per il processo di segmentazione appena creato. |
 | `status` | Lo stato corrente del processo di segmentazione. Poiché il processo di segmentazione è stato appena creato, lo stato sarà sempre `NEW`. |
 | `segments` | Oggetto contenente informazioni sulle definizioni dei segmenti per cui è in esecuzione questo processo di segmentazione. |
-| `segments.segment.id` | Il `*` significa che questo processo di segmentazione è in esecuzione per tutti i segmenti all’interno dell’organizzazione. |
+| `segments.segment.id` | Il `*` significa che questo processo di segmentazione è in esecuzione per tutte le definizioni di segmenti all’interno dell’organizzazione. |
 
 ## Recuperare un processo di segmento specifico {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.  Tuttavia, la risposta varia a seconda del numero di segmenti all’interno del processo di segmentazione.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni dettagliate sul processo di segmentazione specificato.  Tuttavia, la risposta varia a seconda del numero di definizioni di segmento all’interno del processo di segmentazione.
 
-**Minore o uguale a 1500 segmenti nel processo di segmentazione**
+**Meno di o uguale a 1500 definizioni di segmento nel processo di segmentazione**
 
-Se nel processo di segmentazione vengono eseguiti meno di 1500 segmenti, all’interno del processo verrà visualizzato un elenco completo di tutti i segmenti `children.segments` attributo.
+Se nel processo di segmentazione vengono eseguite meno di 1500 definizioni di segmento, all’interno di verrà visualizzato un elenco completo di tutte le definizioni di segmento `children.segments` attributo.
 
 ```json
 {
@@ -622,9 +621,9 @@ Se nel processo di segmentazione vengono eseguiti meno di 1500 segmenti, all’i
 }
 ```
 
-**Più di 1500 segmenti**
+**Più di 1500 definizioni di segmenti**
 
-Se nel processo di segmentazione vengono eseguiti più di 1500 segmenti, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutti i segmenti vengono valutati.
+Se nel processo di segmentazione vengono eseguite più di 1500 definizioni di segmento, il `children.segments` verrà visualizzato l&#39;attributo `*`, che indica che tutte le definizioni dei segmenti vengono valutate.
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore del `children.segments` L’attributo varia se il processo di segmentazione è in esecuzione per più di 1500 segmenti.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con i processi di segmento richiesti. Tuttavia, il valore del `children.segments` L’attributo varia se il processo di segmentazione è in esecuzione per più di 1500 definizioni di segmento.
 
 >[!NOTE]
 >

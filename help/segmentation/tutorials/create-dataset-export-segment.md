@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
 solution: Experience Platform
-title: Creare un set di dati per l’esportazione di un segmento di pubblico
+title: Creare un set di dati per l’esportazione di un pubblico
 type: Tutorial
-description: Questo tutorial illustra i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un segmento di pubblico tramite l’interfaccia utente di Experience Platform.
+description: Scopri come creare un set di dati che può essere utilizzato per esportare un pubblico utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
-# Creare un set di dati per esportare un segmento di pubblico
+# Creare un set di dati per esportare un pubblico
 
-[!DNL Adobe Experience Platform] consente di segmentare i profili dei clienti in tipi di pubblico in base ad attributi specifici. Una volta creato un segmento, puoi esportare tale pubblico in un set di dati in cui è possibile accedervi e agire di conseguenza. Affinché l’esportazione abbia esito positivo, il set di dati deve essere configurato correttamente.
+[!DNL Adobe Experience Platform] consente di segmentare i profili dei clienti in tipi di pubblico in base ad attributi specifici. Una volta creata la definizione di un segmento, puoi esportare il pubblico risultante in un set di dati in cui è possibile accedervi e intervenire. Affinché l’esportazione abbia esito positivo, il set di dati deve essere configurato correttamente.
 
-Questo tutorial illustra i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un segmento di pubblico utilizzando [!DNL Experience Platform] UI.
+Questo tutorial illustra i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un pubblico utilizzando [!DNL Experience Platform] UI.
 
-Questo tutorial è direttamente correlato ai passaggi descritti in esso [valutazione e accesso ai risultati dei segmenti](./evaluate-a-segment.md). Il tutorial di valutazione dei segmenti fornisce passaggi per creare un set di dati utilizzando [!DNL Catalog Service] , mentre questo tutorial illustra i passaggi per creare un set di dati utilizzando [!DNL Experience Platform] UI.
+Questo tutorial è direttamente correlato ai passaggi descritti in esso [valutazione e accesso ai risultati della segmentazione](./evaluate-a-segment.md). L’esercitazione sulla valutazione della definizione del segmento descrive i passaggi per creare un set di dati utilizzando [!DNL Catalog Service] , mentre questo tutorial illustra i passaggi per creare un set di dati utilizzando [!DNL Experience Platform] UI.
 
 ## Introduzione
 
-Per esportare un segmento, il set di dati deve essere basato su [!DNL XDM Individual Profile Union Schema]. Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi di tutti gli schemi che condividono la stessa classe. Per ulteriori informazioni sugli schemi di unione, consulta la guida su [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md#union).
+Per esportare un pubblico, il set di dati deve essere basato su [!DNL XDM Individual Profile Union Schema]. Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi di tutti gli schemi che condividono la stessa classe. Per ulteriori informazioni sugli schemi di unione, consulta la guida su [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md#union).
 
 Per visualizzare gli schemi di unione nell’interfaccia utente, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Schema di unione]** come mostrato di seguito.
 
@@ -70,7 +69,7 @@ Nella schermata successiva, devi assegnare un nome al set di dati. È inoltre po
 
 * I nomi dei set di dati devono essere brevi e descrittivi in modo che il set di dati possa essere facilmente trovato in un secondo momento nella libreria.
 * I nomi dei set di dati devono essere univoci, ovvero devono essere sufficientemente specifici da non poter essere riutilizzati in futuro.
-* È consigliabile fornire informazioni aggiuntive sul set di dati utilizzando il campo descrizione, in quanto in futuro potrebbe aiutare altri utenti a distinguere tra i set di dati.
+* È necessario fornire informazioni aggiuntive sul set di dati utilizzando il campo descrizione, in quanto potrebbe aiutare altri utenti a distinguere i set di dati in futuro.
 
 Una volta che il set di dati ha un nome e una descrizione, seleziona **[!UICONTROL Fine]**.
 
@@ -80,12 +79,12 @@ Una volta che il set di dati ha un nome e una descrizione, seleziona **[!UICONTR
 
 Una volta creato il set di dati, viene visualizzata la pagina dell’attività per tale set di dati. Dovresti visualizzare il nome del set di dati nell’angolo in alto a sinistra dell’area di lavoro, insieme a una notifica che informa che &quot;Non è stato aggiunto alcun batch&quot;. Ciò è previsto perché non hai ancora aggiunto batch a questo set di dati.
 
-La barra a destra contiene informazioni relative al nuovo set di dati, ad esempio ID set di dati, nome, descrizione, schema e altro ancora. Si prega di prendere nota della **[!UICONTROL ID set di dati]**, poiché questo valore è necessario per completare il flusso di lavoro di esportazione del segmento di pubblico.
+La barra a destra contiene informazioni relative al nuovo set di dati, ad esempio ID set di dati, nome, descrizione, schema e altro ancora. Si prega di prendere nota della **[!UICONTROL ID set di dati]**, poiché questo valore è necessario per completare il flusso di lavoro di esportazione del pubblico.
 
 ![Viene visualizzata la pagina dell’attività del set di dati. L’ID del set di dati viene evidenziato, in quanto questo valore deve essere annotato per i passaggi futuri.](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Passaggi successivi
 
-Ora che hai creato un set di dati basato su [!DNL XDM Individual Profile Union Schema], puoi utilizzare l’ID del set di dati per continuare la [valutazione e accesso ai risultati dei segmenti](./evaluate-a-segment.md) esercitazione.
+Ora che hai creato un set di dati basato su [!DNL XDM Individual Profile Union Schema], puoi utilizzare l’ID del set di dati per continuare la [valutazione e accesso ai risultati della definizione del segmento](./evaluate-a-segment.md) esercitazione.
 
-A questo punto, torna all’esercitazione sui risultati dei segmenti di valutazione e riprendi da [generazione di profili per i membri del pubblico](./evaluate-a-segment.md#generate-profiles) passaggio del flusso di lavoro di esportazione di un segmento.
+In questo momento, torna all’esercitazione sui risultati della definizione del segmento di valutazione e riprendi da [generazione di profili per i membri del pubblico](./evaluate-a-segment.md#generate-profiles) passaggio del flusso di lavoro esportazione di un pubblico.

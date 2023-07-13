@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;rinuncia;Segmentazione;servizio di segmentazione;servizio di segmentazione;rispettare rinunce;rinunce;rinuncia;rinunce;consenso;condividere;raccogliere;
 solution: Experience Platform
 title: Rispetto del consenso nei segmenti
 description: Scopri come rispettare le preferenze di consenso del cliente per la raccolta e la condivisione di dati personali nelle operazioni dei segmenti.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # Rispetto del consenso nei segmenti
+
+>[!NOTE]
+>
+>Questa guida spiega come rispettare i consensi in **definizioni dei segmenti**.
 
 Normative legali sulla privacy come [!DNL California Consumer Privacy Act] (CCPA) conferiscono ai consumatori il diritto di rinunciare alla raccolta o alla condivisione dei propri dati personali con terze parti. Adobe Experience Platform fornisce componenti Experience Data Model (XDM) standard che hanno lo scopo di acquisire queste preferenze di consenso del cliente nei dati del profilo cliente in tempo reale.
 
@@ -23,7 +26,7 @@ Rispettare i valori di consenso dei clienti richiede una comprensione dei vari [
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): framework standardizzato tramite il quale Platform organizza i dati sull’esperienza del cliente.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): consente di creare segmenti di pubblico da [!DNL Real-Time Customer Profile] dati.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): consente di creare tipi di pubblico da [!DNL Real-Time Customer Profile] dati.
 
 ## Campi schema di consenso
 
@@ -35,7 +38,7 @@ Dopo l’aggiunta del gruppo di campi a un [Schema abilitato per il profilo](../
 
 ## Gestione del consenso nella segmentazione
 
-Al fine di garantire che i profili di rinuncia non siano inclusi nei segmenti, è necessario aggiungere campi speciali ai segmenti esistenti e includerli durante la creazione di nuovi segmenti.
+Per garantire che i profili di rinuncia non siano inclusi nelle definizioni dei segmenti, è necessario aggiungere campi speciali alle definizioni dei segmenti esistenti e includerli durante la creazione di nuove definizioni dei segmenti.
 
 I passaggi seguenti mostrano come aggiungere i campi appropriati per due tipi di flag di rinuncia:
 
@@ -44,13 +47,13 @@ I passaggi seguenti mostrano come aggiungere i campi appropriati per due tipi di
 
 >[!NOTE]
 >
->Mentre questa guida si concentra sui due flag di rinuncia di cui sopra, puoi configurare i segmenti per incorporare anche segnali di consenso aggiuntivi. Il [guida di riferimento su consensi e preferenze](../xdm/field-groups/profile/consents.md) fornisce ulteriori informazioni su ciascuna di queste opzioni e sui casi d’uso previsti.
+>Mentre questa guida si concentra sui due flag di rinuncia di cui sopra, puoi configurare le definizioni dei segmenti per incorporare anche segnali di consenso aggiuntivi. Il [guida di riferimento su consensi e preferenze](../xdm/field-groups/profile/consents.md) fornisce ulteriori informazioni su ciascuna di queste opzioni e sui casi d’uso previsti.
 
-Durante la creazione di un segmento nell’interfaccia utente, in **[!UICONTROL Attributi]**, passa a **[!UICONTROL Profilo individuale XDM]**, quindi seleziona **[!UICONTROL Consensi e preferenze]**. Da qui puoi vedere le opzioni per **[!UICONTROL Raccolta dati]** e **[!UICONTROL Condividi dati]**.
+Durante la creazione di una definizione di segmento nell’interfaccia utente, in **[!UICONTROL Attributi]**, passa a **[!UICONTROL Profilo individuale XDM]**, quindi seleziona **[!UICONTROL Consensi e preferenze]**. Da qui puoi vedere le opzioni per **[!UICONTROL Raccolta dati]** e **[!UICONTROL Condividi dati]**.
 
 ![](./images/opt-outs/consents.png)
 
-Per iniziare, seleziona la **[!UICONTROL Raccolta dati]** categoria, quindi trascina **[!UICONTROL Valore scelta]** nel generatore di segmenti. Quando aggiungi l’attributo al segmento, puoi specificare [valori di consenso](../xdm/field-groups/profile/consents.md#choice-values) che devono essere inclusi o esclusi.
+Per iniziare, seleziona la **[!UICONTROL Raccolta dati]** categoria, quindi trascina **[!UICONTROL Valore scelta]** nel generatore di segmenti. Quando aggiungi l’attributo alla definizione del segmento, puoi specificare [valori di consenso](../xdm/field-groups/profile/consents.md#choice-values) che devono essere inclusi o esclusi.
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -66,11 +69,11 @@ Sotto **[!UICONTROL Attributi]** nella barra a sinistra, torna a **[!UICONTROL C
 
 ![](./images/opt-outs/share.png)
 
-Con entrambe le opzioni **[!UICONTROL Raccolta dati]** e **[!UICONTROL Condividi dati]** Se al segmento vengono aggiunti dei valori di consenso, tutti i clienti che hanno rinunciato all’utilizzo dei loro dati verranno esclusi dal pubblico risultante. Da qui, puoi continuare a personalizzare la definizione del segmento prima di selezionare **[!UICONTROL Salva]** per completare il processo.
+Con entrambe le opzioni **[!UICONTROL Raccolta dati]** e **[!UICONTROL Condividi dati]** Se alla definizione del segmento sono stati aggiunti dei valori di consenso, tutti i clienti che hanno rinunciato all’utilizzo dei loro dati verranno esclusi dal pubblico risultante. Da qui, puoi continuare a personalizzare la definizione del segmento prima di selezionare **[!UICONTROL Salva]** per completare il processo.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avrai una migliore comprensione di come rispettare i consensi e le preferenze del cliente durante la creazione dei segmenti in Experience Platform.
+Seguendo questa esercitazione, avrai una migliore comprensione di come rispettare i consensi e le preferenze del cliente durante la creazione delle definizioni dei segmenti in Experience Platform.
 
 Per ulteriori informazioni sulla gestione del consenso in Platform, consulta la seguente documentazione:
 

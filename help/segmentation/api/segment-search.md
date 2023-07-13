@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;segmentazione;servizio di segmentazione;risoluzione dei problemi;API;seg;segmento;ricerca;ricerca segmenti;
 title: Endpoint API di ricerca segmenti
 description: Nell’API del servizio di segmentazione di Adobe Experience Platform, la ricerca dei segmenti viene utilizzata per cercare i campi contenuti in diverse origini dati e restituirli quasi in tempo reale. Questa guida fornisce informazioni utili per comprendere meglio la Ricerca di segmenti e include chiamate API di esempio per eseguire azioni di base utilizzando l’API.
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -100,7 +99,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, solo `_xdm.context.segmentdefinition` è supportato. |
 | `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui desideri eseguire la ricerca. |
 | `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} contiene una query conforme all’implementazione di Microsoft di [Sintassi di ricerca di Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se non viene specificato alcun termine di ricerca, tutti i record associati a `schema.name` verrà restituito. Una spiegazione più dettagliata è disponibile nella sezione [appendice](#appendix) del presente documento. |
-| `entityId={ENTITY_ID}` | *(Facoltativo)* Limita la ricerca all’interno della cartella specificata, specificata con {ENTITY_ID}. |
+| `entityId={ENTITY_ID}` | *(Facoltativo)* Limita la ricerca all&#39;interno della cartella specificata, specificata con {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facoltativo)* Dove {LIMIT} rappresenta il numero di risultati di ricerca da restituire. Il valore predefinito è 50. |
 | `page={PAGE}` | *(Facoltativo)* Dove {PAGE} rappresenta il numero di pagina utilizzato per impaginare i risultati della query cercata. Il numero di pagina inizia da **0**. |
 
@@ -170,7 +169,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, solo `_xdm.context.segmentdefinition` è supportato. |
 | `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui desideri eseguire la ricerca. |
-| `entityId={ENTITY_ID}` | **(Obbligatorio)** ID dell’oggetto di ricerca di cui desideri ottenere le informazioni strutturali, specificato con {ENTITY_ID}. |
+| `entityId={ENTITY_ID}` | **(Obbligatorio)** ID dell&#39;oggetto di ricerca di cui si desidera ottenere le informazioni strutturali, specificato con {ENTITY_ID}. |
 
 **Richiesta**
 
@@ -223,9 +222,9 @@ Dopo aver letto questa guida hai acquisito una migliore comprensione del funzion
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Quindi, ad esempio, per cercare un segmento denominato AAM o [!DNL Platform], utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
+Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Quindi, ad esempio, per cercare una definizione di segmento denominata AAM o [!DNL Platform], utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Per best practice, l’espressione di ricerca deve essere codificata come HTML, come nell’esempio mostrato sopra.
+>  Per best practice, l’espressione di ricerca deve essere codificata come HTML, come nell’esempio mostrato sopra.
 
 ### Campi ricerca {#search-fields}
 
@@ -235,16 +234,16 @@ Nella tabella seguente sono elencati i campi in cui è possibile eseguire ricerc
 | ---------- | ----------- |
 | folderId | Cartella o cartelle con l&#39;ID cartella della ricerca specificata. |
 | folderLocation | Il percorso o i percorsi in cui si trova la cartella della ricerca specificata. |
-| parentFolderId | Il segmento o la cartella con l’ID cartella principale della ricerca specificata. |
-| segmentId | Il segmento corrisponde all’ID segmento della ricerca specificata. |
-| segmentName | Il segmento corrisponde al nome del segmento della ricerca specificata. |
-| segmentDescription | Il segmento corrisponde alla descrizione del segmento della ricerca specificata. |
+| parentFolderId | La definizione del segmento o la cartella che ha l’ID della cartella principale della ricerca specificata. |
+| segmentId | La definizione del segmento che corrisponde all’ID del segmento della ricerca specificata. |
+| segmentName | La definizione del segmento che corrisponde al nome del segmento della ricerca specificata. |
+| segmentDescription | La definizione del segmento che corrisponde alla descrizione del segmento della ricerca specificata. |
 
 ### Espressione di ricerca {#search-expression}
 
 Nella tabella seguente sono elencate le specifiche del funzionamento delle query di ricerca quando si utilizza l’API di ricerca dei segmenti.
 
->!![NOTE] Gli esempi seguenti sono mostrati in un formato non codificato da HTML per una maggiore chiarezza. Per best practice, HTML codifica l’espressione di ricerca.
+>  Gli esempi seguenti sono mostrati in un formato non codificato da HTML per una maggiore chiarezza. Per best practice, HTML codifica l’espressione di ricerca.
 
 | Espressione di ricerca di esempio | Descrizione |
 | ------------------------- | ----------- |

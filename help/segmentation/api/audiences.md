@@ -1,22 +1,15 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pubblico;pubblico;API;api;
 title: Endpoint API di Audiences
-description: L’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico i tipi di pubblico per la tua organizzazione.
+description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-hide: true
-hidefromtoc: true
-source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '2124'
 ht-degree: 4%
 
 ---
 
 # Endpoint &quot;audience&quot;
-
->[!IMPORTANT]
->
->L’endpoint &quot;audience&quot; è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 Un pubblico è una raccolta di persone che condividono comportamenti e/o caratteristiche simili. Queste raccolte di persone possono essere generate utilizzando Adobe Experience Platform o da origini esterne. È possibile utilizzare `/audiences` nell’API di segmentazione, che consente di recuperare, creare, aggiornare ed eliminare in modo programmatico i tipi di pubblico.
 
@@ -47,35 +40,28 @@ Durante il recupero di un elenco di tipi di pubblico è possibile utilizzare i s
 | `property` | Un filtro che ti consente di specificare tipi di pubblico che **esattamente** corrisponde al valore di un attributo. Questo è scritto nel formato `property=` | `property=audienceId==test-audience-id` |
 | `name` | Un filtro che consente di specificare tipi di pubblico i cui nomi **contain** il valore fornito. Questo valore non distingue tra maiuscole e minuscole. | `name=Sample` |
 | `description` | Un filtro che consente di specificare tipi di pubblico le cui descrizioni **contain** il valore fornito. Questo valore non distingue tra maiuscole e minuscole. | `description=Test Description` |
-| `withMetrics` | Un filtro che restituisce le metriche oltre ai tipi di pubblico. | `property=withMetrics==true` |
-
->[!IMPORTANT]
->
->Per i tipi di pubblico, le metriche vengono restituite sotto `metrics` e contiene informazioni sui conteggi dei profili, sulle marche temporali di creazione e aggiornamento.
-
-**Nessuna metrica**
-
-La seguente coppia richiesta/risposta viene utilizzata quando `withMetrics` parametro query non presente.
 
 **Richiesta**
 
-La richiesta seguente recupera gli ultimi cinque tipi di pubblico creati nell’organizzazione.
+La richiesta seguente recupera gli ultimi due tipi di pubblico creati nell’organizzazione.
+
++++Richiesta di esempio per recuperare un elenco di tipi di pubblico.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
- -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id:  {IMS_ORG}' \
- -H 'x-api-key:  {API_KEY}' \
- -H 'x-sandbox-name:  {SANDBOX_NAME}'
+curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Risposta** {#no-metrics}
++++
+
+**Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di tipi di pubblico creati nell’organizzazione come JSON.
 
->[!NOTE]
->
->La seguente risposta è stata troncata per motivi di spazio e mostra solo il primo pubblico restituito.
++++Una risposta di esempio contenente gli ultimi due tipi di pubblico creati che appartengono alla tua organizzazione
 
 ```json
 {
@@ -133,15 +119,56 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
             ],
             "dependencies": [],
             "type": "SegmentDefinition",
+            "originName": "REAL_TIME_CUSTOMER_PROFILE",
             "overridePerformanceWarnings": false,
             "createdBy": "{CREATED_BY_ID}",
-            "lifecycle": "published",
+            "lifecycleState": "published",
             "labels": [
                 "core/C1"
             ],
             "namespace": "AEPSegments"
+        },
+        {
+            "id": "32a83b5d-a118-4bd6-b3cb-3aee2f4c30a1",
+            "audienceId": "test-external-audience-id",
+            "name": "externalSegment1",
+            "namespace": "aam",
+            "imsOrgId": "{ORG_ID}",
+            "sandbox":{
+                "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "isSystem": false,
+            "description": "Last 30 days",
+            "type": "ExternalSegment",
+            "originName": "CUSTOM_UPLOAD",
+            "lifecycleState": "published",
+            "createdBy": "{CREATED_BY_ID}",
+            "datasetId": "6254cf3c97f8e31b639fb14d",
+            "labels":[
+                "core/C1"
+            ],
+            "linkedAudienceRef": {
+                "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+            },
+            "creationTime": 1642745034000000,
+            "updateEpoch": 1649926314,
+            "updateTime": 1649926314000,
+            "createEpoch": 1642745034
         }
-    ]
+    ],
+    "_page":{
+      "totalCount": 111,
+      "pageSize": 2,
+      "next": "1"
+   },
+   "_links":{
+      "next":{
+         "href":"@/audiences?start=1&limit=2&totalCount=111"
+      }
+   }
 }
 ```
 
@@ -156,145 +183,17 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | `description` | Entrambi | Una descrizione del pubblico. |
 | `expression` | Generato da piattaforma | L’espressione PQL (Profile Query Language) del pubblico. Ulteriori informazioni sulle espressioni PQL sono disponibili nella sezione [Guida alle espressioni PQL](../pql/overview.md). |
 | `mergePolicyId` | Generato da piattaforma | ID del criterio di unione a cui è associato il pubblico. Ulteriori informazioni sui criteri di unione sono disponibili nella sezione [guida ai criteri di unione](../../profile/api/merge-policies.md). |
-| `evaluationInfo` | Generato da piattaforma | Mostra come verrà valutato il pubblico. I possibili metodi di valutazione includono batch, streaming o edge. Ulteriori informazioni sui metodi di valutazione sono disponibili nella sezione [panoramica sulla segmentazione](../home.md) |
+| `evaluationInfo` | Generato da piattaforma | Mostra come verrà valutato il pubblico. I possibili metodi di valutazione includono batch, sincrono (streaming) o continuo (edge). Ulteriori informazioni sui metodi di valutazione sono disponibili nella sezione [panoramica sulla segmentazione](../home.md) |
 | `dependents` | Entrambi | Un array di ID di pubblico che dipendono dal pubblico corrente. Questa opzione è utile per creare un pubblico che è un segmento di un segmento. |
 | `dependencies` | Entrambi | Un array di ID di pubblico da cui dipende il pubblico. Questa opzione è utile per creare un pubblico che è un segmento di un segmento. |
-| `type` | Entrambi | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalAudience` fa riferimento a un pubblico non generato in Platform. |
+| `type` | Entrambi | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `originName` | Entrambi | Campo che fa riferimento al nome dell’origine del pubblico. Per il pubblico generato da Platform, questo valore sarà `REAL_TIME_CUSTOMER_PROFILE`. Per i tipi di pubblico generati in Audience Orchestration, questo valore sarà `AUDIENCE_ORCHESTRATION`. Per i tipi di pubblico generati in Adobe Audience Manager, questo valore sarà `AUDIENCE_MANAGER`. Per altri tipi di pubblico generati esternamente, questo valore sarà `CUSTOM_UPLOAD`. |
 | `createdBy` | Entrambi | ID dell’utente che ha creato il pubblico. |
 | `labels` | Entrambi | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
 | `namespace` | Entrambi | Lo spazio dei nomi a cui appartiene il pubblico. I valori possibili includono `AAM`, `AAMSegments`, `AAMTraits`, e `AEPSegments`. |
-| `audienceMeta` | Esterno | Metadati creati esternamente dal pubblico creato esternamente. |
+| `linkedAudienceRef` | Entrambi | Oggetto che contiene identificatori di altri sistemi relativi al pubblico. |
 
-**Con metriche**
-
-La seguente coppia richiesta/risposta viene utilizzata quando `withMetrics` parametro di query presente.
-
-**Richiesta**
-
-La richiesta seguente recupera gli ultimi cinque tipi di pubblico, con metriche, creati nell’organizzazione.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetrics==true&limit=5&sort=totalProfiles:desc \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elenco di tipi di pubblico, con relative metriche, per l’organizzazione specificata come JSON.
-
->[!NOTE]
->
->La seguente risposta è stata troncata per motivi di spazio e mostra solo il primo pubblico restituito.
-
-```json
-{
-    "children": [
-        {
-            "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
-            "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "ttlInDays": 60,
-            "profileInstanceId": "ups",
-            "imsOrgId": "{ORG_ID}",
-            "sandbox": {
-                "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "isSystem": false,
-            "name": "People who ordered in the last 30 days",
-            "description": "Last 30 days",
-            "expression": {
-                "type": "PQL",
-                "format": "pql/text",
-                "value": "workAddress.country = \"US\""
-            },
-            "mergePolicyId": "ef006bbe-750e-4e81-85f0-0c6902192dcc",
-            "evaluationInfo": {
-                "batch": {
-                    "enabled": false
-                },
-                "continuous": {
-                    "enabled": true
-                },
-                "synchronous": {
-                    "enabled": false
-                }
-            },
-            "dataGovernancePolicy": {
-                "excludeOptOut": true
-            },
-            "creationTime": 1650374572000,
-            "updateEpoch": 1650374573,
-            "updateTime": 1650374573000,
-            "createEpoch": 1650374572,
-            "_etag": "\"33120d7c-0000-0200-0000-625eb7ad0000\"",
-            "dependents": [],
-            "definedOn": [
-                {
-                    "meta: resourceType": "unions",
-                    "meta: containerId": "tenant",
-                    "$ref": "https: //ns.adobe.com/xdm/context/profile__union"
-                }
-            ],
-            "dependencies": [],
-            "metrics": {
-                "type": "export",
-                "jobId": "test-job-id",
-                "id": "32a83b5d-a118-4bd6-b3cb-3aee2f4c30a1",
-                "data": {
-                    "totalProfiles": 11200769,
-                    "totalProfilesByNamespace": {
-                        "crmid": 11400769
-                    },
-                    "totalProfilesByStatus": {
-                        "realized": 11400769
-                    }
-                },
-                "createEpoch": 1653583927,
-                "updateEpoch": 1653583927
-            },
-            "type": "SegmentDefinition",
-            "overridePerformanceWarnings": false,
-            "createdBy": "{CREATED_BY_ID}",
-            "lifecycle": "published",
-            "labels": [
-                "core/C1"
-            ],
-            "namespace": "AEPSegments"
-        }
-   ],
-   "_page": {
-      "totalCount": 111,
-      "pageSize": 5,
-      "next": "1"
-   },
-   "_links": {
-      "next": {
-         "href": "@/audiences?start=1&limit=5&totalCount=111"
-      }
-   }
-}
-```
-
-Di seguito sono elencate le proprietà **esclusivo** al `withMetrics` risposta. Per conoscere le proprietà standard del pubblico, leggi la sezione [sezione precedente](#no-metrics).
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `metrics.imsOrgId` | L’ID organizzazione del pubblico. |
-| `metrics.sandbox` | Le informazioni sandbox relative al pubblico. |
-| `metrics.jobId` | ID del processo di segmentazione che sta elaborando il pubblico. |
-| `metrics.type` | Il tipo di processo del segmento. Può essere `export` o `batch_segmentation`. |
-| `metrics.id` | ID del pubblico. |
-| `metrics.data` | Metriche correlate al pubblico. Ciò include informazioni come il numero totale di profili inclusi nel pubblico, il numero totale di profili per spazio dei nomi e il numero totale di profili per stato. |
-| `metrics.createEpoch` | Un timestamp che mostra quando è stato creato il pubblico. |
-| `metrics.updateEpoch` | Un timestamp che mostra quando il pubblico è stato aggiornato l’ultima volta. |
++++
 
 ## Creare un nuovo pubblico {#create}
 
@@ -307,6 +206,12 @@ POST /audiences
 ```
 
 **Richiesta**
+
+>[!BEGINTABS]
+
+>[!TAB Pubblico generato dalla piattaforma]
+
++++ Richiesta di esempio per la creazione di un pubblico generato da Platform
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/audiences
@@ -330,7 +235,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ]
+        ],
+        "ttlInDays": 60
     }'
 ```
 
@@ -338,12 +244,70 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | -------- | ----------- | 
 | `name` | Il nome del pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalAudience` fa riferimento a un pubblico non generato in Platform. |
+| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
 | `expression` | L’espressione PQL (Profile Query Language) del pubblico. Ulteriori informazioni sulle espressioni PQL sono disponibili nella sezione [Guida alle espressioni PQL](../pql/overview.md). |
 | `schema` | Lo schema Experience Data Model (XDM) del pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
+| `ttlInDays` | Rappresenta il valore di scadenza dei dati per il pubblico, in giorni. |
+
++++
+
+>[!TAB Pubblico generato esternamente]
+
++++ Richiesta di esempio per la creazione di un pubblico generato esternamente
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "audienceId":"test-external-audience-id",
+        "name":"externalAudience",
+        "namespace":"aam",
+        "description":"Last 30 days",
+        "type":"ExternalSegment",
+        "originName":"CUSTOM_UPLOAD",
+        "lifecycleState":"published",
+        "datasetId":"6254cf3c97f8e31b639fb14d",
+        "labels":[
+            "core/C1"
+        ],
+        "linkedAudienceRef":{
+            "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+        }
+    }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- | 
+| `audienceId` | ID fornito dall’utente per il pubblico. |
+| `name` | Il nome del pubblico. |
+| `namespace` | Lo spazio dei nomi per il pubblico. |
+| `description` | Una descrizione del pubblico. |
+| `type` | Campo che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `originName` | Nome dell’origine del pubblico. Per i tipi di pubblico generati esternamente, il valore predefinito è `CUSTOM_UPLOAD`. Altri valori supportati includono `REAL_TIME_CUSTOMER_PROFILE`, `CUSTOM_UPLOAD`, `AUDIENCE_ORCHESTRATION`, e `AUDIENCE_MATCH`. |
+| `lifecycleState` | Campo facoltativo che determina lo stato iniziale del pubblico che stai tentando di creare. I valori supportati includono `draft`, `published`, e `inactive`. |
+| `datasetId` | ID del set di dati in cui è possibile trovare i dati che costituiscono il pubblico. |
+| `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
+| `audienceMeta` | Metadati che appartengono al pubblico generato esternamente. |
+| `linkedAudienceRef` | Oggetto che contiene identificatori per altri sistemi relativi al pubblico. Ciò può includere quanto segue: <ul><li>`flowId`: questo ID viene utilizzato per collegare il pubblico al flusso di dati utilizzato per inserire i dati del pubblico. Ulteriori informazioni sugli ID richiesti sono disponibili nella sezione [creare una guida al flusso di dati](../../sources/tutorials/api/collect/cloud-storage.md).</li><li>`aoWorkflowId`: questo ID viene utilizzato per connettere il pubblico a una composizione correlata di Audience Orchestration.&lt;/li/> <li>`payloadFieldGroupRef`: questo ID viene utilizzato per fare riferimento allo schema Gruppo di campi XDM che descrive la struttura del pubblico. Ulteriori informazioni sul valore di questo campo sono disponibili nella sezione [Guida dell’endpoint gruppo di campi XDM](../../xdm/api/field-groups.md).</li><li>`audienceFolderId`: questo ID viene utilizzato per fare riferimento all’ID cartella in Adobe Audience Manager per il pubblico. Ulteriori informazioni su questa API sono disponibili nella sezione [Guida API di Adobe Audience Manager](https://bank.demdex.com/portal/swagger/index.html#/Segment%20Folder%20API).</ul> |
+
++++
+
+>[!ENDTABS]
 
 **Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico appena creato.
+
+>[!BEGINTABS]
+
+>[!TAB Pubblico generato dalla piattaforma]
+
++++Una risposta di esempio durante la creazione di un pubblico generato da Platform.
 
 ```json
 {
@@ -399,15 +363,58 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
     ],
     "dependencies": [],
     "type": "SegmentDefinition",
+    "originName": "REAL_TIME_CUSTOMER_PROFILE",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
       "core/C1"
     ],
     "namespace": "AEPSegments"
 }
 ```
+
++++
+
+>[!TAB Pubblico generato esternamente]
+
++++Una risposta di esempio durante la creazione di un pubblico generato esternamente.
+
+```json
+{
+   "id": "322f9f62-cd27-11ec-9d64-0242ac120002",
+   "audienceId": "test-external-audience-id",
+   "name": "externalAudience",
+   "namespace": "aam",
+   "imsOrgId": "{ORG_ID}",
+   "sandbox":{
+      "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+      "sandboxName": "prod",
+      "type": "production",
+      "default": true
+   },
+   "isSystem": false,
+   "description": "Last 30 days",
+   "type": "ExternalSegment",
+   "originName": "CUSTOM_UPLOAD",
+   "lifecycleState": "published",
+   "createdBy": "{CREATED_BY_ID}",
+   "datasetId": "6254cf3c97f8e31b639fb14d",
+   "labels": [
+      "core/C1"
+   ],
+   "linkedAudienceRef": {
+      "flowId": "4685ea90-d2b6-11ec-9d64-0242ac120002"
+   },
+   "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+   "creationTime": 1650251290000,
+   "updateEpoch": 1650251290,
+   "updateTime": 1650251290000,
+   "createEpoch": 1650251290
+}
+```
+
++++
 
 ## Cercare un pubblico specificato {#get}
 
@@ -417,15 +424,15 @@ Per cercare informazioni dettagliate su un pubblico specifico, effettua una rich
 
 ```http
 GET /audiences/{AUDIENCE_ID}
-GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | ID del pubblico che stai tentando di recuperare. |
-| `property=withmetrics==true` | Un parametro di query facoltativo che puoi utilizzare se desideri recuperare un pubblico specificato con le metriche del pubblico. |
+| `{AUDIENCE_ID}` | ID del pubblico che stai tentando di recuperare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
 
 **Richiesta**
+
++++Una richiesta di esempio per recuperare un pubblico
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -435,11 +442,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico specificato. La risposta varia se il pubblico viene generato con Adobe Experience Platform o fonti esterne.
 
-**Generato da piattaforma**
+>[!BEGINTABS]
+
+>[!TAB Pubblico generato dalla piattaforma]
+
++++Una risposta di esempio durante il recupero di un pubblico generato da Platform.
 
 ```json
 {
@@ -497,7 +510,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
         "core/C1"
     ],
@@ -505,13 +518,17 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 }
 ```
 
-**Generato esternamente**
++++
+
+>[!TAB Pubblico generato esternamente]
+
++++Una risposta di esempio durante il recupero di un pubblico generato esternamente.
 
 ```json
 {
-    "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab",
     "audienceId": "test-external-audience-id",
-    "name": "externalSegment1",
+    "name": "externalAudience",
     "namespace": "aam",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -520,10 +537,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
         "type": "production",
         "default": true
     },
-    "isSystem":false,
+    "isSystem": false,
     "description": "Last 30 days",
     "type": "ExternalSegment",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -537,6 +554,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 }
 ```
 
++++
+
+>[!ENDTABS]
+
 ## Aggiornare un campo in un pubblico {#update-field}
 
 Puoi aggiornare i campi di un pubblico specifico effettuando una richiesta PATCH al `/audiences` e fornendo l’ID del pubblico da aggiornare nel percorso della richiesta.
@@ -549,9 +570,11 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. |
+| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
 
 **Richiesta**
+
++++Richiesta di esempio per aggiornare un campo in un pubblico.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -580,9 +603,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 | `path` | Percorso del campo da aggiornare. |
 | `value` | Il valore a cui desideri aggiornare il campo. |
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informazioni sul pubblico appena aggiornato.
+
++++Una risposta di esempio durante l’aggiornamento di un campo in un pubblico.
 
 ```json
 {
@@ -639,13 +666,15 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
     "type": "SegmentDefinition",
     "overridePerformanceWarnings": false,
     "createdBy": "{CREATED_BY_ID}",
-    "lifecycle": "active",
+    "lifecycleState": "active",
     "labels": [
       "core/C1"
     ],
     "namespace": "AEPSegments"
 }
 ```
+
++++
 
 ## Aggiornare un pubblico {#put}
 
@@ -657,7 +686,13 @@ Per aggiornare (sovrascrivere) un pubblico specifico, devi effettuare una richie
 PUT /audiences/{AUDIENCE_ID}
 ```
 
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | ID del pubblico che desideri aggiornare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
+
 **Richiesta**
+
++++Una richiesta di esempio per aggiornare un intero pubblico.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -667,14 +702,14 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-    "audienceId":"test-external-audience-id",
-    "name":"new externalSegment",
-    "namespace":"aam",
-    "description":"Last 30 days",
-    "type":"ExternalSegment",
-    "lifecycle":"published",
-    "datasetId":"6254cf3c97f8e31b639fb14d",
-    "labels":[
+    "audienceId": "test-external-audience-id",
+    "name": "New external audience",
+    "namespace": "aam",
+    "description": "Last 30 days",
+    "type": "ExternalSegment",
+    "lifecycleState": "published",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "labels": [
         "core/C1"
     ]
 }' 
@@ -682,24 +717,28 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `audienceId` | ID del pubblico. Viene utilizzato da un pubblico esterno |
+| `audienceId` | ID del pubblico. Per i tipi di pubblico generati esternamente, questo valore può essere fornito dall’utente. |
 | `name` | Il nome del pubblico. |
-| `namespace` | |
+| `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
-| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalAudience`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalAudience` fa riferimento a un pubblico non generato in Platform. |
-| `lifecycle` | Stato del pubblico. I valori possibili includono `draft`, `published`, `inactive`, e `archived`. `draft` rappresenta quando viene creato il pubblico, `published` quando il pubblico viene pubblicato, `inactive` quando il pubblico non è più attivo, e `archived` se il pubblico viene eliminato. |
+| `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
+| `lifecycleState` | Stato del pubblico. I valori possibili includono `draft`, `published` e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando viene pubblicato il pubblico e `inactive` quando il pubblico non è più attivo. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati sul pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
+
++++
 
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli del pubblico appena aggiornato. Tieni presente che i dettagli del pubblico variano a seconda che si tratti di un pubblico generato da Platform o da un pubblico generato esternamente.
 
++++Una risposta di esempio durante l’aggiornamento di un intero pubblico.
+
 ```json
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-external-audience-id",
-    "name": "new externalSegment",
+    "name": "New external audience",
     "namespace": "aam",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -710,7 +749,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
     },
     "description": "Last 30 days",
     "type": "ExternalSegment",
-    "lifecycle": "published",
+    "lifecycleState": "published",
     "createdBy": "{CREATED_BY_ID}",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
@@ -720,6 +759,8 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
     "createEpoch": 1650251290
 }
 ```
+
++++
 
 ## Eliminare un pubblico {#delete}
 
@@ -733,18 +774,305 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | ID del pubblico da eliminare. |
+| `{AUDIENCE_ID}` | ID del pubblico da eliminare. Tieni presente che questa è la `id` ed è **non** il `audienceId` campo. |
 
 **Richiesta**
+
++++ Una richiesta di esempio per eliminare un pubblico.
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Risposta**
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 senza messaggio.
+
+## Recuperare più tipi di pubblico {#bulk-get}
+
+Per recuperare più tipi di pubblico, devi effettuare una richiesta POST al `/audiences/bulk-get` e fornendo gli ID dei tipi di pubblico da recuperare.
+
+**Formato API**
+
+```http
+POST /audiences/bulk-get
+```
+
+**Richiesta**
+
++++ Una richiesta di esempio per recuperare più tipi di pubblico.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-get
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d ' {
+    "ids": [
+        {
+            "id": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd"
+        },
+        {
+            "id": "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075"
+        }
+    ]
+ }
+```
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con le informazioni relative ai tipi di pubblico richiesti.
+
++++ Una risposta di esempio durante il recupero di più tipi di pubblico.
+
+```json
+{
+   "results":{
+      "72c393ea-caed-441a-9eb6-5f66bb1bd6cd":{
+         "id": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd",
+         "audienceId": "72c393ea-caed-441a-9eb6-5f66bb1bd6cd",
+         "schema": {
+            "name": "_xdm.context.profile"
+         },
+         "ttlInDays": 30,
+         "imsOrgId": "{ORG_ID}",
+         "sandbox": {
+            "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "sandboxName": "prod",
+            "type": "production",
+            "default": true
+         },
+         "name": "Sample audience",
+         "expression": {
+            "type": "pql",
+            "format": "pql/text",
+            "value": "_id = \"abc\""         
+        },
+         "mergePolicyId": "87c94d51-239c-4391-932c-29c2412100e5",
+         "evaluationInfo": {
+            "batch": {
+               "enabled": false
+            },
+            "continuous": {
+               "enabled": true
+            },
+            "synchronous": {
+               "enabled": false
+            }
+         },
+         "ansibleUiEnabled": false,
+         "dataGovernancePolicy": {
+            "excludeOptOut": true
+         },
+         "creationTime": 1623889553000000,
+         "updateEpoch": 1674646369,
+         "updateTime": 1674646369000,
+         "createEpoch": 1623889552,
+         "_etag": "\"61030ec7-0000-0200-0000-63d113610000\"",
+         "dependents": [],
+         "definedOn": [
+            {
+               "meta:resourceType": "unions",
+               "meta:containerId": "tenant",
+               "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+            }
+         ],
+         "dependencies": [],
+         "type": "SegmentDefinition",
+         "state": "enabled",
+         "overridePerformanceWarnings": false,
+         "lastModifiedBy": "{CREATED_ID}",
+         "lifecycleState": "published",
+         "namespace": "AEPSegments",
+         "isSystem": false,
+         "saveSegmentMembership": true,
+         "originName": "REAL_TIME_CUSTOMER_PROFILE"
+      },
+      "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075":{
+         "id": "QU9fLTEzOTgzNTE0MzY0NzY0NDg5NzkyOTkx_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+         "name": "label test24764489707692",
+         "namespace": "AO",
+         "imsOrgId": "{ORG_ID}",
+         "sandbox":{
+            "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "sandboxName": "prod",
+            "type": "production",
+            "default": true
+         },
+         "type": "ExternalSegment",
+         "lifecycleState": "published",
+         "sourceId": "source-id",
+         "createdBy": "{USER_ID}",
+         "datasetId": "62bf31a105e9891b63525c92",
+         "_etag": "\"3100da6d-0000-0200-0000-62bf31a10000\"",
+         "creationTime": 1656697249000,
+         "updateEpoch": 1656697249,
+         "updateTime": 1656697249000,
+         "createEpoch": 1656697249,
+         "audienceId": "test-audience-id",
+         "isSystem": false,
+         "saveSegmentMembership": true,
+         "linkedAudienceRef": {
+            "aoWorkflowId": "62bf31858e87e34c8364befa"
+         },
+         "originName": "AUDIENCE_ORCHESTRATION"
+      }
+   }
+}
+```
+
++++
+
+## Aggiornare più tipi di pubblico {#bulk-patch}
+
+Per aggiornare il profilo e il conteggio dei record di più tipi di pubblico, devi effettuare una richiesta POST al `/audiences/bulk-patch-metric` e fornendo gli ID dei tipi di pubblico che desideri aggiornare.
+
+**Formato API**
+
+```http
+POST /audiences/bulk-patch-metric
+```
+
+**Richiesta**
+
++++ Una richiesta di esempio per aggiornare più tipi di pubblico.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d ' {
+    "jobId": "12345",
+    "jobType": "AO",
+    "resources": [
+        {
+            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "namespace": "AAMTraits",
+            "operations": [
+                {
+                    "op": "add",
+                    "path": "/metrics/data",
+                    "value": {
+                        "totalProfiles": 11037
+                    }
+                },
+            ]
+        },
+        {
+            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+            "namespace": "AAMTraits",
+            "operations": [
+                {
+                    "op": "add",
+                    "path": "/metrics/data",
+                    "value": {
+                        "totalProfiles": 523
+                    }
+                }
+            ]
+        }
+    ]
+    }
+```
+
+<table>
+<thead>
+<tr>
+<th>Parametro</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jobId</code></td>
+<td>ID del processo che eseguirà l’aggiornamento.</td>
+</tr>
+<tr>
+<td><code>jobType</code></td>
+<td>Tipo di processo che eseguirà l'aggiornamento. Questo valore può essere <code>export</code> o <code>AO</code>.</td>
+</tr>
+<tr>
+<td><code>audienceId</code></td>
+<td>ID dei tipi di pubblico da aggiornare. Tieni presente che questa è la <code>audienceId</code> valore, e <strong>non</strong> il <code>id</code> valore dei tipi di pubblico.</td>
+</tr>
+<tr>
+<td><code>namespace</code></td>
+<td>Lo spazio dei nomi per il pubblico che desideri aggiornare.</td>
+</tr>
+<tr>
+<td><code>operations</code></td>
+<td>Oggetto contenente le informazioni utilizzate per aggiornare il pubblico.</td>
+</tr>
+<tr>
+<td><code>operations.op</code></td>
+<td>Operazione utilizzata per la patch. Quando si aggiornano più tipi di pubblico, questo valore è <strong>sempre</strong> <code>add</code>.</td>
+</tr>
+<tr>
+<td><code>operations.path</code></td>
+<td>Percorso del campo da aggiornare. Attualmente sono supportati solo due percorsi: <code>/metrics/data</code> durante l'aggiornamento di <strong>profilo</strong> count e <code>/recordMetrics/data</code> durante l'aggiornamento di <strong>record</strong> conteggio.</td>
+</tr>
+<tr>
+<td><code>operations.value</code></td>
+<td>
+Valore del campo da aggiornare. Quando aggiorni il conteggio dei profili, questo valore sarà simile al seguente: 
+<pre>
+{ "totalProfiles": 123456 }
+</pre>
+Quando aggiorni il conteggio dei record, questo valore sarà simile al seguente: 
+<pre>
+{ "recordCount": 123456 }
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con dettagli sui tipi di pubblico aggiornati.
+
++++ Una risposta di esempio per aggiornare più tipi di pubblico.
+
+```json
+{
+   "resources":[
+      {
+         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+
+         "namespace": "AAMTraits",
+         "status":200
+      },
+      {
+         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+
+         "namespace": "AAMTraits",
+         "status":200
+      }
+   ]
+}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `status` | Stato del pubblico aggiornato. Se lo stato restituito è 200, il pubblico è stato aggiornato correttamente. Se non è stato possibile aggiornare il pubblico, verrà restituito un errore che spiega perché il pubblico non è stato aggiornato. |
+
++++
+
+## Passaggi successivi
+
+Dopo aver letto questa guida, ora hai una migliore comprensione di come creare, gestire ed eliminare i tipi di pubblico utilizzando l’API di Adobe Experience Platform. Per ulteriori informazioni sulla gestione dell&#39;audience tramite l&#39;interfaccia utente, leggi [guida all’interfaccia utente di segmentazione](../ui/overview.md).

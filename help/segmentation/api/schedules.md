@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pianificazioni;pianificazione;api;API;
 solution: Experience Platform
 title: Endpoint API Schedules
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente processi di segmentazione batch una volta al giorno.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '1996'
 ht-degree: 4%
 
 ---

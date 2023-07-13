@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;segmentazione;segmentazione;servizio di segmentazione;pql;PQL;Profile Query Language;aggregation functions;aggregation;
 solution: Experience Platform
 title: Funzioni di aggregazione PQL
 description: Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all’interno degli array PQL (Profile Query Language) in modo da formare un singolo valore di riepilogo.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 6%
+source-wordcount: '227'
+ht-degree: 7%
 
 ---
 
