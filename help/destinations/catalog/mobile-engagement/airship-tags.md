@@ -3,9 +3,9 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Airship] è la piattaforma leader di Customer Engagement che ti aiuta a fornire messaggi omnicanale significativi e personalizzati ai tuoi utenti in ogni fase del ciclo di vita del cliente.
 
-Questa integrazione trasmette i dati dei segmenti di Adobe Experience Platform in [!DNL Airship] as [Tag](https://docs.airship.com/guides/audience/tags/) per il targeting o l’attivazione.
+Questa integrazione trasmette i dati del pubblico di Adobe Experience Platform in [!DNL Airship] as [Tag](https://docs.airship.com/guides/audience/tags/) per il targeting o l’attivazione.
 
 Per ulteriori informazioni su [!DNL Airship], vedere [Documenti dirigibili](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ Per ulteriori informazioni su [!DNL Airship], vedere [Documenti dirigibili](http
 
 ## Prerequisiti
 
-Prima di poter inviare i segmenti di Adobe Experience Platform a [!DNL Airship], è necessario:
+Prima di poter inviare il pubblico Adobe Experience Platform a [!DNL Airship], è necessario:
 
 * Creare un gruppo di tag nel [!DNL Airship] progetto.
 * Genera un token Bearer per l’autenticazione.
@@ -36,20 +36,32 @@ Prima di poter inviare i segmenti di Adobe Experience Platform a [!DNL Airship],
 > 
 >Creare un [!DNL Airship] account tramite [questo collegamento di abbonamento](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
 
+## Supporto di tipi di pubblico esterni {#external-audiences-support}
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico esterni descritti nella tabella seguente.
+
+| Tipo di pubblico esterno | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori utilizzati nella destinazione Tag dirigibili. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tag dirigibili. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Gruppi di tag
 
-Il concetto di segmenti in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in dirigibili, con lievi differenze di attuazione. Questa integrazione mappa lo stato di un utente di [appartenenza a un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o meno di un [!DNL Airship] tag. Ad esempio, in un segmento di Platform in cui `xdm:status` modifiche apportate a `realized`, il tag viene aggiunto al [!DNL Airship] channel or named user a cui è mappato questo profilo. Se il `xdm:status` modifiche apportate a `exited`, il tag viene rimosso.
+Il concetto di pubblico in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in dirigibili, con lievi differenze di attuazione. Questa integrazione mappa lo stato di un utente di [appartenenza a un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o meno di un [!DNL Airship] tag. Ad esempio, in un pubblico di Platform in cui `xdm:status` modifiche apportate a `realized`, il tag viene aggiunto al [!DNL Airship] channel or named user a cui è mappato questo profilo. Se il `xdm:status` modifiche apportate a `exited`, il tag viene rimosso.
 
 Per abilitare questa integrazione, crea un’ *gruppo di tag* in [!DNL Airship] denominato `adobe-segments`.
 
@@ -75,13 +87,13 @@ Per aiutarti a capire meglio come e quando utilizzare il [!DNL Airship Tags] des
 
 ### #1 del caso d’uso
 
-I rivenditori o le piattaforme di intrattenimento possono creare profili di utenti sui loro clienti fidelizzati e trasmettere tali segmenti in [!DNL Airship] per il targeting dei messaggi nelle campagne per dispositivi mobili.
+I rivenditori o le piattaforme di intrattenimento possono creare profili di utenti sui loro clienti fidelizzati e trasmettere tali tipi di pubblico a [!DNL Airship] per il targeting dei messaggi nelle campagne per dispositivi mobili.
 
 ### #2 del caso d’uso
 
-Attiva i messaggi uno-a-uno in tempo reale quando gli utenti rientrano in o da segmenti specifici all’interno di Adobe Experience Platform.
+Attivare messaggi uno-a-uno in tempo reale quando gli utenti entrano o escono da un pubblico specifico all’interno di Adobe Experience Platform.
 
-Ad esempio, un rivenditore imposta un segmento di jeans specifico per il marchio in Platform. Il rivenditore può attivare un messaggio mobile non appena qualcuno imposta la propria preferenza jeans a una marca specifica.
+Ad esempio, un rivenditore imposta in Platform un pubblico specifico per il brand dei jeans. Il rivenditore può attivare un messaggio mobile non appena qualcuno imposta la propria preferenza jeans a una marca specifica.
 
 ## Connetti alla destinazione {#connect}
 
@@ -111,13 +123,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 

@@ -1,10 +1,10 @@
 ---
 title: Destinazione Data Landing Zone
-description: Scopri come connettersi alla Data Landing Zone per attivare segmenti ed esportare set di dati.
+description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -27,8 +27,22 @@ Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati 
 
 ## Connetti al tuo [!UICONTROL Data Landing Zone] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
 
-* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
-* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione a livello di programmazione, leggere [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
+* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione tramite l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva il pubblico in questa destinazione](#activate) di seguito.
+* Per connettersi al tuo [!UICONTROL Data Landing Zone] percorso di archiviazione a livello di programmazione, leggere [Attiva i tipi di pubblico in destinazioni basate su file utilizzando l’esercitazione API del servizio Flusso](../../api/activate-segments-file-based-destinations.md).
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -201,13 +215,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Pianificazione
 

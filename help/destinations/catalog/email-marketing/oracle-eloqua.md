@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;Destinazioni e-mail;oracle eloqua;oracle
 title: (File) Oracle di connessione Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '715'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,21 @@ ht-degree: 1%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da [!DNL Oracle] che ha lo scopo di aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.
 
-Per inviare i dati del segmento a [!DNL Oracle Eloqua], devi prima [connettere la destinazione](#connect-destination) in Adobe Experience Platform, quindi [impostare un’importazione di dati](#import-data-into-eloqua) dalla posizione di archiviazione in [!DNL Oracle Eloqua].
+Per inviare dati sul pubblico a [!DNL Oracle Eloqua], devi prima [connettere la destinazione](#connect-destination) in Adobe Experience Platform, quindi [impostare un’importazione di dati](#import-data-into-eloqua) dalla posizione di archiviazione in [!DNL Oracle Eloqua].
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -81,21 +95,21 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Attributi di destinazione {#destination-attributes}
 
-Quando si attivano i segmenti in questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione di tipi di pubblico su destinazioni di e-mail marketing](overview.md#best-practices).
+Quando si attivano i tipi di pubblico in questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione di tipi di pubblico su destinazioni di e-mail marketing](overview.md#best-practices).
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Oracle Eloqua] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verifica attivazione segmento](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di attivazione dei segmenti.
+Per [!DNL Oracle Eloqua] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verificare l’attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di audience activation.
 
 ## Configurare l’importazione dei dati in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

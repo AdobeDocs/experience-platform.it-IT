@@ -2,7 +2,7 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare e rivedere una destinazione prodotta creata con Destination SDK.
 title: Invia per la revisione una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -22,7 +22,6 @@ ht-degree: 0%
 >* Se il team di Adobi ti chiede di apportare eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, devi inviare un’altra richiesta di pubblicazione di destinazione dopo aver apportato gli aggiornamenti.
 >
 >* Anche dopo che la destinazione è live nel catalogo Experience Platform, se devi apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione affinché gli aggiornamenti vengano rispecchiati nelle configurazioni.
-
 
 Prima che la destinazione possa essere pubblicata su [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), è necessario fornire agli Adobi alcune informazioni sulla destinazione e sui test eseguiti, per garantire che gli utenti godano della migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
@@ -46,7 +45,7 @@ Puoi trovare informazioni dettagliate su ciascun elemento nelle sezioni seguenti
 Fornisci una descrizione dei casi d’uso risolti dalla tua destinazione, ad Experience Platform i clienti. Le descrizioni possono essere simili ai casi d’uso dei partner esistenti:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crea tipi di pubblico dagli elenchi dei clienti, dalle persone che hanno visitato il tuo sito o dalle persone che hanno già interagito con il tuo contenuto su Pinterest.
-* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): le API DataX sono disponibili per gli inserzionisti che desiderano indirizzare un gruppo di pubblico specifico ricavato dagli indirizzi e-mail in Verizon Media (VMG) e che possono creare rapidamente un nuovo segmento e inviare il gruppo di pubblico desiderato utilizzando l’API quasi in tempo reale di VMG.
+* [Dati Yahoo X](/help/destinations/catalog/advertising/datax.md#use-cases): le API DataX sono disponibili per gli inserzionisti che desiderano indirizzare un gruppo di pubblico specifico ricavato dagli indirizzi e-mail in Verizon Media (VMG) e che possono creare rapidamente un nuovo pubblico e inviarlo al gruppo di pubblico desiderato utilizzando l’API quasi in tempo reale di VMG.
 
 ## Motivo dell’aggiornamento {#reason-for-update}
 

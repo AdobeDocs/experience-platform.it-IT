@@ -3,9 +3,9 @@ title: Connettore profilo Pega
 description: Utilizza il connettore di profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archiviazione cloud Amazon S3. In Pega Customer Decision Hub, i processi di dati possono essere pianificati in Customer Profile Designer per importare periodicamente i dati di profilo dall’archiviazione Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 
 >[!TIP]
 >
->Nel flusso di lavoro della destinazione di connessione, puoi creare una cartella personalizzata nell’archiviazione Amazon S3 per ogni file di segmento esportato. Letto [Utilizzare le macro per creare una cartella nel percorso di archiviazione](/help/destinations/catalog/cloud-storage/overview.md#use-macros) per istruzioni.
+>Nel flusso di lavoro della destinazione di connessione, puoi creare una cartella personalizzata nell’archiviazione Amazon S3 per file di pubblico esportato. Letto [Utilizzare le macro per creare una cartella nel percorso di archiviazione](/help/destinations/catalog/cloud-storage/overview.md#use-macros) per istruzioni.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -102,13 +102,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#map}
 
@@ -116,7 +116,7 @@ In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di 
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Per [!DNL Pega Profile Connector] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione Amazon S3 fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di attivazione dei segmenti.
+Per [!DNL Pega Profile Connector] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione Amazon S3 fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di audience activation.
 
 In caso di esito positivo, l’importazione dei dati del profilo da S3 inserisce i dati nel [!DNL Pega Customer] archivio dati profilo. I dati importati del profilo cliente possono essere convalidati in [!DNL Pega Customer Profile Designer] , come illustrato nella figura riportata di seguito.
 ![Immagine della schermata dell’interfaccia utente in cui è possibile convalidare i dati del profilo di Adobe in Customer Profile Designer](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)

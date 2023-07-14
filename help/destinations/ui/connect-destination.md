@@ -4,7 +4,7 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 >* Per connettersi a una destinazione che supporta le esportazioni di set di dati, è necessario **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-
 ## Panoramica {#overview}
 
-Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una connessione alla piattaforma di destinazione. Questo articolo illustra come impostare una nuova connessione di destinazione, alla quale è quindi possibile attivare segmenti o esportare set di dati utilizzando l’interfaccia utente di Adobe Experience Platform.
+Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una connessione alla piattaforma di destinazione. Questo articolo mostra come impostare una nuova connessione di destinazione, alla quale è quindi possibile attivare i tipi di pubblico o esportare i set di dati utilizzando l’interfaccia utente di Adobe Experience Platform.
 
 ## Trovare la destinazione desiderata nel catalogo {#setup}
 
@@ -29,23 +28,23 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 
    ![Schermata dell’interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni.](../assets/ui/connect-destinations/catalog.png)
 
-2. Le schede di destinazione nel catalogo possono avere controlli di azione diversi, a seconda che tu disponga di una connessione esistente alla destinazione e che le destinazioni supportino l’attivazione di segmenti, l’esportazione di set di dati o entrambi. Potresti visualizzare uno dei seguenti controlli per le schede di destinazione:
+2. Le schede di destinazione nel catalogo possono avere controlli di azione diversi, a seconda che tu disponga di una connessione esistente alla destinazione e che le destinazioni supportino l’attivazione di tipi di pubblico, l’esportazione di set di dati o entrambi. Potresti visualizzare uno dei seguenti controlli per le schede di destinazione:
 
-   * **[!UICONTROL Configurazione]**. Prima di attivare i segmenti o esportare i set di dati, è necessario impostare una connessione a questa destinazione.
-   * **[!UICONTROL Attiva]**. Connessione già impostata a questa destinazione. Questa destinazione supporta l’attivazione dei segmenti e le esportazioni dei set di dati.
-   * **[!UICONTROL Attivare segmenti]**. Connessione già impostata a questa destinazione. Questa destinazione supporta solo l’attivazione dei segmenti.
+   * **[!UICONTROL Configurazione]**. Prima di poter attivare i tipi di pubblico o esportare i set di dati, è necessario impostare una connessione a questa destinazione.
+   * **[!UICONTROL Attiva]**. Connessione già impostata a questa destinazione. Questa destinazione supporta l’attivazione del pubblico e le esportazioni di set di dati.
+   * **[!UICONTROL Attiva tipi di pubblico]**. Connessione già impostata a questa destinazione. Questa destinazione supporta solo l’attivazione del pubblico.
 
    Per ulteriori informazioni sulle differenze tra questi controlli, è inoltre possibile fare riferimento alla [Catalogo](../ui/destinations-workspace.md#catalog) sezione della documentazione di workspace di destinazione.
 
-   Seleziona una **[!UICONTROL Configurazione]**, **[!UICONTROL Attiva]**, o **[!UICONTROL Attivare segmenti]**, a seconda del controllo disponibile.
+   Seleziona una **[!UICONTROL Configurazione]**, **[!UICONTROL Attiva]**, o **[!UICONTROL Attiva tipi di pubblico]**, a seconda del controllo disponibile.
 
    ![Schermata dell’interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni con il controllo Configura evidenziato.](../assets/ui/connect-destinations/set-up.png)
 
-   ![Schermata dell’interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni in cui è evidenziato il controllo Attiva segmenti.](../assets/ui/connect-destinations/activate-segments.png)
+   ![Schermata dell’interfaccia utente di Experience Platform che mostra la pagina del catalogo delle destinazioni in cui è evidenziato il controllo Attiva pubblico.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Se hai selezionato **[!UICONTROL Configurazione]**, passa al passaggio successivo, per [autenticare](#authenticate) alla destinazione.
 
-   Se hai selezionato **[!UICONTROL Attiva]**, **[!UICONTROL Attivare segmenti]**, o **[!UICONTROL Esportare i set di dati]**, è ora disponibile un elenco delle connessioni di destinazione esistenti.
+   Se hai selezionato **[!UICONTROL Attiva]**, **[!UICONTROL Attiva tipi di pubblico]**, o **[!UICONTROL Esportare i set di dati]**, è ora disponibile un elenco delle connessioni di destinazione esistenti.
 
    Seleziona **[!UICONTROL Configurare una nuova destinazione]** per stabilire una nuova connessione alla destinazione.
 
@@ -85,11 +84,11 @@ Per le destinazioni basate su file, puoi configurare varie impostazioni relative
 
 ![Immagine che mostra la selezione del tipo di file e varie opzioni per i file CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Impostare la connessione di destinazione per l’attivazione dei segmenti o le esportazioni dei set di dati {#segment-activation-or-dataset-exports}
+### Configurare la connessione di destinazione per l’attivazione del pubblico o le esportazioni di set di dati {#segment-activation-or-dataset-exports}
 
-Alcune destinazioni basate su file supportano l’attivazione dei segmenti e le esportazioni dei set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di attivare segmenti o esportare set di dati.
+Alcune destinazioni basate su file supportano l’attivazione del pubblico e le esportazioni di set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di attivare tipi di pubblico o esportare set di dati.
 
-![Immagine che mostra il controllo per la selezione del tipo di dati, che consente agli utenti di scegliere tra l’attivazione dei segmenti e le esportazioni dei set di dati.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Immagine che mostra il controllo per la selezione del tipo di dati, che consente agli utenti di scegliere tra l’attivazione del pubblico e le esportazioni di set di dati.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Abilita avvisi di destinazione {#enable-alerts}
 
@@ -113,4 +112,4 @@ Alcune destinazioni basate su file supportano l’attivazione dei segmenti e le 
 
 Dopo aver letto questo documento, hai imparato a utilizzare l’interfaccia utente di Experience Platform per stabilire una connessione a una destinazione. I parametri di connessione disponibili e richiesti variano da destinazione a destinazione. È inoltre necessario consultare la pagina della documentazione di destinazione in [catalogo delle destinazioni](/help/destinations/catalog/overview.md) per informazioni specifiche sugli input richiesti e sulle opzioni disponibili per tipo di destinazione.
 
-Quindi, puoi procedere a [attivazione dei segmenti](/help/destinations/ui/activation-overview.md) o [esportazione di set di dati](/help/destinations/ui/export-datasets.md) a destinazione.
+Quindi, puoi procedere a [attivazione di tipi di pubblico](/help/destinations/ui/activation-overview.md) o [esportazione di set di dati](/help/destinations/ui/export-datasets.md) a destinazione.

@@ -3,16 +3,16 @@ title: Coinvolgimento dell’account di Marketing Cloud Salesforce
 description: Scopri come utilizzare la destinazione Salesforce Marketing Cloud Account Engagement (precedentemente nota come Pardot) per esportare i dati dell’account e attivarli in Salesforce Marketing Cloud Account Engagement per le tue esigenze aziendali.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1588'
 ht-degree: 1%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud Account Engagement] connessione
 
-Utilizza il [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(precedentemente noto come [!DNL Pardot])* destinazione per acquisire, tracciare, valutare e valutare i lead. Puoi anche progettare tracce di lead per tutte le fasi della pipeline per segmenti di mercato e gruppi di clienti mirati, mediante campagne e-mail drip e gestione dei lead con sviluppo, valutazione e segmentazione delle campagne.
+Utilizza il [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(precedentemente noto come [!DNL Pardot])* destinazione per acquisire, tracciare, valutare e valutare i lead. Puoi anche progettare tracce di lead per tutte le fasi della pipeline per tipi di pubblico di mercato e gruppi di clienti mirati tramite campagne e-mail drip e gestione dei lead con sviluppo, valutazione e segmentazione delle campagne.
 
 Confrontato con [!DNL Salesforce Marketing Cloud Engagement] che è più orientato verso **B2C** marketing, [!DNL Marketing Cloud Account Engagement] è ideale per **B2B** casi d’uso che coinvolgono più dipartimenti e decision maker e che richiedono cicli di vendita e decisionali più lunghi. Inoltre, mantieni anche una maggiore vicinanza e integrazione con il tuo CRM per prendere le decisioni di vendita e marketing appropriate. *Nota: Experience Platform dispone anche di connessioni per [!DNL Salesforce Marketing Cloud Engagement], puoi controllarli sulla [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) e [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagine.*
 
@@ -26,7 +26,7 @@ Per aiutarti a capire meglio come e quando utilizzare il [!DNL Marketing Cloud A
 
 ### Invia e-mail ai contatti per campagne di marketing {#use-case-send-emails}
 
-Il reparto marketing di una piattaforma online desidera trasmettere una campagna di marketing basata su e-mail a un pubblico curato di lead B2B. Il team marketing della piattaforma può aggiungere nuovi lead o aggiornare le informazioni sui lead esistenti tramite Adobe Experience Platform, creare segmenti dai propri dati offline e inviare tali segmenti a [!DNL Marketing Cloud Account Engagement], che può quindi essere utilizzato per inviare l’e-mail della campagna di marketing.
+Il reparto marketing di una piattaforma online desidera trasmettere una campagna di marketing basata su e-mail a un pubblico curato di lead B2B. Il team marketing della piattaforma può aggiungere nuovi lead o aggiornare informazioni sui lead esistenti tramite Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviarli a [!DNL Marketing Cloud Account Engagement], che può quindi essere utilizzato per inviare l’e-mail della campagna di marketing.
 
 ## Prerequisiti {#prerequisites}
 
@@ -86,8 +86,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni segmento selezionato in Platform, la [!DNL Salesforce Marketing Cloud Account Engagement] Lo stato del segmento viene aggiornato con il relativo stato del segmento da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL Salesforce Marketing Cloud Account Engagement] Lo stato del segmento viene aggiornato con il relativo stato del pubblico da Platform.</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -133,13 +133,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 >
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Considerazioni sulla mappatura ed esempio {#mapping-considerations-example}
 
@@ -154,7 +154,7 @@ Per mappare correttamente i campi XDM su [!DNL Marketing Cloud Account Engagemen
    * Ripeti questi passaggi per aggiungere qualsiasi mappatura tra lo schema del profilo XDM e [!DNL Marketing Cloud Account Engagement]: | Campo di origine | Campo di destinazione | Obbligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: email`| Sì | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * Di seguito è riportato un esempio con le mappature di cui sopra:
-      ![Esempio di schermata dell’interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![Esempio di schermata dell’interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Una volta completate le mappature per la connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
@@ -162,14 +162,14 @@ Una volta completate le mappature per la connessione di destinazione, seleziona 
 
 Per verificare di aver impostato correttamente la destinazione, segui i passaggi seguenti:
 
-1. Passa a uno dei segmenti selezionati. Seleziona la scheda **[!DNL Activation data]**. Il **[!UICONTROL ID mappatura]** nella colonna viene visualizzato il nome del campo personalizzato generato all&#39;interno del [!DNL Marketing Cloud Account Engagement Prospects] pagina.
+1. Passa a uno dei tipi di pubblico selezionati. Seleziona la scheda **[!DNL Activation data]**. Il **[!UICONTROL ID mappatura]** nella colonna viene visualizzato il nome del campo personalizzato generato all&#39;interno del [!DNL Marketing Cloud Account Engagement Prospects] pagina.
    ![Esempio di schermata dell’interfaccia utente di Platform che mostra l’ID di mappatura per un segmento selezionato.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. Accedi a [[!DNL Salesforce]](https://login.salesforce.com/) sito Web. Quindi vai al **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** e verificare se i potenziali clienti del segmento sono stati aggiunti o aggiornati. In alternativa, puoi anche accedere a [[!DNL Salesforce Pardot]](https://pi.pardot.com/) e accedere al **[!DNL Prospects]** pagina.
+1. Accedi a [[!DNL Salesforce]](https://login.salesforce.com/) sito Web. Quindi vai al **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** e verificare se i potenziali clienti del pubblico sono stati aggiunti o aggiornati. In alternativa, puoi anche accedere a [[!DNL Salesforce Pardot]](https://pi.pardot.com/) e accedere al **[!DNL Prospects]** pagina.
    ![Schermata dell’interfaccia utente di Salesforce che mostra la pagina Prospect.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. Per verificare se i prospect sono stati aggiornati, seleziona un prospect e verifica se il campo del prospect personalizzato è stato aggiornato con lo stato del segmento di Experience Platform.
-   ![Schermata dell’interfaccia utente di Salesforce che mostra la pagina Prospect selezionata, il campo del prospect personalizzato viene aggiornato con lo stato del segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. Per verificare se i potenziali clienti sono stati aggiornati, seleziona un potenziale cliente e verifica se il campo del potenziale cliente personalizzato è stato aggiornato con lo stato di pubblico Experience Platform.
+   ![Schermata dell’interfaccia utente di Salesforce che mostra la pagina Prospect selezionata, il campo del prospect personalizzato viene aggiornato con lo stato del pubblico.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

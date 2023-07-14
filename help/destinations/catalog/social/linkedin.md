@@ -3,9 +3,9 @@ keywords: linkedin connessione;linkedin connessione;linkedin destinazioni;linked
 title: Connessione LinkedIn Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting, la personalizzazione e l’eliminazione del pubblico, in base alle e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1087'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Attivare i profili per il [!DNL LinkedIn] campagne per il targeting, la personal
 
 Per aiutarti a capire meglio come e quando utilizzare il [!DNL LinkedIn Matched Audiences] destinazione, ecco un caso d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-Una società di software organizza una conferenza e desidera tenersi in contatto con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L’azienda può acquisire gli indirizzi e-mail o gli ID dei dispositivi mobili dai propri [!DNL CRM] in Adobe Experience Platform. Quindi, può creare segmenti dai propri dati offline e inviare tali segmenti al [!DNL LinkedIn] social, ottimizzando le spese pubblicitarie.
+Una società di software organizza una conferenza e desidera tenersi in contatto con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L’azienda può acquisire gli indirizzi e-mail o gli ID dei dispositivi mobili dai propri [!DNL CRM] in Adobe Experience Platform. Quindi, possono creare tipi di pubblico dai propri dati offline e inviarli al [!DNL LinkedIn] social, ottimizzando le spese pubblicitarie.
 
 ## Identità supportate {#supported-identities}
 
@@ -36,14 +36,28 @@ Una società di software organizza una conferenza e desidera tenersi in contatto
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati in [!DNL LinkedIn Matched Audiences] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono e altri) utilizzati in [!DNL LinkedIn Matched Audiences] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -93,7 +107,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-Il video seguente illustra anche i passaggi per configurare una [!DNL LinkedIn Matched Audiences] destinazione e attivazione dei segmenti.
+Il video seguente illustra anche i passaggi per configurare una [!DNL LinkedIn Matched Audiences] destinazione e attivazione dei tipi di pubblico.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -127,18 +141,18 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 
-Una corretta attivazione implica che un [!DNL LinkedIn] il pubblico personalizzato viene creato a livello di programmazione in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’iscrizione al segmento nel pubblico viene aggiunta e rimossa quando gli utenti sono qualificati o non qualificati per i segmenti attivati.
+Una corretta attivazione implica che un [!DNL LinkedIn] il pubblico personalizzato viene creato a livello di programmazione in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’iscrizione al pubblico viene aggiunta e rimossa quando gli utenti sono qualificati o squalificati per i tipi di pubblico attivati.
 
 >[!TIP]
 >
->L’integrazione tra Adobe Experience Platform e [!DNL LinkedIn Matched Audiences] supporta retrocompilazioni storiche del pubblico. Tutte le qualifiche storiche dei segmenti vengono inviate a [!DNL LinkedIn] quando attivi i segmenti nella destinazione.
+>L’integrazione tra Adobe Experience Platform e [!DNL LinkedIn Matched Audiences] supporta retrocompilazioni storiche del pubblico. Tutti i requisiti storici del pubblico vengono inviati a [!DNL LinkedIn] quando attivi i tipi di pubblico nella destinazione.

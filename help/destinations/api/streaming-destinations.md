@@ -5,7 +5,7 @@ title: Connettersi alle destinazioni di streaming e attivare i dati utilizzando 
 description: Questo documento descrive la creazione di destinazioni di streaming utilizzando l’API Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 3%
@@ -26,9 +26,9 @@ Questo tutorial illustra come utilizzare le chiamate API per connettersi ai dati
 
 Questa esercitazione utilizza [!DNL Amazon Kinesis] destinazione in tutti gli esempi, ma i passaggi sono identici per [!DNL Azure Event Hubs].
 
-![Panoramica: i passaggi per creare una destinazione di streaming e attivare i segmenti](../assets/api/streaming-destination/overview.png)
+![Panoramica: i passaggi per creare una destinazione di streaming e attivare i tipi di pubblico](../assets/api/streaming-destination/overview.png)
 
-Se preferisci utilizzare l’interfaccia utente di Platform per connettersi a una destinazione e attivare i dati, consulta la sezione [Connettere una destinazione](../ui/connect-destination.md) e [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../ui/activate-segment-streaming-destinations.md) esercitazioni.
+Se preferisci utilizzare l’interfaccia utente di Platform per connettersi a una destinazione e attivare i dati, consulta la sezione [Connettere una destinazione](../ui/connect-destination.md) e [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../ui/activate-segment-streaming-destinations.md) esercitazioni.
 
 ## Introduzione
 
@@ -42,7 +42,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Raccogli le credenziali richieste
 
-Per completare i passaggi descritti in questa esercitazione, è necessario disporre delle seguenti credenziali pronte, a seconda del tipo di destinazioni a cui ti stai connettendo e attivando i segmenti.
+Per completare i passaggi descritti in questa esercitazione, è necessario disporre delle seguenti credenziali pronte, a seconda del tipo di destinazioni a cui si connettono e si attivano i tipi di pubblico.
 
 * Per [!DNL Amazon Kinesis] connessioni: `accessKeyId`, `secretKey`, `region` o `connectionUrl`
 * Per [!DNL Azure Event Hubs] connessioni: `sasKeyName`, `sasKey`, `namespace`
@@ -79,7 +79,7 @@ Puoi trovare la documentazione di riferimento di accompagnamento per tutte le ch
 
 ![Panoramica dei passaggi di destinazione passaggio 1](../assets/api/streaming-destination/step1.png)
 
-Come primo passo, devi decidere a quale destinazione di streaming attivare i dati. Per iniziare, effettua una chiamata per richiedere un elenco delle destinazioni disponibili a cui puoi connettere e attivare i segmenti. Esegui la seguente richiesta di GET a `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
+Come primo passo, devi decidere a quale destinazione di streaming attivare i dati. Per iniziare, effettua una chiamata per richiedere un elenco delle destinazioni disponibili a cui puoi connettere e attivare i tipi di pubblico. Esegui la seguente richiesta di GET a `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
 
 **Formato API**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta**
 
-In caso di esito positivo, la risposta contiene un elenco delle destinazioni disponibili e i relativi identificatori univoci (`id`). Memorizza il valore della destinazione che intendi utilizzare, come richiesto nei passaggi successivi. Ad esempio, se desideri connetterti e consegnare segmenti a [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs], cerca il seguente frammento nella risposta:
+In caso di esito positivo, la risposta contiene un elenco delle destinazioni disponibili e i relativi identificatori univoci (`id`). Memorizza il valore della destinazione che intendi utilizzare, come richiesto nei passaggi successivi. Ad esempio, se desideri connettere e inviare tipi di pubblico a [!DNL Amazon Kinesis] o [!DNL Azure Event Hubs], cerca il seguente frammento nella risposta:
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato e un `etag`. Annotare entrambi i valori. come nel passaggio successivo, per attivare i segmenti.
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato e un `etag`. Annotare entrambi i valori. nel passaggio successivo, per attivare i tipi di pubblico.
 
 ```json
 {
@@ -423,9 +423,9 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ![Panoramica dei passaggi di destinazione passaggio 5](../assets/api/streaming-destination/step5.png)
 
-Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di streaming. In questo passaggio, puoi selezionare i segmenti e gli attributi di profilo da inviare alla destinazione, nonché pianificare e inviare dati alla destinazione.
+Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di streaming. In questo passaggio, puoi selezionare i tipi di pubblico e gli attributi di profilo da inviare alla destinazione, nonché pianificare e inviare dati alla destinazione.
 
-Per attivare i segmenti nella nuova destinazione, è necessario eseguire un’operazione PATCH JSON, simile all’esempio di seguito. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta [Specifiche RFC](https://tools.ietf.org/html/rfc6902).
+Per attivare i tipi di pubblico nella nuova destinazione, devi eseguire un’operazione JSON PATCH, simile all’esempio di seguito. Puoi attivare più tipi di pubblico e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta [Specifiche RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato API**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Nell’URL, utilizza l’ID del flusso di dati creato nel passaggio precedente. |
 | `{ETAG}` | Ottieni `{ETAG}` dalla risposta della fase precedente, [Creare un flusso di dati](#create-dataflow). Il formato della risposta nel passaggio precedente contiene virgolette di escape. Devi utilizzare i valori senza escape nell’intestazione della richiesta. Vedi l’esempio seguente: <br> <ul><li>Esempio di risposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valore da utilizzare nella richiesta: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati. |
-| `{SEGMENT_ID}` | Specifica l’ID segmento da esportare in questa destinazione. Per recuperare gli ID segmento per i segmenti che desideri attivare, consulta [recuperare una definizione di segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
+| `{SEGMENT_ID}` | Specifica l’ID del pubblico da esportare in questa destinazione. Per recuperare gli ID del pubblico per i tipi di pubblico che desideri attivare, consulta [recuperare una definizione di pubblico](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Ad esempio, `"person.lastName"` |
-| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per aggiungere un segmento a un flusso di dati, utilizza `add` operazione. |
-| `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un segmento a un flusso di dati, utilizza il percorso specificato nell’esempio. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per aggiungere un pubblico a un flusso di dati, utilizza `add` operazione. |
+| `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un pubblico a un flusso di dati, utilizza il percorso specificato nell’esempio. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
-| `id` | Specifica l’ID del segmento che stai aggiungendo al flusso di dati di destinazione. |
-| `name` | *Facoltativo*. Specifica il nome del segmento che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un segmento al flusso di dati di destinazione senza specificarne il nome. |
+| `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
+| `name` | *Facoltativo*. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
 
 **Risposta**
 
@@ -490,7 +490,7 @@ Cercate una risposta 202 OK. Nessun corpo di risposta restituito. Per verificare
 
 ![Panoramica dei passaggi di destinazione 6](../assets/api/streaming-destination/step6.png)
 
-Come ultimo passaggio dell’esercitazione, verifica che i segmenti e gli attributi del profilo siano stati effettivamente mappati correttamente al flusso di dati.
+Come ultimo passaggio dell’esercitazione, devi verificare che i tipi di pubblico e gli attributi del profilo siano stati effettivamente mappati correttamente al flusso di dati.
 
 Per convalidarlo, esegui la seguente richiesta GET:
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Risposta**
 
-La risposta restituita deve includere nel `transformations` specifica i segmenti e gli attributi del profilo inviati nel passaggio precedente. Un esempio `transformations` Il parametro nella risposta potrebbe essere simile al seguente:
+La risposta restituita deve includere nel `transformations` specifica i tipi di pubblico e gli attributi del profilo inviati nel passaggio precedente. Un esempio `transformations` Il parametro nella risposta potrebbe essere simile al seguente:
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ La risposta restituita deve includere nel `transformations` specifica i segmenti
 
 >[!IMPORTANT]
 >
-> Oltre agli attributi del profilo e ai segmenti nel passaggio [Attiva i dati nella nuova destinazione](#activate-data), i dati esportati in [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] includerà anche informazioni sulla mappa delle identità. Rappresenta le identità dei profili esportati (ad esempio [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID dispositivo mobile, ID Google, indirizzo e-mail, ecc.). Vedi un esempio qui sotto.
+> Oltre agli attributi del profilo e ai tipi di pubblico nel passaggio [Attiva i dati nella nuova destinazione](#activate-data), i dati esportati in [!DNL AWS Kinesis] e [!DNL Azure Event Hubs] includerà anche informazioni sulla mappa delle identità. Rappresenta le identità dei profili esportati (ad esempio [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID dispositivo mobile, ID Google, indirizzo e-mail, ecc.). Vedi un esempio qui sotto.
 
 ```json
 {

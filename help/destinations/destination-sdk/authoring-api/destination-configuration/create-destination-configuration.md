@@ -1,7 +1,7 @@
 ---
 description: Scopri come strutturare una chiamata API per creare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione di destinazione
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
@@ -213,10 +213,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indica quale [spazi dei nomi di identità standard](/help/identity-service/namespaces.md#standard) (ad esempio, IDFA) i clienti possono effettuare il mapping all’identità che stai configurando. <br> Quando si utilizza `acceptedGlobalNamespaces`, è possibile utilizzare `"requiredTransformation":"sha256(lower($))"` agli indirizzi e-mail o ai numeri di telefono in minuscolo e con hash. |
 | `destinationDelivery.authenticationRule` | Stringa | Indica come [!DNL Platform] i clienti si connettono alla tua destinazione. I valori accettati sono `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilizzare `CUSTOMER_AUTHENTICATION` se i clienti di Platform accedono al sistema tramite un nome utente e una password, un token bearer o un altro metodo di autenticazione. Ad esempio, puoi selezionare questa opzione se hai selezionato anche `authType: OAUTH2` o `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Utilizzare `PLATFORM_AUTHENTICATION` se è presente un sistema di autenticazione globale tra Adobe e la tua destinazione e il [!DNL Platform] Il cliente non deve fornire credenziali di autenticazione per connettersi alla destinazione. In questo caso, è necessario creare un oggetto credenziali utilizzando [API delle credenziali](../../credentials-api/create-credential-configuration.md) configurazione. </li><li>Utilizzare `NONE` se non è richiesta alcuna autenticazione per inviare dati alla piattaforma di destinazione. </li></ul> |
 | `destinationDelivery.destinationServerId` | Stringa | Il `instanceId` del [modello server di destinazione](../destination-server/create-destination-server.md) utilizzato per questa destinazione. |
-| `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i segmenti vengono attivati nella destinazione. Imposta sempre questo su `true`. |
-| `segmentMappingConfig.mapUserInput` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione viene immesso dall’utente. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è l’ID del segmento di Experience Platform. |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controlla se l’ID di mappatura del segmento nel flusso di lavoro di attivazione della destinazione è il nome del segmento di Experience Platform. |
+| `backfillHistoricalProfileData` | Booleano | Controlla se i dati storici del profilo vengono esportati quando i tipi di pubblico vengono attivati nella destinazione. Imposta sempre questo su `true`. |
+| `segmentMappingConfig.mapUserInput` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione viene immesso dall’utente. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione è l’ID del pubblico Experience Platform. |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione è il nome Experience Platform del pubblico. |
 | `segmentMappingConfig.audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per questa destinazione. |
 | `schemaConfig.profileFields` | Array | Quando si aggiungono impostazioni predefinite `profileFields` come mostrato nella configurazione precedente, gli utenti avranno la possibilità di mappare gli attributi di Experience Platform agli attributi predefiniti sul lato della destinazione. |
 | `schemaConfig.profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |

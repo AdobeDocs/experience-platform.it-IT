@@ -2,7 +2,7 @@
 description: Scopri come utilizzare l’API di test di destinazione per testare il modello di trasformazione dei messaggi di destinazione in streaming prima di pubblicare la destinazione.
 title: Creare e testare un modello di trasformazione dei messaggi
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Di seguito è illustrato il modo in cui la creazione e il test di un modello di 
 
 ## Perché è necessario creare e testare un modello di trasformazione dei messaggi {#why-create-message-transformation-template}
 
-Uno dei primi passaggi nella creazione della destinazione in Destination SDK consiste nel pensare a come il formato dati per l’iscrizione ai segmenti, le identità e gli attributi di profilo viene trasformato quando viene esportato da Adobe Experience Platform alla destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione in [documento formato messaggio](../../functionality/destination-server/message-format.md#using-templating).
+Uno dei primi passaggi nella creazione della destinazione in Destination SDK consiste nel pensare a come il formato dei dati per l’iscrizione al pubblico, le identità e gli attributi di profilo viene trasformato quando si esporta da Adobe Experience Platform alla destinazione. Trova informazioni sulla trasformazione tra lo schema XDM di Adobe e lo schema di destinazione in [documento formato messaggio](../../functionality/destination-server/message-format.md#using-templating).
 
 Affinché la trasformazione venga eseguita correttamente, è necessario fornire un modello di trasformazione simile al seguente esempio: [Creare un modello che invia segmenti, identità e attributi di profilo](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe fornisce uno strumento per modelli che consente di creare e testare il mod
 Prima di creare il modello, assicurati di completare i passaggi seguenti:
 
 1. [Creare una configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). Il modello che verrà generato è diverso in base al valore fornito per `maxUsersPerRequest` parametro.
-   * Utilizzare `maxUsersPerRequest=1` se desideri che una chiamata API alla destinazione includa un singolo profilo, insieme alle relative qualifiche del segmento, identità e attributi di profilo.
-   * Utilizzare `maxUsersPerRequest` con un valore maggiore di uno se desideri che una chiamata API alla destinazione includa più profili, insieme alle relative qualifiche dei segmenti, identità e attributi di profilo.
+   * Utilizzare `maxUsersPerRequest=1` se desideri che una chiamata API alla destinazione includa un singolo profilo, insieme alle relative qualifiche del pubblico, identità e attributi di profilo.
+   * Utilizzare `maxUsersPerRequest` con un valore maggiore di uno se desideri che una chiamata API alla destinazione includa più profili, insieme alle relative qualifiche del pubblico, identità e attributi di profilo.
 2. [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) e aggiungi l’ID della configurazione del server di destinazione in `destinationDelivery.destinationServerId`.
 3. [Ottieni l’ID della configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) che hai appena creato, in modo da poterlo utilizzare nello strumento di creazione del modello.
 4. Comprendere [quali funzioni e filtri è possibile utilizzare](../../functionality/destination-server/supported-functions.md) nel modello di trasformazione dei messaggi.
@@ -100,7 +100,7 @@ Se l’ID di destinazione fornito corrisponde a una configurazione di destinazio
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -136,7 +136,7 @@ Se l’ID di destinazione fornito corrisponde a un modello di server di destinaz
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

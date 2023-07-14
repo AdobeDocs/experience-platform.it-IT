@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1167'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
    * [Guida alla migrazione delle API per le destinazioni dell’archiviazione cloud](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [Connettersi alle destinazioni di streaming e attivare i dati utilizzando l’API del servizio Flow](./api/streaming-destinations.md)
    * [Connettiti alle destinazioni del marketing via e-mail e dell’archiviazione cloud in batch e attiva i dati utilizzando l’API del servizio Flusso](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Attiva i segmenti di pubblico in destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
+   * [(Beta) Attiva i tipi di pubblico su destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
    * [Modifica destinazione](./api/edit-destination.md)
    * [Aggiornare i flussi di dati di destinazione](./api/update-destination-dataflows.md)
    * [Elimina account di destinazione](./api/delete-destination-account.md)
@@ -37,10 +37,10 @@ ht-degree: 5%
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
    * Attivare i dati sul pubblico nelle destinazioni{#activate}
       * [Panoramica di Activation](./ui/activation-overview.md)
-      * [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](./ui/activate-segment-streaming-destinations.md)
-      * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md)
-      * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md)
-      * [Attivare i dati del pubblico nelle destinazioni di personalizzazione Edge](./ui/activate-edge-personalization-destinations.md)
+      * [Attiva i tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md)
+      * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming](./ui/activate-streaming-profile-destinations.md)
+      * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch](./ui/activate-batch-profile-destinations.md)
+      * [Attivare i tipi di pubblico per Edge Personalization Destinations](./ui/activate-edge-personalization-destinations.md)
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
       * [(Beta) Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 5%
       * [Pubblico Experience Cloud (Beta)](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform di condivisione dei segmenti](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinazioni annunci{#advertising}
       * [Panoramica sulle destinazioni Advertising](./catalog/advertising/overview.md)
       * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -258,7 +258,7 @@ ht-degree: 5%
       * API di test della destinazione di streaming {#streaming-destinations}
          * [Panoramica dell’API di test della destinazione di streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Generare profili di esempio in base a uno schema di origine](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-         * [Genera un esempio di modello di trasformazione dei messaggi ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [Genera un esempio di modello di trasformazione dei messaggi](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [Convalidare la struttura del profilo esportato](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [Test della destinazione di streaming con profili di esempio](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [Creare e testare un modello di trasformazione dei messaggi](./destination-sdk/testing-api/streaming-destinations/create-template.md)

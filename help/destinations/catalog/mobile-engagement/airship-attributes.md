@@ -3,9 +3,9 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmettere facilmente i dati del pubblico Adobe a Airship come attributi del pubblico per il targeting all'interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Per ulteriori informazioni su [!DNL Airship], vedere [Documenti dirigibili](http
 
 ## Prerequisiti {#prerequisites}
 
-Prima di poter inviare i segmenti di pubblico a [!DNL Airship], è necessario:
+Prima di poter inviare i tipi di pubblico a [!DNL Airship], è necessario:
 
 * Abilitare gli attributi nel [!DNL Airship] progetto.
 * Genera un token Bearer per l’autenticazione.
@@ -35,6 +35,18 @@ Prima di poter inviare i segmenti di pubblico a [!DNL Airship], è necessario:
 >
 >Creare un [!DNL Airship] account tramite [questo collegamento di abbonamento](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
 
+## Supporto di tipi di pubblico esterni {#external-audiences-support}
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico esterni descritti nella tabella seguente.
+
+| Tipo di pubblico esterno | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
@@ -42,7 +54,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -72,7 +84,7 @@ Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personali
 
 ### #2 del caso d’uso
 
-Sfruttare gli attributi di Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] e combinarli con l’SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un segmento con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] si prevede che abbandoneranno i dati per inviare messaggi altamente mirati agli utenti con status di fidelizzazione all’oro che vivono a Las Vegas, NV, e hanno un’alta probabilità di abbandono.
+Sfruttare gli attributi di Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] e combinarli con l’SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] si prevede che abbandoneranno i dati per inviare messaggi altamente mirati agli utenti con status di fidelizzazione all’oro che vivono a Las Vegas, NV, e hanno un’alta probabilità di abbandono.
 
 ## Connetti alla destinazione {#connect}
 
@@ -102,13 +114,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 

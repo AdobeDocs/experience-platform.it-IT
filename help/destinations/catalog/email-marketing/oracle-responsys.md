@@ -3,9 +3,9 @@ keywords: e-mail;E-mail;Destinazioni e-mail;Destinazione oracle responsys
 title: Connessione Responsys Oracle
 description: Responsys è uno strumento di e-mail marketing aziendale per campagne di marketing cross-channel offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social network.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '698'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,21 @@ ht-degree: 1%
 
 [Responsys](https://www.oracle.com/cx/marketing/campaign-management/) è uno strumento di e-mail marketing aziendale per campagne di marketing cross-channel offerto da [!DNL Oracle] per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social network.
 
-Per inviare i dati del segmento a [!DNL Oracle Responsys], devi prima [connettersi alla destinazione](#connect-destination) in Adobe Experience Platform, quindi [impostare un’importazione di dati](#import-data-into-responsys) dalla posizione di archiviazione in [!DNL Oracle Responsys].
+Per inviare dati sul pubblico a [!DNL Oracle Responsys], devi prima [connettersi alla destinazione](#connect-destination) in Adobe Experience Platform, quindi [impostare un’importazione di dati](#import-data-into-responsys) dalla posizione di archiviazione in [!DNL Oracle Responsys].
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -82,21 +96,21 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Attributi di destinazione {#destination-attributes}
 
-Quando si attivano i segmenti in questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione di tipi di pubblico su destinazioni di e-mail marketing](overview.md#best-practices).
+Quando si attivano i tipi di pubblico in questa destinazione, Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [best practice per l’attivazione di tipi di pubblico su destinazioni di e-mail marketing](overview.md#best-practices).
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Oracle Responsys] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verifica attivazione segmento](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di attivazione dei segmenti.
+Per [!DNL Oracle Responsys] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verificare l’attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di audience activation.
 
 ## Configurare l’importazione dei dati in [!DNL Oracle Responsys] {#import-data-into-responsys}
 

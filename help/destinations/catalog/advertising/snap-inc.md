@@ -1,10 +1,10 @@
 ---
 title: Connessione Snap Inc
-description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i segmenti di pubblico da Experience Platform.
+description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *Snap Inc* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo *dev-support@snap.com*
+>Questa pagina della documentazione è stata creata da *Snap Inc* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *dev-support@snap.com*
 
 ## Casi d’uso {#use-cases}
 
-Questa destinazione consente agli addetti al marketing di importare in Snapchat Ads i segmenti di utenti creati in Experience Platform e di utilizzarli per eseguire il targeting dei loro annunci.
+Questa destinazione consente agli addetti al marketing di importare in Snapchat Ads i tipi di pubblico per utenti creati in Experience Platform e di utilizzarli per indirizzare i propri annunci.
 
 ## Prerequisiti {#prerequisites}
 
@@ -33,7 +33,7 @@ Per utilizzare questa destinazione, è necessario disporre di un account Snapcha
 
 * Snap Inc non supporta più identità per un determinato segmento di pubblico. Esegui il mapping di una sola identità durante l’attivazione di un segmento.
 * Snap Inc non supporta la ridenominazione dei segmenti. Per rinominare un segmento, è necessario disattivarlo, rinominarlo e quindi attivarlo.
-* Non è possibile definire un periodo di conservazione per i membri di un segmento di pubblico. Tutti i membri hanno una conservazione del ciclo di vita e rimarranno nel segmento fino a quando non verranno rimossi.
+* Non è possibile definire un periodo di conservazione per i membri di un segmento di pubblico. Tutti i membri sono mantenuti per tutta la vita e rimarranno nel pubblico fino a quando non verranno rimossi.
 
 ## Identità supportate {#supported-identities}
 
@@ -65,8 +65,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in *DESTINAZIONE* destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in *DESTINAZIONE* destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID account]**: l’ID dell’account dell’annuncio associato all’account dell’annuncio in cui desideri importare i segmenti. Per ulteriori informazioni su come reperire questa risorsa, fare riferimento a [questa documentazione sul Centro assistenza di Snapchat Business](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL ID account]**: l’ID dell’account dell’annuncio associato all’account dell’annuncio in cui importare i tipi di pubblico. Per ulteriori informazioni su come reperire questa risorsa, fare riferimento a [questa documentazione sul Centro assistenza di Snapchat Business](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->Se si immette un ID account Snapchat Ad errato o non valido, l’attivazione del segmento non riuscirà. Verifica di aver inserito l&#39;ID dell&#39;account dell&#39;annuncio corretto.
+>Se si immette un ID account Snapchat Ad errato o non valido, l’attivazione del pubblico non riuscirà. Verifica di aver inserito l&#39;ID dell&#39;account dell&#39;annuncio corretto.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -110,24 +110,24 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
-Dopo aver attivato i segmenti in *Snap Inc* destinazione, sarà possibile visualizzare i segmenti nel pannello di gestione Snap Ads [**Tipi di pubblico** sezione](https://businesshelp.snapchat.com/s/article/audience-sharing). Per passare a questa sezione, effettua le seguenti operazioni:
+Dopo aver attivato i tipi di pubblico su *Snap Inc* destinazione, sarà possibile visualizzare i tipi di pubblico in Snap Ads Manager [**Tipi di pubblico** sezione](https://businesshelp.snapchat.com/s/article/audience-sharing). Per passare a questa sezione, effettua le seguenti operazioni:
 
 1. Accedi a [Gestione annunci snap](https://ads.snapchat.com/)
-2. Seleziona **Tipi di pubblico** dal menu a discesa nell’angolo superiore sinistro dello schermo. Nella Libreria tipi di pubblico puoi vedere i segmenti attivati in Adobe Experience Platform:
+2. Seleziona **Tipi di pubblico** dal menu a discesa nell’angolo superiore sinistro dello schermo. I tipi di pubblico attivati in Adobe Experience Platform sono visualizzati nella Libreria tipi di pubblico:
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un segmento di Adobe viene attivato per la prima volta in Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il segmento. Per ulteriori informazioni sulla valutazione dei segmenti in Experience Platform, consulta la sezione [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Tieni presente che quando un pubblico di Adobi viene attivato per la prima volta in Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico, consulta l’ Experience Platform [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

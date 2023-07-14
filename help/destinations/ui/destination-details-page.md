@@ -1,9 +1,9 @@
 ---
 keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli destinazioni;destination details page
 title: Visualizzare i dettagli della destinazione
-description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
+description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 1%
@@ -50,8 +50,8 @@ La tabella che segue riporta i controlli e i dettagli forniti dalla barra a dest
 
 | Elemento barra a destra | Descrizione |
 | --- | --- |
-| [!UICONTROL Attivare segmenti] | Selezionare questo controllo per modificare i segmenti mappati alla destinazione, aggiornare le pianificazioni di esportazione o aggiungere e rimuovere attributi e identità mappati. Consulta le guide su [attivazione dei dati sul pubblico nelle destinazioni di streaming dei segmenti](./activate-segment-streaming-destinations.md), [attivazione dei dati sul pubblico in destinazioni basate su profili batch](./activate-batch-profile-destinations.md), e [attivazione dei dati sul pubblico per lo streaming di destinazioni basate su profili](./activate-streaming-profile-destinations.md) per ulteriori informazioni. |
-| [!UICONTROL Elimina] | Consente di eliminare questo flusso di dati e di annullare la mappatura dei segmenti precedentemente attivati, se presenti. |
+| [!UICONTROL Attiva tipi di pubblico] | Selezionare questo controllo per modificare i tipi di pubblico mappati alla destinazione, aggiornare le pianificazioni di esportazione o aggiungere e rimuovere gli attributi e le identità mappati. Consulta le guide su [attivazione dei dati sul pubblico nelle destinazioni di streaming del pubblico](./activate-segment-streaming-destinations.md), [attivazione dei dati sul pubblico in destinazioni basate su profili batch](./activate-batch-profile-destinations.md), e [attivazione dei dati sul pubblico per lo streaming di destinazioni basate su profili](./activate-streaming-profile-destinations.md) per ulteriori informazioni. |
+| [!UICONTROL Elimina] | Consente di eliminare questo flusso di dati e di annullare la mappatura dei tipi di pubblico precedentemente attivati, se presenti. |
 | [!UICONTROL Nome destinazione] | Questo campo può essere modificato per aggiornare il nome della destinazione. |
 | [!UICONTROL Descrizione] | Questo campo può essere modificato per aggiornare o aggiungere una descrizione facoltativa alla destinazione. |
 | [!UICONTROL Destinazione] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Consulta la [catalogo delle destinazioni](../catalog/overview.md) per ulteriori informazioni. |
@@ -81,7 +81,6 @@ Il [!UICONTROL Il flusso di dati viene eseguito] fornisce i dati delle metriche 
 >* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
 >* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinazioni, vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
 
-
 ![Visualizzazione esecuzioni flusso di dati](../assets/ui/details-page/dataflow-runs.png)
 
 ### Durata esecuzioni flusso di dati {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ Per ulteriori informazioni, consulta [il flusso di dati viene eseguito sulle des
 
 ### Destinazioni basate su file {#file-based}
 
-Per eseguire il flusso di dati su destinazioni basate su file, il **[!UICONTROL Durata di elaborazione]** dipende dalle dimensioni dei dati esportati e dal caricamento del sistema. Inoltre, il flusso di dati viene eseguito su destinazioni basate su file e viene suddiviso per segmento.
+Per eseguire il flusso di dati su destinazioni basate su file, il **[!UICONTROL Durata di elaborazione]** dipende dalle dimensioni dei dati esportati e dal caricamento del sistema. Inoltre, il flusso di dati viene eseguito su destinazioni basate su file e viene suddiviso per pubblico.
 
 ![Immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione basata su file.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ Per ulteriori informazioni, consulta [il flusso di dati viene eseguito su destin
 
 ## [!UICONTROL Dati di attivazione] {#activation-data}
 
-Il [!UICONTROL Dati di attivazione] Nella scheda viene visualizzato un elenco dei segmenti mappati sulla destinazione, inclusa la data di inizio e di fine (se applicabile), e altre informazioni rilevanti per l’esportazione dei dati, come il tipo, la pianificazione e la frequenza dell’esportazione. Per visualizzare i dettagli di un particolare segmento, selezionane il nome dall’elenco.
+Il [!UICONTROL Dati di attivazione] Nella scheda viene visualizzato un elenco dei tipi di pubblico mappati sulla destinazione, che include la data di inizio e la data di fine (se applicabili) e altre informazioni rilevanti per l’esportazione dei dati, come il tipo, la pianificazione e la frequenza dell’esportazione. Per visualizzare i dettagli di un particolare pubblico, selezionane il nome dall’elenco.
 
 >[!TIP]
 >
->Per visualizzare e modificare i dettagli degli attributi e delle identità mappati a una destinazione, seleziona **[!UICONTROL Attivare segmenti]** nel [barra a destra](#right-rail).
+>Per visualizzare e modificare i dettagli degli attributi e delle identità mappati a una destinazione, seleziona **[!UICONTROL Attiva tipi di pubblico]** nel [barra a destra](#right-rail).
 
 ![Destinazione batch della visualizzazione dati di attivazione](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ Il [!UICONTROL Dati di attivazione] Nella scheda viene visualizzato un elenco de
 
 >[!NOTE]
 >
->Per informazioni dettagliate sull’esplorazione della pagina dei dettagli di un segmento, consulta [Panoramica sulla segmentazione dell’interfaccia utente](../../segmentation/ui/overview.md#segment-details).
+>Per informazioni dettagliate sull’esplorazione della pagina dei dettagli di un pubblico, consulta [Panoramica sulla segmentazione dell’interfaccia utente](../../segmentation/ui/overview.md#segment-details).

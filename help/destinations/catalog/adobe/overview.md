@@ -3,7 +3,7 @@ keywords: destinazioni;soluzioni experience cloud; target;destinazione target; a
 title: Panoramica sulle destinazioni degli Adobi
 description: Gestisci la customer experience collegando i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 12%
@@ -45,8 +45,8 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Estensione Marketo Munchkin](../email/marketo-munchkin.md)
 * [Estensione Marketo Web Personalization](../personalization/marketo-web-personalization.md)
 
-## Experience Platform di condivisione dei segmenti
+## Experience Platform di condivisione del pubblico
 
-Utilizza la funzionalità di condivisione del segmento Experience Platform per condividere i segmenti di Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
+Utilizza la funzionalità di condivisione del pubblico Experience Platform per condividere i tipi di pubblico Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
 
-* [Condivisione dei segmenti di Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Condivisione del pubblico di Experienci Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

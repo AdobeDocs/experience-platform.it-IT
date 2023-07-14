@@ -3,9 +3,9 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1005'
 ht-degree: 3%
 
 ---
@@ -48,8 +48,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 | --- | --- | --- |
-| Tipo di esportazione | Esportazione del segmento | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Criteo] destinazione. |
-| Frequenza di esportazione | Streaming | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](../../destination-types.md#streaming-destinations). |
+| Tipo di esportazione | Esportazione pubblico | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Criteo] destinazione. |
+| Frequenza di esportazione | Streaming | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](../../destination-types.md#streaming-destinations). |
 
 ## Casi d’uso {#use-cases}
 
@@ -61,7 +61,7 @@ Presenta la tua azienda con offerte di prodotti pertinenti e creatività flessib
 
 ### Caso d’uso 2: aumentare le conversioni dei siti web
 
-Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il segmento Adobe CDP per coinvolgere nuovamente i clienti esistenti o rivolgerti ai consumatori in modo simile ai tuoi acquirenti più fedeli.
+Quando i visitatori lasciano il tuo sito web, ricorda loro cosa non riescono a fare con annunci di retargeting che aumentano le conversioni mostrando offerte speciali e offerte iperrilevanti, ovunque vadano dopo. Connetti il tuo pubblico Adobe di CDP per coinvolgere nuovamente i clienti esistenti o rivolgerti ai consumatori in modo simile ai tuoi acquirenti più fedeli.
 
 ## Connetti a criterio {#connect}
 
@@ -107,17 +107,17 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate-segments}
+## Attiva il pubblico in questa destinazione {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 
-Puoi visualizzare i segmenti esportati in [Centro di gestione dei criteri](https://marketing.criteo.com/audience-manager/dashboard).
+Puoi visualizzare i tipi di pubblico esportati in [Centro di gestione dei criteri](https://marketing.criteo.com/audience-manager/dashboard).
 
 Il corpo della richiesta di aggiunta di un profilo utente ricevuto da [!DNL Criteo] la connessione è simile alla seguente:
 

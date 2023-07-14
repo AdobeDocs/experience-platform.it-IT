@@ -2,7 +2,7 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /testing/destinationInstance per verificare se la destinazione basata su file è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione basata su file con profili di esempio
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Prima di utilizzare il `/testing/destinationInstance` endpoint, assicurati di so
 * Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione.
 * Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
 
-   ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Facoltativo*: se desideri testare la configurazione di destinazione con un profilo di esempio aggiunto alla chiamata API, utilizza [/sample-profiles](file-based-sample-profile-generation-api.md) per generare un profilo di esempio basato sullo schema di origine esistente. Se non fornisci un profilo di esempio, l’API ne genererà uno e lo restituirà nella risposta.
 
 ## Verifica la configurazione di destinazione senza aggiungere profili alla chiamata {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione del flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due segmenti all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni segmento attivato corrisponderà a un file esportato. |
+| `activations` | Restituisce l’ID del pubblico e l’ID di esecuzione del flusso per ogni pubblico attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di tipi di pubblico mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due tipi di pubblico all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni pubblico attivato corrisponderà a un file esportato. |
 | `results` | Restituisce l’ID dell’istanza di destinazione e gli ID di esecuzione del flusso che è possibile utilizzare per chiamare [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l’integrazione. |
 | `inputProfiles` | Restituisce i profili di esempio generati automaticamente dall’API. |
 
@@ -232,7 +232,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 insieme al 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `activations` | Restituisce l’ID del segmento e l’ID dell’esecuzione del flusso per ciascun segmento attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di segmenti mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due segmenti all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni segmento attivato corrisponderà a un file esportato. |
+| `activations` | Restituisce l’ID del pubblico e l’ID di esecuzione del flusso per ogni pubblico attivato. Il numero di voci di attivazione (e dei file generati associati) è uguale al numero di tipi di pubblico mappati sull’istanza di destinazione. <br><br> Esempio: se hai mappato due tipi di pubblico all’istanza di destinazione, il `activations` l’array conterrà due voci. Ogni pubblico attivato corrisponderà a un file esportato. |
 | `results` | Restituisce l’ID dell’istanza di destinazione e gli ID di esecuzione del flusso che è possibile utilizzare per chiamare [API dei risultati](file-based-destination-results-api.md), per testare ulteriormente l’integrazione. |
 | `inputProfiles` | Restituisce i profili di esempio personalizzati passati nella richiesta API. |
 

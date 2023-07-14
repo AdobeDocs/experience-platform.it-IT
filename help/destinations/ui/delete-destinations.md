@@ -4,7 +4,7 @@ title: Elimina destinazioni
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per eliminare una destinazione esistente nell'interfaccia utente di Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Nell’interfaccia utente di Adobe Experience Platform, puoi eliminare le connessioni esistenti alle destinazioni.
 
-L’eliminazione di una destinazione rimuove tutti i flussi di dati esistenti in tale destinazione. Tutti i segmenti attivati nelle destinazioni eliminate vengono annullati prima dell’eliminazione del flusso di dati.
+L’eliminazione di una destinazione rimuove tutti i flussi di dati esistenti in tale destinazione. Tutti i tipi di pubblico attivati nelle destinazioni eliminate vengono annullati prima dell’eliminazione del flusso di dati.
 
 Esistono due modi per eliminare le destinazioni dal [!DNL Platform] [!DNL UI]. Puoi eseguire le seguenti operazioni:
 
@@ -61,11 +61,11 @@ Per eliminare una destinazione dalla pagina dei dettagli della destinazione, seg
 
    * Se la destinazione dispone di flussi di dati esistenti, viene visualizzato il [!UICONTROL Il flusso di dati viene eseguito] scheda.
 
-      ![Scheda Esecuzioni flusso di dati](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![Scheda Esecuzioni flusso di dati](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * Se la destinazione non dispone di flussi di dati esistenti, viene visualizzata una pagina vuota in cui puoi iniziare ad attivare i tipi di pubblico.
 
-      ![Dettagli della destinazione](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![Dettagli della destinazione](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. Seleziona **[!UICONTROL Elimina]** nella barra a destra.
 

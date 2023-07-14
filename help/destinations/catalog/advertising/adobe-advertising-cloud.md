@@ -3,7 +3,7 @@ keywords: Advertising Cloud;estensione advertising cloud; destinazione advertisi
 title: Estensione Adobe Advertising Cloud
 description: L'estensione Adobe Advertising Cloud è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-Questo è il [!DNL Advertising Cloud] estensione per l&#39;implementazione [!DNL Advertising Cloud] I tag di conversione e di segmento per DSP e Ricerca (DCO non è attualmente supportato).
+Questo è il [!DNL Advertising Cloud] estensione per l&#39;implementazione [!DNL Advertising Cloud] I tag di conversione e di pubblico per DSP e Ricerca (DCO non è attualmente supportato).
 
 Adobe Advertising Cloud è un’estensione pubblicitaria in Adobe Experience Platform.
 

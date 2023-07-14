@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive i passaggi necessari per configurare una destinazione basata su file utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione basata su file
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -384,10 +384,10 @@ A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
 
 Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare [strumento di test di destinazione](../testing-api/batch-destinations/file-based-destination-testing-overview.md) per testare l’integrazione tra Adobe Experience Platform e la tua destinazione.
 
-Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare segmenti in Experience Platform, consulta le due risorse seguenti:
+Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experience Platform, consulta le due risorse seguenti:
 
-* [Creare una pagina di documentazione del segmento](/help/segmentation/ui/overview.md#create-segment)
-* [Procedura dettagliata sulla creazione di un video segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/overview.md#create-segment)
+* [Procedura dettagliata per la creazione di un video sul pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Passaggio 6: pubblicare la destinazione {#publish-destination}
 

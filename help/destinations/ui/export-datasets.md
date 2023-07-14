@@ -3,7 +3,7 @@ title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 5%
@@ -35,14 +35,14 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Quando attivare segmenti o esportare set di dati {#when-to-activate-segments-or-activate-datasets}
+## Quando attivare tipi di pubblico o esportare set di dati {#when-to-activate-audiences-or-activate-datasets}
 
-Alcune destinazioni basate su file nel catalogo Experience Platform supportano sia l’attivazione dei segmenti che l’esportazione dei set di dati.
+Alcune destinazioni basate su file nel catalogo Experience Platform supportano sia l’attivazione del pubblico che l’esportazione di set di dati.
 
-* Considera l’attivazione dei segmenti quando desideri che i dati siano strutturati in profili raggruppati per interessi o qualifiche del pubblico.
+* Considera l’attivazione di tipi di pubblico quando desideri che i dati siano strutturati in profili raggruppati per interessi o qualifiche di pubblico.
 * In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per generare rapporti, flussi di lavoro di data science, per soddisfare i requisiti di conformità e molti altri casi d’uso.
 
-Questo documento contiene tutte le informazioni necessarie per esportare i set di dati. Se desideri attivare i segmenti nell’archiviazione cloud o nelle destinazioni del marketing via e-mail, leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md).
+Questo documento contiene tutte le informazioni necessarie per esportare i set di dati. Per attivare i tipi di pubblico nell’archiviazione cloud o nelle destinazioni del marketing via e-mail, leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisiti {#prerequisites}
 

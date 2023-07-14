@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1833'
 ht-degree: 2%
 
 ---
@@ -130,6 +130,14 @@ Dopo aver completato i prerequisiti, ora puoi selezionare la destinazione di per
 ## Seleziona i tipi di pubblico {#select-audiences}
 
 Utilizza le caselle di controllo a sinistra dei nomi del pubblico per selezionare i tipi di pubblico da attivare nella destinazione, quindi seleziona **[!UICONTROL Successivo]**.
+
+Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le caselle di controllo a sinistra dei nomi dei tipi di pubblico, quindi seleziona **[!UICONTROL Successivo]**.
+
+Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
+
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Seleziona i tipi di pubblico](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

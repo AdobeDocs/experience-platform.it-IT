@@ -2,7 +2,7 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming con Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Passaggio 3: creare un modello di trasformazione dei messaggi. Utilizza il linguaggio dei modelli per specificare il formato di output del messaggio {#create-transformation-template}
 
-In base ai payload supportati dalla destinazione, è necessario creare un modello che trasformi il formato dei dati esportati dal formato XDM Adobe in un formato supportato dalla destinazione. Consulta esempi di modelli nella sezione [Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenze a segmenti](../functionality/destination-server/message-format.md#using-templating) e utilizza [strumento per la creazione di modelli](../testing-api/streaming-destinations/create-template.md) fornite dall’Adobe.
+In base ai payload supportati dalla destinazione, è necessario creare un modello che trasformi il formato dei dati esportati dal formato XDM Adobe in un formato supportato dalla destinazione. Consulta esempi di modelli nella sezione [Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico](../functionality/destination-server/message-format.md#using-templating) e utilizza [strumento per la creazione di modelli](../testing-api/streaming-destinations/create-template.md) fornite dall’Adobe.
 
 Dopo aver creato un modello di trasformazione dei messaggi che funziona per te, aggiungilo al server e alla configurazione del modello creati nel passaggio 1.
 
@@ -273,10 +273,10 @@ Se hai selezionato `"authenticationRule": "PLATFORM_AUTHENTICATION"`, è necessa
 
 Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare [strumento di test di destinazione](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) per testare l’integrazione tra Adobe Experience Platform e la tua destinazione.
 
-Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare segmenti in Experience Platform, consulta le due risorse seguenti:
+Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experience Platform, consulta le due risorse seguenti:
 
-* [Creare una pagina di documentazione del segmento](/help/segmentation/ui/overview.md#create-segment)
-* [Procedura dettagliata sulla creazione di un video segmento](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/overview.md#create-segment)
+* [Procedura dettagliata per la creazione di un video sul pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Passaggio 7: pubblicare la destinazione {#publish-destination}
 

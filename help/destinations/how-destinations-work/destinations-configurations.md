@@ -2,7 +2,7 @@
 title: Impostazioni di esportazione comuni e configurabili nelle destinazioni
 description: Scopri quali impostazioni di esportazione nelle destinazioni sono configurabili a livello di destinazione e quali sono fisse e non possono essere modificate.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Ulteriori informazioni sulle diverse opzioni e passaggi disponibili nel flusso d
 
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [Attivare i dati sul pubblico nelle destinazioni Enterprise](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Esporta file on-demand in destinazioni batch](/help/destinations/ui/export-file-now.md)
 * [(Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud](/help/destinations/ui/export-datasets.md)
 

@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 ## Connessioni {#connections}
 
-**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione di segmenti in streaming]**, e **[!DNL Edge Personalization]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare la [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta segmenti e profili qualificati nelle destinazioni.
+**[!UICONTROL Esportazione profilo]**, **[!UICONTROL Esportazione di pubblico in streaming]**, e **[!DNL Edge Personalization]** le destinazioni in Adobe Experience Platform acquisiscono i dati dell’evento, combinandoli con altre origini dati per formare la [Profilo cliente in tempo reale](../profile/home.md), applica la segmentazione ed esporta tipi di pubblico e profili qualificati nelle destinazioni.
 
 ## Destinazioni di esportazione profilo {#profile-export}
 
@@ -41,7 +41,7 @@ Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso 
 
 Utilizza i connettori dati di destinazione Enterprise per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
 
-Queste destinazioni ricevono i dati di segmenti e profili come flussi di dati di Experience Platform.
+Queste destinazioni ricevono i dati di pubblico e profilo come flussi di dati di Experience Platform.
 
 Le destinazioni Enterprise includono:
 
@@ -53,9 +53,9 @@ Le destinazioni Enterprise includono:
 
 Ricezione di destinazioni basate su file `.csv` file contenenti profili e/o attributi. [Amazon S3](catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile esportare file contenenti esportazioni di profili.
 
-## Destinazioni di esportazione di segmenti in streaming {#streaming-destinations}
+## Destinazioni di esportazione del pubblico in streaming {#streaming-destinations}
 
-Le destinazioni di esportazione dei segmenti ricevono i dati dei segmenti di Experience Platform. Queste destinazioni utilizzano ID segmento o ID utente. Destinazioni pubblicitarie e social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
+Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Experienci Platform. Queste destinazioni utilizzano ID pubblico o ID utente. Destinazioni pubblicitarie e social come [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), o [Facebook](catalog/social/facebook.md) sono esempi di tali destinazioni.
 
 ## Destinazioni di personalizzazione Edge {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Le destinazioni di personalizzazione Edge in Experience Platform includono [Adob
 
 Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## Destinazioni di esportazione di profili e segmenti: panoramica video {#video}
+## Destinazioni di esportazione profilo e pubblico - Panoramica video {#video}
 
 Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
@@ -91,7 +91,7 @@ Le estensioni di tag inoltrano i dati di eventi non elaborati a diversi tipi di 
 
 In qualità di addetto al marketing, puoi utilizzare una combinazione di connessioni ed estensioni per gestire i tuoi casi d’uso.
 
-Le connessioni sono utili quando è necessario sfruttare un profilo cliente centralizzato completo o un segmento di cliente per l’attivazione. Ad esempio, utilizza le connessioni se stai unendo dati comportamentali da un sistema di analisi con dati CRM caricati per qualificare un utente per un dato segmento prima di inviare un messaggio personalizzato a tale utente.
+Le connessioni sono utili quando è necessario sfruttare un profilo cliente centralizzato completo o un pubblico cliente per l’attivazione. Ad esempio, utilizza le connessioni se unisci dati comportamentali da un sistema di analisi con dati CRM caricati per qualificare un utente per un determinato pubblico prima di inviare un messaggio personalizzato a tale utente.
 
 Le estensioni sono utili quando i dati evento vengono utilizzati per attivare un’azione o per eseguire la segmentazione in un ambiente esterno. Ad esempio, se i dati comportamentali devono essere inoltrati a un sistema esterno senza essere uniti ad altre origini dati nel file per un determinato utente.
 

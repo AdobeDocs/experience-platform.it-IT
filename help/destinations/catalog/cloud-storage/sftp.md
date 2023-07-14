@@ -2,10 +2,10 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 7%
+source-wordcount: '1043'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 7%
 >Con la versione beta della funzionalità di esportazione dei set di dati e la migliorata funzionalità di esportazione dei file, ora potresti vedere due [!DNL SFTP] nel catalogo delle destinazioni.
 >* Se si stanno già esportando file in **[!UICONTROL SFTP]** destinazione: crea nuovi flussi di dati per il nuovo **[!UICONTROL SFTP beta]** destinazione.
 >* Se non hai ancora creato flussi di dati per **[!UICONTROL SFTP]** destinazione, utilizza il nuovo **[!UICONTROL SFTP beta]** scheda in cui esportare i file **[!UICONTROL SFTP]**.
-
 
 ![Immagine delle due schede di destinazione SFTP in una visualizzazione affiancata.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
@@ -39,8 +38,22 @@ Crea una connessione in uscita al server SFTP per esportare periodicamente file 
 
 ## Connessione a SFTP tramite API o interfaccia utente {#connect-api-or-ui}
 
-* Per connetterti al percorso di archiviazione SFTP utilizzando l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva i segmenti in questa destinazione](#activate) di seguito.
-* Per connettersi al percorso di archiviazione SFTP a livello di programmazione, leggi la [Attivare i segmenti in destinazioni basate su file utilizzando l’esercitazione API del servizio Flow](../../api/activate-segments-file-based-destinations.md).
+* Per connetterti al percorso di archiviazione SFTP utilizzando l’interfaccia utente di Platform, leggi le sezioni [Connetti alla destinazione](#connect) e [Attiva il pubblico in questa destinazione](#activate) di seguito.
+* Per connettersi al percorso di archiviazione SFTP a livello di programmazione, leggi la [Attiva i tipi di pubblico in destinazioni basate su file utilizzando l’esercitazione API del servizio Flusso](../../api/activate-segments-file-based-destinations.md).
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -85,7 +98,7 @@ Se si seleziona la **[!UICONTROL SFTP con password]** tipo di autenticazione per
 * **[!UICONTROL Password]**: password per accedere al percorso di archiviazione SFTP.
 * **[!UICONTROL Chiave di crittografia]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
 
-   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 Se si seleziona la **[!UICONTROL SFTP con chiave SSH]** tipo di autenticazione per connettersi alla posizione SFTP:
@@ -98,7 +111,7 @@ Se si seleziona la **[!UICONTROL SFTP con chiave SSH]** tipo di autenticazione p
 * **[!UICONTROL Chiave SSH]**: chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password.
 * **[!UICONTROL Chiave di crittografia]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
 
-   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### Dettagli della destinazione {#destination-details}
 
@@ -113,13 +126,13 @@ Dopo aver stabilito la connessione di autenticazione alla posizione SFTP, fornis
 * **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL SFTP beta]** destinazione.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Questa opzione è disponibile solo per **[!UICONTROL SFTP beta]** destinazione.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## (Beta) Esportare i set di dati {#export-datasets}
 
@@ -130,7 +143,7 @@ Questa destinazione supporta le esportazioni di set di dati. Per informazioni co
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL SFTP] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di attivazione dei segmenti.
+Per [!DNL SFTP] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di audience activation.
 
 ## ELENCO CONSENTITI di indirizzo IP {#ip-address-allow-list}
 

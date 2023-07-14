@@ -4,9 +4,9 @@ description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi 
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1736'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ Utilizza la connessione LiveRamp per integrare i tipi di pubblico da Adobe Real-
 >
 ><p>Questa connessione di destinazione è attualmente in fase alfa e disponibile solo per una selezione limitata di clienti. La funzionalità e la documentazione sono soggette a modifiche.</p>
 &gt;<p>La versione finale di questa connessione di destinazione potrebbe richiedere la migrazione del cliente.</p>
-
 
 ## Casi d’uso {#use-cases}
 
@@ -45,8 +44,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL LiveRamp SFTP] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione dei segmenti, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL LiveRamp SFTP] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 * **[!UICONTROL Password]**: password per il [!DNL LiveRamp SFTP] percorso di archiviazione.
 * **[!UICONTROL Chiave di crittografia PGP/GPG]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente. Se si fornisce una chiave di crittografia, è necessario fornire anche un **[!UICONTROL ID sottochiave di crittografia]** nel [dettagli della destinazione](#destination-details) sezione.
 
-   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **SFTP con autenticazione della chiave SSH** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 * **[!UICONTROL Chiave di crittografia PGP/GPG]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Se si fornisce una chiave di crittografia, è necessario fornire anche un **[!UICONTROL ID sottochiave di crittografia]** nel [dettagli della destinazione](#destination-details) sezione. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
 
-   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### Inserisci i dettagli della destinazione {#destination-details}
 
@@ -110,28 +109,28 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Pianificazione {#scheduling}
 
-In [!UICONTROL Pianificazione] crea una pianificazione di esportazione per ciascun segmento, con le impostazioni riportate di seguito.
+In [!UICONTROL Pianificazione] crea una pianificazione di esportazione per ogni pubblico, con le impostazioni mostrate di seguito.
 
 >[!IMPORTANT]
 >
->Tutti i segmenti attivati in questa destinazione devono essere configurati con la stessa pianificazione, come mostrato di seguito.
+>Tutti i tipi di pubblico attivati in questa destinazione devono essere configurati con la stessa pianificazione, come mostrato di seguito.
 
 * **[!UICONTROL Opzioni di esportazione file]**: [!UICONTROL Esporta file completi]. [Esportazioni file incrementali](../../ui/activate-batch-profile-destinations.md#export-incremental-files) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
 * **[!UICONTROL Frequenza]**: [!UICONTROL Giornaliero]
-* Imposta il tempo di esportazione su **[!UICONTROL Dopo la valutazione del segmento]**. Esportazioni e [esportazioni di file su richiesta](../../ui/export-file-now.md) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
+* Imposta il tempo di esportazione su **[!UICONTROL Dopo la valutazione del segmento]**. Esportazioni di pubblico pianificate e [esportazioni di file su richiesta](../../ui/export-file-now.md) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
 * **[!UICONTROL Data]**: seleziona l’ora di inizio e di fine dell’esportazione come desideri.
 
-![Schermata dell’interfaccia utente di Platform che mostra il passaggio di pianificazione dei segmenti.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![Schermata dell’interfaccia utente di Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 Il nome del file esportato non è attualmente configurabile dall&#39;utente. Tutti i file esportati in [!DNL LiveRamp SFTP] La destinazione viene automaticamente denominata in base al seguente modello:
 
@@ -179,28 +178,28 @@ I dati vengono esportati in [!DNL LiveRamp SFTP] percorso di archiviazione confi
 
 Durante l&#39;esportazione di file in [!DNL LiveRamp SFTP] di destinazione, Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md).
 
-Ad esempio, consideriamo i seguenti segmenti:
+Ad esempio, prendiamo in considerazione i seguenti tipi di pubblico:
 
-* Segmento A (criterio di unione 1)
-* Segmento B (criterio di unione 2)
-* Segmento C (criterio di unione 1)
-* Segmento D (criterio di unione 1)
+* Pubblico A (criterio di unione 1)
+* Pubblico B (criterio di unione 2)
+* Pubblico C (criterio di unione 1)
+* Pubblico D (criterio di unione 1)
 
 Platform esporterà due file CSV in [!DNL LiveRamp SFTP]:
 
-* Un file CSV contenente i segmenti A, C e D;
-* Un file CSV contenente il segmento B.
+* Un file CSV contenente i tipi di pubblico A, C e D;
+* Un file CSV contenente il pubblico B.
 
-I file CSV esportati contengono profili con gli attributi selezionati e lo stato del segmento corrispondente, in colonne separate, con il nome dell’attributo e gli ID del segmento come intestazioni di colonna.
+I file CSV esportati contengono profili con gli attributi selezionati e lo stato del pubblico corrispondente, in colonne separate, con il nome dell’attributo e gli ID del pubblico come intestazioni di colonna.
 
-I profili inclusi nei file esportati possono corrispondere a uno dei seguenti stati di qualificazione dei segmenti:
+I profili inclusi nei file esportati possono corrispondere a uno dei seguenti stati di qualificazione del pubblico:
 
-* `Active`: il profilo è attualmente qualificato per il segmento.
-* `Expired`: il profilo non è più qualificato per il segmento, ma lo è già stato in passato.
-* `""`(stringa vuota): il profilo non è mai qualificato per il segmento.
+* `Active`: il profilo è attualmente qualificato per il pubblico.
+* `Expired`: il profilo non è più qualificato per il pubblico, ma lo è già stato in passato.
+* `""`(stringa vuota): il profilo non è mai qualificato per il pubblico.
 
 
-Ad esempio, un file CSV esportato con `email` l’attributo e 3 segmenti potrebbero essere simili al seguente:
+Ad esempio, un file CSV esportato con `email` l’attributo e 3 tipi di pubblico potrebbero essere simili al seguente:
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 Poiché Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato eseguito per ogni ID del criterio di unione.
 
-Ciò significa che **[!UICONTROL Identità attivate]** e **[!UICONTROL Profili ricevuti]** metriche in [il flusso di dati viene eseguito](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Le pagine vengono aggregate per ogni gruppo di segmenti che utilizzano lo stesso criterio di unione, anziché essere visualizzate per ogni segmento.
+Ciò significa che **[!UICONTROL Identità attivate]** e **[!UICONTROL Profili ricevuti]** metriche in [il flusso di dati viene eseguito](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) Le pagine vengono aggregate per ogni gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, anziché essere visualizzate per ogni pubblico.
 
-In seguito alla generazione di flussi di dati per un gruppo di segmenti che utilizzano lo stesso criterio di unione, i nomi dei segmenti non vengono visualizzati nel [dashboard di monitoraggio](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+In seguito alla generazione del flusso di dati per un gruppo di tipi di pubblico che utilizzano lo stesso criterio di unione, i nomi dei tipi di pubblico non vengono visualizzati in [dashboard di monitoraggio](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![Screeshot dell’interfaccia utente di Experience Platform che mostra la metrica delle identità attivate.](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

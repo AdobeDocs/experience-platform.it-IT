@@ -1,9 +1,9 @@
 ---
 keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
-description: Adobe Experience Platform può distribuire i segmenti come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
+description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 4a4c82cc4528fe07bbdb75ae9f795bdbab48c089
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform può distribuire i segmenti come file di dati nelle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]e SFTP. Per [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinazioni, i dati vengono inviati in streaming in Experience Platform in [!DNL JSON] formato.
+Adobe Experience Platform può distribuire i tipi di pubblico come file di dati alle posizioni di archiviazione cloud. Questo consente di inviare i tipi di pubblico e i relativi attributi di profilo ai sistemi interni, tramite file CSV per [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage]e SFTP. Per [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] destinazioni, i dati vengono inviati in streaming in Experience Platform in [!DNL JSON] formato.
 
 ![Adobe di destinazioni dell’archiviazione cloud](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
@@ -33,7 +33,7 @@ Adobe Experience Platform supporta le seguenti destinazioni di archiviazione clo
 
 ## Connettersi a una nuova destinazione di archiviazione cloud {#connect-destination}
 
-Per inviare segmenti alle destinazioni di archiviazione cloud per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
+Per inviare i tipi di pubblico alle destinazioni di archiviazione cloud per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
 
 
 ## Utilizzare le macro per creare una cartella nel percorso di archiviazione {#use-macros}
@@ -42,11 +42,11 @@ Per inviare segmenti alle destinazioni di archiviazione cloud per le campagne, P
 >
 > Le funzionalità descritte in questa sezione sono attualmente disponibili per [Amazon S3](amazon-s3.md) solo destinazioni.
 
-Per creare una cartella personalizzata per ogni file di segmento nel percorso di archiviazione, è possibile utilizzare le macro nel campo di input del percorso della cartella. Inserire le macro alla fine del campo di input, come illustrato di seguito.
+Per creare una cartella personalizzata per file di pubblico nel percorso di archiviazione, puoi utilizzare le macro nel campo di input del percorso della cartella. Inserire le macro alla fine del campo di input, come illustrato di seguito.
 
 ![Come utilizzare le macro per creare una cartella nell’archivio](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Gli esempi seguenti fanno riferimento a un segmento di esempio `Luxury Audience` con ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Gli esempi seguenti fanno riferimento a un pubblico di esempio `Luxury Audience` con ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Macro 1:`%SEGMENT_NAME%`**
 
@@ -65,4 +65,4 @@ Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/Luxury Aud
 
 ## Tipo di esportazione dei dati {#export-type}
 
-Supporto delle destinazioni di archiviazione cloud **Esportazione basata su profili**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a segmenti e altro ancora.
+Supporto delle destinazioni di archiviazione cloud **Esportazione basata su profili**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a un pubblico e altro ancora.

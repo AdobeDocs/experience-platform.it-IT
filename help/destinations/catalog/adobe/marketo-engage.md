@@ -2,9 +2,9 @@
 title: Destinazione Marketo Engage
 description: Marketi Engage è l'unica soluzione end-to-end di gestione della customer experience (CXM) per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >* Se stai già attivando i dati in **[!UICONTROL Marketo V1]** destinazione: crea nuovi flussi di dati per **[!UICONTROL Marketo V2]** destinazione ed eliminare i flussi di dati esistenti nella **[!UICONTROL Marketo V1]** destinazione entro febbraio 2023. A partire da tale data, la **[!UICONTROL Marketo V1]** la scheda di destinazione verrà rimossa.
 >* Se non hai ancora creato flussi di dati per **[!UICONTROL Marketo V1]** destinazione, utilizza il nuovo **[!UICONTROL Marketo V2]** per la connessione e l&#39;esportazione di dati in Marketo.
 
-
 ![Immagine delle due schede di destinazione Marketo affiancata.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 I miglioramenti nella destinazione di Marketo V2 includono:
@@ -31,7 +30,7 @@ I miglioramenti nella destinazione di Marketo V2 includono:
 
 [!DNL Marketo Engage] è l&#39;unica soluzione CXM (Customer Experience Management) end-to-end per il marketing, la pubblicità, le analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 
-La destinazione consente agli addetti al marketing di inviare i segmenti creati in Adobe Experience Platform a Marketo, dove verranno visualizzati come elenchi statici.
+La destinazione consente agli addetti al marketing di inviare i tipi di pubblico creati in Adobe Experience Platform a Marketo, dove verranno visualizzati come elenchi statici.
 
 ## Identità e attributi supportati {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ La destinazione consente agli addetti al marketing di inviare i segmenti creati 
 
 È possibile mappare gli attributi da Experience Platform a qualsiasi attributo a cui la tua organizzazione ha accesso in Marketo. In Marketo, puoi utilizzare [Descrizione della richiesta API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) per recuperare i campi attributo a cui la tua organizzazione ha accesso.
 
+## Supporto di tipi di pubblico esterni {#external-audiences-support}
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico esterni descritti nella tabella seguente.
+
+| Tipo di pubblico esterno | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (e-mail, ECID) utilizzati in [!DNL Marketo Engage] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (e-mail, ECID) utilizzati in [!DNL Marketo Engage] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Impostare la destinazione e attivare i segmenti {#set-up}
+## Impostare la destinazione e attivare i tipi di pubblico {#set-up}
 
 >[!IMPORTANT]
 > 
 >* Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions).
 >* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
+Per istruzioni dettagliate su come impostare la destinazione e attivare i tipi di pubblico, leggi [Pubblicare un pubblico Adobe Experience Platform in un elenco statico di Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) nella documentazione di Marketo.
 
-Per istruzioni dettagliate su come impostare la destinazione e attivare i segmenti, leggi [Invio di un segmento Adobe Experience Platform a un elenco statico Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) nella documentazione di Marketo.
-
-Il video seguente illustra anche i passaggi per configurare una destinazione Marketo e attivare i segmenti.
+Il video seguente illustra anche i passaggi per configurare una destinazione Marketo e attivare i tipi di pubblico.
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ Il video seguente illustra anche i passaggi per configurare una destinazione Mar
 > 
 >* La scheda di destinazione da utilizzare nell’interfaccia utente di Experience Platform è **[!UICONTROL Marketo V2]**.
 >* Il video non mostra il nuovo **[!UICONTROL Creazione di persona]** campo del selettore nel flusso di lavoro connetti a destinazione.
->* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al segmento supportate al momento della registrazione del video. Puoi anche esportare i membri del segmento in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
->* In **[!UICONTROL Pianifica passaggio di segmento]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente una **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.
-
+>* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al pubblico supportate al momento della registrazione del video. Puoi anche esportare i membri del pubblico in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
+>* In **[!UICONTROL Passaggio Pianificazione pubblico]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente una **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

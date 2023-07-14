@@ -4,7 +4,7 @@ title: Elimina account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per eliminare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Per eliminare gli account di destinazione esistenti, effettua le seguenti operaz
 
    ![Filtra destinazioni](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera eliminare. Viene visualizzato un pannello a comparsa che fornisce le opzioni per **[!UICONTROL Attivare segmenti]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]** l’account. Seleziona la ![Pulsante Elimina](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Elimina]** per eliminare l’account desiderato.
+3. Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera eliminare. Viene visualizzato un pannello a comparsa che fornisce le opzioni per **[!UICONTROL Attiva tipi di pubblico]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]** l’account. Seleziona la ![Pulsante Elimina](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Elimina]** per eliminare l’account desiderato.
 
    ![Elimina account di destinazione](../assets/ui/delete-accounts/delete-accounts.png)
 

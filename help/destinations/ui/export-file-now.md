@@ -3,9 +3,9 @@ title: (Beta) Esportare file on-demand in destinazioni batch utilizzando l’int
 type: Tutorial
 description: Scopri come esportare i file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '741'
 ht-degree: 8%
 
 ---
@@ -30,9 +30,9 @@ ht-degree: 8%
 
 Questo articolo spiega come utilizzare l’interfaccia utente di Experience Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [e-mail marketing](/help/destinations/catalog/email-marketing/overview.md) destinazioni.
 
-Il **[!UICONTROL Esporta subito il file]** control ti consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un segmento pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni programmate in precedenza e non modifica la frequenza di esportazione del segmento. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
+Il **[!UICONTROL Esporta subito il file]** control ti consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
 
-A questo scopo, puoi anche utilizzare le API Experience Platform. Scopri come [attivare i segmenti di pubblico on-demand nelle destinazioni batch tramite l’API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+A questo scopo, puoi anche utilizzare le API Experience Platform. Scopri come [attivare i tipi di pubblico on-demand nelle destinazioni batch tramite l’API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Prerequisiti {#prerequisites}
 
@@ -48,11 +48,11 @@ Per esportare i file on-demand nelle destinazioni batch, è necessario avere [co
 
    ![Immagine che evidenzia un flusso di dati filtrato.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Seleziona la **[!UICONTROL Dati di attivazione]** e selezionare il segmento per il quale si desidera esportare un file su richiesta e selezionare **[!UICONTROL Esporta subito il file]** controllo per attivare un&#39;esportazione una tantum che invierà un file alla destinazione batch.
+3. Seleziona la **[!UICONTROL Dati di attivazione]** e selezionare il pubblico per il quale si desidera esportare un file su richiesta e selezionare **[!UICONTROL Esporta subito il file]** controllo per attivare un&#39;esportazione una tantum che invierà un file alla destinazione batch.
 
    >[!IMPORTANT]
    >
-   >La selezione di più segmenti per esportare file in blocco su richiesta non è attualmente supportata nell’interfaccia utente. Utilizza il [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md) a tal fine.
+   >La selezione di più tipi di pubblico per esportare i file in blocco su richiesta non è attualmente supportata nell’interfaccia utente di. Utilizza il [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md) a tal fine.
 
    ![Immagine che evidenzia il pulsante Export file now (Esporta file ora).](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
 
@@ -70,9 +70,9 @@ Per esportare i file on-demand nelle destinazioni batch, è necessario avere [co
 
 Quando utilizzi la proprietà, tieni presente quanto segue **[!UICONTROL Esporta subito il file]** controllo:
 
-* **[!UICONTROL Esporta subito il file]** funziona solo per i segmenti la cui pianificazione nel flusso di dati di attivazione batch si sovrappone alla data corrente. Sono inclusi i segmenti con programmi senza data di fine (frequenza di esportazione di **[!UICONTROL Una volta]**) o se la data di fine non è ancora passata.
-* Quando aggiungi un segmento a un flusso di dati esistente, attendi almeno 15 minuti prima di utilizzare il **[!UICONTROL Esporta subito il file]** controllo.
-* Se modifichi il criterio di unione di un segmento o se crei un segmento che utilizza un nuovo criterio di unione, attendi 24 ore prima di utilizzare il **[!UICONTROL Esporta subito il file]** controllo.
+* **[!UICONTROL Esporta subito il file]** funziona solo per i tipi di pubblico la cui pianificazione nel flusso di dati di attivazione batch si sovrappone alla data corrente. Sono inclusi i tipi di pubblico con pianificazioni senza data di fine (frequenza di esportazione di **[!UICONTROL Una volta]**) o se la data di fine non è ancora passata.
+* Quando aggiungi un pubblico a un flusso di dati esistente, attendi almeno 15 minuti prima di utilizzare il **[!UICONTROL Esporta subito il file]** controllo.
+* Se modifichi il criterio di unione di un pubblico o se crei un pubblico che utilizza un nuovo criterio di unione, attendi 24 ore prima di utilizzare il **[!UICONTROL Esporta subito il file]** controllo.
 
 ## Messaggi di errore dell’interfaccia utente {#ui-error-messages}
 
@@ -80,10 +80,10 @@ Quando si utilizza **[!UICONTROL Esporta subito il file]** , è possibile che si
 
 | Messaggio di errore | Risoluzione |
 |---------|----------|
-| Esecuzione già in corso per il segmento `segment ID` per ordine `dataflow ID` con id esecuzione `flow run ID` | Questo messaggio di errore indica che per un segmento è attualmente in corso un flusso di attivazione ad hoc. Attendere il completamento del processo prima di riattivarlo. |
-| Segmenti `<segment name>` non fanno parte di questo flusso di dati o non rientrano nell’intervallo di pianificazione. | Questo messaggio di errore indica che i segmenti selezionati per l’attivazione non sono mappati al flusso di dati o che la pianificazione di attivazione impostata per i segmenti è scaduta o non è ancora iniziata. Controlla se il segmento è effettivamente mappato al flusso di dati e verifica che la pianificazione di attivazione del segmento si sovrapponga alla data attuale. |
+| Esecuzione già in corso per il pubblico `segment ID` per ordine `dataflow ID` con id esecuzione `flow run ID` | Questo messaggio di errore indica che per un pubblico è attualmente in corso un flusso di attivazione ad hoc. Attendere il completamento del processo prima di riattivarlo. |
+| Tipi di pubblico `<segment name>` non fanno parte di questo flusso di dati o non rientrano nell’intervallo di pianificazione. | Questo messaggio di errore indica che i tipi di pubblico selezionati per l’attivazione non sono mappati al flusso di dati o che la pianificazione di attivazione impostata per i tipi di pubblico è scaduta o non è ancora stata avviata. Controlla se il pubblico è effettivamente mappato al flusso di dati e verifica che la pianificazione di attivazione del pubblico si sovrapponga alla data attuale. |
 
 ## Informazioni correlate {#related-information}
 
-* [Attiva segmenti di pubblico su richiesta in destinazioni batch utilizzando le API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
+* [Attiva i tipi di pubblico su richiesta nelle destinazioni batch utilizzando le API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md)

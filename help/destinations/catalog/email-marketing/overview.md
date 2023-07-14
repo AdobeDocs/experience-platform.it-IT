@@ -4,7 +4,7 @@ title: Panoramica delle destinazioni di e-mail marketing
 type: Tutorial
 description: I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio per l’invio di campagne e-mail promozionali. Scopri quali ESP sono supportati come destinazioni di Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio l’invio di campagne e-mail promozionali. Adobe Experience Platform si integra con gli ESP consentendo di attivare i segmenti nelle destinazioni di e-mail marketing.
+I provider di servizi e-mail (ESP) ti consentono di gestire le attività di e-mail marketing, ad esempio l’invio di campagne e-mail promozionali. Adobe Experience Platform si integra con gli ESP consentendo di attivare i tipi di pubblico nelle destinazioni del marketing via e-mail.
 
 ## Destinazioni di e-mail marketing supportate {#supported-destinations}
 
@@ -34,7 +34,7 @@ Adobe Experience Platform supporta le seguenti destinazioni di e-mail marketing:
 
 ## Connettersi a una nuova destinazione di e-mail marketing {#connect-destination}
 
-Per inviare segmenti a destinazioni di e-mail marketing per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
+Per inviare i tipi di pubblico a destinazioni di e-mail marketing per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
 
 ## Best practice per l’attivazione dei tipi di pubblico nelle destinazioni di e-mail marketing {#best-practices}
 
@@ -67,13 +67,13 @@ Nel selettore campo Schema, scegli gli altri campi da esportare nella destinazio
 
 {style="table-layout:auto"}
 
-## Attivare i segmenti nelle destinazioni di e-mail marketing {#activate}
+## Attivare i tipi di pubblico per le destinazioni di e-mail marketing {#activate}
 
 Alcune destinazioni di e-mail marketing nel catalogo esportano i profili in modo in streaming, tramite un’integrazione API con la destinazione.
 
 Altre destinazioni esportano i file in un percorso di archiviazione cloud. Al termine dell’esportazione, devi importare i dati dalla posizione di archiviazione cloud alla destinazione di e-mail marketing.
 
-Segui i collegamenti in [destinazioni di e-mail marketing supportate](#supported-destinations) per scoprire come attivare i segmenti in ogni destinazione di e-mail marketing.
+Segui i collegamenti in [destinazioni di e-mail marketing supportate](#supported-destinations) per scoprire come attivare i tipi di pubblico per ogni destinazione di e-mail marketing.
 
 ## Risorse aggiuntive {#additional-resources}
 

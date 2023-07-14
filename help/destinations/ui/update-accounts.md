@@ -4,7 +4,7 @@ title: Aggiorna account di destinazione
 type: Tutorial
 description: Questo tutorial elenca i passaggi per aggiornare gli account di destinazione nell’interfaccia utente di Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la p
 
    ![Filtrare gli account di destinazione](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera aggiornare. Viene visualizzato un pannello a comparsa che fornisce le opzioni per **[!UICONTROL Attivare segmenti]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]** l’account. Seleziona la ![Pulsante Modifica dettagli](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
+3. Seleziona i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera aggiornare. Viene visualizzato un pannello a comparsa che fornisce le opzioni per **[!UICONTROL Attiva tipi di pubblico]**, **[!UICONTROL Modifica dettagli]**, e **[!UICONTROL Elimina]** l’account. Seleziona la ![Pulsante Modifica dettagli](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifica dettagli]** per modificare le informazioni sull&#39;account.
 
    ![Modifica account](../assets/ui/update-accounts/accounts-edit.png)
 

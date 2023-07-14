@@ -3,9 +3,9 @@ title: (Beta) Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Questo documento è stato progettato per aiutarti ad attivare i profili nel tuo 
 
 ## Prerequisiti {#prerequisites}
 
-Prima di attivare i segmenti in [!DNL The Trade Desk], è necessario contattare il [!DNL The Trade Desk] Account Manager per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] concederà quindi l’autorizzazione e condividerà l’ID inserzionista per configurare la destinazione.
+Prima di poter attivare i tipi di pubblico su [!DNL The Trade Desk], è necessario contattare il [!DNL The Trade Desk] Account Manager per firmare il contratto di onboarding CRM. [!DNL The Trade Desk] concederà quindi l’autorizzazione e condividerà l’ID inserzionista per configurare la destinazione.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (e-mail o e-mail con hash) utilizzati nella destinazione Trade Desk. |
-| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, le identità del profilo vengono aggiornate una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [esportazioni batch](/help/destinations/destination-types.md#file-based). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (e-mail o e-mail con hash) utilizzati nella destinazione Trade Desk. |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il profilo (identità) viene aggiornato una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [esportazioni batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi i
 
 Quando ci si connette alla destinazione, l’impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l’Experience Platform [panoramica sulla governance dei dati](/help/data-governance/policies/overview.md) per ulteriori dettagli.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
-Letto [attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione di segmenti di pubblico in una destinazione.
+Letto [attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione di tipi di pubblico in una destinazione.
 
-In **[!UICONTROL Pianificazione]** pagina, puoi configurare la pianificazione e i nomi dei file per ciascun segmento che stai esportando. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
+In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
 
-![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione del pubblico.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->Tutti i segmenti attivati in [!DNL The Trade Desk] La destinazione CRM viene impostata automaticamente su una frequenza giornaliera e su un&#39;esportazione di file completa.
+>Tutti i tipi di pubblico attivati in [!DNL The Trade Desk] La destinazione CRM viene impostata automaticamente su una frequenza giornaliera e su un&#39;esportazione di file completa.
 
-![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![Schermata dell’interfaccia utente di Platform per pianificare l’attivazione del pubblico.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 In **[!UICONTROL Mappatura]** , è necessario selezionare attributi o spazi dei nomi di identità dalla colonna di origine e mappare alla colonna di destinazione.
 
-![Schermata dell’interfaccia utente di Platform per mappare l’attivazione dei segmenti.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![Schermata dell’interfaccia utente di Platform per mappare l’attivazione del pubblico.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-Di seguito è riportato un esempio di corretta mappatura identità durante l’attivazione di segmenti in [!DNL The Trade Desk] Destinazione CRM.
+Di seguito è riportato un esempio di corretta mappatura identità durante l’attivazione di tipi di pubblico su [!DNL The Trade Desk] Destinazione CRM.
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Selezione dei campi di destinazione:
 
 ## Convalida esportazione dati {#validate}
 
-Per verificare che i dati vengano esportati correttamente da Experience Platform e in [!DNL The Trade Desk], trova i segmenti nella sezione dati di Adobe 1PD in [!DNL The Trade Desk] Piattaforma di gestione dati (DMP, Data Management Platform). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno di [!DNL Trade Desk] Interfaccia utente:
+Per verificare che i dati vengano esportati correttamente da Experience Platform e in [!DNL The Trade Desk], i tipi di pubblico sono disponibili nella sezione dati di Adobe 1PD in [!DNL The Trade Desk] Piattaforma di gestione dati (DMP, Data Management Platform). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno di [!DNL Trade Desk] Interfaccia utente:
 
 1. Innanzitutto, fai clic su **[!UICONTROL Dati]** Scheda e revisione **[!UICONTROL Prime parti]**.
 2. Scorri la pagina verso il basso, sotto **[!UICONTROL Dati importati]**, troverai il **[!UICONTROL Adobe 1PD Tile]**.
-3. Fai clic su**[!UICONTROL Adobe 1PD]** e elencherà tutti i segmenti attivati nel [!DNL Trade Desk] destinazione per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
+3. Fai clic su**[!UICONTROL Adobe 1PD]** e elencherà tutti i tipi di pubblico attivati per il [!DNL Trade Desk] destinazione per l&#39;inserzionista. È inoltre possibile utilizzare la funzione di ricerca.
 4. L’ID segmento # dell’Experience Platform verrà visualizzato come Nome segmento nel [!DNL Trade Desk] UI.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}

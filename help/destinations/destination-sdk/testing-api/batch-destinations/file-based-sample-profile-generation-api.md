@@ -2,7 +2,7 @@
 description: Questa pagina spiega come utilizzare l’endpoint API /sample-profiles di Destination SDK per generare profili di esempio in base a uno schema di origine. Puoi utilizzare questi profili di esempio per testare la configurazione della destinazione basata su file.
 title: Generare profili di esempio in base a uno schema di origine
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Prima di utilizzare il `/sample-profiles` endpoint, assicurati di soddisfare le 
 * Nell’interfaccia utente di Experience Platform è stato creato almeno un flusso di attivazione per la destinazione. Il `/sample-profiles` l’endpoint crea i profili in base allo schema di origine definito nel flusso di attivazione. Consulta la [tutorial di attivazione](../../../ui/activate-batch-profile-destinations.md) per scoprire come creare un flusso di attivazione.
 * Per eseguire correttamente la richiesta API, è necessario disporre dell’ID dell’istanza di destinazione corrispondente all’istanza di destinazione da testare. Ottieni dall’URL l’ID dell’istanza di destinazione da utilizzare nella chiamata API per la navigazione di una connessione con la destinazione nell’interfaccia utente di Platform.
 
-   ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
+  ![Immagine dell’interfaccia utente che mostra come ottenere l’ID dell’istanza di destinazione dall’URL.](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Generare profili di esempio per il test della destinazione {#generate-sample-profiles}
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il numero specificato di profili di esempio, con appartenenza al segmento, identità e attributi di profilo corrispondenti allo schema XDM di origine.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il numero specificato di profili di esempio, con l’appartenenza al pubblico, le identità e gli attributi di profilo che corrispondono allo schema XDM di origine.
 
 >[!NOTE]
 >
-> La risposta restituisce solo l’appartenenza ai segmenti, le identità e gli attributi di profilo utilizzati nell’istanza di destinazione. Anche se lo schema di origine contiene altri campi, questi vengono ignorati.
+> La risposta restituisce solo l’appartenenza al pubblico, le identità e gli attributi di profilo utilizzati nell’istanza di destinazione. Anche se lo schema di origine contiene altri campi, questi vengono ignorati.
 
 ```json
 [
@@ -105,9 +105,9 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo segmento. Per ulteriori informazioni su `segmentMembership`, leggi [Dettagli sull’iscrizione al segmento](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggi [Dettagli sull’iscrizione al pubblico](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Un timestamp dell’ultima volta che questo profilo si è qualificato per il segmento. |
-| `status` | Campo stringa che indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: il profilo fa parte del segmento.</li><li>`exited`: il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
+| `status` | Campo stringa che indica se l’appartenenza al pubblico è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: il profilo fa parte del segmento.</li><li>`exited`: il profilo sta uscendo dal pubblico come parte della richiesta corrente.</li></ul> |
 | `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, vedi [base della composizione dello schema](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

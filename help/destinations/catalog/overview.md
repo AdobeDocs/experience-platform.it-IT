@@ -3,7 +3,7 @@ keywords: Catalogo;catalogo
 title: Panoramica del catalogo delle destinazioni
 description: Il catalogo Destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Queste destinazioni includono soluzioni di Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing via e-mail e altro ancora.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Il catalogo delle destinazioni fornisce un elenco delle piattaforme di destinazione disponibili che sono pronte per ricevere i dati. Queste piattaforme di destinazione includono soluzioni di Adobe, piattaforme pubblicitarie, piattaforme di sondaggio, piattaforme di marketing e-mail, estensioni di Experience Platform e altro ancora.
 
-Sfoglia il catalogo per determinare quali piattaforme di destinazione sono migliori per i tuoi casi di utilizzo di pubblicità e personalizzazione, quindi imposta i flussi per attivare i segmenti nelle destinazioni.
+Sfoglia il catalogo per determinare quali piattaforme di destinazione sono migliori per i tuoi casi di utilizzo di pubblicità e personalizzazione, quindi imposta i flussi per attivare i tipi di pubblico per le destinazioni.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

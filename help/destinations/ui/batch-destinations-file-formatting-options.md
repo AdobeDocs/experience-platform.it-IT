@@ -2,7 +2,7 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati in destinazioni basate su file
 title: (Beta) Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 19%
@@ -37,7 +37,7 @@ Per visualizzare le opzioni di formattazione del file, avviare [connetti alla de
 > 
 >Le nuove destinazioni dell&#39;archiviazione cloud - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Archiviazione Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (beta)](/help/destinations/catalog/cloud-storage/sftp.md) : attualmente supporta solo le sei opzioni CSV evidenziate di seguito.
 
-![Immagine che mostra alcune delle opzioni di formattazione disponibili per il file.](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![Immagine che mostra alcune delle opzioni di formattazione disponibili per il file.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### Delimitatore {#delimiter}
 

@@ -3,7 +3,7 @@ keywords: social;destinazioni social;Livefyre;facebook;Facebook
 title: Panoramica sulle destinazioni social
 description: Con le destinazioni social, puoi attivare profili per le campagne per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Adobe Experience Platform attualmente supporta le seguenti destinazioni per i so
 
 ## Connetti a una nuova destinazione social {#connect-destination}
 
-Per inviare segmenti alle destinazioni social per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.
+Per inviare tipi di pubblico alle destinazioni social per le campagne, Platform deve prima connettersi alla destinazione. Consulta la [tutorial sulla creazione della destinazione](../../ui/connect-destination.md) per informazioni dettagliate sulla configurazione di una nuova destinazione.

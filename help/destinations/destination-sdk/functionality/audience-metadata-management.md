@@ -1,9 +1,9 @@
 ---
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
-source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ A seconda della configurazione API, potrebbe essere necessario utilizzare o meno
 
 ## Casi d’uso supportati dalla gestione dei metadati dell’audience {#use-cases}
 
-Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi dare agli utenti di Platform una di più opzioni quando mappano e attivano i segmenti nella destinazione. Puoi controllare le opzioni disponibili per l’utente tramite i parametri nella sezione [Configurazione dei metadati del pubblico](../functionality/destination-configuration/audience-metadata-configuration.md) della configurazione di destinazione.
+Con il supporto dei metadati del pubblico in Destination SDK, quando configuri la destinazione di Experience Platform, puoi offrire agli utenti di Platform una di più opzioni quando mappano e attivano i tipi di pubblico nella destinazione. Puoi controllare le opzioni disponibili per l’utente tramite i parametri nella sezione [Configurazione dei metadati del pubblico](../functionality/destination-configuration/audience-metadata-configuration.md) della configurazione di destinazione.
 
 ### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono immettere ID di mappatura
 
-Se disponi di un endpoint API per creare/aggiornare/eliminare segmenti o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint di creazione/aggiornamento/eliminazione dei segmenti. Experience Platform può creare, aggiornare o eliminare segmenti a livello di programmazione e sincronizzare nuovamente i metadati con Experience Platform.
+Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experience Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experience Platform.
 
-Quando si attivano i segmenti nella destinazione nell’interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente il campo ID mappatura segmento nel flusso di lavoro di attivazione.
+Quando si attivano dei tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente un campo ID di mappatura pubblico nel flusso di lavoro di attivazione.
 
-### Caso d’uso 2: gli utenti devono prima creare un segmento nella destinazione e devono inserire manualmente l’ID della mappatura
+### Caso d’uso 2: gli utenti devono prima creare un’audience nella destinazione e devono inserire manualmente l’ID della mappatura
 
-Se i segmenti e altri metadati devono essere creati manualmente dai partner o dagli utenti nella tua destinazione, gli utenti devono compilare manualmente il campo ID mappatura segmento nel flusso di lavoro di attivazione per sincronizzare i metadati del segmento tra la destinazione e l’Experience Platform.
+Se i tipi di pubblico e altri metadati devono essere creati manualmente dai partner o dagli utenti nella tua destinazione, gli utenti devono compilare manualmente il campo ID mappatura pubblico nel flusso di lavoro di attivazione per sincronizzare i metadati del pubblico tra la destinazione e l’Experience Platform.
 
 ![ID mappatura input](../assets/functionality/input-mapping-id.png)
 
-### Caso d’uso 3: la destinazione accetta l’ID del segmento di Experience Platform e gli utenti non devono inserire manualmente l’ID della mappatura
+### Caso d’uso 3: la destinazione accetta l’ID del pubblico Experience Platform e gli utenti non devono inserire manualmente l’ID della mappatura
 
-Se il sistema di destinazione accetta l’ID del segmento di Experience Platform, puoi configurarlo nel modello di metadati del pubblico. Gli utenti non devono compilare un ID di mappatura del segmento durante l’attivazione di un segmento.
+Se il sistema di destinazione accetta l&#39;ID pubblico Experience Platform, puoi configurarlo nel modello di metadati del pubblico. Gli utenti non devono compilare un ID di mappatura del pubblico quando attivano un segmento.
 
 ## Modello di pubblico generico ed estensibile {#generic-and-extensible}
 
@@ -525,13 +525,13 @@ Trova descrizioni di tutti i parametri nel modello in [Creare un modello di pubb
 
 ## Macro utilizzate nei modelli di metadati del pubblico
 
-Per trasmettere informazioni quali ID segmento, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro che puoi utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
+Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
 
 | Macro | Descrizione |
 |--- |--- |
-| `{{segment.alias}}` | Consente di accedere all’alias del segmento in Experience Platform. |
-| `{{segment.name}}` | Ti consente di accedere al nome del segmento in Experience Platform. |
-| `{{segment.id}}` | Ti consente di accedere all’ID segmento in Experience Platform. |
+| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experience Platform. |
+| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experience Platform. |
+| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experience Platform. |
 | `{{customerData.accountId}}` | Ti consente di accedere al campo ID account configurato nella configurazione di destinazione. |
 | `{{oauth2ServiceAccessToken}}` | Consente di generare dinamicamente un token di accesso in base alla configurazione OAuth 2. |
 | `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizzare `{{authData.accessToken}}` se in Experience Platform si desidera utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |

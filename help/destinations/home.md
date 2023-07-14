@@ -3,10 +3,10 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![Banner panoramica sulle destinazioni](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+**[!DNL Destinations]** sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -30,7 +30,7 @@ Una delle funzionalità principali di Platform è l’acquisizione dei dati di p
 ## Passaggi delle destinazioni {#steps}
 
 * Scegli da un [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Platform.
-* Utilizza le destinazioni per inviare profili o segmenti a piattaforme di automazione marketing, piattaforme di pubblicità digitale e altro ancora.
+* Utilizza le destinazioni per inviare profili o tipi di pubblico a piattaforme di automazione marketing, piattaforme di pubblicità digitale e altro ancora.
 * Pianifica le esportazioni di dati nelle destinazioni preferite a intervalli regolari.
 
 ## Controlli {#controls}
@@ -40,8 +40,8 @@ I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) con
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare flussi di dati per le destinazioni nel catalogo;
 * Creare un account in un percorso di archiviazione o collegare Platform all’account nella piattaforma di destinazione;
-* Seleziona i segmenti da attivare sulle destinazioni;
-* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano i segmenti nelle destinazioni di e-mail marketing.
+* Seleziona i tipi di pubblico da attivare sulle destinazioni;
+* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano tipi di pubblico su destinazioni di e-mail marketing.
 
 ## Tipi e categorie di destinazione {#types-and-categories}
 
@@ -56,8 +56,8 @@ La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazio
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
 | **[!UICONTROL Gestire le destinazioni]** | Per connettersi alle destinazioni, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i segmenti nelle destinazioni e abilitare [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i segmenti nelle destinazioni e nascondere [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare il pubblico nelle destinazioni e nascondere [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Per ulteriori informazioni su, consulta Governance dei dati nella documentazione
 
 Per ulteriori informazioni sulla selezione delle azioni di marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Platform:
 
-* [Destinazioni pubblicitarie - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
+* [Destinazioni pubblicitarie - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinazioni pubblicitarie - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Destinazioni pubblicitarie - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [Destinazioni pubblicitarie - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [Destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
 * [Destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
 * [Destinazioni social](./catalog/social/overview.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione dei segmenti, vedi **[!UICONTROL Revisione]** nelle seguenti guide:
+Per ulteriori informazioni sulle violazioni dei criteri per i dati nel flusso di lavoro di attivazione del pubblico, vedi **[!UICONTROL Revisione]** nelle seguenti guide:
 
-* [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](./ui/activate-segment-streaming-destinations.md#review)
+* [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](./ui/activate-streaming-profile-destinations.md#review)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](./ui/activate-batch-profile-destinations.md#review)

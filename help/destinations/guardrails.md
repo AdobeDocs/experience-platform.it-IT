@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -22,7 +22,6 @@ Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comp
 >* La maggior parte dei clienti non supera questi limiti predefiniti. Per informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.
 >* I limiti delineati nel presente documento vengono costantemente migliorati. Controlla regolarmente se ci sono aggiornamenti.
 >* A seconda delle limitazioni individuali a valle, alcune destinazioni potrebbero avere guardrail più rigidi rispetto a quelle documentate in questa pagina. Assicurati anche di controllare il [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati.
-
 
 ## Tipi di limite {#limit-types}
 
@@ -42,7 +41,7 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di segmenti in una singola destinazione | 250 | Morbido | Si consiglia di mappare un massimo di 250 segmenti su una singola destinazione in un flusso di dati. <br><br> Se devi attivare più di 250 segmenti in una destinazione, puoi effettuare le seguenti operazioni: <ul><li> Annulla la mappatura dei segmenti che non desideri più attivare oppure</li><li>Crea un nuovo flusso di dati nella destinazione desiderata e mappa i segmenti in questo nuovo flusso di dati.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 segmenti mappati sulla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
+| Numero massimo di tipi di pubblico per una singola destinazione | 250 | Morbido | Si consiglia di mappare un massimo di 250 tipi di pubblico su una singola destinazione in un flusso di dati. <br><br> Se devi attivare più di 250 tipi di pubblico in una destinazione, puoi: <ul><li> Annullare la mappatura dei tipi di pubblico che non desideri più attivare oppure</li><li>Crea un nuovo flusso di dati nella destinazione desiderata e mappa i tipi di pubblico su questo nuovo flusso di dati.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 tipi di pubblico mappati alla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
 | Numero massimo di destinazioni | 100 | Morbido | Ti consigliamo di creare un massimo di 100 destinazioni a cui connettersi e attivare i dati *per sandbox*. [Destinazioni di personalizzazione Edge (personalizzazione personalizzata)](#edge-destinations-activation) può rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Numero massimo di attributi mappati a una destinazione | 50 | Morbido | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Rigido | Attualmente, è possibile esportare solo *attributi record profilo* alle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
@@ -67,7 +66,7 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni ba
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
 | Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Rigido | Leggi le [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) sezioni della documentazione per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch. |
-| Numero massimo di segmenti che possono essere esportati in una determinata ora | 100 | Morbido | Si consiglia di aggiungere un massimo di 100 segmenti ai flussi di dati di destinazione batch. |
+| Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Morbido | Si consiglia di aggiungere un massimo di 100 tipi di pubblico ai flussi di dati di destinazione batch. |
 | Numero massimo di righe (record) per file da attivare | 5 milioni | Rigido | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un’esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere [sezione pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell’esercitazione attivare destinazioni batch. |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ I guardrail riportati di seguito si applicano al [attivazione ad hoc](/help/dest
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Segmenti attivati per processo di attivazione ad hoc | 80 | Rigido | Attualmente, ogni processo di attivazione ad hoc può attivare fino a 80 segmenti. Se si tenta di attivare più di 80 segmenti per processo, il processo non riesce. Questo comportamento è soggetto a modifiche nelle versioni future. |
-| Processi di attivazione ad-hoc simultanei per segmento | 1 | Rigido | Non eseguire più di un processo di attivazione ad hoc simultaneo per segmento. |
+| Tipi di pubblico attivati per processo di attivazione ad hoc | 80 | Rigido | Attualmente, ogni processo di attivazione ad hoc può attivare fino a 80 tipi di pubblico. Se si tenta di attivare più di 80 tipi di pubblico per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future. |
+| Processi di attivazione ad-hoc simultanei per pubblico | 1 | Rigido | Non eseguire più di un processo di attivazione ad hoc simultaneo per pubblico. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 | --- | --- | --- | --- |
 | Numero massimo di [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni | 10 | Morbido | Puoi impostare flussi di dati su 10 destinazioni di personalizzazione personalizzate per sandbox. |
 | Numero massimo di attributi mappati a una destinazione di personalizzazione per sandbox | 30 | Rigido | È possibile mappare un massimo di 30 attributi in un flusso di dati a una destinazione di personalizzazione, per sandbox. |
-| Numero massimo di segmenti mappati a un singolo [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinazione | 50 | Morbido | Puoi attivare fino a 50 segmenti in un flusso di attivazione verso una singola destinazione Adobe Target. |
+| Numero massimo di tipi di pubblico mappati su un singolo [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinazione | 50 | Morbido | Puoi attivare fino a 50 tipi di pubblico in un flusso di attivazione verso una singola destinazione di Adobe Target. |
 
 {style="table-layout:auto"}
 

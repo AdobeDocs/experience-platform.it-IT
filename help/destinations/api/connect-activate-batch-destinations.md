@@ -5,9 +5,9 @@ title: Connettersi alle destinazioni batch e attivare i dati utilizzando l’API
 description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experience Platform e attivare i dati
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3399'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Questa esercitazione illustra come utilizzare l’API del servizio Flusso per cr
 
 Questa esercitazione utilizza [!DNL Adobe Campaign] destinazione in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di archiviazione cloud batch e marketing e-mail.
 
-![Panoramica: i passaggi per creare una destinazione e attivare i segmenti](../assets/api/email-marketing/overview.png)
+![Panoramica: i passaggi per creare una destinazione e attivare i tipi di pubblico](../assets/api/email-marketing/overview.png)
 
 Se preferisci utilizzare l’interfaccia utente di Platform per connetterti a una destinazione e attivare i dati, consulta [Connettere una destinazione](../ui/connect-destination.md) e [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../ui/activate-batch-profile-destinations.md) esercitazioni.
 
@@ -35,14 +35,14 @@ Se preferisci utilizzare l’interfaccia utente di Platform per connetterti a un
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare segmenti e generare tipi di pubblico in [!DNL Adobe Experience Platform] dal tuo [!DNL Real-Time Customer Profile] dati.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] consente di creare tipi di pubblico in [!DNL Adobe Experience Platform] dal tuo [!DNL Real-Time Customer Profile] dati.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per attivare i dati nelle destinazioni batch in Platform.
 
 ### Raccogli le credenziali richieste {#gather-required-credentials}
 
-Per completare i passaggi descritti in questa esercitazione, è necessario disporre delle credenziali seguenti, a seconda del tipo di destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei segmenti.
+Per completare i passaggi descritti in questa esercitazione, è necessario disporre delle seguenti credenziali pronte, a seconda del tipo di destinazione a cui si connette e si attivano i tipi di pubblico.
 
 * Per [!DNL Amazon S3] connessioni: `accessId`, `secretKey`
 * Per [!DNL Amazon S3] connessioni a [!DNL Adobe Campaign]: `accessId`, `secretKey`
@@ -85,7 +85,7 @@ Questa esercitazione contiene la documentazione di riferimento per tutte le oper
 
 ![Panoramica dei passaggi di destinazione passaggio 1](../assets/api/batch-destination/step1.png)
 
-In primo luogo, devi decidere a quale destinazione attivare i dati. Per iniziare, effettua una chiamata per richiedere un elenco delle destinazioni disponibili a cui puoi connettere e attivare i segmenti. Esegui la seguente richiesta di GET a `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
+In primo luogo, devi decidere a quale destinazione attivare i dati. Per iniziare, effettua una chiamata per richiedere un elenco delle destinazioni disponibili a cui puoi connettere e attivare i tipi di pubblico. Esegui la seguente richiesta di GET a `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
 
 **Formato API**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta**
 
-In caso di esito positivo, la risposta contiene un elenco delle destinazioni disponibili e i relativi identificatori univoci (`id`). Memorizza il valore della destinazione che intendi utilizzare, come richiesto nei passaggi successivi. Ad esempio, se desideri connetterti e consegnare segmenti a [!DNL Adobe Campaign], cerca il seguente frammento nella risposta:
+In caso di esito positivo, la risposta contiene un elenco delle destinazioni disponibili e i relativi identificatori univoci (`id`). Memorizza il valore della destinazione che intendi utilizzare, come richiesto nei passaggi successivi. Ad esempio, se desideri connettere e inviare tipi di pubblico a [!DNL Adobe Campaign], cerca il seguente frammento nella risposta:
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | Utilizzare l&#39;ID della specifica di flusso per la destinazione batch a cui si desidera connettersi. Per recuperare l’ID della specifica di flusso, esegui un’operazione di GET sul `flowspecs` come mostrato nella [documentazione di riferimento API per le specifiche di flusso](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Nella risposta, cerca `upsTo` e copia l’ID corrispondente della destinazione batch a cui desideri connetterti. Ad esempio, per Adobe Campaign, cerca `upsToCampaign` e copia `id` parametro. |
 | `sourceConnectionIds` | Utilizza l’ID della connessione sorgente ottenuto nel passaggio [Connettersi ai dati Experienci Platform](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | Utilizza l’ID connessione di destinazione ottenuto nel passaggio [Connetti a destinazione batch](#connect-to-batch-destination). |
-| `transformations` | Nel passaggio successivo, compilerai questa sezione con i segmenti e gli attributi di profilo da attivare. |
+| `transformations` | Nel passaggio successivo, compilerai questa sezione con i tipi di pubblico e gli attributi del profilo da attivare. |
 
 Per riferimento, la tabella seguente contiene gli ID delle specifiche di flusso per le destinazioni batch di uso comune:
 
@@ -933,7 +933,7 @@ Per riferimento, la tabella seguente contiene gli ID delle specifiche di flusso 
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato e un `etag`. Per attivare i segmenti ed esportare i file di dati, prendi nota di entrambi i valori in base alle tue esigenze nel passaggio successivo.
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato e un `etag`. Per attivare i tipi di pubblico ed esportare i file di dati, prendi nota di entrambi i valori in base alle tue esigenze nel passaggio successivo.
 
 ```json
 {
@@ -947,11 +947,11 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ![Panoramica dei passaggi di destinazione passaggio 5](../assets/api/batch-destination/step5.png)
 
-Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di destinazione. In questo passaggio, seleziona i segmenti e gli attributi di profilo da esportare nella destinazione.
+Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di destinazione. In questo passaggio, seleziona i tipi di pubblico e gli attributi di profilo da esportare nella destinazione.
 
 È inoltre possibile determinare il formato di denominazione dei file esportati e gli attributi da utilizzare come [chiavi di deduplicazione](../ui/activate-batch-profile-destinations.md#mandatory-keys) o [attributi obbligatori](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In questo passaggio puoi anche determinare la pianificazione per inviare dati alla destinazione.
 
-Per attivare i segmenti nella nuova destinazione, è necessario eseguire un’operazione PATCH JSON, simile all’esempio di seguito. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta [Specifiche RFC](https://tools.ietf.org/html/rfc6902).
+Per attivare i tipi di pubblico nella nuova destinazione, devi eseguire un’operazione JSON PATCH, simile all’esempio di seguito. Puoi attivare più tipi di pubblico e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta [Specifiche RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato API**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Nell’URL, utilizza l’ID del flusso di dati creato nel passaggio precedente. |
 | `{ETAG}` | Ottieni `{ETAG}` dalla risposta della fase precedente, [Creare un flusso di dati](#create-dataflow). Il formato della risposta nel passaggio precedente contiene virgolette di escape. Devi utilizzare i valori senza escape nell’intestazione della richiesta. Vedi l’esempio seguente: <br> <ul><li>Esempio di risposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valore da utilizzare nella richiesta: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati. |
-| `{SEGMENT_ID}` | Specifica l’ID segmento da esportare in questa destinazione. Per recuperare gli ID segmento per i segmenti che desideri attivare, consulta [recuperare una definizione di segmento](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
+| `{SEGMENT_ID}` | Specifica l’ID del pubblico da esportare in questa destinazione. Per recuperare gli ID del pubblico per i tipi di pubblico che desideri attivare, consulta [recuperare una definizione di pubblico](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Ad esempio, `"person.lastName"` |
-| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per aggiungere un segmento a un flusso di dati, utilizza `add` operazione. |
-| `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un segmento a un flusso di dati, utilizza il percorso specificato nell’esempio. |
+| `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per aggiungere un pubblico a un flusso di dati, utilizza `add` operazione. |
+| `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un pubblico a un flusso di dati, utilizza il percorso specificato nell’esempio. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
-| `id` | Specifica l’ID del segmento che stai aggiungendo al flusso di dati di destinazione. |
-| `name` | *Facoltativo*. Specifica il nome del segmento che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un segmento al flusso di dati di destinazione senza specificarne il nome. |
-| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: Obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: Obbligatorio. I file esportati contengono l’ID del segmento esportato.</li><li>`%SEGMENT_NAME%`: Facoltativo. I file esportati contengono il nome del segmento esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experience Platform.</li><li>`custom-text`: Facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
+| `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
+| `name` | *Facoltativo*. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
+| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: Obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: Obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: Facoltativo. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experience Platform.</li><li>`custom-text`: Facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
 | `exportMode` | Obbligatorio. Seleziona `"DAILY_FULL_EXPORT"` (Mostra origine dati) o `"FIRST_FULL_THEN_INCREMENTAL"` (Blocca selezione). Per ulteriori informazioni sulle due opzioni, consulta [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione di attivazione delle destinazioni batch. |
-| `startDate` | Seleziona la data in cui il segmento deve iniziare a esportare i profili nella destinazione. |
+| `startDate` | Seleziona la data in cui il pubblico deve iniziare a esportare i profili nella tua destinazione. |
 | `frequency` | Obbligatorio. <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Per *destinazioni batch* solo. Questo campo è obbligatorio solo quando si seleziona `"DAILY_FULL_EXPORT"` modalità in `frequency` selettore. <br> Obbligatorio. <br> <ul><li>Seleziona `"AFTER_SEGMENT_EVAL"` far eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. In questo modo, quando viene eseguito il processo di attivazione, i profili più aggiornati vengono esportati nella destinazione.</li><li>Seleziona `"SCHEDULED"` per fare in modo che il processo di attivazione venga eseguito a un orario fisso. In questo modo i dati del profilo di Experience Platform vengono esportati ogni giorno alla stessa ora, ma i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione. Quando selezioni questa opzione, devi aggiungere anche una `startTime` per indicare in quale momento in UTC devono essere effettuate le esportazioni giornaliere.</li></ul> |
-| `endDate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile durante la selezione `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del segmento cessano di essere esportati nella destinazione. |
-| `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un segmento a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona il momento in cui generare ed esportare nella destinazione i file contenenti i membri del segmento. |
+| `endDate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile durante la selezione `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del pubblico cessano di essere esportati nella destinazione. |
+| `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona il momento in cui generare ed esportare nella destinazione i file contenenti i membri del pubblico. |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> Consulta [Aggiornare i componenti di un segmento in un flusso di dati](/help/destinations/api/update-destination-dataflows.md#update-segment) per scoprire come aggiornare vari componenti (modello di nome file, tempo di esportazione e così via) dei segmenti esportati.
+> Consulta [Aggiornare i componenti di un pubblico in un flusso di dati](/help/destinations/api/update-destination-dataflows.md#update-segment) per scoprire come aggiornare vari componenti (modello di nome file, tempo di esportazione e così via) dei tipi di pubblico esportati.
 
 **Risposta**
 
@@ -1055,7 +1055,7 @@ Cerca una risposta 202 Accepted (Accettata). Nessun corpo di risposta restituito
 
 ![Panoramica dei passaggi di destinazione 6](../assets/api/batch-destination/step6.png)
 
-Come ultimo passaggio dell’esercitazione, verifica che i segmenti e gli attributi del profilo siano stati effettivamente mappati correttamente al flusso di dati.
+Come ultimo passaggio dell’esercitazione, verifica che i tipi di pubblico e gli attributi del profilo siano stati effettivamente mappati correttamente al flusso di dati.
 
 Per convalidarlo, esegui la seguente richiesta GET:
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Risposta**
 
-La risposta restituita deve includere nel `transformations` specifica i segmenti e gli attributi del profilo inviati nel passaggio precedente. Un esempio `transformations` Il parametro nella risposta potrebbe essere simile al seguente:
+La risposta restituita deve includere nel `transformations` specifica i tipi di pubblico e gli attributi del profilo inviati nel passaggio precedente. Un esempio `transformations` Il parametro nella risposta potrebbe essere simile al seguente:
 
 ```json
 "transformations":[

@@ -2,11 +2,11 @@
 keywords: attivare destinazioni;attivare dati
 title: Panoramica di Activation
 type: Tutorial
-description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform per vari tipi di destinazioni.
+description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform per vari tipi di destinazioni.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '323'
 ht-degree: 1%
 
 ---
@@ -21,13 +21,13 @@ Adobe Experience Platform supporta un’ampia gamma di destinazioni. Il flusso d
 
 ## Metodi di attivazione {#activation-methods}
 
-Dopo di te [configurare la destinazione](connect-destination.md), puoi attivare i segmenti di pubblico in diversi modi:
+Dopo di te [configurare la destinazione](connect-destination.md), è possibile attivare i tipi di pubblico in diversi modi:
 
 ### Attiva i tipi di pubblico dal catalogo delle destinazioni
 
 Per informazioni dettagliate sull’attivazione dei tipi di pubblico nella destinazione dal catalogo delle destinazioni, consulta le seguenti guide:
 
-* [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](activate-segment-streaming-destinations.md)
+* [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](activate-segment-streaming-destinations.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](activate-streaming-profile-destinations.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](activate-batch-profile-destinations.md)
 
@@ -39,22 +39,22 @@ Segui i passaggi seguenti per attivare i dati nelle destinazioni da **[!UICONTRO
 
    ![Scheda Sfoglia](../assets/ui/activation-overview/browse-tab.png)
 
-1. Trova la connessione di destinazione che desideri utilizzare per attivare i segmenti, seleziona i tre punti nella sezione [!UICONTROL Nome] , quindi seleziona **[!UICONTROL Attivare segmenti]**.
+1. Trova la connessione di destinazione che desideri utilizzare per attivare i segmenti, seleziona i tre punti nella sezione [!UICONTROL Nome] , quindi seleziona **[!UICONTROL Attiva tipi di pubblico]**.
 
-   ![Pulsante Attiva segmenti](../assets/ui/activation-overview/activate-segments.png)
+   ![Pulsante Attiva pubblico](../assets/ui/activation-overview/activate-segments.png)
 
 1. A seconda della destinazione selezionata, segui i passaggi descritti negli articoli seguenti, iniziando con **[!UICONTROL Seleziona segmenti]** per completare il flusso di lavoro di attivazione:
 
-   * [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](activate-segment-streaming-destinations.md)
+   * [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](activate-segment-streaming-destinations.md)
    * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](activate-streaming-profile-destinations.md)
    * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](activate-batch-profile-destinations.md)
 
-### Attiva i tipi di pubblico dalla pagina dei dettagli del segmento {#activate-segment-details}
+### Attiva i tipi di pubblico dalla pagina dei dettagli del pubblico {#activate-segment-details}
 
-Puoi attivare i segmenti nelle destinazioni dalla pagina dei dettagli dei segmenti. Consulta [Dettagli del segmento](../../segmentation/ui/overview.md#segment-details) per ulteriori informazioni.
+Puoi attivare i tipi di pubblico nelle destinazioni dalla pagina dei dettagli dei tipi di pubblico. Consulta [Dettagli del segmento](../../segmentation/ui/overview.md#segment-details) per ulteriori informazioni.
 
 A seconda della destinazione selezionata, segui i passaggi descritti negli articoli seguenti per completare il flusso di lavoro di attivazione:
 
-* [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](activate-segment-streaming-destinations.md)
+* [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](activate-segment-streaming-destinations.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](activate-streaming-profile-destinations.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](activate-batch-profile-destinations.md)

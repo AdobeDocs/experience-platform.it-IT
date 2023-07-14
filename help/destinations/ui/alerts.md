@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari; avvisi;destinazioni
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali sulle destinazioni
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -51,10 +51,10 @@ Gli avvisi disponibili per i flussi di dati di destinazione sono descritti nella
 
 | Avvisi | Descrizione |
 | --- | --- |
-| Ritardo esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione richiede più di 150 minuti per attivare un segmento. |
-| Errore di esecuzione del flusso di destinazione | Questo avviso notifica quando si verifica un errore durante l’attivazione di un segmento in una destinazione. |
-| Esecuzione del flusso di destinazione completata | Questo avviso ti avvisa quando un segmento viene attivato correttamente su una destinazione. |
-| Inizio esecuzione flusso di destinazione | Questo avviso notifica quando un’esecuzione del flusso di destinazione inizia ad attivare un segmento. |
+| Ritardo esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione richiede più di 150 minuti per attivare un pubblico. |
+| Errore di esecuzione del flusso di destinazione | Questo avviso notifica quando si verifica un errore durante l’attivazione di un pubblico in una destinazione. |
+| Esecuzione del flusso di destinazione completata | Questo avviso ti avvisa quando un pubblico viene attivato correttamente su una destinazione. |
+| Inizio esecuzione flusso di destinazione | Questo avviso notifica quando l’esecuzione di un flusso di destinazione avvia l’attivazione di un pubblico. |
 | Frequenza di attivazione ignorata superata | Questo avviso notifica quando il tasso di salto dell’attivazione supera l’1% del totale delle attivazioni. Le identità vengono ignorate durante l’attivazione quando presentano attributi mancanti o violazioni del consenso. |
 
 ## Ricezione degli avvisi {#receiving-alerts}

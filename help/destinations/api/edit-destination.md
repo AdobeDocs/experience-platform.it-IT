@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Modificare le connessioni di destinazione utilizzando l’API del servizio Flusso
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -245,7 +245,7 @@ In caso di esito positivo, la risposta restituisce l’ID connessione di destina
 
 **Richiesta**
 
-La richiesta seguente aggiorna i parametri di un [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destinazione](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connessione per aggiungere il nuovo [**[!UICONTROL Aggiungi ID segmento al nome del segmento]**](/help/release-notes/2023/april-2023.md#destinations) campo.
+La richiesta seguente aggiorna i parametri di un [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) o [[!DNL Google Ad Manager 360] destinazione](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) connessione per aggiungere il nuovo [**[!UICONTROL Aggiungi ID pubblico al nome del pubblico]**](/help/release-notes/2023/april-2023.md#destinations) campo.
 
 ```shell
 curl -X PATCH \

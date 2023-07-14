@@ -2,7 +2,7 @@
 description: Scopri come utilizzare l’API di test di destinazione per verificare se la destinazione di streaming è configurata correttamente e per verificare l’integrità dei flussi di dati alla destinazione configurata.
 title: Test della destinazione di streaming con profili di esempio
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 2%
@@ -26,10 +26,9 @@ Effettuare richieste all’endpoint di test con o senza l’aggiunta di profili 
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Letto [connetti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [attivare profili e segmenti in una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per ulteriori informazioni.
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Letto [connetti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [attivare profili e pubblico in una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per ulteriori informazioni.
 > * Dopo aver stabilito la connessione alla destinazione, ottieni l’ID istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [esplorazione di una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![Immagine dell’interfaccia utente per ottenere l’ID dell’istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
-
+>![Immagine dell’interfaccia utente per ottenere l’ID dell’istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Guida introduttiva alle operazioni API di test della destinazione {#get-started}
 

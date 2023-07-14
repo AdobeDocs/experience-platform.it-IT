@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Per aiutarti a capire meglio come e quando utilizzare il [!DNL Google Customer M
 
 ### #1 del caso d’uso
 
-Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte ed articoli in base ai loro acquisti passati e alla cronologia di navigazione. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per l’Experience Platform e creare segmenti dai propri dati offline. Quindi possono inviare questi segmenti a [!DNL Google Customer Match] da utilizzare in [!DNL Search] e [!DNL Shopping], ottimizzando le spese pubblicitarie.
+Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte ed articoli in base ai loro acquisti passati e alla cronologia di navigazione. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Experience Platform e creare tipi di pubblico dai propri dati offline. Quindi possono inviare questi tipi di pubblico a [!DNL Google Customer Match] da utilizzare in [!DNL Search] e [!DNL Shopping], ottimizzando le spese pubblicitarie.
 
 ### #2 del caso d’uso
 
 Un&#39;importante azienda tecnologica ha lanciato un nuovo telefono. Per promuovere questo nuovo modello di telefono, sono alla ricerca di far conoscere le nuove caratteristiche e funzionalità del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
 
-Per promuovere la versione, caricano in Experience Platform gli indirizzi e-mail dal proprio database CRM, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono modelli di telefono precedenti. Quindi i segmenti vengono inviati a [!DNL Google Customer Match], in modo che l’azienda possa eseguire il targeting dei clienti attuali, dei clienti che possiedono modelli di telefono precedenti e di clienti simili su [!DNL YouTube].
+Per promuovere la versione, caricano in Experience Platform gli indirizzi e-mail dal proprio database CRM, utilizzando gli indirizzi e-mail come identificatori. I tipi di pubblico vengono creati in base ai clienti che possiedono modelli di telefono meno recenti. Quindi i tipi di pubblico vengono inviati a [!DNL Google Customer Match], in modo che l’azienda possa eseguire il targeting dei clienti attuali, dei clienti che possiedono modelli di telefono precedenti e di clienti simili su [!DNL YouTube].
 
 ## Governance dei dati per [!DNL Google Customer Match] destinazioni {#data-governance}
 
@@ -50,14 +50,28 @@ Alcune destinazioni in Experience Platform hanno determinate regole e obblighi p
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati in [!DNL Google Customer Match] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono e altri) utilizzati in [!DNL Google Customer Match] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 >
 > * Il **[!UICONTROL Combina con PII]** l’azione di marketing è selezionata per impostazione predefinita per [!DNL Google Customer Match] e non possono essere rimossi.
 
-
 ### Abilita avvisi {#enable-alerts}
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati verso la tua destinazione. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle destinazioni tramite l’interfaccia utente](../../ui/alerts.md).
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
-In **[!UICONTROL Pianificazione del segmento]** passaggio, devi fornire [!UICONTROL ID app] durante l’invio [!DNL IDFA] o [!DNL GAID] segmenti in [!DNL Google Customer Match].
+In **[!UICONTROL Pianificazione del segmento]** passaggio, devi fornire [!UICONTROL ID app] durante l’invio [!DNL IDFA] o [!DNL GAID] tipi di pubblico a [!DNL Google Customer Match].
 
 ![ID app Customer Match di Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ L&#39;hash dei dati di origine degli attributi non viene eseguito automaticament
 
 ![Trasformazione mappatura identità](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## Verifica che l’attivazione del segmento sia avvenuta correttamente {#verify-activation}
+## Verifica che l’attivazione del pubblico sia avvenuta correttamente {#verify-activation}
 
-Dopo aver completato il flusso di attivazione, passa al **[!UICONTROL Google Ads]** account. I segmenti attivati vengono visualizzati nel tuo account Google come elenchi di clienti. Tieni presente che, a seconda della dimensione del segmento, alcuni tipi di pubblico non si popolano a meno che non vi siano più di 100 utenti attivi da distribuire.
+Dopo aver completato il flusso di attivazione, passa al **[!UICONTROL Google Ads]** account. I tipi di pubblico attivati vengono visualizzati nel tuo account Google come elenchi di clienti. Tieni presente che, a seconda della dimensione del pubblico, alcuni tipi di pubblico non si popolano a meno che non vi siano più di 100 utenti attivi da distribuire.
 
-Quando mappi un segmento a entrambi [!DNL IDFA] e [!DNL GAID] ID di dispositivi mobili, [!DNL Google Customer Match] crea un segmento separato per ogni mappatura ID. Il tuo [!DNL Google Ads] account mostra due segmenti diversi, uno per [!DNL IDFA], e uno per [!DNL GAID] mappatura.
+Quando si esegue la mappatura di un pubblico su entrambi [!DNL IDFA] e [!DNL GAID] ID di dispositivi mobili, [!DNL Google Customer Match] crea un pubblico separato per ogni mappatura ID. Il tuo [!DNL Google Ads] account mostra due segmenti diversi, uno per [!DNL IDFA], e uno per [!DNL GAID] mappatura.
 
 ## Risoluzione dei problemi {#troubleshooting}
 

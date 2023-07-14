@@ -2,9 +2,9 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >
 >* Compila tutte le sezioni di questo modello nell&#39;ordine in cui sono descritte nel modello.
 >* Questo modello viene aggiornato raramente in base al feedback ricevuto dai partner. Prima di iniziare a creare la documentazione per la destinazione, assicurati di aver scaricato [versione più recente del modello](../assets/docs-framework/yourdestination-template.zip).
-
 
 ## Panoramica {#overview}
 
@@ -43,7 +42,7 @@ Per aiutarti a capire meglio come e quando utilizzare il *Destinazione* destinaz
 
 *Per le piattaforme di social network:*
 
-*Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare segmenti dai propri dati offline e inviare questi segmenti a YourDestination, per visualizzare annunci nei feed di social media dei propri clienti.*
+*Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico a YourDestination, per visualizzare annunci nei feed di social media dei propri clienti.*
 
 ## Prerequisiti {#prerequisites}
 
@@ -81,10 +80,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in *Destinazione* destinazione. |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in *Destinazione* destinazione. |
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Tipo di esportazione | **[!UICONTROL Esportazione set di dati]** | Stai esportando set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 | Frequenza di esportazione | **[!UICONTROL Batch]** | Le destinazioni batch esportano i file sulle piattaforme a valle con incrementi di tre, sei, otto, dodici o ventiquattro ore. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -125,7 +124,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
@@ -133,9 +132,9 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 
 *Elimina in base alle esigenze: se stai documentando una nuova destinazione di streaming, tieni il primo paragrafo seguente. Se stai documentando una nuova destinazione basata su file, mantieni il secondo paragrafo. Se stai documentando una destinazione che esporta set di dati, mantieni il terzo paragrafo.*
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
-Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
 
@@ -148,7 +147,7 @@ Letto [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md)
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-*Aggiungi un paragrafo sulla modalità di esportazione dei dati nella destinazione. In questo modo il cliente può essere certo di essersi integrato correttamente con la destinazione. Ad esempio, puoi fornire un codice JSON di esempio simile a quello riportato di seguito. In alternativa, puoi fornire schermate e informazioni dall’interfaccia della destinazione che mostrano come i clienti dovrebbero aspettarsi che i segmenti si popolino nella piattaforma di destinazione.*
+*Aggiungi un paragrafo sulla modalità di esportazione dei dati nella destinazione. In questo modo il cliente può essere certo di essersi integrato correttamente con la destinazione. Ad esempio, puoi fornire un codice JSON di esempio simile a quello riportato di seguito. In alternativa, puoi fornire schermate e informazioni dall’interfaccia della destinazione che mostrano come i clienti dovrebbero aspettarsi che i tipi di pubblico si popolino nella piattaforma di destinazione.*
 
 ```
 {

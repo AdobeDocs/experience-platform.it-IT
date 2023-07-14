@@ -1,12 +1,12 @@
 ---
 title: Connessione TikTok
-description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invio rapido e sicuro del segmento desiderato da Adobe Experience Platform a TikTok tramite l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
+description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 2%
+source-wordcount: '978'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invio rapido e sicuro del segmento desiderato da Adobe Experience Platform a TikTok tramite l’integrazione in tempo reale di Adobe con TikTok Ads Manager. Visita [Centro di assistenza aziendale di TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) per ulteriori informazioni.
+Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager. Visita [Centro di assistenza aziendale di TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) per ulteriori informazioni.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione TikTok, ec
 
 ### Caso d’uso {#use-case-1}
 
-Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire gli indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare segmenti dai propri dati offline e inviare questi segmenti a TikTok per visualizzare annunci nei feed di social media dei propri clienti.
+Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attraverso i loro account di social media. Il marchio di abbigliamento può acquisire indirizzi e-mail dal proprio CRM per Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare tali tipi di pubblico a TikTok per visualizzare annunci nei feed di social media dei propri clienti.
 
 ## Prerequisiti {#prerequisites}
 
@@ -51,8 +51,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione TikTok. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione TikTok. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,17 +88,17 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare le identità {#map}
 
-Di seguito è riportato un esempio di corretta mappatura identità durante l’esportazione di segmenti in TikTok Ads Manager.
+Di seguito è riportato un esempio di corretta mappatura identità durante l’esportazione di tipi di pubblico in TikTok Ads Manager.
 
 Selezione dei campi di origine:
 
@@ -112,7 +112,7 @@ Selezione dei campi di destinazione:
 
 ## Dati esportati {#exported-data}
 
-Controlla il tuo [!DNL TikTok Ads Manager] account (sotto **Assets > Audiences**) per verificare se il segmento di Experience Platform è stato esportato correttamente. Il pubblico verrà popolato come un tipo di pubblico: `Partner Audience`.
+Controlla il tuo [!DNL TikTok Ads Manager] account (sotto **Assets > Audiences**) per verificare se il pubblico Experience Platform è stato esportato correttamente. Il pubblico verrà popolato come un tipo di pubblico: `Partner Audience`.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

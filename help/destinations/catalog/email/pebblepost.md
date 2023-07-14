@@ -3,18 +3,18 @@ keywords: PebblePost;pebblepost;PebblePost direct mailing programmatico;pebblepo
 title: Estensione PebblePost
 description: L'estensione PebblePost è una destinazione e-mail in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 3%
 
 ---
 
-# [!DNL PebblePost] Estensione {#pebblepost-extension}
+# Estensione [!DNL PebblePost] {#pebblepost-extension}
 
 ## Panoramica {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] Questa soluzione consente agli esperti di marketing digitale di collegare l’interesse e l’intento online a contenuti multimediali tangibili e offline che eseguono la conversione. Gli addetti al marketing possono sfruttare i segmenti di dati personalizzati creati in Adobe per indirizzare ora i consumatori con un’impressione rilevante, di più lunga durata, dei contenuti multimediali interni. Analizza le prestazioni in tempo reale in base all’attività del percorso di risposta e alle conversioni nel sito.
+[!DNL PebblePost's Programmatic Direct Mail®] Questa soluzione consente agli esperti di marketing digitale di collegare l’interesse e l’intento online a contenuti multimediali tangibili e offline che eseguono la conversione. Gli addetti al marketing possono sfruttare i tipi di pubblico di dati personalizzati creati in Adobe per indirizzare ora i consumatori con un’impressione rilevante, di più lunga durata, dei contenuti multimediali a casa. Analizza le prestazioni in tempo reale in base all’attività del percorso di risposta e alle conversioni nel sito.
 
 [!DNL PebblePost] è un’estensione e-mail in Adobe Experience Platform. Per ulteriori informazioni su PebblePost, leggere [post di blog sull’integrazione](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 

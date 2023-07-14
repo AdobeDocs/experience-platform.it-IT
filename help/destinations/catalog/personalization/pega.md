@@ -1,10 +1,10 @@
 ---
 title: Connessione Pega Customer Decision Hub
-description: Utilizza la destinazione Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati di iscrizione ai segmenti a Pega Customer Decision Hub per un decisioning sulle azioni migliori successive.
+description: Utilizza la destinazione Pega Customer Decision Hub in Adobe Experience Platform per inviare gli attributi del profilo e i dati sull’iscrizione del pubblico a Pega Customer Decision Hub per prendere decisioni sulla migliore azione successiva.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Utilizza il [!DNL Pega Customer Decision Hub] destinazione in Adobe Experience Platform a cui inviare gli attributi del profilo e i dati di iscrizione al segmento [!DNL Pega Customer Decision Hub] per le decisioni sulle azioni migliori successive.
+Utilizza il [!DNL Pega Customer Decision Hub] destinazione in Adobe Experience Platform per inviare gli attributi del profilo e i dati di iscrizione del pubblico a [!DNL Pega Customer Decision Hub] per le decisioni sulle azioni migliori successive.
 
-Iscrizione al segmento di profilo da Adobe Experience Platform, quando caricato in [!DNL Pega Customer Decision Hub], può essere utilizzato come predittore nei modelli adattivi e contribuire a fornire i dati contestuali e comportamentali giusti per le decisioni che richiedono un’azione successiva.
+Iscrizione al pubblico di profilo da Adobe Experience Platform, quando caricato in [!DNL Pega Customer Decision Hub], può essere utilizzato come predittore nei modelli adattivi e contribuire a fornire i dati contestuali e comportamentali giusti per le decisioni che richiedono un’azione successiva.
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ Un addetto al marketing vuole sfruttare le informazioni provenienti da azioni ot
 
 ### Servizi finanziari
 
-Un addetto al marketing desidera ottimizzare le offerte per i clienti che hanno effettuato o annullato l’abbonamento alle newsletter del piano pensionistico o del piano pensionistico. Le società di servizi finanziari possono acquisire più ID cliente dai propri CRM in Adobe Experience Platform, creare segmenti dai propri dati offline e inviare profili che entrano ed escono dai segmenti a [!DNL Pega Customer Decision Hub] per le decisioni NBA (Next-Best-Action) nei canali in uscita.
+Un addetto al marketing desidera ottimizzare le offerte per i clienti che hanno effettuato o annullato l’abbonamento alle newsletter del piano pensionistico o del piano pensionistico. Le società di servizi finanziari possono acquisire più ID cliente dai propri CRM in Adobe Experience Platform, creare tipi di pubblico dai propri dati offline e inviare profili che entrano ed escono dai tipi di pubblico a [!DNL Pega Customer Decision Hub] per le decisioni NBA (Next-Best-Action) nei canali in uscita.
 
 ## Prerequisiti {#prerequisites}
 
 Prima di poter utilizzare questa destinazione per esportare i dati da Adobe Experience Platform, assicurati di aver soddisfatto i seguenti prerequisiti in [!DNL Pega Customer Decision Hub]:
 
-* Configurare [Componente di integrazione profilo Adobe Experience Platform e appartenenza a segmenti](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) nel tuo [!DNL Pega Customer Decision Hub] dell&#39;istanza.
+* Configurare [Componente di integrazione profilo Adobe Experience Platform e appartenenza a pubblico](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) nel tuo [!DNL Pega Customer Decision Hub] dell&#39;istanza.
 * Configurare OAuth 2.0 [Registrazione client tramite credenziali client](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) tipo di concessione nel tuo [!DNL Pega Customer Decision Hub] dell&#39;istanza.
-* Configura [flusso di dati in tempo reale](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) ad Adobe il flusso di dati di iscrizione al segmento nel tuo [!DNL Pega Customer Decision Hub] dell&#39;istanza.
+* Configura [flusso di dati in tempo reale](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) ad Adobe il flusso di dati di iscrizione al pubblico nel tuo [!DNL Pega Customer Decision Hub] dell&#39;istanza.
 
 ## Identità supportate {#supported-identities}
 
@@ -57,8 +57,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Esporta tutti i membri di un segmento con identificatore (*CustomerID*), attributi (cognome, nome, posizione, ecc.) e dati di iscrizione al segmento. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni sempre basate su API. Non appena un profilo viene aggiornato in Experience Platform, in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Per ulteriori informazioni, consulta [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Esporta tutti i membri di un pubblico con l’identificatore (*CustomerID*), attributi (cognome, nome, posizione, ecc.) e i dati di iscrizione al pubblico. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni sempre basate su API. Non appena un profilo viene aggiornato in Experience Platform, in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Per ulteriori informazioni, consulta [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Nome host]**: nome host Pega Customer Decision Hub in cui il profilo viene esportato come dati json.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Attributi di destinazione {#attributes}
 
@@ -120,14 +120,14 @@ Selezione dei campi di destinazione:
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-Un aggiornamento riuscito dell’iscrizione al segmento per un profilo inserirebbe l’identificatore del segmento, il nome e gli stati nell’archivio dati di iscrizione al segmento di marketing Pega. I dati di iscrizione sono associati a un cliente che utilizza Customer Profile Designer in [!DNL Pega Customer Decision Hub], come illustrato di seguito.
-![Immagine della schermata dell’interfaccia utente in cui è possibile associare i dati di iscrizione al segmento di Adobe al cliente tramite Progettazione profili cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+In caso di esito positivo, l’iscrizione al pubblico per un profilo inserirebbe l’identificatore del pubblico, il nome e gli stati nell’archivio dati di iscrizione al pubblico di marketing Pega. I dati di iscrizione sono associati a un cliente che utilizza Customer Profile Designer in [!DNL Pega Customer Decision Hub], come illustrato di seguito.
+![Immagine della schermata dell’interfaccia utente in cui è possibile associare i dati di iscrizione del pubblico di Adobi al cliente tramite Progettazione profili cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-I dati sull’iscrizione al segmento vengono utilizzati nei criteri di coinvolgimento di Pega Next-Best-Action Designer per le decisioni sulle migliori azioni successive, come illustrato di seguito.
-![Immagine della schermata dell’interfaccia utente in cui è possibile aggiungere campi di iscrizione al segmento come condizioni nei criteri di coinvolgimento di Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+I dati sull’iscrizione del pubblico vengono utilizzati nei criteri di coinvolgimento di Pega Next-Best-Action Designer per le decisioni sulle migliori azioni successive, come illustrato di seguito.
+![Immagine della schermata dell’interfaccia utente in cui è possibile aggiungere campi di iscrizione al pubblico come condizioni in Criteri di coinvolgimento di Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-I campi dati di iscrizione al segmento del cliente vengono aggiunti come predittori nei modelli adattivi, come mostrato di seguito.
-![Immagine della schermata dell’interfaccia utente in cui è possibile aggiungere campi di iscrizione al segmento come predicatori nei modelli adattivi, utilizzando Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+I campi dati di iscrizione del pubblico del cliente vengono aggiunti come predittori nei modelli adattivi, come mostrato di seguito.
+![Immagine della schermata dell’interfaccia utente in cui è possibile aggiungere campi di iscrizione al pubblico come predicatori nei modelli adattivi, utilizzando Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Risorse aggiuntive {#additional-resources}
 

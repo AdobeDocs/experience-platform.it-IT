@@ -3,10 +3,10 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 3%
+source-wordcount: '1395'
+ht-degree: 4%
 
 ---
 
@@ -22,9 +22,9 @@ Questo documento fornisce le risposte alle domande frequenti sulle destinazioni 
 
 +++Risposta Questo è un comportamento normale a causa del modo in cui Experience Platform esegue la segmentazione.
 
-La segmentazione in streaming aggiorna il conteggio dei profili per i segmenti in streaming nel corso della giornata, mentre la segmentazione batch aggiorna il conteggio dei profili per i segmenti batch una volta ogni 24 ore.
+La segmentazione in streaming aggiorna il conteggio dei profili per i tipi di pubblico in streaming nel corso della giornata, mentre la segmentazione batch aggiorna il conteggio dei profili per i tipi di pubblico in batch una volta ogni 24 ore.
 
-Quando la pianificazione di esportazione del segmento differisce dalla pianificazione di segmentazione, il profilo conta tra l’interfaccia utente e il profilo esportato [!DNL CSV] Il file sarà diverso, soprattutto quando si tratta di segmenti di streaming.
+Quando la pianificazione dell’esportazione del pubblico differisce dalla pianificazione della segmentazione, il profilo conta tra l’interfaccia utente e la pianificazione esportata [!DNL CSV] sarà diverso, soprattutto per quanto riguarda i tipi di pubblico in streaming.
 
 Consulta la [Documentazione del servizio di segmentazione](../segmentation/home.md) per ulteriori dettagli.
 +++
@@ -33,7 +33,7 @@ Consulta la [Documentazione del servizio di segmentazione](../segmentation/home.
 
 ### Cosa devo fare prima di poter attivare i tipi di pubblico in [!DNL Facebook Custom Audiences]?
 
-+++Rispondi prima di poter inviare i segmenti di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
++++Rispondi prima di poter inviare i tuoi tipi di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
 
 * Il tuo [!DNL Facebook] l&#39;account utente deve avere **[!DNL Manage campaigns]** Autorizzazione abilitata per l’account annuncio che intendi utilizzare.
 * Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Seleziona `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
@@ -91,9 +91,9 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 
 ## Customer Match di Google {#google-customer-match}
 
-### Durante l’esportazione di segmenti in Google Customer Match, perché trovo numeri aggiuntivi aggiunti alla fine dei nomi dei segmenti nell’interfaccia di Google?
+### Durante l’esportazione di tipi di pubblico in Google Customer Match, perché trovo numeri aggiuntivi aggiunti alla fine dei nomi del pubblico nell’interfaccia di Google?
 
-+++Answer Google richiede nomi di segmento univoci. I numeri che state vedendo sono [Marca temporale UNIX](https://www.unixtimestamp.com/) e vengono aggiunti per mantenere univoci i nomi dei segmenti, se hai mappato lo stesso segmento a più destinazioni Google.
++++Answer Google richiede nomi di pubblico univoci. I numeri che state vedendo sono [Marca temporale UNIX](https://www.unixtimestamp.com/) e vengono aggiunti per mantenere univoci i nomi del pubblico, se hai mappato lo stesso pubblico su più destinazioni di Google.
 +++
 
 ## Tipi di pubblico di linkedIn corrispondenti {#linkedin}
@@ -130,7 +130,7 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 
 +++Risposta n., [SDK per web](../edge/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Tuttavia, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) viene utilizzato al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
+Tuttavia, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=it) viene utilizzato al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
 
 Per [personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md) casi d’uso, è necessario utilizzare [SDK per web](../edge/home.md) o [API server di rete Edge](../server-api/overview.md). Consulta la documentazione su [attivazione di tipi di pubblico nelle destinazioni edge](ui/activate-edge-personalization-destinations.md) per ulteriori dettagli sull’implementazione.
 +++
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++Risposta Sì, l&#39;API del server di rete Edge funziona con la destinazione Personalizzazione personalizzata. Poiché gli attributi del profilo possono contenere dati sensibili, per proteggere tali dati la destinazione Personalizzazione personalizzata richiede l’utilizzo dell’API del server di rete Edge per la raccolta dei dati. Inoltre, tutte le chiamate API devono essere effettuate in un [contesto autenticato](../server-api/authentication.md).
 +++
 
-### È possibile disporre di un solo criterio di unione attivo su Edge. Posso creare tipi di pubblico che utilizzano un criterio di unione diverso e inviarli comunque ad Adobe Target come segmenti di streaming?
+### È possibile disporre di un solo criterio di unione attivo su Edge. Posso creare tipi di pubblico che utilizzano un criterio di unione diverso e inviarli comunque ad Adobe Target come pubblico in streaming?
 
 +++Risposta n. Tutti i tipi di pubblico che desideri attivare in Adobe Target devono utilizzare un pubblico attivo su Edge [criterio di unione](../profile/merge-policies/ui-guide.md).
 +++

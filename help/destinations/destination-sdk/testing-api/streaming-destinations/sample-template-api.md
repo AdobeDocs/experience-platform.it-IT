@@ -2,7 +2,7 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare un modello di trasformazione dei messaggi di test per la destinazione.
 title: Genera un esempio di modello di trasformazione dei messaggi
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 2%
@@ -29,7 +29,6 @@ Per ottenere un modello di esempio, devi effettuare una richiesta GET al `author
 >[!TIP]
 >
 >* L’ID di destinazione da utilizzare qui è il `instanceId` che corrisponde a una configurazione di destinazione, creata utilizzando `/destinations` endpoint. Consulta la sezione [recuperare una configurazione di destinazione](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) per ulteriori dettagli.
-
 
 **Formato API**
 
@@ -83,7 +82,7 @@ Se l’ID di destinazione fornito corrisponde a una configurazione di destinazio
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -119,7 +118,7 @@ Se l’ID di destinazione fornito corrisponde a un modello di server di destinaz
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sull’DSP di Amazon.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integ
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *Amazon Ads* team. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo *`amc-support@amazon.com`.*
+>Questa pagina della documentazione è stata creata da *Amazon Ads* team. Attualmente si tratta di un prodotto beta la cui funzionalità è soggetta a modifiche. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *`amc-support@amazon.com`.*
 
 ## Casi d’uso {#use-cases}
 
@@ -28,7 +28,7 @@ Per aiutarti a capire meglio come e quando utilizzare il *Amazon Ads* destinazio
 
 ### Attivazione e targeting {#activation-and-targeting}
 
-Questa integrazione con l’DSP di Amazon consente agli inserzionisti di Amazon Ads di trasmettere i segmenti CDP dell’inserzionista da Adobe Experience Platform all’DSP di Amazon per creare tipi di pubblico dell’inserzionista per il targeting pubblicitario. I tipi di pubblico possono essere selezionati nell’DSP di Amazon per il targeting positivo e negativo (soppressione).
+Questa integrazione con l’DSP di Amazon consente agli inserzionisti di Amazon Ads di trasmettere il pubblico CDP dell’inserzionista da Adobe Experience Platform all’DSP di Amazon per creare il pubblico dell’inserzionista per il targeting pubblicitario. I tipi di pubblico possono essere selezionati nell’DSP di Amazon per il targeting positivo e negativo (soppressione).
 
 ## Prerequisiti {#prerequisites}
 
@@ -53,8 +53,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati in *Amazon Ads* destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in *Amazon Ads* destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attivare profili e segmenti nelle destinazioni di esportazione di segmenti in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Mappare attributi e identità {#map}
 
