@@ -3,10 +3,10 @@ keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati al di fuori di Experience Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '2431'
-ht-degree: 7%
+source-wordcount: '2486'
+ht-degree: 5%
 
 ---
 
@@ -24,9 +24,23 @@ Per inviare i dati del profilo agli endpoint HTTP, devi prima [connettersi alla 
 
 ## Casi d’uso {#use-cases}
 
-La destinazione API HTTP consente di esportare i dati di profilo XDM e i segmenti di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
+La destinazione API HTTP consente di esportare i dati di profilo XDM e i tipi di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
 
 Gli endpoint HTTP possono essere sistemi propri del cliente o soluzioni di terze parti.
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
@@ -35,7 +49,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -153,12 +167,12 @@ Se si seleziona la **[!UICONTROL Credenziali client OAuth 2]** tipo di autentica
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Includi timestamp dei segmenti"
->abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei segmenti, nonché il timestamp UNIX al momento della mappatura dei segmenti alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -174,8 +188,8 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Intestazioni]**: immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, seguendo questo formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Endpoint HTTP]**: URL dell’endpoint HTTP a cui desideri inviare i dati del profilo.
 * **[!UICONTROL Parametri di query]**: facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei segmenti che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
-* **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i segmenti sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i segmenti sono stati mappati alla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
+* **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati sulla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -183,13 +197,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](../../ui/activate-streaming-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ### Attributi di destinazione {#attributes}
 
@@ -197,13 +211,13 @@ In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destin
 
 ## Comportamento di esportazione del profilo {#profile-export-behavior}
 
-Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualificazione di un segmento o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
+Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
-* L’aggiornamento del profilo è stato determinato da una modifica nell’appartenenza al segmento per almeno uno dei segmenti mappati sulla destinazione. Ad esempio, il profilo è qualificato per uno dei segmenti mappati sulla destinazione o è uscito da uno dei segmenti mappati sulla destinazione.
-* L’aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei segmenti mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo di mappa identità.
+* L’aggiornamento del profilo è stato determinato da una modifica nell’appartenenza al pubblico per almeno uno dei tipi di pubblico mappati alla destinazione. Ad esempio, il profilo è idoneo per uno dei tipi di pubblico mappati sulla destinazione o è uscito da uno dei tipi di pubblico mappati sulla destinazione.
+* L’aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo identity map.
 * L’aggiornamento del profilo è stato determinato da una modifica degli attributi per almeno uno degli attributi mappati alla destinazione. Ad esempio, uno degli attributi mappati sulla destinazione nel passaggio di mappatura viene aggiunto a un profilo.
 
-In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un segmento mappato al flusso di destinazione ha cento membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
+In tutti i casi descritti sopra, solo i profili in cui si sono verificati aggiornamenti rilevanti vengono esportati nella destinazione. Ad esempio, se un pubblico mappato al flusso di destinazione ha un centinaio di membri e cinque nuovi profili sono idonei per il segmento, l’esportazione nella destinazione è incrementale e include solo i cinque nuovi profili.
 
 Tieni presente che tutti gli attributi mappati vengono esportati per un profilo, indipendentemente da dove si trovano le modifiche. Quindi, nell’esempio precedente, tutti gli attributi mappati per questi cinque nuovi profili verranno esportati anche se gli attributi stessi non sono stati modificati.
 
@@ -213,21 +227,21 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i segmenti mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un segmento mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il segmento mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita da un segmento. Tieni presente che altri segmenti non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali segmenti appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come segmento mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` L’oggetto è incluso anche (Experience Platform attualmente non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come il pubblico mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` L’oggetto è incluso anche (Experience Platform attualmente non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
-Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tre segmenti sono selezionati nel flusso di dati e quattro attributi sono mappati alla destinazione.
+Ad esempio, considera questo flusso di dati come una destinazione HTTP in cui tre tipi di pubblico vengono selezionati nel flusso di dati e quattro attributi vengono mappati sulla destinazione.
 
 ![Flusso di dati di destinazione API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Un’esportazione di profilo verso la destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) sezione seguente), potrebbero essere visualizzati altri segmenti non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del segmento che ha attivato l’esportazione. Se un profilo è idoneo per **Cliente con auto DeLorean** ma è anche un membro del **Guarda &quot;Ritorno al futuro&quot;** film e **Fantascienza** , quindi anche questi altri due segmenti saranno presenti nel `segmentMembership` oggetto dell’esportazione di dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con **Cliente con auto DeLorean** segmento.
+Un’esportazione di profilo verso la destinazione può essere determinata da un profilo idoneo o in uscita da uno dei *tre segmenti mappati*. Tuttavia, nell’esportazione dei dati, nella `segmentMembership` oggetto (vedere [Dati esportati](#exported-data) sezione seguente), potrebbero essere visualizzati altri tipi di pubblico non mappati, se quel particolare profilo è un membro di essi e se questi condividono lo stesso criterio di unione del pubblico che ha attivato l’esportazione. Se un profilo è idoneo per **Cliente con auto DeLorean** ma è anche un membro del **Guarda &quot;Ritorno al futuro&quot;** film e **Fantascienza** segmenti, quindi anche questi altri due tipi di pubblico saranno presenti nel `segmentMembership` oggetto dell’esportazione di dati, anche se non sono mappati nel flusso di dati, se condividono lo stesso criterio di unione con **Cliente con auto DeLorean** segmento.
 
 Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro attributi mappati in precedenza determineranno un’esportazione di destinazione e uno qualsiasi dei quattro attributi mappati presenti nel profilo sarà presente nell’esportazione di dati.
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo segmento a una destinazione esistente o quando crei una nuova destinazione e mappi i segmenti su di essa, Experience Platform esporta i dati storici di qualificazione dei segmenti nella destinazione. Profili qualificati per il segmento *prima di* il segmento aggiunto alla destinazione viene esportato nella destinazione entro circa un’ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -288,7 +302,7 @@ Il tuo esportato [!DNL Experience Platform] i dati vengono inseriti nel [!DNL HT
 
 Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle impostazioni dell’interfaccia utente selezionate nel flusso di destinazione della connessione per **[!UICONTROL Includi nomi segmento]** e **[!UICONTROL Includi marche temporali segmento]** opzioni:
 
-+++ L’esempio di esportazione dei dati riportato di seguito include i nomi dei segmenti nel `segmentMembership` sezione
++++ L’esempio di esportazione dei dati riportato di seguito include i nomi dei tipi di pubblico nel `segmentMembership` sezione
 
 ```json
 "segmentMembership": {
@@ -308,7 +322,7 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 +++
 
-+++ L’esempio di esportazione dei dati riportato di seguito include i timestamp del segmento nel `segmentMembership` sezione
++++ L’esempio di esportazione dei dati seguente include i timestamp del pubblico in `segmentMembership` sezione
 
 ```json
 "segmentMembership": {

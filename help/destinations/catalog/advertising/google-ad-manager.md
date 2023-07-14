@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 5%
+source-wordcount: '992'
+ht-degree: 2%
 
 ---
 
@@ -22,8 +22,8 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nel [!DNL Google] piattaforma.
 * [!DNL Platform] al momento non include una metrica di misurazione per convalidare la corretta attivazione. Fai riferimento ai conteggi dei tipi di pubblico in Google per convalidare l’integrazione e comprendere le dimensioni di targeting del pubblico.
-* Dopo aver mappato un segmento su una [!DNL Google Ad Manager] destinazione, il nome del segmento viene visualizzato immediatamente nella [!DNL Google Ad Manager] dell&#39;utente.
-* La popolazione del segmento ha bisogno di 24-48 ore per essere visualizzata in [!DNL Google Ad Manager]. Inoltre, i segmenti devono avere una dimensione di pubblico di almeno 50 profili per essere visualizzati in [!DNL Google Ad Manager]. I segmenti con dimensioni di pubblico inferiori a 50 profili non verranno compilati in [!DNL Google Ad Manager].
+* Dopo la mappatura di un pubblico su una [!DNL Google Ad Manager] destinazione, il nome del pubblico viene visualizzato immediatamente nel [!DNL Google Ad Manager] dell&#39;utente.
+* La popolazione del segmento ha bisogno di 24-48 ore per essere visualizzata in [!DNL Google Ad Manager]. Inoltre, i tipi di pubblico devono avere una dimensione di almeno 50 profili per essere visualizzati in [!DNL Google Ad Manager]. I tipi di pubblico con dimensioni inferiori a 50 profili non verranno popolati in [!DNL Google Ad Manager].
 
 ## Identità supportate {#supported-identities}
 
@@ -41,14 +41,28 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) nella destinazione Google. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico nella destinazione Google. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +89,8 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Aggiungi ID segmento al nome del segmento"
->abstract="Seleziona questa opzione per fare in modo che il nome del segmento in Google Ad Manager includa l’ID del segmento dall’Experience Platform, come riportato di seguito: `Segment Name (Segment ID)`"
+>title="Aggiungi ID pubblico al nome del pubblico"
+>abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager includa l&#39;ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -86,7 +100,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 * **[!UICONTROL Tipo di account]**: seleziona un’opzione, a seconda dell’account con Google:
    * Utilizzare `DFP by Google` per [!DNL DoubleClick] per editori
    * Utilizzare `AdX buyer` per [!DNL Google AdX]
-* **[!UICONTROL Aggiungi ID segmento al nome del segmento]**: seleziona questa opzione per fare in modo che il nome del segmento in Google Ad Manager includa l’ID del segmento da un Experience Platform, come segue: `Segment Name (Segment ID)`.
+* **[!UICONTROL Aggiungi ID pubblico al nome del pubblico]**: seleziona questa opzione affinché il nome del pubblico in Google Ad Manager includa l’ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -98,13 +112,13 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 ## Dati esportati {#exported-data}
 

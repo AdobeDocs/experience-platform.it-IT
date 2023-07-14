@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] connessione
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e app mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 4%
+source-wordcount: '1030'
+ht-degree: 1%
 
 ---
 
@@ -36,6 +36,20 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager 360] des
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | Seleziona questa identità di destinazione a cui inviare i tipi di pubblico [!DNL Google Ad Manager 360] |
+
+{style="table-layout:auto"}
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ Per ulteriori informazioni su questi valori, vedere [Chiavi HMAC di Google Cloud
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Aggiungi ID segmento al nome del segmento"
->abstract="Seleziona questa opzione per fare in modo che il nome del segmento in Google Ad Manager 360 includa l’ID del segmento da Experience Platform, come riportato di seguito: `Segment Name (Segment ID)`"
+>title="Aggiungi ID pubblico al nome del pubblico"
+>abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager 360 includa l’ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -98,7 +112,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Tipo di account]**: seleziona un’opzione, a seconda del [!DNL Google] account:
    * Utilizzare `AdX buyer` per [!DNL Google AdX]
    * Utilizzare `DFP by Google` per [!DNL DoubleClick] per editori
-* **[!UICONTROL Aggiungi ID segmento al nome del segmento]**: seleziona questa opzione per fare in modo che il nome del segmento in Google Ad Manager 360 includa l’ID del segmento di un Experience Platform, come segue: `Segment Name (Segment ID)`.
+* **[!UICONTROL Aggiungi ID pubblico al nome del pubblico]**: seleziona questa opzione affinché il nome del pubblico in Google Ad Manager 360 includa l’ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -106,20 +120,20 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
 Nel passaggio di mappatura identità puoi visualizzare le seguenti mappature precompilate:
 
 | Mappatura precompilata | Descrizione |
 |---------|----------|
 | `ECID` -> `ppid` | Questa è l’unica mappatura precompilata modificabile dall’utente. Puoi selezionare uno qualsiasi degli attributi o degli spazi dei nomi delle identità da Platform e mapparli su `ppid`. |
-| `metadata.segment.alias` -> `list_id` | Mappa i nomi dei segmenti di Experience Platform agli ID dei segmenti nella piattaforma Google. |
+| `metadata.segment.alias` -> `list_id` | Mappa i nomi degli Experienci Platform di pubblico agli ID del pubblico nella piattaforma Google. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Indica alla piattaforma Google quando rimuovere gli utenti non qualificati dai segmenti. |
 
 Queste mappature sono richieste da [!DNL Google Ad Manager 360] e vengono creati automaticamente da Adobe Experience Platform per tutti [!DNL Google Ad Manager 360] connessioni.

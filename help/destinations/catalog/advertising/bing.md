@@ -3,10 +3,10 @@ keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 8%
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Per inviare i dati del profilo a [!DNL Microsoft Bing], devi prima connetterti a
 
 ## Casi d’uso {#use-cases}
 
-In qualità di addetto al marketing, voglio poter utilizzare segmenti creati da [!DNL Microsoft Advertising IDs] per eseguire il targeting degli utenti tramite display advertising in [!DNL Microsoft Advertising] canali.
+In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico basati su [!DNL Microsoft Advertising IDs] per eseguire il targeting degli utenti tramite display advertising in [!DNL Microsoft Advertising] canali.
 
 ## Identità supportate {#supported-identities}
 
@@ -32,16 +32,30 @@ In qualità di addetto al marketing, voglio poter utilizzare segmenti creati da 
 
 {style="table-layout:auto"}
 
+## Tipi di pubblico supportati {#supported-audiences}
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-**[!DNL Segment Export]** : stai esportando tutti i membri di un segmento (pubblico) in [!DNL Microsoft Bing] destinazione.
+**[!DNL Audience Export]** : stai esportando tutti i membri di un pubblico in [!DNL Microsoft Bing] destinazione.
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) in [!DNL Microsoft Bing] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico in [!DNL Microsoft Bing] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva i segmenti in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID di mappatura"
->abstract="Immetti l’ID del segmento Bing numerico a cui desideri mappare il segmento selezionato. Se l’[!UICONTROL ID di mappatura] non corrisponde a un ID di segmento nella destinazione Bing, i dati del pubblico previsti non verranno visualizzati nel tuo account Bing."
+>abstract="Immetti l’ID numerico del pubblico Bing al quale vuoi mappare il segmento selezionato. Se il valore specificato [!UICONTROL ID mappatura] non corrisponde a un ID pubblico nella destinazione Bing, non visualizzerai i dati del pubblico previsto nel tuo account Bing."
 
 >[!IMPORTANT]
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione di segmenti di streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei segmenti di pubblico in questa destinazione.
+Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubblico in streaming](../../ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
-In [Pianificazione del segmento](../../ui/activate-segment-streaming-destinations.md#scheduling) , devi mappare manualmente il nome del segmento nel [!UICONTROL ID mappatura] campo. In questo modo i metadati del segmento vengono trasmessi correttamente a [!DNL Bing].
+In [Pianificazione del pubblico](../../ui/activate-segment-streaming-destinations.md#scheduling) passaggio, devi mappare manualmente il nome del pubblico nel [!UICONTROL ID mappatura] campo. In questo modo i metadati del pubblico vengono trasmessi correttamente a [!DNL Bing].
 
-![Immagine dell’interfaccia utente che mostra la schermata di pianificazione dei segmenti con un esempio di come mappare il nome del segmento all’ID di mappatura Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Immagine dell’interfaccia utente che mostra la schermata di pianificazione del pubblico con un esempio di come mappare il nome del pubblico sull’ID di mappatura Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Dati esportati {#exported-data}
 
