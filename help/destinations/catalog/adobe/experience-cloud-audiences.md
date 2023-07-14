@@ -3,7 +3,7 @@ title: Pubblico Experience Cloud (Beta)
 description: Scopri come condividere i tipi di pubblico da Experience Platform a varie soluzioni di Experience Platform.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### Per i clienti che utilizzano la soluzione legacy di condivisione del pubblico
 
-Se condividi già tipi di pubblico da Experience Platform a Audience Manager e altre soluzioni di Experience Cloud tramite [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), per disabilitare l’integrazione legacy, contatta l’Assistenza clienti o il team dell’account Adobe. Per disabilitare l’integrazione, i team dell’Assistenza clienti e dell’account Adobe devono inviare un ticket Jira (vedi il ticket modello AAM-52354).
+Se condividi già tipi di pubblico da Experience Platform a Audience Manager e altre soluzioni di Experience Cloud tramite [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), per disabilitare l’integrazione legacy, contatta l’Assistenza clienti o il team dell’account Adobe. Per disabilitare l’integrazione, i team dell’Assistenza clienti e dell’account Adobe devono inviare un ticket Jira (vedi il ticket modello PLAT-160986).
 
 Il tempo di risposta per risolvere il ticket di deprovisioning per i clienti beta è inferiore o pari a sei giorni lavorativi. Dopo aver disabilitato l’integrazione legacy esistente, puoi procedere con [creazione di una connessione](#connect) tramite la scheda di destinazione self-service.
 
