@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;salesforce;api salesforce marketing 
 title: (API) Connessione Marketing Cloud Salesforce
 description: La destinazione Marketing Cloud Salesforce (precedentemente nota come ExactTarget) ti consente di esportare i dati del tuo account e attivarli all’interno del Marketing Cloud Salesforce per le tue esigenze aziendali.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2924'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Quando si attivano i tipi di pubblico in [!DNL (API) Salesforce Marketing Cloud]
 
 [!DNL Salesforce] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experience Platform e per aggiornare il loro stato di pubblico in [!DNL Salesforce Marketing Cloud]. Consulta la documentazione dell’Experience Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
 
-Per ogni pubblico che attivi da Platform a [!DNL Salesforce Marketing Cloud], è necessario creare un attributo del tipo `Text` entro [!DNL Salesforce]. Utilizza il [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] per creare attributi. I nomi dei campi attributo vengono utilizzati per [!DNL (API) Salesforce Marketing Cloud] campo di destinazione e deve essere creato nel `[!DNL Email Demographics system attribute-set]`. Puoi definire il carattere del campo con un massimo di 4000 caratteri, in base ai requisiti aziendali. Consulta la [!DNL Salesforce Marketing Cloud] [Tipi di dati delle estensioni dati](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) per ulteriori informazioni sui tipi di attributi.
+Per ogni pubblico che attivi da Platform a [!DNL Salesforce Marketing Cloud], è necessario creare un attributo del tipo `Text` entro [!DNL Salesforce]. Utilizza il [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] per creare attributi. I nomi dei campi attributo vengono utilizzati per [!DNL (API) Salesforce Marketing Cloud] campo di destinazione durante il **[!UICONTROL Mappatura]** passaggio. Puoi definire il carattere del campo con un massimo di 4000 caratteri, in base ai requisiti aziendali. Consulta la [!DNL Salesforce Marketing Cloud] [Tipi di dati delle estensioni dati](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) per ulteriori informazioni sui tipi di attributi.
 
 Consulta la sezione [!DNL Salesforce Marketing Cloud] documentazione per [creare attributi](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) per informazioni sulla creazione di attributi.
 
@@ -68,7 +68,7 @@ Una vista della [!DNL Salesforce Marketing Cloud] [!DNL Email Demographics] il s
 
 Il [!DNL (API) Salesforce Marketing Cloud] la destinazione utilizza [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) per recuperare in modo dinamico gli attributi e i relativi set di attributi definiti in [!DNL Salesforce Marketing Cloud].
 
-Questi vengono visualizzati nel **[!UICONTROL Campo di destinazione]** finestra di selezione quando si imposta [mappatura](#mapping-considerations-example) nel flusso di lavoro a [attivare i tipi di pubblico nella destinazione](#activate). Tieni presente che solo i mapping per gli attributi definiti all’interno di [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` set di attributi supportati.
+Questi vengono visualizzati nel **[!UICONTROL Campo di destinazione]** finestra di selezione quando si imposta [mappatura](#mapping-considerations-example) nel flusso di lavoro a [attivare i tipi di pubblico nella destinazione](#activate).
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,8 @@ As [!DNL Salesforce Marketing Cloud] supporta i ruoli personalizzati a seconda d
 
 A seconda dei ruoli [!DNL Salesforce Marketing Cloud] utente è stato assegnato, è inoltre necessario assegnare le autorizzazioni al [!DNL Salesforce Marketing Cloud] set di attributi contenenti i campi che si desidera aggiornare.
 
-Poiché questa destinazione richiede l’accesso a `[!DNL Email Demographics system attribute-set]`, devi consentire `Email` come mostrato di seguito:
+Poiché questa destinazione richiede l’accesso a `[!DNL attribute-set]`, è necessario consentirli. Ad esempio, per `Email` [!DNL attribute-set] devi consentire come mostrato di seguito:
+
 ![L’interfaccia utente del Marketing Cloud Salesforce mostra il set di attributi e-mail con le autorizzazioni consentite.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 Per limitare il livello di accesso, è inoltre possibile sostituire singoli accessi utilizzando privilegi granulari.
@@ -196,16 +197,22 @@ Per mappare correttamente i campi XDM su [!DNL (API) Salesforce Marketing Cloud]
 
 >[!IMPORTANT]
 >
->Anche se i nomi degli attributi sono come da [!DNL Salesforce Marketing Cloud] account, le mappature per entrambi `contactKey` e `personalEmail.address` sono obbligatori. Quando si mappano gli attributi, solo gli attributi dell’Experience Platform `Email Demographics` nei campi di destinazione deve essere utilizzato il set di attributi.
+>* Anche se i nomi degli attributi sono come da [!DNL Salesforce Marketing Cloud] account, le mappature per entrambi `contactKey` e `personalEmail.address` sono obbligatori.
+>
+>* L&#39;integrazione con [!DNL Salesforce Marketing Cloud] L’API è soggetta a un limite di impaginazione del numero di attributi che gli Experienci Platform possono recuperare da Salesforce. Ciò significa che durante il **[!UICONTROL Mappatura]** fase, lo schema del campo di destinazione può visualizzare un massimo di 2000 attributi dal tuo account Salesforce.
 
 1. In **[!UICONTROL Mappatura]** passaggio, seleziona **[!UICONTROL Aggiungi nuova mappatura]**. Viene visualizzata una nuova riga di mappatura.
    ![Esempio di schermata dell’interfaccia utente di Platform per Aggiungere una nuova mappatura.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. In **[!UICONTROL Seleziona campo di origine]** finestra, scegli la **[!UICONTROL Seleziona attributi]** e selezionare l&#39;attributo XDM o scegliere il **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità.
-1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli la **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità o scegli **[!UICONTROL Seleziona attributi personalizzati]** categoria e selezionare un attributo dalla `Email Demographics` attributi visualizzati in base alle esigenze. Il [!DNL (API) Salesforce Marketing Cloud] la destinazione utilizza [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) per recuperare in modo dinamico gli attributi e i relativi set di attributi definiti in [!DNL Salesforce Marketing Cloud]. Questi vengono visualizzati nel **[!UICONTROL Campo di destinazione]** popup quando si imposta [mappatura](#mapping-considerations-example) nel [attiva flusso di lavoro tipi di pubblico](#activate). Si noti che solo i mapping per gli attributi definiti all&#39;interno del [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` set di attributi supportati.
+1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli la **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona un’identità o scegli **[!UICONTROL Seleziona attributi]** e selezionare un attributo dalle serie di attributi visualizzate, se necessario. Il [!DNL (API) Salesforce Marketing Cloud] la destinazione utilizza [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) per recuperare in modo dinamico gli attributi e i relativi set di attributi definiti in [!DNL Salesforce Marketing Cloud]. Questi vengono visualizzati nel **[!UICONTROL Campo di destinazione]** popup quando si imposta [mappatura](#mapping-considerations-example) nel [attiva flusso di lavoro tipi di pubblico](#activate).
 
-   * Ripeti questi passaggi per aggiungere le seguenti mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce Marketing Cloud]: Campo di origine|Campo di destinazione| obbligatorio| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
-|`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+   * Ripeti questi passaggi per aggiungere le seguenti mappature tra lo schema del profilo XDM e [!DNL (API) Salesforce Marketing Cloud]:
+
+     | Campo di origine | Campo di destinazione | Obbligatorio |
+     |---|---|---|
+     | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
+     | `xdm: person.name.firstName` | `Attribute: First Name` dal set di attributi desiderato. | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` dal set di attributi desiderato. | - |
 
    * Di seguito è riportato un esempio che utilizza queste mappature:
      ![Esempio di schermata dell’interfaccia utente di Platform che mostra le mappature di Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
