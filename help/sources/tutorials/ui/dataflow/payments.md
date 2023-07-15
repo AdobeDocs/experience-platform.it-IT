@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un’origine pagamenti nell’interf
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial descrive come creare un flusso di dati per un’origine di pagamenti utilizzando l’interfaccia utente di Platform.
 exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
 workflow-type: tm+mt
-source-wordcount: '1385'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Per ulteriori informazioni sulle configurazioni di pianificazione, consulta la t
 | Interval | Numero intero che imposta l&#39;intervallo per la frequenza selezionata. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su un valore maggiore o uguale a 15. |
 | Ora di inizio | Una marca temporale UTC che indica quando è impostata per avvenire la prima acquisizione. L’ora di inizio deve essere maggiore o uguale all’ora UTC corrente. |
 | Backfill | Valore booleano che determina quali dati vengono inizialmente acquisiti. Se la retrocompilazione è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se la retrocompilazione è disattivata, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di avvio non verranno acquisiti. |
-| Carica dati incrementali per | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo viene utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| Carica dati incrementali per | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Campo selezionato per **[!UICONTROL Carica dati incrementali per]** per caricare correttamente i dati incrementali, i valori di data e ora devono essere nel fuso orario UTC. Tutte le origini batch basate su tabelle selezionano i dati incrementali confrontando un valore di timestamp della colonna delta con il tempo UTC della finestra di esecuzione del flusso corrispondente e quindi copiando i dati dall&#39;origine, se vengono trovati nuovi dati all&#39;interno della finestra di tempo UTC. |
 
 ![retrocompilazione](../../../images/tutorials/dataflow/table-based/backfill.png)
 
