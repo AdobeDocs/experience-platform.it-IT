@@ -4,9 +4,9 @@ title: Guida dell’interfaccia utente per i criteri di unione
 type: Documentation
 description: Quando in Experience Platform si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare la priorità dei dati e i dati che verranno combinati per creare la vista unificata. Questa guida fornisce istruzioni dettagliate per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ Il primo passaggio nel flusso di lavoro consente di configurare il criterio di u
    * **[!UICONTROL Nessuno]**: non eseguire alcuna unione di identità.
    * **[!UICONTROL Private Graph]**: esegui l’unione delle identità in base al grafico delle identità private.
 * **[!UICONTROL Criterio di unione predefinito]**: pulsante che consente di scegliere se il criterio di unione sarà o meno il criterio predefinito per l’organizzazione. Se il selettore è attivato, viene visualizzato un avviso che richiede di confermare la modifica del criterio di unione predefinito dell&#39;organizzazione. Consulta la [panoramica dei criteri di unione](overview.md) per ulteriori informazioni sui criteri di unione predefiniti.
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Criterio di unione Attivo su Edge]**: pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà attivo o meno su Edge. Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Affinché un segmento possa essere attivato sullo spigolo (contrassegnato come segmento dello spigolo), deve essere associato a un criterio di unione contrassegnato come attivo sullo spigolo. Se un segmento è **non** associato a un criterio di unione contrassegnato come attivo su edge, il segmento non verrà contrassegnato come attivo su edge e verrà contrassegnato come segmento di streaming. Inoltre, ogni sandbox in un’organizzazione può avere solo **uno** criterio di unione attivo su edge.
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Criterio di unione Attivo su Edge]**: pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà attivo o meno su Edge. Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Per attivare un pubblico in Edge (contrassegnato come pubblico Edge), è necessario legarlo a un criterio di unione contrassegnato come attivo in Edge. Se un pubblico è **non** associato a un criterio di unione contrassegnato come attivo su edge, il pubblico non verrà contrassegnato come attivo su edge e verrà contrassegnato come pubblico in streaming. Inoltre, ogni sandbox in un’organizzazione può avere solo **uno** criterio di unione attivo su edge.
 
 Una volta completati i campi obbligatori, puoi selezionare **[!UICONTROL Successivo]** per continuare con il flusso di lavoro.
 
@@ -193,7 +193,7 @@ Dopo aver apportato le modifiche necessarie, rivedi il criterio di unione e sele
 
 ## Violazioni dei criteri di governance dei dati
 
-Durante la creazione o l’aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se tale criterio viola uno dei criteri di utilizzo dei dati definiti dall’organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno su [!DNL Platform] dati. Ad esempio, se per creare un segmento attivato in una destinazione di terze parti veniva utilizzato un criterio di unione e la tua organizzazione disponeva di un criterio di utilizzo dei dati che impediva l’esportazione di dati specifici a terze parti, riceverai un **[!UICONTROL È stata rilevata una violazione dei criteri di governance dei dati]** notifica quando si tenta di salvare il criterio di unione.
+Durante la creazione o l’aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se tale criterio viola uno dei criteri di utilizzo dei dati definiti dall’organizzazione. I criteri di utilizzo dei dati fanno parte della governance dei dati di Adobe Experience Platform e sono regole che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno su [!DNL Platform] dati. Ad esempio, se per creare un pubblico attivato in una destinazione di terze parti veniva utilizzato un criterio di unione e la tua organizzazione disponeva di un criterio di utilizzo dei dati che impediva l’esportazione di dati specifici a terze parti, riceverai un **[!UICONTROL È stata rilevata una violazione dei criteri di governance dei dati]** notifica quando si tenta di salvare il criterio di unione.
 
 Questa notifica include un elenco dei criteri di utilizzo dei dati che sono stati violati e consente di visualizzare i dettagli della violazione selezionando un criterio dall’elenco. Quando si seleziona una policy violata, **[!UICONTROL Derivazione dei dati]** fornisce il motivo della violazione e le attivazioni interessate, ciascuna delle quali fornisce ulteriori dettagli sulla violazione dei criteri di utilizzo dei dati.
 
@@ -203,4 +203,4 @@ Per ulteriori informazioni sulle modalità di governance dei dati in Adobe Exper
 
 ## Passaggi successivi
 
-Dopo aver creato e configurato i criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Platform e per creare segmenti di pubblico dai dati del profilo. Consulta la [panoramica sulla segmentazione](../../segmentation/home.md) per ulteriori informazioni su come creare e lavorare con i segmenti utilizzando [!DNL Experience Platform] Interfaccia utente e API di.
+Dopo aver creato e configurato i criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Platform e per creare tipi di pubblico dai dati del profilo. Consulta la [panoramica sulla segmentazione](../../segmentation/home.md) per ulteriori informazioni su come creare e lavorare con i tipi di pubblico utilizzando [!DNL Experience Platform] Interfaccia utente e API di.

@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ I risultati di questo processo di esempio possono essere visualizzati utilizzand
 
 >[!NOTE]
 >
->Nell’API del servizio di segmentazione di Adobe Experience Platform sono disponibili endpoint per la stima e l’anteprima che consentono di visualizzare informazioni di riepilogo sulle definizioni dei segmenti per poter isolare il pubblico previsto. Per informazioni dettagliate sull’utilizzo dell’anteprima dei segmenti e degli endpoint di stima, visita il [guida alle anteprime e alle stime degli endpoint](../../segmentation/api/previews-and-estimates.md), parte di [!DNL Segmentation] Guida per gli sviluppatori API.
+>Nell’API del servizio di segmentazione di Adobe Experience Platform sono disponibili endpoint per la stima e l’anteprima che consentono di visualizzare informazioni di riepilogo sulle definizioni dei segmenti per poter isolare il pubblico previsto. Per informazioni dettagliate sull’utilizzo degli endpoint di anteprima e stima, visita il [guida alle anteprime e alle stime degli endpoint](../../segmentation/api/previews-and-estimates.md), parte di [!DNL Segmentation] Guida per gli sviluppatori API.
 
 ## Introduzione
 
@@ -592,5 +592,5 @@ Questo rapporto fornisce le seguenti informazioni:
 
 ## Passaggi successivi
 
-Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint di stima e anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo sulle definizioni dei segmenti. Queste informazioni sono utili per isolare il pubblico previsto nel segmento. Per ulteriori informazioni sull’utilizzo delle anteprime dei segmenti e delle stime tramite l’API di segmentazione, visita [guida all’anteprima e stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint di stima e anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo sulle definizioni dei segmenti. Queste informazioni sono utili per isolare il pubblico previsto. Per ulteriori informazioni sull’utilizzo delle anteprime e delle stime tramite l’API di segmentazione, visita il [guida all’anteprima e stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
 

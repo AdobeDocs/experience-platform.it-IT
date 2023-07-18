@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scadenze degli eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per singoli eventi esperienza all’interno di un set di dati di Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Ad esempio, se applicassi un valore di scadenza di 30 giorni il 15 maggio, si ve
 
 ## Effetti sulla segmentazione
 
-Per mantenere accurati i risultati, è necessario assicurarsi che gli intervalli di lookback per i segmenti rientrino nei limiti di scadenza dei relativi set di dati dipendenti. Ad esempio, se applichi un valore di scadenza di 30 giorni e disponi di un segmento che tenta di visualizzare i dati risalenti a un massimo di 45 giorni fa, il pubblico risultante sarà probabilmente impreciso.
+Per mantenere accurati i risultati, è necessario assicurarsi che gli intervalli di lookback per i tipi di pubblico rientrino nei limiti di scadenza dei relativi set di dati dipendenti. Ad esempio, se applichi un valore di scadenza di 30 giorni e un pubblico tenta di visualizzare i dati relativi a un massimo di 45 giorni fa, il pubblico risultante potrebbe non essere accurato.
 
 Pertanto, se possibile, devi mantenere lo stesso valore di scadenza dell’evento esperienza per tutti i set di dati, per evitare l’impatto di valori di scadenza diversi tra set di dati diversi nella logica di segmentazione.
 

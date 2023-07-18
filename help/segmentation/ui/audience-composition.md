@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,64 @@ Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attri
 
 ![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL Arricchire] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>A questo punto, gli attributi di arricchimento possono **solo** negli scenari Adobe Journey Optimizer a valle.
+
+Il **[!UICONTROL Arricchire]** tipo di blocco consente di arricchire il pubblico con attributi aggiuntivi da un set di dati. Puoi utilizzare questi attributi nei casi di utilizzo di personalizzazione.
+
+Per aggiungere una **[!UICONTROL Arricchire]** blocco, seleziona il **+** , seguito da **[!UICONTROL Arricchire]**.
+
+![Il [!UICONTROL Arricchire] è selezionata.](../images/ui/audience-composition/add-enrich-block.png)
+
+Il **[!UICONTROL Arricchire]** viene aggiunto il blocco. Quando questo blocco è selezionato, i dettagli sull’arricchimento vengono visualizzati nella barra a destra. Questo include l’etichetta del blocco e il set di dati di arricchimento.
+
+Per selezionare il set di dati con cui arricchire il pubblico, seleziona la ![filter](../images/ui/audience-composition/filter-attribute.png) icona.
+
+![Il pulsante Filtro viene evidenziato. Selezionando questa opzione si arriva al [!UICONTROL Seleziona set di dati] popover.](../images/ui/audience-composition/enrich-select-dataset.png)
+
+Il **[!UICONTROL Seleziona set di dati]** viene visualizzato popover. Seleziona il set di dati da aggiungere per l’arricchimento, seguito da **[!UICONTROL Seleziona]** per aggiungere il set di dati per l’arricchimento.
+
+![Il set di dati selezionato è selezionato.](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>Il set di dati selezionato **deve** soddisfano i seguenti criteri:
+>
+>- Il set di dati **deve** essere di tipo record.
+>   - Il set di dati **non può** essere di tipo evento, essere generato dal sistema o essere contrassegnato per il profilo.
+>- Il set di dati **deve** almeno 1 GB.
+
+Il **[!UICONTROL Criteri di arricchimento]** viene ora visualizzata nella barra a destra. In questa sezione, puoi selezionare **[!UICONTROL Chiave di unione sorgente]** e **[!UICONTROL Chiave di unione del set di dati di arricchimento]**, che consente di collegare il set di dati di arricchimento al pubblico che stai cercando di creare.
+
+![Il [!UICONTROL Criteri di arricchimento] viene evidenziata.](../images/ui/audience-composition/enrichment-criteria.png)
+
+Per selezionare **[!UICONTROL Chiave di unione sorgente]**, seleziona la ![filter](../images/ui/audience-composition/filter-attribute.png) icona.
+
+![Icona del filtro per [!UICONTROL Chiave di unione sorgente] viene evidenziato.](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+Il **[!UICONTROL Seleziona un attributo di profilo]** viene visualizzato popover. Seleziona l’attributo di profilo da utilizzare come chiave di join di origine, seguito da **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di join di origine.
+
+![L&#39;attributo che si desidera utilizzare come chiave di join di origine viene evidenziato.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+Per selezionare **[!UICONTROL Chiave di unione del set di dati di arricchimento]**, seleziona la ![filter](../images/ui/audience-composition/filter-attribute.png) icona.
+
+![Icona del filtro per [!UICONTROL Chiave di unione del set di dati di arricchimento] viene evidenziato.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+Il **[!UICONTROL Attributi di arricchimento]** viene visualizzato popover. Seleziona l’attributo da utilizzare come chiave di unione del set di dati di arricchimento, seguito da **[!UICONTROL Seleziona]** per scegliere tale attributo come chiave di unione del set di dati di arricchimento.
+
+![L’attributo che desideri utilizzare come chiave di unione del set di dati di arricchimento è evidenziato.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+Dopo aver aggiunto entrambe le chiavi di join, **[!UICONTROL Attributi di arricchimento]** viene visualizzata la sezione. Ora puoi aggiungere l’attributo con cui desideri migliorare il pubblico. Per aggiungere questi attributi, seleziona **[!UICONTROL Aggiungi attributo]**.
+
+![Il [!UICONTROL Aggiungi attributo] viene evidenziato.](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+Il **[!UICONTROL Attributi di arricchimento]** viene visualizzato popover. Puoi selezionare gli attributi dal set di dati per arricchire il pubblico con, seguito da **[!UICONTROL Seleziona]** per aggiungere gli attributi al pubblico.
+
+![Vengono evidenziati gli attributi di arricchimento che si desidera aggiungere.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Il **[!UICONTROL Dividi]** il tipo di blocco ti consente di suddividere il nuovo
 Per aggiungere una **[!UICONTROL Dividi]** blocco, seleziona il **+** , seguito da **[!UICONTROL Dividi]**.
 
 ![L&#39;opzione Dividi (Split) è selezionata.](../images/ui/audience-composition/add-split-block.png)
+
+Quando dividi il pubblico, puoi dividerlo per percentuale o per attributo.
 
 ### Dividi per percentuale {#split-percentage}
 

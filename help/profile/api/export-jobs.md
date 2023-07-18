@@ -4,16 +4,16 @@ title: Endpoint API per processi di esportazione profilo
 type: Documentation
 description: Real-Time Customer Profile consente di creare una singola visualizzazione dei singoli clienti all’interno di Adobe Experience Platform riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
 
 # Endpoint &quot;profile export jobs&quot;
 
-[!DNL Real-Time Customer Profile] consente di creare una singola vista dei singoli clienti riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione. Ad esempio, segmenti di pubblico da [!DNL Profile] i dati possono essere esportati per l’attivazione e gli attributi del profilo possono essere esportati per il reporting.
+[!DNL Real-Time Customer Profile] consente di creare una singola vista dei singoli clienti riunendo dati provenienti da più origini, inclusi sia i dati degli attributi che i dati comportamentali. I dati profilo possono quindi essere esportati in un set di dati per ulteriore elaborazione. Ad esempio: [!DNL Profile] i dati possono essere esportati per l’attivazione mediante la creazione di tipi di pubblico, mentre gli attributi di profilo possono essere esportati a scopo di reporting.
 
 Questo documento fornisce istruzioni dettagliate per la creazione e la gestione dei processi di esportazione mediante [API profilo](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ Durante l’esportazione [!DNL Profile] dati, è prima necessario creare un set 
 
 Una delle considerazioni chiave è lo schema su cui si basa il set di dati (`schemaRef.id` nella richiesta di esempio API (di seguito). Per esportare i dati del profilo, il set di dati deve essere basato su [!DNL XDM Individual Profile] Schema di unione (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema di unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe. In questo caso, è il [!DNL XDM Individual Profile] classe. Per ulteriori informazioni sugli schemi di visualizzazione unione, consulta la [sezione union nella guida di base della composizione dello schema](../../xdm/schema/composition.md#union).
 
-I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che faccia riferimento a [!DNL XDM Individual Profile] Unione dello schema tramite [!DNL Catalog] API. È inoltre possibile utilizzare il [!DNL Platform] per creare un set di dati che faccia riferimento allo schema di unione. I passaggi per utilizzare l’interfaccia utente sono descritti in [questo tutorial sull’interfaccia utente per esportare i segmenti](../../segmentation/tutorials/create-dataset-export-segment.md) ma sono applicabili anche qui. Una volta completato, puoi tornare a questa esercitazione per procedere con i passaggi per [avvio di un nuovo processo di esportazione](#initiate).
+I passaggi seguenti in questa esercitazione descrivono come creare un set di dati che faccia riferimento a [!DNL XDM Individual Profile] Unione dello schema tramite [!DNL Catalog] API. È inoltre possibile utilizzare il [!DNL Platform] per creare un set di dati che faccia riferimento allo schema di unione. I passaggi per utilizzare l’interfaccia utente sono descritti in [questo tutorial sull’interfaccia utente per esportare i tipi di pubblico](../../segmentation/tutorials/create-dataset-export-segment.md) ma sono applicabili anche qui. Una volta completato, puoi tornare a questa esercitazione per procedere con i passaggi per [avvio di un nuovo processo di esportazione](#initiate).
 
 Se disponi già di un set di dati compatibile e conosci il relativo ID, puoi procedere direttamente al passaggio per [avvio di un nuovo processo di esportazione](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `fields` | *(Facoltativo)* Limita i campi dati da includere nell’esportazione a quelli forniti in questo parametro. Omettendo questo valore, tutti i campi verranno inclusi nei dati esportati. |
-| `mergePolicy` | *(Facoltativo)* Specifica il criterio di unione da applicare ai dati esportati. Includi questo parametro quando vengono esportati più segmenti. |
+| `mergePolicy` | *(Facoltativo)* Specifica il criterio di unione da applicare ai dati esportati. Includi questo parametro quando vengono esportati più tipi di pubblico. |
 | `mergePolicy.id` | ID del criterio di unione. |
 | `mergePolicy.version` | Versione specifica del criterio di unione da utilizzare. Se si omette questo valore, per impostazione predefinita viene utilizzata la versione più recente. |
 | `additionalFields.eventList` | *(Facoltativo)* Controlla i campi evento della serie temporale esportati per gli oggetti figlio o associati fornendo una o più delle seguenti impostazioni:<ul><li>`eventList.fields`: controlla i campi da esportare.</li><li>`eventList.filter`: specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Prevede un valore minimo richiesto per l&#39;esportazione, in genere una data.</li><li>`eventList.filter.fromIngestTimestamp`: filtra gli eventi della serie temporale con quelli che sono stati acquisiti dopo la marca temporale fornita. Non è l’ora dell’evento in sé, ma il tempo di acquisizione degli eventi.</li></ul> |
-| `destination` | **(Obbligatorio)** Informazioni sulla destinazione dei dati esportati:<ul><li>`destination.datasetId`: **(Obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`destination.segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non specificato, utilizza per impostazione predefinita `false`. Un valore di `false` esporta tutti gli ID segmento in un singolo ID batch. Un valore di `true` esporta un ID segmento in un ID batch. Tieni presente che impostando il valore su `true` può influire sulle prestazioni di esportazione in batch.</li></ul> |
+| `destination` | **(Obbligatorio)** Informazioni sulla destinazione dei dati esportati:<ul><li>`destination.datasetId`: **(Obbligatorio)** ID del set di dati in cui devono essere esportati i dati.</li><li>`destination.segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non specificato, utilizza per impostazione predefinita `false`. Un valore di `false` esporta tutti gli ID di definizione segmento in un singolo ID batch. Un valore di `true` esporta un ID di definizione segmento in un ID batch. Tieni presente che impostando il valore su `true` può influire sulle prestazioni di esportazione in batch.</li></ul> |
 | `schema.name` | **(Obbligatorio)** Nome dello schema associato al set di dati in cui devono essere esportati i dati. |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ Per creare un processo di esportazione che contenga solo dati evento (senza attr
   }
 ```
 
-### Esportazione di segmenti
+### Esportazione di tipi di pubblico
 
-Puoi anche utilizzare l’endpoint &quot;export jobs&quot; per esportare segmenti di pubblico invece di [!DNL Profile] dati. Consulta la guida su [processi di esportazione nell’API di segmentazione](../../segmentation/api/export-jobs.md) per ulteriori informazioni.
+Puoi anche utilizzare l’endpoint dei processi di esportazione per esportare i tipi di pubblico anziché [!DNL Profile] dati. Consulta la guida su [processi di esportazione nell’API di segmentazione](../../segmentation/api/export-jobs.md) per ulteriori informazioni.

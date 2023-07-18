@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ La relazione tra Real-Time Customer Profile e altri servizi in Experience Platfo
 
 ### Composizione entità profilo
 
-Un profilo cliente in tempo reale è composto da un’entità principale, denominata **entità principale** e varie entità di supporto. Nel contesto di un Experience Platform, l’entità principale è in genere un **entità profilo**, composto da caratteristiche, comportamenti e appartenenze a segmenti di una singola persona. Altre entità consentono al motore di segmentazione di utilizzare dati esterni all’entità principale del profilo e includono quanto segue:
+Un profilo cliente in tempo reale è composto da un’entità principale, denominata **entità principale** e varie entità di supporto. Nel contesto di un Experience Platform, l’entità principale è in genere un **entità profilo**, composto da caratteristiche, comportamenti e appartenenze a un pubblico di una singola persona. Altre entità consentono al motore di segmentazione di utilizzare dati esterni all’entità principale del profilo e includono quanto segue:
 
 - **Entità dimensionale**: entità utilizzata per semplificare il processo di modellazione dei dati per le informazioni condivise tra eventi o record di profilo. Questa è anche nota come entità di ricerca o entità di classificazione.
 - **Entità B2B**: entità che descrivono la relazione del profilo con i conti e le opportunità business-to-business.
@@ -98,13 +98,13 @@ Per ulteriori informazioni sugli schemi unione, tra cui come accedere agli schem
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## Profili e segmenti
+## Profili e pubblico
 
-Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per fornire esperienze ai singoli clienti. Quando viene creato un segmento di pubblico, l’ID di quel segmento viene aggiunto all’elenco delle appartenenze al segmento per tutti i profili idonei. Le regole del segmento vengono generate e applicate a [!DNL Real-Time Customer Profile] dati utilizzando le API RESTful e l’interfaccia utente di Segment Builder. Per ulteriori informazioni sulla segmentazione, consulta la sezione [Panoramica del servizio di segmentazione](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per fornire esperienze ai singoli clienti. Quando viene creato un pubblico, l’ID di tale pubblico viene aggiunto all’elenco delle appartenenze del pubblico per tutti i profili idonei. Le regole del segmento vengono generate e applicate a [!DNL Real-Time Customer Profile] dati utilizzando le API RESTful e l’interfaccia utente di Segment Builder. Per ulteriori informazioni sulla segmentazione, consulta la sezione [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
 ### Acquisizione e segmentazione in streaming
 
-L’input in tempo reale è possibile tramite un processo denominato acquisizione in streaming. Al momento dell’acquisizione dei dati di profilo e serie temporali, [!DNL Real-Time Customer Profile] decide automaticamente di includere o escludere tali dati dai segmenti tramite un processo continuo denominato segmentazione in streaming, prima di unirli ai dati esistenti e di aggiornare la visualizzazione unione. Di conseguenza, puoi eseguire istantaneamente i calcoli e prendere decisioni per fornire esperienze avanzate e personalizzate ai clienti mentre interagiscono con il tuo marchio. Durante l’acquisizione, i dati vengono sottoposti anche a convalida per garantirne la corretta acquisizione e la conformità allo schema su cui si basa il set di dati. Per ulteriori informazioni sulla convalida eseguita durante l’acquisizione, leggi [panoramica sulla qualità dell’acquisizione dei dati](../ingestion/quality/overview.md).
+L’input in tempo reale è possibile tramite un processo denominato acquisizione in streaming. Al momento dell’acquisizione dei dati di profilo e serie temporali, [!DNL Real-Time Customer Profile] decide automaticamente di includere o escludere tali dati dai tipi di pubblico tramite un processo continuo denominato segmentazione in streaming, prima di unirli ai dati esistenti e di aggiornare la visualizzazione unione. Di conseguenza, puoi eseguire istantaneamente i calcoli e prendere decisioni per fornire esperienze avanzate e personalizzate ai clienti mentre interagiscono con il tuo marchio. Durante l’acquisizione, i dati vengono sottoposti anche a convalida per garantirne la corretta acquisizione e la conformità allo schema su cui si basa il set di dati. Per ulteriori informazioni sulla convalida eseguita durante l’acquisizione, leggi [panoramica sulla qualità dell’acquisizione dei dati](../ingestion/quality/overview.md).
 
 ## Proiezioni spigolo
 

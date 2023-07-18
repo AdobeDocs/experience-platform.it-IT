@@ -1,9 +1,9 @@
 ---
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti sui tipi di pubblico.
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ Il posizionamento del componente di composizione segue una struttura rigida come
 
 1. Tu **sempre** inizia con [!UICONTROL Pubblico] blocca per selezionare l’attività iniziale. Puoi avere un massimo di **uno** [!UICONTROL Pubblico] blocco.
 2. Facoltativamente, puoi aggiungere una [!UICONTROL Escludi] blocco che segue il [!UICONTROL Pubblico] blocco.
-3. Facoltativamente, puoi aggiungere una [!UICONTROL Classifica] o [!UICONTROL Dividi] blocco. È possibile **solo** avere uno di questi blocchi per composizione.
-4. Tu **sempre** termina con [!UICONTROL Salva] blocca per salvare il pubblico.
+3. Facoltativamente, puoi aggiungere una [!UICONTROL Arricchire] blocco che segue il [!UICONTROL Escludi] blocco.
+4. Facoltativamente, puoi aggiungere una [!UICONTROL Classifica] o [!UICONTROL Dividi] blocco. È possibile **solo** avere uno di questi blocchi per composizione.
+5. Tu **sempre** termina con [!UICONTROL Salva] blocca per salvare il pubblico.
 
 Per ulteriori dettagli sull’utilizzo di Audience Composition, consulta la sezione [Guida dell’interfaccia utente di Audience Composition](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Per ulteriori informazioni sul blocco Split, leggi [Guida dell’interfaccia ute
 
 ## Posso utilizzare tutti i tipi di segmentazione nel flusso di lavoro Composizione pubblico?
 
-Sì, tutti i tipi di segmentazione (segmentazione batch, segmentazione in streaming e segmentazione Edge) sono supportati nel flusso di lavoro di Composizione del pubblico. Tuttavia, poiché le composizioni vengono attualmente eseguite solo una volta al giorno, anche se sono inclusi i tipi di pubblico valutati in streaming o edge, il risultato sarà basato sull’iscrizione al pubblico al momento dell’esecuzione della composizione.
+Sì, tutti i tipi di segmentazione ([segmentazione batch, segmentazione in streaming e segmentazione Edge](./home.md#evaluate-segments)) sono supportate nel flusso di lavoro Composizione pubblico. Tuttavia, poiché le composizioni vengono attualmente eseguite solo una volta al giorno, anche se sono inclusi i tipi di pubblico valutati in streaming o edge, il risultato sarà basato sull’iscrizione al pubblico al momento dell’esecuzione della composizione.
 
 ## Come posso confermare l’appartenenza di un profilo a un pubblico?
 

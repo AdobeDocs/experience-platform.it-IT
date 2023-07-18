@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Per una guida all’utilizzo di [!DNL Real-Time Customer Profile] dati in [!DNL 
 
 Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
-Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative ad aspetti quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza dover eseguire manualmente calcoli complessi ogni volta che sono necessarie le informazioni. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un segmento o accessibili tramite diversi modelli di accesso.
+Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative ad aspetti quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza dover eseguire manualmente calcoli complessi ogni volta che sono necessarie le informazioni. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un pubblico o accessibili tramite diversi modelli di accesso.
 
 È possibile creare, visualizzare, modificare ed eliminare attributi calcolati utilizzando `ca/attributes/` endpoint. Per informazioni su come utilizzare gli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per le operazioni API, visita [guida dell’endpoint API per attributi calcolati](../computed-attributes/api.md).
 
@@ -42,7 +42,7 @@ Tramite Adobe Experience Platform è possibile accedere a [!DNL Real-Time Custom
 
 ## Processi di esportazione ([!DNL Profile] export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] i dati possono essere esportati in un set di dati per ulteriore elaborazione, ad esempio per l’esportazione di segmenti di pubblico per l’attivazione o di attributi di profilo per il reporting. I processi di esportazione per i segmenti di pubblico fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API, leggi le [guida dell’endpoint &quot;segmentation export jobs&quot;](../../profile/api/export-jobs.md) per ulteriori informazioni. Per istruzioni dettagliate su come creare e gestire processi di esportazione per gli attributi del profilo, visita [guida dell’endpoint &quot;export jobs&quot;](export-jobs.md).
+[!DNL Real-Time Customer Profile] i dati possono essere esportati in un set di dati per ulteriore elaborazione, ad esempio per l’esportazione di tipi di pubblico per l’attivazione o per gli attributi di profilo per il reporting. I processi di esportazione per i tipi di pubblico fanno parte del [!DNL Adobe Experience Platform Segmentation Service] API, leggi le [guida dell’endpoint &quot;segmentation export jobs&quot;](../../profile/api/export-jobs.md) per ulteriori informazioni. Per istruzioni dettagliate su come creare e gestire processi di esportazione per gli attributi del profilo, visita [guida dell’endpoint &quot;export jobs&quot;](export-jobs.md).
 
 ## Criteri di unione {#merge-policies}
 

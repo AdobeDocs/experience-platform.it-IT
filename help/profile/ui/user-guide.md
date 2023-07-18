@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -134,7 +134,7 @@ I campi predefiniti visualizzati possono anche essere modificati a livello di or
 
 ![Viene evidenziata la scheda Dettagli. Vengono visualizzati i dettagli del profilo.](../images/user-guide/profile-detail.png)
 
-Puoi visualizzare ulteriori informazioni relative al singolo profilo cliente selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda di appartenenza ai segmenti che mostra i segmenti per i quali il profilo è attualmente qualificato.
+Puoi visualizzare ulteriori informazioni relative al singolo profilo cliente selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda Appartenenza al pubblico che mostra i tipi di pubblico per i quali il profilo è attualmente qualificato.
 
 ### Scheda Attributi
 
@@ -152,13 +152,13 @@ Gli eventi possono essere visualizzati anche come oggetto JSON selezionando per 
 
 ![Viene evidenziata la scheda Eventi. Vengono visualizzati gli eventi del profilo.](../images/user-guide/events.png)
 
-### Scheda Iscrizione al segmento
+### Scheda Appartenenza al pubblico
 
-Il **[!UICONTROL Iscrizione al segmento]** Nella scheda viene visualizzato un elenco con il nome e la descrizione dei segmenti a cui appartiene attualmente il singolo profilo cliente. Questo elenco viene aggiornato automaticamente quando il profilo si qualifica o scade dai segmenti. Il conteggio totale dei segmenti per i quali il profilo è attualmente qualificato viene visualizzato sul lato destro della scheda.
+Il **[!UICONTROL Iscrizione al pubblico]** Nella scheda viene visualizzato un elenco con il nome e la descrizione dei tipi di pubblico a cui appartiene attualmente il singolo profilo cliente. Questo elenco viene aggiornato automaticamente quando il profilo si qualifica o scade dai tipi di pubblico. Il numero totale di tipi di pubblico per i quali il profilo è attualmente qualificato viene visualizzato sul lato destro della scheda.
 
 Per ulteriori informazioni sulla segmentazione nell’Experience Platform, consulta la sezione [Adobi Experience Platform di documentazione del servizio di segmentazione](../../segmentation/home.md).
 
-![Viene evidenziata la scheda Appartenenza a segmento. Vengono visualizzati i dettagli di iscrizione al segmento di profilo.](../images/user-guide/segment-membership.png)
+![Viene evidenziata la scheda Appartenenza al pubblico. Vengono visualizzati i dettagli di iscrizione del pubblico del profilo.](../images/user-guide/segment-membership.png)
 
 ## Criteri di unione
 

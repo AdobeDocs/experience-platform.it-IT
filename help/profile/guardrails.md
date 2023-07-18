@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 4%
@@ -30,7 +30,7 @@ I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei 
 * [[!DNL Real-Time Customer Profile]](home.md): crea profili di consumatori unificati utilizzando dati provenienti da più origini.
 * [Identità](../identity-service/home.md): collega le identità da diverse origini dati durante l’acquisizione in Platform.
 * [Schemi](../xdm/home.md): gli schemi Experience Data Model (XDM) sono il framework standardizzato tramite il quale Platform organizza i dati sull’esperienza del cliente.
-* [Segmenti](../segmentation/home.md): il motore di segmentazione all’interno di Platform viene utilizzato per creare segmenti dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
+* [Tipi di pubblico](../segmentation/home.md): il motore di segmentazione all’interno di Platform viene utilizzato per creare tipi di pubblico dai profili dei clienti in base ai comportamenti e agli attributi dei clienti.
 
 ## Tipi di limite
 
@@ -108,14 +108,14 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 ## Guardrail di segmentazione
 
-I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei segmenti che un’organizzazione può creare in Experience Platform, nonché alla mappatura e all’attivazione dei segmenti nelle destinazioni.
+I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experience Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Segmenti per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti in totale, purché ci siano meno di 4000 segmenti in ogni singola sandbox. Il tentativo di creare segmenti aggiuntivi può influire sulle prestazioni del sistema. |
-| Segmenti Edge per sandbox | 150 | Morbido | Un’organizzazione può avere più di 150 segmenti edge in totale, purché ci siano meno di 150 segmenti edge in ogni singola sandbox. Il tentativo di creare altri segmenti edge può influire sulle prestazioni del sistema. |
-| Segmenti di streaming per sandbox | 500 | Morbido | Un’organizzazione può avere più di 500 segmenti di streaming in totale, purché ci siano meno di 500 segmenti di streaming in ogni singola sandbox. Il tentativo di creare altri segmenti di streaming può influire sulle prestazioni del sistema. |
-| Segmenti batch per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 segmenti batch in totale, purché ci siano meno di 4000 segmenti batch in ogni singola sandbox. Il tentativo di creare altri segmenti batch può influire sulle prestazioni del sistema. |
+| Tipi di pubblico per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 tipi di pubblico in totale, purché ci siano meno di 4000 tipi di pubblico in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. |
+| Pubblico Edge per sandbox | 150 | Morbido | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. |
+| Tipi di pubblico in streaming per sandbox | 500 | Morbido | Un’organizzazione può avere più di 500 pubblici di streaming in totale, purché ci siano meno di 500 pubblici di streaming in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. |
+| Pubblico in batch per sandbox | 4000 | Morbido | Un’organizzazione può avere più di 4000 tipi di pubblico in batch in totale, purché ci siano meno di 4000 tipi di pubblico in batch in ogni singola sandbox. Il tentativo di creare un pubblico batch aggiuntivo può influire sulle prestazioni del sistema. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, v
 
 #### Entità Dimension
 
-Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con piccole entità dimensionali per creare segmenti in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
+Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
 
 La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi non[!DNL XDM Individual Profile] gli schemi sono denominati &quot;entità dimensione&quot; (anche note come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l’utilizzo di [relazioni tra schemi](../xdm/tutorials/relationship-ui.md).
 

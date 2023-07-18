@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmento;segmentMembership;appartenenza a un segmento;schema design;mappa;mappa;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli dell’iscrizione al segmento
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli appartenenza al segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '419'
 ht-degree: 2%
 
 ---

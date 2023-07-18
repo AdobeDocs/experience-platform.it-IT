@@ -4,7 +4,7 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati dei profili cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o fonti esterne.
 feature: Segments
-source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 24%
@@ -30,8 +30,8 @@ ht-degree: 24%
    - [Segmentazione in streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
    - [Panoramica](ui/overview.md)
+   - [Dashboard del pubblico](ui/audience-dashboard.md)
    - [Composizione del pubblico](ui/audience-composition.md)
-   - [Dashboard dei segmenti](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
    - [Segmentazione Edge](ui/edge-segmentation.md)
    - [Segmentazione in streaming](ui/streaming-segmentation.md)

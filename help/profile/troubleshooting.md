@@ -4,7 +4,7 @@ title: Guida alla risoluzione dei problemi dei profili cliente in tempo reale
 type: Documentation
 description: Questo documento fornisce le risposte alle domande più frequenti su Real-Time Customer Profile, nonché una guida alla risoluzione dei problemi relativi agli errori più comuni durante l’utilizzo dei dati del profilo con Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -47,13 +47,13 @@ Esistono diversi metodi per visualizzare i dati del profilo, a seconda che si ut
 
 Se conosci gli ID delle entità profilo a cui desideri accedere, puoi utilizzare `/entities` (Accesso profilo) nell’API del profilo per cercare tali entità. Consulta la sezione su [entità](./api/entities.md) per ulteriori informazioni, consulta la guida per gli sviluppatori.
 
-Puoi anche utilizzare l’API del servizio di segmentazione di Adobe Experience Platform per accedere ai singoli profili dei clienti che si sono qualificati per un’iscrizione a un segmento. Consulta la [Panoramica del servizio di segmentazione](../segmentation/home.md) per ulteriori informazioni.
+Puoi anche utilizzare l’API del servizio di segmentazione di Adobe Experience Platform per accedere ai singoli profili dei clienti idonei per l’iscrizione a un pubblico. Consulta la [Panoramica del servizio di segmentazione](../segmentation/home.md) per ulteriori informazioni.
 
 #### Utilizzo dell’interfaccia utente
 
 Nell’interfaccia utente di Experience Platform, il **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Profili]** workspace consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al loro valore di identità. Consulta la [Guida utente del profilo](./ui/user-guide.md) per ulteriori informazioni.
 
-Puoi anche visualizzare un elenco dei segmenti sotto **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Segmenti]** Workspace. Dopo aver selezionato un segmento, viene visualizzato un campione di profili qualificati per quel segmento. Puoi quindi selezionare uno di questi profili elencati per visualizzarne i dettagli. Consulta la [Panoramica sulla segmentazione dell’interfaccia utente](../segmentation/ui/overview.md) per ulteriori informazioni.
+Puoi anche visualizzare un elenco dei tipi di pubblico sotto **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Tipi di pubblico]** Workspace. Dopo aver selezionato un pubblico, viene visualizzato un campione di profili idonei per quel pubblico. Puoi quindi selezionare uno di questi profili elencati per visualizzarne i dettagli. Consulta la [Panoramica sulla segmentazione dell’interfaccia utente](../segmentation/ui/overview.md) per ulteriori informazioni.
 
 ## Codici di errore
 

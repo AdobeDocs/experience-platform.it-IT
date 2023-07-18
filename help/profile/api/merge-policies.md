@@ -4,9 +4,9 @@ title: Endpoint API per i criteri di unione
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare una vista unificata.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2467'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Anche se è possibile che ogni organizzazione disponga di più criteri di unione
 >
 >Quando si imposta un nuovo criterio di unione come predefinito, tutti i criteri di unione esistenti precedentemente impostati come predefinito verranno aggiornati automaticamente in modo da non essere più utilizzati come predefiniti.
 
-Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Affinché un segmento possa essere attivato sullo spigolo (contrassegnato come segmento dello spigolo), deve essere associato a un criterio di unione contrassegnato come attivo sullo spigolo. Se un segmento è **non** associato a un criterio di unione contrassegnato come attivo su edge, il segmento non verrà contrassegnato come attivo su edge e verrà contrassegnato come segmento di streaming.
+Per garantire che tutti i consumatori di profili utilizzino la stessa vista sugli spigoli, i criteri di unione possono essere contrassegnati come attivi sugli spigoli. Per attivare un pubblico in Edge (contrassegnato come pubblico Edge), è necessario legarlo a un criterio di unione contrassegnato come attivo in Edge. Se un pubblico è **non** associato a un criterio di unione contrassegnato come attivo su edge, il pubblico non verrà contrassegnato come attivo su edge e verrà contrassegnato come pubblico in streaming.
 
 Inoltre, ogni organizzazione può disporre solo di **uno** criterio di unione attivo su edge. Se un criterio di unione è attivo su Edge, può essere utilizzato per altri sistemi su Edge, ad esempio Profilo Edge, Segmentazione Edge e Destinazioni su Edge.
 
@@ -761,6 +761,6 @@ In caso di esito positivo, la richiesta di eliminazione restituisce lo stato HTT
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare i criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Platform e per creare segmenti di pubblico dal tuo [!DNL Real-Time Customer Profile] dati.
+Ora che sai come creare e configurare i criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili dei clienti in Platform e per creare tipi di pubblico dal tuo [!DNL Real-Time Customer Profile] dati.
 
-Consulta la sezione [Documentazione del servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md) per iniziare a definire e lavorare con i segmenti.
+Consulta la sezione [Documentazione del servizio di segmentazione di Adobe Experience Platform](../../segmentation/home.md) per iniziare a definire e utilizzare i tipi di pubblico.

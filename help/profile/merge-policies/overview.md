@@ -4,7 +4,7 @@ title: Panoramica sui criteri di unione
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per ottenere una visualizzazione completa dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare la vista unificata.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -60,14 +60,14 @@ Quando i record di profilo vengono acquisiti in Experience Platform, al momento 
 
 Unione identità ([!UICONTROL Unione ID]) è il processo di identificazione dei frammenti di dati e di loro combinazione per formare un record di profilo completo. Per illustrare i diversi comportamenti di unione, considera un singolo cliente che interagisce con un brand utilizzando due indirizzi e-mail diversi.
 
-* **[!UICONTROL Nessuno]:** Quando questa opzione è selezionata, gli ID non vengono uniti tra loro. Quando si verifica la segmentazione, le identità che possono appartenere alla stessa persona non vengono unite tra loro e la segmentazione prenderà in considerazione solo gli attributi associati a ogni singolo ID nel determinare se un cliente è idoneo per l’iscrizione al segmento. Questo poteva comportare la presenza di più profili per un singolo cliente e l’idoneità di ciascun profilo per segmenti diversi, con conseguente invio di più messaggi di marketing allo stesso cliente.
-* **[!UICONTROL Private Graph]:** Quando il grafo privato è selezionato, più identità relative allo stesso individuo sono unite tra loro. Questo comporta che il cliente abbia un singolo profilo e consente alla segmentazione di considerare più attributi da più identità correlate durante la determinazione della qualifica del segmento. In questo scenario, è probabile che il cliente abbia un singolo profilo, si qualifichi per un segmento in base alla combinazione di attributi tra identità e riceva un solo messaggio di marketing.
+* **[!UICONTROL Nessuno]:** Quando questa opzione è selezionata, gli ID non vengono uniti tra loro. Quando si verifica la segmentazione, le identità che possono appartenere alla stessa persona non vengono unite tra loro e la segmentazione prenderà in considerazione solo gli attributi associati a ogni singolo ID nel determinare se un cliente si qualifica per l’iscrizione al pubblico. Questo poteva comportare che un singolo cliente avesse più profili e che ogni profilo potesse qualificarsi per diversi tipi di pubblico, con conseguente invio di più messaggi di marketing allo stesso cliente.
+* **[!UICONTROL Private Graph]:** Quando il grafo privato è selezionato, più identità relative allo stesso individuo sono unite tra loro. Questo comporta che il cliente abbia un singolo profilo e consente alla segmentazione di considerare più attributi da più identità correlate durante la determinazione della qualifica del segmento. In questo scenario, è probabile che il cliente abbia un singolo profilo, si qualifichi per un pubblico in base alla combinazione di attributi tra identità e riceva un solo messaggio di marketing.
 
-Per ulteriori informazioni sulle identità e sul loro ruolo nella generazione di profili e segmenti, leggi [Panoramica del servizio Identity](../../identity-service/home.md).
+Per ulteriori informazioni sulle identità e sul loro ruolo nella generazione di profili e tipi di pubblico, leggi [Panoramica del servizio Identity](../../identity-service/home.md).
 
 ## Criterio di unione predefinito {#default-merge-policy}
 
-Un’organizzazione può creare un criterio di unione predefinito da utilizzare per l’unione di frammenti di profilo. Questo consente agli utenti di selezionare facilmente il criterio predefinito durante l’esecuzione di azioni come la visualizzazione dei profili dei clienti o la creazione di segmenti in un Experience Platform. Nella maggior parte dei casi, a meno che non venga specificato un altro criterio di unione, verrà utilizzato quello predefinito.
+Un’organizzazione può creare un criterio di unione predefinito da utilizzare per l’unione di frammenti di profilo. Questo consente agli utenti di selezionare facilmente il criterio predefinito durante l’esecuzione di azioni come la visualizzazione dei profili dei clienti o la creazione di tipi di pubblico, in Experience Platform. Nella maggior parte dei casi, a meno che non venga specificato un altro criterio di unione, verrà utilizzato quello predefinito.
 
 Ogni organizzazione può creare più criteri di unione correlati a una singola classe di schema XDM, ma è possibile dichiarare un solo criterio di unione predefinito per ogni classe. Ad esempio, nell’organizzazione potrebbe essere presente un criterio di unione predefinito relativo al [!DNL XDM Individual Profile] e un criterio di unione predefinito diverso per una classe di inventario prodotti personalizzata.
 
@@ -75,7 +75,7 @@ Se si crea un nuovo criterio di unione e lo si imposta come predefinito, il crit
 
 >[!WARNING]
 >
->Potrebbero essere interessati i conteggi dei profili e i segmenti con un criterio di unione predefinito associato esistente. Tutti i segmenti a cui è applicato un criterio di unione predefinito verranno aggiornati al nuovo criterio di unione predefinito.
+>Potrebbero essere interessati i conteggi dei profili e i tipi di pubblico associati a un criterio di unione predefinito esistente. Qualsiasi pubblico a cui è applicato un criterio di unione predefinito verrà aggiornato al nuovo criterio di unione predefinito.
 
 ## Passaggi successivi
 
