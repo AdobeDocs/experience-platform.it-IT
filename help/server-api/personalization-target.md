@@ -2,7 +2,7 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
+source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -51,9 +51,9 @@ Dato il seguente esempio XDM:
 
 Durante la creazione di tipi di pubblico in Target, i seguenti valori saranno disponibili come parametri personalizzati:
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Aggiornamenti del profilo di Target {#profile-update}
 
