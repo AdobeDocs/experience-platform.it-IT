@@ -4,9 +4,9 @@ title: Panoramica di Activation
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform per vari tipi di destinazioni.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -49,9 +49,9 @@ Segui i passaggi seguenti per attivare i dati nelle destinazioni da **[!UICONTRO
    * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo di streaming](activate-streaming-profile-destinations.md)
    * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](activate-batch-profile-destinations.md)
 
-### Attiva i tipi di pubblico dalla pagina dei dettagli del pubblico {#activate-segment-details}
+### Attiva i tipi di pubblico dalla pagina dei dettagli del pubblico {#activate-audience-details}
 
-Puoi attivare i tipi di pubblico nelle destinazioni dalla pagina dei dettagli dei tipi di pubblico. Consulta [Dettagli del segmento](../../segmentation/ui/overview.md#segment-details) per ulteriori informazioni.
+Puoi attivare i tipi di pubblico nelle destinazioni dalla pagina dei dettagli del pubblico. Consulta [Dettagli del pubblico](../../segmentation/ui/overview.md#audience-details) per ulteriori informazioni.
 
 A seconda della destinazione selezionata, segui i passaggi descritti negli articoli seguenti per completare il flusso di lavoro di attivazione:
 
