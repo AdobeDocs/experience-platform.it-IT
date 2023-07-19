@@ -5,7 +5,7 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -213,7 +213,8 @@ Per rimuovere il profilo e tutte le associazioni di identità per un determinato
 ### Limitazioni dei criteri di unione {#merge-policy-limitations}
 
 Privacy Service è in grado di elaborare solo [!DNL Profile] dati utilizzando un criterio di unione che non esegue l’unione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di accesso a dati personali vengono elaborate, assicurati di utilizzare una policy con **[!DNL None]** come [!UICONTROL Unione ID] tipo. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL Unione ID] è impostato su [!UICONTROL Private Graph].
->![L’unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
+>>
+![L’unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
 >
 ## Passaggi successivi
 
