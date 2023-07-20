@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;guida introduttiva;customer ai;argomenti più comuni;customer ai input;customer ai output; requisiti dei dati
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Requisiti dei dati in Customer AI
 topic-legacy: Getting started
 description: Scopri di più sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
 ht-degree: 1%
@@ -79,7 +79,7 @@ Puoi utilizzare gli schemi XDM di Experience Event o Consumer Experience Event p
 
 >[!IMPORTANT]
 >
->Devi accertarti che i dati vengano inseriti in questi set di dati di input. Se nei set di dati di input non vengono trovati eventi dai gruppi di campi standard, è necessario aggiungere eventi personalizzati durante il flusso di lavoro di configurazione. Vedi i dettagli sugli eventi personalizzati.
+>Devi accertarti che i dati vengano inseriti in questi set di dati di input. Se nei set di dati di input non vengono trovati eventi dai gruppi di campi standard, devi aggiungere eventi personalizzati durante il flusso di lavoro di configurazione. Vedi i dettagli sugli eventi personalizzati.
 
 ### Gruppi di campi standard utilizzati da IA per l’analisi dei clienti {#standard-events}
 

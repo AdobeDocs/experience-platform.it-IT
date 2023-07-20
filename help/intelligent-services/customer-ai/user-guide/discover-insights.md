@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;approfondimenti;customer ai;argomenti più comuni;customer ai insights
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Scopri gli approfondimenti con IA per l’analisi dei clienti
 description: Questo documento funge da guida per l’interazione con le informazioni approfondite sull’istanza del servizio nell’interfaccia utente di IA per l’analisi dei clienti di Intelligent Services.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
