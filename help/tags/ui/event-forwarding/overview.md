@@ -3,14 +3,18 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 8%
 
 ---
 
 # Panoramica sull’inoltro degli eventi
+
+>[!NOTE]
+>
+>L’inoltro di eventi è una funzione a pagamento inclusa nelle offerte Adobe Real-time Customer Data Platform Connections, Prime o Ultimate.
 
 >[!NOTE]
 >
