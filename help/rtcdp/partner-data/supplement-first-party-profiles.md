@@ -4,9 +4,9 @@ description: Scopri come integrare i profili di prime parti con attributi di par
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Puoi integrare i profili di prime parti con attributi di partner dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e ottimizzare meglio il pubblico.
 
-![Arricchisci i profili con gli attributi forniti dai partner; caso d’uso: panoramica visiva di alto livello.](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![Arricchisci i profili con gli attributi forniti dai partner; caso d’uso: panoramica visiva di alto livello.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## Prerequisiti e pianificazione {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 
 ## Come ottenere il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
-![Arricchisci i profili con gli attributi forniti dai partner; caso d’uso: panoramica visiva di alto livello.](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![Arricchisci i profili con gli attributi forniti dai partner; caso d’uso: panoramica visiva di alto livello.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. As a **cliente**, gli attributi della licenza vengono forniti da **partner dati**.
 2. As a **cliente**, puoi estendere i dati del profilo e il modello di governance per supportare **partner** attributi forniti da.
