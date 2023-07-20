@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
 source-wordcount: '3308'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campi"
->abstract="I tre tipi di campo che compongono una definizione di segmento sono attributi, eventi e tipi di pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; il pubblico consente di utilizzare tipi di pubblico importati da origini esterne."
+>abstract="I tre tipi di campi che compongono una definizione di segmento sono attributi, eventi e pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; i tipi di pubblico consentono di utilizzare tipi di pubblico importati da origini esterne."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -224,7 +224,7 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]** il contenito
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Criteri di unione"
->abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito, in alternativa puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
 
 [!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizza per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare un profilo.
 
@@ -234,17 +234,17 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![Il selettore dei criteri di unione viene evidenziato. Questo consente di scegliere quale criterio di unione selezionare per la definizione del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà di definizione del segmento {#segment-properties}
+## Proprietà della definizione di segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Proprietà di definizione del segmento"
->abstract="La sezione delle proprietà di definizione del segmento visualizza una stima delle dimensioni della definizione del segmento risultante, visualizzando il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
+>title="Proprietà della definizione di segmento"
+>abstract="Nella sezione Proprietà della definizione di segmento viene visualizzata una stima della dimensione del segmento risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Aggiornare le stime"
->abstract="Puoi aggiornare le stime della definizione del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per la definizione del segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
+>abstract="Puoi aggiornare le stime della definizione di segmento per visualizzare subito un’anteprima del numero di profili idonei per la definizione di segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=it#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
 Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.

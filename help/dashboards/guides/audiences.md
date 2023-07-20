@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="Dimensione del pubblico"
->abstract="Questo widget mostra il numero totale di profili uniti all’interno del pubblico selezionato. Questo numero dipende dal criterio di unione applicato ai dati ed è esatto al momento dello snapshot più recente."
+>abstract="Questo widget visualizza il numero totale di profili uniti all’interno del pubblico selezionato. Questo numero dipende dal criterio di unione applicato ai dati ed è esatto al momento dello snapshot più recente."
 
 Il **[!UICONTROL Dimensione pubblico]** widget mostra il numero totale di profili uniti nel pubblico selezionato al momento dello scatto dell’istantanea. Questo numero è il risultato dell’applicazione del criterio di unione del pubblico ai dati del profilo per unire i frammenti di profilo e formare un singolo profilo per ogni individuo nel pubblico.
 
@@ -181,7 +181,7 @@ Seleziona **[!UICONTROL Chiudi]** per tornare al [!UICONTROL Tipi di pubblico] d
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="Sovrapposizione di identità"
->abstract="Questo widget mostra la sovrapposizione di profili nel pubblico contenenti entrambe le identità scelte. I cerchi mostrano la dimensione relativa di ogni identità. Il numero di profili contenenti entrambi gli spazi dei nomi è rappresentato dalla sovrapposizione tra i cerchi."
+>abstract="Questo widget mostra la sovrapposizione di profili nel pubblico contenente entrambe le identità selezionate. I cerchi mostrano la dimensione relativa di ogni identità. Il numero di profili contenenti entrambi gli spazi dei nomi è rappresentato dalla sovrapposizione tra i cerchi."
 
 Il **[!UICONTROL Sovrapposizione identità]** Un widget mostra un diagramma di Venn, o diagramma di set, che mostra la sovrapposizione di profili nel pubblico contenenti più identità.
 
@@ -198,7 +198,7 @@ Per ulteriori informazioni sulle identità, visita il [Documentazione del serviz
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="Profili per identità"
->abstract="Questo widget mostra il raggruppamento delle identità per ogni profilo unito nel pubblico selezionato."
+>abstract="Questo widget visualizza il raggruppamento delle identità per ogni profilo unito nel pubblico selezionato."
 
 Il **[!UICONTROL Profili per identità]** il widget mostra il raggruppamento delle identità per ogni profilo unito nel pubblico selezionato. Il numero totale di profili per identità potrebbe essere maggiore del numero totale di profili nel pubblico, perché a un profilo potrebbero essere associate più identità. In altre parole, la somma dei valori mostrati per ogni identità può superare la dimensione totale del pubblico. Questo perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associate più identità.
 

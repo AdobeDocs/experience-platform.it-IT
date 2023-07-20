@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -267,7 +267,7 @@ Il [!UICONTROL Profili non segmentati] Il widget fornisce il numero totale di tu
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Tendenza dei profili non segmentati"
->abstract="Questo widget fornisce un’illustrazione del grafico a linee per il numero di profili che non sono associati ad alcun pubblico in un determinato periodo di tempo. La tendenza dei profili non allegati a un pubblico può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi."
+>abstract="Questo widget fornisce un’illustrazione del grafico a linee per il numero di profili che non sono collegati ad alcun pubblico in un dato periodo di tempo. La tendenza dei profili non collegati ad alcun pubblico può essere visualizzata su periodi di 30 giorni, 90 giorni e 12 mesi."
 
 Il [!UICONTROL Tendenza di modifica dei profili non segmentati] il widget utilizza un grafico a linee per illustrare il numero di profili aggiunti dall’ultima istantanea giornaliera che non sono associati ad alcun pubblico. La tendenza alla modifica dei profili non allegati ad alcun pubblico può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Il periodo di tempo viene scelto da un menu a discesa nel widget. Il conteggio dei profili si riflette sull’asse y e il tempo sull’asse x.
 

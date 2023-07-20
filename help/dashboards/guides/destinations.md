@@ -7,7 +7,7 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3031'
-ht-degree: 9%
+ht-degree: 21%
 
 ---
 
@@ -69,14 +69,14 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 
 * [[!UICONTROL Destinazioni più utilizzate]](#most-used-destinations)
 * [[!UICONTROL Destinazioni create di recente]](#recently-created-destinations)
-* [[!UICONTROL Pubblico attivato di recente]](#recently-activated-audiences)
+* [[!UICONTROL Tipi di pubblico attivati di recente]](#recently-activated-audiences)
 * [[!UICONTROL Tipi di pubblico attivati di recente per destinazione]](#recently-activated-audiences-by-destination)
 * [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
 * [[!UICONTROL Tipi di pubblico non mappati per identità]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Tipi di pubblico mappati per identità]](#mapped-audiences-by-identity)
 * [[!UICONTROL Segmenti di pubblico comuni]](#common-audiences)
 * [[!UICONTROL Pubblico mappato]](#mapped-audiences)
-* [[!UICONTROL Stato del pubblico mappato]](#mapped-audience-health)
+* [[!UICONTROL Integrità del pubblico mappato]](#mapped-audience-health)
 * [[!UICONTROL Conteggio delle destinazioni]](#destinations-count)
 * [[!UICONTROL Stato della destinazione]](#destination-status)
 * [[!UICONTROL Destinazioni attive per piattaforma di destinazione]](#active-destinations-by-destination-platform)
@@ -88,7 +88,7 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Destinazioni più utilizzate"
->abstract="Questo widget mostra le destinazioni più attive della tua organizzazione in base al numero di tipi di pubblico mappati. Questi numeri sono precisi al momento dell’ultimo snapshot. Questa classificazione fornisce informazioni sulle destinazioni attualmente più utilizzate, evidenziando quelle che potrebbero essere sottoutilizzate."
+>abstract="Questo widget visualizza le destinazioni più attive dell&#39;organizzazione in base al numero di tipi di pubblico mappati. Questi numeri sono precisi al momento dell’ultimo snapshot. Questa classificazione fornisce informazioni sulle destinazioni attualmente più utilizzate, evidenziando quelle che potrebbero essere sottoutilizzate."
 
 Il **[!UICONTROL Destinazioni più utilizzate]** widget visualizza le destinazioni principali della tua organizzazione in base al numero di tipi di pubblico mappati, all’ultima istantanea. Questa classificazione fornisce informazioni approfondite sulle destinazioni utilizzate, mostrando potenzialmente anche quelle che potrebbero essere sottoutilizzate.
 
@@ -117,14 +117,14 @@ Per ulteriori informazioni su come configurare tipi specifici di destinazioni, v
 
 ![La scheda Panoramica del dashboard Destinazioni con il widget Destinazioni create di recente evidenziato.](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL Pubblico attivato di recente] {#recently-activated-audiences}
+### [!UICONTROL Tipi di pubblico attivati di recente] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="Pubblico attivato di recente"
->abstract="Questo widget fornisce un elenco degli ultimi tipi di pubblico mappati su una destinazione. Questo elenco fornisce un’istantanea dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate."
+>title="Tipi di pubblico attivati di recente"
+>abstract="Questo widget fornisce un elenco dei tipi pubblico mappati più recentemente a una destinazione. Questo elenco fornisce uno snapshot dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate."
 
-Il **[!UICONTROL Pubblico attivato di recente]** Il widget fornisce un elenco degli ultimi tipi di pubblico mappati su una destinazione. Questo elenco fornisce un’istantanea dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate.
+Il **[!UICONTROL Pubblico attivato di recente]** Il widget fornisce un elenco degli ultimi tipi di pubblico mappati su una destinazione. Questo elenco fornisce uno snapshot dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate.
 
 Il [!UICONTROL Aggiornato] la data visualizzata mostra l’ultima volta che il pubblico è stato attivato nella destinazione ed è accurata rispetto all’ultima istantanea giornaliera. In altre parole, se attivi un pubblico nella destinazione, la data aggiornata non cambierà fino a quando non viene acquisita l’istantanea successiva.
 
@@ -139,7 +139,7 @@ Per ulteriori informazioni sull’utilizzo dei tipi di pubblico in Experience Pl
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="Tipi di pubblico attivati di recente per destinazione"
->abstract="Questo widget mostra i primi cinque tipi di pubblico attivati più di recente in ordine decrescente in base alla destinazione scelta nel menu a discesa Panoramica."
+>abstract="Questo widget visualizza i primi cinque tipi di pubblico attivati più recentemente in ordine decrescente in base alla destinazione scelta nel menu a discesa della panoramica."
 
 Il **[!UICONTROL Tipi di pubblico attivati di recente per destinazione]** il widget mostra i primi cinque tipi di pubblico attivati più di recente in ordine decrescente in base alla destinazione scelta nel menu a discesa panoramica. È simile al [!UICONTROL Pubblico attivato di recente] widget, ma i dati visualizzati **solo** si applica alla destinazione selezionata.
 
@@ -156,7 +156,7 @@ Consulta la sezione prerequisiti per [definizioni dei termini utilizzati](#prere
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="Tendenza delle dimensioni del pubblico"
->abstract="Questo widget illustra il numero di profili contenuti nel pubblico che viene inviato quotidianamente all’account di destinazione. Con il primo menu a discesa si regola il periodo di tempo per la tendenza del pubblico. Il secondo menu a discesa del widget seleziona il pubblico per l’analisi. La destinazione viene scelta dal menu a discesa della panoramica."
+>abstract="Questo widget mostra il numero di profili contenuti nel pubblico, che viene inviato quotidianamente all’account di destinazione. Con il primo menu a discesa si regola il periodo di tempo per la tendenza del pubblico. Con il secondo menu a discesa del widget si seleziona il pubblico per l’analisi. La destinazione viene scelta dal menu a discesa della panoramica."
 
 Il **[!UICONTROL Tendenza dimensione pubblico]** il widget mostra la relazione del conteggio dei profili in un periodo di tempo per un pubblico mappato su tale account di destinazione. Il widget utilizza un grafico a linee per illustrare il numero di profili contenuti nel pubblico che vengono inviati quotidianamente all’account di destinazione.
 
@@ -175,7 +175,7 @@ Il **[!UICONTROL Tendenza dimensione pubblico]** Il widget fornisce un [!UICONTR
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="Tipi di pubblico non mappati per identità"
->abstract="Questo widget elenca i primi cinque **non mappato** i tipi di pubblico sono classificati in base al conteggio delle identità discendenti per una determinata destinazione e identità. Gli ID dei filtri elencati nel menu a discesa del widget cambiano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica."
+>abstract="Questo widget elenca i primi cinque tipi di pubblico **non mappati** classificati in base al conteggio delle identità decrescente per una determinata destinazione e identità. Gli ID dei filtri elencati nel menu a discesa del widget cambiano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica."
 
 Il **[!UICONTROL Tipi di pubblico non mappati per identità]** widget elenca i primi cinque **non mappato** i tipi di pubblico sono classificati in base al conteggio delle identità discendenti per una determinata destinazione e identità. Evidenzia i tipi di pubblico più utili da mappare sull’account di destinazione scelto in base all’ID scelto.
 
@@ -192,9 +192,9 @@ Consulta la sezione prerequisiti per [definizioni dei termini utilizzati](#prere
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="Tipi di pubblico mappati per identità"
->abstract="Questo widget fornisce un elenco dei primi cinque **mappato** pubblico. L’elenco viene ordinato da alto a basso in base al numero di ID sorgente contenuti all’interno dei tipi di pubblico. L’ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili nel menu a discesa del widget dipendono dalla destinazione scelta nella parte superiore della dashboard della panoramica."
+>abstract="Questo widget fornisce un elenco dei primi cinque tipi di pubblico **mappati**. L’elenco è in ordine decrescente in base al numero di ID di origine presenti nei tipi di pubblico. L’ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili nel menu a discesa del widget dipendono dalla destinazione scelta nella parte superiore della dashboard della panoramica."
 
-Questo widget fornisce un elenco dei primi cinque **mappato** pubblico. L’elenco viene ordinato da alto a basso in base al numero di ID sorgente contenuti all’interno dei tipi di pubblico. L’ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili dal menu a discesa nel widget cambieranno in base al filtro dell’account di destinazione scelto nella parte superiore della dashboard di panoramica.
+Questo widget fornisce un elenco dei primi cinque tipi di pubblico **mappati**. L’elenco è in ordine decrescente in base al numero di ID di origine presenti nei tipi di pubblico. L’ID di destinazione da conteggiare viene selezionato dal menu a discesa sotto il titolo del widget. Gli ID di destinazione disponibili dal menu a discesa nel widget cambieranno in base al filtro dell’account di destinazione scelto nella parte superiore della dashboard di panoramica.
 
 ![Il pubblico mappato per widget di identità.](../images/destinations/mapped-audiences-by-identity.png)
 
@@ -205,9 +205,9 @@ Il **[!UICONTROL Tipi di pubblico mappati per identità]** Il widget evidenzia a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="Segmenti di pubblico comuni"
->abstract="Questo widget fornisce un elenco dei primi cinque tipi di pubblico attivati nell’account di destinazione scelto nella parte superiore della pagina e nella destinazione selezionata nel menu a discesa del widget. L’elenco dei tipi di pubblico viene ordinato in base a quanto recentemente sono stati attivati. Il pubblico attivato più di recente viene visualizzato in alto."
+>abstract="Questo widget fornisce un elenco dei primi cinque tipi di pubblico attivati nell’account di destinazione scelto nella parte superiore della pagina e la destinazione selezionata nel menu a discesa del widget. L’elenco dei tipi di pubblico viene ordinato in base a quanto recentemente sono stati attivati. Il pubblico attivato più recentemente viene visualizzato in alto."
 
-Il **[!UICONTROL Tipi di pubblico comuni]** il widget fornisce un elenco dei primi cinque tipi di pubblico attivati nell’account di destinazione scelto nella parte superiore della pagina e nella destinazione selezionata nel menu a discesa del widget. L’elenco dei tipi di pubblico viene ordinato in base a quanto recentemente sono stati attivati. Il pubblico attivato più di recente viene visualizzato in alto.
+Il **[!UICONTROL Tipi di pubblico comuni]** il widget fornisce un elenco dei primi cinque tipi di pubblico attivati nell’account di destinazione scelto nella parte superiore della pagina e nella destinazione selezionata nel menu a discesa del widget. L’elenco dei tipi di pubblico viene ordinato in base a quanto recentemente sono stati attivati. Il pubblico attivato più recentemente viene visualizzato in alto.
 
 Il [!UICONTROL DIMENSIONE PUBBLICO] fornisce il conteggio totale dei profili di ciascun pubblico elencato.
 
@@ -221,12 +221,12 @@ Seleziona **[!UICONTROL Tipi di pubblico]** per passare al dashboard Tipi di pub
 
 ![Il widget Pubblico mappato.](../images/destinations/mapped-audiences.png)
 
-### Stato del pubblico mappato {#mapped-audience-health}
+### Integrità del pubblico mappato {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Stato del pubblico mappato"
->abstract="Questo widget fornisce un elenco di fino a 20 tipi di pubblico mappati i cui conteggi totali dei profili si discostano di almeno un fattore di deviazione standard dalla dimensione media del pubblico mappata a tale destinazione ogni 30 giorni. Fornisce una metrica calcolata per la dispersione delle dimensioni del pubblico dalla media degli ultimi 30 giorni. Le dimensioni del pubblico sono in ordine decrescente."
+>title="Integrità del pubblico mappato"
+>abstract="Questo widget fornisce un elenco di massimo 20 tipi di pubblico mappati, il cui conteggio totale di profili si discosta di almeno un fattore di deviazione standard dalla dimensione media del pubblico mappata a tale destinazione nei 30 giorni. Fornisce una metrica calcolata per la dispersione delle dimensioni del pubblico dalla media degli ultimi 30 giorni. Le dimensioni del pubblico sono in ordine decrescente."
 
 Il widget fornisce un elenco di fino a 20 tipi di pubblico mappati i cui conteggi totali dei profili, all’ultima istantanea giornaliera, si discostano di un fattore di almeno una deviazione standard dalla dimensione media del pubblico di 30 giorni mappata a quella destinazione.
 
