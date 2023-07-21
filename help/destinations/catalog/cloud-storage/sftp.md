@@ -2,10 +2,10 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 6%
+source-wordcount: '1041'
+ht-degree: 3%
 
 ---
 
@@ -86,7 +86,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Chiave SSH privata"
->abstract="La chiave SSH privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password."
+>abstract="La chiave SSH privata deve essere una stringa con codifica Base64 in formato RSA e non deve essere protetta da password."
 
 Se si seleziona la **[!UICONTROL SFTP con password]** tipo di autenticazione per connettersi alla posizione SFTP:
 
@@ -108,7 +108,7 @@ Se si seleziona la **[!UICONTROL SFTP con chiave SSH]** tipo di autenticazione p
 * **[!UICONTROL Dominio]**: inserisci l’indirizzo IP o il nome di dominio dell’account SFTP
 * **[!UICONTROL Porta]**: porta utilizzata dalla posizione di archiviazione SFTP;
 * **[!UICONTROL Nome utente]**: nome utente per accedere al percorso di archiviazione SFTP;
-* **[!UICONTROL Chiave SSH]**: chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere formattata come stringa con codifica Base64 e non deve essere protetta da password.
+* **[!UICONTROL Chiave SSH]**: chiave SSH privata utilizzata per accedere al percorso di archiviazione SFTP. La chiave privata deve essere una stringa in formato RSA con codifica Base64 e non deve essere protetta da password.
 * **[!UICONTROL Chiave di crittografia]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
 
   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
