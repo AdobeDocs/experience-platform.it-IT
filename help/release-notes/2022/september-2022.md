@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 11%
@@ -112,7 +112,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | [[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro di eventi | Ora puoi inviare dati a [!DNL Snapchat Conversions API] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Per ulteriori informazioni su come autenticare e utilizzare l’API, consulta [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | L’SDK per web ora supporta [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ai proprietari di siti web di accedere a gran parte delle stesse informazioni disponibili in [!DNL User-Agent] stringa, ma in modo più rispettoso della privacy. |
 | [Migrazione pagina per pagina dell’SDK web](../../edge/home.md#migrating-to-web-sdk) | Ora puoi migrare le proprietà web esistenti da altre librerie Experience Cloud, come [!DNL at.js], a Web SDK, una pagina alla volta. Questo consente un approccio graduale alla migrazione dell’SDK web, senza la necessità di eseguire la migrazione di tutte le pagine contemporaneamente. |
-| [[!DNL Adobe Journey Optimizer] supporto per gli stream di dati](../../edge/datastreams/overview.md#aep) | Il servizio Adobe Experience Platform per gli stream di dati ora supporta [!DNL Adobe Journey Optimizer]. Questa opzione consente di utilizzare i canali in entrata basati su Web e app in [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] supporto per gli stream di dati](../../datastreams/overview.md#aep) | Il servizio Adobe Experience Platform per gli stream di dati ora supporta [!DNL Adobe Journey Optimizer]. Questa opzione consente di utilizzare i canali in entrata basati su Web e app in [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

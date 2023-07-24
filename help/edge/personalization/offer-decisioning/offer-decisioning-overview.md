@@ -3,7 +3,7 @@ title: Utilizzo di Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o l’API di Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;offerte personalizzate;consegnare offerte;consegna offerte;personalizzazione delle offerte;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -32,28 +32,28 @@ Quando si lavora con Offer Decisioning, è importante comprendere la seguente te
 
 * **Ambiti decisionali:** Ad Offer decisioning, gli ambiti decisionali sono le stringhe con codifica Base64 di JSON contenenti gli ID di attività e posizionamento che il servizio offer decisioning deve utilizzare per proporre le offerte.
 
-   *JSON ambito decisione:*
+  *JSON ambito decisione:*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *Stringa con codifica Base64 dell&#39;ambito decisionale:*
+  *Stringa con codifica Base64 dell&#39;ambito decisionale:*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >Puoi copiare il valore dell’ambito della decisione dalla sezione **Panoramica delle attività** nell&#39;interfaccia utente.
+  >[!TIP]
+  >
+  >Puoi copiare il valore dell’ambito della decisione dalla sezione **Panoramica delle attività** nell&#39;interfaccia utente.
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **Flussi di dati:** Per ulteriori informazioni, leggere [flussi di dati](../../datastreams/overview.md) documentazione.
+* **Flussi di dati:** Per ulteriori informazioni, leggere [flussi di dati](../../../datastreams/overview.md) documentazione.
 
 * **Identità**: per ulteriori informazioni, consulta questa documentazione che illustra come [Platform Web SDK utilizza il servizio Identity](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Quando si lavora con Offer Decisioning, è importante comprendere la seguente te
 
 Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
 
-1. Abilitazione di Adobe Experience Platform nel tuo [flusso di dati](../../datastreams/overview.md) e seleziona la casella &quot;Offer decisioning&quot;
+1. Abilitazione di Adobe Experience Platform nel tuo [flusso di dati](../../../datastreams/overview.md) e seleziona la casella &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
              ]
           })
          ```
+
    * Installare l’SDK tramite tag
 
       1. [Creare una proprietà tag](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
 
          * Aggiungi un’azione Invia evento di Platform Web SDK e aggiungi i relativi `decisionScopes` alla configurazione di tale azione
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [Creare e pubblicare una libreria](../../../tags/ui/publishing/libraries.md) contenente tutte le regole, gli elementi dati e le estensioni pertinenti che hai configurato
-
-
 
 ## Richieste di esempio e risposte
 

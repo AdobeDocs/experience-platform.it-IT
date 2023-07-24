@@ -2,7 +2,7 @@
 title: Panoramica end-to-end sulla raccolta dati
 description: Panoramica di alto livello su come inviare dati di eventi alle soluzioni Adobe Experience Cloud utilizzando le funzionalità di raccolta dati di Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Seleziona **[!UICONTROL Flussi di dati]** nel menu di navigazione a sinistra. Da
 
 ![Stream di dati](./images/e2e/datastreams.png)
 
-I requisiti di configurazione per un datastream dipendono dai prodotti e dalle funzionalità a cui invii i dati. Per informazioni dettagliate sulle opzioni di configurazione di ciascun prodotto, consulta [panoramica sugli stream di dati](../edge/datastreams/overview.md).
+I requisiti di configurazione per un datastream dipendono dai prodotti e dalle funzionalità a cui invii i dati. Per informazioni dettagliate sulle opzioni di configurazione di ciascun prodotto, consulta [panoramica sugli stream di dati](../datastreams/overview.md).
 
 ## Installare e configurare Web SDK {#install}
 

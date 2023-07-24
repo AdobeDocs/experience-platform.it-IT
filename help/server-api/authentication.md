@@ -2,7 +2,7 @@
 title: Autenticazione
 description: Scopri come configurare l’autenticazione per l’API del server di rete Edge di Adobe Experience Platform.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%
@@ -17,7 +17,7 @@ Il [!DNL Edge Network Server API] gestisce sia la raccolta dati autenticati che 
 
 Per ogni richiesta, il [!DNL Server API] verifica lo stream di dati [!DNL access type] impostazione. Utilizzando questa impostazione, i clienti possono configurare un flusso di dati per accettare dati autenticati o sia dati autenticati che non autenticati. Per impostazione predefinita, entrambi i tipi di dati sono accettati.
 
-Per informazioni dettagliate sulla configurazione del tipo di accesso allo stream di dati, consulta la documentazione su come [creare e configurare uno stream di dati](../edge/datastreams/overview.md#create).
+Per informazioni dettagliate sulla configurazione del tipo di accesso allo stream di dati, consulta la documentazione su come [creare e configurare uno stream di dati](../datastreams/overview.md#create).
 
 Di seguito è riportato un riepilogo del comportamento, in base allo stream di dati [!DNL Access Type] e l’endpoint su cui viene ricevuta la richiesta.
 

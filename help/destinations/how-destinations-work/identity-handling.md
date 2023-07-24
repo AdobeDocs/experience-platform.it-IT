@@ -2,7 +2,7 @@
 title: Gestione dell’identità nel flusso di lavoro di attivazione delle destinazioni
 description: Scopri come viene gestita l’esportazione delle identità nel flusso di lavoro di attivazione, a seconda del tipo di destinazione
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 1%
@@ -82,7 +82,7 @@ Destinazioni pubblicitarie che si basano su cookie di terze parti (ad esempio: [
 
 Queste destinazioni richiedono una sincronizzazione ID tramite [!UICONTROL Servizio ID Experience Cloud] o attraverso [!UICONTROL Experience Platform Web SDK].
 
-Se sta usando [!UICONTROL Experience Platform Web SDK] e le versioni precedenti [!UICONTROL Servizio ID Experience Cloud] non è implementato nella pagina, quindi devi assicurarti che lo stream di dati per il sito web in questione sia abilitato per consentire la sincronizzazione degli ID di terze parti, come descritto nella [configurare la documentazione dello stream di dati](/help/edge/datastreams/configure.md#create).
+Se sta usando [!UICONTROL Experience Platform Web SDK] e le versioni precedenti [!UICONTROL Servizio ID Experience Cloud] non è implementato nella pagina, quindi devi assicurarti che lo stream di dati per il sito web in questione sia abilitato per consentire la sincronizzazione degli ID di terze parti, come descritto nella [configurare la documentazione dello stream di dati](/help/datastreams/configure.md#create).
 
 Quando configuri un flusso di dati come descritto nella documentazione collegata in precedenza, è necessario assicurarsi che il **[!UICONTROL Sincronizzazione ID di terze parti]** cursore attivato. La maggior parte dei clienti lascia il `container_id` campo vuoto (il valore predefinito è 0). Devi modificare questo valore solo se l’implementazione legacy dell’Audience Manager utilizza un ID contenitore specifico (tieni presente, tuttavia, che si tratterebbe della stragrande minoranza di clienti).
 

@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform, marzo 2022
 description: Note sulla versione di marzo 2022 per Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 9%
+ht-degree: 15%
 
 ---
 
@@ -108,13 +108,13 @@ Per ulteriori informazioni sulle dashboard di Destinazioni in Platform, consulta
 
 ## Raccolta dati {#data-collection}
 
-Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, dove possono essere arricchiti, trasformati e distribuiti a destinazioni Adobi o non Adobi.
+Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Impostazioni globali dello stream di dati | Ora puoi configurare diverse nuove impostazioni globali durante la configurazione di un flusso di dati: geolocalizzazione, cookie ID di prime parti e sincronizzazione ID di terze parti. Consulta la sezione su [configurazione di uno stream di dati](../../edge/datastreams/overview.md#create) per ulteriori informazioni, consulta la guida all’interfaccia utente per gli stream di dati. |
+| Impostazioni globali dello stream di dati | Ora puoi configurare diverse nuove impostazioni globali durante la configurazione di un flusso di dati: geolocalizzazione, cookie ID di prime parti e sincronizzazione ID di terze parti. Consulta la sezione su [configurazione di uno stream di dati](../../datastreams/overview.md#create) per ulteriori informazioni, consulta la guida all’interfaccia utente per gli stream di dati. |
 | [API del server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con la rete Edge di Experience Platform utilizzando un nuovo endpoint autenticato, per supportare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
@@ -137,7 +137,7 @@ Per ulteriori informazioni sulle funzioni disponibili, consulta [Panoramica di Q
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire l’acquisizione dei dati in.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire l’acquisizione dei dati in.
 
 **Funzioni aggiornate**
 

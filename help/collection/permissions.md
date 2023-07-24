@@ -2,7 +2,7 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experience Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 6%
@@ -36,7 +36,7 @@ Le autorizzazioni in Adobe Experience Platform includono l’accesso a flussi di
 | Modellazione dati | Visualizzare gli schemi | Consente l’accesso in sola lettura agli schemi. |
 | Gestione identità | Manage Identity Namespaces (Gestisci spazi dei nomi di identità) | Consente di visualizzare, creare e modificare [spazi dei nomi di identità](../identity-service/namespaces.md). |
 | Gestione identità | Visualizzare gli spazi dei nomi delle identità | Consente l’accesso in sola lettura agli spazi dei nomi delle identità. |
-| Raccolta dati | Gestire gli stream di dati | Consente di visualizzare, creare e modificare [flussi di dati](../edge/datastreams/overview.md). |
+| Raccolta dati | Gestire gli stream di dati | Consente di visualizzare, creare e modificare [flussi di dati](../datastreams/overview.md). |
 | Raccolta dati | Visualizzare gli stream di dati | Consente l’accesso in sola lettura agli stream di dati. |
 
 {style="table-layout:auto"}
@@ -54,7 +54,7 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’
 | Diritti di proprietà | Approvazione | Consente di approvare una build della libreria come parte della [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Sviluppa | Consente di sviluppare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Modifica proprietà | Consente di modificare la configurazione di base per le proprietà a cui un utente ha accesso. |
-| Diritti di proprietà | Gestisci ambienti | Consente di gestire [ambienti](../tags/ui/publishing/environments.md) per le proprietà a cui un utente ha accesso. |
+| Diritti di proprietà | Gestire gli ambienti | Consente di gestire [ambienti](../tags/ui/publishing/environments.md) per le proprietà a cui un utente ha accesso. |
 | Diritti di proprietà | Gestire le estensioni | Consente di gestire [estensioni](../tags/ui/managing-resources/extensions/overview.md) per le proprietà a cui un utente ha accesso. |
 | Diritti di proprietà | Pubblica | Consente di pubblicare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti aziendali | Sviluppare estensioni | Consente di creare e modificare pacchetti di estensione di proprietà dell’organizzazione, incluse versioni private e richieste di versioni pubbliche. |

@@ -2,7 +2,7 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -23,7 +23,7 @@ L’API del server di rete Edge può distribuire ed eseguire il rendering di esp
 
 Prima di poter utilizzare l’API server in combinazione con Adobe Target, devi abilitare la personalizzazione Adobe Target nella configurazione dello stream di dati.
 
-Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../edge/datastreams/overview.md#adobe-target-settings), per informazioni dettagliate su come abilitare Adobe Target.
+Consulta la [guida sull’aggiunta di servizi a un flusso di dati](../datastreams/overview.md#adobe-target-settings), per informazioni dettagliate su come abilitare Adobe Target.
 
 Durante la configurazione dello stream di dati, puoi (facoltativamente) fornire valori per [!DNL Property Token], [!DNL Target Environment ID], e [!DNL Target Third Party ID Namespace].
 

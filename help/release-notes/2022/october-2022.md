@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 3%
+ht-degree: 16%
 
 ---
 
@@ -28,13 +28,13 @@ Consulta la panoramica su [chiavi gestite dal cliente](../../landing/governance-
 
 ## Raccolta dati {#data-collection}
 
-Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobi o non Adobi.
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Gestione dei dati sensibili per gli stream di dati | I flussi di dati ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili in base a normative quali l’Health Insurance Portability and Accountability Act (HIPAA). Consulta la sezione su [gestione dei dati sensibili nei flussi di dati](../../edge/datastreams/overview.md#sensitive) per ulteriori informazioni. |
+| Gestione dei dati sensibili per gli stream di dati | I flussi di dati ora sfruttano diverse tecnologie Platform per gestire in modo appropriato i dati sensibili in base a normative quali l’Health Insurance Portability and Accountability Act (HIPAA). Consulta la sezione su [gestione dei dati sensibili nei flussi di dati](../../datastreams/overview.md#sensitive) per ulteriori informazioni. |
 | [!DNL Splunk] estensione per l’inoltro di eventi | Ora puoi inviare dati a [!DNL Splunk] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la [[!DNL Splunk] panoramica dell’estensione](../../tags/extensions/server/splunk/overview.md) per ulteriori informazioni. |
 | [!DNL Zendesk] estensione per l’inoltro di eventi | Ora puoi inviare dati a [!DNL Zendesk] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Consulta la [[!DNL Zendesk] panoramica dell’estensione](../../tags/extensions/server/zendesk/overview.md) per ulteriori informazioni. |
 
@@ -42,7 +42,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Funzioni nuove o aggiornate**
 
@@ -113,7 +113,7 @@ Nuove funzioni di Adobe Experience Platform:
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Funzioni aggiornate**
 
@@ -121,4 +121,4 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | --- | --- | 
 | Disponibilità beta dell’origine Adobe Workfront | Utilizza il [Origine Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) Experience Platform dei dati Workfront ed esecuzione di casi d&#39;uso quali la combinazione dei record di lavoro con dati di terze parti, l&#39;applicazione di analisi cronologiche e di serie temporali sui record di lavoro e l&#39;esecuzione di query sui dati di lavoro tramite SQL standard. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Workfront nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
-Per ulteriori informazioni sulle origini, leggere [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni sulle origini, leggi la [panoramica sulle origini](../../sources/home.md).

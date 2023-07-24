@@ -1,0 +1,24 @@
+---
+solution: Data Collection
+audience: user
+user-guide-title: Guida agli stream di dati di Adobe Experience Platform
+breadcrumb-title: Guida agli stream di dati
+user-guide-description: Scopri come configurare gli stream di dati in Adobe Experience Platform.
+feature: Datastreams
+source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
+workflow-type: tm+mt
+source-wordcount: '45'
+ht-degree: 11%
+
+---
+
+
+# Flussi di dati Adobe Experience Platform {#datastreams}
+
+* [Panoramica sugli stream di dati](overview.md)
+* [Configurare uno stream di dati](configure.md)
+* [Configurare le sostituzioni dello stream di dati](overrides.md)
+* [Preparazione per la raccolta dati](data-prep.md)
+* Arricchimento dei dati {#data-enrichment}
+   * [Dati meteo per il canale meteo](data-enrichment/weather.md)
+   * [Mappature campi dati meteo](data-enrichment/weather-reference.md)

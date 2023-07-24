@@ -3,7 +3,7 @@ title: Personalizzazione ibrida tramite Web SDK e API del server di rete Edge
 description: Questo articolo illustra come utilizzare l’SDK per web in combinazione con l’API server per distribuire la personalizzazione ibrida sulle proprietà web.
 keywords: personalizzazione; ibrida; api server; lato server; implementazione ibrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 3%
@@ -65,7 +65,7 @@ Le richieste API server sono necessarie per ottenere proposte e inviare una noti
 
 Quando implementi la personalizzazione ibrida, devi prestare particolare attenzione in modo che gli hit pagina non vengano conteggiati più volte in Analytics.
 
-Quando [configurare uno stream di dati](../datastreams/overview.md) con Analytics, gli eventi vengono inoltrati automaticamente in modo che gli hit pagina vengano acquisiti.
+Quando [configurare uno stream di dati](../../datastreams/overview.md) con Analytics, gli eventi vengono inoltrati automaticamente in modo che gli hit pagina vengano acquisiti.
 
 Il campione di questa implementazione utilizza due diversi flussi di dati:
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sì. | ID dello stream di dati utilizzato per passare le interazioni alla rete Edge. Consulta la [panoramica sugli stream di dati](../datastreams/overview.md) per scoprire come configurare un flusso di dati. |
+| `dataStreamId` | `String` | Sì. | ID dello stream di dati utilizzato per passare le interazioni alla rete Edge. Consulta la [panoramica sugli stream di dati](../../datastreams/overview.md) per scoprire come configurare un flusso di dati. |
 | `requestId` | `String` | No | Un ID casuale per correlare le richieste interne del server. Se non ne viene fornito alcuno, la rete Edge ne genererà uno e lo restituirà nella risposta. |
 
 ### Risposta lato server {#server-response}

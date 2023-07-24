@@ -2,7 +2,7 @@
 title: Configurare l’estensione Adobe Experience Platform Web SDK
 description: Configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 6%
@@ -52,7 +52,7 @@ Il [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experienc
 
 Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
 
-Consulta la guida su [flussi di dati](../../../../edge/datastreams/overview.md) per ulteriori informazioni.
+Consulta la guida su [flussi di dati](../../../../datastreams/overview.md) per ulteriori informazioni.
 
 
 ## [!UICONTROL Privacy]
@@ -112,10 +112,10 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 
 La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
-1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](../../../../edge/datastreams/configure.md).
+1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
 2. Quindi, devi inviare le sostituzioni a Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
 
-Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](../../../../edge/datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
+Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](../../../../datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
 
 In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi configurare le sostituzioni nella schermata dell’estensione tag mostrata di seguito.
 

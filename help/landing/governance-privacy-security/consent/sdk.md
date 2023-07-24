@@ -2,7 +2,7 @@
 title: Elaborare dati di consenso dei clienti utilizzando Adobe Experience Platform Web SDK
 description: Scopri come integrare Adobe Experience Platform Web SDK per elaborare i dati sul consenso dei clienti in Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Questa esercitazione presuppone che tu abbia già determinato come generare i da
 
 Questa guida segue il flusso di lavoro per la configurazione dell’SDK utilizzando l’estensione tag nell’interfaccia utente. Se non desideri utilizzare l&#39;estensione e preferisci incorporare direttamente la versione autonoma dell&#39;SDK sul tuo sito, consulta i seguenti documenti invece di questa guida:
 
-* [Configurare uno stream di dati](../../../edge/datastreams/overview.md)
+* [Configurare uno stream di dati](../../../datastreams/overview.md)
 * [Installare l’SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configurare l’SDK per i comandi di consenso](../../../edge/consent/supporting-consent.md)
 
@@ -202,7 +202,7 @@ var setConsent = function () {
 
 Tutti [!DNL Platform SDK] i comandi restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Consulta la sezione su [gestione di operazioni riuscite o non riuscite](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) nella guida all’esecuzione dei comandi SDK per esempi specifici.
 
-Dopo aver completato correttamente `setConsent` chiamate con l’SDK, puoi utilizzare il visualizzatore di profili nell’interfaccia di Platform per verificare se i dati vengono inviati nell’archivio profili. Consulta la sezione su [esplorazione dei profili per identità](../../../profile/ui/user-guide.md#browse-identity) per ulteriori informazioni.
+Dopo aver completato correttamente `setConsent` chiamate con l’SDK, puoi utilizzare il visualizzatore di profili nell’interfaccia utente di Platform per verificare se i dati vengono inviati nell’archivio profili. Consulta la sezione su [esplorazione dei profili per identità](../../../profile/ui/user-guide.md#browse-identity) per ulteriori informazioni.
 
 ## Passaggi successivi
 

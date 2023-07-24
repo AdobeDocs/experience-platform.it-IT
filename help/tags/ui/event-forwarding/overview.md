@@ -3,7 +3,7 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 8%
@@ -81,7 +81,7 @@ Il **[!UICONTROL Percorso]** il valore per l’elemento dati deve seguire il pat
 
 ### Regole {#rules}
 
-La creazione di regole nelle proprietà di inoltro degli eventi funziona in modo simile ai tag, con la differenza fondamentale che non è possibile selezionare eventi come componenti regola. Al contrario, una regola di inoltro degli eventi elabora tutti gli eventi che riceve dal [flusso di dati](../../../edge/datastreams/overview.md) e inoltra tali eventi alle destinazioni se sono soddisfatte determinate condizioni.
+La creazione di regole nelle proprietà di inoltro degli eventi funziona in modo simile ai tag, con la differenza fondamentale che non è possibile selezionare eventi come componenti regola. Al contrario, una regola di inoltro degli eventi elabora tutti gli eventi che riceve dal [flusso di dati](../../../datastreams/overview.md) e inoltra tali eventi alle destinazioni se sono soddisfatte determinate condizioni.
 
 Inoltre, esiste un timeout di 30 secondi che si applica a un singolo evento durante l’elaborazione in tutte le regole (e quindi tutte le azioni) all’interno di una proprietà di inoltro degli eventi. Ciò significa che tutte le regole e tutte le azioni per un singolo evento devono essere completate in questo intervallo di tempo.
 

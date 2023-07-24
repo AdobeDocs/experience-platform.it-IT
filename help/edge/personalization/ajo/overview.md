@@ -3,7 +3,7 @@ title: Utilizzo di Adobe Journey Optimizer con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con l’SDK per web di Experience Platform utilizzando Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe percorsi optimizer;renderDecisions;superfici;decisioni;proposte;ambito;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Per iniziare a utilizzare [!DNL Adobe Journey Optimizer], segui la procedura ind
 
 1. Passare attraverso [prerequisiti](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) dal [!DNL Adobe Journey Optimizer] [Guida alle esperienze web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), in particolare:
    * Configurazione [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * Abilita [!DNL Adobe Journey Optimizer] nel tuo [flusso di dati](../../datastreams/overview.md).
+   * Abilita [!DNL Adobe Journey Optimizer] nel tuo [flusso di dati](../../../datastreams/overview.md).
    * Abilita [!UICONTROL Criterio di unione Attivo su Edge] opzione.
 
 2. Aggiungi il `renderDecisions` agli eventi. Imposta `renderDecisions` a `true` per il rendering automatico delle proposte di contenuti Journey Optimizer distribuite sulle superfici delle pagine web.

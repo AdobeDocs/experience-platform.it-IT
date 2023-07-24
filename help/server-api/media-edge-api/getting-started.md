@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '959'
 ht-degree: 4%
 
 ---
@@ -60,7 +60,7 @@ Per avviare la sessione multimediale sul server, utilizzare l&#39;endpoint di in
 
 Prima di effettuare la richiesta di avvio della sessione, è necessario disporre dei seguenti elementi:
 
-* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=en).
+* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
 
 * Un oggetto JSON per il payload della richiesta che contiene i dati minimi richiesti (come mostrato nella richiesta di esempio seguente).
 

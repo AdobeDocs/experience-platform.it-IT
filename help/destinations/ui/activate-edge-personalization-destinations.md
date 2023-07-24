@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experienc
 
 ![Configurazione dello stream di dati](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzioni descritte nella sezione [Documentazione di Platform Web SDK](../../edge/datastreams/configure.md#aep).
+Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzioni descritte nella sezione [Documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Creare un [!DNL Active-On-Edge] criterio di unione {#create-merge-policy}
 

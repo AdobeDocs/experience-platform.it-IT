@@ -2,7 +2,7 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 44%
@@ -46,7 +46,7 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | Attributo calcolato | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
 | [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
-| [Datastream](../../../edge/datastreams/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
@@ -90,6 +90,7 @@ Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a des
 ### Filtrare i registri di audit
 
 >[!NOTE]
+>
 Poiché si tratta di una nuova funzione, i dati visualizzati risalgono solo a marzo 2022. A seconda della risorsa selezionata, i dati precedenti potrebbero essere disponibili da gennaio 2022.
 
 

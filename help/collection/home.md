@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sulla raccolta dati
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 8%
@@ -25,7 +25,7 @@ La raccolta dei dati si concentra sulla reperibilità e sull’accessibilità de
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Tag](../tags/home.md)
-* [Stream di dati](../edge/datastreams/overview.md)
+* [Stream di dati](../datastreams/overview.md)
 * [Inoltro eventi](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
@@ -45,9 +45,9 @@ La compressione di queste librerie velocizza la raccolta dei dati e consolida le
 
 ## Rete Edge e flussi di dati di Platform {#edge}
 
-Platform Edge Network è una rete di server distribuita a livello globale, veloce e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi impostare [flussi di dati](../edge/datastreams/overview.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
+Platform Edge Network è una rete di server distribuita a livello globale, veloce e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando i tag, puoi impostare [flussi di dati](../datastreams/overview.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
 
-Inoltre, gli stream di dati sono integrati con diverse funzionalità di Platform che consentono di garantire che tutti i dati sensibili che invii siano gestiti in modo appropriato in conformità alle politiche organizzative e alle normative legali. Consulta la sezione su [gestione dei dati sensibili](../edge/datastreams/overview.md#sensitive) per ulteriori informazioni, consulta la documentazione sugli stream di dati.
+Inoltre, gli stream di dati sono integrati con diverse funzionalità di Platform che consentono di garantire che tutti i dati sensibili che invii siano gestiti in modo appropriato in conformità alle politiche organizzative e alle normative legali. Consulta la sezione su [gestione dei dati sensibili](../datastreams/overview.md#sensitive) per ulteriori informazioni, consulta la documentazione sugli stream di dati.
 
 ![Flussi di dati e soluzioni di Adobe](./images/home/adobe-solutions.png)
 

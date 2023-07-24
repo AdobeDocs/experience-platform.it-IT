@@ -2,7 +2,7 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 38%
@@ -27,7 +27,7 @@ Questo documento descrive le note sulla versione dell’estensione tag Adobe Exp
 **Nuove funzioni**
 
 * Contiene la versione 2.16.0 di Adobe Experience Platform Web SDK.
-* È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](../../../../edge/datastreams/overrides.md).
+* È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](../../../../datastreams/overrides.md).
 * Aggiungi avviso di deprecazione al `datasetId` opzione sul `sendEvent` comando.
 
 

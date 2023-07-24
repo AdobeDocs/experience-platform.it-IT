@@ -3,7 +3,7 @@ title: Tracciare gli eventi utilizzando Adobe Experience Platform Web SDK
 description: Scopri come tenere traccia degli eventi di Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 1%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->Il `datasetId` opzione supportata da `sendEvent` il comando è stato dichiarato obsoleto. Per ignorare un ID di set di dati, utilizza [sostituzioni di configurazione](../datastreams/overrides.md) invece.
+>Il `datasetId` opzione supportata da `sendEvent` il comando è stato dichiarato obsoleto. Per ignorare un ID di set di dati, utilizza [sostituzioni di configurazione](../../datastreams/overrides.md) invece.
 
 In alcuni casi d’uso, potrebbe essere utile inviare un evento a un set di dati diverso da quello configurato nell’interfaccia utente di configurazione. Per questo è necessario impostare il `datasetId` opzione sul `sendEvent` comando:
 
@@ -254,20 +254,20 @@ Alcune note sulla `onBeforeEventSend` callback:
 
 * L’XDM dell’evento può essere modificato durante il callback. Una volta restituito il callback, tutti i campi e i valori modificati degli oggetti content.xdm e content.data vengono inviati con l&#39;evento.
 
-   ```javascript
-   onBeforeEventSend: function(content){
-     //sets a query parameter in XDM
-     const queryString = window.location.search;
-     const urlParams = new URLSearchParams(queryString);
-     content.xdm.marketing.trackingCode = urlParams.get('cid')
-   }
-   ```
+  ```javascript
+  onBeforeEventSend: function(content){
+    //sets a query parameter in XDM
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    content.xdm.marketing.trackingCode = urlParams.get('cid')
+  }
+  ```
 
 * Se il callback genera un&#39;eccezione, l&#39;elaborazione dell&#39;evento viene interrotta e l&#39;evento non viene inviato.
 * Se il callback restituisce il valore booleano di `false`, l’elaborazione degli eventi viene interrotta senza errori e l’evento non viene inviato. Questo meccanismo consente di ignorare facilmente alcuni eventi esaminando i dati dell’evento e restituendoli `false` se l’evento non deve essere inviato.
 
-   >[!NOTE]
-   >Fai attenzione a evitare di restituire false al primo evento di una pagina. La restituzione di false sul primo evento può influire negativamente sulla personalizzazione.
+  >[!NOTE]
+  >Fai attenzione a evitare di restituire false al primo evento di una pagina. La restituzione di false sul primo evento può influire negativamente sulla personalizzazione.
 
 ```javascript
    onBeforeEventSend: function(content) {
