@@ -3,10 +3,10 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 6%
+source-wordcount: '933'
+ht-degree: 5%
 
 ---
 
@@ -68,7 +68,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informazioni sugli ID di stream di dati"
 >abstract="Questa opzione determina in quale flusso di dati di raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=it" text="Scopri come configurare uno stream di dati"
+>additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
 > 
