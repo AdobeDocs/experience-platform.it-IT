@@ -1,7 +1,7 @@
 ---
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Per comprendere il formato del messaggio e la configurazione e la trasformazione
 * **Experience Data Model (XDM)**. [Panoramica di XDM](../../../../xdm/home.md) e  [Come creare uno schema XDM in Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Creare e modificare le classi nell’interfaccia utente](../../../../xdm/ui/resources/classes.md).
 * **IdentityMap**. La mappa delle identità rappresenta una mappa di tutte le identità degli utenti finali in Adobe Experience Platform. Fai riferimento a `xdm:identityMap` nel [Dizionario campo XDM](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. Il [segmentMembership](../../../../xdm/schema/field-dictionary.md) L’attributo XDM indica di quali segmenti è membro un profilo. Per i tre valori diversi in `status` , leggi la documentazione su [Gruppo di campi schema Dettagli appartenenza segmento](../../../../xdm/field-groups/profile/segmentation.md).
+* **SegmentMembership**. Il [segmentMembership](../../../../xdm/schema/field-dictionary.md) L’attributo XDM indica di quali tipi di pubblico è membro un profilo. Per i tre valori diversi in `status` , leggi la documentazione su [Gruppo di campi schema Dettagli appartenenza pubblico](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
@@ -107,7 +107,7 @@ Per comprendere gli esempi più avanti nella pagina, è importante conoscere la 
 I profili hanno 3 sezioni:
 
 * `segmentMembership` (sempre presente in un profilo)
-   * questa sezione contiene tutti i segmenti presenti nel profilo. I segmenti possono avere uno dei due stati seguenti: `realized` o `exited`.
+   * questa sezione contiene tutti i tipi di pubblico presenti nel profilo. I tipi di pubblico possono avere uno dei due stati: `realized` o `exited`.
 * `identityMap` (sempre presente in un profilo)
    * questa sezione contiene tutte le identità presenti nel profilo (e-mail, Google GAID, Apple IDFA e così via) e di cui l’utente ha eseguito la mappatura per l’esportazione nel flusso di lavoro di attivazione.
 * attributi (a seconda della configurazione di destinazione, questi potrebbero essere presenti nel profilo). C’è anche una leggera differenza da notare tra gli attributi predefiniti e gli attributi a forma libera:
@@ -170,15 +170,15 @@ Di seguito sono riportati due Experienci Platform di profili:
 }
 ```
 
-## Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenze a segmenti {#using-templating}
+## Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico {#using-templating}
 
 utilizzi Adobi [Modelli di ciottoli](https://pebbletemplates.io/), un linguaggio per modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), per trasformare i campi dallo schema XDM Experience Platform in un formato supportato dalla tua destinazione.
 
 Questa sezione fornisce diversi esempi di come vengono effettuate queste trasformazioni, dallo schema XDM di input fino al modello e all’output nei formati di payload accettati dalla destinazione. Gli esempi seguenti sono presentati dalla complessità crescente, come segue:
 
-1. Semplici esempi di trasformazione. Scopri come funziona il template con trasformazioni semplici per [Attributi del profilo](#attributes), [Iscrizione al segmento](#segment-membership), e [Identità](#identities) campi.
-2. Sono stati aggiunti esempi di complessità dei modelli che combinano i campi riportati sopra: [Creare un modello che invia segmenti e identità](./message-format.md#segments-and-identities) e [Creare un modello che invia segmenti, identità e attributi di profilo](#segments-identities-attributes).
-3. Modelli che includono la chiave di aggregazione. Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali ID segmento, stato del segmento o spazi dei nomi di identità.
+1. Semplici esempi di trasformazione. Scopri come funziona il template con trasformazioni semplici per [Attributi del profilo](#attributes), [Iscrizione al pubblico](#segment-membership), e [Identità](#identities) campi.
+2. Sono stati aggiunti esempi di complessità dei modelli che combinano i campi riportati sopra: [Creare un modello che invia tipi di pubblico e identità](./message-format.md#segments-and-identities) e [Creare un modello che invia segmenti, identità e attributi di profilo](#segments-identities-attributes).
+3. Modelli che includono la chiave di aggregazione. Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali ID pubblico, stato del pubblico o spazi dei nomi di identità.
 
 ### Attributi del profilo {#attributes}
 
@@ -263,10 +263,10 @@ Profilo 2:
 }
 ```
 
-### Appartenenza a un segmento {#segment-membership}
+### Iscrizione al pubblico {#audience-membership}
 
-Il [segmentMembership](../../../../xdm/schema/field-dictionary.md) L’attributo XDM indica di quali segmenti è membro un profilo.
-Per i tre valori diversi in `status` , leggi la documentazione su [Gruppo di campi schema Dettagli appartenenza segmento](../../../../xdm/field-groups/profile/segmentation.md).
+Il [segmentMembership](../../../../xdm/schema/field-dictionary.md) L’attributo XDM indica di quali tipi di pubblico è membro un profilo.
+Per i tre valori diversi in `status` , leggi la documentazione su [Gruppo di campi schema Dettagli appartenenza pubblico](../../../../xdm/field-groups/profile/segmentation.md).
 
 **Input**
 
@@ -335,7 +335,7 @@ Profilo 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                 "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -490,10 +490,10 @@ Profilo 2:
 }
 ```
 
-### Creare un modello che invia segmenti e identità {#segments-and-identities}
+### Creare un modello che invia tipi di pubblico e identità {#segments-and-identities}
 
 Questa sezione fornisce un esempio di trasformazione comunemente utilizzata tra lo schema XDM di Adobe e lo schema di destinazione del partner.
-L’esempio seguente mostra come trasformare l’iscrizione al segmento e il formato delle identità e come eseguirne l’output nella destinazione.
+L’esempio seguente mostra come trasformare il formato di appartenenza al pubblico e delle identità e inviarli per l’output alla destinazione.
 
 **Input**
 
@@ -595,7 +595,7 @@ Profilo 2:
                     {% endfor %}
                 ],
                 "remove": [
-                    {# Alternative syntax for filtering segments by status: #}
+                    {# Alternative syntax for filtering audiences by status: #}
                     {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                     {% endfor %}
@@ -661,7 +661,7 @@ Il `json` di seguito sono riportati i dati esportati da Adobe Experience Platfor
 
 Questa sezione fornisce un esempio di trasformazione comunemente utilizzata tra lo schema XDM di Adobe e lo schema di destinazione del partner.
 
-Un altro caso d’uso comune è l’esportazione di dati che contengono appartenenza a segmenti, identità (ad esempio: indirizzo e-mail, numero di telefono, ID pubblicitario) e attributi di profilo. Per esportare i dati in questo modo, vedi l’esempio seguente:
+Un altro caso d’uso comune è l’esportazione di dati che contengono l’iscrizione al pubblico, le identità (ad esempio: indirizzo e-mail, numero di telefono, ID pubblicitario) e gli attributi del profilo. Per esportare i dati in questo modo, vedi l’esempio seguente:
 
 **Input**
 
@@ -788,7 +788,7 @@ Profilo 2:
                 {% endfor %}
                 ],
                 "remove": [
-                {# Alternative syntax for filtering segments by status: #}
+                {# Alternative syntax for filtering audiences by status: #}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{% if not loop.last %},{% endif %}
                 {% endfor %}
@@ -859,21 +859,21 @@ Il `json` di seguito sono riportati i dati esportati da Adobe Experience Platfor
 
 ### Includi la chiave di aggregazione nel modello per accedere ai profili esportati raggruppati per vari criteri {#template-aggregation-key}
 
-Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID segmento, alias segmento, appartenenza al segmento o spazi dei nomi delle identità.
+Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID pubblico, alias pubblico, appartenenza a un pubblico o spazi dei nomi di identità.
 
 Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experience Platform in modo che corrisponda ai limiti di formato e frequenza previsti dalla destinazione.
 
-#### Utilizza la chiave di aggregazione ID segmento nel modello {#aggregation-key-segment-id}
+#### Usa chiave di aggregazione ID pubblico nel modello {#aggregation-key-segment-id}
 
-Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione sono raggruppati per ID segmento. Di seguito trovi le modalità di accesso all’ID segmento nel modello.
+Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` su true, i profili nei messaggi HTTP esportati nella destinazione sono raggruppati per ID pubblico. Di seguito trovi le modalità di accesso all’ID del pubblico nel modello.
 
 **Input**
 
 Considera i quattro profili seguenti, dove:
 
-* i primi due fanno parte del segmento con l’ID segmento `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* il terzo profilo fa parte del segmento con l’ID segmento `8f812592-3f06-416b-bd50-e7831848a31a`
-* il quarto profilo fa parte di entrambi i segmenti qui sopra.
+* i primi due fanno parte del pubblico con l’ID pubblico `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* il terzo profilo fa parte del pubblico con l’ID pubblico `8f812592-3f06-416b-bd50-e7831848a31a`
+* il quarto profilo fa parte di entrambi i tipi di pubblico indicati sopra.
 
 Profilo 1:
 
@@ -965,7 +965,7 @@ Profilo 4:
 >
 >Per tutti i modelli utilizzati, è necessario utilizzare caratteri non validi, ad esempio virgolette doppie `""` prima di inserire [modello](../../functionality/destination-server/templating-specs.md) nel [configurazione del server di destinazione](../../authoring-api/destination-server/create-destination-server.md). Per ulteriori informazioni sull&#39;escape delle virgolette doppie, vedere il Capitolo 9 della [Standard JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Osserva come `audienceId` viene utilizzato nel modello per accedere agli ID dei segmenti. Questo esempio presuppone che tu utilizzi `audienceId` per l’iscrizione al segmento nella tassonomia di destinazione. In alternativa, puoi utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
+Osserva come `audienceId` viene utilizzato nel modello per accedere agli ID del pubblico. Questo esempio presuppone che tu utilizzi `audienceId` per l’iscrizione al pubblico nella tassonomia di destinazione. In alternativa, puoi utilizzare qualsiasi altro nome di campo, a seconda della tassonomia.
 
 ```python
 {
@@ -982,7 +982,7 @@ Osserva come `audienceId` viene utilizzato nel modello per accedere agli ID dei 
 
 **Risultato**
 
-Quando vengono esportati nella destinazione, i profili vengono suddivisi in due gruppi, in base al loro ID segmento.
+Quando vengono esportati nella destinazione, i profili vengono suddivisi in due gruppi, in base al loro ID pubblico.
 
 ```json
 {
@@ -1015,19 +1015,19 @@ Quando vengono esportati nella destinazione, i profili vengono suddivisi in due 
 }
 ```
 
-#### Usa chiave di aggregazione alias segmento nel modello {#aggregation-key-segment-alias}
+#### Utilizza la chiave di aggregazione degli alias del pubblico nel modello {#aggregation-key-segment-alias}
 
-Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` se impostato su true, puoi anche accedere all’alias del segmento nel modello.
+Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` se impostato su true, puoi anche accedere all’alias del pubblico nel modello.
 
-Aggiungi la riga seguente al modello per accedere ai profili esportati raggruppati per alias del segmento.
+Aggiungi la riga seguente al modello per accedere ai profili esportati raggruppati per alias di pubblico.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Utilizza la chiave di aggregazione dello stato del segmento nel modello {#aggregation-key-segment-status}
+#### Utilizza la chiave di aggregazione dello stato del pubblico nel modello {#aggregation-key-segment-status}
 
-Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` e `includeSegmentStatus` se impostato su true, puoi accedere allo stato del segmento nel modello. In questo modo, puoi raggruppare i profili nei messaggi HTTP esportati nella destinazione in base al fatto che debbano essere aggiunti o rimossi dai segmenti.
+Se usa [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e imposta `includeSegmentId` e `includeSegmentStatus` se impostato su true, puoi accedere allo stato del pubblico nel modello. In questo modo, puoi raggruppare i profili nei messaggi HTTP esportati nella destinazione in base al fatto che debbano essere aggiunti o rimossi dai segmenti.
 
 I valori possibili sono:
 
@@ -1206,10 +1206,10 @@ La tabella seguente fornisce le descrizioni delle funzioni negli esempi preceden
 | Funzione | Descrizione |
 |---------|----------|
 | `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM del partner menzionato più sopra in questa pagina. |
-| `destination.segmentAliases` | Mappa dagli ID segmento nello spazio dei nomi Adobe Experience Platform agli alias segmento nel sistema del partner. |
-| `destination.segmentNames` | Mappa i nomi dei segmenti nello spazio dei nomi di Adobe Experience Platform ai nomi dei segmenti nel sistema del partner. |
-| `addedSegments(listOfSegments)` | Restituisce solo i segmenti con stato `realized`. |
-| `removedSegments(listOfSegments)` | Restituisce solo i segmenti con stato `exited`. |
+| `destination.segmentAliases` | Mappa dagli ID pubblico nello spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. |
+| `destination.segmentNames` | Mappa dai nomi del pubblico nello spazio dei nomi di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. |
+| `addedSegments(listOfSegments)` | Restituisce solo i tipi di pubblico con stato `realized`. |
+| `removedSegments(listOfSegments)` | Restituisce solo i tipi di pubblico con stato `exited`. |
 
 {style="table-layout:auto"}
 
