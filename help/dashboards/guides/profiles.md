@@ -4,7 +4,7 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
 workflow-type: tm+mt
 source-wordcount: '3393'
 ht-degree: 10%
@@ -15,11 +15,11 @@ ht-degree: 10%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulla tua [!DNL Real-Time Customer Profile] dati acquisiti durante un&#39;istantanea giornaliera. Questa guida illustra come accedere e utilizzare il dashboard Profili nell’interfaccia utente di e fornisce informazioni sulle metriche visualizzate nel dashboard.
 
-Per una panoramica di tutte le funzioni del profilo nell’interfaccia utente di Experience Platform, consulta [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
+Per una panoramica di tutte le funzioni del profilo nell’interfaccia utente di Experienci Platform, consulta [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
 
 ## Dati dashboard profilo
 
-Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
+Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experienci Platform. Lo snapshot non include dati di eventi (serie temporali).
 
 I dati attributo nello snapshot mostrano i dati esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e il dashboard Profilo non viene aggiornato in tempo reale.
 
@@ -339,7 +339,7 @@ Seleziona **[!UICONTROL Chiudi]** per tornare al [!UICONTROL Profili] dashboard.
 
 ### [!UICONTROL Tipi di pubblico mappati allo stato di destinazione] {#audiences-mapped-to-destination-status}
 
-Il [!UICONTROL Tipi di pubblico mappati allo stato di destinazione] widget mostra il numero totale di tipi di pubblico mappati e non mappati in una singola metrica e utilizza un grafico ad anello per illustrare la differenza proporzionale tra i totali. I numeri calcolati dipendono dal criterio di unione scelto.
+Il [!UICONTROL Tipi di pubblico mappati allo stato di destinazione] widget mostra il numero totale di tipi di pubblico mappati e non mappati in una singola metrica e utilizza un grafico ad anello per illustrare la differenza proporzionale tra i rispettivi totali. I numeri calcolati dipendono dal criterio di unione scelto.
 
 I conteggi individuali per i tipi di pubblico mappati o non mappati vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
@@ -436,4 +436,4 @@ The three levels of completeness are:
 
 ## Passaggi successivi
 
-Seguendo questo documento, ora dovresti essere in grado di individuare la dashboard dei profili e comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile] nell’interfaccia utente di Experience Platform, consulta la sezione [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
+Seguendo questo documento, ora dovresti essere in grado di individuare la dashboard dei profili e comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile] nell’interfaccia utente di Experienci Platform, consulta la sezione [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
