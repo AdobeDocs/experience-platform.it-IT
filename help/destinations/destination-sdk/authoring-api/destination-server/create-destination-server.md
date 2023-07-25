@@ -3,8 +3,8 @@ description: Questa pagina esemplifica la chiamata API utilizzata per creare un 
 title: Creare una configurazione del server di destinazione
 source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 9%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
