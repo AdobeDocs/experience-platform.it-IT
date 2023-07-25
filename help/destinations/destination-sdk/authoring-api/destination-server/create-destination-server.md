@@ -1,10 +1,10 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione del server di destinazione
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1623'
-ht-degree: 10%
+source-wordcount: '1696'
+ht-degree: 9%
 
 ---
 
@@ -44,7 +44,11 @@ Prima di continuare, controlla [guida introduttiva](../../getting-started.md) pe
 POST /authoring/destination-servers
 ```
 
-A seconda del tipo di destinazione creato, è necessario configurare un tipo leggermente diverso di server di destinazione. Vedi nelle schede seguenti esempi di server di destinazione per ogni tipo di destinazione supportato in Destination SDK.
+A seconda del tipo di destinazione creato, è necessario configurare un tipo leggermente diverso di server di destinazione.
+
+### Creare server di destinazione con schema statico {#static-destination-servers}
+
+Vedi nelle schede seguenti esempi di server di destinazione per le destinazioni che utilizzano [schemi statici](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 I payload di esempio seguenti includono tutti i parametri supportati da ciascun tipo di server di destinazione. Non è necessario includere tutti i parametri nella richiesta. Il payload è personalizzabile in base alle tue esigenze.
 
@@ -770,6 +774,18 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
+>[!ENDTABS]
+
+### Creare server di destinazione con schema dinamico {#dynamic-schema-servers}
+
+Gli schemi dinamici ti consentono di recuperare dinamicamente gli attributi di destinazione supportati e generare schemi in base alla tua API. Per configurare lo schema, è necessario configurare un server di destinazione per gli schemi dinamici.
+
+Vedi nella scheda seguente un esempio di server di destinazione per le destinazioni che utilizzano [schemi dinamici](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+Il payload di esempio seguente include tutti i parametri necessari per un server di schema dinamico.
+
+>[!BEGINTABS]
+
 >[!TAB Server schema dinamico]
 
 **Creare un server di schema dinamico**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
 
 +++
+
 
 >[!ENDTABS]
 

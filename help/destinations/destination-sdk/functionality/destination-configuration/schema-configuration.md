@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1898'
 ht-degree: 4%
 
 ---
@@ -48,7 +48,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 Destination SDK supporta più configurazioni di schema:
 
 * Gli schemi statici sono definiti tramite `profileFields` array in `schemaConfig` sezione. In uno schema statico, puoi definire ogni attributo di destinazione che deve essere visualizzato nell’interfaccia utente di Experience Platform nel `profileFields` array. Se devi aggiornare lo schema, devi [aggiornare la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* Gli schemi dinamici utilizzano un tipo di server di destinazione aggiuntivo, denominato [server schema dinamico](../../authoring-api/destination-server/create-destination-server.md), per generare dinamicamente gli schemi in base alla tua API. Gli schemi dinamici non utilizzano `profileFields` array. Se devi aggiornare lo schema, non è necessario [aggiornare la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md). Il server con schema dinamico recupera invece lo schema aggiornato dall’API.
+* Gli schemi dinamici utilizzano un tipo di server di destinazione aggiuntivo, denominato [server schema dinamico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), per recuperare in modo dinamico gli attributi di destinazione supportati e generare schemi in base alla tua API. Gli schemi dinamici non utilizzano `profileFields` array. Se devi aggiornare lo schema, non è necessario [aggiornare la configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md). Il server con schema dinamico recupera invece lo schema aggiornato dall’API.
 * All’interno della configurazione dello schema, puoi aggiungere mappature richieste (o predefinite). Si tratta di mappature che gli utenti possono visualizzare nell’interfaccia utente di Platform, ma che non possono modificare quando si imposta una connessione alla destinazione. Ad esempio, puoi applicare che il campo dell’indirizzo e-mail venga sempre inviato alla destinazione.
 
 Il `schemaConfig` Questa sezione utilizza più parametri di configurazione, a seconda del tipo di schema necessario, come illustrato nelle sezioni seguenti.
@@ -126,7 +126,7 @@ Destination SDK supporta la creazione di schemi partner dinamici. A differenza d
 
 >[!IMPORTANT]
 >
->Prima di creare uno schema dinamico, è necessario [creare un server di schema dinamico](../../authoring-api/destination-server/create-destination-server.md).
+>Prima di creare uno schema dinamico, è necessario [creare un server di schema dinamico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 In una configurazione di schema dinamico, il `profileFields` è sostituito da `dynamicSchemaConfig` come illustrato di seguito.
 
