@@ -4,9 +4,9 @@ title: (Beta) Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '3524'
+source-wordcount: '3520'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Questo articolo spiega il flusso di lavoro necessario per utilizzare [!DNL Flow 
 
 >[!TIP]
 >
->Per esportare i set di dati, puoi anche utilizzare l’interfaccia utente di Experience Platform. Leggi le [esercitazione sull’interfaccia utente per esportare i set di dati](/help/destinations/ui/export-datasets.md) per ulteriori informazioni.
+>Per esportare i set di dati, puoi anche utilizzare l’interfaccia utente di Experienci Platform. Leggi le [esercitazione sull’interfaccia utente per esportare i set di dati](/help/destinations/ui/export-datasets.md) per ulteriori informazioni.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -51,7 +51,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** o un **[!UICONTROL Esportare i set di dati]** , quindi si dispone delle autorizzazioni appropriate.
 
@@ -2317,7 +2317,7 @@ Puoi trovare informazioni sulla funzione [vari parametri restituiti dal flusso d
 
 ## Verificare l’esportazione del set di dati {#verify}
 
-Durante l’esportazione dei set di dati, Experience Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. Si prevede che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita quando [creazione di un flusso di dati](#create-dataflow).
+Durante l’esportazione dei set di dati, Experienci Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. Si prevede che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita quando [creazione di un flusso di dati](#create-dataflow).
 
 In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
 

@@ -3,9 +3,9 @@ title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1421'
 ht-degree: 5%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 5%
 >* Questa funzionalità beta supporta l’esportazione di dati di prima generazione, come definito in Real-time Customer Data Platform [descrizione del prodotto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 
-Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage] utilizzando l’interfaccia utente di Experience Platform.
+Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage] utilizzando l’interfaccia utente di Experienci Platform.
 
-Puoi anche utilizzare le API Experience Platform per esportare i set di dati. Leggi le [esercitazione sull’API per l’esportazione di set di dati](/help/destinations/api/export-datasets.md) per ulteriori informazioni.
+Puoi anche utilizzare le API Experienci Platform per esportare i set di dati. Leggi le [esercitazione sull’API per l’esportazione di set di dati](/help/destinations/api/export-datasets.md) per ulteriori informazioni.
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -37,7 +37,7 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 
 ## Quando attivare tipi di pubblico o esportare set di dati {#when-to-activate-audiences-or-activate-datasets}
 
-Alcune destinazioni basate su file nel catalogo Experience Platform supportano sia l’attivazione del pubblico che l’esportazione di set di dati.
+Alcune destinazioni basate su file nel catalogo Experienci Platform supportano sia l’attivazione del pubblico che l’esportazione di set di dati.
 
 * Considera l’attivazione di tipi di pubblico quando desideri che i dati siano strutturati in profili raggruppati per interessi o qualifiche di pubblico.
 * In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per generare rapporti, flussi di lavoro di data science, per soddisfare i requisiti di conformità e molti altri casi d’uso.
@@ -50,7 +50,7 @@ Per esportare i set di dati nelle destinazioni di archiviazione cloud, è necess
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** o un **[!UICONTROL Esportare i set di dati]** , quindi si dispone delle autorizzazioni appropriate.
 
@@ -122,7 +122,7 @@ Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepil
 
 ## Verificare l’esportazione del set di dati {#verify}
 
-Durante l’esportazione dei set di dati, Experience Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
+Durante l’esportazione dei set di dati, Experienci Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
 
 In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
 
@@ -149,7 +149,7 @@ Quando vengono compressi, si noti la differenza di formato tra i due tipi di fil
 
 Per rimuovere un set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
 
-1. Accedi a [Interfaccia utente Experience Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
+1. Accedi a [Interfaccia utente Experienci Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Visualizzazione Sfoglia destinazione con una connessione di destinazione visualizzata e il resto sfocato.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
