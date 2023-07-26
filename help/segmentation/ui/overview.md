@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
+source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
 workflow-type: tm+mt
-source-wordcount: '3606'
+source-wordcount: '3607'
 ht-degree: 3%
 
 ---
@@ -27,11 +27,11 @@ Devi inoltre comprendere due termini chiave utilizzati in questo documento e la 
 
 - **Pubblico**: un insieme di persone che condividono comportamenti e/o caratteristiche simili. Questa raccolta di persone può essere generata da Adobe Experience Platform utilizzando le definizioni dei segmenti o la composizione del pubblico (pubblico generato da Platform) oppure da fonti esterne, come caricamenti personalizzati (pubblico generato esternamente).
 - **Definizione del segmento**: regole utilizzate da Adobe Experience Platform per descrivere le caratteristiche o il comportamento chiave di un pubblico target.
-- **Segmento**: atto di separazione dei profili in tipi di pubblico.
+- **Segmento**: separazione dei profili in tipi di pubblico.
 
 ## Panoramica
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Tipi di pubblico]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Panoramica]** scheda che visualizza [!UICONTROL Tipi di pubblico] dashboard.
+Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Tipi di pubblico]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Panoramica]** scheda che visualizza [!UICONTROL Tipi di pubblico] dashboard.
 
 >[!NOTE]
 >
@@ -125,7 +125,7 @@ Selezione **[!UICONTROL Creare un pubblico]** ti consente di creare un pubblico.
 >
 > Lo farai **non** essere in grado di eliminare un pubblico utilizzato in un’attivazione di destinazione.
 
-### Filtraggio e assegnazione di tag {#manage-audiences}
+### Filtraggio, cartelle e assegnazione tag {#manage-audiences}
 
 Per migliorare l’efficienza del lavoro, puoi cercare i tipi di pubblico esistenti, aggiungere tag definiti dall’utente ai tipi di pubblico, inserire i tipi di pubblico nelle cartelle e filtrare quelli visualizzati.
 
@@ -190,7 +190,7 @@ Viene visualizzato l’elenco dei filtri disponibili.
 
 | Filtro | Descrizione |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. Le opzioni disponibili includono Segmentation Service (Servizio di segmentazione), Custom upload (Caricamento personalizzato), Audience composition (Composizione pubblico) e Audience Manager. |
+| [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. Le opzioni disponibili includono Segmentation Service (Servizio di segmentazione), Custom upload (Caricamento personalizzato), Audience composition (Composizione pubblico) e Audienci Manager. |
 | [!UICONTROL Ha qualsiasi tag] | Consente di filtrare per tag. Puoi scegliere tra **[!UICONTROL Ha qualsiasi tag]** e **[!UICONTROL Ha tutti i tag]**. Quando **[!UICONTROL Ha qualsiasi tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Ha tutti i tag]** è selezionato, i tipi di pubblico filtrati devono includere **tutto** dei tag aggiunti. |
 | [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Attivo], [!UICONTROL Archiviato], [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo], e [!UICONTROL Pubblicato]. |
 | [!UICONTROL Frequenza di aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico. Le opzioni disponibili includono [!UICONTROL Pianificato], [!UICONTROL Continuo], e [!UICONTROL On-demand]. |

@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '3308'
+source-wordcount: '3338'
 ht-degree: 7%
 
 ---
 
 # [!DNL Segment Builder] Guida all’interfaccia utente
+
+>[!NOTE]
+>
+>Questa guida spiega come creare tipi di pubblico tramite **definizioni dei segmenti** utilizzando il Generatore di segmenti. Per scoprire come creare tipi di pubblico utilizzando la Composizione del pubblico, leggi [Guida dell’interfaccia utente di Audience Composition](./audience-composition.md).
 
 [!DNL Segment Builder] fornisce un’area di lavoro ricca che consente di interagire con [!DNL Profile] elementi dati. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 

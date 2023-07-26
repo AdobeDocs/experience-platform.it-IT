@@ -3,14 +3,18 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
+source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
 
 # Guida dell’interfaccia utente di Audience Composition
+
+>[!NOTE]
+>
+>Questa guida spiega come creare tipi di pubblico utilizzando Composizione pubblico. Per scoprire come creare tipi di pubblico tramite le definizioni dei segmenti utilizzando il Generatore di segmenti, leggi [Guida dell’interfaccia utente di Segment Builder](./segment-builder.md).
 
 La funzione Composizione pubblico fornisce un’area di lavoro per creare e modificare i tipi di pubblico, utilizzando blocchi che rappresentano azioni diverse.
 
@@ -30,7 +34,7 @@ Dopo aver aggiornato i dettagli della composizione, seleziona **[!UICONTROL Salv
 
 L’area di lavoro per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Pubblico]](#audience-block)**, **[[!UICONTROL Escludi]](#exclude-block)**, **[[!UICONTROL Classifica]](#rank-block)**, e **[[!UICONTROL Dividi]](#split-block)**.
 
-## [!UICONTROL Destinatari] {#audience-block}
+## [!UICONTROL Pubblico] {#audience-block}
 
 Il **[!UICONTROL Pubblico]** il tipo di blocco ti consente di aggiungere i sottogruppi di pubblico che desideri comporre il nuovo pubblico più grande. Per impostazione predefinita, un **[!UICONTROL Pubblico]** Il blocco è incluso nella parte superiore dell’area di lavoro della composizione.
 
