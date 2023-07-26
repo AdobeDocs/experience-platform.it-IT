@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Privacy Service
 user-guide-description: Gestisci le richieste di dati dei clienti per rispettare le normative legali sulla privacy come RGPD e CCPA.
 feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '93'
+ht-degree: 100%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 0%
 * [Gestire le autorizzazioni per Privacy Service](./permissions.md)
 * [Applicazioni Privacy Service e Experience Cloud](./experience-cloud-apps.md)
 * [Dati di identità per le richieste di privacy](./identity-data.md)
-* [Panoramica della libreria JS per la privacy](./js-library.md)
-* API PRIVACY SERVICE {#api}
+* [Panoramica sulla libreria JS per la privacy](./js-library.md)
+* API di Privacy Service{#api}
    * [Panoramica](./api/overview.md)
    * [Autenticazione e accesso all’API di Privacy Service](./api/getting-started.md)
-   * [Lavori sulla privacy](./api/privacy-jobs.md)
+   * [Processi di privacy](./api/privacy-jobs.md)
    * [Consenso](./api/consent.md)
    * [Appendice](./api/appendix.md)
 * Interfaccia utente di Privacy Service {#ui}
