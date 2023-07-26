@@ -1,9 +1,8 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '296'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 # Come contribuire
@@ -21,7 +20,7 @@ Segnala comportamenti inaccettabili all’indirizzo
 
 ## Documentazione della guida per i collaboratori
 
-Vedere la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Consulta la [Guida per i collaboratori](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=it).
 
 ## Hai una domanda?
 
@@ -33,13 +32,13 @@ un consenso sulla direzione del progetto e sulla risoluzione dei problemi all’
 
 Tutti i contributi di terze parti a questo progetto devono essere accompagnati da un Contratto di licenza da collaboratore firmato. Ciò consente ad Adobe di ridistribuire i contributi come parte del progetto.
 
-[Firma il Contratto di licenza da collaboratore](http://opensource.adobe.com/cla.html).
+[Firma il Contributor License Agreement (CLA)](http://opensource.adobe.com/cla.html).
 
-È sufficiente inviare un Contratto di licenza da collaboratore di Adobe una volta, quindi se ne hai inviato uno in precedenza non devi fare altre operazioni.
+È sufficiente inviare un Contributor License Agreement di Adobe una volta, quindi se ne hai inviato uno in precedenza non devi fare altre operazioni.
 
 ## Revisioni del codice
 
-Tutte le richieste devono essere presentate sotto forma di richieste pull e devono essere riviste da chi conferma i progetti. Per ulteriori informazioni sull’invio di richieste pull, leggi la [documentazione sulle richieste pull di GitHub](https://help.github.com/articles/about-pull-requests/).
+Tutte le richieste devono essere presentate sotto forma di richieste pull e devono essere riviste da chi conferma i progetti. Per ulteriori informazioni sull’invio di richieste pull, leggi la [documentazione sulle richieste pull di GitHub](https://help.github.com/it/articles/about-pull-requests/).
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
@@ -48,9 +47,7 @@ submitting a pull request!
 
 ## Da collaboratore a committente
 
-Apprezziamo i contributi della nostra community. Se desideri essere qualcosa di più di un collaboratore e diventare un committente con accesso completo in scrittura e avere voce in capitolo sul progetto, devi essere invitato al progetto. I committenti esistenti utilizzano un processo di designazione 
-interno che deve raggiungere il consenso approssimativo (il silenzio rappresenta l’approvazione)
-prima di inviare gli inviti. Se ritieni di essere qualificato e desideri un coinvolgimento maggiore,
+Apprezziamo i contributi della nostra community. Se desideri essere qualcosa di più di un collaboratore e diventare un committente con accesso completo in scrittura e avere voce in capitolo sul progetto, devi essere invitato al progetto. I committenti esistenti utilizzano un processo di designazione interno che deve raggiungere il consenso approssimativo (il silenzio rappresenta l’approvazione) prima di inviare gli inviti. Se ritieni di essere qualificato e desideri un coinvolgimento maggiore,
 rivolgiti ai committenti esistenti per parlarne con loro.
 
 ## Problemi di sicurezza
