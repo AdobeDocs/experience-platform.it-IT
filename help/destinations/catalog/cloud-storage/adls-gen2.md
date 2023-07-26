@@ -1,23 +1,19 @@
 ---
-title: (Beta) Connessione di Azure Data Lake Storage Gen2
+title: Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare tipi di pubblico ed esportare set di dati.
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 0%
+source-wordcount: '805'
+ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Azure Data Lake Storage Gen2] connessione
-
->[!IMPORTANT]
->
->Questa destinazione è attualmente in versione beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Azure Data Lake Storage Gen2] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL Organization ID].
+# [!DNL Azure Data Lake Storage Gen2] connessione
 
 ## Panoramica {#overview}
 
-Leggi questa pagina per scoprire come creare una connessione in uscita al tuo [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake per esportare periodicamente file di dati da Experience Platform.
+Leggi questa pagina per scoprire come creare una connessione in uscita al tuo [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2]) data lake per esportare periodicamente file di dati da Experienci Platform.
 
 ## Connetti al tuo [!DNL ADLS Gen2] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -34,7 +30,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -79,7 +75,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Descrizione]**: facoltativo. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
 
 ### Abilita avvisi {#enable-alerts}

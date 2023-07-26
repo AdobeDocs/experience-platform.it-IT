@@ -4,17 +4,17 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 5%
+source-wordcount: '1164'
+ht-degree: 9%
 
 ---
 
 
 # Destinazioni {#destinations}
 
-* [Destinazioni - Panoramica](./home.md)
+* [Panoramica sulle destinazioni](./home.md)
 * [Tipi e categorie di destinazione](./destination-types.md)
 * [Guardrail delle destinazioni (attivazione)](./guardrails.md)
 * Funzionamento delle destinazioni {#how-destinations-work}
@@ -41,8 +41,8 @@ ht-degree: 5%
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming](./ui/activate-streaming-profile-destinations.md)
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch](./ui/activate-batch-profile-destinations.md)
       * [Attivare i tipi di pubblico per Edge Personalization Destinations](./ui/activate-edge-personalization-destinations.md)
-      * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
-      * [(Beta) Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
+      * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
+      * [(Beta) Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
@@ -116,10 +116,10 @@ ht-degree: 5%
       * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Archiviazione Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Archiviazione Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Connessione Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
-      * [Data Landing Zone (Beta)](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [Archiviazione cloud Google](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
       * [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni di Customer Relationship Management (CRM) {#crm}
@@ -129,7 +129,7 @@ ht-degree: 5%
       * [Connessione Zendesk](catalog/crm/zendesk.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni di Data Management Platform (DMP)](./catalog/data-management/overview.md)
-      * [Estensione Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Estensione Audienci Manager DIL](./catalog/data-management/aam-dil-extension.md)
    * Destinazioni e-mail {#email}
       * [Estensione Bizible](./catalog/email/bizible.md)
       * [Estensione Marketo](./catalog/email/marketo.md)
@@ -140,7 +140,7 @@ ht-degree: 5%
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connessione Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Categorie di interesse Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
-      * [(API) Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [Connessione Eloqua Oracle (API)](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(File) Oracle di connessione Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connessione Responsys Oracle](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Connessione Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -278,4 +278,4 @@ ht-degree: 5%
       * [Modello self-service della documentazione](./destination-sdk/docs-framework/self-service-template.md)
       * [Best practice di authoring](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Domande frequenti](./destinations-faq.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

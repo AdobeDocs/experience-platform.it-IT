@@ -2,10 +2,10 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## Registro modifiche destinazione {#changelog}
 
->[!IMPORTANT]
->
->Con la versione beta della funzionalità di esportazione dei set di dati e la migliorata funzionalità di esportazione dei file, ora potresti vedere due [!DNL SFTP] nel catalogo delle destinazioni.
->* Se si stanno già esportando file in **[!UICONTROL SFTP]** destinazione: crea nuovi flussi di dati per il nuovo **[!UICONTROL SFTP beta]** destinazione.
->* Se non hai ancora creato flussi di dati per **[!UICONTROL SFTP]** destinazione, utilizza il nuovo **[!UICONTROL SFTP beta]** scheda in cui esportare i file **[!UICONTROL SFTP]**.
+Con la versione di Experience Platform di luglio 2023, la destinazione SFTP fornisce nuove funzionalità, come elencato di seguito:
 
-![Immagine delle due schede di destinazione SFTP in una visualizzazione affiancata.](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-Miglioramenti nel nuovo [!DNL SFTP] la scheda di destinazione include:
-
-* [Supporto per l’esportazione del set di dati](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Supporto per l’esportazione del set di dati](/help/destinations/ui/export-datasets.md).
 * Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -34,7 +26,7 @@ Crea una connessione in uscita al server SFTP per esportare periodicamente file 
 
 >[!IMPORTANT]
 >
-> Sebbene Experience Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL SFTP].
+> Sebbene Experienci Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL SFTP].
 
 ## Connessione a SFTP tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -51,7 +43,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -119,12 +111,12 @@ Dopo aver stabilito la connessione di autenticazione alla posizione SFTP, fornis
 
 ![Dettagli di destinazione disponibili per la destinazione SFTP](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nome]**: inserisci un nome che ti aiuti a identificare questa destinazione nell’interfaccia utente di Experience Platform;
+* **[!UICONTROL Nome]**: inserisci un nome che ti aiuti a identificare questa destinazione nell’interfaccia utente di Experienci Platform;
 * **[!UICONTROL Descrizione]**: inserire una descrizione per questa destinazione;
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella nel percorso SFTP in cui verranno esportati i file.
-* **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL SFTP beta]** destinazione. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL SFTP beta]** destinazione.
-* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Questa opzione è disponibile solo per **[!UICONTROL SFTP beta]** destinazione.
+* **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
 
 ## Attiva il pubblico in questa destinazione {#activate}
 

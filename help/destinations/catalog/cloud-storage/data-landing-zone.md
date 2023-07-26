@@ -2,19 +2,18 @@
 title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1404'
 ht-degree: 1%
 
 ---
 
-# Destinazione Data Landing Zone (Beta)
+# Destinazione Data Landing Zone
 
 >[!IMPORTANT]
 >
->* Questa destinazione è attualmente in versione beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Data Landing Zone] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL Organization ID].
->* Questa pagina della documentazione fa riferimento a [!DNL Data Landing Zone] *destinazione*. È inoltre disponibile un [!DNL Data Landing Zone] *sorgente* nel catalogo delle origini. Per ulteriori informazioni, leggere [[!DNL Data Landing Zone] sorgente](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentazione.
+>Questa pagina della documentazione fa riferimento a [!DNL Data Landing Zone] *destinazione*. È inoltre disponibile un [!DNL Data Landing Zone] *sorgente* nel catalogo delle origini. Per ulteriori informazioni, leggere [[!DNL Data Landing Zone] sorgente](/help/sources/connectors/cloud-storage/data-landing-zone.md) documentazione.
 
 
 ## Panoramica {#overview}
@@ -40,7 +39,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -184,7 +183,7 @@ Una connessione corretta aggiorna il tuo [!DNL Azure Storage Explorer] Interfacc
 
 ![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-Con [!DNL Data Landing Zone] contenitore connesso a [!DNL Azure Storage Explorer], ora puoi iniziare a esportare i file da Experience Platform al tuo [!DNL Data Landing Zone] contenitore. Per esportare i file, è necessario stabilire una connessione con [!DNL Data Landing Zone] nell’interfaccia utente di Experience Platform, come descritto nella sezione seguente.
+Con [!DNL Data Landing Zone] contenitore connesso a [!DNL Azure Storage Explorer], ora puoi iniziare a esportare i file da Experienci Platform al tuo [!DNL Data Landing Zone] contenitore. Per esportare i file, è necessario stabilire una connessione con [!DNL Data Landing Zone] nell’interfaccia utente di Experienci Platform, come descritto nella sezione seguente.
 
 ## Connetti alla destinazione {#connect}
 
@@ -196,7 +195,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 ### Autentica nella destinazione {#authenticate}
 
-Assicurarsi di aver connesso [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer] come descritto nella [prerequisiti](#prerequisites) sezione. Perché [!DNL Data Landing Zone] è un archivio con provisioning Adobe, non è necessario eseguire ulteriori passaggi nell’interfaccia utente Experience Platform per l’autenticazione nella destinazione.
+Assicurarsi di aver connesso [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer] come descritto nella [prerequisiti](#prerequisites) sezione. Perché [!DNL Data Landing Zone] è un archivio con provisioning Adobe, non è necessario eseguire ulteriori passaggi nell’interfaccia utente Experienci Platform per l’autenticazione nella destinazione.
 
 ### Inserisci i dettagli della destinazione {#destination-details}
 
@@ -206,7 +205,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Descrizione]**: facoltativo. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
 
 ### Abilita avvisi {#enable-alerts}

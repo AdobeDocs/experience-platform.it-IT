@@ -2,10 +2,10 @@
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita all’archiviazione BLOB di Azure per esportare periodicamente i file di dati CSV da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 3%
+source-wordcount: '973'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## Registro modifiche destinazione {#changelog}
 
->[!IMPORTANT]
->
->Con la versione beta della funzionalità di esportazione dei set di dati e la migliorata funzionalità di esportazione dei file, ora potresti vedere due [!DNL Azure Blob] nel catalogo delle destinazioni.
->* Se si stanno già esportando file in **[!UICONTROL BLOB di Azure]** destinazione: crea nuovi flussi di dati per il nuovo **[!UICONTROL Azure Blob beta]** destinazione.
->* Se non hai ancora creato flussi di dati per **[!UICONTROL BLOB di Azure]** destinazione, utilizza il nuovo **[!UICONTROL Azure Blob beta]** scheda in cui esportare i file **[!UICONTROL BLOB di Azure]**.
+Con la versione di Experience Platform di luglio 2023, la [!DNL Azure Blob] destinazione offre nuove funzionalità, come elencato di seguito:
 
-![Immagine delle due schede di destinazione BLOB di Azure in una visualizzazione affiancata.](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
-
-Miglioramenti nel nuovo [!DNL Azure Blob] la scheda di destinazione include:
-
-* [Supporto per l’esportazione del set di dati](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[Supporto per l’esportazione del set di dati](/help/destinations/ui/export-datasets.md).
 * Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -41,7 +33,7 @@ Miglioramenti nel nuovo [!DNL Azure Blob] la scheda di destinazione include:
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -58,7 +50,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -110,9 +102,9 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Descrizione]**: inserisci una descrizione di questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Contenitore]**: immetti il nome del [!DNL Azure Blob Storage] contenitore utilizzato da questa destinazione.
-* **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL Azure Blob beta]** destinazione. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Questa opzione è disponibile solo per **[!UICONTROL Azure Blob beta]** destinazione.
-* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Questa opzione è disponibile solo per **[!UICONTROL Azure Blob beta]** destinazione.
+* **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
 
 ### Abilita avvisi {#enable-alerts}
 

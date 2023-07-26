@@ -3,10 +3,10 @@ keywords: destinazione archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i tipi di pubblico come file di dati ai percorsi di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hub o SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 4%
 
 ---
 
@@ -20,15 +20,15 @@ Adobe Experience Platform può distribuire i tipi di pubblico come file di dati 
 
 ## Destinazioni di archiviazione cloud supportate {#supported-destinations}
 
-Adobe Experience Platform supporta le seguenti destinazioni di archiviazione cloud:
+Adobe Experience Platform supporta le esportazioni di dati verso le seguenti destinazioni di archiviazione cloud:
 
 * [Connessione Amazon Kinesis](amazon-kinesis.md)
 * [Connessione Amazon S3](amazon-s3.md)
 * [Connessione BLOB di Azure](azure-blob.md)
-* [(Beta) Archiviazione Azure Data Lake Gen2](adls-gen2.md)
+* [Archiviazione Azure Data Lake Gen2](adls-gen2.md)
 * [Connessione Azure Event Hubs](azure-event-hubs.md)
-* [Data Landing Zone (Beta)](data-landing-zone.md)
-* [(Beta) Google Cloud Storage](google-cloud-storage.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Archiviazione cloud Google](google-cloud-storage.md)
 * [Connessione SFTP](sftp.md)
 
 ## Connettersi a una nuova destinazione di archiviazione cloud {#connect-destination}
@@ -65,4 +65,10 @@ Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/Luxury Aud
 
 ## Tipo di esportazione dei dati {#export-type}
 
-Supporto delle destinazioni di archiviazione cloud **Esportazione basata su profili**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a un pubblico e altro ancora.
+Le destinazioni di archiviazione cloud supportano i seguenti tipi di esportazione:
+* **Esportazione basata su profili**. Ciò significa che stai esportando dettagli sulle persone nel pubblico. Questi dettagli sono necessari per la personalizzazione e possono includere attributi, eventi, appartenenze a un pubblico e altro ancora.
+* [!BADGE Beta]{type=Informative}**Esportazione set di dati**. Questa funzionalità consente di esportare interi set di dati in destinazioni di archiviazione cloud. [Ulteriori informazioni](/help/destinations/ui/export-datasets.md) informazioni sulla funzionalità.
+
+## Passaggi successivi {#next-steps}
+
+Dopo aver selezionato quale [destinazioni cloud supportate](#supported-destinations) desideri utilizzare, leggi [esercitazione sulla connessione alle destinazioni](/help/destinations/ui/connect-destination.md) per scoprire come stabilire una connessione alla destinazione. Quindi, leggi il tutorial di attivazione su destinazioni basate su file per scoprire come iniziare [esportazione](/help/destinations/ui/activate-batch-profile-destinations.md) alla destinazione di archiviazione cloud.

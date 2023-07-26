@@ -1,19 +1,15 @@
 ---
-title: (Beta) Connessione a Google Cloud Storage
+title: Connessione Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare tipi di pubblico o esportare set di dati.
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Google Cloud Storage] connessione
-
->[!IMPORTANT]
->
->Questa destinazione è attualmente in versione beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Google Cloud Storage] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL Organization ID].
+# [!DNL Google Cloud Storage] connessione
 
 ## Panoramica {#overview}
 
@@ -34,7 +30,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -94,7 +90,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome bucket]**: immetti il nome del [!DNL Google Cloud Storage] bucket da utilizzare per questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
 
 ### Abilita avvisi {#enable-alerts}
