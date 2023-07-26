@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
 title: Ritenta esecuzioni flusso di dati non riuscite
-description: Questa esercitazione descrive i passaggi per ritentare l’esecuzione di un flusso di dati non riuscito tramite l’API del servizio Flusso
+description: Scopri come riprovare l’esecuzione di un flusso di dati non riuscito utilizzando l’API del servizio Flusso.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '273'
+ht-degree: 2%
 
 ---
 
@@ -22,8 +21,8 @@ Questa esercitazione descrive i passaggi per ritentare l’esecuzione di un flus
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sorgenti](../../home.md): [!DNL Experience Platform] consente di acquisire dati da varie origini e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
+* [Sorgenti](../../home.md): Experience Platform consente di acquisire dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
+* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
@@ -45,6 +44,10 @@ POST /runs/{RUN_ID}/action?op=re-trigger
 | `op` | Operazione che determina l&#39;azione da eseguire. Per ritentare l’esecuzione di un flusso di dati non riuscito, è necessario specificare `re-trigger` come operazione. |
 
 **Richiesta**
+
+>[!NOTE]
+>
+>È possibile utilizzare `re-trigger` viene eseguita anche l’operazione per ritentare il flusso di dati corretto, dato che l’esecuzione del flusso di dati corretta non ha record acquisiti.
 
 La richiesta seguente ritenta l’esecuzione del flusso di dati per l’ID esecuzione `4fb0418e-1804-45d6-8d56-dd51f05c0baf`.
 
