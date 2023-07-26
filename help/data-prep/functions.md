@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
+source-git-commit: c9fb9320c7ef1da5aba41b3d01bca44b07ec6c17
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 3%
 
 ---
@@ -117,8 +117,8 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| now | Recupera l&#39;ora corrente. |  | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | Recupera l’ora Unix corrente. |  | timestamp() | timestamp() | 1571850624571 |
+| now | Recupera l&#39;ora corrente. | | now() | now() | `2021-10-26T10:10:24Z` |
+| timestamp | Recupera l’ora Unix corrente. | | timestamp() | timestamp() | 1571850624571 |
 | formato | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** Data di input, come oggetto ZonedDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Il formato in cui desideri modificare la data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11):24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | format | Converte una marca temporale in una stringa di data in base al formato specificato. | <ul><li>TIMESTAMP: **Obbligatorio** Il timestamp da formattare. Questo è scritto in millisecondi.</li><li>FORMATO: **Obbligatorio** Il formato che vuoi che la marca temporale diventi.</li></ul> | format(TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | data | Converte una stringa di data in un oggetto ZonedDateTime (formato ISO 8601). | <ul><li>DATA: **Obbligatorio** Stringa che rappresenta la data.</li><li>FORMATO: **Obbligatorio** Stringa che rappresenta il formato della data di origine.**Nota:** Questo fa **non** rappresenta il formato in cui desideri convertire la stringa di data. </li><li>DATA_PREDEFINITA: **Obbligatorio** Se la data specificata è nulla, viene restituita la data predefinita.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | `2019-10-23T11:24:00Z` |
@@ -145,9 +145,12 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | to_object | Crea un oggetto in base alle coppie chiave/valore fornite. | <ul><li>INPUT: **Obbligatorio** Un elenco semplice di coppie chiave/valore.</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un oggetto dalla stringa di input. | <ul><li>STRINGA: **Obbligatorio** Stringa analizzata per creare un oggetto.</li><li>DELIMITATORE_VALORE: *Facoltativo* Delimitatore che separa un campo dal valore. Il delimitatore predefinito è `:`.</li><li>DELIMITATORE_CAMPO: *Facoltativo* Il delimitatore che separa le coppie di valori di campo. Il delimitatore predefinito è `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: puoi utilizzare la `get()` funzione insieme a `str_to_object()` per recuperare i valori per le chiavi nella stringa. | <ul><li>Esempio #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Esempio #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Esempio #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Esempio #2: &quot;John&quot;</li></ul> |
 | contains_key | Controlla se l&#39;oggetto esiste nei dati di origine. **Nota:** Questa funzione sostituisce la obsoleta `is_set()` funzione. | <ul><li>INPUT: **Obbligatorio** Percorso da controllare se esiste nei dati di origine.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
-| annullare | Imposta il valore dell&#39;attributo su `null`. Da utilizzare quando non si desidera copiare il campo nello schema di destinazione. |  | nullify() | nullify() | `null` |
+| annullare | Imposta il valore dell&#39;attributo su `null`. Da utilizzare quando non si desidera copiare il campo nello schema di destinazione. | | nullify() | nullify() | `null` |
 | get_keys | Analizza le coppie chiave/valore e restituisce tutte le chiavi. | <ul><li>OGGETTO: **Obbligatorio** Oggetto da cui verranno estratte le chiavi.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analizza le coppie chiave/valore e restituisce il valore della stringa, in base alla chiave specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa da analizzare.</li><li>CHIAVE: **Obbligatorio** Chiave per la quale estrarre il valore.</li><li>DELIMITATORE_VALORE: **Obbligatorio** Il delimitatore che separa il campo e il valore. Se uno dei due `null` o viene fornita una stringa vuota, questo valore è `:`.</li><li>DELIMITATORE_CAMPO: *Facoltativo* Il delimitatore che separa le coppie di campi e valori. Se uno dei due `null` o viene fornita una stringa vuota, questo valore è `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
+| map_get_values | Prende una mappa e un input chiave. Se l’input è un singolo tasto, la funzione restituisce il valore associato a tale tasto. Se l’input è una matrice di stringhe, la funzione restituisce tutti i valori corrispondenti alle chiavi fornite. Se la mappa in ingresso contiene chiavi duplicate, il valore restituito deve deduplicare le chiavi e restituire valori univoci. | <ul><li>MAPPA: **Obbligatorio** I dati della mappa di input.</li><li>CHIAVE:  **Obbligatorio** La chiave può essere una singola stringa o una matrice di stringhe. Se viene fornito un altro tipo primitivo (dati/numero), viene trattato come una stringa.</li></ul> | get_values(MAP, KEY) | Consulta la sezione [appendice](#map_get_values) per un esempio di codice. | |
+| map_has_keys | Se vengono forniti uno o più tasti di input, la funzione restituisce true. Se come input viene fornita una matrice di stringhe, la funzione restituisce true sulla prima chiave trovata. | <ul><li>MAPPA:  **Obbligatorio** Dati della mappa di input</li><li>CHIAVE:  **Obbligatorio** La chiave può essere una singola stringa o una matrice di stringhe. Se viene fornito un altro tipo primitivo (dati/numero), viene trattato come una stringa.</li></ul> | map_has_keys(MAP, KEY) | Consulta la sezione [appendice](#map_has_keys) per un esempio di codice. | |
+| add_to_map | Accetta almeno due input. È possibile fornire come input qualsiasi numero di mappe. La preparazione dati restituisce una singola mappa contenente tutte le coppie chiave-valore provenienti da tutti gli input. Se una o più chiavi sono ripetute (nella stessa mappa o su più mappe), la preparazione dati deduplica le chiavi in modo che la prima coppia chiave-valore persista nell’ordine in cui sono state passate nell’input. | MAPPA: **Obbligatorio** I dati della mappa di input. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Consulta la sezione [appendice](#add_to_map) per un esempio di codice. | |
 
 {style="table-layout:auto"}
 
@@ -234,7 +237,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| uuid /<br>GUID | Genera un ID pseudo-casuale. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| uuid /<br>GUID | Genera un ID pseudo-casuale. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | Questa funzione prende una stringa FPID e la converte in un ECID da utilizzare nelle applicazioni Adobe Experience Platform e Adobe Experience Cloud. | <ul><li>STRINGA: **Obbligatorio** Stringa FPID da convertire in ECID.</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
@@ -378,3 +381,77 @@ La tabella seguente illustra un elenco di valori dei campi dispositivo e le rela
 | Hacker | Questo valore di dispositivo viene utilizzato nel caso in cui venga rilevato uno script in `useragent` stringa. |
 
 {style="table-layout:auto"}
+
+### Esempi di codice {#code-samples}
+
+#### map_get_values {#map-get-values}
+
++++Seleziona per visualizzare l’esempio
+
+```json
+ example = "map_get_values(book_details,\"author\") where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\"author\": \"George R. R. Martin\"}"
+```
+
++++
+
+#### map_has_keys {#map_has_keys}
+
++++Seleziona per visualizzare l’esempio
+
+```json
+ example = "map_has_keys(book_details,\"author\")where input is : {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}",
+      result = "true"
+```
+
++++
+
+#### add_to_map {#add_to_map}
+
++++Seleziona per visualizzare l’esempio
+
+```json
+example = "add_to_map(book_details, book_details2) where input is {\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "    }\n" +
+        "}" +
+        "{\n" +
+        "    \"book_details2\":\n" +
+        "    {\n" +
+        "        \"author\": \"Neil Gaiman\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-0-380-97365-0\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      result = "{\n" +
+        "    \"book_details\":\n" +
+        "    {\n" +
+        "        \"author\": \"George R. R. Martin\",\n" +
+        "        \"price\": 17.99,\n" +
+        "        \"ISBN\": \"ISBN-978-0553801477\"\n" +
+        "        \"publisher\": \"William Morrow\"\n" +
+        "    }\n" +
+        "}",
+      returns = "A new map with all elements from map and addends"
+```
+
++++
