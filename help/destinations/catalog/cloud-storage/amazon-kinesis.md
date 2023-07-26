@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2000'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
+> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 Il [!DNL Kinesis Data Streams] servizio di [!DNL Amazon Web Services] consente di raccogliere ed elaborare in tempo reale flussi di dati di grandi dimensioni.
 
@@ -44,7 +44,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -55,17 +55,17 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per l interfaccia [!DNL Amazon Kinesis] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per l interfaccia [!DNL Amazon Kinesis] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
 
 ## Obbligatorio [!DNL Amazon Kinesis] autorizzazioni {#required-kinesis-permission}
 
-Per connettere ed esportare correttamente i dati nel [!DNL Amazon Kinesis] Streams, Experience Platform necessita delle autorizzazioni per le azioni seguenti:
+Per connettere ed esportare correttamente i dati nel [!DNL Amazon Kinesis] Streams, Experienci Platform necessita delle autorizzazioni per le azioni seguenti:
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
@@ -126,12 +126,12 @@ Inserisci i campi qui sotto e seleziona **[!UICONTROL Connetti alla destinazione
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
 >title="Includi timestamp dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché il timestamp UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -197,7 +197,7 @@ Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro at
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experienci Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -299,12 +299,12 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+Nel 95% del tempo, Experienci Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+In caso di richieste non riuscite alla destinazione API HTTP, Experienci Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
 
 >[!MORELIKETHIS]
 >
->* [Connessione ad Amazon Kinesis e attivazione dei dati tramite l’API del servizio Flow](../../api/streaming-destinations.md)
+>* [Connessione ad Amazon Kinesis e attivazione dei dati tramite l’API del servizio Flusso](../../api/streaming-destinations.md)
 >* [Destinazione di Azure Event Hubs](./azure-event-hubs.md)
 >* [Tipi e categorie di destinazione](../../destination-types.md)

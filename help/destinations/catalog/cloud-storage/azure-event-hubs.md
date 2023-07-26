@@ -1,12 +1,12 @@
 ---
 keywords: Destinazione hub eventi di Azure;hub eventi di Azure;azure eventub
 title: Connessione Azure Event Hubs
-description: Creare una connessione in uscita in tempo reale al [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati da Experience Platform.
+description: Creare una connessione in uscita in tempo reale al [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati da Experienci Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2118'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
+> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 [!DNL Azure Event Hubs] è una piattaforma di streaming di big data e un servizio di acquisizione di eventi. Può ricevere ed elaborare milioni di eventi al secondo. I dati inviati a un hub eventi possono essere trasformati e memorizzati utilizzando qualsiasi provider di analisi in tempo reale o adattatori di batch/archiviazione.
 
@@ -44,7 +44,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -55,13 +55,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per l interfaccia [!DNL Azure Event Hubs] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per l interfaccia [!DNL Azure Event Hubs] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
 
 ## Connetti alla destinazione {#connect}
 
@@ -99,12 +99,12 @@ Se si seleziona la **[!UICONTROL Autenticazione standard]** digita per connetter
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="Includi timestamp dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché il timestamp UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -162,7 +162,7 @@ Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro at
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experienci Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -264,9 +264,9 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+Nel 95% del tempo, Experienci Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+In caso di richieste non riuscite alla destinazione API HTTP, Experienci Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
 
 >[!MORELIKETHIS]
 >

@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '992'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -33,7 +33,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audienci Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
 | DOMESTICA | ID Microsoft Advertising. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
@@ -51,7 +51,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,13 +62,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico nella destinazione Google. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Prerequisiti {#prerequisites}
 
-Se desideri creare la prima destinazione con [!DNL Google Ad Manager] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Google] le integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+Se desideri creare la prima destinazione con [!DNL Google Ad Manager] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audienci Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Google] le integrazioni in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
@@ -90,7 +90,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="Aggiungi ID pubblico al nome del pubblico"
->abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager includa l&#39;ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
+>abstract="Seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager includa l’ID del pubblico da Experience Platform, come riportato di seguito: `Audience Name (Audience ID)`"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 

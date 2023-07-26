@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -42,7 +42,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico in [!DNL Microsoft Bing] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
->Se desideri creare la prima destinazione con [!DNL Microsoft Bing] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Microsoft Bing] le integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+>Se desideri creare la prima destinazione con [!DNL Microsoft Bing] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Microsoft Bing] le integrazioni in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 Durante la configurazione della destinazione, devi fornire le seguenti informazioni:
 
@@ -96,7 +96,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="ID di mappatura"
->abstract="Immetti l’ID numerico del pubblico Bing al quale vuoi mappare il segmento selezionato. Se il valore specificato [!UICONTROL ID mappatura] non corrisponde a un ID pubblico nella destinazione Bing, non visualizzerai i dati del pubblico previsto nel tuo account Bing."
+>abstract="Immetti l’ID numerico del pubblico Bing su cui desideri mappare il segmento selezionato. Se l’[!UICONTROL ID di mappatura] fornito non corrisponde a un ID di pubblico nella destinazione Bing, i dati del pubblico previsti non verranno visualizzati nel tuo account Bing."
 
 >[!IMPORTANT]
 > 

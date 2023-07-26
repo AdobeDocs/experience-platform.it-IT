@@ -1,12 +1,12 @@
 ---
 keywords: streaming; destinazione HTTP
 title: Connessione API HTTP
-description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati al di fuori di Experience Platform.
+description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati al di fuori di Experienci Platform.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2486'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
+> Questa destinazione è disponibile solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 La destinazione API HTTP è un [!DNL Adobe Experience Platform] destinazione di streaming che consente di inviare i dati del profilo agli endpoint HTTP di terze parti.
 
@@ -24,7 +24,7 @@ Per inviare i dati del profilo agli endpoint HTTP, devi prima [connettersi alla 
 
 ## Casi d’uso {#use-cases}
 
-La destinazione API HTTP consente di esportare i dati di profilo XDM e i tipi di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experience Platform.
+La destinazione API HTTP consente di esportare i dati di profilo XDM e i tipi di pubblico in endpoint HTTP generici. A questo punto puoi eseguire analisi personalizzate o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati da Experienci Platform.
 
 Gli endpoint HTTP possono essere sistemi propri del cliente o soluzioni di terze parti.
 
@@ -38,7 +38,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -49,16 +49,16 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata di mappatura del [flusso di lavoro di attivazione della destinazione](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Prerequisiti {#prerequisites}
 
-Per utilizzare la destinazione API HTTP per esportare i dati da Experience Platform, è necessario soddisfare i seguenti prerequisiti:
+Per utilizzare la destinazione API HTTP per esportare i dati da Experienci Platform, è necessario soddisfare i seguenti prerequisiti:
 
 * È necessario disporre di un endpoint HTTP che supporti l’API REST.
-* L’endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Consulta la sezione [dati esportati](#exported-data) per un esempio dello schema di output Experience Platform.
+* L’endpoint HTTP deve supportare lo schema del profilo di Experience Platform. Nella destinazione API HTTP non è supportata alcuna trasformazione in uno schema di payload di terze parti. Consulta la sezione [dati esportati](#exported-data) per un esempio dello schema di output Experienci Platform.
 * L&#39;endpoint HTTP deve supportare le intestazioni.
 
 >[!TIP]
@@ -67,7 +67,7 @@ Per utilizzare la destinazione API HTTP per esportare i dati da Experience Platf
 
 ## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
 
 ## Tipi di autenticazione supportati {#supported-authentication-types}
 
@@ -167,12 +167,12 @@ Se si seleziona la **[!UICONTROL Credenziali client OAuth 2]** tipo di autentica
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Includi nomi dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Includi timestamp dei segmenti"
->abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché il timestamp UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -211,7 +211,7 @@ In [[!UICONTROL Seleziona attributi]](../../ui/activate-streaming-profile-destin
 
 ## Comportamento di esportazione del profilo {#profile-export-behavior}
 
-Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
+Experienci Platform ottimizza il comportamento di esportazione del profilo nella destinazione API HTTP per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
 * L’aggiornamento del profilo è stato determinato da una modifica nell’appartenenza al pubblico per almeno uno dei tipi di pubblico mappati alla destinazione. Ad esempio, il profilo è idoneo per uno dei tipi di pubblico mappati sulla destinazione o è uscito da uno dei tipi di pubblico mappati sulla destinazione.
 * L’aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo identity map.
@@ -227,7 +227,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come il pubblico mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` L’oggetto è incluso anche (Experience Platform attualmente non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni API HTTP, anche le modifiche apportate a un’identità in un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come il pubblico mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` L’oggetto è incluso anche (Experienci Platform attualmente non supporta la mappatura identità nella destinazione API HTTP).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -241,7 +241,7 @@ Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro at
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experienci Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -343,6 +343,6 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+Nel 95% del tempo, Experienci Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+In caso di richieste non riuscite alla destinazione API HTTP, Experienci Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.

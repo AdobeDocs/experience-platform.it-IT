@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -58,7 +58,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Facebook. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 Puoi eseguire l’hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro nell’Experience Platform e disporre di [!DNL Platform] esegui l’hashing durante l’attivazione.
 
-Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experienci Platform, consulta la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i seguenti requisiti:
 
@@ -145,7 +145,7 @@ Il video seguente illustra anche i passaggi per configurare una [!DNL Facebook] 
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+>L’interfaccia utente di Experienci Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Autentica nella destinazione {#authenticate}
 
@@ -178,7 +178,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine del pubblico"
->abstract="Scegli come sono stati raccolti originariamente i dati del cliente nel pubblico. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
+>abstract="Scegli come sono stati originariamente raccolti i dati cliente nel pubblico. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

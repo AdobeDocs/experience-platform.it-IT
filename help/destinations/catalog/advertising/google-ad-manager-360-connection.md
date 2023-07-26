@@ -1,15 +1,15 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] connessione
+title: ' [!DNL Google Ad Manager 360] connessione(Beta)'
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e app mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# (Beta) [!DNL Google Ad Manager 360] connessione
+# [!DNL Google Ad Manager 360]connessione(Beta)
 
 ## Panoramica {#overview}
 
@@ -49,7 +49,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la p
 
 >[!NOTE]
 >
->L&#39;eccezione a questa regola è per esistente [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>L&#39;eccezione a questa regola è per esistente [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audienci Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
 1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere un Adobe come DMP (Data Management Platform) collegato.
 2. In [!DNL Google Ad Manager] , vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]**, e abilita **[!UICONTROL Accesso API]** cursore.
@@ -100,7 +100,7 @@ Per ulteriori informazioni su questi valori, vedere [Chiavi HMAC di Google Cloud
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
 >title="Aggiungi ID pubblico al nome del pubblico"
->abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager 360 includa l’ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
+>abstract="Seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager 360 includa l’ID del pubblico da Experience Platform, come riportato di seguito: `Audience Name (Audience ID)`"
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 

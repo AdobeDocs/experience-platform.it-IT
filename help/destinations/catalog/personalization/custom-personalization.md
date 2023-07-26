@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -51,7 +51,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -60,14 +60,14 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo per un singolo profilo tutti i tipi di pubblico mappati nella destinazione di personalizzazione personalizzata. È possibile impostare diverse destinazioni di personalizzazione personalizzate per diversi [Adobe di flussi di dati di Raccolta dati](../../../datastreams/overview.md). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Connetti alla destinazione {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informazioni sugli ID di stream di dati"
->abstract="Questa opzione determina in quale flusso di dati di raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
+>abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i tipi di pubblico nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
@@ -82,7 +82,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 * **[!UICONTROL Nome]**: inserisci il nome preferito per questa destinazione.
 * **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
-* **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experience Platform come nome di oggetto JSON.
+* **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experienci Platform come nome di oggetto JSON.
 * **[!UICONTROL ID flusso di dati]**: questo determina in quale flusso di dati di Raccolta dati i tipi di pubblico verranno inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Consulta [Configurazione di uno stream di dati](../../../datastreams/overview.md) per ulteriori dettagli.
 
 ### Abilita avvisi {#enable-alerts}
@@ -101,7 +101,7 @@ Letto [Attivare profili e tipi di pubblico nelle destinazioni di personalizzazio
 
 ## Dati esportati {#exported-data}
 
-Se sta usando [Tag in Adobe Experience Platform](../../../tags/home.md) per distribuire Experience Platform Web SDK, utilizza [invio evento completato](../../../tags/extensions/client/web-sdk/event-types.md) e l&#39;azione del codice personalizzato avrà un `event.destinations` che è possibile utilizzare per visualizzare i dati esportati.
+Se sta usando [Tag in Adobe Experience Platform](../../../tags/home.md) per distribuire Experienci Platform Web SDK, utilizza [invio evento completato](../../../tags/extensions/client/web-sdk/event-types.md) e l&#39;azione del codice personalizzato avrà un `event.destinations` che è possibile utilizzare per visualizzare i dati esportati.
 
 Esempio di valore per `event.destinations` variabile:
 
@@ -123,7 +123,7 @@ Esempio di valore per `event.destinations` variabile:
 ]
 ```
 
-Se non utilizza [Tag](../../../tags/home.md) per distribuire Experience Platform Web SDK, utilizza [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
+Se non utilizza [Tag](../../../tags/home.md) per distribuire Experienci Platform Web SDK, utilizza [gestione delle risposte dagli eventi](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) per visualizzare i dati esportati.
 
 È possibile analizzare la risposta JSON di Adobe Experience Platform per trovare l’alias di integrazione corrispondente dell’applicazione che si sta integrando con Adobe Experience Platform. Gli ID del pubblico possono essere trasmessi nel codice dell’applicazione come parametri di targeting. Di seguito è riportato un esempio di ciò che dovrebbe apparire specifico per la risposta di destinazione.
 

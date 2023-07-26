@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -53,8 +53,8 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experienci Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Immagine che evidenzia come selezionare uno o più tipi di pubblico da attivare](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
@@ -87,12 +87,12 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al pubblico da 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opzioni di esportazione file"
->abstract="Seleziona **Esporta file completi** per esportare un’istantanea completa di tutti i profili idonei per il pubblico. Seleziona **Esporta file incrementali** per esportare solo i profili qualificati per il pubblico dall’ultima esportazione. <br> La prima esportazione incrementale di file include tutti i profili idonei per il pubblico, che fungono da retrocompilazione. I file incrementali futuri includono solo i profili qualificati per il pubblico dalla prima esportazione di file incrementali."
+>abstract="Seleziona **Esporta file completi** per esportare uno snapshot completo di tutti i profili idonei per il pubblico. Seleziona **Esporta file incrementali** per esportare solo i profili qualificati per il pubblico dall’ultima esportazione. <br> La prima esportazione di file incrementali include tutti i profili idonei per il pubblico, agendo come backfill. I file incrementali futuri includono solo i profili qualificati per il pubblico successivamente alla prima esportazione di file incrementali."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#export-incremental-files" text="Esportare file incrementali"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Attiva dopo la valutazione del pubblico"
+>title="Attivare dopo la valutazione dei tipi di pubblico"
 >abstract="L’attivazione viene eseguita subito dopo il completamento del processo di segmentazione giornaliera, affinché vengano esportati i profili più aggiornati."
 
 >[!CONTEXTUALHELP]
@@ -170,7 +170,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazi
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="Configurare il nome file"
->abstract="Per le destinazioni basate su file, viene generato un nome file univoco per pubblico. Utilizza l’editor dei nomi dei file per creare e modificare un nome di file univoco oppure mantieni il nome predefinito."
+>abstract="Per le destinazioni basate su file, viene generato un nome di file univoco per pubblico. Utilizza l’editor dei nomi dei file per creare e modificare un nome di file univoco oppure mantieni il nome predefinito."
 
 Per la maggior parte delle destinazioni, i nomi di file predefiniti sono costituiti dal nome della destinazione, dall’ID del pubblico e da un indicatore di data e ora. Ad esempio, puoi modificare i nomi dei file esportati per distinguere tra diverse campagne o per aggiungere ai file il tempo di esportazione dei dati. Tieni presente che alcuni sviluppatori di destinazione potrebbero scegliere di visualizzare diverse opzioni di aggiunta dei nomi di file predefiniti per le loro destinazioni.
 
@@ -195,7 +195,7 @@ Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nom
 | **[!UICONTROL Testo personalizzato]** | Qualsiasi testo personalizzato che si desidera aggiungere ai nomi dei file. |
 | **[!UICONTROL ID destinazione]** | ID del flusso di dati di destinazione utilizzato per esportare il pubblico. <br> **Nota**: questa opzione di aggiunta nome file è disponibile solo per i clienti beta che partecipano al programma beta con funzionalità di esportazione file migliorata. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere al programma beta. |
 | **[!UICONTROL Nome destinazione]** | Il nome del flusso di dati di destinazione utilizzato per esportare il pubblico. <br> **Nota**: questa opzione di aggiunta nome file è disponibile solo per i clienti beta che partecipano al programma beta con funzionalità di esportazione file migliorata. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere al programma beta. |
-| **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experience Platform. <br> **Nota**: questa opzione di aggiunta nome file è disponibile solo per i clienti beta che partecipano al programma beta con funzionalità di esportazione file migliorata. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere al programma beta. |
+| **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experienci Platform. <br> **Nota**: questa opzione di aggiunta nome file è disponibile solo per i clienti beta che partecipano al programma beta con funzionalità di esportazione file migliorata. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere al programma beta. |
 | **[!UICONTROL Nome della sandbox]** | ID della sandbox utilizzato per esportare il pubblico. <br> **Nota**: questa opzione di aggiunta nome file è disponibile solo per i clienti beta che partecipano al programma beta con funzionalità di esportazione file migliorata. Contatta il tuo rappresentante di Adobe o l’Assistenza clienti per accedere al programma beta. |
 
 {style="table-layout:auto"}
@@ -247,7 +247,7 @@ Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembers
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="Informazioni sugli attributi obbligatori"
->abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione. Se non selezioni una chiave obbligatoria, esporta tutti i profili idonei, indipendentemente dai loro attributi."
+>abstract="Seleziona gli attributi dello schema XDM che tutti i profili esportati devono includere. I profili senza la chiave obbligatoria non vengono esportati nella destinazione. Se non selezioni una chiave obbligatoria, vengono esportati tutti i profili qualificati, indipendentemente dagli attributi."
 
 Un attributo obbligatorio è una casella di controllo abilitata dall’utente che garantisce che tutti i record di profilo contengano l’attributo selezionato. Ad esempio: tutti i profili esportati contengono un indirizzo e-mail.&#x200B;
 
@@ -470,21 +470,21 @@ La selezione degli spazi dei nomi delle identità per l’esportazione, come ill
 
 Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di identità ai file esportati durante la versione beta, puoi effettuare le seguenti operazioni:
 * Utilizza le destinazioni dell’archiviazione cloud legacy per i flussi di dati in cui desideri includere spazi dei nomi di identità nelle esportazioni
-* Carica le identità come attributi in Experience Platform, quindi esportale nelle destinazioni dell’archiviazione cloud.
+* Carica le identità come attributi in Experienci Platform, quindi esportale nelle destinazioni dell’archiviazione cloud.
 
 ## Seleziona attributi di arricchimento {#select-enrichment-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Escludi attributi di arricchimento"
->abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati nella tua destinazione, escludendo tutti i loro attributi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="Ulteriori informazioni sono disponibili nella documentazione"
+>abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#select-enrichment-attributes" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 >[!IMPORTANT]
 >
 >Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Caricamento personalizzato]** tipi di pubblico durante [selezione del pubblico](#select-audiences) passaggio.
 
-Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experience Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
+Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experienci Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
 
 ![Immagine dell’interfaccia utente che mostra il passaggio di selezione degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
@@ -522,9 +522,9 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
-![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
+![violazione dei criteri dei dati](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 
