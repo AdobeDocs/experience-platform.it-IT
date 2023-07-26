@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 127cc88735fdffa9227bdb0919ae086dbe76184d
+source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
 workflow-type: tm+mt
-source-wordcount: '2548'
+source-wordcount: '2745'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ Seleziona il nome di un set di dati da [!UICONTROL Sfoglia] scheda per accedere 
 
 ## Azioni del set di dati in linea {#inline-actions}
 
-L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea per ogni set di dati disponibile. Seleziona i puntini di sospensione di un set di dati da gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le azioni disponibili comprendono: [[!UICONTROL Anteprima set di dati]](#preview), [[!UICONTROL Gestire i dati e accedere alle etichette]](#manage-and-enforce-data-governance), [[!UICONTROL Abilita profilo unificato]](#enable-profile), [[!UICONTROL Gestione tag]](#add-tags), e [[!UICONTROL Elimina]](#delete). Ulteriori informazioni su queste azioni disponibili sono disponibili nelle rispettive sezioni.
+L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea per ogni set di dati disponibile. Seleziona i puntini di sospensione (...) di un set di dati da gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le azioni disponibili comprendono: [[!UICONTROL Anteprima set di dati]](#preview), [[!UICONTROL Gestire i dati e accedere alle etichette]](#manage-and-enforce-data-governance), [[!UICONTROL Abilita profilo unificato]](#enable-profile), [[!UICONTROL Gestione tag]](#add-tags), [[!UICONTROL Sposta in cartelle]](#move-to-folders), e [[!UICONTROL Elimina]](#delete). Ulteriori informazioni su queste azioni disponibili sono disponibili nelle rispettive sezioni.
 
 ### Aggiungere tag set di dati {#add-tags}
 
@@ -116,7 +116,7 @@ Set di dati in [!UICONTROL Sfoglia] La scheda può essere ordinata in base a dat
 
 ## Visualizzare in anteprima un set di dati {#preview}
 
-Puoi visualizzare in anteprima i dati di esempio del set di dati da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione accanto al nome del set di dati da visualizzare in anteprima. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Anteprima set di dati]** dall’elenco delle opzioni disponibili. Se il set di dati è vuoto, il collegamento di anteprima viene disattivato e indica invece che l’anteprima non è disponibile.
+Puoi visualizzare in anteprima i dati di esempio del set di dati da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da visualizzare in anteprima. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Anteprima set di dati]** dall’elenco delle opzioni disponibili. Se il set di dati è vuoto, il collegamento di anteprima viene disattivato e indica invece che l’anteprima non è disponibile.
 
 ![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Anteprima set di dati evidenziata per il set di dati selezionato.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -203,13 +203,33 @@ Anche i set di dati abilitati per il profilo possono essere filtrati in base a q
 
 ## Gestire e applicare la governance dei dati su un set di dati {#manage-and-enforce-data-governance}
 
-Puoi gestire le etichette di governance dei dati per un set di dati selezionando le opzioni in linea di [!UICONTROL Sfoglia] scheda. Seleziona i puntini di sospensione accanto al nome del set di dati da gestire, seguiti da **[!UICONTROL Gestire i dati e accedere alle etichette]** dal menu a discesa.
+Puoi gestire le etichette di governance dei dati per un set di dati selezionando le opzioni in linea di [!UICONTROL Sfoglia] scheda. Seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, seguiti da **[!UICONTROL Gestire i dati e accedere alle etichette]** dal menu a discesa.
 
 Le etichette di utilizzo dei dati, applicate a livello di schema, ti consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette agli schemi per la propagazione ai set di dati.
 
+### Sposta in cartelle {#move-to-folders}
+
+Per una migliore gestione dei set di dati, puoi inserire i set di dati all’interno di cartelle. Per spostare un set di dati in una cartella, seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, quindi fai clic su **[!UICONTROL Sposta nella cartella]** dal menu a discesa.
+
+![Il [!UICONTROL Set di dati] dashboard con i puntini di sospensione e [!UICONTROL Sposta nella cartella] evidenziato.](../images/datasets/user-guide/move-to-folder.png)
+
+Il [!UICONTROL Sposta] viene visualizzata la finestra di dialogo dataset to folder (set di dati nella cartella). Seleziona la cartella in cui desideri spostare il pubblico, quindi fai clic su **[!UICONTROL Sposta]**. Una notifica a comparsa informa che lo spostamento del set di dati è stato eseguito correttamente.
+
+![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con [!UICONTROL Sposta] evidenziato.](../images/datasets/user-guide/move-dialog.png)
+
+>
+>
+>Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, seleziona l’icona Crea cartella (![Icona Crea cartella.](../images/datasets/user-guide/create-folder-icon.png)) in alto a destra nella finestra di dialogo.
+>
+>![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con l’icona crea cartella evidenziata.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Una volta che il set di dati si trova in una cartella, puoi scegliere di visualizzare solo i set di dati che appartengono a una cartella specifica. Per aprire la struttura delle cartelle, seleziona l’icona mostra cartelle (![Icona Mostra cartelle](../images/datasets/user-guide/show-folders-icon.png)). Quindi, seleziona la cartella scelta per visualizzare tutti i set di dati associati.
+
+![Il [!UICONTROL Set di dati] dashboard con la struttura di cartelle dei set di dati visualizzata, l’icona mostra cartelle e una cartella selezionata evidenziata.](../images/datasets/user-guide/folder-structure.png)
+
 ## Eliminare un set di dati {#delete}
 
-Puoi eliminare un set di dati dalle azioni in linea del set di dati in [!UICONTROL Sfoglia] o in alto a destra del [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione accanto al nome del set di dati da eliminare. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Elimina]** dal menu a discesa.
+Puoi eliminare un set di dati dalle azioni in linea del set di dati in [!UICONTROL Sfoglia] o in alto a destra del [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da eliminare. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Elimina]** dal menu a discesa.
 
 ![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Elimina evidenziata per il set di dati selezionato.](../images/datasets/user-guide/inline-delete-dataset.png)
 
