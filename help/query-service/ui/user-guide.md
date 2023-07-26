@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;editor query;editor query;servizio query;servizio query;
 solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
-description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experience Platform.
+description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
+source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Servic
 
 ## Introduzione {#getting-started}
 
-[!DNL Query Editor] fornisce un’esecuzione flessibile delle query tramite la connessione a [!DNL Query Service]Le query, e verranno eseguite solo quando la connessione è attiva.
+[!DNL Query Editor] fornisce un’esecuzione flessibile delle query tramite la connessione a [!DNL Query Service]Le query, e vengono eseguite solo quando la connessione è attiva.
 
 ### Connessione a [!DNL Query Service] {#connecting-to-query-service}
 
@@ -29,7 +29,7 @@ Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Servic
 
 ### Esecuzione delle query da [!DNL Query Editor] {#run-a-query}
 
-Query eseguite da [!DNL Query Editor] esegui in modo interattivo. Ciò significa che se chiudi il browser o esci, la query viene annullata. Questo vale anche per le query eseguite per generare set di dati dagli output delle query.
+Query eseguite da [!DNL Query Editor] esegui in modo interattivo, il che significa che se chiudi il browser o esci, la query viene annullata. Lo stesso vale per le query eseguite per generare set di dati dagli output delle query.
 
 ## Creazione di query tramite [!DNL Query Editor] {#query-authoring}
 
@@ -37,9 +37,30 @@ Utilizzo di [!DNL Query Editor], puoi scrivere, eseguire e salvare query per i d
 
 ### Accesso [!DNL Query Editor] {#accessing-query-editor}
 
-In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di navigazione sinistro per aprire [!DNL Query Service] Workspace. Quindi, seleziona **[!UICONTROL Crea query]** in alto a destra per iniziare a scrivere le query. Questo collegamento è disponibile da una qualsiasi delle pagine di [!DNL Query Service] Workspace.
+In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di navigazione sinistro per aprire [!DNL Query Service] Workspace. Quindi, per iniziare a scrivere le query, seleziona **[!UICONTROL Crea query]** in alto a destra. Questo collegamento è disponibile da una qualsiasi delle pagine di [!DNL Query Service] Workspace.
 
 ![La scheda Panoramica dell’area di lavoro Query in cui è evidenziata l’opzione Crea query.](../images/ui/query-editor/create-query.png)
+
+### Attivazione/disattivazione editor di query avanzato {#enhanced-editor-toggle}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_enhancedEditorToggle"
+>title="Attivazione/disattivazione editor avanzato"
+>abstract="Consente di passare dalla versione precedente a quella avanzata dell’editor di query. La versione precedente è abilitata per impostazione predefinita, anche se la versione migliorata fornisce una migliore accessibilità e il supporto a più temi. Per ulteriori informazioni su queste modifiche, consulta la documentazione."
+
+Un interruttore dell’interfaccia utente consente di passare dalla versione legacy alla versione avanzata dell’editor di query. La versione precedente è abilitata per impostazione predefinita, anche se la versione migliorata fornisce una migliore accessibilità e il supporto a più temi. Abilita la versione avanzata per accedere alle impostazioni dell’editor di query.
+
+![L’Editor query con l’Editor query avanzato è evidenziato.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
+
+Attivando l’interruttore, l’editor diventa leggero e migliora la leggibilità della sintassi. Sopra il campo di input dell’editor di query viene visualizzata un’icona delle impostazioni che incorpora l’interruttore di completamento automatico. Dall’icona delle impostazioni, puoi abilitare il tema scuro o disabilitare/abilitare il completamento automatico.
+
+>[!TIP]
+>
+>L’editor di query avanzato consente di: [!UICONTROL Disabilita completamento automatico sintassi] durante l’authoring di una query senza perdere l’avanzamento. In genere, se si disattiva la funzione di completamento automatico durante la modifica, tutte le modifiche apportate alla query andranno perse.
+
+Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (![Un&#39;icona delle impostazioni.](../images/ui/query-editor/settings-icon.png)) seguito dall&#39;opzione nel menu a discesa visualizzato.
+
+![L’editor delle query con l’icona delle impostazioni e l’opzione del menu a discesa Abilita tema scuro sono evidenziate.](../images/ui/query-editor/query-editor-settings.png)
 
 ### Scrittura delle query {#writing-queries}
 
@@ -59,11 +80,11 @@ Per ridurre al minimo il tempo di sviluppo, ti consigliamo di sviluppare le quer
 
 ![Alcuni caratteri di SQL con il menu a discesa di completamento automatico che fornisce le opzioni dall’editor delle query.](../images/ui/query-editor/syntax-auto.png)
 
-- **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella che desideri `SELECT` da, quindi utilizzare i tasti freccia per passare alla tabella desiderata e premere **Invio**. Una volta selezionata una tabella, il completamento automatico riconoscerà i campi in essa contenuti.
+- **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella che desideri `SELECT` da, quindi utilizzare i tasti freccia per passare alla tabella desiderata e premere **Invio**. Dopo aver selezionato una tabella, il completamento automatico riconosce i campi della tabella.
 
 ![L’input dell’editor delle query che visualizza i suggerimenti per i nomi delle tabelle a discesa.](../images/ui/query-editor/tables-auto.png)
 
-### Attivazione/disattivazione configurazione interfaccia utente completata automaticamente {#auto-complete}
+### Attivazione/disattivazione della configurazione dell’interfaccia utente a completamento automatico {#auto-complete}
 
 Il [!DNL Query Editor] suggerisce automaticamente parole chiave SQL potenziali insieme ai dettagli di tabella o colonna per la query durante la scrittura. La funzione di completamento automatico è abilitata per impostazione predefinita e può essere disabilitata o abilitata in qualsiasi momento selezionando [!UICONTROL Completamento automatico della sintassi] passa in alto a destra nell’editor di query.
 
@@ -83,11 +104,11 @@ Se disattivate la funzione di completamento automatico, è necessario aggiornare
 
 >[!IMPORTANT]
 >
->Se si sta scrivendo o modificando una query quando si disabilita questa funzione, è necessario salvare le modifiche apportate alla query prima di aggiornare la pagina, altrimenti tutto l&#39;avanzamento andrà perduto.
+>Se si sta scrivendo o modificando una query quando si disabilita questa funzione, è necessario salvare le modifiche apportate alla query prima di aggiornare la pagina. In caso contrario, tutto l&#39;avanzamento andrà perduto.
 
 ![Finestra di dialogo di conferma per disattivare la funzione di completamento automatico.](../images/ui/query-editor/confirmation-dialog.png)
 
-Selezionate l&#39;opzione appropriata per disattivare la funzione di completamento automatico.
+Per disattivare la funzione di completamento automatico, selezionare l&#39;opzione di conferma appropriata.
 
 ### Rilevamento di errori {#error-detection}
 
@@ -101,7 +122,7 @@ Quando vengono rilevati errori, è possibile visualizzare i messaggi di errore s
 
 ### Dettagli query {#query-details}
 
-Seleziona un modello salvato dalla sezione [!UICONTROL Modelli] per visualizzarlo nell&#39;editor delle query. Il pannello Dettagli query fornisce ulteriori informazioni e strumenti per gestire la query selezionata.
+Per visualizzare una query nell’editor delle query, seleziona un modello salvato dall’ [!UICONTROL Modelli] scheda. Il pannello Dettagli query fornisce ulteriori informazioni e strumenti per gestire la query selezionata.
 
 ![Editor query con il pannello Dettagli query evidenziato.](../images/ui/query-editor/query-details.png)
 
@@ -111,13 +132,13 @@ Questo pannello mostra anche metadati utili, come l’ultima volta che la query 
 
 ### Query pianificate {#scheduled-queries}
 
-Le query salvate come modello possono essere pianificate dall&#39;Editor query. Questo consente di automatizzare l’esecuzione di query su una cadenza personalizzata. Puoi pianificare le query in base a frequenza, data e ora e, se necessario, scegliere anche un set di dati di output per i risultati. Le pianificazioni delle query possono anche essere disabilitate o eliminate tramite l’interfaccia utente.
+Le query salvate come modello possono essere pianificate dall&#39;Editor query. La pianificazione delle query consente di automatizzare l’esecuzione delle query su una cadenza personalizzata. Puoi pianificare le query in base a frequenza, data e ora e, se necessario, scegliere anche un set di dati di output per i risultati. Le pianificazioni delle query possono anche essere disabilitate o eliminate tramite l’interfaccia utente.
 
-Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. Questo non si applica al [!DNL Query Service] API:
+Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. La stessa limitazione non si applica al [!DNL Query Service] API:
 
 Consulta la documentazione sulle pianificazioni delle query per scoprire come [creare pianificazioni di query nell’interfaccia utente](./query-schedules.md). In alternativa, per scoprire come aggiungere pianificazioni utilizzando l’API, leggi [guida dell’endpoint &quot;scheduled queries&quot;](../api/scheduled-queries.md).
 
-Tutte le query pianificate vengono aggiunte all’elenco in [!UICONTROL Query pianificate] scheda. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Il giorno [!UICONTROL Query pianificate] scheda puoi trovare informazioni importanti sull’esecuzione della query e abbonarti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di errore di esecuzione. Consulta la [Monitorare il documento delle query pianificate](./monitor-queries.md) per ulteriori informazioni.
+Tutte le query pianificate vengono aggiunte all’elenco in [!UICONTROL Query pianificate] scheda. Da tale area di lavoro è possibile monitorare lo stato di tutti i processi di query pianificati tramite l’interfaccia utente. Il giorno [!UICONTROL Query pianificate] , puoi trovare informazioni importanti sull’esecuzione della query e abbonarti agli avvisi. Le informazioni disponibili includono lo stato, i dettagli della pianificazione e i messaggi/codici di errore in caso di esecuzione non riuscita. Consulta la [Monitorare il documento delle query pianificate](./monitor-queries.md) per ulteriori informazioni.
 
 ### Salvataggio delle query {#saving-queries}
 
@@ -149,7 +170,7 @@ La console fornisce informazioni sullo stato e sul funzionamento di [!DNL Query 
 
 >[!NOTE]
 >
->La console mostra solo gli errori derivanti dall’esecuzione di una query. Gli errori di convalida della query non vengono visualizzati prima dell’esecuzione di una query.
+>La console mostra solo gli errori derivanti dall’esecuzione di una query. Non mostra gli errori di convalida della query che si verificano prima dell’esecuzione di una query.
 
 ### Risultati della query {#query-results}
 
@@ -159,7 +180,7 @@ Al termine di una query, i risultati vengono visualizzati nella **[!UICONTROL Ri
 
 ## Eseguire query con [!DNL Query Service] video tutorial {#query-tutorial-video}
 
-Il video seguente illustra come eseguire query nell’interfaccia di Adobe Experience Platform e in un client PSQL. Inoltre, è possibile utilizzare singole proprietà in un oggetto XDM, utilizzare funzioni definite da Adobe e utilizzare CREATE TABLE AS SELECT (CTAS).
+Il video seguente illustra come eseguire query nell’interfaccia di Adobe Experience Platform e in un client PSQL. Il video illustra inoltre l’utilizzo di singole proprietà in un oggetto XDM, di funzioni definite dall’Adobe e di query CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

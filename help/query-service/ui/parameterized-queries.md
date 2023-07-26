@@ -1,14 +1,14 @@
 ---
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
-source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
+source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
-# Query con parametri
+# Query con parametri (versione limitata)
 
 >[!IMPORTANT]
 >
@@ -18,7 +18,7 @@ Query Service supporta l’utilizzo di query con parametri nell’editor delle q
 
 ## Prerequisiti
 
-Prima di continuare con questa guida, leggere [Guida dell’interfaccia utente di Query Editor](./user-guide.md). La guida dell’editor delle query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente nell’interfaccia utente di Experience Platform.
+Prima di continuare con questa guida, leggere [Guida dell’interfaccia utente di Query Editor](./user-guide.md). La guida dell’editor delle query fornisce informazioni dettagliate su come scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente nell’interfaccia utente di Experienci Platform.
 
 >[!NOTE]
 >
