@@ -1,10 +1,8 @@
 ---
 title: Creare una connessione di origine e un flusso di dati per SAP Commerce utilizzando l’API del servizio Flusso
 description: Scopri come creare una connessione di origine e un flusso di dati per portare i dati SAP Commerce a Experience Platform utilizzando l’API del servizio Flusso.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 2%
@@ -24,7 +22,7 @@ Il seguente tutorial illustra i passaggi necessari per creare un [!DNL SAP Comme
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL SAP Commerce] utilizzando [!DNL Flow Service] API.
 

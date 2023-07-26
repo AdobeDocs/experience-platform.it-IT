@@ -1,21 +1,19 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;schema crm;CRM;salesforce;Salesforce;crm;CRM;home;popular topic;crm schema;CRM;salesforce;Salesforce
-solution: Experience Platform
 title: Panoramica del connettore di origine Salesforce
 description: Scopri come collegare Salesforce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce] connettore
+# [!DNL Salesforce]
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema CRM di terze parti. Il supporto per i provider CRM include [!DNL Salesforce].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema CRM di terze parti. Il supporto per i provider CRM include [!DNL Salesforce].
 
 ## ELENCO CONSENTITI di indirizzo IP
 
@@ -42,7 +40,7 @@ Per utilizzare [!DNL Salesforce] origine come parte di [!DNL B2B-CDP], devi prim
 
 - È possibile scaricare la raccolta di utilità di generazione automatica dello spazio dei nomi e dello schema e l&#39;ambiente da questo [Archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - Per informazioni sull’utilizzo delle API di Platform, compresi i dettagli su come raccogliere i valori per le intestazioni richieste e leggere le chiamate API di esempio, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
-- Per informazioni su come generare le credenziali per le API di Platform, consulta l’esercitazione su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md).
+- Per informazioni su come generare le credenziali per le API di Platform, consulta l’esercitazione su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md).
 - Per informazioni su come impostare [!DNL Postman] per le API di Platform, consulta l’esercitazione su [configurazione della console per sviluppatori e [!DNL Postman]](../../../landing/postman.md).
 
 Con una console per sviluppatori di Platform e [!DNL Postman] , è ora possibile iniziare ad applicare i valori di ambiente appropriati al [!DNL Postman] ambiente.
@@ -51,12 +49,12 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sulla c
 
 | Variable | Descrizione | Esempio |
 | --- | --- | --- |
-| `CLIENT_SECRET` | Un identificatore univoco utilizzato per generare il `{ACCESS_TOKEN}`. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
-| `JWT_TOKEN` | Il JSON Web Token (JWT) è una credenziale di autenticazione utilizzata per generare il {ACCESS_TOKEN}. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come generare `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
-| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experience Platform. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
-| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API Experience Platform. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
+| `CLIENT_SECRET` | Un identificatore univoco utilizzato per generare il `{ACCESS_TOKEN}`. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{CLIENT_SECRET}`. | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | Il JSON Web Token (JWT) è una credenziale di autenticazione utilizzata per generare il {ACCESS_TOKEN}. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come generare `{JWT_TOKEN}`. | `{JWT_TOKEN}` |
+| `API_KEY` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experienci Platform. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{API_KEY}`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Il token di autorizzazione necessario per completare le chiamate alle API Experienci Platform. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Riguardo a [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
-| `CONTAINER_ID` | Il `global` contenitore contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dal partner Adobe e Experience Platform. Riguardo a [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
+| `CONTAINER_ID` | Il `global` contenitore contiene tutte le classi, i gruppi di campi di schema, i tipi di dati e gli schemi standard forniti dal partner Adobe e Experienci Platform. Riguardo a [!DNL Marketo], questo valore è fisso ed è sempre impostato su `global`. | `global` |
 | `PRIVATE_KEY` | Una credenziale utilizzata per autenticare [!DNL Postman] per Experience Platform le API. Consulta il tutorial sulla configurazione di Developer Console e [configurazione della console per sviluppatori e [!DNL Postman]](../../../landing/postman.md) per istruzioni su come recuperare {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Credenziali utilizzate per l&#39;integrazione in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Identity Management System (IMS) fornisce il framework per l’autenticazione nei servizi Adobe. Riguardo a [!DNL Marketo], questo valore è fisso ed è sempre impostato su: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |

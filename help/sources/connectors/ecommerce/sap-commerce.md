@@ -2,10 +2,8 @@
 title: Panoramica dell’origine di SAP Commerce
 description: Scopri come collegare SAP Commerce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-07-26T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
@@ -18,7 +16,7 @@ ht-degree: 3%
 >
 >Il [!DNL SAP Commerce] sorgente in versione beta. Consulta la [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una piattaforma di e-commerce basata su cloud per le aziende B2B e B2C è disponibile come parte del portafoglio Customer Experience di SAP. [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita degli abbonamenti con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
+[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una piattaforma di e-commerce basata su cloud per le aziende B2B e B2C è disponibile come parte del portafoglio Customer Experience SAP. [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita degli abbonamenti con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
 
 Il [!DNL SAP Commerce] consente di acquisire informazioni su clienti e contatti in Platform dalla [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) Di seguito sono riportati gli endpoint API per i partner aziendali:
 
@@ -37,7 +35,7 @@ Prima di poter portare il [!DNL SAP Commerce] dati per Experience Platform, devi
 
 * A [!DNL SAP Subscription Billing] account. Se non disponi già di un account di fatturazione valido, contatta [!DNL SAP] responsabile dell’account. Consulta la sezione [[!DNL SAP] Configurazione piattaforma](https://help.sap.com/doc/5fd179965d5145fbbe7f2a7aa1272338/latest/en-US/PlatformConfiguration.pdf) per ulteriori dettagli.
 
-* [!DNL SAP] chiave del servizio. Il [!DNL SAP] service key consente di accedere al [!DNL SAP Subscription Billing] API tramite Experience Platform. [!DNL SAP Commerce] richiede quanto segue:
+* [!DNL SAP] chiave del servizio. Il [!DNL SAP] service key consente di accedere al [!DNL SAP Subscription Billing] API tramite Experienci Platform. [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
    * URL. Il pattern dell’URL è il seguente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato in seguito per ottenere i valori per `region` e `tokenEndpoint` quando [Crea connessione di base](../../tutorials/api/create/ecommerce/sap-commerce.md#base-connection) utilizzando l’API o quando [Connetti [!DNL SAP Commerce] account](../../tutorials/ui/create/ecommerce/sap-commerce.md#connect-account) tramite l’interfaccia utente di Platform.

@@ -1,10 +1,8 @@
 ---
 title: Creare una connessione sorgente SAP Commerce nell’interfaccia utente
 description: Scopri come creare una connessione sorgente SAP Commerce utilizzando l’interfaccia utente di Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 99edb8b2bcd4225235038e966a367d91375c961a
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 1%
@@ -148,7 +146,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *eCommerce* categoria, seleziona **[!UICONTROL Commerce SAP]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *eCommerce* categoria, seleziona **[!UICONTROL Commerce SAP]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Schermata dell’interfaccia utente di Platform per il catalogo con scheda SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 

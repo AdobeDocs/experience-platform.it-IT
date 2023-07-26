@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 2%
@@ -28,11 +28,11 @@ Ad Experience Platform, puoi centralizzare i dati raccolti da fonti diverse e ut
 
 ## Tipi di origini
 
-Le origini in Experience Platform sono raggruppate nelle seguenti categorie:
+Le origini in Experienci Platform sono raggruppate nelle seguenti categorie:
 
 ### applicazioni Adobe {#adobe-applications}
 
-Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tra cui Adobe Analytics e Adobe Audience Manager. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experienci Platform consente di acquisire i dati da altre applicazioni Adobe, tra cui Adobe Analytics e Adobe Audience Manager. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [Panoramica origine Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -53,13 +53,13 @@ Experience Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 
 ### Advertising {#advertising}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [Google Ads](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
@@ -85,7 +85,7 @@ Le origini di archiviazione cloud possono inserire i tuoi dati in Platform senza
 
 ### Consenso e preferenze {#consent}
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
@@ -101,7 +101,7 @@ I sistemi di gestione delle relazioni con i clienti forniscono dati che possono 
 
 ### Customer Success {#customer-success}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per un cliente di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per un cliente di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
@@ -110,7 +110,7 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un’appli
 
 ### Database {#database}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
@@ -135,20 +135,21 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un databas
 
 ### eCommerce {#ecommerce}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema eCommerce di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema eCommerce di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md)
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 - [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
 ### Sistema locale {#local-system}
 
-Experience Platform fornisce supporto per l’acquisizione di dati dal sistema locale. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati dal sistema locale. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [Caricamento di file locali](connectors/local-system/local-file-upload.md)
 
 ### Marketing Automation {#marketing-automation}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
@@ -162,20 +163,20 @@ Experience Platform fornisce supporto per l’acquisizione di dati da un sistema
 
 ### Pagamenti {#payments}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL PayPal]](connectors/payments/paypal.md)
 - [[!DNL Square]](connectors/payments/square.md)
 
 ### Streaming {#streaming}
 
-Experience Platform fornisce supporto per l’acquisizione di dati da origini di streaming. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da origini di streaming. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
 ### Protocoli {#protocols}
 
-Experience Platform supporta l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
+Experienci Platform supporta l’acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
