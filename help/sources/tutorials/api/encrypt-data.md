@@ -4,20 +4,20 @@ description: Scopri come acquisire i file crittografati tramite le origini batch
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
+source-git-commit: d05202fc1e64bbb06c886aedbe59e07c45f80686
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1343'
 ht-degree: 2%
 
 ---
 
 # Acquisizione di dati crittografati
 
-Adobe Experience Platform consente di acquisire file crittografati tramite origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experience Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
+Adobe Experience Platform consente di acquisire file crittografati tramite origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experienci Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
 
 Il processo di acquisizione dei dati crittografati è il seguente:
 
-1. [Creare una coppia di chiavi di crittografia utilizzando le API Experience Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experience Platform in un archivio protetto. **NOTA:** La chiave pubblica nella risposta è codificata in Base64 e deve essere decrittografata prima dell’utilizzo.
+1. [Creare una coppia di chiavi di crittografia utilizzando le API Experienci Platform](#create-encryption-key-pair). La coppia di chiavi di crittografia è costituita da una chiave privata e da una chiave pubblica. Una volta creata, puoi copiare o scaricare la chiave pubblica, insieme all’ID della chiave pubblica e all’ora di scadenza corrispondenti. Durante questa procedura, la chiave privata verrà memorizzata da Experienci Platform in un archivio protetto. **NOTA:** La chiave pubblica nella risposta è codificata in Base64 e deve essere decrittografata prima dell’utilizzo.
 2. Utilizza la chiave pubblica per crittografare il file di dati che desideri acquisire.
 3. Inserisci il file crittografato nell’archiviazione cloud.
 4. Quando il file crittografato è pronto, [creare una connessione di origine e un flusso di dati per l’origine di archiviazione cloud](#create-a-dataflow-for-encrypted-data). Durante il passaggio di creazione del flusso, devi fornire un `encryption` e includere l&#39;ID della chiave pubblica.
@@ -35,7 +35,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 * [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
    * [Sorgenti di archiviazione cloud](../api/collect/cloud-storage.md): crea un flusso di dati per portare all’Experience Platform i dati batch dall’origine dell’archiviazione cloud.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
@@ -66,7 +66,7 @@ Di seguito è riportato l&#39;elenco delle estensioni di file supportate per i f
 
 ## Crea coppia di chiavi di crittografia {#create-encryption-key-pair}
 
-Il primo passaggio nell’acquisizione di dati crittografati da Experience Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST al `/encryption/keys` endpoint del [!DNL Connectors] API.
+Il primo passaggio nell’acquisizione di dati crittografati da Experienci Platform consiste nel creare la coppia di chiavi di crittografia effettuando una richiesta POST al `/encryption/keys` endpoint del [!DNL Connectors] API.
 
 **Formato API**
 
@@ -97,7 +97,7 @@ curl -X POST \
 | Parametro | Descrizione |
 | --- | --- |
 | `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
-| `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experience Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
+| `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experienci Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
 
 **Risposta**
 
@@ -111,7 +111,66 @@ In caso di esito positivo, la risposta restituisce la chiave pubblica con codifi
 }
 ```
 
-## Connetti l’origine dell’archiviazione cloud a Experience Platform utilizzando [!DNL Flow Service] API
+| Proprietà | Descrizione |
+| --- | --- |
+| `publicKey` | La chiave pubblica viene utilizzata per crittografare i dati nell’archiviazione cloud. Questa chiave corrisponde alla chiave privata creata durante questo passaggio. Tuttavia, la chiave privata viene immediatamente recapitata all’Experience Platform. |
+| `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati per Experienci Platform. |
+| `expiryTime` | L&#39;ora di scadenza definisce la data di scadenza della coppia di chiavi di crittografia. Questa data viene impostata automaticamente su 180 giorni dopo la data di generazione della chiave e viene visualizzata in formato timestamp unix. |
+
++++(Facoltativo) Crea una coppia di chiavi di verifica firma per i dati firmati
+
+### Creare una coppia di chiavi gestite dal cliente
+
+Facoltativamente, puoi creare una coppia di chiavi per la verifica della firma per firmare e acquisire i dati crittografati.
+
+Durante questa fase, devi generare la tua combinazione di chiave privata e chiave pubblica e quindi utilizzare la tua chiave privata per firmare i dati crittografati. Successivamente, devi codificare la chiave pubblica in Base64 e condividerla con Experienci Platform affinché Platform possa verificare la firma.
+
+### Condividi la chiave pubblica per Experience Platform
+
+Per condividere la chiave pubblica, invia una richiesta POST al `/customer-keys` fornendo l&#39;algoritmo di crittografia e la chiave pubblica con codifica Base64.
+
+**Formato API**
+
+```http
+POST /data/foundation/connectors/encryption/customer-keys
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' 
+  -d '{
+      "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+    }'
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
+| `publicKey` | La chiave pubblica che corrisponde alle chiavi gestite dal cliente utilizzate per la firma del file crittografato. Questa chiave deve avere la codifica Base64. |
+
+**Risposta**
+
+```json
+{    
+  "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2" 
+} 
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `publicKeyId` | Questo ID di chiave pubblica viene restituito in risposta alla condivisione della chiave gestita dal cliente con Experienci Platform. Puoi fornire questo ID di chiave pubblica come ID della chiave di verifica della firma durante la creazione di un flusso di dati per dati firmati e crittografati. |
+
++++
+
+## Connetti l’origine dell’archiviazione cloud a Experienci Platform utilizzando [!DNL Flow Service] API
 
 Dopo aver recuperato la coppia di chiavi di crittografia, ora puoi procedere e creare una connessione di origine per l’origine dell’archiviazione cloud e trasferire i dati crittografati a Platform.
 
@@ -150,6 +209,10 @@ POST /flows
 ```
 
 **Richiesta**
+
+>[!BEGINTABS]
+
+>[!TAB Creare un flusso di dati per l’acquisizione di dati crittografati]
 
 La seguente richiesta crea un flusso di dati per acquisire dati crittografati per un’origine di archiviazione cloud.
 
@@ -206,6 +269,58 @@ curl -X POST \
 | `scheduleParams.startTime` | L’ora di inizio del flusso di dati in tempo epoca. |
 | `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
 | `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+
+
+>[!TAB Creare un flusso di dati per acquisire dati crittografati e firmati]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+  -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ACME Customer Data (with Sign Verification)",
+    "description": "ACME Customer Data (with Sign Verification)",
+    "flowSpec": {
+        "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "655f7c1b-1977-49b3-a429-51379ecf0e15"
+    ],
+    "targetConnectionIds": [
+        "de688225-d619-481c-ae3b-40c250fd7c79"
+    ],
+    "transformations": [
+        {
+            "name": "Mapping",
+            "params": {
+                "mappingId": "6b6e24213dbe4f57bd8207d21034ff03",
+                "mappingVersion":"0"
+            }
+        },
+        {
+            "name": "Encryption",
+            "params": {
+                "publicKeyId":"311ef6f8-9bcd-48cf-a9e9-d12c45fb7a17",
+                "signVerificationKeyId":"e31ae895-7896-469a-8e06-eb9207ddf1c2"
+            }
+        }
+    ],
+    "scheduleParams": {
+        "startTime": "1675793392",
+        "frequency": "once"
+    }
+}'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `params.signVerificationKeyId` | L’ID della chiave di verifica della firma è uguale all’ID della chiave pubblica recuperato dopo la condivisione della chiave pubblica con codifica Base64 con Experienci Platform. |
+
+>[!ENDTABS]
 
 **Risposta**
 
