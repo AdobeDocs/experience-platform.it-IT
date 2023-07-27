@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario delle etichette di utilizzo dati
 description: Questo documento illustra tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2207'
 ht-degree: 3%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 3%
 
 Le etichette di utilizzo dei dati ti consentono di categorizzare set di dati e campi in base a [criteri di governance](../policies/overview.md) e [criteri di controllo dell’accesso](../../access-control/abac/overview.md) applicabili a tali dati. Adobe Experience Platform fornisce diverse etichette di utilizzo dei dati di base pronte all’uso che puoi utilizzare per iniziare a categorizzare i dati.
 
-Questo documento illustra le etichette di utilizzo dei dati di base attualmente fornite da Experience Platform.
+Questo documento illustra le etichette di utilizzo dei dati di base attualmente fornite da Experienci Platform.
 
-## Etichette contratto
+## Etichette contratto {#contract}
 
 Le etichette &quot;C&quot; del contratto vengono utilizzate per categorizzare i dati che hanno obblighi contrattuali o sono relativi ai criteri di governance dei dati della tua organizzazione.
 
@@ -42,7 +42,7 @@ Le etichette &quot;C&quot; del contratto vengono utilizzate per categorizzare i 
 | [C11](#c11) | I dati non possono essere condivisi con i partner Segment Match. |
 | [C12](#c12) | I dati non possono essere esportati in alcun modo. |
 
-## Etichette di identità
+## Etichette di identità {#identity}
 
 Le etichette di identità &quot;I&quot; vengono utilizzate per categorizzare i dati che possono identificare o contattare una persona specifica.
 
@@ -64,6 +64,20 @@ Un tipo di dati che si può considerare sensibile può essere diversi tipi di da
 | **PSPD** | I dati personali sensibili consentiti (PSPD) si riferiscono a dati che, ai sensi del contratto, sono consentiti dall’Adobe per il caricamento di dati considerati &quot;sensibili&quot;, &quot;categorie speciali di dati&quot; o termini simili utilizzati dalle leggi applicabili. Ciò esclude specificamente le informazioni sanitarie protette (PHI) e altri dati sanitari regolamentati. |
 | **RHD** | Dati che si riferiscono a informazioni protette sulla salute (PHI) o informazioni su un paziente che l&#39;essere Adobe può contrattualmente caricare. |
 
+## (Beta) Etichette per ecosistemi partner {#partner}
+
+>[!IMPORTANT]
+>
+>L’etichetta dei dati di terze parti è in versione beta. Non è disponibile per tutti gli utenti e la documentazione è soggetta a modifiche.
+
+Le etichette dell’ecosistema partner vengono utilizzate per categorizzare i dati ottenuti da fonti esterne all’organizzazione.
+
+Questa etichetta viene utilizzata per determinare l’utilizzo dei dati dei potenziali clienti.
+
+| Etichetta | Definizione |
+| --- | --- |
+| **Terze parti** | I dati di terze parti sono dati forniti da un fornitore di dati di terze parti. Un fornitore di dati di terze parti è un’entità che ha concluso un accordo con l’organizzazione che ti autorizza ad accedere ai dati di terze parti, utilizzarli, visualizzarli e trasmetterli insieme a Platform. |
+
 ## Appendice
 
 Le sezioni seguenti forniscono informazioni aggiuntive sulle etichette di utilizzo dei dati disponibili.
@@ -78,7 +92,7 @@ Alcuni dati possono essere esportati da Adobe Experience Cloud solo in un modulo
 
 #### C2 {#c2}
 
-Alcuni fornitori di dati hanno clausole nei loro contratti che vietano l’esportazione di dati da dove sono stati raccolti originariamente. Ad esempio, i contratti per social network spesso limitano il trasferimento dei dati che ricevi da loro. L&#39;etichetta C2 è più restrittiva di [C1](#c1), che richiede solo l&#39;aggregazione e dati anonimi, ma è meno restrittivo rispetto a [C12](#c12), che impedisce completamente le esportazioni di dati indipendentemente dalla destinazione.
+Alcuni fornitori di dati hanno clausole nei loro contratti che vietano l&#39;esportazione di dati da dove sono stati raccolti originariamente. Ad esempio, i contratti per social network spesso limitano il trasferimento dei dati che ricevi da loro. L&#39;etichetta C2 è più restrittiva di [C1](#c1), che richiede solo l&#39;aggregazione e dati anonimi, ma è meno restrittivo rispetto a [C12](#c12), che impedisce completamente le esportazioni di dati indipendentemente dalla destinazione.
 
 #### C3 {#c3}
 
