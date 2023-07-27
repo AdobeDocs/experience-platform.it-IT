@@ -4,10 +4,10 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Utilizza i gruppi di campi per classi e schemi di Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 19%
+source-wordcount: '519'
+ht-degree: 21%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 19%
    * [Pianificare](./classes/plan.md)
    * [Criterio](./classes/policy.md)
    * [Prodotto](./classes/product.md)
+   * [Potenziale cliente](./classes/prospect.md)
    * [Provider](./classes/provider.md)
    * [Definizione del segmento](./classes/segment-definition.md)
    * Classi B2B {#b2b}
@@ -57,7 +58,7 @@ ht-degree: 19%
       * [Dettagli dei membri del settore sanitario](./field-groups/profile/healthcare-member-details.md)
       * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dettagli di contatto personali](./field-groups/profile/personal-contact-details.md)
-      * [Dettagli sull’iscrizione al segmento](./field-groups/profile/segmentation.md)
+      * [Dettagli sull’appartenenza a segmento](./field-groups/profile/segmentation.md)
       * [Abbonamento Telecom](./field-groups/profile/telecom-subscription.md)
       * [Dettagli contatto di lavoro](./field-groups/profile/work-contact-details.md)
       * [Componenti della persona aziendale XDM](./field-groups/profile/business-person-components.md)
@@ -143,7 +144,7 @@ ht-degree: 19%
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
    * [Elemento dell’elenco prodotti](./data-types/product-list-item.md)
-   * [Cerca](./data-types/search.md)
+   * [Ricerca](./data-types/search.md)
    * [Abbonamento](./data-types/subscription.md)
    * [Abbonamento Telecom](./data-types/telecom-subscription.md)
    * [Transazione](./data-types/transaction.md)
@@ -202,4 +203,4 @@ ht-degree: 19%
    * [Creare uno schema ad hoc](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
