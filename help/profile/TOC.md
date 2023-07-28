@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 feature: Profiles
-source-git-commit: 52836892736a075981ee06f28fbdf178f4492e09
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 28%
+source-wordcount: '141'
+ht-degree: 29%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 28%
 * Interfaccia utente profilo {#ui}
    * [[!DNL Profile] Guida all’interfaccia utente](ui/user-guide.md)
    * [[!DNL Profile] personalizzazione dettagli](ui/profile-customization.md)
+   * [Profili potenziali](ui/prospect-profile.md)
 * Attributi calcolati (Beta) {#computed-attributes}
    * [Panoramica](computed-attributes/overview.md)
    * [Guida API per attributi calcolati](computed-attributes/api.md)
@@ -51,4 +52,4 @@ ht-degree: 28%
 * [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 * [[!DNL Profile] guida alla risoluzione dei problemi](troubleshooting.md)
 * [Riferimento API del profilo](https://www.adobe.com/go/profile-apis-en)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

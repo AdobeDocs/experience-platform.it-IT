@@ -4,9 +4,9 @@ description: Scopri come creare e utilizzare i tipi di pubblico potenziali per e
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -64,4 +64,4 @@ Per scoprire come utilizzare la funzionalità dei tipi di pubblico potenziali in
 
 ## Passaggi successivi
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+Dopo aver letto questa guida, ora sai come creare e gestire i potenziali tipi di pubblico in Adobe Experience Platform. Per scoprire come attivare un pubblico potenziale per altri servizi a valle, leggi la guida su [attivazione dei tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md).
