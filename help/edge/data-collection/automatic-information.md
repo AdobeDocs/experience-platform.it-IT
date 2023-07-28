@@ -3,7 +3,7 @@ title: Informazioni raccolte automaticamente in Adobe Experience Platform Web SD
 description: Panoramica di ogni informazione raccolta automaticamente dall’SDK di Adobe Experience Platform.
 keywords: raccogliere informazioni;contesto;configurare;dispositivo;screenHeight;screenHeight;screenOrientation;screenWidth;screen Width;screen Width;ambiente;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;dettagli browser;implementazioneDetails;dettagli implementazione;nome;versione;placeContext;localTime;localTimezoneOffset;local Timezone;Offset fuso orario locale;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;orizzontale;portrait;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 6%
@@ -30,7 +30,7 @@ Altezza dello schermo (in pixel).
 
 | **Percorso nel payload:** | **Valori possibili:** |
 | --------------------------------------- | ------------------------- |
-| `events[].xdm.device.screenOrientation` | `landscape` o `portrait` |
+| `events[].xdm.device.screenOrientation` | `landscape` oppure `portrait` |
 
 Orientamento dello schermo.
 
@@ -92,7 +92,7 @@ Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI
 
 Quando si utilizza la libreria indipendente, il valore è semplicemente la versione della libreria. Quando la libreria viene utilizzata come parte dell’estensione tag, si tratta della versione della libreria e dell’estensione tag unite con un segno &quot;+&quot;. Ad esempio, se la versione della libreria è 2.1.0 e la versione dell’estensione tag è 2.1.3, il valore sarà `2.1.0+2.1.3`.
 
-### Ambiente
+### Ambiente {#environment}
 
 | **Percorso nel payload:** | **Esempio:** |
 | ------------------------------------------------ | ------------ |
@@ -100,7 +100,7 @@ Quando si utilizza la libreria indipendente, il valore è semplicemente la versi
 
 Ambiente in cui sono stati raccolti i dati. Questo è sempre impostato su `browser`.
 
-## Contesto del luogo (`placeContext`)
+## Contesto del luogo (`placeContext`) {#place-context}
 
 Informazioni sulla posizione dell’utente finale.
 
