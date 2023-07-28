@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di luglio 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 62a0b6327f1707fcc639a309ae7db5bf0e4c828a
+source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1017'
 ht-degree: 25%
 
 ---
@@ -55,16 +55,9 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 
 **Destinazioni nuove o aggiornate** {#new-updated-destinations}
 
-<!--
-
-LiveRamp commented out until it is officially released tomorrow
-
-| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | New | Onboard identities from Adobe Experience Platform into [!DNL LiveRamp Connect] so that you can target users on mobile, open web, social, and [!DNL CTV] platforms, using the [!DNL Ramp ID] identifier. |
-
--->
-
 | Destinazione | Nuovo o aggiornato | Descrizione |
 | ----------- |----------------|----------- |
+| [[!DNL LiveRamp - Onboarding]](../../destinations/catalog/advertising/liveramp-onboarding.md) | Nuova | Identità integrate da Adobe Experience Platform a [!DNL LiveRamp Connect] in modo da poter eseguire il targeting degli utenti su dispositivi mobili, open web, social e [!DNL CTV] piattaforme, utilizzando [!DNL Ramp ID] identificatore. |
 | [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Nuova | Creare una connessione in uscita a [!DNL Azure Data Lake Storage Gen2] per esportare periodicamente file di dati da Adobe Experience Platform nel percorso di archiviazione personale. Questa nuova destinazione fornisce funzionalità avanzate di esportazione dei file e supporta [!BADGE Beta]{type=Informative} |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | Nuova | [!DNL Data Landing Zone] è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per esportare i file da Platform. Questa nuova destinazione fornisce funzionalità avanzate di esportazione dei file e supporta [!BADGE Beta]{type=Informative} |
 | [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Nuova | Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform nei bucket personali. Questa nuova destinazione fornisce funzionalità avanzate di esportazione dei file e supporta [!BADGE Beta]{type=Informative} |
