@@ -4,10 +4,10 @@ description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi d
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
 workflow-type: tm+mt
 source-wordcount: '1953'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità beta è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili in [descrizioni dei prodotti](https://helpx.adobe.com/legal/product-descriptions.html) e contatta il rappresentante del tuo Adobe per ulteriori informazioni.
+>* Questa funzionalità in versione beta è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
 
 Utilizza il supporto dati di terze parti in Real-Time CDP per espandere la tua base di profili con profili di potenziali clienti dei partner dati e interagire con loro per acquisire o raggiungere nuovi clienti.
 
@@ -31,7 +31,7 @@ Se prendi in considerazione la possibilità di contattare e acquisire nuovi clie
 * I dati del partner che stai acquisendo sono legati a un identificatore durevole ampiamente accettato, ad esempio Dati personali identificabili (PII), PII con hash o un identificatore del partner?
 * Quali criteri di utilizzo dei dati è necessario conoscere dal punto di vista del partner e dal proprio team legale, di privacy o di conformità?
 
-## Come ottenere il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
+## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
 Prima di espandere Real-Time CDP per coinvolgere e acquisire nuovi clienti, assicurati di utilizzare Real-Time CDP per creare una solida base per i dati di prima parte. I flussi di lavoro per ottenere questo caso d’uso sono simili ai flussi di lavoro per interagire con i clienti noti.
 
@@ -44,9 +44,9 @@ Prima di espandere Real-Time CDP per coinvolgere e acquisire nuovi clienti, assi
 5. As a **cliente**, puoi attivare i tipi di pubblico potenziale nelle destinazioni che accettano le identità disponibili nell’elenco dei potenziali clienti.
 6. Se necessario, utilizza **partner dati** per l’attivazione nell’ultimo miglio dei tipi di pubblico sulle destinazioni desiderate dei contenuti multimediali a pagamento.
 
-## Come ottenere il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
+## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
 
-Leggi le sezioni seguenti, che includono collegamenti a ulteriore documentazione, per completare ciascuno dei passaggi descritti nella panoramica di alto livello precedente.
+Leggi le sezioni seguenti, che includono collegamenti a un ulteriore documentazione, per completare ciascuno dei passaggi descritti nella panoramica di alto livello qui sopra.
 
 ### Funzionalità ed elementi dell’interfaccia utente che utilizzerai {#ui-functionality-and-elements}
 
@@ -83,7 +83,7 @@ Inizia creando un nuovo tipo di identità per i profili che riceverai dal partne
 ![Crea un nuovo spazio dei nomi ID partner.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Per ulteriori informazioni sugli spazi dei nomi ID partner, consulta [sezione tipi di identità](/help/identity-service/namespaces.md).
-* Ulteriori informazioni [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
+* Ulteriori informazioni su [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
 
 #### Crea un nuovo schema con **[!UICONTROL Profilo potenziale individuale XDM]** classe
 
@@ -125,11 +125,11 @@ Per farlo, segui la procedura indicata di seguito:
 >
 >Ora lo schema è pronto per l’uso e puoi procedere al passaggio successivo per acquisire i dati prospect dal tuo partner dati.
 
-Anche in questo passaggio, pensa a come cambia il modello di governance dei dati quando espandi la tua strategia di gestione dati per includere i dati di terze parti forniti dal partner. Consulta le considerazioni riportate nei collegamenti alla documentazione riportati di seguito:
+Anche in questo passaggio, tieni presente come cambia il modello di governance dei dati quando espandi la tua strategia di gestione dati per includere i dati di terze parti forniti dal partner. Consulta le considerazioni riportate nei collegamenti alla documentazione qui di seguito:
 
-* (**Disponibile a breve**) Mantieni i dati di terze parti in un set di dati separato in modo che sia facile eliminarli e annullare le integrazioni.
-* (**Disponibile a breve** a) Utilizzare [scadenza set di dati](/help/hygiene/ui/dataset-expiration.md) funzionalità del set di dati per i clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
-* (**Disponibile a breve**) Presta attenzione quando crei set di dati derivati che estraggono dati di terze parti, perché una volta combinati, l’unica soluzione per rimuovere i dati di terze parti è quella di eliminare l’intero set di dati derivati.
+* (**Disponibile a breve**) Conservazione dei dati di terze parti in un set di dati separato in modo che sia facile eliminarli e annullare le integrazioni.
+* (**Disponibile a breve**) Utilizzo della funzionalità [scadenza set di dati](/help/hygiene/ui/dataset-expiration.md) per il set di dati di clienti che hanno acquistato il componente aggiuntivo di igiene dei dati.
+* (**Disponibile a breve**) Presta attenzione durante la creazione di set di dati derivati che estraggono dati di terze parti, perché una volta combinati, l’unica soluzione per rimuovere i dati di terze parti è quella di eliminare l’intero set di dati derivati.
 
 ### Carica l’elenco dei profili prospect e controlla la visualizzazione dei profili prospect
 
@@ -204,11 +204,11 @@ L’esperienza di creazione del pubblico per i profili di potenziali clienti è 
 
 ### Attivare i profili di potenziali clienti nelle destinazioni {#activate-to-destinations}
 
-Utilizza i tipi di pubblico potenziali esportandoli nelle destinazioni. Attualmente, solo alcune destinazioni come [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) la destinazione supporta l’attivazione dei profili prospect.
+Utilizza i tipi di pubblico potenziali esportandoli nelle destinazioni. Attualmente, solo alcune destinazioni come [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o [!BADGE Alfa]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) la destinazione supporta l’attivazione dei profili prospect.
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Integrare i profili di prime parti con attributi di partner di dati attendibili](/help/rtcdp/partner-data/supplement-first-party-profiles.md) per migliorare la base di dati, ottenere nuove informazioni sulla base dei clienti e ottimizzare meglio il pubblico.
-* (**Disponibile a breve**) [!BADGE Beta]{type=Informative}**Utilizzo del riconoscimento assistito dai partner** per personalizzare le esperienze nel sito durante la visita e per il retargeting fuori sito dopo la visita, senza che l’utente si autentichi o abbia antecedenti con il tuo marchio.
+* [!BADGE Beta]{type=Informative}[Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* (**Disponibile a breve**) [!BADGE Beta]{type=Informative}**Utilizzo del riconoscimento assistito deo partner** per personalizzare le esperienze nel sito durante la visita e per il retargeting fuori dal sito dopo la visita, senza che l’utente si autentichi o abbia antecedenti con il tuo marchio.
