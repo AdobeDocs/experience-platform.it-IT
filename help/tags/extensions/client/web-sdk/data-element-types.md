@@ -2,10 +2,10 @@
 title: Tipi di elementi dati nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di elementi dati forniti dall’estensione tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 6%
+source-wordcount: '603'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ Dopo aver impostato [tipi di azioni](action-types.md) nel [Estensione tag Adobe 
 
 ## Mappa identità {#identity-map}
 
-Una mappa delle identità consente di stabilire le identità del visitatore della pagina web. Una mappa di identità è costituita da spazi dei nomi, come _telefono_ o _email_, in cui ogni spazio dei nomi contiene uno o più identificatori. Ad esempio, se l’utente sul sito web ha fornito due numeri di telefono, il namespace del telefono deve contenere due identificatori.
+Una mappa delle identità consente di stabilire le identità del visitatore della pagina web. Una mappa di identità è costituita da spazi dei nomi, come `CRMID`, `Phone` o `Email`, in cui ogni spazio dei nomi contiene uno o più identificatori. Ad esempio, se l’utente sul sito web ha fornito due numeri di telefono, il namespace del telefono deve contenere due identificatori.
 
 In [!UICONTROL Mappa identità] elemento dati, fornirai le seguenti informazioni per ciascun identificatore:
 
@@ -25,6 +25,12 @@ In [!UICONTROL Mappa identità] elemento dati, fornirai le seguenti informazioni
 * **[!UICONTROL Principale]**: selezione che indica se l’identificatore deve essere utilizzato come identificatore principale dell’individuo. Se nessun identificatore è contrassegnato come primario, verrà utilizzato l’ECID come identificatore primario.
 
 ![Immagine dell’interfaccia utente che mostra la schermata Edit Data Element.](assets/identity-map-data-element.png)
+
+>[!TIP]
+>
+>L’Adobe consiglia di inviare identità che rappresentano una persona, come `Luma CRM Id` come identità primaria.
+>
+>Se la mappa di identità contiene l’identificatore della persona (ad es. `Luma CRM Id`), l’identificatore della persona diventerà l’identificatore primario. Altrimenti, `ECID` diventa l’identità primaria.
 
 Non devi fornire un [!DNL ECID] durante la creazione di una mappa di identità. Quando utilizzi l’SDK, un’ [!DNL ECID] viene generato automaticamente sul server e incluso nella mappa di identità.
 
