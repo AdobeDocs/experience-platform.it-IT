@@ -5,9 +5,9 @@ title: Creare un flusso di dati per le origini dei protocolli utilizzando l’AP
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione di protocolli e acquisirli in Platform utilizzando connettori e API di origine.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1338'
 ht-degree: 3%
 
 ---
@@ -24,12 +24,12 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experience Platform come file batch.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch.
+* [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
@@ -196,8 +196,8 @@ curl -X POST \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `data.schema.id` | Il `$id` dello schema XDM di destinazione. |
-| `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | ID del set di dati di destinazione generato nel passaggio precedente. **Nota**: devi fornire un ID set di dati valido durante la creazione di una connessione di destinazione. Un ID di set di dati non valido genererà un errore. |
+| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Risposta**
 
@@ -699,7 +699,7 @@ In caso di esito positivo, la risposta restituisce l’ID `id` del flusso di dat
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API ](../monitor.md)
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API](../monitor.md)
 
 ## Passaggi successivi
 

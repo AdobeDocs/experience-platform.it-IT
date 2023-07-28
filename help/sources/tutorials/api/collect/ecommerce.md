@@ -5,9 +5,9 @@ title: Creare un flusso di dati per le origini di e-commerce utilizzando l’API
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori e le API di origine.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1311'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine e
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [API del registro dello schema](../../../../xdm/api/getting-started.md): scopri come eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): il catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in [!DNL Experience Platform].
@@ -171,8 +171,8 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Il `$id` dello schema XDM di destinazione. |
 | `data.schema.version` | Versione dello schema. Questo valore deve essere impostato `application/vnd.adobe.xed-full+json;version=1`, che restituisce la versione secondaria più recente dello schema. |
-| `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | ID del set di dati di destinazione generato nel passaggio precedente. **Nota**: devi fornire un ID set di dati valido durante la creazione di una connessione di destinazione. Un ID di set di dati non valido genererà un errore. |
+| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Risposta**
 
@@ -642,7 +642,7 @@ In caso di esito positivo, la risposta restituisce l’ID `id` del flusso di dat
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API ](../monitor.md)
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API](../monitor.md)
 
 ## Passaggi successivi
 

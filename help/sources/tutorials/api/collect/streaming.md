@@ -5,9 +5,9 @@ title: Creare un flusso di dati in streaming per i dati non elaborati utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi per recuperare i dati in streaming e importarli in Platform utilizzando i connettori e le API di origine.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 4%
 
 ---
@@ -20,12 +20,12 @@ Questa esercitazione illustra i passaggi necessari per recuperare i dati non ela
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    - [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l’acquisizione in streaming per Platform fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server all’Experience Platform in tempo reale.
-- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+- [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al [!DNL Data Lake]. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Il formato specificato dei dati che si stanno portando a [!DNL Data Lake]. |
-| `params.dataSetId` | ID del set di dati di destinazione recuperato nel passaggio precedente. |
+| `data.format` | Il formato specificato dei dati che si stanno portando al data lake. |
+| `params.dataSetId` | ID del set di dati di destinazione generato nel passaggio precedente. **Nota**: devi fornire un ID set di dati valido durante la creazione di una connessione di destinazione. Un ID di set di dati non valido genererà un errore. |
+| `connectionSpec.id` | ID della specifica di connessione utilizzato per connettersi al data lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Risposta**
 
