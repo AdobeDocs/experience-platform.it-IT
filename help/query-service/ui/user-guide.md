@@ -7,7 +7,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
 source-wordcount: '1901'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -45,10 +45,10 @@ In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di n
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="Attivazione/disattivazione editor avanzato"
->abstract="Consente di passare dalla versione precedente a quella avanzata dell’editor di query. La versione precedente è abilitata per impostazione predefinita, anche se la versione migliorata fornisce una migliore accessibilità e il supporto a più temi. Per ulteriori informazioni su queste modifiche, consulta la documentazione."
+>title="Interruttore per editor avanzato"
+>abstract="Puoi passare dall’editor di query precedente alla nuova versione avanzata. La versione precedente è abilitata per impostazione predefinita, ma la versione avanzata fornisce migliori funzioni per l’accessibilità e il supporto di più temi. Per ulteriori informazioni su queste modifiche, consulta la documentazione."
 
-Un interruttore dell’interfaccia utente consente di passare dalla versione legacy alla versione avanzata dell’editor di query. La versione precedente è abilitata per impostazione predefinita, anche se la versione migliorata fornisce una migliore accessibilità e il supporto a più temi. Abilita la versione avanzata per accedere alle impostazioni dell’editor di query.
+Un interruttore dell’interfaccia utente consente di passare dalla versione legacy alla versione avanzata dell’editor di query. La versione precedente è abilitata per impostazione predefinita, ma la versione avanzata fornisce migliori funzioni per l’accessibilità e il supporto di più temi. Abilita la versione avanzata per accedere alle impostazioni dell’editor di query.
 
 ![L’Editor query con l’Editor query avanzato è evidenziato.](../images/ui/query-editor/enhanced-query-editor-toggle.png)
 

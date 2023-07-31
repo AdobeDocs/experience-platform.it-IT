@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
 source-wordcount: '934'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -68,7 +68,7 @@ Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informazioni sugli ID di stream di dati"
 >abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i tipi di pubblico nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en" text="Scopri come configurare uno stream di dati"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
 > 

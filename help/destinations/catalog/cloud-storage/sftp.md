@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Chiave SSH privata"
->abstract="La chiave SSH privata deve essere una stringa con codifica Base64 in formato RSA e non deve essere protetta da password."
+>abstract="La chiave SSH privata deve essere una stringa in formato RSA con codifica Base64 e non deve essere protetta da password."
 
 Se si seleziona la **[!UICONTROL SFTP con password]** tipo di autenticazione per connettersi alla posizione SFTP:
 

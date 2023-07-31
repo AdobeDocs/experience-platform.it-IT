@@ -6,7 +6,7 @@ hidefromtoc: true
 source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 2%
+ht-degree: 13%
 
 ---
 
@@ -25,7 +25,7 @@ The links when required:
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
 >title="Distribuzione dei punteggi"
->abstract="Questo widget visualizza la distribuzione del numero totale di profili in base ai punteggi di tendenza, con incrementi del 5%. La distribuzione del conteggio dei profili è determinata dal modello di IA e dal criterio di unione selezionati. Puoi modificare il modello di IA dal menu a discesa sotto il titolo del widget."
+>abstract="Questo widget mostra la distribuzione del numero totale di profili in base ai punteggi di propensione, con incrementi del 5%. La distribuzione del conteggio dei profili è determinata dal modello di IA e dal criterio di unione selezionati. Puoi modificare il modello di IA dal menu a discesa sotto il titolo del widget."
 
 Il [!UICONTROL Distribuzione dei punteggi in IA per l’analisi dei clienti] il widget categorizza il numero totale di profili in base ai loro punteggi di propensione. La distribuzione del conteggio dei profili è determinata dal modello di IA e dal criterio di unione selezionato, quindi viene visualizzata con incrementi del 5% che ne indicano la propensione. Il conteggio dei profili viene fornito lungo l’asse Y e i punteggi di propensione vengono forniti lungo l’asse X.
 
@@ -54,7 +54,7 @@ Ulteriori informazioni su Customer AI sono disponibili sul sito [guida all’int
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
 >title="Riepilogo punteggio"
->abstract="Questo widget visualizza il numero totale di profili con punteggio e li categorizza in contenitori contenenti propensione alta, media e bassa. Il grafico ad anello illustra la composizione proporzionale dei profili totali con propensione alta, media e bassa."
+>abstract="Questo widget mostra il numero totale di profili con punteggio e li categorizza in contenitori a seconda della propensione alta, media e bassa. Il grafico ad anello illustra la composizione proporzionale dei profili totali con propensione alta, media e bassa."
 
 Questo widget visualizza il numero totale di profili valutati e li categorizza in contenitori contenenti propensione alta, media e bassa rispettivamente come verde, giallo e rosso. Un grafico ad anello illustra la composizione proporzionale dei profili tra propensione alta, media e bassa. Un profilo può avere una propensione elevata superiore a 75, una propensione media compresa tra 25 e 74 e una bassa propensione inferiore a 24. Una legenda indica il codice del colore e le soglie di propensione. I conteggi dei profili per le propensione alta, media e bassa vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
