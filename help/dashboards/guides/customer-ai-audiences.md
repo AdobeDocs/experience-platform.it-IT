@@ -3,7 +3,7 @@ title: Widget di IA per l’analisi dei clienti della dashboard Pubblico
 description: Scopri in che modo IA per l’analisi dei clienti fornisce informazioni importanti sull’abbandono o sulla propensione al pubblico in tempo reale dei profili cliente della tua organizzazione.
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 13%
@@ -23,7 +23,7 @@ THe links when required
 ## [!UICONTROL Distribuzione dei punteggi in IA per l’analisi dei clienti] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
+>id="platform_dashboards_segments_distributionOfScores"
 >title="Distribuzione dei punteggi"
 >abstract="Questo widget mostra la distribuzione del numero totale di profili in base ai punteggi di propensione, con incrementi del 5%. La distribuzione del conteggio dei profili è determinata dal modello di IA e dal criterio di unione selezionati. Puoi modificare il modello di IA dal menu a discesa sotto il titolo del widget."
 
@@ -52,7 +52,7 @@ Ulteriori informazioni su Customer AI sono disponibili sul sito [guida all’int
 ## [!UICONTROL Riepilogo punteggio di Customer AI] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
+>id="platform_dashboards_segments_scoringSummary"
 >title="Riepilogo punteggio"
 >abstract="Questo widget mostra il numero totale di profili con punteggio e li categorizza in contenitori a seconda della propensione alta, media e bassa. Il grafico ad anello illustra la composizione proporzionale dei profili totali con propensione alta, media e bassa."
 
