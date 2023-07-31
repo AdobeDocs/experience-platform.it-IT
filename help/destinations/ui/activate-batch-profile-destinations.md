@@ -4,15 +4,19 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3673'
 ht-degree: 11%
 
 ---
 
 
 # Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch
+
+>[!IMPORTANT]
+> 
+> La funzionalità descritta sulla pagina non è ancora disponibile a livello generale per i clienti. Questa pagina è destinata attualmente ai team interni agli Adobi come pre-lettura delle funzionalità in arrivo. Non condividere all&#39;esterno di Adobe finché questa nota non viene rimossa.
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ Utilizza il **[!UICONTROL Pianificato]** per l&#39;esecuzione del processo di at
 
    ![Immagine che evidenzia l’opzione Pianificato nel flusso di attivazione per le destinazioni batch e che mostra il selettore dell’ora.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementale o completa potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione dei dati di backfill completa e più aggiornata sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’ora della prima esportazione dei file dopo le 12:00 GMT del giorno successivo. Questa limitazione sarà affrontata nelle versioni future.
-
 1. Utilizza il **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione. Per le esportazioni giornaliere, si consiglia di impostare la data di inizio e la data di fine in base alla durata delle campagne nelle piattaforme a valle.
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazi
    * **[!UICONTROL Ogni ora]**: pianifica le esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
 
 1. Utilizza il **[!UICONTROL Ora]** per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
-
-   >[!IMPORTANT]
-   >
-   >A causa del modo in cui vengono configurati i processi di Experience Platform interni, la prima esportazione di file incrementale o completa potrebbe non contenere tutti i dati di backfill. <br> <br> Per garantire un’esportazione dei dati di backfill completa e più aggiornata sia per i file completi che per quelli incrementali, l’Adobe consiglia di impostare l’ora della prima esportazione dei file dopo le 12:00 GMT del giorno successivo. Questa limitazione sarà affrontata nelle versioni future.
 
 1. Utilizza il **[!UICONTROL Data]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione. Si consiglia di impostare la data di inizio e di fine in modo che sia allineata alla durata delle campagne nelle piattaforme a valle.
 
