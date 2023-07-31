@@ -2,9 +2,9 @@
 description: Scopri come configurare le opzioni di formattazione dei file quando si attivano i dati in destinazioni basate su file
 title: (Beta) Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1190'
 ht-degree: 19%
 
 ---
@@ -12,15 +12,12 @@ ht-degree: 19%
 # (Beta) Configurare le opzioni di formattazione dei file per le destinazioni basate su file
 
 >[!IMPORTANT]
->
->Il **[!UICONTROL Opzioni di formattazione del file]** funzionalità in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
->Contatta il rappresentante del tuo Adobe per accedere a questa funzionalità.
 > 
 >Le opzioni di formattazione descritte in questo documento sono attualmente disponibili solo per i file CSV.
 
 L&#39;opzione per configurare varie opzioni di formattazione per i file esportati è disponibile quando [connetti](/help/destinations/ui/connect-destination.md) in una destinazione basata su file, ad esempio [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md#connect), o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-Puoi configurare varie opzioni di formattazione per i file esportati utilizzando l’interfaccia utente di Experience Platform. È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul proprio lato, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
+Puoi configurare varie opzioni di formattazione per i file esportati utilizzando l’interfaccia utente di Experienci Platform. È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file sul proprio lato, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experienci Platform.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -33,9 +30,9 @@ Per visualizzare le opzioni di formattazione del file, avviare [connetti alla de
 
 >[!IMPORTANT]
 >
->È possibile che nella destinazione a cui ci si connette non siano disponibili tutte queste opzioni. Spetta allo sviluppatore di destinazione determinare le opzioni di formattazione dei file da supportare nella destinazione. Lo sviluppatore di destinazione può determinare quali opzioni sono disponibili quando si connette alla destinazione. Le opzioni obbligatorie sono contrassegnate da un asterisco nell’interfaccia utente di Experience Platform.
+>È possibile che nella destinazione a cui ci si connette non siano disponibili tutte queste opzioni. Spetta allo sviluppatore di destinazione determinare le opzioni di formattazione dei file da supportare nella destinazione. Lo sviluppatore di destinazione può determinare quali opzioni sono disponibili quando si connette alla destinazione. Le opzioni obbligatorie sono contrassegnate da un asterisco nell’interfaccia utente di Experienci Platform.
 > 
->Le nuove destinazioni dell&#39;archiviazione cloud - [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [(Beta) BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta) Archiviazione Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone (Beta)](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [(Beta) Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP (beta)](/help/destinations/catalog/cloud-storage/sftp.md) : attualmente supporta solo le sei opzioni CSV evidenziate di seguito.
+>Adobi di destinazioni dell’archiviazione cloud: [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md), [Archiviazione Azure Data Lake Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Archiviazione cloud Google](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) : attualmente supporta solo le sei opzioni CSV evidenziate di seguito.
 
 ![Immagine che mostra alcune delle opzioni di formattazione disponibili per il file.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -119,8 +116,8 @@ Utilizzare questo controllo per impostare la rappresentazione di stringa di un v
 
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
-* Output di esempio con **[!UICONTROL nulle]** selezionato: `male,NULL,TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in un valore nullo.
-* Output di esempio con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform trasforma il valore vuoto in una coppia di virgolette.
+* Output di esempio con **[!UICONTROL nulle]** selezionato: `male,NULL,TestLastName`. In questo caso, Experienci Platform trasforma il valore vuoto in un valore nullo.
+* Output di esempio con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experienci Platform trasforma il valore vuoto in una coppia di virgolette.
 * Output di esempio con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`. In questo caso, l’Experience Platform mantiene il valore vuoto e lo esporta così com’è (senza virgolette doppie).
 
 >[!TIP]
@@ -145,8 +142,8 @@ Utilizza questo controllo per impostare la rappresentazione stringa di un valore
 Visualizza gli esempi seguenti del contenuto dei file CSV esportati con ciascuna selezione nell’interfaccia utente.
 
 * Output di esempio con **[!UICONTROL nulle]** selezionato: `male,NULL,TestLastName`. In questo caso, non si verifica alcuna trasformazione e il file CSV contiene il valore null.
-* Output di esempio con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experience Platform sostituisce il valore null con virgolette doppie intorno a una stringa vuota.
-* Output di esempio con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`. In questo caso, Experience Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
+* Output di esempio con **&quot;&quot;** selezionato: `male,"",TestLastName`. In questo caso, Experienci Platform sostituisce il valore null con virgolette doppie intorno a una stringa vuota.
+* Output di esempio con **[!UICONTROL Stringa vuota]** selezionato: `male,,TestLastName`. In questo caso, Experienci Platform sostituisce il valore null con una stringa vuota (senza virgolette doppie).
 
 ### Formato di compressione {#compression-format}
 

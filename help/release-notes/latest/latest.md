@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di luglio 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 30%
@@ -17,7 +17,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [Servizio catalogo](#catalog-service)
 - [Raccolta dati](#data-collection)
-- [Destinazioni](#data-prep)
+- [Destinazioni](#destinations)
 - [Servizio query](#query-service)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
@@ -95,7 +95,7 @@ L’aggiornamento e la versione con disponibilità generale delle sei destinazio
 **Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
 
 - È stato risolto un problema con la destinazione di Marketing Cloud (API) Salesforce a causa del quale nel passaggio di mappatura non tutti gli attributi di destinazione disponibili venivano restituiti da Salesforce. Ora è disponibile un’ [limite superiore di 2000 attributi di destinazione](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) da Salesforce che possono essere visualizzate.
-- È stato risolto un problema relativo alla destinazione Microsoft Dynamics 365. La destinazione ora supporta il routing regionale dei dati tramite [Selettore area geografica](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), in modo da poter indirizzare le esportazioni di dati a seconda dell’area in cui è eseguito il provisioning della tua azienda all’interno dell’ecosistema Microsoft. ![È stato evidenziato il nuovo selettore Regione.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "È stato evidenziato il nuovo selettore Regione."){width="100" zoomable="yes"}
+- È stato risolto un problema relativo alla destinazione Microsoft Dynamics 365. La destinazione ora supporta il routing regionale dei dati tramite [Selettore area geografica](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate), in modo da poter indirizzare le esportazioni di dati a seconda dell’area in cui è eseguito il provisioning della tua azienda all’interno dell’ecosistema Microsoft. <br> ![È stato evidenziato il nuovo selettore Regione.](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "È stato evidenziato il nuovo selettore Regione."){width="100" zoomable="yes"}
 
 Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
 
