@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 7c83a946ca30f1bf016cc42245d7d52f2c034f18
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -54,8 +54,6 @@ Experienci Platform consente di acquisire i dati da altre applicazioni Adobe, tr
 - [[!DNL Marketo Engage] panoramica dell’origine](connectors/adobe-applications/marketo/marketo.md)
    - [Creare un [!DNL Marketo Engage] connessione sorgente nell’interfaccia utente](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Creare un [!DNL Marketo Engage] connessione di origine e flusso di dati per i dati di attività personalizzati](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Panoramica sull’origine di Adobe Workfront](connectors/adobe-applications/workfront.md)
-   - [Creare una connessione sorgente Workfront nell’interfaccia utente](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 

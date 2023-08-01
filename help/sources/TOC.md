@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 10%
+source-wordcount: '987'
+ht-degree: 11%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 10%
       - [Origine Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origine attributi cliente](connectors/adobe-applications/customer-attributes.md)
       - [Origine raccolta dati](connectors/adobe-applications/data-collection.md)
-      - [Origine Workfront](connectors/adobe-applications/workfront.md)
       - Mappature campi {#mapping}
          - [Mappature dei campi di Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager di mappature campi](connectors/adobe-applications/mapping/audience-manager.md)
@@ -75,7 +74,7 @@ ht-degree: 10%
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
-      - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
+      - [Connettore Azure Date Explorer](connectors/databases/data-explorer.md)
       - [Azure synapse del connettore Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore Azure Table Storage](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
@@ -154,7 +153,7 @@ ht-degree: 10%
          - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
+         - [Azure Date Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure synapse di Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
@@ -234,7 +233,6 @@ ht-degree: 10%
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Attività personalizzate Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
@@ -275,7 +273,7 @@ ht-degree: 10%
          - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Date Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure synapse di Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
@@ -371,4 +369,4 @@ ht-degree: 10%
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

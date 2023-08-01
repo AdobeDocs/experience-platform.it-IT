@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 16%
+source-wordcount: '1159'
+ht-degree: 26%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 16%
 - [Destinazioni](#destinations)
 - [Experience Data Model](#xdm)
 - [Servizio query](#query-service)
-- [Origini](#sources-sources)
 
 ## Chiavi gestite dal cliente {#cmk}
 
@@ -48,8 +47,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Esportazioni di set di dati (Beta) | Il [Funzionalità Beta per esportazioni set di dati](/help/destinations/ui/export-datasets.md) consente di esportare i dati di prima generazione (come definito nella [Descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) da Adobe Experience Platform ai sistemi dei clienti esterni, tramite l&#39;interfaccia utente delle destinazioni. Questo consente di ottenere dati da Experience Platform con un flusso di lavoro senza codice/a basso codice per sei destinazioni di archiviazione cloud (elencate nella tabella seguente) per casi di utilizzo di analisi e conformità. |
-| Funzionalità di esportazione file migliorate (Beta) | È ora possibile beneficiare di funzionalità di personalizzazione avanzate durante l’esportazione di file da Experience Platform: <br><ul><li>Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Questa funzionalità è supportata dalle sei nuove schede di archiviazione cloud beta elencate nella tabella seguente. |
+| Esportazioni di set di dati (Beta) | Il [Funzionalità Beta per esportazioni set di dati](/help/destinations/ui/export-datasets.md) consente di esportare i dati di prima generazione (come definito nella [Descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) da Adobe Experience Platform ai sistemi dei clienti esterni, tramite l&#39;interfaccia utente delle destinazioni. Questo consente di ottenere dati da Experienci Platform con un flusso di lavoro senza codice/a basso codice per sei destinazioni di archiviazione cloud (elencate nella tabella seguente) per casi di utilizzo di analisi e conformità. |
+| Funzionalità di esportazione file migliorate (Beta) | È ora possibile beneficiare di funzionalità di personalizzazione avanzate durante l’esportazione di file da Experienci Platform: <br><ul><li>Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Questa funzionalità è supportata dalle sei nuove schede di archiviazione cloud beta elencate nella tabella seguente. |
 
 {style="table-layout:auto"}
 
@@ -75,11 +74,11 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | ----------- | ----------- |
 | [Guardrail delle destinazioni](../../destinations/guardrails.md) | Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comportamento di attivazione. |
 
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Componenti XDM aggiornati**
 
@@ -87,15 +86,15 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | --- | --- | --- |
 | Tipo di dati | [[!UICONTROL Informazioni sui dettagli della sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | È stato aggiornato il `authorized` da tipo booleano a stringa. `season` e `episode` sono stati modificati da interi a stringhe. |
 | Tipo di dati | [[!UICONTROL Informazioni sui dettagli della pubblicità]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` è stato rinominato in `friendlyName`, e `ID` è stato rinominato in `name`. |
-| Tipo di dati | [[!UICONTROL Informazioni dettagli errore]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` è stato rinominato come `name`. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dell’errore]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` è stato rinominato come `name`. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 
 ## Servizio query {#query-service}
 
-Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
 
 **Funzioni aggiornate**
 
@@ -106,19 +105,6 @@ Query Service consente di utilizzare SQL standard per eseguire query sui dati in
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su Query Services, consulta [Panoramica di Query Service](../../query-service/home.md).
+Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
 Nuove funzioni di Adobe Experience Platform:
 
-## Origini {#sources}
-
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
-
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
-
-**Funzioni aggiornate**
-
-| Funzione | Descrizione |
-| --- | --- | 
-| Disponibilità beta dell’origine Adobe Workfront | Utilizza il [Origine Adobe Workfront](../../sources/connectors/adobe-applications/workfront.md) Experience Platform dei dati Workfront ed esecuzione di casi d&#39;uso quali la combinazione dei record di lavoro con dati di terze parti, l&#39;applicazione di analisi cronologiche e di serie temporali sui record di lavoro e l&#39;esecuzione di query sui dati di lavoro tramite SQL standard. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Workfront nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
-
-Per ulteriori informazioni sulle origini, leggi la [panoramica sulle origini](../../sources/home.md).
