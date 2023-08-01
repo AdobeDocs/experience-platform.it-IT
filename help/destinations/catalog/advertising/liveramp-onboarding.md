@@ -3,9 +3,9 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,9 @@ In [passaggio di mappatura](#map) del flusso di lavoro di attivazione, devi defi
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico aggiuntivi descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
@@ -129,13 +129,8 @@ Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 
 In [!UICONTROL Pianificazione] crea una pianificazione di esportazione per ogni pubblico, con le impostazioni mostrate di seguito.
 
->[!IMPORTANT]
->
->Tutti i tipi di pubblico attivati in questa destinazione devono essere configurati con la stessa pianificazione, come mostrato di seguito.
-
 * **[!UICONTROL Opzioni di esportazione file]**: [!UICONTROL Esporta file completi]. [Esportazioni file incrementali](../../ui/activate-batch-profile-destinations.md#export-incremental-files) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
 * **[!UICONTROL Frequenza]**: [!UICONTROL Giornaliero]
-* Imposta il tempo di esportazione su **[!UICONTROL Dopo la valutazione del segmento]**. Esportazioni di pubblico pianificate e [esportazioni di file su richiesta](../../ui/export-file-now.md) non sono attualmente supportati per [!DNL LiveRamp] destinazione.
 * **[!UICONTROL Data]**: seleziona l’ora di inizio e di fine dell’esportazione come desideri.
 
 ![Schermata dell’interfaccia utente di Platform che mostra il passaggio di pianificazione del pubblico.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
