@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 2%
+source-wordcount: '1449'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ Ad Experience Platform, puoi centralizzare i dati raccolti da fonti diverse e ut
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Sorgenti create da Adobi e da partner {#adobe-and-partner-built-sources}
+
+Alcuni dei connettori nel catalogo delle sorgenti di Experience Platform sono generati e mantenuti da Adobe, mentre altri vengono generati e mantenuti da società partner utilizzando [SDK origini](/help/sources/sources-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se un’origine viene creata e gestita dal partner. Ad esempio, il [Connettore Amazon S3](/help/sources/connectors/cloud-storage/s3.md) viene creato da Adobe, mentre [Connettore RainFocus](/help/sources/connectors/analytics/rainfocus.md) viene creato e gestito dal team RainFocus.
+
+Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante dell’Adobe o l’Assistenza clienti.
 
 ## Tipi di origini
 

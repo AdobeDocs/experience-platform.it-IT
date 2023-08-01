@@ -3,10 +3,10 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 5%
+source-wordcount: '925'
+ht-degree: 4%
 
 ---
 
@@ -46,6 +46,12 @@ I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) con
 ## Tipi e categorie di destinazione {#types-and-categories}
 
 Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API, a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, vedi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
+
+## Destinazioni create da Adobi e da partner {#adobe-and-partner-built-destinations}
+
+Alcuni dei connettori nel catalogo delle destinazioni Experienci Platform sono generati e gestiti da Adobe, mentre altri sono generati e gestiti da aziende partner che utilizzano [Destination SDK](/help/destinations/destination-sdk/overview.md). Una nota nella parte superiore della pagina della documentazione per ciascun connettore creato dal partner richiama se una destinazione è stata creata e gestita dal partner. Ad esempio, il [Connettore Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) viene creato da Adobe, mentre [Connettore TikTok](/help/destinations/catalog/social/tiktok.md) viene creato e gestito dal team TikTok.
+
+Per i connettori creati e gestiti dal partner, ciò significa che potrebbe essere necessario risolvere i problemi con il connettore dal team partner (metodo di contatto fornito nella nota nella pagina della documentazione). Per i problemi relativi ai connettori creati e gestiti da Adobe, contatta il rappresentante dell’Adobe o l’Assistenza clienti.
 
 ## Destinazioni e controlli di accesso {#access-controls}
 

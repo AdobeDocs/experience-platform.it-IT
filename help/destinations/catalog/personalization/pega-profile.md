@@ -3,10 +3,10 @@ title: Connettore profilo Pega
 description: Utilizza il connettore di profilo Pega per Amazon S3 in Adobe Experience Platform per esportare dati di profilo completi o incrementali, o entrambi, nell’archiviazione cloud Amazon S3. In Pega Customer Decision Hub, i processi di dati possono essere pianificati in Customer Profile Designer per importare periodicamente i dati di profilo dall’archiviazione Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 1%
+source-wordcount: '1084'
+ht-degree: 2%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 ## Panoramica {#overview}
 
-Utilizza il [!DNL Pega Profile Connector] in Adobe Experience Platform per creare una connessione in uscita al tuo [!DNL Amazon Web Services] (AWS) Archiviazione S3 per esportare periodicamente i dati del profilo in file CSV da Adobe Experience Platform nei propri bucket S3. In entrata [!DNL Pega Customer Decision Hub], è possibile pianificare processi di dati per importare questi dati profilo dall’archiviazione S3 per aggiornare [!DNL Pega Customer Decision Hub] profilo.
+Utilizza il [!DNL Pega Profile Connector] in Adobe Experience Platform per creare una connessione in uscita al tuo [!DNL Amazon Web Services] (AWS) Archiviazione S3 per esportare periodicamente i dati del profilo in file CSV da Adobe Experience Platform nei propri bucket S3. In [!DNL Pega Customer Decision Hub], è possibile pianificare processi di dati per importare questi dati profilo dall’archiviazione S3 per aggiornare il profilo di [!DNL Pega Customer Decision Hub].
 
 Questo connettore consente di configurare l’esportazione iniziale dei dati del profilo e di sincronizzare periodicamente nuovi profili in [!DNL Pega Customer Decision Hub].  La disponibilità di dati aggiornati nell’hub decisionale del cliente fornisce una visualizzazione migliore e aggiornata della base clienti per le decisioni ottimali successive.
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da Pegasystems. Per eventuali richieste di informazioni o aggiornamenti, contatta direttamente Pega [qui](mailto:support@pega.com).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da Pegasystems. Per eventuali richieste di informazioni o aggiornamenti, contatta direttamente Pega [qui](mailto:support@pega.com).
 
 ## Casi d’uso
 

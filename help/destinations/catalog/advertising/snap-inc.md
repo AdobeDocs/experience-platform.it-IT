@@ -1,10 +1,10 @@
 ---
 title: Connessione Snap Inc
-description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experience Platform.
+description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experienci Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *Snap Inc* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *dev-support@snap.com*
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da *Snap Inc* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *dev-support@snap.com*
 
 ## Casi d’uso {#use-cases}
 
-Questa destinazione consente agli addetti al marketing di importare in Snapchat Ads i tipi di pubblico per utenti creati in Experience Platform e di utilizzarli per indirizzare i propri annunci.
+Questa destinazione consente agli addetti al marketing di importare in Snapchat Ads i tipi di pubblico per utenti creati in Experienci Platform e di utilizzarli per indirizzare i propri annunci.
 
 ## Prerequisiti {#prerequisites}
 
@@ -66,7 +66,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in *DESTINAZIONE* destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

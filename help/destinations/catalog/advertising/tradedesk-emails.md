@@ -3,10 +3,10 @@ title: (Beta) Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 0%
+source-wordcount: '1081'
+ht-degree: 4%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 0%
 >
 >[!DNL The Trade Desk - CRM] La destinazione in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 >
->Con il rilascio di EUID (European Unified ID), ora ne vengono visualizzati due [!DNL The Trade Desk - CRM] destinazioni in [catalogo delle destinazioni](/help/destinations/catalog/overview.md).
->* Se si trovano dati nell&#39;UE, utilizzare il **[!DNL The Trade Desk - CRM (EU)]** destinazione.
->* Se i dati vengono originati nelle aree APAC o NAMER, utilizzare **[!DNL The Trade Desk - CRM (NAMER & APAC)]** destinazione.
+>Con il rilascio dell’EUID (European Unified ID), nel [catalogo delle destinazioni](/help/destinations/catalog/overview.md) ora vengono visualizzate due destinazioni [!DNL The Trade Desk - CRM].
+>* Se i dati vengono originati nell’UE, utilizza la destinazione **[!DNL The Trade Desk - CRM (EU)]**.
+>* Se i dati vengono originati nelle aree geografiche APAC o NAMER, utilizza la destinazione **[!DNL The Trade Desk - CRM (NAMER & APAC)]**.
 >
->Entrambe le destinazioni in Experience Platform sono attualmente in versione beta. Questa pagina della documentazione è stata creata da *[!DNL Trade Desk]* team. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo [!DNL Trade Desk] rappresentativo, la documentazione e le funzionalità sono soggette a modifiche.
+>Entrambe le destinazioni in Experienci Platform sono attualmente in versione beta. Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da *[!DNL Trade Desk]* team. Per richieste di informazioni o richieste di aggiornamento, contatta il tuo [!DNL Trade Desk] rappresentativo, la documentazione e le funzionalità sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
@@ -57,7 +57,7 @@ Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in tes
 
 Puoi eseguire l’hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform o utilizzare indirizzi e-mail non elaborati.
 
-Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, leggi la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experienci Platform, leggi la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md).
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i seguenti requisiti:
 
@@ -74,7 +74,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (e-mail o e-mail con hash) utilizzati nella destinazione Trade Desk. |
-| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il profilo (identità) viene aggiornato una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [esportazioni batch](/help/destinations/destination-types.md#file-based). |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il profilo (identità) viene aggiornato una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [esportazioni batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ Selezione dei campi di destinazione:
 
 ## Convalida esportazione dati {#validate}
 
-Per verificare che i dati vengano esportati correttamente da Experience Platform e in [!DNL The Trade Desk], i tipi di pubblico sono disponibili nella sezione dati di Adobe 1PD in [!DNL The Trade Desk] Piattaforma di gestione dati (DMP, Data Management Platform). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno di [!DNL Trade Desk] Interfaccia utente:
+Per verificare che i dati vengano esportati correttamente da Experienci Platform e in [!DNL The Trade Desk], i tipi di pubblico sono disponibili nella sezione dati di Adobe 1PD in [!DNL The Trade Desk] Piattaforma di gestione dati (DMP, Data Management Platform). Di seguito sono riportati i passaggi per trovare l’ID corrispondente all’interno di [!DNL Trade Desk] Interfaccia utente:
 
 1. Innanzitutto, fai clic su **[!UICONTROL Dati]** Scheda e revisione **[!UICONTROL Prime parti]**.
 2. Scorri la pagina verso il basso, sotto **[!UICONTROL Dati importati]**, troverai il **[!UICONTROL Adobe 1PD Tile]**.

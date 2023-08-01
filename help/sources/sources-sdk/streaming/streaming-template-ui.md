@@ -4,9 +4,9 @@ description: Scopri come portare dati in streaming da un’origine a Adobe Exper
 hide: true
 hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1198'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial descrive i passaggi necessari per creare *YOUR SOURCE* connettor
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattale direttamente all’indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
+>Il connettore di origine e la pagina della documentazione vengono creati e gestiti da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
 
 ## Prerequisiti
 
@@ -50,7 +50,7 @@ Per ulteriori informazioni su queste credenziali, vedere *YOUR SOURCE* documenta
 
 ### Integrare *YOUR SOURCE* con il tuo webhook
 
-*Streaming SDK richiede che la sorgente sia in grado di supportare i webhook per comunicare con Experience Platform. In questa sezione, devi fornire i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
+*Streaming SDK richiede che la sorgente sia in grado di supportare i webhook per comunicare con Experienci Platform. In questa sezione, devi fornire i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
 
 ## Connetti *YOUR SOURCE* account
 
@@ -58,7 +58,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto **Streaming** categoria, seleziona *YOUR SOURCE*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto **Streaming** categoria, seleziona *YOUR SOURCE* e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 >[!TIP]
 >
@@ -114,7 +114,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Fine]** e lascia 
 
 ## Ottieni l’URL dell’endpoint di streaming
 
-Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform.
+Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experienci Platform.
 
 Per recuperare l’endpoint di streaming, vai al [!UICONTROL Attività flusso di dati] pagina del flusso di dati appena creato e copia l’endpoint dalla parte inferiore della sezione [!UICONTROL Proprietà] pannello.
 

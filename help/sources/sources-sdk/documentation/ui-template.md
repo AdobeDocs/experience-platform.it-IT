@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Modello di documentazione self-service per l’interfaccia utente
 description: Scopri come creare una connessione di origine YOURSOURCE utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Questo tutorial descrive i passaggi necessari per creare *YOUR SOURCE* connettor
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
+>Il connettore di origine e la pagina della documentazione vengono creati e gestiti da *YourSource* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
 
 ## Prerequisiti
 
@@ -53,7 +53,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *CATEGORIA DELLA TUA SORGENTE* categoria, seleziona *YOUR SOURCE*, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *CATEGORIA DELLA TUA SORGENTE* categoria, seleziona *YOUR SOURCE* e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 >[!TIP]
 >

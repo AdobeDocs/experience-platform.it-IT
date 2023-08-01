@@ -3,10 +3,10 @@ title: Panoramica origine RainFocus
 description: Scopri come portare i dati di analisi e gestione degli eventi dall’account RainFocus all’Experience Platform
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 5%
+source-wordcount: '998'
+ht-degree: 6%
 
 ---
 
@@ -22,11 +22,11 @@ Utilizza il [!DNL RainFocus] origine in Adobe Experience Platform e Real-time Cu
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da [!DNL RainFocus] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo clientcare<span>@rainfocus.com o visita il [[!DNL RainFocus] Centro risorse](https://help.rainfocus.com/hc/en-us)
+>Il connettore di origine e la pagina della documentazione vengono creati e gestiti da [!DNL RainFocus] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo clientcare<span>@rainfocus.com o visita il [[!DNL RainFocus] Centro risorse](https://help.rainfocus.com/hc/en-us)
 
 ## Prerequisiti
 
-Prima di attivare la funzionalità di [!DNL RainFocus] integrazione su Experience Platform:
+Prima di attivare la funzionalità di [!DNL RainFocus] integrazione su Experienci Platform:
 
 [Creare un account di servizio Adobe (JWT) nel portale Adobe Developer](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 
@@ -102,7 +102,7 @@ Per creare lo schema per [!DNL RainFocus] Per informazioni su come creare uno sc
 
 ### Creare un profilo di integrazione in RainFocus {#create-an-integration-profile-in-rainfocus}
 
-Una volta che l’account di servizio e lo schema XDM sono pronti, ora puoi attivare [!DNL Integration Profile] tramite [!DNL RainFocus] piattaforma. Il [!DNL Integration Profile] è responsabile dello streaming dei dati su Experience Platform.
+Una volta che l’account di servizio e lo schema XDM sono pronti, ora puoi attivare [!DNL Integration Profile] tramite [!DNL RainFocus] piattaforma. Il [!DNL Integration Profile] è responsabile dello streaming dei dati su Experienci Platform.
 
 Accedi a [[!DNL RainFocus] piattaforma](https://app.rainfocus.com). Nella navigazione principale, seleziona **[!DNL Libraries]** e quindi seleziona **[!DNL Integration Profiles]**
 
@@ -125,7 +125,7 @@ Seleziona la [!DNL Integration Profile] creato per visualizzare un elenco di pre
 
 ![Elenco di tipi di push predefiniti nel dashboard RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 
-Per recuperare una copia del payload JSON di esempio, seleziona **[!DNL Sample JSON Payload]**. Quindi, evidenzia e copia il payload JSON di esempio e **salvarlo in un nuovo file con estensione .json**. Questo verrà utilizzato più avanti in Experience Platform per [configurazioni di mappatura](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
+Per recuperare una copia del payload JSON di esempio, seleziona **[!DNL Sample JSON Payload]**. Quindi, evidenzia e copia il payload JSON di esempio e **salvarlo in un nuovo file con estensione .json**. Questo verrà utilizzato più avanti in Experienci Platform per [configurazioni di mappatura](../../tutorials/ui/create/analytics/rainfocus.md#mapping).
 
 ![Un esempio di payload JSON nel dashboard RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-json.png)
 

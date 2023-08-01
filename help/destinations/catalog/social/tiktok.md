@@ -3,10 +3,10 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '983'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting 
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata dal team TikTok. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti dal team TikTok. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Casi d’uso {#use-cases}
 
@@ -30,7 +30,7 @@ Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attra
 
 ## Prerequisiti {#prerequisites}
 
-Prima di inviare dati al tuo [!DNL TikTok Ads Manager] account, dovrai concedere a Adobe Experience Platform l’autorizzazione per accedere al tuo account annuncio per `Audience Management`. Questa autorizzazione può essere fornita inserendo il tuo ID inserzionista in Experience Platform e seguendo il reindirizzamento per concedere l&#39;autorizzazione. Ulteriori istruzioni sono disponibili nella sezione [Documentazione API di TikTok](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+Prima di inviare dati al tuo [!DNL TikTok Ads Manager] account, dovrai concedere a Adobe Experience Platform l’autorizzazione per accedere al tuo account annuncio per `Audience Management`. Questa autorizzazione può essere fornita inserendo il tuo ID inserzionista in Experienci Platform e seguendo il reindirizzamento per concedere l&#39;autorizzazione. Ulteriori istruzioni sono disponibili nella sezione [Documentazione API di TikTok](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
 
 ## Identità supportate {#supported-identities}
 
@@ -52,7 +52,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione TikTok. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

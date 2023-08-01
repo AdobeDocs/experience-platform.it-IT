@@ -4,9 +4,9 @@ description: Scopri come portare dati in streaming da un’origine a Adobe Exper
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1704'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
+>Il connettore di origine e la pagina della documentazione vengono creati e gestiti da *YOUR SOURCE* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *Inserisci il collegamento o l’indirizzo e-mail a cui puoi accedere per gli aggiornamenti*.
 
 ## Prerequisiti
 
@@ -48,7 +48,7 @@ Per ulteriori informazioni su queste credenziali, vedere *YOUR SOURCE* documenta
 
 ### Integrare *YOUR SOURCE* con il tuo webhook
 
-*Streaming SDK richiede che la sorgente sia in grado di supportare i webhook per comunicare con Experience Platform. In questa sezione, devi fornire i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
+*Streaming SDK richiede che la sorgente sia in grado di supportare i webhook per comunicare con Experienci Platform. In questa sezione, devi fornire i passaggi che gli utenti dovranno seguire per integrare YOURSOURCE con un webhook.*
 
 ## Connetti *YOUR SOURCE* alla piattaforma utilizzando [!DNL Flow Service] API
 
@@ -327,7 +327,7 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ### Ottieni l’URL dell’endpoint di streaming
 
-Una volta creato il flusso di dati, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL endpoint per sottoscrivere l’origine a un webhook, consentendo alla tua origine di comunicare con Experience Platform.
+Una volta creato il flusso di dati, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL endpoint per sottoscrivere l’origine a un webhook, consentendo alla tua origine di comunicare con Experienci Platform.
 
 Per recuperare l’URL dell’endpoint di streaming, effettua una richiesta GET al `/flows` e fornire l’ID del flusso di dati.
 

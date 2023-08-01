@@ -1,10 +1,10 @@
 ---
-title: Collegare l’account RainFocus a Experience Platform utilizzando l’interfaccia utente
-description: Scopri come collegare il tuo account RainFocus a Experience Platform utilizzando l’interfaccia utente.
+title: Collegare l’account RainFocus a Experienci Platform utilizzando l’interfaccia utente
+description: Scopri come collegare il tuo account RainFocus a Experienci Platform utilizzando l’interfaccia utente.
 badge: Beta
-source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
+source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1007'
 ht-degree: 1%
 
 ---
@@ -19,13 +19,13 @@ Questo tutorial descrive come collegare [!DNL RainFocus] gestione di eventi e da
 
 >[!IMPORTANT]
 >
->Questa pagina della documentazione è stata creata da [!DNL RainFocus] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo clientcare<span>@rainfocus.com o visita il [[!DNL RainFocus] Centro risorse](https://help.rainfocus.com/hc/en-us)
+>Il connettore di origine e la pagina della documentazione vengono creati e gestiti da [!DNL RainFocus] team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattaci direttamente all’indirizzo clientcare<span>@rainfocus.com o visita il [[!DNL RainFocus] Centro risorse](https://help.rainfocus.com/hc/en-us)
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -40,15 +40,15 @@ Prima di collegare il [!DNL RainFocus] per Experience Platform, devi prima compl
 
 Una volta completata la configurazione dei prerequisiti, puoi procedere con i passaggi descritti di seguito.
 
-## Collega il tuo account RainFocus a Experience Platform
+## Collega il tuo account RainFocus a Experienci Platform
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere all’area di lavoro origini. Il *[!UICONTROL Catalogo]* Nella schermata vengono visualizzate diverse origini con cui è possibile creare un account.
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *[!UICONTROL Analytics]* categoria, seleziona **[!UICONTROL Esperienza RainFocus]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *[!UICONTROL Analytics]* categoria, seleziona **[!UICONTROL Esperienza RainFocus]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Le origini vengono catalogate nell’interfaccia utente di Experience Platform con l’origine RainFocus selezionata.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![Le origini vengono catalogate nell’interfaccia utente di Experienci Platform con l’origine RainFocus selezionata.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Selezionare i dati
 
@@ -100,7 +100,7 @@ Dopo aver rivisto il flusso di dati, seleziona **Fine** e lascia un po’ di tem
 
 ## Ottieni l’URL dell’endpoint di streaming {#get-your-streaming-endpoint-url}
 
-Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform.
+Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experienci Platform.
 
 Per recuperare l’endpoint di streaming, vai al *[!UICONTROL Attività flusso di dati]* pagina del flusso di dati appena creato e copia l’endpoint dalla parte inferiore della sezione *[!UICONTROL Proprietà]* pannello.
 
@@ -112,11 +112,11 @@ Una volta completato il flusso di dati e recuperato l’URL dell’endpoint di s
 
 * Accedi a [[!DNL RainFocus] piattaforma](https://app.rainfocus.com). Nella navigazione principale, seleziona **[!DNL Libraries]** e **[!DNL Integration Profiles]**
 * Apri [!DNL Integration Profile] creato in precedenza come parte del [prerequisiti](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
-* Incolla il **ID flusso di dati** e **Endpoint di streaming** copiato dal flusso di dati in Experience Platform e seleziona **Salva**
+* Incolla il **ID flusso di dati** e **Endpoint di streaming** copiato dal flusso di dati in Experienci Platform e seleziona **Salva**
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione per il tuo [!DNL RainFocus] , che consente di eseguire lo streaming dei dati di gestione degli eventi e analisi da Experience Platform.
+Seguendo questa esercitazione, hai stabilito una connessione per il tuo [!DNL RainFocus] , che consente di eseguire lo streaming dei dati di gestione degli eventi e analisi da Experienci Platform.
 
 ## Risorse aggiuntive
 
