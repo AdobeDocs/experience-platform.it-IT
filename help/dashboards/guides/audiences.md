@@ -4,9 +4,9 @@ title: Guida al dashboard di Audiences
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2232'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ Per una panoramica di tutte le funzioni del servizio di segmentazione di Adobe E
 
 ## [!UICONTROL Tipi di pubblico] dati dashboard
 
-Il [!UICONTROL Tipi di pubblico] Nel dashboard viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
+Il [!UICONTROL Tipi di pubblico] Nel dashboard viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experienci Platform. Lo snapshot non include dati di eventi (serie temporali).
 
 I dati attributo nello snapshot mostrano i dati esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un campione dei dati e [!UICONTROL Tipi di pubblico] il dashboard non viene aggiornato in tempo reale.
 
@@ -72,6 +72,20 @@ Il [!UICONTROL Tipi di pubblico] la dashboard è composta da widget, metriche di
 La data e l&#39;ora dell&#39;istantanea più recente vengono visualizzate nella parte superiore della [!UICONTROL Panoramica] accanto al menu a discesa del pubblico. Tutti i dati del widget sono accurati a partire da quella data e ora. Il timestamp dell’istantanea viene fornito in UTC; non si trova nel fuso orario del singolo utente o organizzazione.
 
 ![La scheda Panoramica tipi di pubblico con una marca temporale widget evidenziata.](../images/audiences/widget-timestamp.png)
+
+## Widget predefiniti {#default-widgets}
+
+Per tutte le nuove istanze di Adobe Experience Platform viene fornito un widget predefinito che evidenzia le informazioni più recenti disponibili dai dati. I seguenti widget sono preconfigurati nella vista dei segmenti fin dall’inizio. Per informazioni complete sullo scopo e la funzione dei widget, consultare le rispettive sezioni.
+
+* [[!UICONTROL Dimensione del pubblico]](#audience-size)
+* [[!UICONTROL Tendenza di modifica della dimensione del pubblico]](#audience-size-change-trend)
+* [[!UICONTROL Sovrapposizione di identità]](#identity-overlap)
+* [[!UICONTROL Profili per identità]](#profiles-by-identity)
+
+>[!NOTE]
+>
+>Dal 26 luglio 2023, [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] Le dashboard Panoramica sono state reimpostate su un nuovo widget predefinito per tutti gli utenti che non hanno modificato le proprie visualizzazioni nei sei mesi precedenti.
+>Consulta la documentazione in [Profili](./profiles.md#default-widgets) e [Destinazioni](./destinations.md#default-widgets) sezioni di widget predefinite per i dettagli sui widget inclusi come parte dei caricamenti di widget predefiniti. Puoi continuare a personalizzare i widget del dashboard come prima.
 
 ## Widget standard {#standard-widgets}
 
@@ -220,4 +234,4 @@ Il widget consente di scoprire subito dove e quando il pubblico viene attivato e
 
 ## Passaggi successivi
 
-Seguendo questo documento dovresti essere in grado di individuare [!UICONTROL Tipi di pubblico] e selezionare un pubblico da visualizzare. Dovresti anche comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei tipi di pubblico nell’interfaccia utente di Experience Platform, consulta [Guida dell’interfaccia utente di Segmentation Service](../../segmentation/ui/overview.md).
+Seguendo questo documento dovresti essere in grado di individuare [!UICONTROL Tipi di pubblico] e selezionare un pubblico da visualizzare. Dovresti anche comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei tipi di pubblico nell’interfaccia utente di Experienci Platform, consulta [Guida dell’interfaccia utente di Segmentation Service](../../segmentation/ui/overview.md).

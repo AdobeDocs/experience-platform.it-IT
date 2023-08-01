@@ -4,10 +4,10 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 21%
+source-wordcount: '3171'
+ht-degree: 20%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 21%
 
 L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sulle destinazioni attive dell’organizzazione, acquisite durante uno snapshot giornaliero. Questa guida illustra come accedere e lavorare con il dashboard delle destinazioni nell’interfaccia utente di e fornisce ulteriori informazioni sulle metriche visualizzate nel dashboard.
 
-Per una panoramica delle destinazioni e un catalogo di tutte le destinazioni disponibili in Experience Platform, visita il [documentazione sulle destinazioni](../../destinations/home.md).
+Per una panoramica delle destinazioni e un catalogo di tutte le destinazioni disponibili in Experienci Platform, visita il [documentazione sulle destinazioni](../../destinations/home.md).
 
 ## [!UICONTROL Destinazioni] dati dashboard {#destinations-dashboard-data}
 
-Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni abilitate dalla tua organizzazione in Experience Platform. I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e il dashboard delle destinazioni non viene aggiornato in tempo reale.
+Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni abilitate dalla tua organizzazione in Experienci Platform. I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui lo snapshot è stato creato. In altre parole, l’istantanea non è un’approssimazione o un esempio dei dati e il dashboard delle destinazioni non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
@@ -33,13 +33,13 @@ La data e l&#39;ora dell&#39;istantanea più recente vengono visualizzate nella 
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, il dashboard Destinazioni e [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] dalla barra di navigazione a sinistra viene visualizzata la [!UICONTROL Catalogo] scheda. Per ulteriori informazioni su [!UICONTROL Catalogo] , fare riferimento alla scheda [[!UICONTROL Destinazioni] guida di workspace](../../destinations/ui/destinations-workspace.md).
+>Se la tua organizzazione ha poca esperienza con Experienci Platform e non dispone ancora di destinazioni attive, il dashboard Destinazioni e [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] dalla barra di navigazione a sinistra viene visualizzata la [!UICONTROL Catalogo] scheda. Per ulteriori informazioni su [!UICONTROL Catalogo] , fare riferimento alla scheda [[!UICONTROL Destinazioni] guida di workspace](../../destinations/ui/destinations-workspace.md).
 
 ![Panoramica delle destinazioni dell’interfaccia utente di Platform, con la snapshot più recente evidenziata.](../images/destinations/snapshot-timestamp.png)
 
 ### Modifica il [!UICONTROL Destinazioni] dashboard {#modify}
 
-Seleziona **[!UICONTROL Modifica dashboard]** per modificare l’aspetto del dashboard destinazioni. Questo consente di spostare, aggiungere e rimuovere widget dal dashboard, nonché di accedere alla libreria di widget. Dalla libreria dei widget, puoi esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
+Seleziona **[!UICONTROL Modifica dashboard]** per modificare l’aspetto del dashboard destinazioni. Le modifiche al dashboard sono per utente e non a livello di organizzazione. Potete spostare, aggiungere, ridimensionare e rimuovere widget dal dashboard e accedere alla libreria di widget per personalizzare il dashboard. Dalla libreria dei widget, puoi esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
 Consulta la sezione [modifica delle dashboard](../customize/modify.md) e [panoramica della libreria widget](../customize/widget-library.md) per ulteriori informazioni.
 
@@ -51,6 +51,19 @@ Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria widget e vi
 
 Dalla libreria dei widget, puoi sfogliare la selezione di widget di pubblico standard e personalizzati. Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
 
+## Widget predefiniti {#default-widgets}
+
+Per tutte le nuove istanze di Adobe Experience Platform viene fornito un widget predefinito che evidenzia le informazioni più recenti disponibili dai dati. I seguenti widget sono preconfigurati nella vista dei segmenti fin dall’inizio. Per informazioni complete sullo scopo e la funzione dei widget, vedi sotto.
+
+* [[!UICONTROL Destinazioni più utilizzate]](#most-used-destinations)
+* [[!UICONTROL Destinazioni create di recente]](#recently-created-destinations)
+* [[!UICONTROL Segmenti attivati di recente]](#recently-activated-segments)
+
+>[!NOTE]
+>
+>Dal 26 luglio 2023, [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] Le dashboard Panoramica sono state reimpostate su un nuovo widget predefinito per tutti gli utenti che non hanno modificato le proprie visualizzazioni nei sei mesi precedenti.
+>Consulta la documentazione in [Profili](./profiles.md#default-widgets) e [Tipi di pubblico](./audiences.md#default-widgets) sezioni di widget predefinite per i dettagli sui widget inclusi come parte dei caricamenti di widget predefiniti. Puoi continuare a personalizzare i widget del dashboard come prima.
+
 ## Widget standard {#standard-widgets}
 
 Adobe fornisce più widget standard da utilizzare per visualizzare diverse metriche correlate alle destinazioni e valutare la completezza dei tipi di pubblico disponibili per l’analisi dei dati. Puoi anche creare widget personalizzati da condividere con la tua organizzazione utilizzando [!UICONTROL Libreria widget]. Per ulteriori informazioni sulla creazione di widget personalizzati, leggere [Panoramica della libreria dei widget](../customize/widget-library.md).
@@ -60,7 +73,7 @@ Adobe fornisce più widget standard da utilizzare per visualizzare diverse metri
 Prima di continuare con le descrizioni dei widget standard, accertati di conoscere le definizioni dei seguenti termini chiave utilizzati in tutta la documentazione:
 
 * **Definizione segmento:** Una definizione di segmento è **set di regole** utilizzato per descrivere le caratteristiche o il comportamento chiave di un pubblico target. Queste regole includono dati di attributi ed eventi che qualificano i profili come parte di un pubblico.
-* **Pubblico**: un insieme di persone, conti, famiglie o altre entità che condividono caratteristiche e comportamenti comuni.
+* **Pubblico**: un set di persone, account, famiglie o altre entità che hanno in comune caratteristiche e/o comportamenti specifici.
 * **Mappato/Mappatura**: la mappatura dei dati è il processo di mappatura dei campi dati di origine ai campi di destinazione correlati in una destinazione.
 * **Identità**: un’identità è un identificatore che rappresenta in modo univoco un singolo cliente, ad esempio un ID cookie, un ID dispositivo o un ID e-mail.
 * **Attiva**: attiva è l’azione intrapresa da un utente per mappare un pubblico o più profili su una destinazione come un Marketing Cloud Oracle Eloqua, Google o Salesforce.
@@ -130,7 +143,7 @@ Il [!UICONTROL Aggiornato] la data visualizzata mostra l’ultima volta che il p
 
 Selezionando il nome di un pubblico dall’elenco visualizzato sul widget, puoi passare ai dettagli del pubblico. Puoi anche selezionare **[!UICONTROL Visualizza tutto]** per passare al [!UICONTROL Tipi di pubblico] [!UICONTROL Sfoglia] e quindi seleziona il nome di un pubblico per visualizzarne i dettagli.
 
-Per ulteriori informazioni sull’utilizzo dei tipi di pubblico in Experience Platform, consulta la sezione [Panoramica del servizio di segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni sull’utilizzo dei tipi di pubblico in Experienci Platform, consulta la sezione [Panoramica del servizio di segmentazione](../../segmentation/home.md).
 
 ![La scheda Panoramica del dashboard Destinazioni con il widget Tipi di pubblico attivati di recente evidenziato.](../images/destinations/recently-activated-audiences.png)
 

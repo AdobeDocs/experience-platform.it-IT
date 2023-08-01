@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Widget dashboard standard
 description: Questa guida fornisce istruzioni dettagliate per aggiungere widget standard alle dashboard di Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 0391c15e959ab25604a70c163fa7a5ed53e78993
+source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,12 @@ ht-degree: 0%
 
 In Adobe Experience Platform puoi visualizzare e interagire con i dati della tua organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. In questo Adobe viene fornita una selezione di widget standard che è possibile scegliere di aggiungere alle dashboard.
 
-Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare [!UICONTROL Profili], [!UICONTROL Segmenti], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
+Il [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] ogni dashboard ha un widget predefinito al momento della creazione di una nuova istanza Platform. Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
+
+>[!NOTE]
+>
+>Dal 26 luglio 2023, [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] Le dashboard Panoramica sono state reimpostate su un nuovo widget predefinito per tutti gli utenti che non hanno modificato le proprie visualizzazioni nei sei mesi precedenti.
+>Consulta la documentazione in [Profili](../guides/profiles.md#default-widgets), [Tipi di pubblico](../guides/audiences.md#default-widgets), e [Destinazioni](../guides/destinations.md#default-widgets) sezioni di widget predefinite per i dettagli sui widget inclusi come parte dei caricamenti di widget predefiniti.
 
 Per ulteriori informazioni sui widget personalizzati, consulta la guida per [creazione di widget personalizzati](custom-widgets.md).
 
@@ -24,7 +29,7 @@ Per ulteriori informazioni sui widget personalizzati, consulta la guida per [cre
 
 ## Libreria widget {#widget-library}
 
-Questa guida richiede l’accesso a [!UICONTROL Libreria widget] all’interno di Experience Platform. Per ulteriori informazioni sulla libreria dei widget e su come accedervi nell’interfaccia utente, leggi [panoramica della libreria widget](widget-library.md).
+Questa guida richiede l’accesso a [!UICONTROL Libreria widget] all’interno di Experienci Platform. Per ulteriori informazioni sulla libreria dei widget e su come accedervi nell’interfaccia utente, leggi [panoramica della libreria widget](widget-library.md).
 
 ## Guida introduttiva ai widget standard {#standard-widgets}
 
