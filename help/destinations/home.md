@@ -3,9 +3,9 @@ keywords: destinazioni;adobe experience platform;piattaforma;panoramica destinaz
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '801'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) con
 
 ## Tipi e categorie di destinazione {#types-and-categories}
 
-Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, vedi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
+Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API, a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, vedi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
@@ -54,10 +54,10 @@ La funzionalità delle destinazioni in Platform funziona con le autorizzazioni d
 La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni:
 
 | Livello di autorizzazione | Descrizione |
-| ---- | ----|
+| ---- | ---- |
 | **[!UICONTROL Gestire le destinazioni]** | Per connettersi alle destinazioni, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). |
 | **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare i tipi di pubblico nelle destinazioni e abilitare [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare il pubblico nelle destinazioni e nascondere [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
+| **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** | Per attivare il pubblico nelle destinazioni e nascondere [passaggio di mappatura](ui/activate-batch-profile-destinations.md#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare i segmenti senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli 
 
 Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Leggi le [guida sul monitoraggio dei flussi di dati per le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
 
-Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experience Platform.
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experienci Platform.
 
 ## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 
