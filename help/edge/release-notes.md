@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1589'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,18 @@ ht-degree: 3%
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note sulla versione dell’estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
-## Versione 2.16.0 - 17 maggio 2023
+## Versione 2.18.0 - 31 luglio 2023
+
+**Nuove funzioni**
+
+* È stato aggiunto il supporto per [sostituzioni per comando dell’ID dello stream di dati](../datastreams/overrides.md).
+
+**Correzioni e miglioramenti**
+
+* È stato risolto un problema a causa del quale i collegamenti di uscita non venivano qualificati perché il dominio faceva parte della query.
+* Obsoleto `edgeConfigId` a favore di `datastreamId` nella configurazione dell’SDK web.
+
+## Versione 2.17.0 - 17 maggio 2023
 
 **Correzioni e miglioramenti**
 
