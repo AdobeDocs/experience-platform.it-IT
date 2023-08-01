@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
+source-wordcount: '3610'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,7 @@ Puoi aggiungere altri campi a questa visualizzazione selezionando ![icona attrib
 | [!UICONTROL Tag] | I tag definiti dall’utente che appartengono al pubblico. Ulteriori informazioni su questi tag sono disponibili nella sezione [sezione sui tag](#tags). |
 | [!UICONTROL Suddividi] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
 | [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
-| [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono `On Demand`, `Scheduled`, e `Continuous`. |
+| [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono `On Demand` (Lotto) `Scheduled` (Streaming) e `Continuous` (Bordo). |
 | [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
 | [!UICONTROL Descrizione] | Descrizione del pubblico. |
 | [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
