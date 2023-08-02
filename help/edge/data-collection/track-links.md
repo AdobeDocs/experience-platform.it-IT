@@ -1,9 +1,9 @@
 ---
 title: Tracciare i collegamenti tramite Adobe Experience Platform Web SDK
-description: Scopri come inviare dati di collegamento ad Adobe Analytics con Experience Platform Web SDK
+description: Scopri come inviare dati di collegamento ad Adobe Analytics con Experienci Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web interaction;visualizzazioni di pagina;tracciamento dei collegamenti;link;tracciare i collegamenti;clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
+source-git-commit: edf33d0d5991aed5c0535d0e7010aef082bcf48a
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 1%
@@ -12,9 +12,8 @@ ht-degree: 1%
 
 # Tracciare i collegamenti
 
-I collegamenti possono essere impostati manualmente o tracciati [automaticamente](#automaticLinkTracking). Il tracciamento manuale viene eseguito aggiungendo i dettagli sotto `web.webInteraction` parte dello schema. Sono necessarie tre variabili:
+I collegamenti possono essere impostati manualmente o tracciati [automaticamente](#automaticLinkTracking). Il tracciamento manuale viene eseguito aggiungendo i dettagli sotto `web.webInteraction` parte dello schema. Sono necessarie due variabili:
 
-* `web.webInteraction.name`
 * `web.webInteraction.type`
 * `web.webInteraction.linkClicks.value`
 
