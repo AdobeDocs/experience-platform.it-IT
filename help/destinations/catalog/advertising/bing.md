@@ -3,9 +3,9 @@ keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in Microsoft Display Advertising.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 8%
 
 ---
@@ -36,13 +36,13 @@ In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico ba
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

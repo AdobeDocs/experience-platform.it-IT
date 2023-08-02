@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;salesforce;destinazione salesforce
 title: Connessione Marketing Cloud Salesforce
 description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la propria esperienza.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '804'
 ht-degree: 2%
 
 ---
@@ -22,13 +22,13 @@ Per inviare dati sul pubblico a [!DNL Salesforce Marketing Cloud], devi prima [c
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

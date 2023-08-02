@@ -3,10 +3,10 @@ keywords: Doppio clic su Gestione offerte;Doppio clic su Gestione offerte;Doppio
 title: Google Display e connessione Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager, è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 2%
+source-wordcount: '1043'
+ht-degree: 4%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 2%
 Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360] destinazioni:
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
-* L’attivazione dei backfill del pubblico in [!DNL Google Display & Video 360] la destinazione è pianificata per essere eseguita 24-48 ore dopo che un pubblico è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde alla politica di Google di attendere 24 ore prima dell’acquisizione dei dati ed è inteso a migliorare le percentuali di corrispondenza tra Real-time CDP e [!DNL Google Display & Video 360]. Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dal cliente nell’interfaccia utente di.
+* L’attivazione dei backfill del pubblico in [!DNL Google Display & Video 360] la destinazione è pianificata per essere eseguita 24-48 ore dopo che un pubblico è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde alla politica di Google di attendere 24 ore prima dell’acquisizione dei dati ed è inteso a migliorare le percentuali di corrispondenza tra Real-time CDP e [!DNL Google Display & Video 360]. Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dalla clientela nell’interfaccia utente.
 
 >[!IMPORTANT]
 >
->Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato la funzione [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+>Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato la funzione [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ## Identità supportate {#supported-identities}
 
@@ -35,7 +35,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audienci Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=it) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
 | DOMESTICA | ID Microsoft Advertising. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
@@ -45,13 +45,13 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experience Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico nella destinazione Google. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Prerequisiti {#prerequisites}
 
@@ -71,7 +71,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 >[!NOTE]
 >
 >L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Display & Video 360] in Platform. Verifica che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato entro [!DNL Google] prima di creare una destinazione.
->L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audienci Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
 Prima di creare [!DNL Google Display & Video 360] destinazione in Platform, devi contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere il tuo account all’elenco consentiti. Contattare Google e fornire le seguenti informazioni:
 

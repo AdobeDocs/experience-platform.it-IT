@@ -3,9 +3,9 @@ title: Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -25,13 +25,13 @@ Leggi questa pagina per scoprire come creare una connessione in uscita al tuo [[
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

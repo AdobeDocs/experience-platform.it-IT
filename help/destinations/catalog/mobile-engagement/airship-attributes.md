@@ -3,9 +3,9 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmettere facilmente i dati del pubblico Adobe a Airship come attributi del pubblico per il targeting all'interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,15 @@ Prima di poter inviare i tipi di pubblico a [!DNL Airship], è necessario:
 >
 >Creare un [!DNL Airship] account tramite [questo collegamento di abbonamento](https://go.airship.eu/accounts/register/plan/starter/) se non lo hai già fatto.
 
-## Supporto di tipi di pubblico esterni {#external-audiences-support}
+## Tipi di pubblico supportati {#supported-audiences}
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico esterni descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico esterno | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

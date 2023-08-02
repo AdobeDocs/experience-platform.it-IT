@@ -2,9 +2,9 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1645'
 ht-degree: 1%
 
 ---
@@ -69,6 +69,24 @@ Per aiutarti a capire meglio come e quando utilizzare il *Destinazione* destinaz
 | phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
 | email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
+
+{style="table-layout:auto"}
+
+## Tipi di pubblico supportati {#supported-audiences}
+
+*Aggiungi in questa sezione informazioni sui tipi di pubblico supportati dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Elimina i valori non applicabili alla destinazione e tutti i valori non precompilati.*
+
+Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+
+*Se la destinazione non supporta l’attivazione di un pubblico esterno, rimuovi la frase seguente insieme alla tabella.*
+
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+
+| Tipo di pubblico | Descrizione |
+---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

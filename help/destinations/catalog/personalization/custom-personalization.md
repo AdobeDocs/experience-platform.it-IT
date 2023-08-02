@@ -3,9 +3,9 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '935'
 ht-degree: 8%
 
 ---
@@ -45,13 +45,13 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
 
-Tutte le destinazioni supportano l’attivazione dei tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
 
-Inoltre, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
+*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
 ---------|----------|
-| Caricamenti personalizzati | Tipi di pubblico acquisiti in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
