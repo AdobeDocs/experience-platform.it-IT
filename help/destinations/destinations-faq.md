@@ -3,9 +3,9 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1531'
 ht-degree: 4%
 
 ---
@@ -18,9 +18,9 @@ Questo documento fornisce le risposte alle domande frequenti sulle destinazioni 
 
 ## Domande generali sulle destinazioni {#general}
 
-### Perché trovo conteggi di profili diversi nell’interfaccia utente di Experience Platform e nei file CSV esportati?
+### Perché trovo conteggi di profili diversi nell’interfaccia utente di Experienci Platform e nei file CSV esportati?
 
-+++Risposta Questo è un comportamento normale a causa del modo in cui Experience Platform esegue la segmentazione.
++++Risposta Questo è un comportamento normale a causa del modo in cui Experienci Platform esegue la segmentazione.
 
 La segmentazione in streaming aggiorna il conteggio dei profili per i tipi di pubblico in streaming nel corso della giornata, mentre la segmentazione batch aggiorna il conteggio dei profili per i tipi di pubblico in batch una volta ogni 24 ore.
 
@@ -28,6 +28,27 @@ Quando la pianificazione dell’esportazione del pubblico differisce dalla piani
 
 Consulta la [Documentazione del servizio di segmentazione](../segmentation/home.md) per ulteriori dettagli.
 +++
+
+### Perché trovo percentuali di corrispondenza basse quando disattivi e riattivi un pubblico aggiornato nella stessa destinazione?
+
++++Risposta
+
+La disattivazione e la rimozione di un pubblico da una destinazione di streaming non attivano una retrocompilazione dopo la riattivazione del pubblico nella stessa destinazione di streaming.
+
+**Esempio**
+
+Hai attivato un pubblico composto da 10 profili in una destinazione di streaming.
+
+Dopo aver attivato il pubblico, ti rendi conto di voler modificare la sua configurazione in modo da disattivarlo e modificarne i criteri di popolazione, per una popolazione di 100 profili.
+
+Riattivi il pubblico aggiornato nella stessa destinazione, ma poiché non viene attivata alcuna retrocompilazione, la destinazione non riceve gli altri 90 profili.
+
+**Soluzione**
+
+Per garantire che tutti i profili vengano inviati alla destinazione, devi creare un nuovo pubblico con la nuova configurazione, quindi attivarlo nella destinazione.
+
++++
+
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -86,7 +107,7 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 
 ### È possibile creare più destinazioni Facebook nell’interfaccia utente di Platform per account Facebook separati?
 
-+++Risposta Sì. Una destinazione Facebook in Experience Platform corrisponde a 1:1 per un account annuncio in Facebook. Puoi creare una destinazione Facebook separata per ogni account Facebook Ad della tua azienda. Segui le [tutorial sulla connessione di destinazione](/help/destinations/ui/connect-destination.md) e connettersi a un account Facebook separato per ogni nuova destinazione Facebook nell’interfaccia utente di Platform. Non esiste alcun limite al numero di account Facebook Ad a cui è possibile connettersi.
++++Risposta Sì. Una destinazione Facebook in Experienci Platform corrisponde a 1:1 per un account annuncio in Facebook. Puoi creare una destinazione Facebook separata per ogni account Facebook Ad della tua azienda. Segui le [tutorial sulla connessione di destinazione](/help/destinations/ui/connect-destination.md) e connettersi a un account Facebook separato per ogni nuova destinazione Facebook nell’interfaccia utente di Platform. Non esiste alcun limite al numero di account Facebook Ad a cui è possibile connettersi.
 +++
 
 ## Customer Match di Google {#google-customer-match}
@@ -126,7 +147,7 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 
 ## Personalizzazione della stessa pagina e della pagina successiva tramite le destinazioni Adobe Target e Personalizzazione personalizzata {#same-next-page-personalization}
 
-### È necessario utilizzare Experience Platform Web SDK per inviare tipi di pubblico e attributi ad Adobe Target?
+### È necessario utilizzare Experienci Platform Web SDK per inviare tipi di pubblico e attributi ad Adobe Target?
 
 +++Risposta n., [SDK per web](../edge/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
@@ -149,7 +170,7 @@ Per [personalizzazione della stessa pagina e della pagina successiva](ui/activat
 
 Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
 
-### Dopo aver creato un pubblico in Experience Platform, quanto tempo ci vorrà per rendere tale pubblico disponibile per i casi di utilizzo della segmentazione Edge?
+### Dopo aver creato un pubblico in Experienci Platform, quanto tempo ci vorrà per rendere tale pubblico disponibile per i casi di utilizzo della segmentazione Edge?
 
 +++Le definizioni del pubblico di risposte vengono propagate al [Rete Edge](../edge/home.md) entro un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
 +++
