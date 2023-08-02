@@ -2,10 +2,10 @@
 title: Configurare le sostituzioni dello stream di dati
 description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -25,6 +25,26 @@ Questo articolo spiega il processo di sostituzione della configurazione dello st
 >[!IMPORTANT]
 >
 >Le sostituzioni dello stream di dati sono supportate solo per [SDK per web](../edge/home.md) integrazioni. [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/) e [API server](../server-api/overview.md) al momento le integrazioni non supportano le sostituzioni dello stream di dati.
+><br><br>
+>Le sostituzioni dello stream di dati devono essere utilizzate quando devi inviare dati diversi a stream di dati diversi. Non utilizzare le sostituzioni dello stream di dati per i casi di utilizzo di personalizzazione o per i dati sul consenso.
+
+## Casi d’uso {#use-cases}
+
+Per aiutarti a comprendere meglio come e quando utilizzare le sostituzioni dello stream di dati, ecco alcuni casi d’uso che i clienti di Adobe Experience Platform possono risolvere utilizzando questa funzione.
+
+**Raccolta di dati per più aree geografiche**
+
+Un’azienda dispone di siti web o sottodomini diversi per diversi paesi in cui opera. Hanno [configurato](configure.md) separa gli stream di dati con le corrispondenti suite di rapporti specifiche per analytics, i token di proprietà di Adobe Target specifici per paese, gli schemi specifici per paese, i set di dati, le configurazioni di Journey Optimizer e così via. L’azienda dispone anche di un set globale di configurazioni in cui vengono aggregati tutti i dati specifici per paese.
+
+Utilizzando le sostituzioni dello stream di dati, l’azienda può cambiare dinamicamente il flusso di dati in flussi di dati diversi, invece del comportamento predefinito di invio dei dati a uno stream di dati.
+
+Un caso d’uso comune potrebbe essere quello di inviare dati a un flusso di dati specifico per paese e anche di inviare dati a un flusso di dati globale in cui i clienti eseguono un’azione importante, ad esempio l’invio di un ordine o l’aggiornamento del profilo utente.
+
+**Differenziazione di profili e identità per diverse unità aziendali**
+
+Un’azienda con più business unit desidera utilizzare più sandbox Experienci Platform per memorizzare dati specifici di ogni business unit.
+
+Invece di inviare dati a un flusso di dati predefinito, l’azienda può utilizzare le sostituzioni dello stream di dati per assicurarsi che ogni unità aziendale abbia il proprio flusso di dati per ricevere i dati tramite.
 
 ## Configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati {#configure-overrides}
 
