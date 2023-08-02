@@ -2,10 +2,10 @@
 title: Configurare le sostituzioni dello stream di dati
 description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web.
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 4%
 
 ---
 
@@ -17,16 +17,20 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 
 La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
-1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](configure.md).
-2. Quindi, devi inviare le sostituzioni alla rete Edge tramite un comando Web SDK o utilizzando Web SDK [estensione tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](configure.md).
+2. Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.
 
 Questo articolo spiega il processo di sostituzione della configurazione dello stream di dati end-to-end per ogni tipo di sostituzione supportata.
+
+>[!IMPORTANT]
+>
+>Le sostituzioni dello stream di dati sono supportate solo per [SDK per web](../edge/home.md) integrazioni. [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/) e [API server](../server-api/overview.md) al momento le integrazioni non supportano le sostituzioni dello stream di dati.
 
 ## Configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati {#configure-overrides}
 
 Le sostituzioni della configurazione dello stream di dati consentono di modificare le seguenti configurazioni dello stream di dati:
 
-* Set di dati evento Experience Platform
+* Set di dati evento Experienci Platform
 * Token di proprietà di Adobe Target
 * Contenitori di sincronizzazione ID Audience Manager
 * Suite di rapporti di Adobe Analytics
