@@ -7,9 +7,9 @@ landing-page-description: Trova le risposte alle domande frequenti e una guida p
 short-description: Trova le risposte alle domande frequenti e una guida per la risoluzione dei problemi relativi agli errori più comuni in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,7 @@ I seguenti codici di stato possono essere rilevati in qualsiasi [!DNL Experience
 |--- | --- | ---|
 | 400 | Richiesta non valida | La richiesta non è stata costruita correttamente, mancano informazioni sulla chiave e/o contiene una sintassi errata. |
 | 401 | Autenticazione non riuscita | La richiesta non ha superato un controllo di autenticazione. Il token di accesso potrebbe essere mancante o non valido. Consulta la [Errori token OAuth](#oauth-token-is-missing) per ulteriori dettagli. |
-| 403 | Non consentito | La risorsa è stata trovata, ma non si dispone delle credenziali corrette per visualizzarla. |
+| 403 | Non consentito | <p>La risorsa è stata trovata, ma non si dispone delle credenziali corrette per visualizzarla.</p><p> È probabile che l&#39;errore sia dovuto al fatto che non si dispone del necessario [autorizzazioni di controllo degli accessi](/help/access-control/home.md) per accedere o modificare la risorsa. Scopri come [ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](/help/landing/api-authentication.md#get-abac-permissions) per utilizzare le API di Platform. </p> |
 | 404 | Non trovato | Impossibile trovare la risorsa richiesta nel server. È possibile che la risorsa sia stata eliminata o che il percorso richiesto non sia stato immesso correttamente. |
 | 500 | Errore interno del server | Si tratta di un errore lato server. Se effettui molte chiamate simultanee, potresti raggiungere il limite API e dover filtrare i risultati. (consultare la [!DNL Catalog Service] Guida secondaria per gli sviluppatori API su [filtraggio dei dati](../catalog/api/filter-data.md) per ulteriori informazioni.) Attendi un attimo prima di riprovare a eseguire la richiesta e, se il problema persiste, contatta l’amministratore. |
 
