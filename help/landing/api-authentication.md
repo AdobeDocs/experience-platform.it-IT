@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Autenticazione e accesso alle API Experience Platform
+title: Autenticazione e accesso alle API Experienci Platform
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
+source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2205'
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ Questo documento spiega passo-passo come accedere a un account sviluppatore di A
 >
 >Oltre alle tre credenziali di cui sopra, molte API di Platform richiedono anche una `{SANDBOX_NAME}` da fornire come intestazione. Consulta la [panoramica sulle sandbox](../sandboxes/home.md) per ulteriori informazioni sulle sandbox e [endpoint di gestione sandbox](/help/sandboxes/api/sandboxes.md#list) per informazioni sull’elenco delle sandbox disponibili per la tua organizzazione.
 
-Per mantenere la sicurezza delle applicazioni e degli utenti, tutte le richieste alle API Experience Platform devono essere autenticate e autorizzate utilizzando standard come OAuth.
+Per mantenere la sicurezza delle applicazioni e degli utenti, tutte le richieste alle API Experienci Platform devono essere autenticate e autorizzate utilizzando standard come OAuth.
 
 Questo tutorial illustra come raccogliere le credenziali necessarie per autenticare le chiamate API di Platform, come descritto nel diagramma di flusso seguente. È possibile raccogliere la maggior parte delle credenziali richieste nella configurazione iniziale una tantum. Il token di accesso, tuttavia, deve essere aggiornato ogni 24 ore.
 
@@ -32,10 +32,11 @@ Questo tutorial illustra come raccogliere le credenziali necessarie per autentic
 
 ## Prerequisiti {#prerequisites}
 
-Per effettuare correttamente le chiamate alle API Experience Platform, è necessario disporre dei seguenti elementi:
+Per effettuare correttamente le chiamate alle API Experienci Platform, è necessario disporre dei seguenti elementi:
 
 * Organizzazione con accesso a Adobe Experience Platform.
 * Un amministratore di Admin Console che può aggiungerti come sviluppatore e utente per un profilo di prodotto.
+* Un amministratore di Experience Platform che può concederti i controlli di accesso basati su attributi necessari per eseguire operazioni di lettura o scrittura su parti diverse di Experienci Platform tramite API.
 
 Per completare questa esercitazione è necessario disporre anche di un Adobe ID. Se non disponi di un’Adobe ID, puoi crearne una seguendo questi passaggi:
 
@@ -55,7 +56,9 @@ Una volta che ti è stato assegnato come sviluppatore, puoi iniziare a creare in
 
 ### Ottenere l’accesso utente {#gain-user-access}
 
-Il tuo [!DNL Admin Console] l’amministratore deve anche aggiungerti come utente allo stesso profilo di prodotto. Consulta la guida su [gestione dei gruppi di utenti in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) per ulteriori informazioni.
+Il tuo [!DNL Admin Console] l’amministratore deve anche aggiungerti come utente allo stesso profilo di prodotto. Con l’accesso utente, puoi visualizzare nell’interfaccia utente il risultato delle operazioni API eseguite.
+
+Consulta la guida su [gestione dei gruppi di utenti in [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) per ulteriori informazioni.
 
 ## Generare una chiave API (ID client) e un ID organizzazione {#generate-credentials}
 
@@ -71,48 +74,54 @@ Vai a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e acce
 
 Dopo aver creato un nuovo progetto, seleziona **[!UICONTROL Aggiungi API]** il **[!UICONTROL Panoramica del progetto]** schermo.
 
-![](./images/api-authentication/add-api.png)
+>[!TIP]
+>
+>Se disponi del provisioning per più organizzazioni, utilizza il selettore organizzazione nell’angolo superiore destro dell’interfaccia per assicurarti di essere nell’organizzazione necessaria.
 
-Viene visualizzata la schermata **[!UICONTROL Add an API]** (Aggiungi un’API). Seleziona l’icona del prodotto per Adobe Experience Platform, quindi scegli **[!UICONTROL API EXPERIENCE PLATFORM]** prima di selezionare **[!UICONTROL Successivo]**.
+![Nella schermata Console sviluppatori è evidenziata l’opzione Aggiungi API.](./images/api-authentication/add-api.png)
 
-![Seleziona Experience Platform API.](./images/api-authentication/platform-api.png)
+Viene visualizzata la schermata **[!UICONTROL Add an API]** (Aggiungi un’API). Seleziona l’icona del prodotto per Adobe Experience Platform, quindi scegli **[!UICONTROL API EXPERIENCI PLATFORM]** prima di selezionare **[!UICONTROL Successivo]**.
+
+![Seleziona Experienci Platform API.](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->Seleziona la **[!UICONTROL Visualizza documenti]** per passare in una finestra del browser separata al [Documentazione di riferimento dell’API Experience Platform](https://developer.adobe.com/experience-platform-apis/).
+>Seleziona la **[!UICONTROL Visualizza documenti]** per passare in una finestra del browser separata al [Documentazione di riferimento dell’API Experienci Platform](https://developer.adobe.com/experience-platform-apis/).
 
 ### Seleziona il tipo di autenticazione server-to-server OAuth {#select-oauth-server-to-server}
 
-Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experience Platform.
+Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experienci Platform.
 
 >[!IMPORTANT]
 >
 >Seleziona la **[!UICONTROL OAuth Server-to-Server]** poiché questo sarà l’unico metodo supportato per andare avanti. Il **[!UICONTROL Account di servizio (JWT)]** è obsoleto. Anche se le integrazioni che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo metodo server-to-server OAuth prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](#jwt).
 
-![Seleziona Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
+![Seleziona Experienci Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selezionare i profili di prodotto per l’integrazione {#select-product-profiles}
 
-Quindi, seleziona i profili di prodotto da applicare all’integrazione.
-L’account di servizio della tua integrazione potrà accedere a funzioni granulari tramite i profili di prodotto selezionati qui.
+In **[!UICONTROL Configurare API]** schermata, seleziona **[!UICONTROL AEP-Default-All-Users]**.
 
-Per accedere a determinate funzioni di Platform, è necessario disporre anche di un amministratore di sistema che ti conceda le autorizzazioni di controllo dell’accesso basate su attributi necessarie. Ulteriori informazioni nella sezione [Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](#get-abac-permissions).
+<!--
+Your integration's service account will gain access to granular features through the product profiles selected here.
 
->[!TIP]
+-->
+
+>[!IMPORTANT]
 >
-Se prevedi di visualizzare un determinato profilo di prodotto qui, contatta l’amministratore di sistema. Gli amministratori di sistema possono visualizzare e gestire le credenziali API nella vista Autorizzazioni. Per ulteriori informazioni, consulta la sezione [Aggiungere sviluppatori al profilo di prodotto](#add-developers-to-product-profile).
+Per accedere a determinate funzioni di Platform, è necessario disporre anche di un amministratore di sistema per concedere le autorizzazioni di controllo dell’accesso basate su attributi necessarie. Ulteriori informazioni nella sezione [Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](#get-abac-permissions).
 
 ![Seleziona i profili di prodotto per la tua integrazione.](./images/api-authentication/select-product-profiles.png)
 
 Seleziona **[!UICONTROL Salva API configurata]** quando sei pronto.
 
-Nell’esercitazione video seguente è disponibile anche una procedura dettagliata per configurare un’integrazione con l’API Experience Platform:
+Nell’esercitazione video seguente è disponibile anche una procedura dettagliata per configurare un’integrazione con l’API Experienci Platform:
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ### Raccogli le credenziali {#gather-credentials}
 
-Una volta aggiunta l’API al progetto, la **[!UICONTROL API EXPERIENCE PLATFORM]** Nella pagina del progetto vengono visualizzate le seguenti credenziali necessarie in tutte le chiamate alle API Experience Platform:
+Una volta aggiunta l’API al progetto, la **[!UICONTROL API EXPERIENCI PLATFORM]** Nella pagina del progetto vengono visualizzate le seguenti credenziali necessarie in tutte le chiamate alle API Experienci Platform:
 
 ![Informazioni sull’integrazione dopo l’aggiunta di un’API in Developer Console.](./images/api-authentication/api-integration-information.png)
 
@@ -260,11 +269,11 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 >[!IMPORTANT]
 >
-Anche se la chiamata precedente è sufficiente per testare le credenziali di accesso, non sarà possibile accedere a diverse risorse o modificarle senza disporre delle autorizzazioni di controllo dell’accesso basate su attributi corrette. Per ulteriori informazioni, consulta [Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie](#get-abac-permissions) sezione.
+Anche se la chiamata precedente è sufficiente per testare le credenziali di accesso, non sarà possibile accedere a o modificare diverse risorse senza disporre delle autorizzazioni di controllo dell’accesso basate su attributi corretti. Per ulteriori informazioni, consulta **Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie** sezione successiva.
 
 ## Ottenere le autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie {#get-abac-permissions}
 
-Per accedere a o modificare diverse risorse all’interno di Experience Platform, è necessario disporre delle autorizzazioni di controllo di accesso appropriate. Gli amministratori di sistema possono concedere [autorizzazioni necessarie](/help/access-control/ui/permissions.md). Per ulteriori informazioni, consulta la sezione su [gestione delle credenziali API per un ruolo](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
+Per accedere a o modificare diverse risorse all’interno di Experienci Platform, è necessario disporre delle autorizzazioni di controllo di accesso appropriate. Gli amministratori di sistema possono concedere [autorizzazioni necessarie](/help/access-control/ui/permissions.md). Per ulteriori informazioni, consulta la sezione su [gestione delle credenziali API per un ruolo](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
 Informazioni dettagliate su come un amministratore di sistema può concedere le autorizzazioni necessarie per accedere alle risorse Platform tramite l’API sono disponibili anche nel tutorial video seguente:
 
@@ -272,11 +281,11 @@ Informazioni dettagliate su come un amministratore di sistema può concedere le 
 
 ## Utilizzare Postman per autenticare e testare le chiamate API {#use-postman}
 
-[Postman](https://www.postman.com/) è uno strumento popolare che consente agli sviluppatori di esplorare e testare le API RESTful. Puoi utilizzare le raccolte e gli ambienti Postman di Experience Platform per velocizzare il lavoro con le API Experience Platform. Ulteriori informazioni su [utilizzo di Postman in Experience Platform](/help/landing/postman.md) e la guida introduttiva alle raccolte e agli ambienti.
+[Postman](https://www.postman.com/) è uno strumento popolare che consente agli sviluppatori di esplorare e testare le API RESTful. Puoi utilizzare le raccolte e gli ambienti Postman di Experienci Platform per velocizzare il lavoro con le API Experienci Platform. Ulteriori informazioni su [utilizzo di Postman in Experienci Platform](/help/landing/postman.md) e la guida introduttiva alle raccolte e agli ambienti.
 
 Informazioni dettagliate sull’utilizzo di Postman con raccolte e ambienti di Experienci Platform sono disponibili anche nei tutorial video seguenti:
 
-**Scaricare e importare un ambiente Postman da utilizzare con le API Experience Platform**
+**Scaricare e importare un ambiente Postman da utilizzare con le API Experienci Platform**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
@@ -286,7 +295,7 @@ Scarica il file [Raccolta Postman del servizio Identity Management](https://gith
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
-**Scarica raccolte Postman di API Experience Platform e interagisce con le API**
+**Scarica raccolte Postman di API Experienci Platform e interagisce con le API**
 
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
@@ -294,7 +303,7 @@ Scarica il file [Raccolta Postman del servizio Identity Management](https://gith
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
 -->
 
-## Amministratori di sistema: concedere agli sviluppatori e al controllo dell’accesso API autorizzazioni Experience Platform {#grant-developer-and-api-access-control}
+## Amministratori di sistema: concedere agli sviluppatori e al controllo dell’accesso API autorizzazioni Experienci Platform {#grant-developer-and-api-access-control}
 
 >[!NOTE]
 >
@@ -326,23 +335,29 @@ Lo sviluppatore è stato aggiunto correttamente e viene visualizzato nel [!UICON
 
 ![Sviluppatori elencati nella scheda Sviluppatori](././images/api-authentication/developer-added.png)
 
-### Configurare un’API
+<!--
 
-Uno sviluppatore può aggiungere e configurare un’API all’interno di un progetto nella console Adobe Developer.
+Commenting out this part since it duplicates information from the section Add Experience Platform to a project
 
-Seleziona il progetto, quindi seleziona **[!UICONTROL Aggiungi API]**.
+### Set up an API
 
-![Aggiungere API a un progetto](././images/api-authentication/add-api-project.png)
+A developer can add and configure an API within a project in the Adobe Developer Console.
 
-In **[!UICONTROL Aggiungere un’API]** finestra di dialogo seleziona **[!UICONTROL Adobe Experience Platform]**, quindi seleziona **[!UICONTROL API EXPERIENCE PLATFORM]**.
+Select your project, then select **[!UICONTROL Add API]**.
 
-![Aggiungere un’API in Experience Platform](././images/api-authentication/add-api-platform.png)
+![Add API to a project](././images/api-authentication/add-api-project.png)
 
-In **[!UICONTROL Configurare API]** schermata, seleziona **[!UICONTROL AEP-Default-All-Users]**.
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
+
+![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+-->
 
 ### Assegnare API a un ruolo
 
-Un amministratore di sistema può assegnare le API ai ruoli nell’interfaccia utente di Experience Platform.
+Un amministratore di sistema può assegnare le API ai ruoli nell’interfaccia utente di Experienci Platform.
 
 Seleziona **[!UICONTROL Autorizzazioni]** e il ruolo a cui desideri aggiungere l’API. Seleziona la **[!UICONTROL Credenziali API]** , quindi seleziona **[!UICONTROL Aggiungi credenziali API]**.
 
@@ -358,11 +373,11 @@ Viene visualizzata di nuovo la [!UICONTROL Credenziali API] , in cui è elencata
 
 ## Risorse aggiuntive {#additional-resources}
 
-Per ulteriori informazioni introduttive sulle API di Experience Platform, consulta le risorse aggiuntive elencate di seguito
+Per ulteriori informazioni introduttive sulle API di Experienci Platform, consulta le risorse aggiuntive elencate di seguito
 
-* [Autenticazione e accesso alle API di Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=it) pagina dei tutorial video
+* [Autenticazione e accesso alle API di Experienci Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=it) pagina dei tutorial video
 * [Raccolta Postman del servizio Identity Management](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) per generare token di accesso
-* [Raccolte Postman API di Experience Platform](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* [Raccolte Postman API di Experienci Platform](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## Passaggi successivi {#next-steps}
 
