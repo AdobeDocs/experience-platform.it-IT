@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 1%
@@ -94,7 +94,7 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 
 {style="table-layout:auto"}
 
-## [!BADGE Beta]Esportazioni di set di dati {type=Informative} {#dataset-exports}
+### [!BADGE Beta]Esportazioni di set di dati {type=Informative} {#dataset-exports}
 
 Le esportazioni di set di dati sono attualmente supportate in una **[!UICONTROL Prima completo e poi incrementale]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Le protezioni descritte in questa sezione si applicano alla prima esportazione completa che si verifica dopo la configurazione di un flusso di lavoro di esportazione di un set di dati.
 
