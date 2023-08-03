@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f360df6273986be35340432c72d8f8620f339b67
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1272'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comp
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
 * **Limite soft:** È possibile superare un limite soft, tuttavia i limiti soft forniscono una linea guida consigliata per le prestazioni del sistema.
-* **Limite rigido:** Un limite rigido fornisce un massimo assoluto. L’interfaccia utente o l’API di Experience Platform non consente di superare questo limite, oppure se superi questo limite, viene restituito un errore.
+* **Limite rigido:** Un limite rigido fornisce un massimo assoluto. L’interfaccia utente o l’API di Experienci Platform non consente di superare questo limite, oppure se superi questo limite, viene restituito un errore.
 
 
 ## Limiti di attivazione {#activation-limits}
@@ -55,7 +55,7 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero di attivazioni (messaggi HTTP con esportazioni profilo) al secondo | N/D | - | Al momento non esiste alcun limite al numero di messaggi al secondo inviati dagli endpoint API di Experience Platform alle destinazioni partner. <br> Eventuali limiti o latenze sono determinati dall’endpoint in cui Experience Platform invia i dati. Assicurati anche di controllare il [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati. |
+| Numero di attivazioni (messaggi HTTP con esportazioni profilo) al secondo | N/D | - | Al momento non esiste alcun limite al numero di messaggi al secondo inviati dagli endpoint API di Experienci Platform alle destinazioni partner. <br> Eventuali limiti o latenze sono determinati dall’endpoint in cui Experienci Platform invia i dati. Assicurati anche di controllare il [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati. |
 
 {style="table-layout:auto"}
 
@@ -94,6 +94,101 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 
 {style="table-layout:auto"}
 
+## [!BADGE Beta]Esportazioni di set di dati {type=Informative} {#dataset-exports}
+
+Le esportazioni di set di dati sono attualmente supportate in una **[!UICONTROL Prima completo e poi incrementale]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Le protezioni descritte in questa sezione si applicano alla prima esportazione completa che si verifica dopo la configurazione di un flusso di lavoro di esportazione di un set di dati.
+
+| Guardrail | Limite | Tipo limite | Descrizione |
+| --- | --- | --- | --- |
+| Dimensione dei set di dati esportati | 5 miliardi di record | Morbido | Il limite qui descritto per le esportazioni di set di dati è un *guardrail morbido*. Ad esempio, anche se l’interfaccia utente non ti blocca l’esportazione di set di dati superiori a 5 miliardi di record, il comportamento è imprevedibile e le esportazioni potrebbero non riuscire o avere una latenza di esportazione molto lunga. |
+
+{style="table-layout:auto"}
+
+<!--
+
+### Dataset Types {#dataset-types}
+
+Datasets exported from Experience Platform can be of two types, as described below:
+
+**Timeseries**
+Timeseries datasets are also known as *XDM Experience Events* datasets in Experience Platform terminology.
+The dataset schema includes a top level *timestamp* column. Data is ingested in an append-only fashion.
+
+**Record** 
+Record datasets are also known as *XDM Individual Profile* datasets in Experience Platform terminology.
+The dataset schema does not include a top level *timestamp* column. Data is ingested in upsert fashion.
+
+The guardrails below are grouped by the format of the exported file, and then further by dataset type.
+
+**Parquet output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| Record | N/A | Five billion records per file | Only the data from the last seven days is exported. |
+
+{style="table-layout:auto"}
+
+**JSON output**
+
+|Dataset type | Compression | Guardrail | Description |
+|---------|----------|---------|-----------|
+| Timeseries | N/A | Last seven days per file | The data from the last seven days only is exported. |
+| <p>Record</p> | <p><ul><li>Yes</li><li>No</li></ul></p> | <p><ul><li>Five billion records per compressed file</li><li>One million records per uncompressed file</li></ul></p> | <p>The record count of the dataset must be less than five billion for compressed files and one million for uncompressed files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</p> |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+<table>
+<thead>
+  <tr>
+    <th>Output format</th>
+    <th>Dataset type</th>
+    <th>Compression</th>
+    <th>Guardrail</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Parquet</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td>Record</td>
+    <td>-</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">JSON</td>
+    <td>Timeseries</td>
+    <td>-</td>
+    <td>Last seven days per file</td>
+    <td>Only the data from the last seven days is exported.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Record</td>
+    <td>Yes</td>
+    <td>Five billion records per file</td>
+    <td>The record count of the dataset must be less than five billion, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>One million records per file</td>
+    <td>The record count of the dataset must be less than one million, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold.</td>
+  </tr>
+</tbody>
+</table>
+
+-->
+
 ### Destination SDK guardrail {#destination-sdk-guardrails}
 
 [Destination SDK](/help/destinations/destination-sdk/overview.md) è una suite di API di configurazione che consente di configurare i modelli di integrazione delle destinazioni, ad Experience Platform per fornire dati di pubblico e profilo all’endpoint, in base ai formati di dati e autenticazione selezionati. I guardrail riportati di seguito si applicano alle destinazioni configurate mediante Destination SDK.
@@ -111,13 +206,13 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 
 | Tipo di destinazione | Descrizione |
 | --- | --- |
-| Destinazioni Enterprise (API HTTP, Amazon Kinesis, Azure EventHubs) | Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione aziendale. <br> In caso di richieste non riuscite alla destinazione Enterprise, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte. |
+| Destinazioni Enterprise (API HTTP, Amazon Kinesis, Azure EventHubs) | Nel 95% del tempo, Experienci Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati verso una destinazione aziendale. <br> In caso di richieste non riuscite alla destinazione Enterprise, Experienci Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte. |
 
 {style="table-layout:auto"}
 
 ## Guardrail per altri servizi Experienci Platform {#guardrails-other-services}
 
-Visualizza le informazioni sui guardrail per altri servizi Experience Platform:
+Visualizza le informazioni sui guardrail per altri servizi Experienci Platform:
 
 * Guardrail per [acquisizione dei dati](/help/ingestion/guardrails.md)
 * Guardrail per [[!DNL Identity Service] dati](/help/identity-service/guardrails.md)
