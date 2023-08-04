@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
+source-git-commit: 1de2776fbdfc7b32a1660a01ca6df21eb0cb9104
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1736'
 ht-degree: 37%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=it).
+
+## Versione 2.20.1 - 3 agosto 2023
+
+**Correzioni e miglioramenti**
+
+* È stata migliorata la convalida delle impostazioni di sostituzione dello stream di dati salvato.
 
 ## Versione 2.20.0 - 31 luglio 2023
 
