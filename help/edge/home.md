@@ -3,9 +3,9 @@ title: Panoramica di Adobe Experience Platform Web SDK
 description: Scopri come utilizzare Adobe Experience Platform Web SDK per integrare le funzionalità di Platform nel tuo sito web.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 606052562da79982cbe4977c65ecf8ab64e4fa66
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Per una guida dettagliata alla configurazione di Web SDK con i tag e all’invio
 [!DNL Adobe Experience Platform Web SDK] fa parte della raccolta che costituisce [!DNL Adobe Experience Edge]. [!DNL Experience Edge] è costituito dalle seguenti tecnologie:
 
 * **[[!DNL Adobe Experience Platform Web SDK]](#overview):** Un SDK JavaScript e un’estensione tag per semplificare notevolmente la distribuzione [!DNL Adobe] tecnologie.
-* **[[!DNL Adobe Experience Platform Mobile SDK]](https://aep-sdks.gitbook.io/docs/getting-started/overview):** Estensione dell’SDK per dispositivi mobili v5 per consentire ai clienti di utilizzare la nuova metodologia di implementazione
+* **[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/):** Estensione dell’SDK per dispositivi mobili v5 per consentire ai clienti di utilizzare la nuova metodologia di implementazione
 * **[[!DNL Adobe Experience Platform Edge Network]](../server-api/overview.md):** Una rete globale distribuita di server che consente una nuova metodologia di distribuzione [!DNL Adobe] products
 
 Il [!DNL Adobe Experience Edge] è un nuovo framework per la raccolta dati a bassa latenza, il pluggable computing e l’attivazione rapida dei dati su tutti i canali indirizzabili.
