@@ -4,7 +4,7 @@ description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi d
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 15%
@@ -76,7 +76,7 @@ I componenti di identità, gestione dati e governance che utilizzerai sono:
 * **(La documentazione sarà presto disponibile)** Gruppi di campi personalizzati per il supporto dei dati dei partner
 * **(La documentazione sarà presto disponibile)** Etichette di terze parti che verranno aggiunte agli attributi provenienti dai partner
 
-#### Creare uno spazio dei nomi di identità ID partner
+#### Creare uno spazio dei nomi di identità ID partner {#create-partner-id-namespace}
 
 Inizia creando un nuovo tipo di identità per i profili che riceverai dal partner. A questo scopo, nella sezione Identità devi creare un nuovo spazio dei nomi dell’identità del tipo **[!UICONTROL ID partner]**.
 
