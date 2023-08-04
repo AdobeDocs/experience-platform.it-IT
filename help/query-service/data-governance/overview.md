@@ -2,9 +2,9 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experienci Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ Le seguenti categorie sono fondamentali per rispettare le normative sulla confor
 1. Audit
 1. Utilizzo dati
 1. Privacy
-<!-- 1. Data hygiene -->
+1. Igiene dei dati
 
 Questo documento esamina ciascuna delle diverse aree di governance e illustra come facilitare la conformità dei dati quando si utilizza Query Service. Consulta la [panoramica su governance, privacy e sicurezza](../../landing/governance-privacy-security/overview.md) per informazioni più ampie su come Experienci Platform consente di gestire i dati dei clienti e garantire la conformità.
 
-## Sicurezza
+## Sicurezza {#security}
 
 La sicurezza dei dati è il processo di protezione dei dati da accessi non autorizzati e di garanzia di accesso sicuro per tutto il loro ciclo di vita. L’accesso sicuro viene mantenuto in Experienci Platform attraverso l’applicazione di ruoli e autorizzazioni da parte di funzionalità quali il controllo dell’accesso basato su ruoli e il controllo dell’accesso basato su attributi. Credenziali, SSL e crittografia dei dati vengono utilizzati anche per garantire la protezione dei dati in Platform.
 
@@ -35,8 +35,7 @@ La sicurezza relativa a Query Service è suddivisa nelle seguenti categorie:
 
 * [Controllo degli accessi](#access-control): l’accesso è controllato tramite ruoli e autorizzazioni, incluse le autorizzazioni a livello di set di dati e di colonna.
 * Protezione dei dati tramite [connettività](#connectivity): i dati sono protetti tramite Platform e client esterni tramite una connessione limitata con credenziali in scadenza o con credenziali senza scadenza.
-* Protezione dei dati tramite [crittografia e chiavi a livello di sistema](#encryption): la sicurezza dei dati è garantita dalla crittografia quando i dati sono inattivi.
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* Protezione dei dati tramite [crittografia e chiavi gestite dal cliente (CMK)](#encryption-and-customer-managed-keys): accesso controllato tramite crittografia quando i dati sono inattivi.
 
 ### Controllo degli accessi {#access-control}
 
@@ -132,17 +131,14 @@ Per una maggiore sicurezza, Query Service fornisce supporto nativo per le connes
 
 Consulta la guida su [Opzioni SSL per le connessioni client di terze parti a Query Service](../clients/ssl-modes.md) per ulteriori informazioni, tra cui come connettersi utilizzando `verify-full` Valore del parametro SSL.
 
-### Crittografia {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### Crittografia e chiavi gestite dal cliente (CMK) {#encryption-and-customer-managed-keys}
 
 La crittografia è l&#39;utilizzo di un processo algoritmico per trasformare i dati in testo codificato e illeggibile per garantire che le informazioni siano protette e inaccessibili senza una chiave di decrittografia.
 
 La conformità dei dati di Query Service garantisce che i dati siano sempre crittografati. I dati in transito sono sempre conformi a HTTPS e i dati in transito sono crittografati in un archivio Azure Data Lake utilizzando chiavi a livello di sistema. Consulta la documentazione su [cifratura dei dati in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) per ulteriori informazioni. Per informazioni dettagliate sulla modalità di crittografia dei dati inattivi nell&#39;archiviazione di Azure Data Lake, vedere [documentazione ufficiale di Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+I dati in transito sono sempre conformi HTTPS. Analogamente, quando i dati sono inattivi nel data lake, la crittografia viene eseguita con la chiave di gestione del cliente (CMK), già supportata da Data Lake Management. La versione attualmente supportata è TLS1.2. Consulta la [documentazione di Customer-Managed Key (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) per informazioni su come impostare chiavi di crittografia personalizzate per i dati archiviati in Adobe Experience Platform.
+
 
 ## Audit {#audit}
 
@@ -206,14 +202,14 @@ Le funzioni di Query Service per la governance dei dati semplificano e semplific
 
 I campi dati dello schema possono essere impostati come campo di identità tramite l’interfaccia utente di Platform e Query Service consente anche di: [contrassegnare le identità primarie utilizzando il comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Impostazione di un’identità tramite `ALTER TABLE` Questo comando è particolarmente utile quando i set di dati vengono creati utilizzando SQL anziché direttamente da uno schema tramite l’interfaccia utente di Platform. Consulta la documentazione per istruzioni su come [definire i campi di identità nell’interfaccia utente](../../xdm/ui/fields/identity.md) quando si utilizzano schemi standard.
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## Igiene dei dati {#data-hygiene}
 
-## Data hygiene 
+Per &quot;igiene dei dati&quot; si intende il processo di riparazione o rimozione di dati che potrebbero essere obsoleti, imprecisi, formattati in modo errato, duplicati o incompleti. Questi processi garantiscono l’accuratezza e la coerenza dei set di dati in tutti i sistemi. È importante garantire un’igiene dei dati adeguata in ogni fase del percorso dei dati e anche dal luogo di archiviazione iniziale. In Experienci Platform Query Service, si tratta del data lake o dell’archivio accelerato.
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+Puoi assegnare un’identità a un set di dati derivato per consentirne la gestione seguendo i servizi centralizzati di igiene dei dati di Platform.
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+Al contrario, quando si crea un set di dati aggregato nell’archivio accelerato, i dati aggregati non possono essere utilizzati per derivare i dati originali. In seguito a questa aggregazione di dati, viene eliminata la necessità di inoltrare richieste di igiene dei dati.
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+Un’eccezione a questo scenario è il caso dell’eliminazione. Se in un set di dati è richiesta un’eliminazione di igiene dei dati e prima che l’eliminazione sia completata, viene eseguita un’altra query di set di dati derivati, il set di dati derivato acquisirà informazioni dal set di dati originale. In questo caso, è necessario tenere presente che se è stata inviata una richiesta di eliminazione di un set di dati, non è necessario eseguire query di set di dati derivati utilizzando la stessa origine del set di dati.
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+Consulta la [panoramica sull’igiene dei dati](../../hygiene/home.md) per ulteriori informazioni sull’igiene dei dati in Adobe Experience Platform.
