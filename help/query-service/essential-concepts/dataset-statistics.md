@@ -1,9 +1,9 @@
 ---
 title: Calcolo delle statistiche dei set di dati
 description: In questo documento viene descritto come calcolare le statistiche a livello di colonna sui set di dati di Azure Data Lake Storage (ADLS) con comandi SQL.
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Per visualizzare le statistiche calcolate con `ANALYZE TABLE COMPUTE STATISTICS`
 
 >[!IMPORTANT]
 >
->Il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` comandi non supportati nelle tabelle data warehouse. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS. Per ulteriori informazioni, vedere [Sezione ANALYZE TABLE](../sql/syntax.md#analyze-table) della guida alla sintassi SQL.
+>Il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS. Per ulteriori informazioni, vedere [Sezione ANALYZE TABLE](../sql/syntax.md#analyze-table) della guida alla sintassi SQL.
 
 Questa guida consente di strutturare le query in modo da poter calcolare le statistiche delle colonne di un set di dati ADLS. Utilizzando questi comandi, è possibile visualizzare le statistiche generate nella sessione tramite un client PSQL utilizzando una query SQL.
 
@@ -95,7 +95,7 @@ L’output delle statistiche calcolate potrebbe essere simile all’esempio segu
 
 ## Mostra i metadati dell’analisi statistica {#show-statistics}
 
-È possibile utilizzare `SHOW STATISTICS` per visualizzare i metadati di tutte le tabelle statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
+È possibile utilizzare `SHOW STATISTICS` per visualizzare i metadati di tutte le statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
 
 Esempio di output di `SHOW STATISTICS` viene visualizzato di seguito.
 

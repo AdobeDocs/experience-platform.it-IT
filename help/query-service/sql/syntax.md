@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3860'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,6 @@ Inoltre, puoi utilizzare `HEAD` e `TAIL` come valori di offset speciali per le c
 >- Se è impostato il flag di comportamento di fallback facoltativo, Query Service sceglierà lo snapshot disponibile più recente, lo imposterà come snapshot iniziale e restituirà i dati tra lo snapshot disponibile più recente e quello finale specificato. Questi dati sono **inclusivo** della prima istantanea disponibile.
 >
 >- Se il flag di comportamento di fallback facoltativo non è impostato, viene restituito un errore.
-
 
 ### clausola WHERE
 
@@ -541,7 +540,7 @@ I valori ricavati dal `source_dataset` vengono utilizzati per popolare la tabell
 | SKU | _esperienza | quantità | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
-| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |  |  |
+| product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D,NULL)&quot;)&quot;)) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)) | 3 | 12 |
 
@@ -600,7 +599,7 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 
 È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
 
-`COMPUTE STATISTICS` estende `ANALYZE TABLE` comando. Tuttavia, il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` comandi non supportati nelle tabelle data warehouse. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS.
+`COMPUTE STATISTICS` estende `ANALYZE TABLE` comando. Tuttavia, il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS.
 
 **Esempio**
 
@@ -608,28 +607,43 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS  FOR COLUMNS (commerce, id, timestamp);
 ```
 
+Il `FILTER CONTEXT` Il comando calcola le statistiche su un sottoinsieme del set di dati in base alla condizione di filtro fornita. Il `FOR COLUMNS` Il comando esegue il targeting di colonne specifiche per l&#39;analisi.
+
 >[!NOTE]
 >
->`FILTER CONTEXT` calcola le statistiche su un sottoinsieme del set di dati in base alla condizione del filtro fornita; e `FOR COLUMNS` esegue il targeting di colonne specifiche per l’analisi.
+>Il `Statistics ID` e le statistiche generate sono valide solo per ogni sessione e non è possibile accedervi tra diverse sessioni PSQL.<br><br>Limitazioni:<ul><li>La generazione di statistiche non è supportata per i tipi di dati array o mappa</li><li>Le statistiche calcolate non sono persistenti</li></ul><br><br>Opzioni:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Per impostazione predefinita, il flag è impostato su true. Di conseguenza, quando le statistiche vengono richieste su un tipo di dati non supportato, non viene generato un errore, ma si verifica un errore silenzioso.<br>Per abilitare le notifiche sugli errori quando vengono richieste statistiche su tipi di dati non supportati, utilizza: `SET skip_stats_for_complex_datatypes = false`.
 
 L’output della console viene visualizzato come illustrato di seguito.
 
 ```console
-  Statistics ID 
-------------------
- ULKQiqgUlGbTJWhO
+|     Statistics ID      | 
+| ---------------------- |
+| adc_geometric_stats_1  |
 (1 row)
 ```
 
-Puoi quindi utilizzare l’ID delle statistiche restituito per cercare le statistiche calcolate con `SHOW STATISTICS` comando.
+Puoi quindi eseguire direttamente una query sulle statistiche calcolate facendo riferimento al `Statistics ID`. L’istruzione di esempio seguente ti consente di visualizzare l’output completo quando viene utilizzato con `Statistics ID` o il nome dell’alias. Per ulteriori informazioni su questa funzione, consulta [documentazione del nome alias](../essential-concepts/dataset-statistics.md#alias-name).
 
 ```sql
-SHOW STATISTICS FOR <statistics_ID>
+-- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
+SELECT * FROM adc_geometric_stats_1;
 ```
 
->[!NOTE]
->
->`COMPUTE STATISTICS` non supporta i tipi di dati array o map. È possibile impostare un `skip_stats_for_complex_datatypes` contrassegno da notificare o errore se il dataframe di input ha colonne con array e tipi di dati mappa. Per impostazione predefinita, il flag è impostato su true. Per abilitare le notifiche o gli errori, utilizza il comando seguente: `SET skip_stats_for_complex_datatypes = false`.
+Utilizza il `SHOW STATISTICS` per visualizzare i metadati di tutte le tabelle statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
+
+```sql
+SHOW STATISTICS;
+```
+
+Di seguito è riportato un esempio di output di SHOW STATISTICS.
+
+```console
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+```
 
 Consulta la [documentazione delle statistiche dei set di dati](../essential-concepts/dataset-statistics.md) per ulteriori informazioni.
 
@@ -814,7 +828,7 @@ Ulteriori informazioni sui parametri di query SELECT standard sono disponibili n
 
 | Parametri | Descrizione |
 | ------ | ------ |
-| `TEMPORARY` o `TEMP` | Un parametro facoltativo. Se viene specificata, la tabella creata sarà una tabella temporanea. |
+| `TEMPORARY` oppure `TEMP` | Un parametro facoltativo. Se viene specificata, la tabella creata sarà una tabella temporanea. |
 | `UNLOGGED` | Un parametro facoltativo. Se viene specificata, la tabella creata come sarà una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili nella sezione [[!DNL PostgreSQL] documentazione](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nome della tabella da creare. |
 

@@ -1,8 +1,8 @@
 ---
 title: Governance dei dati in Query Service
-description: Questa panoramica descrive i principali elementi di governance dei dati in Experience Platform Query Service.
+description: Questa panoramica descrive i principali elementi di governance dei dati in Experienci Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
 source-wordcount: '2843'
 ht-degree: 1%
@@ -25,18 +25,17 @@ Le seguenti categorie sono fondamentali per rispettare le normative sulla confor
 1. Privacy
 <!-- 1. Data hygiene -->
 
-Questo documento esamina ciascuna delle diverse aree di governance e illustra come facilitare la conformità dei dati quando si utilizza Query Service. Consulta la [panoramica su governance, privacy e sicurezza](../../landing/governance-privacy-security/overview.md) per informazioni più ampie su come Experience Platform consente di gestire i dati dei clienti e garantire la conformità.
+Questo documento esamina ciascuna delle diverse aree di governance e illustra come facilitare la conformità dei dati quando si utilizza Query Service. Consulta la [panoramica su governance, privacy e sicurezza](../../landing/governance-privacy-security/overview.md) per informazioni più ampie su come Experienci Platform consente di gestire i dati dei clienti e garantire la conformità.
 
 ## Sicurezza
 
-La sicurezza dei dati è il processo di protezione dei dati da accessi non autorizzati e di garanzia di accesso sicuro per tutto il loro ciclo di vita. L’accesso sicuro viene mantenuto in Experience Platform attraverso l’applicazione di ruoli e autorizzazioni da parte di funzionalità quali il controllo dell’accesso basato su ruoli e il controllo dell’accesso basato su attributi. Credenziali, SSL e crittografia dei dati vengono utilizzati anche per garantire la protezione dei dati in Platform.
+La sicurezza dei dati è il processo di protezione dei dati da accessi non autorizzati e di garanzia di accesso sicuro per tutto il loro ciclo di vita. L’accesso sicuro viene mantenuto in Experienci Platform attraverso l’applicazione di ruoli e autorizzazioni da parte di funzionalità quali il controllo dell’accesso basato su ruoli e il controllo dell’accesso basato su attributi. Credenziali, SSL e crittografia dei dati vengono utilizzati anche per garantire la protezione dei dati in Platform.
 
 La sicurezza relativa a Query Service è suddivisa nelle seguenti categorie:
 
 * [Controllo degli accessi](#access-control): l’accesso è controllato tramite ruoli e autorizzazioni, incluse le autorizzazioni a livello di set di dati e di colonna.
 * Protezione dei dati tramite [connettività](#connectivity): i dati sono protetti tramite Platform e client esterni tramite una connessione limitata con credenziali in scadenza o con credenziali senza scadenza.
 * Protezione dei dati tramite [crittografia e chiavi a livello di sistema](#encryption): la sicurezza dei dati è garantita dalla crittografia quando i dati sono inattivi.
-
 <!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
 
 ### Controllo degli accessi {#access-control}
@@ -191,7 +190,7 @@ Il framework per la governance dei dati in Platform fornisce un modo uniforme pe
 >
 >I set di dati creati con Query Service sono denominati &quot;set di dati derivati&quot;.
 
-Poiché gli schemi ad hoc vengono creati da un singolo utente per uno scopo specifico, i campi dello schema XDM hanno un namespace per quel particolare set di dati e non sono destinati all’utilizzo in set di dati diversi. Di conseguenza, gli schemi ad hoc non sono visibili per impostazione predefinita nell’interfaccia utente di Experience Platform. Sebbene non vi siano differenze nell’applicazione delle etichette di utilizzo dei dati tra schemi standard e ad hoc, gli schemi ad hoc creati da Query Service a scopo di etichettatura devono prima essere resi visibili nell’interfaccia utente di Platform. Consulta la guida su [individuazione di schemi ad hoc nell’interfaccia utente di Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) per ulteriori dettagli.
+Poiché gli schemi ad hoc vengono creati da un singolo utente per uno scopo specifico, i campi dello schema XDM hanno un namespace per quel particolare set di dati e non sono destinati all’utilizzo in set di dati diversi. Di conseguenza, gli schemi ad hoc non sono visibili per impostazione predefinita nell’interfaccia utente di Experienci Platform. Sebbene non vi siano differenze nell’applicazione delle etichette di utilizzo dei dati tra schemi standard e ad hoc, gli schemi ad hoc creati da Query Service a scopo di etichettatura devono prima essere resi visibili nell’interfaccia utente di Platform. Consulta la guida su [individuazione di schemi ad hoc nell’interfaccia utente di Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) per ulteriori dettagli.
 
 Dopo aver effettuato l’accesso allo schema, puoi [applicare etichette ai singoli campi](../../xdm/tutorials/labels.md). Una volta etichettato uno schema, tutti i set di dati derivati da tale schema ereditano tali etichette. Da qui puoi impostare criteri di utilizzo dei dati che possono limitare l’attivazione di dati con determinate etichette per determinate destinazioni. Per ulteriori informazioni, consulta la panoramica su [criteri di utilizzo dati](../../data-governance/policies/overview.md).
 
@@ -211,7 +210,7 @@ I campi dati dello schema possono essere impostati come campo di identità trami
 
 ## Data hygiene 
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. In Query Service, this is either the data lake or the data warehouse.
+"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
 
 It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
 
