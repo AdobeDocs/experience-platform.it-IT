@@ -1,16 +1,16 @@
 ---
 title: Calcolo delle statistiche dei set di dati
 description: In questo documento viene descritto come calcolare le statistiche a livello di colonna sui set di dati di Azure Data Lake Storage (ADLS) con comandi SQL.
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # Calcolo delle statistiche del set di dati
 
-È ora possibile calcolare le statistiche a livello di colonna per [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. I comandi SQL che calcolano le statistiche dei set di dati sono un&#39;estensione del `ANALYZE TABLE` comando. Dettagli completi sulla `ANALYZE TABLE` Il comando si trova nel [Documentazione di riferimento SQL](../sql/syntax.md#analyze-table).
+È ora possibile calcolare le statistiche a livello di colonna per [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` Comando SQL. I comandi SQL che calcolano le statistiche dei set di dati sono un&#39;estensione del `ANALYZE TABLE` comando. Dettagli completi sulla `ANALYZE TABLE` Il comando si trova nel [Documentazione di riferimento SQL](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Per visualizzare le statistiche calcolate con `ANALYZE TABLE COMPUTE STATISTICS`
 
 >[!IMPORTANT]
 >
->Il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS. Per ulteriori informazioni, vedere [Sezione ANALYZE TABLE](../sql/syntax.md#analyze-table) della guida alla sintassi SQL.
+>Il `COMPUTE STATISTICS`, `FILTERCONTEXT`, e `FOR COLUMNS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS. Per ulteriori informazioni, vedere [Sezione ANALYZE TABLE](../sql/syntax.md#analyze-table) della guida alla sintassi SQL.
 
 Questa guida consente di strutturare le query in modo da poter calcolare le statistiche delle colonne di un set di dati ADLS. Utilizzando questi comandi, è possibile visualizzare le statistiche generate nella sessione tramite un client PSQL utilizzando una query SQL.
 

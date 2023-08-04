@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 2%
 
 ---
@@ -597,9 +597,9 @@ Di seguito è riportato un elenco di calcoli statistici disponibili dopo l&#39;u
 
 #### STATISTICHE DI CALCOLO sul data lake {#compute-statistics-data-lake}
 
-È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` e `SHOW STATISTICS` Comandi SQL. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
+È ora possibile calcolare le statistiche a livello di colonna su [!DNL Azure Data Lake Storage] (ADLS) con `COMPUTE STATISTICS` Comando SQL. Calcola le statistiche delle colonne sull’intero set di dati, su un sottoinsieme di un set di dati, su tutte le colonne o su un sottoinsieme di colonne.
 
-`COMPUTE STATISTICS` estende `ANALYZE TABLE` comando. Tuttavia, il `COMPUTE STATISTICS`, `FILTERCONTEXT`, `FOR COLUMNS`, e `SHOW STATISTICS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS.
+`COMPUTE STATISTICS` estende `ANALYZE TABLE` comando. Tuttavia, il `COMPUTE STATISTICS`, `FILTERCONTEXT`, e `FOR COLUMNS` i comandi non sono supportati nelle tabelle store accelerate. Queste estensioni per `ANALYZE TABLE` sono attualmente supportati solo per le tabelle ADLS.
 
 **Esempio**
 
@@ -611,7 +611,7 @@ Il `FILTER CONTEXT` Il comando calcola le statistiche su un sottoinsieme del set
 
 >[!NOTE]
 >
->Il `Statistics ID` e le statistiche generate sono valide solo per ogni sessione e non è possibile accedervi tra diverse sessioni PSQL.<br><br>Limitazioni:<ul><li>La generazione di statistiche non è supportata per i tipi di dati array o mappa</li><li>Le statistiche calcolate non sono persistenti</li></ul><br><br>Opzioni:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Per impostazione predefinita, il flag è impostato su true. Di conseguenza, quando le statistiche vengono richieste su un tipo di dati non supportato, non viene generato un errore, ma si verifica un errore silenzioso.<br>Per abilitare le notifiche sugli errori quando vengono richieste statistiche su tipi di dati non supportati, utilizza: `SET skip_stats_for_complex_datatypes = false`.
+>Il `Statistics ID` e le statistiche generate sono valide solo per ogni sessione e non è possibile accedervi tra diverse sessioni PSQL.<br><br>Limitazioni:<ul><li>La generazione di statistiche non è supportata per i tipi di dati array o mappa</li><li>Le statistiche calcolate sono **non** persistente in tutte le sessioni.</li></ul><br><br>Opzioni:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Per impostazione predefinita, il flag è impostato su true. Di conseguenza, quando le statistiche vengono richieste su un tipo di dati non supportato, non viene generato un errore ma i campi vengono ignorati automaticamente con i tipi di dati non supportati.<br>Per abilitare le notifiche sugli errori quando vengono richieste statistiche su tipi di dati non supportati, utilizza: `SET skip_stats_for_complex_datatypes = false`.
 
 L’output della console viene visualizzato come illustrato di seguito.
 
@@ -629,7 +629,7 @@ Puoi quindi eseguire direttamente una query sulle statistiche calcolate facendo 
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilizza il `SHOW STATISTICS` per visualizzare i metadati di tutte le tabelle statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
+Utilizza il `SHOW STATISTICS` per visualizzare i metadati di tutte le statistiche temporanee generate nella sessione. Questo comando consente di perfezionare l’ambito dell’analisi statistica.
 
 ```sql
 SHOW STATISTICS;
