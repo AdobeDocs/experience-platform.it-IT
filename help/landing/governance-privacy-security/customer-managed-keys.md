@@ -2,10 +2,10 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 1%
+source-wordcount: '1774'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 
 >[!NOTE]
 >
->I dati nel data lake di Adobe Experience Platform e nell’archivio profili (CosmosDB) sono crittografati utilizzando CMK.
+>I dati nel data lake di Adobe Experience Platform e nell’archivio profili sono crittografati utilizzando CMK. Questi sono considerati come archivi di dati primari.
 
 Questo documento descrive il processo di abilitazione della funzione chiavi gestite dal cliente (CMK) in Platform.
 
@@ -166,7 +166,7 @@ Nella schermata successiva scegliere **[!DNL Select members]** per aprire una fi
 >
 >Se l&#39;applicazione non è presente nell&#39;elenco, l&#39;entità servizio non è stata accettata nel tenant. Lavora con il [!DNL Azure] amministratore o rappresentante per assicurarsi di disporre dei privilegi corretti.
 
-## Abilita la configurazione della chiave di crittografia su Experience Platform {#send-to-adobe}
+## Abilita la configurazione della chiave di crittografia su Experienci Platform {#send-to-adobe}
 
 Dopo aver installato l’app CMK su [!DNL Azure], puoi inviare l’identificatore della chiave di crittografia ad Adobe. Seleziona **[!DNL Keys]** nel menu di navigazione a sinistra, seguito dal nome della chiave che desideri inviare.
 
@@ -282,12 +282,21 @@ Il `status` l&#39;attributo può avere uno dei quattro valori con i seguenti sig
 1. `COMPLETED`: l’insieme di credenziali delle chiavi e il nome della chiave sono stati aggiunti agli archivi dati.
 1. `FAILED`: si è verificato un problema, principalmente relativo alla chiave, all’insieme di credenziali delle chiavi o alla configurazione di app multi-tenant.
 
-## Passaggi successivi
+## Revoca accesso {#revoke-access}
 
-Completando i passaggi precedenti, hai abilitato correttamente la CMK per la tua organizzazione. I dati acquisiti in Platform verranno ora crittografati e decrittografati utilizzando le chiavi nella [!DNL Azure] Key Vault Se desideri revocare l’accesso di Platform ai tuoi dati, puoi rimuovere il ruolo utente associato all’applicazione dall’archivio chiavi in [!DNL Azure].
-
-Dopo aver disabilitato l’accesso all’applicazione, possono essere necessarie da pochi minuti a 24 ore affinché i dati non siano più accessibili in Platform. Lo stesso ritardo si applica ai dati che diventano nuovamente disponibili quando si riabilita l’accesso all’applicazione.
+Se desideri revocare l’accesso di Platform ai tuoi dati, puoi rimuovere il ruolo utente associato all’applicazione dall’archivio chiavi in [!DNL Azure].
 
 >[!WARNING]
 >
->Una volta che l’app Key Vault, Key o CMK è disabilitata e i dati non sono più accessibili in Platform, non sarà più possibile effettuare operazioni a valle relative a tali dati. Prima di apportare modifiche alla configurazione, assicurati di comprendere gli effetti a valle della revoca dell’accesso di Platform ai dati.
+>La disattivazione dell’insieme di credenziali delle chiavi, della chiave o dell’app CMK può causare una modifica che causa interruzioni. Una volta che l’insieme di credenziali delle chiavi, la chiave o l’app CMK è disabilitata e i dati non sono più accessibili in Platform, non sarà più possibile eseguire operazioni a valle relative a tali dati. Prima di apportare modifiche alla configurazione, assicurati di comprendere gli effetti a valle della revoca dell’accesso di Platform alla chiave.
+
+Dopo aver rimosso l’accesso tramite chiave o disabilitato/eliminato la chiave dal tuo [!DNL Azure] Key vault, la propagazione della configurazione agli archivi dati primari potrebbe richiedere da pochi minuti a 24 ore. I flussi di lavoro della piattaforma includono anche archivi di dati memorizzati nella cache e transitori necessari per le prestazioni e le funzionalità delle applicazioni di base. La propagazione della revoca CMK attraverso tali archivi memorizzati nella cache e transitori può richiedere fino a sette giorni, in base ai loro flussi di lavoro di elaborazione dei dati. Ciò significa, ad esempio, che il dashboard Profilo conserverebbe e visualizzerebbe i dati dal relativo archivio dati della cache e impiegherebbe sette giorni per scadere i dati conservati negli archivi dati della cache come parte del ciclo di aggiornamento. Lo stesso ritardo si applica ai dati che diventano nuovamente disponibili quando si riabilita l’accesso all’applicazione.
+
+>[!NOTE]
+>
+>Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[URL abbreviato di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=it#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+
+## Passaggi successivi
+
+Completando i passaggi precedenti, hai abilitato correttamente la CMK per la tua organizzazione. I dati acquisiti negli archivi di dati primari ora vengono crittografati e decrittografati utilizzando le chiavi nella [!DNL Azure] Key Vault
+
