@@ -3,9 +3,9 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 6%
 
 ---
@@ -110,9 +110,7 @@ Per creare uno schema, completa i passaggi seguenti:
 
 Per ulteriori informazioni sulla creazione di schemi, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md)
 
-Per il percorso di ricoinvolgimento vengono utilizzate 4 progettazioni di schemi.
-
-Ogni schema richiede la configurazione di campi specifici, nonché di alcuni campi fortemente consigliati.
+Per il percorso di ricoinvolgimento vengono utilizzate 4 progettazioni di schemi. Ogni schema richiede la configurazione di campi specifici, nonché di alcuni campi fortemente consigliati.
 
 #### Requisiti del gruppo di campi per lo schema attributi del cliente
 
@@ -315,8 +313,6 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 
 Lo schema del connettore web Adobe è un [!UICONTROL XDM ExperienceEvent] schema, contenente i seguenti gruppi di campi:
 
-I gruppi di campi richiesti per lo schema Experience Event per feed dati di Adobe Analytics sono:
-
 Modello +++Adobe Analytics ExperienceEvent (gruppo di campi)
 
 | Campi | Requisito | Descrizione |
@@ -382,8 +378,6 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 +++
 
 ![Adobe di schema del connettore web che evidenzia l’elenco dei gruppi di campi.](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### Creare un set di dati da uno schema
 
