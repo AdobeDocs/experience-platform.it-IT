@@ -2,9 +2,9 @@
 title: Autenticazione
 description: Scopri come configurare l’autenticazione per l’API del server di rete Edge di Adobe Experience Platform.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -38,19 +38,19 @@ Prima di poter effettuare chiamate al [!DNL Server API], assicurati di soddisfar
 
 ## Raccogli le credenziali {#credentials}
 
-Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](../landing/api-authentication.md). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](../landing/api-authentication.md). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experienci Platform, come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Le risorse di Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
+Le risorse di Experienci Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Experience Platform, consulta la sezione [documentazione di panoramica sulla sandbox](../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in Experienci Platform, consulta la sezione [documentazione di panoramica sulla sandbox](../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 

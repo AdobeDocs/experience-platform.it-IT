@@ -4,9 +4,9 @@ title: Panoramica degli avvisi
 description: Scopri gli avvisi di Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 37700c3b3b728b59083fd51cabf1d8e4b8213580
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '773'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ Un avviso può essere suddiviso nei seguenti componenti:
 | **Metrica** | Un&#39;osservabilità [metrica](../api/metrics.md#available-metrics) il cui valore attiva l’avviso, ad esempio il numero di eventi di acquisizione batch non riusciti (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condizione** | Condizione correlata alla metrica che attiva l’avviso se viene risolto in true, ad esempio una metrica di conteggio che supera un determinato numero. Questa condizione può essere associata a un intervallo di tempo predefinito. |
 | **Finestra** | (Facoltativo) La condizione per un avviso può essere vincolata a un intervallo di tempo predefinito. Ad esempio, un avviso può essere attivato a seconda del numero di batch non riusciti negli ultimi cinque minuti. |
-| **Azione** | Quando viene attivato un avviso, viene eseguita un’azione. In particolare, i messaggi vengono inviati ai destinatari applicabili tramite un canale di consegna, ad esempio un webhook preconfigurato o l’interfaccia utente di Experience Platform. |
+| **Azione** | Quando viene attivato un avviso, viene eseguita un’azione. In particolare, i messaggi vengono inviati ai destinatari applicabili tramite un canale di consegna, ad esempio un webhook preconfigurato o l’interfaccia utente di Experienci Platform. |
 | **Frequenza** | (Facoltativo) Un avviso può essere configurato per ripetere l’azione a un intervallo definito se la sua condizione rimane true o non è altrimenti risolta. |
 
 {style="table-layout:auto"}

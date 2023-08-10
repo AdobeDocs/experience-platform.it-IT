@@ -2,10 +2,10 @@
 title: Endpoint “rules”
 description: Scopri come effettuare chiamate all’endpoint /rules nell’API di Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 99%
+source-wordcount: '896'
+ht-degree: 96%
 
 ---
 
@@ -960,7 +960,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della proprietà della regola specificata.
+In caso di esito positivo, la risposta restituisce i dettagli della proprietà della regola specificata.
 
 ```json
 {

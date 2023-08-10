@@ -2,9 +2,9 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 225fee7e2addf5067cb13da11615f6acff62ed72
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2202'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ Experience Platform è composto principalmente da due archivi di dati: [!DNL dat
 
 Il **[!DNL data lake]** ha principalmente i seguenti scopi:
 
-* funge da area di gestione temporanea per l’onboarding dei dati in Experience Platform;
-* funge da archiviazione dei dati a lungo termine per tutti i dati Experience Platform;
+* funge da area di gestione temporanea per l’onboarding dei dati in Experienci Platform;
+* funge da archiviazione dei dati a lungo termine per tutti i dati Experienci Platform;
 * Abilita casi d’uso come analisi dei dati e data science.
 
 Il **Archivio profili** è dove vengono creati i profili dei clienti e serve principalmente per i seguenti scopi:
@@ -40,9 +40,9 @@ Il **Archivio profili** è dove vengono creati i profili dei clienti e serve pri
 
 Quando si riceve la licenza di Experience Platform, vengono forniti diritti di utilizzo della licenza che variano a seconda dello SKU:
 
-**[!DNL Addressable Audience]** - il numero totale di profili cliente consentiti contrattualmente in Experience Platform, inclusi i profili noti e pseudonimi.
+**[!DNL Addressable Audience]** - il numero totale di profili cliente consentiti contrattualmente in Experienci Platform, inclusi i profili noti e pseudonimi.
 
-**[!DNL Profile Richness]** : la dimensione media dei dati del profilo in Experience Platform. Puoi aumentare il tuo [!DNL Profile Richness] acquistando un pacchetto richness.
+**[!DNL Profile Richness]** : la dimensione media dei dati del profilo in Experienci Platform. Puoi aumentare il tuo [!DNL Profile Richness] acquistando un pacchetto richness.
 
 Il [!DNL Profile Richness] La metrica varia a seconda della licenza acquistata. Esistono due calcoli per [!DNL Profile Richness] disponibile:
 
@@ -100,12 +100,12 @@ I filtri di acquisizione consentono di inserire solo i dati necessari per i casi
 
 | Filtro di acquisizione | Descrizione |
 | --- | --- |
-| Filtro origine Adobe Audience Manager | Quando crei una connessione sorgente Adobe Audience Manager, puoi scegliere quali segmenti e caratteristiche inserire nella [!DNL data lake] e Real-Time Customer Profile, anziché acquisire i dati Audience Manager nella loro interezza. Consulta la guida su [creazione di una connessione sorgente Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) per ulteriori informazioni. |
+| Filtro origine Adobe Audience Manager | Quando crei una connessione sorgente Adobe Audience Manager, puoi scegliere quali segmenti e caratteristiche inserire nella [!DNL data lake] e Real-Time Customer Profile, anziché acquisire i dati Audienci Manager nella loro interezza. Consulta la guida su [creazione di una connessione sorgente Audienci Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) per ulteriori informazioni. |
 | Preparazione dati di Adobe Analytics | È possibile utilizzare [!DNL Data Prep] funzionalità durante la creazione di una connessione di origine Analytics per filtrare i dati non necessari per i casi d’uso. Da a [!DNL Data Prep], puoi definire gli attributi o le colonne da pubblicare nel profilo. Puoi anche fornire istruzioni condizionali per informare Platform se i dati devono essere pubblicati nel profilo o solo nel [!DNL data lake]. Consulta la guida su [creazione di una connessione sorgente Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per ulteriori informazioni. |
 | Supporto per abilitare/disabilitare i set di dati per il profilo | Per acquisire dati nel Profilo cliente in tempo reale, devi abilitare un set di dati da utilizzare nell’archivio Profili. In questo modo, aggiunge al tuo [!DNL Addressable Audience] e [!DNL Profile Richness] diritti. Una volta che un set di dati non è più necessario per i casi di utilizzo del profilo cliente, puoi disabilitare l’integrazione del set di dati con Profilo per garantire che i dati rimangano conformi alla licenza. Consulta la guida su [abilitazione e disabilitazione dei set di dati per il profilo](../../catalog/datasets/enable-for-profile.md) per ulteriori informazioni. |
 | Esclusione di dati SDK per web e SDK per dispositivi mobili | Esistono due tipi di dati raccolti da Web e Mobile SDK: dati raccolti automaticamente e dati raccolti esplicitamente dallo sviluppatore. Per gestire meglio la conformità della licenza, puoi disabilitare la raccolta automatica dei dati nella configurazione dell’SDK tramite l’impostazione contestuale. I dati personalizzati possono anche essere rimossi o non impostati dallo sviluppatore. Consulta la guida su [configurazione delle nozioni di base dell’SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) per ulteriori informazioni. |
 | Esclusione dei dati di inoltro lato server | Se invii dati a Platform utilizzando l’inoltro lato server, puoi escludere i dati inviati rimuovendo la mappatura in un’azione della regola per escluderla in tutti gli eventi oppure aggiungendo condizioni alla regola in modo che i dati vengano attivati solo per determinati eventi. Consulta la documentazione su [eventi e condizioni](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) per ulteriori informazioni. |
-| Filtrare i dati a livello di origine | Puoi utilizzare operatori logici e di confronto per filtrare i dati a livello di riga dalle origini prima di creare una connessione e acquisire i dati da Experience Platform. Per ulteriori informazioni, consulta la guida su [filtrare i dati a livello di riga per un&#39;origine utilizzando [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| Filtrare i dati a livello di origine | Puoi utilizzare operatori logici e di confronto per filtrare i dati a livello di riga dalle origini prima di creare una connessione e acquisire i dati da Experienci Platform. Per ulteriori informazioni, consulta la guida su [filtrare i dati a livello di riga per un&#39;origine utilizzando [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -151,7 +151,7 @@ Di seguito è riportato un elenco di alcune best practice consigliate che è pos
 
 ## Riepilogo delle funzioni e disponibilità {#feature-summary}
 
-Le best practice e gli strumenti e descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di ulteriori funzioni che contribuiranno a fornire visibilità e controllo a tutti i clienti Experience Platform.
+Le best practice e gli strumenti descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di nuove funzioni che forniranno visibilità e controllo a tutti i clienti Experienci Platform.
 
 La tabella seguente illustra l’elenco delle funzioni attualmente disponibili per gestire al meglio il diritto all’utilizzo della licenza.
 

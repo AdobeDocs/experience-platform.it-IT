@@ -3,9 +3,9 @@ title: Utilizzo del riconoscimento dei visitatori con l'ausilio dei partner per 
 description: Scopri come utilizzare il riconoscimento dei visitatori supportato dai partner per offrire esperienze personalizzate nel sito ai visitatori.
 hide: true
 hidefromtoc: true
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2492'
 ht-degree: 7%
 
 ---

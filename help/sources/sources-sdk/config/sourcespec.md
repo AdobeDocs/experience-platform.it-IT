@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Configurare le specifiche di origine per le origini self-service (SDK batch)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -254,8 +254,8 @@ Consulta la [appendice](#source-spec) ad esempio una specifica di origine comple
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Questa proprietà consente di ignorare il valore del nome attributo specificato in `explodeEntityPath`. | `activity` |
 | `sourceSpec.attributes.spec.properties.paginationParams` | Definisce i parametri o i campi da fornire per ottenere un collegamento alla pagina successiva dalla risposta della pagina corrente dell&#39;utente o durante la creazione di un URL della pagina successiva. |
 | `sourceSpec.attributes.spec.properties.paginationParams.type` | Visualizza il tipo di impaginazione supportato per l&#39;origine. | <ul><li>`OFFSET`: questo tipo di impaginazione ti consente di analizzare i risultati specificando un indice da cui avviare la matrice risultante e un limite sul numero di risultati restituiti.</li><li>`POINTER`: questo tipo di impaginazione ti consente di utilizzare una `pointer` variabile per puntare a un particolare elemento che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva.</li><li>`CONTINUATION_TOKEN`: questo tipo di impaginazione ti consente di aggiungere alla query o ai parametri di intestazione un token di continuazione per recuperare i dati restituiti rimanenti dall’origine che non sono stati inizialmente restituiti a causa di un massimo predeterminato.</li><li>`PAGE`: questo tipo di impaginazione ti consente di aggiungere al parametro di query un parametro di paging per scorrere i dati restituiti per pagina, a partire dalla pagina zero.</li><li>`NONE`: questo tipo di impaginazione può essere utilizzato per origini che non supportano nessuno dei tipi di impaginazione disponibili. Tipo di impaginazione `NONE` restituisce tutti i dati di risposta dopo una richiesta.</li></ul> |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. | `limit` o `count` |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Il numero di record da recuperare in una pagina. | `limit=10` o `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. | `limit` oppure `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Il numero di record da recuperare in una pagina. | `limit=10` oppure `count=10` |
 | `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Nome dell&#39;attributo di offset. Questa opzione è necessaria se il tipo di paginazione è impostato su `offset`. | `offset` |
 | `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Nome dell&#39;attributo del puntatore. Questo richiede il percorso json dell’attributo che punterà alla pagina successiva. Questa opzione è necessaria se il tipo di paginazione è impostato su `pointer`. | `pointer` |
 | `sourceSpec.attributes.spec.properties.scheduleParams` | Contiene parametri che definiscono i formati di pianificazione supportati per l&#39;origine. I parametri di pianificazione includono `startTime` e `endTime`, entrambi che consentono di impostare intervalli di tempo specifici per le esecuzioni batch, in modo da garantire che i record recuperati in una precedente esecuzione batch non vengano recuperati nuovamente. |
@@ -611,4 +611,4 @@ Di seguito è riportato un esempio di schema personalizzato che è possibile agg
 
 ## Passaggi successivi
 
-Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Platform. Consulta il documento su [configurazione delle specifiche di esplorazione](./explorespec.md) per ulteriori informazioni.
+Con le specifiche sorgente compilate, puoi procedere alla configurazione delle specifiche di esplorazione per l’origine che desideri integrare in Platform. Vedi il documento su [configurazione delle specifiche di esplorazione](./explorespec.md) per ulteriori informazioni.

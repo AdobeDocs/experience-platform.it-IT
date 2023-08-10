@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulla corrispondenza dei segmenti
 description: Segment Match è un servizio di condivisione dei segmenti in Adobe Experience Platform che consente a due o più utenti di Platform di scambiarsi i dati dei segmenti in modo sicuro, gestito e rispettoso della privacy.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1996'
 ht-degree: 2%
 
 ---
@@ -64,7 +64,7 @@ Per ulteriori informazioni su `share` utilizzato per impostare il valore del con
 
 L’ultimo prerequisito da stabilire è configurare una nuova etichetta di utilizzo dati per impedire la condivisione dei dati. Tramite le etichette di utilizzo dei dati, puoi gestire quali dati possono essere condivisi tramite [!DNL Segment Match].
 
-Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experience Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
+Le etichette di utilizzo dei dati consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Experienci Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
 
 [!DNL Segment Match] utilizza l’etichetta C11, un’etichetta di contratto specifica per [!DNL Segment Match] che puoi aggiungere manualmente a qualsiasi set di dati o attributo per assicurarti che sia escluso dal [!DNL Segment Match] processo di condivisione dei partner. L’etichetta C11 indica i dati che non devono essere utilizzati in [!DNL Segment Match] processi. Dopo aver determinato quali set di dati e/o campi escludere [!DNL Segment Match] e aggiunta l&#39;etichetta C11 di conseguenza, l&#39;etichetta viene automaticamente applicata dal [!DNL Segment Match] flusso di lavoro. [!DNL Segment Match] abilita automaticamente [!UICONTROL Limita la condivisione dei dati] politica di base. Per istruzioni specifiche su come applicare le etichette di utilizzo dei dati ai set di dati, consulta l’esercitazione su [gestione delle etichette di utilizzo dei dati nell’interfaccia utente](../../../data-governance/labels/user-guide.md).
 

@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '841'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Durante la creazione di una destinazione tramite Destination SDK, oltre a [confi
 
 Dopo una tale azione, gli utenti potranno scegliere anche di selezionare le identità di destinazione, oltre agli attributi del profilo di destinazione.
 
-Per ulteriori informazioni sugli spazi dei nomi delle identità in Experience Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/namespaces.md).
 
 Quando configuri gli spazi dei nomi di identità per la destinazione, puoi ottimizzare la mappatura identità di destinazione supportata dalla destinazione, ad esempio:
 
@@ -25,7 +25,7 @@ Quando configuri gli spazi dei nomi di identità per la destinazione, puoi ottim
 * Consentire agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/namespaces.md#standard) nei tuoi spazi dei nomi di identità.
 * Consentire agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/namespaces.md#manage-namespaces) nei tuoi spazi dei nomi di identità.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Puoi configurare gli spazi dei nomi di identità supportati tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
@@ -92,7 +92,7 @@ Se i clienti selezionano uno spazio dei nomi dell’identità di origine e non u
 
 ## Configurare l’hashing facoltativo del campo sorgente
 
-I clienti di Experience Platform possono scegliere di acquisire i dati in Platform in formato hash o in testo normale. Se la piattaforma di destinazione accetta sia dati con hash che dati senza hash, puoi dare ai clienti la possibilità di scegliere se Platform deve eseguire l’hashing dei valori dei campi sorgente quando vengono esportati nella destinazione.
+I clienti di Experienci Platform possono scegliere di acquisire i dati in Platform in formato hash o in testo normale. Se la piattaforma di destinazione accetta sia dati con hash che dati senza hash, puoi dare ai clienti la possibilità di scegliere se Platform deve eseguire l’hashing dei valori dei campi sorgente quando vengono esportati nella destinazione.
 
 La configurazione seguente abilita il [Applica trasformazione](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell’interfaccia utente di Platform, nel passaggio Mappatura.
 

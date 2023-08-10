@@ -1,9 +1,9 @@
 ---
 description: Scopri come formattare le richieste HTTP inviate all’endpoint. Utilizza l’endpoint /authoring/destination-servers per configurare le specifiche di modello del server di destinazione in Adobe Experience Platform Destination SDK.
 title: Specifiche di modello per le destinazioni create con Destination SDK
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ In una specifica del modello è possibile definire come trasformare i campi degl
 
 Le specifiche del modello fanno parte della configurazione del server di destinazione per le destinazioni in tempo reale (streaming).
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
 È possibile configurare le specifiche del modello per la destinazione tramite `/authoring/destination-servers` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 

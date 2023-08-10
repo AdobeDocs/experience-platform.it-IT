@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 5%
+source-wordcount: '2181'
+ht-degree: 10%
 
 ---
 
@@ -181,14 +181,14 @@ Per ulteriori informazioni, leggere [Panoramica di Customer AI](../../intelligen
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 **Funzionalità chiave**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Flusso di lavoro dei criteri di unione aggiornato | Platform ha aggiornato la configurazione dei criteri di unione a un nuovo flusso di lavoro graduale. Questo flusso di lavoro consente agli utenti di riunire frammenti di dati da più set di dati profilo e di impostare la priorità del modo in cui i dati vengono uniti in tali set di dati, al fine di creare una visualizzazione completa di ogni singolo utente. Gli utenti possono unire i singoli set di dati profilo XDM selezionati selezionando il metodo di unione appropriato (Timestamp ordinato o Precedenza set di dati) e aggiungendo i set di dati ExperienceEvent ai set di dati profilo. |
-| Visualizzazione schema di unione | Nell’interfaccia utente di Experience Platform, gli utenti possono trovare più facilmente le informazioni relative a tutti gli schemi e i set di dati che contribuiscono allo schema di unione, nonché gli attributi chiave della superficie, come i campi di identità e relazione. Questi aggiornamenti migliorano la possibilità di risolvere i problemi e di verificare che i profili siano configurati correttamente, che le identità siano unite correttamente e che i dati siano stati acquisiti correttamente. |
+| Visualizzazione schema di unione | Nell’interfaccia utente di Experienci Platform, gli utenti possono trovare più facilmente le informazioni relative a tutti gli schemi e i set di dati che contribuiscono allo schema di unione, nonché gli attributi chiave della superficie, come i campi di identità e relazione. Questi aggiornamenti migliorano la possibilità di risolvere i problemi e di verificare che i profili siano configurati correttamente, che le identità siano unite correttamente e che i dati siano stati acquisiti correttamente. |
 
 Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l’utilizzo di [!DNL Profile] dati, leggi i [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
@@ -196,7 +196,7 @@ Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e bes
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando [!DNL Platform] servizi. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-[!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di configurare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+[!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Nuove sorgenti**
 

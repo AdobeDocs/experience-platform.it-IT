@@ -1,11 +1,11 @@
 ---
 title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experience Platform CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experienci Platform CDP B2B.
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '615'
 ht-degree: 3%
 
 ---

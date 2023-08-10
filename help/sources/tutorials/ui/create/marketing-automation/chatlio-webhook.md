@@ -3,9 +3,9 @@ title: Creare una connessione sorgente del catalogo nell’interfaccia utente
 description: Scopri come creare una connessione sorgente di Chatlio utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Devi anche assicurarti di creare uno schema Platform da utilizzare per la tua or
 
 ## Connetti [!DNL Chatlio] account {#connect-account}
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experienci Platform.
 
 Utilizza il *[!UICONTROL Categorie]* per filtrare le sorgenti per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
@@ -118,7 +118,7 @@ Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e lascia un
 
 ## Ottieni l’URL dell’endpoint di streaming {#get-streaming-endpoint-url}
 
-Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform.
+Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experienci Platform.
 
 Per creare l’URL utilizzato per configurare il webhook su [!DNL Chatlio] è necessario recuperare quanto segue:
 
@@ -147,7 +147,7 @@ Quindi, seleziona la **[!DNL Behavior]** e aggiungi l’URL del webhook al *[!DN
 
 >[!TIP]
 >
->È possibile iscriversi a diversi eventi per [!DNL Chatlio] webhook. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Chatlio] documentazione sugli eventi](https://chatlio.com/docs/webhooks/).
+>È possibile iscriversi a diversi eventi per [!DNL Chatlio] webhook. Per ulteriori informazioni sui diversi eventi, consulta [[!DNL Chatlio] documentazione sugli eventi](https://chatlio.com/docs/webhooks/).
 
 ## Passaggi successivi {#next-steps}
 

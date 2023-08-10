@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Configurare le specifiche di autenticazione per le origini self-service (SDK batch)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -237,4 +237,4 @@ Di seguito è riportato un esempio di specifica di autenticazione completata che
 
 ## Passaggi successivi
 
-Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Platform. Consulta il documento su [configurazione delle specifiche di origine](./sourcespec.md) per ulteriori informazioni.
+Con le specifiche di autenticazione compilate, puoi procedere alla configurazione delle specifiche di origine per l’origine che desideri integrare in Platform. Vedi il documento su [configurazione delle specifiche di origine](./sourcespec.md) per ulteriori informazioni.

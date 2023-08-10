@@ -4,16 +4,16 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profilo, pubblico e destinazione in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
 
 # Esplora, verifica ed elabora i set di dati del dashboard tramite [!DNL Query Service]
 
-Adobe Experience Platform fornisce informazioni importanti sui dati di profilo, pubblico e destinazioni della tua organizzazione tramite dashboard disponibili nell’interfaccia utente di Experience Platform. Puoi quindi utilizzare Adobe Experience Platform [!DNL Query Service] esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
+Adobe Experience Platform fornisce informazioni importanti sui dati di profilo, pubblico e destinazioni della tua organizzazione tramite dashboard disponibili nell’interfaccia utente di Experienci Platform. Puoi quindi utilizzare Adobe Experience Platform [!DNL Query Service] esplorare, verificare ed elaborare i set di dati non elaborati che alimentano queste dashboard nel data lake.
 
 ## Guida introduttiva a [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Per ulteriori informazioni su [!DNL Query Service] e il suo ruolo all&#39;intern
 
 ## Accesso ai set di dati disponibili
 
-È possibile utilizzare [!DNL Query Service] per eseguire query sui set di dati non elaborati per i dashboard di profilo, pubblico e destinazioni. Per visualizzare i set di dati disponibili, nell’interfaccia utente di Experience Platform seleziona **Set di dati** nel menu di navigazione a sinistra per aprire il dashboard Set di dati. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
+È possibile utilizzare [!DNL Query Service] per eseguire query sui set di dati non elaborati per i dashboard di profilo, pubblico e destinazioni. Per visualizzare i set di dati disponibili, nell’interfaccia utente di Experienci Platform seleziona **Set di dati** nel menu di navigazione a sinistra per aprire il dashboard Set di dati. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, tra cui il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione dell’acquisizione più recente.
 
 ![Dashboard di Sfoglia set di dati con la scheda Set di dati evidenziata nel menu di navigazione a sinistra.](./images/query/browse-datasets.png)
 
@@ -47,7 +47,7 @@ Le informazioni sul dashboard dei profili sono collegate ai criteri di unione de
 
 La convenzione di denominazione di questi set di dati è **Profile-Snapshot-Export** seguito da un valore alfanumerico casuale generato dal sistema. Ad esempio: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Per comprendere lo schema completo di ciascun set di dati di esportazione dello snapshot del profilo, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo di ciascun set di dati di esportazione dello snapshot del profilo, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experienci Platform.
 
 ![Anteprima del set di dati Profilo-Snapshot-Esporta.](images/query/profile-attribute.png)
 
@@ -70,7 +70,7 @@ Nel data lake è disponibile un set di dati di metadati del pubblico che contien
 
 La convenzione di denominazione di questo set di dati è **Segmentdefinition-Snapshot-Export** seguito da un valore alfanumerico. Ad esempio: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Per comprendere lo schema completo di ogni set di dati di esportazione dello snapshot della definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo di ogni set di dati di esportazione dello snapshot della definizione del segmento, puoi visualizzare in anteprima ed esplorare i set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experienci Platform.
 
 ### Set di dati metadati di destinazione
 
@@ -78,15 +78,11 @@ I metadati per tutte le destinazioni attivate dell’organizzazione sono disponi
 
 La convenzione di denominazione di questo set di dati è **DIM_Destination**.
 
-Per comprendere lo schema completo del set di dati di destinazione DIM, puoi visualizzare in anteprima ed esplorare il set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo del set di dati di destinazione DIM, puoi visualizzare in anteprima ed esplorare il set di dati [utilizzo del visualizzatore di set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente di Experienci Platform.
 
 ![Anteprima del set di dati DIM_Destination.](images/query/destinations-metadata.png)
 
-## (Beta) Rapporti Approfondimenti su Customer Data Platform (CDP)
-
->[!IMPORTANT]
->
->La funzione Modelli dati di approfondimenti CDP è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
+## Rapporti Approfondimenti su Customer Data Platform (CDP)
 
 La funzione CDP Insights Data Models espone l’SQL che potenzia le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQl per creare rapporti CDP per i casi d’uso di marketing e KPI.
 

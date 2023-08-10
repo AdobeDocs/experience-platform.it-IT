@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare le impostazioni di esportazione dei file per le destinazioni create con Destination SDK.
 title: Configurazione batch
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Quando crei destinazioni basate su file tramite Destination SDK, puoi configurar
 
 Le impostazioni di configurazione batch fanno parte della configurazione di destinazione per le destinazioni basate su file.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 È possibile configurare le impostazioni di denominazione ed esportazione dei file tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
@@ -95,7 +95,7 @@ I valori impostati qui vengono visualizzati in [Pianificare l’esportazione del
 | `allowedScheduleFrequency` | Elenco | Definisce la frequenza di esportazione dei file disponibile per i clienti. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enum | Definisce la frequenza di esportazione predefinita dei file. Valori supportati:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> Il valore predefinito è `DAILY`. |
 | `defaultStartTime` | Stringa | Definisce l&#39;ora di inizio predefinita per l&#39;esportazione del file. Utilizza il formato file a 24 ore. Il valore predefinito è &quot;00:00&quot;. |
-| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID pubblico, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall&#39;ordine in cui si definiscono le macro, l&#39;interfaccia utente di Experience Platform le visualizzerà sempre nell&#39;ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` l&#39;elenco deve contenere almeno una macro. |
+| `filenameConfig.allowedFilenameAppendOptions` | Stringa | *Obbligatorio*. Elenco delle macro di nomi file disponibili tra cui gli utenti possono scegliere. Questo determina quali elementi vengono aggiunti ai nomi dei file esportati (ID pubblico, nome organizzazione, data e ora di esportazione e altri). Quando si imposta `defaultFilename`, assicurarsi di evitare la duplicazione delle macro. <br><br>Valori supportati: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Indipendentemente dall&#39;ordine in cui si definiscono le macro, l&#39;interfaccia utente di Experienci Platform le visualizzerà sempre nell&#39;ordine presentato qui. <br><br> Se `defaultFilename` è vuoto, il `allowedFilenameAppendOptions` l&#39;elenco deve contenere almeno una macro. |
 | `filenameConfig.defaultFilenameAppendOptions` | Stringa | *Obbligatorio*. Macro dei nomi di file predefiniti preselezionate che gli utenti possono deselezionare.<br><br> Le macro di questo elenco sono un sottoinsieme di quelle definite in `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | Stringa | *Facoltativo*. Definisce le macro dei nomi di file predefiniti per i file esportati. Non possono essere sovrascritti dagli utenti. <br><br>Qualsiasi macro definita da `allowedFilenameAppendOptions` verrà aggiunto dopo il `defaultFilename` macro. <br><br>Se `defaultFilename` è vuoto, è necessario definire almeno una macro in `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | Booleano | Definisce se i tipi di pubblico attivati devono essere esportati in un singolo file o in più file, in base al pubblico [criterio di unione](../../../../profile/merge-policies/overview.md). Valori supportati: <ul><li>`true`: esporta un file per criterio di unione.</li><li>`false`: esporta un file per pubblico, indipendentemente dal criterio di unione. Questo è il comportamento predefinito. È possibile ottenere lo stesso risultato omettendo completamente questo parametro.</li></ul> |

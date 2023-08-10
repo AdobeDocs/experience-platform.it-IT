@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Adobe Privacy
 description: Scopri l’estensione tag Adobe Privacy in Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '900'
 ht-degree: 9%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 9%
 
 L’estensione tag Adobe Privacy consente di raccogliere e rimuovere gli ID utente assegnati agli utenti finali dalle soluzioni Adobe sui dispositivi lato client. Gli ID raccolti possono quindi essere inviati a [Adobe Experience Platform Privacy Service](../../../../privacy-service/home.md) per accedere o cancellare i dati personali di un individuo correlato nelle applicazioni Adobe Experience Cloud supportate.
 
-Questa guida illustra come installare e configurare l’estensione Adobe Privacy nell’interfaccia utente di Experience Platform o nell’interfaccia utente di Data Collection.
+Questa guida illustra come installare e configurare l’estensione Adobe Privacy nell’interfaccia utente di Experienci Platform o nell’interfaccia utente di Data Collection.
 
 >[!NOTE]
 >
->Se preferisci installare queste funzionalità senza utilizzare i tag, consulta la [Panoramica della libreria JavaScript per la privacy](../../../../privacy-service/js-library.md) per i passaggi su come implementare utilizzando il codice non elaborato.
+>Se preferisci installare queste funzionalità senza utilizzare i tag, consulta [Panoramica della libreria JavaScript per la privacy](../../../../privacy-service/js-library.md) per i passaggi su come implementare utilizzando il codice non elaborato.
 
 ## Installa e configura l&#39;estensione 
 

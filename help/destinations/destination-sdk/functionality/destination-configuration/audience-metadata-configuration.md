@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare le impostazioni dei metadati del pubblico per le destinazioni create con Destination SDK.
 title: Configurazione dei metadati del pubblico
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 2%
 
 ---
@@ -11,11 +11,11 @@ ht-degree: 2%
 
 # Configurazione dei metadati del pubblico
 
-Durante l’esportazione dei dati da Experience Platform alla destinazione, per poter condividere tra Experience Platform e la destinazione potrebbero essere necessari metadati di pubblico specifici, come nomi di pubblico o ID di pubblico.
+Durante l’esportazione dei dati da Experienci Platform alla destinazione, per poter condividere tra Experienci Platform e la destinazione potrebbero essere necessari metadati di pubblico specifici, come nomi di pubblico o ID di pubblico.
 
 Destination SDK offre strumenti che puoi utilizzare per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella piattaforma di destinazione.
 
-Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Puoi configurare il modello di metadati del pubblico tramite `/authoring/audience-templates` endpoint. Dopo aver creato la configurazione dei metadati del pubblico, puoi utilizzare `/authoring/destinations` endpoint per configurare `audienceMetadataConfig` sezione. Questa sezione indica alla destinazione quali metadati di pubblico deve mappare sul modello di pubblico.
 

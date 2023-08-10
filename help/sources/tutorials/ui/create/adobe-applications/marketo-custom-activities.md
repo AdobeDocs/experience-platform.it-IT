@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente di Marketo Engage e un flusso di dati per i dati di attività personalizzati nell’interfaccia utente
 description: Questo tutorial descrive i passaggi necessari per creare una connessione di origine del Marketo Engage e un flusso di dati nell’interfaccia utente per inserire dati personalizzati sulle attività in Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 * [Spazi dei nomi B2B e utilità di generazione automatica dello schema](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): l’utility di generazione automatica degli spazi dei nomi B2B e dello schema consente di utilizzare [!DNL Postman] per generare automaticamente i valori per gli spazi dei nomi e gli schemi B2B. Prima di creare uno schema e uno spazio dei nomi B2B, devi completare [!DNL Marketo] connessione sorgente e flusso di dati.
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Experience Data Model (XDM)](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [Experience Data Model (XDM)](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Creare e modificare gli schemi nell’interfaccia utente](../../../../../xdm/ui/resources/schemas.md): scopri come creare e modificare gli schemi nell’interfaccia utente di.
 * [Spazi dei nomi delle identità](../../../../../identity-service/namespaces.md): gli spazi dei nomi di identità sono un componente di [!DNL Identity Service] che fungono da indicatori del contesto a cui si riferisce un’identità. Un’identità completa include un valore ID e uno spazio dei nomi.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Recuperare i dettagli dell’attività personalizzata
 
@@ -45,13 +45,13 @@ Seleziona **Campi** dall’intestazione superiore per visualizzare i campi assoc
 
 ## Impostare gruppi di campi per attività personalizzate nello schema delle attività B2B
 
-In *[!UICONTROL Schemi]* dashboard dell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sfoglia]** e quindi seleziona **[!UICONTROL Attività B2B]** dall’elenco degli schemi.
+In *[!UICONTROL Schemi]* dashboard dell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Sfoglia]** e quindi seleziona **[!UICONTROL Attività B2B]** dall’elenco degli schemi.
 
 >[!TIP]
 >
 >Utilizza la barra di ricerca per accelerare la navigazione nell’elenco degli schemi.
 
-![L’area di lavoro degli schemi nell’interfaccia utente Experience Platform con lo schema di attività B2B selezionato.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
+![L’area di lavoro degli schemi nell’interfaccia utente Experienci Platform con lo schema di attività B2B selezionato.](../../../../images/tutorials/create/marketo-custom-activities/b2b-activity.png)
 
 ### Crea un nuovo gruppo di campi per l’attività personalizzata
 
@@ -97,7 +97,7 @@ Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello s
 
 Sotto [!UICONTROL applicazioni Adobe] categoria, seleziona **[!UICONTROL Marketo Engage]**. Quindi, seleziona **[!UICONTROL Aggiungi dati]** per creare un nuovo [!DNL Marketo] flusso di dati.
 
-![Catalogo delle origini nell’interfaccia utente di Experience Platform con l’origine del Marketo Engage selezionata.](../../../../images/tutorials/create/marketo/catalog.png)
+![Catalogo delle origini nell’interfaccia utente di Experienci Platform con l’origine del Marketo Engage selezionata.](../../../../images/tutorials/create/marketo/catalog.png)
 
 ### Selezionare i dati
 

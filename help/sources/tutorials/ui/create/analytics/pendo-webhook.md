@@ -3,9 +3,9 @@ title: Creare una connessione sorgente Pendo nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Pendo utilizzando l’interfaccia utente di Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1211'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Devi anche assicurarti di creare prima uno schema Platform da utilizzare per la 
 
 ## Connetti [!DNL Pendo] account {#connect-account}
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experienci Platform.
 
 Utilizza il *[!UICONTROL Categorie]* per filtrare le sorgenti per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
@@ -121,7 +121,7 @@ Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e lascia un
 
 ## Ottieni l’URL dell’endpoint di streaming {#get-streaming-endpoint-url}
 
-Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform.
+Una volta creato il flusso di dati di streaming, ora puoi recuperare l’URL dell’endpoint di streaming. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experienci Platform.
 
 Per creare l’URL utilizzato per configurare il webhook su [!DNL Pendo] è necessario recuperare quanto segue:
 
@@ -144,7 +144,7 @@ Una volta creato il webhook, accedi alla pagina delle impostazioni del [!DNL Pen
 
 >[!TIP]
 >
->Puoi iscriverti a diverse categorie di eventi per determinare il tipo di eventi che desideri inviare dal tuo [!DNL Pendo] da un’istanza a Platform. Per ulteriori informazioni sui diversi eventi, consulta la [[!DNL Pendo] documentazione](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>Puoi iscriverti a diverse categorie di eventi per determinare il tipo di eventi che desideri inviare dal tuo [!DNL Pendo] da un’istanza a Platform. Per ulteriori informazioni sui diversi eventi, consulta [[!DNL Pendo] documentazione](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Passaggi successivi {#next-steps}
 

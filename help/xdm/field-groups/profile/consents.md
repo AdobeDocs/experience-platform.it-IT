@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Gruppo di campi schema Consensi e preferenze
 description: Questo documento fornisce una panoramica del gruppo di campi Schema Consensi e preferenze.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,6 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 >* [Generare dati di esempio nell’interfaccia utente](../../ui/sample.md)
 >* [Generare dati di esempio nell’API](../../api/sample-data.md)
 
-
 ### `idSpecific`
 
 `idSpecific` può essere utilizzato quando un particolare consenso o preferenza non si applica universalmente a un cliente, ma è limitato a un singolo dispositivo o ID. Ad esempio, un cliente può rinunciare alla ricezione di e-mail a un indirizzo, consentendo potenzialmente l’invio di e-mail a un altro.
@@ -106,7 +105,6 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 >
 >* Se il cliente ha rinunciato a livello di canale, qualsiasi consenso o preferenza equivalente in `idSpecific` vengono ignorati.
 >* Se il consenso o la preferenza a livello di canale non è impostata, o il cliente ha acconsentito, allora il consenso o le preferenze equivalenti in `idSpecific` sono onorati.
-
 
 Ogni chiave nella `idSpecific` L’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../../identity-service/namespaces.md) nella documentazione del servizio Identity.
 
@@ -177,7 +175,7 @@ Il `adID` Il consenso rappresenta il consenso del cliente per indicare se è pos
 
 Per utilizzare il [!UICONTROL Consensi e preferenze] per acquisire i dati sul consenso dai clienti, devi creare un set di dati basato su uno schema che contiene tale gruppo di campi.
 
-Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il [!UICONTROL Consensi e preferenze] gruppo di campi, fare riferimento alla sezione relativa a [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi per creare un set di dati con uno schema esistente.
+Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare gruppi di campi ai campi. Dopo aver creato uno schema contenente un campo con il [!UICONTROL Consensi e preferenze] gruppo di campi, fare riferimento alla sezione [creazione di un set di dati](../../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >

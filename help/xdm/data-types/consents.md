@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per la privacy, la personalizzazione e le preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,6 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 >
 >* [Generare dati di esempio nell’interfaccia utente](../ui/sample.md)
 >* [Generare dati di esempio nell’API](../api/sample-data.md)
-
 
 ## `consents` {#choices}
 
@@ -258,7 +257,7 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 
 Per utilizzare il [!UICONTROL Consensi e preferenze] tipo di dati per acquisire i dati sul consenso dei clienti, devi creare un set di dati basato su uno schema che contiene tale tipo di dati.
 
-Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con il [!UICONTROL Consensi e preferenze] tipo di dati, consulta la sezione relativa a [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi per creare un set di dati con uno schema esistente.
+Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) per i passaggi su come assegnare tipi di dati ai campi. Dopo aver creato uno schema contenente un campo con il [!UICONTROL Consensi e preferenze] tipo di dati, consulta la sezione su [creazione di un set di dati](../../catalog/datasets/user-guide.md#create) nella guida utente del set di dati, segui i passaggi per creare un set di dati con uno schema esistente.
 
 >[!IMPORTANT]
 >

@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Le API Media Edge consentono agli sviluppatori di raccogliere dati per Media Edge Analytics e Customer Journey Analytics.
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -3227,7 +3227,7 @@ Questo documento include una specifica API aperta JSON (OAS) o un riferimento a 
     },
     "/sessionStart": {
       "post": {
-        "description": "Signals the the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
+        "description": "Signals the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
         "parameters": [
           {
             "name": "configId",

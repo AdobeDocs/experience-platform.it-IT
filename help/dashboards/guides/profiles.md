@@ -4,9 +4,9 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 29c93c178a1f6247b61c663e87dbb0e5b95d318e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '3520'
+source-wordcount: '3519'
 ht-degree: 10%
 
 ---

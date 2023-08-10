@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 7%
+source-wordcount: '1825'
+ht-degree: 17%
 
 ---
 
@@ -18,7 +18,7 @@ Questa funzionalità consente di etichettare i campi dello schema Experience Dat
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
+>Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experienci Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali (PII) e ai tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
@@ -76,7 +76,7 @@ Per ulteriori informazioni sul controllo degli accessi, vedere [panoramica sul c
 
 ### Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -93,10 +93,9 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo dell�
 >* In [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), è possibile visualizzare e selezionare per l&#39;attivazione solo i campi per i quali si dispone dell&#39;autorizzazione di accesso.
 >* Quando desideri attivare altri segmenti in una destinazione esistente in cui non hai accesso a tutti i campi mappati per l’esportazione, il flusso di lavoro di attivazione viene bloccato automaticamente.
 
-
 Per ulteriori informazioni su [!DNL Destinations], fare riferimento a [[!DNL Destinations] panoramica](../../destinations/home.md).
 
-### Servizio Identity
+### Identity Service
 
 Adobe Experience Platform [!DNL Identity Service] ti consente di avere una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, consentendoti di fornire esperienze digitali personali e di impatto in tempo reale.
 
@@ -106,7 +105,7 @@ Per ulteriori informazioni su [!DNL Identity Service], fare riferimento a [[!DNL
 
 ### Profilo cliente in tempo reale
 
-Platform ti consente di promuovere esperienze coordinate, coerenti e rilevanti per i tuoi clienti, indipendentemente da dove o quando interagiscono con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti. Il profilo ti consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+ Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -119,7 +118,7 @@ Per ulteriori informazioni sul profilo, consulta [Panoramica del profilo](../../
 
 ### Servizio di segmentazione
 
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo commerciabile di persone all’interno della tua base clienti. I segmenti possono essere basati su dati record (ad esempio informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -130,7 +129,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], fare riferimento a [[
 
 ### XDM
 
-Experience Data Model (XDM) è una specifica open-source progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+Experience Data Model (XDM) è una specifica open-source progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 Il controllo degli accessi basato su attributi consente di:
 

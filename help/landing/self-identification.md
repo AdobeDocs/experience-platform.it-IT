@@ -1,12 +1,12 @@
 ---
 title: Utilizza il sondaggio di auto-identificazione per creare il tuo profilo personale Experience Platform
-description: Scopri come utilizzare l’interfaccia utente di sondaggio per l’identificazione automatica per ricevere contenuti rilevanti in base alle funzioni lavorative e agli obiettivi correlati.
+description: Scopri come utilizzare l’interfaccia utente di sondaggio per l’auto-identificazione per ricevere contenuti rilevanti in base alle funzioni lavorative e agli obiettivi correlati.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 1%
+source-wordcount: '560'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >L’indagine di auto-identificazione è in versione beta. Le sue funzioni e la sua documentazione sono soggette a modifiche.
 
-Il sondaggio di auto-identificazione è un breve questionario presentato nella home page dell’interfaccia utente di Adobe Experience Platform. È possibile compilare il sondaggio per fornire informazioni sulle funzioni lavorative e sugli obiettivi generali. Queste informazioni vengono quindi utilizzate per allineare meglio le guide interne al prodotto e, infine, per fornire contenuti più rilevanti per i tuoi obiettivi.
+Il sondaggio di auto-identificazione è un breve questionario presentato nella pagina Home dell’interfaccia utente di Adobe Experience Platform. È possibile compilare il sondaggio per fornire informazioni sulle funzioni lavorative e sugli obiettivi generali. Queste informazioni vengono quindi utilizzate per allineare meglio le guide interne al prodotto e, infine, per fornire contenuti più rilevanti per i tuoi obiettivi.
 
 Questo documento fornisce informazioni su come utilizzare il sondaggio di auto-identificazione nell’interfaccia utente di Platform per ricevere contenuti rilevanti in base agli obiettivi e alle attività, nonché su come riconfigurare gli attributi del profilo personale utilizzando l’interfaccia utente.
 

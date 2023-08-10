@@ -2,10 +2,10 @@
 title: Endpoint “rule_components”
 description: Scopri come effettuare chiamate all’endpoint /rule_components nell’API di Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 96%
+source-wordcount: '1155'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ I componenti delle regole hanno tre tipi di base:
 | Tipo di componente regola | Descrizione |
 | --- | --- |
 | Eventi | Un evento attiva una regola. La regola viene avviata quando l’evento si verifica in fase di runtime sul dispositivo client. Esempi di eventi sono [!UICONTROL Library Load] (caricamento della libreria), [!UICONTROL Page Top] (parte superiore pagina) e [!UICONTROL Click]. |
-| Condizioni | Una condizione determina i criteri che devono essere rispettati prima che venga eseguita un’aziona. Quando si verifica un evento, le condizioni vengono valutate. Le azioni della regola vengono eseguite solo se sono soddisfatte tutte le condizioni. |
+| Condizioni | Una condizione determina i criteri che devono essere rispettati prima che venga eseguita un’azione. Quando si verifica un evento, le condizioni vengono valutate. Le azioni della regola vengono eseguite solo se sono soddisfatte tutte le condizioni. |
 | Azioni | Queste sono le azioni che la regola dovrà effettivamente eseguire, ad esempio inviare un beacon Adobe Analytics, recuperare un ID visitatore personalizzato o attivare una particolare mbox. |
 
 {style="table-layout:auto"}

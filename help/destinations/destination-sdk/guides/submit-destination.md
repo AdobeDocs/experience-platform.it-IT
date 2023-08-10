@@ -2,9 +2,9 @@
 description: Questa pagina fornisce tutte le informazioni necessarie per inviare e rivedere una destinazione prodotta creata con Destination SDK.
 title: Invia per la revisione una destinazione prodotta creata in Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >* Se il team di Adobi ti chiede di apportare eventuali aggiornamenti alle configurazioni dopo l’invio iniziale, devi inviare un’altra richiesta di pubblicazione di destinazione dopo aver apportato gli aggiornamenti.
 >
->* Anche dopo che la destinazione è live nel catalogo Experience Platform, se devi apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione affinché gli aggiornamenti vengano rispecchiati nelle configurazioni.
+>* Anche dopo che la destinazione è live nel catalogo Experienci Platform, se devi apportare aggiornamenti alle configurazioni, devi inviare una nuova richiesta di pubblicazione di destinazione affinché gli aggiornamenti vengano rispecchiati nelle configurazioni.
 
 Prima che la destinazione possa essere pubblicata su [catalogo delle destinazioni di Experience Platform](/help/destinations/catalog/overview.md), è necessario fornire agli Adobi alcune informazioni sulla destinazione e sui test eseguiti, per garantire che gli utenti godano della migliore esperienza possibile durante l’attivazione dei dati sulla piattaforma.
 
@@ -242,8 +242,8 @@ Nel tuo [e-mail di invio](#download-sample-email), allega un file CSV esportato 
 Infine, devi fornire una prova che i dati siano stati correttamente acquisiti nel sistema dopo essere stati esportati nel percorso di archiviazione fornito. Fornisci uno dei seguenti elementi:
 
 * Screenshot o un breve video di cattura in cui il file viene prelevato manualmente dal percorso di archiviazione e caricato nel sistema.
-* Screenshot o un breve video di screencapture in cui l’interfaccia utente del sistema conferma che il nome del file generato da Experience Platform è stato correttamente acquisito nel sistema.
-* Registra le righe del sistema che Adobe può correlare con il nome del file o con i dati generati da Experience Platform.
+* Screenshot o un breve video di screencapture in cui l’interfaccia utente del sistema conferma che il nome del file generato da Experienci Platform è stato correttamente acquisito nel sistema.
+* Registra le righe del sistema che Adobe può correlare con il nome del file o con i dati generati da Experienci Platform.
 
 ## Prova di aver inviato una richiesta di pubblicazione di destinazione {#destination-publishing-request-proof}
 

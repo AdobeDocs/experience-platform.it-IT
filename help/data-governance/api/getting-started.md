@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida introduttiva all’API del servizio criteri
 description: L’API del servizio criteri consente di creare e gestire varie risorse relative alla governance dei dati di Adobe Experience Platform. Questo documento fornisce un’introduzione ai concetti fondamentali che è necessario conoscere prima di tentare di effettuare chiamate all’API del servizio criteri.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---

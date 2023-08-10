@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti sulle normative sulla privacy
 description: Questo documento fornisce le risposte alle domande più frequenti sulle normative legali sulla privacy supportate e sulla loro implementazione in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -86,9 +86,9 @@ Supponendo che l’azienda abbia raccolto informazioni personali e che possa aut
 
 | Regolamento | Intervallo temporale per la risposta | Note |
 | --- | --- | --- |
-| CCPA (California) | 45 giorni |  |
+| CCPA (California) | 45 giorni | |
 | RGPD (Unione europea) | 30 giorni | Se la richiesta è complessa o se la stessa persona interessata ha presentato numerose richieste, la richiesta può essere estesa a 60 giorni. |
-| LGPD (Brasile) | 15 giorni |  |
+| LGPD (Brasile) | 15 giorni | |
 | PDPA (Thailandia) | 30 giorni | Se una società non è in grado di rispondere alla richiesta di una persona interessata entro il periodo di conformità, essa disporrà di ulteriori 30 giorni dalla data in cui non è stata in grado di soddisfare la richiesta per rispondere per iscritto alla persona interessata. |
 
 <!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->

@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurare un’istanza di Customer AI
 description: I servizi AI/ML forniscono IA per l’analisi dei clienti come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti illustrano i passaggi per la configurazione di un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---

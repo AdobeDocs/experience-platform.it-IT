@@ -1,9 +1,9 @@
 ---
 description: Scopri come configurare le opzioni di formattazione dei file per le destinazioni basate su file create con Adobe Experience Platform Destination SDK tramite l’endpoint "/destination-servers".
 title: Configurazione formattazione file
-source-git-commit: 5a6359e5731b36763e86eba8c79e60d74fb3b4c8
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '999'
 ht-degree: 4%
 
 ---
@@ -48,7 +48,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Parametri supportati {#supported-parameters}
 
-È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experience Platform.
+È possibile modificare diverse proprietà dei file esportati in modo che corrispondano ai requisiti del sistema di ricezione dei file della destinazione, al fine di leggere e interpretare in modo ottimale i file ricevuti da Experienci Platform.
 
 >[!NOTE]
 >
@@ -125,7 +125,7 @@ Nell’esempio di configurazione seguente, tutte le opzioni CSV sono predefinite
 
 ## Opzioni CSV in cui gli utenti possono selezionare le opzioni di configurazione {#file-configuration-templating-pebble}
 
-Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è predefinita. Il `value` in ciascuno dei `csvOptions` parametri è configurato in un campo corrispondente dei dati del cliente tramite `/destinations` endpoint (ad esempio [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) per `quote` file (opzione di formattazione del file) e gli utenti possono utilizzare l’interfaccia utente di Experience Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente. Puoi vedere come si presentano queste opzioni in [opzioni di formattazione dei file per le destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md) documentazione.
+Nell’esempio di configurazione seguente, nessuna delle opzioni CSV è predefinita. Il `value` in ciascuno dei `csvOptions` parametri è configurato in un campo corrispondente dei dati del cliente tramite `/destinations` endpoint (ad esempio [`customerData.quote`](../../functionality/destination-configuration/customer-data-fields.md#conditional-options) per `quote` file (opzione di formattazione del file) e gli utenti possono utilizzare l’interfaccia utente di Experienci Platform per selezionare tra le varie opzioni configurate nel campo dati cliente corrispondente. Puoi vedere come si presentano queste opzioni in [opzioni di formattazione dei file per le destinazioni basate su file](../../../ui/batch-destinations-file-formatting-options.md) documentazione.
 
 ```json
 {

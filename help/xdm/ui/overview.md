@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
 solution: Experience Platform
 title: Panoramica dell’interfaccia utente degli schemi
-description: Questa panoramica descrive le principali funzionalità dell’area di lavoro Schemi in Experience Platform.
+description: Questa panoramica descrive le principali funzionalità dell’area di lavoro Schemi in Experienci Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 9%
 
 ---
