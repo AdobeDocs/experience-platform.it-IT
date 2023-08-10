@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform; home; argomenti popolari; tag unificati; tag;
-title: Panoramica sui tag unificati (Beta)
+title: Panoramica dei tag unificati
 description: Questo documento fornisce informazioni sui tag unificati in Adobe Experience Platform
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '607'
-ht-degree: 100%
+source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 98%
 
 ---
 
-# Panoramica sui tag unificati (Beta)
-
->[!IMPORTANT]
->
->I tag unificati sono nella versione beta. Per lasciare un feedback, fai clic sul pulsante nella parte superiore della pagina di Amministrazione dei tag.
+# Panoramica sui tag unificati
 
 I tag sono una funzionalità di Adobe Experience Platform che consente agli amministratori di gestire le tassonomie dei metadati al fine di classificare gli oggetti aziendali per semplificare l’individuazione e la classificazione. I tag sono metadati che possono essere considerati come parole chiave che possono essere associate a un segmento, a un set di dati, a un percorso o ad altri oggetti per consentire alle ricerche di trovare l’oggetto e gli oggetti correlati. I tag sono classificati in due tipi: categorizzati e non categorizzati.
 
