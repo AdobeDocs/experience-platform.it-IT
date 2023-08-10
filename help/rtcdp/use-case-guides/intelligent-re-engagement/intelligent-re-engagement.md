@@ -3,16 +3,16 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 6%
+source-wordcount: '3259'
+ht-degree: 5%
 
 ---
 
 # Coinvolgi di nuovo i tuoi clienti in modo intelligente per tornare
 
-Il ricoinvolgimento intelligente consente di impostare una campagna di drip cross-channel personalizzata per convincere i clienti a eseguire un’azione particolare. La campagna di nudging è destinata a funzionare per un periodo di tempo limitato, che include l’invio di un cliente che ha mostrato e-mail intenzionali, sms e annunci a pagamento. Una volta che il cliente ha intrapreso l’azione appropriata, la campagna nudge terminerà immediatamente.
+Il ricoinvolgimento intelligente consente di impostare una campagna di drip cross-channel personalizzata per convincere i clienti a eseguire un’azione particolare. La campagna di nudging è destinata a funzionare per un periodo di tempo limitato, che include l’invio di clienti che hanno mostrato e-mail, SMS e annunci a pagamento intenzionali. Una volta che il cliente ha intrapreso l’azione appropriata, la campagna nudge terminerà immediatamente.
 
 ![Panoramica visiva di alto livello sul coinvolgimento intelligente.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -23,53 +23,55 @@ Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai l
 * [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Aggrega i dati tra le diverse origini dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). CDP viene utilizzato anche per attivare i tipi di pubblico tramite e-mail e sul web (tramite Adobe Target).
    * [Schemi](/help/xdm/home.md)
    * [Profili](/help/profile/home.md)
+   * [Set di dati](/help/catalog/datasets/overview.md)
    * [Tipi di pubblico](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [Destinazioni](/help/destinations/home.md)
    * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Pubblico/Eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Azioni percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
-Sono stati creati tre percorsi di ricoinvolgimento.
+Al momento sono stati sviluppati tre diversi percorsi di ricoinvolgimento.
 
 >[!BEGINTABS]
 
 >[!TAB Percorso di ricoinvolgimento]
 
-Il percorso di ricoinvolgimento esegue il targeting della navigazione abbandonata del prodotto sia sul sito web che sull’app. Questo percorso viene attivato quando un prodotto viene visualizzato senza alcun prodotto acquistato o aggiunto al carrello. Il coinvolgimento con il brand viene attivato dopo tre giorni, se non sono presenti aggiunte di elenco nelle ultime 24 ore.
+Il percorso di ricoinvolgimento esegue il targeting della navigazione abbandonata dei prodotti sia sul sito web che sull’app. Questo percorso viene attivato quando un prodotto viene visualizzato ma non acquistato o aggiunto al carrello. Il coinvolgimento con il brand viene attivato dopo tre giorni se non sono presenti aggiunte di elenco nelle ultime 24 ore.
 
 ![Panoramica visiva di alto livello del percorso di ricoinvolgimento intelligente del cliente.](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. I dati vengono aggregati in Web SDK/Mobile SDK/Edge Network API tramite Edge Network (metodo preferito).
+1. I dati vengono aggregati in SDK per web, SDK per dispositivi mobili o acquisizione API Edge Network tramite la rete Edge (metodo preferito).
 2. As a **cliente**, puoi creare set di dati contrassegnati per [!UICONTROL Profilo].
 3. As a **cliente**, carichi i profili in Real-Time CDP e definisci criteri di governance per assicurarne un utilizzo responsabile.
 4. As a **cliente**, puoi creare tipi di pubblico mirati dall’elenco dei profili per verificare se **utente** negli ultimi tre giorni ha creato un nuovo brand engagement.
 5. As a **cliente**, creerai un percorso di ricoinvolgimento in Adobe Journey Optimizer.
-6. Se necessario, utilizza **partner dati** per l’attivazione dei tipi di pubblico nelle destinazioni desiderate per i media a pagamento.
+6. Se necessario, utilizza **partner dati** per l’attivazione dei tipi di pubblico nelle destinazioni desiderate dei media a pagamento.
 7. Adobe Journey Optimizer verifica la presenza del consenso e invia le varie azioni configurate.
 
 >[!TAB Percorso carrello abbandonato]
 
-Questo percorso di carrello abbandonato individua i prodotti che sono stati inseriti nel carrello ma non acquistati sia sul sito web che sull’app. Utilizzato per avviare e arrestare le campagne Paid Media
+Il percorso del carrello abbandonato individua i prodotti che sono stati inseriti nel carrello ma che non sono ancora stati acquistati sia sul sito web che sull’app. Inoltre, le campagne Paid Media vengono avviate e interrotte utilizzando questo metodo.
 
 ![Il cliente ha abbandonato il percorso di carrello panoramica visiva di alto livello.](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. I dati vengono aggregati in Web SDK/Mobile SDK/Edge Network API tramite Edge Network (metodo preferito).
+1. I dati vengono aggregati in SDK per web, SDK per dispositivi mobili o acquisizione API Edge Network tramite la rete Edge (metodo preferito).
 2. As a **cliente**, puoi creare set di dati contrassegnati per [!UICONTROL Profilo].
 3. As a **cliente**, carichi i profili in Real-Time CDP e definisci criteri di governance per assicurarne un utilizzo responsabile.
 4. As a **cliente**, puoi creare tipi di pubblico mirati dall’elenco dei profili per verificare se **utente** ha inserito un articolo nel carrello ma non ha completato l&#39;acquisto. Il **[!UICONTROL Aggiungi al carrello]** l’evento avvia un timer che attende 30 minuti, quindi controlla se è stato acquistato. Se non è stato effettuato alcun acquisto, il **utente** viene aggiunto al **[!UICONTROL Abbandona carrello]** pubblico.
-5. As a **cliente**, si creerà un percorso di carrello abbandonato in Adobe Journey Optimizer
-6. Se necessario, utilizza **partner dati** per l’attivazione dei tipi di pubblico nelle destinazioni desiderate per i media a pagamento.
+5. As a **cliente**, verrà creato un percorso di carrello abbandonato in Adobe Journey Optimizer
+6. Se necessario, utilizza **partner dati** per l’attivazione dei tipi di pubblico nelle destinazioni desiderate dei media a pagamento.
 7. Adobe Journey Optimizer verifica la presenza del consenso e invia le varie azioni configurate.
 
 >[!TAB Percorso di conferma ordine]
 
-Questo percorso di conferma dell’ordine esegue il targeting degli acquisti di prodotti sia sul sito web che sull’app.
+Il percorso di conferma degli ordini si concentra sugli acquisti di prodotti effettuati tramite il sito web e l’app mobile.
 
 ![Percorso di conferma dell&#39;ordine cliente panoramica visiva di alto livello.](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. I dati vengono aggregati in Web SDK/Mobile SDK/Edge Network API tramite Edge Network (metodo preferito).
+1. I dati vengono aggregati in SDK per web, SDK per dispositivi mobili o acquisizione API Edge Network tramite la rete Edge (metodo preferito).
 2. As a **cliente**, puoi creare set di dati contrassegnati per [!UICONTROL Profilo].
 3. As a **cliente**, carichi i profili in Real-Time CDP e definisci criteri di governance per assicurarne un utilizzo responsabile.
 4. As a **cliente**, puoi creare tipi di pubblico mirati dall’elenco dei profili per verificare se **utente** ha effettuato un acquisto.
@@ -80,41 +82,36 @@ Questo percorso di conferma dell’ordine esegue il targeting degli acquisti di 
 
 ## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
 
-Leggi le sezioni seguenti, che includono collegamenti a ulteriore documentazione, per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello riportate sopra.
+Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello precedenti, leggere le sezioni seguenti, che offrono collegamenti a ulteriori informazioni e istruzioni più dettagliate.
 
 ### Funzionalità ed elementi dell’interfaccia utente che utilizzerai {#ui-functionality-and-elements}
 
-Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai le seguenti funzionalità di Real-Time CDP ed elementi dell’interfaccia utente (elencati nell’ordine in cui verranno utilizzati). Verificare di disporre delle autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie per tutte queste aree o richiedere all&#39;amministratore di sistema di concedere le autorizzazioni necessarie.
-
-* [Schemi](/help/xdm/home.md)
-* [Profili](/help/profile/home.md)
-* [Set di dati](/help/catalog/datasets/overview.md)
-* [Tipi di pubblico](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [Destinazioni](/help/destinations/home.md)
+Dopo aver completato i passaggi per implementare il caso d’uso, utilizzerai le funzionalità Real-Time CDP e gli elementi dell’interfaccia utente elencati all’inizio del presente documento. Verificare di disporre delle autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie per tutte queste aree o richiedere all&#39;amministratore di sistema di concedere le autorizzazioni necessarie.
 
 ### Creare una struttura di schema e specificare i gruppi di campi
 
-Le risorse Experience Data Model (XDM) sono gestite in [!UICONTROL Schemi] in Adobe Experience Platform. Puoi visualizzare ed esplorare le risorse di base fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
+Le risorse Experience Data Model (XDM) sono gestite in [!UICONTROL Schemi] in Adobe Experience Platform. Puoi visualizzare ed esplorare le risorse core fornite da Adobe e creare risorse e schemi personalizzati per la tua organizzazione.
 
-Per creare uno schema, completa i passaggi seguenti:
+<!--
+To create a schema, complete the steps below:
 
-1. Accedi a **[!UICONTROL Gestione dati]** > **[!UICONTROL Schemi]** e seleziona **[!UICONTROL Crea schema]**.
-2. Seleziona **[!UICONTROL Profilo individuale XDM]/[!UICONTROL XDM ExperienceEvent]**.
-3. Accedi a **[!UICONTROL Gruppi di campi]** e seleziona **[!UICONTROL Aggiungi]**.
-4. Utilizzare la casella di ricerca per trovare e selezionare il gruppo di campi, quindi selezionare **[!UICONTROL Aggiungi gruppi di campi]**.
-5. Assegna un nome allo schema e, facoltativamente, una descrizione.
-6. Seleziona **[!UICONTROL Salva]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Registrazione dei passaggi per la creazione di uno schema.](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 Per ulteriori informazioni sulla creazione di schemi, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md)
 
-Per il percorso di ricoinvolgimento vengono utilizzate 4 progettazioni di schemi. Ogni schema richiede la configurazione di campi specifici, nonché di alcuni campi fortemente consigliati.
+Per il percorso di ricoinvolgimento vengono utilizzati quattro schemi. Ogni schema richiede la configurazione di campi specifici, nonché di alcuni campi fortemente consigliati.
 
-#### Requisiti del gruppo di campi per lo schema attributi del cliente
+#### Schema attributi cliente
 
-Lo schema attributi cliente è un [!UICONTROL Profilo individuale XDM] schema, contenente i seguenti gruppi di campi:
+Lo schema degli attributi del cliente è rappresentato da un [!UICONTROL Profilo individuale XDM] classe, che include i seguenti gruppi di campi:
 
 +++Dati di contatto personali (gruppo di campi)
 
@@ -165,11 +162,13 @@ Questo gruppo di campi viene utilizzato come best practice.
 
 +++
 
-![Schema degli attributi del cliente che evidenzia l’elenco dei gruppi di campi.](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### Requisiti del gruppo di campi per lo schema delle transazioni digitali del cliente
+#### Schema transazioni digitali cliente
 
-Lo schema delle transazioni digitali del cliente è un [!UICONTROL XDM ExperienceEvent] schema, contenente i seguenti gruppi di campi:
+Lo schema delle transazioni digitali del cliente è rappresentato da un [!UICONTROL XDM ExperienceEvent] classe, che include i seguenti gruppi di campi:
 
 +++Adobe Experience Platform Web SDK ExperienceEvent (gruppo di campi)
 
@@ -260,11 +259,13 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 
 +++
 
-![Schema delle transazioni digitali del cliente che evidenzia l’elenco dei gruppi di campi.](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### Requisiti del gruppo di campi per lo schema delle transazioni offline del cliente
+#### Schema transazioni cliente offline
 
-Lo schema di transazioni cliente offline è un [!UICONTROL XDM ExperienceEvent] schema, contenente i seguenti gruppi di campi:
+Lo schema di transazioni cliente non in linea è rappresentato da un [!UICONTROL XDM ExperienceEvent] classe, che include i seguenti gruppi di campi:
 
 +++Dettagli Commerce (Gruppo Di Campi)
 
@@ -307,11 +308,13 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 
 +++
 
-![Schema delle transazioni offline del cliente che evidenzia l’elenco dei gruppi di campi.](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### Requisiti del gruppo di campi per lo schema del connettore web Adobe
+#### Schema del connettore web Adobe
 
-Lo schema del connettore web Adobe è un [!UICONTROL XDM ExperienceEvent] schema, contenente i seguenti gruppi di campi:
+Lo schema del connettore web Adobe è rappresentato da un [!UICONTROL XDM ExperienceEvent] classe, che include i seguenti gruppi di campi:
 
 Modello +++Adobe Analytics ExperienceEvent (gruppo di campi)
 
@@ -377,25 +380,34 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 
 +++
 
-![Adobe di schema del connettore web che evidenzia l’elenco dei gruppi di campi.](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### Creare un set di dati da uno schema
 
-Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe). Per i percorsi di ricoinvolgimento intelligenti, ogni schema avrà un set di dati.
+Un set di dati è una struttura di archiviazione e gestione per un gruppo di dati, spesso una tabella con campi (righe) e uno schema (colonne). Ogni schema per percorsi di ricoinvolgimento intelligente avrà un singolo set di dati.
 
-Per creare un set di dati da uno schema, completa i passaggi seguenti:
+Per ulteriori informazioni su come creare un set di dati da uno schema, leggi [Guida all’interfaccia utente dei set di dati](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. Accedi a **[!UICONTROL Gestione dati]** > **[!UICONTROL Set di dati]** e seleziona **[!UICONTROL Crea set di dati]**.
-2. Seleziona **[!UICONTROL Crea set di dati dallo schema]**.
-3. Seleziona lo schema di ricoinvolgimento appropriato creato.
-4. Assegna un nome al set di dati e, facoltativamente, una descrizione.
-5. Seleziona **[!UICONTROL Fine]**.
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![Registrazione dei passaggi necessari per creare un set di dati da uno schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-Tieni presente che, analogamente al passaggio per creare uno schema, è necessario abilitare il set di dati per l’inclusione in Real-Time Customer Profile. Per ulteriori informazioni sull’abilitazione del set di dati per l’utilizzo in Real-Time Customer Profile, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md#profile)
+>Nota
+>
+>Simile al passaggio per creare uno schema, devi abilitare il set di dati per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull’abilitazione del set di dati per l’utilizzo in Real-Time Customer Profile, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![Abilita il set di dati per il profilo.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### Privacy, consenso e governance dei dati
 
@@ -405,7 +417,7 @@ Tieni presente che, analogamente al passaggio per creare uno schema, è necessar
 >
 >Come requisito legale, è necessario fornire ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili sono disponibili nella [documentazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Durante la configurazione di un percorso di ricoinvolgimento devono essere presi in considerazione e utilizzati i seguenti criteri di consenso:
+Durante la creazione di un percorso di ricoinvolgimento, è necessario considerare e utilizzare i seguenti criteri di consenso:
 
 * Se consents.marketing.email.val = &quot;Y&quot;, allora Can Email
 * Se consents.marketing.sms.val = &quot;Y&quot; allora Can SMS
@@ -415,15 +427,14 @@ Durante la configurazione di un percorso di ricoinvolgimento devono essere presi
 
 #### Etichetta DULE e applicazione
 
-L’indirizzo e-mail personale viene utilizzato come dati direttamente identificabili che possono essere utilizzati per identificare o contattare una persona specifica, anziché un dispositivo.
+Gli indirizzi e-mail personali vengono utilizzati come dati direttamente identificabili utilizzati per identificare o contattare una persona specifica anziché un dispositivo.
 
 * personalEmail.address = I1
 
 #### Politiche di marketing
 
-Non esistono criteri di marketing aggiuntivi per i percorsi di ricoinvolgimento, tuttavia è necessario considerare quanto segue come desiderato:
+Non sono necessari criteri di marketing aggiuntivi per i percorsi di ricoinvolgimento, tuttavia, è necessario considerare quanto segue come desiderato:
 
-* Considera come desiderato
 * Limita dati sensibili
 * Limitare la pubblicità in loco
 * Limita targeting e-mail
@@ -432,22 +443,26 @@ Non esistono criteri di marketing aggiuntivi per i percorsi di ricoinvolgimento,
 
 ### Creazione di un pubblico
 
-Per creare un pubblico, completa i passaggi seguenti:
+<!--
+To create an audience, complete the steps below:
 
-1. Accedi a **[!UICONTROL Cliente]** > **[!UICONTROL Tipi di pubblico]** e seleziona **[!UICONTROL Creare un pubblico]**.
-2. Seleziona **[!UICONTROL Genera regola]** e seleziona **[!UICONTROL Crea]**.
-3. Accedi a **[!UICONTROL Campo]** e seleziona **[!UICONTROL Eventi]** scheda.
-4. Passa alla casella di ricerca o utilizzala per trovare il tipo di evento, quindi trascinalo sul generatore. Infine, aggiungi le regole evento trascinando i tipi di evento.
-5. Assegna un nome allo schema e, facoltativamente, una descrizione.
-6. Seleziona **[!UICONTROL Salva]**.
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![Registrazione dei passaggi necessari per creare un pubblico.](../intelligent-re-engagement/images/create-an-audience.gif)
-
-Per ulteriori informazioni su come creare tipi di pubblico, consulta [Guida dell’interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### Creazione di tipi di pubblico per percorsi di ricoinvolgimento del brand
 
-I tipi di pubblico per ogni percorso di ricoinvolgimento devono essere impostati con eventi specifici per la qualificazione dei segmenti. Queste specifiche si trovano di seguito nelle schede corrispondenti di ciascun percorso.
+I percorsi di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili, al fine di distinguere un gruppo di persone commerciabile dalla base dei clienti. I tipi di pubblico possono essere creati in due modi diversi su Adobe Experience Platform: direttamente composti come tipi di pubblico o tramite definizioni di segmenti derivate da Platform.
+
+Per ulteriori informazioni su come comporre direttamente i tipi di pubblico, consulta [Guida dell’interfaccia utente di Audience Composition](/help/segmentation/ui/audience-composition.md).
+
+Per ulteriori informazioni su come creare tipi di pubblico tramite le definizioni dei segmenti derivate da Platform, leggi [Guida dell’interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ I seguenti eventi vengono utilizzati per il percorso di ricoinvolgimento in cui 
 
 Includi il pubblico che ha almeno 1 EventType = ProductViews event THEN ha almeno 1 Any event where (EventType non è uguale a commerce.productListAdds) e si verifica nelle ultime 24 ore quindi dopo 3 giorni non ha alcun Any event where (EventType = application.launch o web.webpagedetails.pageViews o commerce.purchases) e si verifica negli ultimi 2 giorni.
 
-![Una schermata del pubblico di ricoinvolgimento che mostra l’insieme di regole.](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB Percorso carrello abbandonato]
 
 I seguenti eventi vengono utilizzati per i profili che hanno aggiunto un prodotto al carrello, ma non hanno completato l’acquisto o cancellato il carrello nelle ultime 24 ore.
 
-include EventType = commerce.productListAdds tra 30 minuti e 1440 minuti prima di ora.
+Include EventType = commerce.productListAggiunge tra 30 minuti e 1440 minuti prima di ora.
 escludi EventType = commerce.purchases 30 minuti prima di ora OPPURE EventType = commerce.productListRemovals AND Cart ID è uguale a Product List Adds1 Cart ID (l’evento di inclusione).
 
-![Una schermata del pubblico di ricoinvolgimento che mostra l’insieme di regole.](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta [Guida dell’interfaccia utente di Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 ### Configurazione del percorso in Adobe Journey Optimizer
 
@@ -478,13 +495,15 @@ Per ulteriori informazioni sulla creazione di tipi di pubblico, consulta [Guida 
 >
 >Adobe Journey Optimizer non include tutti gli elementi visualizzati nei diagrammi nella parte superiore della pagina. Tutti gli annunci multimediali a pagamento vengono creati in [!UICONTROL Destinazioni].
 
-Sono necessarie informazioni specifiche per i diversi percorsi di cui può disporre ogni caso d’uso. I dati specifici richiesti per ogni ramo del Percorso sono riportati di seguito nelle schede corrispondenti.
+Adobe Journey Optimizer ti consente di fornire ai clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni caso d’uso può avere diversi percorsi, ciascuno dei quali richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ogni ramo del Percorso.
 
 >[!BEGINTABS]
 
 >[!TAB Percorso di ricoinvolgimento]
 
-![Panoramica sul percorso di recoinvolgimento dei clienti in Adobe Journey Optimizer](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++Eventi
 
@@ -612,7 +631,9 @@ Sono necessarie informazioni specifiche per i diversi percorsi di cui può dispo
 
 >[!TAB Percorso carrello abbandonato]
 
-![Panoramica del percorso carrello abbandonato dal cliente in Adobe Journey Optimizer](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++Eventi
 
@@ -741,7 +762,9 @@ Sono necessarie informazioni specifiche per i diversi percorsi di cui può dispo
 
 >[!TAB Percorso di conferma ordine]
 
-![Panoramica del percorso di conferma degli ordini dei clienti in Adobe Journey Optimizer](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++Eventi
 
