@@ -5,9 +5,9 @@ description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto
 badgeLimitedAvailability: label="Disponibilità limitata" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ In Adobe Experience Platform, il modello lookalike utilizza tre diversi tipi di 
 
 Tutti questi punti dati vengono trasformati in coppie di valori chiave che vengono inserite nel modello lookalike. Verranno mantenute solo le coppie di valori chiave con una percentuale significativa di profili corrispondenti.
 
-Il modello lookalike viene eseguito frequentemente, creando e ricreando i fattori influenti e i grafici di somiglianza per il pubblico di base. Anche il punteggio per i tipi di pubblico simili viene eseguito frequentemente.
+In questo momento, il modello lookalike viene eseguito ogni 24 ore, creando e ricreando i fattori influenti e i grafici di somiglianza per il pubblico di base. Anche il punteggio per i tipi di pubblico simili viene eseguito frequentemente.
 
 ## Diritti {#entitlements}
 
@@ -52,11 +52,26 @@ I seguenti diritti si applicano all’utilizzo di tipi di pubblico lookalike:
 - I clienti di Real-Time CDP Ultimate hanno diritto a **20** pubblico lookalike attivo nelle sandbox di produzione
 - Le sandbox di sviluppo sono limitate a **5** Tipi di pubblico simili per tutti i clienti Real-Time CDP
 
-Sono disponibili pacchetti aggiuntivi che aumentano le adesioni per le sandbox di produzione di 20 tipi di pubblico lookalike per pacchetto.
+I pacchetti di componenti aggiuntivi, che saranno disponibili in un secondo momento, aumentano le adesioni per le sandbox di produzione di 20 tipi di pubblico lookalike per pacchetto.
 
 Per confermare se hai accesso a tipi di pubblico simili, contatta il tuo rappresentante di Adobi.
 
 ## Visualizzare informazioni simili {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="Non idoneo"
+>abstract="Questo pubblico non è attualmente idoneo per approfondimenti simili poiché potrebbe avere un numero inferiore al numero minimo di profili richiesti per la formazione o l’esportazione del profilo non è ancora stata attivata."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="Elaborazione"
+>abstract="Questo pubblico è attualmente in fase di elaborazione. Il modello può richiedere fino a 24 ore per completare l&#39;elaborazione. Controlla di nuovo più tardi."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="Errore"
+>abstract="Errore durante l&#39;elaborazione del modello. Elimina e ricompila questo modello o riprova più tardi."
 
 Le informazioni simili sono integrate nella pagina dei dettagli del pubblico. Per esaminare le informazioni simili relative a un pubblico, seleziona **[!UICONTROL Tipi di pubblico]** nella barra di navigazione a sinistra, seguito da **[!UICONTROL Sfoglia]** e il pubblico per cui desideri visualizzare le informazioni.
 
@@ -68,10 +83,10 @@ Viene visualizzata la pagina dei dettagli del pubblico. Seleziona **[!UICONTROL 
 
 ### Somiglianza e portata {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="Somiglianza e portata"
+>abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico lookalike costituito da profili al di sopra di un dato punteggio di somiglianza. Passa il cursore del mouse su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il conteggio di profili previsto per il punto attualmente evidenziato."
 
 La sezione similarità e portata mostra un grafico che rappresenta la portata prevista di un pubblico lookalike costituito da profili al di sopra di un determinato punteggio di somiglianza. Il punteggio di somiglianza rappresenta **distanza** somiglianza tra il profilo del pubblico di base e il profilo di approfondimenti simili.
 
@@ -93,11 +108,11 @@ La sezione Tipi di pubblico lookalike presenta un elenco di tutti i tipi di pubb
 
 ### Fattori di influenza {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="Fattori di influenza"
+>abstract="I fattori influenti sono attributi, eventi e appartenenze a un pubblico importanti per spiegare la somiglianza di un profilo con i membri del pubblico di base. Le etichette e i criteri di utilizzo dei dati possono essere utilizzati per escludere alcuni dati dall’essere considerati fattori influenti in modelli lookalike."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Escludi dati"
 
 La sezione dei fattori influenti mostra i primi 100 fattori che influenzano il modello lookalike per il pubblico di base selezionato. Questi fattori influenti sono gli attributi del profilo, gli eventi di esperienza e le appartenenze al pubblico che sono i più importanti per spiegare le somiglianze nel pubblico di base. Comprendere i principali fattori influenti consente di personalizzare meglio i contenuti di marketing per questo pubblico e per qualsiasi pubblico lookalike da esso creato. Non verranno visualizzati tutti i fattori influenti che influiscono sul modello lookalike.
 
