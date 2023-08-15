@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;sandbox;sandbox;test;Testing
 solution: Experience Platform
 title: Panoramica sulle sandbox
-description: Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experience Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale.
+description: Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experienci Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per soddisfare questa esigenza, Experience Platform fornisce sandbox che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+Per soddisfare questa esigenza, Experienci Platform fornisce sandbox che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-Questo documento fornisce una panoramica di alto livello delle sandbox in Experience Platform.
+Questo documento fornisce una panoramica di alto livello delle sandbox in Experienci Platform.
 
 ## Informazioni sulle sandbox
 
-Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experience Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Ad Experience Platform, sono supportati due tipi di sandbox:
+Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experienci Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale. Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Ad Experience Platform, sono supportati due tipi di sandbox:
 
 * **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell’ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino alla licenza [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare il profilo medio concesso in licenza per ogni [!DNL Profile] (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
 * **Sandbox di sviluppo**: una sandbox di sviluppo è una sandbox che può essere utilizzata esclusivamente per lo sviluppo e il test con profili non di produzione. Le sandbox di sviluppo supportano un volume di profili non di produzione fino al 10% del [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate). Hai diritto a:
@@ -53,13 +53,13 @@ Per visualizzare, creare, aggiornare o eliminare sandbox non di produzione, è n
 
 Per ulteriori informazioni sulla gestione di ruoli e autorizzazioni per le sandbox, consulta [panoramica sul controllo degli accessi](../access-control/home.md).
 
-## Sandbox nell’interfaccia utente di Experience Platform
+## Sandbox nell’interfaccia utente di Experienci Platform
 
-In [Interfaccia utente di Experience Platform](https://platform.adobe.com), gli utenti possono passare dalle sandbox a cui hanno accesso utilizzando **commutatore sandbox** in alto a sinistra sullo schermo.  Gli utenti con privilegi di amministrazione Sandbox possono inoltre accedere a **[!UICONTROL Sandbox]** nella barra di navigazione a sinistra, per visualizzare e gestire le sandbox per la propria organizzazione. Per ulteriori informazioni su come utilizzare le sandbox nell’interfaccia utente, consulta la sezione [guida utente sulle sandbox](ui/overview.md).
+In [Interfaccia utente di Experienci Platform](https://platform.adobe.com), gli utenti possono passare dalle sandbox a cui hanno accesso utilizzando **commutatore sandbox** in alto a sinistra sullo schermo.  Gli utenti con privilegi di amministrazione Sandbox possono inoltre accedere a **[!UICONTROL Sandbox]** nella barra di navigazione a sinistra, per visualizzare e gestire le sandbox per la propria organizzazione. Per ulteriori informazioni su come utilizzare le sandbox nell’interfaccia utente, consulta la sezione [guida utente sulle sandbox](ui/overview.md).
 
-## Sandbox nelle API di Experience Platform
+## Sandbox nelle API di Experienci Platform
 
-Quando si effettuano chiamate alle API Experience Platform, è necessario fornire un nome sandbox sotto l’intestazione `x-sandbox-name`. Ad esempio, quando effettui una chiamata al [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) per visualizzare tutti i set di dati all’interno della sandbox di produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
+Quando si effettuano chiamate alle API Experienci Platform, è necessario fornire un nome sandbox sotto l’intestazione `x-sandbox-name`. Ad esempio, quando effettui una chiamata al [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) per visualizzare tutti i set di dati all’interno della sandbox di produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
 
 ```shell
 curl -X GET \

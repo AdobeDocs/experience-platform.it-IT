@@ -151,7 +151,7 @@ Di seguito è riportato un elenco di alcune best practice consigliate che è pos
 
 ## Riepilogo delle funzioni e disponibilità {#feature-summary}
 
-Le best practice e gli strumenti descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di nuove funzioni che forniranno visibilità e controllo a tutti i clienti Experienci Platform.
+Le best practice e gli strumenti descritti in questo documento consentono di gestire meglio l’utilizzo dei diritti di licenza in Adobe Experience Platform. Questo documento verrà aggiornato con il rilascio di ulteriori funzioni che contribuiranno a fornire visibilità e controllo a tutti i clienti Experienci Platform.
 
 La tabella seguente illustra l’elenco delle funzioni attualmente disponibili per gestire al meglio il diritto all’utilizzo della licenza.
 
