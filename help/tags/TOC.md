@@ -5,7 +5,7 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 37%
@@ -45,7 +45,7 @@ ht-degree: 37%
    * [Librerie](./ui/publishing/libraries.md)
    * [Self-hosting delle librerie](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Ripubblicare una libreria](./ui/publishing/republish.md)
-   * [Supporto CDN Premium (versione beta)](./ui/publishing/premium-cdn.md)
+   * [Tag Experience Platform (Cina)](./ui/publishing/premium-cdn.md)
 * Informazioni sul lato client {#client-side}
    * [Panoramica](./ui/client-side/overview.md)
    * [Implementazione asincrona](./ui/client-side/asynchronous-deployment.md)
