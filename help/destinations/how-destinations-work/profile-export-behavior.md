@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -19,22 +19,22 @@ In Experience Platform, esistono diversi tipi di destinazione, come illustrato n
 
 ![Diagramma dei tipi di destinazioni](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Criteri di aggregazione e microbatch
+## Aggregazione dei messaggi nelle destinazioni di streaming
 
-Prima di immergerti in informazioni specifiche per tipo di destinazione, è importante comprendere i concetti di politica di microbatch e aggregazione per *destinazioni di streaming*.
+Prima di immergerti in informazioni specifiche per tipo di destinazione, è importante comprendere il concetto di aggregazione dei messaggi per *destinazioni di streaming*.
 
 Le destinazioni di Experienci Platform esportano i dati in integrazioni basate su API come chiamate HTTPS. Una volta che il servizio delle destinazioni viene informato da altri servizi a monte che i profili sono stati aggiornati in seguito all’acquisizione batch, all’acquisizione in streaming, alla segmentazione batch, alla segmentazione in streaming o a modifiche al grafico delle identità, i dati vengono esportati e inviati alle destinazioni di streaming.
 
-Viene chiamato il processo tramite il quale i profili vengono aggregati in messaggi HTTPS prima di essere inviati agli endpoint API di destinazione *microbatch*.
+I profili vengono aggregati nei messaggi HTTPS prima di essere inviati agli endpoint API di destinazione.
 
 Prendi il [Destinazione facebook](/help/destinations/catalog/social/facebook.md) con un *[aggregazione configurabile](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* criterio come esempio: i dati vengono inviati in modo aggregato, dove il servizio destinazioni prende tutti i dati in arrivo dal servizio profilo a monte e li aggrega in base a una delle seguenti opzioni, prima di inviarli a Facebook:
 
 * Numero di record (massimo 10,000) o
-* Intervallo intervallo di tempo (30 minuti)
+* Intervallo intervallo di tempo (300 secondi)
 
-Il primo caso in cui viene raggiunta una delle soglie sopra indicate determina un’esportazione in Facebook. Quindi, nella [!DNL Facebook Custom Audiences] dashboard, i tipi di pubblico potrebbero provenire da Experience Platform con incrementi di 10.000 record. Potresti visualizzare 10.000 record ogni 10-15 minuti perché i dati vengono elaborati e aggregati più rapidamente dell’intervallo di esportazione di 30 minuti e vengono inviati più rapidamente, quindi circa ogni 10-15 minuti finché tutti i record non vengono elaborati. Se non ci sono record sufficienti per comporre un batch di 10.000, il numero corrente di record verrà inviato così com&#39;è quando viene raggiunta la soglia dell&#39;intervallo di tempo, in modo da poter vedere anche i batch più piccoli inviati a Facebook.
+Il primo caso in cui viene raggiunta una delle soglie sopra indicate determina un’esportazione in Facebook. Quindi, nella [!DNL Facebook Custom Audiences] dashboard, i tipi di pubblico potrebbero provenire da Experienci Platform con incrementi di 10.000 record. Potresti visualizzare 10.000 record ogni 2-3 minuti perché i dati vengono elaborati e aggregati più rapidamente dell’intervallo di esportazione di 300 secondi e vengono inviati più rapidamente, quindi circa ogni 2-3 minuti finché tutti i record non vengono elaborati. Se non ci sono record sufficienti per comporre un batch di 10.000, il numero corrente di record verrà inviato così com&#39;è quando viene raggiunta la soglia dell&#39;intervallo di tempo, in modo da poter vedere anche i batch più piccoli inviati a Facebook.
 
-Un altro esempio è dato dalla [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md), che ha un *[aggregazione della migliore fatica](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, con `maxUsersPerRequest: 10`. Ciò significa che un massimo di dieci profili verranno aggregati prima che venga avviata una chiamata HTTP a questa destinazione, ma Experience Platform tenta di inviare profili alla destinazione non appena il servizio delle destinazioni riceve informazioni di rivalutazione aggiornate da un servizio a monte.
+Un altro esempio è dato dalla [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md), che ha un *[aggregazione della migliore fatica](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* policy, con `maxUsersPerRequest: 10`. Ciò significa che un massimo di dieci profili verranno aggregati prima che venga avviata una chiamata HTTP a questa destinazione, ma Experienci Platform tenta di inviare profili alla destinazione non appena il servizio delle destinazioni riceve informazioni di rivalutazione aggiornate da un servizio a monte.
 
 Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione possono decidere come configurarlo per soddisfare al meglio le limitazioni di velocità degli endpoint API a valle. Ulteriori informazioni su [criterio di aggregazione](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) nella documentazione di Destination SDK.
 
@@ -42,11 +42,11 @@ Il criterio di aggregazione è configurabile e gli sviluppatori di destinazione 
 
 >[!IMPORTANT]
 >
-> Le destinazioni Enterprise sono disponibili solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
+> Le destinazioni Enterprise sono disponibili solo per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
 Il [destinazioni enterprise](/help/destinations/destination-types.md#streaming-profile-export) Ad Experience Platform, Amazon Kinesis, Azure Event Hub e API HTTP.
 
-Experience Platform ottimizza il comportamento di esportazione del profilo nella destinazione aziendale, per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
+Experienci Platform ottimizza il comportamento di esportazione del profilo nella destinazione aziendale, per esportare i dati nell’endpoint API solo quando si sono verificati aggiornamenti rilevanti a un profilo in seguito alla qualifica di un pubblico o ad altri eventi significativi. I profili vengono esportati nella destinazione nelle seguenti situazioni:
 
 * L’aggiornamento del profilo è stato determinato da una modifica in [iscrizione al pubblico](/help/xdm/field-groups/profile/segmentation.md) per almeno uno dei tipi di pubblico mappati sulla destinazione. Ad esempio, il profilo è idoneo per uno dei tipi di pubblico mappati sulla destinazione o è uscito da uno dei tipi di pubblico mappati sulla destinazione.
 * L’aggiornamento del profilo è stato determinato da una modifica nella [mappa identità](/help/xdm/field-groups/profile/identitymap.md). Ad esempio, a un profilo che si era già qualificato per uno dei tipi di pubblico mappati sulla destinazione è stata aggiunta una nuova identità nell’attributo identity map.
@@ -62,7 +62,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni Enterprise, anche le modifiche apportate alle identità di un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come il pubblico mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` sono inclusi anche gli oggetti (Experience Platform attualmente non supporta il mapping delle identità nella destinazione enterprise).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Poiché al momento non è possibile mappare le identità sulle destinazioni Enterprise, anche le modifiche apportate alle identità di un determinato profilo determinano le esportazioni delle destinazioni.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, indipendentemente dal fatto che si tratti o meno dello stesso valore. Ciò significa che una sovrascrittura su un attributo è considerata una modifica anche se il valore stesso non è cambiato.</li></ul> | <ul><li>Il `segmentMembership` L’oggetto include il pubblico mappato nel flusso di dati di attivazione, per il quale lo stato del profilo è cambiato a seguito di un evento di qualificazione o uscita dal pubblico. Tieni presente che altri tipi di pubblico non mappati per i quali il profilo si è qualificato possono far parte dell’esportazione di destinazione, se tali tipi di pubblico appartengono allo stesso [criterio di unione](/help/profile/merge-policies/overview.md) come il pubblico mappato nel flusso di dati di attivazione. </li><li>Tutte le identità in `identityMap` sono inclusi anche gli oggetti (Experienci Platform attualmente non supporta il mapping delle identità nella destinazione enterprise).</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
