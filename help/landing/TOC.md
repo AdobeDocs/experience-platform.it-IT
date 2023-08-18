@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: bc781aadb620ad4b383d441d36e39626b0875901
+source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 27%
+source-wordcount: '260'
+ht-degree: 30%
 
 ---
 
@@ -24,13 +24,14 @@ ht-degree: 27%
    * [Casi d’uso principali (video)](video/platform-use-cases.md)
    * [Architettura della piattaforma (video)](video/platform-architecture.md)
    * [Ruoli e fasi del progetto (video)](video/roles-project-phases.md)
-* Interfaccia utente Experience Platform {#platform-ui}
+* Interfaccia utente Experienci Platform {#platform-ui}
    * [Guida all’interfaccia utente di Platform](ui-guide.md)
    * [Presentazione dell’interfaccia utente di Platform (video)](video/platform-ui.md)
    * [Guida all’interfaccia utente Flussi di lavoro](workflows.md)
    * [Supporto di browser e lingue](browser-language-support.md)
    * [Sondaggio di auto-identificazione](self-identification.md)
-* API EXPERIENCE PLATFORM {#platform-apis}
+   * [Assistente AI](ai-assistant.md)
+* API EXPERIENCI PLATFORM {#platform-apis}
    * [Guida introduttiva alle API di Platform](api-guide.md)
    * [Autenticazione e accesso alle API di Platform](api-authentication.md)
    * [Nozioni di base sulle API](api-fundamentals.md)
@@ -43,7 +44,7 @@ ht-degree: 27%
    * [Panoramica](application-services.md)
    * [Adobe Real-time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Applicazione e Intelligent Services (video)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [Integrazioni di Platform con Experience Cloud (video)](video/experience-cloud-integrations.md)
@@ -72,4 +73,4 @@ ht-degree: 27%
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
-* [Note sulla versione](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione](https://www.adobe.com/go/platform-release-notes-it)
