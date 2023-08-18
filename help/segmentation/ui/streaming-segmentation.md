@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente Segmentazione streaming
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione quasi in tempo reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, riducendo la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento ora possono essere valutate quando i dati vengono passati in Platform, il che significa che l’iscrizione al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1442'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il documento seguente illustra come utilizzare la segmentazione in streaming utilizzando l’interfaccia utente. Per informazioni sull’utilizzo della segmentazione in streaming tramite l’API, leggi la sezione [guida dell’API per la segmentazione in streaming](../api/streaming-segmentation.md).
+>Il documento seguente illustra come utilizzare la segmentazione in streaming utilizzando l’interfaccia utente. Per informazioni sull’utilizzo della segmentazione in streaming tramite l’API, leggi la [guida dell’API per la segmentazione in streaming](../api/streaming-segmentation.md).
 
 Segmentazione in streaming su [!DNL Adobe Experience Platform] consente ai clienti di eseguire la segmentazione quasi in tempo reale concentrandosi al contempo sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati in streaming arrivano in [!DNL Platform], riducendo la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento può ora essere valutata mentre i dati vengono trasmessi in [!DNL Platform], il che significa che l’iscrizione al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 
@@ -38,8 +38,7 @@ Una query verrà valutata automaticamente con segmentazione in streaming se sodd
 | Singolo evento entro una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. | ![Viene visualizzato un esempio di un singolo evento all’interno di una finestra temporale relativa.](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Evento singolo con finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. | ![Viene visualizzato un esempio di un singolo evento con una finestra temporale.](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. | |
-| Evento singolo con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni temporali, e a uno o più attributi di profilo. **Nota:** La query viene valutata immediatamente quando si verifica l’evento. Nel caso di un evento profilo, tuttavia, deve attendere 24 ore per essere incorporato. | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo.](../images/ui/streaming-segmentation/profile-hit.png) |
-| Singolo evento con un attributo di profilo all’interno di una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all’interno di una finestra temporale relativa.](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. | ![Viene visualizzato un esempio di un singolo evento con un attributo di profilo all’interno di una finestra temporale relativa.](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** Se si utilizza un segmento di segmenti, si verifica l’interruzione del profilo **ogni 24 ore**. | ![Viene mostrato un esempio di un segmento di segmenti.](../images/ui/streaming-segmentation/two-batches.png) |
 | Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | ![Viene mostrato un esempio di più eventi con un attributo di profilo.](../images/ui/streaming-segmentation/event-history-success.png) |
 

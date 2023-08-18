@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Valutazione degli eventi in tempo quasi reale con segmentazione in streaming
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
-source-wordcount: '1992'
+source-wordcount: '1956'
 ht-degree: 2%
 
 ---
@@ -76,8 +76,7 @@ Affinché una definizione di segmento possa essere valutata utilizzando la segme
 | Singolo evento entro una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo. |
 | Evento singolo con finestra temporale | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo con una finestra temporale. |
 | Solo profilo | Qualsiasi definizione di segmento che fa riferimento solo a un attributo di profilo. |
-| Evento singolo con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni temporali, e a uno o più attributi di profilo. **Nota:** La query viene valutata immediatamente quando si verifica l’evento. Nel caso di un evento profilo, tuttavia, deve attendere 24 ore per essere incorporato. |
-| Singolo evento con un attributo di profilo all’interno di una finestra temporale relativa | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. |
+| Singolo evento con un attributo di profilo entro un intervallo di tempo relativo inferiore a 24 ore | Qualsiasi definizione di segmento che si riferisce a un singolo evento in arrivo, con uno o più attributi di profilo, e si verifica entro un intervallo di tempo relativo inferiore a 24 ore. |
 | Segmento di segmenti | Qualsiasi definizione di segmento che contiene uno o più segmenti batch o in streaming. **Nota:** Se si utilizza un segmento di segmenti, si verifica l’interruzione del profilo **ogni 24 ore**. |
 | Più eventi con un attributo di profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
@@ -101,7 +100,7 @@ Inoltre, l’annullamento del riconoscimento del segmento, in modo simile alla q
 
 ## Recupera tutte le definizioni di segmento abilitate per la segmentazione in streaming
 
-Per recuperare un elenco di tutte le definizioni di segmenti abilitate per la segmentazione in streaming all’interno della tua organizzazione, effettua una richiesta GET al `/segment/definitions` endpoint.
+Per recuperare un elenco di tutte le definizioni di segmenti abilitate per la segmentazione in streaming all’interno dell’organizzazione, effettua una richiesta GET al `/segment/definitions` endpoint.
 
 **Formato API**
 
