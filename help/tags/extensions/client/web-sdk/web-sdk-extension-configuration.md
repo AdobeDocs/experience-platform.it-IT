@@ -2,10 +2,10 @@
 title: Configurare l’estensione Adobe Experience Platform Web SDK
 description: Configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 6%
+source-wordcount: '1220'
+ht-degree: 9%
 
 ---
 
@@ -112,12 +112,16 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 
 La sostituzione della configurazione dello stream di dati è un processo in due fasi:
 
-1. Innanzitutto, devi definire le sostituzioni della configurazione dello stream di dati in [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
-2. Quindi, devi inviare le sostituzioni a Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
+1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
+2. Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’estensione tag di Web SDK.
 
 Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](../../../../datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
 
 In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi configurare le sostituzioni nella schermata dell’estensione tag mostrata di seguito.
+
+>[!IMPORTANT]
+>
+> Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![L’immagine che mostra le sostituzioni della configurazione dello stream di dati nella pagina dell’estensione tag di Web SDK.](assets/datastream-overrides.png)
 
