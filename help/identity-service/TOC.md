@@ -4,10 +4,10 @@ user-guide-title: Servizio Adobe Experience Platform Identity
 breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
-source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
+source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 26%
+source-wordcount: '112'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 26%
 - [Panoramica del servizio Identity](home.md)
 - [Panoramica sullo spazio dei nomi delle identità](namespaces.md)
 - [Guardrail per i dati di identità](guardrails.md)
-- [Guardrail per i dati di identità con logica di eliminazione](guardrails-beta.md)
 - API del servizio Identity {#api}
    - [Introduzione](api/getting-started.md)
    - [Etichettare un campo come identità](api/label-identities.md)
@@ -36,4 +35,4 @@ ht-degree: 26%
 - [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
