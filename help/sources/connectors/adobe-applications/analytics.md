@@ -2,10 +2,10 @@
 title: Connettore di origine di Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 83ce7d46e4e64fbe961c964ed5a17ec12a7ec15f
+source-git-commit: 59f7b7cd2e7c52b64ee7fdb8e33b3a0116697696
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 6%
+source-wordcount: '1161'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,11 @@ Questo documento fornisce una panoramica di [!DNL Analytics] e descrive i casi d
 
 Ad alto livello, [!DNL Analytics] raccoglie dati da vari canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Una volta completata l&#39;elaborazione dei dati non elaborati, questi vengono considerati pronti per essere consumati da [!DNL Real-Time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono inseriti in micro-batch e acquisiti in set di dati di Platform per l’utilizzo da parte di [!DNL Data Science Workspace], [!DNL Query Service]e altre applicazioni di data discovery.
 
-Consulta la [panoramica delle regole di elaborazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) per ulteriori informazioni sulle regole di elaborazione.
+Consulta la [panoramica delle regole di elaborazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=it) per ulteriori informazioni sulle regole di elaborazione.
 
 ## Experience Data Model (XDM)
 
-XDM è una specifica documentata pubblicamente che fornisce strutture e definizioni comuni per un’applicazione da utilizzare per comunicare con i servizi su Experience Platform.
+XDM è una specifica documentata pubblicamente che fornisce strutture e definizioni comuni per un’applicazione da utilizzare per comunicare con i servizi su Experienci Platform.
 
 Il rispetto degli standard XDM consente l’incorporazione uniforme dei dati, semplificandone la distribuzione e la raccolta.
 
@@ -39,7 +39,7 @@ Per ulteriori informazioni su XDM, consulta [Panoramica del sistema XDM](../../.
 >
 >Le trasformazioni della preparazione dati possono aggiungere latenza al flusso di dati complessivo. La latenza aggiuntiva aggiunta varia in base alla complessità della logica di trasformazione.
 
-Quando viene stabilita una connessione di origine per l&#39;importazione [!DNL Analytics] dati in Experience Platform tramite l’interfaccia utente di Platform, i campi dati vengono automaticamente mappati e acquisiti in [!DNL Real-Time Customer Profile] in pochi minuti. Per istruzioni sulla creazione di una connessione sorgente con [!DNL Analytics] utilizzando l’interfaccia utente di Platform, consulta la sezione [Tutorial sul connettore di origine di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
+Quando viene stabilita una connessione di origine per l&#39;importazione [!DNL Analytics] dati in Experienci Platform tramite l’interfaccia utente di Platform, i campi dati vengono automaticamente mappati e acquisiti in [!DNL Real-Time Customer Profile] in pochi minuti. Per istruzioni sulla creazione di una connessione sorgente con [!DNL Analytics] utilizzando l’interfaccia utente di Platform, consulta la sezione [Tutorial sul connettore di origine di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 Per informazioni dettagliate sulla mappatura dei campi tra [!DNL Analytics] e Experience Platform, consulta [Mappatura dei campi in Adobe Analytics](./mapping/analytics.md) guida.
 
@@ -79,7 +79,7 @@ La tabella seguente fornisce ulteriori informazioni sui campi di identità nel [
 
 ### Come [!DNL Analytics] source tratta le identità
 
-Il [!DNL Analytics] L’origine trasmette queste identità ad Experience Platform nel modulo XDM come:
+Il [!DNL Analytics] L’origine trasmette queste identità ad Experienci Platform nel modulo XDM come:
 
 * `endUserIDs._experience.aaid.id`
 * `endUserIDs._experience.mcid.id`
@@ -92,3 +92,7 @@ Questi campi non sono contrassegnati come identità. Invece, le stesse identità
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 Nella mappa di identità, se ECID è presente, viene contrassegnato come identità primaria dell’evento. In questo caso, AAID può essere basato su ECID a causa della [Periodo di tolleranza per il servizio Identity](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). In caso contrario, AAID è contrassegnato come identità primaria dell’evento. AACUSTOMID non viene mai contrassegnato come ID primario dell’evento. Tuttavia, se AACUSTOMID è presente, AAID è basato su AACUSTOMID a causa dell’ordine Experience Cloud delle operazioni.
+
+>[!NOTE]
+>
+>Puoi utilizzare la preparazione dati per filtrare le identità secondarie provenienti da Analytics, come AAID e AACUSTOMID. Se escluse, queste identità non verranno acquisite nel profilo se sono disponibili nei dati Analytics in arrivo. I dati non filtrati continueranno a essere caricati nel data lake.
