@@ -1,8 +1,9 @@
 ---
 title: Panoramica sulla sorgente Pendo
 description: Scopri come collegare Pendo a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
+last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
