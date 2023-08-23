@@ -3,10 +3,10 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
 hide: true
 hidefromtoc: true
-source-git-commit: 69d83e0ca7530f09042e0740e3f25ba92ecb24e4
+source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
 workflow-type: tm+mt
-source-wordcount: '3395'
-ht-degree: 4%
+source-wordcount: '3424'
+ht-degree: 3%
 
 ---
 
@@ -83,7 +83,7 @@ Il percorso di conferma degli ordini si concentra sugli acquisti di prodotti eff
 
 >[!ENDTABS]
 
-## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
+## Come ottenere il caso d’uso {#achieve-use-case-instruction}
 
 Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello precedenti, leggere le sezioni seguenti, che offrono collegamenti a ulteriori informazioni e istruzioni più dettagliate.
 
@@ -91,7 +91,7 @@ Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello
 
 Dopo aver completato i passaggi per implementare il caso d’uso, utilizzerai le funzionalità Real-Time CDP e gli elementi dell’interfaccia utente elencati all’inizio del presente documento. Verificare di disporre delle autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie per tutte queste aree o richiedere all&#39;amministratore di sistema di concedere le autorizzazioni necessarie.
 
-### Creare una struttura di schema e specificare i gruppi di campi
+### Creare una struttura di schema e specificare i gruppi di campi {#schema-design}
 
 Le risorse Experience Data Model (XDM) sono gestite in [!UICONTROL Schemi] workspace in [!DNL Adobe Experience Platform]. Puoi visualizzare ed esplorare le risorse core fornite da [!DNL Adobe] (ad esempio, [!UICONTROL Gruppi di campi]) e creare risorse e schemi personalizzati per la tua organizzazione.
 
@@ -337,22 +337,13 @@ Modello +++Adobe Analytics ExperienceEvent (gruppo di campi)
 
 +++
 
-+++Valore classe (gruppo di campi)
-
-| Campi | Requisito |
-| --- | --- |
-| `eventType` | Obbligatorio |
-| `timestamp` | Obbligatorio |
-
-+++
-
 +++Dettagli di controllo del sistema di sorgente esterna (gruppo di campi)
 
 Attributi di controllo del sistema di origine esterna è un tipo di dati standard Experience Data Model (XDM) che acquisisce i dettagli di controllo di un sistema di origine esterno.
 
 +++
 
-### Creare un set di dati da uno schema
+### Creare un set di dati da uno schema {#dataset-from-schema}
 
 Un set di dati è una struttura di archiviazione e gestione per un gruppo di dati. Ogni schema per percorsi di ricoinvolgimento intelligente ha un singolo set di dati.
 
@@ -362,31 +353,31 @@ Per ulteriori informazioni su come creare una [set di dati](/help/catalog/datase
 >
 >Simile al passaggio per creare uno schema, devi abilitare il set di dati per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull’abilitazione del set di dati per l’utilizzo in Real-Time Customer Profile, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-### Privacy, consenso e governance dei dati
+### Privacy, consenso e governance dei dati {#privacy-consent}
 
 #### Criteri di consenso
 
 >[!IMPORTANT]
 >
->Come requisito legale, è necessario fornire ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Ulteriori informazioni sulle normative applicabili sono disponibili nella [documentazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Come requisito legale, è necessario fornire ai clienti la possibilità di annullare l’abbonamento alla ricezione di comunicazioni da un marchio e garantire che questa scelta sia rispettata. Per ulteriori informazioni sulle normative applicabili, consulta [Panoramica sulle normative sulla privacy](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Durante la creazione di un percorso di ricoinvolgimento, devono essere considerati i seguenti criteri di consenso:
+Durante la creazione di un percorso di ricoinvolgimento, è necessario quanto segue [criteri di consenso](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) da considerare:
 
 * Se `consents.marketing.email.val = "Y"` allora può inviare un messaggio e-mail
 * Se `consents.marketing.sms.val = "Y"` allora può inviare un SMS
 * Se `consents.marketing.push.val = "Y"` then Can Push
 * Se `consents.share.val = "Y"` then Can Advertise
 
-#### Etichetta DULE e applicazione
+#### Etichetta e applicazione della governance dei dati
 
-Quando crei un percorso di ricoinvolgimento, devono essere considerate le seguenti etichette DULE:
+Durante la creazione di un percorso di ricoinvolgimento, è necessario quanto segue [Etichette per governance dei dati](/help/data-governance/labels/overview.md) da considerare:
 
 * Gli indirizzi e-mail personali vengono utilizzati come dati direttamente identificabili utilizzati per identificare o contattare una persona specifica anziché un dispositivo.
    * `personalEmail.address = I1`
 
 #### Politiche di marketing
 
-Non ci sono criteri di marketing richiesti per i percorsi di ricoinvolgimento, tuttavia, i seguenti devono essere considerati come desiderati:
+Non sono presenti [criteri di marketing](/help/data-governance/policies/overview.md) necessari per i percorsi di ricoinvolgimento, tuttavia, devono essere considerati come desiderati:
 
 * Limita dati sensibili
 * Limitare la pubblicità in loco
@@ -394,11 +385,13 @@ Non ci sono criteri di marketing richiesti per i percorsi di ricoinvolgimento, t
 * Limitare il targeting tra siti
 * Limita la combinazione di dati direttamente identificabili con dati anonimi
 
-### Creazione di un pubblico
+### Creazione di un pubblico {#create-audience}
 
 #### Creazione di tipi di pubblico per percorsi di ricoinvolgimento del brand
 
 I percorsi di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili, al fine di distinguere un gruppo di persone commerciabile dalla base dei clienti. I tipi di pubblico possono essere creati in più modi su [!DNL Adobe Experience Platform].
+
+Per ulteriori informazioni su come creare un pubblico, consulta la sezione [Guida dell’interfaccia utente di Audience Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Per ulteriori informazioni sulla composizione diretta [Tipi di pubblico](/help/segmentation/home.md), leggi [Guida dell’interfaccia utente di Audience Composition](/help/segmentation/ui/audience-composition.md).
 
@@ -444,13 +437,17 @@ Il descrittore del percorso di carrello abbandonato viene visualizzato come segu
 
 `Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
+>[!TAB Percorso di conferma ordine]
+
+Questo percorso non richiede la creazione di tipi di pubblico.
+
 >[!ENDTABS]
 
-### Configurazione del percorso in Adobe Journey Optimizer
+### Configurazione del percorso in Adobe Journey Optimizer {#journey-setup}
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] non include tutti gli elementi visualizzati nei diagrammi. Tutti gli annunci multimediali a pagamento vengono creati in [!UICONTROL Destinazioni].
+>[!DNL Adobe Journey Optimizer] non include tutti gli elementi visualizzati nei diagrammi. Tutti [annunci multimediali a pagamento](/help/destinations/catalog/social/overview.md) sono create in [!UICONTROL Destinazioni].
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ti consente di fornire ai clienti esperienze connesse, contestuali e personalizzate. Il percorso del cliente è l’intero processo di interazione del cliente con il marchio. Ogni percorso di casi d’uso richiede informazioni specifiche. Di seguito sono elencati i dati precisi necessari per ogni ramo del Percorso.
 
@@ -768,7 +765,7 @@ Il percorso di conferma degli ordini si concentra sugli acquisti di prodotti eff
 
 Per ulteriori informazioni sulla creazione di percorsi in [!DNL Adobe Journey Optimizer], leggi [Guida introduttiva ai percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
-### Impostazione di annunci multimediali a pagamento nelle destinazioni
+### Impostazione di annunci multimediali a pagamento nelle destinazioni {#paid-media-ads}
 
 Il framework delle destinazioni viene utilizzato per gli annunci multimediali a pagamento. Una volta verificato il consenso, questo viene inviato alle varie destinazioni configurate. Per ulteriori informazioni sulle destinazioni, consulta [Panoramica sulle destinazioni](/help/destinations/home.md) documento.
 
@@ -787,6 +784,3 @@ Il segmento del carrello di abbandono è in streaming e può quindi essere utili
    * [Dispositivi mobili](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destinazione streaming](/help/destinations/catalog/streaming/http-destination.md)
    * [Destination SDK personalizzata](/help/destinations/destination-sdk/overview.md)
-
-* File/Pianificato ogni tre ore
-   * [E-mail marketing](/help/destinations/catalog/email-marketing/overview.md)
