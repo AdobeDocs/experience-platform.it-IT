@@ -1,25 +1,20 @@
 ---
 title: Panoramica dell’origine di SugarCRM
 description: Scopri come collegare SugarCRM a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
-badge: Beta
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL SugarCRM]
-
->[!NOTE]
->
->Il [!DNL SugarCRM] sorgente in versione beta. Consulta la [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# [!DNL SugarCRM]
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione CRM di terze parti. Il supporto per i provider CRM include [!DNL SugarCRM].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un’applicazione CRM di terze parti. Il supporto per i provider CRM include [!DNL SugarCRM].
 
 [[!DNL SugarCRM]](https://www.sugarcrm.com/) è un sistema di gestione delle relazioni con i clienti (CRM). [!DNL SugarCRM]Le funzionalità di includono automazione per la forza vendita, campagne di marketing, supporto clienti, collaborazione, gestione delle relazioni con i clienti tramite dispositivi mobili, gestione delle relazioni con i clienti social e reporting.
 
@@ -28,7 +23,6 @@ Il [!DNL SugarCRM] La sorgente consente di acquisire i dati di account, contatti
 * [Account](https://market.apidocs.sugarcrm.com/#b0aeb0cd-80ea-4688-8474-54e4873f32f3)
 * [Contatti](https://market.apidocs.sugarcrm.com/#308c5025-9478-4de3-8a41-1fc3cff1d8d1)
 * [Eventi](https://market.apidocs.sugarcrm.com/#516ec3b1-8e70-43d4-8bf2-38a2ae74c0a5)
-
 
 [!DNL SugarCRM] utilizza token Bearer come meccanismo di autenticazione per comunicare con [!DNL SugarCRM] API di account e contatti e [!DNL SugarCRM] Eventi API.
 
@@ -53,6 +47,6 @@ Prima di creare un [!DNL SugarCRM] connessione di origine, è necessario verific
 
 ## Connetti [!DNL SugarCRM Events] alla piattaforma
 
-* [Crea una connessione sorgente da portare [!DNL SugarCRM Events] dati per Platform tramite API](../../tutorials/api/create/crm/sugarcrm-events.md).
+* [Crea una connessione sorgente da portare [!DNL SugarCRM Events] dati per Platform tramite API](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Crea una connessione sorgente da portare [!DNL SugarCRM Events] dati a Platform tramite l’interfaccia utente](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Creare un flusso di dati per una connessione di origine CRM nell’interfaccia utente](../../tutorials/ui/dataflow/crm.md)

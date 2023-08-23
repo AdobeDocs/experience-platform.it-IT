@@ -2,18 +2,14 @@
 title: Creare una connessione di origine e un flusso di dati per gli account e i contatti di SugarCRM tramite l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform agli account e ai contatti di SugarCRM utilizzando l’API del servizio Flusso.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2164'
 ht-degree: 2%
 
 ---
 
-# (Beta) Crea una connessione sorgente e un flusso di dati per [!DNL SugarCRM Accounts & Contacts] utilizzo dell’API del servizio Flusso
-
->[!NOTE]
->
->Il [!DNL SugarCRM Accounts & Contacts] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# Creare una connessione di origine e un flusso di dati per [!DNL SugarCRM Accounts & Contacts] utilizzo dell’API del servizio Flusso
 
 Il seguente tutorial illustra i passaggi necessari per creare un [!DNL SugarCRM Accounts & Contacts] connessione sorgente e crea un flusso di dati per portare [[!DNL SugarCRM]](https://www.sugarcrm.com/) dati di account e contatti a Adobe Experience Platform utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,7 +18,7 @@ Il seguente tutorial illustra i passaggi necessari per creare un [!DNL SugarCRM 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente a [!DNL SugarCRM] utilizzando [!DNL Flow Service] API.
 

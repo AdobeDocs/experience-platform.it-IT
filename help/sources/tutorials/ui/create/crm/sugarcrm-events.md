@@ -2,18 +2,14 @@
 title: Creare una connessione sorgente agli eventi SugarCRM nell’interfaccia utente
 description: Scopri come creare una connessione all’origine degli eventi SugarCRM utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
 
-# (Beta) Creare un [!DNL SugarCRM Events] connessione sorgente nell’interfaccia utente
-
->[!NOTE]
->
->Il [!DNL SugarCRM Events] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# Creare un [!DNL SugarCRM Events] connessione sorgente nell’interfaccia utente
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL SugarCRM Events] connessione sorgente mediante l’interfaccia utente di Adobe Experience Platform.
 
@@ -54,7 +50,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *CRM* categoria, seleziona **[!UICONTROL Eventi SugarCRM]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *CRM* categoria, seleziona **[!UICONTROL Eventi SugarCRM]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Schermata dell’interfaccia utente di Platform per il catalogo con la scheda Eventi SugarCRM](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 

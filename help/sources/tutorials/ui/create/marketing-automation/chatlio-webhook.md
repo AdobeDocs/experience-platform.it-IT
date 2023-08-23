@@ -1,20 +1,15 @@
 ---
 title: Creare una connessione sorgente del catalogo nell’interfaccia utente
 description: Scopri come creare una connessione sorgente di Chatlio utilizzando l’interfaccia utente di Adobe Experience Platform.
-badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1149'
 ht-degree: 1%
 
 ---
 
 # Creare un [!DNL Chatlio] connessione sorgente nell’interfaccia utente
-
->[!NOTE]
->
->Il [!DNL Chatlio] sorgente in versione beta. Leggi le [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL Chatlio] connessione sorgente mediante l’interfaccia utente di Adobe Experience Platform.
 

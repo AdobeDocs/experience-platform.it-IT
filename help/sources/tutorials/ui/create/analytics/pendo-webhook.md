@@ -1,20 +1,15 @@
 ---
 title: Creare una connessione sorgente Pendo nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Pendo utilizzando l’interfaccia utente di Adobe Experience Platform.
-badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
 
 # Creare un [!DNL Pendo] flusso di dati della connessione sorgente e nell’interfaccia utente
-
->[!NOTE]
->
->Il [!DNL Pendo] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL Pendo] connessione sorgente e flusso di dati tramite l’interfaccia utente di Adobe Experience Platform.
 

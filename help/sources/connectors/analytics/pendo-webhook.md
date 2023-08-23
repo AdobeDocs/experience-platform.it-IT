@@ -1,24 +1,19 @@
 ---
 title: Panoramica sulla sorgente Pendo
 description: Scopri come collegare Pendo a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
-badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
 # [!DNL Pendo]
 
->[!NOTE]
->
->Il [!DNL Pendo] sorgente in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
-
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da applicazioni di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Pendo].
+Experienci Platform fornisce supporto per l’acquisizione di dati da applicazioni di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Pendo].
 
 [[!DNL Pendo]](https://pendo.io/) è un’app di analisi dei prodotti creata per aiutare le aziende di software a sviluppare prodotti che risuonano con i clienti. L’app consente ai produttori di software di incorporare i loro prodotti con un’ampia gamma di strumenti che possono portare a una migliore esperienza del prodotto per gli utenti e a nuove informazioni per il team di prodotto.
 

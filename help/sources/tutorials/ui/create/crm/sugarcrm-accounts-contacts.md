@@ -2,18 +2,14 @@
 title: Creare una connessione sorgente a conti e contatti SugarCRM nell’interfaccia utente
 description: Scopri come creare una connessione sorgente di account e contatti SugarCRM utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '762'
 ht-degree: 2%
 
 ---
 
-# (Beta) Creare un [!DNL SugarCRM Accounts & Contacts] connessione sorgente nell’interfaccia utente
-
->[!NOTE]
->
->Il [!DNL SugarCRM Accounts & Contacts] sorgente in versione beta. Consulta la [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# Creare un [!DNL SugarCRM Accounts & Contacts] connessione sorgente nell’interfaccia utente
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL SugarCRM Accounts & Contacts] connessione sorgente mediante l’interfaccia utente di Adobe Experience Platform.
 
@@ -62,7 +58,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *CRM* categoria, seleziona **[!UICONTROL Account e contatti SugarCRM]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *CRM* categoria, seleziona **[!UICONTROL Account e contatti SugarCRM]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Schermata dell’interfaccia utente di Platform per il catalogo con la scheda Account e contatti SugarCRM](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 

@@ -4,10 +4,10 @@ user-guide-title: Guida ai dashboard di Adobe Experience Platform
 breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
-source-git-commit: c558ee6cc1c7ae36f87aaff5d40be57cfb21b2e4
+source-git-commit: 43a98526d5713ffd5917bd3986067ba483001171
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 35%
+source-wordcount: '93'
+ht-degree: 33%
 
 ---
 
@@ -34,8 +34,10 @@ ht-degree: 35%
    * [Widget standard](customize/standard-widgets.md)
    * [Widget personalizzati](customize/custom-widgets.md)
    * [Modifica di uno schema](customize/edit-schema.md)
+* Casi di utilizzo di Insights {#insights-use-cases}
+   * [Analisi del consenso](insights-use-cases/consent-analysis.md)
 * Integrazioni di applicazioni {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Eseguire query sui set di dati del dashboard](query.md)
 * [Modello dati di Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
