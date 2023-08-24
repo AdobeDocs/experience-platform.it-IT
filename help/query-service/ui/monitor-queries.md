@@ -2,9 +2,9 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Il [!UICONTROL Query pianificate] fornisce una panoramica di tutte le query CTAS
 
 Per passare al [!UICONTROL Query pianificate] , seleziona **[!UICONTROL Query]** dalla barra di navigazione a sinistra seguita da **[!UICONTROL Query pianificate]**
 
-![La scheda Query pianificate nell’area di lavoro Query.](../images/ui/monitor-queries/scheduled-queries.png)
+![La scheda Query pianificate nell’area di lavoro Query con Query pianificate ed evidenziate.](../images/ui/monitor-queries/scheduled-queries.png)
 
 La tabella seguente descrive ogni colonna disponibile.
 
