@@ -1,9 +1,7 @@
 ---
 title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
-hide: true
-hidefromtoc: true
-source-git-commit: 7de5fe7808a22137c417a4ca865d764b0814b90e
+source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
 ht-degree: 3%
@@ -12,7 +10,7 @@ ht-degree: 3%
 
 # Coinvolgi di nuovo i tuoi clienti in modo intelligente per tornare
 
-Rivolgiti ai clienti che hanno abbandonato una conversione prima di terminarla in modo intelligente e responsabile. Coinvolgi i clienti inattivi attraverso esperienze anziché promemoria per migliorare la conversione e stimolare la crescita del valore del ciclo di vita del cliente.
+Coinvolgi nuovamente i clienti che hanno abbandonato una conversione prima di completarla in modo intelligente e responsabile. Coinvolgi i clienti inattivi attraverso esperienze anziché promemoria per migliorare la conversione e stimolare la crescita del valore del ciclo di vita del cliente.
 
 Utilizza considerazioni in tempo reale, prendi in considerazione tutte le qualità e i comportamenti dei consumatori e offri una riqualificazione rapida in base a eventi online e offline.
 
