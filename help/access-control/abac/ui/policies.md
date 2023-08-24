@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Gestire i criteri di controllo di accesso
 description: Questo documento fornisce informazioni sulla gestione dei criteri di controllo di accesso tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud.
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 504c73fc73ce41f2c1b3159478fc7fe9b4d20a9d
+source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,74 @@ The **[!UICONTROL Delete user policy]** dialog appears, prompting you to confirm
 You are returned to the **[!UICONTROL policies]** tab and a confirmation of deletion pop over appears.
 
 ![flac-policy-delete-confirmation](../../images/flac-ui/flac-policy-delete-confirmation.png) -->
+
+## Configurare i criteri per una sandbox
+
+>[!IMPORTANT]
+>
+>Per impostazione predefinita, il [!UICONTROL Inclusione automatica] la funzione è attivata per tutti i clienti, il che significa che tutte le sandbox sono aggiunte al criterio.
+
+>[!NOTE]
+>
+>Il **[!UICONTROL Default-Label-Based-Access-Control-Policy]** Il criterio è attualmente l&#39;unico disponibile per la configurazione.
+
+Per visualizzare le sandbox associate a un criterio, selezionalo da **[!UICONTROL Criteri]** scheda.
+
+![La pagina dei criteri che mostra un elenco dei criteri esistenti disponibili.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+Quindi, seleziona il criterio e fai clic su **[!UICONTROL Sandbox]** scheda. Viene visualizzato un elenco di sandbox associate al criterio.
+
+![La pagina dei criteri che mostra un elenco dei criteri esistenti disponibili.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+
+### Aggiungi criterio a tutte le sandbox
+
+Utilizza il **[!UICONTROL Inclusione automatica]** attivare **[!UICONTROL Sandbox]** per attivare il criterio per tutte le sandbox.
+
+![Il [!UICONTROL Sandbox] scheda che mostra [!UICONTROL Inclusione automatica] attivare/disattivare.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Il **[!UICONTROL Abilita inclusione automatica]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la selezione. Seleziona **[!UICONTROL Abilita]** per completare l&#39;impostazione di configurazione.
+
+![Il [!UICONTROL Abilita inclusione automatica] evidenziazione finestra di dialogo [!UICONTROL Abilita].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+
+>[!SUCCESS]
+>
+>Il criterio viene attivato per tutte le sandbox esistenti e verrà aggiunto automaticamente a tutte le nuove sandbox quando saranno disponibili.
+
+### Aggiungi criterio per selezionare sandbox
+
+>[!IMPORTANT]
+>
+>Le sandbox future non saranno incluse nel criterio per impostazione predefinita se [!UICONTROL Inclusione automatica] l&#39;interruttore è disattivato. Sarà necessario gestire e aggiungere manualmente le sandbox al criterio.
+
+Utilizza il **[!UICONTROL Inclusione automatica]** attivare **[!UICONTROL Sandbox]** per disabilitare il criterio per tutte le sandbox.
+
+![Il [!UICONTROL Sandbox] scheda che mostra [!UICONTROL Inclusione automatica] attivare/disattivare.](../../images/flac-ui/abac-policies-auto-include.png)
+
+Dalla sezione **[!UICONTROL Sandbox]** , seleziona **[!UICONTROL Aggiungi Sandbox]** per selezionare le sandbox a cui verrà applicato questo criterio.
+
+![Il [!UICONTROL Sandbox] scheda che mostra un elenco di sandbox aggiunte al criterio.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+
+Viene visualizzato un elenco di sandbox. Seleziona la sandbox da aggiungere dall’elenco. In alternativa, utilizza la barra di ricerca per cercare la sandbox. Seleziona **[!UICONTROL Salva]**.
+
+![Il [!UICONTROL Aggiungi Sandbox] pagina che mostra un elenco delle sandbox esistenti disponibili da aggiungere al criterio.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+
+>[!SUCCESS]
+>
+>Le sandbox selezionate sono state aggiunte correttamente al criterio.
+
+### Rimuovere le sandbox da un criterio
+
+Per rimuovere una sandbox, seleziona la **X** accanto al nome della sandbox.
+
+![Il [!UICONTROL Sandbox] scheda che mostra un elenco di sandbox ed evidenzia [!UICONTROL X] da eliminare.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+
+Il **[!UICONTROL Rimuovi]** viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la selezione. Seleziona **[!UICONTROL Conferma]** per completare la rimozione.
+
+![Il [!UICONTROL Rimuovi] evidenziazione finestra di dialogo [!UICONTROL Conferma].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+
+>[!SUCCESS]
+>
+>La sandbox selezionata è stata rimossa correttamente dal criterio.
 
 ## Attivare un criterio
 
