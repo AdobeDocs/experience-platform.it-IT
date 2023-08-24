@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
-source-git-commit: a699f66fd48f463cc69ea0f214f487cce360615e
+source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 32%
+source-wordcount: '1650'
+ht-degree: 33%
 
 ---
 
@@ -36,7 +36,7 @@ Basato su Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time
 | Funzione | Descrizione |
 | --- | --- |
 | Guida all’esempio di ricoinvolgimento intelligente | Il [Nuovo coinvolgimento intelligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) la guida del caso d’uso fornisce dettagli su come coinvolgere nuovamente i clienti che hanno abbandonato una conversione prima di completarla in modo intelligente e responsabile. Questa guida utilizza i seguenti percorsi di esempio per coinvolgere nuovamente i clienti: <ul><li>Percorso di ricoinvolgimento: esegui il targeting dei clienti che hanno abbandonato la navigazione dei prodotti.</li><li>Percorso carrello abbandonato: il targeting dei clienti che hanno inserito prodotti nel carrello ma non hanno ancora completato l’acquisto.</li><li>Percorso di conferma dell’ordine: concentrarsi sugli acquisti di prodotti</li></ul> Utilizza il collegamento dettagliato delle opzioni di feedback nella parte inferiore della sezione [Guida all’esempio di ricoinvolgimento intelligente](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) per fornire un feedback. |
-| Profili potenziali | Esegui il marketing upper funnel in Real-Time CDP, con profili prospect originati dai partner e ID partner, per raggiungere nuovi clienti e arricchire i dati di prime parti: <ul><li>Acquisizione da parte del cliente e indirizzabilità: sfrutta identificatori senza cookie e PII con hash provenienti da partner di dati scelti per raggiungere nuovi clienti e ridurre la dipendenza da cookie di terze parti.</li><li>Marketing full funnel in un unico sistema: segmentazione self-service, cura del pubblico e attivazione nativa per clienti potenziali e noti in un unico sistema.</li><li>Foundation of trust: governa i dati e i profili dei partner con l’utilizzo di dati brevettati, l’etichettatura, i controlli di accesso e altro ancora in modo responsabile per il mercato. Per ulteriori informazioni, consulta le seguenti guide dei casi d’uso: Sono ora disponibili le guide dei casi d’uso per la ricerca di potenziali clienti. Leggi le guide dei casi d’uso per la ricerca di potenziali clienti per scoprire come coinvolgere e acquisire nuovi clienti attraverso i casi d’uso per la ricerca di potenziali clienti:<ul><li>[Prospezione](../../rtcdp/partner-data/prospecting.md)</li><li>[Personalizzazione nel sito](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Integrare i profili di prime parti](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Attiva i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| Supporto dati partner | Esegui il marketing upper funnel in Real-Time CDP, con profili prospect originati dai partner e ID partner, per raggiungere nuovi clienti e arricchire i dati di prime parti: <ul><li>Acquisizione da parte del cliente e indirizzabilità: sfrutta identificatori senza cookie e PII con hash provenienti da partner di dati scelti per raggiungere nuovi clienti e ridurre la dipendenza da cookie di terze parti.</li><li>Marketing full funnel in un unico sistema: segmentazione self-service, cura del pubblico e attivazione nativa per clienti potenziali e noti in un unico sistema.</li><li>Foundation of trust: governa i dati e i profili dei partner con l’utilizzo di dati brevettati, l’etichettatura, i controlli di accesso e altro ancora in modo responsabile per il mercato. Per ulteriori informazioni, consulta le seguenti guide dei casi d’uso: Sono ora disponibili le guide dei casi d’uso per la ricerca di potenziali clienti. Leggi le guide dei casi d’uso per la ricerca di potenziali clienti per scoprire come coinvolgere e acquisire nuovi clienti attraverso i casi d’uso per la ricerca di potenziali clienti:<ul><li>[Prospezione](../../rtcdp/partner-data/prospecting.md)</li><li>[Personalizzazione nel sito](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[Integrare i profili di prime parti](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[Attiva i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -122,6 +122,17 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
 | Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione di clienti. |
+
+{style="table-layout:auto"}
+
+**Componenti XDM aggiornati**
+
+| Tipo di componente | Nome | Descrizione aggiornamento |
+| --- | --- | --- |
+| Estensione ([!UICONTROL Estensione completa Adobe Analytics ExperienceEvent]) | [[!UICONTROL Dati contestuali]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL Dati contestuali] oggetto mappa aggiunto a [!UICONTROL Estensione completa Adobe Analytics ExperienceEvent] per fornire dati contestuali per Adobe Analytics. |
+| Gruppo di campi | Multiplo | Vari campi aggiunti a [[!UICONTROL Dettagli segmento evento arricchito]](https://github.com/adobe/xdm/pull/1760/files). |
+
+{style="table-layout:auto"}
 
 Per ulteriori informazioni, leggere [Panoramica del sistema XDM](../../xdm/home.md).
 
