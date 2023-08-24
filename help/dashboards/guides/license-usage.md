@@ -4,7 +4,7 @@ title: Guida alla dashboard dell’utilizzo delle licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Per scegliere una sandbox da visualizzare nel dashboard, seleziona una delle seg
 
 I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In altre parole, selezionare [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti sul consumo rispettivamente per tutte le sandbox di produzione o di sviluppo.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con il selettore sandbox evidenziato.](../images/license-usage/select-sandbox.png)
+![La scheda Panoramica della dashboard Utilizzo licenze con il selettore sandbox evidenziato.](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -55,11 +55,11 @@ I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello
 
 Dopo aver selezionato una sandbox, puoi utilizzare il menu a discesa dell’intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili più opzioni, incluso il valore predefinito degli ultimi 30 giorni.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con il menu a discesa Intervallo date evidenziato.](../images/license-usage/select-date-range.png)
+![La scheda Panoramica della dashboard Utilizzo licenze con il menu a discesa Intervallo date evidenziato.](../images/license-usage/select-date-range-old.png)
 
 Puoi anche selezionare **[!UICONTROL Data personalizzata]** per scegliere il periodo di tempo visualizzato.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con le opzioni di intervallo date personalizzate evidenziate.](../images/license-usage/select-custom-date.png)
+![La scheda Panoramica della dashboard Utilizzo licenze con le opzioni di intervallo date personalizzate evidenziate.](../images/license-usage/select-custom-date-old.png)
 
 ## Widget
 
@@ -67,7 +67,7 @@ Il dashboard utilizzo licenze è composto da widget che visualizzano metriche di
 
 Ogni widget visualizza un grafico a linee che confronta i numeri effettivi dell’organizzazione con il totale disponibile con le licenze dell’organizzazione e fornisce una percentuale dell’utilizzo totale.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con il grafico a linee del widget della metrica Utilizzo licenze di esempio evidenziata.](../images/license-usage/widgets.png)
+![La scheda Panoramica della dashboard Utilizzo licenze con il grafico a linee del widget della metrica Utilizzo licenze di esempio evidenziata.](../images/license-usage/widgets-old.png)
 
 ## Metriche disponibili
 
