@@ -1,13 +1,11 @@
 ---
 title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 8%
 
 ---
 
@@ -82,3 +80,11 @@ Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblic
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
+
+Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
+
+* [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* Utilizzare il supporto dati di terze parti in Real-Time CDP per [espandi la base di profili con i profili prospect dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
+* [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.

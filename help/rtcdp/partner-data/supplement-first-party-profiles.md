@@ -1,13 +1,10 @@
 ---
-title: Integrare i profili di prime parti con gli attributi forniti dai partner (Beta)
+title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '1091'
+ht-degree: 94%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 100%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità in versione beta è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
+>* Questa funzionalità in versione è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
 
 Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.
 
@@ -121,5 +118,6 @@ Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni pres
 
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
-* (**Disponibile a breve**) [!BADGE Beta]{type=Informative}**Utilizzo del riconoscimento assistito deo partner** per personalizzare le esperienze nel sito durante la visita e per il retargeting fuori dal sito dopo la visita, senza che l’utente si autentichi o abbia antecedenti con il tuo marchio.
-* (**Disponibile a breve**) [!BADGE Beta]{type=Informative}**Attivazione estesa** che utilizza gli ID partner per pubblicare ecosistemi che non accettano PII o PII con hash.
+* Utilizzare il supporto dati di terze parti in Real-Time CDP per [espandi la base di profili con i profili prospect dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
+* [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
+* [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.

@@ -1,13 +1,10 @@
 ---
-title: (Beta) Coinvolgi e acquisisci nuovi clienti attraverso la ricerca di casi d’uso
+title: Coinvolgi e acquisisci nuovi clienti attraverso la ricerca di casi d’uso
 description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi di utilizzo di individuazione, grazie al supporto dei dati dei partner in Real-Time CDP.
-hide: true
-hidefromtoc: true
-badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2e2a473efd247cb235ee7e8f94058baa48fd1b1a
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 15%
+source-wordcount: '1941'
+ht-degree: 13%
 
 ---
 
@@ -15,7 +12,7 @@ ht-degree: 15%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità in versione beta è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
+>* Questa funzionalità in versione è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
 
 Utilizza il supporto dati di terze parti in Real-Time CDP per espandere la tua base di profili con profili di potenziali clienti dei partner dati e interagire con loro per acquisire o raggiungere nuovi clienti.
 
@@ -57,8 +54,8 @@ Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai l
 * [Etichette di utilizzo dati](/help/data-governance/labels/overview.md)
 * [Set di dati](/help/catalog/datasets/overview.md)
 * [Origini](/help/sources/home.md)
-* Profili (collegamento ai profili dei potenziali clienti)
-* Tipi di pubblico (collegamento ai tipi di pubblico potenziali)
+* [Profili potenziali](/help/profile/ui/prospect-profile.md)
+* [Pubblico potenziale](/help/segmentation/ui/prospect-audience.md)
 * [Destinazioni](/help/destinations/home.md)
 
 ### Ottenere la licenza dei dettagli del profilo di terze parti dal partner {#license-profiles-from-partner}
@@ -184,7 +181,7 @@ Potrebbero essere necessarie fino a due ore perché i profili di potenziali clie
 
 ![Visualizzazione di come ispezionare i profili di potenziali clienti.](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)
 
-(**Disponibile a breve** a) Ulteriori informazioni sui profili di potenziali clienti.
+Ulteriori informazioni su [profili potenziali](/help/profile/ui/prospect-profile.md).
 
 ### Creare un pubblico potenziale {#create-prospect-audiences}
 
@@ -200,7 +197,7 @@ L’esperienza di creazione del pubblico per i profili di potenziali clienti è 
 * Solo valutazione profilo batch.
 * Non supporta la creazione di tipi di pubblico in base a eventi di serie temporali.
 
-(**Disponibile a breve** a) Ulteriori informazioni sui tipi di pubblico potenziali.
+Ulteriori informazioni su [audience potenziali](/help/segmentation/ui/prospect-audience.md).
 
 ### Attivare i profili di potenziali clienti nelle destinazioni {#activate-to-destinations}
 
@@ -210,5 +207,6 @@ Utilizza i tipi di pubblico potenziali esportandoli nelle destinazioni. Attualme
 
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
-* [!BADGE Beta]{type=Informative}[Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* (**Disponibile a breve**) [!BADGE Beta]{type=Informative}**Utilizzo del riconoscimento assistito deo partner** per personalizzare le esperienze nel sito durante la visita e per il retargeting fuori dal sito dopo la visita, senza che l’utente si autentichi o abbia antecedenti con il tuo marchio.
+* [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
+* [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.
