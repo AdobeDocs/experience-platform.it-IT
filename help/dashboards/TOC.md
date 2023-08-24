@@ -4,10 +4,10 @@ user-guide-title: Guida ai dashboard di Adobe Experience Platform
 breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
-source-git-commit: 43a98526d5713ffd5917bd3986067ba483001171
+source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 33%
+source-wordcount: '89'
+ht-degree: 34%
 
 ---
 
@@ -25,8 +25,7 @@ ht-degree: 33%
    * [Tipi di pubblico](guides/audiences.md)
    * [Destinazioni](guides/destinations.md)
    * [Utilizzo delle licenze](guides/license-usage.md)
-   * [Informazioni sul profilo di Customer AI](guides/customer-ai-profiles.md)
-   * [Approfondimenti sul pubblico di Customer AI](guides/customer-ai-audiences.md)
+   * [Utilizzo licenze (versione limitata)](guides/license-usage-limited.md)
 * Personalizzare le dashboard {#customize}
    * [Panoramica sulla personalizzazione](customize/overview.md)
    * [Modificare le dashboard](customize/modify.md)
