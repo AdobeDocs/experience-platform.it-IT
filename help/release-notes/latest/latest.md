@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 32%
@@ -64,10 +64,13 @@ Per ulteriori informazioni sul controllo degli accessi basato su attributi, vede
 Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
 **Funzioni nuove o aggiornate**
-&#x200B; | Funzione | Descrizione | | — | — | |Caso di utilizzo: analisi del consenso e monitoraggio | Scopri come creare una dashboard del consenso per vari casi di utilizzo di marketing per i dati di Real-Time CDP con [analisi del consenso e documento di tracciamento](../../dashboards/insights-use-cases/consent-analysis.md). Descrive come creare un pubblico con gli attributi appropriati per le tue esigenze aziendali e quindi utilizzare le informazioni tramite l’utilizzo di widget preconfigurati nell’interfaccia utente di Adobe Experience Platform. Fornisce inoltre istruzioni su come creare widget personalizzati con la funzione delle dashboard definite dall’utente. Il documento illustra la tendenza del consenso e i casi di utilizzo di sovrapposizione del consenso. |
+
+| Funzione | Descrizione |
+| --- | --- |
+| Caso di utilizzo: analisi del consenso e tracciamento | Scopri come creare una dashboard del consenso per vari casi d’uso di marketing per i dati di Real-Time CDP con [analisi del consenso e documento di tracciamento](../../dashboards/insights-use-cases/consent-analysis.md). Descrive come creare un pubblico con gli attributi appropriati per le tue esigenze aziendali e quindi utilizzare le informazioni tramite l’utilizzo di widget preconfigurati nell’interfaccia utente di Adobe Experience Platform. Fornisce inoltre istruzioni su come creare widget personalizzati con la funzione delle dashboard definite dall’utente. Il documento illustra la tendenza del consenso e i casi di utilizzo di sovrapposizione del consenso. |
 
 {style="table-layout:auto"}
-&#x200B;
+
 Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzazioni di accesso e creare widget personalizzati, consulta la [panoramica sulle dashboard](../../dashboards/home.md).
 
 ## Raccolta dati {#data-collection}
