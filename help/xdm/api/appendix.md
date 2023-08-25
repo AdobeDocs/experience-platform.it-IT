@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Appendice alla guida API del registro dello schema
 description: Questo documento fornisce informazioni supplementari relative all’utilizzo dell’API Schema Registry.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,6 @@ Puoi filtrare i risultati utilizzando `property` , utilizzato per applicare un o
 | `>` | Filtra in base al fatto che la proprietà sia maggiore del valore specificato. | `property=version>5` |
 | `<=` | Filtra in base al fatto che la proprietà sia minore o uguale al valore specificato. | `property=version<=5` |
 | `>=` | Filtra in base al fatto che la proprietà sia maggiore o uguale al valore specificato. | `property=version>=5` |
-| `~` | Filtra in base alla corrispondenza della proprietà con un’espressione regolare fornita. | `property=title~test$` |
 | (Nessuna) | L&#39;indicazione solo del nome della proprietà restituisce solo le voci in cui la proprietà esiste. | `property=title` |
 
 {style="table-layout:auto"}
