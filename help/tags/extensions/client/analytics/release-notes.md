@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Analytics Extension
 description: Note aggiornate sulla versione dell’estensione tag Adobe Analytics in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 90%
+source-wordcount: '1394'
+ht-degree: 87%
 
 ---
 
@@ -17,13 +17,26 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 >
 >L’estensione tag Analytics, se spesso aggiornata in risposta agli aggiornamenti del [Libreria JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it). Consulta la sezione [Note sulla versione di AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it) per informazioni dettagliate sulle versioni specifiche menzionate di seguito.
 
+## 19 luglio 2023
+
+**Estensione Adobe Analytics 1.9.2**
+
+**Funzioni**:
+
+* Aggiornato all’AppMeasurement v2.24.0.
+* È stata aggiunta una configurazione opzionale (`decodeLinkParameters` predefinito `false`) che decodifica gli URL di collegamento che includono caratteri con codifica a doppio byte.
+
+**Correzioni di bug**:
+* È stata aggiunta una gestione aggiuntiva degli errori per i browser con entropia elevata errata [Hint client agente utente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=it) API.
+* Modificato [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Intestazione Content-Type da utilizzare `x-www-form-urlencoded` per impostazione predefinita.
+
 ## 23 settembre 2022
 
 **Estensione Adobe Analytics 1.9.1**
 
 **Funzioni**:
 
-* Aggiornato ad AppMeasurement v2.23.0.
+* Aggiornato all’AppMeasurement v2.23.0.
 * L&#39;estensione può ora raccogliere entropia elevata [user-agent client hints](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) come supportato dall’ultima versione di AppMeasurement.
 
 ## 28 febbraio 2022
@@ -40,7 +53,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 **Correzioni di bug**:
 
-* AppMeasurement è stato aggiornato alla versione v2.22.3.
+* È stato aggiornato l’AppMeasurement alla versione v2.22.3.
 
 ## 16 settembre 2021
 
@@ -48,7 +61,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 **Correzioni di bug**:
 
-* AppMeasurement è stato aggiornato alla versione v2.22.2.
+* È stato aggiornato l’AppMeasurement alla versione v2.22.2.
 * BuildInfo.environment obsoleto rimosso
 
 ## 24 agosto 2021
