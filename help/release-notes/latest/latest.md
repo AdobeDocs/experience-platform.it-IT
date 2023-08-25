@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1650'
-ht-degree: 33%
+source-wordcount: '1664'
+ht-degree: 32%
 
 ---
 
@@ -121,7 +121,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione di clienti. |
+| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione di clienti. Consulta la sezione [[!UICONTROL Profilo potenziale individuale XDM]](../../xdm/classes/prospect.md) per visualizzare esempi e ulteriori informazioni. |
 
 {style="table-layout:auto"}
 
