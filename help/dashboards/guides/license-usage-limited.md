@@ -5,7 +5,7 @@ description: Adobe Experience Platform fornisce una dashboard attraverso la qual
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 1%
@@ -68,7 +68,7 @@ La tabella indica la metrica principale per ciascun prodotto, in quanto ogni pro
 
 Tutte le metriche disponibili vengono visualizzate nel [!UICONTROL Riepilogo] scheda. Le metriche disponibili dipendono dal prodotto concesso in licenza. Questa visualizzazione fornisce **una visualizzazione consolidata di tutte le metriche in tutte le sandbox di produzione o di sviluppo**. Lo stesso livello di analisi viene fornito per le sandbox di produzione e di sviluppo.
 
-![La visualizzazione di riepilogo di un prodotto Platform che mostra tutte le metriche disponibili per tale prodotto.]()
+![La visualizzazione di riepilogo di un prodotto Platform che mostra tutte le metriche disponibili per tale prodotto.](../images/license-usage/summary-tab.png)
 
 Nella scheda Riepilogo, la tabella include [!UICONTROL Metrica] colonna. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo di sandbox.
 
@@ -78,7 +78,7 @@ Per cambiare la visualizzazione tra i tipi di sandbox di produzione e di svilupp
 
 I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In altre parole, selezionare [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti sul consumo rispettivamente per tutte le sandbox di produzione o di sviluppo.
 
-![La vista di riepilogo di un prodotto Platform con sandbox di produzione e sandbox di sviluppo evidenziate.](../images/license-usage/summary-tab.png)
+![La vista di riepilogo di un prodotto Platform con sandbox di produzione e sandbox di sviluppo evidenziate.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >

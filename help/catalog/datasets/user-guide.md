@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 4%
@@ -207,7 +207,7 @@ Puoi gestire le etichette di governance dei dati per un set di dati selezionando
 
 Le etichette di utilizzo dei dati, applicate a livello di schema, ti consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette agli schemi per la propagazione ai set di dati.
 
-### Sposta in cartelle {#move-to-folders}
+## Sposta in cartelle {#move-to-folders}
 
 Per una migliore gestione dei set di dati, puoi inserire i set di dati all’interno di cartelle. Per spostare un set di dati in una cartella, seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, quindi fai clic su **[!UICONTROL Sposta nella cartella]** dal menu a discesa.
 
@@ -217,7 +217,7 @@ Il [!UICONTROL Sposta] viene visualizzata la finestra di dialogo dataset to fold
 
 ![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con [!UICONTROL Sposta] evidenziato.](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, seleziona l’icona Crea cartella (![Icona Crea cartella.](../images/datasets/user-guide/create-folder-icon.png)) in alto a destra nella finestra di dialogo.
 >
