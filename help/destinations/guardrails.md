@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
+source-git-commit: 0835021523a7eb1642a6dbcb24334eac535aaa6d
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1270'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,8 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
 | Numero massimo di tipi di pubblico per una singola destinazione | 250 | Morbido | Si consiglia di mappare un massimo di 250 tipi di pubblico su una singola destinazione in un flusso di dati. <br><br> Se devi attivare più di 250 tipi di pubblico in una destinazione, puoi: <ul><li> Annullare la mappatura dei tipi di pubblico che non desideri più attivare oppure</li><li>Crea un nuovo flusso di dati nella destinazione desiderata e mappa i tipi di pubblico su questo nuovo flusso di dati.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 tipi di pubblico mappati alla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
-| Numero massimo di destinazioni | 100 | Morbido | Ti consigliamo di creare un massimo di 100 destinazioni a cui connettersi e attivare i dati *per sandbox*. [Destinazioni di personalizzazione Edge (personalizzazione personalizzata)](#edge-destinations-activation) può rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Numero massimo di attributi mappati a una destinazione | 50 | Morbido | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
+| Numero massimo di destinazioni | 100 | Rigido | Puoi creare un massimo di 100 destinazioni a cui connettersi e attivare i dati, *per sandbox*. [Destinazioni di personalizzazione Edge (personalizzazione personalizzata)](#edge-destinations-activation) può rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
 | Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Rigido | Attualmente, è possibile esportare solo *attributi record profilo* alle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
 | Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Non disponibile | Rigido | In questo momento, è **non** possibile esportare *array o attributi mappa* alle destinazioni. L&#39;eccezione a questa regola è il [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportato sia in streaming che nelle attivazioni basate su file. |
 
@@ -100,7 +100,7 @@ Le esportazioni di set di dati sono attualmente supportate in una **[!UICONTROL 
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Dimensione dei set di dati esportati | 5 miliardi di record | Morbido | Il limite qui descritto per le esportazioni di set di dati è un *guardrail morbido*. Ad esempio, anche se l’interfaccia utente non ti blocca l’esportazione di set di dati superiori a 5 miliardi di record, il comportamento è imprevedibile e le esportazioni potrebbero non riuscire o avere una latenza di esportazione molto lunga. |
+| Dimensione dei set di dati esportati | 5 miliardi di record | Morbido | Il limite qui descritto per le esportazioni di set di dati è un *guardrail morbido*. Ad esempio, anche se l’interfaccia utente non blocca l’esportazione di set di dati superiori a 5 miliardi di record, il comportamento è imprevedibile e le esportazioni potrebbero non riuscire o avere una latenza di esportazione molto lunga. |
 
 {style="table-layout:auto"}
 
@@ -195,7 +195,7 @@ The guardrails below are grouped by the format of the exported file, and then fu
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Morbido | Puoi creare un massimo di 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
+| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Morbido | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
 | Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1,800 e massimo 3,600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Rigido | Quando si utilizza [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili da includere nei messaggi. |
 
 {style="table-layout:auto"}
