@@ -4,9 +4,9 @@ description: Scopri come utilizzare l’Assistente AI per navigare e comprendere
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: ca606e4e29f4ba1df281f47a86b4e3cfa850ae35
+source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -342,4 +342,4 @@ Leggi la tabella seguente per alcuni esempi:
 | --- | --- | --- |
 | Qual è il segmento più grande? | Qual è il segmento più grande? Utilizzo dei dati. | Indica esplicitamente all’Assistente IA che desideri che la risposta sia basata sui dati. |
 | Qual è il segmento più grande? | Elencate il mio segmento più grande. | Esistono casi in cui una domanda &quot;cosa...&quot; può essere scambiata per una domanda basata su documentazione. L’utilizzo di un comando come &quot;list&quot; è un indicatore più forte del fatto che ti stai ponendo una domanda con i dati nel contesto. |
-| Quanti set di dati ho? | Conta i miei set di dati. | I segmenti della domanda originale non funzionano con i set di dati. |
+| Quanti set di dati ho? | Conta i miei set di dati. | La domanda originale funziona per i segmenti, ma potrebbe non funzionare con i set di dati. |
