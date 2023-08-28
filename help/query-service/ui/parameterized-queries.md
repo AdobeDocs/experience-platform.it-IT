@@ -4,7 +4,7 @@ description: Scopri come utilizzare le query con parametri nell’interfaccia ut
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Query con parametri"
->abstract="Utilizza le query con parametri per aggiungere valori di parametro al momento dell’esecuzione. Questo consente di lavorare con dati dinamici e riutilizzare le query per diversi casi d’uso. Utilizza il `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi un valore per la chiave nella sezione Parametri query sotto l’editor."
+>abstract="Utilizza le query con parametri per aggiungere valori di parametro al momento dell’esecuzione. Questo consente di lavorare con dati dinamici e riutilizzare le query per diversi casi d’uso. Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi un valore per la chiave nella sezione dei parametri di query sotto l’editor."
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 Per creare una query con parametri nell’interfaccia utente, passa all’editor delle query. Consulta la sezione su [accesso all’editor query](./user-guide.md#accessing-query-editor) per ulteriori istruzioni.
 
-Utilizza il `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi il valore mancante per la chiave nella [!UICONTROL Parametri di query] sotto l’editor. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Un&#39;icona di avviso.](../images/ui/parameterized-queries/alert-icon.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi [!UICONTROL Valore] campi di input.
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi il valore mancante per la chiave nella [!UICONTROL Parametri di query] sotto l’editor. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Un&#39;icona di avviso.](../images/ui/parameterized-queries/alert-icon.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi [!UICONTROL Valore] campi di input.
 
 ![Vengono evidenziati l&#39;Editor query con una query con parametri e la sezione Parametri query.](../images/ui/parameterized-queries/parameterized-query.png)
 
