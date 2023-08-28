@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 32%
+source-wordcount: '1749'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [Raccolta dati](#data-collection)
 - [Acquisizione dei dati](#data-ingestion)
 - [Preparazione dei dati](#data-prep)
+- [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
 - [Servizio di segmentazione](#segmentation)
@@ -111,6 +112,17 @@ La preparazione dei dati consente ai data engineer di mappare, trasformare e con
 {style="table-layout:auto"}
 
 Per ulteriori informazioni, leggere [Panoramica sulla preparazione dati](../../data-prep/home.md).
+
+## Destinazioni {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+
+- Ora puoi [attivare i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md) nelle destinazioni basate su file.
+- Il generale [guardrail di attivazione](../../destinations/guardrails.md#general-activation-guardrails) di un massimo di 100 destinazioni per sandbox è stato aggiornato a _limite rigido_.
+
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
