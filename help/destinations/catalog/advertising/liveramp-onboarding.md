@@ -3,7 +3,7 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 3%
@@ -209,7 +209,7 @@ I profili inclusi nei file esportati possono corrispondere a uno dei seguenti st
 Ad esempio, un file CSV esportato con `email` , due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md), e uno [importato](../../../segmentation/ui/overview.md#importing-an-audience) pubblico esterno, potrebbe presentarsi così:
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Nell’esempio precedente, il `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/overview.md#importing-an-audience).
+Nell’esempio precedente, il `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/overview.md#importing-an-audience).
 
 Poiché Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato eseguito per ogni ID del criterio di unione.
 
