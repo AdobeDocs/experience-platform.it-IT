@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: d16a4cf7db12c92ab6ead498846f17d76f6ac641
+source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 9%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 9%
    * [Modifica flussi di dati di attivazione](./ui/edit-activation.md)
    * [Elimina destinazioni](./ui/delete-destinations.md)
    * [Monitorare i flussi di dati](./ui/monitor-dataflows.md)
-   * [(Beta) Configurare le opzioni di formattazione dei file per le destinazioni basate su file](./ui/batch-destinations-file-formatting-options.md)
+   * [Configurare le opzioni di formattazione dei file per le destinazioni basate su file](./ui/batch-destinations-file-formatting-options.md)
    * [Iscriviti agli avvisi contestuali sulle destinazioni](ui/alerts.md)
 * Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
@@ -89,7 +89,7 @@ ht-degree: 9%
       * [Connessione Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [La connessione a Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Beta) La connessione CRM del Trade Desk](./catalog/advertising/tradedesk-emails.md)
-      * [Estensione tag per sito web twitter Universal](./catalog/advertising/twitter-uwt.md)
+      * [Estensione tag twitter per sito Web universale](./catalog/advertising/twitter-uwt.md)
       * [Connessione Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Destinazioni di Analytics {#analytics}
       * [Panoramica sulle destinazioni di Analytics](./catalog/analytics/overview.md)
