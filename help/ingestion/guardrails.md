@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Questo documento fornisce indicazioni sui guardrail per l’acquisizione dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
+source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -29,11 +29,14 @@ La tabella seguente illustra i guardrail da considerare quando si utilizza [API 
 
 ## Guardrail per acquisizione in streaming
 
-La tabella seguente illustra i guardrail da considerare quando si utilizza [API di acquisizione in streaming](./streaming-ingestion/overview.md) o origini di streaming:
+Leggi le [panoramica sull’acquisizione in streaming](./streaming-ingestion/overview.md) per informazioni sui guardrail per l’acquisizione in streaming.
+
+## Guardrail per sorgenti in streaming
+
+La tabella seguente illustra i guardrail da considerare quando si utilizzano le sorgenti di streaming:
 
 | Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
-| Acquisizione in streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Puoi elaborare fino a 2500 richieste al secondo in Profilo.</li><li>Puoi elaborare fino a 20000 richieste al secondo al data lake in meno di 15 minuti.</li></ul> | Utilizza l’API di acquisizione batch se hai bisogno di una velocità effettiva di dati più elevata. |
 | Origini di streaming | <ul><li>La dimensione massima del record è 1 MB, con la dimensione consigliata di 10 KB.</li><li>Le origini di streaming supportano tra 4000 e 5000 richieste al secondo al momento della creazione di una nuova connessione sorgente. **Nota**: possono essere necessari fino a 30 minuti affinché i dati in streaming vengano completamente elaborati nel data lake.</li><li>Puoi elaborare tra 4000 e 5000 richieste al secondo nel data lake. **Nota**: possono essere necessari fino a 30 minuti affinché i dati in streaming vengano completamente elaborati nel data lake.</li></ul> | Origini di streaming come [!DNL Kafka], [!DNL Azure Event Hubs], e [!DNL Amazon Kinesis] non utilizzare il [!DNL Data Collection Core Service] (DCCS) e possono avere diversi limiti di velocità effettiva. Consulta la [panoramica sulle origini](../sources/home.md) per un catalogo di origini che puoi utilizzare per l’acquisizione dei dati. |
 
 ## Passaggi successivi
