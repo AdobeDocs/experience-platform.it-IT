@@ -1,16 +1,20 @@
 ---
 title: Panoramica dell’origine del catalogo
 description: Scopri come collegare Chatlio a Adobe Experience Platform utilizzando le API o l’interfaccia utente sfruttando i webhook
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
 # [!DNL Chatlio]
+
+>[!NOTE]
+>
+>Il [!DNL Chatlio] sorgente in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
