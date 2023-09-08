@@ -1,87 +1,87 @@
 ---
-title: Usa i dati meteo da DNL The Weather Channel
+title: Utilizzare i dati meteo da DNL The Weather Channel
 description: Utilizza i dati meteo da DNL The Weather Channel per migliorare i dati raccolti attraverso gli stream di dati.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
 source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '672'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Utilizza i dati meteo da [!DNL The Weather Channel]
 
-L’Adobe ha collaborato con [!DNL [The Weather Company]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo americano ai dati raccolti tramite flussi di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di segmenti in Experience Platform.
+Adobe ha collaborato con [!DNL [The Weather Company]](https://www.ibm.com/weather) per portare il contesto aggiuntivo del meteo degli Stati Uniti ai dati raccolti tramite stream di dati. Puoi utilizzare questi dati per l’analisi, il targeting e la creazione di segmenti in Experience Platform.
 
 Sono disponibili 3 tipi di dati da [!DNL The Weather Channel]:
 
-* **[!UICONTROL Condizioni meteorologiche attuali]**: le condizioni meteo correnti dell’utente, in base alla sua posizione. Ciò include la temperatura corrente, le precipitazioni, la copertura nuvolosa e altro ancora.
-* **[!UICONTROL Tempo previsto]**: la previsione include le previsioni a 1,2,3,5,7 e 10 giorni per l’ubicazione utente.
-* **[!UICONTROL Triggers]**: gli attivatori sono combinazioni specifiche che si associano a diverse condizioni meteo semantiche. Esistono tre diversi tipi di fattori scatenanti:
+* **[!UICONTROL Meteo attuale]**: le condizioni meteo attuali dell’utente, in base alla sua posizione. Ciò include la temperatura corrente, le precipitazioni, la nuvolosità e altro ancora.
+* **[!UICONTROL Tempo previsto]**: include le previsioni di 1, 2 ,3 ,5, 7 e 10 giorni per la posizione dell’utente.
+* **[!UICONTROL Trigger]**: i trigger sono combinazioni specifiche che vengono mappate su diverse condizioni meteo semantiche. Esistono tre diversi tipi di trigger meteo:
 
-   * **[!UICONTROL Attivatori meteo]**: condizioni semanticamente significative, come tempo freddo o piovoso. Questi possono differire nelle loro definizioni tra i vari climi.
-   * **[!UICONTROL Attivatori prodotto]**: condizioni che porterebbero all’acquisto di diversi tipi di prodotti. Ad esempio: le previsioni del freddo potrebbero indicare che gli acquisti di impermeabili sono più probabili.
-   * **[!UICONTROL Condizioni Meteorologiche Avverse]**: Avvisi meteorologici severi, come tempeste invernali o avvertenze di uragani.
+   * **[!UICONTROL Trigger meteo]**: condizioni semanticamente significative, come meteo freddo o piovoso. Questi possono differire nelle loro definizioni tra i vari climi.
+   * **[!UICONTROL Trigger prodotto]**: condizioni che porterebbero all’acquisto di diversi tipi di prodotti. Ad esempio: le previsioni di temperature fredde potrebbero indicare verosimilmente l’acquisto di impermeabili.
+   * **[!UICONTROL Trigger meteo gravi]**: avvisi meteo gravi, come tempeste invernali o avvisi di uragani.
 
 ## Prerequisiti {#prerequisites}
 
 Prima di utilizzare i dati meteo, è necessario soddisfare i seguenti prerequisiti:
 
-* Devi ottenere la licenza per i dati meteo che userai, da [!DNL The Weather Channel]. Quindi lo abiliteranno sul tuo account.
-* I dati meteo sono disponibili solo attraverso flussi di dati. Per utilizzare i dati meteo, è necessario utilizzare [!DNL Web SDK], [!DNL Mobile Edge Extension] o [API server](../../server-api/overview.md) per sfruttare questi dati.
-* Lo stream di dati deve avere [[!UICONTROL Geolocalizzazione]](../configure.md#advanced-options) abilitato.
+* ottenere la licenza per i dati meteo che userai da [!DNL The Weather Channel]. Seguirà l’abilitazione del meteo sul tuo account.
+* I dati meteo sono disponibili solo attraverso stream di dati. Per utilizzare e sfruttare i dati meteo, è necessario utilizzare [!DNL Web SDK] [!DNL Mobile Edge Extension] o l’[API server](../../server-api/overview.md).
+* Lo stream di dati deve avere abilitata la funzione di [[!UICONTROL geolocalizzazione]](../configure.md#advanced-options).
 * Aggiungi il [gruppo di campi meteo](#schema-configuration) allo schema in uso.
 
 ## Provisioning {#provisioning}
 
-Dopo aver concesso la licenza ai dati da [!DNL The Weather Channel], consentiranno al tuo account di accedere ai dati. Successivamente, devi contattare l’Assistenza clienti Adobe per far sì che i dati siano abilitati nel flusso di dati. Una volta abilitati, i dati verranno aggiunti automaticamente.
+Dopo aver concesso la licenza ai dati da [!DNL The Weather Channel], il tuo account potrà accedere ai dati. Successivamente, contatta l’Assistenza clienti di Adobe perché i dati siano abilitati nello stream di dati. Una volta abilitati, i dati verranno aggiunti automaticamente.
 
-Puoi convalidarne l’aggiunta eseguendo una traccia Edge con il debugger o utilizzando Assurance per tracciare un hit attraverso [!DNL Edge Network].
+Puoi convalidarne l’aggiunta eseguendo un controllo Edge con il Debugger o utilizzando Assurance per tracciare un hit attraverso [!DNL Edge Network].
 
 ### Configurazione dello schema {#schema-configuration}
 
-Devi aggiungere i gruppi di campi meteo allo schema di Experience Platform corrispondente al set di dati dell’evento che stai utilizzando nel flusso di dati. Sono disponibili cinque gruppi di campi:
+È necessario aggiungere i gruppi di campi meteo allo schema di Experience Platform corrispondente al set di dati dell’evento che stai utilizzando nello stream di dati. Sono disponibili cinque gruppi di campo:
 
-* [!UICONTROL Tempo previsto]
-* [!UICONTROL Condizioni meteorologiche attuali]
-* [!UICONTROL Attivatori prodotto]
+* [!UICONTROL Meteo previsto]
+* [!UICONTROL Meteo attuale]
+* [!UICONTROL Trigger del prodotto]
 * [!UICONTROL Trigger relativi]
-* [!UICONTROL Condizioni Meteorologiche Avverse]
+* [!UICONTROL Trigger meteo gravi]
 
 ## Accedere ai dati meteo {#access-weather-data}
 
-Una volta che i dati sono concessi in licenza e disponibili, puoi accedervi in diversi modi in tutti i servizi Adobe.
+Una volta concessi i dati in licenza e resi disponibili, puoi accedervi in diversi modi da tutti i servizi Adobe.
 
 ### Adobe Analytics {#analytics}
 
-In entrata [!DNL Adobe Analytics], i dati meteo sono disponibili per la mappatura tramite regole di elaborazione, insieme al resto [!DNL XDM] schema.
+In [!DNL Adobe Analytics], i dati meteo sono disponibili per la mappatura tramite regole di elaborazione, insieme al resto dello schema [!DNL XDM].
 
-Puoi trovare l’elenco dei campi che puoi mappare in [riferimento meteo](weather-reference.md) pagina. Come per tutti [!DNL XDM] negli schemi, le chiavi hanno il prefisso `a.x`. Ad esempio, un campo denominato `weather.current.temperature.farenheit` verrebbe visualizzato in [!DNL Analytics] as `a.x.weather.current.temperature.farenheit`.
+Puoi trovare l’elenco di campi da mappare nella pagina di [riferimento meteo](weather-reference.md). Come per tutti gli schemi di [!DNL XDM], le chiavi hanno il prefisso `a.x`. Ad esempio, un campo denominato `weather.current.temperature.farenheit` in [!DNL Analytics] verrebbe visualizzato come `a.x.weather.current.temperature.farenheit`.
 
 ![Interfaccia regola di elaborazione](../assets/data-enrichment/weather/processing-rules.png)
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In entrata [!DNL Adobe Customer Journey Analytics], i dati meteo sono disponibili nel set di dati specificato nel flusso di dati. Se gli attributi meteo sono [aggiunto allo schema](#prerequisites-prerequisites), saranno disponibili per [aggiungere a una visualizzazione dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics], i dati meteo sono disponibili nel set di dati specificato nello stream di dati. Poiché gli attributi meteo vengono [aggiunti allo schema](#prerequisites-prerequisites), saranno disponibili per [aggiungere una vista dati](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=it) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-I dati meteorologici sono disponibili nel [Real-time Customer Data Platform](../../rtcdp/overview.md), per l’utilizzo in segmenti. I dati meteo sono allegati agli eventi.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), i dati meteo sono disponibili per l’utilizzo nei segmenti. I dati meteo sono collegati agli eventi.
 
-![Generatore di segmenti che mostra gli eventi meteo](../assets/data-enrichment/weather/schema-builder.png)
+![Segment Builder che mostra gli eventi meteo](../assets/data-enrichment/weather/schema-builder.png)
 
-Poiché le condizioni meteorologiche cambiano spesso, Adobe consiglia di impostare vincoli di tempo sui segmenti, come illustrato nell’esempio precedente. Avere un giorno freddo nell&#39;ultimo giorno o due è molto più importante che avere un giorno freddo 6 mesi fa.
+Poiché le condizioni meteo cambiano spesso, Adobe consiglia di impostare vincoli di tempo sui segmenti, come illustrato nell’esempio precedente. Registrare un giorno freddo nell’ultimo giorno o due ha un maggiore impatto averlo registrato 6 mesi fa.
 
-Consulta la [riferimento meteo](weather-reference.md) per i campi disponibili.
+Consulta il [riferimento meteo](weather-reference.md) per i campi disponibili.
 
 ### Adobe Target {#target}
 
-In entrata [!DNL Adobe Target], puoi utilizzare i dati meteo per promuovere la personalizzazione in tempo reale. I dati meteo vengono trasmessi a [!DNL Target] as [!UICONTROL mBox] e puoi accedervi tramite un [!UICONTROL mBox] parametro.
+In [!DNL Adobe Target], puoi utilizzare i dati meteo per stimolare la personalizzazione in tempo reale. I dati meteo vengono trasmessi a [!DNL Target] come parametri [!UICONTROL mBox] e puoi accedervi tramite un parametro [!UICONTROL mBox].
 
-![Generatore di pubblico di Target](../assets/data-enrichment/weather/target-audience-builder.png)
+![Generatore di pubblico target](../assets/data-enrichment/weather/target-audience-builder.png)
 
-Il parametro è [!DNL XDM] percorso di un campo specifico. Consulta la [riferimento meteo](weather-reference.md) per i campi disponibili e i percorsi corrispondenti.
+Il parametro è il percorso [!DNL XDM] di un campo specifico. Consulta il [riferimento meteo](weather-reference.md) per i campi disponibili e i percorsi corrispondenti.
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora hai una migliore comprensione di come utilizzare i dati meteo nelle varie soluzioni di Adobe. Per ulteriori informazioni sulla mappatura dei campi dei dati meteo, vedi [riferimento mappatura campo](weather-reference.md).
+Dopo aver letto questo documento, ora hai una migliore comprensione di come utilizzare i dati meteo nelle varie soluzioni di Adobe. Per ulteriori informazioni sulla mappatura dei campi dei dati meteo, consulta il [riferimento alla mappatura del campo](weather-reference.md).
