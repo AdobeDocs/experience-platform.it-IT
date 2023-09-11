@@ -2,22 +2,22 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 14%
+source-wordcount: '1017'
+ht-degree: 17%
 
 ---
 
-# [!DNL Amazon S3] connessione {#s3-connection}
+# Connessione [!DNL Amazon S3] {#s3-connection}
 
 ## Registro modifiche destinazione {#changelog}
 
 Con la versione di Experience Platform di luglio 2023, la [!DNL Amazon S3] destinazione offre nuove funzionalità, come elencato di seguito:
 
-* [!BADGE Beta]{type=Informative}[Supporto per l’esportazione del set di dati](/help/destinations/ui/export-datasets.md).
-* Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [!BADGE Beta]{type=Informative}[Supporto per l’esportazione di set di dati](/help/destinations/ui/export-datasets.md).
+* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite il [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## Connetti al tuo [!DNL Amazon S3] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
@@ -27,15 +27,12 @@ Con la versione di Experience Platform di luglio 2023, la [!DNL Amazon S3] desti
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -89,13 +86,18 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-* **[!UICONTROL Nome]**: inserisci un nome che ti aiuterà a identificare questa destinazione.
-* **[!UICONTROL Descrizione]**: inserisci una descrizione di questa destinazione.
+* **[!UICONTROL Nome]**: immetti un nome che ti aiuterà a identificare questa destinazione.
+* **[!UICONTROL Descrizione]**: immetti una descrizione di questa destinazione.
 * **[!UICONTROL Nome bucket]**: immetti il nome del [!DNL Amazon S3] bucket da utilizzare per questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
-* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
+* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto contenente informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto viene denominato utilizzando il formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti:
+   * `flowRunId`: Il [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.
+   * `scheduledTime`: ora in UTC in cui è stato esportato il file.
+   * `exportResults.sinkPath`: percorso nel percorso di archiviazione in cui viene depositato il file esportato.
+   * `exportResults.name`: nome del file esportato.
+   * `size`: dimensione del file esportato, in byte.
 
 >[!TIP]
 >

@@ -3,18 +3,18 @@ title: Connessione Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare tipi di pubblico o esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 0%
+source-wordcount: '1072'
+ht-degree: 2%
 
 ---
 
-# [!DNL Google Cloud Storage] connessione
+# Connessione [!DNL Google Cloud Storage]
 
 ## Panoramica {#overview}
 
-Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform nei bucket personali.
+Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform ai tuoi bucket.
 
 ## Connetti al tuo [!DNL Google Cloud Storage] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -23,15 +23,12 @@ Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare per
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +89,12 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
-* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto che contiene informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora.
+* **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto contenente informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto viene denominato utilizzando il formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti:
+   * `flowRunId`: Il [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.
+   * `scheduledTime`: ora in UTC in cui è stato esportato il file.
+   * `exportResults.sinkPath`: percorso nel percorso di archiviazione in cui viene depositato il file esportato.
+   * `exportResults.name`: nome del file esportato.
+   * `size`: dimensione del file esportato, in byte.
 
 ### Abilita avvisi {#enable-alerts}
 
