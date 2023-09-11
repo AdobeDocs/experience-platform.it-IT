@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1170'
 ht-degree: 9%
 
 ---
@@ -83,6 +83,7 @@ ht-degree: 9%
       * [Estensione Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Estensione tag linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connessione di onboarding](./catalog/advertising/liveramp-onboarding.md)
+      * [LiveRamp - Connessione di distribuzione](./catalog/advertising/liveramp-distribution.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione per il tracciamento delle conversioni di pinterest](./catalog/advertising/pinterest-extension.md)
       * [Connessione a elenco clienti pinterest](./catalog/advertising/pinterest.md)
@@ -177,7 +178,7 @@ ht-degree: 9%
       * [Connessione facebook](./catalog/social/facebook.md)
       * [Connessione di linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [Connessione TikTok](./catalog/social/tiktok.md)
-      * [[!DNL Twitter Custom Audiences] connessione](./catalog/social/twitter.md)
+      * [Connessione [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
    * Destinazioni di streaming {#streaming}
       * [Connessione API HTTP](./catalog/streaming/http-destination.md)
       * [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)

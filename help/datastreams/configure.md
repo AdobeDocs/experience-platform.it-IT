@@ -2,9 +2,9 @@
 title: Configurare uno stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
-workflow-type: ht
-source-wordcount: '2275'
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+workflow-type: tm+mt
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ Seleziona **[!UICONTROL Opzioni avanzate]** per visualizzare ulteriori controlli
 | [!UICONTROL Sincronizzazione ID di terze parti] | Le sincronizzazioni ID possono essere raggruppate in contenitori per consentire di eseguire diverse sincronizzazioni ID in momenti diversi. Quando è abilitata, questa impostazione consente di specificare quale contenitore di sincronizzazioni ID viene eseguito per tale stream di dati. |
 | [!UICONTROL ID contenitore sincronizzazione ID di terze parti] | ID numerico del contenitore da utilizzare per la sincronizzazione dell’ID di terze parti. |
 | [!UICONTROL Override ID contenitore] | In questa sezione puoi definire altri ID contenitore di sincronizzazione ID di terze parti da utilizzare in sostituzione di quello predefinito. |
-| [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione accettato dalla rete Edge per lo stream di dati. <ul><li>**[!UICONTROL Autenticazione mista]**: quando è selezionata questa opzione, la rete Edge accetta sia richieste autenticate che non autenticate. Seleziona questa opzione quando intendi utilizzare Web SDK o l’[SDK Mobile](https://aep-sdks.gitbook.io/docs/), insieme all’[API del server](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticate]**: quando è selezionata questa opzione, la rete Edge accetta solo richieste autenticate. Seleziona questa opzione quando intendi utilizzare solo l’API del server e desideri impedire l’elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
+| [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione accettato dalla rete Edge per lo stream di dati. <ul><li>**[!UICONTROL Autenticazione mista]**: quando è selezionata questa opzione, la rete Edge accetta sia richieste autenticate che non autenticate. Seleziona questa opzione quando intendi utilizzare Web SDK o l’[SDK Mobile](https://developer.adobe.com/client-sdks/documentation/), insieme all’[API del server](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticate]**: quando è selezionata questa opzione, la rete Edge accetta solo richieste autenticate. Seleziona questa opzione quando intendi utilizzare solo l’API del server e desideri impedire l’elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
 
 Da qui, se stai configurando uno stream di dati per Experience Platform, segui il tutorial sulla [Preparazione dei dati per la raccolta dati](./data-prep.md) per mappare i dati su uno schema di eventi di Platform prima di tornare a questa guida. Diversamente, seleziona **[!UICONTROL Salva]** e passa alla sezione successiva.
 

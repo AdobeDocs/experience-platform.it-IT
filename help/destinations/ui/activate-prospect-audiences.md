@@ -2,10 +2,10 @@
 title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 8%
+source-wordcount: '620'
+ht-degree: 12%
 
 ---
 
@@ -20,7 +20,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [audience po
 
 ## Destinazioni supportati {#supported-destinations}
 
-Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Utilizza il **[!UICONTROL Tipi di dati]** filtra e seleziona **[!UICONTROL Prospettive]** per visualizzare le destinazioni che supportano l’attivazione dei tipi di pubblico potenziali. Attualmente, l’esportazione dei tipi di pubblico potenziali è disponibile solo per [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) destinazione.
+Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Utilizza il **[!UICONTROL Tipi di dati]** filtra e seleziona **[!UICONTROL Prospettive]** per visualizzare le destinazioni che supportano l’attivazione dei tipi di pubblico potenziali. Attualmente, l’esportazione dei tipi di pubblico potenziali è disponibile solo per le destinazioni di archiviazione cloud.
 
 ![Destinazioni che supportano le esportazioni di set di dati](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -86,5 +86,5 @@ Note that we will need to add links to other destination types here as more dest
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
 * [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilizzare il supporto dati di terze parti in Real-Time CDP per [espandi la base di profili con i profili prospect dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
+* Utilizza il supporto dati di terze parti in Real-Time CDP per [espandere la base di profili con i profili di potenziali clienti dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
 * [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.

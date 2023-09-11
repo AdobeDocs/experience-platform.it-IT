@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 1ca080f6dd62c49c1f1672ec36ce446af591b6b6
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1034'
 ht-degree: 37%
 
 ---
@@ -246,6 +246,7 @@ ht-degree: 37%
          * [Panoramica](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Panoramica](./extensions/server/twitter/overview.md)
+      * [[!DNL Tiktok] API per eventi web](https://exchange.adobe.com/apps/ec/109834)
       * [!DNL Zendesk] API Eventi {#zendesk}
          * [Panoramica](./extensions/server/zendesk/overview.md)
 * Sviluppo delle estensioni {#extension-dev}

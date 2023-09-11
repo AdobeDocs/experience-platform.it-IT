@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica sulla raccolta dati
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 998cc9a9c490124ff21fdbf5f3a7b91abef3e8b8
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 7%
+source-wordcount: '515'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ La raccolta dei dati si concentra sulla reperibilità e sull’accessibilità de
 * [Stream di dati](../datastreams/overview.md)
 * [Inoltro eventi](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
-* [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [API del server di rete Edge](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=it)
 * [Experienci Platform Assurance](../assurance/home.md)

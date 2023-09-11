@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4141'
 ht-degree: 6%
 
 ---
@@ -78,7 +78,7 @@ L&#39;inconveniente principale dell&#39;utilizzo `identityMap` è che le identit
 >
 >Uno schema che utilizza `identityMap` può essere utilizzato come schema di origine in una relazione, ma non come schema di riferimento. Questo perché tutti gli schemi di riferimento devono avere un’identità visibile che può essere mappata in un campo di riferimento all’interno dello schema di origine. Fai riferimento alla guida dell’interfaccia utente su [relazioni](../tutorials/relationship-ui.md) per ulteriori informazioni sui requisiti degli schemi di origine e di riferimento.
 
-Tuttavia, le mappe di identità possono essere particolarmente utili se si inseriscono dati da origini che memorizzano le identità (ad esempio [!DNL Airship] o Adobe Audience Manager), o quando è presente un numero variabile di identità per uno schema. Inoltre, le mappe di identità sono necessarie se utilizzi il [SDK di Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/).
+Tuttavia, le mappe di identità possono essere particolarmente utili se si inseriscono dati da origini che memorizzano le identità (ad esempio [!DNL Airship] o Adobe Audience Manager), o quando è presente un numero variabile di identità per uno schema. Inoltre, le mappe di identità sono necessarie se utilizzi il [SDK di Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
 
 Di seguito è riportato un esempio di mappa di identità semplice:
 
@@ -325,7 +325,7 @@ Gli schemi risolvono questo problema consentendo l’integrazione dei dati da pi
 
 ### Oggetti e campi in formato libero {#objects-v-freeform}
 
-Durante la progettazione degli schemi è necessario considerare alcuni fattori chiave per la scelta degli oggetti rispetto ai campi in formato libero:
+Durante la progettazione degli schemi è necessario tenere presenti alcuni fattori chiave per la scelta degli oggetti rispetto ai campi in formato libero:
 
 | Oggetti | Campi in formato libero |
 | --- | --- |

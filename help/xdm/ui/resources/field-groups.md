@@ -2,16 +2,21 @@
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field group;field groups;
 solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
-description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experience Platform.
+description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experienci Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
+source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 1%
 
 ---
 
-# Creare e modificare gruppi di campi schema nell’interfaccia utente
+# Creare e modificare gruppi di campi schema nell’interfaccia utente {#ui-create-and-edit}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup_filter"
+>title="Filtro gruppo di campi standard o personalizzato"
+>abstract="L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Selezionare il pulsante di opzione per scegliere tra le opzioni Standard e Personalizzato. L&#39;opzione Standard mostra le entità create da Adobe, mentre l&#39;opzione Personalizzato mostra le entità create all&#39;interno dell&#39;organizzazione. Per ulteriori informazioni sulla creazione e la modifica di gruppi di campi, consulta la documentazione."
 
 In Experience Data Model (XDM), i gruppi di campi di schema sono componenti riutilizzabili che definiscono uno o più campi che implementano determinate funzioni come dati personali, preferenze di hotel o indirizzo. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile.
 

@@ -3,14 +3,14 @@ keywords: Google ads;Google ads;Google adwords;Google AdWords;Google Adwords
 title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di pagare per clic su ricerche testuali, visualizzazioni grafiche, video YouTube e display mobili in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '974'
 ht-degree: 2%
 
 ---
 
-# [!DNL Google Ads] connessione
+# Connessione [!DNL Google Ads]
 
 ## Panoramica {#overview}
 
@@ -45,15 +45,12 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ads] destinazioni:
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

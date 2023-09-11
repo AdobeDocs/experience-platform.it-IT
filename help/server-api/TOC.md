@@ -5,19 +5,18 @@ user-guide-title: Documentazione API del server di rete Edge
 breadcrumb-title: Documentazione API del server di rete Edge
 user-guide-description: Utilizza l’API del server di rete Edge per i casi d’uso di raccolta dati, personalizzazione, pubblicità e marketing con i servizi Experience Cloud o Experience Platform Edge.
 feature: Data Collection
-source-git-commit: be073dcc62f0cf5b94f94082348442e2526604a7
+source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 41%
+source-wordcount: '99'
+ht-degree: 46%
 
 ---
 
 
 # Documentazione API del server di rete Edge {#edge-network-server-api}
 
-
-* [Panoramica API del server di rete Edge](overview.md)
-* [Guardrail delle prestazioni per l’API del server di rete Edge](guardrails.md)
+* [Panoramica](overview.md)
+* [Guardrail delle prestazioni](guardrails.md)
 * [Autenticazione](authentication.md)
 * Raccolta dati {#data-collection}
    * [Raccolta di dati per evento singolo](interactive-data-collection.md)

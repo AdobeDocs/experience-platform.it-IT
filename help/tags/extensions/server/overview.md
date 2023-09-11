@@ -2,10 +2,10 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 21%
+source-wordcount: '191'
+ht-degree: 20%
 
 ---
 
@@ -47,4 +47,5 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] API per eventi web](https://exchange.adobe.com/apps/ec/109834)*
 * [[!DNL Zendesk] API Eventi](./zendesk/overview.md)

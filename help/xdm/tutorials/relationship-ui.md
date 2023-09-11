@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;sistema XDM;Experience data model;Experience data model;Experience Data Model;data model;modello dati;modello dati;modello dati;editor schema;schema;schema;schemi;schemi;creare;relazione;riferimento;riferimento;
 solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l’Editor di schema
-description: Questo documento fornisce un tutorial per definire una relazione tra due schemi utilizzando l’Editor di schema nell’interfaccia utente di Experience Platform.
+description: Questo documento fornisce un tutorial per definire una relazione tra due schemi utilizzando l’Editor di schema nell’interfaccia utente di Experienci Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1161'
 ht-degree: 9%
 
 ---
@@ -32,6 +32,10 @@ ht-degree: 9%
 La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il brand attraverso vari canali è una parte importante di Adobe Experience Platform. Definizione di queste relazioni all&#39;interno della struttura [!DNL Experience Data Model] Gli schemi (XDM) consentono di ottenere informazioni complesse sui dati dei clienti.
 
 Anche se le relazioni tra schemi possono essere dedotte tramite l’utilizzo dello schema di unione e [!DNL Real-Time Customer Profile], applicabile solo agli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere a uno schema di origine un campo relazione dedicato che faccia riferimento all’identità dell’altro schema correlato.
+
+>[!NOTE]
+>
+>Se gli schemi di origine e di destinazione appartengono entrambi alla stessa classe, un campo relazione dedicato deve **non** essere utilizzati. In questo caso, utilizza l’interfaccia utente dello schema di unione per visualizzare la relazione. Le istruzioni per eseguire questa operazione sono reperibili nella sezione [visualizza relazioni](../../profile/ui/union-schema.md#view-relationships) sezione della guida dell’interfaccia utente dello schema di unione.
 
 Questo documento fornisce un tutorial per definire una relazione tra due schemi utilizzando l’Editor di schema nel [!DNL Experience Platform] dell&#39;utente. Per informazioni sulla definizione delle relazioni tra schemi tramite l’API, consulta l’esercitazione su [definizione di una relazione tramite l’API Schema Registry](relationship-api.md).
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione del consenso in Adobe Experience Platform
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questo documento fornisce una panoramica su come configurare le operazioni sui d
 
 Questa guida richiede una buona conoscenza dei vari servizi Experienci Platform coinvolti nel trattamento dei dati del consenso:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
 * [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](../../../../profile/home.md): utilizza [!DNL Identity Service] funzionalità per creare in tempo reale profili cliente dettagliati dai set di dati. Real-Time Customer Profile estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
@@ -41,7 +41,7 @@ Di seguito viene descritto come i dati di consenso vengono elaborati dopo che il
 1. Quando `setConsent` Si chiama, Platform Web SDK controlla se i valori del consenso sono diversi da quelli ricevuti l’ultima volta. Se i valori sono diversi (o non esiste un valore precedente), i dati strutturati sul consenso/preferenza vengono inviati a Adobe Experience Platform.
 1. I dati di consenso/preferenza vengono acquisiti in una [!DNL Profile]Set di dati abilitato con schema contenente campi di consenso/preferenza.
 
-Oltre ai comandi SDK attivati dagli hook di modifica del consenso CMP, i dati del consenso possono anche fluire in Experience Platform tramite qualsiasi dato XDM generato dal cliente e caricato direttamente in un [!DNL Profile]Set di dati abilitato da.
+Oltre ai comandi SDK attivati dagli hook di modifica del consenso CMP, i dati del consenso possono anche fluire in Experienci Platform tramite qualsiasi dato XDM generato dal cliente e caricato direttamente in un [!DNL Profile]Set di dati abilitato da.
 
 ### Applicazione del consenso
 
@@ -65,7 +65,7 @@ Questa finestra di dialogo dovrebbe consentire al cliente di dare o rinunciare a
 
 I dati sul consenso del cliente devono essere inviati a un [!DNL Profile]Set di dati abilitato con schema contenente campi di consenso. Questi campi devono essere inclusi nello stesso schema e set di dati utilizzati per acquisire informazioni sugli attributi dei singoli clienti.
 
-Fai riferimento al tutorial su [configurazione di un set di dati per l’acquisizione dei dati sul consenso](./dataset.md) per i passaggi dettagliati su come aggiungere questi campi obbligatori a un [!DNL Profile]: set di dati abilitato prima di continuare con questa guida.
+Fai riferimento al tutorial su [configurazione di un set di dati per l’acquisizione dei dati sul consenso](./dataset.md) per i passaggi dettagliati su come aggiungere questi campi obbligatori a [!DNL Profile]: set di dati abilitato prima di continuare con questa guida.
 
 ## Aggiorna [!DNL Profile] criteri di unione per includere i dati sul consenso {#merge-policies}
 
@@ -85,15 +85,15 @@ Principalmente, devi utilizzare Adobe Experience Platform Web SDK per inviare i 
 
 I dettagli di ciascuno di questi metodi sono forniti nelle sottosezioni seguenti.
 
-### Configurare l’SDK per web di Experience Platform per elaborare i dati sul consenso {#web-sdk}
+### Configurare l’SDK per web di Experienci Platform per elaborare i dati sul consenso {#web-sdk}
 
-Dopo aver configurato la CMP per l’ascolto degli eventi di modifica del consenso sul sito web, puoi integrare Experience Platform Web SDK per ricevere le impostazioni di consenso aggiornate e inviarle a Platform a ogni caricamento di pagina e ogni volta che si verificano eventi di modifica del consenso. Consulta la guida su [configurazione di Web SDK per elaborare i dati sul consenso dei clienti](../sdk.md) per ulteriori informazioni.
+Dopo aver configurato la CMP per l’ascolto degli eventi di modifica del consenso sul sito web, puoi integrare Experienci Platform Web SDK per ricevere le impostazioni di consenso aggiornate e inviarle a Platform a ogni caricamento di pagina e ogni volta che si verificano eventi di modifica del consenso. Consulta la guida su [configurazione di Web SDK per elaborare i dati sul consenso dei clienti](../sdk.md) per ulteriori informazioni.
 
-### Configurare l’SDK di Experience Platform Mobile per elaborare i dati sul consenso {#mobile-sdk}
+### Configurare l’SDK di Experienci Platform Mobile per elaborare i dati sul consenso {#mobile-sdk}
 
-Se nell’app mobile sono richieste le preferenze di consenso del cliente, puoi integrare l’SDK di Experience Platform Mobile per recuperare e aggiornare le impostazioni del consenso, inviandole a Platform ogni volta che viene chiamata l’API di consenso.
+Se nell’app mobile sono richieste le preferenze di consenso del cliente, puoi integrare l’SDK di Experienci Platform Mobile per recuperare e aggiornare le impostazioni del consenso, inviandole a Platform ogni volta che viene chiamata l’API di consenso.
 
-Consulta la documentazione dell’SDK di Mobile per [configurazione dell’estensione per dispositivi mobili di consenso](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) e [utilizzo dell’API di consenso](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). Per ulteriori dettagli su come gestire i problemi di privacy utilizzando l’SDK di Mobile, consulta la sezione [Privacy e RGPD](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+Consulta la documentazione dell’SDK di Mobile per [configurazione dell’estensione per dispositivi mobili di consenso](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) e [utilizzo dell’API di consenso](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Per ulteriori dettagli su come gestire i problemi di privacy utilizzando l’SDK di Mobile, consulta la sezione [Privacy e RGPD](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
 
 ### Acquisire direttamente i dati di consenso conformi a XDM {#batch}
 
@@ -127,4 +127,4 @@ Customer Journey Management can also send consent-change signals back to Platfor
 
 Questa guida illustra come configurare le operazioni di Platform per elaborare i dati sul consenso dei clienti utilizzando lo standard Adobe e come rappresentare tali attributi nei profili cliente. Ora puoi integrare le preferenze di consenso dei clienti come fattore determinante nella qualificazione dei segmenti e in altri casi d’uso a valle.
 
-Per ulteriori informazioni sulle funzionalità di Experience Platform relative alla privacy, consulta la panoramica su [governance, privacy e sicurezza in Platform](../../overview.md).
+Per ulteriori informazioni sulle funzionalità di Experienci Platform relative alla privacy, consulta la panoramica su [governance, privacy e sicurezza in Platform](../../overview.md).

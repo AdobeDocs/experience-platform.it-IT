@@ -3,14 +3,14 @@ keywords: e-mail;E-mail;Destinazioni e-mail;oracle eloqua;oracle
 title: (File) Oracle di connessione Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 1%
+source-wordcount: '695'
+ht-degree: 2%
 
 ---
 
-# [!DNL (Files) Oracle Eloqua] connessione
+# Connessione [!DNL (Files) Oracle Eloqua]
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da [!DNL Oracle] che ha lo scopo di aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.
 
@@ -18,15 +18,12 @@ Per inviare dati sul pubblico a [!DNL Oracle Eloqua], devi prima [connettere la 
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

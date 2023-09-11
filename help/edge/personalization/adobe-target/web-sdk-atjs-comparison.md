@@ -1,11 +1,11 @@
 ---
-title: Confronto di at.js con Experience Platform Web SDK
-description: Scopri le caratteristiche di at.js rispetto a Experience Platform Web SDK
+title: Confronto di at.js con Experienci Platform Web SDK
+description: Scopri le caratteristiche di at.js rispetto a Experienci Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 6%
 
 ---
@@ -130,7 +130,7 @@ alloy("sendEvent", {
 });
 ```
 
-Experience Platform Web SDK invia automaticamente una notifica con le offerte eseguite dall’SDK WEB. Di seguito è riportato un esempio di payload per una richiesta di notifica:
+Experienci Platform Web SDK invia automaticamente una notifica con le offerte eseguite dall’SDK WEB. Di seguito è riportato un esempio di payload per una richiesta di notifica:
 
 ```json
 {
@@ -1233,7 +1233,7 @@ Nota: tutte queste funzioni di debug sono disponibili con funzionalità avanzate
 
 Sono disponibili più funzionalità di debug quando si utilizza Web SDK:
 
-* Utilizzo di [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* Utilizzo di [Assurance](../../../assurance/home.md)
 * [Debug di Web SDK abilitato](../../../edge/fundamentals/debugging.md)
 * Utilizzare [Hook di monitoraggio di Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Utilizzare [Adobe Experience Platform Debugger](../../../debugger/home.md)

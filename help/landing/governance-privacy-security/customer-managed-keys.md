@@ -2,10 +2,10 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 2%
+source-wordcount: '1855'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 Questo documento descrive il processo di abilitazione della funzione chiavi gestite dal cliente (CMK) in Platform.
 
 ## Prerequisiti
+
+Per accedere alle API CMK, devi assegnare il [!UICONTROL Gestisci chiave gestita dal cliente] autorizzazione e accesso a una sandbox di produzione per un ruolo nuovo o esistente associato alle credenziali API. Se desideri fornire a questa credenziale API solo l’accesso CMK, ti consigliamo di creare un nuovo ruolo di amministratore CMK con le autorizzazioni necessarie menzionate in precedenza.
+
+Per ulteriori informazioni sull’assegnazione di ruoli e autorizzazioni in Experienci Platform, consulta [configurare la documentazione sulle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Per abilitare la CMK, [!DNL Azure] L’insieme di credenziali delle chiavi deve essere configurato con le seguenti impostazioni:
 

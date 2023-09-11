@@ -3,14 +3,14 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 0%
+source-wordcount: '984'
+ht-degree: 1%
 
 ---
 
-# [!DNL Airship Tags] connessione {#airship-tags-destination}
+# Connessione [!DNL Airship Tags] {#airship-tags-destination}
 
 ## Panoramica
 
@@ -38,13 +38,12 @@ Prima di poter inviare il pubblico Adobe Experience Platform a [!DNL Airship], �
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico esterno | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

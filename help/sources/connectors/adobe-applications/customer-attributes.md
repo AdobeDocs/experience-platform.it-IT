@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica del connettore di origine degli attributi del cliente
 description: Scopri come collegare Attributi del cliente a Adobe Experience Platform utilizzando le API o l’interfaccia utente
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 8%
@@ -17,7 +17,7 @@ Adobe Experience Platform consente di acquisire i dati da origini esterne e allo
 
 [[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) in Experience Cloud consente di caricare i dati aziendali acquisiti da un database di gestione delle relazioni con i clienti (CRM). Puoi caricare i dati in un’origine dati di attributi cliente in Experience Cloud, quindi utilizzarli in Adobe Analytics e Adobe Target.
 
-Experience Platform fornisce supporto per l’acquisizione di [!DNL Customer Attributes] dati di profilo in Adobe Experience Platform.
+Experienci Platform fornisce supporto per l’acquisizione di [!DNL Customer Attributes] dati di profilo in Adobe Experience Platform.
 
 ## Set di dati e schemi
 
@@ -31,7 +31,7 @@ Non è possibile selezionare uno spazio dei nomi esistente per l’identità qua
 
 Per [!DNL Customer Attributes] dati da collegare ad altri [!DNL Profile] i set di dati, i relativi dati e le identità devono poter essere associati a un ID Experience Cloud.
 
-È possibile stabilire `CORE` dello spazio dei nomi impostando l’ID Experience Cloud per il visitatore tramite [SDK per web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [SDK per dispositivi mobili](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity)o [API del servizio ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
+È possibile stabilire `CORE` dello spazio dei nomi impostando l’ID Experience Cloud per il visitatore tramite [SDK per web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)o [API del servizio ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
 
 Il [!DNL Customer Attributes] Il file non popola ulteriormente altre relazioni di identità. Ad esempio, se un [!DNL Customer Attributes] il set di dati di origine contiene un **E-mail** e un **ID fedeltà** , questi campi devono essere etichettati come campi di identità nello schema per essere elaborati in [!DNL Identity Service].
 

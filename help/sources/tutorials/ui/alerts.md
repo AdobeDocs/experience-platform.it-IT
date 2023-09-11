@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari; avvisi
 description: È possibile abbonarsi agli avvisi durante la creazione di un flusso di dati, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso.
 title: Iscriviti agli avvisi contestuali nell’interfaccia utente di
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 5%
+source-wordcount: '846'
+ht-degree: 6%
 
 ---
 
@@ -48,12 +48,15 @@ Puoi abilitare gli avvisi per i flussi di dati durante il [!UICONTROL Dettagli d
 
 Gli avvisi disponibili per i flussi di dati di origine sono:
 
+>[!NOTE]
+>
+>Le origini di streaming non sono attualmente supportate dagli avvisi. È possibile abbonarsi solo alle notifiche di avviso per le origini batch.
+
 | Avvisi | Descrizione |
 | --- | --- |
-| Inizio esecuzione flusso di dati origini | Questo avviso invia un messaggio all’avvio del flusso di dati sorgente. |
-| Esecuzione flusso di dati origini completata | Questo avviso invia un messaggio quando i dati provenienti dall’origine vengono acquisiti correttamente in Platform. |
-| Errore di esecuzione del flusso di dati origini | Questo avviso ti invia un messaggio in caso di errore nel flusso di dati. |
-| ~~Flusso di dati delle sorgenti - Mancata acquisizione~~ | ~~Questo avviso ti invia un messaggio se l’acquisizione subisce un ritardo di oltre sette ore e nessun dato viene acquisito in Platform.~~ <br>**Nota:** Non riceverai più avvisi poiché è diventato obsoleto. |
+| Inizio esecuzione flusso origini | Questo avviso invia un messaggio all’avvio del flusso di dati sorgente. |
+| Esecuzione del flusso di origini completata | Questo avviso invia un messaggio quando i dati provenienti dall’origine vengono acquisiti correttamente in Platform. |
+| Errore di esecuzione del flusso origini | Questo avviso ti invia un messaggio in caso di errore nel flusso di dati. |
 
 Seleziona gli avvisi a cui desideri abbonarti, quindi seleziona **[!UICONTROL Successivo]** per rivedere e completare il flusso di dati.
 
@@ -109,7 +112,7 @@ Gli avvisi per i flussi di dati vengono inviati anche via e-mail. Seleziona il n
 
 ![e-mail](../../images/tutorials/alerts/email.png)
 
-Analogamente all’avviso dell’interfaccia utente, il [!UICONTROL Panoramica sull’esecuzione del flusso di dati] viene visualizzata una pagina, che offre un’interfaccia per esaminare eventuali errori associati al flusso di dati.
+Analogamente all’avviso dell’interfaccia utente, il [!UICONTROL Panoramica sull’esecuzione del flusso di dati] viene visualizzata una pagina, che offre un’interfaccia per analizzare eventuali errori associati al flusso di dati.
 
 ![panoramica del flusso di dati](../../images/tutorials/alerts/dataflow-overview.png)
 

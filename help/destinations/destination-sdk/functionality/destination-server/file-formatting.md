@@ -1,9 +1,9 @@
 ---
-description: Scopri come configurare le opzioni di formattazione dei file per le destinazioni basate su file create con Adobe Experience Platform Destination SDK tramite l’endpoint "/destination-servers".
+description: Scopri come configurare le opzioni di formattazione dei file per le destinazioni basate su file create con Adobe Experience Platform Destination SDK, tramite l’endpoint "/destination-servers".
 title: Configurazione formattazione file
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -178,7 +178,7 @@ Di seguito è riportato un riferimento completo di tutte le opzioni di formattaz
 | `templatingStrategy` | Obbligatorio | Per ogni opzione di formattazione del file configurata, è necessario aggiungere il parametro `templatingStrategy`, che può avere due valori: <br><ul><li>`NONE`: utilizza questo valore se non intendi consentire agli utenti di selezionare tra valori diversi per una configurazione. Consulta [questa configurazione](#file-configuration-templating-none) ad esempio, in cui le opzioni di formattazione del file sono fisse.</li><li>`PEBBLE_V1`: utilizza questo valore se desideri consentire agli utenti di selezionare tra valori diversi per una configurazione. In questo caso, devi anche impostare un campo dati cliente corrispondente nel `/destination` configurazione dell’endpoint, per rendere note le varie opzioni agli utenti nell’interfaccia utente. Consulta [questa configurazione](#file-configuration-templating-pebble) ad esempio, in cui gli utenti possono selezionare tra diversi valori per le opzioni di formattazione del file.</li></ul> | - | - | - |
 | `compression.value` | Facoltativo | Codec di compressione da utilizzare per il salvataggio dei dati nel file. Valori supportati: `none`, `bzip2`, `gzip`, `lz4`, e `snappy`. | `none` | - | - |
 | `fileType.value` | Facoltativo | Specifica il formato del file di output. Valori supportati: `csv`, `parquet`, e `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette, in cui il separatore può far parte del valore. | `null` | - | - |
+| `csvOptions.quote.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per l&#39;escape dei valori tra virgolette, in cui il separatore può far parte del valore. | `null` | Esempio di valore predefinito: `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | Esempio personalizzato: `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Indica se tutti i valori devono essere sempre racchiusi tra virgolette. L&#39;impostazione predefinita prevede solo l&#39;escape di valori contenenti virgolette. | `false` | `quoteAll`:`false` --> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un separatore per ogni campo e valore. Il separatore può essere costituito da uno o più caratteri. | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | Facoltativo | *Solo per`"fileType.value": "csv"`*. Imposta un singolo carattere utilizzato per eseguire l’escape delle virgolette all’interno di un valore già tra virgolette. | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

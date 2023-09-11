@@ -4,22 +4,26 @@ title: Regole di avviso standard
 description: Questo documento descrive le regole di avviso predefinite fornite dall’Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
+source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
 
 # Regole di avviso standard
 
-Adobe Experience Platform fornisce diverse regole di avviso predefinite che è possibile abilitare per l’organizzazione. Il presente documento descrive i dettagli di queste regole di avviso fornite dagli Adobi. Per informazioni più generali sugli avvisi in Experience Platform, consulta la sezione [panoramica degli avvisi](./overview.md).
+Adobe Experience Platform fornisce diverse regole di avviso predefinite che è possibile abilitare per l’organizzazione. Il presente documento descrive i dettagli di queste regole di avviso fornite dagli Adobi. Per informazioni più generali sugli avvisi in Experienci Platform, consulta la sezione [panoramica degli avvisi](./overview.md).
 
 Quando [visualizzazione delle regole di avviso nell’interfaccia utente di Platform](./ui.md), puoi abbonarti a ogni regola singolarmente. Quando si sottoscrivono avvisi tramite [Notifiche di eventi di I/O](./subscribe.md)Tuttavia, le regole di avviso sono organizzate in pacchetti di abbonamento diversi. Nelle tabelle seguenti, ogni regola viene visualizzata con il nome dell’abbonamento all’evento di I/O corrispondente.
 
 ## Acquisizione dei dati
 
 Le seguenti regole di avviso sono specifiche per [Acquisizione dei dati](../../ingestion/home.md) e  [sorgenti](../../sources/home.md):
+
+>[!NOTE]
+>
+>Le origini di streaming non sono attualmente supportate dagli avvisi. È possibile abbonarsi solo alle notifiche di avviso per le origini batch.
 
 | Iscrizione evento di I/O | Regola di avviso | Descrizione |
 | --- | --- | --- |
@@ -39,7 +43,7 @@ Se in precedenza è stato eseguito l&#39;abbonamento al tipo di avviso seguente,
 
 {style="table-layout:auto"}
 
-## Servizio Identity
+## Identity Service
 
 Le seguenti regole di avviso sono specifiche per [Servizio identità](../../identity-service/home.md):
 

@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
+source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,13 @@ Questo documento descrive i concetti essenziali relativi all’elaborazione dell
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di accesso ai dati personali per l’archivio dati profilo in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform, consulta la guida su [elaborazione della richiesta di accesso a dati personali nel data lake](../catalog/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di accesso ai dati personali per l’archivio dati profilo in Experienci Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform, consulta la guida su [elaborazione della richiesta di accesso a dati personali nel data lake](../catalog/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
+
+>[!IMPORTANT]
+>
+>La richiesta di accesso a dati personali in questa guida **non** coprono le entità non personali B2B.
 
 ## Introduzione
 
@@ -213,9 +217,9 @@ Per rimuovere il profilo e tutte le associazioni di identità per un determinato
 ### Limitazioni dei criteri di unione {#merge-policy-limitations}
 
 Privacy Service è in grado di elaborare solo [!DNL Profile] dati utilizzando un criterio di unione che non esegue l’unione di identità. Se utilizzi l’interfaccia utente per confermare se le richieste di accesso a dati personali vengono elaborate, assicurati di utilizzare una policy con **[!DNL None]** come [!UICONTROL Unione ID] tipo. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL Unione ID] è impostato su [!UICONTROL Private Graph].
->>
-![L’unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
->
+
+>![L’unione ID del criterio di unione è impostata su Nessuno](./images/privacy/no-id-stitch.png)
+
 ## Passaggi successivi
 
 Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali in [!DNL Experience Platform]. Per comprendere meglio come gestire i dati di identità e creare processi relativi alla privacy, continua a leggere la documentazione fornita in questa guida.

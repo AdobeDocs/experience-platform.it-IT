@@ -4,9 +4,9 @@ description: Scopri come utilizzare l’Assistente AI per navigare e comprendere
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: e84f5aff6885535b58874a4fe02db2944e1d9b7f
+source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
 workflow-type: tm+mt
-source-wordcount: '2629'
+source-wordcount: '2369'
 ht-degree: 0%
 
 ---
@@ -154,112 +154,55 @@ Puoi anche porre all’Assistente AI domande sull’utilizzo dei dati nei seguen
 
 * Attributi
 * Set di dati
-* Destinazioni
-* Schemi
+* Destinazioni (al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati).
+* Schemi (al momento non è possibile rispondere alle domande relative ai gruppi di campi).
 * Segmenti
-* Origini
+* Origini (Al momento non è possibile rispondere alle domande relative ai conti).
 
-Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati ogni 12-24 ore. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il segmento con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} segmento creato?&quot;
+Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il segmento con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} segmento creato?&quot;
 
 Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come schemi, set di dati, attributi, destinazioni e segmenti.
 
-+++Seleziona per un elenco di domande sull’utilizzo dei dati supportate
+### Domande sull’utilizzo dei dati supportate
+
++++Seleziona per visualizzare un elenco di domande sull’utilizzo dei dati supportate
 
 Di seguito è riportato un elenco delle domande sull’utilizzo dei dati attualmente supportate, raggruppate per dominio.
 
->[!BEGINTABS]
-
->[!TAB Segmenti]
-
-* Sono presenti segmenti duplicati?
-* Mostra tutti i segmenti di streaming.
-* Segmento con nome {SEGMENT_ID} valutato in Batch OR Stream?
-* Quali segmenti sono duplicati?
+* Elencare gli attributi utilizzati per questo segmento?
 * Quanti segmenti ci sono in totale?
-* Esistono segmenti con gli stessi nomi ma ID diversi?
-* Qual è la distribuzione dei metodi di valutazione (batch, edge, streaming) tra i segmenti?
 * Visualizza un elenco dei segmenti modificati l’ultima volta nell’ultimo mese.
 * Quali segmenti sono stati modificati nell’ultima settimana?
-* Esistono segmenti che non sono stati modificati negli ultimi sei mesi?
-* Elencare i segmenti creati nell’ultimo anno.
-* Mostra i segmenti modificati per ultimi prima di oggi.
-* Esistono pattern o tendenze nelle date di creazione dei segmenti nell’ultimo anno?
-* È possibile identificare i segmenti che non sono stati modificati dalla loro creazione?
-* Esistono segmenti che non sono stati modificati dalla loro creazione?
-* Qual è la tendenza nella creazione dei segmenti nel tempo?
-* Qual è la distribuzione delle date di creazione dei segmenti?
-* Qual è la distribuzione delle date di modifica dei segmenti?
-* Quali segmenti hanno più profili utente?
-* Quali segmenti presentano il minor numero di profili utente?
-* Elencare tutti i segmenti batch.
-* Elenca tutti i segmenti edge.
-* Quali segmenti sono attivati?
-* Quali segmenti vengono inoltrati a Facebook?
-* Il segmento denominato &quot;Clienti APAC&quot; è in batch o in streaming?
-* Quanti profili ha il segmento Lavoro attivo?
-* Alcuni dei miei segmenti hanno 0 profili?
-* Quali set di dati influiscono sul segmento fedeltà bronzo?
-* Quali definizioni di segmento utilizzano campi XDM che contengono &quot;gender&quot;?
-* Quali campi XDM compilati si verificano nei segmenti di streaming?
-* Quanti campi XDM sono presenti in tutte le definizioni di segmenti?
-* Quali segmenti influiscono sul set di dati &quot;Utenti professionali&quot;?
-* Quali segmenti vengono inoltrati all’API HTTP?
-* Dei segmenti attivati, quali sono attivati per il maggior numero di tipi di destinazione?
+* Qual è il conteggio dei profili per {SEGMENT_NAME} segmento?
+* Elenca tutti i segmenti duplicati.
+* Mostra i segmenti creati o aggiornati negli ultimi 7 giorni.
+* Qual è la distribuzione del numero di profili tra i segmenti?
+* Quanti campi vengono utilizzati nella segmentazione?
 * Qual è il conteggio totale dei segmenti attivati?
-* Quanti segmenti vengono attivati?
+* Quali segmenti sono attivati?
 * Quanti segmenti duplicati vengono attivati?
+* Elencare i segmenti creati nell’ultimo anno.
+* Mostra i segmenti modificati più di recente {DATE}.
+* Quanti nomi di segmento univoci sono associati al {SCHEMA_NAME} schema?
+* Quali schemi vengono utilizzati più comunemente nei segmenti?
+* Quanti schemi ho?
+* Quali set di dati utilizzano {SCHEMA_NAME} schema?
+* Elenca tutti gli schemi modificati nell&#39;ultima settimana.
+* Quanti schemi sono abilitati per i profili?
+* Elencare tutti gli schemi di classi di evento esperienza?
+* Quali set di dati vengono acquisiti in {SCHEMA_NAME} schema?
+* Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?
+* Quanti set di dati ho?
+* Quali set di dati vengono utilizzati in ciascun segmento?
+* Quali segmenti utilizzano {ATTRIBUTE_NAME} attributo?
+* Quali schemi hanno {ATTRIBUTE_NAME} attributi in essi?
+* Quanti attributi dello schema XDM non vengono utilizzati in alcun segmento?
+* In quali set di dati è/sono {ATTRIBUTE_NAME} Campi XDM compilati?
+* Quali set di dati contengono dati per {ATTRIBUTE_NAME} attributo?
 * Quanti segmenti vengono attivati per ogni destinazione?
-* Quali segmenti sono attivati su 0, 1 o più destinazioni? Mostra la distribuzione.
-* Quali segmenti vengono attivati per il maggior numero di destinazioni?
-* Quali segmenti duplicati vengono attivati?
-* Quali segmenti sono attivati in Adobe Target?
-* In tutti i segmenti, quante volte viene utilizzato ciascun criterio di unione?
-
->[!TAB Schemi]
-
-* Quanti schemi XDM sono definiti?
-* Quali sono gli schemi creati più di recente?
-* Quanti schemi per ogni classe XDM?
-* Quale schema utilizza il set di dati &quot;Acquisizione segmento&quot;?
-* Quali schemi non vengono utilizzati da alcun set di dati?
-
->[!TAB Destinazioni]
-
-* Quante destinazioni sono presenti?
-* Quali sono le destinazioni create più di recente?
-* Quali destinazioni sono associate a ciascun segmento?
-
->[!TAB Origini]
-
-* Quante origini sono state create?
-* Quali sono le origini create più di recente?
-* Quante origini sono disponibili, suddivise per categoria?
-* È possibile creare una connessione sorgente da S3?
-* Quali fonti hanno contribuito al set di dati Mutual365?
-
->[!TAB Set di dati]
-
-* Quanti set di dati ci sono?
-* Quali sono i set di dati creati più di recente?
-* Quali set di dati sono abilitati per il profilo unificato?
-* È impostato un TTL per il set di dati di acquisizione segmento?
-* Qual è il TTL per il set di dati per utenti professionali?
-* Quali set di dati utilizzano lo schema Utenti professionali?
-
->[!TAB Attributi]
-
-* Quali campi XDM vengono popolati più comunemente in tutti i DataSet?
-* Quali campi e attributi XDM vengono utilizzati più comunemente negli schemi?
-* Quali campi e attributi XDM vengono utilizzati nello schema Utenti professionali?
-* Elencare gli attributi utilizzati per questo segmento con ID {SEGMENT_ID}.
-* Quanti campi XDM vengono utilizzati in 2+ segmenti?
-* Quali campi vengono utilizzati più comunemente nei segmenti?
-* Esistono campi utilizzati in un solo segmento?
-* Quali attributi vengono utilizzati per il segmento fedeltà Bronzo?
-* Quali attributi non vengono utilizzati in alcun segmento?
-* Quali attributi vengono utilizzati più comunemente nei segmenti?
-
->[!ENDTABS]
+* Quali segmenti vengono attivati nel maggior numero di destinazioni?
+* Alcuni dei miei segmenti hanno 0 profili?
+* Quanti flussi di dati ho?
 
 +++
 
@@ -343,3 +286,5 @@ Leggi la tabella seguente per alcuni esempi:
 | Qual è il segmento più grande? | Qual è il segmento più grande? Utilizzo dei dati. | Indica esplicitamente all’Assistente IA che desideri che la risposta sia basata sui dati. |
 | Qual è il segmento più grande? | Elencate il mio segmento più grande. | Esistono casi in cui una domanda &quot;cosa...&quot; può essere scambiata per una domanda basata su documentazione. L’utilizzo di un comando come &quot;list&quot; è un indicatore più forte del fatto che ti stai ponendo una domanda con i dati nel contesto. |
 | Quanti set di dati ho? | Conta i miei set di dati. | La domanda originale funziona per i segmenti, ma potrebbe non funzionare con i set di dati. |
+
+

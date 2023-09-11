@@ -5,9 +5,9 @@ description: Segui questo tutorial per scoprire come utilizzare i tipi di pubbli
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Questa documentazione contiene informazioni provenienti da una versione precedente della documentazione di Audiences e, di conseguenza, è obsoleta.
 
-Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per un nuovo pubblico. Questo documento fornisce un tutorial per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
+Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per un nuovo pubblico. Questo documento fornisce un tutorial per configurare Experienci Platform per importare e utilizzare tipi di pubblico esterni.
 
 ## Introduzione
 
@@ -27,8 +27,8 @@ Questo tutorial richiede una buona conoscenza delle varie [!DNL Adobe Experience
 - [Servizio di segmentazione](../home.md): consente di creare tipi di pubblico dai dati Profilo cliente in tempo reale.
 - [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale Platform organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
-- [Set di dati](../../catalog/datasets/overview.md): il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
-- [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): come Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
+- [Set di dati](../../catalog/datasets/overview.md): il costrutto di archiviazione e gestione per la persistenza dei dati in Experienci Platform.
+- [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): come Experienci Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
 ### Tipi di pubblico e definizioni dei segmenti
 
@@ -86,7 +86,7 @@ Dopo aver creato il set di dati, continua a seguire le istruzioni riportate nell
 
 ## Impostare e importare i dati sul pubblico
 
-Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
+Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experienci Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
 
 ### Acquisire dati utilizzando una connessione batch
 
@@ -189,11 +189,11 @@ Per creare un set di dati, segui le istruzioni riportate nella sezione [guida ut
 
 Dopo aver creato il set di dati, continua a seguire le istruzioni riportate nella sezione [guida utente del set di dati](../../catalog/datasets/user-guide.md#enable-profile) per abilitare questo set di dati per Real-Time Customer Profile.
 
-![L’interruttore per abilitare lo schema per il profilo viene evidenziato nel flusso di lavoro per la creazione dei set di dati.](../images/tutorials/external-audiences/dataset-profile.png)
+![L’opzione per abilitare lo schema per il profilo è evidenziata nel flusso di lavoro Crea set di dati.](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## Impostare e importare i dati di iscrizione del pubblico esterno
 
-Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experience Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
+Con il set di dati abilitato, ora i dati possono essere inviati a Platform tramite l’interfaccia utente o utilizzando le API Experienci Platform. Puoi acquisire questi dati tramite una connessione in batch o in streaming.
 
 ### Acquisire dati utilizzando una connessione batch
 
@@ -265,4 +265,4 @@ Di seguito è riportato un esempio del payload di iscrizione al pubblico esterno
 
 >[!NOTE]
 >
->Per impostazione predefinita, le appartenenze a un pubblico esterno vengono mantenute solo per 30 giorni. Per conservarli per più di 30 giorni, utilizzare il `validUntil` durante l’acquisizione dei dati sul pubblico. Per ulteriori informazioni su questo campo, consulta la guida su [Gruppi di campi dello schema dei dettagli di iscrizione al segmento](../../xdm/field-groups/profile/segmentation.md).
+>Per impostazione predefinita, le appartenenze a un pubblico esterno vengono eliminate dopo 30 giorni. Per evitare l&#39;eliminazione e conservarle per più di 30 giorni, utilizzare il `validUntil` durante l’acquisizione dei dati sul pubblico. Per ulteriori informazioni su questo campo, consulta la guida su [Gruppi di campi dello schema dei dettagli di iscrizione al segmento](../../xdm/field-groups/profile/segmentation.md).

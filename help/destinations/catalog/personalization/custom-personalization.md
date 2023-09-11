@@ -3,10 +3,10 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 8%
+source-wordcount: '915'
+ht-degree: 9%
 
 ---
 
@@ -35,7 +35,7 @@ Questa destinazione offre un modo per recuperare informazioni sul pubblico da Ad
 
 ## Prerequisiti {#prerequisites}
 
-Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../edge/home.md) o [SDK di Adobe Experience Platform Mobile](https://aep-sdks.gitbook.io/docs/). Per utilizzare questa destinazione, devi utilizzare uno di questi SDK.
+Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../edge/home.md) o [SDK di Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/). Per utilizzare questa destinazione, devi utilizzare uno di questi SDK.
 
 >[!IMPORTANT]
 >
@@ -43,15 +43,12 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

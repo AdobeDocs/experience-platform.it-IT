@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1112'
 ht-degree: 1%
 
 ---
@@ -70,7 +70,8 @@ La sezione seguente contiene informazioni aggiuntive sui guardrail per Identity 
 >
 > * Uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.
 > * Uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità per più dispositivi.
-
+>
+>Quando questa funzione sarà disponibile, i grafici che superano il limite di 50 identità verranno ridotti a un massimo di 50 identità. Per la versione B2C di Real-time CDP, ciò poteva comportare un aumento minimo del numero di profili idonei per un pubblico, in quanto questi profili venivano precedentemente ignorati da Segmentation and Activation.
 
 Quando un grafo di identità completo viene aggiornato, Identity Service elimina l’identità meno recente nel grafo prima di aggiungere l’identità più recente. Ciò al fine di mantenere l’accuratezza e la pertinenza dei dati di identità. Questo processo di eliminazione segue due regole principali:
 
@@ -108,3 +109,8 @@ In questo esempio, prima che il grafico a sinistra possa essere aggiornato con u
 * Nel raro caso in cui vi siano due identità con la stessa marca temporale e lo stesso tipo di identità, Identity Service ordinerà gli ID in base a [XID](./api/list-native-id.md) ed eseguirne la cancellazione.
 
 >[!ENDSHADEBOX]
+
+L’eliminazione avviene solo per i dati presenti nel servizio Identity e non per il profilo cliente in tempo reale.
+
+* Questo comportamento potrebbe di conseguenza creare più profili con un singolo ECID, perché l’ECID non fa più parte del grafo delle identità.
+* Per rimanere all’interno dei numeri di iscrizione al pubblico indirizzabile, si consiglia di abilitare [scadenza dati profilo pseudonimo](../profile/pseudonymous-profiles.md) per eliminare i vecchi profili.

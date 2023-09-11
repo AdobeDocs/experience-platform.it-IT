@@ -2,9 +2,9 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1604'
 ht-degree: 1%
 
 ---
@@ -74,25 +74,20 @@ Per aiutarti a capire meglio come e quando utilizzare il *Destinazione* destinaz
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-*Aggiungi in questa sezione informazioni sui tipi di pubblico supportati dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Elimina i valori non applicabili alla destinazione e tutti i valori non precompilati.*
+*Aggiungi in questa sezione informazioni sui tipi di pubblico supportati dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Utilizza il `✓` e `X` caratteri per contrassegnare se il tipo di pubblico è supportato da questa destinazione.*
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Se la destinazione non supporta l’attivazione di un pubblico esterno, rimuovi la frase seguente insieme alla tabella.*
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
 ## Tipo e frequenza di esportazione {#export-type-frequency}
 
-*Nella tabella, conserva solo le righe corrispondenti alla destinazione. Dovresti avere una riga per il tipo di esportazione e una riga per la frequenza di esportazione. Elimina i valori che non si applicano alla destinazione.*
+*Nella tabella, mantieni solo le righe corrispondenti alla destinazione. Dovresti avere una riga per il tipo di esportazione e una riga per la frequenza di esportazione. Elimina i valori che non si applicano alla destinazione.*
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 

@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di agosto 2023 per Adobe Experience Platform.
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 34%
+source-wordcount: '1750'
+ht-degree: 38%
 
 ---
 
@@ -119,7 +119,7 @@ Per ulteriori informazioni, leggere [Panoramica sulla preparazione dati](../../d
 
 **Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
 
-- Ora puoi [attivare i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md) nelle destinazioni basate su file.
+- Ora puoi [attivare i tipi di pubblico potenziali](../../destinations/ui/activate-prospect-audiences.md) nelle destinazioni di archiviazione cloud.
 - Il generale [guardrail di attivazione](../../destinations/guardrails.md#general-activation-guardrails) di un massimo di 100 destinazioni per sandbox è stato aggiornato a _limite rigido_.
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
@@ -132,7 +132,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione di clienti. Consulta la sezione [[!UICONTROL Profilo potenziale individuale XDM]](../../xdm/classes/prospect.md) per visualizzare esempi e ulteriori informazioni. |
+| Classe | [[!UICONTROL Profilo individuale potenziale cliente XDM]](https://github.com/adobe/xdm/pull/1758/files) | Utilizza questa classe per inserire profili di potenziali clienti provenienti dai casi d’uso più complessi dei fornitori di dati per l’acquisizione clienti. Consulta la sezione [[!UICONTROL Profilo potenziale individuale XDM]](../../xdm/classes/prospect.md) per visualizzare esempi e ulteriori informazioni. |
 
 {style="table-layout:auto"}
 
@@ -161,7 +161,7 @@ Per ulteriori informazioni, leggere [Panoramica del servizio Identity](../../ide
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferisce ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dal tuo [!DNL Real-Time Customer Profile] dati. Questi tipi di pubblico sono configurati e gestiti centralmente su [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione Adobe.
+[!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferiscono ai singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in tipi di pubblico. Puoi creare tipi di pubblico tramite definizioni di segmenti o altre origini dai tuoi dati di [!DNL Real-Time Customer Profile]. Questi tipi di pubblico sono configurati e gestiti centralmente in [!DNL Platform] e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 **Funzioni nuove o aggiornate**
 

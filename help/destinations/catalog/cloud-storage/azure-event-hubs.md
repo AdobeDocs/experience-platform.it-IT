@@ -3,14 +3,14 @@ keywords: Destinazione hub eventi di Azure;hub eventi di Azure;azure eventub
 title: Connessione Azure Event Hubs
 description: Creare una connessione in uscita in tempo reale al [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati da Experienci Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2098'
 ht-degree: 4%
 
 ---
 
-# [!DNL Azure Event Hubs] connessione
+# Connessione [!DNL Azure Event Hubs]
 
 ## Panoramica {#overview}
 
@@ -36,15 +36,12 @@ Ad esempio, un potenziale cliente ha scaricato un white paper che li qualifica c
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 

@@ -1,26 +1,26 @@
 ---
-title: Connessione di tipi di pubblico personalizzati twitter
-description: Effettua il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando il pubblico integrato in Adobe Experience Platform
+title: Connessione twitter tipi di pubblico personalizzati
+description: Effettua il targeting dei tuoi follower e clienti esistenti nel Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '840'
 ht-degree: 4%
 
 ---
 
-# [!DNL Twitter Custom Audiences] connessione
+# Connessione [!DNL Twitter Custom Audiences]
 
 ## Panoramica {#overview}
 
-Effettua il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform.
+Effettua il targeting dei tuoi follower e clienti esistenti nel Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
-Prima di configurare [!DNL Twitter Custom Audiences] destinazione, assicurati di rivedere i seguenti prerequisiti Twitter che devi soddisfare.
+Prima di configurare [!DNL Twitter Custom Audiences] destinazione, assicurati di rivedere i seguenti prerequisiti di Twitter che devi soddisfare.
 
 1. Il tuo [!DNL Twitter Ads] l&#39;account deve essere idoneo per la pubblicità. Nuovo [!DNL Twitter Ads] gli account non sono idonei per la pubblicità nelle prime 2 settimane dopo la loro creazione.
-2. L’account utente Twitter per il quale hai autorizzato l’accesso in [!DNL Twitter Audience Manager] deve avere *[!DNL Partner Audience Manager]* autorizzazione abilitata.
+2. L’account utente di Twitter per il quale hai autorizzato l’accesso in [!DNL Twitter Audience Manager] deve avere *[!DNL Partner Audience Manager]* autorizzazione abilitata.
 
 ## Identità supportate {#supported-identities}
 
@@ -35,15 +35,12 @@ Prima di configurare [!DNL Twitter Custom Audiences] destinazione, assicurati di
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive tutti i tipi di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generati tramite l’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md).
-
-*Inoltre*, questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
-
-| Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Origine pubblico | Supportati | Descrizione |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +50,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tipi di pubblico personalizzati di Twitter. |
+| Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tipi di pubblico personalizzati del Twitter. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -64,7 +61,7 @@ Per aiutarti a capire meglio come e quando utilizzare il [!DNL Twitter Custom Au
 
 ### #1 del caso d’uso
 
-Effettua il targeting dei tuoi follower e clienti esistenti in Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform come [!DNL List Custom Audiences] in Twitter.
+Effettua il targeting dei tuoi follower e clienti esistenti nel Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform come [!DNL List Custom Audiences] nel Twitter.
 
 ## Connetti alla destinazione {#connect}
 
@@ -79,7 +76,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 1. Trova il [!DNL Twitter Custom Audiences] nel catalogo di destinazione e seleziona **[!UICONTROL Configurazione]**.
 2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
    ![Autentica in LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Immetti le credenziali Twitter e seleziona **Accedi**.
+3. Immetti le credenziali del Twitter e seleziona **Accedi**.
 
 ### Inserisci i dettagli della destinazione {#destination-details}
 
@@ -114,9 +111,9 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 
 ## Risorse aggiuntive {#additional-resources}
 
-Quando mappi i tipi di pubblico su Twitter, assicurati di soddisfare i seguenti requisiti di denominazione dei tipi di pubblico:
+Quando mappi il pubblico al Twitter, assicurati di soddisfare i seguenti requisiti di denominazione del pubblico:
 
 1. Fornisci nomi di mappatura del pubblico leggibili dall’utente. È consigliabile utilizzare lo stesso nome utilizzato per i segmenti di Experience Platform.
-2. Non utilizzare caratteri speciali (+ &amp; , % : ; @ / = ? $) nei nomi di mappatura del pubblico e del pubblico. Se il nome del pubblico di Experience Platform contiene questi caratteri, rimuovili prima di mappare il pubblico su una destinazione Twitter.
+2. Non utilizzare caratteri speciali (+ &amp; , % : ; @ / = ? $) nei nomi di mappatura del pubblico e del pubblico. Se il nome del pubblico di Experience Platform contiene questi caratteri, rimuovili prima di mappare il pubblico su una destinazione di Twitter.
 
-Ulteriori informazioni su [!DNL List Custom Audiences] in Twitter si trova nella sezione [Documentazione di twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+Ulteriori informazioni su [!DNL List Custom Audiences] nel Twitter è disponibile nella sezione [Documentazione del twitter](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
