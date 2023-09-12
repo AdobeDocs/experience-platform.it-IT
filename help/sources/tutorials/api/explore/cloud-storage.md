@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;archiviazione cloud;archiv
 title: Esplorare le cartelle di archiviazione cloud utilizzando l’API del servizio Flusso
 description: Questa esercitazione utilizza l’API Flow Service per esplorare un sistema di archiviazione cloud di terze parti.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -106,14 +106,14 @@ Puoi controllare la struttura di un file di dati dall’origine dell’archiviaz
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&fileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | ID di connessione del connettore di origine dell’archiviazione cloud. |
 | `{FILE_PATH}` | Percorso del file che si desidera controllare. |
-| `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati includono:<ul><li>DELIMITATO</code>: valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li>JSON</code>: notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li>PARQUET</code>: Apache Parquet I file Parquet devono essere conformi a XDM.</li></ul> |
+| `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati includono:<ul><li><code>DELIMITATO</code>: valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li><code>JSON</code>: notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li><code>PARQUET</code>: Apache Parquet I file Parquet devono essere conformi a XDM.</li></ul> |
 | `{QUERY_PARAMS}` | Parametri di query facoltativi che possono essere utilizzati per filtrare i risultati. Consulta la sezione su [parametri di query](#query) per ulteriori informazioni. |
 
 **Richiesta**
