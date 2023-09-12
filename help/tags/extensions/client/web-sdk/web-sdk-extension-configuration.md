@@ -1,65 +1,67 @@
 ---
-title: Configurare l’estensione Adobe Experience Platform Web SDK
-description: Configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente.
-exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 97b435b9bcaf20be0e41150b6a7a408e083fbd61
+title: Configurare l’estensione tag Web SDK
+description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
+source-git-commit: ec0aa64c466a8228d49a776d27040253b5a1b196
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 9%
+source-wordcount: '1458'
+ht-degree: 10%
 
 ---
 
 
-# Configurare l’estensione tag Adobe Experience Platform Web SDK
+# Configurare l’estensione tag Web SDK
 
-L’estensione tag Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite la rete Edge di Adobe Experience Platform. L’estensione ti consente di inviare in streaming dati a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
+Il [!DNL Web SDK] L’estensione tag invia i dati a Adobe Experience Cloud dalle proprietà web tramite Experienci Platform Edge Network.
 
-Questo documento illustra come configurare l’estensione nell’interfaccia utente.
+L’estensione ti consente di inviare in streaming dati a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
-## Introduzione
+Questo documento spiega come configurare l’estensione tag nell’interfaccia utente Tag.
 
-Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente e seleziona la **[!UICONTROL Estensioni]** scheda. In Platform Web SDK, seleziona **[!UICONTROL Configura]**.
+## Installare l’estensione tag Web SDK {#install}
 
-![](assets/configure.png)
+L&#39;estensione tag Web SDK richiede una proprietà in cui installare. Se non lo hai già fatto, consulta la documentazione su [creazione di una proprietà tag](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=it).
 
-Se non hai ancora installato l&#39;estensione, fai clic sul pulsante **[!UICONTROL Catalogo]** scheda. Dall’elenco delle estensioni disponibili, individua l’estensione Platform Web SDK e seleziona **[!UICONTROL Installa]**.
+Dopo aver creato una proprietà, aprila e seleziona la **[!UICONTROL Estensioni]** sulla barra laterale sinistra.
 
-![](assets/install.png)
+Seleziona la **[!UICONTROL Catalogo]** scheda. Dall’elenco delle estensioni disponibili, individua [!DNL Web SDK] e seleziona **[!UICONTROL Installa]**.
 
-In entrambi i casi, si apre la pagina di configurazione per Platform Web SDK. Le sezioni seguenti spiegano le opzioni di configurazione dell&#39;estensione.
+![Immagine che mostra l’interfaccia utente Tag con l’estensione Web SDK selezionata](assets/web-sdk-install.png)
 
-![](assets/config-screen.png)
+Dopo aver selezionato **[!UICONTROL Installa]**, è necessario configurare l’estensione tag Web SDK e salvare la configurazione.
 
-## Opzioni di configurazione generali
+>[!NOTE]
+>
+>L’estensione tag viene installata solo dopo il salvataggio della configurazione. Consulta le sezioni successive per scoprire come configurare l’estensione tag.
+
+## Configurare le impostazioni delle istanze {#general}
 
 Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe Experience Platform dove instradare i dati e quali configurazioni utilizzare sul server.
 
-### [!UICONTROL Nome]
+![Immagine che mostra le impostazioni generali dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-general.png)
 
-L&#39;estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag.
+* **[!UICONTROL Nome]**: l’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza viene impostato automaticamente su `alloy`. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
+* **[!UICONTROL ID organizzazione IMS]**: ID dell’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
+* **[!UICONTROL Dominio Edge]**: dominio da cui l’estensione invia e riceve i dati. L’Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
-Il nome predefinito dell&#39;estensione è &quot;[!DNL alloy]&quot;. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
+## Configurare le impostazioni dello stream di dati {#datastreams}
 
-### **[!UICONTROL ID organizzazione IMS]**
+Questa sezione consente di selezionare gli stream di dati da utilizzare per ciascuno dei tre ambienti disponibili (produzione, staging e sviluppo).
 
-Il [!UICONTROL ID organizzazione IMS] è l’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
+Quando una richiesta viene inviata alla rete Edge, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
 
-### **[!UICONTROL Dominio Edge]**
+Consulta la guida su [flussi di dati](../../../../datastreams/overview.md) per scoprire come configurare un flusso di dati.
 
-Il [!UICONTROL Dominio Edge] è il dominio da cui l’estensione Adobe Experience Platform invia e riceve i dati. L’Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+Puoi scegliere uno stream di dati dai menu a discesa disponibili, oppure selezionare **[!UICONTROL Inserisci i valori]** e inserisci un ID dello stream di dati personalizzato per ogni ambiente.
 
-## [!UICONTROL Stream di dati]
+![Immagine che mostra le impostazioni dello stream di dati dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-datastreams.png)
 
-Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
+## Configurare le impostazioni della privacy {#privacy}
 
-Consulta la guida su [flussi di dati](../../../../datastreams/overview.md) per ulteriori informazioni.
+Questa sezione ti consente di configurare il modo in cui Web SDK gestisce i segnali di consenso degli utenti dal sito web. In particolare, consente di selezionare il livello predefinito di consenso presunto di un utente se non è stata fornita alcuna preferenza di consenso esplicito.
 
+Il livello di consenso predefinito non viene salvato nel profilo utente.
 
-## [!UICONTROL Privacy]
-
-![](assets/privacy.png)
-
-Il [!UICONTROL Privacy] consente di configurare il modo in cui l’SDK gestisce i segnali di consenso degli utenti dal sito web. In particolare, consente di selezionare il livello predefinito di consenso presunto di un utente se non è stata fornita alcuna preferenza di consenso esplicito. Il livello di consenso predefinito non viene salvato nel profilo dell’utente. La tabella seguente suddivide ciò che ogni opzione comporta:
+![Immagine che mostra le impostazioni di privacy dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-privacy.png)
 
 | [!UICONTROL Livello di consenso predefinito] | Descrizione |
 | --- | --- |
@@ -68,49 +70,44 @@ Il [!UICONTROL Privacy] consente di configurare il modo in cui l’SDK gestisce 
 | [!UICONTROL In sospeso] | Metti in coda eventi che si verificano prima che l’utente fornisca le preferenze di consenso. Quando vengono fornite le preferenze di consenso, gli eventi vengono raccolti o eliminati in base alle preferenze fornite. |
 | [!UICONTROL Fornito dall’elemento dati] | Il livello di consenso predefinito è determinato da un elemento dati separato da te definito. Quando utilizzi questa opzione, devi specificare l’elemento dati utilizzando il menu a discesa fornito. |
 
-Utilizzare Out o Pending se si richiede il consenso esplicito dell&#39;utente per le operazioni aziendali.
+>[!TIP]
+>
+>Utilizzare **[!UICONTROL Uscita]** o **[!UICONTROL In sospeso]** se hai bisogno del consenso esplicito dell’utente per le operazioni aziendali.
 
-## [!UICONTROL Identità]
+## Configurare le impostazioni di identità {#identity}
 
-![](assets/identity.png)
+Questa sezione ti consente di definire il comportamento dell’SDK web quando si tratta di gestire l’identificazione dell’utente.
 
-### [!UICONTROL Migrazione di ECID da VisitorAPI]
+![Immagine che mostra le impostazioni di identità dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-identity.png)
 
-L’opzione è abilitata per impostazione predefinita. Quando questa funzione è abilitata, l&#39;SDK può leggere i cookie AMCV e s_ecid e impostare il cookie AMCV utilizzato da Visitor.js. Questa funzione è importante durante la migrazione a Adobe Experience Platform Web SDK, in quanto alcune pagine potrebbero usare ancora Visitor.js. Consente all’SDK di continuare a utilizzare lo stesso ECID in modo che gli utenti non vengano identificati come due utenti separati.
+* **[!UICONTROL Migrazione di ECID da VisitorAPI]**: questa opzione è attivata per impostazione predefinita. Quando questa funzione è abilitata, l&#39;SDK può leggere `AMCV` e `s_ecid` cookie e impostare `AMCV` cookie utilizzato da [!DNL Visitor.js]. Questa funzione è importante durante la migrazione a Web SDK, in quanto alcune pagine potrebbero ancora utilizzare [!DNL Visitor.js]. Questa opzione consente all’SDK di continuare a utilizzare lo stesso [!DNL ECID] in modo che gli utenti non vengano identificati come due utenti distinti.
+* **[!UICONTROL Utilizzare i cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, l’SDK potrebbe ancora non essere in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o se è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, l’SDK memorizza l’identificatore solo nel dominio di prime parti.
 
-### [!UICONTROL Utilizzare i cookie di terze parti]
+## Configurare le impostazioni di personalizzazione {#personalization}
 
-Questa opzione consente all&#39;SDK di tentare di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, l’SDK potrebbe ancora non essere in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o se è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, l’SDK memorizza l’identificatore solo nel dominio di prime parti.
+Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato.
 
-## [!UICONTROL Personalizzazione]
+È possibile specificare gli elementi da nascondere nell&#39;editor di stili pre-hiding. È quindi possibile copiare il frammento predefinito di pre-hiding fornito e incollarlo all&#39;interno del `<head>` elemento del sito [!DNL HTML] codice.
 
-![](assets/personalization.png)
+![Immagine che mostra le impostazioni di personalizzazione dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-personalization.png)
 
-Se desideri nascondere determinate parti se il tuo sito viene caricato mentre è presente contenuto personalizzato, puoi specificare gli elementi da nascondere nell’editor di stili per il pre-hiding. È quindi possibile copiare il frammento predefinito di pre-hiding fornito e incollarlo all&#39;interno del `<head>`del sito HTML.
+* **[!UICONTROL Migrare Target da at.js a Web SDK]**: utilizza questa opzione per abilitare [!DNL Web SDK] per leggere e scrivere la versione precedente `mbox` e `mboxEdgeCluster` cookie utilizzati da at.js `1.x` o `2.x` librerie. Questo ti aiuta a mantenere il profilo visitatore durante il passaggio da una pagina che utilizza l’SDK per web a una pagina che utilizza at.js `1.x` o `2.x` e viceversa.
 
-## [!UICONTROL Raccolta dati]
+## Configurare le impostazioni di raccolta dati {#data-collection}
 
-![](assets/data-collection.png)
+![Immagine che mostra le impostazioni di raccolta dati dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-collection.png)
 
-### [!UICONTROL Funzione callback]
+* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=it) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati alla rete Edge. Per informazioni più dettagliate su come utilizzare questa funzione, consulta [qui](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Abilita raccolta dati di clic]**: Web SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata, ma può essere disabilitata utilizzando questa opzione. I collegamenti sono etichettati anche come collegamenti di download se contengono una delle espressioni di download elencate in [!UICONTROL Qualificatore collegamento di download] casella di testo. In questo Adobe vengono forniti alcuni qualificatori predefiniti per i collegamenti di download. Puoi modificarli in base alle tue esigenze.
+* **[!UICONTROL Dati contestuali raccolti automaticamente]**: per impostazione predefinita, Web SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se desideri visualizzare un elenco delle informazioni raccolte dall’Adobe, puoi trovarlo [qui](../../../../edge/data-collection/automatic-information.md). Se non desideri raccogliere questi dati o desideri solo raccogliere determinate categorie di dati, seleziona **[!UICONTROL Informazioni specifiche sul contesto]** e seleziona i dati che desideri raccogliere.
 
-La funzione di callback fornita nell&#39;estensione è denominata anche [`onBeforeEventSend` funzione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=it) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati ad Adobe Edge Network. Per informazioni più dettagliate su come utilizzare questa funzione, consulta [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+## Configurare gli override dello stream di dati {#datastream-overrides}
 
-### [!UICONTROL Fai clic su raccolta dati]
-
-L&#39;SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata, ma può essere disabilitata utilizzando questa opzione. I collegamenti sono etichettati anche come collegamenti di download se contengono una delle espressioni di download elencate in [!UICONTROL Qualificatore collegamento di download] casella di testo. In questo Adobe vengono forniti alcuni qualificatori predefiniti per i collegamenti di download, che possono essere modificati in qualsiasi momento.
-
-### [!UICONTROL Dati contestuali raccolti automaticamente]
-
-Per impostazione predefinita, l&#39;SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se desideri visualizzare un elenco delle informazioni raccolte dall’Adobe, puoi trovarlo [qui](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Se non desideri che questi dati vengano raccolti o se desideri solo determinate categorie di dati raccolti, puoi modificare queste opzioni.
-
-## [!UICONTROL Override della configurazione dello stream di dati]
-
-Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati alla rete Edge tramite l’SDK per web.
+Gli override dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passate alla rete Edge tramite il Web SDK.
 
 Questo consente di attivare comportamenti diversi dello stream di dati rispetto a quelli predefiniti, senza creare un nuovo stream di dati o modificare le impostazioni esistenti.
 
-La sostituzione della configurazione dello stream di dati è un processo in due fasi:
+L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
 1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
 2. Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’estensione tag di Web SDK.
@@ -125,10 +122,8 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 
 ![L’immagine che mostra le sostituzioni della configurazione dello stream di dati nella pagina dell’estensione tag di Web SDK.](assets/datastream-overrides.png)
 
-## [!UICONTROL Impostazioni avanzate]
+## Configurare le impostazioni avanzate
 
-![](assets/advanced-settings.png)
+Utilizza il **[!UICONTROL Percorso base perimetrale]** se è necessario modificare il percorso di base utilizzato per interagire con la rete Edge. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
 
-### [!UICONTROL Percorso base perimetrale]
-
-Utilizza questo campo se devi modificare il percorso di base utilizzato per interagire con Adobe Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
+![Immagine che mostra le impostazioni avanzate nella pagina dell’estensione tag Web SDK.](assets/advanced-settings.png)
