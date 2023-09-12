@@ -3,10 +3,10 @@ title: Creare una connessione sorgente PubSub di Google utilizzando l’API del 
 description: Scopri come collegare Adobe Experience Platform a un account Google PubSub utilizzando l’API del servizio Flow.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ Questo tutorial illustra i passaggi necessari per la connessione [!DNL Google Pu
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per connettersi correttamente [!DNL PubSub] alla piattaforma utilizzando [!DNL Flow Service] API.
 
@@ -34,7 +34,7 @@ Per ottenere [!DNL Flow Service] per connettersi a [!DNL PubSub], è necessario 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `projectId` | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
-| `credentials` | Credenziali o chiave necessarie per l&#39;autenticazione [!DNL PubSub]. |
+| `credentials` | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
 | `topicName` | Nome della risorsa che rappresenta un feed di messaggi. È necessario specificare un nome di argomento se si desidera fornire l&#39;accesso a un flusso di dati specifico nel [!DNL PubSub] sorgente. Il formato del nome dell&#39;argomento è: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. Il formato del nome dell’abbonamento è: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di destinazione di origine. Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
@@ -59,7 +59,7 @@ Il [!DNL PubSub] origine consente di specificare il tipo di accesso da consentir
 
 >[!NOTE]
 >
->Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere tale entità principale (ruolo) anche alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
+>Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere anche tale entità principale (ruolo) alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **Formato API**
 

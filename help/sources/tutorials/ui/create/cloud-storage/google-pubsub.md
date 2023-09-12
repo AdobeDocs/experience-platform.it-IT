@@ -3,10 +3,10 @@ title: Creare una connessione sorgente PubSub di Google nell’interfaccia utent
 description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 0%
+source-wordcount: '1043'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Questo tutorial descrive i passaggi necessari per creare [!DNL Google PubSub] (i
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Se disponi già di un [!DNL PubSub] connessione, è possibile saltare il resto del documento e passare all&#39;esercitazione [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
@@ -34,7 +34,7 @@ Per connettersi [!DNL PubSub] In Platform, devi fornire un valore valido per le 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | Progetto ID | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
-| Credenziali  | ID della chiave privata o delle credenziali richiesto per l&#39;autenticazione [!DNL PubSub]. |
+| Credenziali | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
 | Nome argomento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. |
 | Nome abbonamento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. |
 
@@ -52,9 +52,9 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto [!UICONTROL Archiviazione cloud] categoria, seleziona **[!UICONTROL Google PubSub]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto [!UICONTROL Archiviazione cloud] categoria, seleziona **[!UICONTROL Google PubSub]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
-![Catalogo delle origini nell’interfaccia utente di Experience Platform.](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Catalogo delle origini nell’interfaccia utente di Experienci Platform.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 Il **[!UICONTROL Connetti a Google PubSub]** viene visualizzata. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
@@ -94,7 +94,7 @@ Per creare un account con accesso limitato solo a un determinato [!DNL PubSub] a
 
 >[!NOTE]
 >
->Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere tale entità principale (ruolo) anche alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
+>Entità principale (ruoli) assegnata a un [!DNL PubSub] vengono ereditati in tutti gli argomenti e le sottoscrizioni creati all&#39;interno di un [!DNL PubSub] progetto. Se si desidera che un&#39;entità principale (ruolo) abbia accesso a un argomento specifico, è necessario aggiungere anche tale entità principale (ruolo) alla sottoscrizione corrispondente dell&#39;argomento. Per ulteriori informazioni, leggere [[!DNL PubSub] documentazione sul controllo degli accessi](<https://cloud.google.com/pubsub/docs/access-control>).
 
 ## Selezionare i dati
 
