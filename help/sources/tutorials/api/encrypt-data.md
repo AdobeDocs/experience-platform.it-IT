@@ -4,9 +4,9 @@ description: Scopri come acquisire i file crittografati tramite le origini batch
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -332,6 +332,40 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**Limitazioni all’acquisizione ricorrente**
+
+L’acquisizione di dati crittografati non supporta l’acquisizione di cartelle ricorrenti o a più livelli nelle origini. Tutti i file crittografati devono essere contenuti in una singola cartella. Non sono supportati neanche i caratteri jolly con più cartelle in un unico percorso di origine.
+
+Di seguito è riportato un esempio di struttura di cartelle supportata, in cui il percorso di origine è `/ACME-customers/*.csv.gpg`.
+
+In questo scenario, i file in grassetto vengono acquisiti in Experienci Platform.
+
+* ACME-clienti
+   * **File1.csv.gpg**
+   * File2.json.gpg
+   * **File3.csv.gpg**
+   * File4.json
+   * **File5.csv.gpg**
+
+Di seguito è riportato un esempio di struttura di cartelle non supportata in cui il percorso di origine è `/ACME-customers/*`.
+
+In questo scenario, l’esecuzione del flusso non riuscirà e restituirà un messaggio di errore che indica che i dati non possono essere copiati dall’origine.
+
+* ACME-clienti
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* fedeltà ACME
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## Passaggi successivi
 
