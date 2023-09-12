@@ -1,11 +1,11 @@
 ---
 keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
-description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in Microsoft Display Advertising.
+description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in tutta Microsoft Advertising Network, inclusi Display advertising, Search e Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '690'
 ht-degree: 8%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 8%
 
 ## Panoramica {#overview}
 
-Il [!DNL Microsoft Bing] destination ti consente di inviare i dati del profilo a [!DNL Microsoft Display Advertising].
+Utilizza il [!DNL Microsoft Bing] destinazione per inviare i dati del profilo all&#39;intero [!DNL Microsoft Advertising Network], tra cui [!DNL Display Advertising], [!DNL Search], e [!DNL Native].
+
+Il [!DNL Microsoft Bing] creazione della destinazione *[!DNL Custom Audiences]* in Microsoft. Questi sono disponibili sia nel [!DNL Microsoft Search Network] e [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) come elencato nella [Documentazione di Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Per inviare i dati del profilo a [!DNL Microsoft Bing], devi prima connetterti alla destinazione.
 
 ## Casi d’uso {#use-cases}
 
-In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico basati su [!DNL Microsoft Advertising IDs] per eseguire il targeting degli utenti tramite display advertising in [!DNL Microsoft Advertising] canali.
+In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico basati su [!DNL Microsoft Advertising IDs] per eseguire il targeting degli utenti tramite display o search advertising su [!DNL Microsoft Advertising] canali.
 
 ## Identità supportate {#supported-identities}
 
@@ -74,7 +76,7 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Parametri di connessione {#parameters}
+### Inserisci i dettagli della destinazione {#parameters}
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
