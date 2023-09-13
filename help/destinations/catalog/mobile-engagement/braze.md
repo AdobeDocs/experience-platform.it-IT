@@ -3,9 +3,9 @@ keywords: mobile; braze; messaggistica;
 title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,14 @@ La mappatura corretta sarà simile alla seguente:
 ## Dati esportati {#exported-data}
 
 Per verificare se i dati sono stati esportati correttamente in [!DNL Braze] destinazione, controlla il tuo [!DNL Braze] account. [!DNL Adobe Experience Platform] i tipi di pubblico vengono esportati in [!DNL Braze] sotto `AdobeExperiencePlatformSegments` attributo.
+
+## Risoluzione dei problemi {#troubleshooting}
+
+**Ho ricevuto un errore di timeout durante l’attivazione dei tipi di pubblico in questa destinazione. Cosa devo fare?**
+
+Talvolta, l’attivazione del pubblico su questa destinazione può causare un errore di timeout. Questo errore non indica sempre un problema di attivazione.
+
+Se ricevi un errore di timeout, controlla le dimensioni del pubblico nella piattaforma di destinazione. Se la dimensione del pubblico è corretta, l’integrazione funziona come previsto.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
