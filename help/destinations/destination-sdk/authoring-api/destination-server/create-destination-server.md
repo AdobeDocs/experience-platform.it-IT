@@ -1,10 +1,10 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite il Adobe Experience Platform Destination SDK.
 title: Creare una configurazione del server di destinazione
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1696'
+ht-degree: 9%
 
 ---
 
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -319,10 +319,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---|---|---|
 | `name` | Stringa | Nome della connessione di destinazione. |
 | `destinationServerType` | Stringa | Imposta questo valore in base alla piattaforma di destinazione. Per [!DNL SFTP] destinazioni, impostalo su `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | Stringa | La directory radice dell&#39;archiviazione di destinazione. |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | Stringa | Nome host dell&#39;archiviazione di destinazione. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | Stringa | La directory radice dell&#39;archiviazione di destinazione. |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | Stringa | Nome host dell&#39;archiviazione di destinazione. |
 | `port` | Intero | Porta del file server SFTP. |
 | `encryptionMode` | Stringa | Indica se utilizzare la crittografia file. Valori supportati: <ul><li>PGP</li><li>Nessuna</li></ul> |
 | `fileConfigurations` | N/D | Consulta [configurazione formattazione file](../../functionality/destination-server/file-formatting.md) per informazioni dettagliate su come configurare queste impostazioni. |
@@ -829,7 +829,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server dello schema dinamico, visibile solo agli Adobi. |
 | `destinationServerType` | Stringa | *Obbligatorio.* Imposta su `URL_BASED` per i server di schema dinamico. |
 | `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzare `PEBBLE_V1` se Adobe deve trasformare l’URL in `value` di seguito. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui Experience Platform deve connettersi e recupera i campi dello schema da compilare come campi di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. |
+| `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui Experienci Platform deve connettersi e recupera i campi dello schema da compilare come campi di destinazione nel passaggio di mappatura del flusso di lavoro di attivazione. |
 | `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Per i server con schema dinamico, utilizza `GET`. |
 | `responseFields.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
 | `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall’API partner nello schema partner che verrà visualizzato nell’interfaccia utente di Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere [Sezione Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull’escape di caratteri, consulta [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Per un esempio di semplice trasformazione, fai riferimento a [Attributi del profilo](../../functionality/destination-server/message-format.md#attributes) trasformazione. </li></ul> |
