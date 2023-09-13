@@ -4,19 +4,15 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3633'
 ht-degree: 11%
 
 ---
 
 
 # Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch
-
->[!IMPORTANT]
-> 
-> La funzionalità descritta sulla pagina non è ancora disponibile a livello generale per i clienti. Questa pagina è destinata attualmente ai team interni agli Adobi come pre-lettura delle funzionalità in arrivo. Non condividere all&#39;esterno di Adobe finché questa nota non viene rimossa.
 
 >[!IMPORTANT]
 > 
@@ -517,7 +513,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
-![violazione dei criteri dei dati](../assets/common/data-policy-violation.png)
+![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 
