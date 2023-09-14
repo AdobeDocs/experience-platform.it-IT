@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: f3bad477156db8f8cf79582c7a6cc2562e983b63
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3354'
 ht-degree: 7%
 
 ---
@@ -98,6 +98,10 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 | Suite di rapporti multiple | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** EVAR 2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene l’eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
 
 ### Tipi di pubblico
+
+>[!NOTE]
+>
+>Per i tipi di pubblico creati all’interno di Platform, solo quelli con **uguale** verrà visualizzato il criterio di unione.
 
 Il **[!UICONTROL Tipi di pubblico]** Questa scheda elenca tutti i tipi di pubblico importati da origini esterne, ad esempio Adobe Audience Manager, e quelli creati in [!DNL Experience Platform].
 
