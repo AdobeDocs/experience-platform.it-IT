@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1748'
 ht-degree: 19%
 
 ---
@@ -255,3 +255,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 Hai completato l’applicazione delle etichette a un ruolo, ai campi dello schema e ai segmenti. L’agenzia esterna assegnata a questi ruoli non può visualizzare queste etichette e i relativi valori nella vista schema, set di dati e profilo. Inoltre, questi campi non possono essere utilizzati nella definizione del segmento quando si utilizza il Generatore di segmenti.
 
 Per ulteriori informazioni sul controllo degli accessi basato su attributi, vedere [panoramica sul controllo degli accessi basato su attributi](./overview.md).
+
+Il video seguente ha lo scopo di illustrare il controllo degli accessi basato su attributi e illustra come configurare ruoli, risorse e criteri.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

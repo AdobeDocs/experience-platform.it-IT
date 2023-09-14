@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 17%
 
 ---
@@ -21,6 +21,10 @@ Questa funzionalità consente di etichettare i campi dello schema Experience Dat
 >Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experienci Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali (PII) e ai tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
+
+Il video seguente ha lo scopo di illustrare il controllo degli accessi basato su attributi e illustra come configurare ruoli, risorse e criteri.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologia per il controllo degli accessi basato su attributi
 
