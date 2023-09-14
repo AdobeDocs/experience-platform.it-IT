@@ -2,9 +2,9 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Gli spazi dei nomi dele identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1764'
 ht-degree: 9%
 
 ---
@@ -37,7 +37,7 @@ Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma con
 >abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafo identità. Gli identificatori che non si riferiscono a persone non verranno memorizzati, mentre tutti gli altri tipi di identità sì."
 >text="Learn more in documentation"
 
-I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi dell’identità e controlla se i dati vengono salvati in modo permanente nel grafico delle identità ed eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non persone** segui lo stesso comportamento dell’unione di uno spazio dei nomi e del relativo valore ID corrispondente in un cluster di grafo delle identità. I dati non vengono uniti quando si utilizza **Identificatore non persone**.
+I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi dell’identità e controlla se i dati vengono salvati in modo permanente nel grafico delle identità ed eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non persone** segui lo stesso comportamento dell’unione di uno spazio dei nomi e del relativo valore ID corrispondente in un cluster del grafico delle identità. I dati non vengono uniti quando si utilizza **Identificatore non persone**.
 
 I seguenti tipi di identità sono disponibili in [!DNL Platform]:
 
@@ -48,7 +48,7 @@ I seguenti tipi di identità sono disponibili in [!DNL Platform]:
 | ID dispositivo | Gli ID dispositivo identificano i dispositivi hardware, come IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e possono essere condivisi da più persone nelle famiglie. |
 | Indirizzo e-mail | Gli indirizzi e-mail sono spesso associati a una singola persona e possono quindi essere utilizzati per identificarla tra canali diversi. Le identità di questo tipo includono informazioni personali (PII, personally identifiable information). Questo è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | Identificatore non personale | Gli ID non-people vengono utilizzati per memorizzare gli identificatori che richiedono spazi dei nomi ma non sono connessi a un cluster di persone. Ad esempio, uno SKU di prodotto, dati relativi a prodotti, organizzazioni o negozi. |
-| ID partner [!BADGE Beta]{type=Informative} | <ul><li>Gli ID partner sono identificatori utilizzati dai partner di dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti del grafico delle identità.</li><li>I grafici delle identità non vengono generati durante l’acquisizione di un’identità che include uno spazio dei nomi di identità specificato come tipo di ID partner.</li><li>La mancata acquisizione dei dati dei partner utilizzando il tipo di identità ID partner potrebbe comportare il raggiungimento di limitazioni del grafico del sistema per Identity Service, nonché l’unione indesiderata di profili.</li><ul> |
+| ID partner | <ul><li>Gli ID partner sono identificatori utilizzati dai partner di dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti del grafico delle identità.</li><li>I grafici delle identità non vengono generati durante l’acquisizione di un’identità che include uno spazio dei nomi di identità specificato come tipo di ID partner.</li><li>La mancata acquisizione dei dati dei partner utilizzando il tipo di identità ID partner potrebbe comportare il raggiungimento di limitazioni del grafico del sistema per Identity Service, nonché l’unione indesiderata di profili.</li><ul> |
 | Numero di telefono | I numeri di telefono sono spesso associati a una singola persona e possono quindi essere utilizzati per identificare tale persona su canali diversi. Le identità di questo tipo includono PII. Questa è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 
 {style="table-layout:auto"}
