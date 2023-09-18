@@ -1,31 +1,36 @@
 ---
 title: Panoramica degli attributi calcolati
 description: Gli attributi calcolati sono funzioni per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1059'
 ht-degree: 1%
 
 ---
 
-# Panoramica degli attributi calcolati
 
->[!IMPORTANT]
->
->Gli attributi calcolati sono attualmente in **beta** ed è **non** disponibile per tutti gli utenti.
+# Panoramica degli attributi calcolati
 
 La personalizzazione basata sul comportamento degli utenti è un requisito chiave affinché gli esperti di marketing massimizzino l’impatto della personalizzazione. Ad esempio, puoi personalizzare l’e-mail di marketing con il prodotto visualizzato più di recente per favorire la conversione o la pagina web in base al totale degli acquisti effettuati dagli utenti per promuovere la fidelizzazione.
 
 Gli attributi calcolati consentono di convertire rapidamente i dati comportamentali del profilo in valori aggregati a livello di profilo senza dipendere dalle risorse tecniche per:
 
-- Abilitazione della personalizzazione mirata con attivazione di aggregati comportamentali nelle destinazioni Real-time Customer Data Platform, utilizzo in Adobe Journey Optimizer o nella segmentazione
+- Abilitazione della personalizzazione mirata uno-a-uno o in batch con attivazione degli aggregati comportamentali per le destinazioni Real-time Customer Data Platform e l’utilizzo in Adobe Journey Optimizer
+- Segmentazione del pubblico semplificata con archiviazione di aggregati comportamentali come attributi di profilo
 - Standardizzazione dei dati comportamentali aggregati del profilo da utilizzare su piattaforme e app diverse
 - Migliore gestione dei dati con consolidamento dei dati dei vecchi eventi di profilo in informazioni comportamentali significative
 
-Questi aggregati vengono calcolati in base ai set di dati Experience Event abilitati per il profilo e acquisiti in Adobe Experience Platform. Ogni attributo calcolato è un attributo di profilo creato nello schema di unione profili e viene raggruppato nel gruppo di campi &quot;Attributo calcolato&quot; nello schema di unione.
+Questi aggregati vengono calcolati in base ai set di dati Experience Event abilitati per il profilo e acquisiti in Adobe Experience Platform. Ogni attributo calcolato è un attributo di profilo creato nello schema di unione profili e viene raggruppato nel gruppo di campi &quot;SystemComputedAttribute&quot; nello schema di unione.
 
-I casi d’uso di esempio includono la personalizzazione degli annunci con il nome dell’ultimo prodotto visualizzato per le persone che non hanno effettuato acquisti negli ultimi 7 giorni, la personalizzazione delle e-mail di marketing con punti premio totali ottenuti per congratularsi con gli utenti per essere stati promossi a un livello premium o il calcolo del valore del ciclo di vita di ciascun cliente per favorire un targeting migliore.
+I casi d’uso di esempio includono:
+
+- Personalizzazione delle e-mail di marketing con punti premio totali per congratularsi con gli utenti per essere stati promossi a un livello superiore
+- Personalizzazione delle comunicazioni agli utenti in base al numero di acquisti e alla frequenza
+- Personalizzazione delle e-mail di conservazione in base alle date di scadenza dell’abbonamento
+- Nuovo targeting degli utenti che hanno visualizzato ma non hanno acquistato un prodotto con l’ultimo prodotto visualizzato
+- Attivazione di aggregazioni di eventi tramite attributi calcolati in un sistema a valle utilizzando Destinazioni di Real-Time CDP
+- Compressione di più tipi di pubblico basati su eventi in un gruppo più compatto di attributi calcolati
+- Nuovo targeting degli utenti non autenticati fuori sede utilizzando ID partner recenti da eventi
 
 Questa guida ti aiuterà a comprendere meglio il ruolo degli attributi calcolati in Platform, oltre a spiegare le nozioni di base degli attributi calcolati.
 
@@ -47,7 +52,7 @@ Gli attributi calcolati consentono di definire gli aggregati di eventi in modo a
 | COUNT | Una funzione che **conteggi** il numero di eventi che si sono verificati per la regola specificata. | N/D | Numero di acquisti negli ultimi 3 mesi |
 | MIN | Una funzione che trova **minimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Dati del primo acquisto negli ultimi 7 giorni<br/>Importo minimo dell’ordine nelle ultime 4 settimane |
 | MAX | Una funzione che trova **massimo** valore per gli eventi qualificati. | Interi, Numeri, Lunghi, Marca temporale | Ultimi dati di acquisto negli ultimi 7 giorni<br/>Importo massimo dell’ordine nelle ultime 4 settimane |
-| MOST_RECENT | Funzione che trova il valore di attributo specificato dall’evento qualificato più recente. | Tutti i valori primitivi, matrici di valori primitivi | Ultimo prodotto visualizzato negli ultimi 7 giorni |
+| MOST_RECENT | Funzione che trova il valore di attributo specificato dall&#39;ultimo evento qualificato. Questa funzione offre **entrambi** il valore e la marca temporale dell’attributo. | Tutti i valori primitivi, matrici di valori primitivi | Ultimo prodotto visualizzato negli ultimi 7 giorni |
 
 ### Periodi di lookback
 
@@ -68,21 +73,19 @@ Ad esempio, se l’attributo calcolato ha un periodo di lookback degli ultimi 7 
 
 >[!NOTE]
 >
->Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi.
+>Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi. La settimana del calendario inizia il **Domenica** e termina il **Sabato** della settimana.
 
-**Aggiornamento rapido**
+**Aggiornamento rapido** {#fast-refresh}
 
->[!IMPORTANT]
->
->Massimo di **cinque** per gli attributi, in base alla sandbox, può essere abilitato l’aggiornamento rapido.
-
-L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi. Questo consente di reagire alle attività degli utenti quasi in tempo reale. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale.
+L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi, per poter reagire rapidamente alle attività degli utenti.
 
 >[!NOTE]
 >
 >L’abilitazione dell’aggiornamento rapido varia la durata del lookback dell’evento, in quanto il periodo di lookback viene riavviato rispettivamente su base settimanale o mensile.
 >
->Ad esempio, se crei un attributo calcolato con un periodo di lookback di due settimane con aggiornamento rapido abilitato, il periodo di lookback iniziale sarà di due settimane. Tuttavia, con ogni aggiornamento giornaliero, il periodo di lookback includerà gli eventi del giorno aggiuntivo. L’aggiunta di giorni continuerà fino all’inizio della settimana di calendario successiva, durante la quale l’intervallo di lookback verrà rinnovato e tornerà a due settimane.
+>Se crei un attributo calcolato con un periodo di lookback di due settimane con aggiornamento rapido abilitato, il periodo di lookback iniziale sarà di due settimane. Tuttavia, con ogni aggiornamento giornaliero, il periodo di lookback includerà gli eventi del giorno aggiuntivo. L’aggiunta di giorni continuerà fino all’inizio della settimana di calendario successiva, durante la quale l’intervallo di lookback verrà rinnovato e tornerà a due settimane.
+>
+>Ad esempio, se si è verificato un periodo di lookback di due settimane a partire dal 15 marzo (domenica) con aggiornamento rapido abilitato, con aggiornamento giornaliero, il periodo di lookback continuerà a espandersi inclusivamente fino al 22 marzo, giorno in cui verrà ripristinato su due settimane. In breve, l’attributo calcolato è **aggiornato** ogni giorno, con il periodo di lookback che aumenta da **due** settimane a **tre** settimane durante la settimana, e quindi di nuovo a **due** settimane.
 
 ## Passaggi successivi
 

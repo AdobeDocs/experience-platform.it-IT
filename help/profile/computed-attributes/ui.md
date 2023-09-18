@@ -1,20 +1,15 @@
 ---
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
-badge: "Beta"
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
 
 
 # Guida dell’interfaccia utente attributi calcolati
-
->[!IMPORTANT]
->
->Gli attributi calcolati sono attualmente in **beta** ed è **non** disponibile per tutti gli utenti.
 
 In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
@@ -29,7 +24,7 @@ Questa guida dell’interfaccia utente richiede una comprensione dei vari [!DNL 
 
 ## Visualizza attributi calcolati {#view}
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Attributi calcolati]** per visualizzare un elenco degli attributi calcolati disponibili per la tua organizzazione. Ciò include informazioni sul nome, la descrizione, la data dell&#39;ultima valutazione e lo stato dell&#39;ultima valutazione dell&#39;attributo calcolato.
+Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Attributi calcolati]** per visualizzare un elenco degli attributi calcolati disponibili per la tua organizzazione. Ciò include informazioni sul nome, la descrizione, la data dell&#39;ultima valutazione e lo stato dell&#39;ultima valutazione dell&#39;attributo calcolato.
 
 ![Il [!UICONTROL Profilo] sezione e [!UICONTROL Attributi calcolati] Le schede sono evidenziate e mostrano agli utenti come accedere alla pagina di navigazione degli attributi calcolati.](./images/ui/browse.png)
 
@@ -45,6 +40,16 @@ Per selezionare i campi visibili, è possibile selezionare ![icona configura col
 | [!UICONTROL Refresh frequency (Frequenza di aggiornamento)] | Indicazione della frequenza con cui si prevede di aggiornare l&#39;attributo calcolato. I valori possibili includono orario, giornaliero, settimanale o mensile. |
 | [!UICONTROL Aggiornamento rapido] | Valore che indica se l&#39;aggiornamento rapido è abilitato o meno per questo attributo di calcolo. Se è abilitato l&#39;aggiornamento rapido, l&#39;attributo calcolato può essere aggiornato su base giornaliera anziché settimanale, bisettimanale o mensile. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale. |
 | [!UICONTROL Stato del ciclo di vita] | Stato corrente dell&#39;attributo calcolato. Esistono tre stati possibili: <ul><li>**[!UICONTROL Bozza]:** L’attributo calcolato **non** hai già creato un campo nello schema. In questo stato, l’attributo calcolato può essere modificato. </li><li>**[!UICONTROL Pubblicato]:** L’attributo calcolato ha un campo creato nello schema ed è pronto per essere utilizzato. In questo stato, l’attributo calcolato **non può** essere modificata.</li><li>**[!UICONTROL Inattivo]:** L’attributo calcolato è disabilitato. Per ulteriori informazioni sullo stato di inattività, leggere [Pagina Domande frequenti](./faq.md#inactive-status). </li> |
+| [!UICONTROL Creato] | Timestamp che mostra la data e l’ora di creazione dell’attributo calcolato. |
+| [!UICONTROL Ultima modifica] | Timestamp che mostra la data e l’ora dell’ultima modifica apportata all’attributo calcolato. |
+
+Puoi anche filtrare gli attributi calcolati visualizzati in base allo stato del ciclo di vita. Seleziona la ![funnel](./images/ui/filter-icon.png) icona.
+
+![L’icona del filtro viene evidenziata.](./images/ui/select-filter.png)
+
+Ora puoi scegliere di filtrare gli attributi calcolati per stato ([!UICONTROL Bozza], [!UICONTROL Pubblicato], e [!UICONTROL Inattivo]).
+
+![Vengono evidenziate le opzioni per le quali è possibile filtrare gli attributi calcolati. Queste opzioni includono [!UICONTROL Bozza], [!UICONTROL Pubblicato], e [!UICONTROL Inattivo].](./images/ui/view-filters.png)
 
 Inoltre, puoi selezionare un attributo calcolato per visualizzare informazioni più dettagliate su di esso. Per ulteriori informazioni sulla pagina dei dettagli degli attributi calcolati, consulta [visualizzare la sezione dei dettagli di un attributo calcolato](#view-details).
 
@@ -91,6 +96,21 @@ Dopo aver scelto una funzione, puoi scegliere il campo su cui eseguire l’aggre
 Dopo aver applicato la funzione di aggregazione, è necessario definire il periodo di lookback dell’attributo calcolato. Questo periodo di lookback specifica per quanto tempo desideri aggregare gli eventi. Questa durata del lookback può essere specificata in termini di ore, giorni, settimane o mesi.
 
 ![Viene evidenziata la durata del lookback.](./images/ui/select-lookback-duration.png)
+
+### Aggiornamento rapido {#fast-refresh}
+
+>[!CONTEXTUALHELP]
+>id="platform_profile_computedAttributes_fastRefresh"
+>title="Aggiornamento rapido"
+>abstract="L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi, per poter reagire rapidamente alle attività degli utenti. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale."
+
+Quando si applica la funzione di aggregazione, è possibile abilitare l’aggiornamento rapido se il periodo di lookback è superiore a una settimana.
+
+![Il [!UICONTROL Aggiornamento rapido] la casella di controllo è evidenziata.](./images/ui/enable-fast-refresh.png)
+
+L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi, per poter reagire rapidamente alle attività degli utenti.
+
+Per ulteriori informazioni sull&#39;aggiornamento rapido, leggere [sezione aggiornamento rapido](./overview.md#fast-refresh) della panoramica degli attributi calcolati.
 
 Una volta completati questi passaggi, puoi scegliere se salvare l’attributo calcolato come bozza o pubblicarlo immediatamente.
 
