@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitoraggio dell’acquisizione dei dati
 description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 3%
+source-wordcount: '657'
+ht-degree: 2%
 
 ---
 
@@ -24,13 +24,13 @@ Questa guida utente descrive come monitorare i dati nell’interfaccia utente di
 >title="Tasso di acquisizione"
 >abstract="Numero di eventi elaborati correttamente al secondo."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=it" text="Monitorare i flussi di dati per le origini nell’interfaccia utente"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Monitorare i flussi di dati per le origini nell’interfaccia utente"
 
 >[!TIP]
 >
 >Per calcolare gli eventi totali in una data particolare, utilizza l’espressione: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-In [Interfaccia utente Experience Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitorare]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
+In [Interfaccia utente Experienci Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitorare]** nel menu di navigazione a sinistra, seguito da **[!UICONTROL Streaming end-to-end]**.
 
 Il **[!UICONTROL Streaming end-to-end]** viene visualizzata la pagina di monitoraggio. Questa area di lavoro fornisce un grafico che visualizza la frequenza degli eventi trasmessi da [!DNL Platform], un grafico che visualizza la frequenza di eventi in streaming elaborati correttamente da [[!DNL Real-Time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
@@ -80,7 +80,7 @@ Il **[!UICONTROL Batch end-to-end]** viene visualizzata una pagina di monitoragg
 
 ### Visualizzazione dei batch
 
-Quando si visualizzano i dettagli di un batch riuscito, vengono visualizzate informazioni quali il numero di record acquisiti, la dimensione del file e gli orari di inizio e fine dell’acquisizione.
+Quando si visualizzano i dettagli di un batch riuscito, vengono visualizzate informazioni quali il numero di record acquisiti, la dimensione del file e gli orari di inizio e di fine dell’acquisizione.
 
 ![](../images/quality/monitor-data-flows/successful-batch.png)
 
