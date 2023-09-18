@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Adobe Campaign Managed Cloud Services;campagna;campaign managed services
 title: Adobe Campaign Managed Cloud Services
-description: Scopri come collegare Cloud Services gestiti di Campaign a Platform utilizzando l’interfaccia utente
+description: Scopri come collegare Cloud Service gestiti di Campaign a Platform utilizzando l’interfaccia utente
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 0%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
@@ -56,7 +56,7 @@ Ora puoi visualizzare i registri di consegna dei destinatari, inclusi i campi di
 
 ![Vengono visualizzati i registri di consegna del destinatario con le informazioni relative all’ultima modifica del nome, del canale di consegna, del nome di consegna interno e dell’etichetta.](./images/campaign/recipient-delivery-logs.png)
 
-### Creare uno schema {#create-a-schema}
+### Crea uno schema {#create-a-schema}
 
 Quindi, crea uno schema XDM ExperienceEvent per i registri di consegna e di tracciamento. Devi applicare il gruppo di campi Registri di consegna campagna allo schema dei registri di consegna e il gruppo di campi Registri di tracciamento campagna allo schema dei registri di tracciamento. È inoltre necessario definire `externalID` come identità primaria dello schema.
 
@@ -75,3 +75,9 @@ Infine, devi creare un set di dati per gli schemi. Per istruzioni dettagliate su
 Dopo aver effettuato l’accesso ai registri dati nella console client di Campaign, creato uno schema e un set di dati, ora puoi procedere con la creazione di una connessione di origine per portare i dati di Campaign Managed Services su Platform.
 
 Per istruzioni dettagliate su come trasferire i dati dei registri di consegna e di tracciamento di Campaign v8 in Experience Platform, consulta la guida su [creazione di una connessione sorgente di Campaign Managed Services nell’interfaccia utente](../../tutorials/ui/create/adobe-applications/campaign.md).
+
+>[!IMPORTANT]
+>
+>Esiste un caso limite in cui l’interazione di un destinatario e-mail rimosso di recente con un’e-mail potrebbe riacquisire informazioni personali in Experienci Platform. In alcuni casi, questo potrebbe riabilitare il marketing per tale utente.
+>
+>* Questo scenario è attivo solo tra il momento in cui una richiesta di accesso a dati personali viene eseguita in Experienci Platform e il momento in cui viene eseguita in Adobe Campaign Classic. Dopo aver eseguito la richiesta in Campaign, viene eseguito un controllo per verificare che il record non venga esportato in Campaign. Per risolvere il problema, invia nuovamente una richiesta RGPD dopo 72 ore dall’esecuzione.
