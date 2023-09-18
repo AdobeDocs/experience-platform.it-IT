@@ -3,18 +3,18 @@ title: Coinvolgimento dell’account di Marketing Cloud Salesforce
 description: Scopri come utilizzare la destinazione Salesforce Marketing Cloud Account Engagement (precedentemente nota come Pardot) per esportare i dati dell’account e attivarli in Salesforce Marketing Cloud Account Engagement per le tue esigenze aziendali.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
 
-# [!DNL Salesforce Marketing Cloud Account Engagement] connessione
+# Connessione [!DNL Salesforce Marketing Cloud Account Engagement]
 
 Utilizza il [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(precedentemente noto come [!DNL Pardot])* destinazione per acquisire, tracciare, valutare e valutare i lead. Puoi anche progettare tracce di lead per tutte le fasi della pipeline per tipi di pubblico di mercato e gruppi di clienti mirati tramite campagne e-mail drip e gestione dei lead con sviluppo, valutazione e segmentazione delle campagne.
 
-Confrontato con [!DNL Salesforce Marketing Cloud Engagement] che è più orientato verso **B2C** marketing, [!DNL Marketing Cloud Account Engagement] è ideale per **B2B** casi d’uso che coinvolgono più dipartimenti e decision maker e che richiedono cicli di vendita e decisionali più lunghi. Inoltre, mantieni anche una maggiore vicinanza e integrazione con il tuo CRM per prendere le decisioni di vendita e marketing appropriate. *Nota: Experience Platform dispone anche di connessioni per [!DNL Salesforce Marketing Cloud Engagement], puoi controllarli sulla [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) e [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagine.*
+Confrontato con [!DNL Salesforce Marketing Cloud Engagement] che è più orientato verso **B2C** marketing, [!DNL Marketing Cloud Account Engagement] è ideale per **B2B** casi d’uso che coinvolgono più dipartimenti e decision maker e che richiedono cicli di vendita e decisionali più lunghi. Inoltre, mantieni anche una maggiore vicinanza e integrazione con il tuo CRM per prendere le decisioni di vendita e marketing appropriate. *Nota: Experienci Platform dispone anche di connessioni per [!DNL Salesforce Marketing Cloud Engagement], puoi controllarli sulla [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) e [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagine.*
 
 Questo [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) endpoint, a **aggiungere o aggiornare i lead** dopo averli attivati in un nuovo [!DNL Marketing Cloud Account Engagement] segmento.
 
@@ -30,15 +30,15 @@ Il reparto marketing di una piattaforma online desidera trasmettere una campagna
 
 ## Prerequisiti {#prerequisites}
 
-Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL Salesforce] e per le informazioni da raccogliere prima di lavorare con [!DNL Marketing Cloud Account Engagement] destinazione.
+Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experienci Platform e [!DNL Salesforce] e per le informazioni da raccogliere prima di lavorare con [!DNL Marketing Cloud Account Engagement] destinazione.
 
-### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
+### Prerequisiti in Experienci Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati in [!DNL Marketing Cloud Account Engagement] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creato in [!DNL Experience Platform].
 
 ### Prerequisiti in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
-Prendi nota dei seguenti prerequisiti per esportare i dati da Platform al [!DNL Marketing Cloud Account Engagement] account:
+Prendi nota dei seguenti prerequisiti per esportare i dati da Platform al tuo [!DNL Marketing Cloud Account Engagement] account:
 
 #### Devi avere un [!DNL Marketing Cloud Account Engagement] account {#prerequisites-account}
 
@@ -87,7 +87,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL Salesforce Marketing Cloud Account Engagement] Lo stato del segmento viene aggiornato con il relativo stato del pubblico da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -136,8 +136,9 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 ## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
->
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+> 
+>* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 

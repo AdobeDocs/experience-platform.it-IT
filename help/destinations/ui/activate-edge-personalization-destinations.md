@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1869'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,7 @@ Esempi di destinazioni Edge sono [Adobe Target](../../destinations/catalog/perso
 > 
 > * Per attivare i dati e abilitare [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
 > * Per attivare i dati senza passare attraverso [passaggio di mappatura](#mapping) del flusso di lavoro, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 > 
 > Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
@@ -36,7 +37,7 @@ Per una breve panoramica su come configurare la connessione Adobe Target per la 
 
 >[!NOTE]
 >
->L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
+>L’interfaccia utente di Experienci Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta i passaggi di configurazione descritti nelle sezioni seguenti.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
@@ -46,11 +47,11 @@ Per una breve panoramica su come condividere tipi di pubblico e attributi di pro
 
 ## Casi d’uso {#use-cases}
 
-Le destinazioni di personalizzazione Edge ti consentono di utilizzare soluzioni di personalizzazione Adobe, come Adobe Target, o piattaforme partner di personalizzazione personalizzate (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) destinazione. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experience Platform Edge Network.
+Le destinazioni di personalizzazione Edge ti consentono di utilizzare soluzioni di personalizzazione Adobe, come Adobe Target, o piattaforme partner di personalizzazione personalizzate (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) destinazione. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experienci Platform Edge Network.
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
 
-Per abilitare questi casi d’uso, i clienti necessitano di un modo rapido e semplice per recuperare da Experience Platform informazioni su tipi di pubblico e attributi di profilo e per inviarle all’utente [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experience Platform.
+Per abilitare questi casi d’uso, i clienti necessitano di un modo rapido e semplice per recuperare da Experienci Platform informazioni su tipi di pubblico e attributi di profilo e per inviarle all’utente [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) nell&#39;interfaccia utente di Experienci Platform.
 
 ### Personalizzazione stessa pagina {#same-page}
 
@@ -84,7 +85,7 @@ Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzi
 
 ### Creare un [!DNL Active-On-Edge] criterio di unione {#create-merge-policy}
 
-Dopo aver creato la connessione di destinazione, è necessario creare una [!DNL Active-On-Edge] criterio di unione. Il [!DNL Active-On-Edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../segmentation/ui/edge-segmentation.md) e sono disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
+Dopo aver creato la connessione di destinazione, è necessario creare un [!DNL Active-On-Edge] criterio di unione. Il [!DNL Active-On-Edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../segmentation/ui/edge-segmentation.md) e sono disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
 
 >[!IMPORTANT]
 >
@@ -135,8 +136,8 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experienci Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Seleziona i tipi di pubblico](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -199,7 +200,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
 ![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
 

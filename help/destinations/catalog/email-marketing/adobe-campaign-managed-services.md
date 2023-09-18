@@ -2,9 +2,9 @@
 title: Connessione Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1584'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ Per aiutarti a capire meglio come e quando utilizzare la destinazione del serviz
 
 * Adobe Experience Platform crea un profilo cliente che incorpora informazioni come il grafico delle identità, dati comportamentali di Analytics, unioni di dati offline e online, ecc. Con questa integrazione, puoi aumentare le funzionalità di segmentazione già esistenti in Adobe Campaign con i tipi di pubblico basati su Adobe Experience Platform e quindi attivare tali dati in Campaign.
 
-  Ad esempio, un’azienda di abbigliamento sportivo vuole sfruttare i segmenti avanzati basati su Adobe Experience Platform e attivarli utilizzando Adobe Campaign per raggiungere la propria base clienti tra i diversi canali supportati da Adobe Campaign. Dopo l’invio, i messaggi desiderano migliorare il profilo cliente in Adobe Experience Platform con i dati sull’esperienza di Adobe Campaign, ad esempio invii, apri e clic.
+  Ad esempio, un’azienda di abbigliamento sportivo vuole sfruttare i segmenti avanzati basati su Adobe Experience Platform e attivarli utilizzando Adobe Campaign per raggiungere la propria base clienti tra i diversi canali supportati da Adobe Campaign. Una volta inviati i messaggi, desiderano migliorare il profilo del cliente in Adobe Experience Platform con i dati sull’esperienza di Adobe Campaign come invii, apertura e clic.
 
   Il risultato sono campagne cross-channel più coerenti nell’ecosistema Adobe Experience Cloud e un profilo cliente avanzato che si adatta e apprende rapidamente.
 
@@ -97,7 +97,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Seleziona istanza]**: il tuo **[!DNL Campaign]** istanza di marketing.
-* **[!UICONTROL Mappatura target]**: seleziona la mappatura di destinazione in uso **[!DNL Adobe Campaign]** per inviare consegne. [Maggiori informazioni](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Mappatura target]**: seleziona la mappatura di destinazione in uso **[!DNL Adobe Campaign]** per inviare consegne. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Seleziona tipo di sincronizzazione]**:
 
    * **[!UICONTROL Sincronizzazione pubblico]**: utilizza questa opzione per inviare il pubblico di Adobe Experience Platform ad Adobe Campaign.
@@ -119,7 +119,8 @@ Per ulteriori informazioni sulle azioni di marketing, vedi [panoramica dei crite
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it) per istruzioni sull’attivazione dei dati sul pubblico in questa destinazione.
 

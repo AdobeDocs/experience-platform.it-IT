@@ -3,14 +3,14 @@ keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
 title: Connessione CRM Salesforce
 description: La destinazione di gestione delle relazioni con i clienti di Salesforce ti consente di esportare i dati del tuo account e di attivarli all’interno di Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '3085'
+source-wordcount: '3121'
 ht-degree: 0%
 
 ---
 
-# [!DNL Salesforce CRM] connessione
+# Connessione [!DNL Salesforce CRM]
 
 ## Panoramica {#overview}
 
@@ -31,7 +31,7 @@ In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai t
 
 ## Prerequisiti {#prerequisites}
 
-### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
+### Prerequisiti in Experienci Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati nella destinazione del sistema CRM di Salesforce, devi disporre di un’ [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [segmenti](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) creato in [!DNL Experience Platform].
 
@@ -72,14 +72,14 @@ Infine, assicurati che `password` la sovvenzione è abilitata all’interno del 
 
 Quando si attivano i tipi di pubblico in [!DNL Salesforce CRM] destinazione, è necessario immettere un valore nella **[!UICONTROL ID mappatura]** per ogni pubblico attivato, nel **[Pianificazione del pubblico](#schedule-segment-export-example)** passaggio.
 
-[!DNL Salesforce CRM] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experience Platform e per aggiornare il loro stato di pubblico in [!DNL Salesforce]. Consulta la documentazione dell’Experience Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
+[!DNL Salesforce CRM] richiede questo valore per leggere e interpretare correttamente i tipi di pubblico provenienti da Experienci Platform e per aggiornare il loro stato di pubblico in [!DNL Salesforce]. Consulta la documentazione dell’Experience Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
 
 Per ogni pubblico che attivi da Platform a [!DNL Salesforce CRM], è necessario creare un campo personalizzato del tipo `Text Area (Long)` entro [!DNL Salesforce]. Puoi definire la lunghezza del carattere di campo di qualsiasi dimensione compresa tra 256 e 131.072 caratteri in base alle tue esigenze aziendali. Consulta la [!DNL Salesforce] [Tipi di campi personalizzati](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) per ulteriori informazioni sui tipi di campi personalizzati. Consulta anche [!DNL Salesforce] documentazione per [creare campi personalizzati](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) se hai bisogno di assistenza per la creazione dei campi.
 
 >[!IMPORTANT]
 >
 >Non includere spazi nel nome del campo. Utilizza invece il carattere di sottolineatura `(_)` come separatore.
->Entro [!DNL Salesforce] è necessario creare campi personalizzati con **[!UICONTROL Nome campo]** che corrisponde esattamente al valore specificato in **[!UICONTROL ID mappatura]** per ogni segmento di Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando attivi un pubblico in questa destinazione, aggiungi `crm_2_seg` as **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
+>Entro [!DNL Salesforce] è necessario creare campi personalizzati con **[!UICONTROL Nome campo]** che corrisponde esattamente al valore specificato in **[!UICONTROL ID mappatura]** per ogni segmento di Platform attivato. Ad esempio, la schermata seguente mostra un campo personalizzato denominato `crm_2_seg`. Quando attivi un pubblico in questa destinazione, aggiungi `crm_2_seg` as **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experienci Platform in questo campo personalizzato.
 
 Un esempio di creazione di campi personalizzati in [!DNL Salesforce], *Passaggio 1: selezionare il tipo di dati*, è mostrato di seguito:
 ![Schermata dell’interfaccia utente di Salesforce che mostra la creazione di campi personalizzati, passaggio 1: seleziona il tipo di dati.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)
@@ -95,8 +95,8 @@ Un esempio di creazione di campi personalizzati in [!DNL Salesforce], *Passaggio
 >[!NOTE]
 >
 >* Gli oggetti in Salesforce sono limitati a 25 campi esterni, vedi [Attributi di campo personalizzati](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
->* Questa restrizione implica che puoi avere solo un massimo di 25 iscrizioni di pubblico Experience Platform attive in qualsiasi momento.
->* Se hai raggiunto questo limite in Salesforce, devi rimuovere da Salesforce gli attributi personalizzati utilizzati per memorizzare lo stato del pubblico rispetto ai tipi di pubblico precedenti in Experience Platform prima di un nuovo **[!UICONTROL ID mappatura]** possono essere utilizzati.
+>* Questa restrizione implica che è possibile avere solo un massimo di 25 iscrizioni di pubblico Experience Platform attive in qualsiasi momento.
+>* Se hai raggiunto questo limite in Salesforce, devi rimuovere da Salesforce gli attributi personalizzati utilizzati per memorizzare lo stato del pubblico rispetto ai tipi di pubblico precedenti in Experienci Platform prima di un nuovo **[!UICONTROL ID mappatura]** possono essere utilizzati.
 
 #### Raccogli [!DNL Salesforce CRM] credenziali {#gather-credentials}
 
@@ -136,7 +136,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Ogni stato del pubblico in [!DNL Salesforce CRM] viene aggiornato con il corrispondente stato del pubblico da Platform, in base al **[!UICONTROL ID mappatura]** valore fornito durante il [pianificazione del pubblico](#schedule-segment-export-example) passaggio.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -179,8 +179,9 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 ## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
->
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+> 
+>* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
@@ -228,7 +229,7 @@ Durante l&#39;esecuzione di [Pianificare l’esportazione del pubblico](/help/de
 
 A questo scopo, seleziona ogni segmento, quindi inserisci il nome del campo personalizzato da [!DNL Salesforce] nel [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** campo. Consulta la sezione [Creare campi personalizzati in [!DNL Salesforce]](#prerequisites-custom-field) sezione per indicazioni e best practice sulla creazione di campi personalizzati in [!DNL Salesforce].
 
-Ad esempio, se [!DNL Salesforce] il campo personalizzato è `crm_2_seg`, specifica questo valore in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experience Platform in questo campo personalizzato.
+Ad esempio, se [!DNL Salesforce] il campo personalizzato è `crm_2_seg`, specifica questo valore in [!DNL Salesforce CRM] **[!UICONTROL ID mappatura]** per popolare i tipi di pubblico da Experienci Platform in questo campo personalizzato.
 
 Esempio di campo personalizzato da [!DNL Salesforce] è mostrato di seguito:
 ![[!DNL Salesforce] Schermata dell’interfaccia utente che mostra il campo personalizzato.](../../assets/catalog/crm/salesforce/salesforce-custom-field.png)

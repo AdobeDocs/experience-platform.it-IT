@@ -1,17 +1,17 @@
 ---
-title: (API) Connessione Eloqua Oracle
+title: Connessione Eloqua Oracle (API)
 description: La destinazione Oracle Eloqua (API) consente di esportare i dati dell’account e attivarli in Oracle Eloqua in base alle esigenze aziendali.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2160'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL (API) Oracle Eloqua] connessione
+# Connessione [!DNL (API) Oracle Eloqua]
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) consente agli addetti al marketing di pianificare ed eseguire campagne offrendo al contempo ai potenziali clienti un’esperienza personalizzata. Grazie alla gestione integrata dei lead e alla facile creazione delle campagne, gli esperti di marketing possono coinvolgere il pubblico giusto al momento giusto nel percorso dell’acquirente e scalare in modo elegante, per raggiungere il pubblico su tutti i canali, comprese e-mail, ricerche per display, video e dispositivi mobili. I team di vendita possono chiudere più offerte a una velocità più elevata, aumentando il ROI del marketing attraverso approfondimenti in tempo reale.
 
@@ -58,7 +58,7 @@ Consulta la sezione [Accesso a [!DNL Oracle Eloqua]](https://docs.oracle.com/en/
 
 * [!DNL Oracle Eloqua] ha un limite massimo di 250 campi di contatto personalizzati.
 * Prima di esportare nuovi tipi di pubblico, assicurati che il numero di tipi di pubblico di Platform e quello esistente in [!DNL Oracle Eloqua] non superi questo limite.
-* Se questo limite viene superato, si verifica un errore in Experience Platform. Questo perché il [!DNL Oracle Eloqua] L’API non riesce a convalidare la richiesta e risponde con un segno - *400: errore di convalida* - messaggio di errore che descrive il problema.
+* Se questo limite viene superato, si verifica un errore in Experienci Platform. Questo perché il [!DNL Oracle Eloqua] L’API non riesce a convalidare la richiesta e risponde con un segno - *400: errore di convalida* - messaggio di errore che descrive il problema.
 * Se hai raggiunto il limite specificato sopra, devi rimuovere le mappature esistenti dalla destinazione ed eliminare i campi dei contatti personalizzati corrispondenti nel tuo [!DNL Oracle Eloqua] prima di esportare altri segmenti.
 
 * Consulta la sezione [[!DNL Oracle Eloqua] Creazione di campi contatto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) per informazioni sui limiti aggiuntivi.
@@ -78,7 +78,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un segmento, insieme ai campi schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL Oracle Eloqua] Lo stato del segmento viene aggiornato con il relativo stato del pubblico da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -132,8 +132,9 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 ## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
->
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+> 
+>* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 
 Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
@@ -203,7 +204,7 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 Quando crei la destinazione, potresti ricevere uno dei seguenti messaggi di errore: `400: There was a validation error` o `400 BAD_REQUEST`. Ciò si verifica quando si supera il limite di 250 campi contatto personalizzati, come descritto in [guardrail](#guardrails) sezione. Per risolvere questo errore, assicurati di non superare il limite del campo contatto personalizzato in [!DNL Oracle Eloqua].
 ![La schermata dell’interfaccia utente di Platform mostra l’errore.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
-Consulta la sezione [[!DNL Oracle Eloqua] Codici di stato HTTP](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) e [[!DNL Oracle Eloqua] Errori di convalida](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pagine per un elenco completo dei codici di stato e di errore con spiegazioni.
+Consulta la sezione [[!DNL Oracle Eloqua] Codici di stato HTTP](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) e [[!DNL Oracle Eloqua] Errori di convalida](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pagine per un elenco completo di codici di stato e di errore con spiegazioni.
 
 ## Risorse aggiuntive {#additional-resources}
 
