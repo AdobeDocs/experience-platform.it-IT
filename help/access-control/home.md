@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: d83a5558d706e7bf059edb912f6fd43d4b66cc54
+source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 3%
 
 ---
@@ -83,6 +83,8 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Alerts] | [!UICONTROL Risolvi avvisi] | Accesso per leggere, modificare ed eliminare gli avvisi. |
 | [!DNL Alerts] | [!UICONTROL Visualizza avvisi] | Accesso in sola lettura per gli avvisi. |
 | [!DNL Alerts] | [!UICONTROL Gestire gli avvisi] | Accesso per leggere, creare, modificare ed eliminare la cronologia degli avvisi. |
+| [!DNL Computed Attributes] | [!UICONTROL Visualizza attributi calcolati] | Accesso in sola lettura per la scheda degli attributi calcolati, l’inventario e i dettagli. |
+| [!DNL Computed Attributes] | [!UICONTROL Gestisci attributi calcolati] | Accesso per leggere, creare, eliminare bozze e disattivare attributi calcolati. |
 | [!DNL Data Hygiene] | [!UICONTROL Visualizza igiene dei dati] | Accesso in sola lettura per l’igiene dei dati. |
 | [!DNL Data Hygiene] | [!UICONTROL Gestire l’igiene dei dati] | Accesso per leggere, creare, modificare ed eliminare l’igiene dei dati. |
 | [!DNL Data Modeling] | [!UICONTROL Gestire gli schemi] | Accesso per leggere, creare, modificare ed eliminare schemi e risorse correlate. |
