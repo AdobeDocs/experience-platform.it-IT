@@ -1,9 +1,9 @@
 ---
 title: Domande frequenti sugli attributi calcolati
 description: Risposte alle domande frequenti sull’utilizzo degli attributi calcolati.
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Domande frequenti
 
 In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione. Di seguito è riportato un elenco delle domande frequenti relative agli attributi calcolati.
+
+## Come posso accedere agli attributi calcolati?
+
+Per accedere agli attributi calcolati, devi disporre delle autorizzazioni appropriate (**Visualizza attributi calcolati** e **Gestisci attributi calcolati**). Per ulteriori informazioni sulle autorizzazioni necessarie, leggere [documentazione sul controllo degli accessi](../../access-control/home.md). Per informazioni su come applicare queste autorizzazioni, leggi [guida alla gestione delle autorizzazioni](../../access-control/ui/permissions.md).
 
 ## Quali set di dati contribuiscono ai calcoli degli attributi calcolati?
 
@@ -76,10 +80,6 @@ Come qualsiasi altro attributo di profilo, gli attributi calcolati sono disponib
 ## Come vengono applicate le etichette di utilizzo dei dati sugli attributi calcolati?
 
 Gli attributi calcolati derivano automaticamente le etichette di utilizzo dei dati dai campi e dai set di dati di origine utilizzati per definire gli attributi calcolati. In questo modo i dati comportamentali verranno utilizzati in modo appropriato.
-
-## Come posso accedere agli attributi calcolati?
-
-Per accedere agli attributi calcolati, devi disporre delle autorizzazioni appropriate. Per ulteriori informazioni sulle autorizzazioni necessarie, leggere [documentazione sul controllo degli accessi](../../access-control/home.md).
 
 ## Come si utilizzano gli attributi calcolati con Adobe Journey Optimizer?
 

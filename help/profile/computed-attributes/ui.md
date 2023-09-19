@@ -1,15 +1,19 @@
 ---
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
 
 
 # Guida dell’interfaccia utente attributi calcolati
+
+>[!NOTE]
+>
+>Per accedere agli attributi calcolati, devi disporre delle autorizzazioni appropriate (**Visualizza attributi calcolati** e **Gestisci attributi calcolati**). Per ulteriori informazioni sulle autorizzazioni necessarie, leggere [documentazione sul controllo degli accessi](../../access-control/home.md). Per informazioni su come applicare queste autorizzazioni, leggi [guida alla gestione delle autorizzazioni](../../access-control/ui/permissions.md).
 
 In Adobe Experience Platform, gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
