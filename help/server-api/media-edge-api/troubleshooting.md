@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida alla risoluzione dei problemi delle API Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Per facilitare la risoluzione dei problemi delle risposte non riuscite, gli erro
 ## Convalida degli avvii della sessione
 
 La maggior parte dei problemi relativi alle richieste di avvio sessione si traduce in una risposta 207 con più stati.
-Il payload è simile agli errori non irreversibili dell’API del server di rete Experience Edge. Tutti gli errori di Media Analytics hanno il seguente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. I numeri visualizzati nella risposta corrispondono allo stato di errore.
+Il payload è simile a [API server](../error-handling.md)degli errori non irreversibili. Tutti gli errori di Media Analytics hanno il seguente tipo:  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. I numeri visualizzati nella risposta corrispondono allo stato di errore.
 
 L’esempio seguente mostra un corpo di risposta per una richiesta di inizio sessione privo di un campo obbligatorio e con uno non valido.
 
@@ -64,7 +64,7 @@ Nell’esempio precedente, entrambi i problemi sono rilevati da `name` e `reason
 
 ## Convalida degli eventi
 
-La maggior parte delle richieste di evento non valide genera una risposta di richiesta 400 non valida. In questi casi, il payload è simile agli errori irreversibili dell’API del server di rete Experience Edge.
+La maggior parte delle richieste di evento non valide genera una risposta di richiesta 400 non valida. In questi casi, il payload è simile agli errori irreversibili dell’API server.
 
 Per le richieste di eventi, il servizio API Media Edge include controlli aggiuntivi che non vengono acquisiti nel modello XDM stesso. Ciò include una verifica che il percorso `eventType` corrisponde al payload della richiesta `eventType`.
 

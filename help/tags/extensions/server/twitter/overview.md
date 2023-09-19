@@ -1,18 +1,18 @@
 ---
 keywords: estensione inoltro eventi;twitter;estensione inoltro eventi twitter
-title: Estensione twitter per l’inoltro degli eventi
-description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire eventi in Twitter in base ai requisiti aziendali.
+title: Estensione di inoltro eventi di twitter
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire gli eventi nel Twitter in base ai requisiti aziendali.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1141'
 ht-degree: 3%
 
 ---
 
 # Estensione [!DNL Twitter] per l’inoltro degli eventi
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) è un social media online e un servizio di social networking, sul quale gli utenti pubblicano e interagiscono con messaggi di 280 caratteri, noti come tweet. Gli utenti possono interagire con Twitter utilizzando un browser, un software front-end mobile o a livello di programmazione tramite [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) è un social media online e un servizio di social networking, sul quale gli utenti pubblicano e interagiscono con messaggi di 280 caratteri, noti come tweet. Gli utenti possono interagire con il Twitter utilizzando un browser, un software front-end mobile o a livello di programmazione tramite [API](https://developer.twitter.com/en/docs/twitter-api)
 
 Il [!DNL Twitter] API per conversioni web [inoltro eventi](../../../ui/event-forwarding/overview.md) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Twitter]. Questo documento descrive i casi di utilizzo dell’estensione, come installarla e come integrarne le funzionalità nell’inoltro degli eventi [regole](../../../ui/managing-resources/rules.md).
 
@@ -78,7 +78,7 @@ Al termine, seleziona **[!UICONTROL Salva]**.
 
 Una volta configurati tutti gli elementi dati, puoi iniziare a creare regole di inoltro degli eventi che determinano quando e come verranno inviati gli eventi a [!DNL Twitter].
 
-Crea un nuovo [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Twitter]**. Per inviare eventi Adobe Experience Edge Network a [!DNL Twitter], imposta **[!UICONTROL Tipo di azione]** a **[!UICONTROL Invia conversione web].**
+Crea un nuovo [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Twitter]**. Per inviare eventi di rete Edge a [!DNL Twitter], imposta **[!UICONTROL Tipo di azione]** a **[!UICONTROL Invia conversione web].**
 
 Dopo la selezione, vengono visualizzati controlli aggiuntivi per configurare ulteriormente l’evento. È necessario mappare il [!DNL Twitter] proprietà evento agli elementi dati creati in precedenza. Per ulteriori informazioni, consulta [[!DNL Twitter] API per conversioni web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
@@ -90,7 +90,7 @@ Dopo la selezione, vengono visualizzati controlli aggiuntivi per configurare ult
 | --- | --- | --- | --- |
 | [!UICONTROL [!DNL Twitter] ID clic] | [!DNL Twitter] Fai clic sull’ID analizzato dall’URL di click-through. | 26l6412g5p4iyj65a2oic2ayg2 | Obbligatorio se non viene aggiunto alcun altro identificatore. |
 | [!UICONTROL E-mail] | Indirizzo e-mail con hash SHA256. Il testo deve essere in minuscolo ed eventuali spazi finali o iniziali devono essere rimossi prima dell’hashing. | eventforwarding@example.com | Obbligatorio se non viene aggiunto alcun altro identificatore. |
-| [!UICONTROL Telefono] | Il telefono funge da identificatore per corrispondere all’evento di conversione. Il numero di telefono deve essere nel formato E164 [+][codice paese][indicativo località][local phone number] prima dell’hashing. | +911234567875 | Obbligatorio se non viene aggiunto alcun altro identificatore. |
+| [!UICONTROL Telefono] | Il telefono funge da identificatore per corrispondere all’evento di conversione. Il numero di telefono deve essere nel formato E164 [+][codice paese][indicativo di località][local phone number] prima dell’hashing. | +911234567875 | Obbligatorio se non viene aggiunto alcun altro identificatore. |
 
 **[!UICONTROL Dati di conversione]**
 

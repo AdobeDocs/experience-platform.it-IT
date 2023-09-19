@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida introduttiva di Real-time Machine Learning
 description: Il documento seguente illustra i passaggi necessari per creare un modello di apprendimento automatico in tempo reale in Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Le guide per il machine learning in tempo reale richiedono una buona conoscenza 
 
 - **DSL:** Lingua specifica del dominio.
 - **Spigolo:** Il servizio di punteggio di apprendimento automatico in tempo reale può essere eseguito su cluster Edge più vicini alle attivazioni e alle applicazioni.
-- **Hub:** L’attuale alfa esegue il servizio di punteggio di apprendimento automatico in tempo reale sull’hub Adobe Experience Platform mentre Experience Edge Network è in fase di sviluppo.
+- **Hub:** L’attuale alfa esegue il servizio di punteggio di apprendimento automatico in tempo reale sull’hub Adobe Experience Platform mentre la rete Edge è in fase di sviluppo.
 - **Nodo:** Un nodo è l’unità fondamentale di cui vengono formati i grafici. Ogni nodo esegue un’attività specifica e può essere collegato utilizzando dei collegamenti per formare un grafico che rappresenta una pipeline ML. L’attività eseguita da un nodo rappresenta un’operazione sui dati di input, ad esempio una trasformazione di dati o schemi, o un’inferenza di apprendimento automatico. Il nodo restituisce il valore trasformato o dedotto ai nodi successivi.
 
 ## Set di dati in Adobe Experience Platform

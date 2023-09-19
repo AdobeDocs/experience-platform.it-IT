@@ -2,7 +2,7 @@
 title: Raccolta interattiva di dati
 description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta interattiva dei dati.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 7%
@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che venga restituita una risposta dal server di rete Edge di Adobe Experience Platform. Questi endpoint possono inoltre restituire contenuti da altri servizi Experience Edge, durante l’esecuzione della raccolta dati.
+Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che venga restituita una risposta dal server di rete Edge di Adobe Experience Platform. Questi endpoint possono inoltre restituire contenuto da altri servizi di rete Edge, durante l’esecuzione della raccolta dati.
 
 La risposta del server include uno o più `Handle` come mostrato di seguito.
 

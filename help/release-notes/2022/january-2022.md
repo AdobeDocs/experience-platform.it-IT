@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2022
-description: Note sulla versione di gennaio 2022 per Adobe Experience Platform.
+description: Note sulla versione di Adobe Experience Platform di gennaio 2022.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 12%
+ht-degree: 20%
 
 ---
 
@@ -39,7 +39,7 @@ Per ulteriori informazioni sugli avvisi in Platform, consulta [panoramica degli 
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -69,10 +69,10 @@ Per ulteriori informazioni su [!DNL Data Prep], consultare il [[!DNL Data Prep] 
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| Personalizzazione della stessa pagina e della pagina successiva | Il [funzione di personalizzazione della stessa pagina e della pagina successiva](../../destinations/ui/activate-edge-personalization-destinations.md) fornisce una visualizzazione condivisa e mirata degli utenti per le applicazioni Experience Edge, per coerenza tra i canali di marketing e quelli dei clienti. Questa personalizzazione è possibile tramite [Connessione Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Connessione di personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md). Per configurare le campagne di personalizzazione della stessa pagina o della pagina successiva, consulta [tutorial dedicato](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| Personalizzazione della stessa pagina e della pagina successiva | Il [funzione di personalizzazione della stessa pagina e della pagina successiva](../../destinations/ui/activate-edge-personalization-destinations.md) fornisce una visualizzazione condivisa e mirata degli utenti per le applicazioni sulla rete Edge di, per coerenza tra i canali di marketing e quelli dei clienti. Questa personalizzazione è possibile tramite [Connessione Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Connessione di personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md). Per configurare le campagne di personalizzazione della stessa pagina o della pagina successiva, consulta [tutorial dedicato](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | Monitoraggio della destinazione batch e metriche a livello di segmento | La funzionalità di monitoraggio della destinazione è ora estesa dalle destinazioni di streaming per includere anche destinazioni batch e metriche a livello di segmento per i flussi di dati di attivazione. Per ulteriori informazioni, consulta [dashboard delle destinazioni di monitoraggio](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [monitoraggio del dashboard processi di segmento](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), e [vista a livello di segmento](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Pianifica la modifica nell’interfaccia utente per i flussi di dati di attivazione batch esistenti | Questa versione introduce l’opzione per modificare la pianificazione dei flussi di dati di attivazione esistenti nelle destinazioni batch. Per ulteriori informazioni, consulta [attivare i dati profilo nelle destinazioni profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Miglioramenti alla destinazione Marketo | I clienti Experience Platform che utilizzano Marketi Engage possono massimizzare il proprio database Marketo con la nuova possibilità di inserire in Marketi Engage i record di persone nuovi tramite Experience Platform [Connettore di destinazione Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Quando si inviano segmenti di pubblico da un Experience Platform Marketo Engage all’altro, è possibile aggiungere automaticamente al segmento persone che non esistono già nel database del Marketo Engage. Per ulteriori informazioni, consulta [Invio di un segmento Adobe Experience Platform a un elenco statico Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (il passaggio 9 nell’esercitazione indica come inserire in Marketo i record persona netti nuovi). |
+| Miglioramenti alla destinazione Marketo | I clienti Experienci Platform che utilizzano Marketi Engage possono massimizzare il proprio database Marketo con la nuova possibilità di inserire in Marketi Engage i record di persone nuovi tramite Experienci Platform [Connettore di destinazione Marketo](/help/destinations/catalog/adobe/marketo-engage.md). <br> Quando si inviano segmenti di pubblico da un Experienci Platform Marketo Engage all’altro, è possibile aggiungere automaticamente al segmento persone che non esistono già nel database del Marketo Engage. Per ulteriori informazioni, consulta [Invio di un segmento Adobe Experience Platform a un elenco statico Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (il passaggio 9 nell’esercitazione indica come inserire in Marketo i record persona netti nuovi). |
 
 **Nuove destinazioni**
 
@@ -98,7 +98,7 @@ Per ulteriori informazioni su [!DNL Query Service], consultare il [[!DNL Query S
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per soddisfare questa esigenza, Experience Platform fornisce sandbox che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+Adobe Experience Platform è stato progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono occuparsi di sviluppo, test e distribuzione di tali applicazioni, garantendo al contempo la conformità operativa. Per soddisfare questa esigenza, Experienci Platform fornisce sandbox che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 **Funzioni aggiornate**
 
@@ -110,7 +110,7 @@ Per ulteriori informazioni sulle sandbox, consulta [panoramica sulle sandbox](..
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo commerciabile di persone all’interno della tua base clienti. I segmenti possono essere basati su dati record (ad esempio informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
 
 **Nuove funzioni**
 
@@ -118,11 +118,11 @@ Per ulteriori informazioni sulle sandbox, consulta [panoramica sulle sandbox](..
 | --- | --- |
 | Corrispondenza segmento | Segment Match è un servizio di collaborazione sui dati che consente a due o più utenti di Platform di scambiarsi dati, basati su identificatori comuni, in modo sicuro, gestito e rispettoso della privacy. Segment Match utilizza gli standard di privacy di Platform e gli identificatori personali come e-mail con hash, numeri di telefono con hash e identificatori di dispositivo come IDFA e GAID. Per ulteriori informazioni, vedere [Panoramica di Segment Match](../../segmentation/ui/segment-match/overview.md). |
 
-Per ulteriori informazioni su [!DNL Segmentation Service], consultare il [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

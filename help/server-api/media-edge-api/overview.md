@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: API Media Edge
 description: Panoramica delle API Media Edge
-source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 5%
@@ -27,7 +27,7 @@ Entrambi [API Media Collection](https://experienceleague.adobe.com/docs/media-an
 
 * È il modo più semplice per incorporare schemi XDM nel flusso di dati.
 
-* Le chiamate vengono indirizzate da un lettore multimediale direttamente al [Rete Experience Edge Platform](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* Le chiamate vengono indirizzate da un lettore multimediale direttamente al [Experienci Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
 * Tiene traccia degli eventi multimediali in modo efficiente con un minimo di chiamate tra server diversi.
 
@@ -52,7 +52,7 @@ L’immagine seguente mostra i flussi di dati per i due servizi API:
 
 * Per ulteriori informazioni sull’utilizzo delle API Media Edge, consulta [Documentazione introduttiva](getting-started.md).
 
-* Per ulteriori informazioni sull’utilizzo di Platform Edge, consulta [Installazione di Media Analytics con Experience Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
+* Per ulteriori informazioni sull’utilizzo di Platform Edge, consulta [Installazione di Media Analytics con Experienci Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 
 
 

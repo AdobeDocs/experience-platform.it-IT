@@ -3,7 +3,7 @@ title: Confronto di at.js con Experienci Platform Web SDK
 description: Scopri le caratteristiche di at.js rispetto a Experienci Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 6%
@@ -918,7 +918,7 @@ La funzione di registrazione lato server di Analytics è abilitata quando Analyt
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-Quando la funzione di registrazione Analytics lato server è abilitata, il payload A4T che deve essere condiviso con Analytics in modo che i rapporti di Analytics mostrino le impression e le conversioni corrette venga condiviso a livello di Experience Edge, in modo che il cliente non debba eseguire alcuna elaborazione aggiuntiva.
+Quando la registrazione Analytics lato server è abilitata, il payload A4T che deve essere condiviso con Analytics in modo che i rapporti di Analytics mostrino le impression e le conversioni corrette venga condiviso a livello di rete Edge, in modo che il cliente non debba eseguire alcuna elaborazione aggiuntiva.
 
 Ecco come fluiscono i dati nei nostri sistemi quando è abilitata la registrazione di Analytics lato server:
 

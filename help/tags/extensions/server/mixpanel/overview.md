@@ -1,12 +1,12 @@
 ---
 keywords: estensione inoltro eventi;mixpanel;estensione inoltro eventi mixpanel
 title: Estensione inoltro eventi API Mixpanel Track Events
-description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Mixpanel.
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Edge Network a Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ In entrata [!DNL Mixpanel], un cluster di identità contiene una raccolta di `di
 
 ### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 
-Per collegare Experience Platform a [!DNL Mixpanel] è necessario disporre dei seguenti input:
+Per collegare Experienci Platform a [!DNL Mixpanel] è necessario disporre dei seguenti input:
 
 | Tipo di chiave | Descrizione | Esempio |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ Seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra. In **[
 
 ## Creare un [!DNL Send Event] regola
 
-Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Mixpanel]**. Quindi, imposta il tipo di azione su **[!UICONTROL Traccia evento]** per inviare eventi Adobe Experience Edge Network a [!DNL Mixpanel].
+Inizia a creare una nuova regola nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Mixpanel]**. Quindi, imposta il tipo di azione su **[!UICONTROL Traccia evento]** per inviare eventi di rete Edge a [!DNL Mixpanel].
 
 | Input | Descrizione | Obbligatorio |
 | --- | --- | --- |
@@ -110,4 +110,4 @@ Questa guida illustra come inviare eventi di conversione a [!DNL Mixpanel] utili
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] API JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)
 
-Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experienci Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).

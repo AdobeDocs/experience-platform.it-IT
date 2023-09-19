@@ -3,14 +3,14 @@ keywords: estensione inoltro eventi;pinterest;estensione inoltro eventi pinteres
 title: Estensione pinterest per l’inoltro degli eventi
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di acquisire eventi in Pinterest in base ai requisiti aziendali.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 87c76ef4b95bc05a64d9d124d69c2a51b7b77c08
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
 
-# [!DNL Pinterest] estensione di inoltro eventi
+# Estensione [!DNL Pinterest] per l’inoltro degli eventi
 
 [!DNL Pinterest] è un motore di scoperta visiva per trovare idee come ricette, arredamento, ispirazione di stile e altro ancora. Ci sono miliardi di pin [!DNL Pinterest], che può anche essere condiviso con altri su [!DNL Pinterest]. Puoi fascicolare gli eventi di interazione dell’utente e sfruttare [!DNL Pinterest Analytics] per comprendere il comportamento degli utenti ed eseguire annunci mirati.
 
@@ -69,7 +69,7 @@ Nella schermata successiva, immettere [!UICONTROL ID account annunci] e [!UICONT
 
 Una volta configurati tutti gli elementi dati, puoi iniziare a creare regole di inoltro degli eventi che determinano quando e come verranno inviati gli eventi a [!DNL Pinterest].
 
-Crea un nuovo [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Pinterest]**. Per inviare eventi Adobe Experience Edge Network a [!DNL Pinterest], imposta **[!UICONTROL Tipo di azione]** a **[!UICONTROL Invia evento].**
+Crea un nuovo [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL Pinterest]**. Per inviare eventi di rete Edge a [!DNL Pinterest], imposta **[!UICONTROL Tipo di azione]** a **[!UICONTROL Invia evento].**
 
 ![Il [!DNL Pinterest] [!UICONTROL Invia evento] creazione di regole.](../../../images/extensions/server/pinterest/rule.png)
 

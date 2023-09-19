@@ -3,7 +3,7 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 3%
@@ -118,8 +118,8 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 * Sono stati ottimizzati gli eventi di modifica della visualizzazione per le applicazioni a pagina singola. La notifica di visualizzazione ora è inclusa nell’evento di modifica della visualizzazione quando vengono riprodotte esperienze personalizzate.
 * Avviso della console rimossa se non `eventType` è presente.
 * È stato risolto un problema a causa del quale `propositions` proprietà restituita solo da un `sendEvent` quando le esperienze sono state richieste o recuperate dalla cache. Il `propositions` La proprietà ora sarà sempre definita come un array.
-* È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito da Adobe Experience Edge.
-* È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Per risolvere questo problema, aggiungi il nome della visualizzazione all’XDM in web.webPageDetails.viewName.
+* È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito da Edge Network.
+* È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Questo problema è stato risolto aggiungendo il nome della visualizzazione al file XDM in web.webPageDetails.viewName.
 * Correggi i collegamenti interrotti alla documentazione nei messaggi della console.
 
 ## Versione 2.8.0 - 19 gennaio 2022
@@ -130,7 +130,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 ## Versione 2.7.0 - 26 ottobre 2021
 
-* Esponi informazioni aggiuntive da Experience Edge nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta. Per ulteriori informazioni, consulta [Tracciamento degli eventi.](fundamentals/tracking-events.md)
+* Esporre informazioni aggiuntive da Edge Network nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta. Per ulteriori informazioni, consulta [Tracciamento degli eventi.](fundamentals/tracking-events.md)
 
 ## Versione 2.6.4 - 7 settembre 2021
 

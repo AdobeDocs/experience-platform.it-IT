@@ -1,10 +1,10 @@
 ---
 title: Estensione Inoltro eventi di Google Cloud Platform
-description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Google Cloud Platform.
+description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi di Edge Network a Google Cloud Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '568'
 ht-degree: 2%
 
 ---
@@ -53,4 +53,4 @@ Una volta installata l’estensione, crea un nuovo inoltro eventi [regola](../..
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare dati a [!DNL Cloud Pub/Sub] utilizzando [!DNL Google Cloud Platform] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Questa guida illustra come inviare dati a [!DNL Cloud Pub/Sub] utilizzando [!DNL Google Cloud Platform] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experienci Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).

@@ -2,9 +2,9 @@
 title: ID dispositivo di prime parti nell’SDK per web di Platform
 description: Scopri come configurare gli ID dispositivo di prime parti (FPID) per Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1774'
 ht-degree: 1%
 
 ---
@@ -176,7 +176,7 @@ I seguenti elementi `identityMap` si tradurrebbe in una risposta di errore da pa
 }
 ```
 
-La risposta di errore restituita da Experience Edge in questo caso è simile alla seguente:
+La risposta di errore restituita da Edge Network in questo caso è simile alla seguente:
 
 ```json
 {
@@ -239,4 +239,4 @@ Attualmente solo Platform Web SDK supporta gli FPID.
 
 ### Gli FPID sono memorizzati su qualsiasi piattaforma o soluzione Experience Cloud?
 
-Una volta che l’FPID è stato utilizzato per la generazione di un ECID, viene rilasciato dall’elemento `identityMap` e sostituito con l’ECID generato. L’FPID non viene memorizzato in alcuna soluzione Adobe Experience Platform o Experience Cloud.
+Una volta che l’FPID è stato utilizzato per la generazione di un ECID, viene rilasciato dal `identityMap` e sostituito con l’ECID generato. L’FPID non viene memorizzato in alcuna soluzione Adobe Experience Platform o Experience Cloud.

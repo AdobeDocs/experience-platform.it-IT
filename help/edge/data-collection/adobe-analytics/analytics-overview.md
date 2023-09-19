@@ -3,9 +3,9 @@ title: Utilizzo di Adobe Analytics con Platform Web SDK
 description: Scopri come inviare dati ad Adobe Analytics con Adobe Experience Platform Web SDK.
 keywords: adobe analytics;dati mappati;variabili mappate;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 836fa7814a6966903639e871bfaea0563847f363
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -74,4 +74,4 @@ Di seguito è riportato un esempio di regola di elaborazione che utilizzerebbe q
 
 >[!NOTE]
 >
->Con la raccolta Experience Edge, tutti gli eventi vengono inviati ad Analytics e a qualsiasi altro servizio configurato per lo stream di dati. Ad esempio, se hai sia Analytics che Target configurati come servizi e effettui chiamate separate per la personalizzazione e per Analytics, entrambi gli eventi verranno inviati ad Analytics e a Target. Questi eventi verranno registrati nei rapporti di Analytics e possono influenzare metriche quali il tasso di mancato recapito.
+>Con la raccolta di reti Edge, tutti gli eventi vengono inviati ad Analytics e a qualsiasi altro servizio configurato per lo stream di dati. Ad esempio, se hai sia Analytics che Target configurati come servizi e effettui chiamate separate per la personalizzazione e per Analytics, entrambi gli eventi verranno inviati ad Analytics e a Target. Questi eventi verranno registrati nei rapporti di Analytics e possono influenzare metriche quali il tasso di mancato recapito.

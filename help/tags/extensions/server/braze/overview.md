@@ -1,12 +1,12 @@
 ---
 keywords: estensione inoltro eventi;brasare;brasare estensione inoltro eventi
 title: Estensione Inoltro Evento Braze
-description: Questa estensione per l’inoltro di eventi Adobe Experience Platform invia gli eventi Adobe Experience Edge Network a Braze.
+description: Questa estensione di inoltro degli eventi Adobe Experience Platform invia gli eventi di Edge Network a Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1861'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Gli attributi utente possono essere un oggetto JSON contenente campi che creeran
 | [!UICONTROL Data di nascita] | Stringa in formato &quot;AAAA-MM-GG&quot; (ad esempio, 1980-12-21). |
 | [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio, &#39;America/New_York&#39; o &#39;Ora orientale (Stati Uniti e Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash contenente uno qualsiasi di id (stringa), mi piace (matrice di stringhe), num_amici (numero intero). |
-| [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), screen_name (stringa, handle Twitter), followers_count (integer), friends_count (integer), statuses_count(integer). |
+| [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), screen_name (stringa, handle di Twitter), followers_count (integer), friends_count (integer), statuses_count(integer). |
 
 {style="table-layout:auto"}
 
@@ -194,7 +194,7 @@ Gli attributi utente possono essere un oggetto JSON contenente campi che creeran
 | [!UICONTROL Data di nascita] | Stringa in formato &quot;AAAA-MM-GG&quot; (ad esempio, 1980-12-21). |
 | [!UICONTROL Fuso orario] | Nome del fuso orario da [Database del fuso orario IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (ad esempio, &#39;America/New_York&#39; o &#39;Ora orientale (Stati Uniti e Canada)&#39;). |
 | [!UICONTROL Facebook] | Hash contenente uno qualsiasi di id (stringa), mi piace (matrice di stringhe), num_amici (numero intero). |
-| [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), screen_name (stringa, handle Twitter), followers_count (integer), friends_count (integer), statuses_count(integer). |
+| [!UICONTROL Twitter] | Hash contenente uno qualsiasi di id (integer), screen_name (stringa, handle di Twitter), followers_count (integer), friends_count (integer), statuses_count(integer). |
 
 {style="table-layout:auto"}
 
@@ -206,4 +206,4 @@ Se la raccolta di eventi e [!DNL Adobe Experience Platform] integrazione riuscit
 
 Questa guida illustra come inviare eventi di conversione a [!DNL Braze] utilizzando l’inoltro degli eventi. Per ulteriori dettagli sulle applicazioni a valle per i dati evento inviati a [!DNL Braze], fare riferimento a [documentazione ufficiale](https://www.braze.com/docs).
 
-Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experience Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in Experienci Platform, consulta [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).

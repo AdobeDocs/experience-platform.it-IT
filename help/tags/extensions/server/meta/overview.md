@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f5a9e8cb5cdbff485bc7d50e9567b0236ae5872e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Per utilizzare il [!DNL Conversions API] , devi avere accesso all&#39;inoltro de
 
 ## Installare l’estensione
 
-Per installare [!DNL Meta Conversions API] , passa all’interfaccia utente di Data Collection o all’interfaccia utente di Experience Platform e seleziona **[!UICONTROL Inoltro eventi]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
+Per installare [!DNL Meta Conversions API] , passa all’interfaccia utente di Data Collection o all’interfaccia utente di Experienci Platform e seleziona **[!UICONTROL Inoltro eventi]** dal menu di navigazione a sinistra. Da qui, seleziona una proprietà a cui aggiungere l’estensione o creane una nuova.
 
 Dopo aver selezionato o creato la proprietà desiderata, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Catalogo]** scheda. Cerca [!UICONTROL API di metaconversione] , quindi seleziona **[!UICONTROL Installa]**.
 
@@ -91,10 +91,9 @@ Quando invii eventi condivisi, accertati di includere un ID evento e un nome con
 >* La funzione di avvio rapido è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 >* Questa funzione è destinata alle nuove implementazioni nette e al momento non supporta l’installazione automatica di estensioni e configurazioni su tag e proprietà di inoltro degli eventi esistenti.
 
-
 La funzione di avvio rapido consente di effettuare la configurazione con facilità ed efficienza con l’API Meta Conversions e le estensioni Meta Pixel. Questo strumento automatizza più passaggi eseguiti nei tag Adobe e nell’inoltro degli eventi, riducendo in modo significativo il tempo di configurazione.
 
-Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experience Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite Event Forwarding ed Experience Edge.
+Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experienci Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e Experienci Platform Edge Network.
 
 Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 

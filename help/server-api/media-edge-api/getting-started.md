@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 4%
+source-wordcount: '958'
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ Per avviare la sessione multimediale sul server, utilizzare l&#39;endpoint di in
 
 Prima di effettuare la richiesta di avvio della sessione, è necessario disporre dei seguenti elementi:
 
-* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en).
+* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it).
 
 * Un oggetto JSON per il payload della richiesta che contiene i dati minimi richiesti (come mostrato nella richiesta di esempio seguente).
 
@@ -284,7 +284,7 @@ La tabella seguente mostra i possibili codici di risposta risultanti dalle richi
 | Stato | Descrizione |
 | ---------- | --------- |
 | 200 | La sessione è stata creata |
-| 207 | Problema con uno dei servizi che si connettono a Experience Edge Network (per ulteriori informazioni, vedere [guida alla risoluzione dei problemi](troubleshooting.md)) |
+| 207 | Problema con uno dei servizi connessi a Edge Network (per ulteriori informazioni, vedere [guida alla risoluzione dei problemi](troubleshooting.md)) |
 | 400 livelli | Richiesta non valida |
 | Livello 500 | Errore del server |
 
