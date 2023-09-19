@@ -2,29 +2,35 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Connettersi alle destinazioni batch e attivare i dati utilizzando l’API del servizio Flusso
-description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experience Platform e attivare i dati
+description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experienci Platform e attivare i dati
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '3399'
+source-wordcount: '3446'
 ht-degree: 2%
 
 ---
 
-# Connettersi alle destinazioni batch e attivare i dati utilizzando l’API del servizio Flusso
+# Connettersi a destinazioni di e-mail marketing basate su file e attivare i dati utilizzando l’API del servizio di flusso
 
 >[!IMPORTANT]
 > 
->Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions).
+>* Per connettersi a una destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions).
 >
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
+>* Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions).
+>
+>* Per esportare *identità*, è necessario **[!UICONTROL Visualizza grafico delle identità]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico nelle destinazioni."){width="100" zoomable="yes"}
 >
 >Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questa esercitazione illustra come utilizzare l’API del servizio Flusso per creare un batch [archiviazione cloud](../catalog/cloud-storage/overview.md) o [destinazione e-mail marketing](../catalog/email-marketing/overview.md), crea un flusso di dati nella destinazione appena creata ed esporta i dati nella destinazione appena creata tramite file CSV.
+Questo tutorial illustra come utilizzare l’API del servizio Flow per creare un’interfaccia utente [destinazione e-mail marketing](../catalog/email-marketing/overview.md), crea un flusso di dati nella destinazione appena creata ed esporta i dati nella destinazione appena creata tramite file CSV.
 
-Questa esercitazione utilizza [!DNL Adobe Campaign] destinazione in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di archiviazione cloud batch e marketing e-mail.
+>[!TIP]
+> 
+>Per informazioni su come attivare i dati nelle destinazioni di archiviazione cloud utilizzando l’API del servizio Flusso, leggi [tutorial API dedicato](/help/destinations/api/activate-segments-file-based-destinations.md).
+
+Questa esercitazione utilizza [!DNL Adobe Campaign] destinazione in tutti gli esempi, ma i passaggi sono identici per le destinazioni di e-mail marketing basate su file.
 
 ![Panoramica: i passaggi per creare una destinazione e attivare i tipi di pubblico](../assets/api/email-marketing/overview.png)
 
@@ -123,12 +129,9 @@ Per riferimento, la tabella seguente contiene gli ID delle specifiche di conness
 | Destinazione | ID specifica di connessione |
 ---------|----------|
 | [!DNL Adobe Campaign] | `0b23e41a-cb4a-4321-a78f-3b654f5d7d97` |
-| [!DNL Amazon S3] | `4890fc95-5a1f-4983-94bb-e060c08e3f81` |
-| [!DNL Azure Blob] | `e258278b-a4cf-43ac-b158-4fa0ca0d948b` |
 | [!DNL Oracle Eloqua] | `c1e44b6b-e7c8-404b-9031-58f0ef760604` |
 | [!DNL Oracle Responsys] | `a5e28ddf-e265-426e-83a1-9d03a3a6822b` |
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
-| SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
 {style="table-layout:auto"}
 
@@ -1026,14 +1029,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Nell’URL, utilizza l’ID del flusso di dati creato nel passaggio precedente. |
 | `{ETAG}` | Ottieni `{ETAG}` dalla risposta della fase precedente, [Creare un flusso di dati](#create-dataflow). Il formato della risposta nel passaggio precedente contiene virgolette di escape. Devi utilizzare i valori senza escape nell’intestazione della richiesta. Vedi l’esempio seguente: <br> <ul><li>Esempio di risposta: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valore da utilizzare nella richiesta: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Il valore etag viene aggiornato a ogni aggiornamento riuscito di un flusso di dati. |
-| `{SEGMENT_ID}` | Specifica l’ID del pubblico da esportare in questa destinazione. Per recuperare gli ID del pubblico per i tipi di pubblico che desideri attivare, consulta [recuperare una definizione di pubblico](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experience Platform. |
+| `{SEGMENT_ID}` | Specifica l’ID del pubblico da esportare in questa destinazione. Per recuperare gli ID del pubblico per i tipi di pubblico che desideri attivare, consulta [recuperare una definizione di pubblico](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) nel riferimento API di Experienci Platform. |
 | `{PROFILE_ATTRIBUTE}` | Ad esempio, `"person.lastName"` |
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per aggiungere un pubblico a un flusso di dati, utilizza `add` operazione. |
 | `path` | Definisce la parte del flusso da aggiornare. Quando aggiungi un pubblico a un flusso di dati, utilizza il percorso specificato nell’esempio. |
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 | `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
 | `name` | *Facoltativo*. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
-| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: Obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: Obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: Facoltativo. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experience Platform.</li><li>`custom-text`: Facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
+| `filenameTemplate` | Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: Obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: Obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: Facoltativo. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: facoltativo. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experienci Platform.</li><li>`custom-text`: Facoltativo. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
 | `exportMode` | Obbligatorio. Seleziona `"DAILY_FULL_EXPORT"` (Mostra origine dati) o `"FIRST_FULL_THEN_INCREMENTAL"` (Blocca selezione). Per ulteriori informazioni sulle due opzioni, consulta [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione di attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il pubblico deve iniziare a esportare i profili nella tua destinazione. |
 | `frequency` | Obbligatorio. <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
@@ -1241,7 +1244,7 @@ Gli endpoint API in questa esercitazione seguono i principi generali dei messagg
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai connesso Platform a una delle destinazioni preferite per l’archiviazione cloud in batch o il marketing via e-mail e hai impostato un flusso di dati nella rispettiva destinazione per esportare i file di dati. I dati in uscita possono ora essere utilizzati nella destinazione per campagne e-mail, pubblicità mirata e molti altri casi d’uso. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
+Seguendo questa esercitazione, hai connesso Platform a una delle destinazioni di e-mail marketing basate su file preferite e hai impostato un flusso di dati nella rispettiva destinazione per esportare i file di dati. I dati in uscita possono ora essere utilizzati nella destinazione per campagne e-mail, pubblicità mirata e molti altri casi d’uso. Per ulteriori dettagli, vedi le pagine seguenti, ad esempio come modificare i flussi di dati esistenti utilizzando l’API del servizio Flusso:
 
 * [Panoramica sulle destinazioni](../home.md)
 * [Panoramica del catalogo delle destinazioni](../catalog/overview.md)
