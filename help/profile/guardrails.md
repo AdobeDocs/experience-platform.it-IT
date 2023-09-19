@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;guardrail;linee guida;limite;entità;entità principale;entità dimensione;profile;real-time customer profile;problem eshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
 title: Guardrail predefiniti per dati Real-Time Customer Profile
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1965'
 ht-degree: 4%
 
 ---
 
 # Guardrail predefiniti per [!DNL Real-Time Customer Profile] dati
 
-Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
 
 In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
@@ -108,7 +107,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 ## Guardrail di segmentazione
 
-I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experience Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
+I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |

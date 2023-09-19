@@ -2,9 +2,7 @@
 title: Pubblico potenziale
 description: Scopri come creare e utilizzare i tipi di pubblico potenziali per eseguire il targeting di clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
+source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 1%

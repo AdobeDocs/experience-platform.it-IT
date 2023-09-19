@@ -1,22 +1,21 @@
 ---
-keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;Profilo unificato;unificato;Profilo;rtcp;XDM
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
 workflow-type: tm+mt
-source-wordcount: '1990'
-ht-degree: 0%
+source-wordcount: '1973'
+ht-degree: 1%
 
 ---
 
 # Panoramica di [!DNL Real-Time Customer Profile]
 
-Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-Time Customer Profile], puoi avere una visione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica ti aiuterà a comprendere il ruolo e l’utilizzo di [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con [!DNL Real-Time Customer Profile], puoi avere una visione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica ti aiuterà a comprendere il ruolo e l’utilizzo di [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
 
 ## [!DNL Profile] nell’Experience Platform
 
-La relazione tra Real-Time Customer Profile e altri servizi in Experience Platform è evidenziata nel diagramma seguente:
+La relazione tra Real-Time Customer Profile e altri servizi in Experienci Platform è evidenziata nel diagramma seguente:
 
 ![La relazione tra Real-Time Customer Profile e altri servizi in Adobe Experience Platform. Questo diagramma mostra che Profilo è uno dei componenti principali di Adobe Experience Platform.](images/profile-overview/profile-in-platform.png)
 
@@ -54,7 +53,7 @@ Experience Platform fornisce una serie di guardrail per evitare la creazione di 
 
 ### Dashboard dei profili {#profile-dashboard}
 
-L’interfaccia utente di Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati del Profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per scoprire come accedere e utilizzare [!DNL Profile] nell&#39;interfaccia utente e informazioni dettagliate sulle metriche visualizzate nel dashboard, fai riferimento alla [Guida dell’interfaccia utente della dashboard del profilo](ui/profile-dashboard.md).
+L’interfaccia utente di Experienci Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati del Profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per scoprire come accedere e utilizzare [!DNL Profile] nell&#39;interfaccia utente e informazioni dettagliate sulle metriche visualizzate nel dashboard, fai riferimento alla [Guida dell’interfaccia utente della dashboard del profilo](ui/profile-dashboard.md).
 
 ### Frammenti di profilo e profili uniti {#profile-fragments-vs-merged-profiles}
 
@@ -144,4 +143,4 @@ La governance dei dati viene gestita in diversi punti. Questi includono la decis
 
 ## Passaggi successivi e risorse aggiuntive
 
-Per ulteriori informazioni sull’utilizzo dei dati del Profilo cliente in tempo reale tramite l’interfaccia utente di Experience Platform o l’API del Profilo, consulta la sezione [Guida all’interfaccia utente del profilo](ui/user-guide.md) o [Guida per gli sviluppatori API](api/overview.md), rispettivamente.
+Per ulteriori informazioni sull’utilizzo dei dati del Profilo cliente in tempo reale tramite l’interfaccia utente di Experienci Platform o l’API del Profilo, consulta la sezione [Guida all’interfaccia utente del profilo](ui/user-guide.md) o [Guida per gli sviluppatori API](api/overview.md), rispettivamente.
