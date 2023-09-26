@@ -5,14 +5,19 @@ description: Adobe Experience Platform fornisce una dashboard attraverso la qual
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
 
 # Dashboard di utilizzo della licenza (versione limitata) {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Dashboard utilizzo licenze"
+>abstract="La dashboard Utilizzo licenze fornisce informazioni approfondite sui prodotti Adobe Experience Platform acquistati. Nella panoramica della dashboard vengono visualizzate le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale, nonché l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
 
 >[!IMPORTANT]
 >
