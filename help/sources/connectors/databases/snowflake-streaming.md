@@ -4,9 +4,9 @@ description: Scopri come creare una connessione di origine e un flusso di dati p
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,8 @@ Per ulteriori informazioni sulla gestione di ruoli e privilegi, fare riferimento
    * È possibile abilitare una `backfill` flag booleano per [!DNL Snowflake] origine durante la creazione di una connessione di origine.
       * Se backfill è impostato su true, il valore di timestamp.initial è impostato su 0. Ciò significa che vengono recuperati dati con una colonna di marca temporale maggiore di 0 epoca.
       * Se backfill è impostato su false, il valore di timestamp.initial è impostato su -1. Ciò significa che vengono recuperati i dati con una colonna di marca temporale maggiore dell’ora corrente (l’ora in cui inizia l’acquisizione della sorgente).
-   * La colonna timestamp deve essere formattata come tipo: `TIMESTAMP_LTZ` o `TIMESTAMP_NTZ`. Se la colonna timestamp è impostata su `TIMESTAMP_NTZ`, quindi i tipi devono essere memorizzati nel database in ora UTC.
+   * La colonna timestamp deve essere formattata come tipo: `TIMESTAMP_LTZ` o `TIMESTAMP_NTZ`. Se la colonna timestamp è impostata su `TIMESTAMP_NTZ`, il fuso orario corrispondente in cui sono memorizzati i valori deve essere trasmesso tramite `timezoneValue` parametro. Se non specificato, il valore predefinito è UTC.
+      * `TIMESTAMP_TZ` non può essere utilizzata in una colonna timestamp o in una mappatura.
 
 ## Passaggi successivi
 

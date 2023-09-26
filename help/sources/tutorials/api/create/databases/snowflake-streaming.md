@@ -3,10 +3,10 @@ title: Collegare l'account di streaming di Snowflake a Adobe Experience Platform
 description: Scopri come collegare Adobe Experience Platform a Streaming di Snowflake utilizzando l’API del servizio Flusso.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 3%
+source-wordcount: '867'
+ht-degree: 4%
 
 ---
 
@@ -185,7 +185,8 @@ curl -X POST \
       "params": {
           "tableName": "ACME",
           "timestampColumn": "dOb",
-          "backfill": "true"
+          "backfill": "true",
+          "timezoneValue": "PST"
       }
   }'
 ```
@@ -197,6 +198,7 @@ curl -X POST \
 | `params.tableName` | Nome della tabella nel [!DNL Snowflake] che desideri portare su Platform. |
 | `params.timestampColumn` | Nome della colonna timestamp che verrà utilizzata per recuperare i valori incrementali. |
 | `params.backfill` | Flag booleano che determina se i dati vengono recuperati dall’inizio (0 epoca) o dal momento in cui viene avviata l’origine. Per ulteriori informazioni su questo valore, leggere [[!DNL Snowflake] panoramica origine streaming](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.timezoneValue` | Il valore del fuso orario indica l’ora corrente del fuso orario da recuperare quando si esegue una query su [!DNL Snowflake] database. Questo parametro deve essere fornito se la colonna timestamp nella configurazione è impostata su `TIMESTAMP_NTZ`. Se non specificato, `timezoneValue` viene impostato automaticamente su UTC. |
 
 **Risposta**
 
