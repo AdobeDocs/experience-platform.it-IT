@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
+source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
 workflow-type: tm+mt
-source-wordcount: '3707'
+source-wordcount: '3669'
 ht-degree: 11%
 
 ---
@@ -27,11 +27,6 @@ ht-degree: 11%
 Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni basate su profili batch di Adobe Experience Platform, ad esempio l’archiviazione cloud e le destinazioni del marketing via e-mail.
 
 ## Prerequisiti {#prerequisites}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="Supporto per gli array di esportazione (Beta)"
->abstract="(Beta) Esporta array di valori primitivi da Experienci Platform alla destinazione di archiviazione cloud desiderata. Questo testo verrà aggiornato con ulteriori informazioni. <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">Ulteriori informazioni</a>. "
 
 Per attivare i tipi di pubblico nelle destinazioni, è necessario aver completato [connesso a una destinazione](./connect-destination.md). Se non lo hai già fatto, accedi al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
 
