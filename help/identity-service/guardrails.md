@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,7 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| (Comportamento corrente) Numero di identità in un grafico | 150 | Il limite viene applicato a livello di sandbox. Quando il numero di identità raggiunge 150 o più, non vengono aggiunte nuove identità e il grafico delle identità non viene aggiornato. I grafici possono mostrare identità maggiori di 150 come risultato del collegamento di uno o più grafici con meno di 150 identità. **Nota**: numero massimo di identità in un grafico delle identità **per un singolo profilo unito** è 50. I profili uniti basati su grafici di identità con più di 50 identità sono esclusi dal profilo cliente in tempo reale. Per ulteriori informazioni, consulta la guida su [guardrail per i dati profilo](../profile/guardrails.md). |
-| (Comportamento futuro) Numero di identità in un grafico [!BADGE Beta]{type=Informative} | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità più vecchia per fare spazio all’identità più recente. L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
+| Numero di identità in un grafico | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità più vecchia per fare spazio all’identità più recente. L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di caratteri per un nome visualizzato dello spazio dei nomi o un simbolo di identità | Nessuna | Non vi sono limiti al numero di caratteri di un nome visualizzato dello spazio dei nomi o di un simbolo di identità. |
@@ -50,7 +49,7 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 
 A partire dal 31 marzo 2023, il servizio Identity bloccherà l’acquisizione di Adobe Analytics ID (AAID) per i nuovi clienti. Questa identità viene generalmente acquisita tramite [Origine Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e [Origine Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) ed è ridondante perché l’ECID rappresenta lo stesso browser web. Se desideri modificare questa configurazione predefinita, contatta il team del tuo account di Adobe.
 
-## [!BADGE Beta]{type=Informative} Informazioni sulla logica di eliminazione quando viene aggiornato un grafico delle identità alla capacità {#deletion-logic}
+## Informazioni sulla logica di eliminazione quando viene aggiornato un grafico delle identità alla capacità {#deletion-logic}
 
 Quando un grafo di identità completo viene aggiornato, Identity Service elimina l’identità meno recente nel grafo prima di aggiungere l’identità più recente. Ciò al fine di mantenere l’accuratezza e la pertinenza dei dati di identità. Questo processo di eliminazione segue due regole principali:
 
