@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,10 @@ L’Adobe consiglia di selezionare uno spazio dei nomi dell’identità come [!D
 >* I campi sono configurati come attributi previsti per la destinazione target.
 >
 > Ad esempio, se il campo `person.name.firstName` presenta alcune etichette di utilizzo dei dati in conflitto con l’azione di marketing della destinazione; nel passaggio di revisione verrebbe mostrata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, consulta [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE Beta]{type=Informative} Esporta array tramite campi calcolati {#export-arrays-calculated-fields}
+
+Alcuni clienti beta possono esportare gli oggetti array da Experienci Platform a destinazioni di archiviazione cloud. Ulteriori informazioni su [esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contatta il rappresentante del tuo Adobe per accedere alla funzionalità.
 
 ### Limitazioni note {#known-limitations}
 
