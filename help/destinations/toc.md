@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1168'
 ht-degree: 9%
 
 ---
@@ -125,6 +125,7 @@ ht-degree: 9%
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
       * [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni di Customer Relationship Management (CRM) {#crm}
+      * [Connessione Hubspot](./catalog/crm/hubspot.md)
       * [Connessione CRM Salesforce](./catalog/crm/salesforce.md)
       * [Connessione Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Connessione di uscita](catalog/crm/outreach.md)
