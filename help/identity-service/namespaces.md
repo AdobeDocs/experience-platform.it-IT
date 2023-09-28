@@ -1,45 +1,59 @@
 ---
 title: Panoramica dello spazio dei nomi dell’identità
-description: Gli spazi dei nomi dele identità sono un componente di Identity Service che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
+description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 9%
+source-wordcount: '1699'
+ht-degree: 6%
 
 ---
 
 # Panoramica sullo spazio dei nomi delle identità
 
-Gli spazi dei nomi delle identità sono un componente di [[!DNL Identity Service]](./home.md) che fungono da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
+Per ulteriori informazioni su cosa è possibile fare con gli spazi dei nomi delle identità in Adobe Experience Platform Identity Service, consulta il documento seguente.
 
 ## Introduzione
 
-Per utilizzare gli spazi dei nomi delle identità è necessario comprendere i vari servizi Adobe Experience Platform interessati. Prima di iniziare a utilizzare gli spazi dei nomi, controlla la documentazione relativa ai seguenti servizi:
+Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe Experience Platform. Prima di iniziare a utilizzare gli spazi dei nomi, controlla la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Identity Service]](./home.md): ottieni una visione migliore dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
-- [[!DNL Privacy Service]](../privacy-service/home.md): gli spazi dei nomi di identità vengono utilizzati nelle richieste di conformità per le normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Identity Service]](./home.md): ottieni una visione migliore dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
+* [[!DNL Privacy Service]](../privacy-service/home.md): gli spazi dei nomi di identità vengono utilizzati nelle richieste di conformità per le normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
 ## Informazioni sugli spazi dei nomi delle identità
 
-Un’identità completa include un valore ID e uno spazio dei nomi. Quando si abbinano dati record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo; il valore di identità e lo spazio dei nomi devono corrispondere.
+Un’identità completa include due componenti: **valore identità** e un **spazio dei nomi delle identità**. Ad esempio, se il valore di un’identità è `scott@acme.com`, quindi uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono, e `3126ABC` come ID CRM. Essenzialmente, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano dati record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo; il valore di identità e lo spazio dei nomi devono corrispondere.
 
-Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;, pertanto [!DNL Platform] è in grado di vedere che questi frammenti sono in realtà lo stesso individuo e riunisce i dati nel grafico delle identità dell’individuo.
+Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;, pertanto Experienci Platform è in grado di vedere che questi frammenti sono in realtà lo stesso individuo e uniscono i dati nel grafico delle identità dell’individuo.
 
 ![](images/identity-service-stitching.png)
 
-### Tipi di identità {#identity-types}
+### Componenti di uno spazio dei nomi
+
+Uno spazio dei nomi è costituito dai seguenti componenti:
+
+* **Nome visualizzato**: nome descrittivo di un dato spazio dei nomi.
+* **Simbolo di identità**: codice utilizzato internamente da Identity Service per rappresentare uno spazio dei nomi.
+* **Tipo di identità**: classificazione di un dato spazio dei nomi.
+* **Descrizione**: (facoltativo) qualsiasi informazione supplementare che puoi fornire su un dato spazio dei nomi.
+
+### Tipo di identità {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Specificare il tipo di identità"
->abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafo identità. Gli identificatori che non si riferiscono a persone non verranno memorizzati, mentre tutti gli altri tipi di identità sì."
+>abstract="Il tipo di identità controlla se i dati vengono memorizzati o meno nel grafo identità. I grafici delle identità non vengono generati per i seguenti tipi di identità: identificatori di persone e ID partner."
 >text="Learn more in documentation"
 
-I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi dell’identità e controlla se i dati vengono salvati in modo permanente nel grafico delle identità ed eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non persone** segui lo stesso comportamento dell’unione di uno spazio dei nomi e del relativo valore ID corrispondente in un cluster del grafico delle identità. I dati non vengono uniti quando si utilizza **Identificatore non persone**.
+Un elemento di uno spazio dei nomi delle identità è **tipo di identità**. Il tipo di identità determina:
 
-I seguenti tipi di identità sono disponibili in [!DNL Platform]:
+* Se verrà generato un grafo delle identità:
+   * I grafici delle identità non vengono generati per i seguenti tipi di identità: identificatori di persone e ID partner.
+   * I grafici delle identità vengono generati per tutti gli altri tipi di identità.
+* Quali identità vengono rimosse dal grafico delle identità quando vengono raggiunti i limiti del sistema. Per ulteriori informazioni, leggere [guardrail per i dati di identità](guardrails.md).
+
+In Experienci Platform sono disponibili i seguenti tipi di identità:
 
 | Tipo di identità | Descrizione |
 | --- | --- |
@@ -88,43 +102,33 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 
 Per visualizzare gli spazi dei nomi delle identità nell’interfaccia utente, seleziona **[!UICONTROL Identità]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Sfoglia]**.
 
-![navigazione](./images/browse.png)
+Viene visualizzata una directory di spazi dei nomi dell’organizzazione contenente informazioni su nomi, simboli di identità, date dell’ultimo aggiornamento, tipi di identità corrispondenti e descrizione.
 
-Nell’interfaccia principale della pagina viene visualizzato un elenco di spazi dei nomi di identità con informazioni su nomi, simboli di identità, data dell’ultimo aggiornamento e sullo spazio dei nomi standard o personalizzato. La barra a destra contiene informazioni su [!UICONTROL Forza del grafo delle identità].
+![Una directory di spazi dei nomi di identità personalizzati nella tua organizzazione.](./images/namespace/browse.png)
 
-![identità](./images/identities.png)
-
-Platform fornisce anche namespace a scopo di integrazione. Questi spazi dei nomi sono nascosti per impostazione predefinita in quanto vengono utilizzati per connettersi con altri sistemi e non per unire le identità. Per visualizzare gli spazi dei nomi dell’integrazione, seleziona **[!UICONTROL Visualizzare le identità di integrazione]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-Seleziona uno spazio dei nomi identità dall’elenco per visualizzare informazioni su uno spazio dei nomi specifico. Quando si seleziona uno spazio dei nomi di identità, la visualizzazione nella barra a destra viene aggiornata in modo da visualizzare i metadati relativi allo spazio dei nomi di identità selezionato, inclusi il numero di identità acquisite e il numero di record con errori e ignorati.
-
-![select-namespace](./images/select-namespace.png)
-
-## Gestire gli spazi dei nomi personalizzati {#manage-namespaces}
+## Creare spazi dei nomi personalizzati {#create-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, potrebbe essere necessario specificare spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando [[!DNL Identity Service]](./api/create-custom-namespace.md) tramite l’interfaccia utente.
 
-Per creare uno spazio dei nomi personalizzato utilizzando l’interfaccia utente, passa a **[!UICONTROL Identità]** workspace, seleziona **[!UICONTROL Sfoglia]** e quindi selezionare **[!UICONTROL Creare lo spazio dei nomi delle identità]**.
+Per creare uno spazio dei nomi personalizzato, seleziona **[!UICONTROL Creare lo spazio dei nomi delle identità]**.
 
-![select-create](./images/select-create.png)
+![Il pulsante Crea spazio dei nomi delle identità nell’area di lavoro delle identità.](./images/namespace/create-identity-namespace.png)
 
-Il **[!UICONTROL Creare lo spazio dei nomi delle identità]** viene visualizzata. Fornisci un **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Simbolo di identità]** quindi seleziona il tipo di identità da creare. È inoltre possibile aggiungere una descrizione facoltativa per aggiungere ulteriori informazioni sullo spazio dei nomi. Tutti i tipi di identità tranne **Identificatore non persone** segue lo stesso comportamento dell’unione. Se si seleziona **Identificatore non persone** come tipo di identità durante la creazione di uno spazio dei nomi, l’unione non si verifica. Per informazioni specifiche su ciascun tipo di identità, consulta la tabella relativa a [tipi di identità](#identity-types).
+Il [!UICONTROL Creare lo spazio dei nomi delle identità] viene visualizzata la finestra. Innanzitutto, devi fornire un nome visualizzato e un simbolo di identità per lo spazio dei nomi personalizzato che desideri creare. Facoltativamente, puoi anche fornire una descrizione per aggiungere più contesto allo spazio dei nomi personalizzato che stai creando.
 
-Al termine, seleziona **[!UICONTROL Crea]**.
+![Una finestra pop-up in cui è possibile inserire informazioni relative allo spazio dei nomi dell’identità personalizzato.](./images/namespace/name-and-symbol.png)
+
+Quindi, seleziona il tipo di identità da assegnare allo spazio dei nomi personalizzato. Al termine, seleziona **[!UICONTROL Crea]**.
+
+![Una selezione di tipi di identità tra cui puoi scegliere e assegnarli allo spazio dei nomi dell’identità personalizzato.](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->Gli spazi dei nomi definiti dall’utente sono privati per l’organizzazione e, per essere creati correttamente, richiedono un simbolo di identità univoco.
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-Analogamente agli spazi dei nomi standard, puoi selezionare uno spazio dei nomi personalizzato dall’ **[!UICONTROL Sfoglia]** per visualizzarne i dettagli. Tuttavia, con uno spazio dei nomi personalizzato è anche possibile modificarne il nome visualizzato e la descrizione dall’area dei dettagli.
-
->[!NOTE]
+>* Gli spazi dei nomi definiti dall’utente sono privati per l’organizzazione e, per essere creati correttamente, richiedono un simbolo di identità univoco.
 >
->Una volta creato, lo spazio dei nomi non può essere eliminato né modificato in base al simbolo di identità e al tipo.
+>* Una volta creato, lo spazio dei nomi non può essere eliminato né modificato in base al simbolo di identità e al tipo.
+>
+>* Gli spazi dei nomi duplicati non sono supportati. Non è possibile utilizzare un nome visualizzato e un simbolo di identità esistenti durante la creazione di un nuovo spazio dei nomi.
 
 ## Spazi dei nomi nei dati di identità
 
