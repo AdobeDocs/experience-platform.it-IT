@@ -2,9 +2,9 @@
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,37 @@ Nel pannello dei dettagli del registro, puoi selezionare un nuovo set di dati di
 
 ![Visualizzazione dei dettagli del registro query.](../images/ui/query-log/query-log-details.png)
 
+## Modifica registri {#edit-logs}
+
 Accanto al nome del modello di ogni riga o al frammento SQL è presente l&#39;icona a forma di matita (![Un’icona a forma di matita.](../images/ui/query-log/edit-icon.png)) che è possibile utilizzare per passare all’editor delle query. La query viene quindi precompilata nell’editor per la modifica.
 
 ![Nell’area di lavoro Registro query è evidenziata un’icona a forma di matita.](../images/ui/query-log/edit-query.png)
+
+## Filtra registri {#filter-logs}
+
+Puoi filtrare l’elenco dei registri di query in base a diverse impostazioni. Seleziona l’icona del filtro (![Icona del filtro.](../images/ui/query-log/filter-icon.png)) in alto a sinistra nell’area di lavoro per aprire un set di opzioni di filtro nella barra a sinistra.
+
+![L’area di lavoro Registro query con l’icona del filtro evidenziata.](../images/ui/query-log/log-filter.png)
+
+Viene visualizzato l’elenco dei filtri disponibili.
+
+![L’area di lavoro Registro query con le opzioni filtro visualizzate ed evidenziate.](../images/ui/query-log/log-filter-settings.png)
+
+Nella tabella seguente viene fornita una descrizione di ogni filtro.
+
+| Filtro | Descrizione |
+| ------ | ----------- |
+| [!UICONTROL Escludere le query del dashboard] | Questa casella di controllo è attivata per impostazione predefinita ed esclude i registri generati dalle query utilizzate per generare le informazioni. Queste query sono generate dal sistema e nascondono i record dei registri generati dagli utenti e necessari per il monitoraggio, l’amministrazione e la risoluzione dei problemi. Per visualizzare i registri generati dal sistema, deseleziona la casella di controllo. |
+| [!UICONTROL Start date (Data di inizio)] | Per filtrare i registri per le query create durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di inizio] sezione. |
+| [!UICONTROL Data di completamento] | Per filtrare i registri per le query completate durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di completamento] sezione. |
+| [!UICONTROL Stato] | Per filtrare i registri in base al [!UICONTROL Stato] della query, selezionare il pulsante di opzione appropriato. Le opzioni disponibili includono [!UICONTROL Inviato], [!UICONTROL In corso], [!UICONTROL Completato], e [!UICONTROL Non riuscito]. Puoi filtrare i registri solo in base a una condizione di stato alla volta. |
+| [!UICONTROL Client] | Per filtrare i registri in base al client di query utilizzato, immetti uno dei seguenti valori accettati nel campo di testo libero: `API`, `Adobe Query Service UI`, o `QsAccel`. |
+| [!UICONTROL Le mie query] | Utilizza il [!UICONTROL Le mie query] attiva per filtrare i registri per le query eseguite da te. |
+| [!UICONTROL ID registro query] | Per filtrare in base all’ID registro univoco di una query, immetti l’ID registro nel campo di testo libero. Queste informazioni sono disponibili nella sezione [!UICONTROL Dettagli registro]. |
+
+Tutti i filtri applicati vengono visualizzati sopra i risultati del registro filtrato.
+
+![Scheda Registro dell’area di lavoro Query, con l’elenco dei filtri applicati evidenziato.](../images/ui/query-log/applied-log-filters.png)
 
 ## Passaggi successivi
 

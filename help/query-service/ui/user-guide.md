@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '2288'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,23 @@ ht-degree: 3%
 
 Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Service], vedere [Panoramica di Query Service](../home.md). Per ulteriori informazioni su come navigare nell’interfaccia utente di Query Service su [!DNL Platform], vedere [Panoramica dell’interfaccia utente di Query Service](./overview.md).
 
+>[!NOTE]
+>
+>Alcune funzionalità di Query Service non sono fornite dalla versione precedente di Query Editor. Le schermate utilizzate in questo documento vengono acquisite utilizzando la versione migliorata dell’editor delle query, salvo diversa indicazione. Consulta la sezione sulla [Editor query avanzato](#enhanced-editor-toggle) per ulteriori dettagli.
+
 ## Introduzione {#getting-started}
 
 [!DNL Query Editor] fornisce un’esecuzione flessibile delle query tramite la connessione a [!DNL Query Service]Le query, e vengono eseguite solo quando la connessione è attiva.
 
+## Accesso [!DNL Query Editor] {#accessing-query-editor}
+
+In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di navigazione sinistro per aprire [!DNL Query Service] Workspace. Quindi, per iniziare a scrivere le query, seleziona **[!UICONTROL Crea query]** in alto a destra. Questo collegamento è disponibile da una qualsiasi delle pagine di [!DNL Query Service] Workspace.
+
+![La scheda Panoramica dell’area di lavoro Query in cui è evidenziata l’opzione Crea query.](../images/ui/query-editor/create-query.png)
+
 ### Connessione a [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] richiede alcuni secondi per l&#39;inizializzazione e la connessione [!DNL Query Service] quando viene aperto. La console indica quando è collegata, come illustrato di seguito. Se tenti di eseguire una query prima che l’editor si sia connesso, l’esecuzione viene rimandata fino al completamento della connessione.
+L’editor delle query impiega alcuni secondi per inizializzare e connettersi a Query Service quando viene aperto. La console indica quando è collegata, come illustrato di seguito. Se tenti di eseguire una query prima che l’editor si sia connesso, l’esecuzione viene rimandata fino al completamento della connessione.
 
 ![L&#39;output della console dell&#39;editor di query al momento della connessione iniziale.](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Servic
 
 Query eseguite da [!DNL Query Editor] esegui in modo interattivo, il che significa che se chiudi il browser o esci, la query viene annullata. Lo stesso vale per le query eseguite per generare set di dati dagli output delle query.
 
+L&#39;edizione avanzata dell&#39;editor di query consente di scrivere più query nell&#39;editor ed eseguirle in sequenza. Consulta la sezione su [esecuzione di più query sequenziali](#execute-multiple-sequential-queries) per ulteriori informazioni.
+
 ## Creazione di query tramite [!DNL Query Editor] {#query-authoring}
 
 Utilizzo di [!DNL Query Editor], puoi scrivere, eseguire e salvare query per i dati sull’esperienza del cliente. Tutte le query eseguite o salvate in [!DNL Query Editor] sono disponibili per tutti gli utenti dell’organizzazione con accesso a [!DNL Query Service].
 
-### Accesso [!DNL Query Editor] {#accessing-query-editor}
-
-In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di navigazione sinistro per aprire [!DNL Query Service] Workspace. Quindi, per iniziare a scrivere le query, seleziona **[!UICONTROL Crea query]** in alto a destra. Questo collegamento è disponibile da una qualsiasi delle pagine di [!DNL Query Service] Workspace.
-
-![La scheda Panoramica dell’area di lavoro Query in cui è evidenziata l’opzione Crea query.](../images/ui/query-editor/create-query.png)
-
-### Attivazione/disattivazione editor di query avanzato {#enhanced-editor-toggle}
+## Opzione Editor di query ottimizzata {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (
 
 ![L’editor delle query con l’icona delle impostazioni e l’opzione del menu a discesa Abilita tema scuro sono evidenziate.](../images/ui/query-editor/query-editor-settings.png)
 
-### Scrittura delle query {#writing-queries}
+### Eseguire più query sequenziali {#execute-multiple-sequential-queries}
+
+L&#39;edizione avanzata dell&#39;editor di query consente di scrivere più di una query nell&#39;editor ed eseguirle tutte in modo sequenziale.
+
+L’esecuzione di più query in una sequenza genera ciascuna una voce di registro. Tuttavia, solo i risultati della prima query vengono visualizzati nella console dell’editor delle query. Se hai la necessità di risolvere i problemi o confermare le query eseguite, controlla il registro delle query. Consulta la [documentazione dei registri di query](./query-logs.md) per ulteriori informazioni.
+
+>[!NOTE]
+> 
+>Se una query CTAS viene eseguita dopo la prima query nell’editor delle query, viene comunque creata una tabella, ma non è presente alcun output nella console dell’editor delle query.
+
+### Esegui query selezionata {#execute-selected-query}
+
+Se hai scritto più query ma devi eseguirne una sola, puoi evidenziare la query scelta e selezionare la
+[!UICONTROL Esegui query selezionata] icona. Questa icona è disabilitata per impostazione predefinita, a meno che non selezioni una query nell’editor.
+
+![L’editor delle query con [!UICONTROL Esegui query selezionata] icona evidenziata.](../images/ui/query-editor/run-selected-query.png)
+
+### Conteggio risultati {#result-count}
+
+L’editor delle query può contenere un massimo di 50.000 righe. Tuttavia, nella console dell’editor di query vengono visualizzate solo 50 righe alla volta. Per modificare il numero di righe visualizzate nella console, seleziona la **[!UICONTROL Conteggio risultati]** e scegliere tra i valori 50, 100, 150, 300 e 500.
+
+![L’editor delle query con il menu a discesa Conteggio risultati è evidenziato.](../images/ui/query-editor/result-count.png)
+
+## Scrittura delle query {#writing-queries}
 
 [!UICONTROL Editor query] è organizzato in modo da rendere la scrittura delle query il più semplice possibile. La schermata seguente mostra come viene visualizzato l’editor nell’interfaccia utente, con il campo di immissione SQL e **Play** evidenziato.
 
@@ -70,7 +99,7 @@ Per attivare i temi scuri o chiari, selezionare l&#39;icona delle impostazioni (
 
 Per ridurre al minimo il tempo di sviluppo, ti consigliamo di sviluppare le query con limiti per le righe restituite. Ad esempio, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Dopo aver verificato che la query produca l’output previsto, rimuovi i limiti ed esegui la query con `CREATE TABLE tablename AS SELECT` per generare un set di dati con l’output.
 
-### Strumenti di scrittura in [!DNL Query Editor] {#writing-tools}
+## Strumenti di scrittura in [!DNL Query Editor] {#writing-tools}
 
 - **Evidenziazione automatica della sintassi:** Semplifica la lettura e l&#39;organizzazione di SQL.
 
@@ -83,6 +112,18 @@ Per ridurre al minimo il tempo di sviluppo, ti consigliamo di sviluppare le quer
 - **Completamento automatico tabella e campo:** Inizia a digitare il nome della tabella che desideri `SELECT` da, quindi utilizzare i tasti freccia per passare alla tabella desiderata e premere **Invio**. Dopo aver selezionato una tabella, il completamento automatico riconosce i campi della tabella.
 
 ![L’input dell’editor delle query che visualizza i suggerimenti per i nomi delle tabelle a discesa.](../images/ui/query-editor/tables-auto.png)
+
+### Formato testo {#format-text}
+
+Il [!UICONTROL Formato testo] rende la query più leggibile aggiungendo uno stile di sintassi standardizzato. Seleziona **[!UICONTROL Formato testo]** per standardizzare tutto il testo all&#39;interno dell&#39;editor di query.
+
+![Editor query con [!UICONTROL Formato testo] e le istruzioni SQL evidenziate.](../images/ui/query-editor/format-text.png)
+
+### Copia SQL {#copy-sql}
+
+Selezionare l&#39;icona Copia per copiare SQL dall&#39;editor di query negli Appunti. Questa funzione di copia è disponibile sia per i modelli di query che per le query appena create nell’Editor query.
+
+![Nell’area di lavoro Query è presente un modello di query di esempio con l’icona Copia evidenziata.](../images/ui/query-editor/copy-sql.png)
 
 ### Attivazione/disattivazione della configurazione dell’interfaccia utente a completamento automatico {#auto-complete}
 
