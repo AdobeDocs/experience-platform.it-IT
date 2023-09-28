@@ -1,17 +1,17 @@
 ---
-description: Scopri come creare campi di input nell’interfaccia utente di Experience Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
+description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1436'
-ht-degree: 2%
+source-wordcount: '1580'
+ht-degree: 4%
 
 ---
 
 
 # Configurare l’input dell’utente tramite i campi dati del cliente
 
-Quando ti connetti alla destinazione nell’interfaccia utente di Experience Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino le opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
+Quando ti connetti alla destinazione nell’interfaccia utente di Experienci Platform, potrebbe essere necessario che gli utenti forniscano dettagli di configurazione specifici o selezionino le opzioni specifiche che rendi disponibili. In Destination SDK, queste opzioni sono denominate campi dati del cliente.
 
 Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta le seguenti pagine di panoramica sulla configurazione di destinazione:
 
@@ -20,7 +20,7 @@ Per capire dove questo componente si inserisce in un’integrazione creata con D
 
 ## Casi d’uso per i campi dati cliente {#use-cases}
 
-Utilizza i campi dati del cliente per diversi casi d’uso in cui gli utenti devono inserire dati nell’interfaccia utente di Experience Platform. Ad esempio, utilizza i campi dati del cliente quando gli utenti devono fornire:
+Utilizza i campi dati del cliente per diversi casi d’uso in cui gli utenti devono inserire dati nell’interfaccia utente di Experienci Platform. Ad esempio, utilizza i campi dati del cliente quando gli utenti devono fornire:
 
 * Nomi e percorsi dei bucket di archiviazione cloud, per destinazioni basate su file.
 * Il formato accettato dai campi dati del cliente.
@@ -32,7 +32,7 @@ Puoi configurare i campi dati del cliente tramite `/authoring/destinations` endp
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutti i tipi di configurazione dei campi dati cliente supportati che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
+Questo articolo descrive tutti i tipi di configurazione dei campi dati cliente supportati che è possibile utilizzare per la destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experienci Platform.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 | `enum` | Stringa | Facoltativo | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
 | `default` | Stringa | Facoltativo | Definisce il valore predefinito da un `enum` elenco. |
 | `hidden` | Booleano | Facoltativo | Indica se il campo dati del cliente viene visualizzato o meno nell’interfaccia utente. |
-| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il **[!UICONTROL Alias di integrazione]** campo in [Personalizzazione personalizzata](../../../catalog/personalization/custom-personalization.md) la destinazione deve essere univoca, il che significa che due flussi di dati separati verso questa destinazione non possono avere lo stesso valore per questo campo. |
+| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il campo **[!UICONTROL Alias di integrazione]** in [Personalizzazione personalizzata](../../../catalog/personalization/custom-personalization.md) la destinazione deve essere univoca, vale a dire che due flussi di dati separati verso questa destinazione non possono avere lo stesso valore per questo campo. |
 | `readOnly` | Booleano | Facoltativo | Indica se il cliente può modificare il valore del campo. |
 
 {style="table-layout:auto"}
@@ -169,7 +169,7 @@ Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfa
 ]
 ```
 
-![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experience Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experienci Platform.](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## Raggruppa campi dati cliente {#grouping}
 
@@ -252,6 +252,93 @@ A tale scopo, utilizza `namedEnum` come mostrato di seguito e configurare un `de
 ```
 
 ![Registrazione dello schermo che mostra un esempio di selettori a discesa creati con la configurazione mostrata sopra.](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+
+## Creare selettori a discesa dinamici per i campi dati del cliente {#dynamic-dropdown-selectors}
+
+Nelle situazioni in cui desideri chiamare un’API in modo dinamico e utilizzare la risposta per popolare dinamicamente le opzioni in un menu a discesa, puoi utilizzare un selettore a discesa dinamico.
+
+I selettori a discesa dinamici sono identici ai [selettori a discesa regolari](#dropdown-selectors) nell’interfaccia utente. L’unica differenza consiste nel fatto che i valori vengono recuperati in modo dinamico da un’API.
+
+Per creare un selettore a discesa dinamico, devi configurare due componenti:
+
+**Passaggio 1.** [Creare un server di destinazione](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un `responseFields` modello per la chiamata API dinamica, come mostrato di seguito.
+
+```json
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":" <--YOUR-API-ENDPOINT-PATH--> "
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+**Passaggio 2.** Utilizza il `dynamicEnum` come mostrato di seguito. Nell’esempio seguente, il `User` Il menu a discesa viene recuperato utilizzando dynamic server.
+
+
+```json {line-numbers="true" highlight="13-21"}
+"customerDataFields": [
+  {
+    "name": "integrationId",
+    "title": "Integration ID",
+    "type": "string",
+    "isRequired": true
+  },
+  {
+    "name": "userId",
+    "title": "User",
+    "type": "string",
+    "isRequired": true,
+    "dynamicEnum": {
+      "queryParams": [
+        "integrationId"
+      ],
+      "destinationServerId": "<~dynamic-field-server-id~>",
+      "authenticationRule": "CUSTOMER_AUTHENTICATION",
+      "value": "$.list",
+      "responseFormat": "NAME_VALUE"
+    }
+  }
+]
+```
+
+Imposta il `destinationServerId` all&#39;ID del server di destinazione creato al passaggio 1. Puoi visualizzare l’ID del server di destinazione nella risposta di [recuperare una configurazione del server di destinazione](../../authoring-api/destination-server/retrieve-destination-server.md) Chiamata API.
 
 ## Creare campi dati cliente condizionali {#conditional-options}
 
@@ -470,13 +557,13 @@ Ad Experience Platform, per connettersi correttamente a [!DNL Amazon S3], il ser
    }
 ```
 
-I valori del modello `{{customerData.bucketName}}` e `{{customerData.path}}` leggi i valori forniti dall’utente in modo che Experience Platform possa connettersi correttamente alla piattaforma di destinazione.
+I valori del modello `{{customerData.bucketName}}` e `{{customerData.path}}` leggi i valori forniti dall’utente in modo che Experienci Platform possa connettersi correttamente alla piattaforma di destinazione.
 
 Per ulteriori informazioni su come configurare il server di destinazione per leggere i campi con modelli, consulta la documentazione su [campi hardcoded e template](../destination-server/server-specs.md#templatized-fields).
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experience Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Platform.
+Dopo aver letto questo articolo, dovresti capire meglio come consentire agli utenti di inserire informazioni nell’interfaccia utente di Experienci Platform tramite i campi dati del cliente. Ora sai anche come selezionare il campo dati cliente corretto per il caso d’uso e configurare, ordinare e raggruppare i campi dati cliente nell’interfaccia utente di Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

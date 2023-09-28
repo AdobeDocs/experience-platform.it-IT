@@ -1,9 +1,9 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un server di destinazione tramite il Adobe Experience Platform Destination SDK.
 title: Creare una configurazione del server di destinazione
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '2039'
 ht-degree: 9%
 
 ---
@@ -844,6 +844,103 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i detta
 
 +++
 
+
+>[!ENDTABS]
+
+
+### Creare server di destinazione dinamici a discesa {#dynamic-dropdown-servers}
+
+Utilizzare [elenchi a discesa dinamici](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) per recuperare e popolare dinamicamente i campi dei dati dei clienti a discesa, in base alla tua API. Ad esempio, puoi recuperare un elenco di account utente esistenti che desideri utilizzare per una connessione di destinazione.
+
+Prima di poter configurare il campo dati cliente a discesa dinamico, è necessario configurare un server di destinazione per i menu a discesa dinamici.
+
+Vedi nella scheda seguente un esempio di server di destinazione utilizzato per recuperare in modo dinamico da un’API i valori da visualizzare in un selettore a discesa.
+
+Il payload di esempio seguente include tutti i parametri necessari per un server di schema dinamico.
+
+>[!BEGINTABS]
+
+>[!TAB Server a discesa dinamico]
+
+**Creare un server a discesa dinamico**
+
+Quando configuri una destinazione che recupera i valori di un campo dati cliente a discesa dal tuo endpoint API, devi creare un server a discesa dinamico simile a quello mostrato di seguito.
+
++++Richiesta
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| Parametro | Tipo | Descrizione |
+| -------- | ----------- | ----------- |
+| `name` | Stringa | *Obbligatorio.* Rappresenta un nome descrittivo del server a discesa dinamico, visibile solo agli Adobi. |
+| `destinationServerType` | Stringa | *Obbligatorio.* Imposta su `URL_BASED` per i server a discesa dinamici. |
+| `urlBasedDestination.url.templatingStrategy` | Stringa | *Obbligatorio.* <ul><li>Utilizzare `PEBBLE_V1` se Adobe deve trasformare l’URL in `value` di seguito. Utilizza questa opzione se disponi di un endpoint come: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Utilizzare `NONE` se non è necessaria alcuna trasformazione sul lato Adobe, ad esempio se si dispone di un endpoint come: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | Stringa | *Obbligatorio.* Inserisci l’indirizzo dell’endpoint API a cui Experienci Platform deve connettersi e recuperare i valori del menu a discesa. |
+| `httpTemplate.httpMethod` | Stringa | *Obbligatorio.* Il metodo che Adobe utilizzerà nelle chiamate al server. Per i server a discesa dinamici, utilizza `GET`. |
+| `httpTemplate.headers` | Oggetto | *Facoltativa.l* Includi le intestazioni necessarie per la connessione al server a discesa dinamico. |
+| `responseFields.templatingStrategy` | Stringa | *Obbligatorio.* Seleziona `PEBBLE_V1`. |
+| `responseFields.value` | Stringa | *Obbligatorio.* Questa stringa è il modello di trasformazione con escape di carattere che trasforma la risposta ricevuta dall’API nei valori che verranno visualizzati nell’interfaccia utente di Platform. <br> <ul><li> Per informazioni su come scrivere il modello, leggere [Sezione Utilizzo dei modelli](../../functionality/destination-server/message-format.md#using-templating). </li><li> Per ulteriori informazioni sull’escape di caratteri, consulta [RFC JSON standard, sezione sette](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++Risposta
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con i dettagli della configurazione del server di destinazione appena creata.
+
++++
 
 >[!ENDTABS]
 
