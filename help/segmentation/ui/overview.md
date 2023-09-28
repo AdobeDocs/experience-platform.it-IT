@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
 workflow-type: tm+mt
-source-wordcount: '3610'
+source-wordcount: '3781'
 ht-degree: 3%
 
 ---
@@ -62,37 +62,9 @@ Per ulteriori informazioni, visita [guida della dashboard di audiences](../../da
 >title="Aggiungi tutti i tipi di pubblico alla pianificazione"
 >abstract="Abilita questa opzione per includere tutti i tipi di pubblico valutati utilizzando la segmentazione in batch nell’aggiornamento pianificato giornaliero. Disabilita questa opzione per rimuovere tutti i tipi di pubblico dall’aggiornamento pianificato."
 
-Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutti i tipi di pubblico per la tua organizzazione.
+Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutti i tipi di pubblico per la tua organizzazione. Questa vista elenca informazioni sui tipi di pubblico, tra cui il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
 
 ![Viene visualizzata la schermata Sfoglia. Viene visualizzato un elenco di tutti i tipi di pubblico appartenenti all’organizzazione.](../images/ui/overview/audience-browse.png)
-
-Questa vista elenca informazioni sui tipi di pubblico, tra cui il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
-
-Puoi aggiungere altri campi a questa visualizzazione selezionando ![icona attributo filtro](../images/ui/overview/filter-attribute.png). Questi campi aggiuntivi includono lo stato del ciclo di vita, la frequenza di aggiornamento, l’ultimo aggiornamento di, la descrizione, creato da ed etichette di accesso.
-
-| Campo | Descrizione |
-| ----- | ----------- |
-| [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
-| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
-| [!UICONTROL Creato] | La data e l’ora in UTC in cui è stato creato il pubblico. |
-| [!UICONTROL Ultimo aggiornamento] | La data e l’ora, in UTC, in cui il pubblico è stato aggiornato l’ultima volta. |
-| [!UICONTROL Tag] | I tag definiti dall’utente che appartengono al pubblico. Ulteriori informazioni su questi tag sono disponibili nella sezione [sezione sui tag](#tags). |
-| [!UICONTROL Suddividi] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
-| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
-| [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono `On Demand` (Lotto) `Scheduled` (Streaming) e `Continuous` (Bordo). |
-| [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
-| [!UICONTROL Descrizione] | Descrizione del pubblico. |
-| [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
-| [!UICONTROL Etichette di accesso] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta di come gestire i dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-
-Se è selezionato il raggruppamento, la visualizzazione mostra un grafico a barre che illustra la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato], [!UICONTROL Esistente], e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella [!UICONTROL Sfoglia] Questa è la suddivisione più accurata dello stato di definizione del segmento. Se questo numero è diverso da quello riportato sulla [!UICONTROL Panoramica] , è necessario utilizzare i numeri della scheda [!UICONTROL Sfoglia] come fonte corretta di informazioni, poiché il [!UICONTROL Panoramica] i numeri di tabulazione vengono aggiornati solo una volta al giorno.
-
-| Stato | Descrizione |
-| ------ | ----------- |
-| [!UICONTROL Realizzato] | Numero di profili che **qualificato** per il segmento nelle ultime 24 ore dall’esecuzione dell’ultimo processo di segmentazione batch. |
-| [!UICONTROL Esistente] | Numero di profili che **rimasto** nel segmento nelle ultime 24 ore dall’esecuzione dell’ultimo processo di segmentazione batch. |
-| [!UICONTROL Uscita] | Numero di profili che **uscita** il segmento nelle ultime 24 ore dall’ultima esecuzione del processo di segmentazione batch. |
 
 Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Selezionando questa opzione viene visualizzato un elenco delle azioni rapide disponibili per il pubblico. Questo elenco di azioni è diverso in base all’origine del pubblico.
 
@@ -110,8 +82,13 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | Applica etichette di accesso | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
 | Archivia | Caricamento personalizzato | Archivia il pubblico selezionato. |
 | Elimina | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
+| Aggiungi al pacchetto | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di spostare il pubblico tra sandbox diverse. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Nella parte superiore della pagina sono presenti opzioni che consentono di aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico e crearne uno nuovo.
+>[!NOTE]
+>
+> Lo farai **non** essere in grado di eliminare un pubblico utilizzato in un’attivazione di destinazione.
+
+Nella parte superiore della pagina sono presenti opzioni per aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico, creare un nuovo pubblico e visualizzare un raggruppamento della frequenza di aggiornamento.
 
 Attivazione/disattivazione **[!UICONTROL Pianifica tutti i tipi di pubblico]** abiliterà la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [sezione segmentazione pianificata di questa guida utente](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ Selezione **[!UICONTROL Creare un pubblico]** ti consente di creare un pubblico.
 
 ![Viene evidenziata la barra di navigazione superiore nella pagina di navigazione del pubblico. Questa barra contiene un pulsante per creare un pubblico e un pulsante per importare un pubblico.](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> Lo farai **non** essere in grado di eliminare un pubblico utilizzato in un’attivazione di destinazione.
+Puoi selezionare **[!UICONTROL Aggiorna riepilogo frequenza]** per visualizzare un grafico a torta che mostra la frequenza di aggiornamento.
+
+![Viene evidenziato il pulsante Aggiorna riepilogo frequenza.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico in base alla frequenza di aggiornamento. Il grafico mostra il numero totale di tipi di pubblico al centro. Se passi il cursore del mouse sulle diverse parti del pubblico, viene visualizzato il numero di tipi di pubblico che appartengono a ciascun tipo di frequenza di aggiornamento.
+
+![Viene visualizzato il grafico a torta della frequenza di aggiornamento.](../images/ui/overview/update-frequency-chart.png)
+
+### Personalizza {#customize}
+
+È possibile aggiungere ulteriori campi al [!UICONTROL Sfoglia] pagina selezionando ![icona attributo filtro](../images/ui/overview/filter-attribute.png). Questi campi aggiuntivi includono lo stato del ciclo di vita, la frequenza di aggiornamento, l’ultimo aggiornamento di, la descrizione, creato da ed etichette di accesso.
+
+| Campo | Descrizione |
+| ----- | ----------- |
+| [!UICONTROL Nome] | Il nome del pubblico. |
+| [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
+| [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
+| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Bordo], e [!UICONTROL Non pianificato]. |
+| [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
+| [!UICONTROL Creato] | La data e l’ora in UTC in cui è stato creato il pubblico. |
+| [!UICONTROL Ultimo aggiornamento] | La data e l’ora, in UTC, in cui il pubblico è stato aggiornato l’ultima volta. |
+| [!UICONTROL Tag] | I tag definiti dall’utente che appartengono al pubblico. Ulteriori informazioni su questi tag sono disponibili nella sezione [sezione sui tag](#tags). |
+| [!UICONTROL Descrizione] | Descrizione del pubblico. |
+| [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
+| [!UICONTROL Etichette di accesso] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta di come gestire i dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Suddividi] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
+
+Se è selezionato il raggruppamento, la visualizzazione mostra un grafico a barre che illustra la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato], [!UICONTROL Esistente], e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella [!UICONTROL Sfoglia] Questa è la suddivisione più accurata dello stato di definizione del segmento. Se questo numero è diverso da quello riportato sulla [!UICONTROL Panoramica] , è necessario utilizzare i numeri della scheda [!UICONTROL Sfoglia] come fonte corretta di informazioni, poiché il [!UICONTROL Panoramica] i numeri di tabulazione vengono aggiornati solo una volta al giorno.
+
+| Stato | Descrizione |
+| ------ | ----------- |
+| [!UICONTROL Realizzato] | Numero di profili che **qualificato** per il segmento nelle ultime 24 ore dall’esecuzione dell’ultimo processo di segmentazione batch. |
+| [!UICONTROL Esistente] | Numero di profili che **rimasto** nel segmento nelle ultime 24 ore dall’esecuzione dell’ultimo processo di segmentazione batch. |
+| [!UICONTROL Uscita] | Numero di profili che **uscita** il segmento nelle ultime 24 ore dall’ultima esecuzione del processo di segmentazione batch. |
+
+Dopo aver selezionato i campi da visualizzare, è possibile ridimensionare anche la larghezza delle colonne visualizzate. Per eseguire questa operazione, trascina l’area tra le colonne oppure seleziona la ![icona freccia](../images/ui/overview/arrow-icon.png) della colonna da ridimensionare, seguita da **[!UICONTROL Ridimensiona colonna]**.
+
+![Viene evidenziato il pulsante Ridimensiona colonna.](../images/ui/overview/browse-audience-resize-column.png)
 
 ### Filtraggio, cartelle e assegnazione tag {#manage-audiences}
 
@@ -378,7 +391,7 @@ Viene visualizzato un popover che elenca tutti i campi che possono essere visual
 | [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
 | [!UICONTROL Creato] | L’ora e la data di creazione del pubblico. |
 | [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
-| [!UICONTROL Aggiornamento dei bundle  ] | Ora e data dell’ultimo aggiornamento del pubblico. |
+| [!UICONTROL Aggiornata] | Ora e data dell’ultimo aggiornamento del pubblico. |
 | [!UICONTROL Aggiornato da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
 
 Per visualizzare la modalità di composizione del pubblico, seleziona il nome di un pubblico all’interno del [!UICONTROL Tipi di pubblico] scheda.
