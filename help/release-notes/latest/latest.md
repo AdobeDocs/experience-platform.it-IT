@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -20,9 +20,14 @@ Nuove funzioni di Adobe Experience Platform:
 Aggiornamenti alle funzioni esistenti in Experience Platform:
 
 - [Avvisi](#alerts)
+- [Dashboard](#dashboards)
 - [Raccolta dati](#data-collection)
+- [Governance dei dati](#data-governance)
+- [Igiene dei dati](#hygiene)
 - [Destinazioni](#destinations)
+- [Experience Data Model (XDM)](#xdm)
 - [Identity Service](#identity-service)
+- [Servizio query](#query-service)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
@@ -44,6 +49,18 @@ Un Experience Platform consente di abbonarti agli avvisi basati su eventi per va
 
 Per ulteriori informazioni sugli avvisi, consulta la sezione [[!DNL Observability Insights] panoramica](../../observability/home.md).
 
+## Dashboard {#dashboards}
+
+Adobe Experience Platform offre più [!DNL dashboards] attraverso cui è possibile visualizzare informazioni importanti sui dati dell&#39;organizzazione, acquisite durante le istantanee giornaliere.
+
+| Funzione | Descrizione |
+| --- | --- |
+| [Miglioramento della dashboard di utilizzo delle licenze](../../dashboards/guides/license-usage.md) | Mantenere il controllo dei contratti di licenza con rapporti migliorati e visualizzazioni delle metriche chiave relative all’utilizzo delle licenze della tua organizzazione. Questi miglioramenti forniscono un elevato grado di granularità sulle metriche di utilizzo della licenza per tutti i prodotti di Experience Platform acquistati. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sul dashboard utilizzo licenze, vedere [panoramica del dashboard utilizzo licenze](../../dashboards/guides/destinations.md).
+
 ## Raccolta dati {#data-collection}
 
 Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
@@ -58,6 +75,35 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla raccolta dati](../../tags/home.md).
+
+## Governance dei dati {#data-governance}
+
+La governance dei dati di Adobe Experience Platform è una serie di strategie e tecnologie utilizzate per gestire i dati della clientela e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di accesso ai dati e controllo degli accessi ai dati per le azioni di marketing.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Nuove etichette per ecosistemi partner per dati di terze parti | Sono disponibili nuove etichette di utilizzo dei dati per l’arricchimento e la ricerca di terze parti. Consulta la [documentazione sulle etichette dell’ecosistema partner](../../data-governance/labels/reference.md#partner) per ulteriori informazioni. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulla governance dei dati, consulta la [panoramica sulla governance dei dati](../../data-governance/home.md).
+
+## Igiene dei dati {#hygiene}
+
+Experienci Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando [!UICONTROL Ciclo di vita dei dati] nell’interfaccia utente o tramite le chiamate all’API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Utilizza queste funzionalità per garantire che le informazioni vengano utilizzate come previsto, aggiornate quando è necessario correggere i dati errati e eliminate quando i criteri organizzativi lo ritengono necessario.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni avanzate di gestione del ciclo di vita dei dati in Adobe Experience Platform: Scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatizzata dei set di dati, puoi eliminare interi set di dati e impostare una data e un’ora per il set di dati da eliminare.<br>L’eliminazione dei record ti consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Consulta la [Documentazione sull’eliminazione dei record](../../hygiene/ui/record-delete.md) per ulteriori informazioni |
+| Scadenze set di dati | Riduci al minimo i dati e tieni sotto controllo i contratti di licenza con Scadenza set di dati automatica. Riduci i volumi di dati eliminando interi set di dati e imposta una data e un’ora per l’eliminazione del set di dati. Consulta la [documentazione sulle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md) per ulteriori informazioni. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulle funzionalità di igiene dei dati di Platform, consulta [panoramica sull’igiene dei dati](../../hygiene/home.md).
 
 ## Destinazioni {#destinations}
 
@@ -98,6 +144,23 @@ Add these to release notes as they go out
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
+## Experience Data Model (XDM) {#xdm}
+
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
+
+**Nuove funzioni**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Azioni rapide aggiunte all’Editor di schema | Sono state aggiunte nuove azioni rapide all’area di lavoro dell’editor di schemi. Ora puoi copiare la struttura JSON o eliminare lo schema direttamente dall’editor.<br>![Le azioni rapide nell’Editor di schema.](../2023/assets/schema-editor-copy-json.png "Editor schemi con Altro e Copia in JSON evidenziati."){width="100" zoomable="yes"} |
+| Filtrare le risorse XDM per creatore personalizzato o standard | Gli elenchi di schemi, gruppi di campi, tipi di dati e classi disponibili ora sono prefiltrati in base al loro metodo di creazione. Questo consente di filtrare le risorse in base al fatto che siano state create o create dall’Adobe.<br>![I filtri Standard e Personalizzati nell’area di lavoro Schemi.](../2023/assets/standard-and-custom-classes.png "Nell’area di lavoro Schemi sono evidenziati i filtri Standard e Personalizzato."){width="100" zoomable="yes"} <br> Consulta la [creare e modificare la documentazione delle risorse](../../xdm/ui/resources/classes.md#filter.md) per ulteriori informazioni. |
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| È stato aggiornato il flusso di lavoro per la creazione dello schema | È stato implementato un nuovo flusso di lavoro per la creazione di schemi per semplificare il processo. <br> ![La nuova interfaccia utente per la creazione dello schema.](../2023/assets/schema-class-options.png "Il selettore dei dettagli del nuovo schema è evidenziato."){width="100" zoomable="yes"} <br> Consulta la [documentazione sulla creazione di schemi](../../xdm/ui/resources/schemas.md#create) per ulteriori informazioni. |
+
 ## Identity Service {#identity-service}
 
 Adobe Experience Platform Identity Service offre una panoramica completa della clientela e del relativo comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali ed efficaci in tempo reale.
@@ -112,6 +175,21 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servizio Identity](../../identity-service/home.md).
+
+## Servizio query {#query-service}
+
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
+
+**Funzioni aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Registra aggiornamenti interfaccia utente filtro | Il filtro migliorato dei registri di query migliora la visibilità dei registri generati dagli utenti per il monitoraggio, l’amministrazione e la risoluzione dei problemi. Puoi filtrare l’elenco dei registri di query in base a diverse impostazioni. <br> ![Impostazioni del filtro del registro query.](../2023/assets/log-filter-settings.png "Vengono evidenziati i nuovi filtri del registro delle query."){width="100" zoomable="yes"}  <br> Consulta la [documentazione dei registri di query](../../query-service/ui/query-logs.md#filter-logs) per ulteriori informazioni. |
+| Più aggiornamenti dell’interfaccia utente dell’editor delle query | È ora possibile eseguire più query sequenziali nell’editor delle query oppure scrivere più query ed eseguire tutte le query in modo sequenziale. Per aggiungere maggiore flessibilità all’esecuzione della query, puoi evidenziare la query scelta e selezionare quella specifica query da eseguire indipendentemente dalle altre. Consulta la [Guida dell’interfaccia utente di Query Editor](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) per ulteriori informazioni. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
