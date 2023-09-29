@@ -1,26 +1,22 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;
-title: (Beta) Creare un’esecuzione del flusso per l’acquisizione su richiesta utilizzando l’API del servizio Flusso
-description: Questo tutorial illustra i passaggi necessari per creare un’esecuzione del flusso per l’acquisizione on-demand tramite l’API del servizio Flow
+title: Creare un’esecuzione del flusso per l’acquisizione su richiesta utilizzando l’API del servizio Flusso
+description: Scopri come creare un’esecuzione del flusso per l’acquisizione on-demand utilizzando l’API del servizio Flusso
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 795b1af6421c713f580829588f954856e0a88277
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
 
-# (Beta) Crea un’esecuzione del flusso per l’acquisizione su richiesta utilizzando [!DNL Flow Service] API
-
->[!IMPORTANT]
->
->L’acquisizione on-demand è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. Le funzionalità descritte in questa documentazione sono soggette a modifiche.
+# Crea un’esecuzione del flusso per l’acquisizione su richiesta utilizzando [!DNL Flow Service] API
 
 Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso. Ad esempio, se un flusso è pianificato per essere eseguito ogni ora alle 9:00, alle 10:00 e alle 11:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
 L’acquisizione su richiesta consente di creare un flusso eseguito su un determinato flusso di dati. Questo consente agli utenti di creare un’esecuzione del flusso, basata su parametri specifici, e un ciclo di acquisizione, senza token di servizio. Il supporto per l’acquisizione su richiesta è disponibile solo per le origini batch.
 
-Questa esercitazione illustra i passaggi per utilizzare l’acquisizione on-demand e creare un’esecuzione di flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questa esercitazione descrive i passaggi per utilizzare l’acquisizione on-demand e creare un’esecuzione di flusso utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -83,9 +79,9 @@ curl -X POST \
 | Parametro | Descrizione |
 | --- | --- |
 | `flowId` | ID del flusso su cui verrà creata l’esecuzione del flusso. |
-| `params.startTime` | Numero intero che definisce l&#39;ora di inizio dell&#39;esecuzione. Il valore è rappresentato nel tempo dell&#39;epoca unix. |
-| `params.windowStartTime` | Numero intero che definisce l&#39;ora di inizio della finestra durante la quale devono essere estratti i dati. Il valore è rappresentato nel tempo Unix. |
-| `params.windowEndTime` | Numero intero che definisce l&#39;ora di fine della finestra durante la quale devono essere estratti i dati. Il valore è rappresentato nel tempo Unix. |
+| `params.startTime` | L’ora programmata di inizio dell’esecuzione del flusso su richiesta. Questo valore è rappresentato nel tempo unix. |
+| `params.windowStartTime` | La prima data e ora da cui verranno recuperati i dati. Questo valore è rappresentato nel tempo unix. |
+| `params.windowEndTime` | La data e l’ora in cui i dati verranno recuperati. Questo valore è rappresentato nel tempo unix. |
 | `params.deltaColumn` | La colonna delta è necessaria per partizionare i dati e separare i dati appena acquisiti da quelli storici. **Nota**: Il `deltaColumn` è necessario solo durante la creazione della prima esecuzione del flusso. |
 | `params.deltaColumn.name` | Nome della colonna delta. |
 
@@ -165,9 +161,9 @@ curl -X POST \
 | Parametro | Descrizione |
 | --- | --- |
 | `flowId` | ID del flusso su cui verrà creata l’esecuzione del flusso. |
-| `params.startTime` | Numero intero che definisce l&#39;ora di inizio dell&#39;esecuzione. Il valore è rappresentato nel tempo dell&#39;epoca unix. |
-| `params.windowStartTime` | Numero intero che definisce l&#39;ora di inizio della finestra durante la quale devono essere estratti i dati. Il valore è rappresentato nel tempo Unix. |
-| `params.windowEndTime` | Numero intero che definisce l&#39;ora di fine della finestra durante la quale devono essere estratti i dati. Il valore è rappresentato nel tempo Unix. |
+| `params.startTime` | L’ora programmata di inizio dell’esecuzione del flusso su richiesta. Questo valore è rappresentato nel tempo unix. |
+| `params.windowStartTime` | La prima data e ora da cui verranno recuperati i dati. Questo valore è rappresentato nel tempo unix. |
+| `params.windowEndTime` | La data e l’ora in cui i dati verranno recuperati. Questo valore è rappresentato nel tempo unix. |
 
 **Risposta**
 
@@ -192,4 +188,4 @@ In caso di esito positivo, la risposta restituisce i dettagli della nuova esecuz
 
 ## Monitorare le esecuzioni del flusso
 
-Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l’API, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API ](./monitor.md). Per monitorare il flusso eseguito tramite l’interfaccia utente di Platform, consulta la guida su [monitoraggio dei flussi di dati di origine tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).
+Una volta creata l’esecuzione del flusso, puoi monitorare i dati che vengono acquisiti tramite di essa per visualizzare informazioni sulle esecuzioni del flusso, sullo stato di completamento e sugli errori. Per monitorare il flusso eseguito utilizzando l’API, consulta l’esercitazione su [monitoraggio dei flussi di dati nell’API](./monitor.md). Per monitorare il flusso eseguito tramite l’interfaccia utente di Platform, consulta la guida su [monitoraggio dei flussi di dati di origine tramite il dashboard di monitoraggio](../../../dataflows/ui/monitor-sources.md).

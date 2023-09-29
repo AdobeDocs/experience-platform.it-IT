@@ -1,10 +1,10 @@
 ---
 title: Acquisizione su richiesta per flussi di dati di origini nell’interfaccia utente
 description: Scopri come creare flussi di dati on-demand per le connessioni sorgente utilizzando l’interfaccia utente di Experienci Platform.
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -44,9 +44,9 @@ Configura la pianificazione dell’acquisizione on-demand. Seleziona la **[!UICO
 
 | Configurazione pianificazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Ora di inizio acquisizione] | L’ora di inizio pianificata in UTC di quando inizierà il flusso di dati su richiesta. |
-| [!UICONTROL Ora di inizio intervallo di date] | La data e l’ora di inizio da cui i dati verranno estratti. |
-| [!UICONTROL Ora di fine intervallo di date] | La data e l’ora di fine a partire dalle quali i dati verranno estratti. |
+| [!UICONTROL Ora di inizio acquisizione] | L’ora programmata di inizio dell’esecuzione del flusso su richiesta. |
+| [!UICONTROL Ora di inizio intervallo di date] | La prima data e ora da cui verranno recuperati i dati. |
+| [!UICONTROL Ora di fine intervallo di date] | La data e l’ora in cui i dati verranno recuperati. |
 
 Seleziona **[!UICONTROL Pianificazione]** e attendi alcuni istanti per l’attivazione del flusso di dati on-demand.
 
