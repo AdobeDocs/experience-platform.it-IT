@@ -6,7 +6,7 @@ feature: Catalog
 source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 22%
+ht-degree: 31%
 
 ---
 
@@ -25,14 +25,14 @@ ht-degree: 22%
    * [Eliminare un oggetto](api/delete-object.md)
    * [Creare un set di dati](api/create-dataset.md)
    * [Creare un batch](api/create-batch.md)
-   * [Etichette di utilizzo dati](api/labels.md)
+   * [Etichette di utilizzo dei dati](api/labels.md)
    * [Appendice](api/appendix.md)
 * Set di dati {#datasets}
-   * [Panoramica sui set di dati](datasets/overview.md)
+   * [Set di dati - Panoramica](datasets/overview.md)
    * [Guida utente sui set di dati](datasets/user-guide.md)
    * [Creare e popolare un set di dati utilizzando le API](datasets/create.md)
    * [Abilitare un set di dati per profilo e identità](datasets/enable-for-profile.md)
    * [Abilitare un set di dati per gli aggiornamenti del profilo (upsert)](datasets/enable-upsert.md)
 * [Elaborazione della richiesta di accesso a dati personali nel Data Lake](privacy.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

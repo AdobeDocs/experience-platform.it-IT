@@ -6,19 +6,19 @@ exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1082'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
 # Panoramica dell’edizione B2B di Real-time Customer Data Platform
 
-Basata su Adobe Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition è progettata appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Raccoglie dati da più origini e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono agli addetti al marketing di rivolgersi con precisione a tipi di pubblico specifici e di coinvolgerli in tutti i canali disponibili.
+Basata su Adobe Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition è progettata appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Raccoglie dati da più origini e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono ai marketer di rivolgersi con precisione a tipi di pubblico specifici e di coinvolgerli in tutti i canali disponibili.
 
 Sono stati apportati miglioramenti a diverse funzionalità di Adobe Experience Platform che distinguono Real-Time CDP B2B Edition dalla sua controparte B2C. Includono miglioramenti all’Experience Data Model (XDM) per i casi d’uso B2B, aggiornamenti alla risoluzione delle identità e alla segmentazione dei profili, nonché un connettore e una destinazione personalizzati per [!DNL Marketo Engage]. Il [!DNL Marketo] Il connettore consente ai brand B2B di collegare i dati del coinvolgimento B2B leader del settore con informazioni comportamentali per sviluppare lead e migliorare le operazioni di marketing basate sull’account.
 
 Con Real-Time CDP B2B Edition è possibile:
 
-* Combina i dati raccolti da più origini in un’unica vista per creare profili olistici di persone e account.
+* Combina dati raccolti da più origini in un’unica vista per creare profili olistici di persone e account.
 * Arricchisci, segmenta ed esporta tutti i dati provenienti da più origini da un archivio centralizzato di profili di account unificati.
 * Gestisci i tuoi dati utilizzando gli strumenti di governance dei dati disponibili in ogni fase del processo di centralizzazione per garantire la conformità dei tuoi dati alle normative e alle politiche aziendali.
 

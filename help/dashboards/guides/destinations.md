@@ -241,7 +241,7 @@ Seleziona **[!UICONTROL Tipi di pubblico]** per passare al dashboard Tipi di pub
 >title="Integrità del pubblico mappato"
 >abstract="Questo widget fornisce un elenco di massimo 20 tipi di pubblico mappati, il cui conteggio totale di profili si discosta di almeno un fattore di deviazione standard dalla dimensione media del pubblico mappata a tale destinazione nei 30 giorni. Fornisce una metrica calcolata per la dispersione delle dimensioni del pubblico dalla media degli ultimi 30 giorni. Le dimensioni del pubblico sono in ordine decrescente."
 
-Il widget fornisce un elenco di fino a 20 tipi di pubblico mappati i cui conteggi totali dei profili, all’ultima istantanea giornaliera, si discostano di un fattore di almeno una deviazione standard dalla dimensione media del pubblico di 30 giorni mappata a quella destinazione.
+Il widget fornisce un elenco di un massimo di 20 tipi di pubblico mappati i cui conteggi totali dei profili, all’ultima istantanea giornaliera, si discostano di un fattore di almeno una deviazione standard dalla dimensione media del pubblico di 30 giorni mappata a quella destinazione.
 
 In breve, fornisce una metrica calcolata per la dispersione delle dimensioni del pubblico dalla media negli ultimi 30 giorni. Confronta se la dimensione del pubblico di oggi è al di fuori della deviazione standard storica osservata nei dati degli ultimi 30 giorni.
 

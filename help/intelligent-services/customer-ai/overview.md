@@ -3,7 +3,7 @@ keywords: Experience Platform;panoramica;ia clienti;argomenti popolari;panoramic
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Panoramica di Customer AI
-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 short-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
@@ -23,7 +23,7 @@ Con l’aiuto di fattori di influenza, IA per l’analisi dei clienti può dirti
 
 ## Informazioni su Customer AI
 
-Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 IA per l’analisi dei clienti è progettata per:
 
@@ -34,7 +34,7 @@ IA per l’analisi dei clienti è progettata per:
 - Migliora i profili dei clienti con fattori influenti per i punteggi di tendenza.
 - Crea segmenti di clienti in base a fattori influenti e punteggi di propensione.
 
-Il cliente non è stato creato per:
+Il cliente non è progettato per:
 
 - IA per l’analisi dei clienti non deve essere utilizzata per prevedere i prezzi dinamici o il punto di prezzo in cui il cliente effettuerà un acquisto.
 - IA per l’analisi dei clienti non è in grado di determinare se la consegna di un’offerta aumenterà le probabilità del cliente di acquistare un articolo. Anche se puoi decidere di inviare offerte di sconto in base ai punteggi di tendenza, non è necessariamente il modo migliore per convertire questi clienti.

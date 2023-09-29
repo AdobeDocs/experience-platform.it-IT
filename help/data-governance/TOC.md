@@ -7,7 +7,7 @@ feature: Data Governance
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '97'
-ht-degree: 40%
+ht-degree: 48%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 40%
 
 * [Panoramica sulla governance dei dati](home.md)
 * [Guida completa](./e2e.md)
-* Etichette di utilizzo dati {#labels}
+* Etichette di utilizzo dei dati {#labels}
    * [Panoramica](labels/overview.md)
    * [Glossario delle etichette](labels/reference.md)
    * [Gestire le etichette nell’interfaccia utente](labels/user-guide.md)
@@ -37,4 +37,4 @@ ht-degree: 40%
    * [Azioni di marketing](api/marketing-actions.md)
    * [Valutazione](api/evaluation.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

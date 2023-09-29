@@ -157,7 +157,7 @@ Ad esempio, per acquisire i dati CRM di Luma, filtra il catalogo per *CRM* e tut
 
    Ad esempio, seleziona **[!UICONTROL Contatti]**. Viene caricata automaticamente un&#39;anteprima dei dati dei contatti, in modo da poter verificare che l&#39;aspetto sia quello previsto.
 
-   Adobe Experience Platform consente di svolgere gran parte del lavoro manuale con la mappatura automatica dei campi standard in [!DNL Experience Data Model] Schema del profilo (XDM).
+   Adobe Experience Platform consente di eseguire molte operazioni manuali eseguendo la mappatura automatica dei campi standard su [!DNL Experience Data Model] Schema del profilo (XDM).
 
 1. Controlla le mappature dei campi.
 
@@ -203,7 +203,7 @@ Le potenti funzionalità di segmentazione di Adobe Experience Platform consenton
 
 <!-- ![image](assets/luma-segments.png) -->
 
-In questo scenario, le recenti interazioni di Sarah sul sito mostrano un comportamento diverso dalle sue azioni passate. Lei di solito compra abbigliamento da donna. Tuttavia, l’articolo nel suo carrello è una felpa grande da uomo.
+In questo scenario, le recenti interazioni di Sarah sul sito mostrano un comportamento diverso dalle sue azioni passate. Lei di solito compra abbigliamento da donna. Tuttavia, l&#39;oggetto nel suo carrello è una felpa grande da uomo.
 
 Il team di Data Science di Luma ha creato modelli sulla propensione all’acquisto. Un modello identifica un cambiamento improvviso nella categoria di abbigliamento (come uomini/donne) o nelle dimensioni per il consumatore esistente. Il cambiamento nel comportamento d&#39;acquisto di Sarah fa pensare che non stia facendo acquisti per se stessa.
 
@@ -244,8 +244,7 @@ Qui vediamo tutte le destinazioni disponibili per l’invio di questa destinazio
 In questo scenario, Luma desidera eseguire il retargeting del pubblico con la personalizzazione tra queste destinazioni:
 
 * Google, per la visualizzazione
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, per e-mail
 
 <!-- ![image](assets/luma-sched-dest.png) -->

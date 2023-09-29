@@ -1,5 +1,5 @@
 ---
-title: Note sulla versione di Adobe Experience Platform Debugger
+title: Note sulla versione di Adobi Experience Platform Debugger
 description: Note aggiornate sulla versione di Adobe Experience Platform Debugger.
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 ---
 
-# Note sulla versione di Adobe Experience Platform Debugger
+# Note sulla versione di Adobi Experience Platform Debugger
 
 ## Versione 1.4.0 - 3 ottobre 2022
 
@@ -64,4 +64,4 @@ ht-degree: 2%
 
 ## Versione 1.0.0 del 5 maggio 2021
 
-* Prima versione principale di Experience Platform Debugger. Destinato a sostituire il Experience Cloud Debugger.
+* Prima versione principale di Experienci Platform Debugger. Destinato a sostituire il Experience Cloud Debugger.

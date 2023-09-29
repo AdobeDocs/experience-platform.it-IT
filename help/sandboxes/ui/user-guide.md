@@ -51,7 +51,7 @@ Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla s
 >
 >Quando crei una nuova sandbox, devi prima aggiungerla al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di iniziare a utilizzare la nuova sandbox. Consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md) per informazioni su come effettuare il provisioning di una sandbox per un profilo di prodotto.
 
-Il video seguente offre una rapida panoramica sull’utilizzo delle Sandbox in Experience Platform.
+Il video seguente offre una rapida panoramica sull’utilizzo delle Sandbox in Experienci Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
@@ -138,4 +138,4 @@ Nella finestra di conferma finale, immetti il nome della sandbox nella finestra 
 
 ## Passaggi successivi
 
-Questo documento illustra come gestire le sandbox nell’interfaccia utente di Experience Platform. Per informazioni su come gestire le sandbox utilizzando l’API Sandbox, consulta [guida per gli sviluppatori sulle sandbox](../api/getting-started.md).
+Questo documento illustra come gestire le sandbox nell’interfaccia utente di Experienci Platform. Per informazioni su come gestire le sandbox utilizzando l’API Sandbox, consulta [guida per gli sviluppatori sulle sandbox](../api/getting-started.md).

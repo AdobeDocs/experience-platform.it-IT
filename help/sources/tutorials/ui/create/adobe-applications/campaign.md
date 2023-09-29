@@ -19,7 +19,7 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di orig
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../../../home.md): Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [Sandbox](../../../../../sandboxes/home.md): Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
@@ -88,7 +88,7 @@ Per utilizzare un nuovo set di dati, seleziona **[!UICONTROL Nuovo set di dati]*
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per iscriverti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle origini tramite l’interfaccia utente](../../alerts.md).
 
-Una volta completati i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![Una selezione di diversi tipi di avviso che è possibile abilitare per il flusso di dati.](../../../../images/tutorials/create/campaign/alerts.png)
 

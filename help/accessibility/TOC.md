@@ -5,7 +5,7 @@ user-guide-description: Scopri come, con Experience Platform, ci impegniamo a fo
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 58%
+ht-degree: 66%
 
 ---
 
@@ -15,6 +15,6 @@ ht-degree: 58%
 * [Panoramica sull’accessibilità](home.md)
 * [Funzioni di accessibilità](features.md)
 * [Accessibilità personalizzata per Platform](custom.md)
-* [Documentazione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [Documentazione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform.html?lang=it)
 * [Panoramica della piattaforma](https://www.adobe.com/go/platform-overview-en)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

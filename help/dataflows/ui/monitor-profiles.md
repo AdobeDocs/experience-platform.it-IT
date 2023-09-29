@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;monitorare i profili;monitorare i flussi di dati;flusso di dati;profilo;profilo cliente in tempo reale;
-description: Real-Time Customer Profile consente di visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con i profili utilizzando l’interfaccia utente di Experience Platform.
+description: Real-Time Customer Profile consente di visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con i profili utilizzando l’interfaccia utente di Experienci Platform.
 title: Monitorare i flussi di dati per i profili nell’interfaccia utente
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Real-Time Customer Profile consente di visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
-La dashboard di monitoraggio offre una rappresentazione visiva dell’attività dei dati all’interno di Profilo, incluso lo stato dei Profili dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare i profili dei dati utilizzando l’interfaccia utente di Experience Platform, che consente di tenere traccia dello stato di elaborazione del profilo.
+La dashboard di monitoraggio offre una rappresentazione visiva dell’attività dei dati all’interno di Profilo, incluso lo stato dei Profili dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare i profili dei dati utilizzando l’interfaccia utente di Experienci Platform, che consente di tenere traccia dello stato di elaborazione del profilo.
 
 ## Introduzione {#getting-started}
 

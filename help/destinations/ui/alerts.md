@@ -95,7 +95,7 @@ Gli avvisi per i flussi di dati vengono inviati anche via e-mail. Seleziona il n
 
 ![Schermata di un messaggio e-mail di avviso](../assets/ui/alerts/email.png)
 
-Analogamente all’avviso dell’interfaccia utente, il [!UICONTROL Panoramica sull’esecuzione del flusso di dati] viene visualizzata una pagina, che offre un’interfaccia per esaminare eventuali errori associati al flusso di dati.
+Analogamente all’avviso dell’interfaccia utente, il [!UICONTROL Panoramica sull’esecuzione del flusso di dati] viene visualizzata una pagina, che offre un’interfaccia per analizzare eventuali errori associati al flusso di dati.
 
 ![panoramica del flusso di dati](../assets/ui/alerts/dataflow-overview.png)
 

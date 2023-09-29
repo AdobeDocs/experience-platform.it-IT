@@ -7,7 +7,7 @@ user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgent
 source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 88%
+ht-degree: 96%
 
 ---
 
@@ -68,8 +68,8 @@ ht-degree: 88%
    * Casi di utilizzo di ricoinvolgimento intelligente {#intelligent-re-engagement}
       * [Coinvolgi di nuovo i tuoi clienti in modo intelligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Casi d’uso dei dati partner {#partner-data}
-      * [Coinvolgi e acquisisci nuovi clienti tramite il supporto di ricerca di potenziali clienti](/help/rtcdp/partner-data/prospecting.md)
+      * [Coinvolgi e acquisisci nuovi clienti tramite il supporto del prospecting](/help/rtcdp/partner-data/prospecting.md)
       * [Integrare i profili di prime parti con gli attributi forniti dai partner](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Utilizzare il riconoscimento dei visitatori supportato dai partner per personalizzare le esperienze nel sito](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Utilizzo del riconoscimento visitatori assistito dal partner per personalizzare le esperienze nel sito](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Note sulla versione di Experience Platform](https://www.adobe.com/go/platform-release-notes-it)
 * [Glossario di Experience Platform](https://www.adobe.com/go/platform-glossary-it)

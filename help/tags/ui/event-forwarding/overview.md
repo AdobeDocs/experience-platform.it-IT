@@ -53,7 +53,7 @@ Mentre i tag raccolgono i dati dell’evento direttamente dal sito o dall’appl
 
 ### Proprietà {#properties}
 
-L’inoltro degli eventi mantiene un proprio archivio di proprietà separate dai tag, che puoi visualizzare nell’interfaccia utente di Experience Platform o di Data Collection selezionando **[!UICONTROL Inoltro eventi]** nel menu di navigazione a sinistra.
+L’inoltro degli eventi mantiene un proprio archivio di proprietà separate dai tag, che puoi visualizzare nell’interfaccia utente di Experienci Platform o di Data Collection selezionando **[!UICONTROL Inoltro eventi]** nel menu di navigazione a sinistra.
 
 ![Proprietà di inoltro degli eventi nell’interfaccia utente di Data Collection](../../images/ui/event-forwarding/overview/properties.png)
 

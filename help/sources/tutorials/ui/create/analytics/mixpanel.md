@@ -41,7 +41,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *Analytics* categoria, seleziona [!DNL Mixpanel], quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *Analytics* categoria, seleziona [!DNL Mixpanel]e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![catalogo](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 

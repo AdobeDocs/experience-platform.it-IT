@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;monitorare gli account;monitorare i flussi di dati;flussi di dati;destinazioni
-description: Le destinazioni consentono di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experience Platform.
+description: Le destinazioni consentono di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
 solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
@@ -16,7 +16,7 @@ ht-degree: 10%
 
 Le destinazioni consentono di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni. Platform semplifica il processo di tracciamento del flusso di dati nelle destinazioni fornendo trasparenza con i flussi di dati.
 
-La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione in cui i dati vengono attivati. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experience Platform.
+La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione in cui i dati vengono attivati. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
 
 ## Introduzione {#getting-started}
 
@@ -85,7 +85,7 @@ Viene visualizzato un elenco di singole esecuzioni e delle relative metriche spe
 
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
-- **[!UICONTROL Avvio esecuzione flusso di dati]**: ora di inizio dell’esecuzione del flusso di dati. Per le esecuzioni di flussi di dati in streaming, Experience Platform acquisisce metriche basate sull’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Per le esecuzioni dei flussi di dati in streaming, se un flusso di dati è iniziato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
+- **[!UICONTROL Avvio esecuzione flusso di dati]**: ora di inizio dell’esecuzione del flusso di dati. Per le esecuzioni di flussi di dati in streaming, Experienci Platform acquisisce metriche basate sull’inizio dell’esecuzione del flusso di dati, sotto forma di metriche orarie. Per le esecuzioni dei flussi di dati in streaming, se un flusso di dati è iniziato, ad esempio, alle 22:30, la metrica mostra l’ora di inizio come 22:00 nell’interfaccia utente.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario all’elaborazione del flusso di dati.
    - Per **[!UICONTROL completato]** , la metrica del tempo di elaborazione mostra sempre un’ora.
    - Per le esecuzioni del flusso di dati che si trovano ancora in una **[!UICONTROL elaborazione]** state, la finestra per acquisire tutte le metriche rimane aperta per più di un’ora, per elaborare tutte le metriche che corrispondono all’esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta chiusa la finestra di elaborazione e aggiornato lo stato dell’esecuzione del flusso di dati a **completato**, il tempo di elaborazione visualizzato viene modificato in un’ora.
@@ -94,7 +94,7 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall’attivazione in base ad attributi mancanti e a violazioni del consenso.
 - **[!UICONTROL Identità non riuscite]** Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 - **[!UICONTROL Tasso di attivazione]**: percentuale di identità ricevute che sono state attivate correttamente o saltate. La formula seguente illustra come viene calcolato questo valore:
-   ![Formula del tasso di attivazione](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![Formula del tasso di attivazione](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Stato]**: rappresenta lo stato del flusso di dati: [!UICONTROL Completato] o [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che tutte le identità per l’esecuzione del flusso di dati corrispondente sono state esportate entro il periodo di un’ora. [!UICONTROL Elaborazione] significa che l’esecuzione del flusso di dati non è ancora terminata.
 
 Per visualizzare i dettagli di una particolare esecuzione del flusso di dati, seleziona l’ora di inizio dell’esecuzione dall’elenco.
@@ -169,9 +169,8 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 >[!NOTE]
 >
->- La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
+>- La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experienci Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni.
 >- Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinazioni, vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
-
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -261,7 +260,6 @@ Ad esempio, stai attivando un segmento denominato &quot;Membri fedeltà in Calif
 >Tieni presente le limitazioni correnti relative alle metriche a livello di segmento:
 >- La visualizzazione a livello di segmento è attualmente disponibile solo per le destinazioni batch.
 >- Le metriche a livello di segmento sono attualmente registrate solo per le esecuzioni riuscite del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi.
-
 
 ![Segmenti nel pannello dei flussi di dati](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 

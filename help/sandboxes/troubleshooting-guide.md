@@ -19,7 +19,7 @@ Le sandbox suddividono una singola istanza Platform in ambienti virtuali separat
 
 ## Che cos’è un sandbox?
 
-Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse di Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Per ulteriori informazioni, consulta la [panoramica delle sandbox](home.md).
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experienci Platform. Ogni sandbox mantiene la propria libreria indipendente di risorse di Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non influiscono su altre sandbox. Per ulteriori informazioni, consulta la [panoramica delle sandbox](home.md).
 
 ## Quali tipi di sandbox sono disponibili e quali sono le loro differenze? {#sandbox-types}
 
@@ -29,7 +29,7 @@ Le sandbox sono partizioni virtuali all’interno di una singola istanza di Expe
 >abstract="Il tipo di sandbox indica se si tratta di una sandbox di produzione o di sviluppo. Le sandbox di produzione includono dati in tempo reale; quelle di sviluppo vengono utilizzate a scopo di test e sviluppo."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=it#create" text="Creare una sandbox nell’interfaccia utente"
 
-In Experience Platform sono disponibili due tipi di sandbox:
+In Experienci Platform sono disponibili due tipi di sandbox:
 
 * **Sandbox di produzione**: una sandbox di produzione deve essere utilizzata con i profili nell’ambiente di produzione. Platform consente di creare più sandbox di produzione per fornire la funzionalità giusta per i dati, mantenendo al contempo l’isolamento operativo. Questa funzione consente di dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche distinte. Le sandbox di produzione supportano un volume di profili di produzione fino alla licenza [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di produzione autorizzate). Hai diritto a utilizzare il profilo medio concesso in licenza per ogni [!DNL Profile] (misurato cumulativamente in tutte le sandbox di produzione autorizzate).
 * **Sandbox di sviluppo**: una sandbox di sviluppo è una sandbox che può essere utilizzata esclusivamente per lo sviluppo e il test con profili non di produzione. Le sandbox di sviluppo supportano un volume di profili non di produzione fino al 10% del [!DNL Profile] impegno (misurato cumulativamente in tutte le sandbox di sviluppo autorizzate). Hai diritto a:
@@ -63,7 +63,7 @@ Puoi aggiornare il titolo di una sandbox di produzione. Tuttavia, non è possibi
 
 ## Quante sandbox di sviluppo posso avere?
 
-Experience Platform attualmente consente di attivare un massimo di 75 sandbox totali (produzione e sviluppo) all’interno di una singola organizzazione.
+Experienci Platform attualmente consente di attivare un massimo di 75 sandbox totali (produzione e sviluppo) all’interno di una singola organizzazione.
 
 Le sandbox di sviluppo supportano sia le funzionalità di ripristino che quelle di eliminazione.
 

@@ -7,7 +7,7 @@ feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 48%
+ht-degree: 51%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 48%
 # Controllo degli accessi {#access-control}
 
 * [Panoramica sul controllo degli accessi](home.md)
-* Controllo dell’accesso basato su attributi {#abac}
+* Controllo degli accessi basato su attributi {#abac}
    * [Panoramica](abac/overview.md)
    * [Guida completa](abac/end-to-end-guide.md)
    * Autorizzazioni {#permissions-ui}
@@ -45,4 +45,4 @@ ht-degree: 48%
    * [Visualizza criteri effettivi](api/effective-policies.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

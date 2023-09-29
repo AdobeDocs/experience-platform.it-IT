@@ -18,7 +18,7 @@ ht-degree: 32%
 - [Panoramica sullo spazio dei nomi delle identità](namespaces.md)
 - [Guardrail per i dati di identità](guardrails.md)
 - API del servizio Identity {#api}
-   - [Introduzione](api/getting-started.md)
+   - [Guida introduttuva](api/getting-started.md)
    - [Etichettare un campo come identità](api/label-identities.md)
    - [Elencare le identità del cluster](api/list-cluster-identites.md)
    - [Elencare la cronologia cluster di un&#39;identità](api/list-cluster-history.md)

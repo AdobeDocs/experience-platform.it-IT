@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;monitorare identità;monitorare flussi di dati;flussi di dati;identità;
-description: Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con le identità utilizzando l’interfaccia utente di Experience Platform.
+description: Adobe Experience Platform Identity Service offre una panoramica completa della clientela e del relativo comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali ed efficaci in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati con le identità utilizzando l’interfaccia utente di Experienci Platform.
 title: Monitorare i flussi di dati per le identità nell’interfaccia utente
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 7%
+ht-degree: 13%
 
 ---
 
 # Monitorare i flussi di dati per le identità nell’interfaccia utente
 
-Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale.
+Adobe Experience Platform Identity Service offre una panoramica completa della clientela e del relativo comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali ed efficaci in tempo reale.
 
-La dashboard di monitoraggio offre una rappresentazione visiva dell’attività dei dati all’interno delle identità, incluso lo stato delle identità dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare le identità dei dati utilizzando l’interfaccia utente di Experience Platform, che consente di tenere traccia dello stato di elaborazione dell’identità.
+La dashboard di monitoraggio offre una rappresentazione visiva dell’attività dei dati all’interno delle identità, incluso lo stato delle identità dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare le identità dei dati utilizzando l’interfaccia utente di Experienci Platform, che consente di tenere traccia dello stato di elaborazione dell’identità.
 
 ## Introduzione {#getting-started}
 

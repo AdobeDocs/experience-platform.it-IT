@@ -22,4 +22,4 @@ Unendo i dati di account provenienti da origini diverse, puoi iniziare a visuali
 
 ## Visualizzatore profilo account
 
-Con Real-Time CDP, B2B Edition, puoi utilizzare l’interfaccia utente di Experience Platform per visualizzare i profili dell’account e cercare account specifici utilizzando un ID account da un’origine aziendale connessa oppure immettendo direttamente i dettagli dell’origine. Per ulteriori informazioni su come visualizzare i profili dell’account nell’interfaccia utente di Platform, consulta la sezione [guida dell’interfaccia utente del profilo account](account-profile-ui-guide.md).
+Con Real-Time CDP, B2B Edition, puoi utilizzare l’interfaccia utente di Experienci Platform per visualizzare i profili dell’account e cercare account specifici utilizzando un ID account da un’origine aziendale connessa oppure immettendo direttamente i dettagli dell’origine. Per ulteriori informazioni su come visualizzare i profili dell’account nell’interfaccia utente di Platform, consulta la sezione [guida dell’interfaccia utente del profilo account](account-profile-ui-guide.md).

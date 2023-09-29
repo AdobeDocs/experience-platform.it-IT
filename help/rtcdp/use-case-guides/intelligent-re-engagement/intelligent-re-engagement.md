@@ -1,14 +1,14 @@
 ---
 title: Nuovo coinvolgimento intelligente
-description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
+description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente la clientela poco frequente.
 source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
-# Coinvolgi di nuovo i tuoi clienti in modo intelligente per tornare
+# Coinvolgi nuovamente i tuoi clienti con intelligenza, per farli tornare
 
 Coinvolgi nuovamente i clienti che hanno abbandonato una conversione prima di completarla in modo intelligente e responsabile. Coinvolgi i clienti inattivi attraverso esperienze anziché promemoria per migliorare la conversione e stimolare la crescita del valore del ciclo di vita del cliente.
 
@@ -26,7 +26,7 @@ Costruirai schemi, set di dati e tipi di pubblico mentre lavori su esempi di per
 
 ## Prerequisiti e pianificazione {#prerequisites-and-planning}
 
-Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai le seguenti funzionalità di Real-Time CDP ed elementi dell’interfaccia utente (elencati nell’ordine in cui verranno utilizzati). Verificare di disporre delle autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie per tutte queste aree o richiedere all&#39;amministratore di sistema di concedere le autorizzazioni necessarie.
+Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai le funzionalità di Real-Time CDP ed elementi dell’interfaccia utente seguenti (elencati nell’ordine in cui verranno utilizzati). Assicurati di disporre delle autorizzazioni di controllo degli accessi basate su attributi per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra i dati tra le diverse sorgenti di dati per alimentare la campagna. Questi dati vengono quindi utilizzati per creare i tipi di pubblico della campagna e far emergere elementi di dati personalizzati utilizzati nell’e-mail e nelle tessere delle promozioni web (ad esempio, nome o informazioni relative all’account). Il CDP viene utilizzato anche per attivare i tipi di pubblico tra e-mail e sul web (tramite [!DNL Adobe Target]).
    * [Schemi](/help/xdm/home.md)
@@ -87,7 +87,7 @@ Per completare ciascuno dei passaggi descritti nelle panoramiche di alto livello
 
 ### Funzionalità ed elementi dell’interfaccia utente che utilizzerai {#ui-functionality-and-elements}
 
-Dopo aver completato i passaggi per implementare il caso d’uso, utilizzerai le funzionalità Real-Time CDP e gli elementi dell’interfaccia utente elencati all’inizio del presente documento. Verificare di disporre delle autorizzazioni di controllo dell&#39;accesso basate su attributi necessarie per tutte queste aree o richiedere all&#39;amministratore di sistema di concedere le autorizzazioni necessarie.
+Dopo aver completato i passaggi per implementare il caso d’uso, utilizzerai le funzionalità Real-Time CDP e gli elementi dell’interfaccia utente elencati all’inizio del presente documento. Assicurati di disporre delle autorizzazioni di controllo degli accessi basate su attributi per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
 ### Creare una struttura di schema e specificare i gruppi di campi {#schema-design}
 
@@ -349,7 +349,7 @@ Per ulteriori informazioni su come creare una [set di dati](/help/catalog/datase
 
 >[!NOTE]
 >
->Simile al passaggio per creare uno schema, devi abilitare il set di dati per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull’abilitazione del set di dati per l’utilizzo in Real-Time Customer Profile, consulta [tutorial su come creare uno schema.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Simile al passaggio per creare uno schema, devi abilitare il set di dati per essere incluso nel Profilo cliente in tempo reale. Per ulteriori informazioni sull’abilitazione del set di dati per l’utilizzo nel Profilo cliente in tempo reale, consulta il [tutorial sulla creazione di uno schema.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
 ### Privacy, consenso e governance dei dati {#privacy-consent}
 

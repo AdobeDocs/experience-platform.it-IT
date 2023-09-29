@@ -42,9 +42,9 @@ Per ulteriori informazioni sul funzionamento dell’applicazione automatica in P
 
 ### Ereditarietà da controlli esportazione dati Adobe Audience Manager
 
-[!DNL Experience Platform] ha la possibilità di condividere segmenti con Adobe Audience Manager. Tutti i Controlli sull’esportazione dei dati applicati ai segmenti Audience Manager vengono tradotti in etichette equivalenti e le azioni di marketing riconosciute da [!DNL Experience Platform] Governance dei dati.
+[!DNL Experience Platform] ha la possibilità di condividere segmenti con Adobe Audience Manager. Tutti i Controlli sull’esportazione dei dati applicati ai segmenti Audienci Manager vengono tradotti in etichette equivalenti e le azioni di marketing riconosciute da [!DNL Experience Platform] Governance dei dati.
 
-Per informazioni sulla mappatura di specifici controlli sull’esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Platform], fare riferimento al [Documentazione di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Per informazioni sulla mappatura di specifici controlli sull’esportazione dei dati alle etichette di utilizzo dei dati in [!DNL Platform], fare riferimento al [Documentazione di Audienci Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 

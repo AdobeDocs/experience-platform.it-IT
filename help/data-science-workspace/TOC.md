@@ -8,7 +8,7 @@ solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 17%
+ht-degree: 19%
 
 ---
 
@@ -64,4 +64,4 @@ ht-degree: 17%
    * [Pianificazione dell’apprendimento automatico e del punteggio in un servizio (interfaccia utente)](models-recipes/schedule-models-ui.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

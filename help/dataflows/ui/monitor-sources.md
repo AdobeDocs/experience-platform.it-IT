@@ -18,7 +18,7 @@ ht-degree: 8%
 >
 >Origini di streaming, come [Origine API HTTP](../../sources/connectors/streaming/http.md) non sono attualmente supportati dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
-In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di fonti, analizzati all’interno di Experience Platform e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
+In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di fonti, analizzati all’interno di Experienci Platform e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
 
 La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati. Puoi utilizzare una vista di monitoraggio aggregata e passare verticalmente dal livello di origine a un flusso di dati e a un’esecuzione di flusso di dati, per visualizzare le metriche corrispondenti che contribuiscono al successo o all’errore di un flusso di dati. Puoi anche utilizzare la capacità di monitoraggio cross-service del dashboard di monitoraggio per monitorare il percorso di un flusso di dati da un’origine a [!DNL Identity Service], e a [!DNL Profile].
 
@@ -33,7 +33,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Sorgenti](../../sources/home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
 * [Servizio identità](../../identity-service/home.md): ottieni una visione migliore dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Visualizzazione di monitoraggio aggregato {#aggregated-monitoring-view}
 
@@ -69,7 +69,7 @@ I grafici sono attivati per impostazione predefinita e puoi disattivarli per esp
 
 | Acquisizione di origine | Descrizione |
 | ---------------- | ----------- |
-| [!UICONTROL Record acquisiti ] | Numero totale di record acquisiti. |
+| [!UICONTROL Record acquisiti] | Numero totale di record acquisiti. |
 | [!UICONTROL Record con errori] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
 | [!UICONTROL Totale flussi di dati non riusciti] | Numero totale di flussi di dati con un `failed` stato. |
 

@@ -18,4 +18,4 @@ ht-degree: 68%
 - [API di accesso ai dati](api.md)
 - Tutorial {#tutorials}
    - [Visualizzare i dati del set di dati](tutorials/dataset-data.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

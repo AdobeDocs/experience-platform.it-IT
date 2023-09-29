@@ -7,7 +7,7 @@ user-guide-description: Utilizza i servizi di intelligenza artificiale per gener
 source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 32%
+ht-degree: 38%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 32%
    - [Scarica punteggi](attribution-ai/download-scores.md)
    - Governance dei dati {#aai-data-governance}
       - [Controlli di accesso](attribution-ai/aai-data-governance/access-controls.md)
-      - [Registri di controllo](attribution-ai/aai-data-governance/audit-logs.md)
+      - [Registri di audit](attribution-ai/aai-data-governance/audit-logs.md)
       - [Chiavi gestite dal cliente](attribution-ai/aai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](attribution-ai/aai-data-governance/data-governance.md)
       - [Criteri di governance](attribution-ai/aai-data-governance/governance-policies.md)
@@ -50,8 +50,8 @@ ht-degree: 32%
    - [Risoluzione dei problemi di errore](customer-ai/troubleshooting.md)
    - Governance dei dati {#cai-data-governance}
       - [Controlli di accesso](customer-ai/cai-data-governance/access-controls.md)
-      - [Registri di controllo](customer-ai/cai-data-governance/audit-logs.md)
+      - [Registri di audit](customer-ai/cai-data-governance/audit-logs.md)
       - [Chiavi gestite dal cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](customer-ai/cai-data-governance/data-governance.md)
       - [Criteri di governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

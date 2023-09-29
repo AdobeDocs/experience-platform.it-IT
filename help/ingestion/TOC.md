@@ -48,4 +48,4 @@ ht-degree: 26%
 - [Connettori di origine](source-connectors.md)
 - [Riferimento API per acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Riferimento API per Streaming Ingestion](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

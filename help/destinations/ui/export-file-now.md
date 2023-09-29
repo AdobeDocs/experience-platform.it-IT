@@ -1,7 +1,7 @@
 ---
-title: (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
+title: (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform
 type: Tutorial
-description: Scopri come esportare i file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform.
+description: Scopri come esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
@@ -10,7 +10,7 @@ ht-degree: 8%
 
 ---
 
-# (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform
+# (Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform
 
 >[!IMPORTANT]
 >
@@ -28,11 +28,11 @@ ht-degree: 8%
 >title="Esporta subito i file"
 >abstract="Seleziona questa opzione per fornire un’esportazione di file completa in aggiunta a eventuali esportazioni già pianificate. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform."
 
-Questo articolo spiega come utilizzare l’interfaccia utente di Experience Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [e-mail marketing](/help/destinations/catalog/email-marketing/overview.md) destinazioni.
+Questo articolo spiega come utilizzare l’interfaccia utente di Experienci Platform per esportare i file on-demand in destinazioni batch come [archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md) e [e-mail marketing](/help/destinations/catalog/email-marketing/overview.md) destinazioni.
 
 Il **[!UICONTROL Esporta subito il file]** control ti consente di esportare un file completo senza interrompere la pianificazione di esportazione corrente di un pubblico pianificato in precedenza. Questa esportazione si verifica in aggiunta alle esportazioni pianificate in precedenza e non modifica la frequenza di esportazione del pubblico. L’esportazione dei file viene attivata subito e raccoglie i risultati più recenti delle esecuzioni di segmentazione di Experience Platform.
 
-A questo scopo, puoi anche utilizzare le API Experience Platform. Scopri come [attivare i tipi di pubblico on-demand nelle destinazioni batch tramite l’API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
+A questo scopo, puoi anche utilizzare le API Experienci Platform. Scopri come [attivare i tipi di pubblico on-demand nelle destinazioni batch tramite l’API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
 ## Prerequisiti {#prerequisites}
 
@@ -85,5 +85,5 @@ Quando si utilizza **[!UICONTROL Esporta subito il file]** , è possibile che si
 
 ## Informazioni correlate {#related-information}
 
-* [Attiva i tipi di pubblico su richiesta nelle destinazioni batch utilizzando le API Experience Platform](/help/destinations/api/ad-hoc-activation-api.md)
+* [Attiva i tipi di pubblico su richiesta nelle destinazioni batch utilizzando le API Experienci Platform](/help/destinations/api/ad-hoc-activation-api.md)
 * [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md)

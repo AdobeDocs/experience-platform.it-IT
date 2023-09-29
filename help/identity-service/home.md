@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Questo è reso più difficile quando i dati del cliente sono frammentati tra sistemi diversi, facendo apparire ogni singolo cliente con più &quot;identità&quot;.
 
-Il servizio Adobe Experience Platform Identity offre una panoramica completa dei clienti e del loro comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale.
+Adobe Experience Platform Identity Service offre una panoramica completa della clientela e del relativo comportamento, collegando le identità attraverso diversi dispositivi e sistemi e consentendo di offrire esperienze digitali personali ed efficaci in tempo reale.
 
 Con [!DNL Identity Service], è possibile:
 
@@ -30,7 +30,7 @@ Prima di immergerti nei dettagli di [!DNL Identity Service], ecco una breve sint
 | Termine | Definizione |
 | --- | --- |
 | Identità | Un’identità è un dato univoco per un’entità, in genere una singola persona. Un’identità, ad esempio un ID di accesso, ECID o ID fedeltà, viene indicata anche come &quot;identità nota&quot;. |
-| ECID | L’ID Experience Cloud (ECID) è uno spazio dei nomi di identità condiviso e utilizzato nelle applicazioni Experience Platform e Adobe Experience Cloud. ECID fornisce una base per l’identità del cliente e viene utilizzato come ID principale per i dispositivi e come nodo di base per i grafici di identità. Consulta la [Panoramica di ECID](./ecid.md) per ulteriori informazioni. |
+| ECID | L’ID Experience Cloud (ECID) è uno spazio dei nomi di identità condiviso e utilizzato nelle applicazioni Experienci Platform e Adobe Experience Cloud. ECID fornisce una base per l’identità del cliente e viene utilizzato come ID principale per i dispositivi e come nodo di base per i grafici di identità. Consulta la [Panoramica di ECID](./ecid.md) per ulteriori informazioni. |
 | Spazio dei nomi dell’identità | Uno spazio dei nomi delle identità consente di distinguere il contesto o il tipo di un’identità. Ad esempio, un’identità distingue “nome<span>@e-mail.com” come indirizzo e-mail o “443522” come ID CRM numerico. Gli spazi dei nomi delle identità vengono utilizzati per cercare le singole identità e fornire il contesto per i valori di identità. Questo consente di determinare che due [!DNL Profile] frammenti che contengono ID primari diversi, ma condividono lo stesso valore per `email` lo spazio dei nomi dell’identità, sono in realtà lo stesso individuo. Consulta la [panoramica dello spazio dei nomi delle identità](./namespaces.md) per ulteriori informazioni. |
 | Grafico delle identità | Un grafo di identità è una mappa di relazioni tra identità diverse, che ti consente di visualizzare e comprendere meglio quali identità dei clienti sono unite tra loro e come. Guarda il tutorial su [utilizzo del visualizzatore del grafico delle identità](./ui/identity-graph-viewer.md) per ulteriori informazioni. |
 | Informazioni personali (PII) | I dati PII sono informazioni che possono identificare direttamente un cliente, ad esempio un indirizzo e-mail o un numero di telefono. I valori PII vengono spesso utilizzati per la corrispondenza. le identità multiple di un cliente su diversi sistemi. |
@@ -46,7 +46,7 @@ Prendi in considerazione un esempio quotidiano della relazione di un consumatore
 - A questo punto, l’attività di Mary viene visualizzata come due profili separati:
    - Il suo accesso e-commerce
    - Il suo dispositivo tablet, forse identificato dall&#39;ID dispositivo
-- Mary successivamente riprende la sessione del tablet e fornisce il suo indirizzo e-mail durante l’abbonamento alla newsletter. In questo modo, l’acquisizione in streaming aggiunge una nuova identità come dati di record all’interno del suo profilo. Di conseguenza, [!DNL Identity Service] ora mette in relazione l’attività sul tablet di Mary con la cronologia del suo account di e-commerce.
+- Mary successivamente riprende la sessione del tablet e fornisce il suo indirizzo e-mail durante l’abbonamento alla newsletter. In questo modo, l’acquisizione in streaming aggiunge una nuova identità come dati di record all’interno del suo profilo. Di conseguenza, [!DNL Identity Service] ora mette in relazione l’attività di Mary sui dispositivi tablet con la cronologia del suo account di e-commerce.
 - Al prossimo clic sul tablet, il contenuto mirato potrebbe riflettere il profilo completo e la storia di Mary, piuttosto che solo un tablet utilizzato da un acquirente sconosciuto.
 
 ![Unione delle identità su Platform](./images/identity-service-stitching.png)
@@ -104,7 +104,7 @@ A seconda della strategia di raccolta dati aziendale, i campi dati etichettati c
 
 ### Creare spazi dei nomi di identità aggiuntivi
 
-Sebbene Experience Platform offra diversi spazi dei nomi standard, potrebbe essere necessario creare spazi dei nomi aggiuntivi per categorizzare correttamente le identità. Per ulteriori informazioni, consulta la sezione su [visualizzazione e creazione di spazi dei nomi per l’organizzazione](./namespaces.md) nella panoramica dello spazio dei nomi delle identità.
+Sebbene Experienci Platform offra diversi spazi dei nomi standard, potrebbe essere necessario creare spazi dei nomi aggiuntivi per categorizzare correttamente le identità. Per ulteriori informazioni, consulta la sezione su [visualizzazione e creazione di spazi dei nomi per l’organizzazione](./namespaces.md) nella panoramica dello spazio dei nomi delle identità.
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ Sebbene Experience Platform offra diversi spazi dei nomi standard, potrebbe esse
 
 ### Includi dati di identità in [!DNL Experience Data Model] (XDM)
 
-Come quadro standardizzato mediante il quale [!DNL Platform] organizza i dati dei clienti, [!DNL Experience Data Model] (XDM) consente la condivisione e la comprensione dei dati tra Experience Platform e altri servizi che interagiscono con [!DNL Platform]. Per ulteriori informazioni, consulta [Panoramica del sistema XDM](../xdm/home.md).
+Come quadro standardizzato mediante il quale [!DNL Platform] organizza i dati dei clienti, [!DNL Experience Data Model] (XDM) consente la condivisione e la comprensione dei dati tra Experienci Platform e altri servizi che interagiscono con [!DNL Platform]. Per ulteriori informazioni, consulta [Panoramica del sistema XDM](../xdm/home.md).
 
 Sia gli schemi di record che quelli di serie temporali forniscono i mezzi per includere i dati di identità. Quando i dati vengono acquisiti, il grafico delle identità crea nuove relazioni tra frammenti di dati da spazi dei nomi diversi se tali frammenti condividono dati di identità comuni.
 
@@ -133,7 +133,7 @@ Ad esempio, etichettando i campi del numero di telefono come campi di identità,
 
 ### Configurare un set di dati per [!DNL Identity Service]
 
-Durante il processo di acquisizione in streaming, [!DNL Identity Service ]estrae automaticamente i dati di identità dai dati di record e serie temporali. Tuttavia, prima che i dati possano essere acquisiti, devono essere abilitati per [!DNL Identity Service]. Guarda il tutorial su  [configurazione di un set di dati per Real-Time Customer Profile e Identity Service tramite API](../profile/tutorials/dataset-configuration.md) per ulteriori informazioni.
+Durante il processo di acquisizione in streaming, [!DNL Identity Service]estrae automaticamente i dati di identità dai dati di record e serie temporali. Tuttavia, prima che i dati possano essere acquisiti, devono essere abilitati per [!DNL Identity Service]. Guarda il tutorial su  [configurazione di un set di dati per Real-Time Customer Profile e Identity Service tramite API](../profile/tutorials/dataset-configuration.md) per ulteriori informazioni.
 
 ### Acquisire dati in [!DNL Identity Service]
 
@@ -153,4 +153,4 @@ Adobe Experience Platform è stato creato pensando alla privacy e include un fra
 
 ## Passaggi successivi
 
-Ora che conosci i concetti chiave di [!DNL Identity Service] e il suo ruolo all’interno di Experience Platform, puoi imparare a lavorare con il grafico delle identità utilizzando [[!DNL Identity Service API]](./api/getting-started.md).
+Ora che conosci i concetti chiave di [!DNL Identity Service] e il suo ruolo all’interno di Experienci Platform, puoi imparare a lavorare con il grafico delle identità utilizzando [[!DNL Identity Service API]](./api/getting-started.md).

@@ -4,7 +4,7 @@ description: Scopri come integrare i profili di prime parti con attributi di par
 source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
 source-wordcount: '1091'
-ht-degree: 94%
+ht-degree: 96%
 
 ---
 
@@ -118,6 +118,6 @@ Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni pres
 
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
-* Utilizzare il supporto dati di terze parti in Real-Time CDP per [espandi la base di profili con i profili prospect dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
+* Utilizza il supporto dati di terze parti in Real-Time CDP per [espandere la base di profili con i profili di potenziali clienti dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
 * [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
 * [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.

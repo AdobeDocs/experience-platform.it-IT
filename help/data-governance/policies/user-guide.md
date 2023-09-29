@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;governance dei dati;guida utente per i criteri di utilizzo dei dati
 solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
-description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell’area di lavoro Criteri nell’interfaccia utente di Experience Platform.
+description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell’area di lavoro Criteri nell’interfaccia utente di Experienci Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
@@ -114,7 +114,7 @@ Se hai scelto di creare un criterio di consenso, viene visualizzata una nuova sc
 
 ![](../images/policies/consent-policy-dialog.png)
 
-Per utilizzare i criteri di consenso, devi disporre di attributi di consenso presenti nei dati del profilo. Consulta la guida su [elaborazione del consenso in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) per i passaggi dettagliati su come includere gli attributi richiesti nello schema di unione.
+Per utilizzare i criteri di consenso, devi disporre di attributi di consenso presenti nei dati del profilo. Consulta la guida su [elaborazione del consenso in Experienci Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) per i passaggi dettagliati su come includere gli attributi richiesti nello schema di unione.
 
 I criteri di consenso sono composti da due componenti logici:
 

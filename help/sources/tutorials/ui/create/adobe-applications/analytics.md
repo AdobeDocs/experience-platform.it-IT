@@ -133,8 +133,8 @@ A seconda delle tue esigenze, puoi selezionare: **[!UICONTROL Aggiungi nuova map
 
 La documentazione seguente fornisce ulteriori risorse sulla preparazione dati, sui campi calcolati e sulle funzioni di mappatura:
 
-* [Panoramica sulla preparazione dati](../../../../../data-prep/home.md)
-* [Funzioni di mappatura della preparazione dati](../../../../../data-prep/functions.md)
+* [Panoramica sulla preparazione dei dati](../../../../../data-prep/home.md)
+* [Funzioni di mappatura della preparazione dei dati](../../../../../data-prep/functions.md)
 * [Aggiungere campi calcolati](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 

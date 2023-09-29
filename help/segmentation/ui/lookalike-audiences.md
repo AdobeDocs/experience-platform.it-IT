@@ -6,7 +6,7 @@ badgeLimitedAvailability: label="Disponibilità limitata" type=Caution
 source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -84,7 +84,7 @@ Viene visualizzata la pagina dei dettagli del pubblico. Seleziona **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
 >title="Somiglianza e portata"
->abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico simile costituito da profili al di sopra di un dato punteggio di somiglianza. Puoi passare il cursore del mouse su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il numero di profili previsto per il punto attualmente evidenziato."
+>abstract="Il grafico di somiglianza e portata rappresenta la portata prevista di un pubblico Look-Alike costituito da profili al di sopra di un dato punteggio di somiglianza. Puoi passare il cursore del mouse su un punto specifico del grafico per visualizzare la percentuale di somiglianza e il numero di profili previsto per il punto attualmente evidenziato."
 
 La sezione similarità e portata mostra un grafico che rappresenta la portata prevista di un pubblico simile costituito da profili al di sopra di un determinato punteggio di somiglianza. Il punteggio di somiglianza rappresenta **distanza** somiglianza tra il profilo del pubblico di base e il profilo di approfondimenti simili.
 

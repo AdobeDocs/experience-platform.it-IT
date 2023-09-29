@@ -83,7 +83,7 @@ Per semplicità e per lo scopo di questo esempio, le persone vengono identificat
 
 - Crea un pubblico che sia il destinatario più efficiente della nuova campagna di marketing di Bodea. In questo esempio, RT-CDP, B2B Edition aiuterà l’addetto al marketing a identificare `p2@townsend.com` come target corretto per questa campagna di marketing.
 
-Utilizzando il Marketo Engage e le destinazioni LinkedIn, Bodea dispone di una soluzione CXM (Customer Experience Management) end-to-end per il proprio team di marketing. Il pubblico creato in Experience Platform viene inviato alla destinazione Marketo dove viene visualizzato come elenco statico. Questo pubblico viene quindi aggiunto automaticamente a una campagna di marketing Marketo. Contemporaneamente, il pubblico può anche essere inviato a una campagna di marketing LinkedIn dall’edizione B2B di RT-CDP.
+Utilizzando il Marketo Engage e le destinazioni LinkedIn, Bodea dispone di una soluzione CXM (Customer Experience Management) end-to-end per il proprio team di marketing. Il pubblico creato in Experienci Platform viene inviato alla destinazione Marketo dove viene visualizzato come elenco statico. Questo pubblico viene quindi aggiunto automaticamente a una campagna di marketing Marketo. Contemporaneamente, il pubblico può anche essere inviato a una campagna di marketing LinkedIn dall’edizione B2B di RT-CDP.
 
 ## Passaggi successivi
 

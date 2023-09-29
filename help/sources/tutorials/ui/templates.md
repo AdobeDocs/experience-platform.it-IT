@@ -35,15 +35,15 @@ Con i modelli, puoi:
 * Riduci al minimo gli errori che possono verificarsi durante il processo manuale di acquisizione dei dati.
 * Aggiorna le risorse generate automaticamente in qualsiasi momento in base ai tuoi casi d’uso.
 
-Il seguente tutorial descrive come utilizzare i modelli nell’interfaccia utente di Platform.
+Il seguente tutorial illustra i passaggi da seguire per utilizzare i modelli nell’interfaccia utente di Platform.
 
-## Introduzione
+## Guida introduttuva
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
+* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Utilizzare i modelli nell’interfaccia utente di Platform {#use-templates-in-the-platform-ui}
 
@@ -53,7 +53,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >abstract="Seleziona il tipo di azienda appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it" text="Panoramica di Real-Time CDP"
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experience Platform.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experienci Platform.
 
 Utilizza il *[!UICONTROL Categorie]* per filtrare le sorgenti per categoria. In alternativa, immettere un nome di origine nella barra di ricerca per trovare un&#39;origine specifica dal catalogo.
 
@@ -234,7 +234,7 @@ Puoi utilizzare la vista dell’editor schema per apportare aggiornamenti allo s
 
 ### Pubblicare il flusso di dati
 
-Inizia il processo di pubblicazione passando dal flusso di lavoro origini. Dopo aver selezionato [!UICONTROL Aggiorna flusso di dati], si viene indirizzati al *[!UICONTROL Aggiungi dati]* passaggio del flusso di lavoro. Seleziona **[!UICONTROL Successivo]** per procedere.
+Inizia il processo di pubblicazione passando dal flusso di lavoro origini. Dopo aver selezionato [!UICONTROL Aggiorna flusso di dati], si viene indirizzati al *[!UICONTROL Aggiungi dati]* passaggio del flusso di lavoro. Seleziona **[!UICONTROL Avanti]** per procedere.
 
 ![Passaggio per aggiungere dati per un flusso di dati bozza](../../images/tutorials/templates/continue-draft.png)
 

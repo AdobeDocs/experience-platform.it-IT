@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
 source-wordcount: '1462'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -60,7 +60,7 @@ Prima di poter generare credenziali senza scadenza, è necessario completare i s
 2. [Seleziona un profilo di prodotto.](../../access-control/ui/browse.md)
 3. [Configura entrambi **Sandbox** e **Gestire l’integrazione di Query Service** autorizzazioni](../../access-control/ui/permissions.md) per il profilo di prodotto.
 4. [Aggiungere un nuovo utente a un profilo di prodotto](../../access-control/ui/users.md) in modo che possano disporre delle autorizzazioni configurate.
-5. [Aggiungere l’utente come amministratore del profilo di prodotto](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
+5. [Aggiungere l’utente come amministratore del profilo di prodotto](https://helpx.adobe.com/it/enterprise/using/manage-product-profiles.html) per consentire la creazione di un account per qualsiasi profilo di prodotto attivo.
 6. [Aggiungere l’utente come sviluppatore del profilo di prodotto](https://helpx.adobe.com/it/enterprise/using/manage-developers.html) per creare un’integrazione.
 
 Per ulteriori informazioni su come assegnare le autorizzazioni, consulta la documentazione su [controllo degli accessi](../../access-control/home.md).

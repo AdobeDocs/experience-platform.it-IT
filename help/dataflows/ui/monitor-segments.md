@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;monitorare segmenti;monitorare flussi di dati;flussi di dati;segmentazione;monitor;dataflows;segmentation
-description: La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati dei profili cliente in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati durante la segmentazione utilizzando l’interfaccia utente di Experience Platform.
+description: La segmentazione ti consente di creare segmenti e tipi di pubblico dai dati dei profili cliente in tempo reale. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati durante la segmentazione utilizzando l’interfaccia utente di Experienci Platform.
 title: Monitorare i flussi di dati per i segmenti nell’interfaccia utente
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Il servizio di segmentazione consente di creare segmenti e tipi di pubblico dai dati dei profili cliente in tempo reale in Adobe Experience Platform. Platform fornisce flussi di dati per monitorare in modo trasparente questo flusso di dati dalle origini alle destinazioni.
 
-La dashboard di monitoraggio fornisce una rappresentazione visiva dell’attività dei dati all’interno di un segmento, incluso lo stato della segmentazione dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare la segmentazione dei dati utilizzando l’interfaccia utente di Experience Platform, che consente di monitorare lo stato dei processi di attivazione, valutazione ed esportazione dei segmenti.
+La dashboard di monitoraggio fornisce una rappresentazione visiva dell’attività dei dati all’interno di un segmento, incluso lo stato della segmentazione dei dati. Questa esercitazione fornisce istruzioni su come utilizzare il dashboard di monitoraggio per monitorare la segmentazione dei dati utilizzando l’interfaccia utente di Experienci Platform, che consente di monitorare lo stato dei processi di attivazione, valutazione ed esportazione dei segmenti.
 
 ## Introduzione {#getting-started}
 

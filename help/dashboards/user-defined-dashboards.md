@@ -9,7 +9,7 @@ ht-degree: 3%
 
 ---
 
-# Dashboard definiti dall&#39;utente
+# Dashboard definite dall’utente
 
 Le dashboard di Adobe Experience Platform consentono di velocizzare le informazioni e personalizzare la visualizzazione tramite la funzione delle dashboard definite dall’utente. Questa funzione ti consente di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione.
 

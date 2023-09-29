@@ -9,7 +9,7 @@ ht-degree: 44%
 
 ---
 
-# Registri di controllo {#audit-logs}
+# Registri di audit {#audit-logs}
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
@@ -144,8 +144,8 @@ Per informazioni su come gestire i registri di audit per le attività in Adobe A
 
 ## Passaggi successivi e risorse aggiuntive
 
-Questa guida illustra come gestire i registri di audit in Experience Platform. Per ulteriori informazioni su come monitorare le attività di Platform, consulta la documentazione su [Observability Insights](../../../observability/home.md) e [monitoraggio dell’acquisizione dei dati](../../../ingestion/quality/monitor-data-ingestion.md).
+Questa guida illustra come gestire i registri di audit in Experienci Platform. Per ulteriori informazioni su come monitorare le attività di Platform, consulta la documentazione su [Observability Insights](../../../observability/home.md) e [monitoraggio dell’acquisizione dei dati](../../../ingestion/quality/monitor-data-ingestion.md).
 
-Per comprendere meglio i registri di audit in Experience Platform, guarda il video seguente:
+Per comprendere meglio i registri di audit in Experienci Platform, guarda il video seguente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

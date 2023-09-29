@@ -25,7 +25,7 @@ Sono attualmente supportati i seguenti tipi di segreto:
 
 {style="table-layout:auto"}
 
-Questa guida fornisce una panoramica di alto livello sulla configurazione dei segreti per l’inoltro di un evento ([!UICONTROL Bordo]) nell’interfaccia di Experience Platform o nell’interfaccia di Data Collection.
+Questa guida fornisce una panoramica di alto livello sulla configurazione dei segreti per l’inoltro di un evento ([!UICONTROL Bordo]) nell’interfaccia di Experienci Platform o nell’interfaccia di Data Collection.
 
 >[!NOTE]
 >

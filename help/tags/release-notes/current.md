@@ -5,7 +5,7 @@ exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
@@ -17,25 +17,25 @@ ht-degree: 3%
 
 ## 26 aprile 2023
 
-* **Segreto JWT OAuth**: Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) consente ai clienti di utilizzare i token di servizio Adobe e Google per supportare le interazioni server-to-server nell’inoltro degli eventi.
+* **Segreto JWT OAuth**: Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=it) consente ai clienti di utilizzare i token di servizio Adobe e Google per supportare le interazioni server-to-server nell’inoltro degli eventi.
 
 È stata rilasciata la seguente nuova estensione:
 
-* **[!DNL Pinterest Conversions API]estensione**: Il [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) l’estensione per l’inoltro degli eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Pinterest] sotto forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API].
+* **[!DNL Pinterest Conversions API]estensione**: Il [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=it) l’estensione per l’inoltro degli eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Pinterest] sotto forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API].
 
 ## 29 marzo 2023
 
 **Flussi di lavoro Quick Stark (Beta)**
 
-Accedi ai nuovi flussi di lavoro di avvio rapido in &quot;Guida introduttiva&quot; dalla schermata iniziale di Data Collection. I seguenti flussi di lavoro sono ora disponibili per i clienti come versione beta pubblica.
-* **[API di metaconversione](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**: i clienti di Inoltro eventi possono raccogliere e inoltrare rapidamente i dati dell’evento dal lato server a Meta per le conversioni di annunci in pochi e semplici passaggi.
+Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. I seguenti flussi di lavoro sono ora disponibili per i clienti come versione beta pubblica.
+* **[API di metaconversione](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=it#quick-start)**: i clienti di Inoltro eventi possono raccogliere e inoltrare rapidamente i dati dell’evento dal lato server a Meta per le conversioni di annunci in pochi e semplici passaggi.
 * **[SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/)**: i clienti possono implementare rapidamente l’SDK di Mobile e convalidare gli eventi mobili di base in pochi semplici passaggi.
 
 Sono state rilasciate nuove estensioni:
 
-* **[!DNL Braze]estensione di inoltro eventi**: Il [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) l’estensione per l’inoltro degli eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [!DNL Braze] API User Track.
-* **[API eventi Epsilon] estensione di inoltro eventi**: Il [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi in Adobe Experience Platform Edge Network e inviarle a [!DNL Epsilon] utilizzando [!DNL Epsilon] API evento.
-* **[!DNL Mixpanel]estensione di inoltro eventi**: Il [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi in Adobe Experience Platform Edge Network e inviarle a [!DNL Mixpanel] utilizzando l’API Track Events.
+* **[!DNL Braze]estensione di inoltro eventi**: Il [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=it) l’estensione per l’inoltro degli eventi consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL Braze] sotto forma di eventi lato server che utilizzano [!DNL Braze] API User Track.
+* **[API eventi Epsilon] estensione di inoltro eventi**: Il [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=it) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi in Adobe Experience Platform Edge Network e inviarle a [!DNL Epsilon] utilizzando [!DNL Epsilon] API evento.
+* **[!DNL Mixpanel]estensione di inoltro eventi**: Il [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=it) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi in Adobe Experience Platform Edge Network e inviarle a [!DNL Mixpanel] utilizzando l’API Track Events.
 
 ## 25 gennaio 2023
 
@@ -60,7 +60,7 @@ Sono state rilasciate nuove estensioni:
 
 ## 28 settembre 2022
 
-* **Integrazione navigazione sinistra Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente di Data Collection (inclusi tag e inoltro eventi) ora sono disponibili anche tramite la navigazione a sinistra nell’interfaccia utente di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform.
+* **Integrazione navigazione sinistra Adobe Experience Platform**: tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente di Data Collection (inclusi tag e inoltro eventi) ora sono disponibili anche tramite la navigazione a sinistra nell’interfaccia utente di Experienci Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform.
 * **Attribuzione degli utenti nei tag e nell’inoltro degli eventi**: quando elenchi le proprietà disponibili nei tag e nell’inoltro degli eventi, ogni proprietà elencata ora mostra quando è stata aggiornata l’ultima volta e da chi.
 * **[[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro di eventi**: ora è possibile inviare dati a [!DNL Snapchat Conversions API] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Per ulteriori informazioni su come autenticare e utilizzare l’API, consulta [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html).
 

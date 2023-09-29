@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## A
 
-**Controllo degli accessi**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare accesso e autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
+**Controllo degli accessi**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare accesso e autorizzazioni agli utenti di Experienci Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
 
 **ID chiave di accesso**: un ID della chiave di accesso è un identificatore univoco associato a un [!DNL Amazon] Chiave di accesso segreta S3. L’ID della chiave di accesso e la chiave di accesso segreta vengono utilizzati insieme per firmare [!DNL Amazon Web Services] (AWS) richieste.
 
@@ -31,19 +31,19 @@ ht-degree: 0%
 
 **Adobe Experience Platform**: Adobe Experience Platform standardizza dati e contenuti a livello aziendale, fornendo profili di consumatori in tempo reale, consentendo l’utilizzo della scienza dei dati e accelerando la velocità dei contenuti per stimolare la personalizzazione dell’esperienza nel percorso del cliente.
 
-**Servizio query Adobe Experience Platform**: consente agli analisti di dati di eseguire query su eventi e profili da utilizzare in Analytics e nell’apprendimento automatico. Con Query Service, data scientist e analisti possono richiamare tutti i loro set di dati memorizzati in Experience Platform (inclusi i dati comportamentali e i punti vendita, la gestione delle relazioni con i clienti e altro ancora) ed eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
+**Servizio query Adobe Experience Platform**: consente agli analisti di dati di eseguire query su eventi e profili da utilizzare in Analytics e nell’apprendimento automatico. Con Query Service, data scientist e analisti possono richiamare tutti i loro set di dati memorizzati in Experienci Platform (inclusi i dati comportamentali e i punti vendita, la gestione delle relazioni con i clienti e altro ancora) ed eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
 
-**Servizio di segmentazione di Adobe Experience Platform**: consente di creare segmenti e generare tipi di pubblico dai dati dei profili cliente in tempo reale. Questi tipi di pubblico possono quindi essere esportati nei propri set di dati all’interno del Data Lake.
+**Servizio di segmentazione di Adobe Experience Platform**: consente di creare segmenti e generare tipi di pubblico dai dati del profilo cliente in tempo reale. Questi tipi di pubblico possono quindi essere esportati nei propri set di dati all’interno del Data Lake.
 
-**Adobe Intelligent Services**: i servizi intelligenti come Attribution AI e IA per l’analisi dei clienti sono modelli basati sull’apprendimento automatico e sull’intelligenza artificiale appositamente progettati e che richiedono l’esecuzione e il funzionamento di Experience Platform.
+**Adobe Intelligent Services**: i servizi intelligenti come Attribution AI e IA per l’analisi dei clienti sono modelli basati sull’apprendimento automatico e sull’intelligenza artificiale appositamente progettati e che richiedono l’esecuzione e il funzionamento di Experienci Platform.
 
-**Adobe I/O**: Adobe I/O fa parte di Experience Platform e fornisce l’accesso a tutto ciò di cui gli sviluppatori hanno bisogno per integrare, estendere e personalizzare Platform, inclusi API, eventi, console per sviluppatori e strumenti utili.
+**Adobe I/O**: Adobe I/O fa parte di Experienci Platform e fornisce l’accesso a tutto ciò di cui gli sviluppatori hanno bisogno per integrare, estendere e personalizzare Platform, inclusi API, eventi, console per sviluppatori e strumenti utili.
 
 **Adobe Sensei**: Adobe Sensei è il framework di intelligence che potenzia gli Experienci Platform. Fornisce inoltre una serie di servizi di intelligenza artificiale che consentono ai brand di migliorare la loro capacità di fornire ai clienti esperienze personalizzate in tempo reale.
 
 **Bucket Amazon S3**: [!DNL Amazon S3] I bucket sono i contenitori fondamentali per i dati memorizzati nel [!DNL Amazon] ecosistema. I bucket contengono oggetti, ogni oggetto viene memorizzato e recuperato utilizzando una chiave univoca assegnata dagli sviluppatori.
 
-**Connettore Amazon S3**: Il [!DNL Amazon] Il connettore S3 consente ai clienti di Experience Platform di connettersi e accedere in modo sicuro ai [!DNL Amazon] Dati S3.
+**Connettore Amazon S3**: Il [!DNL Amazon] Il connettore S3 consente ai clienti di Experienci Platform di connettersi e accedere in modo sicuro ai [!DNL Amazon] Dati S3.
 
 **APA**: Il [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promuove e protegge la privacy delle persone e regola il modo in cui le agenzie governative australiane e l&#39;organizzazione gestiscono le informazioni personali. Il [!DNL Privacy Act] include principi che si applicano alle organizzazioni del settore privato. Ad esempio, gli utenti hanno il diritto di comprendere il motivo per cui le informazioni personali vengono raccolte e come verranno utilizzate, la possibilità di accedere ai loro dati, cancellarli e correggerli.
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 **Backfill**: per le origini pianificate, l’opzione di backfill consente l’acquisizione di dati storici.
 
-**Periodo di backfill**: il periodo di retrocompilazione è un’opzione che consente di impostare il periodo di tempo necessario per acquisire dati storici di terze parti tramite una connessione di origine. Selezionando un periodo di backfill di &quot;per sempre&quot; acquisirà l’intera cronologia dei dati sorgente in Experience Platform.
+**Periodo di backfill**: il periodo di retrocompilazione è un’opzione che consente di impostare il periodo di tempo necessario per acquisire dati storici di terze parti tramite una connessione di origine. Selezionando un periodo di backfill di &quot;per sempre&quot; acquisirà l’intera cronologia dei dati sorgente in Experienci Platform.
 
 **Batch**: un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come una singola unità. I set di dati sono composti da più batch.
 
 **ID batch**: un ID batch è un identificatore generato da un Adobe per un batch di dati.
 
-**Acquisizione in batch**: l’acquisizione in batch consente di acquisire i dati in Experience Platform come file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità.
+**Acquisizione in batch**: l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità.
 
 **Segmentazione batch**: la segmentazione in batch è un’alternativa a un processo di selezione dei dati in corso e sposta tutti i dati del profilo contemporaneamente attraverso le definizioni dei segmenti per produrre pubblici corrispondenti. Una volta creato, il segmento viene salvato e memorizzato in modo da poterlo esportare per l’utilizzo.
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 **Catalogo**: nel contesto di origini e destinazioni, un catalogo è una galleria con connessioni disponibili ad applicazioni Adobe e tecnologie di terze parti. Da non confondere con [!DNL Catalog Service].
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service] (a volte chiamato [!DNL Catalog]) è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel data lake come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca, monitoraggio e governance dei dati.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] (a volte chiamato [!DNL Catalog]) è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experienci Platform vengono memorizzati nel data lake come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca, monitoraggio e governance dei dati.
 
 **CCPA**: Il [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) migliora i diritti alla privacy e la protezione dei consumatori dei residenti in California, Stati Uniti. Il CCPA conferisce ai residenti della California nuovi diritti sulla privacy dei dati, tra cui il diritto di accesso e cancellazione dei propri dati personali, di sapere se i propri dati personali vengono venduti o divulgati (e a chi), e il diritto di non acconsentire alla vendita dei propri dati a terzi.
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 **Etichette set di dati**: è possibile aggiungere etichette di utilizzo dei dati ai set di dati. Tutti i campi all’interno di tale set di dati ereditano le etichette del set di dati.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] all’interno di Experience Platform consente ai clienti di creare modelli di apprendimento automatico utilizzando i dati nelle applicazioni Platform e Adobe per creare segmenti intelligenti, generare informazioni approfondite e fornire previsioni, consentendo di migliorare notevolmente le esperienze digitali degli utenti finali.
+**Data Science Workspace**: [!DNL Data Science Workspace] all’interno di Experienci Platform consente ai clienti di creare modelli di apprendimento automatico utilizzando i dati nelle applicazioni Platform e Adobe per creare segmenti intelligenti, generare informazioni approfondite e fornire previsioni, consentendo di migliorare notevolmente le esperienze digitali degli utenti finali.
 
 **Origine dati**: un’origine dati è un’origine dei dati designata dall’utente. Esempi di un’origine dati sono un’app mobile, eventi di profilo e/o esperienza, eventi di profilo del sito web o un CRM.
 
@@ -179,7 +179,7 @@ ht-degree: 0%
 
 **Flusso di dati**: un flusso di dati è una pipeline virtuale di dati che fluisce in Platform da un’origine e ne esce verso le destinazioni.
 
-**Esecuzione del flusso di dati**: un’esecuzione del flusso di dati è un flusso di dati che arriva in Experience Platform in base a una pianificazione specificata dall’utente.
+**Esecuzione del flusso di dati**: un’esecuzione del flusso di dati è un flusso di dati che arriva in Experienci Platform in base a una pianificazione specificata dall’utente.
 
 **Set di dati**: un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e dei campi (righe).
 
@@ -191,15 +191,15 @@ ht-degree: 0%
 
 **Colonna delta**: una colonna delta consente di selezionare un campo dati di origine per rappresentare una marca temporale per l’acquisizione incrementale.
 
-**Strategia di salvataggio delta**: la strategia di salvataggio delta è un’opzione per acquisire dati di terze parti tramite una connessione di origine. L’opzione consente all’utente di specificare che le righe di dati di origine nuove o modificate vengono acquisite in Experience Platform. Alla fine del set di dati vengono aggiunte nuove righe e quelle modificate vengono aggiornate nel set di dati in Experience Platform.
+**Strategia di salvataggio delta**: la strategia di salvataggio delta è un’opzione per acquisire dati di terze parti tramite una connessione di origine. L’opzione consente all’utente di specificare che le righe di dati di origine nuove o modificate vengono acquisite in Experienci Platform. Alla fine del set di dati vengono aggiunte nuove righe e quelle modificate vengono aggiornate nel set di dati in Experienci Platform.
 
-**Descrittore**: in Experience Data Model (XDM), un descrittore è un set aggiuntivo di metadati relativi allo schema che descrive un comportamento specifico per un campo. I descrittori possono essere utilizzati da Experience Platform per comprendere il comportamento dello schema desiderato, ad esempio la relazione tra due schemi.
+**Descrittore**: in Experience Data Model (XDM), un descrittore è un set aggiuntivo di metadati relativi allo schema che descrive un comportamento specifico per un campo. I descrittori possono essere utilizzati da Experienci Platform per comprendere il comportamento dello schema desiderato, ad esempio la relazione tra due schemi.
 
 **Destinazione**: una destinazione è un termine generale per qualsiasi endpoint, ad esempio un’applicazione di Adobe, una piattaforma pubblicitaria, un servizio di archiviazione cloud o un servizio di marketing, in cui viene attivato e distribuito un pubblico.
 
 **Categoria di destinazione**: una categoria di destinazione è un raggruppamento di destinazioni che hanno caratteristiche simili.
 
-**Catalogo di destinazione**: un catalogo di destinazione è un elenco delle destinazioni disponibili in Experience Platform.
+**Catalogo di destinazione**: un catalogo di destinazione è un elenco delle destinazioni disponibili in Experienci Platform.
 
 **Regole di chiamata diretta**: nel contesto dei tag, una regola di chiamata diretta è una regola che viene eseguita quando viene chiamata direttamente dalla pagina, ignorando i sistemi di rilevamento degli eventi e di ricerca.
 
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 **Eventi**: gli eventi sono dati comportamentali associati a un profilo.
 
-**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) è un framework open-source che utilizza schemi standard per unificare i dati da utilizzare con le applicazioni Experience Platform e Adobe Experience Cloud. XDM standardizza la struttura dei dati, velocizza e semplifica il processo di acquisizione di informazioni da enormi quantità di dati.
+**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) è un framework open-source che utilizza schemi standard per unificare i dati da utilizzare con le applicazioni Experienci Platform e Adobe Experience Cloud. XDM standardizza la struttura dei dati, velocizza e semplifica il processo di acquisizione di informazioni da enormi quantità di dati.
 
 **Esperimento**: un esperimento è il processo di creazione di un modello addestrato addestrando l’istanza con una porzione campione di dati di produzione live. È diverso da un modello addestrato che viene testato in base a un set di dati di prova di sospensione. Questo è anche diverso dal concetto di esperimento in alcuni framework di apprendimento automatico dove in realtà significa un progetto di modellazione campione.
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 **Funzione di input**: una funzione di input viene specificata nella mappatura della funzione e utilizzata da un modello di apprendimento automatico per effettuare previsioni.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] come [!DNL Attribution AI] e [!DNL Customer AI] sono modelli basati sull’apprendimento automatico e sull’intelligenza artificiale che richiedono l’esecuzione e il funzionamento di Experience Platform (o di applicazioni basate su Platform, come Adobe Real-time Customer Data Platform).
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] come [!DNL Attribution AI] e [!DNL Customer AI] sono modelli basati sull’apprendimento automatico e sull’intelligenza artificiale che richiedono l’esecuzione e il funzionamento di Experienci Platform (o di applicazioni basate su Platform, come Adobe Real-time Customer Data Platform).
 
 **Targeting o personalizzazione basata sugli interessi**: il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se vengono soddisfatte le tre condizioni seguenti:
 
@@ -343,7 +343,7 @@ ht-degree: 0%
 
 **Metodo di unione**: quando si definisce un criterio di unione utilizzando l’interfaccia utente di Platform, il metodo di unione specifica il modo in cui assegnare la priorità ai frammenti di dati in caso di conflitto. Quando si utilizza l’API Real-Time Customer Profile per definire un criterio di unione, il metodo di unione viene determinato utilizzando `attributeMerge` oggetto.
 
-**Criterio di unione**: i criteri di unione sono regole che Experience Platform utilizza per determinare in che modo i frammenti di dati dei clienti provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
+**Criterio di unione**: i criteri di unione sono regole che Experienci Platform utilizza per determinare in che modo i frammenti di dati dei clienti provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
 
 **Mixin**: consulta &quot;Gruppo di campi schema&quot;.
 
@@ -397,7 +397,7 @@ ht-degree: 0%
 
 **Grafo di identità privata**: il grafico dell’identità privata (talvolta denominato grafico privato) è una mappa privata delle relazioni tra identità collegate e unite, basata sui dati di prime parti e visibile solo all’organizzazione. Esiste un solo grafico privato per ogni organizzazione e funge da blueprint strutturale per i singoli grafici di identità generati per ogni cliente che interagisce con il tuo marchio.
 
-**Profilo di prodotto**: i profili di prodotto consentono agli amministratori di concedere l’accesso utente a tutti i servizi associati ad Experience Platform o a un sottoinsieme di essi.
+**Profilo di prodotto**: i profili di prodotto consentono agli amministratori di concedere l’accesso utente a tutti i servizi associati ad Experienci Platform o a un sottoinsieme di essi.
 
 **Sandbox di produzione**: una sandbox di produzione è una sandbox destinata all’utilizzo nell’ambiente di produzione. A differenza delle sandbox non di produzione, le sandbox di produzione non possono essere reimpostate o eliminate.
 
@@ -411,7 +411,7 @@ ht-degree: 0%
 
 **Entità profilo**: le entità profilo rappresentano attributi relativi a una singola persona, in genere un cliente. Le entità che rientrano in questa categoria devono essere rappresentate da schemi basati su [!DNL XDM Individual Profile] classe. Vedi anche: Accesso al profilo
 
-**Esportazione profilo**: [!DNL Profile] export è uno dei due tipi di destinazioni in Experience Platform. [!DNL Profile] l’esportazione genera un file contenente profili e attributi e utilizza dati PII non elaborati con le e-mail per l’integrazione con le piattaforme di marketing e automazione delle e-mail.
+**Esportazione profilo**: [!DNL Profile] export è uno dei due tipi di destinazioni in Experienci Platform. [!DNL Profile] l’esportazione genera un file contenente profili e attributi e utilizza dati PII non elaborati con le e-mail per l’integrazione con le piattaforme di marketing e automazione delle e-mail.
 
 **Frammento di profilo**: un frammento di profilo è costituito dalle informazioni di profilo per una sola identità presente nell’elenco delle identità esistenti per un particolare cliente.
 
@@ -443,7 +443,7 @@ ht-degree: 0%
 
 **Risorsa**: nel contesto dei tag, una risorsa è un termine generico che fa riferimento alle opzioni che l’utente di tag può configurare all’interno dell’ambiente client, tra cui estensioni, elementi dati e regole.
 
-**Controllo degli accessi basato sul ruolo**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare accesso e autorizzazioni agli utenti di Experience Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
+**Controllo degli accessi basato sul ruolo**: il controllo degli accessi basato sul ruolo consente agli amministratori di assegnare accesso e autorizzazioni agli utenti di Experienci Platform. Le autorizzazioni includono la possibilità di visualizzare e/o utilizzare funzioni di Experience Platform, ad esempio la creazione di sandbox, la definizione di schemi e la gestione di set di dati.
 
 **Regola**: nel contesto dei tag, una regola è una raccolta di componenti che definiscono un set specifico di eventi, condizioni e azioni che devono essere raggruppati in modo logico.
 
@@ -459,7 +459,7 @@ ht-degree: 0%
 
 **Ripristino della sandbox**: con il ripristino di una sandbox vengono eliminati tutti i dati, inclusi dati, profili e segmenti all’interno di una sandbox. I ripristini delle sandbox possono influire sui dati connessi a destinazioni interne o esterne.
 
-**Commutatore sandbox**: il controllo del commutatore sandbox in Experience Platform consente agli utenti di spostarsi tra le sandbox a cui hanno accesso. Il passaggio a una sandbox modificherà tutto il contenuto e l’accesso alle funzioni in base alle autorizzazioni.
+**Commutatore sandbox**: il controllo del commutatore sandbox in Experienci Platform consente agli utenti di spostarsi tra le sandbox a cui hanno accesso. Il passaggio a una sandbox modificherà tutto il contenuto e l’accesso alle funzioni in base alle autorizzazioni.
 
 **Pianificazione**: una pianificazione è una specifica definita dall’utente sulla frequenza o la frequenza dell’acquisizione di dati da un’origine dati di terze parti a Adobe Experience Platform.
 
@@ -477,13 +477,13 @@ ht-degree: 0%
 
 **Segmento**: un segmento è un insieme di regole che includono attributi e dati evento che qualificano diversi profili affinché diventino un pubblico.
 
-**Generatore di segmenti**: Il [!DNL Segment Builder] è un ambiente di sviluppo visivo utilizzato per creare le definizioni dei segmenti. Funge da componente comune di tutte le applicazioni che utilizzano Experience Platform Segmentation Service.
+**Generatore di segmenti**: Il [!DNL Segment Builder] è un ambiente di sviluppo visivo utilizzato per creare le definizioni dei segmenti. Funge da componente comune di tutte le applicazioni che utilizzano Experienci Platform Segmentation Service.
 
 **Definizione del segmento**: una definizione di segmento è il set di regole utilizzato per descrivere le caratteristiche o il comportamento chiave di un pubblico target. Una volta concettualizzate, le regole delineate in una definizione di segmento vengono utilizzate per determinare i membri del pubblico idonei per un segmento.
 
 **Metodo di valutazione del segmento**: esistono due metodi di valutazione dei segmenti: pianificato e on-demand. La valutazione pianificata consente una pianificazione ricorrente per l’esecuzione di un processo di esportazione in un momento specifico, mentre la valutazione on-demand comporta la creazione di un processo di segmentazione per generare immediatamente il pubblico.
 
-**Esportazione segmento**: l’esportazione del segmento è uno dei due tipi di destinazioni di Experience Platform. Con l’esportazione dei segmenti, puoi inviare i profili idonei e mappati sulla destinazione. Utilizza ID di segmenti e utenti e dati pseudonimi e in genere si integra con i social network e altre piattaforme di destinazione di contenuti multimediali digitali.
+**Esportazione segmento**: l’esportazione del segmento è uno dei due tipi di destinazioni di Experienci Platform. Con l’esportazione dei segmenti, puoi inviare i profili idonei e mappati sulla destinazione. Utilizza ID di segmenti e utenti e dati pseudonimi e in genere si integra con i social network e altre piattaforme di destinazione di contenuti multimediali digitali.
 
 **ID segmento**: un ID segmento è un identificatore generato automaticamente associato a un segmento.
 
@@ -509,13 +509,13 @@ ht-degree: 0%
 
 **Attributo di origine**: un attributo di origine è un campo nel set di dati di origine. Gli attributi di origine sono mappati sui campi dello schema di destinazione.
 
-**Catalogo di origine**: il catalogo di origine è l’elenco dei connettori di origine disponibili in Experience Platform.
+**Catalogo di origine**: il catalogo di origine è l’elenco dei connettori di origine disponibili in Experienci Platform.
 
 **Categoria di origine**: una categoria di origine è un raggruppamento di origini che hanno caratteristiche simili.
 
 **Connettore sorgente**: i connettori di sorgenti (noti anche come sorgenti) consentono agli utenti di acquisire facilmente dati da più sorgenti, consentendo la strutturazione, l’etichettatura e il miglioramento dei dati utilizzando i servizi di Experience Platform. I dati possono essere acquisiti da diverse origini, ad esempio archiviazione basata su cloud, software di terze parti e sistemi di gestione delle relazioni con i clienti.
 
-**Connessione streaming**: una connessione in streaming è un endpoint univoco fornito da Adobe e associato alla tua organizzazione per lo streaming di dati in Experience Platform.
+**Connessione streaming**: una connessione in streaming è un endpoint univoco fornito da Adobe e associato alla tua organizzazione per lo streaming di dati in Experienci Platform.
 
 **Spazio dei nomi identità standard**: gli spazi dei nomi di identità standard sono spazi dei nomi di identità predefiniti forniti da Adobe, che rappresentano soluzioni standard del settore comunemente utilizzate per identificare i clienti.
 
