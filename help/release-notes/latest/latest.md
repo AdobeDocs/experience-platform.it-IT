@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 05136ca1a44fa0ecbf2fd9941d047c3a0899f2d1
+source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 25%
+source-wordcount: '1308'
+ht-degree: 24%
 
 ---
 
@@ -67,8 +67,10 @@ Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla r
 
 | Destinazione | Nuova o aggiornata | Descrizione |
 | ----------- |----------------|----------- |
+| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nuova | Attiva i tipi di pubblico per i quali è stato effettuato l’onboarding in precedenza [!DNL LiveRamp] per gli editori premium su dispositivi mobili, web, display e TV collegati. <br> Dopo aver effettuato l’onboarding dei tipi di pubblico in [!DNL LiveRamp] account tramite [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md) connessione, utilizza il nuovo [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) per attivare i tipi di pubblico nelle destinazioni a valle. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuova | [[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Ti consente di collegare dati, team e clienti su un’unica piattaforma di gestione delle relazioni con i clienti. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Aggiornata | È stato aggiunto il supporto per [!DNL Dynamics 365] prefissi di campi personalizzati per campi personalizzati non creati nella soluzione predefinita in [!DNL Dynamics 365]. Un nuovo campo di input, **[!UICONTROL Prefisso di personalizzazione]**, è stato aggiunto nel [Inserisci i dettagli della destinazione](#destination-details) passaggio. |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Aggiornata | La destinazione Tipi di pubblico di Experience Cloud è ora generalmente disponibile. Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audienci Manager e Adobe Analytics. È necessaria una licenza Audienci Manager per inviare tipi di pubblico ad Adobe Analytics. |
 
 {style="table-layout:auto"}
 
@@ -78,8 +80,6 @@ Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla r
 Add these to release notes as they go out
 
 | [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
-| [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | New | Activate audiences previously onboarded to [!DNL LiveRamp] to premium publishers across mobile, web, display, and connected TV mediums. <br> After onboarding audiences to your [!DNL LiveRamp] account through the [LiveRamp - Onboarding](liveramp-onboarding.md) connection, use the new [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) connection to activate the audiences to downstream destinations.  |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Updated | The Experience Cloud Audiences destination is now generally available. Use this destination to activate audiences from Real-Time CDP to Audience Manager and Adobe Analytics. You need an Audience Manager license to send audiences to Adobe Analytics. |
 
 -->
 
