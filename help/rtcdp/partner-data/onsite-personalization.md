@@ -1,10 +1,10 @@
 ---
 title: Utilizzo del riconoscimento visitatori assistito dal partner per personalizzare le esperienze nel sito
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
-source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '2530'
-ht-degree: 99%
+source-wordcount: '2548'
+ht-degree: 98%
 
 ---
 
@@ -49,6 +49,12 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
    * [Segmentazione Edge](/help/segmentation/ui/edge-segmentation.md)
    * [Destinazioni di personalizzazione Edge](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (o una piattaforma di personalizzazione a tua scelta. Questo tutorial sui casi d’uso mette in evidenza Adobe Target come motore di personalizzazione)
+
+## Procedura dettagliata del video {#video-walkthrough}
+
+Il tutorial video seguente illustra come personalizzare le esperienze nel sito per visitatori sconosciuti:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 

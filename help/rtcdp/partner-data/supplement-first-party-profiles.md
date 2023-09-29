@@ -1,10 +1,10 @@
 ---
 title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 96%
+source-wordcount: '1110'
+ht-degree: 95%
 
 ---
 
@@ -30,6 +30,12 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 >[!WARNING]
 >
 >Gli attributi aggiuntivi forniti dal partner e acquisiti in Real-Time CDP influiscono sulla *ricchezza media del profilo*. Per ulteriori informazioni sulla ricchezza dei profili, consulta la [descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html).
+
+## Procedura dettagliata del video {#video-walkthrough}
+
+Il tutorial video seguente illustra come integrare i tipi di pubblico di prime parti con gli attributi forniti dai partner:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 

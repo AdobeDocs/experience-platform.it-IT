@@ -1,10 +1,10 @@
 ---
 title: Coinvolgi e acquisisci nuovi clienti attraverso casi d’uso potenziali
 description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi d’uso potenziali, grazie al supporto dei dati dei partner in Real-Time CDP.
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 97%
+source-wordcount: '1953'
+ht-degree: 96%
 
 ---
 
@@ -40,6 +40,12 @@ Prima di espandere Real-Time CDP per coinvolgere e acquisire nuovi clienti, assi
 4. Come **cliente**, puoi creare tipi di pubblico mirati dall’elenco dei profili di potenziali clienti.
 5. Come **cliente**, puoi attivare i tipi di pubblico potenziale nelle destinazioni che accettano le identità disponibili nell’elenco dei potenziali clienti.
 6. Se necessario, utilizza il **partner dati** per l’attivazione nell’ultimo miglio dei tipi di pubblico sulle destinazioni desiderate dei contenuti multimediali a pagamento.
+
+## Procedura dettagliata del video {#video-walkthrough}
+
+Il tutorial video seguente illustra come raggiungere e coinvolgere i potenziali tipi di pubblico:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
 

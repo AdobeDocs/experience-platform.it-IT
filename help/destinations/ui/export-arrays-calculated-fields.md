@@ -3,9 +3,9 @@ title: (Beta) Utilizzare i campi calcolati per esportare le matrici in file di s
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
 badge: "Beta"
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ In questo caso, il file di output si presenta come di seguito. I tre elementi de
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` funzione per esportare array {#iif-function-export-arrays}
+
+Utilizza il `iif` funzione per esportare elementi di un array in determinate condizioni. Ad esempio, continuando con `organzations` oggetto array dall’alto, puoi scrivere una semplice funzione condizionale come `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![Schermata di mappatura per la prima e l’ultima funzione](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+In questo caso, il file di output si presenta come di seguito. In questo caso, il primo elemento dell’array è Marketing, quindi la persona è membro del reparto marketing.
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` funzione per esportare array {#coalesce-function-export-arrays}
 
 Utilizza il `coalesce` funzione per accedere ed esportare il primo elemento non nullo di un array in una stringa.
@@ -188,14 +201,6 @@ In questo caso, il file di output si presenta come:
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` e `sha256` funzioni di hashing {#hashing-functions}
 
