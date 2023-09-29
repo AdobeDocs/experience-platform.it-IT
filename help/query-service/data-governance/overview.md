@@ -2,7 +2,7 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experienci Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 1%
@@ -137,7 +137,7 @@ La crittografia è l&#39;utilizzo di un processo algoritmico per trasformare i d
 
 La conformità dei dati di Query Service garantisce che i dati siano sempre crittografati. I dati in transito sono sempre conformi a HTTPS e i dati in transito sono crittografati in un archivio Azure Data Lake utilizzando chiavi a livello di sistema. Consulta la documentazione su [cifratura dei dati in Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) per ulteriori informazioni. Per informazioni dettagliate sulla modalità di crittografia dei dati inattivi nell&#39;archiviazione di Azure Data Lake, vedere [documentazione ufficiale di Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-I dati in transito sono sempre conformi HTTPS. Analogamente, quando i dati sono inattivi nel data lake, la crittografia viene eseguita con la chiave di gestione del cliente (CMK), già supportata da Data Lake Management. La versione attualmente supportata è TLS1.2. Consulta la [documentazione di Customer-Managed Key (CMK)](../../landing/governance-privacy-security/customer-managed-keys.md) per informazioni su come impostare chiavi di crittografia personalizzate per i dati archiviati in Adobe Experience Platform.
+I dati in transito sono sempre conformi HTTPS. Analogamente, quando i dati sono inattivi nel data lake, la crittografia viene eseguita con la chiave di gestione del cliente (CMK), già supportata da Data Lake Management. La versione attualmente supportata è TLS1.2. Consulta la [documentazione di Customer-Managed Key (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) per informazioni su come impostare chiavi di crittografia personalizzate per i dati archiviati in Adobe Experience Platform.
 
 
 ## Audit {#audit}
@@ -154,7 +154,7 @@ I registri delle query sono accessibili tramite l’interfaccia utente di Platfo
 
 ![La scheda Registro query con il pannello dei dettagli evidenziato.](../images/data-governance/overview/queries-log.png)
 
-### Registri di controllo {#audit-logs}
+### Registri di audit {#audit-logs}
 
 I registri di audit contengono informazioni più dettagliate rispetto ai registri di query e consentono di filtrare i registri in base ad attributi quali utente, data, tipo di query e così via. Oltre ai dettagli disponibili nell’interfaccia utente del registro delle query, i registri di controllo memorizzano i dettagli sui singoli utenti, insieme ai relativi dati di sessione o alla connettività a un client di terze parti.
 

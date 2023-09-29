@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire ai clienti esperienze personalizzate in tempo reale.
-source-git-commit: 65abbb4dde5b83f597a3a5bfd96ce7c081c88275
+source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 30%
+source-wordcount: '281'
+ht-degree: 27%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 30%
          * [Panoramica](./governance-privacy-security/consent/iab/overview.md)
          * [Configurare un set di dati per acquisire dati su consenso e preferenze](./governance-privacy-security/consent/iab/dataset.md)
       * [Integrare Platform Web SDK per elaborare i dati di consenso e preferenze](./governance-privacy-security/consent/sdk.md)
-   * Registri di controllo {#audit-logs}
+   * Registri di audit {#audit-logs}
       * [Panoramica](./governance-privacy-security/audit-logs/overview.md)
       * API di query di controllo {#audit-api}
          * [Panoramica](./governance-privacy-security/audit-logs/api/overview.md)
@@ -66,7 +66,11 @@ ht-degree: 30%
          * [Eventi](./governance-privacy-security/audit-logs/api/events.md)
          * [Esporta](./governance-privacy-security/audit-logs/api/export.md)
    * [Crittografia dei dati](./governance-privacy-security/encryption.md)
-   * [Chiavi gestite dal cliente](./governance-privacy-security/customer-managed-keys.md)
+   * Chiavi gestite dal cliente {#customer-managed-keys}
+      * [Chiavi gestite dal cliente](./governance-privacy-security/customer-managed-keys/overview.md)
+      * [Configurare un archivio chiavi di Azure](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
+      * [Utilizzare l’API per configurare la CMK](./governance-privacy-security/customer-managed-keys/api-set-up.md)
+      * [Utilizzare l’interfaccia utente per configurare la CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * Utilizzo delle licenze e guardrail {#license}
    * [Best practice per l’adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)

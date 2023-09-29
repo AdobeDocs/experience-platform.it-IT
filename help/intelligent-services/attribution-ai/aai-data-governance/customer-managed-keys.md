@@ -3,7 +3,7 @@ keywords: insights;attribution ai;attribution ai insights;AAI query service;attr
 title: Chiavi gestite dal cliente
 description: Scopri come impostare le chiavi gestite dal cliente per Attribution AI.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%
@@ -12,7 +12,7 @@ ht-degree: 24%
 
 # Chiavi gestite dal cliente
 
-Attribution AI fornisce l’opzione per [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e i clienti di Privacy &amp; Security Shield a utilizzare le chiavi gestite dal cliente di Azure (CMK) da applicare ai dati delle Attribution AI. Il processo di configurazione è lo stesso [Configurazione CMK di Adobe Experience Platform](../../../landing/governance-privacy-security/customer-managed-keys.md) e puoi seguire i passaggi descritti in.
+Attribution AI fornisce l’opzione per [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e i clienti di Privacy &amp; Security Shield a utilizzare le chiavi gestite dal cliente di Azure (CMK) da applicare ai dati delle Attribution AI. Il processo di configurazione è lo stesso [Configurazione CMK di Adobe Experience Platform](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) e puoi seguire i passaggi descritti in.
 
 Puoi leggere la documentazione su [Chiavi gestite dal cliente in Adobe Experience Platform](../../../landing/governance-privacy-security/encryption.md) e segui i passaggi descritti per passare attraverso il processo di configurazione.
 

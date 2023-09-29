@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 26%
+ht-degree: 34%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 26%
 
 Tutti i dati memorizzati su Adobe Experience Platform vengono crittografati a riposo utilizzando chiavi a livello di sistema. Se utilizzi un’applicazione basata su Platform, ora puoi scegliere di utilizzare le tue chiavi di crittografia, garantendo un maggiore controllo sulla sicurezza dei dati.
 
-Consulta la panoramica su [chiavi gestite dal cliente](../../landing/governance-privacy-security/customer-managed-keys.md) per i dettagli sulla funzione.
+Consulta la panoramica su [chiavi gestite dal cliente](../../landing/governance-privacy-security/customer-managed-keys/overview.md) per i dettagli sulla funzione.
 
 ## Raccolta dati {#data-collection}
 
@@ -48,7 +48,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Funzione | Descrizione |
 | --- | --- |
 | Esportazioni di set di dati (Beta) | Il [Funzionalità Beta per esportazioni set di dati](/help/destinations/ui/export-datasets.md) consente di esportare i dati di prima generazione (come definito nella [Descrizione del prodotto Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)) da Adobe Experience Platform ai sistemi dei clienti esterni, tramite l&#39;interfaccia utente delle destinazioni. Questo consente di ottenere dati da Experienci Platform con un flusso di lavoro senza codice/a basso codice per sei destinazioni di archiviazione cloud (elencate nella tabella seguente) per casi di utilizzo di analisi e conformità. |
-| Funzionalità di esportazione file migliorate (Beta) | È ora possibile beneficiare di funzionalità di personalizzazione avanzate durante l’esportazione di file da Experienci Platform: <br><ul><li>Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Questa funzionalità è supportata dalle sei nuove schede di archiviazione cloud beta elencate nella tabella seguente. |
+| Funzionalità di esportazione file migliorate (Beta) | È ora possibile beneficiare di funzionalità di personalizzazione avanzate durante l’esportazione di file da Experienci Platform: <br><ul><li>Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite il [passaggio di mappatura migliorato](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilità di personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> Questa funzionalità è supportata dalle sei nuove schede di archiviazione cloud beta elencate nella tabella seguente. |
 
 {style="table-layout:auto"}
 
@@ -59,9 +59,9 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line è una piattaforma di comunicazione popolare che collega persone, servizi e informazioni ed è cresciuta da un’app di chat a un hub per l’intrattenimento, il social e le attività quotidiane. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365 è una piattaforma di applicazioni aziendali basata su cloud che combina la pianificazione delle risorse aziendali (ERP) e la gestione delle relazioni con i clienti (CRM) insieme alle applicazioni di produttività e agli strumenti di intelligenza artificiale, per offrire operazioni end-to-end più fluide e controllate, un migliore potenziale di crescita e costi ridotti. |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | Il [!DNL (Beta) Adobe Commerce] il connettore di destinazione consente di selezionare uno o più segmenti Real-Time CDP da attivare nel [!DNL Adobe Commerce] per offrire agli acquirenti un&#39;esperienza dinamica e personalizzata. Entro [!DNL Adobe Commerce], puoi quindi selezionare i segmenti Real-Time CDP per personalizzare offerte univoche nel carrello, ad esempio &quot;acquista 2 ottieni 1 gratis&quot;. Puoi anche visualizzare hero banner e modificare il prezzo dei prodotti attraverso offerte promozionali, tutte personalizzate per i segmenti Adobe Real-Time CDP. |
-| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Creare una connessione in uscita a [!DNL Azure Data Lake Storage Gen2] per esportare periodicamente file di dati da Adobe Experience Platform nel percorso di archiviazione personale. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
-| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] è un [!DNL Azure Blob] l’interfaccia di archiviazione fornita da Adobe Experience Platform consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per esportare i file da Platform. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
-| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform nei bucket personali. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | Crea una connessione in uscita a [!DNL Azure Data Lake Storage Gen2] per esportare periodicamente file di dati da Adobe Experience Platform al tuo spazio di archiviazione. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
+| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] è un’interfaccia di archiviazione [!DNL Azure Blob] fornita da Adobe Experience Platform che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per esportare i file da Platform. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform ai tuoi bucket. Questa nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
 | [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | I partecipanti beta ne visualizzano due [!DNL Amazon S3] schede di destinazione affiancate nel catalogo delle destinazioni. La nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | I partecipanti beta ne visualizzano due [!DNL Azure Blob] schede di destinazione affiancate nel catalogo delle destinazioni. La nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | I partecipanti beta ne visualizzano due [!DNL SFTP] schede di destinazione affiancate nel catalogo delle destinazioni. La nuova destinazione beta fornisce funzionalità avanzate di esportazione dei file e supporta le esportazioni dei set di dati. |
