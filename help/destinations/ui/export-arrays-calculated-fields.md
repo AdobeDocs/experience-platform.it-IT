@@ -1,11 +1,11 @@
 ---
-title: (Beta) Utilizzare i campi calcolati per esportare matrici in file sequenziali
+title: (Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat
 type: Tutorial
-description: Scopri come esportare array e campi calcolati da Real-Time CDP a destinazioni basate su profili batch.
+description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
 badge: "Beta"
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Supporto per gli array di esportazione (Beta)"
 >abstract="Esporta semplici array di valori int, stringa o booleani da Experienci Platform alla destinazione di archiviazione cloud desiderata. Si applicano alcune limitazioni. Consulta la documentazione per esempi esaurienti e funzioni supportate."
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Esempi"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitazioni note"
 
 >[!AVAILABILITY]
 >

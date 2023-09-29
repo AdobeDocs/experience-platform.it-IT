@@ -4,9 +4,9 @@ title: Esportare i set di dati utilizzando l’API del servizio Flusso
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i set di dati in determinate destinazioni.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
+source-wordcount: '3550'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Visualizzare i set di dati]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** o un **[!UICONTROL Esportare i set di dati]** , quindi si dispone delle autorizzazioni appropriate.
 
@@ -1149,6 +1149,10 @@ Prendi nota dell’ID di connessione dalla risposta. Questo ID sarà richiesto n
 ![Diagramma che mostra il passaggio 4 nel flusso di lavoro dell’esportazione dei set di dati](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Successivamente, devi creare una connessione di destinazione in cui sono memorizzati i parametri di esportazione per i set di dati. I parametri di esportazione includono la posizione, il formato del file, la compressione e altri dettagli. Consulta la sezione `targetSpec` proprietà fornite nella specifica di connessione della destinazione per comprendere le proprietà supportate per ciascun tipo di destinazione. Fai riferimento alle schede seguenti per `targetSpec` di tutte le destinazioni supportate.
+
+>[!WARNING]
+>
+>Le esportazioni in file JSON sono supportate solo in modalità compressa. Esporta in [!DNL Parquet] i file sono supportati in modalità compressa e non compressa.
 
 >[!BEGINTABS]
 

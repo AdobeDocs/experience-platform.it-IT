@@ -4,9 +4,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -78,15 +78,19 @@ A seconda della destinazione a cui ti stai connettendo, potrebbe essere richiest
 
 ![Immagine che mostra i parametri di input richiesti e opzionali durante il collegamento a una destinazione Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### (Beta) Impostare le opzioni di formattazione per i file esportati {#file-formatting-and-compression-options}
+### Impostare le opzioni di formattazione per i file esportati {#file-formatting-and-compression-options}
 
 Per le destinazioni basate su file, puoi configurare varie impostazioni relative al modo in cui i file esportati vengono formattati e compressi. Per ulteriori informazioni su tutte le opzioni di formattazione e compressione disponibili, vedere [Tutorial su come configurare le opzioni di formattazione per le destinazioni basate su file](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ![Immagine che mostra la selezione del tipo di file e varie opzioni per i file CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurare la connessione di destinazione per l’attivazione del pubblico o le esportazioni di set di dati {#segment-activation-or-dataset-exports}
+### Configurare la connessione di destinazione per l’attivazione di tipi di pubblico, l’attivazione di potenziali clienti o le esportazioni di set di dati {#segment-activation-or-dataset-exports}
 
-Alcune destinazioni basate su file supportano l’attivazione del pubblico e le esportazioni di set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di attivare tipi di pubblico o esportare set di dati.
+Alcune destinazioni basate su file supportano l’attivazione del pubblico per clienti o potenziali clienti noti, nonché le esportazioni di set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di: [attivare i tipi di pubblico](/help/destinations/ui/activate-batch-profile-destinations.md), [potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md), o [esportare i set di dati](/help/destinations/ui/export-datasets.md).
+
+>[!WARNING]
+>
+>Durante l’esportazione dei set di dati, tieni presente che le esportazioni in file JSON sono supportate solo in modalità compressa. Esporta in [!DNL Parquet] i file sono supportati in modalità compressa e non compressa.
 
 ![Immagine che mostra il controllo per la selezione del tipo di dati, che consente agli utenti di scegliere tra l’attivazione del pubblico e le esportazioni di set di dati.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
@@ -110,6 +114,6 @@ Alcune destinazioni basate su file supportano l’attivazione del pubblico e le 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, hai imparato a utilizzare l’interfaccia utente di Experience Platform per stabilire una connessione a una destinazione. I parametri di connessione disponibili e richiesti variano da destinazione a destinazione. È inoltre necessario consultare la pagina della documentazione di destinazione in [catalogo delle destinazioni](/help/destinations/catalog/overview.md) per informazioni specifiche sugli input richiesti e sulle opzioni disponibili per tipo di destinazione.
+Dopo aver letto questo documento, hai imparato a utilizzare l’interfaccia utente di Experienci Platform per stabilire una connessione a una destinazione. I parametri di connessione disponibili e richiesti variano da destinazione a destinazione. È inoltre necessario consultare la pagina della documentazione di destinazione in [catalogo delle destinazioni](/help/destinations/catalog/overview.md) per informazioni specifiche sugli input richiesti e sulle opzioni disponibili per tipo di destinazione.
 
 Quindi, puoi procedere a [attivazione di tipi di pubblico](/help/destinations/ui/activation-overview.md) o [esportazione di set di dati](/help/destinations/ui/export-datasets.md) a destinazione.
