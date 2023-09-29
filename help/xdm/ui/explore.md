@@ -2,21 +2,21 @@
 keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;data model;esplorare;classe;gruppo di campi;tipo di dati;schema;
 solution: Experience Platform
 title: Esplorare le risorse dello schema nell’interfaccia utente
-description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
+description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
 
 # Esplorare le risorse dello schema nell’interfaccia utente
 
-In Adobe Experience Platform, tutte le risorse dello schema Experience Data Model (XDM) sono memorizzate nel [!DNL Schema Library], incluse le risorse standard fornite da Adobe e le risorse personalizzate definite dall’organizzazione. Nell’interfaccia utente di Experience Platform, puoi visualizzare la struttura e i campi di qualsiasi schema, classe, gruppo di campi o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile durante la pianificazione e la preparazione per l’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi di utilizzo di ciascun campo fornito da queste risorse XDM.
+In Adobe Experience Platform, tutte le risorse dello schema Experience Data Model (XDM) sono memorizzate nel [!DNL Schema Library], incluse le risorse standard fornite da Adobe e le risorse personalizzate definite dall’organizzazione. Nell’interfaccia utente di Experienci Platform, puoi visualizzare la struttura e i campi di qualsiasi schema, classe, gruppo di campi o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile durante la pianificazione e la preparazione per l’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi di utilizzo di ciascun campo fornito da queste risorse XDM.
 
-Questo tutorial illustra i passaggi necessari per esplorare schemi, classi, gruppi di campi e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
+Questo tutorial illustra i passaggi necessari per esplorare schemi, classi, gruppi di campi e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
 
 ## Cercare una risorsa schema {#lookup}
 
@@ -28,9 +28,9 @@ Icona del filtro (![Immagine icona filtro](../images/ui/explore/icon.png)) mostr
 
 Ad esempio, per filtrare l’elenco in modo da mostrare solo i tipi di dati standard forniti dall’Adobe, seleziona **[!UICONTROL Tipo di dati]** e **[!UICONTROL Adobe]** sotto **[!UICONTROL Tipo]** e **[!UICONTROL Proprietario]** sezioni, rispettivamente.
 
-Il **[!UICONTROL Incluso nel profilo]** consente di filtrare i risultati in modo da visualizzare solo le risorse utilizzate negli schemi che sono stati abilitati per l’utilizzo in [Profilo cliente in tempo reale](../../profile/home.md).
+Il **[!UICONTROL Incluso nel profilo]** consente di filtrare i risultati in modo da visualizzare solo le risorse utilizzate negli schemi che sono stati abilitati per l’utilizzo in [Profilo cliente in tempo reale](../../profile/home.md). Il **[!UICONTROL Mostra schemi ad hoc]** attiva/disattiva filtra l’elenco degli schemi creati con campi con namespace utilizzabili solo da un singolo set di dati.
 
-![](../images/ui/explore/filter.png)
+![Il [!UICONTROL Schemi] workspace [!UICONTROL Sfoglia] con il pannello filtri evidenziato.](../images/ui/explore/filter.png)
 
 Quando si elencano le risorse in **[!UICONTROL Classi]**, **[!UICONTROL Gruppi di campi]**, o **[!UICONTROL Tipi di dati]** schede, è possibile selezionare **[!UICONTROL Adobe]** per visualizzare solo le risorse standard o **[!UICONTROL Cliente]** per visualizzare solo le risorse create dall’organizzazione.
 
@@ -108,4 +108,4 @@ I campi di relazione vengono inoltre evidenziati in modo univoco nell’area di 
 
 ## Passaggi successivi
 
-Questo documento illustra come esplorare le risorse XDM esistenti nell’interfaccia utente di Experience Platform. Per ulteriori informazioni sulle diverse funzioni del [!UICONTROL Schemi] workspace e [!DNL Schema Editor], vedere [[!UICONTROL Schemi] panoramica di workspace](./overview.md).
+Questo documento illustra come esplorare le risorse XDM esistenti nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni sulle diverse funzioni del [!UICONTROL Schemi] workspace e [!DNL Schema Editor], vedere [[!UICONTROL Schemi] panoramica di workspace](./overview.md).

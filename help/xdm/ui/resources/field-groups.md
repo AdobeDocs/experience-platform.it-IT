@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experienci Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 1%
+source-wordcount: '985'
+ht-degree: 8%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
->title="Filtro gruppo di campi standard o personalizzato"
->abstract="L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Selezionare il pulsante di opzione per scegliere tra le opzioni Standard e Personalizzato. L&#39;opzione Standard mostra le entità create da Adobe, mentre l&#39;opzione Personalizzato mostra le entità create all&#39;interno dell&#39;organizzazione. Per ulteriori informazioni sulla creazione e la modifica di gruppi di campi, consulta la documentazione."
+>title="Filtro gruppo di campi personalizzato o standard"
+>abstract="L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Selezionare il pulsante di opzione per scegliere tra le opzioni Standard e Personalizzato. L’opzione Standard mostra le entità create da Adobe, mentre l’opzione Personalizzato mostra le entità create all’interno dell’organizzazione. Per ulteriori informazioni sulla creazione e la modifica di gruppi di campi, consulta la documentazione."
 
 In Experience Data Model (XDM), i gruppi di campi di schema sono componenti riutilizzabili che definiscono uno o più campi che implementano determinate funzioni come dati personali, preferenze di hotel o indirizzo. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile.
 
@@ -45,6 +45,12 @@ Nella finestra di dialogo visualizzata, seleziona **[!UICONTROL Crea nuovo grupp
 Il [!DNL Schema Editor] viene nuovamente visualizzato, con il nuovo gruppo di campi elencato nella barra a sinistra. Poiché si tratta di un gruppo di campi nuovo di zecca, al momento non fornisce alcun campo allo schema, e pertanto l’area di lavoro rimane invariata. Ora puoi iniziare [aggiungere campi al gruppo di campi](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## Filtra gruppi di campi {#filter}
+
+L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Per impostazione predefinita vengono visualizzati i gruppi di campi definiti dall&#39;Adobe. Tuttavia, puoi anche filtrare l’elenco per mostrare quelli creati dalla tua organizzazione. Seleziona il pulsante di opzione per scegliere tra [!UICONTROL Standard] e [!UICONTROL Personalizzato] opzioni. Il [!UICONTROL Standard] mostra le entità create da Adobe e [!UICONTROL Personalizzato] Questa opzione consente di visualizzare le entità create all’interno dell’organizzazione.
+
+![Il [!UICONTROL Gruppi di campi] scheda di [!UICONTROL Schemi] workspace con [!UICONTROL Standard] e [!UICONTROL Personalizzato] evidenziato.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Modificare un gruppo di campi esistente {#edit}
 

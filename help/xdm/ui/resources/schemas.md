@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemi;
 solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
-description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experience Platform.
+description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experienci Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
 workflow-type: tm+mt
-source-wordcount: '3340'
+source-wordcount: '3571'
 ht-degree: 1%
 
 ---
@@ -31,15 +31,25 @@ Questa guida richiede una buona conoscenza del sistema XDM. Consulta la sezione 
 >
 >Questa sezione illustra come creare manualmente un nuovo schema nell’interfaccia utente. Se acquisisci dati CSV in Platform, puoi scegliere di [mappare tali dati su uno schema XDM creato dai consigli generati dall’intelligenza artificiale](../../../ingestion/tutorials/map-csv/recommendations.md) (attualmente in versione beta) senza dover creare manualmente lo schema.
 
-In [!UICONTROL Schemi] workspace, seleziona **[!UICONTROL Crea schema]** in alto a destra. Nel menu a discesa visualizzato puoi scegliere tra **[!UICONTROL Profilo individuale XDM]** e **[!UICONTROL XDM ExperienceEvent]** come classe base per lo schema. In alternativa, è possibile selezionare **[!UICONTROL Sfoglia]** per effettuare una selezione dall&#39;elenco completo delle classi disponibili, oppure [crea una nuova classe personalizzata](./classes.md#create) invece.
+In [!UICONTROL Schemi] workspace, seleziona **[!UICONTROL Crea schema]** in alto a destra.
 
-![](../../images/ui/resources/schemas/create-schema.png)
+![L’area di lavoro Schemi con [!UICONTROL Crea schema] evidenziato.](../../images/ui/resources/schemas/create-schema.png)
 
-Dopo aver selezionato una classe, [!DNL Schema Editor] e la struttura di base dello schema (fornita dalla classe) viene visualizzata nell’area di lavoro. Da qui, puoi utilizzare la barra a destra per aggiungere una **[!UICONTROL Nome visualizzato]** e **[!UICONTROL Descrizione]** per lo schema.
+Il [!UICONTROL Crea schema] viene visualizzato workflow. È possibile scegliere una classe base per lo schema selezionando **[!UICONTROL Profilo individuale]**, **[!UICONTROL Evento esperienza]**, o **[!UICONTROL Altro]**, seguito da **[!UICONTROL Successivo]** per confermare la scelta. Consulta la [Profilo individuale XDM](../../classes/individual-profile.md) e [XDM ExperienceEvent](../../classes/experienceevent.md) per ulteriori informazioni su queste classi.
 
-![](../../images/ui/resources/schemas/schema-details.png)
+![Il [!UICONTROL Crea schema] con le tre opzioni di classe e [!UICONTROL Successivo] evidenziato.](../../images/ui/resources/schemas/schema-class-options.png)
 
-Ora puoi iniziare a creare la struttura dello schema [aggiunta di gruppi di campi schema](#add-field-groups).
+Dopo aver selezionato una classe, [!UICONTROL Nome e recensione] viene visualizzata la sezione. In questa sezione, fornisci un nome e una descrizione per identificare lo schema. &#x200B;La struttura di base dello schema (fornita dalla classe) viene visualizzata nell’area di lavoro per rivedere e verificare la struttura di classe e schema selezionata.
+
+Inserisci un [!UICONTROL Nome visualizzato schema] nel campo di testo. Quindi, inserisci una descrizione adatta per identificare lo schema. Dopo aver rivisto la struttura dello schema e aver impostato correttamente le impostazioni, seleziona **[!UICONTROL Fine]** per creare lo schema.
+
+![Il [!UICONTROL Nome e recensione] sezione del [!UICONTROL Crea schema] workflow con [!UICONTROL Nome visualizzato schema], [!UICONTROL Descrizione], e [!UICONTROL Fine] evidenziato.](../../images/ui/resources/schemas/name-and-review.png)
+
+Il [!UICONTROL Schema] [!UICONTROL Sfoglia] viene visualizzata la scheda. Lo schema creato di recente è ora disponibile per la modifica nel [!DNL Schema Editor] e viene visualizzato nell’elenco degli schemi disponibili.
+
+![Editor di schema che visualizza lo schema creato di recente.](../../images/ui/resources/schemas/schema-details.png)
+
+Ora puoi iniziare a creare la struttura dello schema [aggiunta di gruppi di campi schema](#add-field-groups) nel [!DNL Schema Editor].
 
 ## Modificare uno schema esistente {#edit}
 
@@ -47,9 +57,9 @@ Ora puoi iniziare a creare la struttura dello schema [aggiunta di gruppi di camp
 >
 >Una volta che uno schema è stato salvato e utilizzato nell’acquisizione dei dati, è possibile apportarvi solo modifiche aggiuntive. Consulta la [regole di evoluzione dello schema](../../schema/composition.md#evolution) per ulteriori informazioni.
 
-Per modificare uno schema esistente, seleziona la **[!UICONTROL Sfoglia]** e quindi selezionare il nome dello schema da modificare.
+Per modificare uno schema esistente, seleziona la **[!UICONTROL Sfoglia]** e quindi selezionare il nome dello schema da modificare. È inoltre possibile utilizzare la barra di ricerca per limitare l&#39;elenco delle opzioni disponibili.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
+![L’area di lavoro Schema con uno schema evidenziato.](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
@@ -81,11 +91,11 @@ Dopo aver aperto uno schema all’interno di [!DNL Schema Editor], è possibile 
 
 Viene visualizzata una finestra di dialogo con l’elenco dei gruppi di campi che è possibile selezionare per lo schema. Poiché i gruppi di campi sono compatibili solo con una classe, verranno elencati solo i gruppi di campi associati alla classe selezionata dello schema. Per impostazione predefinita, i gruppi di campi elencati sono ordinati in base alla popolarità di utilizzo all’interno dell’organizzazione.
 
-![](../../images/ui/resources/schemas/field-group-popularity.png)
+![Il [!UICONTROL Aggiungi gruppi di campi] finestra di dialogo evidenziata con [!UICONTROL Popolarità] colonna evidenziata.](../../images/ui/resources/schemas/field-group-popularity.png)
 
 Se conosci l’attività generale o l’area aziendale dei campi che desideri aggiungere, seleziona una o più categorie verticali di settore nella barra a sinistra per filtrare l’elenco visualizzato dei gruppi di campi.
 
-![](../../images/ui/resources/schemas/industry-filter.png)
+![Il [!UICONTROL Aggiungi gruppi di campi] finestra di dialogo evidenziata con [!UICONTROL Settore] filtri e [!UICONTROL Settore] colonna evidenziata.](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
@@ -93,11 +103,11 @@ Se conosci l’attività generale o l’area aziendale dei campi che desideri ag
 
 È inoltre possibile utilizzare la barra di ricerca per individuare facilmente il gruppo di campi desiderato. I gruppi di campi il cui nome corrisponde alla query vengono visualizzati nella parte superiore dell’elenco. Sotto **[!UICONTROL Campi standard]**, vengono visualizzati i gruppi di campi contenenti campi che descrivono gli attributi di dati desiderati.
 
-![](../../images/ui/resources/schemas/field-group-search.png)
+![Il [!UICONTROL Aggiungi gruppi di campi] dialogo con [!UICONTROL Campi standard] funzione di ricerca evidenziata.](../../images/ui/resources/schemas/field-group-search.png)
 
 Seleziona la casella di controllo accanto al nome del gruppo di campi che desideri aggiungere allo schema. Dall’elenco puoi selezionare più gruppi di campi, ciascuno dei quali viene visualizzato nella barra a destra.
 
-![](../../images/ui/resources/schemas/add-field-group.png)
+![Il [!UICONTROL Aggiungi gruppi di campi] con la funzione di selezione della casella di controllo evidenziata.](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
@@ -105,11 +115,11 @@ Seleziona la casella di controllo accanto al nome del gruppo di campi che deside
 
 Dopo aver scelto i gruppi di campi, seleziona **[!UICONTROL Aggiungi gruppi di campi]** per aggiungerli allo schema.
 
-![](../../images/ui/resources/schemas/add-field-group-finish.png)
+![Il [!UICONTROL Aggiungi gruppi di campi] finestra di dialogo con i gruppi di campi selezionati e [!UICONTROL Aggiungi gruppi di campi] evidenziato.](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 Il [!DNL Schema Editor] viene nuovamente visualizzato con i campi forniti dal gruppo di campi rappresentati nell’area di lavoro.
 
-![](../../images/ui/resources/schemas/field-groups-added.png)
+![Il [!DNL Schema Editor] con uno schema di esempio visualizzato.](../../images/ui/resources/schemas/field-groups-added.png)
 
 Dopo aver aggiunto un gruppo di campi a uno schema, puoi facoltativamente [rimuovi campi esistenti](#remove-fields) o [aggiungi nuovi campi personalizzati](#add-fields) a tali gruppi, in base alle tue esigenze.
 
@@ -123,15 +133,15 @@ Dopo aver aggiunto un gruppo di campi a uno schema, puoi rimuovere tutti i campi
 
 Nell&#39;esempio seguente, il gruppo di campi standard **[!UICONTROL Dettagli demografici]** è stato aggiunto a uno schema. Per rimuovere un singolo campo come `taxId`, seleziona il campo nell’area di lavoro, quindi seleziona **[!UICONTROL Rimuovi]** nella barra a destra.
 
-![Rimuovi campo singolo](../../images/ui/resources/schemas/remove-single-field.png)
+![Il [!DNL Schema Editor] con [!UICONTROL Rimuovi] evidenziato. Questa azione rimuove un singolo campo.](../../images/ui/resources/schemas/remove-single-field.png)
 
 Se si desidera rimuovere più campi, è possibile gestire il gruppo di campi nel suo complesso. Seleziona un campo appartenente al gruppo nell’area di lavoro, quindi seleziona **[!UICONTROL Gestire i campi correlati]** nella barra a destra.
 
-![Gestire i campi correlati](../../images/ui/resources/schemas/manage-related-fields.png)
+![Il [!DNL Schema Editor] con [!UICONTROL Gestire i campi correlati] evidenziato.](../../images/ui/resources/schemas/manage-related-fields.png)
 
 Viene visualizzata una finestra di dialogo che mostra la struttura del gruppo di campi in questione. Da qui puoi utilizzare le caselle di controllo fornite per selezionare o deselezionare i campi necessari. Quando sei soddisfatto, seleziona **[!UICONTROL Conferma]**.
 
-![Seleziona campi dal gruppo di campi](../../images/ui/resources/schemas/select-fields.png)
+![Il [!UICONTROL Gestire i campi correlati] finestra di dialogo con i campi selezionati e [!UICONTROL Conferma] evidenziato.](../../images/ui/resources/schemas/select-fields.png)
 
 L’area di lavoro viene nuovamente visualizzata con solo i campi selezionati presenti nella struttura dello schema.
 
@@ -264,7 +274,7 @@ Dopo aver applicato le modifiche, il nuovo campo viene visualizzato sotto lo spa
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Abilitare uno schema per il profilo"
->abstract="Quando uno schema è abilitato per il profilo, tutti i set di dati creati da questo schema partecipano a Real-Time Customer Profile, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta che uno schema viene utilizzato per acquisire dati nel profilo, non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione dello strumento."
+>abstract="Quando uno schema è abilitato per il profilo, tutti i set di dati creati da questo schema partecipano a Real-Time Customer Profile, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta che uno schema viene utilizzato per acquisire dati nel profilo, non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione."
 
 [Profilo cliente in tempo reale](../../../profile/home.md) unisce dati provenienti da origini diverse per creare una visualizzazione completa di ogni singolo cliente. Se desideri che i dati acquisiti da uno schema partecipino a questo processo, devi abilitare lo schema per l’utilizzo in [!DNL Profile].
 

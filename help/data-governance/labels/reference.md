@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossario delle etichette di utilizzo dati
 description: Questo documento illustra tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 3%
+source-wordcount: '2250'
+ht-degree: 2%
 
 ---
 
@@ -73,6 +73,8 @@ Questa etichetta viene utilizzata per determinare l’utilizzo dei dati dei pote
 | Etichetta | Definizione |
 | --- | --- |
 | **Terze parti** | I dati di terze parti sono dati forniti da un fornitore di dati di terze parti. Un fornitore di dati di terze parti è un’entità che ha concluso un accordo con l’organizzazione che ti autorizza ad accedere ai dati di terze parti, utilizzarli, visualizzarli e trasmetterli insieme a Platform. |
+| **Arricchimento di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati per arricchire i profili di prime parti. |
+| **Prospezione di terze parti** | Dati raccolti da un’organizzazione terza che non è direttamente correlata alla persona interessata. L’etichetta deve essere applicata ai dati di terze parti utilizzati nella parte superiore della ricerca di funnel per clienti nuovi. |
 
 ## Appendice
 

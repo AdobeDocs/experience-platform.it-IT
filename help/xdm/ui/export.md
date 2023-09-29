@@ -4,9 +4,9 @@ title: Esportare gli schemi XDM nell’interfaccia utente
 description: Scopri come esportare uno schema esistente in una sandbox o organizzazione diversa nell’interfaccia utente di Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,9 @@ Anche se l’interfaccia utente di Platform consente di esportare risorse XDM, �
 
 ## Generare un payload di esportazione {#generate-export-payload}
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra. All&#39;interno del [!UICONTROL Schemi] nell’area di lavoro, seleziona la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
+I payload di esportazione possono essere generati nell’interfaccia utente di Platform dal pannello dei dettagli in [!UICONTROL Sfoglia] o direttamente dall’area di lavoro dello schema nell’Editor di schema.
+
+Per generare un payload di esportazione, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra. All&#39;interno del [!UICONTROL Schemi] nell’area di lavoro, seleziona la riga dello schema da esportare per visualizzare i dettagli dello schema nella barra laterale a destra.
 
 >[!TIP]
 >
@@ -200,6 +202,14 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
   }
 ]
 ```
+
+Puoi copiare il payload anche selezionando [!UICONTROL Altro] in alto a destra nell’Editor di schema. Un menu a discesa fornisce due opzioni: [!UICONTROL Copia struttura JSON] e [!UICONTROL Elimina schema].
+
+>[!NOTE]
+>
+>Non è possibile eliminare uno schema se è abilitato per il profilo o se a esso sono associati set di dati.
+
+![Editor schemi con [!UICONTROL Altro] e [!UICONTROL Copia in JSON] evidenziato.](../images/ui/export/schema-editor-copy-json.png)
 
 Il payload assume la forma di un array; ogni elemento dell’array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell’esempio precedente, l’opzione &quot;[!DNL Loyalty details]&quot; gruppo di campi personalizzato e &quot;[!DNL Loyalty Members]&quot;sono inclusi. Tutte le risorse core utilizzate dallo schema non vengono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni.
 
