@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
+source-wordcount: '4006'
 ht-degree: 2%
 
 ---
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREA DATABASE
 
-Il `CREATE DATABASE` crea un database ADLS.
+Il `CREATE DATABASE` Il comando crea un database di Azure Data Lake Storage (ADLS).
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## CREA VISUALIZZAZIONE
 
-La sintassi seguente definisce un `CREATE VIEW` query:
+La sintassi seguente definisce un `CREATE VIEW` per un set di dati. Questo set di dati può essere un ADLS o un set di dati archivio accelerato.
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+La sintassi seguente definisce un `CREATE VIEW` query che crea una visualizzazione nel contesto di un database e di uno schema.
+
+**Esempio**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| Parametri | Descrizione |
+| ------ | ------ |
+| `db_name` | Nome del database. |
+| `schema_name` | Nome dello schema. |
+| `view_name` | Nome della visualizzazione da creare. |
+| `select_query` | A `SELECT` dichiarazione. La sintassi del `SELECT` La query si trova in [Sezione SELECT queries](#select-queries). |
+
+**Esempio**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## MOSTRA VISTE
+
+La query seguente mostra l’elenco delle visualizzazioni.
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## VISTA A DISCESA
@@ -677,7 +717,7 @@ BEGIN TRANSACTION
 
 ### CHIUDI
 
-Il `CLOSE` Il comando consente di liberare le risorse associate a un cursore aperto. Dopo la chiusura del cursore non sono consentite operazioni successive. Quando il cursore non è più necessario, è necessario chiuderlo.
+Il `CLOSE` libera le risorse associate a un cursore aperto. Dopo la chiusura del cursore non sono consentite operazioni successive. Quando il cursore non è più necessario, è necessario chiuderlo.
 
 ```sql
 CLOSE name
