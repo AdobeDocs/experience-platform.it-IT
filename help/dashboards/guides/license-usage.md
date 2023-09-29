@@ -3,87 +3,151 @@ keywords: Experience Platform;interfaccia utente;personalizzazione;dashboard uti
 title: Guida alla dashboard dell’utilizzo delle licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
-exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
+source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 2%
+source-wordcount: '1987'
+ht-degree: 1%
 
 ---
 
 # Dashboard utilizzo licenze {#license-usage-dashboard}
 
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze nell’interfaccia utente di e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="Dashboard utilizzo licenze"
+>abstract="La dashboard Utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
 
-Per una panoramica generale dell’interfaccia utente di Platform, visita [Guida all’interfaccia utente di Experienci Platform](../../landing/ui-guide.md).
+Puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione tramite Adobe Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
-## Dati dashboard utilizzo licenze
+I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze. Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato, l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni di Experience Platform: Real-Time Customer Data Profile, Adobe Journey Optimizer e Customer Journey Analytics.
 
-Nel dashboard utilizzo licenze viene visualizzata un’istantanea dei dati relativi alla licenza della tua organizzazione, ad Experience Platform. I dati nel dashboard vengono visualizzati esattamente come appaiono nel momento specifico in cui è stata acquisita l’istantanea. In altre parole, l’istantanea non è un’approssimazione o un campione dei dati e il dashboard non viene aggiornato in tempo reale.
+Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze nell’interfaccia utente di e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
+
+Per una panoramica generale dell’interfaccia utente di Platform, consulta [Guida all’interfaccia utente di Experienci Platform](../../landing/ui-guide.md).
+
+## [!UICONTROL Utilizzo licenze] dati dashboard
+
+Il [!UICONTROL Utilizzo licenze] nel dashboard viene visualizzato un elenco di tutti i prodotti di Experience Platform acquistati. Da questo elenco, puoi trovare un’istantanea dei dati relativi alla licenza della tua organizzazione, ad Experience Platform, in qualsiasi sandbox associata.
+
+I dati in questo dashboard vengono visualizzati esattamente come appaiono nel momento specifico in cui è stata acquisita l’istantanea. In altre parole, l’istantanea non è un’approssimazione o un campione dei dati e il dashboard non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
 >Eventuali modifiche o aggiornamenti apportati ai dati dal momento in cui è stata acquisita l’istantanea non verranno riflessi nel dashboard fino all’acquisizione dell’istantanea successiva.
 
-## Esplorazione del dashboard utilizzo licenze
+## Esplorazione del dashboard utilizzo licenze {#explore}
 
-Per passare al dashboard utilizzo licenze nell’interfaccia utente di Platform, seleziona **[!UICONTROL Utilizzo licenze]** nella barra a sinistra. Verrà aperto il **[!UICONTROL Panoramica]** che visualizza il dashboard.
+Per passare al dashboard utilizzo licenze nell’interfaccia utente di Platform, seleziona **[!UICONTROL Utilizzo licenze]** nella barra a sinistra. Il [!UICONTROL Panoramica] viene visualizzata una scheda contenente un elenco dei prodotti disponibili.
 
 >[!NOTE]
 >
 >Per impostazione predefinita, il dashboard utilizzo licenze non è attivato. Per poter visualizzare la dashboard, gli utenti devono disporre dell’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;. Per i passaggi sulla concessione delle autorizzazioni di accesso per la visualizzazione del dashboard utilizzo licenze, consulta [guida alle autorizzazioni della dashboard](../permissions.md).
 
-![Scheda Panoramica della dashboard Utilizzo licenze.](../images/license-usage/dashboard-overview.png)
+![La scheda Panoramica della dashboard Utilizzo licenze, in cui l’utilizzo delle licenze è evidenziato nella barra laterale di navigazione a sinistra.](../images/license-usage/dashboard-overview.png)
 
-### Seleziona una sandbox
+## [!UICONTROL Scheda Panoramica] {#overview-tab}
 
-Per scegliere una sandbox da visualizzare nel dashboard, seleziona una delle seguenti opzioni [!UICONTROL Produzione] o [!UICONTROL Sviluppo]. La sandbox selezionata è indicata dal pulsante di opzione accanto al nome della sandbox.
+Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, inclusi i componenti aggiuntivi, in un formato tabella. La tabella fornisce informazioni chiave sull’utilizzo delle licenze in tutti i profili disponibili.
+
+| Nome colonna | Descrizione |
+|---|---|
+| **[!UICONTROL Prodotto]** | La soluzione di Adobe concessa in licenza dalla tua organizzazione. |
+| **[!UICONTROL Metrica principale]** | La metrica principale utilizzata per il tracciamento in per quel prodotto. |
+| **[!UICONTROL Importo licenza]** | Il valore contrattuale per l’importo massimo della metrica principale come concordato nel contratto di licenza del prodotto. |
+| **[!UICONTROL Utilizzo]** | Quantità della metrica principale utilizzata. Questo valore fornisce l’utilizzo totale di quella metrica in tutte le sandbox, di produzione o di sviluppo. |
+| **[!UICONTROL Utilizzo %]** | La percentuale della metrica principale utilizzata in base alla quantità di licenza. |
+
+>[!NOTE]
+>
+>Aggiunte al [!UICONTROL Importo licenza] in seguito all&#39;aggiunta di componenti aggiuntivi in aggiunta a [!UICONTROL Importo licenza] per i prodotti di base come Real-Time Customer Data Profile, Adobe Journey Optimizer e Customer Journey Analytics. L’utilizzo della quantità concessa in licenza (dopo i componenti aggiuntivi) viene monitorato attraverso i prodotti di base. Ad esempio, se acquisti una confezione di cinque sandbox, la quantità di cinque viene aggiunta a quella del prodotto di base. In questo caso, il componente aggiuntivo mostra [!UICONTROL Importo licenza] di uno, e l’utilizzo per tale componente aggiuntivo è &quot;vuoto&quot; in quanto viene tracciato attraverso il prodotto di base.
+
+La tabella indica la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
+
+## [!UICONTROL Riepilogo] scheda {#summary-tab}
+
+Per visualizzare ulteriori metriche e informazioni dettagliate sull’utilizzo della licenza del prodotto, seleziona un nome di prodotto dall’elenco. Il [!UICONTROL Riepilogo] viene visualizzata la vista del prodotto. Tutte le metriche disponibili vengono visualizzate nel [!UICONTROL Riepilogo] scheda. Le metriche disponibili dipendono dal prodotto concesso in licenza. Questa visualizzazione fornisce **una visualizzazione consolidata di tutte le metriche in tutte le sandbox di produzione o di sviluppo**. Lo stesso livello di analisi viene fornito per le sandbox di produzione e di sviluppo.
+
+![La visualizzazione di riepilogo di un prodotto Platform che mostra tutte le metriche disponibili per tale prodotto.](../images/license-usage/summary-tab.png)
+
+Nella scheda Riepilogo, la tabella include [!UICONTROL Metrica] colonna. Queste descrizioni leggibili dall’utente indicano tutte le metriche utilizzate per quel tipo di sandbox.
+
+### Seleziona una sandbox {#select-sandbox}
+
+Per cambiare la visualizzazione tra i tipi di sandbox di produzione e di sviluppo, seleziona una delle seguenti opzioni: [!UICONTROL Sandbox di produzione] o [!UICONTROL Sandbox di sviluppo]. Il tipo di sandbox selezionato è indicato dal pulsante di opzione accanto al nome della sandbox.
 
 I rapporti sul consumo per le sandbox sono cumulativi per tutte le sandbox dello stesso tipo. In altre parole, selezionare [!UICONTROL Produzione] o [!UICONTROL Sviluppo] fornisce rapporti sul consumo rispettivamente per tutte le sandbox di produzione o di sviluppo.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con il selettore sandbox evidenziato.](../images/license-usage/select-sandbox-old.png)
+![La vista di riepilogo di un prodotto Platform con sandbox di produzione e sandbox di sviluppo evidenziate.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Questo significa che l’autorizzazione per visualizzare il dashboard deve essere aggiunta a ogni singola sandbox. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
+>L’autorizzazione per visualizzare il dashboard utilizzo licenze deve essere specificata a livello di sandbox. Aggiungi le autorizzazioni a ogni singola sandbox per visualizzarle all’interno del dashboard. Questa limitazione verrà risolta in una versione futura. Nel frattempo, è disponibile la seguente soluzione alternativa:
 >
 >1. Creare un profilo di prodotto in Adobe Admin Console.
 >2. In Autorizzazione nella categoria Sandbox, aggiungi tutte le sandbox da visualizzare nel dashboard utilizzo licenze.
 >3. Nella categoria Autorizzazioni dashboard utenti, aggiungi l’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;.
 
-### Seleziona un intervallo di date
+## Il [!UICONTROL Dettagli] scheda {#details-tab}
 
-Dopo aver selezionato una sandbox, puoi utilizzare il menu a discesa dell’intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili più opzioni, incluso il valore predefinito degli ultimi 30 giorni.
+Per vedere **una particolare metrica di utilizzo da una sandbox specifica**, passare alla [!UICONTROL Dettagli] scheda. Il [!UICONTROL Dettagli] Questa scheda mostra tutte le sandbox disponibili nelle sandbox di produzione o di sviluppo.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con il menu a discesa Intervallo date evidenziato.](../images/license-usage/select-date-range-old.png)
+![La scheda Dettagli della dashboard Utilizzo licenze.](../images/license-usage/details-tab.png)
+
+Da questa vista puoi selezionare ![Icona di ispezione.](../images/license-usage/inspect-icon.png) accanto al nome di una sandbox per visualizzare la visualizzazione di tale metrica. Si apre una finestra di dialogo con una visualizzazione per quella metrica.
+
+### Visualizzazioni {#visualizations}
+
+Ogni widget di visualizzazione include i seguenti aspetti:
+
+- Un grafico a linee che traccia la variazione della metrica nel tempo
+- Una chiave per il grafico a linee
+- Nome della sandbox
+- Menu a discesa per regolare il periodo di tempo per il grafico a linee
+
+I grafici a linee confrontano i numeri di utilizzo per l’organizzazione con il totale disponibile con le licenze dell’organizzazione e forniscono una percentuale dell’utilizzo totale.
+
+![Visualizzazione di una metrica.](../images/license-usage/visualization.png)
+
+Il periodo di lookback dell’analisi può essere regolato dal menu a discesa. Il valore predefinito degli ultimi 30 giorni
+
+Per selezionare un intervallo di date, puoi utilizzare il menu a discesa dell’intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili più opzioni, incluso il valore predefinito degli ultimi 30 giorni.
+
+![La finestra di dialogo di visualizzazione con il menu a discesa intervallo di date è evidenziata.](../images/license-usage/date-range.png)
 
 Puoi anche selezionare **[!UICONTROL Data personalizzata]** per scegliere il periodo di tempo visualizzato.
 
-![La scheda Panoramica della dashboard Utilizzo licenze con le opzioni di intervallo date personalizzate evidenziate.](../images/license-usage/select-custom-date-old.png)
-
-## Widget
-
-Il dashboard utilizzo licenze è composto da widget che visualizzano metriche di sola lettura contenenti informazioni importanti sull’utilizzo delle licenze da parte dell’organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione (vedi [metriche disponibili](#available-metrics) sezione per i dettagli).
-
-Ogni widget visualizza un grafico a linee che confronta i numeri effettivi dell’organizzazione con il totale disponibile con le licenze dell’organizzazione e fornisce una percentuale dell’utilizzo totale.
-
-![La scheda Panoramica della dashboard Utilizzo licenze con il grafico a linee del widget della metrica Utilizzo licenze di esempio evidenziata.](../images/license-usage/widgets-old.png)
+![La scheda Panoramica della dashboard Utilizzo licenze con le opzioni di intervallo date personalizzate evidenziate.](../images/license-usage/custom-date-range.png)
 
 ## Metriche disponibili
 
-La dashboard utilizzo licenze riporta quattro metriche chiave, con ulteriori metriche da aggiungere nelle versioni successive. Le metriche disponibili sono:
+Il dashboard utilizzo licenze riporta diverse metriche univoche applicabili a più prodotti dell’organizzazione. Le metriche disponibili sono:
 
-* [!UICONTROL Pubblico di riferimento]
-* [!UICONTROL Ricchezza media dei profili]
-* [!UICONTROL Dati analizzati per rapporto di segmentazione]
-* [!UICONTROL Memoria totale utilizzata]
+| Metrica | Descrizione |
+|---|---|
+| [!UICONTROL Esportazioni dati] | Dimensione totale dei set di dati che possono essere esportati (direttamente o indirettamente) in una soluzione non Adobe in un anno. |
+| [!UICONTROL Numero di modelli AMM] | Un conteggio del modello di apprendimento automatico (integrato nell’Adobe Mix Modeler) utilizzato per misurare e/o prevedere un risultato specifico in base ai tuoi investimenti. |
+| [!UICONTROL Archiviazione del data lake] | Quantità utilizzata dell’archivio dati analitici in Adobe Experience Platform. |
+| [!UICONTROL Attributi calcolati] | Numero totale di dati comportamentali aggregati del profilo. I dati comportamentali aggregati del profilo si basano su eventi di esperienza convertiti in un attributo di profilo e che possono essere inclusi in un profilo di persona o di persona aziendale. |
+| [!UICONTROL Tipi di pubblico simili] | Il numero di tipi di pubblico generati modellando un pubblico consumer esistente per identificare profili di persone simili a quello esistente. |
+| [!UICONTROL Pubblico di riferimento] | La somma delle adesioni per il pubblico aziendale e per il pubblico dei consumatori. Un pubblico di consumatori è definito come il numero di profili di persone identificati come &quot;pubblico di consumatori&quot; nell’ordine di vendita. Per pubblico aziendale si intende il numero di profili di persona aziendale identificati come &quot;pubblico aziendale&quot; nell’ordine di vendita. |
+| [!UICONTROL Numero di sandbox] | Numero di separazioni logiche all’interno dell’istanza di qualsiasi servizio Adobe On-demand che accede ai dati e alle operazioni di isolamento di Adobe Experience Platform. |
+| [!UICONTROL Ricchezza media dei profili] | La somma di tutti i dati di produzione memorizzati nel servizio profili hub in qualsiasi momento, divisa per cinque volte il numero di profili di persona aziendale autorizzati. [!UICONTROL Ricchezza media dei profili] è una funzione condivisa. |
+| [!UICONTROL Segmentazione in streaming n. di pacchetti] | I pacchetti aggiornano l’iscrizione al segmento per un profilo persona man mano che nuovi dati entrano nel servizio di segmentazione attraverso un flusso di streaming. L’iscrizione al segmento viene valutata in base agli attributi del profilo della persona corrente e al valore dell’evento corrente, senza tenere conto del comportamento storico. La segmentazione in streaming è una funzione condivisa. |
+| [!UICONTROL Pubblico consumer] | Il numero di profili di persona identificati come &quot;Pubblico consumatore&quot; nell’ordine cliente. |
+| [!UICONTROL Righe CJA disponibili] | La media giornaliera delle righe di dati disponibili per l’analisi nel Customer Journey Analytics. |
+| [!UICONTROL Ricchezza profilo N. di confezioni] | Un aumento della Ricchezza media profilo autorizzata di 25 KB per profilo per ogni pacchetto Ricchezza profilo aggiuntiva. |
+| [!UICONTROL Pacchetti utenti di Adobe Query Service] | Componente aggiuntivo per aumentare il diritto degli utenti autorizzati di Query Service di altri cinque utenti di Query Service simultanei e di un’ulteriore query ad hoc in esecuzione simultanea per pacchetto. È possibile concedere in licenza più pacchetti utente di Ad Hoc Query aggiuntivi. |
+| [!UICONTROL Pubblico coinvolgibile] | Questa metrica si riferisce al pubblico di profili coinvolgibili. Un profilo coinvolgibile è un record di informazioni che rappresenta un individuo ed è rappresentato nel Servizio profili. Questi record sono profili che hai tentato di utilizzare con le funzionalità di authoring, decisione, distribuzione, sperimentazione o orchestrazione di Journey Optimizer negli ultimi 12 mesi. |
+| [!UICONTROL Ore di calcolo servizio query] | Misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch. |
 
-La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, fai riferimento alla documentazione descrittiva del prodotto appropriata:
+<!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+La disponibilità di queste metriche e la definizione specifica di ciascuna di esse varia a seconda delle licenze acquistate dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, consulta l’appropriata documentazione di descrizione del prodotto:
 
 | Licenza | Descrizione del prodotto |
 |---|---|
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:INTENSO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform: servizi app e servizi intelligenti](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, servizi app e servizi intelligenti](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 10M</li><li>RT CUSTOMER DATA PLATFORM:DA PRFL A 50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:ATTIVAZIONE OD</li><li>AEP:ATTIVAZIONE OD PRFL A 10M</li><li>AEP: PRFL DI ATTIVAZIONE OD FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELLIGENZA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
@@ -95,6 +159,6 @@ La disponibilità di queste metriche e la definizione specifica di ciascuna di e
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, puoi individuare il dashboard utilizzo licenze e selezionare una sandbox da visualizzare. Puoi anche trovare ulteriori informazioni sulle metriche disponibili per la tua organizzazione, in base alle licenze acquistate dalla tua organizzazione.
+Dopo aver letto questo documento, potrai individuare la dashboard di utilizzo della licenza e visualizzare le metriche di utilizzo per ciascun prodotto acquistato, per tutte le sandbox di produzione o di sviluppo e per una sandbox specifica. Puoi trovare ulteriori informazioni sulle metriche disponibili per la tua organizzazione, in base alle licenze acquistate dalla tua organizzazione.
 
 Per ulteriori informazioni sulle altre funzioni disponibili nell’interfaccia utente di Experienci Platform, consulta [Guida all’interfaccia utente di Platform](../../landing/ui-guide.md).
