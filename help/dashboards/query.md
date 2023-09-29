@@ -4,7 +4,7 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profilo, pubblico e destinazione in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Per ulteriori informazioni su [!DNL Query Service] e il suo ruolo all&#39;intern
 
 ![Dashboard di Sfoglia set di dati con la scheda Set di dati evidenziata nel menu di navigazione a sinistra.](./images/query/browse-datasets.png)
 
-### Set di dati generati dal sistema
+### Set di dati generati dal sistema {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Viene visualizzata una barra laterale contenente due interruttori, [!UICONTROL I
 
 ![Nella scheda Sfoglia set di dati è evidenziata l’opzione Mostra set di dati di sistema.](./images/query/show-system-datasets.png)
 
-### Set di dati di attributi di profilo
+### Set di dati di attributi di profilo {#profile-attribute-datasets}
 
 Le informazioni sul dashboard dei profili sono collegate ai criteri di unione definiti dall’organizzazione. Per ogni criterio di unione attivo, nel data lake è disponibile un set di dati di attributi di profilo.
 

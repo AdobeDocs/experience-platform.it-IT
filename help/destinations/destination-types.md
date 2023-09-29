@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche di
 
 ## Destinazioni di esportazione profilo {#profile-export}
 
-Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experience Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
+Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso con l’indirizzo e-mail come chiave primaria. Experienci Platform supporta attualmente due tipi di destinazioni di esportazione del profilo:
 
 * [Destinazioni di esportazione dei profili di streaming (destinazioni aziendali)](#streaming-profile-export)
 * [Destinazioni batch (basate su file)](#file-based)
@@ -37,7 +37,7 @@ Le destinazioni di esportazione dei profili ricevono dati non elaborati, spesso 
 
 >[!IMPORTANT]
 >
->Le destinazioni Enterprise, o destinazioni di esportazione di profili di streaming, sono disponibili per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) solo clienti.
+>Le destinazioni Enterprise, o destinazioni di esportazione di profili di streaming, sono disponibili per [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) solo clienti.
 
 Utilizza i connettori dati di destinazione Enterprise per fornire profili Adobe Real-time Customer Data Platform in tempo reale a sistemi interni o ad altri sistemi di terze parti per casi di utilizzo di sincronizzazione, analisi e ulteriore arricchimento dei profili.
 
@@ -59,7 +59,7 @@ Le destinazioni di esportazione del pubblico ricevono i dati sul pubblico di Exp
 
 ## Destinazioni di personalizzazione Edge {#edge-personalization-destinations}
 
-Le destinazioni di personalizzazione Edge in Experience Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destinazione di personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare per i clienti i casi di utilizzo della personalizzazione della stessa pagina e della pagina successiva.
+Le destinazioni di personalizzazione Edge in Experienci Platform includono [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) e [Destinazione di personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md). Utilizzando queste destinazioni, puoi abilitare per i clienti i casi di utilizzo della personalizzazione della stessa pagina e della pagina successiva.
 
 Ulteriori informazioni su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
@@ -69,7 +69,7 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## Destinazioni di esportazione del set di dati (Beta) {#dataset-export-destinations}
+## Destinazioni di esportazione del set di dati {#dataset-export-destinations}
 
 Alcune destinazioni di archiviazione cloud nel catalogo delle destinazioni supportano le esportazioni dei set di dati. Utilizza queste destinazioni per esportare i set di dati non elaborati nelle posizioni di archiviazione cloud.
 

@@ -1,26 +1,65 @@
 ---
-title: (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
+title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 85bc1f0af608a7b5510bd0b958122e9db10ee27a
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1754'
 ht-degree: 5%
 
 ---
 
-# (Beta) Esportare i set di dati nelle destinazioni di archiviazione cloud
+# Esportare i set di dati nelle destinazioni dell’archiviazione cloud
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->* La funzionalità per esportare i set di dati è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
->* Questa funzionalità beta supporta l’esportazione di dati di prima generazione, come definito in Real-time Customer Data Platform [descrizione del prodotto](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
->* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
+>* Questa funzionalità è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime o Ultimate, Adobe Journey Optimizer o il Customer Journey Analytics. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 
 Questo articolo spiega il flusso di lavoro necessario per esportare [set di dati](/help/catalog/datasets/overview.md) da Adobe Experience Platform alla posizione di archiviazione cloud preferita, ad esempio [!DNL Amazon S3], posizioni SFTP o [!DNL Google Cloud Storage] utilizzando l’interfaccia utente di Experienci Platform.
 
 Puoi anche utilizzare le API Experienci Platform per esportare i set di dati. Leggi le [esercitazione sull’API per l’esportazione di set di dati](/help/destinations/api/export-datasets.md) per ulteriori informazioni.
+
+## Set di dati disponibili per l’esportazione {#datasets-to-export}
+
+I set di dati che puoi esportare variano in base all’applicazione di Experience Platform (Real-Time CDP, Adobe Journey Optimizer), al livello (Prime o Ultimate) ed eventuali componenti aggiuntivi acquistati (ad esempio, Data Distiller).
+
+Scopri dalla tabella seguente quali tipi di set di dati puoi esportare in base all’applicazione, al livello di prodotto ed eventuali componenti aggiuntivi acquistati:
+
+<table>
+<thead>
+  <tr>
+    <th>Applicazione/componente aggiuntivo</th>
+    <th>Livello</th>
+    <th>Set di dati disponibili per l’esportazione</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">Real-Time CDP</td>
+    <td>Prime</td>
+    <td>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experienci Platform dopo l’acquisizione o la raccolta di dati tramite Sources, Web SDK, Mobile SDK, Analytics Data Connector ed Audienci Manager.</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td><ul><li>Set di dati di profili ed eventi di esperienza creati nell’interfaccia utente di Experienci Platform dopo l’acquisizione o la raccolta di dati tramite Sources, Web SDK, Mobile SDK, Analytics Data Connector ed Audienci Manager.</li><li> Set di dati generati dal sistema come <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=en#profile-attribute-datasets">Set di dati snapshot profilo</a>.</li></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Adobe Journey Optimizer</td>
+    <td>Prime</td>
+    <td>Consulta la sezione <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it"> Adobe Journey Optimizer</a> documentazione. (aggiornamento a collegamento profondo della tabella o sezione AJO per i set di dati supportati)</td>
+  </tr>
+  <tr>
+    <td>Ultimate</td>
+    <td>Consulta la sezione <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=it"> Adobe Journey Optimizer</a> documentazione. (aggiornamento a collegamento profondo della tabella o sezione AJO per i set di dati supportati)</td>
+  </tr>
+  <tr>
+    <td>Data Distiller</td>
+    <td>Data Distiller (componente aggiuntivo)</td>
+    <td>Set di dati derivati creati tramite Query Service.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Destinazioni supportati {#supported-destinations}
 
@@ -40,9 +79,9 @@ Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione clo
 Alcune destinazioni basate su file nel catalogo Experienci Platform supportano sia l’attivazione del pubblico che l’esportazione di set di dati.
 
 * Considera l’attivazione di tipi di pubblico quando desideri che i dati siano strutturati in profili raggruppati per interessi o qualifiche di pubblico.
-* In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per generare rapporti, flussi di lavoro di data science, per soddisfare i requisiti di conformità e molti altri casi d’uso.
+* In alternativa, puoi prendere in considerazione le esportazioni di set di dati quando desideri esportare set di dati non elaborati, che non sono raggruppati o strutturati in base agli interessi o alle qualifiche del pubblico. Puoi utilizzare questi dati per reporting, flussi di lavoro sulla scienza dei dati e molti altri casi d’uso. In qualità di amministratore, ingegnere dati o analista, ad esempio, puoi esportare i dati da Experienci Platform per sincronizzarli con il data warehouse, utilizzarli in strumenti di analisi BI, in strumenti di ML cloud esterni o archiviarli nel sistema per esigenze di archiviazione a lungo termine.
 
-Questo documento contiene tutte le informazioni necessarie per esportare i set di dati. Per attivare i tipi di pubblico nell’archiviazione cloud o nelle destinazioni del marketing via e-mail, leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md).
+Questo documento contiene tutte le informazioni necessarie per esportare i set di dati. Se desideri attivare *audience* nelle destinazioni del marketing via e-mail o dell’archiviazione cloud, leggi [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## Prerequisiti {#prerequisites}
 
@@ -50,7 +89,7 @@ Per esportare i set di dati nelle destinazioni di archiviazione cloud, è necess
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per esportare i set di dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Visualizzare i set di dati]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per esportare i set di dati e che la destinazione supporti l’esportazione dei set di dati, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** o un **[!UICONTROL Esportare i set di dati]** , quindi si dispone delle autorizzazioni appropriate.
 
@@ -106,7 +145,7 @@ Il **[!UICONTROL Esporta file incrementali]** viene selezionata automaticamente.
 
 2. Utilizza il **[!UICONTROL Ora]** per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
 
-3. Utilizza il **[!UICONTROL Data]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione. Nella versione beta della funzione non è possibile impostare una data di fine per le esportazioni. Per ulteriori informazioni, vedere [limitazioni note](#known-limitations) sezione.
+3. Utilizza il **[!UICONTROL Data]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione. Al momento non è possibile impostare una data di fine per le esportazioni. Per ulteriori informazioni, vedere [limitazioni note](#known-limitations) sezione.
 
 4. Seleziona **[!UICONTROL Successivo]** per salvare la pianificazione e passare alla **[!UICONTROL Revisione]** passaggio.
 
@@ -169,12 +208,23 @@ Per rimuovere un set di dati da un flusso di dati esistente, effettua le seguent
 
    ![Finestra di dialogo che mostra l’opzione Conferma rimozione set di dati dal flusso di dati.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
+
+## Diritti di esportazione del set di dati {#licensing-entitlement}
+
+Consulta i documenti di descrizione del prodotto per capire la quantità di dati che hai diritto di esportare per ogni applicazione di Experience Platform all’anno. Ad esempio, puoi visualizzare la descrizione del prodotto Real-Time CDP [qui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+
+I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato moltiplicando il numero totale di profili con licenza per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
+
+Se invece si acquistano componenti aggiuntivi come Data Distiller, il limite di esportazione dei dati a cui si ha diritto rappresenta la somma del livello prodotto e del componente aggiuntivo.
+
+Puoi visualizzare e tenere traccia delle esportazioni di profili in base ai limiti contrattuali nel dashboard delle licenze.
+
 ## Limitazioni note {#known-limitations}
 
-Tieni presente le seguenti limitazioni per il rilascio beta delle esportazioni di set di dati:
+Tieni presente le seguenti limitazioni per il rilascio di disponibilità generale delle esportazioni di set di dati:
 
-* Attualmente esiste una singola autorizzazione (**[!UICONTROL Gestire e attivare le destinazioni dei set di dati]**) che include le autorizzazioni di gestione e attivazione per le destinazioni dei set di dati. In futuro questi controlli verranno suddivisi in autorizzazioni più granulari. Rivedi [autorizzazioni richieste](#permissions) per un elenco completo delle autorizzazioni necessarie per esportare i set di dati.
 * Attualmente, è possibile esportare solo file incrementali e non è possibile selezionare una data di fine per le esportazioni dei set di dati.
 * I nomi di file esportati non sono attualmente personalizzabili.
+* I set di dati creati tramite API non sono attualmente disponibili per l’esportazione.
 * L’interfaccia utente non ti blocca attualmente l’eliminazione di un set di dati in fase di esportazione in una destinazione. Non eliminare i set di dati da esportare nelle destinazioni. [Rimuovi il set di dati](#remove-dataset) da un flusso di dati di destinazione prima di eliminarlo.
 * Le metriche di monitoraggio per le esportazioni di set di dati sono attualmente combinate con i numeri per le esportazioni di profili, pertanto non riflettono i numeri di esportazione effettivi.

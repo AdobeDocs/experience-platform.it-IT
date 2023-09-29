@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
+source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1165'
 ht-degree: 9%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 9%
    * [Aggiornare i flussi di dati di destinazione](./api/update-destination-dataflows.md)
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
-   * [(Beta) Esportare i set di dati](/help/destinations/api/export-datasets.md)
+   * [Esportare i set di dati](/help/destinations/api/export-datasets.md)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
-   * Attivare i dati sul pubblico nelle destinazioni{#activate}
+   * Attivare i dati nelle destinazioni{#activate}
       * [Panoramica di Activation](./ui/activation-overview.md)
       * [Attiva i tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](./ui/activate-segment-streaming-destinations.md)
       * [Attivare i tipi di pubblico per le destinazioni di esportazione dei profili di streaming](./ui/activate-streaming-profile-destinations.md)
@@ -42,7 +42,7 @@ ht-degree: 9%
       * [Attivare i tipi di pubblico per Edge Personalization Destinations](./ui/activate-edge-personalization-destinations.md)
       * [Attiva i tipi di pubblico potenziali nelle destinazioni](./ui/activate-prospect-audiences.md)
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
-      * [(Beta) Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
+      * [Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
       * [Esportare i campi array nelle destinazioni di archiviazione cloud](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
