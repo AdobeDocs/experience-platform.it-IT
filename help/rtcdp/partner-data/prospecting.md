@@ -1,10 +1,11 @@
 ---
 title: Coinvolgi e acquisisci nuovi clienti attraverso casi d’uso potenziali
 description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi d’uso potenziali, grazie al supporto dei dati dei partner in Real-Time CDP.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 96%
+source-wordcount: '1960'
+ht-degree: 95%
 
 ---
 
@@ -207,7 +208,11 @@ Ulteriori informazioni su [audience potenziali](/help/segmentation/ui/prospect-a
 
 ### Attivare profili di potenziali clienti nelle destinazioni {#activate-to-destinations}
 
-Utilizza i tipi di pubblico di potenziali clienti esportandoli nelle destinazioni. Attualmente, solo alcune destinazioni come [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) o [!BADGE Alfa]{type=Informative}La destinazione [LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) supporta l’attivazione dei profili di potenziali clienti.
+Utilizza i tipi di pubblico di potenziali clienti esportandoli nelle destinazioni. Attualmente, solo alcune destinazioni di archiviazione cloud supportano l’attivazione di profili potenziali.
+
+![Destinazioni che supportano i potenziali tipi di pubblico.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[Ulteriori informazioni](/help/destinations/ui/activate-prospect-audiences.md) informazioni sull’attivazione di potenziali clienti in destinazioni di archiviazione cloud.
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 

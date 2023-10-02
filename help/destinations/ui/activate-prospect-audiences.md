@@ -2,13 +2,13 @@
 title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 12%
 
 ---
-
 
 # Attiva i tipi di pubblico potenziali
 
@@ -22,7 +22,7 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [audience po
 
 Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Utilizza il **[!UICONTROL Tipi di dati]** filtra e seleziona **[!UICONTROL Prospettive]** per visualizzare le destinazioni che supportano l’attivazione dei tipi di pubblico potenziali. Attualmente, l’esportazione dei tipi di pubblico potenziali è disponibile solo per le destinazioni di archiviazione cloud.
 
-![Destinazioni che supportano le esportazioni di set di dati](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![Destinazioni che supportano i potenziali tipi di pubblico.](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## Prerequisiti {#prerequisites}
 
