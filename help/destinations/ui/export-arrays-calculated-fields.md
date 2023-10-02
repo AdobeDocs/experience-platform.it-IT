@@ -2,21 +2,21 @@
 title: (Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
-badge: "Beta"
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+badge: Beta
+exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
+source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 2%
+source-wordcount: '1479'
+ht-degree: 1%
 
 ---
-
 
 # (Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Supporto per gli array di esportazione (Beta)"
->abstract="Esporta semplici array di valori int, stringa o booleani da Experienci Platform alla destinazione di archiviazione cloud desiderata. Si applicano alcune limitazioni. Consulta la documentazione per esempi esaurienti e funzioni supportate."
+>abstract="Utilizza il **Aggiungi campo calcolato** per esportare semplici array di valori int, stringa o booleani da Experienci Platform alla destinazione di archiviazione cloud desiderata. Si applicano alcune limitazioni. Consulta la documentazione per esempi esaurienti e funzioni supportate."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Esempi"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitazioni note"
 
@@ -24,12 +24,12 @@ ht-degree: 2%
 >
 >* La funzionalità per esportare array tramite campi calcolati è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
-Scopri come esportare array tramite campi calcolati da Real-Time CDP in file di schema flat nelle destinazioni di archiviazione cloud. Leggi questo documento per comprendere i casi d’uso abilitati da questa funzionalità.
+Scopri come esportare array tramite campi calcolati da Real-Time CDP in file di schema flat in [destinazioni archiviazione cloud](/help/destinations/catalog/cloud-storage/overview.md). Leggi questo documento per comprendere i casi d’uso abilitati da questa funzionalità.
 
 Ottieni informazioni complete sui campi calcolati: cosa sono e perché sono importanti. Leggi le pagine collegate di seguito per un’introduzione ai campi calcolati in Preparazione dati e ulteriori informazioni su tutte le funzioni disponibili:
 
 * [Guida e panoramica dell’interfaccia utente](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Funzioni di preparazione dei dati](/help/data-prep/functions.md)
+* [Funzioni di preparazione dati](/help/data-prep/functions.md)
 
 >[!IMPORTANT]
 >
@@ -50,13 +50,13 @@ Tieni presente le seguenti limitazioni note per la versione beta di questa funzi
 
 ## Prerequisiti {#prerequisites}
 
-Avanzamento attraverso [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e accedi al [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) passaggio.
+[Connetti](/help/destinations/ui/connect-destination.md) nella destinazione di archiviazione cloud desiderata, procedere attraverso [passaggi di attivazione per le destinazioni di archiviazione cloud](/help/destinations/ui/activate-batch-profile-destinations.md) e accedi al [mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) passaggio.
 
 ## Come esportare i campi calcolati {#how-to-export-calculated-fields}
 
 Nel passaggio di mappatura del flusso di lavoro di attivazione per le destinazioni di archiviazione cloud, seleziona **[!UICONTROL (Beta) Aggiungi campo calcolato]**.
 
-![Aggiungi campo calcolato da esportare](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+![Aggiungi campo calcolato evidenziato nella fase di mappatura del flusso di lavoro di attivazione batch.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
 Viene visualizzata una finestra modale in cui è possibile selezionare gli attributi che è possibile utilizzare per esportare gli attributi da Experienci Platform.
 
@@ -64,25 +64,25 @@ Viene visualizzata una finestra modale in cui è possibile selezionare gli attri
 >
 >Solo alcuni dei campi dello schema XDM sono disponibili nel **[!UICONTROL Campo]** visualizzazione. Puoi visualizzare valori stringa e matrici di valori stringa, int e booleani. Ad esempio, il `segmentMembership` non viene visualizzato, in quanto include altri valori di array.
 
-![Finestra modale 1](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+![Finestra modale della funzionalità del campo calcolato senza che sia stata ancora selezionata alcuna funzione.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
 Ad esempio, utilizza `join` funzione su `loyaltyID` come mostrato di seguito per esportare un array di ID fedeltà come stringa concatenata con un trattino basso in un file CSV. Visualizza [ulteriori informazioni su questo e altri esempi riportati di seguito](#join-function-export-arrays).
 
-![Finestra modale 2](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Finestra modale della funzionalità del campo calcolato con la funzione di join selezionata.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Seleziona **[!UICONTROL Salva]** per mantenere il campo calcolato e tornare al passaggio di mappatura.
 
-![Finestra modale 3](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Finestra modale della funzionalità del campo calcolato con la funzione di unione selezionata ed il controllo Salva evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 Torna al passaggio di mappatura del flusso di lavoro, compila il **[!UICONTROL Campo di destinazione]** con un valore dell’intestazione di colonna desiderata per questo campo nei file esportati.
 
-![Seleziona campo di destinazione 1](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+![Mappatura del passaggio con il campo di destinazione evidenziato.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
 
 ![Seleziona campo di destinazione 2](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
 
 Quando è pronto, seleziona **[!UICONTROL Successivo]** per procedere al passaggio successivo del flusso di lavoro di attivazione.
 
-![Seleziona avanti per procedere](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+![Fase di mappatura con il campo di destinazione evidenziato e un valore di destinazione compilato.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
 ## Funzioni supportate {#supported-functions}
 
@@ -115,20 +115,20 @@ Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Schermata di mappatura](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Esempio di mappatura che include la funzione di join.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
 In questo caso, il file di output si presenta come di seguito. I tre elementi dell’array vengono concatenati in una singola stringa utilizzando `_` carattere.
 
 ```
-`First_Name,Last_Name,Organization
-John,Doe,"Marketing_Sales_Finance"
+`First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
 ```
 
 ### `iif` funzione per esportare array {#iif-function-export-arrays}
 
-Utilizza il `iif` funzione per esportare elementi di un array in determinate condizioni. Ad esempio, continuando con `organzations` oggetto array dall’alto, puoi scrivere una semplice funzione condizionale come `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+Utilizza il `iif` funzione per esportare elementi di un array in determinate condizioni. Ad esempio, continuando con `organizations` oggetto array dall’alto, puoi scrivere una semplice funzione condizionale come `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
 
-![Schermata di mappatura per la prima e l’ultima funzione](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+![Esempio di mappatura che include la funzione iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
 
 In questo caso, il file di output si presenta come di seguito. In questo caso, il primo elemento dell’array è Marketing, quindi la persona è membro del reparto marketing.
 
@@ -137,18 +137,33 @@ In questo caso, il file di output si presenta come di seguito. In questo caso, i
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
 
+### `add_to_array` funzione per esportare array {#add-to-array-function-export-arrays}
+
+Utilizza il `add_to_array` per aggiungere elementi a un array esportato. È possibile combinare questa funzione con `join` funzione descritta in precedenza.
+
+Continuando con `organizations` oggetto array dall&#39;alto, puoi scrivere una funzione come `source: join('_', add_to_array(organizations,"2023"))`, restituendo le organizzazioni di cui una persona è membro nel 2023.
+
+![Esempio di mappatura che include la funzione add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
+
+In questo caso, il file di output si presenta come di seguito. I tre elementi dell’array vengono concatenati in una singola stringa utilizzando `_` e 2023 viene inoltre aggiunto alla fine della stringa.
+
+```
+`First_Name,Last_Name,Personal_Email,Organization_Member_2023
+John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
+```
+
 ### `coalesce` funzione per esportare array {#coalesce-function-export-arrays}
 
 Utilizza il `coalesce` funzione per accedere ed esportare il primo elemento non nullo di un array in una stringa.
 
-Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando un `coalesce(subscriptions.hasPromotion)` sintassi per restituire il primo vero di falso valore nell’array:
+Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando un `coalesce(subscriptions.hasPromotion)` sintassi per restituire il primo `true` di `false` valore nell’array:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` array
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Schermata di mappatura per la funzione coalesce](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
+![Esempio di mappatura che include la funzione coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
 In questo caso, il file di output si presenta come di seguito. Notare come il primo non-null `true` valore nell’array viene esportato nel file.
 
@@ -156,7 +171,6 @@ In questo caso, il file di output si presenta come di seguito. Notare come il pr
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
-
 
 ### `size_of` funzione per esportare array {#sizeof-function-export-arrays}
 
@@ -167,7 +181,7 @@ Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array che indica cinque diversi tempi di acquisto da parte del cliente
 * `personalEmail.address` string
 
-![Schermata di mappatura per la funzione size_of](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
+![Esempio di mappatura che include la funzione size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
 In questo caso, il file di output si presenta come di seguito. Osserva come la seconda colonna indica il numero di elementi nell’array, corrispondente al numero di acquisti separati effettuati dal cliente.
 
@@ -180,9 +194,9 @@ johndoe@acme.org,"5"
 
 È possibile accedere a un indice di un array per esportare un singolo elemento dall’array. Ad esempio, simile all’esempio precedente per il `size_of` , se desideri accedere ed esportare solo la prima volta che un cliente ha acquistato un determinato prodotto, puoi utilizzare `purchaseTime[0]` per esportare il primo elemento della marca temporale, `purchaseTime[1]` per esportare il secondo elemento della marca temporale, `purchaseTime[2]` per esportare il terzo elemento della marca temporale e così via.
 
-![Schermata di mappatura per l’accesso all’indice](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
+![Esempio di mappatura che mostra come accedere a un elemento di un array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
 
-In questo caso, il file di output si presenta come:
+In questo caso, il file di output si presenta come di seguito, esportando la prima volta che il cliente ha effettuato un acquisto:
 
 ```
 `Personal_Email,First_Purchase
@@ -193,9 +207,9 @@ johndoe@acme.org,"1538097126"
 
 Utilizza il `first` e `last` funzioni per esportare il primo o l&#39;ultimo elemento di un array. Ad esempio, continuando con `purchaseTime` oggetto array con più marche temporali dagli esempi precedenti, è possibile utilizzarle per esportare la prima o l’ultima ora di acquisto effettuata da una persona.
 
-![Schermata di mappatura per la prima e l’ultima funzione](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
+![Esempio di mappatura che include la prima e l’ultima funzione.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
 
-In questo caso, il file di output si presenta come:
+In questo caso, il file di output si presenta come di seguito, esportando la prima e l’ultima volta che il cliente ha effettuato un acquisto:
 
 ```
 `Personal_Email,First_Purchase, Last_Purchase
@@ -207,6 +221,3 @@ johndoe@acme.org,"1538097126","1664327526"
 Oltre alle funzioni specifiche per l’esportazione di array o elementi da un array, puoi utilizzare funzioni di hashing per eseguire l’hashing degli attributi. Ad esempio, se negli attributi sono presenti informazioni di identificazione personale, puoi eseguire l’hashing di tali campi durante l’esportazione.
 
 Puoi eseguire l’hashing diretto dei valori stringa, ad esempio `md5(personalEmail.address)`. Se lo desideri, puoi anche eseguire l’hashing di singoli elementi di campi array, come segue: `md5(purchaseTime[0])`
-
-
-
