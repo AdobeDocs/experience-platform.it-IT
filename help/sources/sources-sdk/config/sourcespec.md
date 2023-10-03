@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Configurare le specifiche di origine per le origini self-service (SDK batch)
 description: Questo documento fornisce una panoramica delle configurazioni da preparare per utilizzare Self-Service Sources (SDK batch).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 0%
+source-wordcount: '2078'
+ht-degree: 1%
 
 ---
 
@@ -381,7 +381,53 @@ Di seguito è riportata una specifica di origine completata utilizzando [!DNL Ma
 
 Di seguito sono riportati alcuni esempi di altri tipi di impaginazione supportati da Self-Service Sources (Batch SDK):
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB Offset]
+
+Questo tipo di impaginazione consente di analizzare i risultati specificando un indice da cui avviare la matrice risultante e un limite sul numero di risultati restituiti. Ad esempio:
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `type` | Tipo di impaginazione utilizzato per restituire i dati. |
+| `limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. |
+| `limitValue` | Il numero di record da recuperare in una pagina. |
+| `offSetName` | Nome dell&#39;attributo di offset. Questa opzione è necessaria se il tipo di paginazione è impostato su `offset`. |
+| `endConditionName` | Valore definito dall&#39;utente che indica la condizione che terminerà il ciclo di impaginazione nella successiva richiesta HTTP. È necessario specificare il nome dell&#39;attributo in cui inserire la condizione finale. |
+| `endConditionValue` | Il valore dell’attributo sul quale vuoi inserire la condizione finale. |
+
+>[!TAB Puntatore]
+
+Questo tipo di impaginazione ti consente di utilizzare un’ `pointer` variabile per puntare a un particolare elemento che deve essere inviato con una richiesta. L&#39;impaginazione del tipo di puntatore richiede il percorso nel payload che punta alla pagina successiva. Ad esempio:
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `type` | Tipo di impaginazione utilizzato per restituire i dati. |
+| `limitName` | Il nome del limite attraverso il quale l’API può specificare il numero di record da recuperare in una pagina. |
+| `limitValue` | Il numero di record da recuperare in una pagina. |
+| `pointerPath` | Nome dell&#39;attributo del puntatore. Questo richiede il percorso json dell’attributo che punterà alla pagina successiva. |
+
+>[!TAB Token di continuazione]
 
 Un tipo di impaginazione del token di continuazione restituisce un token stringa che indica l’esistenza di più elementi che non possono essere restituiti, a causa di un numero massimo predeterminato di elementi che possono essere restituiti in una singola risposta.
 
@@ -432,7 +478,7 @@ Di seguito è riportato un esempio di risposta restituita utilizzando il tipo di
 }
 ```
 
-#### `PAGE`
+>[!TAB Pagina]
 
 Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numero di pagine a partire da zero. Quando si utilizza `PAGE` tipo di impaginazione, devi fornire il numero di record dato in una singola pagina.
 
@@ -461,7 +507,7 @@ Il `PAGE` tipo di impaginazione consente di scorrere i dati restituiti per numer
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB Nessuna]
 
 Il `NONE` il tipo di impaginazione può essere utilizzato per origini che non supportano nessuno dei tipi di impaginazione disponibili. Origini che utilizzano il tipo di impaginazione `NONE` è sufficiente restituire tutti i record recuperabili quando viene effettuata una richiesta GET.
 
@@ -470,6 +516,8 @@ Il `NONE` il tipo di impaginazione può essere utilizzato per origini che non su
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### Pianificazione avanzata per origini self-service (SDK batch)
 
