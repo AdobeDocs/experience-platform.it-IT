@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -89,7 +89,7 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
->abstract="La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente sulla rete Edge, abilitando casi d’uso di personalizzazione della stessa pagina e della pagina successiva."
+>abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=it" text="Guida all’interfaccia utente per la segmentazione Edge"
 
 La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente [sulla rete Edge](../edge/home.md), abilitazione dei casi d’uso di personalizzazione della stessa pagina e della pagina successiva.

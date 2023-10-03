@@ -1,13 +1,13 @@
 ---
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
-
 
 # Guida dell’interfaccia utente attributi calcolati
 
@@ -42,7 +42,7 @@ Per selezionare i campi visibili, è possibile selezionare ![icona configura col
 | [!UICONTROL Ultima valutazione eseguita] | Questo timestamp rappresenta l’ultima esecuzione di valutazione riuscita. Solo gli eventi che si sono verificati **prima di** questo timestamp viene considerato nell’ultima valutazione riuscita. |
 | [!UICONTROL Stato ultima valutazione] | Lo stato che indica se l’attributo calcolato è stato calcolato correttamente o meno nell’ultima esecuzione della valutazione. I valori possibili includono **[!UICONTROL Completato]** o **[!UICONTROL Non riuscito]**. |
 | [!UICONTROL Refresh frequency (Frequenza di aggiornamento)] | Indicazione della frequenza con cui si prevede di aggiornare l&#39;attributo calcolato. I valori possibili includono orario, giornaliero, settimanale o mensile. |
-| [!UICONTROL Aggiornamento rapido] | Valore che indica se l&#39;aggiornamento rapido è abilitato o meno per questo attributo di calcolo. Se è abilitato l&#39;aggiornamento rapido, l&#39;attributo calcolato può essere aggiornato su base giornaliera anziché settimanale, bisettimanale o mensile. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale. |
+| [!UICONTROL Aggiornamento rapido] | Valore che indica se l&#39;aggiornamento rapido è abilitato o meno per questo attributo di calcolo. Se è abilitato l&#39;aggiornamento rapido, l&#39;attributo calcolato può essere aggiornato su base giornaliera anziché settimanale, bisettimanale o mensile. Questo valore è applicabile solo per attributi calcolati con un periodo di lookback superiore a una base settimanale. |
 | [!UICONTROL Stato del ciclo di vita] | Stato corrente dell&#39;attributo calcolato. Esistono tre stati possibili: <ul><li>**[!UICONTROL Bozza]:** L’attributo calcolato **non** hai già creato un campo nello schema. In questo stato, l’attributo calcolato può essere modificato. </li><li>**[!UICONTROL Pubblicato]:** L’attributo calcolato ha un campo creato nello schema ed è pronto per essere utilizzato. In questo stato, l’attributo calcolato **non può** essere modificata.</li><li>**[!UICONTROL Inattivo]:** L’attributo calcolato è disabilitato. Per ulteriori informazioni sullo stato di inattività, leggere [Pagina Domande frequenti](./faq.md#inactive-status). </li> |
 | [!UICONTROL Creato] | Timestamp che mostra la data e l’ora di creazione dell’attributo calcolato. |
 | [!UICONTROL Ultima modifica] | Timestamp che mostra la data e l’ora dell’ultima modifica apportata all’attributo calcolato. |
@@ -106,7 +106,7 @@ Dopo aver applicato la funzione di aggregazione, è necessario definire il perio
 >[!CONTEXTUALHELP]
 >id="platform_profile_computedAttributes_fastRefresh"
 >title="Aggiornamento rapido"
->abstract="L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi, per poter reagire rapidamente alle attività degli utenti. Questo valore è applicabile solo per gli attributi calcolati con un periodo di lookback superiore a una base settimanale."
+>abstract="L’aggiornamento rapido consente di mantenere aggiornati gli attributi. L’abilitazione di questa opzione consente di aggiornare gli attributi calcolati su base giornaliera, anche per periodi di lookback più lunghi, per poter reagire rapidamente alle attività degli utenti. Questo valore è applicabile solo per attributi calcolati con un periodo di lookback superiore a una base settimanale."
 
 Quando si applica la funzione di aggregazione, è possibile abilitare l’aggiornamento rapido se il periodo di lookback è superiore a una settimana.
 
