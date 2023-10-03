@@ -2,7 +2,7 @@
 title: Flusso SQL senza interruzioni per attributi derivati
 description: Query Service SQL è stato esteso per fornire supporto senza soluzione di continuità per gli attributi derivati. Scopri come utilizzare questa estensione SQL per creare un attributo derivato abilitato per il profilo e come utilizzare l’attributo per Real-Time Customer Profile and Segmentation Service.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1238'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Query Service consente di eseguire tutte le azioni elencate sopra utilizzando qu
 >
 >La query SQL fornita di seguito presuppone l&#39;utilizzo di uno spazio dei nomi preesistente.
 
-Utilizza una query Create Table as Select (CTAS) per creare un set di dati, assegnare tipi di dati, impostare un’identità primaria, creare uno schema e contrassegnarlo come abilitato per il profilo. L’istruzione SQL di esempio seguente crea gli attributi e li rende disponibili per Real-Time Customer Data Profile (Real-Time CDP). La query SQL verrà eseguita nel formato illustrato nell&#39;esempio seguente:
+Utilizza una query Create Table as Select (CTAS) per creare un set di dati, assegnare tipi di dati, impostare un’identità primaria, creare uno schema e contrassegnarlo come abilitato per il profilo. L&#39;istruzione SQL di esempio seguente crea attributi e li rende disponibili per Real-time Customer Data Platform (Real-Time CDP). La query SQL verrà eseguita nel formato illustrato nell&#39;esempio seguente:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];

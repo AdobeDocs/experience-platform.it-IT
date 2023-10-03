@@ -3,7 +3,8 @@ keywords: Experience Platform;interfaccia utente;personalizzazione;dashboard uti
 title: Guida alla dashboard dell’utilizzo delle licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
 ht-degree: 1%
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 Puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione tramite Adobe Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
-I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze. Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato, l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni di Experience Platform: Real-Time Customer Data Profile, Adobe Journey Optimizer e Customer Journey Analytics.
+I rapporti sull’utilizzo delle licenze forniscono un elevato grado di granularità sulle metriche di utilizzo delle licenze. Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato, l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e la metrica di utilizzo da una sandbox specifica. Con le metriche di utilizzo è possibile tenere traccia delle seguenti applicazioni di Experience Platform: Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Questa guida illustra come accedere e utilizzare il dashboard utilizzo licenze nell’interfaccia utente di e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
@@ -59,7 +60,7 @@ Questa dashboard mostra tutti i prodotti Adobe Experience Platform con licenza, 
 
 >[!NOTE]
 >
->Aggiunte al [!UICONTROL Importo licenza] in seguito all&#39;aggiunta di componenti aggiuntivi in aggiunta a [!UICONTROL Importo licenza] per i prodotti di base come Real-Time Customer Data Profile, Adobe Journey Optimizer e Customer Journey Analytics. L’utilizzo della quantità concessa in licenza (dopo i componenti aggiuntivi) viene monitorato attraverso i prodotti di base. Ad esempio, se acquisti una confezione di cinque sandbox, la quantità di cinque viene aggiunta a quella del prodotto di base. In questo caso, il componente aggiuntivo mostra [!UICONTROL Importo licenza] di uno, e l’utilizzo per tale componente aggiuntivo è &quot;vuoto&quot; in quanto viene tracciato attraverso il prodotto di base.
+>Aggiunte al [!UICONTROL Importo licenza] in seguito all&#39;aggiunta di componenti aggiuntivi in aggiunta a [!UICONTROL Importo licenza] per i prodotti di base come Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics. L’utilizzo della quantità concessa in licenza (dopo i componenti aggiuntivi) viene monitorato attraverso i prodotti di base. Ad esempio, se acquisti una confezione di cinque sandbox, la quantità di cinque viene aggiunta a quella del prodotto di base. In questo caso, il componente aggiuntivo mostra [!UICONTROL Importo licenza] di uno, e l’utilizzo per tale componente aggiuntivo è &quot;vuoto&quot; in quanto viene tracciato attraverso il prodotto di base.
 
 La tabella indica la metrica principale per ciascun prodotto, in quanto ogni prodotto può tracciare numerose metriche.
 
