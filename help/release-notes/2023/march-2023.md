@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2023
 description: Note sulla versione di Adobe Experience Platform di marzo 2023.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -96,7 +96,7 @@ Per ulteriori informazioni sulla preparazione dei dati, consulta [Panoramica sul
 
 **Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
 
-Stiamo rilasciando una correzione di bug per la crittografia PGP/GPG nelle destinazioni basate su file per Real-time CDP. Con questa modifica, le destinazioni esistenti basate su file che attualmente utilizzano la crittografia genereranno un nome file con un’estensione diversa da quella precedente.
+Stiamo rilasciando una correzione di bug per la crittografia PGP/GPG nelle destinazioni basate su file per Real-Time CDP. Con questa modifica, le destinazioni esistenti basate su file che attualmente utilizzano la crittografia genereranno un nome file con un’estensione diversa da quella precedente.
 
 - Estensione corrente quando si utilizza la crittografia: `filename.csv`
 - Estensione futura quando si utilizza la crittografia: `filename.csv.gpg`
@@ -151,7 +151,7 @@ Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul siste
 
 ## Servizio query {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati dal data lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o da acquisire nel profilo cliente in tempo reale.
 
 **Funzioni aggiornate**
 

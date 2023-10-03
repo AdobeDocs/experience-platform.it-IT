@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Trovare il playbook adatto
 description: Scopri come trovare il playbook adatto per il tuo caso d’uso e abilitare i playbook.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Versione beta) Trovare il playbook adatto
 
@@ -23,7 +23,7 @@ Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [
 
 Utilizza la finestra di ricerca e i filtri disponibili nella pagina per trovare il playbook adatto per il tuo caso d’uso.
 
-Ad esempio, puoi filtrare i playbook in base alla fase nel funnel di marketing che ti interessa: conversione, coinvolgimento o conservazione. Puoi anche filtrare i playbook visualizzati in base al settore in cui operi o alla licenza del prodotto a cui hai accesso: Adobe Journey Optimizer o Real-time CDP.
+Ad esempio, puoi filtrare i playbook in base alla fase nel funnel di marketing che ti interessa: conversione, coinvolgimento o conservazione. Puoi anche filtrare i playbook visualizzati in base al settore di appartenenza o alla licenza del prodotto a cui hai accesso: Adobe Journey Optimizer o Real-Time CDP.
 
 ![Filtra i playbook per funnel di marketing, settore o prodotto](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

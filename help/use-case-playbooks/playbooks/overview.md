@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Panoramica sui playbook di casi d’uso
 description: Scopri come utilizzare la funzione Playbook di casi d’uso in Experience Platform per iniziare a utilizzare vari casi d’uso di marketing
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # Panoramica sui playbook di casi d’uso (Beta)
 
@@ -41,11 +41,11 @@ Se selezioni un playbook di Real-Time CDP, l’obiettivo potrebbe essere quello 
 
 Se selezioni un playbook di Adobe Journey Optimizer, l’obiettivo potrebbe essere quello di creare un percorso cliente all’interno del prodotto e inviare messaggi pertinenti alla clientela.
 
-Crea un’istanza di un playbook per generare risorse specifiche, come schemi, segmenti o percorsi personalizzati in base al tuo caso d’uso e riutilizzabili in Experience Platform. Lo scopo di questi oggetti è quello di aiutarti a comprendere tutte le risorse necessarie per implementare un caso d’uso specifico. Non contengono dati e vengono create in sandbox di sviluppo. Inizia a utilizzare queste risorse o apportarvi modifiche prima di utilizzarle e condividerle con il tuo team in Real-time CDP o Journey Optimizer.
+Crea un’istanza di un playbook per generare risorse specifiche, come schemi, segmenti o percorsi personalizzati in base al tuo caso d’uso e riutilizzabili in Experience Platform. Lo scopo di questi oggetti è quello di aiutarti a comprendere tutte le risorse necessarie per implementare un caso d’uso specifico. Non contengono dati e vengono create in sandbox di sviluppo. Inizia a utilizzare queste risorse o apportarvi modifiche prima di utilizzarle e condividerle con il tuo team in Real-Time CDP o Journey Optimizer.
 
 ## Disponibilità
 
-Alcuni [!UICONTROL Playbook di casi d’uso] sono personalizzati per i casi d’uso di Real-time CDP, mentre altri sono più adatti per l’utilizzo in Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso.
+Alcuni [!UICONTROL Playbook di casi d’uso] sono personalizzati per i casi di utilizzo di Real-Time CDP, mentre altri sono più adatti per i clienti che utilizzano Journey Optimizer. Sfoglia il catalogo per trovare i playbook più adatti al tuo prodotto e caso d’uso.
 
 ## Guide dell’interfaccia utente
 

@@ -1,13 +1,13 @@
 ---
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 1%
 
 ---
-
 
 # Domande frequenti
 
@@ -140,7 +140,7 @@ A questo punto, no. Tuttavia, questa funzionalità dovrebbe essere disponibile a
 
 ### Posso inviare tipi di pubblico da Audience Composition a tutte le destinazioni e i canali a valle?
 
-A questo punto, no. Attualmente, puoi utilizzare i tipi di pubblico da Composizione pubblico in Campagne Adobe Journey Optimizer e destinazioni di Real-time CDP. I Percorsi Adobe Journey Optimizer saranno supportati in una versione futura.
+A questo punto, no. Attualmente, puoi utilizzare i tipi di pubblico da Composizione pubblico nelle campagne Adobe Journey Optimizer e nelle destinazioni Real-Time CDP. I Percorsi Adobe Journey Optimizer saranno supportati in una versione futura.
 
 ### Ci sono dei guardrail sul numero di composizioni?
 

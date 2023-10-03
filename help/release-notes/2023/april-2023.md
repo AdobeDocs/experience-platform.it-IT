@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Note sulla versione di Adobe Experience Platform di aprile 2023.
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -91,7 +91,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | ----------- | ----------- |
 | Monitoraggio del flusso di dati per le destinazioni [!DNL Custom Personalization] e [!DNL Adobe Commerce] | <p> Ora puoi visualizzare le metriche di attivazione per le connessioni di [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) e [Personalizzazione personalizzata con attributi](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Immagine di Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Metriche di Adobe Commerce"){width="100" zoomable="yes"}</p>  Per ulteriori informazioni, consulta [Monitorare i flussi di dati nell’area di lavoro Destinazioni](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace). |
 | Nuovo campo **[!UICONTROL Aggiungi ID segmento al nome del segmento]** per le destinazioni [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Ora il nome del segmento in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) può includere l’ID di segmento da Experience Platform, come segue: `Segment Name (Segment ID)`.</p><p>![Aggiungi immagine a ID segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Nuovo campo Aggiungi ID segmento al nome del segmento "){width="100" zoomable="yes"}</p> |
-| Retrocompilazioni del pubblico pianificate | <p>Per la destinazione [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’attivazione delle retrocompilazioni del pubblico alla destinazione è programmata per verificarsi 24-48 ore dopo che un segmento è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde ai criteri di Google di attendere 24 ore prima dell’acquisizione dei dati e migliorerà le percentuali di corrispondenza tra Real-time CDP e [!DNL Google Display & Video 360].</p> <p>Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dalla clientela nell’interfaccia utente.</p> |
+| Retrocompilazioni del pubblico pianificate | <p>Per la destinazione [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), l’attivazione delle retrocompilazioni del pubblico alla destinazione è programmata per verificarsi 24-48 ore dopo che un segmento è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde alla politica di Google di attendere 24 ore prima dell’acquisizione dei dati e migliorerà le percentuali di corrispondenza tra Real-Time CDP e [!DNL Google Display & Video 360].</p> <p>Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dalla clientela nell’interfaccia utente.</p> |
 
 {style="table-layout:auto"}
 

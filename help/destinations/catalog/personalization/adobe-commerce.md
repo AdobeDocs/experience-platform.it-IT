@@ -2,7 +2,7 @@
 title: Connettore di destinazione Adobe Commerce
 description: Scopri come i commercianti di Adobe Commerce e Real-Time CDP possono personalizzare l’esperienza di acquisto distribuendo contenuti e promozioni del sito altamente pertinenti, personalizzati per il pubblico dei clienti e creati e gestiti in Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 - **[!UICONTROL Nome]**: inserisci il nome preferito per questa destinazione.
 - **[!UICONTROL Descrizione]**: immetti una descrizione per la destinazione. Ad esempio, puoi indicare per quale campagna stai utilizzando questa destinazione. Questo campo è facoltativo.
-- **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experience Platform come nome di oggetto JSON.
+- **[!UICONTROL Alias di integrazione]**: questo valore viene inviato all’SDK web per Experienci Platform come nome di oggetto JSON.
 - **[!UICONTROL ID flusso di dati]**: questo determina quale flusso di dati di Raccolta dati contiene i tipi di pubblico inclusi nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Consulta [Configurazione di uno stream di dati](../../../datastreams/overview.md) per ulteriori dettagli.
 
 ### Abilita avvisi {#enable-alerts}
@@ -71,11 +71,11 @@ Letto [Attivare profili e tipi di pubblico nelle destinazioni delle richieste di
 
 ## Passaggi successivi in [!DNL Adobe Commerce]
 
-Ora che hai configurato [!DNL Commerce] all&#39;interno di Experience Platform, è necessario installare [!DNL Audience Activation] estensione in [!DNL Commerce] e configurare [!DNL Commerce Admin] per importare i tipi di pubblico di Real-Time CDP creati. Consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) per ulteriori informazioni.
+Ora che hai configurato [!DNL Commerce] all&#39;interno di Experienci Platform, è necessario installare [!DNL Audience Activation] estensione in [!DNL Commerce] e configurare [!DNL Commerce Admin] per importare i tipi di pubblico di Real-Time CDP creati. Consulta la [[!DNL Commerce] documentazione](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) per ulteriori informazioni.
 
 ## Convalidare l’attivazione del pubblico in Commerce {#exported-data}
 
-Dopo aver attivato i tipi di pubblico di Real-Time CDP sul tuo [!DNL Adobe Commerce] dell&#39;account, tali tipi di pubblico saranno disponibili quando si passa al _Amministratore_ barra laterale, quindi vai a **[!UICONTROL Clienti]** > **[!UICONTROL Pubblico di Real-time CDP]**.
+Dopo aver attivato i tipi di pubblico di Real-Time CDP sul tuo [!DNL Adobe Commerce] dell&#39;account, tali tipi di pubblico saranno disponibili quando si passa al _Amministratore_ barra laterale, quindi vai a **[!UICONTROL Clienti]** > **[!UICONTROL Pubblico Real-Time CDP]**.
 
 ![Dashboard di Real-Time CDP Audiences](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

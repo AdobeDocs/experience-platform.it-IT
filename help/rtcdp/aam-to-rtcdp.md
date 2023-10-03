@@ -1,13 +1,13 @@
 ---
 title: Evoluzione da Audience Manager a Real-Time CDP
 description: Comprendere le considerazioni prima di pianificare la migrazione da Audience Manager a Real-Time CDP.
-source-git-commit: 147e95cce203933d591fc807d9d20bcbc06e68e3
-workflow-type: ht
+exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
-
 
 # Evoluzione da Audience Manager a Real-Time CDP
 
@@ -23,9 +23,9 @@ Inoltre, prendi in considerazione le origini dati attualmente utilizzate in Audi
 
 Adobe consiglia di categorizzare i segmenti nel modo seguente:
 
-* Segmenti che possono essere inviati ad Experience Platform tramite il [[!UICONTROL Connettore di origine di Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), poiché non hanno dipendenze di dati, non hanno problemi di destinazione o attivazione e le loro regole di segmentazione possono essere create successivamente tramite il [Segment Builder](/help/segmentation/ui/segment-builder.md) di Real-time CDP.
+* Segmenti che possono essere inviati ad Experienci Platform tramite [[!UICONTROL Connettore sorgente Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), poiché non hanno dipendenze di dati, non hanno problemi di destinazione o attivazione e le loro regole di segmentazione possono essere create tramite Real-Time CDP [Generatore di segmenti](/help/segmentation/ui/segment-builder.md) più tardi.
 * Segmenti con regole che possono essere supportate ma che possono contenere dati che non saranno disponibili in Real-Time CDP.
-* Segmenti che non possono essere creati in Real-time CDP e per i quali mancano le funzionalità.
+* Segmenti che non possono essere creati in Real-Time CDP e per i quali mancano funzionalità.
 
 >[!TIP]
 >

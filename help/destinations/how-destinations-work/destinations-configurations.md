@@ -2,20 +2,20 @@
 title: Impostazioni di esportazione comuni e configurabili nelle destinazioni
 description: Scopri quali impostazioni di esportazione nelle destinazioni sono configurabili a livello di destinazione e quali sono fisse e non possono essere modificate.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Impostazioni di esportazione comuni e configurabili nelle destinazioni
 
-Quando pensi al comportamento di esportazione nelle destinazioni Experience Platform, devi considerare tre livelli separati su cui agiscono le configurazioni.
+Quando pensi al comportamento di esportazione nelle destinazioni Experienci Platform, devi considerare tre livelli separati su cui agiscono le configurazioni.
 
-* Al primo livello, alcune delle impostazioni relative al comportamento di esportazione del profilo e alle impostazioni di configurazione sono comuni a tutte le destinazioni appartenenti a un tipo di destinazione. Queste impostazioni si riferiscono a ciò che attiva un’esportazione di destinazione e a ciò che è incluso in un’esportazione e non possono essere modificate dagli sviluppatori di destinazione o dagli utenti di Real-time CDP.
+* Al primo livello, alcune delle impostazioni relative al comportamento di esportazione del profilo e alle impostazioni di configurazione sono comuni a tutte le destinazioni appartenenti a un tipo di destinazione. Queste impostazioni si riferiscono a ciò che attiva un’esportazione di destinazione e a ciò che è incluso in un’esportazione e non possono essere modificate dagli sviluppatori di destinazione o dagli utenti di Real-Time CDP.
 * Al secondo livello, alcune impostazioni possono essere personalizzate a livello di destinazione dallo sviluppatore di destinazione durante l’authoring delle destinazioni utilizzando Destination SDK.
-* Al terzo livello, è possibile configurare le impostazioni di configurazione che gli utenti di Real-time CDP possono impostare nei flussi di lavoro di attivazione.
+* Al terzo livello, è possibile configurare le impostazioni di configurazione impostate dagli utenti di Real-Time CDP nei flussi di lavoro di attivazione.
 
 ![Diagramma che mostra l’interazione tra le impostazioni di esportazione comuni e configurabili per le destinazioni](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -25,13 +25,13 @@ Questa pagina descrive o collega tutte le impostazioni di esportazione comuni e 
 
 Il comportamento di esportazione della destinazione è coerente tra le destinazioni appartenenti a un tipo di destinazione per quanto riguarda *cosa attiva un’esportazione di destinazione* e *cosa è incluso nelle esportazioni di destinazione*. Le esportazioni delle destinazioni vengono attivate dalle notifiche che il servizio delle destinazioni riceve da [servizio a monte Profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni su [modelli di comportamento di esportazione comuni per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Non possono essere modificate dagli sviluppatori di destinazione o dagli utenti di Real-time CDP.
+Ciò che è incluso nelle esportazioni di destinazione varia leggermente tra i tipi di destinazione. Ulteriori informazioni su [modelli di comportamento di esportazione comuni per tipo di destinazione](/help/destinations/how-destinations-work/profile-export-behavior.md). Queste impostazioni non possono essere modificate dagli sviluppatori o dagli utenti di Real-Time CDP.
 
 ## Impostazioni di esportazione personalizzabili per sviluppatori di destinazione {#customizable-settings-by-destination-developers}
 
 Gli sviluppatori di destinazione possono utilizzare [Destination SDK](/help/destinations/destination-sdk/overview.md) per creare destinazioni personalizzate o prodotte (private o pubbliche). Destination SDK offre agli sviluppatori una grande flessibilità per configurare le destinazioni in base alle funzionalità a valle dei loro endpoint API e dei sistemi di ricezione dei file. In base alle funzionalità a valle, gli sviluppatori di destinazione dispongono delle seguenti opzioni di configurazione quando configurano una destinazione utilizzando Destination SDK:
 
-* Determina quali attributi e identità possono essere esportati da Experience Platform alla destinazione. Determina anche quali identità sono richieste dalle loro destinazioni per una corretta esportazione dei dati.
+* Determina quali attributi e identità possono essere esportati da Experienci Platform alla destinazione. Determina anche quali identità sono richieste dalle loro destinazioni per una corretta esportazione dei dati.
 * Imposta un criterio di aggregazione che determina il tempo di attesa dell’Experience Platform durante l’aggregazione dei messaggi HTTP da inviare alle integrazioni API. Gli sviluppatori di destinazione possono configurare diversi tipi di aggregazione per determinare quanti profili devono essere inclusi nei messaggi HTTP in uscita e per quanto tempo l’Experience Platform deve attendere fino all’invio del messaggio HTTP. Trova informazioni dettagliate su [opzioni di configurazione dei criteri di aggregazione](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponibile per gli sviluppatori di destinazione nella documentazione di Destination SDK.
 * Determina se le esportazioni di messaggi HTTP devono includere profili idonei per i segmenti, rimossi dai segmenti o entrambi.
 * Determinare il nome e le configurazioni di formattazione dei file da rendere disponibili agli utenti durante l&#39;esportazione dei file.

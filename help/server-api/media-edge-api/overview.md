@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: API Media Edge
 description: Panoramica delle API Media Edge
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 5%
 
 ---
-
 
 # Panoramica API di Media Edge
 
@@ -36,7 +36,7 @@ La tabella seguente mostra un possibile servizio API di Adobe per vari casi di a
 | Caso d’uso | Servizio API |
 | -------- | ----------- |
 | Soluzione Adobe Experience Platform | Media Edge |
-| Real-time CDP + Customer Journey Analytics | Media Edge |
+| REAL-TIME CDP + CUSTOMER JOURNEY ANALYTICS | Media Edge |
 | Soluzione Adobe Analytics + Adobe Experience Platform | Media Edge |
 | Solo Adobe Analytics (già tracciamento) | Media Collection |
 
@@ -53,7 +53,3 @@ L’immagine seguente mostra i flussi di dati per i due servizi API:
 * Per ulteriori informazioni sull’utilizzo delle API Media Edge, consulta [Documentazione introduttiva](getting-started.md).
 
 * Per ulteriori informazioni sull’utilizzo di Platform Edge, consulta [Installazione di Media Analytics con Experienci Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
-
-
-
-

@@ -1,10 +1,11 @@
 ---
 title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 95%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 95%
 
 >[!AVAILABILITY]
 >
->* Questa funzionalità in versione è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
+>* Questa funzionalità è disponibile per i clienti che dispongono di una licenza per Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Ulteriori informazioni su questi pacchetti sono disponibili nelle [descrizioni dei prodotti](https://helpx.adobe.com/it/legal/product-descriptions.html). Contatta il tuo rappresentante Adobe per ulteriori informazioni.
 
 Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.
 
@@ -24,7 +25,7 @@ Se prendi in considerazione l’integrazione dei profili di prime parti con gli 
 
 * Prendi in considerazione la posizione in cui l’elenco dei tipi di pubblico verrà esportato da Real-Time CDP per essere condiviso con il fornitore dei dati. Questa posizione deve supportare l’esportazione di file.
 * Quali sono gli identificatori previsti dal fornitore dei dati in modo che possano essere sovrapposti agli attributi aggiuntivi?
-* In che modo verrà acquisito il file contenente gli attributi forniti dal partner in Real-time CDP? Ad esempio, i file possono essere acquisiti tramite i connettori di origine dell’archiviazione cloud, come [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) o [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
+* Come verrà acquisito in Real-Time CDP il file contenente gli attributi forniti dai partner? Ad esempio, i file possono essere acquisiti tramite i connettori di origine dell’archiviazione cloud, come [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) o [SFTP](/help/sources/connectors/cloud-storage/sftp.md).
 * Qual è la cadenza con cui si prevede che gli attributi forniti dai partner vengano riportati in Real-Time CDP e aggiornati?
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Anche in questo passaggio, tieni presente come cambia il modello di governance d
 
 ### Esportare i tipi di pubblico che si desidera arricchire quando vengono ricavati dalle PII (Informazioni d’identificazione personale) o PII con hash {#export-audiences}
 
-Esporta i tipi di pubblico che desideri essere arricchiti dal partner. Utilizza le destinazioni dell’archiviazione cloud fornite da Real-time CDP, ad esempio Amazon S3 o SFTP. Per completare questo passaggio, leggi le seguenti pagine della documentazione:
+Esporta i tipi di pubblico che desideri essere arricchiti dal partner. Utilizza le destinazioni dell’archiviazione cloud fornite da Real-Time CDP, ad esempio Amazon S3 o SFTP. Per completare questo passaggio, leggi le seguenti pagine della documentazione:
 
 * Pagina della documentazione sulla [destinazione Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)
 * Pagina della documentazione sulla [destinazione SFTP](/help/destinations/catalog/cloud-storage/sftp.md)
