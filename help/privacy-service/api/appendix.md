@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Appendice guida API di Privacy Service
 description: Questo documento contiene informazioni aggiuntive per l’utilizzo dell’API Privacy Service.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 # Appendice alla guida API di Privacy Service
 
-Le sezioni seguenti contengono informazioni aggiuntive sull’utilizzo dell’API di Adobe Experience Platform Privacy Service.
+Le sezioni seguenti contengono informazioni aggiuntive sull’utilizzo dell’API Adobe Experience Platform Privacy Service.
 
 ## Spazi dei nomi di identità standard {#standard-namespaces}
 
@@ -69,10 +69,10 @@ Nella tabella seguente vengono illustrati i valori accettati per specificare un 
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Experience Platform (Real-Time Customer Profile) | `profileService` |
-| Autenticazione Adobe Primetime | `primetimeAuthentication` |
+| Autenticazione Adobe Pass | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Attributi del cliente (CRS) | `CRS` |
-| Servizio Identity | `identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style="table-layout:auto"}
