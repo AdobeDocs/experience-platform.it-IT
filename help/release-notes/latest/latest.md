@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 24%
+source-wordcount: '2284'
+ht-degree: 26%
 
 ---
 
@@ -160,6 +160,27 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Funzione | Descrizione |
 | --- | --- |
 | È stato aggiornato il flusso di lavoro per la creazione dello schema | È stato implementato un nuovo flusso di lavoro per la creazione di schemi per semplificare il processo. <br> ![La nuova interfaccia utente per la creazione dello schema.](../2023/assets/schema-class-options.png "Il selettore dei dettagli del nuovo schema è evidenziato."){width="100" zoomable="yes"} <br> Consulta la [documentazione sulla creazione di schemi](../../xdm/ui/resources/schemas.md#create) per ulteriori informazioni. |
+
+**Nuovi componenti XDM**
+
+| Tipo di componente | Nome | Descrizione |
+| --- | --- | --- |
+| Tipo di dati | [[!UICONTROL Ritorno]](https://github.com/adobe/xdm/pull/1773/files) | RMA (Return Merchandise Authorization) rilasciato. |
+| Tipo di dati | [[!UICONTROL Restituisci elemento]](https://github.com/adobe/xdm/pull/1773/files) | Le informazioni sull&#39;articolo restituito all&#39;interno di RMA (Return Merchandise Authorization). |
+
+{style="table-layout:auto"}
+
+**Componenti XDM aggiornati**
+
+| Tipo di componente | Nome | Descrizione aggiornamento |
+| --- | --- | --- |
+| Estensione | [!UICONTROL Campi entità AJO] | Il [[!UICONTROL flag per più varianti]](https://github.com/adobe/xdm/pull/1774/files) aggiunto a [!UICONTROL Campi entità AJO] per identificare se la variante è multi-variante o meno. |
+| Tipo di dati | [!UICONTROL Elemento dell’elenco prodotti] | [[!UICONTROL Restituisci elemento]](https://github.com/adobe/xdm/pull/1773/files) è stato aggiunto per includere le informazioni di autorizzazione restituzione merce. |
+| Tipo di dati | Ordine | [[!UICONTROL Informazioni di ritorno]](https://github.com/adobe/xdm/pull/1773/files) è stato aggiunto per includere la RMA (Return Merchandise Authorization) rilasciata. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md)
 
 ## Identity Service {#identity-service}
 
