@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1475'
 ht-degree: 14%
 
 ---
@@ -38,17 +38,18 @@ Dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widget 
 
 | Etichetta interfaccia utente | Regolamento |
 | --- | --- |
+| [!UICONTROL APA_AUS] | Le selezioni del menu [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL CPA] | Le selezioni del menu [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | Le selezioni del menu [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | Le selezioni del menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | Le selezioni del menu [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | dell&#39;Unione europea [!DNL General Data Protection Regulation] |
-| [!UICONTROL PDPA_THA] | thailandese [!DNL Personal Data Protection Act] |
+| [!UICONTROL HIPAA_AUS] | Le selezioni del menu [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | del Brasile [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | La Nuova Zelanda [!DNL Privacy Act] |
+| [!UICONTROL PDPA_THA] | thailandese [!DNL Personal Data Protection Act] |
+| [!UICONTROL UCPA] | Le selezioni del menu [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | Le selezioni del menu [!DNL Virginia Consumer Data Protection Act] |
-| [!UICONTROL CPRA_USA] | Le selezioni del menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL APA_AUS] | Le selezioni del menu [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL HIPAA_AUS] | Le selezioni del menu [!DNL Health Insurance Portability and Accountability Act] |
 
 {style="table-layout:auto"}
 

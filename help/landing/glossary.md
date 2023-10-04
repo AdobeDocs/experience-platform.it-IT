@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 0%
 
 ---
@@ -538,6 +538,8 @@ ht-degree: 0%
 **Token**: un token è un tipo di sicurezza di autenticazione a due fattori che può essere utilizzato per autorizzare l’utilizzo di servizi informatici con [!DNL Query Service].
 
 ## U
+
+**UCPA**: Il [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) crea il diritto per un consumatore di sapere quali dati personali raccoglie un&#39;azienda, in che modo utilizza i suoi dati personali e se l&#39;azienda vende i suoi dati personali. I consumatori possono richiedere all&#39;azienda di cancellare o smettere di vendere i propri dati personali.
 
 **Schema di unione**: uno schema di unione è un consolidamento di schemi che condividono la stessa classe e sono stati abilitati per [!DNL Real-Time Customer Profile]. Per un’organizzazione possono esistere più schemi di unione, ma può esistere un solo schema di unione per classe.
 

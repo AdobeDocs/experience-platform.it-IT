@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1796'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 
 ## G
 
-**RGPD**: Il [!DNL General Data Protection Regulation] Il GDPR (Regolamento generale sulla protezione dei dati) è un quadro giuridico che definisce le linee guida per la raccolta e il trattamento di informazioni personali di persone all’interno dello Spazio economico europeo (SEE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dell’individuo, imponendo al contempo ammende che possono essere basate sulle entrate. Il RGPD copre tutte le aziende che si occupano dei dati dei cittadini del SEE, pertanto è una normativa critica per i responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie.
+**RGPD**: Il [!DNL General Data Protection Regulation] Il GDPR (Regolamento generale sulla protezione dei dati) è un quadro giuridico che definisce le linee guida per la raccolta e il trattamento di informazioni personali di persone all’interno dello Spazio economico europeo (SEE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dell’individuo, imponendo nel contempo ammende che possono essere basate sulle entrate. Il RGPD copre tutte le aziende che si occupano dei dati dei cittadini del SEE, pertanto è una normativa critica per i responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie.
 
 **Dati genetici**: dati relativi alle caratteristiche ereditarie o acquisite di una persona, che forniscono informazioni univoche sulla salute o sulla fisiologia della persona.
 
@@ -151,6 +151,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 concordare più rapidamente l&#39;adozione di un testo di compromesso.
 
 ## U
+
+**UCPA**: Il [!DNL Utah Consumer Privacy Act] crea il diritto per un consumatore di sapere quali dati personali raccoglie un&#39;azienda, in che modo utilizza i suoi dati personali e se l&#39;azienda vende i suoi dati personali. I consumatori possono richiedere all&#39;azienda di cancellare o smettere di vendere i propri dati personali.
 
 **Consenso non ambiguo**: il consenso non ambiguo è anche noto come consenso implicito. Per consenso inequivocabile si intende il consenso non esplicitamente fornito dall’interessato, ma di natura non ambigua. Ad esempio, durante il processo di iscrizione al sito web di un’azienda, viene comunicato che fornendo un indirizzo e-mail, l’interessato acconsente alla ricezione di e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva consistente nell’inserire l’e-mail è sufficiente per essere considerata un consenso inequivocabile.
 
