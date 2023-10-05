@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i ruoli
 description: L’endpoint /roles nell’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli in Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1666'
 ht-degree: 6%
 
 ---
@@ -23,7 +23,7 @@ Il `/roles` L’endpoint nell’API di controllo degli accessi basata su attribu
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte dell’API di controllo degli accessi basata su attributi. Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Recuperare un elenco di ruoli {#list}
 
@@ -179,7 +179,7 @@ In caso di esito positivo, la risposta restituisce i dettagli per l’ID ruolo i
 
 ## Cerca soggetti per ID ruolo
 
-Puoi anche recuperare gli oggetti effettuando una richiesta GET al `/roles` mentre forniva un {ROLE_ID}.
+Puoi anche recuperare gli oggetti effettuando una richiesta GET al `/roles` endpoint durante la fornitura di un {ROLE_ID}.
 
 **Formato API**
 
@@ -498,20 +498,18 @@ PATCH /roles/{ROLE_ID}
 La richiesta seguente aggiorna gli argomenti associati a `{ROLE_ID}`.
 
 ```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/access-control/administration/roles/{ROLE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -d'{
-    "operations": [
-      {
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
         "op": "add",
-        "path": "/subjects",
-        "value": "New subjects"
-      }
-    ]
-  }'
+        "path": "/user",
+        "value": "{USER ID}"
+    }
+]' 
 ```
 
 | Operazioni | Descrizione |
@@ -522,37 +520,7 @@ curl -X PATCH \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce gli oggetti aggiornati associati all’ID ruolo richiesto.
-
-```json
-{
-  "subjects": [
-    {
-      "subjectId": "string",
-      "subjectType": "user"
-    }
-  ],
-  "_page": {
-    "limit": 0,
-    "count": 0
-  },
-  "_links": {
-    "next": {
-      "href": "string",
-      "templated": true
-    },
-    "page": {
-      "href": "string",
-      "templated": true
-    }
-  }
-}
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `subjectId` | ID di un soggetto. |
-| `subjectType` | Tipo di oggetto. |
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
 
 ## Eliminare una mansione {#delete}
 
@@ -585,3 +553,34 @@ curl -X DELETE \
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
 
 Puoi confermare l’eliminazione tentando una richiesta di ricerca (GET) al ruolo. Riceverai lo stato HTTP 404 (Non trovato) perché il ruolo è stato rimosso dall’amministrazione.
+
+## Aggiungi credenziali API {#apicredential}
+
+Per aggiungere una credenziale API, effettua una richiesta PATCH a `/roles` fornendo l’ID del ruolo dei soggetti.
+
+**Formato API**
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'Content-Type: application/json' \
+--data-raw '[
+    {
+        "op": "add",
+        "path": "/api-integration",
+        "value": "{TECHNICAL ACCOUNT ID}"
+    }
+]'   
+```
+
+| Operazioni | Descrizione |
+| --- | --- |
+| `op` | Chiamata di operazione utilizzata per definire l&#39;azione necessaria per aggiornare il ruolo. Le operazioni includono: `add`, `replace`, e `remove`. |
+| `path` | Percorso del parametro da aggiungere. |
+| `value` | Il valore con cui desideri aggiungere il parametro. |
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
