@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experienci Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 1%
 
 ---
@@ -45,11 +45,9 @@ Inserisci un [!UICONTROL Nome visualizzato schema] nel campo di testo. Quindi, i
 
 ![Il [!UICONTROL Nome e recensione] sezione del [!UICONTROL Crea schema] workflow con [!UICONTROL Nome visualizzato schema], [!UICONTROL Descrizione], e [!UICONTROL Fine] evidenziato.](../../images/ui/resources/schemas/name-and-review.png)
 
-Il [!UICONTROL Schema] [!UICONTROL Sfoglia] viene visualizzata la scheda. Lo schema creato di recente è ora disponibile per la modifica nel [!DNL Schema Editor] e viene visualizzato nell’elenco degli schemi disponibili.
+Il [!UICONTROL Schema] [!UICONTROL Sfoglia] viene visualizzata la scheda. Lo schema creato di recente è ora elencato nella Libreria schemi e disponibile per la modifica nel [!DNL Schema Editor].
 
-![Editor di schema che visualizza lo schema creato di recente.](../../images/ui/resources/schemas/schema-details.png)
-
-Ora puoi iniziare a creare la struttura dello schema [aggiunta di gruppi di campi schema](#add-field-groups) nel [!DNL Schema Editor].
+![Nell’area di lavoro Schemi è disponibile la scheda Sfoglia che mostra lo schema creato di recente.](../../images/ui/resources/schemas/example-schema.png)
 
 ## Modificare uno schema esistente {#edit}
 
@@ -66,6 +64,14 @@ Per modificare uno schema esistente, seleziona la **[!UICONTROL Sfoglia]** e qui
 >Puoi utilizzare le funzionalità di ricerca e filtro dell’area di lavoro per trovare più facilmente lo schema. Consulta la guida su [esplorazione delle risorse XDM](../explore.md) per ulteriori informazioni.
 
 Dopo aver selezionato uno schema, [!DNL Schema Editor] viene visualizzato con la struttura dello schema mostrata nell’area di lavoro. Ora puoi [aggiungi gruppi di campi](#add-field-groups) allo schema (o [aggiungi singoli campi](#add-individual-fields) da tali gruppi), [modifica nomi visualizzati campi](#display-names), o [modifica gruppi di campi personalizzati esistenti](./field-groups.md#edit) se lo schema utilizza.
+
+## Altre azioni {#more}
+
+Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema, se non è stato abilitato per Real-Time Customer Profile o se a esso sono associati set di dati. Seleziona [!UICONTROL Altro] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
+
+La funzionalità di copia della struttura JSON consente di visualizzare l’aspetto di un payload di esempio durante la creazione dello schema e delle pipeline di dati. È particolarmente utile nelle situazioni in cui sono presenti strutture complesse di mappa oggetto nello schema, ad esempio una mappa di identità.
+
+![Editor di schema con il pulsante Altro evidenziato e le opzioni a discesa visualizzate.](../../images/tutorials/create-schema/more-actions.png)
 
 ## Attiva/Disattiva nome visualizzato {#display-name-toggle}
 

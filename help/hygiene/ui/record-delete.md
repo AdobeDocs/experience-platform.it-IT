@@ -3,9 +3,10 @@ title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: ccb2236fa169c26ef2f75d26776eee9f0122e92a
+exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
+source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1533'
 ht-degree: 8%
 
 ---
@@ -134,13 +135,13 @@ Per aggiungere altre identità, seleziona l’icona più (![Un&#39;icona più.](
 
 ![Il flusso di lavoro per la creazione di richieste con l’icona più e l’icona Aggiungi identità evidenziate.](../images/ui/record-delete/more-identities.png)
 
-## Invia la richiesta (#submit)
+## Inviare la richiesta {#submit}
 
 Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni richiesta]**, fornisci un nome e una descrizione facoltativa per la richiesta prima di selezionare **[!UICONTROL Invia]**.
 
 >[!IMPORTANT]
 > 
->Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.
+>Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Una singola richiesta di eliminazione del record tramite l’interfaccia utente consente di inviare 10.000 ID alla volta. Il [Metodo API per eliminare i record](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) consente di inviare contemporaneamente 100.000 ID.
 
 ![L&#39;impostazione della richiesta [!UICONTROL Nome] e [!UICONTROL Descrizione] campi con [!UICONTROL Invia] evidenziato.](../images/ui/record-delete/submit.png)
 

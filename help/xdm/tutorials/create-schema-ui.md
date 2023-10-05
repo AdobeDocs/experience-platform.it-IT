@@ -5,7 +5,7 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4619'
 ht-degree: 0%
@@ -345,7 +345,7 @@ Seleziona **[!UICONTROL Profilo]** e viene visualizzato un messaggio che richied
 
 Seleziona **[!UICONTROL Abilita]** per confermare la scelta. È possibile selezionare **[!UICONTROL Profilo]** attiva di nuovo per disabilitare lo schema, ma una volta che lo schema è stato salvato durante [!DNL Profile] è attivato, non può più essere disattivato.
 
-## Altre azioni
+## Altre azioni {#more}
 
 Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema, se non è stato abilitato per Real-Time Customer Profile o se a esso sono associati set di dati. Seleziona [!UICONTROL Altro] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
 
