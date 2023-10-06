@@ -2,7 +2,7 @@
 title: Scadenze automatizzate del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 16%
@@ -26,7 +26,7 @@ Questo documento illustra come pianificare e automatizzare le scadenze dei set d
 
 >[!NOTE]
 >
->La scadenza del set di dati non elimina attualmente i dati dalla rete Edge di Adobe Experience Platform. Tuttavia, non è possibile che i dati rimangano all’interno della rete Edge dopo la scadenza del set di dati. Questo perché il contratto di licenza del servizio di 14 giorni per la scadenza del set di dati coincide con il periodo di 14 giorni in cui i dati esistono all’interno della rete Edge prima di essere eliminati.
+>La scadenza del set di dati non elimina attualmente i dati dalla rete Edge di Adobe Experience Platform. Tuttavia, non è possibile che i dati rimangano all’interno della rete Edge dopo la scadenza del set di dati. Questo perché il contratto di licenza del servizio di 15 giorni per la scadenza del set di dati si sovrappone al periodo di 14 giorni in cui i dati esistono all’interno della rete Edge prima di essere eliminati.
 
 ## Pianificare la scadenza di un set di dati {#schedule-dataset-expiration}
 

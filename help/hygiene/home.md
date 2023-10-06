@@ -2,7 +2,7 @@
 title: Panoramica di Advanced Data Lifecycle Management
 description: La gestione avanzata del ciclo di vita dei dati consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Quando si verifica una [richiesta di scadenza del set di dati](./ui/dataset-expi
 | Conteggio profili aggiornato | 30 ore | A seconda del contenuto del set di dati da eliminare, alcuni profili possono essere rimossi dal sistema se tutti gli attributi dei loro componenti sono associati a tale set di dati. 30 ore dopo l’eliminazione del set di dati, eventuali modifiche risultanti nei conteggi complessivi dei profili vengono riportate in [widget dashboard](../dashboards/guides/profiles.md#profile-count-trend) e altri rapporti. |
 | Tipi di pubblico aggiornati | 48 ore | Una volta aggiornati tutti i profili interessati, tutti i relativi [audience](../segmentation/home.md) vengono aggiornati per riflettere le nuove dimensioni. A seconda del set di dati rimosso e degli attributi su cui stai effettuando la segmentazione, la dimensione di ciascun pubblico potrebbe aumentare o diminuire a seguito dell’eliminazione. |
 | Percorsi e destinazioni aggiornati | 50 ore | [Percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campagne](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), e [destinazioni](../destinations/home.md) vengono aggiornati in base alle modifiche nei segmenti correlati. |
-| Eliminazione definitiva completata | 14 giorni | Tutti i dati relativi al set di dati vengono eliminati dal data lake. Il [stato del processo del ciclo di vita dei dati](./ui/browse.md#view-details) che ha eliminato il set di dati viene aggiornato di conseguenza. |
+| Eliminazione definitiva completata | 15 giorni | Tutti i dati relativi al set di dati vengono eliminati dal data lake. Il [stato del processo del ciclo di vita dei dati](./ui/browse.md#view-details) che ha eliminato il set di dati viene aggiornato di conseguenza. |
 
 {style="table-layout:auto"}
 
