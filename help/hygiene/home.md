@@ -2,18 +2,14 @@
 title: Panoramica sull’igiene dei dati
 description: L’igiene dei dati Adobe Experience Platform consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: ba23fb65fcc27a304e1075ec18b0bee3f240aa27
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '585'
 ht-degree: 1%
 
 ---
 
 # Igiene dei dati in Adobe Experience Platform
-
->[!IMPORTANT]
->
->L’igiene dei dati è attualmente disponibile solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**. Queste funzionalità saranno disponibili per il rilascio generale nel prossimo futuro. Per ulteriori informazioni sulla loro imminente disponibilità, contatta il rappresentante del servizio Adobe. Tuttavia, puoi farlo immediatamente [eliminare i set di dati tramite [!UICONTROL Set di dati] UI](../catalog/datasets/user-guide.md#delete).
 
 Adobe Experience Platform fornisce un solido set di strumenti per gestire operazioni di dati complesse e di grandi dimensioni al fine di orchestrare le esperienze dei consumatori. Man mano che i dati vengono acquisiti nel sistema nel tempo, diventa sempre più importante gestire gli archivi di dati in modo che vengano utilizzati come previsto, vengano aggiornati quando i dati errati devono essere corretti e vengano eliminati quando le politiche organizzative lo ritengono necessario.
 
