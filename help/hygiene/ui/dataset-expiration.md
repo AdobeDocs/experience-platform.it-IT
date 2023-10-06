@@ -1,15 +1,15 @@
 ---
-title: Gestire le scadenze dei set di dati
+title: Scadenze automatizzate del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '828'
 ht-degree: 16%
 
 ---
 
-# Gestire le scadenze dei set di dati {#dataset-expiration}
+# Scadenze di set di dati automatizzati {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ Il [[!UICONTROL Ciclo di vita dei dati] workspace](./overview.md) nell’interfa
 >
 >Se un set di dati è impostato per la scadenza, è necessario modificare manualmente i flussi di dati che potrebbero acquisire dati in tale set di dati in modo che i flussi di lavoro a valle non vengano influenzati negativamente.
 
-Questo documento illustra come pianificare e gestire le scadenze dei set di dati nell’interfaccia utente di Platform.
+Questo documento illustra come pianificare e automatizzare le scadenze dei set di dati nell’interfaccia utente di Platform.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Per creare una richiesta, seleziona **[!UICONTROL Crea richiesta]** dalla pagina
 
 >[!IMPORTANT]
 >
-Puoi avere fino a 20 scadenze di set di dati pianificate simultaneamente. Ciò significa che puoi pianificare l’eliminazione di 20 set di dati in qualsiasi momento. Non vi sono restrizioni sull’ora o sull’anno per cui queste scadenze sono impostate. Ad esempio, se hai 20 scadenze pianificate per un set di dati e un set di dati deve essere eliminato domani, non puoi impostarne altre fino a dopo l’eliminazione.
+Gli utenti di Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics hanno 20 ordini di lavoro con scadenza set di dati pianificati in sospeso. Gli utenti di Healthcare Shield e Privacy and Security Shield hanno 50 ordini di lavoro in attesa di scadenza del set di dati pianificati. Ciò significa che puoi pianificare l’eliminazione di 20 o 50 set di dati in qualsiasi momento.<br>Ad esempio, se hai 20 scadenze pianificate per un set di dati e un set di dati deve essere eliminato domani, non puoi impostarne altre fino a dopo l’eliminazione.
 
 ![Il [!UICONTROL Ciclo di vita dei dati] workspace con [!UICONTROL Crea richiesta] evidenziato.](../images/ui/ttl/create-request-button.png)
 

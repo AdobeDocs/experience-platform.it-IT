@@ -1,23 +1,19 @@
 ---
 title: Endpoint API quota
-description: L’endpoint /quota nell’API di igiene dei dati ti consente di monitorare l’utilizzo dell’igiene dei dati rispetto ai limiti di quota mensili della tua organizzazione per ogni tipo di processo.
+description: L’endpoint /quota nell’API di igiene dei dati consente di monitorare l’utilizzo della gestione avanzata del ciclo di vita dei dati in base ai limiti di quota mensili dell’organizzazione per ciascun tipo di processo.
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 2%
+source-wordcount: '327'
+ht-degree: 3%
 
 ---
 
 # Endpoint quota
 
->[!IMPORTANT]
->
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
+Il `/quota` L’endpoint nell’API di igiene dei dati consente di monitorare l’utilizzo della gestione avanzata del ciclo di vita dei dati in base ai limiti di quota della tua organizzazione per ogni tipo di processo.
 
-Il `/quota` L’endpoint nell’API di igiene dei dati consente di monitorare l’utilizzo dell’igiene dei dati rispetto ai limiti di quota della tua organizzazione per ogni tipo di processo.
-
-Le quote vengono applicate per ogni tipo di processo di igiene dei dati nei seguenti modi:
+Le quote vengono applicate per ogni tipo di processo del ciclo di vita dei dati nei modi seguenti:
 
 * Le eliminazioni e gli aggiornamenti dei record sono limitati a un determinato numero di richieste al mese.
 * Le scadenze dei set di dati hanno un limite fisso per il numero di processi attivi simultaneamente, indipendentemente da quando verranno eseguite.
@@ -28,7 +24,7 @@ L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. 
 
 * Collegamenti alla documentazione correlata
 * Guida alla lettura delle chiamate API di esempio in questo documento
-* Informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform
+* Informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experienci Platform
 
 ## Elenca quote {#list}
 
@@ -58,7 +54,7 @@ curl -X GET \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli delle quote di igiene dei dati.
+In caso di esito positivo, la risposta restituisce i dettagli delle quote del ciclo di vita dei dati.
 
 ```json
 {
@@ -81,6 +77,6 @@ In caso di esito positivo, la risposta restituisce i dettagli delle quote di igi
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `quotas` | Elenca le informazioni sulla quota per ogni tipo di processo di igiene dei dati. Ogni oggetto quota contiene le proprietà seguenti:<ul><li>`name`: tipo di processo di igiene dei dati:<ul><li>`expirationDatasetQuota`: scadenze del set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminazioni record</li></ul></li><li>`description`: descrizione del tipo di processo di igiene dei dati.</li><li>`consumed`: numero di processi di questo tipo eseguiti nel periodo mensile corrente.</li><li>`quota`: limite di quota per questo tipo di processo. Per le eliminazioni e gli aggiornamenti dei record, rappresenta il numero di processi che è possibile eseguire per ogni periodo mensile. Per le scadenze dei set di dati, rappresenta il numero di processi che possono essere attivi contemporaneamente in un dato momento.</li></ul> |
+| `quotas` | Elenca le informazioni sulla quota per ogni tipo di processo del ciclo di vita dei dati. Ogni oggetto quota contiene le proprietà seguenti:<ul><li>`name`: tipo di processo del ciclo di vita dei dati:<ul><li>`expirationDatasetQuota`: scadenze del set di dati</li><li>`deleteIdentityWorkOrderDatasetQuota`: eliminazioni record</li></ul></li><li>`description`: descrizione del tipo di processo del ciclo di vita dei dati.</li><li>`consumed`: numero di processi di questo tipo eseguiti nel periodo mensile corrente.</li><li>`quota`: limite di quota per questo tipo di processo. Per le eliminazioni e gli aggiornamenti dei record, rappresenta il numero di processi che è possibile eseguire per ogni periodo mensile. Per le scadenze dei set di dati, rappresenta il numero di processi che possono essere attivi contemporaneamente in un dato momento.</li></ul> |
 
 {style="table-layout:auto"}

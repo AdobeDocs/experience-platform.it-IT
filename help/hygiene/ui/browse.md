@@ -1,35 +1,31 @@
 ---
-title: Sfogliare gli ordini di lavoro per l’igiene dei dati
-description: Scopri come visualizzare e gestire gli ordini di lavoro di igiene dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
+title: Sfoglia ordini di lavoro del ciclo di vita dei dati
+description: Scopri come visualizzare e gestire gli ordini di lavoro del ciclo di vita dei dati esistenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 25%
+source-wordcount: '841'
+ht-degree: 14%
 
 ---
 
-# Sfogliare gli ordini di lavoro per l’igiene dei dati {#browse-work-orders}
+# Sfoglia ordini di lavoro del ciclo di vita dei dati {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="ID degli ordini di lavoro"
->abstract="Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico di igiene dei dati, che include il suo stato attuale e altri dettagli correlati. Al momento della creazione di ogni ordine di lavoro, gli viene assegnato automaticamente un ID univoco."
->text="See the data hygiene UI guide to learn more."
+>abstract="Quando una richiesta del ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico del ciclo di vita dei dati, che include lo stato corrente e altri dettagli correlati. Al momento della creazione di ogni ordine di lavoro, gli viene assegnato automaticamente un ID univoco."
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
-
-Quando una richiesta di igiene dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. Un ordine di lavoro rappresenta un processo di igiene dei dati specifico, ad esempio una scadenza pianificata del set di dati, che include lo stato corrente e altri dettagli correlati.
+Quando una richiesta del ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. Un ordine di lavoro rappresenta un processo specifico del ciclo di vita dei dati, ad esempio una scadenza pianificata del set di dati, che include lo stato corrente e altri dettagli correlati.
 
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti nell’interfaccia utente di Adobe Experience Platform.
 
 ## Elenca e filtra gli ordini di lavoro esistenti
 
-La prima volta che accedi a **[!UICONTROL Igiene dei dati]** nell’interfaccia utente di, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
+La prima volta che accedi a **[!UICONTROL Ciclo di vita dei dati]** nell’interfaccia utente di, viene visualizzato un elenco degli ordini di lavoro esistenti con i relativi dettagli di base.
 
-![Immagine che mostra [!UICONTROL Igiene dei dati] Workspace nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
+![Immagine che mostra [!UICONTROL Ciclo di vita dei dati] Workspace nell’interfaccia utente di Platform](../images/ui/browse/work-order-list.png)
 
 Nell&#39;elenco vengono visualizzati solo gli ordini di lavorazione per una categoria alla volta. Seleziona **[!UICONTROL Consumatore]** per visualizzare un elenco di attività di eliminazione record e **[!UICONTROL Set di dati]** per visualizzare un elenco delle scadenze pianificate dei set di dati.
 
@@ -69,17 +65,17 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Stato per servizio"
->abstract="Le richieste di igiene dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. Questa sezione riassume lo stato di elaborazione attuale della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
+>abstract="Le richieste del ciclo di vita dei dati vengono elaborate in modo indipendente da più servizi Experienci Platform. Questa sezione riassume lo stato di elaborazione attuale della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Numero di identità"
->abstract="Numero di identità per i cui record è stato richiesto l’aggiornamento o l’eliminazione nell’ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
+>abstract="Numero di identità per i cui record è stato richiesto l’aggiornamento o l’eliminazione nell’ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Risposta per eliminazione dei record"
->abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia per l’igiene dei dati."
+>abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 
@@ -101,7 +97,7 @@ La pagina dei dettagli per la scadenza di un set di dati fornisce informazioni s
 
 ## Passaggi successivi
 
-Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti per l’igiene dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consultare la seguente documentazione:
+Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti relativi al ciclo di vita dei dati nell’interfaccia utente di Platform. Per informazioni sulla creazione di ordini di lavoro personalizzati, consultare la seguente documentazione:
 
 * [Gestire le scadenze dei set di dati](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [Gestisci eliminazioni record](./record-delete.md)

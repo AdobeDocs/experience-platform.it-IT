@@ -2,18 +2,14 @@
 title: Guida dell’API di igiene dei dati
 description: Scopri come correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 0%
+source-wordcount: '445'
+ht-degree: 5%
 
 ---
 
 # Guida dell’API di igiene dei dati
-
->[!IMPORTANT]
->
->Le funzionalità di igiene dei dati in Adobe Experience Platform sono attualmente disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
 
 L’API di igiene dei dati consente di correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform, nonché di pianificare le date di scadenza dei set di dati. Questa guida descrive i passaggi preliminari per l’utilizzo dell’API e fornisce collegamenti a documentazione più specifica per l’endpoint.
 
@@ -23,7 +19,7 @@ Puoi accedere all’API di igiene dei dati attraverso il seguente percorso princ
 
 Le sezioni seguenti descrivono i concetti di base che devi conoscere prima di tentare di effettuare chiamate all’API.
 
-### Raccogli i valori per le intestazioni richieste
+### Raccogliere i valori per le intestazioni richieste
 
 Per effettuare chiamate all’API di igiene dei dati, devi prima raccogliere le credenziali di autenticazione. Segui le [Guida all’autenticazione API](../../landing/api-authentication.md) per generare valori per ciascuna delle intestazioni richieste per l’API di igiene dei dati, come illustrato di seguito:
 
@@ -37,7 +33,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Lettura delle chiamate API di esempio
 
-Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva di Experience Platform API.
+Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva di Experienci Platform API.
 
 ## Scadenze set di dati
 
@@ -52,12 +48,12 @@ La scadenza di un set di dati è un’azione &quot;elimina un set di dati&quot; 
 >
 >Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
-L’API di igiene dei dati consente di eliminare tutti i record associati a un’identità in uno o tutti i set di dati. Tutte le attività di igiene dei dati che eliminano le identità sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la [guida dell’endpoint dell’ordine di lavoro](./workorder.md) per informazioni dettagliate sull’utilizzo delle eliminazioni di record nell’API.
+L’API di igiene dei dati consente di eliminare tutti i record associati a un’identità in uno o tutti i set di dati. Tutte le attività del ciclo di vita dei dati che eliminano le identità sono rappresentate da un costrutto chiamato ordine di lavoro. Consulta la [guida dell’endpoint dell’ordine di lavoro](./workorder.md) per informazioni dettagliate sull’utilizzo delle eliminazioni di record nell’API.
 
 ## Quota
 
-La tua organizzazione è limitata a una quota di lavoro mensile predeterminata per ogni tipo di operazione di igiene dei dati, che può variare a seconda della licenza. Consulta la [guida dell’endpoint &quot;quota&quot;](./quota.md) per informazioni dettagliate sulla visualizzazione dello stato attuale delle quote dei processi di igiene dei dati.
+L&#39;organizzazione è limitata a una quota mensile predeterminata di processi per ogni tipo di operazione del ciclo di vita dei dati, che può variare a seconda della licenza. Consulta la [guida dell’endpoint &quot;quota&quot;](./quota.md) per informazioni dettagliate sulla visualizzazione dello stato attuale delle quote dei processi del ciclo di vita dei dati.
 
 ## Passaggi successivi
 
-Questa guida illustra come gestire le richieste di igiene dei dati utilizzando le chiamate API. Per informazioni su come eseguire queste azioni nell’interfaccia utente di Platform, consulta [guida all’interfaccia utente per l’igiene dei dati](../ui/overview.md).
+Questa guida illustra come gestire le richieste del ciclo di vita dei dati utilizzando le chiamate API. Per informazioni su come eseguire queste azioni nell’interfaccia utente di Platform, consulta [guida dell’interfaccia utente data lifecycle](../ui/overview.md).

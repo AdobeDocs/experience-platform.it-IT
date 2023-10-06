@@ -1,25 +1,25 @@
 ---
 audience: user
-user-guide-title: Aiuto sull’igiene dei dati
-breadcrumb-title: Guida all’igiene dei dati
+user-guide-title: Guida di Advanced Data Lifecycle Management
+breadcrumb-title: Guida di Advanced Data Lifecycle Management
 user-guide-description: Elimina singoli record e pianifica le scadenze dei set di dati in Experience Platform per la pulizia dei dati, la rimozione di dati anonimi e la minimizzazione dei dati.
 feature: Data Hygiene
-source-git-commit: 0deb861d016fc99cfc1a2b75a08800dac7d208f4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 52%
+source-wordcount: '64'
+ht-degree: 32%
 
 ---
 
 
-# Igiene dei dati {#hygiene}
+# Gestione avanzata del ciclo di vita dei dati {#data-lifecycle}
 
-* [Panoramica sull’igiene dei dati](./home.md)
-* Interfaccia utente di igiene dei dati {#ui}
+* [Panoramica di Advanced Data Lifecycle Management](./home.md)
+* Interfaccia utente del ciclo di vita dei dati {#ui}
    * [Panoramica](./ui/overview.md)
-   * [Sfoglia ordini di lavoro esistenti](./ui/browse.md)
-   * [Gestire le scadenze dei set di dati](./ui/dataset-expiration.md)
+   * [Scadenze di set di dati automatizzati](./ui/dataset-expiration.md)
    * [(Beta) Elimina record](./ui/record-delete.md)
+   * [Sfoglia ordini di lavoro del ciclo di vita dei dati](./ui/browse.md)
 * API di igiene dei dati {#api}
    * [Panoramica](./api/overview.md)
    * [Scadenze set di dati](./api/dataset-expiration.md)
