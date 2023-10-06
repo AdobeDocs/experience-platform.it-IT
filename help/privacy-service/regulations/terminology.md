@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 ## P
 
 **PDPA**: Il [!DNL Personal Data Protection Act] della Thailandia (PDPA) è stato introdotto per tutelare i proprietari di dati thailandesi dalla raccolta, dall&#39;uso o dalla divulgazione illeciti dei loro dati personali. Ispirandosi al regolamento generale sulla protezione dei dati (RGPD) dell&#39;Unione Europea, il regolamento garantisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso o la cancellazione dei propri dati personali memorizzati.
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **Dati personali**: qualsiasi informazione correlata a una persona fisica o a una &quot;persona interessata&quot; che può essere usata per identificare direttamente o indirettamente la persona.
 
