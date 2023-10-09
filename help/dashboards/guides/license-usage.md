@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Dashboard utilizzo licenze"
->abstract="La dashboard Utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
+>abstract="La dashboard Utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
 
 Puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione tramite Adobe Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 

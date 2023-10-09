@@ -15,7 +15,7 @@ ht-degree: 8%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
->title="Filtro gruppo di campi standard o personalizzato"
+>title="Filtro gruppo di campi personalizzato o standard"
 >abstract="L’elenco dei gruppi di campi disponibili viene prefiltrato in base alla modalità di creazione. Selezionare il pulsante di opzione per scegliere tra le opzioni Standard e Personalizzato. L’opzione Standard mostra le entità create da Adobe, mentre l’opzione Personalizzato mostra le entità create all’interno dell’organizzazione. Per ulteriori informazioni sulla creazione e la modifica di gruppi di campi, consulta la documentazione."
 
 In Experience Data Model (XDM), i gruppi di campi di schema sono componenti riutilizzabili che definiscono uno o più campi che implementano determinate funzioni come dati personali, preferenze di hotel o indirizzo. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile.

@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Supporto per gli array di esportazione (Beta)"
->abstract="Utilizza il **Aggiungi campo calcolato** per esportare semplici array di valori int, stringa o booleani da Experienci Platform alla destinazione di archiviazione cloud desiderata. Si applicano alcune limitazioni. Consulta la documentazione per esempi esaurienti e funzioni supportate."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Esempi"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limitazioni note"
+>abstract="Utilizza il controllo **Aggiungi campo calcolato** per esportare semplici array di int, stringa o booleani da Experience Platform alla destinazione di archiviazione cloud desiderata. Si applicano alcune limitazioni. Consulta la documentazione per esempi esaurienti e funzioni supportate."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#examples" text="Esempi"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=it#known-limitations" text="Limitazioni note"
 
 >[!AVAILABILITY]
 >
