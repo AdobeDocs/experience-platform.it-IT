@@ -2,20 +2,20 @@
 title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1034'
 ht-degree: 4%
 
 ---
 
-# Endpoint ordine di lavoro
+# [!BADGE Beta]{type=Informative} Endpoint ordine di lavoro {#work-order-endpoint}
 
 Il `/workorder` L’endpoint nell’API di igiene dei dati consente di gestire in modo programmatico le richieste di eliminazione dei record in Adobe Experience Platform.
 
 >[!IMPORTANT]
+> 
+>La funzione Record Delete (Elimina record) è attualmente in versione beta e disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
 >
 >Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 

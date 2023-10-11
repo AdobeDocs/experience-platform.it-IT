@@ -4,9 +4,9 @@ user-guide-title: Guida di Advanced Data Lifecycle Management
 breadcrumb-title: Guida di Advanced Data Lifecycle Management
 user-guide-description: Elimina singoli record e pianifica le scadenze dei set di dati in Experience Platform per la pulizia dei dati, la rimozione di dati anonimi e la minimizzazione dei dati.
 feature: Data Hygiene
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '65'
 ht-degree: 32%
 
 ---
@@ -24,5 +24,5 @@ ht-degree: 32%
    * [Panoramica](./api/overview.md)
    * [Scadenze set di dati](./api/dataset-expiration.md)
    * [Eliminazioni record](./api/jobs.md)
-   * [Eliminazioni record](./api/workorder.md)
+   * [Eliminazioni record (Beta)](./api/workorder.md)
    * [Quota](./api/quota.md)
