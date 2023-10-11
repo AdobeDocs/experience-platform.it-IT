@@ -3,7 +3,7 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 3%
@@ -195,7 +195,7 @@ Platform esporterà due file CSV in [!DNL LiveRamp - Onboarding]:
 
 I file CSV esportati contengono profili con gli attributi selezionati e lo stato del pubblico corrispondente, in colonne separate, con il nome dell’attributo e `audience_namespace:audience_ID` coppie come intestazioni di colonna, come mostrato nell’esempio seguente:
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 I profili inclusi nei file esportati possono corrispondere a uno dei seguenti stati di qualificazione del pubblico:
 

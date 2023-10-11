@@ -1,37 +1,38 @@
 ---
-title: Assistente AI per Adobe Experience Platform
-description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
+title: Assistente per Adobe Experience Platform
+description: Scopri come utilizzare l’Assistente per navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 badge: Alfa
 hide: true
 hidefromtoc: true
-source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
+exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
+source-git-commit: a2b5375cd78a5d154c2ba7205491d877606ff988
 workflow-type: tm+mt
-source-wordcount: '2369'
+source-wordcount: '2524'
 ht-degree: 0%
 
 ---
 
-# Assistente AI per Adobe Experience Platform
+# Assistente per Adobe Experience Platform
 
 >[!NOTE]
 >
->L’Assistente AI per Adobe Experience Platform è attualmente in Alfa. La funzione e la documentazione sono soggette a modifiche.
+>L&#39;Assistente per Adobe Experience Platform è attualmente in fase di Alpha. La funzione e la documentazione sono soggette a modifiche.
 
-L’Assistente IA per Adobe Experience Platform è una funzione dell’interfaccia utente che consente di navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
+L’Assistente per Adobe Experience Platform è una funzione dell’interfaccia utente che consente di navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 
-È possibile eseguire una query sull&#39;Assistente IA per informazioni quali:
+È possibile eseguire una query sull&#39;Assistente per ottenere informazioni quali:
 
 * Linee guida su come eseguire attività relative a dati e tipi di pubblico.
 * Stati e metriche degli oggetti dati esistenti nell’organizzazione.
 * Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, set di dati, destinazioni, schemi, segmenti e origini.
 
-Questo documento fornisce informazioni su come accedere e utilizzare l’Assistente AI per porre domande e ricevere risposte sui concetti di Experienci Platform e Real-Time CDP.
+In questo documento vengono fornite informazioni su come accedere e utilizzare l&#39;Assistente per porre domande e ricevere risposte sui concetti di Experienci Platform e Real-Time CDP.
 
 >[!BEGINSHADEBOX]
 
-**Come funziona l’Assistente AI?**
+**Come funziona Assistant?**
 
-L’Assistente AI risponde alle domande inviate eseguendo una query su un database e quindi traducendo i dati dal database in una risposta leggibile.
+L&#39;Assistente risponde alle domande inviate eseguendo una query su un database e quindi traducendo i dati dal database in una risposta leggibile.
 
 Questa rappresentazione interna dei dati sottostanti è nota anche come Knowledge Graph (Grafico della conoscenza), un web completo di concetti, dati e metadati per una determinata risposta.
 
@@ -41,7 +42,7 @@ Il Knowledge Graph è costituito da sottografi a cui viene fatto riferimento ogn
 * Dati sull’utilizzo dei clienti nei vari meta-store.
 * Documentazione di Experience League.
 
-Prima di eseguire una query sull’Assistente IA, è necessario considerare due classi di domande:
+Prima di eseguire una query dell&#39;Assistente, è necessario considerare due classi di domande:
 
 * **Domande sui concetti**: le domande sui concetti riguardano concetti Adobi relativi a dati o tipi di pubblico. Alcuni esempi di domande sui concetti includono:
    * Qual è la differenza tra segmentazione in batch e segmentazione in streaming?
@@ -54,161 +55,176 @@ Prima di eseguire una query sull’Assistente IA, è necessario considerare due 
 
 >[!ENDSHADEBOX]
 
-## Accedere all’Assistente AI, ad Experience Platform nell’interfaccia utente
+## Accedi all’Assistente per Experience Platform nell’interfaccia utente
 
-Puoi accedere all’Assistente AI dalla navigazione dell’intestazione nell’interfaccia utente di Experienci Platform.
+Puoi accedere all’Assistente dalla navigazione dell’intestazione nell’interfaccia utente di Experienci Platform.
 
-Seleziona la **[!UICONTROL Icona Assistente AI]** dall’intestazione per avviare il pannello dell’Assistente AI.
+Seleziona la **[!UICONTROL Icona Assistente]** dall’intestazione al pannello Assistente di avvio.
 
-![La home page dell’interfaccia utente di Experience Platform con l’icona Assistente AI selezionata.](./images/ai-assistant/ai-assistant.png)
+![La home page dell’interfaccia utente di Experience Platform con l’icona Assistente selezionata.](./images/ai-assistant/ai-assistant.png)
 
-Da qui, puoi inserire la domanda nella casella di testo ed eseguire una query sull’Assistente AI per individuare i concetti relativi ai dati o ai tipi di pubblico. Puoi anche porre domande sugli oggetti dati per capire meglio come utilizzarli nel rispettivo caso d’uso.
++++Usa modalità immersiva
 
-### Caso d’uso di esempio: utilizza l’Assistente IA per accelerare il processo di creazione dello schema
+Da utilizzare [!DNL Immersive mode] selezionare l&#39;icona stato attivo nella navigazione dell&#39;intestazione dell&#39;Assistente.
+
+![coinvolgente](./images/ai-assistant/select-immersive.png)
+
+Al centro dello schermo viene visualizzata un&#39;interfaccia popup dedicata per l&#39;Assistente.
+
+![modalità immersiva](./images/ai-assistant/immersive-mode.png)
+
++++
+
+Da qui è possibile inserire la domanda nella casella di testo e interrogare l&#39;Assistente per i concetti relativi ai dati o ai tipi di pubblico. Puoi anche porre domande sugli oggetti dati per capire meglio come utilizzarli nel rispettivo caso d’uso.
+
+### Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema
 
 >[!NOTE]
 >
->Il flusso di lavoro di esempio seguente utilizza il processo di creazione dello schema ExperienceEvent per illustrare come utilizzare l’Assistente IA quando si utilizza l’interfaccia utente di Experienci Platform.
+>Il flusso di lavoro di esempio seguente utilizza il processo di creazione dello schema ExperienceEvent per illustrare come utilizzare l’Assistente quando si utilizza l’interfaccia utente di Experienci Platform.
 
-Considera un caso d’uso in cui stai creando una **Schema permuta dispositivo in evento**. Durante il processo di creazione dello schema ExperienceEvent, incappi nel `eventType` campo. A questo punto, puoi uscire dal flusso di lavoro e fare riferimento alla documentazione del [nozioni di base su una composizione di schema](../xdm/schema/composition.md), oppure puoi utilizzare l’Assistente AI per recuperare risposte immediate alle tue domande.
+Considera un caso d’uso in cui stai creando una **Schema permuta dispositivo in evento**. Durante il processo di creazione dello schema ExperienceEvent, incappi nel `eventType` campo. A questo punto, puoi uscire dal flusso di lavoro e fare riferimento alla documentazione del [nozioni di base su una composizione di schema](../xdm/schema/composition.md), oppure è possibile utilizzare l&#39;Assistente per recuperare risposte immediate alle domande.
 
-Per iniziare, inserisci la domanda nella casella di testo fornita. Nell’esempio seguente, all’Assistente AI viene fornita la domanda: &quot;**Qual è il campo eventType in uno schema Experience Event?**&quot;
+Per iniziare, immettere la domanda nella casella di testo fornita. Nell’esempio seguente, Assistant riceve la domanda: &quot;**Qual è il campo eventType in uno schema ExperienceEvent?**&quot;
 
-![L’Assistente IA, ad Experience Platform, con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/ai-assistant/question.png)
+![L’Assistente, ad Experience Platform, con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/ai-assistant/question.png)
 
-L’Assistente AI esegue quindi una query sulla knowledge base e calcola una risposta. Dopo alcuni istanti, l’Assistente AI restituisce una risposta e i suggerimenti correlati che puoi utilizzare come prompt di follow-up.
+L&#39;Assistente esegue quindi una query sulla knowledge base e calcola una risposta. Dopo alcuni istanti, l&#39;Assistente restituisce una risposta e suggerimenti correlati che è possibile utilizzare come prompt di follow-up.
 
-![L’Assistente AI, ad Experience Platform, con una risposta alla query precedente.](./images/ai-assistant/answer.png)
+Una determinata risposta fornisce collegamenti ipertestuali a qualsiasi entità di riferimento. Nell’esempio seguente, seleziona **[!UICONTROL Schemi]** per visualizzare un elenco degli schemi a cui si fa riferimento, oppure **[!UICONTROL Segmenti]** per visualizzare un elenco dei segmenti di riferimento.
 
-Per saperne di più su un particolare argomento, fai una domanda di follow-up. Nell’esempio successivo, all’Assistente AI viene richiesto come utilizzare eventType nella segmentazione.
+![Assistente, ad Experience Platform con una risposta alla query precedente.](./images/ai-assistant/answer.png)
 
-![Una domanda e una risposta di follow-up visualizzate sull’Assistente AI, ad Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+Assistente consente di convalidare la risposta visualizzandone l&#39;origine. Vengono forniti collegamenti alla documentazione per le domande sui concetti, mentre le domande sull’utilizzo dei dati possono essere verificate con una query SQL che illustra come è stata calcolata la risposta.
 
-Puoi anche porre all’Assistente AI domande relative all’utilizzo dei tuoi dati. Quando si richiedono informazioni sull’utilizzo dei dati, è necessario trovarsi in una sandbox attiva affinché l’Assistente AI possa rispondere alla query.
+![Opzioni fornite dall&#39;Assistente dopo la restituzione di una risposta.](./images/ai-assistant/options-post-answer.png)
+
+#### Suggerimenti correlati
+
+Puoi anche approfondire l’argomento della query selezionando uno dei suggerimenti correlati forniti da Assistant.
+
+![Suggerimenti correlati](./images/ai-assistant/related-suggestions.png)
+
+#### Domande di follow-up
+
+Per saperne di più su un particolare argomento, fai una domanda di follow-up. Nell’esempio successivo, all’Assistente viene chiesto come può essere utilizzato eventType nella segmentazione.
+
+![Una domanda e una risposta di follow-up visualizzate sull&#39;Assistente, ad Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+
+#### Domanda di utilizzo dati
+
+Puoi anche porre all’Assistente domande relative all’utilizzo dei tuoi dati. Quando si richiedono informazioni sull&#39;utilizzo dei dati, è necessario trovarsi in una sandbox attiva affinché l&#39;Assistente possa rispondere alla query.
 
 ![Una domanda sull’utilizzo dei dati, che chiede quanti segmenti ha un utente.](./images/ai-assistant/data-usage-question.png)
 
-Con ogni risposta, l’assistente AI ti offre un modo per convalidare la risposta visualizzandone l’origine. Vengono forniti collegamenti alla documentazione per le domande sui concetti, mentre le domande sull’utilizzo dei dati possono essere verificate con una query SQL che illustra come è stata calcolata la risposta.
+## Portata
 
->[!BEGINSHADEBOX]
+L’Assistente può rispondere a domande relative ai concetti di Real-Time CDP e Experienci Platform, nonché all’utilizzo di dati specifici per il tuo account utente. L’Assistente può anche dedurre il contesto in base alla pagina dell’interfaccia utente in cui ti trovi. È in grado di identificare:
 
-**Richiesta del feedback**
+* Account utente in uso.
+* L’organizzazione a cui appartieni.
+* Pagina visualizzata sullo schermo.
+* La risorsa (inclusi tipo e ID) che stai visualizzando sullo schermo.
+* Se si sta eseguendo un particolare Experience Platform o flusso di lavoro Real-Time CDP, l&#39;Assistente può dedurre l&#39;intento.
 
-Durante questa fase Alpha, sei invitato a fornire feedback sulle risposte ricevute dall’Assistente AI. Tutte le risposte e i feedback inviati vengono esaminati per continuare a migliorare l’esperienza di AI Assistant.
+### Documentazione
 
-Per fornire un feedback, seleziona Miniature in alto o Miniature in basso dopo aver ricevuto una risposta dall’Assistente AI, quindi inserisci il tuo feedback nella casella di testo fornita. Quindi, seleziona **[!UICONTROL Invia feedback]** da inviare.
-
->[!ENDSHADEBOX]
-
->[!BEGINTABS]
-
->[!TAB Mostra sorgente]
-
-Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla documentazione a cui l’Assistente AI fa riferimento per calcolare la risposta.
-
-![Collegamenti all&#39;origine visualizzati nell&#39;Assistente IA.](./images/ai-assistant/show-sources.png)
-
->[!TAB Miniature in alto]
-
-Seleziona l’icona miniature in alto per fornire un feedback su ciò che è andato bene con la tua esperienza con l’Assistente AI.
-
-![La finestra di feedback positivo.](./images/ai-assistant/positive-feedback.png)
-
->[!TAB Miniature in basso]
-
-Seleziona l’icona miniature verso il basso per fornire feedback su cosa potrebbe essere migliorato in base alla tua esperienza con l’Assistente AI. Durante questo passaggio, puoi anche fornire commenti specifici relativi alla tua esperienza. Il feedback fornito nei commenti viene rivisto ogni giorno.
-
-![La finestra di feedback negativo.](./images/ai-assistant/negative-feedback.png)
-
->[!TAB Contrassegno]
-
-Seleziona l’icona del flag per fornire ulteriori rapporti sulla tua esperienza utilizzando l’Assistente AI.
-
-![Finestra dei risultati del rapporto.](./images/ai-assistant/report-results.png)
-
->[!ENDTABS]
-
-### Idee per iniziare
-
-È inoltre possibile utilizzare i prompt predefiniti forniti dall&#39;Assistente AI per iniziare.
-
-![I prompt forniti nel pannello Assistente AI.](./images/ai-assistant/ideas.png)
-
-## Informazioni aggiuntive
-
-Fai riferimento a questa sezione per ulteriori informazioni sull’Assistente IA, ad Experience Platform.
-
-### Portata
-
-L’Assistente AI può rispondere alle query in base alla documentazione e all’utilizzo dei dati.
-
-#### Documentazione
-
-Puoi porre domande sulla documentazione in base a Real-time Customer Data Platform e Audiences. Attualmente, l’indice della documentazione copre Adobe Experience Platform (Real-Time CDP e Audiences). L’indice viene aggiornato periodicamente.
+Attualmente, l’indice della documentazione copre Adobe Experience Platform (Real-Time CDP e Audiences). L’indice viene aggiornato periodicamente.
 
 Il modello di recupero della documentazione di è addestrato su Experienci Platform (Real-Time CDP e Audiences). Non è possibile rispondere a domande che esulano dall’ambito di Adobe Experience Platform, come ad esempio domande su altri prodotti Adobe come Adobe Target e la suite di Creative Cloud.
 
-#### Utilizzo dati
+### Utilizzo dati
 
-Puoi anche porre all’Assistente AI domande sull’utilizzo dei dati nei seguenti domini:
+Puoi anche porre domande sull’utilizzo dei dati da parte dell’Assistente nei seguenti domini:
 
 * Attributi
 * Set di dati
-* Destinazioni (al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati).
-* Schemi (al momento non è possibile rispondere alle domande relative ai gruppi di campi).
+* Destinazioni _Al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati._
+* Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
 * Segmenti
-* Origini (Al momento non è possibile rispondere alle domande relative ai conti).
+* Origini _(Al momento non è possibile rispondere alle domande relative ai conti)._
 
 Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il segmento con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} segmento creato?&quot;
 
 Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come schemi, set di dati, attributi, destinazioni e segmenti.
 
-### Domande sull’utilizzo dei dati supportate
+### Esempi di domande sull’utilizzo dei dati
 
-+++Seleziona per visualizzare un elenco di domande sull’utilizzo dei dati supportate
++++Seleziona per visualizzare un elenco di esempi di domande sull’utilizzo dei dati
 
-Di seguito è riportato un elenco delle domande sull’utilizzo dei dati attualmente supportate, raggruppate per dominio.
-
-* Elencare gli attributi utilizzati per questo segmento?
-* Quanti segmenti ci sono in totale?
-* Visualizza un elenco dei segmenti modificati l’ultima volta nell’ultimo mese.
-* Quali segmenti sono stati modificati nell’ultima settimana?
-* Qual è il conteggio dei profili per {SEGMENT_NAME} segmento?
-* Elenca tutti i segmenti duplicati.
-* Mostra i segmenti creati o aggiornati negli ultimi 7 giorni.
-* Qual è la distribuzione del numero di profili tra i segmenti?
-* Quanti campi vengono utilizzati nella segmentazione?
-* Qual è il conteggio totale dei segmenti attivati?
-* Quali segmenti sono attivati?
-* Quanti segmenti duplicati vengono attivati?
-* Elencare i segmenti creati nell’ultimo anno.
-* Mostra i segmenti modificati più di recente {DATE}.
-* Quanti nomi di segmento univoci sono associati al {SCHEMA_NAME} schema?
-* Quali schemi vengono utilizzati più comunemente nei segmenti?
-* Quanti schemi ho?
-* Quali set di dati utilizzano {SCHEMA_NAME} schema?
-* Elenca tutti gli schemi modificati nell&#39;ultima settimana.
-* Quanti schemi sono abilitati per i profili?
-* Elencare tutti gli schemi di classi di evento esperienza?
-* Quali set di dati vengono acquisiti in {SCHEMA_NAME} schema?
-* Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?
-* Quanti set di dati ho?
-* Quali set di dati vengono utilizzati in ciascun segmento?
-* Quali segmenti utilizzano {ATTRIBUTE_NAME} attributo?
-* Quali schemi hanno {ATTRIBUTE_NAME} attributi in essi?
-* Quanti attributi dello schema XDM non vengono utilizzati in alcun segmento?
-* In quali set di dati è/sono {ATTRIBUTE_NAME} Campi XDM compilati?
-* Quali set di dati contengono dati per {ATTRIBUTE_NAME} attributo?
-* Quanti segmenti vengono attivati per ogni destinazione?
-* Quali segmenti vengono attivati nel maggior numero di destinazioni?
-* Alcuni dei miei segmenti hanno 0 profili?
-* Quanti flussi di dati ho?
+| Tipo di domanda | Descrizione | Esempi |
+| --- | --- | --- | 
+| Derivazione dei dati | Tracciare l&#39;utilizzo di uno o più oggetti tra altri oggetti Experienci Platform | <ul><li>Quali set di dati utilizzano {SCHEMA_NAME} schema?</li><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quali set di dati sono stati utilizzati nei segmenti attivati?</li><li>Elencare gli schemi con attributi utilizzati nei segmenti attivati.</li><li>Mostra i segmenti attivati in {DESTINATION_ACCOUNT_NAME} e avere più di 1000 profili.</li><li>Mostra gli attributi utilizzati nei segmenti attivati che sono stati modificati dopo gennaio 2023.</li><li>Elencare gli schemi relativi ai segmenti attivati e creati nell’ultimo anno.</li></ul> |
+| Distribuzione e aggregazioni | Domande basate su riepilogo sull&#39;utilizzo degli oggetti di Experience Platform | <ul><li>Qual è la percentuale di segmenti attivati?</li><li>Quanti campi vengono utilizzati nella segmentazione?</li><li>Quali segmenti vengono attivati nel maggior numero di destinazioni?</li><li>Elencare i segmenti duplicati.</li><li>Mostra i segmenti attivati in {DESTINATION_ACCOUNT_NAME} e li classifica in base alle dimensioni del profilo.</li><li>Qual è la percentuale dei segmenti che non sono stati attivati ma hanno più di 100 profili. Mostratemi i loro nomi.</li><li>Elencami i primi 5 attributi utilizzati nei segmenti attivati in base alla loro occorrenza.</li></ul> |
+| Ricerca oggetto | Recuperare o accedere a un oggetto Experience Platform o alle relative proprietà. | <ul><li>A quali set di dati non è associato alcuno schema</li><li>Elencare gli attributi utilizzati per {SEGMENT_NAME}?</li><li>Dammi l’elenco degli schemi abilitati per il profilo ma non modificati dalla loro creazione.</li><li>Quali segmenti sono stati modificati nell’ultima settimana?</li><li>Elencami i segmenti che hanno le stesse definizioni di segmenti insieme alla relativa data di creazione.</li><li>Quali set di dati sono abilitati per il profilo e includono anche il numero di segmenti creati da ciascun set di dati.</li><li>Mostra la definizione del segmento e la data di modifica di {SEGMENT_NAME}.</li></ul> |
 
 +++
 
-### Esperienza conversazionale
+## Verifica la risposta
 
-Quando esegui una query sull’Assistente AI, devi tenere presenti diverse sfumature relative all’esperienza di conversazione.
+È possibile verificare la risposta restituita dall&#39;Assistente in diversi modi.
+
+### Citazioni per la documentazione
+
+Con ogni risposta, l&#39;Assistente fornisce le citazioni a cui è possibile fare riferimento per la verifica o per ulteriori informazioni.
+
+Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla documentazione a cui l’Assistente fa riferimento per calcolare la risposta.
+
+![Collegamenti all&#39;origine visualizzati nell&#39;Assistente.](./images/ai-assistant/sources.png)
+
+Per le risposte che includono informazioni sull&#39;utilizzo dei dati, l&#39;Assistente fornisce collegamenti alle entità in questione. Inoltre, l&#39;Assistente fornisce una spiegazione su come ha calcolato la risposta.
+
+![spiegazione](./images/ai-assistant/explanation.png)
+
+## Fornire feedback
+
+>[!BEGINSHADEBOX]
+
+**Richiesta del feedback**
+
+In questa fase di Alpha, si è invitati a fornire un feedback sulle risposte ricevute dall&#39;Assistente. Tutte le risposte e i feedback inviati vengono esaminati per continuare a migliorare l’esperienza dell’Assistente.
+
+Per fornire un feedback, selezionare la casella di controllo Miniatura in alto o Miniatura in basso dopo aver ricevuto una risposta dall&#39;Assistente, quindi immettere il feedback nella casella di testo fornita. Quindi, seleziona **[!UICONTROL Invia feedback]** da inviare.
+
+>[!ENDSHADEBOX]
+
++++Fornire feedback
+
+>[!BEGINTABS]
+
+>[!TAB Miniature in alto]
+
+Seleziona l’icona miniature in alto per fornire un feedback su ciò che è andato bene con la tua esperienza con l’Assistente.
+
+![La finestra di feedback positivo.](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB Miniature in basso]
+
+Seleziona l’icona miniature in basso per fornire feedback su cosa potrebbe essere migliorato in base alla tua esperienza con l’Assistente. Durante questo passaggio, puoi anche fornire commenti specifici relativi alla tua esperienza. Il feedback fornito nei commenti viene rivisto ogni giorno.
+
+![La finestra di feedback negativo.](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB Contrassegno]
+
+Seleziona l’icona del flag per fornire ulteriori rapporti sulla tua esperienza utilizzando l’Assistente.
+
+![Finestra dei risultati del rapporto.](./images/ai-assistant/report-results.png)
+
+>[!ENDTABS]
+
++++
+
+## Informazioni aggiuntive
+
+Fare riferimento a questa sezione per ulteriori informazioni sull&#39;Assistente, ad Experience Platform.
+
+### Avvertenze e limitazioni
+
+La sezione seguente illustra le avvertenze e le limitazioni correnti da considerare quando si utilizza l’Assistente.
+
+#### Esperienza conversazionale
+
+Quando si esegue una query sull&#39;Assistente, è necessario considerare diverse sfumature relative all&#39;esperienza di conversazione.
 
 >[!NOTE]
 >
@@ -218,34 +234,34 @@ Quando esegui una query sull’Assistente AI, devi tenere presenti diverse sfuma
 
 >[!TAB Impossibile dedurre il contesto dalla discussione precedente]
 
-L’Assistente IA al momento non può fare riferimento a discussioni precedenti come contesto per una determinata domanda. Per esempi, consulta la tabella seguente:
+Attualmente l&#39;Assistente non può fare riferimento a discussioni precedenti come contesto per una determinata domanda. Per esempi, consulta la tabella seguente:
 
 | Domanda ambigua | Cancella domanda | Nota |
 | --- | --- | --- |
-| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Esistono diversi tipi di questi?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Domanda di follow-up: &quot;Esistono diversi tipi di **segmenti**?&quot;</li></ul> | L’Assistente AI non può dedurre il significato di &quot;loro&quot;. |
-| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Puoi elaborare di più?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Domanda di follow-up: &quot;Spiega cosa è approfondito un segmento&quot;</li></ul> | L’Assistente AI non può fare riferimento in modo intelligente alla documentazione basata su &quot;altro&quot;. |
-| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Me ne puoi fare un esempio?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Puoi farmi un esempio di segmento?&quot;</li></ul> | L’Assistente AI non può dedurre ciò di cui desideri un esempio. |
-| <ul><li>Prima domanda: &quot;Cos’è un segmento batch?&quot;</li><li>Domanda di follow-up: &quot;Come si confronta con un segmento di streaming?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento batch?&quot;</li><li>Domanda di follow-up: &quot;È possibile confrontare un segmento di streaming con un segmento batch?&quot;</li></ul> | L’Assistente AI non può dedurre a cosa si riferisca &quot;esso&quot; e quindi non può confrontare il segmento di streaming. |
-| <ul><li>Prima domanda: &quot;Quanti segmenti ho?&quot;</li><li>Segui la domanda: &quot;Quanti di loro usano Facebook come destinazione?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Quanti segmenti ho?&quot;</li><li>Domanda di follow-up: &quot;Quanti dei segmenti di cui dispongo utilizzano Facebook come destinazione?&quot;</li></ul> | L’Assistente AI non è in grado di dedurre a cosa si riferisca &quot;loro&quot;. |
+| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Esistono diversi tipi di questi?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Domanda di follow-up: &quot;Esistono diversi tipi di **segmenti**?&quot;</li></ul> | L&#39;Assistente non può dedurre il significato di &quot;loro&quot;. |
+| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Puoi elaborare di più?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Domanda di follow-up: &quot;Spiega cosa è approfondito un segmento&quot;</li></ul> | L’Assistente non può fare riferimento in modo intelligente alla documentazione basata su &quot;altro&quot;. |
+| <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Me ne puoi fare un esempio?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento?&quot;</li><li>Segui la domanda: &quot;Puoi farmi un esempio di segmento?&quot;</li></ul> | L&#39;Assistente non può dedurre ciò di cui si desidera un esempio. |
+| <ul><li>Prima domanda: &quot;Cos’è un segmento batch?&quot;</li><li>Domanda di follow-up: &quot;Come si confronta con un segmento di streaming?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Cos’è un segmento batch?&quot;</li><li>Domanda di follow-up: &quot;È possibile confrontare un segmento di streaming con un segmento batch?&quot;</li></ul> | L’Assistente non può dedurre a cosa si riferisce e quindi non può confrontare il segmento di streaming. |
+| <ul><li>Prima domanda: &quot;Quanti segmenti ho?&quot;</li><li>Segui la domanda: &quot;Quanti di loro usano Facebook come destinazione?&quot;</li></ul> | <ul><li>Prima domanda: &quot;Quanti segmenti ho?&quot;</li><li>Domanda di follow-up: &quot;Quanti dei segmenti di cui dispongo utilizzano Facebook come destinazione?&quot;</li></ul> | L’Assistente non è in grado di dedurre a cosa si riferisca &quot;loro&quot;. |
 
 {style="table-layout:auto"}
 
 >[!TAB Impossibile dedurre il contesto da una pagina]
 
-Quando chiedi all’Assistente AI informazioni su un particolare elemento della pagina dell’interfaccia utente di Experienci Platform su cui ti trovi, devi definire chiaramente l’elemento specifico all’interno della domanda.
+Quando chiedi all’Assistente informazioni su un particolare elemento della pagina dell’interfaccia utente di Experienci Platform su cui ti trovi, devi definire chiaramente l’elemento specifico all’interno della domanda.
 
 | Domanda ambigua | Cancella domanda | Nota |
 | --- | --- | --- |
-| &quot;Cosa fa questo?&quot; | &quot;Che cosa fa {PAGE_NAME} vero? | L’Assistente AI non può dedurre a cosa si riferisca &quot;questo&quot;. È necessario fornire l&#39;elemento di pagina specifico su cui si sta eseguendo una query. |
-| &quot;Perché non si risparmia?&quot; | &quot;Perché non posso salvare una nuova sandbox denominata {NAME}?&quot; | L’Assistente AI non può dedurre a cosa si riferisca &quot;it&quot; e non può sapere che si sono verificati problemi con un’entità. |
+| &quot;Cosa fa questo?&quot; | &quot;Che cosa fa {PAGE_NAME} vero? | L&#39;Assistente non può dedurre a cosa si riferisca &quot;questo&quot;. È necessario fornire l&#39;elemento di pagina specifico su cui si sta eseguendo una query. |
+| &quot;Perché non si risparmia?&quot; | &quot;Perché non posso salvare una nuova sandbox denominata {NAME}?&quot; | L’Assistente non può dedurre a cosa si riferisca e non può sapere che si sono verificati problemi con un’entità. |
 
 {style="table-layout:auto"}
 
-Inoltre, l’assistente AI può rispondere solo a domande relative a messaggi di errore, dato che l’errore è documentato in un Experience League.
+Inoltre, l’Assistente può rispondere solo a domande relative a messaggi di errore, dato che l’errore è documentato nell’Experience League.
 
 >[!TAB Ambiguità]
 
-È necessario formulare le domande in modo chiaro e definirle all’interno di un prodotto, un’applicazione o un dominio, in quanto l’Assistente AI non è attualmente in grado di dissimulare le domande.
+È necessario formulare le domande in modo chiaro e definirle all&#39;interno di un prodotto, un&#39;applicazione o un dominio, in quanto l&#39;Assistente non è attualmente in grado di dissimulare le domande.
 
 | Domanda ambigua | Cancella domanda | Nota |
 | --- | --- | --- |
@@ -256,25 +272,27 @@ Inoltre, l’assistente AI può rispondere solo a domande relative a messaggi di
 
 >[!ENDTABS]
 
-### Piccolo talk limitato
+#### Piccolo talk limitato
 
-Puoi partecipare a una piccola conversazione con l’Assistente AI, ma al momento questa capacità è limitata.
+È possibile avviare una conversazione di breve durata con l&#39;Assistente, ma questa capacità è attualmente limitata.
 
-### Domande sulle funzionalità
+#### Domande sulle funzionalità
 
-L’Assistente AI può fornire un’impressione imprecisa di ciò che è in grado di fare. Potrebbe rispondere erroneamente ai seguenti tipi di domande:
+L&#39;Assistente può dare un&#39;impressione imprecisa di ciò che può fare. Potrebbe rispondere erroneamente ai seguenti tipi di domande:
 
 | Domanda di esempio | Nota |
 | --- | --- |
-| &quot;Puoi rispondere a domande su {ENTITY}?&quot; | Se l’Assistente AI è in grado di trovare una singola pagina che fa riferimento a una determinata entità nel suo indice, risponderà sì. |
-| &quot;Lo sai che **x** lingua?&quot; | L’Assistente per l’intelligenza artificiale attualmente supporta solo l’inglese, ma potrebbe rispondere &quot;sì&quot; a causa del fatto che il modello sottostante è in grado di supportarlo. |
-| &quot;Puoi fare...?&quot; | L’Assistente AI può rispondere di sì, anche se non è possibile. |
+| &quot;Puoi rispondere a domande su {ENTITY}?&quot; | Se l&#39;Assistente è in grado di trovare una singola pagina che fa riferimento a una determinata entità nel proprio indice, risponderà sì. |
+| &quot;Lo sai che **x** lingua?&quot; | L&#39;Assistente attualmente supporta solo l&#39;inglese, ma potrebbe rispondere &quot;sì&quot; a causa del modello sottostante in grado di supportarlo. |
+| &quot;Puoi fare...?&quot; | L&#39;Assistente può rispondere di sì, anche se non può. |
 
 ### Suggerimenti
 
+La sezione seguente illustra alcuni suggerimenti e soluzioni da prendere in considerazione quando si utilizza l&#39;Assistente.
+
 #### È possibile rispondere alle domande con un&#39;informazione errata
 
-In alcuni casi, quando si pongono domande sui dati di utilizzo, si può ottenere una risposta in base alla documentazione. Ciò si verifica perché l’Assistente AI può instradare erroneamente la domanda all’origine delle informazioni errata. Per evitare questo problema:
+In alcuni casi, quando si pongono domande sui dati di utilizzo, si può ottenere una risposta in base alla documentazione. Ciò si verifica perché l&#39;Assistente può instradare la domanda all&#39;origine delle informazioni errata. Per evitare questo problema:
 
 * Riformulare la domanda per utilizzare un linguaggio più simile a quello SQL
 * Chiamando in modo esplicito l&#39;origine delle informazioni da utilizzare.
@@ -283,6 +301,6 @@ Leggi la tabella seguente per alcuni esempi:
 
 | Domanda errata | Buona domanda | Note |
 | --- | --- | --- |
-| Qual è il segmento più grande? | Qual è il segmento più grande? Utilizzo dei dati. | Indica esplicitamente all’Assistente IA che desideri che la risposta sia basata sui dati. |
+| Qual è il segmento più grande? | Qual è il segmento più grande? Utilizzo dei dati. | Comunicare in modo esplicito all&#39;Assistente che si desidera che la risposta sia basata sui dati. |
 | Qual è il segmento più grande? | Elencate il mio segmento più grande. | Esistono casi in cui una domanda &quot;cosa...&quot; può essere scambiata per una domanda basata su documentazione. L’utilizzo di un comando come &quot;list&quot; è un indicatore più forte del fatto che ti stai ponendo una domanda con i dati nel contesto. |
 | Quanti set di dati ho? | Conta i miei set di dati. | La domanda originale funziona per i segmenti, ma potrebbe non funzionare con i set di dati. |
