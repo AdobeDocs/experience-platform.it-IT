@@ -2,10 +2,10 @@
 title: Configurare uno stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ Espandi **[!UICONTROL Geolocalizzazione e ricerca di rete]** per configurare le 
 
 | Impostazione | Descrizione |
 | --- | --- |
-| [!UICONTROL Ricerca geolocalizzazione] | Abilita le ricerche di geolocalizzazione per le opzioni selezionate, in base all’indirizzo IP del visitatore. La ricerca di geolocalizzazione richiede l’inclusione di un gruppo di campi [`placeContext`](../edge/data-collection/automatic-information.md#place-context) nella configurazione di Web SDK. <br> Opzioni disponibili: <ul><li>Paese</li><li>Codice di avviamento postale</li><li>Stato/Provincia</li><li>DMA</li><li>Città</li><li>Latitudine </li><li>Longitudine</li></ul>La selezione di **[!UICONTROL Città]**, **[!UICONTROL Latitudine]** o **[!UICONTROL Longitudine]** fornisce coordinate fino a due punti decimali, indipendentemente dalle altre opzioni selezionate. Questo viene considerato come granularità a livello di città. <br> <br>Se non viene selezionata alcuna opzione, qualsiasi ricerca di geolocalizzazione viene disabilitata. La geolocalizzazione si verifica prima dell’[!UICONTROL offuscamento dell’indirizzo IP] e non è interessata dall’impostazione [!UICONTROL Offuscamento IP]. |
-| [!UICONTROL Ricerca in rete] | Abilita le ricerche in rete per le opzioni selezionate, in base all’indirizzo IP del visitatore. La ricerca in rete richiede di includere il gruppo di campi [`Environment`](../edge/data-collection/automatic-information.md#environment) nella configurazione di Web SDK. <br> Opzioni disponibili: <ul><li>Operatore telefonia</li><li>Dominio</li><li>ISP</li></ul>Utilizza queste opzioni per fornire maggiori informazioni ad altri servizi in merito alla rete specifica da cui hanno avuto origine le richieste. |
+| [!UICONTROL Ricerca geolocalizzazione] | Abilita le ricerche di geolocalizzazione per le opzioni selezionate in base all’indirizzo IP del visitatore. Le opzioni disponibili includono: <ul><li>**Paese**: Popolazioni `xdm.placeContext.geo.countryCode`</li><li>**Codice postale**: Popolazioni `xdm.placeContext.geo.postalCode`</li><li>**Stato/Provincia**: Popolazioni `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: Popolazioni `xdm.placeContext.geo.dmaID`</li><li>**Città**: Popolazioni `xdm.placeContext.geo.city`</li><li>**Latitudine**: Popolazioni `xdm.placeContext.geo._schema.latitude`</li><li>**Longitudine**: Popolazioni `xdm.placeContext.geo._schema.longitude`</li></ul>La selezione di **[!UICONTROL Città]**, **[!UICONTROL Latitudine]** o **[!UICONTROL Longitudine]** fornisce coordinate fino a due punti decimali, indipendentemente dalle altre opzioni selezionate. Questo viene considerato come granularità a livello di città.<br> <br>Se non si seleziona alcuna opzione, vengono disattivate le ricerche di geolocalizzazione. La geolocalizzazione avviene prima [!UICONTROL Offuscamento IP], il che significa che non è interessato dal [!UICONTROL Offuscamento IP] impostazione. |
+| [!UICONTROL Ricerca in rete] | Abilita le ricerche di rete per le opzioni selezionate in base all&#39;indirizzo IP del visitatore. Le opzioni disponibili includono: <ul><li>**Gestore**: Popolazioni `xdm.environment.carrier`</li><li>**Dominio**: Popolazioni `xdm.environment.domain`</li><li>**ISP**: Popolazioni `xdm.environment.ISP`</li></ul> |
+
+Se abiliti uno dei campi di cui sopra per la raccolta dati, assicurati di impostare correttamente [`context`](../edge/data-collection/automatic-information.md) proprietà array quando [configurazione di Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+I campi di ricerca di geolocalizzazione utilizzano `context` stringa di matrice `"placeContext"`, mentre i campi di ricerca di rete utilizzano `context` stringa di matrice `"environment"`.
+
+Inoltre, accertati che nello schema esista ogni campo XDM desiderato. In caso contrario, puoi aggiungere l’Adobe fornito `Environment Details` gruppo di campi allo schema.
 
 ### Configurare la ricerca del dispositivo {#geolocation-device-lookup}
 
-Il **[!UICONTROL Ricerca dispositivo]** Le impostazioni consentono di selezionare il livello di granularità delle informazioni specifiche del dispositivo da raccogliere.
+Il **[!UICONTROL Ricerca dispositivo]** Le impostazioni consentono di selezionare le informazioni specifiche del dispositivo da raccogliere.
 
 Espandi **[!UICONTROL Ricerca dispositivo]** per configurare le impostazioni descritte di seguito.
 
@@ -65,9 +71,15 @@ Espandi **[!UICONTROL Ricerca dispositivo]** per configurare le impostazioni des
 
 | Impostazione | Descrizione |
 | --- | --- |
-| **[!UICONTROL Mantieni intestazioni agente utente e suggerimenti client]** | Seleziona questa opzione per raccogliere solo le informazioni memorizzate nella stringa dell’agente utente. Questa è l&#39;impostazione predefinita. |
-| **[!UICONTROL Utilizza la ricerca del dispositivo per raccogliere le seguenti informazioni]** | Seleziona questa opzione se desideri raccogliere una o più delle seguenti informazioni specifiche per il dispositivo: <ul><li>**[!UICONTROL Dispositivo]** informazioni:<ul><li>Produttore dispositivo</li><li>Modello dispositivo</li><li>Nome marketing</li></ul></li><li>**[!UICONTROL Hardware]** informazioni: <ul><li>Tipo di dispositivo</li><li>Altezza visualizzazione</li><li>Larghezza visualizzazione</li><li>Profondità colore visualizzazione</li></ul></li><li>**[!UICONTROL Browser]** informazioni: <ul><li>Fornitore browser</li><li>Nome browser</li><li>Versione browser</li></ul></li><li>**[!UICONTROL Sistema operativo]** informazioni: <ul><li>Fornitore del sistema operativo</li><li>Nome sistema operativo</li><li>Versione sistema operativo</li></ul></li></ul> <br>  Non è possibile raccogliere le informazioni di ricerca del dispositivo insieme all’agente utente e agli hint client. La scelta di raccogliere informazioni sul dispositivo disabiliterà la raccolta di hint dell’agente utente e del client e viceversa. Tutte le informazioni di ricerca del dispositivo sono memorizzate in `xdm:device` gruppo di campi. |
-| **[!UICONTROL Non raccogliere informazioni sul dispositivo]** | Selezionare questa opzione se non si desidera raccogliere alcun tipo di informazioni di ricerca. Non verranno raccolte informazioni su dispositivi, hardware, browser o sistemi operativi, incluse intestazioni di user agent o client hints. |
+| **[!UICONTROL Mantieni intestazioni agente utente e suggerimenti client]** | Seleziona questa opzione per raccogliere solo le informazioni memorizzate nella stringa dell’agente utente. Questa impostazione è selezionata per impostazione predefinita. Popola `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL Utilizza la ricerca del dispositivo per raccogliere le seguenti informazioni]** | Seleziona questa opzione se desideri raccogliere una o più delle seguenti informazioni specifiche per il dispositivo: <ul><li>**[!UICONTROL Dispositivo]** informazioni:<ul><li>**Produttore dispositivo**: Popolazioni `xdm.device.manufacturer`</li><li>**Modello dispositivo**: Popolazioni `xdm.device.modelNumber`</li><li>**Nome marketing**: Popolazioni `xdm.device.model`</li></ul></li><li>**[!UICONTROL Hardware]** informazioni: <ul><li>**Tipo di hardware**: Popolazioni `xdm.device.type`</li><li>**Altezza visualizzazione**: Popolazioni `xdm.device.screenHeight`</li><li>**Larghezza visualizzazione**: Popolazioni `xdm.device.screenWidth`</li><li>**Profondità colore visualizzazione**: Popolazioni `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Browser]** informazioni: <ul><li>**Fornitore browser**: Popolazioni `xdm.environment.browserDetails.vendor`</li><li>**Nome browser**: Popolazioni `xdm.environment.browserDetails.name`</li><li>**Versione browser**: Popolazioni `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Sistema operativo]** informazioni: <ul><li>**Fornitore del sistema operativo**: Popolazioni `xdm.environment.operatingSystemVendor`</li><li>**Nome sistema operativo**: Popolazioni `xdm.environment.operatingSystem`</li><li>**Versione sistema operativo**: Popolazioni `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Non è possibile raccogliere le informazioni di ricerca del dispositivo insieme all’agente utente e agli hint client. La scelta di raccogliere le informazioni sul dispositivo disattiva la raccolta degli hint dell’agente utente e del client e viceversa. |
+| **[!UICONTROL Non raccogliere informazioni sul dispositivo]** | Selezionare questa opzione se non si desidera raccogliere informazioni sulla ricerca del dispositivo. Non vengono raccolti dati relativi a dispositivi, hardware, browser, sistema operativo, agenti utente o suggerimenti client. |
+
+Se abiliti uno dei campi di cui sopra per la raccolta dati, assicurati di impostare correttamente [`context`](../edge/data-collection/automatic-information.md) proprietà array quando [configurazione di Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+Le informazioni sul dispositivo e sull&#39;hardware utilizzano `context` stringa di matrice `"device"`, mentre le informazioni del browser e del sistema operativo utilizzano `context` stringa di matrice `"environment"`.
+
+Inoltre, accertati che nello schema esista ogni campo XDM desiderato. In caso contrario, puoi aggiungere l’Adobe fornito `Environment Details` gruppo di campi allo schema.
 
 ### Configurare le opzioni avanzate {#@advanced-options}
 
