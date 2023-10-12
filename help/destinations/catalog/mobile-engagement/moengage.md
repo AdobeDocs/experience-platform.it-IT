@@ -2,7 +2,7 @@
 title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Ad Adobe, l’integrazione è molto semplice e intuitiva. È sufficiente prender
 
 >[!IMPORTANT]
 >
->Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da *Moengi* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>Il connettore di destinazione e la pagina della documentazione vengono creati e gestiti da *Moengi* team. Per eventuali richieste di informazioni o richieste di aggiornamento, contattatele direttamente all&#39;indirizzo *`https://help.moengage.com/hc/en-us`.*
 
 ## Casi d’uso {#use-cases}
 
