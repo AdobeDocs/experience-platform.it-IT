@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3822'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ L’utilizzo dei tipi di pubblico e delle definizioni dei segmenti richiede una 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] consente di segmentare i dati memorizzati in [!DNL Experience Platform] che si riferisce a singoli utenti (come clienti, potenziali clienti, utenti o organizzazioni) in gruppi più piccoli.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): consente la creazione di profili cliente collegando le identità da diverse origini dati acquisite in [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform]. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 
 Devi inoltre comprendere due termini chiave utilizzati in questo documento e la loro differenza:
 
@@ -350,6 +350,10 @@ Il **[!UICONTROL Revisione]** viene visualizzata. Puoi rivedere i dettagli del p
 ![Il [!UICONTROL Revisione] viene visualizzata una pagina che mostra i dettagli del pubblico generato esternamente appena importato.](../images/ui/overview/import-audience-review-details.png)
 
 Dopo aver confermato la correttezza dei dettagli, seleziona **[!UICONTROL Fine]** per importare in Adobe Experience Platform il pubblico generato esternamente.
+
+>[!IMPORTANT]
+>
+>Se il pubblico generato esternamente contiene informazioni sensibili e/o relative all’assistenza sanitaria, **deve** applica le etichette di utilizzo dei dati necessarie prima di attivarla in qualsiasi destinazione. Per ulteriori informazioni sull’applicazione delle etichette di utilizzo dei dati, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md).
 
 ## Segmentazione pianificata {#scheduled-segmentation}
 
