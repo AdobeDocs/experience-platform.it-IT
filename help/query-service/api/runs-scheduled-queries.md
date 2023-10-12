@@ -4,9 +4,9 @@ solution: Experience Platform
 title: La query pianificata esegue l’endpoint API
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per eseguire query pianificate con l’API di Query Service.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '774'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | --------- | ----------- |
 | `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima le esecuzioni più vecchie, quindi continuerà a elencare i risultati più recenti<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. Le marche temporali ISO di base hanno il formato di: `2020-09-07` per esprimere la data del 7 settembre 2020. Un esempio più complesso sarebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30:00, ora standard USA orientale. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
 | `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state`, e `externalTrigger`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e  `==` (uguale a), e `!=` (diverso da). Ad esempio: `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create, riuscite e create manualmente dopo il 20 aprile 2019. |
 
 **Richiesta**
@@ -193,7 +193,7 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui desideri recuperare i dettagli dell’esecuzione. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
 | `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
 
 **Richiesta**
@@ -254,7 +254,7 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui desideri recuperare i dettagli dell’esecuzione. |
+| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
 | `{RUN_ID}` | Il `id` valore dell’esecuzione da recuperare. |
 
 **Richiesta**

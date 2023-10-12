@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint Schedules
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1212'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;e
 | --------- | ----------- |
 | `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio: `orderby=created` I risultati verranno ordinati in base alla creazione in ordine crescente. Aggiunta di un `-` prima della creazione (`orderby=-created`) ordinerà gli elementi in base a quelli creati in ordine decrescente. |
 | `limit` | Specifica il limite di dimensioni della pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
-| `start` | Sposta l&#39;elenco di risposte utilizzando la numerazione a base zero. Ad esempio: `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `start` | Specifica una marca temporale in formato ISO per ordinare i risultati. Se non viene specificata una data di inizio, la chiamata API restituirà prima la query pianificata creata più datata, quindi continuerà a elencare i risultati più recenti.<br> Le marche temporali ISO consentono diversi livelli di granularità in data e ora. Le marche temporali ISO di base hanno il formato di: `2020-09-07` per esprimere la data del 7 settembre 2020. Un esempio più complesso sarebbe scritto come `2022-11-05T08:15:30-05:00` e corrisponde al 5 novembre 2022, 8:15:30:00, ora standard USA orientale. È possibile fornire un fuso orario con scostamento UTC ed è indicato dal suffisso &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se non viene fornito alcun fuso orario, per impostazione predefinita viene impostato su zero. |
 | `property` | Filtra i risultati in base ai campi. I filtri **deve** essere HTML in escape. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `templateId`, e `userId`. L’elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), e `==` (uguale a) Ad esempio: `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query pianificate in cui l’ID utente corrisponde a quello specificato. |
 
 **Richiesta**
