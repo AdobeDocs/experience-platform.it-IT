@@ -2,18 +2,14 @@
 title: Tipo di dati attributi di controllo del sistema di sorgente esterna
 description: Questo documento fornisce una panoramica del tipo di dati Attributi di controllo del sistema di sorgente esterna Experience Data Model (XDM).
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '192'
 ht-degree: 3%
 
 ---
 
 # [!UICONTROL Attributi di controllo del sistema di sorgente esterna] tipo di dati
-
->[!NOTE]
->
->Questo tipo di dati è disponibile solo per le organizzazioni che hanno accesso all’edizione B2B di Adobe Real-time Customer Data Platform.
 
 [!UICONTROL Attributi di controllo del sistema di sorgente esterna] è un tipo di dati Experience Data Model (XDM) standard che acquisisce dettagli di audit su un sistema di origine esterno.
 

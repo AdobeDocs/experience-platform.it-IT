@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Per installare [!DNL Meta Conversions API] , passa all’interfaccia utente di D
 
 Dopo aver selezionato o creato la proprietà desiderata, seleziona **[!UICONTROL Estensioni]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Catalogo]** scheda. Cerca [!UICONTROL API di metaconversione] , quindi seleziona **[!UICONTROL Installa]**.
 
-![Il [!UICONTROL Installa] pulsante selezionato per il [!UICONTROL API di metaconversione] nell’interfaccia utente di Data Collection.](../../../images/extensions/server/meta/install.png)
+![Il [!UICONTROL Installa] opzione selezionata per il [!UICONTROL API di metaconversione] nell’interfaccia utente di Data Collection.](../../../images/extensions/server/meta/install.png)
 
 Nella vista di configurazione visualizzata, devi fornire [!DNL Pixel] ID copiato in precedenza per collegare l&#39;estensione al tuo account. Puoi incollare l’ID direttamente nell’input, oppure puoi utilizzare un elemento dati.
 
@@ -46,6 +46,30 @@ Al termine, seleziona **[!UICONTROL Salva]**
 ![Il [!DNL Pixel] ID fornito come elemento dati nella vista di configurazione dell’estensione.](../../../images/extensions/server/meta/configure.png)
 
 L&#39;estensione è installata e ora puoi utilizzarne le funzionalità nelle regole di inoltro degli eventi.
+
+## Integrazione con Meta Business Extension (MBE) {#mbe}
+
+Il miglioramento dell’integrazione con Meta Business Extensions (MBE) consente di eseguire rapidamente l’autenticazione nell’account Meta Business. Questo quindi compila automaticamente il tuo [!UICONTROL ID pixel] e l’API Meta Conversions [!UICONTROL Token di accesso], per semplificare l’installazione e la configurazione dell’API di conversione metadati.
+
+Viene visualizzata una finestra di dialogo per l&#39;autenticazione in MBE durante l&#39;installazione di [!UICONTROL API di metaconversione] estensione.
+
+![Il [!UICONTROL Estensione API per metaconversione] evidenziazione della pagina di installazione [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+Una finestra di dialogo per l’autenticazione in MBE viene visualizzata anche nell’interfaccia utente del flusso di lavoro con avvio rapido nell’inoltro degli eventi.
+
+![Evidenziazione dell’interfaccia utente del flusso di lavoro con avvio rapido [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Integrazione con Event Quality Match Score (EMQ) {#emq}
+
+L’integrazione con Event Quality Match Score (EMQ) consente di visualizzare facilmente l’efficacia dell’implementazione mostrando i punteggi EMQ. Questa integrazione riduce al minimo il passaggio a un altro contesto e consente di migliorare il successo delle implementazioni API di metaconversione. Questi punteggi di evento vengono visualizzati nel [!UICONTROL Estensione API per metaconversione] schermata di configurazione.
+
+![Il [!UICONTROL Estensione API per metaconversione] evidenziazione della pagina di configurazione [!UICONTROL Visualizza punteggio EMQ].](../../../images/extensions/server/meta/emq-score.png)
+
+## Integrazione con LiveRamp (Alpha) {#alpha}
+
+L’integrazione con LiveRamp aggiunge nuovi campi alla configurazione delle regole dell’API Meta Conversions, semplificando l’integrazione dei clienti con l’API LiveRamp Conversions. Questa integrazione elimina la necessità di condividere i dati PII direttamente con il partner o Meta. Grazie al grafico di identità robusto di LiveRamp, l&#39;inclusione di [!UICONTROL ID partner (alfa)] può migliorare la qualità dell’integrazione aumentando il tasso di corrispondenza degli utenti.
+
+![Inoltro metadati [!UICONTROL Regola] evidenziazione della pagina di configurazione [!UICONTROL Nome partner (alfa)] e [!UICONTROL ID partner (alfa)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurare una regola di inoltro degli eventi {#rule}
 
