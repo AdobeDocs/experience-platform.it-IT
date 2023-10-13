@@ -1,9 +1,10 @@
 ---
 title: Configurare un archivio chiavi di Azure
 description: Scopri come creare un nuovo account Enterprise con Azure o utilizzare un account Enterprise esistente e creare l’insieme di credenziali delle chiavi.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 1%
 
 ---
@@ -41,6 +42,12 @@ Da qui, continua a seguire il flusso di lavoro di creazione dell’insieme di cr
 Una volta raggiunto il **[!DNL Review + create]** passaggio, puoi rivedere i dettagli dell’insieme di credenziali delle chiavi durante la convalida. Al termine della convalida, seleziona **[!DNL Create]** per completare il processo.
 
 ![La pagina Revisione e creazione degli archivi chiavi di Microsoft Azure è evidenziata dall&#39;opzione Crea.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Configurare l’accesso {#configure-access}
+
+Quindi, abilita il controllo degli accessi basato sul ruolo di Azure per l’insieme di credenziali delle chiavi. Seleziona **[!DNL Access configuration]** nel [!DNL Settings] nella sezione di navigazione a sinistra, quindi seleziona **[!DNL Azure role-based access control]** per attivare l&#39;impostazione. Questo passaggio è essenziale in quanto l’app CMK deve essere associata in seguito a un ruolo Azure. L’assegnazione di un ruolo è documentata in entrambi [API](./api-set-up.md#assign-to-role) e [UI](./ui-set-up.md#assign-to-role) flussi di lavoro.
+
+![Il [!DNL Microsoft Azure] dashboard con [!DNL Access configuration] e [!DNL Azure role-based access control] evidenziato.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Configurare le opzioni di rete {#configure-network-options}
 
