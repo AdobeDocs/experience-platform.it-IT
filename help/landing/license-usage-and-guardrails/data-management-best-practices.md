@@ -2,9 +2,9 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -94,6 +94,12 @@ Esistono diversi strumenti che puoi sfruttare per rispettare i diritti di utiliz
 * [Filtri di acquisizione](#ingestion-filters)
 * [Archivio profili](#profile-service)
 
+### Servizio identità e pubblico indirizzabile {#identity-service}
+
+I grafici delle identità non vengono conteggiati per il diritto totale al pubblico indirizzabile, perché il pubblico indirizzabile si riferisce al numero totale di profili cliente.
+
+Tuttavia, i limiti del grafo delle identità possono influenzare il pubblico indirizzabile a causa della suddivisione delle identità. Ad esempio, se l’ECID più vecchio viene rimosso dal grafico, ECID continuerà a esistere in Real-Time Customer Profile come profilo pseudonimo. È possibile impostare [Scadenze dati profilo pseudonimo](../../profile/pseudonymous-profiles.md) per aggirare questo comportamento. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md).
+
 ### Filtri di acquisizione {#ingestion-filters}
 
 I filtri di acquisizione consentono di inserire solo i dati necessari per i casi d’uso e di escludere tutti gli eventi non necessari.
@@ -104,7 +110,7 @@ I filtri di acquisizione consentono di inserire solo i dati necessari per i casi
 | Preparazione dati di Adobe Analytics | È possibile utilizzare [!DNL Data Prep] funzionalità durante la creazione di una connessione di origine Analytics per filtrare i dati non necessari per i casi d’uso. Da a [!DNL Data Prep], puoi definire gli attributi o le colonne da pubblicare nel profilo. Puoi anche fornire istruzioni condizionali per informare Platform se i dati devono essere pubblicati nel profilo o solo nel [!DNL data lake]. Consulta la guida su [creazione di una connessione sorgente Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) per ulteriori informazioni. |
 | Supporto per abilitare/disabilitare i set di dati per il profilo | Per acquisire dati nel Profilo cliente in tempo reale, devi abilitare un set di dati da utilizzare nell’archivio Profili. In questo modo, aggiunge al tuo [!DNL Addressable Audience] e [!DNL Profile Richness] diritti. Una volta che un set di dati non è più necessario per i casi di utilizzo del profilo cliente, puoi disabilitare l’integrazione del set di dati con Profilo per garantire che i dati rimangano conformi alla licenza. Consulta la guida su [abilitazione e disabilitazione dei set di dati per il profilo](../../catalog/datasets/enable-for-profile.md) per ulteriori informazioni. |
 | Esclusione di dati SDK per web e SDK per dispositivi mobili | Esistono due tipi di dati raccolti da Web e Mobile SDK: dati raccolti automaticamente e dati raccolti esplicitamente dallo sviluppatore. Per gestire meglio la conformità della licenza, puoi disabilitare la raccolta automatica dei dati nella configurazione dell’SDK tramite l’impostazione contestuale. I dati personalizzati possono anche essere rimossi o non impostati dallo sviluppatore. Consulta la guida su [configurazione delle nozioni di base dell’SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) per ulteriori informazioni. |
-| Esclusione dei dati di inoltro lato server | Se invii dati a Platform utilizzando l’inoltro lato server, puoi escludere i dati inviati rimuovendo la mappatura in un’azione della regola per escluderla in tutti gli eventi oppure aggiungendo condizioni alla regola in modo che i dati vengano attivati solo per determinati eventi. Consulta la documentazione su [eventi e condizioni](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) per ulteriori informazioni. |
+| Esclusione dei dati di inoltro lato server | Se invii dati a Platform utilizzando l’inoltro lato server, puoi escludere i dati inviati rimuovendo la mappatura in un’azione della regola per escluderla in tutti gli eventi oppure aggiungendo condizioni alla regola in modo che i dati vengano attivati solo per determinati eventi. Consulta la documentazione su [eventi e condizioni](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if) per ulteriori informazioni. |
 | Filtrare i dati a livello di origine | Puoi utilizzare operatori logici e di confronto per filtrare i dati a livello di riga dalle origini prima di creare una connessione e acquisire i dati da Experienci Platform. Per ulteriori informazioni, consulta la guida su [filtrare i dati a livello di riga per un&#39;origine utilizzando [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
