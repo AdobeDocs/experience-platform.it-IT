@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 14%
+ht-degree: 26%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="ID degli ordini di lavoro"
->abstract="Quando una richiesta del ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico del ciclo di vita dei dati, che include lo stato corrente e altri dettagli correlati. Al momento della creazione di ogni ordine di lavoro, gli viene assegnato automaticamente un ID univoco."
+>abstract="Quando una richiesta di ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. In altre parole, un ordine di lavoro rappresenta un processo specifico di ciclo di vita dei dati, che include lo stato attuale e altri dettagli correlati. Al momento della creazione di ogni ordine di lavoro, gli viene assegnato automaticamente un ID univoco."
 >text="See the data lifecycle UI guide to learn more."
 
-Quando una richiesta del ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l&#39;attività richiesta. Un ordine di lavoro rappresenta un processo specifico del ciclo di vita dei dati, ad esempio una scadenza pianificata del set di dati, che include lo stato corrente e altri dettagli correlati.
+Quando una richiesta di ciclo di vita dei dati viene inviata al sistema, viene creato un ordine di lavoro per eseguire l’attività richiesta. Un ordine di lavoro rappresenta un processo specifico del ciclo di vita dei dati, ad esempio una scadenza pianificata del set di dati, che include lo stato corrente e altri dettagli correlati.
 
 Questa guida illustra come visualizzare e gestire gli ordini di lavoro esistenti nell’interfaccia utente di Adobe Experience Platform.
 
@@ -65,17 +65,17 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Stato per servizio"
->abstract="Le richieste del ciclo di vita dei dati vengono elaborate in modo indipendente da più servizi Experienci Platform. Questa sezione riassume lo stato di elaborazione attuale della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
+>abstract="Le richieste di ciclo di vita dei dati vengono elaborate in modo indipendente da più servizi di Experience Platform. Questa sezione riassume lo stato di elaborazione attuale della richiesta per ciascun servizio. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Numero di identità"
->abstract="Numero di identità per i cui record è stato richiesto l’aggiornamento o l’eliminazione nell’ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
+>abstract="Numero di identità per i cui record è stato richiesto l’aggiornamento o l’eliminazione nell’ambito di questo ordine di lavoro. Le identità incluse nel conteggio potrebbero non esistere necessariamente nei set di dati interessati. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Risposta per eliminazione dei record"
->abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
+>abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 
