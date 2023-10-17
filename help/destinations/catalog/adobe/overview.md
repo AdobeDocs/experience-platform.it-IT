@@ -3,9 +3,9 @@ keywords: destinazioni;soluzioni experience cloud; target;destinazione target; a
 title: Panoramica sulle destinazioni degli Adobi
 description: Gestisci la customer experience collegando i tuoi dati in Platform ad altre soluzioni Adobe Experience Cloud per il targeting di annunci, la personalizzazione, l’automazione del marketing e altro ancora
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '231'
 ht-degree: 12%
 
 ---
@@ -35,11 +35,10 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 
 * [Estensione Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 * [Estensione Adobe Analytics](../analytics/adobe-analytics.md)
-* [Estensione Adobe Livefyre](../social/adobe-livefyre.md)
 * [Estensione Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 * [Estensione Adobe Target](../personalization/adobe-target.md)
 * [Estensione Adobe Target v2](../personalization/adobe-target-v2.md)
-* [Estensione Audience Manager DIL](../data-management/aam-dil-extension.md)
+* [Estensione Audienci Manager DIL](../data-management/aam-dil-extension.md)
 * [Estensione del servizio Experience Cloud ID](../personalization/adobe-ecid.md)
 * [Estensione Marketo](../email/marketo.md)
 * [Estensione Marketo Munchkin](../email/marketo-munchkin.md)
@@ -47,6 +46,6 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 
 ## Experience Platform di condivisione del pubblico
 
-Utilizza la funzionalità di condivisione del pubblico Experience Platform per condividere i tipi di pubblico Experience Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audience Manager):
+Utilizza la funzionalità di condivisione del pubblico Experienci Platform per condividere i tipi di pubblico Experienci Platform in altre destinazioni di Adobe. Per ulteriori informazioni, consulta la pagina seguente (si apre nel portale della documentazione di Audienci Manager):
 
 * [Condivisione del pubblico di Experienci Platform con Adobe Audience Manager, Adobe Advertising Cloud e Adobe Target tramite l’integrazione dei servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
