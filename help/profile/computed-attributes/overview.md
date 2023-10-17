@@ -1,13 +1,13 @@
 ---
 title: Panoramica degli attributi calcolati
 description: Gli attributi calcolati sono funzioni per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 1%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # Panoramica degli attributi calcolati
 
@@ -56,7 +56,7 @@ Gli attributi calcolati consentono di definire gli aggregati di eventi in modo a
 
 ### Periodi di lookback
 
-Gli attributi calcolati vengono calcolati in batch, consentendo di mantenere aggiornati gli aggregati e utilizzando gli eventi più recenti. Per supportare questi scenari quasi in tempo reale, la frequenza di aggiornamento varia a seconda del periodo di lookback dell’evento.
+Gli attributi calcolati vengono calcolati in batch, consentendo di mantenere aggiornati gli aggregati e utilizzando gli eventi più recenti. Per supportare questi scenari con ritardo minimo, la frequenza di aggiornamento varia a seconda del periodo di lookback dell’evento.
 
 Il periodo di lookback si riferisce alla quantità di tempo che viene esaminata durante l’aggregazione di Eventi esperienza per l’attributo calcolato. Questo periodo di tempo può essere definito in ore, giorni, settimane o mesi.
 
@@ -73,7 +73,9 @@ Ad esempio, se l’attributo calcolato ha un periodo di lookback degli ultimi 7 
 
 >[!NOTE]
 >
->Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi. La settimana del calendario inizia il **Domenica** e termina il **Sabato** della settimana.
+>Sia le settimane che i mesi sono considerati **settimane di calendario** e **mesi calendario** quando utilizzato nei lookback di eventi. La settimana del calendario inizia il **Domenica** e termina il **Sabato** della settimana. Il mese del calendario inizia il **primo** del mese e termina **ultimo giorno** del mese.
+
+Il periodo di lookback per gli attributi calcolati è un **continuo** periodo di lookback. Ad esempio, se la valutazione viene eseguita per la prima volta il 15 ottobre alle 12:00 UTC, un periodo di lookback di due settimane recupera tutti gli eventi dal 1° al 15 ottobre, aggiorna una settimana dopo il 22 ottobre, quindi recupera tutti gli eventi dall’8 ottobre al 22 ottobre.
 
 **Aggiornamento rapido** {#fast-refresh}
 

@@ -1,13 +1,13 @@
 ---
 title: Domande frequenti sugli attributi calcolati
 description: Risposte alle domande frequenti sull’utilizzo degli attributi calcolati.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
-
 
 # Domande frequenti
 
@@ -25,9 +25,9 @@ Attributi calcolati considera i set di dati Experience Event abilitati per il pr
 
 Tutti i campi XDM nello schema di unione eventi esperienza possono essere utilizzati per creare attributi calcolati.
 
-## Cosa rappresenta l’&quot;ora dell’ultima valutazione&quot;?
+## Cosa rappresentano &quot;ultima valutazione&quot; e &quot;ultimo stato di valutazione&quot;?
 
-L&#39;ora dell&#39;ultima valutazione indica che gli eventi **precedente** a quella marca temporale sono stati considerati nell’ultimo aggiornamento riuscito dell’attributo calcolato.
+L’ultima valutazione si riferisce alla marca temporale fino alla quale gli eventi vengono considerati nell’ultima esecuzione riuscita. Lo stato dell’ultima valutazione indica se l’ultima esecuzione della valutazione è stata eseguita correttamente o meno.
 
 ## È possibile scegliere la frequenza di aggiornamento? Come si decide?
 
@@ -65,9 +65,25 @@ Gli attributi calcolati favoriscono l’arricchimento del profilo aggregando gli
 
 ## Con quale frequenza vengono valutati gli attributi calcolati? È correlato alla pianificazione di valutazione del pubblico?
 
-Gli attributi calcolati vengono valutati in batch indipendentemente dalla pianificazione di segmentazione. Ciò significa che indipendentemente dal tipo di segmentazione (segmentazione batch o segmentazione in streaming), l’attributo calcolato verrà valutato sulla propria pianificazione (oraria, giornaliera, settimanale o mensile).
+Gli attributi calcolati vengono valutati in un **batch** frequenza **indipendente** alla pianificazione della valutazione di pubblico, destinazione e percorso. Ciò significa che indipendentemente dal tipo di segmentazione (segmentazione batch o segmentazione in streaming), l’attributo calcolato verrà valutato sulla propria pianificazione (oraria, giornaliera, settimanale o mensile).
 
-Quando il pubblico viene valutato, utilizzerà il **più recente** valore dell’attributo calcolato disponibile.
+La prima valutazione dell’attributo calcolato viene eseguita entro 24 ore dalla **creazione**. Le valutazioni batch successive vengono eseguite su base oraria, giornaliera, settimanale o mensile a seconda del periodo di lookback definito.
+
+Ad esempio, se la prima valutazione si verifica alle 12:00 UTC del 9 ottobre, le valutazioni successive si verificheranno nei seguenti orari:
+
+- Prossimo aggiornamento giornaliero: 10 ottobre alle 12 UTC
+- Prossimo aggiornamento settimanale: 12:00 UTC del 15 ottobre
+- Prossimo aggiornamento mensile: 12:00 UTC del 1° novembre
+
+>[!IMPORTANT]
+>
+>Questo è il caso solo se l’aggiornamento rapido è **non** abilitato. Per scoprire come cambia il periodo di lookback quando è abilitato l’aggiornamento rapido, leggi [sezione aggiornamento rapido](./overview.md#fast-refresh).
+
+Entrambe **ogni settimana** e **mensile** gli aggiornamenti hanno luogo all&#39;inizio del **settimana del calendario** (la domenica della nuova settimana) o l&#39;inizio della **mese del calendario** (il primo del nuovo mese), anziché esattamente una settimana o un mese dopo la data della prima valutazione.
+
+>[!NOTE]
+>
+>Il valore attributo calcolato è **non** aggiornato immediatamente nel profilo dopo ogni esecuzione della valutazione. Per garantire che il valore aggiornato sia presente nei profili, è necessario considerare un buffer di alcune ore tra il tempo di valutazione e l’utilizzo degli attributi calcolati. La pianificazione dell&#39;aggiornamento degli attributi calcolati è **determinato dal sistema** e **non può** essere modificata. Per ulteriori informazioni, contatta l’Assistenza clienti Adobe.
 
 ## Come interagiscono gli attributi calcolati con i tipi di pubblico valutati utilizzando la segmentazione in streaming?
 
