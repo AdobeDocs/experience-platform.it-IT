@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '3044'
 ht-degree: 1%
 
 ---
@@ -19,13 +19,13 @@ Poiché XDM è estremamente versatile e personalizzabile dalla progettazione, è
 
 ## Introduzione
 
-Prima di leggere questa guida, consulta [Panoramica del sistema XDM](../home.md) per un’introduzione di alto livello a XDM e al suo ruolo all’interno di Experience Platform.
+Prima di leggere questa guida, consulta [Panoramica del sistema XDM](../home.md) per un’introduzione di alto livello a XDM e al suo ruolo all’interno di Experienci Platform.
 
 Inoltre, questa guida si concentra esclusivamente su considerazioni chiave relative alla progettazione dello schema. Si consiglia pertanto vivamente di fare riferimento al [nozioni di base sulla composizione dello schema](./composition.md) per una spiegazione dettagliata dei singoli elementi dello schema menzionati in questa guida.
 
 ## Riepilogo delle best practice
 
-L’approccio consigliato per la progettazione del modello dati da utilizzare in Experience Platform può essere riassunto come segue:
+L’approccio consigliato per la progettazione del modello dati da utilizzare in Experienci Platform può essere riassunto come segue:
 
 1. Comprendi i casi d’uso aziendali per i tuoi dati.
 1. Identifica le origini dati primarie da inserire in [!DNL Platform] per risolvere tali casi d’uso.
@@ -113,7 +113,7 @@ Ad esempio, un’azienda desidera creare un pubblico in base al numero di acquis
 
 >[!CAUTION]
 >
->Experience Platform al momento non esegue l’aggregazione automatica dei valori, anche se questa operazione è pianificata per le versioni future. Se si sceglie di utilizzare valori aggregati, è necessario eseguire i calcoli esternamente prima di inviare i dati a [!DNL Platform].
+>Experienci Platform al momento non esegue l’aggregazione automatica dei valori, anche se questa operazione è pianificata per le versioni future. Se si sceglie di utilizzare valori aggregati, è necessario eseguire i calcoli esternamente prima di inviare i dati a [!DNL Platform].
 
 #### Cardinalità
 
@@ -229,6 +229,16 @@ Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore EC
 >
 >Quando si utilizzano i gruppi di campi dell’applicazione Adobe, nessun altro campo deve essere contrassegnato come identità primaria. Se esistono proprietà aggiuntive che devono essere contrassegnate come identità, questi campi devono essere assegnati come identità secondarie.
 
+## Campi di convalida dei dati {#data-validation-fields}
+
+Per evitare che dati non necessari vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo durante la creazione degli schemi. Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire [!UICONTROL Proprietà campo] barra laterale. Consulta la documentazione su [proprietà del campo specifiche del tipo](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) per una descrizione esatta dei campi disponibili.
+
+![Editor di schema con i campi vincolo evidenziati nel [!UICONTROL Proprietà campo] barra laterale.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>Di seguito è riportata una raccolta di suggerimenti per la modellazione dei dati durante la creazione di uno schema:<br><ul><li>**Considerare le identità primarie**: ad Adobe prodotti come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, `identityMap` Questo campo spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.</li><li>**Evita di utilizzare `_id` come identità**: evita di utilizzare `_id` negli schemi Experience Event come identità. Ha lo scopo di garantire l&#39;univocità dei record e non di utilizzarli come identità.</li><li>**Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime per i campi contrassegnati come identità. Queste limitazioni consentono di mantenere coerenza e qualità dei dati.</li><li>**Applicare pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, utilizza [!UICONTROL Pattern] per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.</li><li>**Limitare le eVar nello schema di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.</li><li>**Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all’identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono.</li></ul>
+
 ## Passaggi successivi
 
 Questo documento illustra le linee guida generali e le best practice per la progettazione del modello dati, ad Experience Platform. Per riepilogare:
@@ -236,6 +246,6 @@ Questo documento illustra le linee guida generali e le best practice per la prog
 * Prima di creare gli schemi, utilizza un approccio discendente che consiste nell’ordinare le tabelle di dati in categorie di profilo, ricerca ed eventi.
 * Spesso esistono diversi approcci e opzioni per la progettazione di schemi per scopi diversi.
 * Il modello dati deve supportare i casi di utilizzo aziendali, ad esempio la segmentazione o l’analisi del percorso di clienti.
-* Rendi gli schemi più semplici possibile e aggiungi nuovi campi solo se assolutamente necessario.
+* Rendi gli schemi il più semplici possibile e aggiungi nuovi campi solo se assolutamente necessario.
 
 Quando sei pronto, consulta l’esercitazione su [creazione di uno schema nell’interfaccia utente](../tutorials/create-schema-ui.md) per istruzioni dettagliate su come creare uno schema, assegna la classe appropriata per l’entità e aggiungi campi a cui mappare i dati.

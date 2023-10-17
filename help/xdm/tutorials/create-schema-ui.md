@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A scopo dimostrativo, i passaggi di questa esercitazione comportano la creazione
 
 Questo tutorial richiede una buona conoscenza dei vari aspetti di Adobe Experience Platform coinvolti nella creazione dello schema. Prima di iniziare questo tutorial, consulta la documentazione per i seguenti concetti:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): panoramica degli schemi XDM e dei relativi blocchi predefiniti, tra cui classi, gruppi di campi di schema, tipi di dati e singoli campi.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
@@ -201,7 +201,7 @@ Ogni campo richiede le seguenti informazioni:
 * **[!UICONTROL Tipo]:** Il tipo di dati del campo. Questo include i tipi scalari di base e tutti i tipi di dati definiti nella [!DNL Schema Registry]. Esempi: [!UICONTROL Stringa], [!UICONTROL Intero], [!UICONTROL Booleano], [!UICONTROL Persona], [!UICONTROL Indirizzo], [!UICONTROL Numero di telefono], ecc.
 * **[!UICONTROL Descrizione]:** Una descrizione facoltativa del campo deve essere inclusa con un massimo di 200 caratteri.
 
-Il primo campo per `loyaltyTier` l&#39;oggetto sarà una stringa denominata `id`, che rappresenta l&#39;ID del livello corrente del membro fedeltà. L’ID del livello sarà univoco per ciascun membro fedeltà, poiché questa società imposta soglie di punti del livello fedeltà diverse per ciascun cliente in base a fattori diversi. Imposta il tipo del nuovo campo su &quot;[!UICONTROL Stringa]&quot;, e **[!UICONTROL Proprietà campo]** La sezione viene compilata con diverse opzioni per l&#39;applicazione dei vincoli, tra cui il valore predefinito, il formato e la lunghezza massima.
+Il primo campo per `loyaltyTier` l&#39;oggetto sarà una stringa denominata `id`, che rappresenta l&#39;ID del livello corrente del membro fedeltà. L’ID del livello sarà univoco per ciascun membro fedeltà, poiché questa società imposta soglie di punti del livello fedeltà diverse per ciascun cliente in base a fattori diversi. Imposta il tipo del nuovo campo su &quot;[!UICONTROL Stringa]&quot;, e **[!UICONTROL Proprietà campo]** La sezione viene compilata con diverse opzioni per l&#39;applicazione dei vincoli, tra cui il valore predefinito, il formato e la lunghezza massima. Consulta la documentazione su [best practice per i campi di convalida dei dati](../schema/best-practices.md#data-validation-fields) per ulteriori informazioni.
 
 ![Editor schema con i valori delle proprietà del campo per il nuovo campo ID evidenziati.](../images/tutorials/create-schema/string-constraints.png)
 
