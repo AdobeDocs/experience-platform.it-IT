@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 20%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 20%
       - [Panoramica](data-distiller/derived-attributes/overview.md)
       - [Flusso SQL senza interruzioni](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Creare attributi derivati basati su decile](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - Pipeline per funzioni AI/ML {#ml-feature-pipelines}
+      - [Pipeline per funzioni AI/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Analisi esplorativa dei dati](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Funzioni del tecnico per ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Casi d’uso {#use-cases}
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
    - [Analisi dell’attribuzione](use-cases/attribution-analysis.md)
