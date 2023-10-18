@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vincoli per il tipo di campo XDM
 description: Un riferimento per i vincoli dei tipi di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e come definire tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 4%
@@ -19,7 +19,7 @@ Negli schemi Experience Data Model (XDM), il tipo di un campo limita il tipo di 
 
 Prima di utilizzare questa guida, consultare [nozioni di base sulla composizione dello schema](./composition.md) per un’introduzione a schemi, classi e gruppi di campi di schema XDM.
 
-Se prevedi di definire tipi di campo personalizzati nell’API, si consiglia vivamente di iniziare con [Guida per gli sviluppatori del registro dello schema](../api/getting-started.md) per scoprire come creare gruppi di campi e tipi di dati per includere i campi personalizzati in. Se utilizzi l’interfaccia utente di Experience Platform per creare gli schemi, consulta la guida su [definizione dei campi nell’interfaccia utente](../ui/fields/overview.md) per scoprire come implementare vincoli sui campi definiti all’interno di gruppi di campi e tipi di dati personalizzati.
+Se prevedi di definire tipi di campo personalizzati nell’API, si consiglia vivamente di iniziare con [Guida per gli sviluppatori del registro dello schema](../api/getting-started.md) per scoprire come creare gruppi di campi e tipi di dati per includere i campi personalizzati in. Se utilizzi l’interfaccia utente di Experienci Platform per creare gli schemi, consulta la guida su [definizione dei campi nell’interfaccia utente](../ui/fields/overview.md) per scoprire come implementare vincoli sui campi definiti all’interno di gruppi di campi e tipi di dati personalizzati.
 
 ## Struttura di base ed esempi {#basic-types}
 
@@ -49,7 +49,7 @@ La tabella seguente illustra come ogni tipo XDM viene rappresentato nello schema
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Doppio]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -136,7 +136,7 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 | Tipo XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL Stringa] | Tipo: `BYTE_ARRAY`<br>Annotazione: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Doppio] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Numero] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Lungo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Intero] | Tipo: `INT32`<br>Annotazione: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Breve] | Tipo: `INT32`<br>Annotazione: `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Stringa] | `String` | `System.String` | `String` |
-| [!UICONTROL Doppio] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Numero] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Lungo] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Intero] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Breve] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Stringa] | `string` | `String` | `string` |
-| [!UICONTROL Doppio] | `double` | `Double` | `double` |
+| [!UICONTROL Numero] | `double` | `Double` | `double` |
 | [!UICONTROL Lungo] | `long` | `Integer` | `int64` |
 | [!UICONTROL Intero] | `int` | `Integer` | `int32` |
 | [!UICONTROL Breve] | `int` | `Integer` | `int32` |
