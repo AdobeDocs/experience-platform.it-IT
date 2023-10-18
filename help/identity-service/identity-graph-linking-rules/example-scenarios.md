@@ -3,17 +3,21 @@ title: Scenari Di Esempio Per La Configurazione Delle Impostazioni Delle Identit
 description: Scopri alcuni scenari di esempio per la configurazione delle impostazioni delle identità.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
 
 # Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità
 
-Questo documento illustra alcuni scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
+>[!IMPORTANT]
+>
+>Le regole di collegamento del grafo delle identità sono attualmente in Alpha. La funzione e la documentazione sono soggette a modifiche.
 
+Questo documento illustra alcuni scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
 ## Dispositivo condiviso
 
