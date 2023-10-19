@@ -2,10 +2,10 @@
 title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 4%
+source-wordcount: '1181'
+ht-degree: 3%
 
 ---
 
@@ -26,6 +26,10 @@ L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. 
 ## Creare una richiesta di eliminazione record {#create}
 
 Per eliminare una o più identità da un singolo set di dati o da tutti i set di dati, effettua una richiesta POST al `/workorder` endpoint.
+
+>[!IMPORTANT]
+> 
+>Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Un singolo [registrare la richiesta di eliminazione tramite l’interfaccia utente](../ui/record-delete.md) ti consente di inviare 10.000 ID contemporaneamente. Il metodo API per eliminare i record consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite dell’ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
 
 **Formato API**
 
