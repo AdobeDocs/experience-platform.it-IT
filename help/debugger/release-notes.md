@@ -4,14 +4,34 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
 
 # Note sulla versione di Adobi Experience Platform Debugger
+
+## Versione 1.5.0 - 19 ottobre 2023
+
+### Nuove funzionalità
+
+* Mostra collegamenti a proprietà, ambiente e regole nel riepilogo e nei registri dei tag.
+
+### Correzioni e miglioramenti
+
+* È stato risolto un problema a causa del quale i dati di riepilogo dei tag non venivano inviati.
+* È stato risolto un problema a causa del quale le sessioni di Assurance generavano un errore CORS
+* È stato risolto un problema che impediva la visualizzazione di Target Trace.
+* È stato corretto il pulsante Invia feedback.
+* È stato risolto il problema relativo all’ID dello stream di dati mancante nel riepilogo dell’SDK web per la versione ≥2.18.0.
+* È stato risolto un problema che impediva la ricerca dei registri Edge.
+* È stata aggiunta una nota sui profili aggiuntivi per alcuni tipi di account.
+
+## Versione 1.4.1 - 1 novembre 2022
+
+* Prestazioni migliorate sulle pagine con molti eventi di Adobe Experience Platform Assurance.
 
 ## Versione 1.4.0 - 3 ottobre 2022
 
