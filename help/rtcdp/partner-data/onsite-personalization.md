@@ -2,10 +2,10 @@
 title: Utilizzo del riconoscimento visitatori assistito dal partner per personalizzare le esperienze nel sito
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ Immetti `interact` nella casella di ricerca, aggiorna la pagina e dovresti veder
 
 Ora puoi creare e attivare tipi di pubblico per la personalizzazione.
 
-#### Impostare la segmentazione Edge
+#### Creare un pubblico e impostare la segmentazione Edge
 
-Configura la [segmentazione Edge](/help/segmentation/ui/edge-segmentation.md) in modo che l’appartenenza a un pubblico dei visitatori sia valutata in tempo reale, quando visitano la tua proprietà web.
+Nell’interfaccia utente di Platform, passa a **[!UICONTROL Cliente]** > **[!UICONTROL Tipi di pubblico]** e crea un pubblico per acquisire i visitatori del tuo sito web.
+
+![Visualizzazione della modalità di accesso ai tipi di pubblico.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+È necessario configurare il pubblico con [segmentazione Edge](/help/segmentation/ui/edge-segmentation.md) in questo modo l’appartenenza del pubblico dei visitatori viene valutata in tempo reale, quando visitano la tua proprietà web.
 
 Assicurati anche di impostare un [criterio di unione attivo su Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) per i tipi di pubblico Edge.
 
