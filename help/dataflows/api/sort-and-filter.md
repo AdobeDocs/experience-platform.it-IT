@@ -2,10 +2,10 @@
 title: Ordinamento e filtraggio delle risposte nell’API del servizio Flusso
 description: Questa esercitazione descrive la sintassi per l’ordinamento e il filtraggio utilizzando i parametri di query nell’API del servizio Flusso, inclusi alcuni casi d’uso avanzati.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 3%
+source-wordcount: '863'
+ht-degree: 2%
 
 ---
 
@@ -194,6 +194,58 @@ A seconda dell’entità Servizio flusso che stai recuperando, è possibile util
 | `state` | `/runs?property=state==inProgress` |
 
 {style="table-layout:auto"}
+
+## Casi d’uso {#use-cases}
+
+Leggi questa sezione per alcuni esempi specifici su come utilizzare i filtri e l’ordinamento per restituire informazioni su determinati connettori o per assistenza nei problemi di debug. Adobe Se desideri aggiungere altri casi d’uso, utilizza l’ **[!UICONTROL Opzioni di feedback dettagliate]** sulla pagina per inviare una richiesta.
+
+**Filtro per restituire solo le connessioni a una determinata destinazione**
+
+Puoi utilizzare i filtri per restituire connessioni solo a determinate destinazioni. Innanzitutto, esegui una query su `connectionSpecs` endpoint come quello riportato di seguito:
+
+```http
+GET /connectionSpecs
+```
+
+Quindi, cerca il `connectionSpec` esaminando la `name` parametro. Ad esempio, cerca Amazon Ads, o Pega, o SFTP, e così via in `name` parametro. Il corrispondente `id` è il `connectionSpec` che puoi cercare nella chiamata API successiva.
+
+Ad esempio, filtra le destinazioni per restituire solo le connessioni esistenti alle connessioni Amazon S3:
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtra per restituire flussi di dati solo alle destinazioni**
+
+Quando si esegue una query su `/flows` endpoint, invece di restituire tutti i flussi di dati di origini e destinazioni, puoi utilizzare un filtro per restituire solo i flussi di dati alle destinazioni. A tale scopo, utilizza `isDestinationFlow` come parametro di query, come segue:
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filtro per restituire flussi di dati solo a una determinata origine o destinazione**
+
+Puoi filtrare i flussi di dati per restituirli solo a una determinata destinazione o da una determinata origine. Ad esempio, filtra le destinazioni per restituire solo le connessioni esistenti alle connessioni Amazon S3:
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtro per ottenere tutte le esecuzioni di un flusso di dati per un periodo di tempo specifico**
+
+Puoi filtrare le esecuzioni di un flusso di dati per esaminare solo le esecuzioni in un determinato intervallo di tempo, come segue:
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filtro per restituire solo i flussi di dati non riusciti**
+
+A scopo di debug, puoi filtrare e visualizzare tutti i flussi di dati non riusciti eseguiti per un determinato flusso di dati di origine o di destinazione, come indicato di seguito:
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
 
 ## Passaggi successivi
 

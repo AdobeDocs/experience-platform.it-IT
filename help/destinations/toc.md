@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
+source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1182'
 ht-degree: 9%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 9%
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
    * [Esportare i set di dati](/help/destinations/api/export-datasets.md)
+   * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
    * [Creare una nuova connessione di destinazione](./ui/connect-destination.md)
