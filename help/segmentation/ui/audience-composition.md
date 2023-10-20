@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Quando selezioni il **[!UICONTROL Pubblico]** blocco, nella barra a destra vengo
 Aggiungere tipi di pubblico al blocco Pubblico. seleziona **[!UICONTROL Aggiungi pubblico]**.
 
 ![Viene evidenziato il pulsante Aggiungi pubblico.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Tieni presente che **solo** verranno visualizzati i tipi di pubblico definiti utilizzando il criterio di unione predefinito.
 
 Viene visualizzato un elenco di tipi di pubblico. Seleziona i tipi di pubblico da includere, seguito da **[!UICONTROL Aggiungi]** per aggiungerli al blocco di pubblico.
 
