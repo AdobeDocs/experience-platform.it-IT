@@ -2,9 +2,9 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
+source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1834'
 ht-degree: 7%
 
 ---
@@ -56,10 +56,9 @@ La tabella seguente elenca [!DNL Adobe Journey Optimizer] oggetti attualmente su
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Pubblico | Un pubblico può essere copiato come oggetto dipendente dell’oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Schema | Gli schemi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Puoi selezionare Crea un nuovo schema o riutilizzarne uno esistente nella sandbox di destinazione. |
-| [!DNL Adobe Journey Optimizer] | Messaggio | I messaggi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati. |
 | [!DNL Adobe Journey Optimizer] | Percorso - dettagli area di lavoro | La rappresentazione del percorso nell’area di lavoro include gli oggetti del percorso, quali condizioni, azioni, eventi, tipi di pubblico letti e così via, che vengono copiati. L’attività Salta viene esclusa dalla copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Gli eventi e i dettagli dell’evento utilizzati nel percorso vengono copiati. Crea sempre una nuova versione nella sandbox di destinazione. |
-| [!DNL Adobe Journey Optimizer] | Azione | Vengono copiati le azioni e i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
+| [!DNL Adobe Journey Optimizer] | Azione | I messaggi e-mail e push utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati.<br><br>È possibile copiare l&#39;azione di aggiornamento del profilo utilizzata nel percorso. Vengono copiati anche le azioni personalizzate e i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
 
 Le superfici (ad esempio i predefiniti) non vengono copiate. Il sistema seleziona automaticamente la corrispondenza più simile possibile nella sandbox di destinazione in base al tipo di messaggio e al nome della superficie. Se nella sandbox di destinazione non è presente alcuna superficie, la copia della superficie avrà esito negativo e la copia del messaggio avrà esito negativo perché un messaggio richiede che una superficie sia disponibile per l’impostazione. In questo caso, affinché la copia funzioni, è necessario creare almeno una superficie per il canale destro del messaggio.
 
