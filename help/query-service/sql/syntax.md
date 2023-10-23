@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 2%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Blocco anonimo
+## Blocco anonimo {#anonymous-block}
 
 Un blocco anonimo è costituito da due sezioni: eseguibile e gestione delle eccezioni. In un blocco anonimo, la sezione eseguibile è obbligatoria. Tuttavia, la sezione relativa alla gestione delle eccezioni è facoltativa.
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Istruzioni condizionali in un blocco anonimo {#conditional-anonymous-block-statements}
+
+La struttura di controllo IF-THEN-ELSE consente l&#39;esecuzione condizionale di un elenco di istruzioni quando una condizione viene valutata come TRUE. Questa struttura di controllo è applicabile solo all&#39;interno di un blocco anonimo. Se questa struttura viene utilizzata come comando autonomo, si verifica un errore di sintassi (&quot;Comando non valido all&#39;esterno di Blocco anonimo&quot;).
+
+Il frammento di codice seguente illustra il formato corretto per le istruzioni condizionali IF-THEN-ELSE in un blocco anonimo.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Esempio**
+
+L’esempio seguente esegue `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+Questa struttura può essere utilizzata in combinazione con `raise_error();` per restituire un messaggio di errore personalizzato. Il blocco di codice visualizzato di seguito termina il blocco anonimo con un &quot;messaggio di errore personalizzato&quot;.
+
+**Esempio**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Istruzioni IF nidificate
+
+Le istruzioni IF nidificate sono supportate all’interno di blocchi anonimi.
+
+**Esempio**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Blocchi di eccezioni
+
+I blocchi di eccezione sono supportati all’interno di blocchi anonimi.
+
+**Esempio**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Automatico a JSON {#auto-to-json}
