@@ -5,10 +5,10 @@ title: Connettere Data Landing Zone a Adobe Experience Platform utilizzando l’
 type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a Data Landing Zone utilizzando l’API del servizio Flusso.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 0089aa0d6b765645840e6954c3957282c2ad972b
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 5%
+source-wordcount: '1304'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +27,7 @@ Questo tutorial illustra i passaggi necessari per creare un [!DNL Data Landing Z
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per creare correttamente un [!DNL Data Landing Zone] connessione sorgente tramite [!DNL Flow Service] API.
 
@@ -103,14 +103,15 @@ curl -X GET \
 
 **Risposta**
 
-La risposta seguente restituisce le informazioni sulle credenziali per la zona di destinazione, incluso l’attuale `SASToken` e `SASUri`, nonché `storageAccountName` che corrisponde al contenitore della zona di destinazione.
+La risposta seguente restituisce le informazioni sulle credenziali per l’area di destinazione dati, inclusa la `SASToken`, `SASUri`, `storageAccountName`e data di scadenza.
 
 ```json
 {
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 
@@ -119,6 +120,7 @@ La risposta seguente restituisce le informazioni sulle credenziali per la zona d
 | `containerName` | Il nome della zona di destinazione. |
 | `SASToken` | Il token di firma di accesso condiviso per la tua zona di destinazione. Questa stringa contiene tutte le informazioni necessarie per autorizzare una richiesta. |
 | `SASUri` | URI della firma di accesso condiviso per la zona di destinazione. Questa stringa è una combinazione dell&#39;URI della zona di destinazione per la quale si sta effettuando l&#39;autenticazione e del token SAS corrispondente, |
+| `expiryDate` | Data di scadenza del token SAS. Devi aggiornare il token prima della data di scadenza per continuare a utilizzarlo nell’applicazione per caricare dati nella Data Landing Zone. Se non aggiorni manualmente il token prima della data di scadenza indicata, questo verrà aggiornato automaticamente e fornirà un nuovo token quando viene eseguita la chiamata delle credenziali GET. |
 
 
 ## Aggiorna [!DNL Data Landing Zone] credenziali
@@ -159,7 +161,8 @@ La seguente risposta restituisce valori aggiornati per il `SASToken` e `SASUri`.
     "containerName": "dlz-user-container",
     "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
     "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "expiryDate": "2024-01-06"
 }
 ```
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;Data Landing Zone;data lan
 title: Collegare Data Landing Zone a Platform tramite l’interfaccia utente
 description: Scopri come creare un connettore di origine per la Data Landing Zone utilizzando l’interfaccia utente di Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial descrive i passaggi necessari per creare [!DNL Data Landing Zone
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Porta i file da [!DNL Data Landing Zone] alla piattaforma
 
@@ -35,16 +35,16 @@ Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello s
 
 Sotto [!UICONTROL archiviazione cloud] categoria, seleziona [!DNL Data Landing Zone] e quindi seleziona **[!UICONTROL Aggiungi dati]**.
 
-![catalogo](../../../../images/tutorials/create/dlz/catalog.png)
+![Catalogo delle origini con Data Landing Zone selezionato.](../../../../images/tutorials/create/dlz/catalog.png)
 
 Il [!UICONTROL Aggiungi dati] viene visualizzata un’interfaccia per selezionare e visualizzare in anteprima i dati da portare su Platform.
 
 * La parte sinistra dell’interfaccia è un browser di cartelle che ti fornisce un elenco di file dal contenitore da portare su Platform.
 * La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-Seleziona il file da portare su Platform e attendi alcuni istanti prima che l’interfaccia corretta venga aggiornata in una schermata di anteprima.
+Seleziona il file da portare in Experience Platform e attendi alcuni istanti prima che l’interfaccia corretta venga aggiornata in una schermata di anteprima.
 
-![add-data](../../../../images/tutorials/create/dlz/add-data.png)
+![Interfaccia per l&#39;aggiunta di dati dell&#39;area di lavoro origini.](../../../../images/tutorials/create/dlz/add-data.png)
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ Per visualizzare in anteprima un file diverso, selezionate l&#39;icona di antepr
 
 Al termine, seleziona **[!UICONTROL Successivo]**.
 
-![rilevamento file](../../../../images/tutorials/create/dlz/file-detection.png)
+![Pagina di anteprima dei dati dell&#39;area di lavoro origini.](../../../../images/tutorials/create/dlz/file-detection.png)
 
 Per una guida dettagliata su come creare un flusso di dati per un’origine di archiviazione cloud, consulta l’esercitazione su [creazione di un flusso di dati di archiviazione cloud per portare i dati su Platform](../../dataflow/batch/cloud-storage.md).
 
@@ -66,9 +66,9 @@ Per una guida dettagliata su come creare un flusso di dati per un’origine di a
 
 In [!UICONTROL Catalogo origini], sotto il [!UICONTROL Archiviazione cloud] , seleziona i puntini di sospensione (**...**) dalla **[!UICONTROL Data Landing Zone]** Card. Dal menu a discesa visualizzato, seleziona **[!UICONTROL Visualizza credenziali]**.
 
-![opzioni](../../../../images/tutorials/create/dlz/options.png)
+![Elenco delle opzioni di visualizzazione per Data Landing Zone.](../../../../images/tutorials/create/dlz/options.png)
 
-Viene visualizzato un popover con il nome del contenitore, il token SAS, il nome dell&#39;account di archiviazione e l&#39;URI SAS.
+Viene visualizzato un popover con il nome del contenitore, il token SAS, il nome dell&#39;account di archiviazione, l&#39;URI SAS e la data di scadenza.
 
 Seleziona **[!UICONTROL Aggiorna credenziali]** e attendi alcuni secondi per l’elaborazione delle credenziali aggiornate.
 
@@ -76,7 +76,7 @@ Seleziona **[!UICONTROL Aggiorna credenziali]** e attendi alcuni secondi per l�
 >
 >Il tuo [!DNL Data Landing Zone] le credenziali sono impostate per scadere automaticamente dopo 90 giorni ed è necessario utilizzare le nuove credenziali per riconnettersi a [!DNL Data Landing Zone] dopo la scadenza. I flussi di dati in Platform non sono interessati dalla scadenza delle credenziali ed è comunque possibile continuare a lavorare con flussi di dati nuovi ed esistenti con le nuove credenziali.
 
-![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+![Le credenziali associate a un determinato account Data Landing Zone.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 ## Passaggi successivi
 
