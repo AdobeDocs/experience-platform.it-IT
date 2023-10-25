@@ -5,7 +5,7 @@ exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ Questo documento fornisce una guida su come creare e aggiornare attributi calcol
 Questa guida dell’interfaccia utente richiede una comprensione dei vari [!DNL Experience Platform] servizi coinvolti nella gestione [!DNL Real-Time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, consulta la documentazione dei seguenti servizi:
 
 - [[!DNL Real-Time Customer Profile]](../home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
 
 ## Visualizza attributi calcolati {#view}
 

@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Questo tutorial illustra i passaggi necessari per aggiungere etichette a uno sch
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
    * [Editor schema](../ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornisce l’infrastruttura per applicare le restrizioni di utilizzo dei dati sulle operazioni di Platform, utilizzando criteri che definiscono quali azioni di marketing possono o non possono essere eseguite sui dati con etichetta.
 

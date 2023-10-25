@@ -2,18 +2,14 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1820'
 ht-degree: 7%
 
 ---
 
-# [!BADGE Beta] Strumenti sandbox
-
->[!IMPORTANT]
->
->Il **Strumenti sandbox** La funzione descritta di seguito è disponibile solo per alcuni clienti beta.
+# Strumenti sandbox
 
 >[!NOTE]
 >
