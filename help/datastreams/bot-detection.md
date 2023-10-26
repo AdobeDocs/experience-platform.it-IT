@@ -1,11 +1,11 @@
 ---
-title: Configurare il rilevamento di bot
-description: Scopri come configurare il rilevamento di bot per gli stream di dati.
+title: Configurare il rilevamento di bot per gli stream di dati
+description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
