@@ -2,9 +2,9 @@
 title: Creare una connessione di origine BLOB di Azure nell’interfaccia utente
 description: Scopri come creare un connettore di origine BLOB di Azure utilizzando l’interfaccia utente di Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Questo tutorial descrive i passaggi necessari per creare [!DNL Azure Blob] (in s
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato per organizzare i dati sull’esperienza del cliente in Experience Platform.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato per organizzare i dati sull’esperienza del cliente in Experienci Platform.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -34,16 +34,27 @@ Experience Platform supporta i seguenti formati di file da acquisire da archivi 
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo [!DNL Blob] su Platform, è necessario fornire un valore valido per le seguenti credenziali:
+Per accedere al tuo [!DNL Blob] archiviazione in Experienci Platform, devi fornire valori validi per le seguenti credenziali:
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione della stringa di connessione]
 
 | Credenziali | Descrizione |
-| ---------- | ----------- |
+| --- | --- |
 | Stringa di connessione | Stringa contenente le informazioni di autorizzazione necessarie per l&#39;autenticazione [!DNL Blob] all&#39;Experience Platform. Il [!DNL Blob] modello di stringa di connessione: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Per ulteriori informazioni sulle stringhe di connessione, vedere [!DNL Blob] documento su [configurazione delle stringhe di connessione](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+
+>[!TAB Autenticazione URI SAS]
+
+| Credenziali | Descrizione |
+| --- | --- |
 | URI SAS | URI della firma di accesso condiviso che è possibile utilizzare come tipo di autenticazione alternativo per connettere [!DNL Blob] account. Il [!DNL Blob] Criterio URI SAS: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Per ulteriori informazioni, consulta [!DNL Blob] documento su [URI della firma di accesso condiviso](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 | Contenitore | Nome del contenitore a cui si desidera designare l&#39;accesso. Quando crei un nuovo account con [!DNL Blob] sorgente, puoi fornire un nome contenitore per specificare l’accesso utente alla sottocartella desiderata. |
 | Percorso della cartella | Percorso della cartella a cui desideri fornire l’accesso. |
 
-Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Blob] da un account a Platform.
+>[!ENDTABS]
+
+Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Blob] archiviazione in Experience Platform
 
 ## Connetti [!DNL Blob] account
 
@@ -51,7 +62,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la fonte specifica che si desidera utilizzare utilizzando la barra di ricerca.
 
-Sotto [!UICONTROL Archiviazione cloud] categoria, seleziona **[!UICONTROL Archiviazione BLOB di Azure]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto [!UICONTROL Archiviazione cloud] categoria, seleziona **[!UICONTROL Archiviazione BLOB di Azure]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Il catalogo delle origini Experienci Platform con l’origine Archiviazione BLOB di Azure selezionata.](../../../../images/tutorials/create/blob/catalog.png)
 
@@ -64,6 +75,10 @@ Per utilizzare un account esistente, seleziona la [!DNL Blob] account con cui vu
 ![esistente](../../../../images/tutorials/create/blob/existing.png)
 
 ### Nuovo account
+
+>[!TIP]
+>
+>Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL Blob] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
 Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi fornisci un nome e una descrizione facoltativa per il nuovo [!DNL Blob] account.
 

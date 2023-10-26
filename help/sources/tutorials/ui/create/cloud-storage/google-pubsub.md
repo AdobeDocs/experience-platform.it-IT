@@ -3,9 +3,9 @@ title: Creare una connessione sorgente PubSub di Google nell’interfaccia utent
 description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1099'
 ht-degree: 1%
 
 ---
@@ -31,12 +31,24 @@ Se disponi già di un [!DNL PubSub] connessione, è possibile saltare il resto d
 
 Per connettersi [!DNL PubSub] In Platform, devi fornire un valore valido per le seguenti credenziali:
 
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su progetto]
+
 | Credenziali | Descrizione |
-| ---------- | ----------- |
+| --- | --- |
 | Progetto ID | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
+| Credenziali | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
+
+>[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+| Credenziali | Descrizione |
+| --- | --- |
 | Credenziali | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
 | Nome argomento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. |
 | Nome abbonamento | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. |
+
+>[!ENDTABS]
 
 Per ulteriori informazioni su questi valori, vedi quanto segue [Autenticazione PubSub](https://cloud.google.com/pubsub/docs/authentication) documento. Se si utilizza l&#39;autenticazione basata sull&#39;account del servizio, vedere [Guida di PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
 
@@ -68,7 +80,8 @@ Per utilizzare un account esistente, seleziona la [!DNL PubSub] account con cui 
 
 >[!TIP]
 >
->Quando crei un account con accesso limitato, devi fornire almeno uno dei tuoi nomi di argomento o di abbonamento. L’autenticazione non riuscirà se mancano entrambi i valori.
+>* Quando crei un account con accesso limitato, devi fornire almeno uno dei tuoi nomi di argomento o di abbonamento. L’autenticazione non riuscirà se mancano entrambi i valori.
+>* Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL Google PubSub] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
 Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi fornisci un nome e una descrizione facoltativa per il nuovo [!DNL PubSub] account.
 

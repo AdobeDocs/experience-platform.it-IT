@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente SFTP nell’interfaccia utente
 description: Scopri come creare una connessione sorgente SFTP utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: e92471b386b857fc21947d352f1c1b88431c68bc
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Questo tutorial descrive i passaggi necessari per creare [!DNL SFTP] connessione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -61,13 +61,15 @@ Il **[!UICONTROL Connettersi a SFTP]** viene visualizzata. In questa pagina è p
 
 Per collegare un account esistente, seleziona l’account FTP o SFTP con cui desideri connetterti, quindi fai clic su **[!UICONTROL Successivo]** per procedere.
 
-![Elenco di account SFTP esistenti nell’interfaccia utente di Experience Platform.](../../../../images/tutorials/create/sftp/existing.png)
+![Elenco di account SFTP esistenti nell’interfaccia utente di Experienci Platform.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Nuovo account
 
->[!IMPORTANT]
+>[!TIP]
 >
->SFTP supporta una chiave OpenSSH di tipo RSA o DSA. Assicurati che il contenuto del file chiave inizi con `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` e termina con `"-----END [RSA/DSA] PRIVATE KEY-----"`. Se il file della chiave privata è in formato PPK, utilizzare lo strumento PuTTY per convertire il formato PPK in OpenSSH.
+>* Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL SFTP] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
+>
+>* SFTP supporta una chiave OpenSSH di tipo RSA o DSA. Assicurati che il contenuto del file chiave inizi con `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` e termina con `"-----END [RSA/DSA] PRIVATE KEY-----"`. Se il file della chiave privata è in formato PPK, utilizzare lo strumento PuTTY per convertire il formato PPK in OpenSSH.
 
 Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi fornisci un nome e una descrizione facoltativa per il nuovo [!DNL SFTP] account.
 

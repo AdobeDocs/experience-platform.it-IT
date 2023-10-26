@@ -2,10 +2,10 @@
 title: Creare una connessione di base SFTP utilizzando l’API del servizio Flusso
 description: Scopri come connettere Adobe Experience Platform a un server SFTP (Secure File Transfer Protocol) utilizzando l’API del servizio Flusso.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '938'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Questo tutorial illustra i passaggi necessari per creare una connessione di base
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,11 @@ Per ottenere [!DNL Flow Service] per connettersi a [!DNL SFTP], è necessario fo
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Crea una connessione di base
+
+>[!TIP]
+>
+>Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL Dynamics] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
@@ -66,13 +70,11 @@ Per creare un ID di connessione di base, effettua una richiesta POST al `/connec
 POST /connections
 ```
 
-**Richiesta**
-
-La richiesta seguente crea una connessione di base per [!DNL SFTP]:
-
 >[!BEGINTABS]
 
 >[!TAB Autenticazione di base]
+
++++Richiesta
 
 ```shell
 curl -X POST \
@@ -113,7 +115,24 @@ curl -X POST \
 | `auth.params.folderPath` | Percorso della cartella a cui desideri fornire l’accesso. |
 | `connectionSpec.id` | ID della specifica di connessione al server SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Risposta
+
+In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione appena creata. Questo ID è necessario per esplorare il server SFTP nella prossima esercitazione.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB Autenticazione chiave pubblica SSH]
+
++++Richiesta
 
 ```shell
 curl -X POST \
@@ -156,9 +175,9 @@ curl -X POST \
 | `auth.params.folderPath` | Percorso della cartella a cui desideri fornire l’accesso. |
 | `connectionSpec.id` | Il [!DNL SFTP] ID specifica connessione server: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Risposta**
++++Risposta
 
 In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) della connessione appena creata. Questo ID è necessario per esplorare il server SFTP nella prossima esercitazione.
 
@@ -168,6 +187,10 @@ In caso di esito positivo, la risposta restituisce l’identificatore univoco (`
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Passaggi successivi
 

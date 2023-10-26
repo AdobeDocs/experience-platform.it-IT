@@ -3,10 +3,10 @@ title: Creare una connessione sorgente PubSub di Google utilizzando l’API del 
 description: Scopri come collegare Adobe Experience Platform a un account Google PubSub utilizzando l’API del servizio Flow.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 2%
+source-wordcount: '1153'
+ht-degree: 3%
 
 ---
 
@@ -31,13 +31,26 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 Per ottenere [!DNL Flow Service] per connettersi a [!DNL PubSub], è necessario fornire valori per le seguenti proprietà di connessione:
 
+>[!BEGINTABS]
+
+>[!TAB Autenticazione basata su progetto]
+
 | Credenziali | Descrizione |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
+| `credentials` | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di destinazione di origine. Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+| Credenziali | Descrizione |
+| --- | --- |
 | `credentials` | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
 | `topicName` | Nome della risorsa che rappresenta un feed di messaggi. È necessario specificare un nome di argomento se si desidera fornire l&#39;accesso a un flusso di dati specifico nel [!DNL PubSub] sorgente. Il formato del nome dell&#39;argomento è: `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | Il nome del tuo [!DNL PubSub] abbonamento. In entrata [!DNL PubSub], gli abbonamenti ti consentono di ricevere messaggi, abbonandoti all’argomento in cui i messaggi sono stati pubblicati in. **Nota**: un singolo [!DNL PubSub] l’abbonamento può essere utilizzato per un solo flusso di dati. Per creare più flussi di dati, devi disporre di più abbonamenti. Il formato del nome dell’abbonamento è: `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di destinazione di origine. Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 Per ulteriori informazioni su questi valori, vedere [[!DNL PubSub] autenticazione](https://cloud.google.com/pubsub/docs/authentication) documento. Per utilizzare l&#39;autenticazione basata sull&#39;account del servizio, vedere [[!DNL PubSub] guida alla creazione di account di servizio](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
 
@@ -49,7 +62,11 @@ Per ulteriori informazioni su questi valori, vedere [[!DNL PubSub] autenticazion
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Crea una connessione di base
+
+>[!TIP]
+>
+>Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL Google PubSub] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
 Il primo passaggio nella creazione di una connessione sorgente consiste nell’autenticare [!DNL PubSub] e generare un ID di connessione di base. Un ID di connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare elementi specifici da acquisire, incluse informazioni relative ai tipi di dati e ai formati.
 
@@ -67,11 +84,13 @@ Il [!DNL PubSub] origine consente di specificare il tipo di accesso da consentir
 POST /connections
 ```
 
-**Richiesta**
-
 >[!BEGINTABS]
 
 >[!TAB Autenticazione basata su progetto]
+
+Per creare una connessione di base con l’autenticazione basata su progetto, effettua una richiesta POST al `/connections` e fornire il `projectId` e `credentials` nel corpo della richiesta.
+
++++Richiesta
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | Credenziali o chiave necessarie per l&#39;autenticazione [!DNL PubSub]. |
 | `connectionSpec.id` | Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++Risposta
+
+In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione di base è richiesto nel passaggio successivo per creare una connessione sorgente.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB Autenticazione basata su argomenti e sottoscrizioni]
+
+Per creare una connessione di base con l&#39;autenticazione basata su argomento e su sottoscrizione, effettuare una richiesta POST al `/connections` e fornire il `credentials`, `topicName`, e `subscriptionName` nel corpo della richiesta.
+
++++Richiesta
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | La coppia ID progetto e ID abbonamento per [!DNL PubSub] origine a cui desideri fornire accesso. |
 | `connectionSpec.id` | Il [!DNL PubSub] ID specifica di connessione: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**Risposta**
++++Risposta
 
 In caso di esito positivo, la risposta restituisce i dettagli della connessione appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione di base è richiesto nel passaggio successivo per creare una connessione sorgente.
 
@@ -151,6 +189,11 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## Creare una connessione sorgente {#source}
 

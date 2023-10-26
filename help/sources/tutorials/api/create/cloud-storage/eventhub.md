@@ -3,10 +3,10 @@ title: Creare una connessione di origine degli hub eventi di Azure tramite l’A
 description: Scopri come connettere Adobe Experience Platform a un account Azure Event Hubs utilizzando l’API del servizio Flusso.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 2%
+source-wordcount: '1005'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 >
 >Il [!DNL Azure Event Hubs] è disponibile nel catalogo delle origini per gli utenti che hanno acquistato Real-time Customer Data Platform Ultimate.
 
-Questo tutorial illustra i passaggi necessari per la connessione [!DNL Azure Event Hubs] (in seguito denominati &quot;[!DNL Event Hubs]&quot;) per l&#39;Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Questo tutorial descrive come creare un [!DNL Azure Event Hubs] (in seguito denominati &quot;[!DNL Event Hubs]&quot;) per l&#39;Experience Platform, utilizzando [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Introduzione
 
@@ -31,12 +31,28 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 Per ottenere [!DNL Flow Service] per connettersi con [!DNL Event Hubs] account, è necessario fornire valori per le seguenti proprietà di connessione:
 
+>[!BEGINTABS]
+
+>[!TAB Autenticazione standard]
+
 | Credenziali | Descrizione |
-| ---------- | ----------- |
+| --- | --- |
 | `sasKeyName` | Il nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
 | `sasKey` | La chiave primaria della [!DNL Event Hubs] spazio dei nomi. Il `sasPolicy` che il `sasKey` corrisponde a deve avere `manage` diritti configurati per il [!DNL Event Hubs] elenco da compilare. |
 | `namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+
+>[!TAB Autenticazione SAS]
+
+| Credenziali | Descrizione |
+| --- | --- |
+| `sasKeyName` | Il nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
+| `sasKey` | La chiave primaria della [!DNL Event Hubs] spazio dei nomi. Il `sasPolicy` che il `sasKey` corrisponde a deve avere `manage` diritti configurati per il [!DNL Event Hubs] elenco da compilare. |
+| `namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
+| `eventHubName` | Il nome per il [!DNL Event Hubs] sorgente. |
+| `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+
+>[!ENDTABS]
 
 Per ulteriori informazioni su questi valori, consulta [questo documento Hub eventi](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
@@ -44,7 +60,11 @@ Per ulteriori informazioni su questi valori, consulta [questo documento Hub even
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Crea una connessione di base
+
+>[!TIP]
+>
+>Una volta creato, non è possibile modificare il tipo di autenticazione di un [!DNL Event Hubs] connessione di base. Per modificare il tipo di autenticazione, è necessario creare una nuova connessione di base.
 
 Il primo passaggio nella creazione di una connessione sorgente consiste nell’autenticare [!DNL Event Hubs] e generare un ID di connessione di base. Un ID di connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare elementi specifici da acquisire, incluse informazioni relative ai tipi di dati e ai formati.
 
@@ -56,32 +76,38 @@ Per creare un ID di connessione di base, effettua una richiesta POST al `/connec
 POST /connections
 ```
 
-**Richiesta**
+>[!BEGINTABS]
+
+>[!TAB Autenticazione standard]
+
+Per creare un account utilizzando l’autenticazione standard, effettua una richiesta POST al `/connections` mentre si forniscono valori per il `sasKeyName`, `sasKey`, e `namespace`.
+
++++Richiesta
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Azure Event Hubs connection",
-        "description": "Connector for Azure Event Hubs",
-        "auth": {
-            "specName": "Azure EventHub authentication credentials",
-            "params": {
-                "sasKeyName": "{SAS_KEY_NAME}",
-                "sasKey": "{SAS_KEY}",
-                "namespace": "{NAMESPACE}"
-            }
-        },
-        "connectionSpec": {
-            "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Azure EventHub authentication credentials",
+          "params": {
+              "sasKeyName": "{SAS_KEY_NAME}",
+              "sasKey": "{SAS_KEY}",
+              "namespace": "{NAMESPACE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Proprietà | Descrizione |
@@ -91,7 +117,9 @@ curl -X POST \
 | `auth.params.namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. |
 | `connectionSpec.id` | Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-**Risposta**
++++
+
++++Risposta
 
 In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione è richiesto nel passaggio successivo per creare una connessione sorgente.
 
@@ -101,6 +129,66 @@ In caso di esito positivo, la risposta restituisce i dettagli della connessione 
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
++++
+
+>[!TAB Autenticazione SAS]
+
+Per creare un account utilizzando l’autenticazione SAS, effettua una richiesta POST al `/connections` mentre si forniscono valori per il `sasKeyName`, `sasKey`,`namespace`, e `eventHubName`.
+
++++Richiesta
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Azure EventHub authentication credentials",
+          "params": {
+              "sasKeyName": "{SAS_KEY_NAME}",
+              "sasKey": "{SAS_KEY}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME} 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `auth.params.sasKeyName` | Il nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
+| `auth.params.sasKey` | Firma di accesso condiviso generata. |
+| `auth.params.namespace` | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. |
+| `params.eventHubName` | Il nome per il [!DNL Event Hubs] sorgente. |
+| `connectionSpec.id` | Il [!DNL Event Hubs] ID specifica di connessione: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Risposta
+
+In caso di esito positivo, la risposta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID connessione è richiesto nel passaggio successivo per creare una connessione sorgente.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 ## Creare una connessione sorgente
 
@@ -122,30 +210,30 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'content-type: application/json' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -d '{
-        "name": "Azure Event Hubs source connection",
-        "description": "A source connection for Azure Event Hubs",
-        "baseConnectionId": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
-        "connectionSpec": {
-            "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
-            "version": "1.0"
-        },
-        "data": {
-            "format": "json"
-        },
-        "params": {
-            "eventHubName": "{EVENTHUB_NAME}",
-            "dataType": "raw",
-            "reset": "latest",
-            "consumerGroup": "{CONSUMER_GROUP}"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'content-type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+      "name": "Azure Event Hubs source connection",
+      "description": "A source connection for Azure Event Hubs",
+      "baseConnectionId": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      },
+      "data": {
+          "format": "json"
+      },
+      "params": {
+          "eventHubName": "{EVENT_HUB_NAME}",
+          "dataType": "raw",
+          "reset": "latest",
+          "consumerGroup": "{CONSUMER_GROUP}"
+      }
+  }'
 ```
 
 | Proprietà | Descrizione |
