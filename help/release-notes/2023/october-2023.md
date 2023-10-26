@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di ottobre 2023 per Adobe Experience Platform.
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 35%
+source-wordcount: '766'
+ht-degree: 36%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 35%
 Aggiornamenti alle funzioni esistenti in Experience Platform:
 
 - [Raccolta dati](#data-collection)
+- [Destinazioni](#destinations)
 - [Sandbox](#sandboxes)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
@@ -30,6 +31,31 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Estensione | [!DNL Meta] Miglioramento API per le conversioni | Sono disponibili tre miglioramenti al [API di metaconversione](/help/tags/extensions/server/meta/overview.md) estensione: <ul><li>Integrazione con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea un’esperienza di accesso fluida consentendoti di condividere il pixelID e il token di accesso per l’integrazione API di conversione con Adobe.</li><li>Integrazione con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): consente di inviare annunci pubblicitari a persone che hanno più probabilità di completare un’azione desiderata e di ricollegare l’azione agli annunci consegnati.</li><li>Integrazione con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): consente di trasmettere la RampID di LiveRamp nel campo CIP, eliminando la necessità di condividere i dati PII direttamente con i partner o con Meta. </li></ul> |
 
 Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla raccolta dati](../../tags/home.md).
+
+## Destinazioni {#destinations}
+
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+
+**Destinazioni nuove o aggiornate** {#new-updated-destinations}
+
+| Destinazione | Nuova o aggiornata | Descrizione |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nuova | Utilizza la destinazione Moengagement per connettere e mappare i dati di Adobe (attributi utente, segmenti ed eventi) con MoEngage in tempo reale. I clienti possono quindi agire su questi dati, distribuendo esperienze personalizzate e mirate. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nuova | Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Platform come input in Qualtrics Experience ID per comprendere meglio i tuoi clienti e consentire un’attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i fattori che stimolano l’esperienza. |
+
+{style="table-layout:auto"}
+
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+
+| Funzionalità | Descrizione |
+| ----------- | ----------- |
+| Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportazione di array](../../destinations/ui/export-arrays-calculated-fields.md) o da un array, è ora possibile utilizzare [funzioni di hashing](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Correzioni di problemi e miglioramenti** {#destinations-fixes-and-enhancements}
+
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Sandbox {#sandboxes}
 
