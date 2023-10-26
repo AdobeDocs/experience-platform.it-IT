@@ -2,7 +2,7 @@
 title: Estensione di inoltro eventi API LinkedIn Conversions
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di misurare le prestazioni della campagna di marketing LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Devi creare una regola di conversione nel [!DNL LinkedIn] account degli annunci 
 
 ### Creare un segreto e un elemento dati
 
-Crea un nuovo `LinkedIn` [segreto di inoltro eventi](../../../ui/event-forwarding/secrets.md) e fornisci un nome univoco che indichi il membro che esegue l’autenticazione. Verrà utilizzato per autenticare la connessione al tuo account mantenendo protetto il valore.
+Crea un nuovo [!DNL LinkedIn] [segreto di inoltro eventi](../../../ui/event-forwarding/secrets.md) e fornisci un nome univoco che indichi il membro che esegue l’autenticazione. Verrà utilizzato per autenticare la connessione al tuo account mantenendo protetto il valore.
 
 Avanti, [creare un elemento dati](../../../ui/managing-resources/data-elements.md#create-a-data-element) utilizzando [!UICONTROL Core] e un [!UICONTROL Segreto] tipo di elemento dati per fare riferimento a `LinkedIn` segreto appena creato.
 
