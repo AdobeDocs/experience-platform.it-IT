@@ -5,10 +5,10 @@ user-guide-title: Guida agli stream di dati di Adobe Experience Platform
 breadcrumb-title: Guida agli stream di dati
 user-guide-description: Scopri come configurare gli stream di dati in Adobe Experience Platform.
 feature: Datastreams
-source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
+source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 100%
+source-wordcount: '50'
+ht-degree: 90%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 100%
 
 * [Panoramica sugli stream di dati](overview.md)
 * [Configurare uno stream di dati](configure.md)
+* [Configurare il rilevamento di bot per gli stream di dati](bot-detection.md)
 * [Configurare gli override dello stream di dati](overrides.md)
 * [Preparazione dei dati per la raccolta dati](data-prep.md)
 * Arricchimento dei dati {#data-enrichment}
