@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di ottobre 2023 per Adobe Experience Platform.
-source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
+source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 36%
+source-wordcount: '808'
+ht-degree: 34%
 
 ---
 
@@ -29,6 +29,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Estensione | [!DNL Meta] Miglioramento API per le conversioni | Sono disponibili tre miglioramenti al [API di metaconversione](/help/tags/extensions/server/meta/overview.md) estensione: <ul><li>Integrazione con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea un’esperienza di accesso fluida consentendoti di condividere il pixelID e il token di accesso per l’integrazione API di conversione con Adobe.</li><li>Integrazione con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): consente di inviare annunci pubblicitari a persone che hanno più probabilità di completare un’azione desiderata e di ricollegare l’azione agli annunci consegnati.</li><li>Integrazione con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): consente di trasmettere la RampID di LiveRamp nel campo CIP, eliminando la necessità di condividere i dati PII direttamente con i partner o con Meta. </li></ul> |
+| Estensione | [!DNL LinkedIn] API di conversione | Il [[!DNL LinkedIn] API di conversione](../../tags/extensions/server/linkedin/overview.md) L’estensione consente di valutare l’efficacia delle campagne di marketing LinkedIn inoltrando i dati dell’evento Experienci Platform a LinkedIn. |
+| Segreto | [!DNL LinkedIn] Segreto OAuth 2 | Il [[!DNL LinkedIn] Segreto OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) consente di inviare interazioni server-server a [!DNL LinkedIn] nell’inoltro degli eventi. |
 
 Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla raccolta dati](../../tags/home.md).
 
