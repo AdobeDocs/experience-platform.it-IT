@@ -4,9 +4,9 @@ type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 5%
 
 ---
@@ -216,8 +216,21 @@ In questo caso, il file di output si presenta come di seguito, esportando la pri
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` e `sha256` funzioni di hashing {#hashing-functions}
+### Funzioni di hashing {#hashing-functions}
 
-Oltre alle funzioni specifiche per l’esportazione di array o elementi da un array, puoi utilizzare funzioni di hashing per eseguire l’hashing degli attributi. Ad esempio, se negli attributi sono presenti informazioni di identificazione personale, puoi eseguire l’hashing di tali campi durante l’esportazione.
+Oltre alle funzioni specifiche per l&#39;esportazione di array o elementi da un array, è possibile utilizzare funzioni di hashing per eseguire l&#39;hashing degli attributi nei file esportati. Ad esempio, se negli attributi sono presenti informazioni di identificazione personale, puoi eseguire l’hashing di tali campi durante l’esportazione.
 
-Puoi eseguire l’hashing diretto dei valori stringa, ad esempio `md5(personalEmail.address)`. Se lo desideri, puoi anche eseguire l’hashing di singoli elementi di campi array, come segue: `md5(purchaseTime[0])`
+Puoi eseguire l’hashing diretto dei valori stringa, ad esempio `md5(personalEmail.address)`. Se lo desideri, puoi anche eseguire l’hash di singoli elementi di campi array, supponendo che gli elementi nell’array siano stringhe, come segue: `md5(purchaseTime[0])`
+
+Le funzioni di hashing supportate sono:
+
+| Funzione | Espressione di esempio |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
