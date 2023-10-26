@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1033'
 ht-degree: 37%
 
 ---
@@ -228,11 +228,13 @@ ht-degree: 37%
          * [Panoramica](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Piattaforma Google Cloud {#google-cloud-platform}
          * [Panoramica](./extensions/server/google-cloud-platform/overview.md)
+      * [!DNL LinkedIn Conversions API] {#linkedin}
+         * [Panoramica](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Panoramica](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Panoramica](./extensions/server/meta/overview.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
+      * [!DNL Microsoft Azure] {#azure}
          * [Panoramica](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Panoramica](./extensions/server/mixpanel/overview.md)

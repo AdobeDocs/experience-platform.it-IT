@@ -2,10 +2,10 @@
 title: Configurazione dei segreti nell’inoltro degli eventi
 description: Scopri come configurare i segreti nell’interfaccia utente per l’autenticazione negli endpoint utilizzati nelle proprietà di inoltro degli eventi.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 4%
+source-wordcount: '2458'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,7 @@ Sono attualmente supportati i seguenti tipi di segreto:
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contiene diversi attributi per supportare [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) specifica di autenticazione da utilizzare in [API di Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL HTTP] | Contiene due attributi di stringa rispettivamente per nome utente e password. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL OAuth 2] | Contiene diversi attributi per supportare [tipo di concessione credenziali client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) per [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) specifica di autenticazione. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL OAuth 2 JWT] | Contiene diversi attributi per supportare il profilo JSON Web Token (JWT) per [Autorizzazione OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) sovvenzioni. Il sistema richiede le informazioni richieste, quindi gestisce il rinnovo di questi token per te in un intervallo specificato. |
 | [!UICONTROL Token] | Una singola stringa di caratteri che rappresenta un valore del token di autenticazione noto e compreso da entrambi i sistemi. |
@@ -76,6 +77,7 @@ Da qui, i passaggi per creare il segreto variano a seconda del tipo di segreto c
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -175,6 +177,38 @@ Viene visualizzata una finestra di dialogo che consente di immettere le credenzi
 >Se nell’organizzazione è impostato un criterio di riautenticazione per le applicazioni Google Cloud, i segreti creati non vengono aggiornati correttamente alla scadenza dell’autenticazione (tra 1 e 24 ore a seconda della configurazione del criterio).
 >
 >Per risolvere questo problema, accedi a Google Admin Console e passa a **[!DNL App access control]** in modo da poter contrassegnare l’app di inoltro eventi (Inoltro eventi di Adobe Real-Time CDP) come [!DNL Trusted]. Consulta la documentazione di Google su [impostazione della durata delle sessioni per i servizi Google Cloud](https://support.google.com/a/answer/9368756?hl=it) per ulteriori informazioni.
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+Per creare un [!DNL LinkedIn] Segreto OAuth 2, seleziona **[!UICONTROL [!DNL LinkedIn]OAuth 2]** dal **[!UICONTROL Tipo]** a discesa. Quindi, seleziona **[!UICONTROL Crea segreto]**.
+
+![Il [!UICONTROL Crea segreto] scheda con [!UICONTROL Tipo] campo evidenziato.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+Viene visualizzato un messaggio che informa che il segreto deve essere autorizzato manualmente tramite [!DNL LinkedIn]. Seleziona **[!UICONTROL Crea e autorizza segreto con[!DNL LinkedIn]]** per continuare.
+
+![[!DNL LinkedIn] evidenziazione a comparsa autorizzazione [!UICONTROL Crea e autorizza segreto con [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere [!DNL LinkedIn] credenziali. Segui le istruzioni per concedere l’accesso ai tuoi dati con inoltro eventi.
+
+Una volta completato il processo di autorizzazione, si ritorna al **[!UICONTROL Segreti]** , in cui puoi visualizzare il segreto appena creato. Qui puoi vedere lo stato del segreto e la data di scadenza.
+
+![Il [!UICONTROL Segreto] evidenziare il segreto appena creato.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### Autorizza nuovamente un [!UICONTROL [!DNL LinkedIn] OAuth 2] segreto
+
+>IMPORTANTE
+>
+>È necessario autorizzare nuovamente utilizzando [!DNL LinkedIn] ogni 365 giorni. Se non esegui nuovamente l’autorizzazione in tempo utile, il segreto non verrà aggiornato e [!DNL LinkedIn] le richieste di conversione non avranno esito positivo.
+
+Tre mesi prima del segreto che richiede la riautorizzazione, quando visiti una pagina della proprietà inizia a essere visualizzato un pop-up. Seleziona **[!UICONTROL Fai clic qui per accedere ai tuoi segreti]**.
+
+![Il [!UICONTROL Panoramica delle proprietà] scheda che evidenzia la finestra a comparsa di ri-autorizzazione segreta.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+Sei reindirizzato al [!UICONTROL Segreti] scheda. I segreti elencati in questa pagina vengono filtrati in modo da mostrare solo i segreti che devono essere nuovamente autorizzati. Seleziona **[!UICONTROL Autenticazione necessaria]** per il segreto che devi autorizzare di nuovo.
+
+![Il [!UICONTROL Segreto] evidenziazione scheda [!UICONTROL Autenticazione necessaria]per [!DNL LinkedIn] segreto.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+Viene visualizzata una finestra di dialogo in cui viene richiesto di immettere [!DNL LinkedIn] credenziali. Segui le istruzioni per autorizzare nuovamente il segreto.
 
 ## Modifica un segreto
 

@@ -2,9 +2,9 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '193'
 ht-degree: 20%
 
 ---
@@ -37,6 +37,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversioni avanzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [Piattaforma Google Cloud](./google-cloud-platform/overview.md)
+* [[!DNL LinkedIn] API di conversione](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API di conversione](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
