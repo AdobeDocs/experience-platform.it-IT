@@ -1,9 +1,9 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di ottobre 2023 per Adobe Experience Platform.
-source-git-commit: 9009f56956f0719fb80d423a14b81a6dc7115d77
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '954'
 ht-degree: 34%
 
 ---
@@ -14,11 +14,26 @@ ht-degree: 34%
 
 Aggiornamenti alle funzioni esistenti in Experience Platform:
 
+- [Dashboard](#dashboards)
 - [Raccolta dati](#data-collection)
 - [Destinazioni](#destinations)
 - [Sandbox](#sandboxes)
 - [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
+
+## Dashboard {#dashboards}
+
+Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Metriche di utilizzo delle destinazioni | Sono state aggiunte nuove metriche di misurazione al dashboard Utilizzo licenze. Il **[!UICONTROL Dimensione Audience Activation]** e **[!UICONTROL Dimensione esportazione dati]** Le metriche consentono di tenere traccia della quantità di dati esportati al di fuori di Platform in relazione ai diritti di utilizzo della licenza. Consulta la [metriche disponibili](../../dashboards/guides/license-usage.md#available-metrics) la documentazione per le descrizioni di questi e di altre metriche di utilizzo della licenza. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzazioni di accesso e creare widget personalizzati, consulta la [panoramica sulle dashboard](../../dashboards/home.md).
 
 ## Raccolta dati {#data-collection}
 
@@ -51,7 +66,8 @@ Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla ra
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportazione di array](../../destinations/ui/export-arrays-calculated-fields.md) o da un array, è ora possibile utilizzare [funzioni di hashing](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Beta) Supporto delle funzioni di hashing nei campi calcolati | Oltre alle funzioni specifiche per [esportazione di array](../../destinations/ui/export-arrays-calculated-fields.md) o da un array, è ora possibile utilizzare [funzioni di hashing](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) per eseguire l&#39;hashing degli attributi nei file esportati. Le funzioni di hashing supportate sono: `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (GA limitato) Attiva i tipi di pubblico dell’account su determinate destinazioni | I clienti B2B di Real-Time CDP ora possono attivare [pubblico dell’account](../../segmentation/ui/account-audiences.md) verso determinate destinazioni. Per ulteriori informazioni su questa funzione, leggere [tutorial attivare il pubblico dell’account](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
