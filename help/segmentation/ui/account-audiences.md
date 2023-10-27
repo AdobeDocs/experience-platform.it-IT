@@ -2,20 +2,20 @@
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
 badgeLimitedAvailability: label="Disponibilità limitata" type="Caution"
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 1%
+source-wordcount: '603'
+ht-degree: 0%
 
 ---
 
 
 # Pubblico dell’account
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->I tipi di pubblico degli account sono disponibili solo in [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Inoltre, la funzionalità di pubblico dell’account è attualmente in **disponibilità limitata**.
+>I tipi di pubblico dell’account sono disponibili solo in [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Inoltre, la funzionalità di pubblico dell’account è attualmente in **disponibilità limitata**. Contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe per richiedere l’accesso a questa funzionalità.
 
 Con la segmentazione dell’account, Adobe Experience Platform ti consente di rendere l’esperienza di segmentazione del marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account.
 
@@ -69,7 +69,7 @@ Seleziona il pubblico da attivare, seguito da **[!UICONTROL Attiva nella destina
 
 ![Il [!UICONTROL Attiva nella destinazione] nel menu Azioni rapide per il pubblico selezionato.](../images/ui/account-audiences/activate.png)
 
-Il [!UICONTROL Attiva destinazione] viene visualizzata. Per ulteriori informazioni sul processo di attivazione, compresi i dettagli sulle mappature dei campi, consulta [panoramica sull’attivazione](../../destinations/ui/activation-overview.md).
+Il [!UICONTROL Attiva destinazione] viene visualizzata. Per ulteriori informazioni sul processo di attivazione, comprese le destinazioni supportate e i dettagli sulle mappature dei campi, leggi [attivare il pubblico dell’account](/help/destinations/ui/activate-account-audiences.md) esercitazione.
 
 ## Passaggi successivi {#next-steps}
 

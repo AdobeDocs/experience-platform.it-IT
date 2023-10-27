@@ -4,9 +4,9 @@ title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ Per le destinazioni basate su file, puoi configurare varie impostazioni relative
 
 ![Immagine che mostra la selezione del tipo di file e varie opzioni per i file CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configurare la connessione di destinazione per l’attivazione di tipi di pubblico, l’attivazione di potenziali clienti o le esportazioni di set di dati {#segment-activation-or-dataset-exports}
+### Imposta la connessione di destinazione per l’attivazione del pubblico, dell’account, dei potenziali clienti o per le esportazioni di set di dati {#segment-activation-or-dataset-exports}
 
-Alcune destinazioni basate su file supportano l’attivazione del pubblico per clienti o potenziali clienti noti, nonché le esportazioni di set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di: [attivare i tipi di pubblico](/help/destinations/ui/activate-batch-profile-destinations.md), [potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md), o [esportare i set di dati](/help/destinations/ui/export-datasets.md).
+Alcune destinazioni basate su file supportano l’attivazione del pubblico per clienti noti, clienti account o potenziali clienti, nonché le esportazioni di set di dati. Per tali destinazioni, puoi scegliere se creare una connessione che ti consenta di: [attivare i tipi di pubblico](/help/destinations/ui/activate-batch-profile-destinations.md), [account](/help/destinations/ui/activate-account-audiences.md), [potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md), o [esportare i set di dati](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
