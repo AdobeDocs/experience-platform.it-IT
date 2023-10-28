@@ -1,9 +1,9 @@
 ---
 title: Caratteristiche tecniche per l'apprendimento automatico
 description: Scopri come trasformare i dati in Adobe Experience Platform in funzioni o variabili che possono essere utilizzate da un modello di apprendimento automatico. Utilizza Data Distiller per calcolare le funzioni ML su larga scala e condividerle con il tuo ambiente di apprendimento automatico.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 14%
 
 ---
@@ -67,7 +67,7 @@ Numero di classi: 50000
 
 ### Aggregare gli eventi per definire le funzioni per ML {#define-features}
 
-La query seguente aggrega gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di propensione:
+Con una query appropriata puoi raccogliere gli eventi nel set di dati in funzioni numeriche significative che possono essere utilizzate per addestrare un modello di tendenza. Di seguito sono riportati alcuni eventi di esempio:
 
 - **Numero di e-mail** inviati a scopo di marketing e ricevuti dall’utente.
 - Parte di queste e-mail che erano **aperto**.
@@ -83,6 +83,8 @@ La query seguente aggrega gli eventi nel set di dati in funzioni numeriche signi
 - Numero di minuti tra due proposte con cui si è interagito.
 - Numero di minuti tra due proposte che sono state ignorate.
 - Numero di minuti tra due collegamenti selezionati.
+
+La query seguente aggrega questi eventi:
 
 +++Seleziona per visualizzare la query di esempio
 

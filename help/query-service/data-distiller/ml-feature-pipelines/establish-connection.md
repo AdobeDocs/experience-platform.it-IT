@@ -1,39 +1,39 @@
 ---
 title: Connessione a Data Distiller da un notebook Jupyter
 description: Scopri come connettersi a Data Distiller da un Jupyter Notebook.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
 
-# Connessione a DD da un blocco appunti Jupyter
+# Connessione a Data Distiller da un notebook Jupyter
 
-Per arricchire le pipeline di apprendimento automatico con dati di alta qualità sull’esperienza del cliente, devi prima connetterti a Data Distiller da Jupyter Notebooks. Questo documento descrive i passaggi necessari per connettersi a Data Distiller da un notebook Python nell’ambiente di machine learning.
+Per arricchire le pipeline di apprendimento automatico con dati di alta qualità sull’esperienza del cliente, devi prima connetterti a Data Distiller da [!DNL Jupyter Notebooks]. Questo documento descrive i passaggi per connettersi a Data Distiller da un [!DNL Python] nell&#39;ambiente di machine learning.
 
 ## Introduzione
 
-Questa guida presuppone che tu abbia familiarità con i notebook Python interattivi e che tu abbia accesso a un ambiente notebook. Il notebook può essere ospitato in un ambiente di apprendimento automatico basato su cloud oppure localmente con [Jupyter Notebook](https://jupyter.org/).
+Questa guida presuppone che tu abbia familiarità con le [!DNL Python] e avere accesso a un ambiente notebook. Il notebook può essere ospitato in un ambiente di apprendimento automatico basato su cloud oppure localmente con [[!DNL Jupyter Notebook]](https://jupyter.org/).
 
-### Ottenere le credenziali di connessione
+### Ottenere le credenziali di connessione {#obtain-credentials}
 
-Per connettersi a Data Distiller e ad altri servizi Adobe Experience Platform, è necessario disporre di una credenziale API Experienci Platform. Le credenziali API possono essere create in  [Console Adobe Developer](https://developer.adobe.com/console/projects) da un utente con accesso per sviluppatori all’Experience Platform. Si consiglia di creare una credenziale API OAuth2 specifica per i flussi di lavoro di data science e chiedere a un amministratore di Adobe della tua organizzazione di assegnare le credenziali a un ruolo con le autorizzazioni appropriate.
+Per connettersi a Data Distiller e ad altri servizi Adobe Experience Platform, è necessario disporre di una credenziale API Experienci Platform. Le credenziali API possono essere create in  [Console Adobe Developer](https://developer.adobe.com/console/projects) da un utente con accesso per sviluppatori all’Experience Platform. Ti consigliamo di creare una credenziale API OAuth2 specifica per i flussi di lavoro di data science e di chiedere a un amministratore di Adobe della tua organizzazione di assegnare la credenziale a un ruolo con le autorizzazioni appropriate.
 
 Consulta [Autenticazione e accesso alle API di Experienci Platform](../../../landing/api-authentication.md) per istruzioni dettagliate sulla creazione di credenziali API e sull’ottenimento delle autorizzazioni necessarie.
 
 Le autorizzazioni consigliate per la data science includono:
 
-- Sandbox/e che verranno utilizzate per data science (di solito prod)
-- Modellazione dati: gestire gli schemi
-- Gestione dei dati: gestire i set di dati
-- Acquisizione dei dati: visualizza origini
-- Destinazioni: gestire e attivare le destinazioni dei set di dati
-- Query Service: Gestisci query
+- Sandbox/e che verranno utilizzate per la scienza dei dati (in genere `prod`)
+- Modellazione dati: [!UICONTROL Gestire gli schemi]
+- Gestione dati: [!UICONTROL Gestione set di dati]
+- Acquisizione dei dati: [!UICONTROL Visualizza origini]
+- Destinazioni: [!UICONTROL Gestire e attivare le destinazioni dei set di dati]
+- Servizio query: [!UICONTROL Gestire le query]
 
-Per impostazione predefinita, a un Ruolo (e alle credenziali API assegnate a tale ruolo) viene impedito l’accesso ai dati con etichetta. In base ai criteri di governance dei dati dell’organizzazione, un amministratore di sistema può concedere al ruolo l’accesso a determinati dati etichettati ritenuti appropriati per l’utilizzo della scienza dei dati. I clienti di Platform hanno la responsabilità di gestire in modo appropriato l’accesso alle etichette e le policy al fine di rispettare le normative e le politiche organizzative pertinenti.
+Per impostazione predefinita, a un ruolo (e alle credenziali API assegnate a tale ruolo) viene impedito l’accesso ai dati con etichetta. In base ai criteri di governance dei dati dell’organizzazione, un amministratore di sistema può concedere al ruolo l’accesso a determinati dati etichettati ritenuti appropriati per l’utilizzo della scienza dei dati. I clienti di Platform hanno la responsabilità di gestire in modo appropriato l’accesso alle etichette e le policy al fine di rispettare le normative e le politiche organizzative pertinenti.
 
-### Memorizza le credenziali in un file di configurazione separato
+### Memorizza le credenziali in un file di configurazione separato {#store-credentials}
 
 Per proteggere le credenziali, è consigliabile evitare di scrivere le informazioni direttamente nel codice. Le informazioni sulle credenziali vengono invece conservate in un file di configurazione separato e lette nei valori necessari per la connessione a Experienci Platform e Data Distiller.
 
@@ -49,7 +49,7 @@ scopes=openid, AdobeID, read_organizations, additional_info.projectedProductCont
 tech_acct_id=<YOUR_TECHNICAL_ACCOUNT_ID>
 ```
 
-Nel blocco appunti è quindi possibile leggere le informazioni sulle credenziali nella memoria utilizzando `configParser` dalla libreria Python standard:
+Nel blocco appunti è quindi possibile leggere le informazioni sulle credenziali nella memoria utilizzando `configParser` pacchetto standard [!DNL Python] libreria:
 
 ```python
 from configparser import ConfigParser
@@ -66,9 +66,9 @@ config.read(config_path)
 org_id = config.get('Credential', 'ims_org_id')
 ```
 
-## Il `aepp` Libreria Python
+## Installare la libreria app Python {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) è una libreria Python open source gestita da Adobe che fornisce funzioni per la connessione a Data Distiller e l’invio di query, come l’esecuzione di richieste ad altri servizi Experienci Platform. Il `aepp` La libreria a sua volta si basa sul pacchetto dell&#39;adattatore di database PostgreSQL  `psycopg2` per query interattive di Data Distiller. È possibile connettersi a Data Distiller ed eseguire query sui set di dati di Experience Platform con `psycopg2` da solo, ma `aepp` offre maggiore comodità e funzionalità aggiuntive per effettuare richieste a tutti i servizi API Experienci Platform.
+[aepp](https://github.com/adobe/aepp/tree/main) è un open source gestito da Adobe [!DNL Python] fornisce funzioni per la connessione a Data Distiller e l’invio di query, come l’esecuzione di richieste ad altri servizi Experienci Platform. Il `aepp` La libreria a sua volta si basa sul pacchetto dell&#39;adattatore di database PostgreSQL  `psycopg2` per query interattive di Data Distiller. È possibile connettersi a Data Distiller ed eseguire query sui set di dati di Experience Platform con `psycopg2` da solo, ma `aepp` offre maggiore comodità e funzionalità aggiuntive per effettuare richieste a tutti i servizi API Experienci Platform.
 
 Per installare o aggiornare `aepp` e `psycopg2` nell&#39;ambiente, è possibile utilizzare `%pip` comando magico nel notebook:
 
@@ -100,7 +100,7 @@ aepp.configure(
 )
 ```
 
-## Creare una connessione a Data Distiller
+## Creare una connessione a Data Distiller {#create-connection}
 
 Una volta `aepp` è configurato con le tue credenziali, puoi utilizzare il seguente codice per creare una connessione a Data Distiller e avviare una sessione interattiva come segue:
 
@@ -119,7 +119,7 @@ simple_query = f'''SELECT * FROM {table_name} LIMIT 5'''
 dd_cursor.query(simple_query)
 ```
 
-### Connessione a un singolo set di dati per prestazioni di query più veloci
+### Connessione a un singolo set di dati per prestazioni di query più veloci {#connect-to-single-dataset}
 
 Per impostazione predefinita, la connessione a Data Distiller si connette a tutti i set di dati nella sandbox. Per query più veloci e un utilizzo ridotto delle risorse, puoi invece connetterti a un set di dati specifico di tuo interesse. Per farlo, è possibile modificare `dbname` nell’oggetto connessione Data Distiller a `{sandbox}:{table_name}`:
 
@@ -136,4 +136,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, hai imparato a connetterti a Data Distiller da un notebook Python nell’ambiente di machine learning. Il passaggio successivo nella creazione di pipeline di funzioni da Experienci Platform per alimentare modelli personalizzati nell’ambiente di apprendimento automatico è [esplorare e analizzare i set di dati](./exploratory-analysis.md).
+Dopo aver letto questo documento, hai imparato a connetterti a Data Distiller da un [!DNL Python] nell&#39;ambiente di machine learning. Il passaggio successivo nella creazione di pipeline di funzioni da Experienci Platform per alimentare modelli personalizzati nell’ambiente di apprendimento automatico è [esplorare e analizzare i set di dati](./exploratory-analysis.md).

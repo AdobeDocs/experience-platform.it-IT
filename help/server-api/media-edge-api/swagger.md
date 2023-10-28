@@ -4,7 +4,7 @@ title: Specifica API aperta Media Edge
 description: Questo documento include una specifica API aperta YAML (OAS), o riferimento a "Swagger". Puoi copiare e incollare questa specifica in uno strumento di rendering, ad esempio editor.swagger.io, per visualizzare le informazioni API di Media Edge. Questa specifica include parametri, esempi e schemi per ogni endpoint.
 source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
