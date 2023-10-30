@@ -2,7 +2,8 @@
 title: Estensione di inoltro eventi API LinkedIn Conversions
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di misurare le prestazioni della campagna di marketing LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
+exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 2%

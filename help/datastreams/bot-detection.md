@@ -3,13 +3,13 @@ title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # Configurare il rilevamento di bot per gli stream di dati
 
@@ -176,4 +176,3 @@ La regola mostrata nell’immagine seguente identifica una richiesta di origine 
 La richiesta proviene da uno dei due indirizzi IP, il `referer` l’intestazione inizia con `www.adobe.com`e `sec-ch-ua-mobile` l’intestazione identifica la richiesta come proveniente da un browser desktop.
 
 ![Immagine della regola di rilevamento bot basata su più condizioni.](assets/bot-detection/bot-detection-multiple.png)
-

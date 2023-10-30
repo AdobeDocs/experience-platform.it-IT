@@ -1,7 +1,8 @@
 ---
 title: Endpoint API per pacchetti di strumenti sandbox
 description: L’endpoint /packages nell’API degli strumenti sandbox consente di gestire in modo programmatico i pacchetti in Adobe Experience Platform.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 8%

@@ -1,7 +1,8 @@
 ---
 title: Caratteristiche tecniche per l'apprendimento automatico
 description: Scopri come trasformare i dati in Adobe Experience Platform in funzioni o variabili che possono essere utilizzate da un modello di apprendimento automatico. Utilizza Data Distiller per calcolare le funzioni ML su larga scala e condividerle con il tuo ambiente di apprendimento automatico.
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 14%

@@ -1,7 +1,8 @@
 ---
 title: Esportare dati in ambienti ML esterni
 description: Scopri come condividere un set di dati di formazione preparato, creato con Data Distiller, in una posizione di archiviazione cloud che il tuo ambiente di apprendimento può leggere per la formazione e il punteggio del modello.
-source-git-commit: a23100e8fbca93f14490e639f05991f06c113b93
+exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 3%

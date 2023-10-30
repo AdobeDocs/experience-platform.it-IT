@@ -1,11 +1,11 @@
 ---
 title: Configurare gli override dello stream di dati
 description: Scopri come configurare gli override dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite il Web SDK.
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
-workflow-type: ht
-source-wordcount: '1231'
-ht-degree: 100%
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 78%
 
 ---
 
@@ -18,14 +18,17 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
 1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](configure.md).
-2. Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.
+2. Quindi, devi inviare le sostituzioni alla rete Edge in uno dei seguenti modi:
+   * Attraverso il `sendEvent` o `configure` [SDK per web](#send-overrides-web-sdk) comandi.
+   * Tramite l’SDK web [estensione tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Tramite Mobile SDK [API sendEvent](#send-overrides-mobile-sdk) chiamare.
 
 Questo articolo spiega il processo di override della configurazione dello stream di dati end-to-end per ogni tipo di override supportato.
 
 >[!IMPORTANT]
 >
->Gli override dello stream di dati sono supportati solo per le integrazioni [Web SDK](../edge/home.md). Le integrazioni [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) e [API server](../server-api/overview.md) al momento non supportano gli override dello stream di dati.
-><br><br>
+>Le sostituzioni dello stream di dati sono supportate solo per [SDK per web](../edge/home.md) e [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/) integrazioni. [API server](../server-api/overview.md) al momento le integrazioni non supportano le sostituzioni dello stream di dati.
+><br>
 >Gli override dello stream di dati devono essere utilizzati quando è necessario inviare dati diversi a stream di dati diversi. Non utilizzare gli override dello stream di dati per i casi di utilizzo di personalizzazione o per i dati sul consenso.
 
 ## Casi d’uso {#use-cases}
@@ -111,7 +114,7 @@ Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream d
 
 Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora puoi [inviare gli override alla rete Edge tramite Web SDK](#send-overrides).
 
-## Inviare gli override alla rete Edge tramite Web SDK {#send-overrides}
+## Inviare gli override alla rete Edge tramite Web SDK {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora
 
 Dopo [aver configurato gli override dello stream di dati](#configure-overrides) nell’interfaccia utente Raccolta dati, puoi inviare gli override alla rete Edge tramite Web SDK.
 
-L’invio degli override alla rete Edge tramite Web SDK è il secondo e ultimo passaggio dell’attivazione degli override della configurazione dello stream di dati.
+Se utilizzi Web SDK, inviare le sostituzioni alla rete Edge tramite `edgeConfigOverrides` Il comando è il secondo e ultimo passaggio dell’attivazione delle sostituzioni della configurazione dello stream di dati.
 
 Gli override della configurazione dello stream di dati vengono inviati alla rete Edge tramite il comando `edgeConfigOverrides` di Web SDK. Questo comando crea gli override dello stream di dati che vengono passati alla [!DNL Edge Network] al comando successivo o, nel caso del comando `configure`, a ogni richiesta.
 
@@ -135,7 +138,7 @@ Quando viene inviato un override di configurazione con il comando `configure`, v
 
 Le opzioni specificate a livello globale possono essere ignorate dall’opzione di configurazione relativa ai singoli comandi.
 
-### Invio degli override della configurazione tramite il comando `sendEvent` {#send-event}
+### Invio delle sostituzioni di configurazione tramite Web SDK `sendEvent` comando {#send-event}
 
 L’esempio seguente mostra l’aspetto di un override della configurazione con un comando `sendEvent`.
 
@@ -149,7 +152,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -193,7 +196,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -218,9 +221,168 @@ alloy("configure", {
 };
 ```
 
-### Esempio di payload {#payload-example}
+## Inviare le sostituzioni a Edge Network tramite Mobile SDK {#send-overrides-mobile-sdk}
 
-Gli esempi precedenti generano un payload della [!DNL Edge Network] simile al seguente:
+Dopo [configurazione delle sostituzioni dello stream di dati](#configure-overrides) Nell’interfaccia utente di Data Collection, ora puoi inviare le sostituzioni alla rete Edge tramite l’SDK di Mobile.
+
+Se utilizzi l’SDK di Mobile, puoi inviare le sostituzioni alla rete Edge tramite `sendEvent` API è il secondo e ultimo passaggio dell’attivazione delle sostituzioni della configurazione dello stream di dati.
+
+Per ulteriori informazioni sull’SDK di Mobile di Experienci Platform, consulta la [Documentazione di Mobile SDK](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### Override dell’ID dello stream di dati tramite SDK mobile {#id-override-mobile}
+
+Gli esempi seguenti mostrano l’aspetto di una sostituzione dell’ID dello stream di dati in un’integrazione SDK per dispositivi mobili. Seleziona le schede seguenti per visualizzare [!DNL iOS] e [!DNL Android] esempi.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Questo esempio mostra l’aspetto di una sostituzione dell’ID dello stream di dati in un SDK mobile [!DNL iOS] integrazione.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+Questo esempio mostra l’aspetto di una sostituzione dell’ID dello stream di dati in un SDK mobile [!DNL Android] integrazione.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Override della configurazione dello stream di dati tramite SDK per dispositivi mobili {#config-override-mobile}
+
+Gli esempi seguenti mostrano l’aspetto di una sostituzione della configurazione dello stream di dati in un’integrazione Mobile SDK. Seleziona le schede seguenti per visualizzare [!DNL iOS] e [!DNL Android] esempi.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Questo esempio mostra l’aspetto di una sostituzione della configurazione dello stream di dati in un SDK mobile [!DNL iOS] integrazione.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+Questo esempio mostra l’aspetto di una sostituzione della configurazione dello stream di dati in un SDK mobile [!DNL Android] integrazione.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## Esempio di payload {#payload-example}
+
+Gli esempi precedenti generano un [!DNL Edge Network] payload simile a quello riportato di seguito.
 
 ```json
 {
@@ -229,7 +391,7 @@ Gli esempi precedenti generano un payload della [!DNL Edge Network] simile al se
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -252,13 +414,6 @@ Gli esempi precedenti generano un payload della [!DNL Edge Network] simile al se
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```

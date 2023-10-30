@@ -2,13 +2,13 @@
 title: Connessione moenging
 description: Moengi è una piattaforma di coinvolgimento dei clienti che potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
 
 ---
-
 
 # Connessione [!DNL Moengage]
 
@@ -150,4 +150,3 @@ Per verificare se i dati sono stati esportati correttamente in [!DNL Moengage] d
 ## Utilizzo dei dati e governance {#data-usage-governance}
 
 Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
-

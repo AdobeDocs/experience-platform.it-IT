@@ -3,13 +3,13 @@ keywords: streaming, destinazione Qualtrics
 title: Automazioni Qualtrics
 description: Sincronizza i dati relativi all’esperienza e ai clienti operativi per sbloccare la personalizzazione su larga scala. Utilizza l’aggregazione di più fonti di dati operativi in Adobe Experience Platform come input in Qualtrics Experience ID per comprendere meglio i tuoi clienti e consentire un’attività di sensibilizzazione mirata per colmare il divario quando si tratta di comprendere le intenzioni, le emozioni e i driver di esperienza.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 1%
 
 ---
-
 
 # Automazioni Qualtrics
 
