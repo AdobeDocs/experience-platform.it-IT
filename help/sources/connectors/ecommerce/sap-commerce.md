@@ -3,7 +3,8 @@ title: Panoramica dell’origine di SAP Commerce
 description: Scopri come collegare SAP Commerce a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 3%
@@ -16,7 +17,7 @@ ht-degree: 3%
 >
 >Il [!DNL SAP Commerce] sorgente in versione beta. Consulta la [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una piattaforma di e-commerce basata su cloud per le aziende B2B e B2C è disponibile come parte del portafoglio Customer Experience SAP. [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita degli abbonamenti con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
+[[!DNL SAP Commerce]](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), una piattaforma di e-commerce basata su cloud per le aziende B2B e B2C è disponibile come parte del portafoglio Customer Experience di SAP. [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) è un prodotto incluso nel portfolio e consente la gestione completa del ciclo di vita degli abbonamenti con esperienze di vendita e pagamento semplificate tramite integrazioni standardizzate.
 
 Il [!DNL SAP Commerce] consente di acquisire informazioni su clienti e contatti in Platform dalla [[!DNL SAP] Fatturazione abbonamento](https://www.sap.com/products/financial-management/subscription-billing.html) Di seguito sono riportati gli endpoint API per i partner aziendali:
 

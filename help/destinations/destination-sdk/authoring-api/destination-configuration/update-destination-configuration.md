@@ -1,13 +1,13 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di destinazione esistente tramite Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di destinazione esistente tramite il Adobe Experience Platform Destination SDK.
 title: Aggiornare una configurazione di destinazione
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '369'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Aggiornare una configurazione di destinazione
 

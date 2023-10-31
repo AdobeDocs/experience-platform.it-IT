@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Creare, condividere e riutilizzare le istanze del playbook
 description: Scopri come creare, condividere e riutilizzare le istanze del playbook per eseguire il caso d’uso di marketing.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # Creare, condividere e riutilizzare le istanze del playbook (Beta)
 

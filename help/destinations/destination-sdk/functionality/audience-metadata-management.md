@@ -1,13 +1,13 @@
 ---
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 0%
 
 ---
-
 
 # Gestione dei metadati del pubblico
 
@@ -17,7 +17,7 @@ Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare i
 
 ## Quando utilizzare l’endpoint di gestione dei metadati dell’audience {#when-to-use}
 
-A seconda della configurazione API, potrebbe essere necessario utilizzare o meno l’endpoint di gestione dei metadati dell’audience durante la configurazione della destinazione in Experience Platform. Utilizza il diagramma dell’albero decisionale seguente per capire quando utilizzare l’endpoint dei metadati del pubblico e come configurare un modello di metadati del pubblico per la tua destinazione.
+A seconda della configurazione API, potrebbe essere necessario utilizzare o meno l’endpoint di gestione dei metadati dell’audience durante la configurazione della destinazione in Experienci Platform. Utilizza il diagramma dell’albero decisionale seguente per capire quando utilizzare l’endpoint dei metadati del pubblico e come configurare un modello di metadati del pubblico per la tua destinazione.
 
 ![Diagramma dell’albero decisionale](../assets/functionality/audience-metadata-decision-tree.png)
 
@@ -27,9 +27,9 @@ Con il supporto dei metadati del pubblico in Destination SDK, quando configuri l
 
 ### Caso d’uso 1: disponi di un’API di terze parti e gli utenti non devono immettere ID di mappatura
 
-Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experience Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experience Platform.
+Se disponi di un endpoint API per creare/aggiornare/eliminare tipi di pubblico o tipi di pubblico, puoi utilizzare i modelli di metadati del pubblico per configurare Destination SDK in modo che corrisponda alle specifiche dell’endpoint creazione/aggiornamento/eliminazione del pubblico. Experienci Platform può creare, aggiornare o eliminare a livello di programmazione tipi di pubblico e sincronizzare nuovamente i metadati con Experienci Platform.
 
-Quando si attivano dei tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experience Platform, gli utenti non devono compilare manualmente un campo ID di mappatura pubblico nel flusso di lavoro di attivazione.
+Quando si attivano dei tipi di pubblico nella destinazione nell&#39;interfaccia utente di Experienci Platform, gli utenti non devono compilare manualmente un campo ID di mappatura pubblico nel flusso di lavoro di attivazione.
 
 ### Caso d’uso 2: gli utenti devono prima creare un’audience nella destinazione e devono inserire manualmente l’ID della mappatura
 
@@ -525,17 +525,17 @@ Trova descrizioni di tutti i parametri nel modello in [Creare un modello di pubb
 
 ## Macro utilizzate nei modelli di metadati del pubblico
 
-Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experience Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
+Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experienci Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
 
 | Macro | Descrizione |
 |--- |--- |
-| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experience Platform. |
-| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experience Platform. |
-| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experience Platform. |
+| `{{segment.alias}}` | Consente di accedere all’alias del pubblico in Experienci Platform. |
+| `{{segment.name}}` | Consente di accedere al nome del pubblico in Experienci Platform. |
+| `{{segment.id}}` | Consente di accedere all’ID del pubblico in Experienci Platform. |
 | `{{customerData.accountId}}` | Ti consente di accedere al campo ID account configurato nella configurazione di destinazione. |
 | `{{oauth2ServiceAccessToken}}` | Consente di generare dinamicamente un token di accesso in base alla configurazione OAuth 2. |
-| `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizzare `{{authData.accessToken}}` se in Experience Platform si desidera utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
+| `{{authData.accessToken}}` | Ti consente di passare il token di accesso all’endpoint API. Utilizzare `{{authData.accessToken}}` se in Experienci Platform si desidera utilizzare token senza scadenza per la connessione alla destinazione, altrimenti utilizza `{{oauth2ServiceAccessToken}}` per generare un token di accesso. |
 | `{{body.segments[0].segment.id}}` | Restituisce l’identificatore univoco del pubblico creato come valore della chiave `externalAudienceId`. |
-| `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experience Platform. |
+| `{{error.message}}` | Restituisce un messaggio di errore che verrà mostrato agli utenti nell’interfaccia utente di Experienci Platform. |
 
 {style="table-layout:auto"}

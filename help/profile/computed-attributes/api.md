@@ -1,13 +1,13 @@
 ---
 title: Endpoint API per attributi calcolati
 description: Scopri come creare, visualizzare, aggiornare ed eliminare gli attributi calcolati utilizzando l’API Profilo cliente in tempo reale.
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Endpoint API per attributi calcolati
 
@@ -27,7 +27,7 @@ Prima di continuare, controlla [Guida introduttiva all’API del profilo](../api
 
 Inoltre, consulta la documentazione del seguente servizio:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
    - [Guida introduttiva al Registro di schema](../../xdm/api/getting-started.md#know-your-tenant_id): informazioni su `{TENANT_ID}`, che viene visualizzato nelle risposte di questa guida.
 
 ## Recuperare un elenco di attributi calcolati {#list}

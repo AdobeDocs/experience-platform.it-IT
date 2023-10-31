@@ -1,13 +1,13 @@
 ---
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
 
 ---
-
 
 # Attributi dell’interfaccia utente
 
@@ -31,7 +31,7 @@ Puoi configurare gli attributi dell’interfaccia utente tramite `/authoring/des
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutti gli attributi supportati dell’interfaccia utente che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experience Platform.
+Questo articolo descrive tutti gli attributi supportati dell’interfaccia utente che puoi utilizzare per la tua destinazione e mostra cosa vedranno i clienti nell’interfaccia utente di Experienci Platform.
 
 ![Schermata dell’interfaccia utente che mostra gli attributi dell’interfaccia utente nell’interfaccia di Experience Platform](../../assets/functionality/destination-configuration/ui-attributes.png)
 

@@ -2,7 +2,8 @@
 title: Panoramica del Snowflake
 description: Scopri il Snowflake per l’inoltro degli eventi in Adobe Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: fe28840fab46fadb82f1a37f972084057a00af44
+exl-id: abddf0c4-3d4c-4f66-a6e0-c10b54ea3430
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 1%
@@ -41,4 +42,4 @@ Nostro nativo [[!DNL AWS]](../aws/overview.md), [[!DNL Azure]](../azure/overview
 
 Questa guida fornisce una panoramica di [!DNL Snowflake] e l&#39;uso di [!DNL AWS] e [!DNL Azure] estensioni di inoltro eventi.
 
-Per ulteriori informazioni su [!DNL AWS] e [!DNL Azure] funzionalità di inoltro degli eventi in Experience Platform, consulta [[!DNL AWS] panoramica dell’estensione](../aws/overview.md) e [[!DNL Azure] panoramica dell’estensione](../azure/overview.md).
+Per ulteriori informazioni su [!DNL AWS] e [!DNL Azure] funzionalità di inoltro degli eventi in Experienci Platform, consulta [[!DNL AWS] panoramica dell’estensione](../aws/overview.md) e [[!DNL Azure] panoramica dell’estensione](../azure/overview.md).

@@ -1,13 +1,13 @@
 ---
 description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 4%
 
 ---
-
 
 # Configurare l’input dell’utente tramite i campi dati del cliente
 

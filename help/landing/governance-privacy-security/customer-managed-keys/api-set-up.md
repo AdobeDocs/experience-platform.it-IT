@@ -1,7 +1,8 @@
 ---
 title: Configurare e configurare le chiavi gestite dal cliente tramite l’API
 description: Scopri come configurare l’app CMK con il tenant di Azure e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 2%
@@ -16,7 +17,7 @@ Questo documento descrive il processo di abilitazione della funzione chiavi gest
 
 Per visualizzare e visitare il [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e assegnato il [!UICONTROL Gestisci chiave gestita dal cliente] autorizzazione per quel ruolo. Qualsiasi utente che dispone di [!UICONTROL Gestisci chiave gestita dal cliente] L’autorizzazione può abilitare la CMK per la loro organizzazione.
 
-Per ulteriori informazioni sull’assegnazione di ruoli e autorizzazioni in Experienci Platform, consulta [configurare la documentazione sulle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Per ulteriori informazioni sull’assegnazione di ruoli e autorizzazioni in Experienci Platform, consulta [configurare la documentazione sulle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it).
 
 Per attivare la CMK, [[!DNL Azure] L’insieme di credenziali delle chiavi deve essere configurato](./azure-key-vault-config.md) con le seguenti impostazioni:
 

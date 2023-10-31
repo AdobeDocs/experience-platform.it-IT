@@ -1,7 +1,8 @@
 ---
 title: Modelli in linea
 description: Scopri come riutilizzare più condizioni in numerose query con modelli in linea.
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 1%

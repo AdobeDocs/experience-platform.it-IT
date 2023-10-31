@@ -1,13 +1,13 @@
 ---
 title: Raccogliere informazioni su prodotti e ordini tramite Adobe Experience Platform Web SDK
 description: Scopri come aggiungere dati relativi a prodotti o a un carrello utilizzando Adobe Experience Platform Web SDK.
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 1%
 
 ---
-
 
 # Raccogliere informazioni su prodotti e ordini
 

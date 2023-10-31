@@ -1,7 +1,8 @@
 ---
 title: Flussi di dati bozza nell’interfaccia utente
 description: Scopri come salvare i flussi di dati come bozza e pubblicarli in un secondo momento, quando utilizzi l’area di lavoro origini.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%

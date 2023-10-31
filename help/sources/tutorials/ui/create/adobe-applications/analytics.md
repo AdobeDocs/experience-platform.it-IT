@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2481'
 ht-degree: 6%
 
 ---
@@ -264,33 +264,53 @@ Il [!UICONTROL Revisione] viene visualizzato un passaggio che consente di rivede
 
 ![recensione](../../../../images/tutorials/create/analytics/review.png)
 
-### Monitorare il flusso di dati
+## Monitorare il flusso di dati {#monitor-your-dataflow}
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso. Dalla sezione [!UICONTROL Catalogo] schermata, seleziona **[!UICONTROL Flussi dati]** per visualizzare un elenco dei flussi stabiliti associati al tuo account Analytics.
+Una volta completato il flusso di dati, seleziona **[!UICONTROL Flussi dati]** nel catalogo sorgenti per monitorare l’attività e lo stato dei dati.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![Catalogo delle origini con la scheda Flussi dati selezionata.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-Il **Flussi dati** viene visualizzata la schermata. In questa pagina è presente una coppia di flussi di set di dati, con informazioni sul nome, i dati di origine, l’ora di creazione e lo stato.
+Viene visualizzato un elenco dei flussi di dati di Analytics esistenti nell’organizzazione. Da qui, seleziona un set di dati di destinazione per visualizzare la rispettiva attività di acquisizione.
 
-Il connettore crea un’istanza di due flussi di set di dati. Un flusso rappresenta i dati di backfill e l’altro è per i dati live. I dati di backfill non sono configurati per il profilo, ma vengono inviati al data lake per casi d’uso analitici e di scienza dei dati.
+![Elenco dei flussi di dati Adobe Analytics esistenti nell’organizzazione.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispettive latenze, vedi la [Panoramica di Analytics Data Connector](../../../../connectors/adobe-applications/analytics.md).
+Il [!UICONTROL Attività set di dati] fornisce informazioni sull’avanzamento dei dati inviati da Analytics ad Experienci Platform. L’interfaccia visualizza metriche quali il numero di record acquisiti, il numero di batch acquisiti e il numero di batch non riusciti.
 
-Seleziona dall’elenco il flusso del set di dati da visualizzare.
+L’origine crea un’istanza di due flussi di set di dati. Un flusso rappresenta i dati di backfill e l’altro è per i dati live. I dati di backfill non sono configurati per l’acquisizione in Real-Time Customer Profile, ma vengono inviati al data lake per casi d’uso analitici e di data science.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Per ulteriori informazioni sulla retrocompilazione, sui dati live e sulle rispettive latenze, consulta [Panoramica sull’origine di Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-Il **[!UICONTROL Attività set di dati]** viene visualizzata. In questa pagina viene visualizzata la frequenza dei messaggi utilizzati sotto forma di grafico. Seleziona **[!UICONTROL Governance dei dati]** dall’intestazione superiore per accedere ai campi di etichettatura.
+![Pagina dell’attività del set di dati per un determinato set di dati di destinazione per i dati di Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Visualizzare singoli batch utilizzando l&#39;interfaccia di monitoraggio legacy
 
-Puoi visualizzare le etichette ereditate di un flusso di set di dati da [!UICONTROL Governance dei dati] schermo. Per ulteriori informazioni su come etichettare i dati provenienti da Analytics, visita [guida alle etichette di utilizzo dei dati](../../../../../data-governance/labels/user-guide.md).
+La pagina dell’attività del set di dati non visualizza un elenco di singoli batch. Per visualizzare un elenco di singoli batch, seleziona un grafico nell’interfaccia dell’attività del set di dati.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![Pagina dell’attività del set di dati con un grafico selezionato.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Per eliminare un flusso di dati, passare alla [!UICONTROL Flussi dati] e quindi selezionare i puntini di sospensione (`...`) accanto al nome del flusso di dati, quindi seleziona [!UICONTROL Elimina].
+Viene visualizzata la dashboard Monitoraggio. Quindi, seleziona **[!UICONTROL SOLO ERRORI DI ACQUISIZIONE: SÌ]** per cancellare il filtro e visualizzare un elenco di singoli batch.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![Dashboard di monitoraggio con il filtro errori selezionato.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+L’interfaccia viene aggiornata a un elenco di singoli batch, incluse informazioni sulle rispettive metriche.
+
+![Pagina di monitoraggio legacy per i dati batch.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Metriche | Descrizione |
+| --- | --- |
+| ID batch | L’ID di un determinato batch. Questo valore viene generato internamente. |
+| Nome del set di dati | Nome di un dato set di dati utilizzato per i dati di Analytics. |
+| Origine | L’origine dei dati acquisiti. |
+| Aggiornata | Data dell&#39;iterazione dell&#39;esecuzione del flusso più recente. |
+| Record nel set di dati | Numero totale di record nel set di dati. **Nota**: questo parametro mostra occasionalmente lo stato `in-progress`. Questo stato indica che il processo di acquisizione dei record non è ancora stato completato. |
+| Nuovi frammenti di profilo | Numero totale di nuovi frammenti di profilo acquisiti. |
+| Frammenti di profilo esistenti | Numero totale di frammenti di profilo esistenti. |
+| Record di identità uniti | Numero totale di record di identità uniti dopo l’acquisizione. |
+| Record nel profilo | Numero totale di record acquisiti in Real-Time Customer Profile. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Passaggi successivi e risorse aggiuntive
 

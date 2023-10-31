@@ -1,13 +1,13 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione del server di destinazione tramite Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per recuperare una configurazione del server di destinazione tramite il Adobe Experience Platform Destination SDK.
 title: Recuperare una configurazione del server di destinazione
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 1b375343-e793-4c91-856f-af66fe71822e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 3%
 
 ---
-
 
 # Recuperare una configurazione del server di destinazione
 

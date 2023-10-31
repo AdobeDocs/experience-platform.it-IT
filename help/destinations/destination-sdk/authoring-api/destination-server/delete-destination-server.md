@@ -1,13 +1,13 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione del server di destinazione esistente tramite Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per eliminare una configurazione del server di destinazione esistente tramite il Adobe Experience Platform Destination SDK.
 title: Eliminare una configurazione del server di destinazione
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 3%
 
 ---
-
 
 # Eliminare una configurazione del server di destinazione
 
@@ -75,4 +75,3 @@ Per ulteriori informazioni su cosa è possibile fare con questo endpoint, consul
 * [Creare una configurazione del server di destinazione](create-destination-server.md)
 * [Recuperare una configurazione del server di destinazione](retrieve-destination-server.md)
 * [Aggiornare una configurazione del server di destinazione](update-destination-server.md)
-

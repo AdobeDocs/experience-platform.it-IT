@@ -6,7 +6,7 @@ user-guide-description: Scopri come Experience Platform consente di offrire ai c
 source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 

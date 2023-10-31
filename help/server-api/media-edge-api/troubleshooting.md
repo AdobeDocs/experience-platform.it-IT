@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida alla risoluzione dei problemi delle API Media Edge
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 51f494f5-25a3-400d-b225-8d8dc4cbebd5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%
 
 ---
-
 
 # Guida alla risoluzione dei problemi dell’API Media Edge
 
@@ -164,5 +164,3 @@ VideoPlayer.prototype._processPendingEvents function(sessionID) {
     _pendingEvents = [];
 }
 ```
-
-

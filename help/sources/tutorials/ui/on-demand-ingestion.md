@@ -1,7 +1,8 @@
 ---
 title: Acquisizione su richiesta per flussi di dati di origini nell’interfaccia utente
 description: Scopri come creare flussi di dati on-demand per le connessioni sorgente utilizzando l’interfaccia utente di Experienci Platform.
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%

@@ -2,13 +2,13 @@
 title: Profili potenziali
 description: Scopri come creare e utilizzare i profili di potenziali clienti per raccogliere informazioni su clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
-source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 7%
 
 ---
-
 
 # Profili potenziali
 

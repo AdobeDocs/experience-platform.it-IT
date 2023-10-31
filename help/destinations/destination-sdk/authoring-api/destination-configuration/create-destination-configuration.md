@@ -1,13 +1,13 @@
 ---
 description: Scopri come strutturare una chiamata API per creare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione di destinazione
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
 
 ---
-
 
 # Creare una configurazione di destinazione
 
@@ -192,12 +192,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `name` | Stringa | Indica il titolo della destinazione nel catalogo di Experienci Platform. |
-| `description` | Stringa | Fornisci una descrizione che Adobe utilizzerà nel catalogo delle destinazioni Experience Platform per la tua scheda di destinazione. Puntare a non più di 4-5 frasi. ![Immagine dell’interfaccia utente di Platform che mostra la descrizione della destinazione.](../../assets/authoring-api/destination-configuration/destination-description.png "Descrizione della destinazione"){width="100" zoomable="yes"} |
+| `description` | Stringa | Fornisci una descrizione che Adobe utilizzerà nel catalogo delle destinazioni Experienci Platform per la tua scheda di destinazione. Puntare a non più di 4-5 frasi. ![Immagine dell’interfaccia utente di Platform che mostra la descrizione della destinazione.](../../assets/authoring-api/destination-configuration/destination-description.png "Descrizione della destinazione"){width="100" zoomable="yes"} |
 | `status` | Stringa | Indica lo stato del ciclo di vita della scheda di destinazione. I valori accettati sono `TEST`, `PUBLISHED` e `DELETED`. Utilizzare `TEST` la prima volta che configuri la destinazione. |
 | `customerAuthenticationConfigurations.authType` | Stringa | Indica la configurazione utilizzata per autenticare i clienti Experienci Platform nel server di destinazione. Consulta [configurazione autenticazione cliente](../../functionality/destination-configuration/customer-authentication.md) per informazioni dettagliate sui tipi di autenticazione supportati. |
 | `customerDataFields.name` | Stringa | Immetti un nome per il campo personalizzato che stai presentando. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. ![Immagine dell’interfaccia utente di Platform che mostra i campi dati del cliente.](../../assets/authoring-api/destination-configuration/customer-data-fields.png "Campo dati cliente"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | Stringa | Indica il tipo di campo personalizzato che si sta introducendo. I valori accettati sono `string`, `object`, `integer`. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
-| `customerDataFields.title` | Stringa | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Experience Platform. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
+| `customerDataFields.title` | Stringa | Indica il nome del campo, così come viene visualizzato dai clienti nell’interfaccia utente di Experienci Platform. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
 | `customerDataFields.description` | Stringa | Fornisci una descrizione per il campo personalizzato. Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
 | `customerDataFields.isRequired` | Booleano | Indica se questo campo è obbligatorio nel flusso di lavoro di configurazione della destinazione. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
 | `customerDataFields.enum` | Stringa | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. <br/><br/> Consulta [Campi dati cliente](../../functionality/destination-configuration/customer-data-fields.md) per informazioni dettagliate su queste impostazioni. |
@@ -219,7 +219,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione è il nome Experience Platform del pubblico. |
 | `segmentMappingConfig.audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per questa destinazione. |
 | `schemaConfig.profileFields` | Array | Quando si aggiungono impostazioni predefinite `profileFields` come mostrato nella configurazione precedente, gli utenti avranno la possibilità di mappare gli attributi di Experience Platform agli attributi predefiniti sul lato della destinazione. |
-| `schemaConfig.profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experience Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |
+| `schemaConfig.profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experienci Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |
 | `schemaConfig.segmentRequired` | Booleano | Usa sempre `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Booleano | Utilizzare `true` se gli utenti devono essere in grado di mappare gli spazi dei nomi delle identità dall’Experience Platform allo schema desiderato. |
 

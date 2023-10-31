@@ -1,13 +1,13 @@
 ---
-description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di credenziali esistente tramite Adobe Experience Platform Destination SDK.
+description: Questa pagina esemplifica la chiamata API utilizzata per aggiornare una configurazione di credenziali esistente tramite il Adobe Experience Platform Destination SDK.
 title: Aggiornare una configurazione delle credenziali
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 8%
 
 ---
-
 
 # Aggiornare una configurazione delle credenziali
 

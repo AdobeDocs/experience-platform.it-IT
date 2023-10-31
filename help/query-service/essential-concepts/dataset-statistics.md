@@ -1,7 +1,8 @@
 ---
 title: Calcolo delle statistiche dei set di dati
 description: In questo documento viene descritto come calcolare le statistiche a livello di colonna sui set di dati di Azure Data Lake Storage (ADLS) con comandi SQL.
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%

@@ -1,19 +1,19 @@
 ---
 description: Scopri come formattare una chiamata API per inviare una richiesta di pubblicazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una richiesta di pubblicazione di destinazione
-source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
+exl-id: 913be9de-a699-4756-885d-b3761ec729cb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
 
 ---
 
-
 # Creare una richiesta di pubblicazione di destinazione
 
 >[!IMPORTANT]
 >
->Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), che dovrà essere utilizzata da altri clienti Experience Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
+>Devi utilizzare questo endpoint API solo se invii una destinazione prodotta (pubblica), che dovrà essere utilizzata da altri clienti Experienci Platform. Se crei una destinazione privata per uso personale, non è necessario inviare formalmente la destinazione utilizzando l’API di pubblicazione.
 
 >[!IMPORTANT]
 >
@@ -65,7 +65,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
 | `destinationId` | Stringa | ID di destinazione della configurazione di destinazione che si sta inviando per la pubblicazione. Ottieni l’ID di destinazione di una configurazione di destinazione utilizzando [recuperare una configurazione di destinazione](../authoring-api/destination-configuration/retrieve-destination-configuration.md) Chiamata API. |
-| `destinationAccess` | Stringa | Utilizzare `ALL` affinché la tua destinazione venga visualizzata nel catalogo per tutti i clienti di Experience Platform. |
+| `destinationAccess` | Stringa | Utilizzare `ALL` affinché la tua destinazione venga visualizzata nel catalogo per tutti i clienti di Experienci Platform. |
 
 {style="table-layout:auto"}
 

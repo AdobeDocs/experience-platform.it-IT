@@ -3,10 +3,11 @@ title: Collegare l'account di streaming di Snowflake a Adobe Experience Platform
 description: Scopri come collegare Adobe Experience Platform a Streaming di Snowflake utilizzando l’API del servizio Flusso.
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -32,7 +33,7 @@ Per l’impostazione dei prerequisiti e per le informazioni su [!DNL Snowflake] 
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base {#create-a-base-connection}
+## Crea una connessione di base {#create-a-base-connection}
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
@@ -211,7 +212,7 @@ In caso di esito positivo, la risposta restituisce l’ID della connessione sorg
 }
 ```
 
-## Creare un flusso di dati
+## Crea un flusso di dati
 
 Per creare un flusso di dati per inviare dati dalla presentazione [!DNL Snowflake] a Platform, è necessario effettuare una richiesta POST al `/flows` endpoint, fornendo i seguenti valori:
 

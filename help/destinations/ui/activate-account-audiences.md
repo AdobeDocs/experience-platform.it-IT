@@ -4,9 +4,10 @@ type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
 badgeLimitedAvailability: label="Disponibilità limitata" type="Caution"
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
+exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -89,11 +90,11 @@ Quando si attivano i tipi di pubblico dell’account per **[!UICONTROL (Aziende)
 | Campo di origine | Campo di destinazione |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (seleziona questo campo nella sezione **[!UICONTROL Seleziona lo spazio dei nomi delle identità]** view) |
+| `accountKey.sourceKey` | `primaryId` (seleziona questo campo nella sezione **[!UICONTROL Seleziona lo spazio dei nomi delle identità]** visualizzazione, quando si seleziona la **[!UICONTROL Campo di destinazione]**). <br> ![Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell’account nelle destinazioni.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Seleziona lo spazio dei nomi delle identità evidenziato nel flusso di lavoro per attivare i tipi di pubblico dell’account nelle destinazioni."){width="100" zoomable="yes"} |
 
 ### Applicazione della governance dei dati {#data-governance-enforcement}
 
-[Valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportato quando si attivano i tipi di pubblico dell’account nelle destinazioni. Nel passaggio di revisione del flusso di lavoro di attivazione, è possibile visualizzare un controllo disattivato per **[!UICONTROL Visualizza i criteri di consenso applicabili]**.
+Il consenso viene applicato a livello di persona o profilo per *pubblico cliente e potenziale cliente*. Pertanto,  [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) non è attualmente supportato quando si attivano i tipi di pubblico dell’account nelle destinazioni. Nel passaggio di revisione del flusso di lavoro di attivazione, è possibile visualizzare un controllo disattivato per **[!UICONTROL Visualizza i criteri di consenso applicabili]**.
 
 ![Passaggio di revisione del flusso di lavoro attiva tipi di pubblico per l’account con il controllo dell’applicazione del consenso disattivato.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

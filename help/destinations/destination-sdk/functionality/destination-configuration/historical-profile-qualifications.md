@@ -1,13 +1,13 @@
 ---
 description: Scopri le qualifiche storiche dei profili supportate dalle destinazioni create con Destination SDK.
 title: Qualifiche del profilo storico
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
-
 
 # Qualifiche del profilo storico
 
@@ -40,7 +40,7 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo articolo, dovresti sapere che Experience Platform esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un pubblico attivato quando il pubblico viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experience Platform.
+Dopo aver letto questo articolo, dovresti sapere che Experienci Platform esporta automaticamente una popolazione storica di tutti i profili che si sono mai qualificati per un pubblico attivato quando il pubblico viene esportato per la prima volta nella destinazione. Questa opzione non è configurabile in Destination SDK o nell’interfaccia utente di Experienci Platform.
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 

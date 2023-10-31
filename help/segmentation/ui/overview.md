@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3910'
 ht-degree: 3%
 
 ---
@@ -72,17 +72,17 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 
 | Azione | Origini | Descrizione |
 | ------ | ------- | ----------- |
-| Modifica | Servizio di segmentazione | Consente di aprire Segment Builder (Generatore di segmenti) per modificare il pubblico. Per ulteriori informazioni sull’utilizzo del Generatore di segmenti, consulta la sezione [Guida dell’interfaccia utente di Segment Builder](./segment-builder.md). |
-| Apri composizione | Composizione del pubblico | Consente di aprire la composizione Pubblico per visualizzare il pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi [guida dell’interfaccia utente per la composizione del pubblico](./audience-composition.md). |
-| Attiva nella destinazione | Servizio di segmentazione | Consente di attivare il pubblico in una destinazione. Per informazioni più dettagliate sull’attivazione di un pubblico in una destinazione, consulta la sezione [panoramica sull’attivazione](../../destinations/ui/activation-overview.md). |
-| Condividi con i partner | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di condividere il pubblico con altri utenti di Platform. Per ulteriori informazioni su questa funzione, leggere [Panoramica di Segment Match](./segment-match/overview.md). |
-| Gestire i tag | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
-| Sposta nella cartella | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
-| Copia | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Duplica il pubblico selezionato. |
-| Applica etichette di accesso | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| Archivia | Caricamento personalizzato | Archivia il pubblico selezionato. |
-| Elimina | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
-| Aggiungi al pacchetto | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di spostare il pubblico tra sandbox diverse. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Modifica] | Servizio di segmentazione | Consente di aprire Segment Builder (Generatore di segmenti) per modificare il pubblico. Per ulteriori informazioni sull’utilizzo del Generatore di segmenti, consulta la sezione [Guida dell’interfaccia utente di Segment Builder](./segment-builder.md). |
+| [!UICONTROL Apri composizione] | Composizione del pubblico | Consente di aprire la composizione Pubblico per visualizzare il pubblico. Per ulteriori informazioni sulla composizione del pubblico, leggi [guida dell’interfaccia utente per la composizione del pubblico](./audience-composition.md). |
+| [!UICONTROL Attiva nella destinazione] | Servizio di segmentazione | Consente di attivare il pubblico in una destinazione. Per informazioni più dettagliate sull’attivazione di un pubblico in una destinazione, consulta la sezione [panoramica sull’attivazione](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di condividere il pubblico con altri utenti di Platform. Per ulteriori informazioni su questa funzione, leggere [Panoramica di Segment Match](./segment-match/overview.md). |
+| [!UICONTROL Gestire i tag] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
+| [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
+| [!UICONTROL Copia] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Duplica il pubblico selezionato. |
+| [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di gestire le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archivia] | Caricamento personalizzato | Archivia il pubblico selezionato. |
+| [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
+| [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Consente di spostare il pubblico tra sandbox diverse. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di 
 
 Il **[!UICONTROL Dettagli del pubblico]** viene visualizzata. Puoi aggiungere informazioni sul pubblico, tra cui nome, descrizione, identità primaria e valore dello spazio dei nomi dell’identità.
 
+Quando importi il pubblico generato esternamente, devi selezionare una delle colonne da usare come campo di identità principale e specificare il valore dello spazio dei nomi. Si prega di notare che tutti i campi rimanenti verranno considerati **attributi payload**. Questi attributi vengono considerati **non durevole**, poiché saranno associate a questo pubblico solo a scopo di personalizzazione e sono **non** connesso al profilo.
+
 ![Il [!UICONTROL Dettagli del pubblico] viene visualizzata.](../images/ui/overview/import-audience-audience-details.png)
 
 Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Successivo]**.
@@ -353,7 +355,9 @@ Dopo aver confermato la correttezza dei dettagli, seleziona **[!UICONTROL Fine]*
 
 >[!IMPORTANT]
 >
->Se il pubblico generato esternamente contiene informazioni sensibili e/o relative all’assistenza sanitaria, **deve** applica le etichette di utilizzo dei dati necessarie prima di attivarla in qualsiasi destinazione. Per ulteriori informazioni sull’applicazione delle etichette di utilizzo dei dati, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md).
+>Per impostazione predefinita, i tipi di pubblico generati esternamente hanno una scadenza dei dati di 30 giorni. La scadenza dei dati viene reimpostata se il pubblico viene aggiornato o modificato in qualsiasi modo.
+>
+>Inoltre, se il pubblico generato esternamente contiene informazioni sensibili e/o relative all’assistenza sanitaria, **deve** applica le etichette di utilizzo dei dati necessarie prima di attivarla in qualsiasi destinazione. Per ulteriori informazioni sull’applicazione delle etichette di utilizzo dei dati, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md).
 
 ## Segmentazione pianificata {#scheduled-segmentation}
 

@@ -1,13 +1,13 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per eliminare un Adobe Experience Platform Destination SDK di configurazione delle credenziali.
 title: Eliminare una configurazione di credenziali
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: a540e349-043c-4f04-8ca8-f650b9943492
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
 
 ---
-
 
 # Eliminare una configurazione di credenziali
 

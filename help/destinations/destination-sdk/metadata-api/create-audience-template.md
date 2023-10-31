@@ -1,13 +1,13 @@
 ---
 description: Questa pagina esemplifica la chiamata API utilizzata per creare un modello di pubblico tramite Adobe Experience Platform Destination SDK.
 title: Creare un modello di pubblico
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+exl-id: 98d30002-d462-4008-9337-7de0cd608194
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
 
 ---
-
 
 # Creare un modello di pubblico
 
@@ -189,7 +189,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Proprietà | Tipo | Descrizione |
 | -------- | ----------- | ----------- |
-| `name` | Stringa | Il nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell’interfaccia utente di Experience Platform, seguito dal messaggio di errore analizzato da `metadataTemplate.create.errorSchemaMap`. |
+| `name` | Stringa | Il nome del modello di metadati del pubblico per la destinazione. Questo nome verrà visualizzato in qualsiasi messaggio di errore specifico del partner nell’interfaccia utente di Experienci Platform, seguito dal messaggio di errore analizzato da `metadataTemplate.create.errorSchemaMap`. |
 | `url` | Stringa | L’URL e l’endpoint dell’API, utilizzati per creare, aggiornare, eliminare o convalidare i tipi di pubblico nella piattaforma. Due esempi di settore: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` e `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
 | `httpMethod` | Stringa | Il metodo utilizzato sull’endpoint per creare, aggiornare, eliminare o convalidare a livello di programmazione il pubblico nella destinazione. Ad esempio: `POST`, `PUT`, `DELETE` |
 | `headers.header` | Stringa | Specifica eventuali intestazioni HTTP da aggiungere alla chiamata all’API. Ad esempio, `"Content-Type"` |
@@ -198,7 +198,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `responseFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità Metadati del pubblico. |
 | `responseFields.value` | Stringa | Specifica il valore di tutti i campi di risposta restituiti dall’API quando vengono chiamati. |
 | `responseErrorFields.name` | Stringa | Specifica eventuali campi di risposta restituiti dall’API quando vengono chiamati. Ad esempio, consulta [esempi di modelli](../functionality/audience-metadata-management.md#examples) nel documento relativo alla funzionalità Metadati del pubblico. |
-| `responseErrorFields.value` | Stringa | Analizza eventuali messaggi di errore restituiti nelle risposte alle chiamate API dalla destinazione. Questi messaggi di errore verranno visualizzati dagli utenti nell’interfaccia utente di Experience Platform. |
+| `responseErrorFields.value` | Stringa | Analizza eventuali messaggi di errore restituiti nelle risposte alle chiamate API dalla destinazione. Questi messaggi di errore verranno visualizzati dagli utenti nell’interfaccia utente di Experienci Platform. |
 | `validations.field` | Stringa | Indica se è necessario eseguire le convalide per qualsiasi campo prima di effettuare chiamate API alla destinazione. Ad esempio, puoi utilizzare `{{validations.accountId}}` per convalidare l’ID account dell’utente. |
 | `validations.regex` | Stringa | Indica come deve essere strutturato il campo affinché la convalida possa passare. |
 

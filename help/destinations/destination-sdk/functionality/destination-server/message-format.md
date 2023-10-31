@@ -1,13 +1,13 @@
 ---
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
-source-git-commit: e500d05858a3242295c6e5aac8284ad301d0cd17
+exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2237'
 ht-degree: 1%
 
 ---
-
 
 # Formato del messaggio
 
@@ -39,7 +39,7 @@ Questa pagina tratta il formato del messaggio e la trasformazione del profilo ne
 
 Adobe Experience Platform esporta dati in un numero significativo di destinazioni, in vari formati di dati. Alcuni esempi di tipi di destinazione sono le piattaforme pubblicitarie (Google), i social network (Facebook) e le posizioni di archiviazione cloud (Amazon S3, Azure Event Hubs).
 
-Experience Platform può regolare il formato dei messaggi dei profili esportati in modo che corrisponda al formato previsto sul tuo lato. Per comprendere questa personalizzazione, sono importanti i seguenti concetti:
+Experienci Platform può regolare il formato dei messaggi dei profili esportati in modo che corrisponda al formato previsto sul tuo lato. Per comprendere questa personalizzazione, sono importanti i seguenti concetti:
 
 * Schema XDM di origine (1) e destinazione (2) in Adobe Experience Platform
 * il formato previsto del messaggio sul lato partner (3), e
@@ -47,7 +47,7 @@ Experience Platform può regolare il formato dei messaggi dei profili esportati 
 
 ![Trasformazione da schema a JSON](../../assets/functionality/destination-server/transformations-3-steps.png)
 
-Experience Platform utilizza gli schemi XDM per descrivere la struttura dei dati in modo coerente e riutilizzabile.
+Experienci Platform utilizza gli schemi XDM per descrivere la struttura dei dati in modo coerente e riutilizzabile.
 
 <!--
 
@@ -55,11 +55,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Schema XDM di origine (1)**: questo elemento fa riferimento allo schema utilizzato dai clienti in Experience Platform. Ad Experience Platform, nella sezione [passaggio di mappatura](../../../ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione destinazione, i clienti mappano i campi dal proprio schema XDM allo schema di destinazione della tua destinazione (2).
+**Schema XDM di origine (1)**: questo elemento fa riferimento allo schema utilizzato dai clienti in Experienci Platform. Ad Experience Platform, nella sezione [passaggio di mappatura](../../../ui/activate-segment-streaming-destinations.md#mapping) del flusso di lavoro di attivazione destinazione, i clienti mappano i campi dal proprio schema XDM allo schema di destinazione della tua destinazione (2).
 
 **Schema XDM di destinazione (2)**: in base allo schema JSON standard (3) del formato previsto della destinazione e agli attributi che la destinazione può interpretare, puoi definire gli attributi e le identità del profilo nello schema XDM di destinazione. Puoi eseguire questa operazione nella configurazione delle destinazioni, nel [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) e [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) oggetti.
 
-**Schema standard JSON degli attributi del profilo di destinazione (3)**: questo esempio rappresenta una [Schema JSON](https://json-schema.org/learn/miscellaneous-examples.html) di tutti gli attributi di profilo supportati dalla piattaforma e dei relativi tipi (ad esempio: oggetto, stringa, array). Campi di esempio che la tua destinazione potrebbe supportare `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`e così via. Hai bisogno di un [modello di trasformazione dei messaggi](#using-templating) per adattare i dati esportati da Experience Platform al formato previsto.
+**Schema standard JSON degli attributi del profilo di destinazione (3)**: questo esempio rappresenta una [Schema JSON](https://json-schema.org/learn/miscellaneous-examples.html) di tutti gli attributi di profilo supportati dalla piattaforma e dei relativi tipi (ad esempio: oggetto, stringa, array). Campi di esempio che la tua destinazione potrebbe supportare `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`e così via. Hai bisogno di un [modello di trasformazione dei messaggi](#using-templating) per adattare i dati esportati da Experienci Platform al formato previsto.
 
 In base alle trasformazioni dello schema descritte in precedenza, ecco come cambia la configurazione di un profilo tra lo schema XDM di origine e uno schema di esempio sul lato partner:
 
@@ -100,9 +100,9 @@ Considerando il formato del messaggio, le trasformazioni corrispondenti sono le 
 
 {style="table-layout:auto"}
 
-## Struttura del profilo in Experience Platform {#profile-structure}
+## Struttura del profilo in Experienci Platform {#profile-structure}
 
-Per comprendere gli esempi più avanti nella pagina, è importante conoscere la struttura di un profilo in Experience Platform.
+Per comprendere gli esempi più avanti nella pagina, è importante conoscere la struttura di un profilo in Experienci Platform.
 
 I profili hanno 3 sezioni:
 
@@ -172,13 +172,13 @@ Di seguito sono riportati due Experienci Platform di profili:
 
 ## Utilizzo di un linguaggio per modelli per le trasformazioni di identità, attributi e appartenenza a un pubblico {#using-templating}
 
-utilizzi Adobi [Modelli di ciottoli](https://pebbletemplates.io/), un linguaggio per modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), per trasformare i campi dallo schema XDM Experience Platform in un formato supportato dalla tua destinazione.
+utilizzi Adobi [Modelli di ciottoli](https://pebbletemplates.io/), un linguaggio per modelli simile a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), per trasformare i campi dallo schema XDM Experienci Platform in un formato supportato dalla tua destinazione.
 
 Questa sezione fornisce diversi esempi di come vengono effettuate queste trasformazioni, dallo schema XDM di input fino al modello e all’output nei formati di payload accettati dalla destinazione. Gli esempi seguenti sono presentati dalla complessità crescente, come segue:
 
 1. Semplici esempi di trasformazione. Scopri come funziona il template con trasformazioni semplici per [Attributi del profilo](#attributes), [Iscrizione al pubblico](#segment-membership), e [Identità](#identities) campi.
 2. Sono stati aggiunti esempi di complessità dei modelli che combinano i campi riportati sopra: [Creare un modello che invia tipi di pubblico e identità](./message-format.md#segments-and-identities) e [Creare un modello che invia segmenti, identità e attributi di profilo](#segments-identities-attributes).
-3. Modelli che includono la chiave di aggregazione. Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experience Platform raggruppa i profili esportati nella destinazione in base a criteri quali ID pubblico, stato del pubblico o spazi dei nomi di identità.
+3. Modelli che includono la chiave di aggregazione. Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, Experienci Platform raggruppa i profili esportati nella destinazione in base a criteri quali ID pubblico, stato del pubblico o spazi dei nomi di identità.
 
 ### Attributi del profilo {#attributes}
 
@@ -380,7 +380,7 @@ Profilo 2:
 
 ### Identità {#identities}
 
-Per informazioni sulle identità in Experience Platform, consulta [Panoramica sullo spazio dei nomi delle identità](../../../../identity-service/namespaces.md).
+Per informazioni sulle identità in Experienci Platform, consulta [Panoramica sullo spazio dei nomi delle identità](../../../../identity-service/namespaces.md).
 
 **Input**
 
@@ -493,7 +493,7 @@ Profilo 2:
 ### Creare un modello che invia tipi di pubblico e identità {#segments-and-identities}
 
 Questa sezione fornisce un esempio di trasformazione comunemente utilizzata tra lo schema XDM di Adobe e lo schema di destinazione del partner.
-L’esempio seguente mostra come trasformare il formato di appartenenza al pubblico e delle identità e inviarli per l’output alla destinazione.
+L’esempio seguente mostra come trasformare il formato di appartenenza al pubblico e delle identità e come inviarli alla tua destinazione.
 
 **Input**
 
@@ -861,7 +861,7 @@ Il `json` di seguito sono riportati i dati esportati da Adobe Experience Platfor
 
 Quando si utilizza [aggregazione configurabile](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) nella configurazione di destinazione, puoi raggruppare i profili esportati nella destinazione in base a criteri quali ID pubblico, alias pubblico, appartenenza a un pubblico o spazi dei nomi di identità.
 
-Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experience Platform in modo che corrisponda ai limiti di formato e frequenza previsti dalla destinazione.
+Nel modello di trasformazione dei messaggi, puoi accedere alle chiavi di aggregazione indicate in precedenza, come mostrato negli esempi nelle sezioni seguenti. Utilizza le chiavi di aggregazione per strutturare il messaggio HTTP esportato da Experienci Platform in modo che corrisponda ai limiti di formato e frequenza previsti dalla destinazione.
 
 #### Usa chiave di aggregazione ID pubblico nel modello {#aggregation-key-segment-id}
 
@@ -1215,7 +1215,7 @@ La tabella seguente fornisce le descrizioni delle funzioni negli esempi preceden
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver letto questo documento, ora sai come vengono trasformati i dati esportati da Experience Platform. Quindi, leggi le pagine seguenti per approfondire le tue conoscenze sulla creazione di modelli di trasformazione dei messaggi per la tua destinazione:
+Dopo aver letto questo documento, ora sai come vengono trasformati i dati esportati da Experienci Platform. Quindi, leggi le pagine seguenti per approfondire le tue conoscenze sulla creazione di modelli di trasformazione dei messaggi per la tua destinazione:
 
 * [Creare e testare un modello di trasformazione dei messaggi](../../testing-api/streaming-destinations/create-template.md)
 * [Operazioni API del modello di rendering](../../testing-api/streaming-destinations/render-template-api.md)

@@ -3,8 +3,8 @@ title: Shopify Streaming Source
 description: Scopri come creare una connessione di origine e un flusso di dati per acquisire i dati in streaming dall’istanza di Shopify a Adobe Experience Platform
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
-exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%
@@ -151,7 +151,7 @@ In caso di esito positivo, la risposta restituisce informazioni sul webhook, inc
 }
 ```
 
-### Limitazioni  {#limitations}
+### Limitazioni {#limitations}
 
 Di seguito è riportato un elenco delle limitazioni note che è possibile incontrare durante l’utilizzo dei webhook con [!DNL Shopify Streaming] sorgente.
 

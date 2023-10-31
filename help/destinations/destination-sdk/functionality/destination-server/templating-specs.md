@@ -1,17 +1,17 @@
 ---
 description: Scopri come formattare le richieste HTTP inviate all’endpoint. Utilizza l’endpoint /authoring/destination-servers per configurare le specifiche di modello del server di destinazione in Adobe Experience Platform Destination SDK.
 title: Specifiche di modello per le destinazioni create con Destination SDK
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 4%
 
 ---
 
-
 # Specifiche del modello per le destinazioni create con Destination SDK
 
-Utilizza la parte relativa alle specifiche del modello della configurazione del server di destinazione per configurare la modalità di formattazione delle richieste HTTP inviate alla destinazione.
+Utilizza la parte specifica del modello della configurazione del server di destinazione per configurare la modalità di formattazione delle richieste HTTP inviate alla destinazione.
 
 In una specifica del modello è possibile definire come trasformare i campi degli attributi del profilo tra lo schema XDM e il formato supportato dalla piattaforma.
 

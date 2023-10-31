@@ -3,10 +3,11 @@ solution: Experience Platform
 title: Modificare le connessioni di destinazione utilizzando l’API del servizio Flusso
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -20,7 +21,7 @@ Questo tutorial illustra i passaggi necessari per modificare vari componenti di 
 
 ## Introduzione {#get-started}
 
-Questo tutorial richiede un ID del flusso di dati valido. Se non disponi di un ID di flusso di dati valido, seleziona la destinazione desiderata tra [catalogo delle destinazioni](../catalog/overview.md) e segui i passaggi descritti per [connettersi alla destinazione](../ui/connect-destination.md) e [attivare i dati](../ui/activation-overview.md) prima di provare questa esercitazione.
+Questo tutorial richiede un ID del flusso di dati valido. Se non disponi di un ID di flusso di dati valido, seleziona la destinazione desiderata tra [catalogo delle destinazioni](../catalog/overview.md) e seguire i passaggi descritti per [connettersi alla destinazione](../ui/connect-destination.md) e [attivare i dati](../ui/activation-overview.md) prima di provare questa esercitazione.
 
 >[!NOTE]
 >
@@ -29,23 +30,23 @@ Questo tutorial richiede un ID del flusso di dati valido. Se non disponi di un I
 Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Destinazioni](../home.md): [!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per aggiornare correttamente il flusso di dati utilizzando [!DNL Flow Service] API.
 
 ### Lettura delle chiamate API di esempio {#reading-sample-api-calls}
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-### Raccogli i valori per le intestazioni richieste {#gather-values-for-required-headers}
+### Raccogliere i valori per le intestazioni richieste {#gather-values-for-required-headers}
 
-Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experienci Platform, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Tutte le risorse in Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
+Tutte le risorse in Experienci Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in specifiche sandbox virtuali. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui verrà eseguita l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -63,9 +64,9 @@ Il primo passaggio nella modifica della connessione di destinazione consiste nel
 
 >[!TIP]
 >
->Puoi utilizzare l’interfaccia utente di Experience Platform per ottenere l’ID del flusso di dati desiderato per una destinazione. Vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**, seleziona il flusso di dati di destinazione desiderato e individua l’ID di destinazione nella barra a destra. L’ID di destinazione è il valore che utilizzerai come ID di flusso nel passaggio successivo.
+>Puoi utilizzare l’interfaccia utente di Experienci Platform per ottenere l’ID del flusso di dati desiderato per una destinazione. Vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]**, seleziona il flusso di dati di destinazione desiderato e individua l’ID di destinazione nella barra a destra. L’ID di destinazione è il valore che utilizzerai come ID di flusso nel passaggio successivo.
 >
-> ![Ottenere l’ID di destinazione tramite l’interfaccia utente di Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
+> ![Ottenere l’ID di destinazione tramite l’interfaccia utente di Experienci Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
 >[!BEGINSHADEBOX]
 

@@ -1,30 +1,30 @@
 ---
 description: Scopri come impostare un meccanismo di autenticazione per la destinazione e ottenere informazioni approfondite su ciò che gli utenti vedranno nell’interfaccia utente a seconda del metodo di autenticazione selezionato.
 title: Configurazione autenticazione cliente
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
 
 ---
 
-
 # Configurazione autenticazione cliente
 
-Experience Platform offre grande flessibilità nei protocolli di autenticazione disponibili per partner e clienti. Puoi configurare la tua destinazione per supportare qualsiasi metodo di autenticazione standard del settore, come [!DNL OAuth2], l’autenticazione del token Bearer, l’autenticazione della password e molto altro.
+Experienci Platform offre grande flessibilità nei protocolli di autenticazione disponibili per partner e clienti. Puoi configurare la tua destinazione per supportare qualsiasi metodo di autenticazione standard del settore, come [!DNL OAuth2], l’autenticazione del token Bearer, l’autenticazione della password e molto altro.
 
-Questa pagina spiega come impostare la destinazione utilizzando il metodo di autenticazione preferito. In base alla configurazione di autenticazione utilizzata durante la creazione della destinazione, i clienti vedranno diversi tipi di pagine di autenticazione durante la connessione alla destinazione nell’interfaccia utente di Experience Platform.
+Questa pagina spiega come impostare la destinazione utilizzando il metodo di autenticazione preferito. In base alla configurazione di autenticazione utilizzata durante la creazione della destinazione, i clienti vedranno diversi tipi di pagine di autenticazione durante la connessione alla destinazione nell’interfaccia utente di Experienci Platform.
 
 Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta le seguenti pagine di panoramica sulla configurazione di destinazione:
 
 * [Utilizzare Destination SDK per configurare una destinazione di streaming](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Prima di poter esportare i dati da Platform alla destinazione, i clienti devono creare una nuova connessione tra Experience Platform e la destinazione, seguendo i passaggi descritti nella [connessione di destinazione](../../../ui/connect-destination.md) esercitazione.
+Prima di poter esportare i dati da Platform alla destinazione, i clienti devono creare una nuova connessione tra Experienci Platform e la destinazione, seguendo i passaggi descritti nella [connessione di destinazione](../../../ui/connect-destination.md) esercitazione.
 
 Quando [creazione di una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) attraverso la Destination SDK, `customerAuthenticationConfigurations` definisce ciò che i clienti visualizzano in [schermata di autenticazione](../../../ui/connect-destination.md#authenticate). A seconda del tipo di autenticazione di destinazione, i clienti devono fornire vari dettagli di autenticazione, ad esempio:
 
-* Per le destinazioni che utilizzano [autenticazione di base](#basic), gli utenti devono fornire un nome utente e una password direttamente nella pagina di autenticazione dell’interfaccia utente di Experience Platform.
+* Per le destinazioni che utilizzano [autenticazione di base](#basic), gli utenti devono fornire un nome utente e una password direttamente nella pagina di autenticazione dell’interfaccia utente di Experienci Platform.
 * Per le destinazioni che utilizzano [autenticazione bearer](#bearer), gli utenti devono fornire un token Bearer.
 * Per le destinazioni che utilizzano [Autenticazione OAuth2](#oauth2): gli utenti vengono reindirizzati alla pagina di accesso della tua destinazione, dove possono accedere con le loro credenziali.
 * Per [Amazon S3](#s3) destinazioni, gli utenti devono fornire la propria [!DNL Amazon S3] chiave di accesso e chiave segreta.
@@ -35,7 +35,7 @@ Puoi configurare i dettagli di autenticazione del cliente tramite `/authoring/de
 * [Creare una configurazione di destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Aggiornare una configurazione di destinazione](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Questo articolo descrive tutte le configurazioni di autenticazione dei clienti supportate che è possibile utilizzare per la destinazione e mostra ciò che i clienti vedranno nell’interfaccia utente di Experience Platform in base al metodo di autenticazione configurato per la destinazione.
+Questo articolo descrive tutte le configurazioni di autenticazione dei clienti supportate che è possibile utilizzare per la destinazione e mostra ciò che i clienti vedranno nell’interfaccia utente di Experienci Platform in base al metodo di autenticazione configurato per la destinazione.
 
 >[!IMPORTANT]
 >
@@ -71,7 +71,7 @@ Quando utilizzi una delle configurazioni di autenticazione del cliente descritte
 
 ## Autenticazione di base {#basic}
 
-L’autenticazione di base è supportata per le integrazioni in tempo reale (streaming) in Experience Platform.
+L’autenticazione di base è supportata per le integrazioni in tempo reale (streaming) in Experienci Platform.
 
 Quando si configura il tipo di autenticazione di base, gli utenti devono immettere un nome utente e una password per connettersi alla destinazione.
 
@@ -105,7 +105,7 @@ Per impostare l&#39;autenticazione di tipo Bearer per la destinazione, configura
 
 ## Autenticazione OAuth 2 {#oauth2}
 
-Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella destinazione, come mostrato nell’esempio seguente per la destinazione Tipi di pubblico personalizzati di Twitter. Per informazioni dettagliate sulla configurazione dell’autenticazione OAuth 2 per l’endpoint di destinazione, consulta la sezione dedicata [Destination SDK pagina di autenticazione OAuth 2](oauth2-authentication.md).
+Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella destinazione, come mostrato nell’esempio seguente per la destinazione Twitter Tipi di pubblico personalizzati. Per informazioni dettagliate sulla configurazione dell’autenticazione OAuth 2 per l’endpoint di destinazione, consulta la sezione dedicata [Destination SDK pagina di autenticazione OAuth 2](oauth2-authentication.md).
 
 ![Rendering dell’interfaccia utente con autenticazione OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -121,7 +121,7 @@ Per impostare [!DNL OAuth2] per la destinazione, configura il `customerAuthentic
 
 ## Autenticazione Amazon S3 {#s3}
 
-[!DNL Amazon S3] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL Amazon S3] l’autenticazione è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando configuri il tipo di autenticazione Amazon S3, agli utenti viene richiesto di immettere le credenziali S3.
 
@@ -139,7 +139,7 @@ Per impostare [!DNL Amazon S3] per la destinazione, configura il `customerAuthen
 
 ## Autenticazione BLOB di Azure  {#blob}
 
-[!DNL Azure Blob Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL Azure Blob Storage] l’autenticazione è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando configuri il tipo di autenticazione BLOB di Azure, gli utenti devono immettere la stringa di connessione.
 
@@ -157,7 +157,7 @@ Per impostare [!DNL Azure Blob] per la destinazione, configura il `customerAuthe
 
 ## [!DNL Azure Data Lake Storage] autenticazione {#adls}
 
-[!DNL Azure Data Lake Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL Azure Data Lake Storage] l’autenticazione è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando si configura [!DNL Azure Data Lake Storage] tipo di autenticazione, gli utenti devono immettere le credenziali dell’entità servizio Azure e le informazioni sul tenant.
 
@@ -175,7 +175,7 @@ Per impostare [!DNL Azure Data Lake Storage] (ADLS) per la destinazione, configu
 
 ## SFTP con autenticazione tramite password
 
-[!DNL SFTP] l’autenticazione con password è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL SFTP] l’autenticazione con password è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando configuri SFTP con il tipo di autenticazione tramite password, gli utenti devono immettere il nome utente e la password SFTP, nonché il dominio e la porta SFTP (la porta predefinita è 22).
 
@@ -193,7 +193,7 @@ Per impostare l’autenticazione SFTP con password per la destinazione, configur
 
 ## SFTP con autenticazione della chiave SSH
 
-[!DNL SFTP] autenticazione con [!DNL SSH] La chiave è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL SFTP] autenticazione con [!DNL SSH] La chiave è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando configuri SFTP con il tipo di autenticazione della chiave SSH, gli utenti devono immettere il nome utente SFTP e la chiave SSH, nonché il dominio SFTP e la porta (la porta predefinita è 22).
 
@@ -211,7 +211,7 @@ Per impostare l’autenticazione SFTP con chiave SSH per la destinazione, config
 
 ## [!DNL Google Cloud Storage] autenticazione {#gcs}
 
-[!DNL Google Cloud Storage] l’autenticazione è supportata per le destinazioni basate su file in Experience Platform.
+[!DNL Google Cloud Storage] l’autenticazione è supportata per le destinazioni basate su file in Experienci Platform.
 
 Quando si configura [!DNL Google Cloud Storage] tipo di autenticazione, gli utenti devono inserire il proprio [!DNL Google Cloud Storage] [!UICONTROL ID chiave di accesso] e [!UICONTROL chiave di accesso segreto].
 
