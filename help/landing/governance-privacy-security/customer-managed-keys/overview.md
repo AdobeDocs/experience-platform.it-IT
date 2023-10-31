@@ -2,9 +2,9 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '763'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,10 @@ I dati memorizzati su Adobe Experience Platform vengono crittografati a riposo u
 >I dati nel data lake di Adobe Experience Platform e nell’archivio profili sono crittografati utilizzando CMK. Questi sono considerati come archivi di dati primari.
 
 Questo documento fornisce una panoramica generale del processo di abilitazione della funzione CMK (Customer-Managed Key) in Platform e delle informazioni sui prerequisiti necessari per completare questi passaggi.
+
+>[!NOTE]
+>
+>Per i clienti di Customer Journey Analytics, seguire le istruzioni riportate nella [Documentazione del Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Prerequisiti
 
