@@ -2,7 +2,7 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 10%
@@ -26,7 +26,7 @@ Crea una connessione in uscita al server SFTP per esportare periodicamente file 
 
 >[!IMPORTANT]
 >
-> Sebbene Experienci Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL SFTP].
+> Sebbene Experienci Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Connessione a SFTP tramite API o interfaccia utente {#connect-api-or-ui}
 
