@@ -3,9 +3,9 @@ title: Connessione TikTok
 description: Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager. Visita [Centro di assistenza aziendale di TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) per ulteriori informazioni.
+Crea tipi di pubblico personalizzati su TikTok con i tuoi dati per il targeting con le campagne pubblicitarie. Questi tipi di pubblico possono essere costituiti da persone che hanno visitato il tuo sito web o interagito con il tuo contenuto. Invia in modo rapido e sicuro il pubblico desiderato da Adobe Experience Platform a TikTok utilizzando l’integrazione in tempo reale di Adobe con TikTok Ads Manager. Visita [Centro di assistenza aziendale di TikTok](https://ads.tiktok.com/help/article/audiences) per ulteriori informazioni.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attra
 
 ## Prerequisiti {#prerequisites}
 
-Devi avere [!DNL Admin] o [!DNL Operator] accedere all’account TikTok Ads Manager a cui desideri inviare i tipi di pubblico. Ulteriori istruzioni sono disponibili sul sito [Centro assistenza TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+Devi avere [!DNL Admin] o [!DNL Operator] accedere all’account TikTok Ads Manager a cui desideri inviare i tipi di pubblico. Ulteriori istruzioni sono disponibili sul sito [Centro assistenza TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Prima di inviare i dati all’account TikTok Ads Manager, devi concedere l’autorizzazione Adobe Experience Platform per accedere all’account annuncio per `Audience Management`. Questa autorizzazione può essere fornita da [immissione dell&#39;ID gestore annunci](#authenticate) nell’interfaccia utente di Experienci Platform e concessione dell’autorizzazione dopo essere stato reindirizzato all’account TikTok Ads Manager.
 
@@ -123,4 +123,4 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 
 ## Risorse aggiuntive {#additional-resources}
 
-Consulta la sezione [Pagina del Centro assistenza TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) per ulteriori informazioni.
+Consulta la sezione [Pagina del Centro assistenza TikTok](https://ads.tiktok.com/help/article/audiences) per ulteriori informazioni.

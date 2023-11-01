@@ -1,11 +1,11 @@
 ---
 title: Utilizzo di Adobe Target con Platform Web SDK
-description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK utilizzando Adobe Target
+description: Scopri come eseguire il rendering di contenuti personalizzati con Experienci Platform Web SDK utilizzando Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 6%
 
 ---
@@ -85,7 +85,7 @@ Se è stato [!DNL Target] Le attività con tipi di pubblico predefiniti che util
 * Origini di traffico
 * Arco temporale
 
-Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) nel *Guida di Adobe Target*.
+Per ulteriori informazioni, consulta [Categorie di pubblico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) nel *Guida di Adobe Target*.
 
 ### Token di risposta
 

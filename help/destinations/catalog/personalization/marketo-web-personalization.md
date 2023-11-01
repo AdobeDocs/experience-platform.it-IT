@@ -3,20 +3,20 @@ keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Pe
 title: Estensione Marketo Web Personalization
 description: L'estensione Marketo Web Personalization è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 3%
+source-wordcount: '499'
+ht-degree: 4%
 
 ---
 
-# [!DNL Marketo Web Personalization] Estensione {#marketo-web-personalization-extension}
+# Estensione [!DNL Marketo Web Personalization] {#marketo-web-personalization-extension}
 
 ## Panoramica {#overview}
 
-Questa estensione distribuisce lo script per [!DNL Marketo’s] Applicazioni di personalizzazione web e IA per la gestione dei contenuti. [!DNL Marketo] La personalizzazione web identifica e personalizza in modo univoco i contenuti in base alle caratteristiche dei visitatori web, ad esempio la firmografica per i visitatori anonimi e un’ampia gamma di attributi comportamentali all’interno del [!DNL Marketo] Piattaforma di coinvolgimento per i visitatori noti. [!DNL Marketo] ContentAI contiene funzionalità per consigli basati sull’intelligenza artificiale e personalizzazione per campagne web ed e-mail univoche per i clienti B2B.
+Questa estensione distribuisce lo script per [!DNL Marketo's] Applicazioni di personalizzazione web e IA per la gestione dei contenuti. [!DNL Marketo] La personalizzazione web identifica e personalizza in modo univoco i contenuti in base alle caratteristiche dei visitatori web, ad esempio la firmografica per i visitatori anonimi e un’ampia gamma di attributi comportamentali all’interno del [!DNL Marketo] Piattaforma di coinvolgimento per i visitatori noti. [!DNL Marketo] ContentAI contiene funzionalità per consigli basati sull’intelligenza artificiale e personalizzazione per campagne web ed e-mail univoche per i clienti B2B.
 
-[!DNL Marketo Web Personalization] è un’estensione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla personalizzazione web e su ContentAI in Marketo, consulta [Panoramica sulla personalizzazione web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
+[!DNL Marketo Web Personalization] è un’estensione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla personalizzazione web e su ContentAI in Marketo, consulta [Panoramica sulla personalizzazione web](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni tag in Platform, consulta [panoramica delle estensioni tag](../launch-extensions/overview.md).
 
@@ -42,7 +42,7 @@ Seleziona la proprietà in cui desideri installare l’estensione. Puoi anche cr
 
 Il flusso di lavoro illustra i passaggi necessari per completare l’installazione.
 
-Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
 
 ## Come utilizzare l’estensione {#how-to-use}
 

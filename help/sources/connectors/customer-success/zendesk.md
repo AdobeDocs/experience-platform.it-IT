@@ -3,9 +3,9 @@ title: Panoramica del connettore di origine Zendesk
 description: Scopri come collegare Zendesk a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per un cliente di terze parti. Il supporto per i provider di successo dei clienti include [!DNL Zendesk].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un’applicazione di successo per un cliente di terze parti. Il supporto per i provider di successo dei clienti include [!DNL Zendesk].
 
-Questo Adobe Experience Platform [sorgenti](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=it) sfrutta [API di ricerca Zendesk > Esporta risultati di ricerca](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) che restituisce le informazioni degli utenti in Experience Platform da Zendesk per un’ulteriore elaborazione.
+Questo Adobe Experience Platform [sorgenti](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=it) sfrutta [API di ricerca Zendesk > Esporta risultati di ricerca](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) che restituisce le informazioni degli utenti in Experienci Platform da Zendesk per un’ulteriore elaborazione.
 
 ## ELENCO CONSENTITI di indirizzo IP
 

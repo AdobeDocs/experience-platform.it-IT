@@ -3,9 +3,9 @@ title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 528b13aa20da62c32456e02cb2293fdded156421
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '757'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ Invia un evento a Adobe [!DNL Experience Platform] affinché Adobe Experience Pl
 
 Esistono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere utili a seconda dell’implementazione. Si noti che questi campi sono tutti facoltativi.
 
-- **Tipo:** Questo campo consente di specificare un tipo di evento da registrare nello schema XDM. Consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) per ulteriori informazioni sui tipi di evento predefiniti.
-- **Dati:** I dati che non corrispondono a uno schema XDM possono essere inviati utilizzando questo campo. Questo campo è utile se stai tentando di aggiornare un profilo Adobe Target o di inviare gli attributi Recommendations di Target. Per esempi, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **Tipo:** Questo campo consente di specificare un tipo di evento da registrare nello schema XDM. Consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) per ulteriori informazioni sui tipi di evento predefiniti.
+- **Dati:** I dati che non corrispondono a uno schema XDM possono essere inviati utilizzando questo campo. Questo campo è utile se stai tentando di aggiornare un profilo Adobe Target o di inviare gli attributi Recommendations di Target. Per esempi, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **ID set di dati:** Se devi inviare dati a un set di dati diverso da quello specificato nello stream di dati, puoi specificare tale ID qui.
 - **Il documento verrà scaricato:** Se desideri che gli eventi raggiungano il server anche se l’utente si sposta dalla pagina, seleziona la **[!UICONTROL Il documento verrà scaricato]** casella di controllo. Questo consente agli eventi di raggiungere il server, ma le risposte vengono ignorate.
 - **Eseguire il rendering delle decisioni di personalizzazione visiva:** Se desideri eseguire il rendering di contenuti personalizzati sulla pagina, seleziona la **[!UICONTROL Eseguire il rendering delle decisioni di personalizzazione visiva]** casella di controllo. Se necessario, è inoltre possibile specificare ambiti decisionali e/o superfici. Consulta la [documentazione sulla personalizzazione](../../../../edge/personalization/rendering-personalization-content.md#automatically-rendering-content) per ulteriori informazioni sul rendering di contenuti personalizzati.
@@ -37,7 +37,7 @@ In questa azione, ti viene fornito anche un campo facoltativo per includere una 
 
 ## Aggiorna variabile {#update-variable}
 
-Utilizza questa azione per modificare un oggetto XDM come risultato di un evento. Questa azione ha lo scopo di creare un oggetto a cui è possibile fare successivamente riferimento da un **[!UICONTROL Invia evento]** per registrare l’oggetto XDM dell’evento.
+Utilizza questa azione per modificare un oggetto XDM a seguito di un evento. Questa azione ha lo scopo di creare un oggetto a cui è possibile fare successivamente riferimento da un **[!UICONTROL Invia evento]** per registrare l’oggetto XDM dell’evento.
 
 Per utilizzare questo tipo di azione è necessario aver definito un [variabile](data-element-types.md#variable) elemento dati. Dopo aver scelto un elemento dati variabile da modificare, viene visualizzato un editor simile a quello della [Oggetto XDM](data-element-types.md#xdm-object) elemento dati.
 

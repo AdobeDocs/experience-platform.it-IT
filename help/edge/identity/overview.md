@@ -3,9 +3,9 @@ title: Dati di identità in Platform Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 keywords: Identity;Identity;Identity Service;3rd Party Identity;Migration ID;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;id spazio dei nomi;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1414'
 ht-degree: 1%
 
 ---
@@ -119,7 +119,7 @@ Ogni oggetto identità nell’array delle identità contiene le seguenti proprie
 | `authenticationState` | Stringa | **(Obbligatorio)** Stato di autenticazione dell&#39;ID. I valori possibili sono `ambiguous`, `authenticated`, e `loggedOut`. |
 | `primary` | Booleano | Determina se questa identità deve essere utilizzata come frammento principale nel profilo. Per impostazione predefinita, l’ECID è impostato come identificatore principale dell’utente. Se omesso, il valore predefinito è `false`. |
 
-Utilizzo di `identityMap` per identificare i dispositivi o gli utenti porta allo stesso risultato dell&#39;utilizzo del [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) metodo da [!DNL ID Service API]. Consulta la [Documentazione API del servizio ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) per ulteriori dettagli.
+Utilizzo di `identityMap` per identificare i dispositivi o gli utenti porta allo stesso risultato dell&#39;utilizzo del [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) metodo da [!DNL ID Service API]. Consulta la [Documentazione API del servizio ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) per ulteriori dettagli.
 
 ## Migrazione dall’API visitatore a ECID
 
@@ -131,8 +131,8 @@ Durante la migrazione da utilizzando l’API visitatore, puoi anche eseguire la 
 
 ### Aggiornamento delle caratteristiche per la migrazione
 
-Quando i dati formattati XDM vengono inviati ad Audience Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche dovranno essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando [Strumento BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) l’Audience Manager è stato creato.
+Quando i dati formattati XDM vengono inviati ad Audienci Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche dovranno essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando [Strumento BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) l’Audience Manager è stato creato.
 
 ## Utilizzo nell’inoltro degli eventi
 
-Se al momento hai [inoltro eventi](../../tags/ui/event-forwarding/overview.md) abilitato e utilizzato `appmeasurement.js` e `visitor.js`, puoi mantenere attiva la funzione di inoltro degli eventi, senza causare alcun problema. Nel back-end, Adobe recupera tutti i segmenti AAM e li aggiunge alla chiamata ad Analytics. Se la chiamata ad Analytics contiene tali segmenti, Analytics non chiamerà Audience Manager per inoltrare alcun dato, quindi non esiste una doppia raccolta di dati. Inoltre, non è necessario usare il suggerimento posizione quando si utilizza l’SDK per web, in quanto nel back-end vengono chiamati gli stessi endpoint di segmentazione.
+Se al momento hai [inoltro eventi](../../tags/ui/event-forwarding/overview.md) abilitato e utilizzato `appmeasurement.js` e `visitor.js`, puoi mantenere attiva la funzione di inoltro degli eventi, senza causare alcun problema. Nel back-end, Adobe recupera tutti i segmenti AAM e li aggiunge alla chiamata ad Analytics. Se la chiamata ad Analytics contiene tali segmenti, Analytics non chiamerà Audienci Manager per inoltrare alcun dato, quindi non esiste una doppia raccolta di dati. Inoltre, non è necessario usare il suggerimento posizione quando si utilizza l’SDK per web, in quanto nel back-end vengono chiamati gli stessi endpoint di segmentazione.

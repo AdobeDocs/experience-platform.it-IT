@@ -3,20 +3,20 @@ keywords: bizible;bizible extension;bizible destination
 title: Estensione Bizible
 description: L’estensione Bizible è una destinazione e-mail in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 3%
+source-wordcount: '444'
+ht-degree: 4%
 
 ---
 
-# [!DNL Bizible] Estensione {#bizible-extension}
+# Estensione [!DNL Bizible] {#bizible-extension}
 
 ## Panoramica {#overview}
 
 [!DNL Bizible] è la soluzione di attribuzione B2B leader di settore che offre una visibilità senza precedenti nei dati, in modo da poter prendere decisioni intelligenti che alimentano la crescita.
 
-[!DNL Bizible] è un’estensione e-mail in Adobe Experience Platform. Per ulteriori informazioni su Bizible, leggere [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) nelle risorse della panoramica Bizible.
+[!DNL Bizible] è un’estensione e-mail in Adobe Experience Platform. Per ulteriori informazioni su Bizible, leggere [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) nelle risorse della panoramica Bizible.
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta [panoramica delle estensioni tag](../launch-extensions/overview.md).
 
@@ -42,7 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l’estensione. Puoi anch
 
 Il flusso di lavoro ti porta all’interfaccia utente di Data Collection per completare l’installazione.
 
-Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
 
 ## Come utilizzare l’estensione {#how-to-use}
 

@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1587'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 **Correzioni e miglioramenti**
 
-* L’SDK per web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile al [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en).
+* L’SDK per web ora codifica i valori di destinazione dei cookie di Audience Manager, in modo simile al [Data Integration Library (DIL)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=it).
 
 ## Versione 2.16.0 - 25 aprile 2023
 

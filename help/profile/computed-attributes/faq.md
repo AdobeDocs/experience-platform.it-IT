@@ -2,9 +2,9 @@
 title: Domande frequenti sugli attributi calcolati
 description: Risposte alle domande frequenti sull’utilizzo degli attributi calcolati.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ Gli attributi calcolati derivano automaticamente le etichette di utilizzo dei da
 
 ## Come si utilizzano gli attributi calcolati con Adobe Journey Optimizer?
 
-Per utilizzare gli attributi calcolati nei percorsi, devi aggiungere `SystemComputedAttributes` all&#39;origine dati di Experience Platform. Per ulteriori informazioni sulla configurazione dell’origine dati di Experienci Platform, consulta [Guida all’origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Per utilizzare gli attributi calcolati nei percorsi, devi aggiungere `SystemComputedAttributes` all&#39;origine dati di Experience Platform. Per ulteriori informazioni sulla configurazione dell’origine dati di Experienci Platform, consulta [Guida all’origine dati di Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

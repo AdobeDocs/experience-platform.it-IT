@@ -2,10 +2,10 @@
 title: Personalizzazione tramite Offer Decisioning
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate tramite Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-L’API del server di rete Edge può fornire esperienze personalizzate gestite in [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) al canale web.
+L’API del server di rete Edge può fornire esperienze personalizzate gestite in [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=it) al canale web.
 
 [!DNL Offer Decisioning] supporta un’interfaccia non visiva per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
 
@@ -41,7 +41,7 @@ Per ulteriori informazioni su [!DNL Offer Decisioning Engine], consulta la sezio
 
 Dopo [configurazione dello stream di dati](#configure-your-datastream), devi definire gli ambiti decisionali da utilizzare nella campagna di personalizzazione.
 
-[Ambiti decisionali](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) sono le stringhe JSON con codifica Base64 contenenti gli ID di attività e posizionamento che desideri [!DNL Offer Decisioning Service] da utilizzare per la proposta di offerte.
+[Ambiti decisionali](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) sono le stringhe JSON con codifica Base64 contenenti gli ID di attività e posizionamento che desideri [!DNL Offer Decisioning Service] da utilizzare per la proposta di offerte.
 
 **JSON ambito decisione**
 
@@ -58,7 +58,7 @@ Dopo [configurazione dello stream di dati](#configure-your-datastream), devi def
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Dopo aver creato le offerte e le raccolte, devi definire una [ambito della decisione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Dopo aver creato le offerte e le raccolte, devi definire una [ambito della decisione](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Copia l’ambito di decisione con codifica Base64. Lo utilizzerai in `query` oggetto della richiesta API server.
 

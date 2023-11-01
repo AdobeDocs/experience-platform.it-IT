@@ -2,9 +2,9 @@
 title: Best practice di authoring
 description: Scopri le regole e i suggerimenti da seguire per creare la pagina della documentazione di destinazione in modo che soddisfi gli standard di qualità della documentazione di Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -17,35 +17,35 @@ Questa pagina descrive le regole da seguire quando [authoring della documentazio
 
 ## Indicazioni generali {#general-guidance}
 
-* Durante la compilazione del [modello](./self-service-template.md) per informazioni sulla documentazione di destinazione, consulta l’Adobe guida per i collaboratori [collegamento](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en), [tabelle](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#tables), il [sintassi markdown supportata](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en), [istruzioni per la scrittura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en), e altro ancora.
+* Durante la compilazione del [modello](./self-service-template.md) per informazioni sulla documentazione di destinazione, consulta l’Adobe guida per i collaboratori [collegamento](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [tabelle](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), il [sintassi markdown supportata](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [istruzioni per la scrittura](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html), e altro ancora.
 * Non includere osservazioni e stime nella documentazione del prodotto.
-* Nella documentazione di Experience Platform, gli autori di Adobi utilizzano **grassetto** per fare riferimento ai controlli dell’interfaccia utente, come segue:
-   * Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Visualizza un esempio della documentazione dei controlli dell’interfaccia utente in una [tutorial sulle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+* Nella documentazione di Experienci Platform, gli autori di Adobi utilizzano **grassetto** per fare riferimento ai controlli dell’interfaccia utente, come segue:
+   * Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Visualizza un esempio della documentazione dei controlli dell’interfaccia utente in una [tutorial sulle destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
 
 ## Stile scrittura
 
 >[!IMPORTANT]
 >
->Letto [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) prima di iniziare a creare la pagina della documentazione di destinazione.
+>Letto [Indicazioni sulla scrittura per la documentazione di Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) prima di iniziare a creare la pagina della documentazione di destinazione.
 
 * Mantieni le tue frasi brevi e arriva rapidamente al punto. Se la tua frase è lunga più di 20 parole o utilizza più virgole, prendi in considerazione di suddividerla in frasi separate. Frasi di lunghezza superiore a 20 parole possono essere particolarmente difficili per i lettori.
 * Non siate eccessivamente educate. Evita di utilizzare &quot;per favore&quot; o &quot;gentilmente fare ...&quot; nella documentazione tecnica.
 
 ## Collegamento {#linking}
 
-Segui il modello di documentazione fornito e non modificare i collegamenti esistenti nel modello. Quando includi nuovi collegamenti, leggi [utilizzo dei collegamenti nella documentazione di](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en) nella guida per i collaboratori.
+Segui il modello di documentazione fornito e non modificare i collegamenti esistenti nel modello. Quando includi nuovi collegamenti, leggi [utilizzo dei collegamenti nella documentazione di](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) nella guida per i collaboratori.
 
 ## Linee guida per il branding {#branding}
 
-* AEP non è un termine approvato rivolto al pubblico. Utilizza Adobe Experience Platform al primo utilizzo, quindi Experience Platform e infine Platform.
+* AEP non è un termine approvato rivolto al pubblico. Utilizza Adobe Experience Platform al primo utilizzo, quindi Experienci Platform e infine Platform.
    * **Non utilizzare**: prima di poter esportare dati da AEP a YourDestination, assicurati di aver letto e completato questi prerequisiti.
    * **Utilizzare**: prima di esportare i dati da Adobe Experience Platform a YourDestination, assicurati di aver letto e completato questi prerequisiti.
 
 ## Immagini e schermate {#images-and-screenshots}
 
-* Per informazioni su [come collegare immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#images), consulta la guida per i collaboratori.
+* Per informazioni su [come collegare immagini](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), consulta la guida per i collaboratori.
 * Quando utilizzi le schermate, accertati che queste acquisiscano l’intera schermata dell’interfaccia utente di Platform.
-* Quando si marcano le immagini per evidenziare un determinato controllo o etichetta nella pagina, provare a seguire lo stile di markup utilizzato dal team di documentazione di Experience Platform. Nota come le opzioni basate sul profilo sono evidenziate in [questa schermata](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
+* Quando si marcano le immagini per evidenziare un determinato controllo o etichetta nella pagina, provare a seguire lo stile di markup utilizzato dal team di documentazione di Experienci Platform. Nota come le opzioni basate sul profilo sono evidenziate in [questa schermata](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Utilizza `png` formattare le immagini.
 * Non utilizzare le schermate numerate come nomi di file. I nomi dei file immagine devono essere descrittivi.
    * **Non utilizzare**: `1.png`, `2.png`, `3.png`

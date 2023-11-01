@@ -2,9 +2,9 @@
 title: Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experienci Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Per utilizzare questa destinazione, è necessario disporre di un account Snapcha
 
 [Guida introduttiva a Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
-## Limitazioni  {#limitations}
+## Limitazioni {#limitations}
 
 * Snap Inc non supporta più identità per un determinato segmento di pubblico. Esegui il mapping di una sola identità durante l’attivazione di un segmento.
 * Snap Inc non supporta la ridenominazione dei segmenti. Per rinominare un segmento, è necessario disattivarlo, rinominarlo e quindi attivarlo.
@@ -128,7 +128,7 @@ Dopo aver attivato i tipi di pubblico su *Snap Inc* destinazione, sarà possibil
 
 ![Tipi di pubblico](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tieni presente che quando un pubblico di Adobi viene attivato per la prima volta in Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico, consulta l’ Experience Platform [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Tieni presente che quando un pubblico di Adobi viene attivato per la prima volta in Snap Inc, inizialmente verrà visualizzato come un pubblico vuoto. Questo perché Adobe Experience Platform non esporta i dati dei membri in Snap Inc finché non valuta il pubblico. Per ulteriori informazioni sulla valutazione dei tipi di pubblico, consulta l’ Experience Platform [Panoramica del servizio di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

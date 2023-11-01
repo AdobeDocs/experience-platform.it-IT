@@ -2,10 +2,10 @@
 title: Gestione dell’identità nel flusso di lavoro di attivazione delle destinazioni
 description: Scopri come viene gestita l’esportazione delle identità nel flusso di lavoro di attivazione, a seconda del tipo di destinazione
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 1%
+source-wordcount: '1180'
+ht-degree: 3%
 
 ---
 
@@ -27,13 +27,13 @@ Se scegli di aggiungere identità alle esportazioni di file, tieni presente che 
 
 ![Un’identità selezionata come attributo obbligatorio e chiave di deduplicazione.](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
-Come soluzione alternativa, puoi aggiungere più identità all’esportazione se sono state acquisite in Experience Platform come attributi. Di seguito è riportato un esempio in cui l’indirizzo e-mail dell’attributo XDM è stato selezionato per l’esportazione, oltre allo spazio dei nomi dell’identità `Phone_E.164`.
+Come soluzione alternativa, puoi aggiungere più identità all’esportazione se sono state acquisite in Experienci Platform come attributi. Di seguito è riportato un esempio in cui l’indirizzo e-mail dell’attributo XDM è stato selezionato per l’esportazione, oltre allo spazio dei nomi dell’identità `Phone_E.164`.
 
 ![Esempio di attributo dell’indirizzo e-mail selezionato per l’esportazione.](/help/destinations/assets/how-destinations-work/email-selected.png)
 
 ## Esportazione di un’identità da una mappa di identità rispetto all’esportazione di un’identità come attributo XDM: le differenze {#identity-map-or-attribute}
 
-Il numero di record esportati può essere diverso a seconda che vengano selezionate identità di esportazione dalla mappa delle identità o che vengano acquisite come attributi in Experience Platform. [Criteri di unione](/help/profile/merge-policies/overview.md) svolge anche un ruolo importante nel numero di record che vengono esportati quando selezioni identità da identity map.
+Il numero di record esportati può essere diverso a seconda che vengano selezionate identità di esportazione dalla mappa delle identità o che vengano acquisite come attributi in Experienci Platform. [Criteri di unione](/help/profile/merge-policies/overview.md) svolge anche un ruolo importante nel numero di record che vengono esportati quando selezioni identità da identity map.
 
 Ad esempio, considera che da due set di dati diversi, sono presenti i seguenti frammenti di profilo che verranno uniti in un singolo profilo cliente:
 
@@ -72,23 +72,23 @@ Tuttavia, puoi utilizzare i dati di con la massima flessibilità [grafi privati]
 
 >[!TIP]
 >
->Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** affinché Experience Platform esegua automaticamente l’hash dei dati all’attivazione. Ulteriori informazioni su **[!UICONTROL Applica trasformazione]** opzione in [tutorial sull’attivazione di destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** affinché Experienci Platform esegua automaticamente l’hash dei dati all’attivazione. Ulteriori informazioni su **[!UICONTROL Applica trasformazione]** opzione in [tutorial sull’attivazione di destinazioni di streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Esempio di attributo dell’indirizzo e-mail mappato al campo di identità per la destinazione Pinterest.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Destinazioni pubblicitarie basate su integrazioni di cookie di terze parti {#third-party-cookie-destinations}
 
-Destinazioni pubblicitarie che si basano su cookie di terze parti (ad esempio: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) non richiedono ai clienti di selezionare gli ID nel flusso di lavoro di attivazione. Per queste destinazioni, quando si imposta un flusso di lavoro di attivazione, Experience Platform cerca automaticamente la tabella di corrispondenza delle identità creata da [[!UICONTROL Servizio ID Experience Cloud]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) ed esporta tutte le identità disponibili per un profilo e supportate dalla destinazione.
+Destinazioni pubblicitarie che si basano su cookie di terze parti (ad esempio: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) non richiedono ai clienti di selezionare gli ID nel flusso di lavoro di attivazione. Per queste destinazioni, quando si imposta un flusso di lavoro di attivazione, Experienci Platform cerca automaticamente la tabella di corrispondenza delle identità creata da [[!UICONTROL Servizio ID Experience Cloud]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it) ed esporta tutte le identità disponibili per un profilo e supportate dalla destinazione.
 
-Queste destinazioni richiedono una sincronizzazione ID tramite [!UICONTROL Servizio ID Experience Cloud] o attraverso [!UICONTROL Experience Platform Web SDK].
+Queste destinazioni richiedono una sincronizzazione ID tramite [!UICONTROL Servizio ID Experience Cloud] o attraverso [!UICONTROL Experienci Platform Web SDK].
 
-Se sta usando [!UICONTROL Experience Platform Web SDK] e le versioni precedenti [!UICONTROL Servizio ID Experience Cloud] non è implementato nella pagina, quindi devi assicurarti che lo stream di dati per il sito web in questione sia abilitato per consentire la sincronizzazione degli ID di terze parti, come descritto nella [configurare la documentazione dello stream di dati](/help/datastreams/configure.md#create).
+Se sta usando [!UICONTROL Experienci Platform Web SDK] e le versioni precedenti [!UICONTROL Servizio ID Experience Cloud] non è implementato nella pagina, quindi devi assicurarti che lo stream di dati per il sito web in questione sia abilitato per consentire la sincronizzazione degli ID di terze parti, come descritto nella [configurare la documentazione dello stream di dati](/help/datastreams/configure.md#create).
 
 Quando configuri un flusso di dati come descritto nella documentazione collegata in precedenza, è necessario assicurarsi che il **[!UICONTROL Sincronizzazione ID di terze parti]** cursore attivato. La maggior parte dei clienti lascia il `container_id` campo vuoto (il valore predefinito è 0). Devi modificare questo valore solo se l’implementazione legacy dell’Audience Manager utilizza un ID contenitore specifico (tieni presente, tuttavia, che si tratterebbe della stragrande minoranza di clienti).
 
 >[!NOTE]
 >
->La maggior parte di queste destinazioni pubblicitarie sono supportate in Audience Manager (questi tipi di destinazione sono noti in Audience Manager come destinazioni basate su dispositivi. Vedi un [elenco di tutte le destinazioni basate su dispositivi supportate in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=en)). Solo alcuni sono elencati nell’Experience Platform. Per informazioni sulla condivisione dei dati tra Experience Platform e Audience Manager, consulta la sezione su [abilitazione della condivisione dei dati da Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#enable-aep-to-aam-data). Attualmente, non è previsto il supporto di più destinazioni di cookie di terze parti.
+>La maggior parte di queste destinazioni pubblicitarie sono supportate in Audienci Manager (questi tipi di destinazione sono noti in Audienci Manager come destinazioni basate su dispositivi. Vedi un [elenco di tutte le destinazioni basate su dispositivi supportate in Audienci Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Solo alcuni sono elencati nell’Experience Platform. Per informazioni sulla condivisione dei dati tra Experience Platform e Audience Manager, consulta la sezione su [abilitazione della condivisione dei dati da Experienci Platform a Audienci Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Attualmente, non è previsto il supporto di più destinazioni di cookie di terze parti.
 
 ## Destinazioni Enterprise {#enterprise-destinations}
 

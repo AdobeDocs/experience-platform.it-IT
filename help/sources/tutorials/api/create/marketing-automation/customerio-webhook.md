@@ -3,10 +3,10 @@ title: Creare una connessione di origine e un flusso di dati per Customer.io uti
 description: Scopri come collegare Adobe Experience Platform a Customer.io utilizzando l’API del servizio Flow.
 badge: Beta
 exl-id: 1c84d818-428f-4097-9f6f-ef0cf1a04785
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1457'
-ht-degree: 2%
+source-wordcount: '1453'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Il seguente tutorial illustra i passaggi necessari per creare un [!DNL Customer.
 Questa guida richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
 * [Sorgenti](../../../../home.md): Experience Platform consente di acquisire dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Connetti [!DNL Customer.io] alla piattaforma utilizzando [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
@@ -89,13 +89,13 @@ Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di d
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
 È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Creare una connessione di destinazione {#target-connection}
 
@@ -326,7 +326,7 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 ### Ottieni l’URL dell’endpoint di streaming {#get-streaming-endpoint-url}
 
-Una volta creato il flusso di dati, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL endpoint per sottoscrivere l’origine a un webhook, consentendo alla tua origine di comunicare con Experience Platform.
+Una volta creato il flusso di dati, ora puoi recuperare l’URL dell’endpoint di streaming. Utilizzerai questo URL endpoint per sottoscrivere l’origine a un webhook, consentendo alla tua origine di comunicare con Experienci Platform.
 
 Per recuperare l’URL dell’endpoint di streaming, effettua una richiesta GET al `/flows` e fornire l’ID del flusso di dati.
 

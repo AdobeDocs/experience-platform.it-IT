@@ -2,10 +2,10 @@
 title: Note sulla versione per Tag ed Inoltro eventi
 description: Le ultime note sulla versione relative ai tag e all’inoltro di eventi in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 15%
+source-wordcount: '835'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->In questa pagina non verranno più forniti i tag e le note sulla versione per l’inoltro degli eventi. Si prega di fare riferimento al più recente [Note sulla versione di Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) per tag dettagliati e aggiornamenti sull’inoltro degli eventi.
+>In questa pagina non verranno più forniti i tag e le note sulla versione per l’inoltro degli eventi. Si prega di fare riferimento al più recente [Note sulla versione di Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) per tag dettagliati e aggiornamenti sull’inoltro degli eventi.
 
 ## 26 aprile 2023
 
-* **Segreto JWT OAuth**: Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=it) consente ai clienti di utilizzare i token di servizio Adobe e Google per supportare le interazioni server-to-server nell’inoltro degli eventi.
+* **Segreto JWT OAuth**: Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) consente ai clienti di utilizzare i token di servizio Adobe e Google per supportare le interazioni server-to-server nell’inoltro degli eventi.
 
 È stata rilasciata la seguente nuova estensione:
 
@@ -28,7 +28,7 @@ ht-degree: 15%
 **Flussi di lavoro Quick Stark (Beta)**
 
 Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. I seguenti flussi di lavoro sono ora disponibili per i clienti come versione beta pubblica.
-* **[API di metaconversione](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=it#quick-start)**: i clienti di Inoltro eventi possono raccogliere e inoltrare rapidamente i dati dell’evento dal lato server a Meta per le conversioni di annunci in pochi e semplici passaggi.
+* **[API di metaconversione](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**: i clienti di Inoltro eventi possono raccogliere e inoltrare rapidamente i dati dell’evento dal lato server a Meta per le conversioni di annunci in pochi e semplici passaggi.
 * **[SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/)**: i clienti possono implementare rapidamente l’SDK di Mobile e convalidare gli eventi mobili di base in pochi semplici passaggi.
 
 Sono state rilasciate nuove estensioni:

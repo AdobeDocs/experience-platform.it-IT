@@ -5,9 +5,9 @@ title: Creare schemi web e set di dati Luma
 type: Tutorial
 description: Questa esercitazione ti fornisce i prerequisiti e le risorse necessari per il modello di propensione demo Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Questa esercitazione ti fornisce i prerequisiti e le risorse necessari per tutte
 
 ## Scaricare le risorse {#assets}
 
-L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica le risorse richieste](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip?lang=en) cartella zip. Questa cartella contiene:
+L’esercitazione seguente utilizza un modello di propensione all’acquisto Luma personalizzato. Prima di procedere, [scarica le risorse richieste](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) cartella zip. Questa cartella contiene:
 
 - Il notebook del modello di propensione all&#39;acquisto
 - Notebook utilizzato per acquisire dati in un set di dati di formazione e punteggio (un sottoinsieme di dati web Luma)

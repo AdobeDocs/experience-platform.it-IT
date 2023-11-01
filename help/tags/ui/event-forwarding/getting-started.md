@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 79%
+source-wordcount: '873'
+ht-degree: 78%
 
 ---
 
@@ -20,7 +20,7 @@ Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [API server-to-server](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=it)
+* [API server-to-server](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
 
 >[!NOTE]
 >Platform Web SDK e Platform Mobile SDK non richiedono l’implementazione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
@@ -98,7 +98,7 @@ Dopo la configurazione, annota gli ID ambiente per la nuova proprietà.
 
 ## Configura l’estensione Platform Web SDK per inviare dati allo stream di dati creato in precedenza
 
-Crea la proprietà in **[!UICONTROL Tag]** , quindi vai a **[!UICONTROL Estensioni]** e seleziona l’estensione Experience Platform Web SDK dal catalogo per configurarla e installarla.
+Crea la proprietà in **[!UICONTROL Tag]** , quindi vai a **[!UICONTROL Estensioni]** e seleziona l’estensione Experienci Platform Web SDK dal catalogo per configurarla e installarla.
 
 Consulta la [Documentazione dell’estensione Web SDK](../../extensions/client/web-sdk/overview.md) per informazioni dettagliate sulle opzioni di configurazione.
 

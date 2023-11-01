@@ -3,9 +3,9 @@ keywords: pubblicità; criteri;
 title: Connessione critica
 description: Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze più ricche a ogni consumatore attraverso l'internet aperto. Con il set di dati di e-commerce più grande al mondo e l’intelligenza artificiale migliore della classe, Criteo assicura che ogni punto di contatto nel percorso sia personalizzato per raggiungere i clienti con l’annuncio giusto, al momento giusto.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze pi
 * Avrai bisogno del tuo ID Criteo Advertiser (chiedi al tuo contatto Criteo se non hai questo ID).
 * Dovrai fornire [!DNL GUM caller ID], nel caso in cui si desideri utilizzare [!DNL GUM ID] come identificatore.
 
-## Limitazioni  {#limitations}
+## Limitazioni {#limitations}
 
 * Il criterio accetta solo [!DNL SHA-256]e-mail con hash e testo normale (da trasformare in [!DNL SHA-256] prima dell’invio). Non inviare dati PII (informazioni personali identificabili, come nomi o numeri di telefono di persone).
 * Il criterio richiede almeno un identificatore che deve essere fornito dal client. Assegna priorità [!DNL GUM ID] come identificatore nell’e-mail con hash, in quanto contribuisce a migliorare il tasso di corrispondenza.
@@ -35,7 +35,7 @@ Criteo potenzia la pubblicità di fiducia e di impatto per offrire esperienze pi
 
 ## Identità supportate {#supported-identities}
 
-Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+Il criterio supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --- | --- | --- |

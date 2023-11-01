@@ -3,31 +3,31 @@ solution: Experience Platform
 title: API Media Edge
 description: Panoramica delle API Media Edge
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '393'
-ht-degree: 5%
+source-wordcount: '381'
+ht-degree: 8%
 
 ---
 
 # Panoramica API di Media Edge
 
-Le API Media Edge sono basate su Adobe Experience Platform per fornire dati di tracciamento degli eventi multimediali nel framework di [Schemi XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Per i clienti Media Analytics, questo rende disponibili le seguenti funzioni:
+Le API Media Edge sono basate su Adobe Experience Platform per fornire dati di tracciamento degli eventi multimediali nel framework di [Schemi XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html#:~:text=Experience%20Data%20Model%20(XDM)%2C,the%20power%20of%20digital%20experiences). Per i clienti Media Analytics, questo rende disponibili le seguenti funzioni:
 
 * Con [Adobe Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it), i clienti possono ottenere dettagli granulari sulla durata, avvii e arresti in tempo reale da valutare e combinare per le metriche dei contenuti multimediali. I clienti che eseguono la migrazione da Adobe Analytics dispongono di tutte le metriche di reporting disponibili in Adobe Customer Journey Analytics.
 
 * Con [Adobe Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it), i clienti possono arricchire i loro profili in tempo reale con i dati sul consumo di contenuti multimediali.
 
-* Con [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en), i clienti possono ottimizzare le campagne omnicanale e automatizzare i percorsi con i segnali di consumo dei contenuti multimediali.
+* Con [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it), i clienti possono ottimizzare le campagne omnicanale e automatizzare i percorsi con i segnali di consumo dei contenuti multimediali.
 
 
 ## Ottimizzazione dei flussi di dati di tracciamento dei contenuti multimediali
 
-Entrambi [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en&amp;media-tracking-data-flows) e le API Media Edge forniscono i dati di tracciamento dei contenuti multimediali come servizi RESTful. Tuttavia, l’utilizzo del servizio Media Edge offre i seguenti vantaggi:
+Entrambi [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html&amp;media-tracking-data-flows) e le API Media Edge forniscono i dati di tracciamento dei contenuti multimediali come servizi RESTful. Tuttavia, l’utilizzo del servizio Media Edge offre i seguenti vantaggi:
 
 * È il modo più semplice per incorporare schemi XDM nel flusso di dati.
 
-* Le chiamate vengono indirizzate da un lettore multimediale direttamente al [Experienci Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
+* Le chiamate vengono indirizzate da un lettore multimediale direttamente al [Experienci Platform Edge Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=it).
 
 * Tiene traccia degli eventi multimediali in modo efficiente con un minimo di chiamate tra server diversi.
 
@@ -52,4 +52,4 @@ L’immagine seguente mostra i flussi di dati per i due servizi API:
 
 * Per ulteriori informazioni sull’utilizzo delle API Media Edge, consulta [Documentazione introduttiva](getting-started.md).
 
-* Per ulteriori informazioni sull’utilizzo di Platform Edge, consulta [Installazione di Media Analytics con Experienci Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
+* Per ulteriori informazioni sull’utilizzo di Platform Edge, consulta [Installazione di Media Analytics con Experienci Platform Edge](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html).

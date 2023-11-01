@@ -2,9 +2,9 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Il [!UICONTROL Iscrizioni] cartella. Dalle opzioni disponibili, seleziona e tras
 
 >[!NOTE]
 >
->È previsto un limite al numero di tipi di pubblico che si consiglia di creare. Ulteriori informazioni sono disponibili nella sezione [documentazione sui guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>È previsto un limite al numero di tipi di pubblico che si consiglia di creare. Ulteriori informazioni sono disponibili nella sezione [documentazione sui guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![Il [!UICONTROL Valore scelta] attributo con [!UICONTROL Sì (consenso)] valore evidenziato nel generatore di segmenti. Vengono evidenziati anche il nome e la descrizione del pubblico.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

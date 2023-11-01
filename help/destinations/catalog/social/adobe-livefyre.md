@@ -3,10 +3,10 @@ keywords: livefyre;estensione livefyre
 title: Estensione Adobe Livefyre
 description: L'Adobe dell'estensione Livefyre è una destinazione social in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità dell’estensione, consulta la pagina dell’estensione in Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 Adobe Livefyre ti consente di scoprire, organizzare e pubblicare un flusso costante di contenuti generati dagli utenti sul tuo sito web per creare esperienze autentiche e altamente personalizzate.
 
-L&#39;Adobe Livefyre è un&#39;estensione per social network in Adobe Experience Platform. Per ulteriori informazioni sull&#39;Adobe Livefyre, leggere [Guida all’implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=it).
+L&#39;Adobe Livefyre è un&#39;estensione per social network in Adobe Experience Platform. Per ulteriori informazioni sull&#39;Adobe Livefyre, leggere [Guida all’implementazione di Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 Questa destinazione è un’estensione tag. Per ulteriori informazioni sul funzionamento delle estensioni dei tag in Platform, consulta [panoramica delle estensioni tag](../launch-extensions/overview.md).
 
@@ -42,7 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l’estensione. Puoi anch
 
 Il flusso di lavoro ti porta all’interfaccia utente di Data Collection per completare l’installazione.
 
-Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
 
 ## Come utilizzare l’estensione {#how-to-use}
 

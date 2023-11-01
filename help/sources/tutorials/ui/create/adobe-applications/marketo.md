@@ -2,10 +2,10 @@
 title: Creare una connessione sorgente del Marketo Engage e un flusso di dati nell’interfaccia utente
 description: Questa esercitazione descrive i passaggi da seguire per creare una connessione di origine del Marketo Engage e un flusso di dati nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 0%
+source-wordcount: '1691'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Prima di creare un [!DNL Marketo Engage] connessione di origine e un flusso di dati, devi prima verificare di avere [ha mappato il tuo ID organizzazione Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [popolamento automatico [!DNL Marketo] Spazi dei nomi e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione sorgente e un flusso di dati.
+>Prima di creare un [!DNL Marketo Engage] connessione di origine e un flusso di dati, devi prima verificare di avere [ha mappato il tuo ID organizzazione Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. Inoltre, devi anche assicurarti di aver completato [popolamento automatico [!DNL Marketo] Spazi dei nomi e schemi B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) prima di creare una connessione sorgente e un flusso di dati.
 
 Questo tutorial descrive i passaggi necessari per creare [!DNL Marketo Engage] (in seguito denominati &quot;[!DNL Marketo]&quot;) nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 
@@ -23,11 +23,11 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 * [Spazi dei nomi B2B e utilità di generazione automatica dello schema](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): l’utility di generazione automatica degli spazi dei nomi B2B e dello schema consente di utilizzare [!DNL Postman] per generare automaticamente i valori per gli spazi dei nomi e gli schemi B2B. Prima di creare uno schema e uno spazio dei nomi B2B, devi completare [!DNL Marketo] connessione sorgente e flusso di dati.
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Experience Data Model (XDM)](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [Experience Data Model (XDM)](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Creare e modificare gli schemi nell’interfaccia utente](../../../../../xdm/ui/resources/schemas.md): scopri come creare e modificare gli schemi nell’interfaccia utente di.
 * [Spazi dei nomi delle identità](../../../../../identity-service/namespaces.md): gli spazi dei nomi di identità sono un componente di [!DNL Identity Service] che fungono da indicatori del contesto a cui si riferisce un’identità. Un’identità completa include un valore ID e uno spazio dei nomi.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Raccogli le credenziali richieste
 
@@ -57,7 +57,7 @@ Il **[!UICONTROL Connetti account di Marketo Engage]** viene visualizzata. In qu
 
 ### Account esistente
 
-Per creare un flusso di dati con un account esistente, seleziona **[!UICONTROL Account esistente]** e quindi selezionare [!DNL Marketo] account che desideri utilizzare. Seleziona **[!UICONTROL Successivo]** per procedere.
+Per creare un flusso di dati con un account esistente, seleziona **[!UICONTROL Account esistente]** e quindi selezionare [!DNL Marketo] account che desideri utilizzare. Seleziona **[!UICONTROL Avanti]** per procedere.
 
 ![esistente](../../../../images/tutorials/create/marketo/existing.png)
 
@@ -119,7 +119,7 @@ Quindi, seleziona la **[!UICONTROL Set di dati profilo]** attiva per abilitare i
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle origini tramite l’interfaccia utente](../../alerts.md).
 
-Una volta completati i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![avvisi](../../../../images/tutorials/create/marketo/alerts.png)
 

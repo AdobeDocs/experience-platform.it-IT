@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2023
 description: Note sulla versione di Adobe Experience Platform di marzo 2023.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 99%
+source-wordcount: '2204'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuovo flusso di lavoro con avvio rapido per l’API Conversions di Meta (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’API Conversions di Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=it#quick-start) consente alla clientela di raccogliere e inoltrare rapidamente a Meta i dati dell’evento lato server per le conversioni di annunci in alcuni semplici passaggi. |
+| Nuovo flusso di lavoro con avvio rapido per l’API Conversions di Meta (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’API Conversions di Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) consente alla clientela di raccogliere e inoltrare rapidamente a Meta i dati dell’evento lato server per le conversioni di annunci in alcuni semplici passaggi. |
 | Nuovo flusso di lavoro di avvio rapido per l’SDK Mobile (Beta) | Accedi ai nuovi flussi di lavoro di avvio rapido nella “Guida introduttiva” dalla schermata iniziale della Raccolta dati. Il [flusso di lavoro di avvio rapido per l’SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) consente di implementare rapidamente l’SDK Mobile e di convalidare gli eventi mobili di base in pochi semplici passaggi. |
 | Estensione [!DNL Braze] per l’inoltro degli eventi | L’estensione [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=it) per l’inoltro degli eventi consente di sfruttare i dati acquisiti nella rete Edge di Adobe Experience Platform e di inviarli a [!DNL Braze] in forma di eventi lato server che utilizzano le API User Track di [!DNL Braze]. |
 | Estensione [!DNL Epsilon] per l’inoltro degli eventi | L’estensione [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=it) consente di sfruttare l’inoltro degli eventi per acquisire informazioni sugli eventi nella rete Edge di Adobe Experience Platform e inviarle a [!DNL Epsilon] utilizzando l’API dell’evento di [!DNL Epsilon]. |

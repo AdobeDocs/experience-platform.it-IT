@@ -2,9 +2,9 @@
 description: Scopri come utilizzare l’API di test di destinazione per generare profili di esempio per la destinazione di streaming, che puoi utilizzare nel test di destinazione.
 title: Generare profili di esempio in base a uno schema di origine
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1010'
 ht-degree: 2%
 
 ---
@@ -42,12 +42,12 @@ Prima di continuare, controlla [guida introduttiva](../../getting-started.md) pe
 
 Puoi generare profili di esempio in base allo schema di origine effettuando una richiesta GET al `authoring/sample-profiles/` e fornendo l’ID di un’istanza di destinazione creata in base alla configurazione di destinazione da testare.
 
-Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare una connessione nell’interfaccia utente di Experience Platform con la destinazione prima di tentare di testare la destinazione. Leggi le [esercitazione attivazione destinazione](../../../ui/activation-overview.md) e consulta il suggerimento seguente per ottenere l’ID istanza delle destinazioni da utilizzare per questa API.
+Per ottenere l’ID di un’istanza di destinazione, devi innanzitutto creare una connessione nell’interfaccia utente di Experienci Platform con la destinazione prima di tentare di testare la destinazione. Leggi le [esercitazione attivazione destinazione](../../../ui/activation-overview.md) e consulta il suggerimento seguente per ottenere l’ID istanza delle destinazioni da utilizzare per questa API.
 
 >[!IMPORTANT]
 >
->* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experience Platform. Letto [connetti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) e [attivare profili e pubblico in una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) per ulteriori informazioni.
-> * Dopo aver stabilito la connessione alla destinazione, ottieni l’ID istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [esplorazione di una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Per utilizzare questa API, è necessario disporre di una connessione esistente alla destinazione nell’interfaccia utente di Experienci Platform. Letto [connetti alla destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [attivare profili e pubblico in una destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) per ulteriori informazioni.
+> * Dopo aver stabilito la connessione alla destinazione, ottieni l’ID istanza di destinazione da utilizzare nelle chiamate API a questo endpoint quando [esplorazione di una connessione con la destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![Immagine dell’interfaccia utente per ottenere l’ID dell’istanza di destinazione](../../assets/testing-api/get-destination-instance-id.png)
 
 **Formato API**
@@ -183,7 +183,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con il nume
 | `segmentMembership` | Oggetto mappa che descrive le appartenenze del singolo pubblico. Per ulteriori informazioni su `segmentMembership`, leggi [Dettagli sull’iscrizione al pubblico](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Un timestamp dell’ultima volta che questo profilo si è qualificato per il segmento. |
 | `xdm:status` | Campo stringa che indica se l’appartenenza al pubblico è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`realized`: il profilo fa parte del segmento.</li><li>`exited`: il profilo sta uscendo dal pubblico come parte della richiesta corrente.</li></ul> |
-| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggi [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | Campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Per ulteriori informazioni su `identityMap`, leggi [Base della composizione dello schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 

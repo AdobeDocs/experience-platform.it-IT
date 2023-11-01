@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2477'
 ht-degree: 6%
 
 ---
@@ -26,9 +26,9 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 È importante comprendere i seguenti termini chiave utilizzati nel presente documento:
 
 * **Attributo standard**: gli attributi standard sono qualsiasi attributo predefinito da Adobe. Contengono lo stesso significato per tutti i clienti e sono disponibili nella sezione [!DNL Analytics] dati di origine e [!DNL Analytics] gruppi di campi dello schema.
-* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia di variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sulle eVar.
+* **Attributo personalizzato**: gli attributi personalizzati sono qualsiasi attributo nella gerarchia di variabili personalizzate in [!DNL Analytics]. Gli attributi personalizzati vengono utilizzati all’interno di un’implementazione di Adobe Analytics per acquisire informazioni specifiche in una suite di rapporti e possono differire nel loro utilizzo da una suite di rapporti all’altra. Gli attributi personalizzati includono eVar, prop ed elenchi. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) per ulteriori informazioni sulle eVar.
 * **Qualsiasi attributo nei gruppi di campi personalizzati**: gli attributi che provengono da gruppi di campi creati dai clienti sono tutti definiti dall’utente e non sono considerati né attributi standard né personalizzati.
-* **Nomi descrittivi**: i nomi descrittivi sono etichette fornite dall’uomo per le variabili personalizzate in un [!DNL Analytics] implementazione. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) per ulteriori informazioni sui nomi descrittivi.
+* **Nomi descrittivi**: i nomi descrittivi sono etichette fornite dall’uomo per le variabili personalizzate in un [!DNL Analytics] implementazione. Vedi quanto segue [[!DNL Analytics] documentazione sulle variabili di conversione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) per ulteriori informazioni sui nomi descrittivi.
 
 ## Creare una connessione sorgente con Adobe Analytics
 

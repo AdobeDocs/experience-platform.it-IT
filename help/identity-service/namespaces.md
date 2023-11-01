@@ -2,9 +2,9 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1699'
+source-wordcount: '1691'
 ht-degree: 8%
 
 ---
@@ -76,13 +76,13 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Nome visualizzato | Descrizione |
 | ------------ | ----------- |
 | AdCloud | Uno spazio dei nomi che rappresenta Adobe AdCloud. |
-| Adobe Analytics (ID legacy) | Uno spazio dei nomi che rappresenta Adobe Analytics. Vedi il seguente documento su [Spazi dei nomi di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) per ulteriori informazioni. |
+| Adobe Analytics (ID legacy) | Uno spazio dei nomi che rappresenta Adobe Analytics. Vedi il seguente documento su [Spazi dei nomi di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) per ulteriori informazioni. |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta l’ID di Apple per gli inserzionisti. Vedi il seguente documento su [annunci basati su interessi](https://support.apple.com/en-us/HT202074) per ulteriori informazioni. |
 | Servizio di notifica push di Apple | Uno spazio dei nomi che rappresenta le identità raccolte tramite il servizio Apple Push Notification. Vedi il seguente documento su [Servizio di notifica push di Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) per ulteriori informazioni. |
-| CORE | Uno spazio dei nomi che rappresenta Adobe Audience Manager. A questo namespace può anche fare riferimento il suo nome legacy: &quot;Adobe AudienceManager&quot;. Vedi il seguente documento su [ID AUDIENCE MANAGER](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) per ulteriori informazioni. |
+| CORE | Uno spazio dei nomi che rappresenta Adobe Audience Manager. A questo namespace può anche fare riferimento il suo nome legacy: &quot;Adobe AudienceManager&quot;. Vedi il seguente documento su [ID AUDIENCE MANAGER](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) per ulteriori informazioni. |
 | ECID | Uno spazio dei nomi che rappresenta ECID. A questo spazio dei nomi possono fare riferimento anche i seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Vedi il seguente documento su [ECID](./ecid.md) per ulteriori informazioni. |
 | E-mail | Uno spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Vedi il seguente documento su [Supporto di hashing SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) per ulteriori informazioni. |
+| E-mail (SHA256, in minuscolo) | Uno spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo spazio dei nomi vengono convertiti in minuscolo prima dell’hashing con SHA256. Gli spazi iniziali e finali devono essere tagliati prima che un indirizzo e-mail venga normalizzato. Questa impostazione non può essere modificata retroattivamente. Vedi il seguente documento su [Supporto di hashing SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) per ulteriori informazioni. |
 | Firebase Cloud Messaging | Spazio dei nomi che rappresenta le identità raccolte tramite Google Firebase Cloud Messaging per le notifiche push. Vedi il seguente documento su [Messaggistica cloud Google Firebase](https://firebase.google.com/docs/cloud-messaging) per ulteriori informazioni. |
 | Google Ad ID (GAID) | Spazio dei nomi che rappresenta un ID Google Advertising. Vedi il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) per ulteriori informazioni. |
 | ID clic Google | Spazio dei nomi che rappresenta un ID clic di Google. Vedi il seguente documento su [Tracciamento dei clic in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) per ulteriori informazioni. |
@@ -90,7 +90,7 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Telefono (E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata, un prefisso locale e un numero di telefono. Ad esempio: `(+)(country code)(area code)(phone number)`. |
 | Telefono (SHA256) | Spazio dei nomi che rappresenta i numeri di telefono che devono essere sottoposti a hashing utilizzando SHA256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
 | Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash che devono essere eseguiti utilizzando sia il formato SHA256 che il formato E.164. |
-| TNTID | Uno spazio dei nomi che rappresenta Adobe Target. Vedi il seguente documento su [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=it) per ulteriori informazioni. |
+| TNTID | Uno spazio dei nomi che rappresenta Adobe Target. Vedi il seguente documento su [Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) per ulteriori informazioni. |
 | AID di Windows | Spazio dei nomi che rappresenta un ID Windows Advertising. Vedi il seguente documento su [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) per ulteriori informazioni. |
 
 ### Visualizzare gli spazi dei nomi delle identità {#view-identity-namespaces}

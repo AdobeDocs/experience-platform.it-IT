@@ -2,9 +2,9 @@
 title: Creare una connessione di origine e un flusso di dati per gli account e i contatti di SugarCRM tramite l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform agli account e ai contatti di SugarCRM utilizzando l’API del servizio Flusso.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2160'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Per connettersi [!DNL SugarCRM Accounts & Contacts] In Platform, è necessario f
 
 Di seguito sono descritti i passaggi da eseguire per autenticare il [!DNL SugarCRM] origine, creare una connessione di origine e creare un flusso di dati per portare in Experience Platform i dati degli account e dei contatti.
 
-### Creare una connessione di base {#base-connection}
+### Crea una connessione di base {#base-connection}
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
@@ -671,13 +671,13 @@ Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di d
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST al [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Creare un set di dati di destinazione {#target-dataset}
 
 È possibile creare un set di dati di destinazione eseguendo una richiesta POST al [API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), che fornisce l’ID dello schema di destinazione all’interno del payload.
 
-Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Per i passaggi dettagliati su come creare un set di dati di destinazione, consulta l’esercitazione su [creazione di un set di dati tramite l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Creare una connessione di destinazione {#target-connection}
 

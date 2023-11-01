@@ -4,9 +4,9 @@ description: L’ultimo passaggio prima che la nuova origine possa essere pubbli
 hide: true
 hidefromtoc: true
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Questa guida alla documentazione include:
 
 * Un tutorial che puoi seguire per creare una pagina di documentazione per la nuova sorgente;
 * Un modello di documentazione da compilare per la nuova sorgente;
-* [Istruzioni su come utilizzare Markdown per la scrittura della documentazione tecnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Istruzioni su come comprendere il sapore Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Istruzioni su come utilizzare Markdown per la scrittura della documentazione tecnica](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Istruzioni su come comprendere il sapore Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Prerequisiti
 

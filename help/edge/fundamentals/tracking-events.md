@@ -3,9 +3,9 @@ title: Tracciare gli eventi utilizzando Adobe Experience Platform Web SDK
 description: Scopri come tenere traccia degli eventi di Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -218,7 +218,7 @@ Il `sendEvent` Il comando restituisce una promessa risolta con un `result` ogget
 
 **decisioni**: proprietà obsoleta. Utilizza piuttosto `propositions`.
 
-**destinazioni**: segmenti da Adobe Experience Platform che possono essere condivisi con piattaforme di personalizzazione esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sui siti web dei clienti. [Ulteriori informazioni sulle destinazioni.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**destinazioni**: segmenti da Adobe Experience Platform che possono essere condivisi con piattaforme di personalizzazione esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sui siti web dei clienti. [Ulteriori informazioni sulle destinazioni.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >

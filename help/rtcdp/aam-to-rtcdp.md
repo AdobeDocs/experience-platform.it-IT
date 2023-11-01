@@ -2,10 +2,10 @@
 title: Evoluzione da Audience Manager a Real-Time CDP
 description: Comprendere le considerazioni prima di pianificare la migrazione da Audience Manager a Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ Man mano che la tua organizzazione inizia a utilizzare Adobe Real-Time CDP, espl
 
 ## 1. Considerare l’architettura dei dati all’interno di Audience Manager
 
-Nel considerare l’evoluzione da Audience Manager a Real-Time CDP, è giunto il momento di analizzare i tuoi [Segmenti di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=it) e determinare quali [segnali](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=it), [caratteristiche](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=it), e [regole](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=it#segment-builder-section) compongono tali segmenti.
+Nel considerare l’evoluzione da Audience Manager a Real-Time CDP, è giunto il momento di analizzare i tuoi [Segmenti di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) e determinare quali [segnali](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [caratteristiche](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html), e [regole](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) compongono tali segmenti.
 
 Inoltre, prendi in considerazione le origini dati attualmente utilizzate in Audience Manager.
 

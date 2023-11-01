@@ -2,9 +2,9 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '616'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-L’API del server di rete Edge può distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target, con l’aiuto del [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+L’API del server di rete Edge può distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target, con l’aiuto del [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
 >[!IMPORTANT]
 >
->Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../edge/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
+>Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../edge/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
 
 ## Configurare lo stream di dati {#configure-your-datastream}
 

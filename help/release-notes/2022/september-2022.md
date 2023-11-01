@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2940'
-ht-degree: 11%
+source-wordcount: '2938'
+ht-degree: 19%
 
 ---
 
@@ -20,12 +20,12 @@ Nuove funzioni di Adobe Experience Platform:
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
-- [Registri di controllo](#audit-logs)
+- [Registri di audit](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [Raccolta dati](#data-collection)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Servizio Identity](#identity-service)
+- [Identity Service](#identity-service)
 - [Servizio query](#query-service)
 - [Origini](#sources)
 
@@ -33,7 +33,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 >[!IMPORTANT]
 >
->Il controllo degli accessi basato su attributi verrà abilitato a partire da ottobre 2022. Se desideri essere uno dei primi ad adottare, contatta il tuo rappresentante Adobe.
+>Il controllo degli accessi basato su attributi verrà abilitato a partire da ottobre 2022. Se desideri essere uno dei primi ad adottare, contatta il rappresentante del tuo Adobe.
 
 Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai brand attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. È possibile assegnare singoli oggetti, come campi e segmenti dello schema, ai ruoli utente. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
 
@@ -52,7 +52,7 @@ I servizi di intelligenza artificiale e machine learning consentono agli analist
 
 ### IA per l’attribuzione
 
-Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzata dai marketer per quantificare l’impatto di ogni punto di contatto di marketing lungo i percorsi della clientela.
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -74,7 +74,7 @@ Per ulteriori informazioni su Customer AI, leggi [Panoramica di Customer AI](../
 
 ## Registri di audit {#audit-logs}
 
-Experience Platform consente di controllare l’attività dell’utente per vari servizi e funzionalità. I registri di audit forniscono informazioni su chi ha fatto cosa e quando.
+Experienci Platform consente di controllare l’attività dell’utente per vari servizi e funzionalità. I registri di audit forniscono informazioni su chi ha fatto cosa e quando.
 
 **Funzioni aggiornate**
 
@@ -88,12 +88,12 @@ Per ulteriori informazioni sui diversi tipi di eventi specifici delle risorse tr
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
 | Funzione | Descrizione |
 | --- | --- |
 | Etichetta in uso | Quando viene visualizzata nella libreria dei widget, l’etichetta in uso identifica facilmente la presenza di widget esistenti nel dashboard. Questo consente di evitare facilmente la duplicazione, anche se è comunque possibile aggiungere lo stesso widget più di una volta, se lo si desidera. |
-| Dashboard definiti dall&#39;utente | Le dashboard definite dall’utente consentono di velocizzare le informazioni approfondite e personalizzare le visualizzazioni creando e gestendo dashboard personalizzate. Con le dashboard definite dall’utente puoi creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Leggi le [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per ulteriori informazioni. |
+| Dashboard definite dall’utente | Le dashboard definite dall’utente consentono di velocizzare le informazioni approfondite e personalizzare le visualizzazioni creando e gestendo dashboard personalizzate. Con le dashboard definite dall’utente puoi creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione. Leggi le [guida alle funzioni](../../dashboards/user-defined-dashboards.md) per ulteriori informazioni. |
 | Modello dati di Customer Data Platform Insights | La funzione Customer Data Platform (CDP) Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti CDP per i casi di utilizzo degli indicatori di prestazioni chiave e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Leggi le [Guida alle funzioni del modello dati di approfondimenti CDP](../../dashboards/cdp-insights-data-model.md) per ulteriori informazioni. |
 | Widget report di sovrapposizione pubblico | Questo widget è disponibile per entrambi [!UICONTROL Profili] e [!UICONTROL Segmenti] dashboard. Il rapporto fornisce un elenco ordinato di tipi di pubblico classificati in base alle percentuali di sovrapposizione più alte o più basse per il segmento scelto. Dalla sezione [!UICONTROL Profili] dashboard puoi filtrare e visualizzare la sovrapposizione dei tipi di pubblico tramite il criterio di unione da tutti i segmenti disponibili. Il [!UICONTROL Segmenti] le dashboard ti consentono di filtrare la sovrapposizione del pubblico in base a un segmento specifico.<br>Utilizza questa analisi per creare nuovi segmenti ad alte prestazioni ed evitare di inviare lo stesso pubblico a destinazioni diverse. Il rapporto consente inoltre di identificare informazioni nascoste per migliorare la segmentazione o individuare profili univoci da perseguire. Leggi le rispettive [profili](../../dashboards/guides/profiles.md#audience-overlap-report) e [segmenti](../../dashboards/guides/audiences.md#audience-overlap-report) guide per ulteriori informazioni. |
 
@@ -107,7 +107,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente di Data Collection (inclusi tag, inoltro eventi e flussi di dati) ora sono disponibili anche nella barra di navigazione a sinistra di Experience Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
+| Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente di Data Collection (inclusi tag, inoltro eventi e flussi di dati) ora sono disponibili anche nella barra di navigazione a sinistra di Experienci Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
 | Attribuzione degli utenti nei tag e nell’inoltro degli eventi | Quando l’inserzione è disponibile [!UICONTROL Proprietà] in tag e inoltro eventi, ogni proprietà elencata ora mostra quando è stata aggiornata per l’ultima volta e quale utente ha effettuato l’aggiornamento. |
 | [[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro di eventi | Ora puoi inviare dati a [!DNL Snapchat Conversions API] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Per ulteriori informazioni su come autenticare e utilizzare l’API, consulta [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | L’SDK per web ora supporta [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ai proprietari di siti web di accedere a gran parte delle stesse informazioni disponibili in [!DNL User-Agent] stringa, ma in modo più rispettoso della privacy. |
@@ -134,7 +134,7 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Introduzione a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Questa integrazione funziona con [Adobe Campaign versione 8.4 o successiva](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Introduzione a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Questa integrazione funziona con [Adobe Campaign versione 8.4 o successiva](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | Il [!DNL Salesforce CRM] la destinazione è stata aggiornata per supportare sia gli aggiornamenti dei contatti che quelli dei lead, oltre a miglioramenti delle prestazioni per aggiornamenti più veloci. |
 
 {style="table-layout:auto"}
@@ -145,11 +145,11 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 | ----------- | ----------- |
 | Documentazione API del servizio Flusso delle destinazioni | Il [Documentazione di riferimento dell’API Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) è stato aggiornato per includere istruzioni su come eseguire operazioni sulle destinazioni basate su file. Le operazioni per le destinazioni di streaming verranno aggiunte in un secondo momento. |
 
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuove funzioni**
 
@@ -190,9 +190,9 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 
-## Servizio Identity {#identity-service}
+## Identity Service {#identity-service}
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Questo è reso più difficile quando i dati del cliente sono frammentati tra sistemi diversi, facendo apparire ogni cliente con più &quot;identità&quot;.
 
@@ -204,11 +204,11 @@ Il servizio Adobe Experience Platform Identity consente di ottenere una visione 
 | --- | --- |
 | Supporto per l’eliminazione di set di dati | Identity Service ora supporta l’eliminazione dei set di dati quando si richiede tramite il [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), interfaccia utente o igiene dei dati. Leggi la guida su [eliminazione di set di dati nell’interfaccia utente](../../catalog/datasets/user-guide.md#delete-a-dataset) per ulteriori informazioni. |
 
-Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servizio Identity](../../identity-service/home.md).
+Per ulteriori informazioni su Identity Service, consulta la [panoramica su Identity Service](../../identity-service/home.md).
 
 ## Servizio query {#query-service}
 
-Query Service consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform [!DNL Data Lake]. Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
 
 **Funzioni aggiornate**
 
@@ -223,7 +223,7 @@ Consulta la [documentazione degli avvisi di query](../../query-service/api/alert
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
@@ -231,10 +231,10 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 
 | Funzione | Descrizione |
 | --- | --- |
-| Audience Manager dell’impatto della popolazione del segmento sul profilo cliente in tempo reale | L’acquisizione di popolazioni di segmenti Audience Manager di dimensioni considerevoli ha un impatto diretto sul conteggio totale dei profili quando invii un segmento di Audience Manager a Platform per la prima volta utilizzando l’origine di Audience Manager. Ciò significa che la selezione di tutti i segmenti può potenzialmente causare un conteggio dei profili superiore al limite di utilizzo della licenza consentito. Per ulteriori informazioni, leggere [Panoramica origine Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Per informazioni sull’utilizzo della licenza, consulta la documentazione su [utilizzo del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md). |
+| Audience Manager dell’impatto della popolazione del segmento sul profilo cliente in tempo reale | L’acquisizione di popolazioni di segmenti Audienci Manager di dimensioni considerevoli ha un impatto diretto sul conteggio totale dei profili quando invii un segmento di Audience Manager a Platform per la prima volta utilizzando l’origine di Audience Manager. Ciò significa che la selezione di tutti i segmenti può potenzialmente causare un conteggio dei profili superiore al limite di utilizzo della licenza consentito. Per ulteriori informazioni, leggere [Panoramica origine Audience Manager](../../sources/connectors/adobe-applications/audience-manager.md). Per informazioni sull’utilizzo della licenza, consulta la documentazione su [utilizzo del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md). |
 | Supporto per Adobe Campaign Managed Cloud Service | Utilizza l’origine del Cloud Service gestito di Adobe Campaign per dare Experience Platform ai dati dei registri di consegna e tracciamento di Adobe Campaign v8.4. Leggi la guida su [creazione di una connessione sorgente del Cloud Service gestito di Adobe Campaign nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/campaign.md) per ulteriori informazioni. |
 | Supporto API per l’acquisizione su richiesta per le origini batch | Utilizza l’acquisizione su richiesta per creare esecuzioni di flussi ad hoc per un dato flusso di dati con [!DNL Flow Service] API. Le esecuzioni del flusso create devono essere impostate su acquisizione una tantum. Per ulteriori informazioni, consulta la guida su [creazione di un’esecuzione del flusso per l’acquisizione on-demand tramite l’API](../../sources/tutorials/api/on-demand-ingestion.md) per ulteriori informazioni. |
 | Supporto API per il nuovo tentativo di esecuzione del flusso di dati non riuscito per le origini batch | Utilizza il `re-trigger` operazione per ritentare il flusso di dati non riuscito tramite l’API. Leggi la guida su [nuovo tentativo di esecuzione del flusso di dati non riuscito tramite l’API](../../sources/tutorials/api/retry-flows.md) per ulteriori informazioni. |
-| Supporto API per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] sorgenti | Utilizzare gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] origini. Leggi la guida su [filtrare i dati per un’origine utilizzando l’API](../../sources/tutorials/api/filter.md) per ulteriori informazioni. |
+| Supporto API per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] sorgenti | Utilizzare gli operatori logici e di confronto per filtrare i dati a livello di riga per [!DNL Google BigQuery] e [!DNL Snowflake] origini. Per ulteriori informazioni, consulta la guida su come [filtrare i dati per un’origine utilizzando l’API](../../sources/tutorials/api/filter.md). |
 
-Per ulteriori informazioni sulle origini, leggi la [panoramica sulle origini](../../sources/home.md).
+Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../sources/home.md).

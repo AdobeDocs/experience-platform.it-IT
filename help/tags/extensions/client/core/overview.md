@@ -2,7 +2,7 @@
 title: Panoramica dell’estensione Core
 description: Scopri l’estensione tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 83%
@@ -160,7 +160,7 @@ L’evento viene attivato se l’utente rimane sulla pagina per un numero specif
 
 L’evento viene attivato quando il DOM è pronto e l’utente può interagire con la pagina. Non sono disponibili impostazioni per questo tipo di evento.
 
-#### Library Loaded (Page Top) {#library-loaded-page-top}
+#### Library Loaded (Page Top) (Libreria caricata (Inizio pagina)) {#library-loaded-page-top}
 
 L’evento viene attivato non appena viene caricata la libreria di tag. Non sono disponibili impostazioni per questo tipo di evento.
 
@@ -191,15 +191,15 @@ Se selezioni questa opzione, diventano disponibili i seguenti parametri:
 
 * `property=value`
 
-   Specifica il valore della proprietà
+  Specifica il valore della proprietà
 
 * Regex
 
-   Attiva se `property=value` è un&#39;espressione regolare.
+  Attiva se `property=value` è un&#39;espressione regolare.
 
 * Add
 
-   Aggiungi un&#39;altra coppia `property=value`.
+  Aggiungi un&#39;altra coppia `property=value`.
 
 #### Advanced options (Bubbling)
 
@@ -572,11 +572,11 @@ Esegui la regola in un browser ed esamina l&#39;oggetto evento registrato nella 
 
 L’estensione Core, disponibile per tutti gli utenti di Adobe Experience Platform, contiene un’azione Custom Code per l’esecuzione di JavaScript o HTML fornito dall’utente. Spesso è utile che gli utenti possano capire in che modo vengono elaborate le regole con le azioni Custom Code.
 
-#### Regole che utilizzano gli eventi nella parte superiore o inferiore della pagina
+#### Regole che utilizzano gli eventi Inizio pagina o Fine pagina
 
 Il codice da azioni personalizzate è incorporato nella libreria di tag principale. Il codice viene scritto nel documento utilizzando document.write. Se una regola include più azioni Custom Code, il codice viene scritto nell&#39;ordine configurato nella regola.
 
-#### Regole che utilizzano un evento diverso dalla pagina superiore o dalla pagina inferiore
+#### Regole che utilizzano un evento diverso da Inizio pagina o Fine pagina
 
 Un codice da azioni personalizzate viene caricato dal server e scritto sul documento utilizzando [Postscribe](https://github.com/krux/postscribe). Se una regola include più azioni Custom Code, il codice viene caricato in parallelo dal server, ma scritto nell&#39;ordine configurato nella regola.
 
@@ -636,7 +636,7 @@ Questa azione attiva tutte le regole che utilizzano un [evento di chiamata diret
 
 ![Schermata di un’azione Trigger Direct Call nell’interfaccia utente di Data Collection](../../../images/extensions/client/core/direct-call-action.png)
 
-L’azione viene mappata direttamente su [`track` metodo](../../../ui/client-side/satellite-object.md?lang=en#track) nel `satellite` , accessibile tramite codice lato client.
+L’azione viene mappata direttamente su [`track` metodo](../../../ui/client-side/satellite-object.md#track) nel `satellite` , accessibile tramite codice lato client.
 
 ## Tipi di elementi di dati dell’estensione Core
 

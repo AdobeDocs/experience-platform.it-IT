@@ -3,9 +3,9 @@ title: Personalizzazione ibrida tramite Web SDK e API del server di rete Edge
 description: Questo articolo illustra come utilizzare l’SDK per web in combinazione con l’API server per distribuire la personalizzazione ibrida sulle proprietà web.
 keywords: personalizzazione; ibrida; api server; lato server; implementazione ibrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '828'
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Il diagramma di flusso seguente descrive l’ordine dei passaggi effettuati per 
 1. L’API server restituisce il contenuto di personalizzazione al server applicazioni.
 1. Il server applicazioni restituisce una risposta HTML al browser client, contenente [cookie di identità e cluster](#cookies).
 1. Nella pagina del client, il [!DNL Web SDK] `applyResponse` viene chiamato il comando, passando nelle intestazioni e nel corpo del [!UICONTROL API server] risposta dal passaggio precedente.
-1. Il [!DNL Web SDK] esegue il rendering del caricamento della pagina [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) offerte automaticamente, perché il `renderDecisions` il flag è impostato su `true`.
+1. Il [!DNL Web SDK] esegue il rendering del caricamento della pagina [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offerte automaticamente, perché il `renderDecisions` il flag è impostato su `true`.
 1. Basato su modulo [!DNL JSON] le offerte vengono applicate manualmente tramite `applyPersonalization` per aggiornare [!DNL DOM] in base all’offerta di personalizzazione.
 1. Per le attività basate su moduli, gli eventi di visualizzazione devono essere inviati manualmente, per indicare quando è stata visualizzata l’offerta. Questa operazione viene eseguita tramite `sendEvent` comando.
 
