@@ -2,7 +2,7 @@
 title: Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico da Adobe Experience Platform alle destinazioni TV e audio connesse e ad altre integrazioni tramite il RampID LiveRamp.
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pub
 
 È possibile attivare i tipi di pubblico per le destinazioni TV e audio collegate eseguendo un processo in due fasi e utilizzando [LiveRamp - Onboarding](../catalog/advertising/liveramp-onboarding.md) e [LiveRamp - Distribuzione](../catalog/advertising/liveramp-distribution.md) come illustrato nell’immagine seguente.
 
-![Diagramma che mostra il flusso di lavoro per attivare i tipi di pubblico da Real-Time CDP alle destinazioni curate tramite LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![Diagramma che mostra il flusso di lavoro per attivare i tipi di pubblico da Real-Time CDP alle destinazioni curate tramite LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 Innanzitutto, esporta i tipi di pubblico da Real-Time CDP a [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) come file CSV.
 
