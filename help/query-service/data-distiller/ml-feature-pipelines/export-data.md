@@ -2,16 +2,16 @@
 title: Esportare dati in ambienti ML esterni
 description: Scopri come condividere un set di dati di formazione preparato, creato con Data Distiller, in una posizione di archiviazione cloud che il tuo ambiente di apprendimento può leggere per la formazione e il punteggio del modello.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
 
 # Esportare dati in ambienti ML esterni
 
-Questo documento illustra come condividere un set di dati di formazione preparato creato con Data Distiller in una posizione di archiviazione cloud che l’ambiente di apprendimento può leggere per l’apprendimento e il punteggio del modello. L’esempio esporta il set di dati di formazione in [Data Landing Zone (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). È possibile modificare la destinazione di archiviazione in base alle esigenze per lavorare con l&#39;ambiente di apprendimento automatico.
+Questo documento illustra come condividere un set di dati di formazione preparato creato con Data Distiller in una posizione di archiviazione cloud che l’ambiente di apprendimento può leggere per l’apprendimento e il punteggio del modello. L’esempio esporta il set di dati di formazione in [Data Landing Zone (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). È possibile modificare la destinazione di archiviazione in base alle esigenze per lavorare con l&#39;ambiente di apprendimento automatico.
 
 Il [Servizio di flusso per le destinazioni](https://developer.adobe.com/experience-platform-apis/references/destinations/) viene utilizzato per completare la pipeline delle funzioni inviando un set di dati di funzioni calcolate in una posizione di archiviazione cloud appropriata.
 

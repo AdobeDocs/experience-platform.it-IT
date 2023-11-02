@@ -2,16 +2,16 @@
 title: Restituire e utilizzare le variabili di merchandising dai dati di analisi
 description: Scopri come fornire campi XDM e query di esempio per accedere alle variabili di merchandising nei set di dati di Analytics.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 3%
 
 ---
 
 # Restituire e utilizzare le variabili di merchandising dai dati di Analytics
 
-Utilizza Query Service per gestire i dati acquisiti da Adobe Analytics in Adobe Experience Platform come set di dati. Le sezioni seguenti forniscono query di esempio che puoi utilizzare per accedere alle variabili di merchandising nei set di dati di Analytics. Consulta la documentazione per ulteriori informazioni su [come acquisire e mappare i dati di Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=it) tramite l’origine Analytics
+Utilizza Query Service per gestire i dati acquisiti da Adobe Analytics in Adobe Experience Platform come set di dati. Le sezioni seguenti forniscono query di esempio che puoi utilizzare per accedere alle variabili di merchandising nei set di dati di Analytics. Consulta la documentazione per ulteriori informazioni su [come acquisire e mappare i dati di Adobe Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) tramite l’origine Analytics
 
 ## Variabili merchandising {#merchandising-variables}
 
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > Se tenti di recuperare un campo che non esiste nel set di dati corrente, si verifica l’errore &quot;Nessun campo struct simile&quot;. Valuta il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiorna la query ed eseguila di nuovo.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 

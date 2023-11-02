@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 1%
 
 ---
@@ -231,7 +231,7 @@ Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore EC
 
 ## Campi di convalida dei dati {#data-validation-fields}
 
-Per evitare che dati errati vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo durante la creazione degli schemi. Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire [!UICONTROL Proprietà campo] barra laterale. Consulta la documentazione su [proprietà del campo specifiche del tipo](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) per una descrizione esatta dei campi disponibili.
+Per evitare che dati errati vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo durante la creazione degli schemi. Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire [!UICONTROL Proprietà campo] barra laterale. Consulta la documentazione su [proprietà del campo specifiche del tipo](../ui/fields/overview.md#type-specific-properties) per una descrizione esatta dei campi disponibili.
 
 ![Editor di schema con i campi vincolo evidenziati nel [!UICONTROL Proprietà campo] barra laterale.](../images/best-practices/data-validation-fields.png)
 

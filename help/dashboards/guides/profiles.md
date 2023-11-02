@@ -4,9 +4,9 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '4329'
+source-wordcount: '4313'
 ht-degree: 10%
 
 ---
@@ -213,7 +213,7 @@ Consulta la [sezione sui criteri di unione più indietro in questo documento](#m
 >
 >Il [!UICONTROL Conteggio profili] widget può mostrare un numero diverso rispetto al conteggio dei profili visualizzato sul [!UICONTROL Sfoglia] scheda in [!UICONTROL Profili] dell’interfaccia utente per diversi motivi. Il motivo più comune di questa differenza è che il [!UICONTROL Sfoglia] scheda fa riferimento al numero totale di profili uniti in base al criterio di unione predefinito della tua organizzazione, mentre [!UICONTROL Conteggio profili] il widget fa riferimento al numero totale di profili uniti in base al criterio di unione selezionato per la visualizzazione nel dashboard.
 >
->Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per [!UICONTROL Sfoglia] scheda. È possibile vedere quando [!UICONTROL Conteggio profili] l’ultimo aggiornamento del widget è stato effettuato osservando la marca temporale sul widget. Per ulteriori informazioni su come viene attivato il processo di esempio su [!UICONTROL Sfoglia] , vedere la [sezione conteggio dei profili nella guida dell’interfaccia utente del profilo cliente in tempo reale](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
+>Un altro motivo comune è dovuto alle differenze tra il momento in cui viene acquisita l’istantanea del dashboard e il momento in cui il processo di esempio viene eseguito per [!UICONTROL Sfoglia] scheda. È possibile vedere quando [!UICONTROL Conteggio profili] l’ultimo aggiornamento del widget è stato effettuato osservando la marca temporale sul widget. Per ulteriori informazioni su come viene attivato il processo di esempio su [!UICONTROL Sfoglia] , vedere la [sezione conteggio dei profili nella guida dell’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md#profile-count).
 
 ![Il dashboard Profili di Experience Platform con il widget Conteggio profili evidenziato.](../images/profiles/profile-count.png)
 
@@ -428,7 +428,7 @@ Per visualizzare informazioni complete su un pubblico, seleziona un nome di pubb
 
 ![Il widget dimensione Tipi di pubblico con un nome di pubblico e il testo Visualizza tutti i tipi di pubblico evidenziato.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Consulta la documentazione per ulteriori informazioni su [[!UICONTROL Tipi di pubblico] [!UICONTROL  Sfoglia] scheda](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+Consulta la documentazione per ulteriori informazioni su [[!UICONTROL Tipi di pubblico] [!UICONTROL  Sfoglia] scheda](../../segmentation/ui/overview.md#browse).
 
 ### [!UICONTROL Sovrapposizione del pubblico con criterio di unione] {#audience-overlap-by-merge-policy}
 

@@ -2,9 +2,9 @@
 title: Supporto del controllo degli accessi basato su attributi per schemi ad hoc
 description: Guida per limitare l’accesso ai campi dati negli schemi ad hoc generati tramite Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1013'
 ht-degree: 2%
 
 ---
@@ -25,8 +25,8 @@ Questo documento fornisce un tutorial per gestire l’accesso ai dati sensibili 
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=it): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=it): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
+* [Sistema Experience Data Model (XDM)](../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): scopri come [!DNL Data Governance] consente di gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati.
 * [Controllo degli accessi basato su attributi](../../access-control/abac/overview.md): il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo schema ad hoc o normale. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
@@ -70,7 +70,7 @@ Il [!UICONTROL Modifica etichette] viene visualizzato popover. Da questa vista p
 
 ![Viene visualizzata la finestra a comparsa Modifica etichette.](../images/data-governance/edit-labels-popover.png)
 
-Consulta la documentazione per istruzioni su come [crea o modifica etichette per lo schema o il campo selezionato](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+Consulta la documentazione per istruzioni su come [crea o modifica etichette per lo schema o il campo selezionato](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Se un’identità o un’identità primaria è impostata su uno schema ad hoc, i
 Dopo aver letto questo documento hai una migliore comprensione di come aggiungere etichette di utilizzo dei dati a schemi ad hoc creati tramite query CTAS di Query Service. Se non lo hai già fatto, i seguenti documenti sono utili per comprendere meglio la governance dei dati in Query Service:
 
 * [Identità di schemi ad hoc](./ad-hoc-schema-identities.md)
-* [Governance dei dati](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it)
+* [Governance dei dati](../../data-governance/home.md)

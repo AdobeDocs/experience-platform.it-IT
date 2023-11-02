@@ -1,10 +1,10 @@
 ---
 title: Endpoint "Accelerated Queries"
-description: Scopri come accedere alle query dell’archivio accelerato senza stato per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
+description: Scopri come accedere alle query dell’archivio accelerato in modo stateless per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -212,6 +212,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con lo sche
 | `resultsMeta` | Questo oggetto contiene i metadati per ogni colonna restituita nei risultati, in modo che gli utenti possano conoscere il nome e il tipo di ogni colonna. |
 | `resultsMeta._adhoc` | Schema ad hoc Experience Data Model (XDM) con campi denominati in modo che possano essere utilizzati solo da un singolo set di dati. |
 | `resultsMeta._adhoc.type` | Il tipo di dati dello schema ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Si tratta di un valore generato dal sistema per il tipo di campo XDM. Per ulteriori informazioni sui tipi disponibili, consulta la documentazione su [tipi XDM disponibili](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.meta:xdmType` | Si tratta di un valore generato dal sistema per il tipo di campo XDM. Per ulteriori informazioni sui tipi disponibili, consulta la documentazione su [tipi XDM disponibili](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Si tratta dei nomi delle colonne del set di dati sottoposto a query. |
 | `resultsMeta._adhoc.results` | Questi sono i nomi delle righe del set di dati sottoposto a query. Riflettono ciascuna delle colonne restituite. |
