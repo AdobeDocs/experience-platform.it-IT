@@ -1,15 +1,15 @@
 ---
-title: Coinvolgi e acquisisci nuovi clienti attraverso casi d’uso potenziali
-description: Scopri come coinvolgere e acquisire nuovi clienti attraverso casi d’uso potenziali, grazie al supporto dei dati dei partner in Real-Time CDP.
+title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti
+description: Scopri come coinvolgere e acquisire nuovi clienti attraverso la ricerca di casi d’uso, senza affidarsi a cookie di terze parti.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# Coinvolgi e acquisisci nuovi clienti attraverso casi d’uso potenziali
+# Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Utilizza il supporto dati di terze parti in Real-Time CDP per espandere la tua b
 
 ![Panoramica visiva di alto livello su un caso d’uso di potenziale cliente.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Perché considerare questo caso d’uso {#why-this-use-case}
+
+I brand si trovano ad affrontare contemporaneamente sfide impegnative relative all’esecuzione responsabile di casi d’uso di acquisizione clienti top-of-the-funnel senza dipendere dai cookie di terze parti, da budget limitati e da una maggiore domanda di trasparenza e ritorno sulla spesa pubblicitaria.
+
+Adobe Real-time Customer Data Platform può aiutare i brand a passare in modo sicuro i casi di utilizzo supportati dalla piattaforma di gestione dati (DMP, Data Management Platform) a alternative senza cookie, in modo da portare avanti la sofisticazione e la potenza complete della segmentazione self-service, della cura del pubblico e dell’attivazione in un unico sistema. Il tutto senza compromettere l&#39;attenzione costante di Adobe sull&#39;uso responsabile dei dati tramite un framework brevettato per la governance dei dati e il consenso.
+
+Ad esempio, segui i passaggi descritti in questo caso d’uso quando devi eseguire una campagna per attrarre potenziali utenti affinché diventino clienti noti.
+
 ## Prerequisiti e pianificazione {#prerequisites-and-planning}
 
-Se prendi in considerazione la possibilità di contattare e acquisire nuovi clienti utilizzando il supporto dei dati dei partner in Real-Time CDP, considera i seguenti prerequisiti nel processo di pianificazione:
+Se stai valutando la possibilità di contattare e acquisire nuovi clienti, tieni presente i seguenti prerequisiti nel processo di pianificazione:
 
 * Qual è la cadenza con cui si prevede che gli attributi forniti dai partner vengano acquisiti in Real-Time CDP e aggiornati?
 * Quali identità richiedono le destinazioni a valle?
@@ -219,5 +227,5 @@ Utilizza i tipi di pubblico di potenziali clienti esportandoli nelle destinazion
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
 * [Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
+* [Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
 * [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.

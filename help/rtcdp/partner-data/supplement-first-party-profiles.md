@@ -2,10 +2,10 @@
 title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 90%
+source-wordcount: '1263'
+ht-degree: 79%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 90%
 Puoi integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare la base di dati, acquisire nuove informazioni sulla base dei clienti e una migliore ottimizzazione del pubblico.
 
 ![Panoramica visiva di alto livello su come arricchire i profili con i casi d’uso degli attributi forniti dai partner.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Perché considerare questo caso d’uso {#why-this-use-case}
+
+La maggior parte dei brand, anche quelli ricchi di dati di prime parti, può trarre vantaggio dalla semplificazione dei propri dati e dalla comprensione più sfumata dei clienti, dei loro comportamenti, modelli e preferenze.
+
+Adobe Real-time Customer Data Platform può aiutare i brand a integrare in modo responsabile i dati di prime parti con informazioni, identificatori e attributi utili provenienti da uno o più partner di fiducia.
+
+Adobe è consapevole del fatto che non esiste un approccio universale che consenta l’interoperabilità diretta con i dati e i partner di identità per promuovere un coinvolgimento personalizzato e ponderato in tutte le fasi del ciclo di vita del cliente. Queste funzionalità sono supportate da un framework di governance dei dati affidabile, che consente un controllo sfumato su dove e come vengono utilizzati i dati dei partner. Ad esempio, potresti voler utilizzare le informazioni fornite dai partner per la segmentazione, ma non per la personalizzazione.
+
+Ad esempio, segui i passaggi descritti in questo caso d’uso quando devi arricchire i record dei clienti con segnali demografici e intenzionali.
 
 ## Prerequisiti e pianificazione {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni pres
 Esplora altri casi d’uso abilitati tramite il supporto dei dati dei partner in Real-Time CDP:
 
 * Utilizza il supporto dati di terze parti in Real-Time CDP per [espandere la base di profili con i profili di potenziali clienti dei partner dati e interagisci con loro per acquisire o raggiungere nuovi clienti](/help/rtcdp/partner-data/prospecting.md).
-* [Utilizzo del riconoscimento supportato dai partner per la personalizzazione delle esperienze sul sito](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
+* [Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita senza che l’utente si autentichi o abbia una storia precedente con il tuo marchio.
 * [Attivazione estesa di profili di potenziali clienti e tipi di pubblico di potenziali clienti](/help/destinations/ui/activate-prospect-audiences.md) per selezionare le destinazioni.

@@ -3,10 +3,10 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1587'
-ht-degree: 3%
+source-wordcount: '1660'
+ht-degree: 4%
 
 ---
 
@@ -15,6 +15,20 @@ ht-degree: 3%
 
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note sulla versione dell’estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.19.0 - 1 novembre 2023
+
+**Nuove funzioni**
+
+* È stato aggiunto il supporto per il rendering dei messaggi in-app da Adobe Journey Optimizer.
+* È stato aggiunto il supporto per gli eventi di inizio e fine pagina.
+* È stata aggiunta l’opzione &quot;defaultPersonalizationEnabled&quot; al comando sendEvent per controllare la richiesta dell’ambito a livello di pagina e della superficie predefinita.
+
+**Correzioni e miglioramenti**
+
+* La personalizzazione combinata mostra gli eventi insieme durante il rendering di più tipi di personalizzazione.
+* È stato risolto un problema a causa del quale i nomi delle visualizzazioni delle applicazioni a pagina singola facevano distinzione tra maiuscole e minuscole.
+* È stato risolto un problema relativo ai selettori di offerte personalizzati DOM ombra.
 
 ## Versione 2.18.0 - 31 luglio 2023
 
