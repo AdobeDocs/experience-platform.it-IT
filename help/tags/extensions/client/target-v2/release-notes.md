@@ -2,10 +2,10 @@
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 51%
+source-wordcount: '776'
+ht-degree: 49%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 51%
 
 ## v0.20.1 (3 novembre 2023)
 
-- Aggiornato per supportare at.js 2.11.2.
+- Aggiornato per supportare `at.js` 2.11.2
 - È stato corretto un bug che causava incoerenze nei token di risposta inviati su eventi personalizzati.
 
 ## v0.20.0 (9 ottobre 2023)
 
-- Aggiornato per supportare at.js 2.11.0.
+- Aggiornato per supportare `at.js` 2.11.0
 - È stato aggiunto il supporto per l’impostazione di sandboxId e sandboxName personalizzati per Adobe Experience Platform in targetGlobalSettings, che verranno trasmessi all’API di consegna nelle chiamate getOffer/getOffers.
 - Correzione DOM shadow per il concatenamento :eq() nel selettore.
 
 ## v0.19.3 (18 settembre 2023)
 
-- Aggiornato per supportare at.js v2.10.3.
+- Aggiornato per supportare `at.js` v2.10.3.
 - È stato risolto un problema che attivava erroneamente l’evento personalizzato di rendering del contenuto at quando non veniva eseguito il rendering di alcuna offerta. Ora viene attivato l’evento corretto, at-content-rendering-no-offers (Rendering-nessun’offerta).
 - Sono stati aggiunti eventToken e responseTokens all’oggetto errore per l’evento personalizzato at-content-rendering-failed.
 
@@ -66,6 +66,12 @@ ht-degree: 51%
 ## v0.16.0 (28 ottobre 2021)
 
 - Aggiornato per supportare `at.js` v2.7.0, ora disponibile per il download da Adobe Target.
+
+## v0.15.2 (16 agosto 2021)
+
+- Aggiornato per supportare `at.js` 2.6.1
+- Inizializza il decisioning sul dispositivo all’avvio, indipendentemente dall’evento Caricamento pagina.
+- È ora possibile utilizzare le decisioni sul dispositivo alla prima visita dopo il download dell’artefatto.
 
 ## v0.15.1 (20 luglio 2021)
 
