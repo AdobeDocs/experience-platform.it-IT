@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Questo documento fornisce indicazioni sui guardrail per l’acquisizione dei dati in Adobe Experience Platform
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,10 @@ La tabella seguente illustra i guardrail da considerare quando si utilizzano le 
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sui guardrail di dati ed elaborazione, consulta la seguente documentazione in Experience Platform:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
-* [Guardrail per i dati Real-Time Customer Profile](../profile/guardrails.md)
-* [Guardrail per i dati del servizio Identity](../identity-service/guardrails.md)
+* [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

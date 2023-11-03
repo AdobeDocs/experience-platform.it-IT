@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d8e7b5daf72afab8e0a980e35b18a9986a19387d
+source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -23,12 +23,16 @@ Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comp
 >* I limiti delineati nel presente documento vengono costantemente migliorati. Controlla regolarmente se ci sono aggiornamenti.
 >* A seconda delle limitazioni individuali a valle, alcune destinazioni potrebbero avere guardrail più rigidi rispetto a quelle documentate in questa pagina. Assicurati anche di controllare il [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati.
 
-## Tipi di limite {#limit-types}
+## Tipi di guardrail {#limit-types}
 
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
-* **Limite soft:** È possibile superare un limite soft, tuttavia i limiti soft forniscono una linea guida consigliata per le prestazioni del sistema.
-* **Limite rigido:** Un limite rigido fornisce un massimo assoluto. L’interfaccia utente o l’API di Experienci Platform non consente di superare questo limite, oppure se superi questo limite, viene restituito un errore.
+| Tipo di guardrail | Descrizione |
+|----------|---------|
+| **Guardrail delle prestazioni (limite morbido)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
+
+{style="table-layout:auto"}
 
 
 ## Limiti di attivazione {#activation-limits}
@@ -41,11 +45,11 @@ I guardrail di seguito si applicano generalmente all&#39;attivazione tramite [tu
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di tipi di pubblico per una singola destinazione | 250 | Morbido | Si consiglia di mappare un massimo di 250 tipi di pubblico su una singola destinazione in un flusso di dati. <br><br> Se devi attivare più di 250 tipi di pubblico in una destinazione, puoi: <ul><li> Annullare la mappatura dei tipi di pubblico che non desideri più attivare oppure</li><li>Crea un nuovo flusso di dati nella destinazione desiderata e mappa i tipi di pubblico su questo nuovo flusso di dati.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 tipi di pubblico mappati alla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
-| Numero massimo di attributi mappati a una destinazione | 50 | Morbido | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
-| Numero massimo di destinazioni | 100 | Rigido | Puoi creare un massimo di 100 destinazioni a cui connettersi e attivare i dati, *per sandbox*. [Destinazioni di personalizzazione Edge (personalizzazione personalizzata)](#edge-destinations-activation) può rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
-| Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Rigido | Attualmente, è possibile esportare solo *attributi record profilo* alle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
-| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Non disponibile | Rigido | In questo momento, è **non** possibile esportare *array o attributi mappa* alle destinazioni. L&#39;eccezione a questa regola è il [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportato sia in streaming che nelle attivazioni basate su file. |
+| Numero massimo di tipi di pubblico per una singola destinazione | 250 | Guardrail delle prestazioni | Si consiglia di mappare un massimo di 250 tipi di pubblico su una singola destinazione in un flusso di dati. <br><br> Se devi attivare più di 250 tipi di pubblico in una destinazione, puoi: <ul><li> Annullare la mappatura dei tipi di pubblico che non desideri più attivare oppure</li><li>Crea un nuovo flusso di dati nella destinazione desiderata e mappa i tipi di pubblico su questo nuovo flusso di dati.</li></ul> <br> Tieni presente che nel caso di alcune destinazioni, puoi essere limitato a meno di 250 tipi di pubblico mappati alla destinazione. Tali destinazioni sono richiamate più avanti nella pagina, nelle rispettive sezioni. |
+| Numero massimo di attributi mappati a una destinazione | 50 | Guardrail delle prestazioni | Nel caso di più destinazioni e tipi di destinazione, puoi selezionare gli attributi e le identità del profilo da mappare per l’esportazione. Per prestazioni ottimali, è necessario mappare un massimo di 50 attributi in un flusso di dati su una destinazione. |
+| Numero massimo di destinazioni | 100 | Guarddrail imposto dal sistema | Puoi creare un massimo di 100 destinazioni a cui connettersi e attivare i dati, *per sandbox*. [Destinazioni di personalizzazione Edge (personalizzazione personalizzata)](#edge-destinations-activation) può rappresentare un massimo di 10 delle 100 destinazioni consigliate. |
+| Tipo di dati attivati nelle destinazioni | Dati profilo, comprese identità e mappa identità | Guarddrail imposto dal sistema | Attualmente, è possibile esportare solo *attributi record profilo* alle destinazioni. Al momento, gli attributi XDM che descrivono i dati dell’evento non sono supportati per l’esportazione. |
+| Tipo di dati attivati nelle destinazioni: supporto degli attributi di array e mappa | Non disponibile | Guarddrail imposto dal sistema | In questo momento, è **non** possibile esportare *array o attributi mappa* alle destinazioni. L&#39;eccezione a questa regola è il [mappa identità](/help/xdm/field-groups/profile/identitymap.md), che viene esportato sia in streaming che nelle attivazioni basate su file. |
 
 {style="table-layout:auto"}
 
@@ -65,9 +69,9 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni ba
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Rigido | Leggi le [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) sezioni della documentazione per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch. |
-| Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Morbido | Si consiglia di aggiungere un massimo di 100 tipi di pubblico ai flussi di dati di destinazione batch. |
-| Numero massimo di righe (record) per file da attivare | 5 milioni | Rigido | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un’esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere [sezione pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell’esercitazione attivare destinazioni batch. |
+| Frequenza di attivazione | Un’esportazione completa giornaliera o esportazioni incrementali più frequenti ogni 3, 6, 8 o 12 ore. | Guarddrail imposto dal sistema | Leggi le [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) sezioni della documentazione per ulteriori informazioni sugli incrementi di frequenza per le esportazioni batch. |
+| Numero massimo di tipi di pubblico che possono essere esportati in una determinata ora | 100 | Guardrail delle prestazioni | Si consiglia di aggiungere un massimo di 100 tipi di pubblico ai flussi di dati di destinazione batch. |
+| Numero massimo di righe (record) per file da attivare | 5 milioni | Guarddrail imposto dal sistema | Adobe Experience Platform divide automaticamente i file esportati in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo. Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un’esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Per ulteriori informazioni, leggere [sezione pianificazione](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) dell’esercitazione attivare destinazioni batch. |
 
 {style="table-layout:auto"}
 
@@ -77,8 +81,8 @@ I guardrail riportati di seguito si applicano al [attivazione ad hoc](/help/dest
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Tipi di pubblico attivati per processo di attivazione ad hoc | 80 | Rigido | Attualmente, ogni processo di attivazione ad hoc può attivare fino a 80 tipi di pubblico. Se si tenta di attivare più di 80 tipi di pubblico per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future. |
-| Processi di attivazione ad-hoc simultanei per pubblico | 1 | Rigido | Non eseguire più di un processo di attivazione ad hoc simultaneo per pubblico. |
+| Tipi di pubblico attivati per processo di attivazione ad hoc | 80 | Guarddrail imposto dal sistema | Attualmente, ogni processo di attivazione ad hoc può attivare fino a 80 tipi di pubblico. Se si tenta di attivare più di 80 tipi di pubblico per processo, il processo non riuscirà. Questo comportamento è soggetto a modifiche nelle versioni future. |
+| Processi di attivazione ad-hoc simultanei per pubblico | 1 | Guarddrail imposto dal sistema | Non eseguire più di un processo di attivazione ad hoc simultaneo per pubblico. |
 
 {style="table-layout:auto"}
 
@@ -88,9 +92,9 @@ I guardrail di seguito si applicano all&#39;attivazione tramite [destinazioni di
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni | 10 | Morbido | Puoi impostare flussi di dati su 10 destinazioni di personalizzazione personalizzate per sandbox. |
-| Numero massimo di attributi mappati a una destinazione di personalizzazione per sandbox | 30 | Rigido | È possibile mappare un massimo di 30 attributi in un flusso di dati a una destinazione di personalizzazione, per sandbox. |
-| Numero massimo di tipi di pubblico mappati su un singolo [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinazione | 50 | Morbido | Puoi attivare fino a 50 tipi di pubblico in un flusso di attivazione verso una singola destinazione di Adobe Target. |
+| Numero massimo di [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) destinazioni | 10 | Guardrail delle prestazioni | Puoi impostare flussi di dati su 10 destinazioni di personalizzazione personalizzate per sandbox. |
+| Numero massimo di attributi mappati a una destinazione di personalizzazione per sandbox | 30 | Guarddrail imposto dal sistema | È possibile mappare un massimo di 30 attributi in un flusso di dati a una destinazione di personalizzazione, per sandbox. |
+| Numero massimo di tipi di pubblico mappati su un singolo [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destinazione | 50 | Guardrail delle prestazioni | Puoi attivare fino a 50 tipi di pubblico in un flusso di attivazione verso una singola destinazione di Adobe Target. |
 
 {style="table-layout:auto"}
 
@@ -122,7 +126,7 @@ Il soft guardrail riportato di seguito si applica a tutti i set di dati esportat
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Dimensione dei set di dati esportati | 5 miliardi di record | Morbido | Il limite qui descritto per le esportazioni di set di dati è un *guardrail morbido*. Ad esempio, anche se l’interfaccia utente non blocca l’esportazione di set di dati superiori a 5 miliardi di record, il comportamento è imprevedibile e le esportazioni potrebbero non riuscire o avere una latenza di esportazione molto lunga. |
+| Dimensione dei set di dati esportati | 5 miliardi di record | Guardrail delle prestazioni | Il limite qui descritto per le esportazioni di set di dati è un *guardrail morbido*. Ad esempio, anche se l’interfaccia utente non blocca l’esportazione di set di dati superiori a 5 miliardi di record, il comportamento è imprevedibile e le esportazioni potrebbero non riuscire o avere una latenza di esportazione molto lunga. |
 
 {style="table-layout:auto"}
 
@@ -136,8 +140,8 @@ Per le esportazioni di set di dati pianificate o ricorrenti, i guardrail riporta
 
 | Tipo di set di dati | Guardrail | Tipo di guardrail | Descrizione |
 ---------|----------|---------|-------|
-| Set di dati basati su **Schema eventi esperienza XDM** | Ultimi 365 giorni di dati | Rigido | Vengono esportati i dati dell&#39;ultimo anno di calendario. |
-| Set di dati basati su **Schema profilo individuale XDM** | Dieci miliardi di record in tutti i file esportati in un flusso di dati | Rigido | Il numero di record del set di dati deve essere inferiore a dieci miliardi per i file JSON o parquet compressi e a un milione per i file parquet non compressi, altrimenti l’esportazione non riesce. Riduci le dimensioni del set di dati che stai tentando di esportare se è più grande della soglia consentita. |
+| Set di dati basati su **Schema eventi esperienza XDM** | Ultimi 365 giorni di dati | Guarddrail imposto dal sistema | Vengono esportati i dati dell&#39;ultimo anno di calendario. |
+| Set di dati basati su **Schema profilo individuale XDM** | Dieci miliardi di record in tutti i file esportati in un flusso di dati | Guarddrail imposto dal sistema | Il numero di record del set di dati deve essere inferiore a dieci miliardi per i file JSON o parquet compressi e a un milione per i file parquet non compressi, altrimenti l’esportazione non riesce. Riduci le dimensioni del set di dati che stai tentando di esportare se è più grande della soglia consentita. |
 
 {style="table-layout:auto"}
 
@@ -169,8 +173,8 @@ Ulteriori informazioni su [esportazione di set di dati](/help/destinations/ui/ex
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Morbido | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
-| Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1,800 e massimo 3,600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Rigido | Quando si utilizza [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili da includere nei messaggi. |
+| Numero massimo di [destinazioni personalizzate private](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Guardrail delle prestazioni | Puoi creare fino a 5 destinazioni private di flussi personalizzati o batch utilizzando Destination SDK. Se devi creare più di 5 di queste destinazioni, rivolgiti a un rappresentante dell’assistenza personalizzata. |
+| Criterio di esportazione profilo per Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimo 1,800 e massimo 3,600)</li><li>`maxNumEventsInBatch` (minimo 1.000, massimo 10.000)</li></ul> | Guarddrail imposto dal sistema | Quando si utilizza [aggregazione configurabile](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) per la destinazione, tieni presente i valori minimo e massimo che determinano la frequenza con cui i messaggi HTTP vengono inviati alla destinazione basata su API e il numero di profili da includere nei messaggi. |
 
 {style="table-layout:auto"}
 
@@ -184,11 +188,12 @@ Dettagli sulle soglie o limitazioni di limitazione per determinate destinazioni.
 
 {style="table-layout:auto"}
 
-## Guardrail per altri servizi Experienci Platform {#guardrails-other-services}
+## Passaggi successivi
 
-Visualizza le informazioni sui guardrail per altri servizi Experienci Platform:
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 
-* Guardrail per [acquisizione dei dati](/help/ingestion/guardrails.md)
-* Guardrail per [[!DNL Identity Service] dati](/help/identity-service/guardrails.md)
-* Guardrail per [[!DNL Real-Time Customer Profile] dati](/help/profile/guardrails.md)
-* Guardrail per [[!DNL Query Service] dati](/help/query-service/guardrails.md)
+* [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

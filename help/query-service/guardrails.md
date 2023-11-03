@@ -3,9 +3,9 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;guar
 title: Guardrail per Query Service
 description: In questo documento vengono fornite informazioni sui limiti di utilizzo per i dati di Query Service, utili per ottimizzare l’utilizzo delle query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
+source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1177'
 ht-degree: 2%
 
 ---
@@ -34,13 +34,16 @@ Prima di continuare con questo documento, è necessario avere una buona conoscen
 
 L’illustrazione seguente riepiloga il modo in cui le funzionalità di Query Service sono attualmente incluse in pacchetti e concesse in licenza:
 
-## Tipi di limite
+## Tipi di guardrail
 
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
-* **Limite morbido**: è possibile superare un limite non vincolante; tuttavia, i limiti non permanenti forniscono una linea guida consigliata per le prestazioni del sistema.
+| Tipo di guardrail | Descrizione |
+|----------|---------|
+| **Guardrail delle prestazioni (limite morbido)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
-* **Limite rigido**: un limite rigido fornisce un massimo assoluto.
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -54,10 +57,10 @@ Le tabelle seguenti forniscono i limiti di guardrail e le descrizioni consigliat
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 |---|---|---|---|
-| Tempo massimo di esecuzione | 10 minuti | Rigido | Definisce il tempo massimo di output per una query SQL ad hoc. Il superamento del limite di tempo per restituire un risultato genera il codice di errore 53400. |
-| Utenti di Concurrent Query Service | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+5 (con ogni pacchetto aggiuntivo ad hoc per utenti di query acquistato)</li></ul> | Rigido | Questo definisce quanti utenti possono creare sessioni simultaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, l’utente riceve un’e-mail `Session Limit Reached` errore. |
-| Concorrenza query | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+1 (con ogni pacchetto SKU aggiuntivo utente per query ad hoc acquistato)</li></ul> | Rigido | Definisce quante query possono essere eseguite contemporaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, le query vengono messe in coda. |
-| Connettore client e limite di output dei risultati | Connettore client<ul><li>Interfaccia query (100 righe)</li><li>Cliente di terze parti (50.000)</li><li>[!DNL PostgresSQL] cliente (50.000)</li></ul> | Rigido | Il risultato di una query può essere ricevuto nei modi seguenti:<ul><li>Interfaccia utente di Query Service</li><li>Client di terze parti</li><li>[!DNL PostgresSQL] client</li></ul>Nota: l’aggiunta di un limite al conteggio degli output potrebbe restituire risultati più rapidamente. Ad esempio, `LIMIT 5`, `LIMIT 10` e così via. |
+| Tempo massimo di esecuzione | 10 minuti | Guarddrail imposto dal sistema | Definisce il tempo massimo di output per una query SQL ad hoc. Il superamento del limite di tempo per restituire un risultato genera il codice di errore 53400. |
+| Utenti di Concurrent Query Service | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+5 (con ogni pacchetto aggiuntivo ad hoc per utenti di query acquistato)</li></ul> | Guarddrail imposto dal sistema | Questo definisce quanti utenti possono creare sessioni simultaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, l’utente riceve un’e-mail `Session Limit Reached` errore. |
+| Concorrenza query | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+1 (con ogni pacchetto SKU aggiuntivo utente per query ad hoc acquistato)</li></ul> | Guarddrail imposto dal sistema | Definisce quante query possono essere eseguite contemporaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, le query vengono messe in coda. |
+| Connettore client e limite di output dei risultati | Connettore client<ul><li>Interfaccia query (100 righe)</li><li>Cliente di terze parti (50.000)</li><li>[!DNL PostgresSQL] cliente (50.000)</li></ul> | Guarddrail imposto dal sistema | Il risultato di una query può essere ricevuto nei modi seguenti:<ul><li>Interfaccia utente di Query Service</li><li>Client di terze parti</li><li>[!DNL PostgresSQL] client</li></ul>Nota: l’aggiunta di un limite al conteggio degli output potrebbe restituire risultati più rapidamente. Ad esempio, `LIMIT 5`, `LIMIT 10` e così via. |
 | Risultati restituiti tramite | Interfaccia utente client | N/D | Definisce il modo in cui i risultati vengono resi disponibili agli utenti. |
 
 {style="table-layout:auto"}
@@ -66,12 +69,12 @@ Le tabelle seguenti forniscono i limiti di guardrail e le descrizioni consigliat
 
 | **Guardrail** | **Limite** | **Tipo di limite** | **Descrizione** |
 |---|---|---|---|
-| Tempo massimo di esecuzione | 24 ore | Rigido | Definisce il tempo massimo di esecuzione per una query SQL batch.<br>Il tempo di elaborazione di una query dipende dal volume di dati da elaborare e dalla complessità della query. |
-| Utenti del servizio di query simultanee per batch non pianificato | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+5 (con ogni pacchetto aggiuntivo ad hoc per utenti di query acquistato)</li></ul> | Rigido | Per le query batch non pianificate (ad esempio le query CTAS/ITAS in modalità interattiva), questo definisce quanti utenti possono creare sessioni simultaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, l’utente riceve un’e-mail `Session Limit Reached` errore. |
+| Tempo massimo di esecuzione | 24 ore | Guarddrail imposto dal sistema | Definisce il tempo massimo di esecuzione per una query SQL batch.<br>Il tempo di elaborazione di una query dipende dal volume di dati da elaborare e dalla complessità della query. |
+| Utenti del servizio di query simultanee per batch non pianificato | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+5 (con ogni pacchetto aggiuntivo ad hoc per utenti di query acquistato)</li></ul> | Guarddrail imposto dal sistema | Per le query batch non pianificate (ad esempio le query CTAS/ITAS in modalità interattiva), questo definisce quanti utenti possono creare sessioni simultaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, l’utente riceve un’e-mail `Session Limit Reached` errore. |
 | Utenti di Query Service simultanei per batch pianificato | Nessun limite utente | N/D | Le query batch pianificate sono processi asincroni, quindi non esistono limitazioni per gli utenti. |
-| Ore di calcolo per l’elaborazione dei dati in batch | Come specificato nell&#39;ordine cliente SKU personalizzato di Adobe Experience Platform Intelligence Query del cliente | Morbido | Questo definisce la quantità di tempo computazionale nell’ambito per anno consentita a un cliente per l’esecuzione di query batch al fine di analizzare, elaborare e riscrivere i dati nel data lake. |
+| Ore di calcolo per l’elaborazione dei dati in batch | Come specificato nell&#39;ordine cliente SKU personalizzato di Adobe Experience Platform Intelligence Query del cliente | Guardrail delle prestazioni | Questo definisce la quantità di tempo computazionale nell’ambito per anno consentita a un cliente per l’esecuzione di query batch al fine di analizzare, elaborare e riscrivere i dati nel data lake. |
 | Concorrenza query | Supportati | N/D | Le query batch pianificate sono processi asincroni, pertanto sono supportate le query simultanee. |
-| Connettore client e limite di output dei risultati | Connettore client<ul><li>Interfaccia utente Query (nessun limite superiore alle righe)</li><li>Client di terze parti (nessun limite superiore alle righe)</li><li>[!DNL PostgresSQL] client (nessun limite superiore alle righe)</li><li>API REST (nessun limite superiore alle righe)</li></ul> | Rigido | Il risultato di una query può essere reso disponibile utilizzando i metodi seguenti:<ul><li>Può essere memorizzato come set di dati derivati</li><li>Può essere inserito nei set di dati derivati esistenti</li></ul>Nota: non esiste alcun limite superiore al numero di conteggio dei record risultante dal risultato della query. |
+| Connettore client e limite di output dei risultati | Connettore client<ul><li>Interfaccia utente Query (nessun limite superiore alle righe)</li><li>Client di terze parti (nessun limite superiore alle righe)</li><li>[!DNL PostgresSQL] client (nessun limite superiore alle righe)</li><li>API REST (nessun limite superiore alle righe)</li></ul> | Guarddrail imposto dal sistema | Il risultato di una query può essere reso disponibile utilizzando i metodi seguenti:<ul><li>Può essere memorizzato come set di dati derivati</li><li>Può essere inserito nei set di dati derivati esistenti</li></ul>Nota: non esiste alcun limite superiore al numero di conteggio dei record risultante dal risultato della query. |
 | Risultati restituiti tramite | Set di dati | N/D | Definisce il modo in cui i risultati vengono resi disponibili agli utenti. |
 
 {style="table-layout:auto"}
@@ -82,7 +85,7 @@ La tabella seguente fornisce i limiti di guardrail e la descrizione consigliati 
 
 | Guardrail | Limite | Tipo di limite | Descrizione |
 |---|---|---|---|
-| Concorrenza query | 4 | Rigido | Per garantire che le query sui dati aggregati tramite l’API di reporting (incluse le query che migliorano i modelli di dati come i modelli di dati di Real-Time CDP) dispongano delle risorse per essere eseguite in modo efficiente, l’API di reporting tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ogni query. Il sistema mette le query in coda e attende che gli slot di concorrenza siano disponibili o che possano essere serviti dalla cache. Sono disponibili al massimo quattro slot di query simultanei in un determinato momento.<br>Se accedi all’API di reporting tramite uno strumento BI e hai bisogno di più concorrenza, è necessario un server BI. |
+| Concorrenza query | 4 | Guarddrail imposto dal sistema | Per garantire che le query sui dati aggregati tramite l’API di reporting (incluse le query che migliorano i modelli di dati come i modelli di dati di Real-Time CDP) dispongano delle risorse per essere eseguite in modo efficiente, l’API di reporting tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ogni query. Il sistema mette le query in coda e attende che gli slot di concorrenza siano disponibili o che possano essere serviti dalla cache. Sono disponibili al massimo quattro slot di query simultanei in un determinato momento.<br>Se accedi all’API di reporting tramite uno strumento BI e hai bisogno di più concorrenza, è necessario un server BI. |
 
 {style="table-layout:auto"}
 
@@ -94,3 +97,11 @@ Per ulteriori informazioni su Query Service, consulta la seguente documentazione
 
 * [API servizio query](./api/getting-started.md)
 * [Interfaccia utente di Query Service](./ui/overview.md)
+
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+
+* [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

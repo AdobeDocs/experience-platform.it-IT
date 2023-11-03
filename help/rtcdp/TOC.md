@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
+source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 89%
+source-wordcount: '318'
+ht-degree: 73%
 
 ---
 
@@ -37,6 +37,14 @@ ht-degree: 89%
 * Destinazioni {#destinations}
    * [Panoramica sulle destinazioni](destinations/overview.md)
    * [Destinazioni nell’Edizione B2B di Real-Time CDP](destinations/b2b.md)
+* Guardrail {#guardrails}
+   * [Panoramica sui guardrail di Real-Time CDP](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [Guardrail per l’acquisizione dei dati](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Guardrail per il [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Guardrail per [!DNL Real-Time Customer Profile] dati e segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it){target="_blank"}
+   * [Guardrail per [!DNL Identity Service] dati](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Guardrail per [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Guardrail per l’attivazione dei dati tramite destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identità {#identity}
    * [Identità e spazi dei nomi di identità](profile/identities-overview.md)
 * Criteri di unione {#merge-policies}

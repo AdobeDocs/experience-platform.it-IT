@@ -3,9 +3,9 @@ title: Guardrail delle prestazioni per l’API del server di rete Edge
 description: Scopri come utilizzare l’API server all’interno di guardrail di prestazioni ottimali.
 keywords: raccolta dati;raccolta;rete edge;api;sla;slt;livelli di servizio
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Adobe non è responsabile del deterioramento delle prestazioni causato dal super
 
 ## Definizioni
 
-* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale di richieste elaborate da Experience Platform Edge Network che non generano errori e si riferiscono solo alle API di Edge Network fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
+* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale di richieste elaborate da Experienci Platform Edge Network che non generano errori e si riferiscono solo alle API di Edge Network fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
 * **Percentuale tempo di attività mensile** per una determinata regione viene calcolata come media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
 * Un **a monte** è un servizio dietro la rete Edge, abilitato per uno stream di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
 * A **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e uno a monte configurato per uno stream di dati.
@@ -64,3 +64,13 @@ La tabella seguente mostra i valori limite predefiniti. Se hai bisogno di limiti
 >[!NOTE]
 >
 >A seconda del payload stesso, i formati binari sono generalmente più compatti del 20-40%, consentendo di inviare più dati di quanti ne avresti in JSON in formato testo normale. Contatta il rappresentante dell’Assistenza clienti se hai bisogno di una capacità più elevata per i flussi di dati.
+
+## Passaggi successivi
+
+Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
+
+* [Guardrail Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+* [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

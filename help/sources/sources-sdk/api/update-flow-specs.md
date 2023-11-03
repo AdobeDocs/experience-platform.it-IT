@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;origini;connettori;sorgent
 title: Aggiornare le specifiche di flusso utilizzando l’API del servizio Flusso
 description: Il documento seguente illustra i passaggi necessari per recuperare e aggiornare le specifiche di flusso mediante l’API del servizio di flusso per le origini self-service (SDK batch).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Il documento seguente descrive come recuperare e aggiornare le specifiche di flu
 
 ## Introduzione
 
-Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Cercare una specifica di flusso {#lookup}
 
@@ -251,7 +251,7 @@ La richiesta seguente aggiorna la specifica di flusso di `6499120c-0b15-42dc-936
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
