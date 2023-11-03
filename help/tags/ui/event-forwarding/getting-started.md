@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 78%
+source-wordcount: '868'
+ht-degree: 76%
 
 ---
 
@@ -20,7 +20,7 @@ Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [API server-to-server](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
+* [API server-to-server](/help/server-api/overview.md)
 
 >[!NOTE]
 >Platform Web SDK e Platform Mobile SDK non richiedono l’implementazione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
@@ -31,7 +31,7 @@ Dopo aver inviato i dati a Edge Network, è possibile attivare le soluzioni Adob
 
 * Adobe Real-Time CDP Connections, Prime o Ultimate (contatta il team del tuo account Adobe per informazioni sui prezzi)
 * Inoltro di eventi in Adobe Experience Platform
-* Adobe Experience Platform Web SDK o Mobile SDK, configurato per inviare i dati a Edge Network
+* Adobe Experience Platform Web SDK, Mobile SDK o Edge Network Server API configurate per inviare dati a Edge Network
 * Mappare i dati su Experience Data Model (XDM) (la mappatura può essere eseguita utilizzando i tag)
 
 ## Creare uno schema XDM
