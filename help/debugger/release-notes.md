@@ -4,14 +4,22 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
+source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '564'
+ht-degree: 3%
 
 ---
 
 # Note sulla versione di Adobi Experience Platform Debugger
+
+## Versione 1.5.1 - 2 novembre 2023
+
+### Correzioni e miglioramenti
+
+* Sono stati risolti dei problemi a causa dei quali gli eventi di Analytics venivano ignorati o duplicati.
+* È stato risolto un problema che causava il superamento della dimensione massima di archiviazione dello stato.
+* È stato risolto un problema a causa del quale la ricerca dei registri Edge non filtrava gli eventi.
 
 ## Versione 1.5.0 - 19 ottobre 2023
 
