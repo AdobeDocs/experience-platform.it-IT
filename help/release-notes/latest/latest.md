@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di ottobre 2023 per Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 34%
+source-wordcount: '1068'
+ht-degree: 32%
 
 ---
 
@@ -44,9 +44,11 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
-| Estensione | [!DNL Meta] Miglioramento API per le conversioni | Sono disponibili tre miglioramenti al [API di metaconversione](/help/tags/extensions/server/meta/overview.md) estensione: <ul><li>Integrazione con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea un’esperienza di accesso fluida consentendoti di condividere il pixelID e il token di accesso per l’integrazione API di conversione con Adobe.</li><li>Integrazione con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): consente di inviare annunci pubblicitari a persone che hanno più probabilità di completare un’azione desiderata e di ricollegare l’azione agli annunci consegnati.</li><li>Integrazione con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): consente di trasmettere la RampID di LiveRamp nel campo CIP, eliminando la necessità di condividere i dati PII direttamente con i partner o con Meta. </li></ul> |
-| Estensione | [!DNL LinkedIn] API di conversione | Il [[!DNL LinkedIn] API di conversione](../../tags/extensions/server/linkedin/overview.md) L’estensione consente di valutare l’efficacia delle campagne di marketing LinkedIn inoltrando i dati dell’evento Experienci Platform a LinkedIn. |
+| Estensioni | [!DNL Meta] Miglioramento API per le conversioni | Sono disponibili tre miglioramenti al [API di metaconversione](/help/tags/extensions/server/meta/overview.md) estensione: <ul><li>Integrazione con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea un’esperienza di accesso fluida consentendoti di condividere il pixelID e il token di accesso per l’integrazione API di conversione con Adobe.</li><li>Integrazione con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): consente di inviare annunci pubblicitari a persone che hanno più probabilità di completare un’azione desiderata e di ricollegare l’azione agli annunci consegnati.</li><li>Integrazione con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): consente di trasmettere la RampID di LiveRamp nel campo CIP, eliminando la necessità di condividere i dati PII direttamente con i partner o con Meta. </li></ul> |
+| Estensioni | [!DNL LinkedIn] API di conversione | Il [[!DNL LinkedIn] API di conversione](../../tags/extensions/server/linkedin/overview.md) L’estensione consente di valutare l’efficacia delle campagne di marketing LinkedIn inoltrando i dati dell’evento Experienci Platform a LinkedIn. |
 | Segreto | [!DNL LinkedIn] Segreto OAuth 2 | Il [[!DNL LinkedIn] Segreto OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) consente di inviare interazioni server-server a [!DNL LinkedIn] nell’inoltro degli eventi. |
+| Inoltro eventi | Aggiornamento dei tag e inoltro degli eventi | Per mantenere [Tag](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=it) e [Inoltro eventi](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) Prestazioni in Platform, verranno mantenute solo le build di sviluppo e staging più recenti, sia con esito positivo che negativo. Tutte le build non più in uso verranno rimosse. Inoltre, è stata implementata una limitazione della velocità e della limitazione di limitazione per garantire che alcuni utilizzi API pesanti non danneggino le prestazioni API di altri. |
+| Estensioni | Elementi, regole ed estensioni | [Elementi, regole ed estensioni](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=it) sono ora ordinati nell’output della libreria per garantire una maggiore coerenza tra più build e implementazioni della stessa libreria. |
 
 Per ulteriori informazioni sulla raccolta dati, consulta la [panoramica sulla raccolta dati](../../tags/home.md).
 

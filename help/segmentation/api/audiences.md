@@ -2,9 +2,9 @@
 title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '1879'
 ht-degree: 4%
 
 ---
@@ -933,145 +933,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con le info
 
 +++
 
-## Aggiornare più tipi di pubblico {#bulk-patch}
-
-Per aggiornare il profilo e il conteggio dei record di più tipi di pubblico, devi effettuare una richiesta POST al `/audiences/bulk-patch-metric` e fornendo gli ID dei tipi di pubblico che desideri aggiornare.
-
-**Formato API**
-
-```http
-POST /audiences/bulk-patch-metric
-```
-
-**Richiesta**
-
-+++ Una richiesta di esempio per aggiornare più tipi di pubblico.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/audiences/bulk-patch-metric
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d ' {
-    "jobId": "12345",
-    "jobType": "AO",
-    "resources": [
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 11037
-                    }
-                },
-            ]
-        },
-        {
-            "audienceId": "QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-            "namespace": "AAMTraits",
-            "operations": [
-                {
-                    "op": "add",
-                    "path": "/metrics/data",
-                    "value": {
-                        "totalProfiles": 523
-                    }
-                }
-            ]
-        }
-    ]
-    }
-```
-
-<table>
-<thead>
-<tr>
-<th>Parametro</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>jobId</code></td>
-<td>ID del processo che eseguirà l’aggiornamento.</td>
-</tr>
-<tr>
-<td><code>jobType</code></td>
-<td>Tipo di processo che eseguirà l'aggiornamento. Questo valore può essere <code>export</code> o <code>AO</code>.</td>
-</tr>
-<tr>
-<td><code>audienceId</code></td>
-<td>ID dei tipi di pubblico da aggiornare. Tieni presente che questa è la <code>audienceId</code> valore, e <strong>non</strong> il <code>id</code> valore dei tipi di pubblico.</td>
-</tr>
-<tr>
-<td><code>namespace</code></td>
-<td>Lo spazio dei nomi per il pubblico che desideri aggiornare.</td>
-</tr>
-<tr>
-<td><code>operations</code></td>
-<td>Oggetto contenente le informazioni utilizzate per aggiornare il pubblico.</td>
-</tr>
-<tr>
-<td><code>operations.op</code></td>
-<td>Operazione utilizzata per la patch. Quando si aggiornano più tipi di pubblico, questo valore è <strong>sempre</strong> <code>add</code>.</td>
-</tr>
-<tr>
-<td><code>operations.path</code></td>
-<td>Percorso del campo da aggiornare. Attualmente sono supportati solo due percorsi: <code>/metrics/data</code> durante l'aggiornamento di <strong>profilo</strong> count e <code>/recordMetrics/data</code> durante l'aggiornamento di <strong>record</strong> conteggio.</td>
-</tr>
-<tr>
-<td><code>operations.value</code></td>
-<td>
-Valore del campo da aggiornare. Quando aggiorni il conteggio dei profili, questo valore sarà simile al seguente: 
-<pre>
-{ "totalProfiles": 123456 }
-</pre>
-Quando aggiorni il conteggio dei record, questo valore sarà simile al seguente: 
-<pre>
-{ "recordCount": 123456 }
-</pre>
-</td>
-</tr>
-</tbody>
-</table>
-
-+++
-
-**Risposta**
-
-In caso di esito positivo, la risposta restituisce lo stato HTTP 207 con dettagli sui tipi di pubblico aggiornati.
-
-+++ Una risposta di esempio per aggiornare più tipi di pubblico.
-
-```json
-{
-   "resources":[
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1hdWRpZW5jZS1pZA_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      },
-      {
-         "audienceId":"QUFNVHJhaXRzX2V4dGVybmFsU2VnbWVudC1vcmlnaW4tdGVzdDE_6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
-
-         "namespace": "AAMTraits",
-         "status":200
-      }
-   ]
-}
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `status` | Stato del pubblico aggiornato. Se lo stato restituito è 200, il pubblico è stato aggiornato correttamente. Se non è stato possibile aggiornare il pubblico, verrà restituito un errore che spiega perché il pubblico non è stato aggiornato. |
-
-+++
 
 ## Passaggi successivi
 

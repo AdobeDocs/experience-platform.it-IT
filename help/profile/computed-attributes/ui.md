@@ -2,10 +2,10 @@
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 9%
+source-wordcount: '1567'
+ht-degree: 8%
 
 ---
 
@@ -147,6 +147,12 @@ Quando si seleziona una bozza di attributo calcolato, **[!UICONTROL Modifica att
 ![Il [!UICONTROL Modifica attributi calcolati] viene visualizzata.](./images/ui/edit.png)
 
 ## Utilizzo di attributi calcolati {#usage}
+
+>[!IMPORTANT]
+>
+>Se utilizzi un attributo calcolato con **Più recente** funzione in una definizione di segmento, **deve** include **entrambi** il valore e il valore timestamp nell’oggetto attributo calcolato.
+>
+>Ad esempio, se stai creando una definizione di segmento che cerca &quot;Tutti i profili con un indirizzo e-mail valido&quot; in cui il campo dell’indirizzo e-mail è popolato da un attributo calcolato con la funzione più recente, **deve** includi sia il valore dell’indirizzo e-mail che esiste **e** il timestamp dell’indirizzo e-mail esiste già.
 
 Dopo aver creato un attributo calcolato, puoi utilizzare **pubblicato** attributi calcolati in altri servizi a valle. Poiché gli attributi calcolati sono campi di attributi di profilo creati nello schema di unione profili, puoi cercare valori di attributi calcolati per un profilo cliente in tempo reale, utilizzarli in un pubblico, attivarli in una destinazione o utilizzarli per la personalizzazione nei percorsi in Adobe Journey Optimizer.
 

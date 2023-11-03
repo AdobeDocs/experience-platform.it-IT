@@ -2,7 +2,7 @@
 title: Endpoint API per attributi calcolati
 description: Scopri come creare, visualizzare, aggiornare ed eliminare gli attributi calcolati utilizzando l’API Profilo cliente in tempo reale.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 3%
@@ -50,7 +50,7 @@ I seguenti parametri di query possono essere utilizzati per recuperare un elenco
 | `limit` | Un parametro che specifica il numero massimo di elementi restituiti come parte della risposta. Il valore minimo di questo parametro è 1 e il valore massimo è 40. Se questo parametro non è incluso, per impostazione predefinita verranno restituiti 20 elementi. | `limit=20` |
 | `offset` | Un parametro che specifica il numero di elementi da ignorare prima di restituire gli elementi. | `offset=5` |
 | `sortBy` | Parametro che specifica l&#39;ordine in cui vengono ordinati gli elementi restituiti. Le opzioni disponibili includono `name`, `status`, `updateEpoch`, e `createEpoch`. Puoi anche scegliere se ordinare in ordine crescente o decrescente non includendo o includendo un `-` davanti all’opzione di ordinamento. Per impostazione predefinita, gli elementi vengono ordinati per `updateEpoch` in ordine decrescente. | `sortBy=name` |
-| `property` | Parametro che consente di filtrare in base a vari campi attributo calcolati. Le proprietà supportate includono `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. Le operazioni supportate dipendono dalla proprietà elencata. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contiene()), `NOT_CONTAINS` (!=contiene())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | Parametro che consente di filtrare in base a vari campi attributo calcolati. Le proprietà supportate includono `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, e `status`. Le operazioni supportate dipendono dalla proprietà elencata. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Richiesta**
 
