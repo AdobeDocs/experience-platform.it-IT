@@ -2,10 +2,10 @@
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
 source-wordcount: '1622'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -78,7 +78,7 @@ Gli elementi dati sono i blocchi di creazione per le regole. Gli elementi dati c
       * Il valore viene tenuto in una variabile JavaScript fino a quando la pagina viene aggiornata o viene caricata una nuova pagina.
       * Può essere creato e impostato negli script utilizzando la sintassi dell&#39;oggetto `_satellite`:
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * I valori rimangono memorizzati nella memoria della sessione del browser fino alla chiusura della scheda del browser.
       * Disponibile tramite visita del sito.
