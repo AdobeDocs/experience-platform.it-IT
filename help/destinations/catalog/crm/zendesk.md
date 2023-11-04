@@ -6,7 +6,7 @@ exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** cerca [!DNL Zendesk]. In alternativa, è possibile posizionarlo sotto il **[!UICONTROL CRM]** categoria.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Compila i campi obbligatori di seguito. Consulta la sezione [Raccogli [!DNL Zendesk] credenziali](#gather-credentials) sezione per eventuali indicazioni.
 * **[!UICONTROL Token Bearer]**: il token di accesso generato nel [!DNL Zendesk] account.
@@ -85,7 +85,7 @@ Per eseguire l’autenticazione nella destinazione, seleziona **[!UICONTROL Conn
 
 Se i dettagli forniti sono validi, nell’interfaccia utente viene visualizzato un **[!UICONTROL Connesso]** con un segno di spunta verde. A questo punto è possibile procedere al passaggio successivo.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 ![Schermata dell’interfaccia utente di Platform che mostra i dettagli della destinazione.](../../assets/catalog/crm/zendesk/destination-details.png)
@@ -99,7 +99,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

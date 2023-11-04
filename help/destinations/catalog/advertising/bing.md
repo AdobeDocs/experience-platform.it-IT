@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -68,7 +68,7 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 
 * [!UICONTROL ID account]: questo è il tuo [!DNL Bing Ads CID], in formato numero intero.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -76,7 +76,7 @@ Durante la configurazione della destinazione, devi fornire le seguenti informazi
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Inserisci i dettagli della destinazione {#parameters}
+### Inserire i dettagli della destinazione {#parameters}
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -90,7 +90,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"

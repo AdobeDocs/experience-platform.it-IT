@@ -113,7 +113,7 @@ Per connettere un partner utilizzando il proprio [!UICONTROL ID connessione], in
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Crea feed {#create-feed}
+### Creare un feed {#create-feed}
 
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"

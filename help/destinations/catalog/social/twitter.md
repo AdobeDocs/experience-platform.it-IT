@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -71,14 +71,14 @@ Effettua il targeting dei tuoi follower e clienti esistenti nel Twitter e crea c
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 1. Trova il [!DNL Twitter Custom Audiences] nel catalogo di destinazione e seleziona **[!UICONTROL Configurazione]**.
 2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
    ![Autentica in LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. Immetti le credenziali del Twitter e seleziona **Accedi**.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
@@ -97,7 +97,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

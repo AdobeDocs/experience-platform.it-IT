@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -49,7 +49,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ![Tipo di esportazione basato su profilo Amazon S3](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -57,7 +57,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
@@ -71,7 +71,7 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
   ![Immagine che mostra un esempio di chiave PGP formattata correttamente nell’interfaccia utente](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -130,7 +130,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

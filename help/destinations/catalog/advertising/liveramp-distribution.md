@@ -56,7 +56,7 @@ Prima di attivare i tipi di pubblico tramite [!DNL LiveRamp - Distribution] conn
 
 Dopo aver effettuato l’onboarding dei tipi di pubblico in LiveRamp, continua il flusso di lavoro di attivazione da [connettersi alla destinazione](#connect) per selezionare e configurare le piattaforme di destinazione target per l&#39;attivazione dei dati.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_identifier_settings"
@@ -427,7 +427,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

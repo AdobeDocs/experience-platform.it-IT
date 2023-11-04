@@ -93,7 +93,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [Concessione password OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## Connetti alla destinazione {#connect-destination}
+## Connettersi alla destinazione {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -149,7 +149,7 @@ Se si seleziona la **[!UICONTROL Credenziali client OAuth 2]** tipo di autentica
    * **[!UICONTROL Corpo del modulo codificato]**: in questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviato alla tua destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione.
    * **[!UICONTROL Autorizzazione di base]**: in questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *in un `Authorization` intestazione* dopo la codifica base64 e l&#39;invio alla destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -194,7 +194,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -129,7 +129,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 
 Prima di utilizzare il `Extern_ID` spazio dei nomi a cui inviare i dati [!DNL Facebook], assicurati di sincronizzare i tuoi identificatori tramite [!DNL Facebook Pixel]. Consulta la [Documentazione ufficiale di facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) per informazioni dettagliate.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -145,14 +145,14 @@ Il video seguente illustra anche i passaggi per configurare una [!DNL Facebook] 
 >
 >L’interfaccia utente di Experienci Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 1. Trova la destinazione Facebook nel catalogo di destinazione e seleziona **[!UICONTROL Configurazione]**.
 2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
    ![Autentica in Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Immetti le credenziali Facebook e seleziona **Accedi**.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
@@ -171,7 +171,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"

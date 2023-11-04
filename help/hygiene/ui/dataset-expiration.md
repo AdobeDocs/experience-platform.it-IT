@@ -5,11 +5,11 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
-# Scadenze di set di dati automatizzati {#dataset-expiration}
+# Scadenze di set di dati automatizzate {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"

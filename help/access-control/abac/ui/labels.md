@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 5810a7778d86db2720a0372ace33278348d1ffdf
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 Le etichette consentono di categorizzare set di dati e campi in base ai criteri di utilizzo e di accesso applicabili a tali dati. Le etichette possono essere applicate in qualsiasi momento, offrendo flessibilità nella scelta di come gestire i dati. Le best practice incoraggiano i dati di etichettatura non appena vengono acquisiti in Platform o non appena i dati diventano disponibili per l’utilizzo in Platform.
 
-## Crea una nuova etichetta {#create-new-label}
+## Creare una nuova etichetta {#create-new-label}
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"

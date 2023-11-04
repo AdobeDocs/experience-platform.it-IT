@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alle credenziali di Query Service
 description: Adobe Experience Platform Query Service fornisce un’interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare le query eseguite in precedenza e accedere a quelle salvate dagli utenti della tua organizzazione.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 3%
 # Guida alle credenziali
 
 Adobe Experience Platform Query Service consente di connettersi con client esterni. È possibile connettersi a questi client esterni utilizzando credenziali in scadenza o credenziali senza scadenza.
+
+>[!NOTE]
+>
+>Il pannello delle credenziali non è disponibile automaticamente per tutti gli utenti. Contatta il team del tuo account Adobe per richiedere [!UICONTROL Credenziali] da includere nell’area di lavoro Servizio query se necessario. Se richiesto, questo cambiamento riguarda l’intera organizzazione ed è condotto dal team di progettazione di Adobe. Non si tratta di un’impostazione controllata dagli utenti.
 
 ## Credenziali in scadenza {#expiring-credentials}
 

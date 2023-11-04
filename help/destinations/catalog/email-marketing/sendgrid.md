@@ -6,7 +6,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1571'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -79,7 +79,7 @@ I team di marketing che utilizzano SendGrid possono creare una mailing list allâ
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 1. All&#39;interno del [!DNL Adobe Experience Platform] , passa a **Destinazioni**.
 
@@ -96,7 +96,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Mentre [configurazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) in questa destinazione, Ã¨ necessario fornire le seguenti informazioni:
 
@@ -111,7 +111,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

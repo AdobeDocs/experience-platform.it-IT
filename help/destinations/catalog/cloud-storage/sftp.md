@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ![Tipo di esportazione basata su profilo SFTP](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -120,7 +120,7 @@ Dopo aver stabilito la connessione di autenticazione alla posizione SFTP, fornis
    * `exportResults.name`: nome del file esportato.
    * `size`: dimensione del file esportato, in byte.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

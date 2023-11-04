@@ -5,7 +5,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1047'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -62,11 +62,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 #### Autenticazione credenziali client OAuth 2 {#oauth-2-client-credentials-authentication}
 
@@ -78,7 +78,7 @@ Compila i campi seguenti e seleziona **[!UICONTROL Connetti alla destinazione]**
 * **[!UICONTROL ID client]**: OAuth 2 [!DNL client ID] che hai generato in [!DNL Pega Customer Decision Hub] dell&#39;istanza.
 * **[!UICONTROL Segreto client]**: OAuth 2 [!DNL client secret] che hai generato in [!DNL Pega Customer Decision Hub] dell&#39;istanza.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Dopo aver stabilito la connessione di autenticazione al [!DNL Pega Customer Decision Hub], forniscono le seguenti informazioni per la destinazione:
 
@@ -90,7 +90,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e se
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Nome host]**: nome host Pega Customer Decision Hub in cui il profilo viene esportato come dati json.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

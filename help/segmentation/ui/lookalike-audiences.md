@@ -30,7 +30,7 @@ Prima di iniziare a utilizzare tipi di pubblico simili, assicurati di comprender
 - **Pubblico simile**: un pubblico per similarità è il pubblico che viene creato quando al pubblico di base viene applicato un modello lookalike con una soglia di similarità selezionata. Puoi creare più tipi di pubblico per similarità utilizzando lo stesso modello per similarità. Il pubblico per somiglianza è ciò che viene valutato.
 - **Dimensione totale del pubblico indirizzabile**: la dimensione totale del pubblico indirizzabile corrisponde al numero totale di profili negli ultimi 30 giorni meno la popolazione del pubblico di base negli ultimi 30 giorni. Ad esempio, se un cliente ha 10 milioni di profili negli ultimi 30 giorni e il pubblico di base ha 1 milione di profili negli ultimi 30 giorni, la dimensione totale del pubblico indirizzabile è di 9 milioni di profili.
 
-## Dettagli modello per similarità {#details}
+## Dettagli del modello Look-Alike {#details}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"

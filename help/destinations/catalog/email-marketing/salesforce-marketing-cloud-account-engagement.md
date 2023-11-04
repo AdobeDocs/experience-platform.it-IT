@@ -6,7 +6,7 @@ exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1620'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -91,7 +91,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]**, cerca [!DNL Salesforce Marketing Cloud Account Engagement]. In alternativa, è possibile posizionarlo sotto il **[!UICONTROL E-mail marketing]** categoria.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l’autenticazione nella destinazione, seleziona **[!UICONTROL Connetti alla destinazione]**. Passerai alla [!DNL Salesforce] pagina di accesso. Immetti il [!DNL Marketing Cloud Account Engagement] credenziali dell’account e seleziona [!DNL Log In].
 
@@ -113,7 +113,7 @@ Quindi, seleziona [!UICONTROL Consenti] nella finestra successiva per assegnare 
 
 Se i dettagli forniti sono validi, nell’interfaccia utente viene visualizzato un messaggio: *Connessione all&#39;account Salesforce Marketing Cloud Account Engagement riuscita* messaggio e un **[!UICONTROL Connesso]** con un segno di spunta verde, puoi quindi procedere al passaggio successivo.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio. Consulta la sezione [Raccogli [!DNL Marketing Cloud Account Engagement] credenziali](#gather-credentials) sezione per eventuali indicazioni.
 
@@ -133,7 +133,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

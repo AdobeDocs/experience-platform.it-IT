@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
 source-wordcount: '3670'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -275,7 +275,7 @@ Dopo aver applicato le modifiche, il nuovo campo viene visualizzato sotto lo spa
 
 ![Campo aggiunto all&#39;oggetto standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Abilitare uno schema per Real-Time Customer Profile {#profile}
+## Abilitare uno schema per il profilo cliente in tempo reale {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

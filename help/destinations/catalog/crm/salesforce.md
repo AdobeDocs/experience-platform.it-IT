@@ -6,7 +6,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3117'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -140,7 +140,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 >
@@ -150,7 +150,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Entro **[!UICONTROL Destinazioni]** > **[!UICONTROL Catalogo]** cerca [!DNL Salesforce CRM]. In alternativa, è possibile posizionarlo sotto il **[!UICONTROL CRM]** categoria.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Per eseguire l’autenticazione nella destinazione, compila i campi richiesti di seguito e seleziona **[!UICONTROL Connetti alla destinazione]**. Consulta la sezione [Raccogli [!DNL Salesforce CRM] credenziali](#gather-credentials) sezione per eventuali indicazioni.
 | Credenziali | Descrizione | | — | — | | **[!UICONTROL Nome utente]** | Il tuo [!DNL Salesforce] nome utente dell’account. | | **[!UICONTROL Password]** | Stringa concatenata composta da [!DNL Salesforce] password dell&#39;account aggiunta al tuo [!DNL Salesforce] Token di sicurezza.<br>Il valore concatenato assume la forma di `{PASSWORD}{TOKEN}`.<br> Non utilizzare parentesi graffe o spazi.<br>Ad esempio, se [!DNL Salesforce] La password è `MyPa$$w0rd123` e [!DNL Salesforce] Il token di sicurezza è `TOKEN12345....0000`, il valore concatenato che utilizzerai nel **[!UICONTROL Password]** il campo è `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Dominio personalizzato]** | Il tuo [!DNL Salesforce] prefisso del dominio. <br>Ad esempio, se il dominio è *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, devi fornire `d5i000000isb4eak-dev-ed` come valore. | | **[!UICONTROL ID client]** | Il tuo [!DNL Salesforce] app connessa `Consumer Key`. | | **[!UICONTROL Segreto client]** | Il tuo [!DNL Salesforce] app connessa `Consumer Secret`. |
@@ -159,7 +159,7 @@ Per eseguire l’autenticazione nella destinazione, compila i campi richiesti di
 
 Se i dettagli forniti sono validi, nell’interfaccia utente viene visualizzato un **[!UICONTROL Connesso]** con un segno di spunta verde, puoi quindi procedere al passaggio successivo.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
@@ -176,7 +176,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

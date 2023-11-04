@@ -6,7 +6,7 @@ exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1020'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -76,7 +76,7 @@ Prima di creare [!DNL Google Display & Video 360] destinazione in Platform, devi
 * **ID cliente**: ID account cliente di Adobe con Google. ID cliente: 89690775.
 * **Tipo di account**: utilizzare **[!DNL Invite advertiser]** per consentire la condivisione dei tipi di pubblico solo con una marca specifica nell’account Display &amp; Video 360 o nell’utilizzo di **[!DNL Invite partner]** per consentire la condivisione dei tipi di pubblico con tutti i marchi presenti nell’account Display &amp; Video 360.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -105,7 +105,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

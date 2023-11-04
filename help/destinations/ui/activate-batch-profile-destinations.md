@@ -81,7 +81,7 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al pubblico da 
 
 ![Immagine che evidenzia il pulsante Crea pianificazione](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
-### Esporta file completi {#export-full-files}
+### Esportare file completi {#export-full-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
@@ -156,7 +156,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazi
 
 1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Configura nomi file {#file-names}
+### Configurare nomi file {#file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -432,9 +432,9 @@ Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di iden
 
 >[!IMPORTANT]
 > 
->Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mappatura] passaggio](#mapping) che sostituisce il **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
+Tutte le destinazioni di archiviazione cloud nel catalogo possono visualizzare un [[!UICONTROL Mappatura] passaggio](#mapping) che sostituisce il **[!UICONTROL Seleziona attributi]** descritto in questa sezione.
 >
->Questo **[!UICONTROL Seleziona attributi]** Questo passaggio viene ancora visualizzato per le destinazioni di e-mail marketing del Marketing Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
+Questo **[!UICONTROL Seleziona attributi]** Questo passaggio viene ancora visualizzato per le destinazioni di e-mail marketing del Marketing Cloud Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce.
 
 Per le destinazioni basate su profili, devi selezionare gli attributi del profilo che desideri inviare alla destinazione target.
 
@@ -454,31 +454,31 @@ Per le destinazioni basate su profili, devi selezionare gli attributi del profil
 
 >[!NOTE]
 >
-> Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![Immagine che mostra gli attributi consigliati precompilati nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.status` alle esportazioni di file. È necessario invece incollare manualmente il valore `xdm: segmentMembership.status` nel campo schema, come illustrato di seguito.
+A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.status` alle esportazioni di file. È necessario invece incollare manualmente il valore `xdm: segmentMembership.status` nel campo schema, come illustrato di seguito.
 >
->![Registrazione schermata che mostra la soluzione alternativa per l’iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![Registrazione schermata che mostra la soluzione alternativa per l’iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.status` è selezionato:
 * Se il `segmentMembership.status` è selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
 * Se il `segmentMembership.status` non è selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
-## Seleziona attributi di arricchimento {#select-enrichment-attributes}
+## Selezionare attributi di arricchimento {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Escludi attributi di arricchimento"
->abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#select-enrichment-attributes" text="Ulteriori informazioni sono disponibili nella documentazione"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="Escludi attributi di arricchimento"
+abstract="Abilita questa opzione per esportare i profili dai tipi di pubblico personalizzati caricati selezionati alla tua destinazione, escludendo tutti i loro attributi."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=it#select-enrichment-attributes" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 >[!IMPORTANT]
 >
->Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Caricamento personalizzato]** tipi di pubblico durante [selezione del pubblico](#select-audiences) passaggio.
+Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Caricamento personalizzato]** tipi di pubblico durante [selezione del pubblico](#select-audiences) passaggio.
 
 Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experienci Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
 
@@ -509,10 +509,10 @@ Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepil
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Visualizzare i criteri di consenso applicabili"
->abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="Visualizzare i criteri di consenso applicabili"
+abstract="Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Questa opzione è disabilitata se la tua azienda non ha accesso alle SKU menzionate qui sopra."
 
 Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 

@@ -73,7 +73,7 @@ La segmentazione in streaming è un processo continuo di selezione di dati che a
 
 Per ulteriori informazioni sulla segmentazione in streaming, consulta [documentazione sulla segmentazione in streaming](./api/streaming-segmentation.md).
 
-### Segmentazione batch {#batch}
+### Segmentazione in batch {#batch}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"

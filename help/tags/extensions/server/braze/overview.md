@@ -62,7 +62,7 @@ Per collegare la rete Edge a [!DNL Braze], sono necessari i seguenti input:
 | [!DNL Braze] Istanza | Endpoint REST associato a [!DNL Braze] account. Consulta la sezione [!DNL Braze] documentazione su [istanze](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) a titolo indicativo. | `https://rest.iad-03.braze.com` |
 | Chiave API | Il [!DNL Braze] Chiave API associata al [!DNL Braze] account. <br/>Consulta la sezione [!DNL Braze] documentazione sulla [Chiave API REST](https://www.braze.com/docs/api/basics/#rest-api-key) a titolo indicativo. | `YOUR-BRAZE-REST-API-KEY` |
 
-### Crea un segreto
+### Creare un segreto
 
 Crea un nuovo [segreto di inoltro eventi](../../../ui/event-forwarding/secrets.md) e imposta il valore su [[!DNL Braze] Chiave API](#configuration-details). Verrà utilizzato per autenticare la connessione al tuo account mantenendo protetto il valore.
 

@@ -50,7 +50,7 @@ Prima di poter inviare dati sul pubblico a una destinazione, devi impostare una 
 
    ![Schermata dell’interfaccia utente di Experience Platform che mostra un elenco di destinazioni disponibili ed evidenzia il controllo Configura nuova destinazione.](../assets/ui/connect-destinations/configure-new-destination.png)
 
-## Autentica nella destinazione {#authenticate}
+## Autenticarsi nella destinazione {#authenticate}
 
 Il primo passaggio nella connessione a una destinazione consiste nell’eseguire l’autenticazione nella piattaforma di destinazione.
 

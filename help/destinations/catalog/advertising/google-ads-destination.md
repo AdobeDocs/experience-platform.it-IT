@@ -6,7 +6,7 @@ exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '972'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -87,7 +87,7 @@ Prima di creare [!DNL Google Ads] destinazione in Platform, è necessario contat
 * Tipo di account: **AdWords**
 * **ID Google AdWords**: questo è il tuo ID con [!DNL Google]. Il formato ID è tipicamente 123-456-7890.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -110,7 +110,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

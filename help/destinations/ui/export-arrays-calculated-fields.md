@@ -1,5 +1,5 @@
 ---
-title: (Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat
+title: (Beta) Utilizzare i campi calcolati per esportare array in file di schema piatto
 type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
 badge: Beta
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# (Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Beta) Utilizzare i campi calcolati per esportare array in file di schema piatto {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

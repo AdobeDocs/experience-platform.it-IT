@@ -6,7 +6,7 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '1048'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,7 @@ Sfrutta i dati di profilo raccolti in Adobe Experience Platform per la personali
 
 Sfruttare gli attributi di Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] e combinarli con l’SDK o [!DNL Airship] dati predittivi. Ad esempio, un rivenditore può creare un pubblico con lo stato di fedeltà e i dati sulla posizione (attributi da Platform) e [!DNL Airship] si prevede che abbandoneranno i dati per inviare messaggi altamente mirati agli utenti con status di fidelizzazione all’oro che vivono a Las Vegas, NV, e hanno un’alta probabilità di abbandono.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -93,13 +93,13 @@ Sfruttare gli attributi di Adobe Experience Platform per arricchire ulteriorment
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
 * **[!UICONTROL Token Bearer]**: il token Bearer generato da [!DNL Airship] dashboard.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -113,7 +113,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

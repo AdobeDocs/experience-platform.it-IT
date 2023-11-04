@@ -3,7 +3,7 @@ title: Eseguire il rendering di contenuti personalizzati utilizzando Adobe Exper
 description: Scopri come eseguire il rendering di contenuti personalizzati con Adobe Experience Platform Web SDK.
 keywords: personalizzazione;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Inoltre, l’SDK per web fornisce funzionalità di personalizzazione per la stes
 
 Contenuto creato in Adobe Target [Compositore esperienza visivo](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e ADOBE JOURNEY OPTIMIZER [Interfaccia utente di Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) può essere recuperato e renderizzato automaticamente dall’SDK. Contenuto creato in Adobe Target [Compositore esperienza basato su moduli](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) o Offer decisioning non può essere renderizzato automaticamente dall’SDK. Devi invece richiedere questo contenuto utilizzando l’SDK e quindi eseguire manualmente il rendering del contenuto.
 
-## Rendering automatico del contenuto
+## Rendering automatico del contenuto {#automatic}
 
 Quando invii eventi al server, puoi impostare `renderDecisions` opzione per `true`. In questo modo l’SDK deve eseguire automaticamente il rendering di qualsiasi contenuto personalizzato idoneo per il rendering automatico.
 
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 Il rendering di contenuti personalizzati è asincrono, pertanto non devi fare supposizioni su quando un particolare contenuto avrà completato il rendering.
 
-## Rendering manuale del contenuto
+## Rendering manuale del contenuto {#manual}
 
 Per accedere a qualsiasi contenuto di personalizzazione, puoi fornire una funzione di callback che verrà chiamata dopo che l’SDK avrà ricevuto una risposta corretta dal server. Il callback viene fornito come `result` oggetto, che può contenere `propositions` contenente eventuali contenuti di personalizzazione restituiti. Di seguito è riportato un esempio di come fornire una funzione di callback durante l’invio di un evento.
 

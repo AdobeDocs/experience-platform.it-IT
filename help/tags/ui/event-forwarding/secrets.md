@@ -38,7 +38,7 @@ Questa guida presuppone che tu abbia già familiarità con le modalità di gesti
 
 È inoltre necessario avere una buona conoscenza del flusso di pubblicazione per i tag e l’inoltro degli eventi, incluso come aggiungere risorse a una libreria e installare una build sul sito web per i test. Consulta la [panoramica sulla pubblicazione](../publishing/overview.md) per ulteriori dettagli.
 
-## Crea un segreto {#create}
+## Creare un segreto {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"

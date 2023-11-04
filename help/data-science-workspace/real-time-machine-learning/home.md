@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Panoramica di apprendimento automatico in tempo reale (Alpha)
+# Panoramica sull’apprendimento automatico in tempo reale (Alpha)
 
 >[!IMPORTANT]
 >
@@ -59,7 +59,7 @@ L’apprendimento automatico in tempo reale è attualmente in formato alfa. Le f
 
 >[!NOTE]
 >
-> Limitazioni alfa:
+> Limitazioni di Alpha:
 > - Attualmente, sono supportati solo i modelli basati su ONNX.
 > - Impossibile serializzare le funzioni utilizzate nei nodi. Ad esempio, una funzione lambda utilizzata in un nodo Pandas.
 > - Dopo 20 secondi si dorme [!DNL Edge] la distribuzione viene eseguita manualmente.
@@ -68,7 +68,7 @@ L’apprendimento automatico in tempo reale è attualmente in formato alfa. Le f
 
 ### Funzioni:
 
-| | Alfa (maggio) |
+| | Alpha (maggio) |
 | --- | --- |
 | **Funzioni** | - Utilizzo del modello di notebook RTML, creazione, test e distribuzione di un modello di apprendimento automatico personalizzato. <br> - Supporto per l&#39;importazione di modelli di apprendimento automatico preformati. <br> - SDK per l’apprendimento automatico in tempo reale. <br> - Set iniziale di nodi di authoring. <br> : implementato nell’hub Adobe Experience Platform. |
 | **Disponibilità** | America del Nord |

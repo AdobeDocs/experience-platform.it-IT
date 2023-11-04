@@ -4,9 +4,9 @@ description: Scopri come configurare il rilevamento di bot per i flussi di dati,
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Questa regola controlla se la richiesta proviene da un indirizzo IP specifico e 
 
 ![Immagine della regola di rilevamento bot basata sull’indirizzo IP e sull’intestazione della richiesta.](assets/bot-detection/bot-detection-header-ip.png)
 
-### Rilevamento bot basato su più condizioni {#multiple-conditions}
+### Rilevamento dei bot in base a più condizioni {#multiple-conditions}
 
 Puoi creare regole di rilevamento bot in base a:
 

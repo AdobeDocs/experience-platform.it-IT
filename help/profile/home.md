@@ -51,7 +51,7 @@ L’archivio dei profili utilizza un’infrastruttura Microsoft Azure Cosmos DB 
 
 Experience Platform fornisce una serie di guardrail per evitare la creazione di [Schemi Experience Data Model (XDM)](../xdm/home.md) che Real-Time Customer Profile non può supportare. Questo include limiti programmati che determineranno un deterioramento delle prestazioni e limiti rigidi che determineranno errori e interruzioni del sistema. Per ulteriori informazioni, tra cui un elenco di linee guida e casi d’uso di esempio, consulta [Guardrail del profilo](guardrails.md) documentazione.
 
-### Dashboard dei profili {#profile-dashboard}
+### Dashboard profili {#profile-dashboard}
 
 L’interfaccia utente di Experienci Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati del Profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per scoprire come accedere e utilizzare [!DNL Profile] nell&#39;interfaccia utente e informazioni dettagliate sulle metriche visualizzate nel dashboard, fai riferimento alla [Guida dell’interfaccia utente della dashboard del profilo](ui/profile-dashboard.md).
 

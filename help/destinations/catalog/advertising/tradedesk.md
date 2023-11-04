@@ -6,7 +6,7 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 >
 >Se desideri creare la prima destinazione con [!DNL The Trade Desk] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL The Trade Desk] le integrazioni in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -93,7 +93,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

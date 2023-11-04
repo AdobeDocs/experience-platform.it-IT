@@ -67,7 +67,7 @@ I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra qua
 | Tipo di unione | Descrizione |
 | ---------- | ----------- |
 | [!UICONTROL Unione] | I tipi di pubblico vengono combinati in un unico pubblico. Equivale a un&#39;operazione OR. |
-| [!UICONTROL Intersection] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
+| [!UICONTROL Intersezione ] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
 | [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **uno, ma non tutti** di quelli che vengono aggiunti. Equivale a un&#39;operazione XOR. |
 
 ### [!UICONTROL Genera regola] {#build-rule}

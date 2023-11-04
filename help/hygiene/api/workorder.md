@@ -4,7 +4,7 @@ description: L’endpoint /workorder nell’API di igiene dei dati consente di g
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1283'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ Il `/workorder` L’endpoint nell’API di igiene dei dati consente di gestire i
 
 >[!IMPORTANT]
 > 
->La funzione Record Delete (Elimina record) è attualmente in versione beta e disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
+La funzione Record Delete (Elimina record) è attualmente in versione beta e disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
 >
->Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
+Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Per eliminare una o più identità da un singolo set di dati o da tutti i set di
 
 >[!IMPORTANT]
 > 
->Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Un singolo [registrare la richiesta di eliminazione tramite l’interfaccia utente](../ui/record-delete.md) ti consente di inviare 10.000 ID contemporaneamente. Il metodo API per eliminare i record consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite dell’ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
+Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Un singolo [registrare la richiesta di eliminazione tramite l’interfaccia utente](../ui/record-delete.md) ti consente di inviare 10.000 ID contemporaneamente. Il metodo API per eliminare i record consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite dell’ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
 
 **Formato API**
 
@@ -39,7 +39,7 @@ POST /workorder
 
 >[!NOTE]
 >
->Le richieste del ciclo di vita dei dati possono modificare solo set di dati basati su identità primarie o una mappa di identità. Una richiesta deve specificare l’identità primaria o fornire una mappa di identità.
+Le richieste del ciclo di vita dei dati possono modificare solo set di dati basati su identità primarie o una mappa di identità. Una richiesta deve specificare l’identità primaria o fornire una mappa di identità.
 
 **Richiesta**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `description` | Descrizione della richiesta di eliminazione record. |
 | `identities` | Matrice contenente le identità di almeno un utente di cui desideri eliminare le informazioni. Ogni identità è composta da un [spazio dei nomi delle identità](../../identity-service/namespaces.md) e un valore:<ul><li>`namespace`: contiene una singola proprietà stringa, `code`, che rappresenta lo spazio dei nomi dell’identità. </li><li>`id`: valore di identità.</ul>Se `datasetId` specifica un singolo set di dati, ogni entità in `identities` deve utilizzare lo stesso spazio dei nomi dell’identità primaria dello schema.<br><br>Se `datasetId` è impostato su `ALL`, il `identities` l’array non è vincolato a un singolo spazio dei nomi poiché ogni set di dati potrebbe essere diverso. Tuttavia, le richieste di sono ancora vincolate agli spazi dei nomi disponibili per la tua organizzazione, come segnalato da [Servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:auto"}
+{style="layout tabella:automatico"}
 
 **Risposta**
 

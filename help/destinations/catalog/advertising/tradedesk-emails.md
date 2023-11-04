@@ -6,7 +6,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -78,7 +78,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 ### Autentica nella destinazione {#authenticate}
 
@@ -97,7 +97,7 @@ Prima di poter inviare o attivare i dati sul pubblico a una destinazione, devi i
 
 Quando ci si connette alla destinazione, l’impostazione di un criterio di governance dei dati è completamente facoltativa. Rivedi l’Experience Platform [panoramica sulla governance dei dati](/help/data-governance/policies/overview.md) per ulteriori dettagli.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

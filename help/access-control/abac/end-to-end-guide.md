@@ -153,7 +153,7 @@ Il **[!UICONTROL Modifica etichette]** viene visualizzata una finestra di dialog
 
 Ripeti i passaggi precedenti con **[!UICONTROL Insulina &lt; 50]**.
 
-## Attiva il criterio di controllo degli accessi {#policy}
+## Attivare il criterio di controllo degli accessi {#policy}
 
 I criteri di controllo di accesso predefiniti sfrutteranno le etichette per definire quali ruoli utente hanno accesso a risorse Platform specifiche. In questo esempio, l’accesso ai campi e ai segmenti dello schema verrà negato in tutte le sandbox per gli utenti che non si trovano in un ruolo con le etichette corrispondenti nel campo schema.
 

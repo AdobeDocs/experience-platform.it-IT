@@ -6,7 +6,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -94,7 +94,7 @@ Attivare messaggi uno-a-uno in tempo reale quando gli utenti entrano o escono da
 
 Ad esempio, un rivenditore imposta in Platform un pubblico specifico per il brand dei jeans. Il rivenditore può attivare un messaggio mobile non appena qualcuno imposta la propria preferenza jeans a una marca specifica.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -102,13 +102,13 @@ Ad esempio, un rivenditore imposta in Platform un pubblico specifico per il bran
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
 * **[!UICONTROL Token Bearer]**: il token Bearer generato da [!DNL Airship] dashboard.
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -122,7 +122,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
