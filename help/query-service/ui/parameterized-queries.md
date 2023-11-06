@@ -2,23 +2,19 @@
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '734'
 ht-degree: 10%
 
 ---
 
-# Query con parametri (versione limitata) {#parameterized-queries}
+# Query con parametri {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Query con parametri"
 >abstract="Utilizza le query con parametri per aggiungere valori di parametro al momento dell’esecuzione. Questo consente di lavorare con dati dinamici e riutilizzare le query per diversi casi d’uso. Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi un valore per la chiave nella sezione dei parametri di query sotto l’editor."
-
->[!IMPORTANT]
->
->La funzione per l’interfaccia con parametri per query è disponibile in una **solo versione limitata** e non è disponibile per tutti i clienti.
 
 Query Service supporta l’utilizzo di query con parametri nell’editor delle query. Con le query con parametri, ora puoi utilizzare segnaposto per i parametri e aggiungere i valori dei parametri al momento dell’esecuzione. I segnaposto consentono di lavorare con dati dinamici in cui non si sa quali saranno i valori fino all’esecuzione dell’istruzione. Puoi anche preparare le query in anticipo e riutilizzarle per scopi simili. Il riutilizzo delle query consente di risparmiare tempo evitando di creare query SQL distinte per ogni caso d’uso.
 
