@@ -4,7 +4,7 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 73%
@@ -38,7 +38,7 @@ ht-degree: 73%
    * [Panoramica sulle destinazioni](destinations/overview.md)
    * [Destinazioni nell’Edizione B2B di Real-Time CDP](destinations/b2b.md)
 * Guardrail {#guardrails}
-   * [Panoramica sui guardrail di Real-Time CDP](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [Panoramica sui guardrail di Real-Time CDP](guardrails/overview.md)
    * [Guardrail per l’acquisizione dei dati](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Guardrail per il [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [Guardrail per [!DNL Real-Time Customer Profile] dati e segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=it){target="_blank"}
