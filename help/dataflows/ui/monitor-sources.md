@@ -35,7 +35,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Visualizzazione di monitoraggio aggregato {#aggregated-monitoring-view}
+## Vista di monitoraggio aggregato {#aggregated-monitoring-view}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

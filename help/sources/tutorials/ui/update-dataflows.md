@@ -23,7 +23,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
 * [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Aggiorna flussi di dati {#update-dataflows}
+## Aggiornare i flussi di dati {#update-dataflows}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"

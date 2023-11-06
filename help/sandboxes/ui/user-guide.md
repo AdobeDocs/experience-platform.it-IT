@@ -35,7 +35,7 @@ Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla s
 
 ![sandbox-switched](../images/ui/sandbox-switched.png)
 
-## Crea una nuova sandbox {#create}
+## Creare una nuova sandbox {#create}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"

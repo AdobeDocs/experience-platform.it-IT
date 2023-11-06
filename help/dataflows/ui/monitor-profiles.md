@@ -26,7 +26,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 - [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-## Monitoraggio del dashboard dei profili {#profile-metrics}
+## Dashboard di monitoraggio dei profili {#profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"

@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
 workflow-type: tm+mt
 source-wordcount: '1788'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -138,7 +138,7 @@ Se selezioni più di una condizione, puoi utilizzare l’icona che appare tra di
 
 ![](../images/policies/and-or-selection.png)
 
-#### Seleziona attributi di consenso {#consent-attributes}
+#### Selezionare attributi di consenso {#consent-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"

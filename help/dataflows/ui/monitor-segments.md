@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -29,7 +29,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
    - [Processi di esportazione](../../segmentation/api/export-jobs.md): un processo di esportazione è un processo asincrono utilizzato per rendere persistenti i membri del segmento di pubblico nei set di dati.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che permettono di suddividere un singolo [!DNL Platform] in ambienti virtuali separati, per facilitare lo sviluppo e l’evoluzione delle applicazioni di esperienza digitale.
 
-## Monitoraggio del dashboard dei segmenti {#monitoring-segments-dashboard}
+## Dashboard di monitoraggio dei segmenti {#monitoring-segments-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
@@ -168,7 +168,7 @@ Per la sezione segmenti sono disponibili le metriche seguenti:
 | **[!UICONTROL Nome]** | Il nome del segmento che viene valutato. |
 | **[!UICONTROL Conteggio dei profili]** | Il numero di profili che vengono valutati. |
 
-## Monitoraggio del dashboard dei processi di segmento {#monitoring-segment-jobs-dashboard}
+## Dashboard di monitoraggio dei lavori sui segmenti {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"

@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -48,7 +48,7 @@ Dopo la creazione di un nuovo schema o la selezione di uno schema esistente dall
 
 Viene visualizzata una finestra di dialogo che consente di applicare e gestire le etichette di utilizzo dei dati a livello di schema e di campo. Per istruzioni complete su, consulta il tutorial XDM [come aggiungere o modificare le etichette di utilizzo dei dati per gli schemi XDM](../../xdm/tutorials/labels.md#select-schema-field).
 
-### Aggiungere etichette di utilizzo dati a un set di dati specifico {#add-labels-to-dataset}
+### Aggiungere etichette di utilizzo dei dati a un set di dati specifico {#add-labels-to-dataset}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"

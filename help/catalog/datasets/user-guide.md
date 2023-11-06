@@ -26,7 +26,7 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): assicurati la conformità a normative, restrizioni e criteri relativi all’utilizzo dei dati dei clienti.
 
-## Visualizzare i set di dati {#view-datasets}
+## Visualizza set di dati {#view-datasets}
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"

@@ -30,7 +30,7 @@ Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe 
 * [Osservabilità](../../../observability/home.md): [!DNL Observability Insights] consente di monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi.
    * [Avvisi](../../../observability/alerts/overview.md): quando viene raggiunto un determinato set di condizioni nelle operazioni di Platform (ad esempio un potenziale problema quando il sistema supera una soglia), Platform può inviare messaggi di avviso a tutti gli utenti dell’organizzazione che sono abbonati.
 
-## Iscriviti agli avvisi nell’interfaccia utente {#subscribe-sources-alerts}
+## Iscriversi agli avvisi nell’interfaccia utente {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

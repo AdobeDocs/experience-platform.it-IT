@@ -107,7 +107,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![Record del flusso di dati per le destinazioni di streaming](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Il flusso di dati viene eseguito per le destinazioni batch {#dataflow-runs-for-batch-destinations}
+### Il flusso di dati viene eseguito per le destinazioni di batch {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -165,7 +165,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 ![Record del flusso di dati per le destinazioni batch](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Monitoraggio del dashboard di Destinazioni {#monitoring-destinations-dashboard}
+## Dashboard di monitoraggio delle destinazioni {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
