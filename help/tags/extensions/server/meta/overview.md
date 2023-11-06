@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ L’integrazione con Event Quality Match Score (EMQ) consente di visualizzare fa
 
 ## Integrazione con LiveRamp (Alpha) {#alpha}
 
-L’integrazione con LiveRamp aggiunge nuovi campi alla configurazione delle regole dell’API Meta Conversions, semplificando l’integrazione dei clienti con l’API LiveRamp Conversions. Questa integrazione elimina la necessità di condividere i dati PII direttamente con il partner o Meta. Grazie al grafico di identità robusto di LiveRamp, l&#39;inclusione di [!UICONTROL ID partner (alfa)] può migliorare la qualità dell’integrazione aumentando il tasso di corrispondenza degli utenti.
+[!DNL LiveRamp] clienti che hanno [!DNL LiveRamp]La soluzione ATS (Authenticated Traffic Solution) distribuita sui propri siti può scegliere di condividere i RampID come parametro delle informazioni del cliente. Lavora con il [!DNL Meta] team dell’account per partecipare al programma di Alpha per questa funzione.
 
 ![Inoltro metadati [!UICONTROL Regola] evidenziazione della pagina di configurazione [!UICONTROL Nome partner (alfa)] e [!UICONTROL ID partner (alfa)].](../../../images/extensions/server/meta/live-ramp.png)
 
