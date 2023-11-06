@@ -3,10 +3,10 @@ title: Guida introduttiva all’inoltro degli eventi
 description: Segui questa esercitazione passo per passo per iniziare a utilizzare l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
-ht-degree: 76%
+source-wordcount: '870'
+ht-degree: 77%
 
 ---
 
@@ -20,7 +20,7 @@ Per utilizzare Adobe Experience Platform, i dati devono essere inviati ad Adobe 
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [API server-to-server](/help/server-api/overview.md)
+* [API del server di rete Edge](/help/server-api/overview.md)
 
 >[!NOTE]
 >Platform Web SDK e Platform Mobile SDK non richiedono l’implementazione tramite tag in Adobe Experience Platform. Tuttavia, l’utilizzo di tag per distribuire questi SDK è l’approccio consigliato.
