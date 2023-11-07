@@ -3,16 +3,16 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per la privacy, la personalizzazione e le preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2294'
 ht-degree: 1%
 
 ---
 
 # [!UICONTROL Consensi e preferenze] tipo di dati
 
-Il [!UICONTROL Consenso per le preferenze di privacy, personalizzazione e marketing] tipo di dati (in seguito denominato &quot;tipo di dati&quot;)[!UICONTROL Consensi e preferenze] data type&quot;) è un [!DNL Experience Data Model] (XDM) tipo di dati che ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
+Il [!UICONTROL Consenso per le preferenze di privacy, personalizzazione e marketing] tipo di dati (in seguito denominato &quot;tipo di dati&quot;)[!UICONTROL Consensi e preferenze] data type&quot;) è un [!DNL Experience Data Model] (XDM) tipo di dati che ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni dei tuoi dati.
 
 Il presente documento descrive la struttura e l&#39;uso previsto dei campi forniti dal [!UICONTROL Consensi e preferenze] tipo di dati.
 
@@ -295,23 +295,23 @@ La tabella seguente illustra i valori accettati per `val`:
 
 ### Valori accettati per `preferred` {#preferred-values}
 
-La tabella seguente illustra i valori accettati per `preferred`:
+La tabella seguente illustra i valori accettati per `preferred`. Il `preferred` i valori indicano il canale preferito dal cliente per ricevere comunicazioni che li informerebbero sulla raccolta di dati, sulle politiche sulla privacy e sulle opzioni di personalizzazione.
 
 | Valore | Descrizione |
 | --- | --- |
-| `email` | E-mail messages. |
-| `push` | Notifiche push. |
-| `inApp` | Messaggi in-app. |
-| `sms` | Messaggi SMS. |
-| `phone` | Interazioni telefoniche. |
-| `phyMail` | Posta fisica. |
-| `inVehicle` | Messaggi nel veicolo. |
-| `inHome` | Messaggi in casa. |
-| `iot` | Messaggi Internet of Things (IoT). |
-| `social` | Contenuti per social media. |
-| `other` | Canale che non rientra in una categoria standard. |
-| `none` | Nessun canale preferito. |
-| `unknown` | Il canale preferito è sconosciuto. |
+| `email` | Questa preferenza indica il consenso del cliente a ricevere messaggi tramite e-mail. |
+| `push` | Questa preferenza indica il consenso del cliente alla ricezione di notifiche push. Si tratta di messaggi o avvisi inviati direttamente al loro dispositivo, spesso un’app mobile. |
+| `inApp` | Questa preferenza indica il consenso del cliente alla ricezione dei messaggi in-app. Questi messaggi vengono inviati all’interno di un’app mobile o web e forniscono informazioni mentre l’utente è attivamente coinvolto con l’app. |
+| `sms` | Questa preferenza indica il consenso del cliente alla ricezione di messaggi tramite SMS (Short Message Service). Si tratta di messaggi di testo inviati al cellulare. |
+| `phone` | Questa preferenza indica il consenso del cliente a ricevere comunicazioni attraverso interazioni telefoniche. |
+| `phyMail` | Questa preferenza indica il consenso del cliente a ricevere il materiale tramite posta fisica. |
+| `inVehicle` | Questa preferenza indica il consenso del cliente a ricevere notifiche mentre si trova nel suo veicolo. Questi messaggi possono essere trasmessi attraverso i sistemi di infotainment del veicolo o altri canali di comunicazione a bordo del veicolo. |
+| `inHome` | Questa preferenza indica il consenso del cliente alla ricezione dei messaggi mentre si trova a casa. Questi messaggi possono essere inviati tramite dispositivi smart home o altri canali di comunicazione basati su home. |
+| `iot` | Questa preferenza indica il consenso del cliente a ricevere messaggi relativi all’Internet of Things (IoT). Questi messaggi possono essere inviati tramite dispositivi e sistemi collegati all&#39;interno del proprio ambiente. |
+| `social` | Questa preferenza indica il consenso del cliente a ricevere comunicazioni tramite le piattaforme di social media. |
+| `other` | Questa preferenza include i canali che non rientrano nelle categorie standard. Rappresenta canali di comunicazione alternativi o specializzati che possono essere specifici per un particolare business o settore. |
+| `none` | Questa preferenza indica che il cliente non dispone di un canale di comunicazione preferito. |
+| `unknown` | Questa preferenza indica che il canale di comunicazione preferito dal cliente non è noto o non è stato specificato. Ciò potrebbe verificarsi se il cliente non ha fornito informazioni esplicite sul consenso o sulle preferenze. |
 
 {style="table-layout:auto"}
 
