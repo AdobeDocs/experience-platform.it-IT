@@ -2,7 +2,7 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 4%
@@ -568,7 +568,7 @@ Dopo aver letto questo articolo, dovresti capire meglio come consentire agli ute
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Autenticazione del cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authentication.md)
+* [Autenticazione OAuth2](oauth2-authorization.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)
 * [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)

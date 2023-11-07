@@ -2,7 +2,7 @@
 description: Il servizio delle destinazioni in Adobe Experience Platform utilizza endpoint di configurazione per diversi componenti che creano la funzionalità delle destinazioni. Scopri come questi componenti combinati consentono ad Experienci Platform di connettersi ai partner di destinazione, inviare messaggi personalizzati e attivare i dati del profilo nell’ecosistema digitale.
 title: Opzioni di configurazione in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Questo endpoint di configurazione contiene informazioni di base e avanzate sulla
 Per informazioni dettagliate su ciascuno dei componenti di configurazione di destinazione, consulta la documentazione riportata di seguito. Puoi configurare le funzionalità descritte di seguito tramite la [endpoint destinazioni](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [Configurazione autenticazione cliente](destination-configuration/customer-authentication.md): seleziona il meccanismo di autenticazione che Experienci Platform deve utilizzare per connettersi alla destinazione. Questa configurazione genera il [Configurare una nuova destinazione](../../ui/connect-destination.md) nell’interfaccia utente di Experienci Platform, in cui gli utenti connettono Experienci Platform agli account che hanno con la tua destinazione.
-* [Autenticazione OAuth2](destination-configuration/oauth2-authentication.md): scopri tutte le [!DNL OAuth2] flussi di autenticazione supportati da Destination SDK e istruzioni per la configurazione [!DNL OAuth2] autenticazione per la destinazione.
+* [Autenticazione OAuth2](destination-configuration/oauth2-authorization.md): scopri tutte le [!DNL OAuth2] flussi di autenticazione supportati da Destination SDK e istruzioni per la configurazione [!DNL OAuth2] autenticazione per la destinazione.
 * [Campi dati cliente](destination-configuration/customer-data-fields.md): scopri come creare campi di input nell’interfaccia utente di Experienci Platform che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 * [Attributi dell’interfaccia utente](destination-configuration/ui-attributes.md): scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 * [Configurazione dello schema](destination-configuration/schema-configuration.md): scopri come definire lo schema di destinazione della destinazione in cui gli utenti possono mappare gli attributi e le identità del profilo.

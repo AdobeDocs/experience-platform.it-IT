@@ -2,7 +2,7 @@
 description: Scopri come impostare un meccanismo di autenticazione per la destinazione e ottenere informazioni approfondite su ciò che gli utenti vedranno nell’interfaccia utente a seconda del metodo di autenticazione selezionato.
 title: Configurazione autenticazione cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Per impostare l&#39;autenticazione di tipo Bearer per la destinazione, configura
 
 ## Autenticazione OAuth 2 {#oauth2}
 
-Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella destinazione, come mostrato nell’esempio seguente per la destinazione Twitter Tipi di pubblico personalizzati. Per informazioni dettagliate sulla configurazione dell’autenticazione OAuth 2 per l’endpoint di destinazione, consulta la sezione dedicata [Destination SDK pagina di autenticazione OAuth 2](oauth2-authentication.md).
+Gli utenti selezionano **[!UICONTROL Connetti alla destinazione]** per attivare il flusso di autenticazione OAuth 2 nella destinazione, come mostrato nell’esempio seguente per la destinazione Twitter Tipi di pubblico personalizzati. Per informazioni dettagliate sulla configurazione dell’autenticazione OAuth 2 per l’endpoint di destinazione, consulta la sezione dedicata [Destination SDK pagina di autenticazione OAuth 2](oauth2-authorization.md).
 
 ![Rendering dell’interfaccia utente con autenticazione OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Dopo aver letto questo articolo, sarai in grado di comprendere meglio come confi
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
-* [Autenticazione OAuth2](oauth2-authentication.md)
+* [Autenticazione OAuth2](oauth2-authorization.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)

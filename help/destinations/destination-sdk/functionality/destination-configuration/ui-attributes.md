@@ -2,7 +2,7 @@
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Dopo aver letto questo articolo, sarai in grado di capire meglio quali attributi
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Autenticazione del cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authentication.md)
+* [Autenticazione OAuth2](oauth2-authorization.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Configurazione dello schema](schema-configuration.md)
 * [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)
