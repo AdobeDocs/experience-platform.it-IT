@@ -2,7 +2,7 @@
 description: Scopri come configurare lo schema partner per le destinazioni create con Destination SDK.
 title: Configurazione schema partner
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
@@ -246,7 +246,7 @@ Dopo aver letto questo articolo, sarai in grado di comprendere meglio quali tipi
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Autenticazione del cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authorization.md)
+* [Autorizzazione OAuth2](oauth2-authorization.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Configurazione dello spazio dei nomi dell’identità](identity-namespace-configuration.md)

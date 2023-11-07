@@ -2,7 +2,7 @@
 description: Scopri le qualifiche storiche dei profili supportate dalle destinazioni create con Destination SDK.
 title: Qualifiche del profilo storico
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -45,7 +45,7 @@ Dopo aver letto questo articolo, dovresti sapere che Experienci Platform esporta
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Autenticazione del cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authorization.md)
+* [Autorizzazione OAuth2](oauth2-authorization.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)

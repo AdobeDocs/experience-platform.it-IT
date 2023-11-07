@@ -2,7 +2,7 @@
 description: Scopri come configurare le impostazioni dei metadati del pubblico per le destinazioni create con Destination SDK.
 title: Configurazione dei metadati del pubblico
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Dopo aver letto questo articolo, avrai una migliore comprensione di come configu
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Configurazione autenticazione cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authorization.md)
+* [Autorizzazione OAuth2](oauth2-authorization.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)

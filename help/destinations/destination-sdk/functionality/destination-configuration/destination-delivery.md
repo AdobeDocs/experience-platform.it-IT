@@ -2,7 +2,7 @@
 description: Scopri come configurare le impostazioni di consegna della destinazione per le destinazioni create con Destination SDK, per indicare dove vanno i dati esportati e quale regola di autenticazione viene utilizzata nella posizione in cui verranno recapitati i dati.
 title: Consegna della destinazione
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
@@ -108,7 +108,7 @@ Dopo aver letto questo articolo, dovresti sapere meglio come configurare le posi
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
 * [Autenticazione del cliente](customer-authentication.md)
-* [Autenticazione OAuth2](oauth2-authorization.md)
+* [Autorizzazione OAuth2](oauth2-authorization.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Configurazione dello schema](schema-configuration.md)

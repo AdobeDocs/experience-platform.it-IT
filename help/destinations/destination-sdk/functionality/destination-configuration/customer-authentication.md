@@ -2,7 +2,7 @@
 description: Scopri come impostare un meccanismo di autenticazione per la destinazione e ottenere informazioni approfondite su ciò che gli utenti vedranno nell’interfaccia utente a seconda del metodo di autenticazione selezionato.
 title: Configurazione autenticazione cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Quando [creazione di una destinazione](../../authoring-api/destination-configura
 
 * Per le destinazioni che utilizzano [autenticazione di base](#basic), gli utenti devono fornire un nome utente e una password direttamente nella pagina di autenticazione dell’interfaccia utente di Experienci Platform.
 * Per le destinazioni che utilizzano [autenticazione bearer](#bearer), gli utenti devono fornire un token Bearer.
-* Per le destinazioni che utilizzano [Autenticazione OAuth2](#oauth2): gli utenti vengono reindirizzati alla pagina di accesso della tua destinazione, dove possono accedere con le loro credenziali.
+* Per le destinazioni che utilizzano [Autorizzazione OAuth2](#oauth2): gli utenti vengono reindirizzati alla pagina di accesso della tua destinazione, dove possono accedere con le loro credenziali.
 * Per [Amazon S3](#s3) destinazioni, gli utenti devono fornire la propria [!DNL Amazon S3] chiave di accesso e chiave segreta.
 * Per [BLOB di Azure](#blob) destinazioni, gli utenti devono fornire la propria [!DNL Azure Blob] stringa di connessione.
 
@@ -233,7 +233,7 @@ Dopo aver letto questo articolo, sarai in grado di comprendere meglio come confi
 
 Per ulteriori informazioni sugli altri componenti di destinazione, consulta i seguenti articoli:
 
-* [Autenticazione OAuth2](oauth2-authorization.md)
+* [Autorizzazione OAuth2](oauth2-authorization.md)
 * [Campi dati cliente](customer-data-fields.md)
 * [Attributi dell’interfaccia utente](ui-attributes.md)
 * [Configurazione dello schema](schema-configuration.md)
