@@ -2,9 +2,9 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
@@ -1203,13 +1203,18 @@ Il contesto fornito al modello contiene `input`  (i profili/dati esportati in qu
 
 La tabella seguente fornisce le descrizioni delle funzioni negli esempi precedenti.
 
-| Funzione | Descrizione |
-|---------|----------|
+| Funzione | Descrizione | Esempio |
+|---------|----------|----------|
 | `input.profile` | Il profilo, rappresentato come [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue lo schema XDM del partner menzionato più sopra in questa pagina. |
-| `destination.segmentAliases` | Mappa dagli ID pubblico nello spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. |
-| `destination.segmentNames` | Mappa dai nomi del pubblico nello spazio dei nomi di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. |
-| `addedSegments(listOfSegments)` | Restituisce solo i tipi di pubblico con stato `realized`. |
-| `removedSegments(listOfSegments)` | Restituisce solo i tipi di pubblico con stato `exited`. |
+| `hasSegments` | Questa funzione prende una mappa degli ID del pubblico dello spazio dei nomi come parametro. La funzione restituisce `true` se nella mappa è presente almeno un pubblico (indipendentemente dal suo stato), e `false` altrimenti. Puoi utilizzare questa funzione per decidere se eseguire o meno l’iterazione su una mappa di tipi di pubblico. | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | Mappa dagli ID pubblico in uno specifico spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Mappa i nomi del pubblico in spazi dei nomi specifici di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | Restituisce l’ora in cui un pubblico è stato creato, aggiornato o attivato in formato timestamp UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: restituisce l’ora in cui il segmento con l’ID `seg-id-1`, dalla `ups` namespace, è stato creato in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: restituisce l’ora in cui il pubblico con l’ID `seg-id-1`, dalla `ups` lo spazio dei nomi, è stato aggiornato in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: restituisce l’ora in cui il pubblico con l’ID `seg-id-1`, dalla `ups` namespace, è stato attivato nella destinazione, in formato timestamp UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: restituisce l’ora in cui l’attivazione del pubblico è stata aggiornata sulla destinazione, in formato timestamp UNIX.</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | Restituisce solo i tipi di pubblico con stato `realized`, in tutti i namespace. | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | Restituisce solo i tipi di pubblico con stato `exited`, in tutti i namespace. | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **Obsoleto. Sostituito da`destination.namespaceSegmentAliases`** <br><br> Mappa dagli ID pubblico nello spazio dei nomi Adobe Experience Platform agli alias pubblico nel sistema del partner. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Sostituito da`destination.namespaceSegmentNames`** <br><br>  Mappa dai nomi del pubblico nello spazio dei nomi di Adobe Experience Platform ai nomi del pubblico nel sistema del partner. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **Obsoleto. Sostituito da`destination.namespaceSegmentTimestamps`** <br><br> Restituisce l’ora in cui un pubblico è stato creato, aggiornato o attivato in formato timestamp UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: restituisce l’ora in cui il pubblico con l’ID `seg-id-1` è stato creato in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: restituisce l’ora in cui il pubblico con l’ID `seg-id-1` è stato aggiornato in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: restituisce l’ora in cui il pubblico con l’ID `seg-id-1` è stato attivato nella destinazione, in formato timestamp UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: restituisce l’ora in cui l’attivazione del pubblico è stata aggiornata sulla destinazione, in formato timestamp UNIX.</li></ul> |
 
 {style="table-layout:auto"}
 
