@@ -4,9 +4,9 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
-source-git-commit: 98171126ea09ec9e81daeeb9122da8a44ab8c16b
+source-git-commit: c76a6267230599dfab905524e613f9721b928211
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '323'
 ht-degree: 72%
 
 ---
@@ -73,7 +73,7 @@ ht-degree: 72%
    * [Panoramica sulle origini](sources/sources-overview.md)
    * [Origini nell’Edizione B2B di Real-Time CDP](sources/b2b.md)
 * Casi d’uso {#use-cases}
-   * Casi di utilizzo di personalizzazione, approfondimenti e coinvolgimento {#personalization-insights-engagement}
+   * Personalizzazione, approfondimenti e coinvolgimento {#personalization-insights-engagement}
       * [Coinvolgi di nuovo i tuoi clienti in modo intelligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Acquisizione cliente {#customer-acquisition}
       * [Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti](/help/rtcdp/partner-data/prospecting.md)
