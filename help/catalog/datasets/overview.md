@@ -3,11 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;posizione dati;posizione d
 solution: Experience Platform
 title: Panoramica dei set di dati
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
+user-guide-description: Ottieni una panoramica di alto livello dei set di dati nell’Experience Platform con questa guida. Scopri come crearli, applicare vincoli sui dati e acquisire dati nei set di dati qui.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 9%
+source-wordcount: '870'
+ht-degree: 8%
 
 ---
 
