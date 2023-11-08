@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -65,7 +65,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 >id="platform_destinations_custom_personalization_datastream"
 >title="Informazioni sugli ID di stream di dati"
 >abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i tipi di pubblico nella risposta alla pagina. Il menu a discesa mostra solo gli stream di dati in cui è abilitata la configurazione della destinazione. Prima di poter configurare la destinazione, devi configurare uno stream di dati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Scopri come configurare uno stream di dati"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it" text="Scopri come configurare uno stream di dati"
 
 >[!IMPORTANT]
 > 

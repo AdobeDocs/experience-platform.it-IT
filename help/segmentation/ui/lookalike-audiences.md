@@ -7,7 +7,7 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2121'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -110,7 +110,7 @@ La sezione Tipi di pubblico simili visualizza un elenco di tutti i tipi di pubbl
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fattori di influenza"
 >abstract="I fattori di influenza sono attributi, eventi e appartenenze al pubblico importanti per spiegare la somiglianza di un profilo con i membri del pubblico di base. Le etichette e i criteri di utilizzo dei dati possono essere utilizzati per escludere alcuni dati dall’essere considerati fattori di influenza nei modelli Look-Alike."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="Escludi dati"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=it#exclude" text="Escludi dati"
 
 La sezione dei fattori influenti mostra i primi 100 fattori che influenzano il modello lookalike per il pubblico di base selezionato. Questi fattori influenti sono gli attributi del profilo, gli eventi di esperienza e le appartenenze al pubblico che sono i più importanti per spiegare le somiglianze nel pubblico di base. Comprendere i principali fattori influenti consente di personalizzare meglio i contenuti di marketing per questo pubblico e per qualsiasi pubblico simile che crei da esso. Non verranno visualizzati tutti i fattori influenti che influiscono sul modello lookalike.
 
