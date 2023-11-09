@@ -2,45 +2,32 @@
 title: Monitorare l’utilizzo delle licenze per query batch
 description: L’interfaccia utente di Adobe Experience Platform fornisce una dashboard tramite la quale puoi visualizzare informazioni importanti sull’utilizzo delle licenze di Data Distiller da parte della tua organizzazione.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-hide: true
-hidefromtoc: true
 recommendations: noCatalog, display
-source-git-commit: fa573dcf03eb711e946afe40d107871f5166ff58
+source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# (Alfa) Monitorare l’utilizzo delle licenze per query batch {#monitor-license-usage}
+# Monitorare l’utilizzo delle licenze per query batch {#monitor-license-usage}
 
->[!IMPORTANT]
+Il dashboard utilizzo licenze fornisce report granulari sull’utilizzo delle licenze di Query Service e sulle metriche di utilizzo per ogni prodotto acquistato. Per ulteriori informazioni sulle metriche disponibili visualizzate nel dashboard, visita il [guida del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md#available-metrics).
+
+Il dashboard fornisce le metriche di utilizzo per ciascun prodotto acquistato, l’utilizzo consolidato delle metriche in tutte le sandbox di produzione o di sviluppo e le metriche di utilizzo da una sandbox specifica. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
+
+>[!NOTE]
 >
->La possibilità di monitorare l’utilizzo delle licenze per query batch tramite l’interfaccia utente non è ancora disponibile per tutti gli utenti. Questa funzione è in formato alfa ed è ancora in fase di test. Questo documento è soggetto a modifiche.
-
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze di Query Service da parte dell’organizzazione.
-
-Per istruzioni dettagliate su come accedere e interagire con la dashboard Utilizzo licenze nell’interfaccia utente, nonché per ulteriori informazioni sulle metriche disponibili visualizzate nella dashboard, visita [guida del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md).
-
-Leggi le [panoramica delle dashboard](../../dashboards/home.md) per un riepilogo di tutte le funzionalità del dashboard in Experience Platform.
-
-## Widget {#widgets}
-
-Il dashboard utilizzo licenze è composto da widget che visualizzano metriche di sola lettura contenenti informazioni importanti sull’utilizzo delle licenze da parte dell’organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione.
-
-Seleziona un pulsante di scelta per scegliere una sandbox per l’analisi e utilizza il menu a discesa per selezionare un periodo di tempo per l’analisi. Le opzioni disponibili sono un periodo di 30 giorni, 90 giorni, 12 mesi, l’ultimo anno, l’intero periodo contrattuale o una data personalizzata.
+>Per impostazione predefinita, il dashboard utilizzo licenze non è attivato. Per poter visualizzare la dashboard, gli utenti devono disporre dell’autorizzazione &quot;Visualizza dashboard utilizzo licenze&quot;. Per i passaggi sulla concessione delle autorizzazioni di accesso per la visualizzazione del dashboard utilizzo licenze, consulta [guida alle autorizzazioni della dashboard](../../dashboards/permissions.md).
 
 ## Calcola ore {#compute-hours}
 
-Il [!UICONTROL Calcola ore] il widget utilizza un grafico a linee per visualizzare ogni giorno il tempo di elaborazione delle query batch dell’organizzazione. Il widget mostra tre metriche indicate da un numero in alto a sinistra. Sono
+Il [!UICONTROL Calcola ore] La metrica è applicabile solo ai clienti con la licenza Data Distiller per le query batch. [!UICONTROL Calcola ore] sono la misura del tempo impiegato dai motori di Query Service per leggere, elaborare e riscrivere i dati nel data lake quando viene eseguita una query batch.
 
-- [!UICONTROL Effettivo]: numero totale di ore di calcolo per il periodo di tempo scelto nel menu a discesa Panoramica. Questa metrica è indicata anche nel grafico da una linea continua.
-- [!UICONTROL Concesso in licenza]: il numero totale di ore di calcolo consentite dal contratto di licenza della tua organizzazione. Anche questa metrica è indicata sul grafico da una linea tratteggiata.
-- [!UICONTROL Utilizzo]: questa è la percentuale di utilizzo relativa al numero massimo di ore di calcolo concordato dalla licenza.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Il [!UICONTROL Calcola ore] Il widget è applicabile solo ai clienti con la licenza Data Distiller per le query batch.
+>**I dati sono disponibili con limitazioni**: i dati iniziano dal 1° ottobre 2023 senza tendenze.<br>Il **retrocompilazione** dei dati dalla data di inizio del contratto è un work-in-progress. La sua disponibilità è prevista entro la fine dell&#39;anno civile.
 
-![Dashboard di utilizzo della licenza con widget ore di calcolo evidenziato.](../images/data-distiller/compute-hours.png)
+![Dashboard di utilizzo della licenza con la metrica ore di calcolo evidenziata.](../images/data-distiller/compute-hours.png)
 
+Per ulteriori informazioni sulle metriche disponibili per l’organizzazione in base alla licenza acquistata, consulta [guida del dashboard utilizzo licenze](../../dashboards/guides/license-usage.md).
