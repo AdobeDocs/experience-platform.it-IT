@@ -4,20 +4,14 @@ solution: Experience Platform
 title: Panoramica di Privacy Service
 description: Privacy Service consente di facilitare la conformità automatica alle normative legali sulla privacy nelle operazioni relative ai dati di Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 3296209a15a5f88ab14e16de25d554b9df712445
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1505'
 ht-degree: 5%
 
 ---
 
 # Panoramica di [!DNL Privacy Service]
-
->[!IMPORTANT]
->
->Le autorizzazioni per Adobe Experience Platform Privacy Service sono state migliorate per aumentarne il livello di granularità. Queste modifiche consentono agli amministratori dell’organizzazione di concedere a più utenti l’accesso con il ruolo e il livello di autorizzazione desiderati. Gli utenti dell’account tecnico devono aggiornare le autorizzazioni Privacy Service in quanto questo aggiornamento imminente costituisce per loro una modifica fondamentale. L&#39;applicazione di questa modifica delle autorizzazioni avrà luogo il **13 aprile 2023**. Consulta la documentazione su [migrazione delle credenziali API legacy](./permissions.md#migrate-tech-accounts) per indicazioni sulla risoluzione del problema.
->
->Gli account tecnici sono disponibili per i clienti aziendali e vengono creati tramite la console per sviluppatori Adobe. L’Adobe ID di un titolare di account tecnico termina in `@techacct.adobe.com`. Se non sei sicuro di essere il titolare di un account tecnico, contatta l’amministratore dell’organizzazione.
 
 Per offrire migliori esperienze ai clienti, devi raccogliere e archiviare i dati personali dei clienti. Quando si utilizzano questi dati, è importante comprendere e rispettare la privacy dei clienti. Nuovi regolamenti legali e organizzativi danno agli utenti il diritto di accedere ai propri dati o di cancellarli dagli archivi dati su richiesta.
 
@@ -66,7 +60,7 @@ A seconda della [!DNL Experience Cloud] applicazioni in uso, è necessario etich
 
 Per ottenere [!DNL Privacy Service] per elaborare una richiesta di accesso a dati personali da parte di un cliente, è necessario fornire almeno un valore di identità univoco per tale cliente nella richiesta stessa. Un valore di identità univoco è qualsiasi informazione che può essere utilizzata per identificare una singola persona e i suoi dati personali memorizzati all’interno del tuo [!DNL Experience Cloud] archivi dati. [!DNL Privacy Service] utilizza queste informazioni di identità per individuare ed elaborare i dati personali del cliente in base alla natura della richiesta (accesso, eliminazione o rinuncia).
 
-A seconda della [!DNL Experience Cloud] applicazioni utilizzate dal sistema CRM, il tipo e il numero di valori di identità da fornire per ciascun cliente varieranno. Alcune applicazioni utilizzano i propri valori ID cliente interni (come gli ID di Adobe Target), mentre altre soluzioni si basano su identificatori globali di Adobe [!DNL Experience Cloud Identity Service] (ECID) che tengono traccia dell’attività dei clienti in tutti [!DNL Experience Cloud] applicazioni. Inoltre, anche informazioni personali generiche come l’indirizzo e-mail o il numero di telefono possono fungere da dati di identità validi.
+A seconda della [!DNL Experience Cloud] applicazioni utilizzate dal sistema CRM, il tipo e il numero di valori di identità da fornire per ogni cliente varieranno. Alcune applicazioni utilizzano i propri valori ID cliente interni (come gli ID di Adobe Target), mentre altre soluzioni si basano su identificatori globali di Adobe [!DNL Experience Cloud Identity Service] (ECID) che tengono traccia dell’attività dei clienti in tutti [!DNL Experience Cloud] applicazioni. Inoltre, anche informazioni personali generiche come l’indirizzo e-mail o il numero di telefono possono fungere da dati di identità validi.
 
 Il documento su [dati di identità per le richieste di privacy](./identity-data.md) fornisce informazioni più dettagliate sui tipi di informazioni di identità accettate per [!DNL Privacy Service]. Il documento fornisce anche indicazioni su come sfruttare le tecnologie Adobe per recuperare in modo efficace le informazioni di identità appropriate dai clienti durante l’interazione con il sito web e inviare tali dati a [!DNL Privacy Service] nelle richieste API.
 

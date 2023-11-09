@@ -2,9 +2,9 @@
 title: Guida di Informazioni su Query Accelerated Store Reporting
 description: Scopri come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 L’archivio con query accelerate consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. In genere, i dati vengono elaborati a intervalli regolari (ad esempio, su base oraria o giornaliera), dove vengono create e riportate le visualizzazioni aggregate. L’analisi di questi rapporti generati dai dati aggregati deriva da informazioni mirate a migliorare le prestazioni aziendali. L’archivio con query accelerata fornisce un servizio di cache, concorrenza, un’esperienza interattiva e un’API senza stato. Tuttavia, presuppone che i dati siano preelaborati e ottimizzati per l’esecuzione di query aggregate e non per l’esecuzione di query di dati non elaborati.
 
-L’archivio con query accelerata ti consente di creare un modello dati personalizzato e/o estendere un modello dati Adobe Real-time Customer Data Platform esistente. Puoi quindi interagire con o incorporare le tue informazioni di reporting in un framework di reporting/visualizzazione a tua scelta. Per informazioni su come utilizzare questa funzione, consulta la documentazione del modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../../dashboards/cdp-insights-data-model.md).
+L’archivio con query accelerata ti consente di creare un modello dati personalizzato e/o estendere un modello dati Adobe Real-time Customer Data Platform esistente. Puoi quindi interagire con o incorporare le tue informazioni di reporting in un framework di reporting/visualizzazione a tua scelta. Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../../dashboards/cdp-insights-data-model.md).
 
 Il modello dati di Real-Time CDP di Adobe Experience Platform fornisce informazioni su profili, tipi di pubblico e destinazioni e abilita le dashboard di Real-Time CDP Insight. Questo documento ti guida attraverso il processo di creazione del modello dati Reporting Insights e anche come estendere i modelli dati di Real-Time CDP in base alle esigenze.
 
@@ -23,11 +23,7 @@ Questa esercitazione utilizza dashboard definite dall’utente per visualizzare 
 
 ## Introduzione
 
-Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting ed estendere i modelli dati di Real-Time CDP che contengono dati Platform arricchiti. Consulta la sezione [imballaggio](../../packages.md) e [guardrail](../../guardrails.md#query-accelerated-store) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Lo SKU di Data Distiller è necessario per creare un modello dati personalizzato per le informazioni di reporting ed estendere i modelli dati di Real-Time CDP che contengono dati Platform arricchiti. Consulta la sezione [imballaggio](../../packaging.md), [guardrail](../../guardrails.md#query-accelerated-store), e  [licenza](../../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
 
 ## Creare un modello dati per informazioni di reporting
 

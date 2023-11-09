@@ -2,9 +2,9 @@
 title: Endpoint "Accelerated Queries"
 description: Scopri come accedere alle query dell’archivio accelerato in modo stateless per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,7 @@ Prima di continuare con questa guida, assicurati di aver letto e compreso [Guida
 
 ## Introduzione
 
-Per utilizzare l’archivio con accelerazione delle query è necessario lo SKU di Data Distiller. Consulta la sezione [imballaggio](../packages.md) e [guardrail](../guardrails.md#query-accelerated-store) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Per utilizzare l’archivio con accelerazione delle query è necessario lo SKU di Data Distiller. Consulta la sezione [imballaggio](../packaging.md) e [guardrail](../guardrails.md#query-accelerated-store), e [licenza](../data-distiller/license-usage.md) documentazione relativa allo SKU di Data Distiller. Se non disponi dello SKU di Data Distiller, contatta il rappresentante dell’assistenza clienti Adobe per ulteriori informazioni.
 
 Le sezioni seguenti descrivono le chiamate API necessarie per accedere all’archivio accelerato delle query in modo senza stato tramite l’API Query Service. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
