@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Analytics Extension
 description: Note aggiornate sulla versione dell’estensione tag Adobe Analytics in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 87%
+source-wordcount: '1416'
+ht-degree: 86%
 
 ---
 
@@ -17,13 +17,22 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 >
 >L’estensione tag Analytics, se spesso aggiornata in risposta agli aggiornamenti del [Libreria JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it). Consulta la sezione [Note sulla versione di AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it) per informazioni dettagliate sulle versioni specifiche menzionate di seguito.
 
+## 15 settembre 2023
+
+**Estensione Adobe Analytics 1.9.3**
+
+**Funzioni**:
+
+* Aggiornato a [AppMeasurement alla versione v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 19 luglio 2023
 
 **Estensione Adobe Analytics 1.9.2**
 
 **Funzioni**:
 
-* Aggiornato all’AppMeasurement v2.24.0.
+* Aggiornato a [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * È stata aggiunta una configurazione opzionale (`decodeLinkParameters` predefinito `false`) che decodifica gli URL di collegamento che includono caratteri con codifica a doppio byte.
 
 **Correzioni di bug**:
