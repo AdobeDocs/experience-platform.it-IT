@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1751'
 ht-degree: 4%
 
 ---
@@ -60,6 +60,12 @@ Scopri dalla tabella seguente quali tipi di set di dati puoi esportare in base a
   </tr>
 </tbody>
 </table>
+
+## Esercitazione video {#video-tutorial}
+
+Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro descritto in questa pagina, i vantaggi dell’utilizzo della funzionalità di esportazione dei set di dati e alcuni casi d’uso consigliati.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinazioni supportati {#supported-destinations}
 
