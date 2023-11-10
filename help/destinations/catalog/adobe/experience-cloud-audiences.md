@@ -3,10 +3,10 @@ title: Experience Cloud Audiences
 description: Scopri come condividere i tipi di pubblico da Real-time Customer Data Platform a varie app di Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
 workflow-type: tm+mt
-source-wordcount: '1683'
-ht-degree: 2%
+source-wordcount: '1780'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,9 @@ ht-degree: 2%
 >
 > Questa destinazione è disponibile per [Adobe Real-time Customer Data Platform Prime e Ultimate](https://helpx.adobe.com/it/legal/product-descriptions/real-time-customer-data-platform.html) clienti.
 
-Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audienci Manager e Adobe Analytics. È necessaria una licenza Audienci Manager per inviare tipi di pubblico ad Adobe Analytics.
+Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audienci Manager e Adobe Analytics.
+
+Per inviare dei tipi di pubblico ad Adobe Analytics, è necessaria una licenza Audienci Manager. Per ulteriori dettagli, vedi [Panoramica Audience Analytics](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=it).
 
 Per inviare tipi di pubblico ad altre soluzioni di Adobe, utilizza le connessioni dirette da Real-Time CDP a [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) e [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -43,56 +45,62 @@ Ad Audience Manager, puoi utilizzare i tipi di pubblico di Real-Time CDP per i c
 
 ### Controllo granulare dei tipi di pubblico esportati {#segments-control}
 
-Utilizza la nuova integrazione self-service di condivisione del pubblico tramite la destinazione Tipi di pubblico di Experience Cloud per selezionare i tipi di pubblico da esportare in Audienci Manager e oltre. Questo consente di determinare quali tipi di pubblico desideri condividere con altre soluzioni di Experience Cloud e quali tipi di pubblico desideri mantenere esclusivamente in Real-Time CDP.
+Per selezionare i tipi di pubblico da esportare in Audienci Manager e oltre, utilizza la nuova integrazione self-service di condivisione del pubblico tramite la destinazione Experience Cloud Audiences.  Questo consente di determinare quali tipi di pubblico desideri condividere con altre soluzioni di Experience Cloud e quali tipi di pubblico desideri mantenere esclusivamente in Real-Time CDP.
 
 L’integrazione legacy di condivisione del pubblico non consentiva un controllo granulare dei tipi di pubblico da esportare in Audienci Manager e versioni successive.
 
+### Condividere tipi di pubblico di Real-Time CDP con Adobe Analytics {#share-audiences-with-analytics}
+
+I tipi di pubblico inviati alla destinazione Tipi di pubblico di Experience Cloud non vengono visualizzati automaticamente in Adobe Analytics.
+
+Prima di poter inviare un pubblico ad Adobe Analytics, devi [implementare il servizio Experience Cloud Identity per Analytics e Audienci Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en).
+
+>[!IMPORTANT]
+>
+>Per inviare tipi di pubblico da Real-Time CDP ad Adobe Analytics tramite la destinazione Tipi di pubblico di Experience Cloud, è necessario disporre di una licenza Audienci Manager.
+
 ### Condividere i tipi di pubblico di Real-Time CDP con altre soluzioni di Experience Cloud {#share-segments-with-other-solutions}
 
-Oltre a condividere i tipi di pubblico con Audienci Manager, la scheda di destinazione Tipi di pubblico di Real-Time CDP consente di condividere i tipi di pubblico con qualsiasi altra soluzione di Experience Cloud per la quale disponi del provisioning, tra cui:
+Puoi utilizzare la scheda di destinazione Tipi di pubblico di Real-Time CDP per condividere i tipi di pubblico con altre soluzioni di Experience Cloud.
 
-* Adobe Campaign
-* Adobe Target
-* Advertising Cloud
-* Analytics
-* Marketo
+Tuttavia, Adobe consiglia vivamente di utilizzare le seguenti schede di destinazione dedicate se desideri condividere i tipi di pubblico con queste soluzioni:
 
-<!--
-
-Note: briefly talk about when to share audiences to these destinations using the existing destination cards and when to share using the new Experience Cloud Audiences destination. 
-
--->
+* [Adobe Campaign](../email-marketing/adobe-campaign.md)
+* [Adobe Target](../personalization/adobe-target-connection.md)
+* [Advertising Cloud](../advertising/adobe-advertising-cloud-connection.md)
+* [Marketo](../adobe/marketo-engage.md)
 
 ## Prerequisiti {#prerequisites}
 
 >[!IMPORTANT]
 >
 > * È necessaria una licenza Audienci Manager per abilitare [Casi d’uso di Data Management Platform](#dmp-use-cases) di cui sopra.
+> * Tu *fare* è necessaria una licenza di Audience Manager per condividere i tipi di pubblico di Real-Time CDP con Adobe Analytics.
 > * Tu *non è necessario* una licenza di Audience Manager per condividere i tipi di pubblico di Real-Time CDP con Adobe Advertising Cloud, Adobe Target, Marketo e altre soluzioni di Experience Cloud, menzionate in [sezione precedente](#share-segments-with-other-solutions).
 
 ### Per i clienti che utilizzano la soluzione legacy di condivisione del pubblico
 
 Se condividi già tipi di pubblico da Real-Time CDP a Audienci Manager e altre soluzioni di Experience Cloud tramite [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam), è necessario contattare l’Assistenza clienti per disabilitare l’integrazione legacy.
 
-Il tempo di risposta per risolvere il ticket di deprovisioning è inferiore o pari a sei giorni lavorativi. Dopo aver disabilitato l’integrazione legacy esistente, puoi procedere con [creazione di una connessione](#connect) tramite la scheda di destinazione self-service.
+Il tempo di risposta per risolvere il ticket di deprovisioning è inferiore o pari a sei giorni lavorativi. Dopo aver disabilitato l’integrazione legacy esistente, puoi procedere con [creare una connessione](#connect) tramite la scheda di destinazione self-service.
 
 >[!IMPORTANT]
 >
->L’esportazione del pubblico da Real-Time CDP alle altre soluzioni verrà interrotta nel periodo compreso tra la risoluzione del ticket e il momento in cui viene stabilita una nuova connessione tramite la scheda di destinazione. Puoi ridurre al minimo questo downtime creando la connessione tramite la scheda di destinazione non appena il ticket viene chiuso.
+>L’esportazione del pubblico da Real-Time CDP alle altre soluzioni viene interrotta nel periodo di tempo che intercorre tra la risoluzione del ticket e il momento in cui viene stabilita una nuova connessione tramite la scheda di destinazione. Puoi ridurre al minimo i tempi di inattività creando la connessione tramite la scheda di destinazione dopo la chiusura del ticket.
 
 ## Limitazioni note e callout {#known-limitations}
 
 Prendi nota delle seguenti limitazioni note e dei callout importanti durante l’utilizzo della scheda Tipi di pubblico di Experience Cloud:
 
-* Attualmente, è supportata una singola destinazione Tipi di pubblico di Experience Cloud. Se si tenta di configurare una seconda connessione di destinazione, si verifica un errore.
+* Attualmente, è supportata una singola destinazione Tipi di pubblico di Experience Cloud. Il tentativo di configurare una seconda connessione di destinazione genera un errore.
 * Quando ti connetti alla destinazione, puoi vedere un’opzione per [abilitare gli avvisi del flusso di dati](../../ui/alerts.md). Anche se visibile nell’interfaccia utente, il **l’opzione abilita avvisi non è attualmente supportata**.
-* **Supporto per la retrocompilazione del pubblico**: la prima esportazione in Audienci Manager o in altre soluzioni Experience Cloud include una popolazione storica dei tipi di pubblico. Utenti di [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) chi configura questa destinazione deve aspettarsi una differenza di backfill di circa 6 ore.
+* **Supporto per la retrocompilazione del pubblico**: la prima esportazione in Audienci Manager o in altre soluzioni Experience Cloud include una popolazione storica dei tipi di pubblico. Utenti di [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) chi configura questa destinazione deve aspettarsi una differenza di backfill di circa sei ore.
 
 ### Latenza durante l’attivazione dei tipi di pubblico {#audience-activation-latency}
 
-Esiste una latenza di quattro ore tra il momento in cui i tipi di pubblico vengono attivati per la prima volta in Real-Time CDP e il momento in cui sono pronti per essere utilizzati in Audienci Manager e in altre soluzioni Experience Cloud per determinati casi d’uso.
+Esiste una latenza di quattro ore tra il momento in cui i tipi di pubblico vengono attivati per la prima volta in Real-Time CDP e il momento in cui sono pronti per essere utilizzati in Audienci Manager e in altre soluzioni Experience Cloud.
 
-Possono essere necessarie fino a 24 ore affinché i tipi di pubblico siano completamente disponibili in Audienci Manager per tutti i casi d’uso e fino a 48 ore affinché i tipi di pubblico di Experience Cloud Audiences vengano visualizzati nei rapporti di Audienci Manager.
+Possono essere necessarie fino a 24 ore affinché i tipi di pubblico siano completamente disponibili, ad Audience Manager per tutti i casi d’uso. La visualizzazione dei tipi di pubblico di Experience Cloud Audiences nei rapporti di Audienci Manager può richiedere fino a 48 ore.
 
 I metadati, come i nomi del pubblico, sono disponibili in Audienci Manager entro pochi minuti dalla configurazione dell’esportazione nella destinazione Audiences di Experience Cloud.
 
@@ -127,7 +135,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 |---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico ricavati dalle identità elencate nella sezione precedente. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Real-Time CDP in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Real-Time CDP in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -160,7 +168,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione. Tieni presente che no [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) è obbligatorio e no [passaggio di pianificazione](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) è disponibile per questa destinazione.
+Letto [Attiva profili e tipi di pubblico nelle destinazioni di esportazione del pubblico in streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione. No [passaggio di mappatura](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) è obbligatorio e no [passaggio di pianificazione](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) è disponibile per questa destinazione.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
@@ -172,7 +180,7 @@ I tipi di pubblico di Real-Time CDP vengono visualizzati in Audienci Manager com
 
 I nomi dei segmenti iniziano a essere popolati in Audienci Manager 15 minuti dopo l’invio dei tipi di pubblico da Real-Time CDP.
 
-La popolazione del segmento inizia a fluire in Audienci Manager entro 6 ore dall’invio da Real-Time CDP e verrà aggiornata ogni 24 ore in Audienci Manager.
+La popolazione del segmento inizia a fluire in Audienci Manager entro 6 ore dall’invio da Real-Time CDP e viene aggiornata ogni 24 ore in Audienci Manager.
 
 L’intera popolazione sarà visibile in Audienci Manager dopo 72 ore e le popolazioni continueranno a scorrere in Audienci Manager a meno che il pubblico non venga rimosso dalla destinazione in Real-Time CDP.
 
@@ -181,9 +189,9 @@ L’intera popolazione sarà visibile in Audienci Manager dopo 72 ore e le popol
 Tutti [!DNL Real-Time CDP] le destinazioni sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, leggi [Panoramica sulla governance dei dati](/help/data-governance/home.md).
 
 La governance dei dati in Real-Time CDP viene applicata da entrambi [etichette di utilizzo dei dati](/help/data-governance/labels/reference.md) e azioni di marketing.
-Le etichette di utilizzo dei dati verranno trasferite alle applicazioni, ma le azioni di marketing no. Ciò significa che una volta arrivati in Audienci Manager, i tipi di pubblico da Real-Time CDP possono essere esportati in qualsiasi destinazione disponibile. Ad Audience Manager, puoi utilizzare [controlli sull’esportazione dei dati](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) per bloccare l’esportazione di tipi di pubblico in determinate destinazioni.
+Le etichette di utilizzo dei dati vengono trasferite alle applicazioni, ma le azioni di marketing no. Ciò significa che una volta arrivati in Audienci Manager, i tipi di pubblico da Real-Time CDP possono essere esportati in qualsiasi destinazione disponibile. Ad Audience Manager, puoi utilizzare [controlli sull’esportazione dei dati](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) per bloccare l’esportazione di tipi di pubblico in determinate destinazioni.
 
-Tipi di pubblico contrassegnati con [!DNL HIPAA] l’azione di marketing non verrà inviata da Real-Time CDP all’Audience Manager.
+Tipi di pubblico contrassegnati con [!DNL HIPAA] l’azione di marketing non viene inviata da Real-Time CDP all’Audience Manager.
 
 ### Gestione delle autorizzazioni in Audienci Manager
 
@@ -191,4 +199,4 @@ I tipi di pubblico e le caratteristiche in Audienci Manager sono soggetti a [Con
 
 I tipi di pubblico esportati da Real-Time CDP vengono assegnati a un’origine dati specifica nell’Audience Manager denominato **[!UICONTROL Segmenti Experienci Platform]**.
 
-Per consentire solo a determinati utenti di accedere ai tipi di pubblico, puoi applicare i controlli di accesso ai tipi di pubblico appartenenti all’origine dati. In Audienci Manager, devi impostare le nuove autorizzazioni di controllo degli accessi per questi tipi di pubblico e le caratteristiche create dai segmenti di Real-Time CDP.
+Per consentire solo a determinati utenti di accedere ai tipi di pubblico, puoi applicare i controlli di accesso ai tipi di pubblico appartenenti all’origine dati. In Audienci Manager, imposta le nuove autorizzazioni di controllo degli accessi per questi tipi di pubblico e le caratteristiche create dai segmenti di Real-Time CDP.
