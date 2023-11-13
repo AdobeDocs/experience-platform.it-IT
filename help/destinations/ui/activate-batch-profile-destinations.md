@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3781'
 ht-degree: 11%
 
 ---
@@ -29,6 +29,18 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pub
 ## Prerequisiti {#prerequisites}
 
 Per attivare i tipi di pubblico nelle destinazioni, è necessario aver completato [connesso a una destinazione](./connect-destination.md). Se non lo hai già fatto, accedi al [catalogo delle destinazioni](../catalog/overview.md), sfoglia le destinazioni supportate e configura la destinazione che desideri utilizzare.
+
+### Formati di file supportati per l’esportazione {#supported-file-formats-export}
+
+Durante l’esportazione dei tipi di pubblico sono supportati i seguenti formati di file:
+
+* CSV
+* JSON
+* Parquet
+
+L’esportazione di file CSV offre maggiore flessibilità in termini di struttura dei file esportati. Ulteriori informazioni su [configurazione della formattazione dei file per i file CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Seleziona il formato file desiderato per l’esportazione quando [creazione di una connessione alla destinazione basata su file](/help/destinations/ui/connect-destination.md).
 
 ## Seleziona la destinazione {#select-destination}
 
@@ -532,7 +544,7 @@ Se si è soddisfatti della selezione e non sono state rilevate violazioni dei cr
 
 ## Verificare l’attivazione del pubblico {#verify}
 
-Per le destinazioni di e-mail marketing e di archiviazione cloud, Adobe Experience Platform crea una `.csv` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modifica i componenti del nome file](#file-names):
+Quando si esportano tipi di pubblico in destinazioni di archiviazione cloud, Adobe Experience Platform crea un `.csv`, `.json`, o `.parquet` nel percorso di archiviazione fornito. È necessario creare un nuovo file nel percorso di archiviazione in base alla pianificazione impostata nel flusso di lavoro. Di seguito è riportato il formato di file predefinito, ma è possibile [modifica i componenti del nome file](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Ad esempio, se hai selezionato una frequenza di esportazione giornaliera, i file che riceverai in tre giorni consecutivi potrebbero essere simili al seguente:

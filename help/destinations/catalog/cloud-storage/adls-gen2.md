@@ -3,9 +3,9 @@ title: Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '882'
 ht-degree: 2%
 
 ---
@@ -104,7 +104,7 @@ In **[!UICONTROL Pianificazione]** passaggio, puoi [impostare la pianificazione 
 
 In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di identità da esportare per i profili. Puoi anche scegliere di modificare le intestazioni nel file esportato con qualsiasi nome descrittivo. Per ulteriori informazioni, vedere [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) nell’esercitazione dell’interfaccia utente attiva destinazioni batch.
 
-## (Beta) Esportare i set di dati {#export-datasets}
+## Esportare i set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 

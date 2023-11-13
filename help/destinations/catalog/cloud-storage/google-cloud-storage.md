@@ -3,9 +3,9 @@ title: Connessione Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare tipi di pubblico o esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1107'
 ht-degree: 3%
 
 ---
@@ -119,7 +119,7 @@ In **[!UICONTROL Pianificazione]** passaggio, puoi [impostare la pianificazione 
 
 In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di identità da esportare per i profili. Puoi anche scegliere di modificare le intestazioni nel file esportato con qualsiasi nome descrittivo. Per ulteriori informazioni, vedere [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) nell’esercitazione dell’interfaccia utente attiva destinazioni batch.
 
-## (Beta) Esportare i set di dati {#export-datasets}
+## Esportare i set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 

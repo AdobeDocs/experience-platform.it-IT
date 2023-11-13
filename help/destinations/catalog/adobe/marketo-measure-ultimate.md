@@ -3,9 +3,9 @@ title: Destinazione Marketo Measure Ultimate
 description: Scopri come collegare e attivare i dati alla destinazione Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 2%
 
 ---
@@ -74,7 +74,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 > 
 >Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Gestire e attivare le destinazioni dei set di dati]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Leggi le [(Beta) Esportare i set di dati](/help/destinations/ui/export-datasets.md) tutorial per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
+Leggi le [Esportare i set di dati](/help/destinations/ui/export-datasets.md) tutorial per istruzioni dettagliate sull’esportazione dei set di dati in questa destinazione.
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 
