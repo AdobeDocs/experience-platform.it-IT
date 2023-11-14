@@ -3,9 +3,9 @@ title: Connettore sorgente Adobe Commerce
 description: Scopri come utilizzare l’origine Adobe Commerce per dare Experience Platform ai dati di e-commerce.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
-source-git-commit: 5eaa5e518de72b452d43a9abca3082efe9e4cb32
+source-git-commit: 8249de4c78810a4cee245fa9c48b91c210aeb0a4
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,10 @@ Per collegare Adobe Commerce ad Experienci Platform, è necessario disporre dei 
 
 Per integrare completamente l’account sorgente di Adobe Commerce, segui i passaggi descritti di seguito insieme alla relativa documentazione.
 
-* [Installare [!DNL Data Connection] estensione](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/install.html) per Adobe Commerce. Puoi scaricare l’estensione del connettore da [Adobe Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
+* [Installare l’estensione del connettore Experienci Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/install.html) per Adobe Commerce. Puoi scaricare l’estensione del connettore da [Adobe Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
 * Dopo aver installato correttamente l’estensione del connettore, accedi al tuo account di Adobe in Experience Cloud e [conferma il tuo ID organizzazione](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255). Questo ID è associato alla società di Experience Cloud con provisioning. È formattato come stringa alfanumerica composta da 24 caratteri e include una stringa `@AdobeOrg`.
-* Quindi, crea o aggiorna lo schema Experience Data Model (XDM) con i gruppi di campi specifici di Commerce. Per i passaggi dettagliati su come aggiungere gruppi di campi specifici di Commerce allo schema XDM, consulta la guida su [aggiunta di gruppi di campi a uno schema XDM](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html).
+* Quindi, crea o aggiorna lo schema Experience Data Model (XDM) con i gruppi di campi specifici di Commerce. Per i passaggi dettagliati su come aggiungere gruppi di campi specifici di Commerce allo schema XDM, consulta la guida su [aggiunta di gruppi di campi a uno schema XDM](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html).
 * Una volta configurato lo schema, devi creare un set di dati basato sul nuovo schema. Questo set di dati conterrà quindi [!DNL Commerce] dati inviati. Per passaggi dettagliati su come creare un set di dati per [!DNL Commerce] , leggi la guida su [invio di dati all’Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html#create-a-dataset).
 * Quindi, crea un flusso di dati e seleziona lo schema XDM che contiene i gruppi di campi specifici di Commerce. Per ulteriori informazioni sugli stream di dati, consulta [panoramica sugli stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=it).
 * Quindi, devi collegare la tua istanza di Adobe Commerce al [Connettore Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). Questo consente di distribuire l’istanza Commerce come SaaS (Software as a Service).
-* Una volta completate tutte le configurazioni di cui sopra, è ora possibile connettersi ad Experienci Platform configurando sia Commerce Services Connector che [!DNL Data Connection] tramite il [!DNL Commerce Admin]. Per ulteriori informazioni su questo passaggio finale, consulta la guida [connessione dei dati di Commerce all’Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/connect-data.html).
+* Una volta completate tutte le configurazioni di cui sopra, è ora possibile connettersi ad Experienci Platform configurando sia il connettore Commerce Services che il connettore Experienci Platform utilizzando [!DNL Commerce Admin]. Per ulteriori informazioni su questo passaggio finale, consulta la guida [connessione dei dati di Commerce all’Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).
