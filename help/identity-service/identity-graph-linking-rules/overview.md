@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
 ## Sommario 
 
 * [Panoramica](./overview.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio](./example-scenarios.md)
 * [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
 * [Logica di collegamento dell’identità](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Per ulteriori informazioni sugli scenari di utilizzo per le regole di collegamen
 
 Con le regole di collegamento del grafico delle identità puoi:
 
-* Configura i limiti per evitare che due identificatori di persona diversi si uniscano in un unico grafico di identità, in modo che un singolo grafico di identità rappresenti solo una singola persona.
-   * I limiti configurati vengono quindi applicati dall’algoritmo di ottimizzazione delle identità.
-* Configurare le priorità per associare eventi online condotti dall&#39;utente autenticato a un determinato utente.
+* Crea un singolo grafo di identità/profilo unito per ogni utente configurando spazi dei nomi univoci (limiti), che impediranno a due identificatori di persona diversi di unirsi in un unico grafo di identità.
+* Associa eventi online autenticati alla persona configurando le priorità
 
 ### Limiti
 
-Puoi utilizzare i limiti dello spazio dei nomi per definire il numero massimo di identità che possono esistere in un grafico in base a un dato spazio dei nomi. Ad esempio, puoi impostare un grafo con un massimo di una sola identità con un ID del sistema di gestione delle relazioni con i clienti spazio dei nomi, evitando così l’unione di due identificatori di persona diversi all’interno dello stesso grafo.
+Uno spazio dei nomi univoco è un identificatore che rappresenta un individuo, ad esempio l’ID del sistema di gestione delle relazioni con i clienti, l’ID di accesso e l’e-mail con hash. Se uno spazio dei nomi è designato come univoco, un grafico può avere una sola identità con quello spazio dei nomi (`limit=1`). In questo modo si evita l’unione di due identificatori di persona diversi all’interno dello stesso grafico.
 
 * Se non è configurato un limite, potrebbero verificarsi unioni di grafici indesiderate, ad esempio due identità con un ID del sistema di gestione delle relazioni con i clienti nello spazio dei nomi di un grafico.
 * Se non è configurato un limite, il grafico può aggiungere tutti gli spazi dei nomi necessari, purché il grafico sia all’interno dei guardrail (50 identità/grafico).
@@ -60,6 +60,8 @@ Di seguito è riportato un elenco delle implicazioni dell’algoritmo sull’ass
 * L’ECID verrà associato all’ultimo utente autenticato se sono soddisfatte le seguenti condizioni:
    * Se gli ID del sistema di gestione delle relazioni con i clienti vengono uniti da ECID (dispositivo condiviso).
    * Se i limiti sono configurati per un solo ID CRM.
+
+Per ulteriori informazioni, leggere il documento [algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md).
 
 ### Priorità
 
@@ -106,6 +108,7 @@ Se in Experienci Platform vengono acquisiti i seguenti eventi di esperienza, i f
 
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md)
 * [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
 * [Logica di collegamento dell’identità](./identity-linking-logic.md)

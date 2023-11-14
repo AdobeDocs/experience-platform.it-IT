@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -69,5 +69,6 @@ Con le regole di collegamento del grafico delle identità puoi configurare l’I
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
 * [Logica di collegamento dell’identità](./identity-linking-logic.md)

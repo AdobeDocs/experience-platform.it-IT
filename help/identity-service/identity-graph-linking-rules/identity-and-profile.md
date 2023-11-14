@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
@@ -74,5 +74,6 @@ Identity Service acquisisce solo i campi designati come identità. Identity Serv
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md)
 * [Logica di collegamento dell’identità](./identity-linking-logic.md)

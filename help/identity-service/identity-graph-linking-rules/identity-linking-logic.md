@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '794'
 ht-degree: 3%
 
 ---
@@ -150,5 +150,6 @@ A `timestamp=4`, un cliente utilizza lo stesso tablet, accede al proprio account
 Per ulteriori informazioni sulle regole di collegamento del grafico delle identità, consulta la documentazione seguente:
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
+* [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md)
 * [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)

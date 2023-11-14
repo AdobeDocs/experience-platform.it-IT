@@ -2,9 +2,9 @@
 title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -29,11 +29,15 @@ Una volta avviata l’eliminazione del set di dati, il relativo processo di scad
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla [panoramica](./overview.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
+L’endpoint utilizzato in questa guida fa parte dell’API di igiene dei dati. Prima di continuare, controlla [Guida API](./overview.md) per informazioni sulle intestazioni richieste per operazioni CRUD, messaggi di errore, raccolte Postman e come leggere chiamate API di esempio.
+
+>[!IMPORTANT]
+>
+>Quando effettui chiamate all’API di igiene dei dati, devi utilizzare il comando -H `x-sandbox-name: {SANDBOX_NAME}` intestazione.
 
 ## Elenca scadenze set di dati {#list}
 
-Per elencare tutte le scadenze dei set di dati per la tua organizzazione, devi eseguire una richiesta GET.
+Per elencare tutte le scadenze dei set di dati per la tua organizzazione, devi eseguire una richiesta GET. I parametri di query possono essere utilizzati per filtrare la risposta in base ai risultati appropriati.
 
 **Formato API**
 
@@ -43,7 +47,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Elenco di parametri di query facoltativi, con più parametri separati da `&` caratteri. I parametri comuni includono `size` e `page` a scopo di impaginazione. Per un elenco completo dei parametri di query supportati, consulta [sezione dell&#39;appendice](#query-params). |
+| `{QUERY_PARAMETERS}` | Elenco di parametri di query facoltativi, con più parametri separati da `&` caratteri. I parametri comuni includono `limit` e `page` a scopo di impaginazione. Per un elenco completo dei parametri di query supportati, consulta [sezione dell&#39;appendice](#query-params). |
 
 {style="table-layout:auto"}
 
@@ -64,36 +68,22 @@ In caso di esito positivo, la risposta elenca le scadenze risultanti del set di 
 
 ```json
 {
-  "totalRecords": 3,
-  "ttlDetails": [
+  "results": [
     {
-      "status": "completed",
-      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "f440ac301c414bf1b6ba419162866346",
-      "expiry": "2021-07-07T13:14:15Z",
-      "updatedAt": "2021-07-07T13:14:15Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
-    },
-    {
+      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
+      "datasetId": "629bd9125b31471b2da7645c",
+      "datasetName": "Sample Acme dataset",
+      "sandboxName": "hygiene-beta",
+      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
       "status": "pending",
-      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
-      "expiry": "2099-02-02T00:00:00Z",
-      "updatedAt": "2021-02-02T13:00:00Z",
-      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
-    },
-    {
-      "status": "pending",
-      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
-      "expiry": "2099-01-01T00:00:00Z",
-      "updatedAt": "2021-01-01T13:00:00Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
+      "expiry": "2050-01-01T00:00:00Z",
+      "updatedAt": "2023-06-09T16:52:44.136028Z",
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
-  ]
+  ],
+  "current_page": 0,
+  "total_pages": 1,
+  "total_count": 1
 }
 ```
 
@@ -106,17 +96,19 @@ In caso di esito positivo, la risposta elenca le scadenze risultanti del set di 
 
 ## Cercare una scadenza del set di dati {#lookup}
 
-Puoi cercare la scadenza di un set di dati tramite una richiesta GET.
+Per cercare la scadenza di un set di dati, effettua una richiesta GET con `datasetId` o `ttlId`.
 
 **Formato API**
 
 ```http
-GET /ttl/{DATASET_ID}
+GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati di cui desideri cercare la scadenza. |
+| `{TTL_ID}` | ID della scadenza del set di dati. |
 
 {style="table-layout:auto"}
 
@@ -137,24 +129,30 @@ curl -X GET \
 
 In caso di esito positivo, la risposta restituisce i dettagli della scadenza del set di dati.
 
+<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
+
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
+    "datasetName": "XtVRwq9-38734",
+    "sandboxName": "prod",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}",
-    "displayName": "Example Dataset Expiration Request",
-    "description": "A dataset expiration request that will execute at the end of 2023"
+    "expiry": "2024-12-31T23:59:59Z",
+    "updatedAt": "2024-05-11T15:12:40.393115Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID della scadenza del set di dati. |
+| `ttlId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
+| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
+| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
 | `imsOrg` | ID organizzazione. |
 | `status` | Lo stato corrente della scadenza del set di dati. |
 | `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
@@ -189,17 +187,19 @@ Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di d
 
 ## Creare o aggiornare la scadenza di un set di dati {#create-or-update}
 
-Puoi creare o aggiornare una data di scadenza per un set di dati tramite una richiesta PUT.
+Crea o aggiorna una data di scadenza per un set di dati tramite una richiesta PUT. La richiesta PUT utilizza `datasetId` o `ttlId`.
 
 **Formato API**
 
 ```http
 PUT /ttl/{DATASET_ID}
+PUT /ttl/{TTL_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati per cui pianificare una scadenza. |
+| `{TTL_ID}` | ID della scadenza del set di dati. |
 
 **Richiesta**
 
@@ -214,15 +214,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2022-12-31T23:59:59Z",
-        "displayName": "Example Expiration Request",
-        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+        "expiry": "2024-12-31T23:59:59Z",
+        "displayName": "Delete Acme Data before 2025",
+        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
       }'
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `expiry` | Una marca temporale ISO 8601 per indicare quando il set di dati verrà eliminato. |
+| `expiry` | Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati vengono sostituite dal nuovo valore di scadenza fornito. |
 | `displayName` | Nome visualizzato per la richiesta di scadenza. |
 | `description` | Descrizione facoltativa della richiesta di scadenza. |
 
@@ -234,21 +234,21 @@ In caso di esito positivo, la risposta restituisce i dettagli della scadenza del
 
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
+    "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}",
-    "displayName": "Example Expiration Request",
-    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID della scadenza del set di dati. |
+| `ttlId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
 | `imsOrg` | ID organizzazione. |
 | `status` | Lo stato corrente della scadenza del set di dati. |
@@ -274,17 +274,17 @@ DELETE /ttl/{EXPIRATION_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPIRATION_ID}` | Il `workorderId` della scadenza del set di dati che desideri annullare. |
+| `{EXPIRATION_ID}` | Il `ttlId` della scadenza del set di dati che desideri annullare. |
 
 {style="table-layout:auto"}
 
 **Richiesta**
 
-La seguente richiesta annulla la scadenza di un set di dati con ID `SD5cfd7a11b25543a9bcd9ef647db3d8df`:
+La seguente richiesta annulla la scadenza di un set di dati con ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -295,19 +295,21 @@ curl -X DELETE \
 
 In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e il campo `status` attributo impostato su `cancelled`.
 
-## Recuperare la cronologia dello stato di scadenza di un set di dati
+## Recuperare la cronologia dello stato di scadenza di un set di dati {#retrieve-expiration-history}
 
-Puoi cercare la cronologia dello stato di scadenza di un set di dati specifico utilizzando il parametro di query `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, su eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile).
+Puoi cercare la cronologia dello stato di scadenza di un set di dati specifico utilizzando il parametro di query `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, su eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile). È inoltre possibile utilizzare `ttlId` della scadenza del set di dati.
 
 **Formato API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati di cui desideri cercare la cronologia delle scadenze. |
+| `{TTL_ID}` | ID della scadenza del set di dati. |
 
 {style="table-layout:auto"}
 
@@ -328,35 +330,35 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati, con
 
 ```json
 {
-  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
   "datasetId": "62759f2ede9e601b63a2ee14",
   "datasetName": "Example Dataset",
   "sandboxName": "prod",
   "displayName": "Expiration Request 123",
   "description": "Expiration Request 123 Description",
-  "imsOrg": "{ORG_ID}",
+  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
   "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "{USER_ID}",
+  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
   "history": [
     {
       "status": "created",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "updated",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "cancelled",
       "expiry": "2022-05-09T23:47:30.071186Z",
       "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
   ]
 }
@@ -364,7 +366,7 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati, con
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `workorderId` | ID della scadenza del set di dati. |
+| `ttlId` | ID della scadenza del set di dati. |
 | `datasetId` | ID del set di dati a cui si applica questa scadenza. |
 | `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
 | `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
@@ -381,21 +383,32 @@ Una risposta corretta restituisce i dettagli della scadenza del set di dati, con
 
 La tabella seguente illustra i parametri di query disponibili quando [elenco scadenze set di dati](#list):
 
+>[!NOTE]
+>
+>Il `description`, `displayName`, e `datasetName` Tutti i parametri contengono la possibilità di cercare per valori LIKE. Ciò significa che puoi trovare le scadenze pianificate del set di dati denominate: &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot; cercando la stringa &quot;Name1&quot;.
+
 | Parametro | Descrizione | Esempio |
 | --- | --- | --- |
-| `size` | Un numero intero compreso tra 1 e 100 che indica il numero massimo di scadenze da restituire. Impostazione predefinita: 25. | `size=50` |
-| `page` | Numero intero che indica la pagina di scadenze da restituire. | `page=3` |
-| `orgId` | Corrisponde alle scadenze dei set di dati il cui ID organizzazione corrisponde a quello del parametro. Questo valore viene impostato automaticamente su quello del `x-gw-ims-org-id` e viene ignorato a meno che la richiesta non fornisca un token di servizio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
-| `status` | Elenco di stati separato da virgole. Se inclusa, la risposta corrisponde alle scadenze del set di dati il cui stato corrente è tra quelli elencati. | `status=pending,cancelled` |
-| `author` | Corrisponde a scadenze il cui `created_by` corrisponde alla stringa di ricerca. Se la stringa di ricerca inizia con `LIKE` o `NOT LIKE`, il resto viene trattato come un modello di ricerca SQL. In caso contrario, l’intera stringa di ricerca viene trattata come una stringa letterale che deve corrispondere esattamente all’intero contenuto di una `created_by` campo. | `author=LIKE %john%` |
-| `sandboxName` | Corrisponde alle scadenze del set di dati il cui nome di sandbox corrisponde esattamente all’argomento. Viene impostato automaticamente sul nome della sandbox nel campo `x-sandbox-name` intestazione. Utilizzare `sandboxName=*` per includere le scadenze dei set di dati da tutte le sandbox. | `sandboxName=dev1` |
-| `datasetId` | Corrisponde alle scadenze che si applicano a un set di dati specifico. | `datasetId=62b3925ff20f8e1b990a7434` |
+| `author` | Corrisponde a scadenze il cui `created_by` corrisponde alla stringa di ricerca. Se la stringa di ricerca inizia con `LIKE` o `NOT LIKE`, il resto viene trattato come un modello di ricerca SQL. In caso contrario, l’intera stringa di ricerca viene trattata come una stringa letterale che deve corrispondere esattamente all’intero contenuto di una `created_by` campo. | `author=LIKE %john%`, `author=John Q. Public` |
+| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Corrisponde alle scadenze annullate in qualsiasi momento nell’intervallo indicato. Ciò si applica anche se la scadenza è stata successivamente riaperta (impostando una nuova scadenza per lo stesso set di dati). | `updatedDate=2022-01-01` |
+| `completedDate` / `completedToDate` / `completedFromDate` | Corrisponde alle scadenze completate durante l’intervallo specificato. | `completedToDate=2021-11-11-06:00` |
 | `createdDate` | Corrisponde alle scadenze create nell’intervallo di 24 ore a partire dall’ora indicata.<br><br>Tieni presente che le date senza un’ora (come `2021-12-07`) rappresentano il datetime all&#39;inizio di tale giorno. Pertanto, `createdDate=2021-12-07` si riferisce a qualsiasi scadenza creata il 7 dicembre 2021, a partire da `00:00:00` da a `23:59:59.999999999` (UTC) | `createdDate=2021-12-07` |
 | `createdFromDate` | Corrisponde alle scadenze create all’ora indicata o successivamente. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Corrisponde alle scadenze create entro l’ora indicata o prima di essa. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | Mi piace `createdDate` / `createdFromDate` / `createdToDate`, ma corrisponde all’ora di aggiornamento della scadenza di un set di dati invece dell’ora di creazione.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Corrisponde alle scadenze annullate in qualsiasi momento nell’intervallo indicato. Ciò si applica anche se la scadenza è stata successivamente riaperta (impostando una nuova scadenza per lo stesso set di dati). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Corrisponde alle scadenze completate durante l’intervallo specificato. | `completedToDate=2021-11-11-06:00` |
+| `datasetId` | Corrisponde alle scadenze che si applicano a un set di dati specifico. | `datasetId=62b3925ff20f8e1b990a7434` |
+| `datasetName` | Corrisponde a scadenze il cui nome del set di dati contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `datasetName=Acme` |
+| `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
+| `displayName` | Corrisponde a scadenze il cui nome visualizzato contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `displayName=License Expiry` |
+| `executedDate` / `executedFromDate` / `executedToDate` | Filtra i risultati in base a una data di esecuzione esatta, una data di fine per l’esecuzione o una data di inizio per l’esecuzione. Vengono utilizzati per recuperare dati o record associati all&#39;esecuzione di un&#39;operazione in una data specifica, prima di una data specifica o dopo una data specifica. | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Corrisponde alle scadenze che devono essere eseguite, o che sono già state eseguite, durante l’intervallo specificato. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `limit` | Un numero intero compreso tra 1 e 100 che indica il numero massimo di scadenze da restituire. Impostazione predefinita: 25. | `limit=50` |
+| `orderBy` | Il `orderBy` Il parametro query specifica l’ordinamento dei risultati restituiti dall’API. Utilizzalo per disporre i dati in base a uno o più campi, in ordine crescente (ASC) o decrescente (DESC). Utilizzare il prefisso + o - per indicare rispettivamente ASC e DESC. Sono accettati i seguenti valori: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orgId` | Corrisponde alle scadenze dei set di dati il cui ID organizzazione corrisponde a quello del parametro. Questo valore viene impostato automaticamente su quello del `x-gw-ims-org-id` e viene ignorato a meno che la richiesta non fornisca un token di servizio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `page` | Numero intero che indica la pagina di scadenze da restituire. | `page=3` |
+| `sandboxName` | Corrisponde alle scadenze del set di dati il cui nome di sandbox corrisponde esattamente all’argomento. Viene impostato automaticamente sul nome della sandbox nel campo `x-sandbox-name` intestazione. Utilizzare `sandboxName=*` per includere le scadenze dei set di dati da tutte le sandbox. | `sandboxName=dev1` |
+| `search` | Corrisponde a scadenze in cui la stringa specificata corrisponde esattamente all’ID scadenza o è **contenuto** in uno di questi campi:<br><ul><li>author</li><li>nome visualizzato</li><li>descrizione</li><li>nome visualizzato</li><li>nome set di dati</li></ul> | `search=TESTING` |
+| `status` | Elenco di stati separato da virgole. Se inclusa, la risposta corrisponde alle scadenze del set di dati il cui stato corrente è tra quelli elencati. | `status=pending,cancelled` |
+| `ttlId` | Corrisponde alla richiesta di scadenza con l’ID specificato. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | Mi piace `createdDate` / `createdFromDate` / `createdToDate`, ma corrisponde all’ora di aggiornamento della scadenza di un set di dati invece dell’ora di creazione.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
