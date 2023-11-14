@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1833'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,15 @@ ht-degree: 36%
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=it).
 
-## Versione 2.21.0 - 1 novembre 2023
+## Versione 2.21.3 - 10 novembre 2023
+
+Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
+
+**Correzioni e miglioramenti**
+
+* È stato risolto un problema a causa del quale l’array propositions era disponibile in `Send event complete` Gli eventi sono sempre stati vuoti.
+
+## Versione 2.21.2 - 1 novembre 2023
 
 **Nuove funzioni**
 

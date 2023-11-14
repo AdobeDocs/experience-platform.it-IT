@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1678'
 ht-degree: 4%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 4%
 
 Questo documento descrive le note sulla versione di Adobe Experience Platform Web SDK.
 Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note sulla versione dell’estensione tag Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versione 2.19.1 - 10 novembre 2023
+
+**Correzioni e miglioramenti**
+
+* È stato risolto un problema a causa del quale l’array propositions restituiva da `sendEvent` le chiamate erano sempre vuote.
 
 ## Versione 2.19.0 - 1 novembre 2023
 
