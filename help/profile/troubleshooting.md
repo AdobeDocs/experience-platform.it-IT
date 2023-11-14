@@ -51,7 +51,7 @@ Puoi anche utilizzare l’API del servizio di segmentazione di Adobe Experience 
 
 #### Utilizzo dell’interfaccia utente
 
-Nell’interfaccia utente di Experience Platform, il **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Profili]** workspace consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al loro valore di identità. Consulta la [Guida utente del profilo](./ui/user-guide.md) per ulteriori informazioni.
+Nell’interfaccia utente di Experienci Platform, il **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Profili]** workspace consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al loro valore di identità. Consulta la [Guida utente del profilo](./ui/user-guide.md) per ulteriori informazioni.
 
 Puoi anche visualizzare un elenco dei tipi di pubblico sotto **[!UICONTROL Sfoglia]** scheda in **[!UICONTROL Tipi di pubblico]** Workspace. Dopo aver selezionato un pubblico, viene visualizzato un campione di profili idonei per quel pubblico. Puoi quindi selezionare uno di questi profili elencati per visualizzarne i dettagli. Consulta la [Panoramica sulla segmentazione dell’interfaccia utente](../segmentation/ui/overview.md) per ulteriori informazioni.
 

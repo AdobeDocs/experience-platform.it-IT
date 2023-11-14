@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Avvio [Ottobre 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), puoi utilizzare le nuove funzionalità di esportazione dei file per accedere a funzionalità di personalizzazione avanzate durante l’esportazione di file, ad Experience Platform:
 
-* Aggiuntivo [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
+* Nuove [opzioni di denominazione file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Possibilità di impostare intestazioni di file personalizzate nei file esportati tramite [nuovo passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Possibilità di selezionare [tipo di file](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del file esportato.
 * Possibilità di [personalizzare la formattazione dei file di dati CSV esportati](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -42,7 +42,7 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Tieni presente che attualmente nell’interfaccia utente di Experience Platform puoi visualizzare due schede di destinazione affiancate delle tre destinazioni. Di seguito sono riportati i [!DNL Amazon S3] destinazioni legacy e nuove. In tutti i casi, le schede contrassegnate con **Beta** sono le nuove schede di destinazione.
+Tieni presente che attualmente nell’interfaccia utente di Experienci Platform puoi visualizzare due schede di destinazione affiancate delle tre destinazioni. Di seguito sono riportati i [!DNL Amazon S3] destinazioni legacy e nuove. In tutti i casi, le schede contrassegnate con **Beta** sono le nuove schede di destinazione.
 
 ![Immagine delle due schede di destinazione Amazon S3 in una visualizzazione affiancata.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
@@ -52,7 +52,7 @@ Anche se queste destinazioni con funzionalità avanzate sono state inizialmente 
 
 Se utilizzi già il [API del servizio Flusso](https://developer.adobe.com/experience-platform-apis/references/destinations/) per esportare i profili nelle destinazioni dell’archiviazione cloud Amazon S3, Azure Blob o SFTP, questa guida alla migrazione API è applicabile al tuo caso.
 
-Se gli script sono in esecuzione in [!DNL Amazon S3], [!DNL Azure Blob], o le posizioni di archiviazione cloud SFTP sopra i file esportati da Experience Platform, tieni presente che alcuni parametri stanno cambiando per quanto riguarda le specifiche di connessione e flusso delle nuove schede, nonché per quanto riguarda il passaggio di mappatura.
+Se gli script sono in esecuzione in [!DNL Amazon S3], [!DNL Azure Blob], o le posizioni di archiviazione cloud SFTP sopra i file esportati da Experienci Platform, tieni presente che alcuni parametri stanno cambiando per quanto riguarda le specifiche di connessione e flusso delle nuove schede, nonché per quanto riguarda il passaggio di mappatura.
 
 Ad esempio, se utilizzi uno script per filtrare i flussi di dati di destinazione in [!DNL Amazon S3] destinazione, in base alla specifica di connessione del [!DNL Amazon S3] destinazione, tieni presente che la specifica di connessione cambierà, pertanto dovrai aggiornare i filtri.
 
@@ -802,4 +802,4 @@ Tieni presente che non vi è alcun impatto sulla pianificazione esistente per le
 
 ## Passaggi successivi {#next-steps}
 
-Una volta letta questa pagina, saprai se è necessario intraprendere un’azione in preparazione alla migrazione delle destinazioni dell’archiviazione cloud. Saprai anche quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare file da Experience Platform nelle destinazioni di archiviazione cloud preferite. Ora puoi visualizzare l’esercitazione API per [esportare i dati nelle destinazioni dell’archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).
+Una volta letta questa pagina, saprai se è necessario intraprendere un’azione in preparazione alla migrazione delle destinazioni dell’archiviazione cloud. Saprai anche quali pagine della documentazione fare riferimento quando configuri flussi di lavoro basati su API per esportare file da Experienci Platform nelle destinazioni di archiviazione cloud preferite. Ora puoi visualizzare l’esercitazione API per [esportare i dati nelle destinazioni dell’archiviazione cloud](/help/destinations/api/activate-segments-file-based-destinations.md).

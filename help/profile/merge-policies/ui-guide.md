@@ -2,7 +2,7 @@
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;criteri di unione;interfaccia utente;interfaccia utente;timestamp ordinato;precedenza set di dati
 title: Guida dell’interfaccia utente per i criteri di unione
 type: Documentation
-description: Quando in Experience Platform si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare la priorità dei dati e i dati che verranno combinati per creare la vista unificata. Questa guida fornisce istruzioni dettagliate per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
+description: Quando in Experienci Platform si riuniscono dati provenienti da più origini, i criteri di unione sono le regole utilizzate da Platform per determinare la priorità dei dati e i dati che verranno combinati per creare la vista unificata. Questa guida fornisce istruzioni dettagliate per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ Adobe Experience Platform consente di unire frammenti di dati provenienti da pi�
 
 Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce istruzioni dettagliate per l’utilizzo dei criteri di unione tramite l’interfaccia utente di Adobe Experience Platform.
 
-Per ulteriori informazioni sui criteri di unione e sul ruolo che svolgono all’interno di Experience Platform, consulta la sezione [panoramica dei criteri di unione](overview.md).
+Per ulteriori informazioni sui criteri di unione e sul ruolo che svolgono all’interno di Experienci Platform, consulta la sezione [panoramica dei criteri di unione](overview.md).
 
 ## Introduzione
 
@@ -48,7 +48,7 @@ Il **[!UICONTROL Nuovo criterio di unione]** , richiede di fornire informazioni 
 
 ![Il nuovo flusso di lavoro per i criteri di unione.](../images/merge-policies/create.png)
 
-## [!UICONTROL Configurare gli] {#configure}
+## [!UICONTROL Configura] {#configure}
 
 Il primo passaggio nel flusso di lavoro consente di configurare il criterio di unione fornendo informazioni di base. Queste informazioni includono:
 

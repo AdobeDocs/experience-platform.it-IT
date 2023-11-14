@@ -189,7 +189,7 @@ Se il valore di `name` è il nome della classe XDM su cui si basa lo schema asso
     }
 ```
 
-Per ulteriori informazioni su XDM e sull’utilizzo degli schemi in Experience Platform, leggi [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM e sull’utilizzo degli schemi in Experienci Platform, leggi [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Accedere ai criteri di unione {#access-merge-policies}
 

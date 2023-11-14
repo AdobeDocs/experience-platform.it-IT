@@ -54,7 +54,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *Pubblicità* categoria, seleziona **[!UICONTROL Pinterest Ads]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *Pubblicità* categoria, seleziona **[!UICONTROL Pinterest Ads]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Catalogo delle origini su Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 

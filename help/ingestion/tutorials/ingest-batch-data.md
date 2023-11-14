@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;inserimento;inserire dati batch;esercitazione;inserimento batch;tutorial;guida interfaccia utente;
 solution: Experience Platform
-title: Acquisire dati in Experience Platform
+title: Acquisire dati in Experienci Platform
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file Parquet o dati conformi a uno schema Experience Data Model (XDM) noto.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd

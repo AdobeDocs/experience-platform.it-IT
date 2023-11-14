@@ -29,7 +29,7 @@ Di uno schema di unione `identityMap` è una rappresentazione delle identità no
 
 Il `timeSeriesEvents` array è un elenco di eventi di serie temporali correlati agli schemi di record associati all’unione. Quando i dati di profilo vengono esportati in set di dati, questo array viene incluso per ogni record. Ciò è utile per vari casi d’uso, come l’apprendimento automatico in cui i modelli richiedono l’intera cronologia del comportamento di un profilo, oltre agli attributi record.
 
-### Mappa di iscrizione al segmento
+### Mappa di appartenenza al segmento
 
 Il `segmentMembership` map memorizza i risultati della valutazione di una definizione di segmento. Quando i processi di segmentazione vengono eseguiti correttamente utilizzando [API di segmentazione](https://www.adobe.io/experience-platform-apis/references/segmentation/), la mappa viene aggiornata. `segmentMembership` archivia anche eventuali tipi di pubblico pre-valutati che vengono acquisiti in Platform, consentendo l’integrazione con altre soluzioni come Adobe Audience Manager. Guarda il tutorial su [creazione di tipi di pubblico tramite API](../../segmentation/tutorials/create-a-segment.md) per ulteriori informazioni.
 

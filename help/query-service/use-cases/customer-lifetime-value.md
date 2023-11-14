@@ -56,7 +56,7 @@ Successivamente, devi creare un modello dati personalizzato o estendere un model
 * Crea tabelle dimensione per estendere il modello di reporting insights.
 * Eseguire una query sul modello dati Exaccelerated Store Reporting Insights
 
-Per informazioni su come utilizzare questa funzione, consulta la documentazione del modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../dashboards/cdp-insights-data-model.md).
+Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../dashboards/cdp-insights-data-model.md).
 
 Assicurati di impostare una pianificazione per aggiornare il modello dati personalizzato a intervalli regolari. In questo modo i dati vengono reinseriti come parte della pipeline di acquisizione in base alle esigenze e popolano le dashboard definite dall’utente. Consulta la [guida alla pianificazione delle query](../ui/query-schedules.md#create-schedule) per scoprire come impostare la pianificazione.
 

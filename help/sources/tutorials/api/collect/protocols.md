@@ -606,7 +606,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Creare un flusso di dati
+## Crea un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati consiste nel creare un flusso di dati. A questo punto, è necessario preparare i seguenti valori obbligatori:
 

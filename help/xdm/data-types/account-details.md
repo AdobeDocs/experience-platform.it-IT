@@ -35,7 +35,7 @@ ht-degree: 5%
 | `primaryEmailDomain` | Stringa | Il dominio e-mail principale utilizzato dall’organizzazione per il proprio personale. |
 | `rating` | Doppio | Il punteggio calcolato o la valutazione in stelle per questa organizzazione. `1` indica il punteggio massimo possibile, e `0` è la valutazione minima possibile. |
 | `tickerSymbol` | Stringa | Il simbolo del mercato azionario per questo account. Massimo 20 caratteri. |
-| `twitterHandleUrl` | Stringa | Collegamento a un sito web dell’handle twitter dell’organizzazione. |
+| `twitterHandleUrl` | Stringa | Collegamento a un sito web dell’handle di twitter dell’organizzazione. |
 | `website` | Stringa | L’URL del sito web dell’organizzazione. |
 
 {style="table-layout:auto"}

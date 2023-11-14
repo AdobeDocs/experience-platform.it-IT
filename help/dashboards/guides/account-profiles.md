@@ -108,4 +108,4 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 
 ## Passaggi successivi
 
-Seguendo questo documento, ora dovresti sapere come individuare [!UICONTROL Profili account] dashboard. Dovresti anche comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei profili account come parte dei dati B2B nell’interfaccia utente di Experience Platform, consulta [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, edizione B2B.
+Seguendo questo documento, ora dovresti sapere come individuare [!UICONTROL Profili account] dashboard. Dovresti anche comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei profili account come parte dei dati B2B nell’interfaccia utente di Experienci Platform, consulta [panoramica dei profili account](../../rtcdp/accounts/account-profile-overview.md) per Adobe Real-Time CDP, edizione B2B.

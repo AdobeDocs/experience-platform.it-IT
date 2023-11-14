@@ -1,11 +1,11 @@
 ---
-description: Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
+description: Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare il Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
 title: Guida introduttiva a Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
+Questa pagina descrive come eseguire l’autenticazione e iniziare a utilizzare il Adobe Experience Platform Destination SDK. Include istruzioni su come ottenere le credenziali di autenticazione Adobe I/O, il nome di una sandbox e l’autorizzazione di controllo dell’accesso per l’authoring della destinazione.
 
 ## Terminologia {#terminology}
 
@@ -23,7 +23,7 @@ Questa guida utilizza concetti specifici di Platform, ad esempio organizzazione 
 
 Destination SDK utilizza [Adobe I/O](https://www.adobe.io/) gateway per l&#39;autenticazione. Per effettuare chiamate API agli endpoint Destination SDK, devi fornire determinate intestazioni nelle chiamate API. Collaborare con il team Adobe Exchange per configurare l&#39;autenticazione per l&#39;accesso [Console Adobe Developer](https://developer.adobe.com/console).
 
-Per effettuare correttamente le chiamate agli endpoint API Destination SDK, segui la [tutorial sull’autenticazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Avvia l’esercitazione da &quot;[Generare una chiave API, un ID organizzazione e un segreto client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. Il team Adobe Exchange gestirà automaticamente i passaggi precedenti. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste nelle chiamate API Destination SDK, come mostrato di seguito:
+Per effettuare correttamente le chiamate agli endpoint API Destination SDK, segui la [tutorial sull’autenticazione di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=it). Avvia l’esercitazione da &quot;[Generare una chiave API, un ID organizzazione e un segreto client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. Il team Adobe Exchange gestirà automaticamente i passaggi precedenti. Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste nelle chiamate API Destination SDK, come mostrato di seguito:
 
 * `x-api-key: {API_KEY}`, noto anche come ID client
 * `x-gw-ims-org-id: {ORG_ID}`, noto anche come ID organizzazione
@@ -48,7 +48,7 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## Proprietà della destinazione e sandbox {#destination-ownership}
 
-Tutte le risorse in Experience Platform sono isolate in specifiche sandbox virtuali. Le richieste di Destination SDK richiedono intestazioni che specificano il nome della sandbox in cui si svolge l’operazione:
+Tutte le risorse in Experienci Platform sono isolate in specifiche sandbox virtuali. Le richieste di Destination SDK richiedono intestazioni che specificano il nome della sandbox in cui si svolge l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 

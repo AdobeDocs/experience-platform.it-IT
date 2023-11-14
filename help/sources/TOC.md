@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 11%
    - Streaming {#streaming}
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
-   - Creare una connessione di base {#create}
+   - Crea una connessione di base {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
@@ -217,7 +217,7 @@ ht-degree: 11%
    - [Filtrare i dati a livello di origine](tutorials/api/filter.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna account](tutorials/api/update.md)
-   - [Aggiorna flussi di dati](tutorials/api/update-dataflows.md)
+   - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
    - [Riprova esecuzioni flusso di dati non riuscite](tutorials/api/retry-flows.md)
    - [Elimina account](tutorials/api/delete.md)
    - [Elimina flussi di dati](tutorials/api/delete-dataflows.md)
@@ -329,7 +329,7 @@ ht-degree: 11%
    - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
    - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
    - [Aggiorna account](tutorials/ui/update.md)
-   - [Aggiorna flussi di dati](tutorials/ui/update-dataflows.md)
+   - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Elimina flussi di dati](tutorials/ui/delete.md)
    - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)

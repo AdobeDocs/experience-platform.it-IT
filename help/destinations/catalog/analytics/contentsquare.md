@@ -45,7 +45,7 @@ Il flusso di lavoro illustra i passaggi necessari per completare l’installazio
 
 Per informazioni sulle opzioni di configurazione dell&#39;estensione, vedi [Pagina dell’estensione Contentsquare](https://exchange.adobe.com/experiencecloud.details.100364.html) in caso di scambio di Adobi.
 
-Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) nella documentazione sui tag.
 
 ## Come utilizzare l’estensione {#how-to-use}
 

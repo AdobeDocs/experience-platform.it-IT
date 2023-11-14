@@ -20,7 +20,7 @@ Questo documento funge da guida per il download dei punteggi per IA per l’anal
 
 IA per l’analisi dei clienti consente di scaricare i punteggi nel formato file Parquet. Questo tutorial richiede di aver letto e terminato la sezione download dei punteggi di Customer AI in [introduzione](../getting-started.md) guida.
 
-Inoltre, per accedere ai punteggi per IA per l’analisi dei clienti, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Configurazione di un’istanza di Customer AI](./configure.md). Se di recente è stata creata un’istanza del servizio che sta ancora formando e assegnando un punteggio, attendi 24 ore prima del termine dell’esecuzione.
+Inoltre, per accedere ai punteggi per IA per l’analisi dei clienti, è necessario disporre di un’istanza del servizio con uno stato di esecuzione corretto. Per creare una nuova istanza di servizio, visita [Configurazione di un’istanza di Customer AI](./configure.md). Se di recente è stata creata un’istanza del servizio per la quale si sta ancora eseguendo l’apprendimento e il punteggio, attendi 24 ore per il completamento dell’esecuzione.
 
 Attualmente, esistono due modi per scaricare i punteggi di Customer AI:
 

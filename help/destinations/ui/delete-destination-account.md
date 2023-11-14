@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Il **[!UICONTROL Account]** Questa scheda mostra i dettagli sulle connessioni stabilite con varie destinazioni. Consulta la sezione [Panoramica sugli account](../ui/destinations-workspace.md#accounts) per tutte le informazioni che puoi ottenere su ciascun account di destinazione.
 
-Questo tutorial illustra i passaggi necessari per eliminare gli account di destinazione che non sono più necessari utilizzando l’interfaccia utente di Experience Platform.
+Questo tutorial illustra i passaggi necessari per eliminare gli account di destinazione che non sono più necessari utilizzando l’interfaccia utente di Experienci Platform.
 
 ![Scheda Account](../assets/ui/update-accounts/destination-accounts.png)
 
@@ -29,7 +29,7 @@ Questo tutorial illustra i passaggi necessari per eliminare gli account di desti
 
 Per eliminare gli account di destinazione esistenti, effettua le seguenti operazioni.
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** nell’intestazione in alto per visualizzare i tuoi account esistenti.
+1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** nell’intestazione in alto per visualizzare i tuoi account esistenti.
 
    ![Scheda Account](../assets/ui/delete-accounts/accounts-tab.png)
 

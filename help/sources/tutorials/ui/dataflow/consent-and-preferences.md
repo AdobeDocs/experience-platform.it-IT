@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;consenso e preferenze;cons
 solution: Experience Platform
 title: Creare un flusso di dati utilizzando un’origine di consenso e preferenze nell’interfaccia utente
 type: Tutorial
-description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial illustra come creare un flusso di dati per un’origine di consenso e preferenze tramite l’interfaccia utente di Platform.
+description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial illustra i passaggi necessari per creare un flusso di dati per un’origine di consenso e preferenze tramite l’interfaccia utente di Platform.
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
 source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
 workflow-type: tm+mt
@@ -25,7 +25,7 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
 
 * [Sorgenti](../../../home.md): Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -76,7 +76,7 @@ Quindi, seleziona la **[!UICONTROL Set di dati profilo]** attiva per abilitare i
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle origini tramite l’interfaccia utente](../alerts.md).
 
-Una volta completati i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![avvisi](../../../images/tutorials/dataflow/table-based/alerts.png)
 

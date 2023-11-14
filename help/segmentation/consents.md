@@ -73,7 +73,7 @@ Con entrambe le opzioni **[!UICONTROL Raccolta dati]** e **[!UICONTROL Condividi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avrai una migliore comprensione di come rispettare i consensi e le preferenze del cliente durante la creazione delle definizioni dei segmenti in Experience Platform.
+Seguendo questa esercitazione, avrai una migliore comprensione di come rispettare i consensi e le preferenze del cliente durante la creazione delle definizioni dei segmenti in Experienci Platform.
 
 Per ulteriori informazioni sulla gestione del consenso in Platform, consulta la seguente documentazione:
 

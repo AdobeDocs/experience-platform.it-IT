@@ -1,6 +1,6 @@
 ---
 title: Installare Adobe Experience Platform Web SDK
-description: Scopri come installare Experience Platform Web SDK.
+description: Scopri come installare Experienci Platform Web SDK.
 keywords: installazione web sdk;installazione web sdk;internet explorer;promise;npm package
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Sono disponibili tre modi supportati per utilizzare Adobe Experience Platform Web SDK:
 
-1. Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite l’interfaccia utente di Data Collection o l’interfaccia utente di Experience Platform.
+1. Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite l’interfaccia utente di Data Collection o l’interfaccia utente di Experienci Platform.
 1. Adobe Experience Platform Web SDK è disponibile anche su una rete CDN (Content Delivery Network).
 1. Utilizza la libreria NPM che esporta i moduli EcmaScript 5 ed EcmaScript 2015 (ES6).
 

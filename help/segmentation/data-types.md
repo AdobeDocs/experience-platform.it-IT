@@ -30,7 +30,7 @@ I dati stringa vengono inclusi nelle definizioni dei segmenti utilizzando istruz
 
 I dati sulla data consentono di assegnare un contesto basato sul tempo alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o istruzioni relative alla data come mostrato nella tabella seguente. Un’implementazione potrebbe consistere nella creazione di un pubblico di clienti che hanno interagito con il tuo marchio in qualsiasi momento *quest&#39;anno* ed è stato anche attivo *entro* ultimi giorni.
 
-| Campo di esempio | Dichiarazioni relative alla data | Timeline  |
+| Campo di esempio | Dichiarazioni relative alla data | Timeline |
 | ------------- | ------------------------ | --------- |
 | person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Rilevante per il giorno in cui è stata generata la definizione del segmento. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Rilevante entro una data settimana/mese. |

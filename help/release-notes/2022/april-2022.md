@@ -1,11 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
-description: Note sulla versione di aprile 2022 per Adobe Experience Platform.
+description: Note sulla versione di Adobe Experience Platform di aprile 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '2904'
-ht-degree: 10%
+ht-degree: 18%
 
 ---
 
@@ -49,7 +49,7 @@ I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboar
 | [!UICONTROL Tendenza di modifica della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili idonei per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza dimensione pubblico per identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 
-**Nuove funzionalità** {#new-features}
+**Nuove funzioni** {#new-features}
 
 | Funzione | Dashboard di | Descrizione |
 | ------- | --------- | ----------- |
@@ -95,7 +95,7 @@ Per ulteriori informazioni su [!DNL Data Prep], consultare il [[!DNL Data Prep] 
 | Funzione | Descrizione |
 | ----------- | ----------- |
 | Connettori di destinazione Enterprise avanzati | Sono ora generalmente disponibili tre connettori di destinazione aziendali: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md), e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> La disponibilità generale dei connettori di destinazione aziendali include tutte le funzionalità offerte in precedenza nella fase Beta e altro ancora: <ul><li>Nuove funzionalità di autenticazione, tra cui [Firma di accesso condiviso negli hub eventi di Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e altro ancora [tipi di autenticazione](../../destinations/catalog/streaming/http-destination.md#authentication-information) (token Bearer, OAuth 2) nella destinazione API HTTP;</li><li>[Backfill dei dati storici del profilo](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (invio di profili storici qualificati per il segmento quando è attivato per la prima volta);</li><li>Le metriche di esecuzione del flusso di dati sono ora supportate per queste destinazioni;</li><li>[Metadati aggiuntivi del segmento](../../destinations/catalog/streaming/http-destination.md#destination-details) inclusi nel payload dei dati, compresi i nomi dei segmenti e le marche temporali dei segmenti;</li><li>Supporto per [indirizzi IP statici](/help/destinations/catalog/streaming/ip-address-allow-list.md) per i clienti che devono Experience Platform di inserisce nell&#39;elenco Consentiti.</li></ul> |
-| Avvisi contestuali per i flussi di dati di destinazione | Ora puoi [abbonati agli avvisi](../../destinations/ui/alerts.md) durante la creazione di un flusso di dati di destinazione, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso di dati. Puoi scegliere di ricevere gli avvisi nell’interfaccia utente di Experience Platform o tramite e-mail. |
+| Avvisi contestuali per i flussi di dati di destinazione | Ora puoi [abbonati agli avvisi](../../destinations/ui/alerts.md) durante la creazione di un flusso di dati di destinazione, per ricevere messaggi di avviso relativi allo stato, al completamento o al fallimento dell’esecuzione del flusso di dati. Puoi scegliere di ricevere gli avvisi nell’interfaccia utente di Experienci Platform o tramite e-mail. |
 
 ### Processo di rilascio per connettori di destinazione aziendali avanzati {#release-process-enterprise-destinations}
 
@@ -114,11 +114,11 @@ Se hai utilizzato queste destinazioni nella fase Beta, tieni presente quanto seg
 | [!DNL Criteo] | Connetti e attiva i dati a [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) piattaforma pubblicitaria. |
 | [!DNL Sendgrid] | Connetti e attiva i dati a [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) piattaforma per e-mail transazionali e di marketing. |
 
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuove funzioni**
 
@@ -157,19 +157,19 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Tipo di componente | Nome | Descrizione aggiornamento |
 | --- | --- | --- |
-| Schema globale | [[!UICONTROL Destinazioni ]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nuovi valori enum per `destinationCategory`. |
+| Schema globale | [[!UICONTROL Destinazioni]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Nuovi valori enum per `destinationCategory`. |
 | Descrittore | [[!UICONTROL Descrittore del nome intuitivo]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | È stato aggiunto il supporto per la rimozione dei valori suggeriti (`meta:enum`) non necessari dai campi standard. |
 | Gruppo di campi | [[!UICONTROL Processo di accesso utente]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo aggiunto. |
-| Tipo di dati | [[!UICONTROL Commercio]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Sono stati aggiunti diversi campi relativi al carrello. |
+| Tipo di dati | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Sono stati aggiunti diversi campi relativi al carrello. |
 | Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Sono stati aggiunti nuovi campi per le opzioni selezionate e l’importo dello sconto. |
 | Estensione (Intelligent Services) | [[!UICONTROL Ottimizzazione del tempo di invio di Intelligent Services JourneyAI]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Ottimizza il formato di archiviazione per i punteggi del tempo di invio. |
-| Estensione (Workfront) | [[!UICONTROL Evento modifica Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Diversi campi sostituiti con un `workfront:customData` campo per campi modulo personalizzati. |
+| Estensione (Workfront) | [[!UICONTROL Evento modifica di Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Diversi campi sostituiti con un `workfront:customData` campo per campi modulo personalizzati. |
 | Estensione (Workfront) | [[!UICONTROL Attributi attività di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Sono stati aggiunti diversi campi. |
 | Estensione (Workfront) | [[!UICONTROL Oggetto di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nuovi campi per il tipo di oggetto padre e i campi modulo personalizzati. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
@@ -177,7 +177,7 @@ I servizi di intelligenza artificiale e machine learning consentono agli analist
 
 ### IA per l’attribuzione
 
-Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzata dai marketer per quantificare l’impatto di ogni punto di contatto di marketing lungo i percorsi della clientela.
 
 **Funzioni aggiornate**
 
@@ -189,7 +189,7 @@ Per ulteriori informazioni su [!DNL Intelligent Services], consultare il [[!DNL 
 
 ### IA per l’analisi dei clienti
 
-IA per l’analisi dei clienti disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su larga scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
+IA per l’analisi dei clienti disponibile in Real-time Customer Data Platform, viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su larga scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di apprendimento automatico né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 **Funzioni aggiornate**
 
@@ -202,7 +202,7 @@ Per ulteriori informazioni su [!DNL Intelligent Services], consultare il [[!DNL 
 
 ## Edizione B2B di Real-Time Customer Data Platform {#B2B}
 
-Basata su Real-time Customer Data Platform (Real-Time CDP), Real-Time CDP B2B Edition è progettata appositamente per gli esperti di marketing che operano in un modello di servizio business-to-business. Raccoglie dati da più origini e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono agli addetti al marketing di rivolgersi con precisione a tipi di pubblico specifici e di coinvolgerli in tutti i canali disponibili.
+L’Edizione B2B di Real-Time CDP, basata su Real-Time Customer Data Platform (Real-Time CDP), è creata appositamente per i marketer che operano in un modello di servizio business-to-business. Raccoglie dati da più origini e li combina in un’unica vista di persone e profili di account. Questi dati unificati consentono ai marketer di rivolgersi con precisione a tipi di pubblico specifici e di coinvolgerli in tutti i canali disponibili.
 
 **Funzioni aggiornate**
 
@@ -214,7 +214,7 @@ Per ulteriori informazioni sulla versione B2B di Real-time Customer Data Platfor
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 

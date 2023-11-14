@@ -6,7 +6,7 @@ exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -42,7 +42,7 @@ Seleziona la proprietà tag in cui desideri installare l’estensione. Puoi anch
 
 Il flusso di lavoro ti porta all’interfaccia utente di Data Collection per completare l’installazione.
 
-Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
+Puoi anche installare l’estensione direttamente nel [Interfaccia utente di Data Collection](https://experience.adobe.com/it#/data-collection/). Consulta la guida su [aggiunta di una nuova estensione](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) per ulteriori informazioni.
 
 ## Come utilizzare l’estensione {#how-to-use}
 

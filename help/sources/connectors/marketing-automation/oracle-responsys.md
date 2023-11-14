@@ -22,7 +22,7 @@ Adobe Experience Platform consente di acquisire dati da origini esterne e allo s
 
 [!DNL Oracle Responsys] è una piattaforma di gestione delle campagne cross-channel che consente di fornire informazioni avanzate su larga scala e creare messaggi personalizzati che si adattano agli interessi e alle preferenze specifici dei clienti.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Oracle Responsys].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Il supporto per i provider di automazione marketing include [!DNL Oracle Responsys].
 
 ## ELENCO CONSENTITI di indirizzo IP
 

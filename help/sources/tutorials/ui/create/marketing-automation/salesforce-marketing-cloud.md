@@ -1,6 +1,6 @@
 ---
-title: Connetti il tuo account di Marketing Cloud Salesforce a Experience Platform tramite l’interfaccia utente
-description: Scopri come collegare il tuo account di Marketing Cloud Salesforce a Experience Platform tramite l’interfaccia utente.
+title: Connetti il tuo account di Marketing Cloud Salesforce a Experienci Platform tramite l’interfaccia utente
+description: Scopri come collegare il tuo account di Marketing Cloud Salesforce a Experienci Platform tramite l’interfaccia utente.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
@@ -43,7 +43,7 @@ Per ulteriori informazioni sull&#39;autenticazione per [!DNL Salesforce Marketin
 
 ## Connetti [!DNL Salesforce Marketing Cloud] account
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Il [!UICONTROL Catalogo] In vengono visualizzate diverse origini supportate da Experience Platform.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Il [!UICONTROL Catalogo] In vengono visualizzate diverse origini supportate da Experienci Platform.
 
 È possibile selezionare la categoria appropriata dall&#39;elenco delle categorie. Puoi anche utilizzare la barra di ricerca per filtrare in base a un’origine specifica.
 

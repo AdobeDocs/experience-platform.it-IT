@@ -119,12 +119,12 @@ La tabella seguente fornisce maggiori dettagli per ciascun valore possibile.
 
 | Nome | Percorso di esempio | Tipo | Descrizione | Obbligatorio | Limiti |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> o<br /> `arc.event.data._tenant.emailId` | Stringa | Indirizzo che riceve l’e-mail | **Sì** | Deve esistere nel pubblico Mailchimp |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> o<br /> `arc.event.data._tenant.listid` | Stringa | ID pubblico | **Sì** | Deve corrispondere a un ID pubblico esistente |
-| `name` | `arc.event.xdm._tenant.name`<br /> o<br /> `arc.event.data._tenant.name` | Stringa | Nome dell’evento | **Sì** | 2-30 caratteri |
-| `properties` | `arc.event.xdm._tenant.properties`<br /> o<br /> `arc.event.data._tenant.properties` | Oggetto | Un elenco facoltativo di proprietà in formato JSON con dettagli sull’evento | No |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> o<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventi creati con `is_syncing` imposta su `true` **non** automazioni trigger | No |  |
-| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> o `arc.event.data._tenant.occuredAt` | Stringa | Una marca temporale ISO 8601 del momento in cui si è verificato l’evento | No |  |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> oppure<br /> `arc.event.data._tenant.emailId` | Stringa | Indirizzo che riceve l’e-mail | **Sì** | Deve esistere nel pubblico Mailchimp |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> oppure<br /> `arc.event.data._tenant.listid` | Stringa | ID pubblico | **Sì** | Deve corrispondere a un ID pubblico esistente |
+| `name` | `arc.event.xdm._tenant.name`<br /> oppure<br /> `arc.event.data._tenant.name` | Stringa | Nome dell’evento | **Sì** | 2-30 caratteri |
+| `properties` | `arc.event.xdm._tenant.properties`<br /> oppure<br /> `arc.event.data._tenant.properties` | Oggetto | Un elenco facoltativo di proprietà in formato JSON con dettagli sull’evento | No |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> oppure<br /> `arc.event.data._tenant.isSyncing` | booleano | Eventi creati con `is_syncing` imposta su `true` **non** automazioni trigger | No |  |
+| `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> oppure `arc.event.data._tenant.occuredAt` | Stringa | Una marca temporale ISO 8601 del momento in cui si è verificato l’evento | No |  |
 
 {style="table-layout:auto"}
 

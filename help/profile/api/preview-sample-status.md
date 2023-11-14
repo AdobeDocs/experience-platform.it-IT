@@ -32,7 +32,7 @@ Ogni singolo profilo cliente è composto da più frammenti di profilo che sono s
 
 Quando i frammenti di profilo vengono acquisiti in Platform, vengono uniti insieme (in base a un criterio di unione) per creare un singolo profilo per quel cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
 
-Per ulteriori informazioni sui profili e sul loro ruolo in Experience Platform, consulta la sezione [Panoramica del profilo cliente in tempo reale](../home.md).
+Per ulteriori informazioni sui profili e sul loro ruolo in Experienci Platform, consulta la sezione [Panoramica del profilo cliente in tempo reale](../home.md).
 
 ## Modalità di attivazione del processo di esempio
 
@@ -41,11 +41,11 @@ Come i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL 
 * Per **flussi di lavoro per dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o di diminuzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
 * Per **acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
-Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche all’interno del [!UICONTROL Profili] sezione dell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo utilizzando l’interfaccia utente, visita il [[!DNL Profile] Guida all’interfaccia utente](../ui/user-guide.md).
+Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche all’interno del [!UICONTROL Profili] sezione dell’interfaccia utente di Experienci Platform. Per informazioni su come accedere ai dati del profilo utilizzando l’interfaccia utente, visita il [[!DNL Profile] Guida all’interfaccia utente](../ui/user-guide.md).
 
 ## Visualizza ultimo stato del campione {#view-last-sample-status}
 
-È possibile eseguire una richiesta GET al `/previewsamplestatus` endpoint per visualizzare i dettagli dell&#39;ultimo processo campione eseguito correttamente per l&#39;organizzazione. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili o il numero totale di profili di cui dispone la tua organizzazione in Experience Platform.
+È possibile eseguire una richiesta GET al `/previewsamplestatus` endpoint per visualizzare i dettagli dell&#39;ultimo processo campione eseguito correttamente per l&#39;organizzazione. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili o il numero totale di profili di cui dispone la tua organizzazione in Experienci Platform.
 
 Il conteggio dei profili viene generato dopo l’unione dei frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, quando i frammenti di profilo vengono uniti tra loro, viene restituito un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
 
@@ -104,7 +104,7 @@ La risposta include i dettagli dell’ultimo processo di esempio riuscito esegui
 | `totalFragmentCount` | Numero totale di frammenti di profilo nell’archivio profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp dell’ultima acquisizione batch riuscita. |
 | `streamingDriven` | *Questo campo è stato dichiarato obsoleto e non contiene alcun significato per la risposta.* |
-| `totalRows` | Numero totale di profili uniti in Experience Platform, noto anche come &quot;conteggio dei profili&quot;. |
+| `totalRows` | Numero totale di profili uniti in Experienci Platform, noto anche come &quot;conteggio dei profili&quot;. |
 | `lastBatchId` | ID dell’ultima acquisizione batch. |
 | `status` | Stato dell’ultimo campione. |
 | `samplingRatio` | Rapporto tra i profili uniti campionati (`numRowsToRead`) al totale dei profili uniti (`totalRows`), espressa in percentuale in formato decimale. |
@@ -298,7 +298,7 @@ La risposta include una `data` , con singoli oggetti contenenti i dettagli di og
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
 | `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il `totalRows` valore restituito nella [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
+| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
 | `value` | Il `id` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
 ## Generare il rapporto di sovrapposizione del set di dati
@@ -444,7 +444,7 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 | Proprietà | Descrizione |
 |---|---|
 | `data` | Il `data` L’oggetto contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi delle identità e dei rispettivi conteggi dei profili. |
-| Codici dello spazio dei nomi | Il `code` è un formato breve per ogni nome dello spazio dei nomi dell’identità. Una mappatura di ciascun `code` alla sua `name` sono reperibili utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Il `code` è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
+| Codici dello spazio dei nomi | Il `code` è un formato breve per ogni nome dello spazio dei nomi dell’identità. Una mappatura di ciascun `code` alla sua `name` sono reperibili utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Il `code` è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
 | `reportTimestamp` | Il timestamp del rapporto. Se un `date` Il parametro è stato fornito durante la richiesta, il rapporto restituito si riferisce alla data specificata. In caso negativo `date` viene fornito il parametro, viene restituito il rapporto più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione dello spazio dei nomi delle identità

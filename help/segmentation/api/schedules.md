@@ -94,7 +94,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 | -------- | ------------ |
 | `_page.totalCount` | Numero totale di pianificazioni restituite. |
 | `_page.pageSize` | Dimensione della pagina delle pianificazioni. |
-| `children.name` | Il nome della pianificazione sotto forma di stringa. |
+| `children.name` | Nome della pianificazione sotto forma di stringa. |
 | `children.type` | Tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `children.properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `children.properties.segments` | Utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
@@ -136,7 +136,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 | Proprietà | Descrizione |
 | -------- | ------------ |
-| `name` | **Obbligatorio.** Il nome della pianificazione sotto forma di stringa. |
+| `name` | **Obbligatorio.** Nome della pianificazione sotto forma di stringa. |
 | `type` | **Obbligatorio.** Tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; ed &quot;export&quot;. |
 | `properties` | **Obbligatorio.** Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `properties.segments` | **Obbligatorio quando `type` è uguale a &quot;batch_segmentation&quot;.** Utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
@@ -225,7 +225,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con informa
 
 | Proprietà | Descrizione |
 | -------- | ------------ |
-| `name` | Il nome della pianificazione sotto forma di stringa. |
+| `name` | Nome della pianificazione sotto forma di stringa. |
 | `type` | Tipo di processo come stringa. I due tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | Oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
 | `properties.segments` | Utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |

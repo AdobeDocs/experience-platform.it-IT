@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Richiesta**
 
 La richiesta seguente crea una nuova configurazione del server di destinazione, configurata dai parametri forniti nel payload.
-Il payload riportato di seguito include un generico [!DNL Data Landing Zone] configurazione, con [Formattazione file CSV](../../functionality/destination-server/file-formatting.md) parametri di configurazione che gli utenti possono definire nell’interfaccia utente di Experience Platform.
+Il payload riportato di seguito include un generico [!DNL Data Landing Zone] configurazione, con [Formattazione file CSV](../../functionality/destination-server/file-formatting.md) parametri di configurazione che gli utenti possono definire nell’interfaccia utente di Experienci Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -411,7 +411,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 In caso di esito positivo, la risposta restituisce la nuova configurazione di destinazione, incluso l’identificatore univoco (`instanceId`) della configurazione. Memorizza questo valore in quanto è necessario se devi effettuare ulteriori richieste HTTP per aggiornare la configurazione di destinazione.
 
-## Passaggio 3: verificare l’interfaccia utente di Experience Platform {#verify-ui}
+## Passaggio 3: verificare l’interfaccia utente di Experienci Platform {#verify-ui}
 
 In base alle configurazioni di cui sopra, nel catalogo di Experience Platform verrà ora visualizzata una nuova scheda di destinazione privata da utilizzare.
 

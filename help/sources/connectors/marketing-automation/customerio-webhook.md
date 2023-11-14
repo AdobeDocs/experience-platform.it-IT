@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da applicazioni di streaming. Il supporto per i provider di streaming include [!DNL Customer.io].
+Experienci Platform fornisce supporto per l’acquisizione di dati da applicazioni di streaming. Il supporto per i provider di streaming include [!DNL Customer.io].
 
 [[!DNL Customer.io]](https://customer.io/) è una piattaforma di messaggistica automatizzata per gli esperti di marketing che desiderano maggiore controllo e flessibilità per creare e inviare e-mail basate su dati, notifiche push, messaggi in-app e SMS.
 

@@ -83,7 +83,7 @@ Una volta eliminata, la query pianificata **non** è stato rimosso dall’elenco
 
 Se si desidera pianificare le esecuzioni per tale modello di query, selezionare il nome del modello dalla riga appropriata per passare all&#39;editor di query, quindi seguire la [istruzioni per aggiungere una pianificazione a una query](./query-schedules.md#create-schedule) come descritto nella documentazione.
 
-### Iscriviti agli avvisi {#alert-subscription}
+### Iscriversi agli avvisi {#alert-subscription}
 
 Per attivare gli avvisi relativi alle esecuzioni delle query pianificate, seleziona i puntini di sospensione di una query pianificata da gestire, quindi seleziona **[!UICONTROL Abbonati]** dalle opzioni del menu a comparsa.
 

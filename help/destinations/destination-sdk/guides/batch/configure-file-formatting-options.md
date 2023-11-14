@@ -102,13 +102,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Verificare l’interfaccia utente di Experience Platform**. Quando configuri le opzioni di formattazione del file con le configurazioni illustrate nelle sezioni seguenti, controlla nell’interfaccia utente di Experience Platform come vengono visualizzate queste opzioni.
+>**Verificare l’interfaccia utente di Experienci Platform**. Quando configuri le opzioni di formattazione del file con le configurazioni illustrate nelle sezioni seguenti, controlla nell’interfaccia utente di Experienci Platform come vengono visualizzate queste opzioni.
 
 Dopo aver aggiunto le opzioni di formattazione del file desiderate al server di destinazione e la configurazione di formattazione del file nel passaggio precedente, ora puoi utilizzare `/destinations` Endpoint API per aggiungere i campi desiderati come campi dati del cliente alla configurazione di destinazione.
 
 >[!IMPORTANT]
 >
->Questo passaggio è facoltativo e determina solo le opzioni di formattazione del file da rendere visibili agli utenti nell’interfaccia utente di Experience Platform. Se non imposti le opzioni di formattazione del file come campi dati del cliente, l’esportazione dei file proseguirà con i valori predefiniti configurati in [configurazione di server e file](#create-server-file-configuration).
+>Questo passaggio è facoltativo e determina solo le opzioni di formattazione del file da rendere visibili agli utenti nell’interfaccia utente di Experienci Platform. Se non imposti le opzioni di formattazione del file come campi dati del cliente, l’esportazione dei file proseguirà con i valori predefiniti configurati in [configurazione di server e file](#create-server-file-configuration).
 
 In questo passaggio è possibile raggruppare le opzioni visualizzate in qualsiasi ordine desiderato, nonché creare raggruppamenti personalizzati, campi a discesa e raggruppamenti condizionali in base ai tipi di file selezionati. Tutte queste impostazioni sono mostrate nella registrazione e nelle sezioni seguenti.
 
@@ -118,7 +118,7 @@ In questo passaggio è possibile raggruppare le opzioni visualizzate in qualsias
 
 L’ordine in cui aggiungi le opzioni di formattazione del file come campi dati del cliente nella configurazione di destinazione si riflette nell’interfaccia utente. Ad esempio, la configurazione seguente si riflette di conseguenza nell’interfaccia utente, con le opzioni visualizzate nell’ordine **[!UICONTROL Delimitatore]**, **[!UICONTROL Carattere offerta]**, **[!UICONTROL Carattere di escape]**, **[!UICONTROL Valore vuoto]**, **[!UICONTROL Valore nullo]**.
 
-![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
+![Immagine che mostra l’ordine delle opzioni di formattazione dei file nell’interfaccia utente di Experienci Platform.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {

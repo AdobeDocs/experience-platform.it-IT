@@ -5,7 +5,7 @@ exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1349'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -36,7 +36,7 @@ I passaggi di installazione descritti in questa guida richiedono una buona conos
 
 ## Configurare un flusso di dati
 
-Affinché l’SDK possa inviare dati ad Experience Platform, devi prima configurare uno stream di dati. Nell’interfaccia di Data Collection o nell’interfaccia di Experience Platform, seleziona **[!UICONTROL Flussi di dati]** nel menu di navigazione a sinistra.
+Affinché l’SDK possa inviare dati ad Experienci Platform, devi prima configurare uno stream di dati. Nell’interfaccia di Data Collection o nell’interfaccia di Experienci Platform, seleziona **[!UICONTROL Flussi di dati]** nel menu di navigazione a sinistra.
 
 Dopo aver creato un nuovo stream di dati o averne selezionato uno esistente da modificare, seleziona il pulsante di attivazione/disattivazione accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i valori elencati di seguito per completare il modulo.
 
@@ -45,8 +45,8 @@ Dopo aver creato un nuovo stream di dati o averne selezionato uno esistente da m
 | Campo stream di dati | Valore |
 | --- | --- |
 | [!UICONTROL Sandbox] | Nome della piattaforma [sandbox](../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati necessari per impostare lo stream di dati. |
-| [!UICONTROL Set di dati evento] | Un [!DNL XDM ExperienceEvent] set di dati pianificato per l’invio di dati evento a utilizzando l’SDK. Anche se devi fornire un set di dati evento per creare un flusso di dati di Platform, tieni presente che i dati del consenso inviati tramite eventi non vengono rispettati nei flussi di lavoro di applicazione a valle. |
-| [!UICONTROL Set di dati profilo] | Il [!DNL Profile]Set di dati abilitato con campi di consenso cliente creati dall’utente [precedente](#prerequisites). |
+| [!UICONTROL Set di dati di evento] | Un [!DNL XDM ExperienceEvent] set di dati pianificato per l’invio di dati evento a utilizzando l’SDK. Anche se devi fornire un set di dati evento per creare un flusso di dati di Platform, tieni presente che i dati del consenso inviati tramite eventi non vengono rispettati nei flussi di lavoro di applicazione a valle. |
+| [!UICONTROL Set di dati di profilo] | Il [!DNL Profile]Set di dati abilitato con campi di consenso cliente creati dall’utente [precedente](#prerequisites). |
 
 Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore della schermata e continuare a seguire eventuali altre richieste per completare la configurazione.
 
@@ -202,11 +202,11 @@ var setConsent = function () {
 
 Tutti [!DNL Platform SDK] i comandi restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Consulta la sezione su [gestione di operazioni riuscite o non riuscite](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) nella guida all’esecuzione dei comandi SDK per esempi specifici.
 
-Dopo aver completato correttamente `setConsent` chiamate con l’SDK, puoi utilizzare il visualizzatore di profili nell’interfaccia utente di Platform per verificare se i dati vengono inviati nell’archivio profili. Consulta la sezione su [esplorazione dei profili per identità](../../../profile/ui/user-guide.md#browse-identity) per ulteriori informazioni.
+Dopo aver completato correttamente `setConsent` chiamate con l’SDK, puoi utilizzare il visualizzatore di profili nell’interfaccia di Platform per verificare se i dati vengono inviati nell’archivio profili. Consulta la sezione su [esplorazione dei profili per identità](../../../profile/ui/user-guide.md#browse-identity) per ulteriori informazioni.
 
 ## Passaggi successivi
 
-Seguendo questa guida, hai configurato l’estensione Platform Web SDK per inviare i dati sul consenso ad Experience Platform. Per informazioni su come testare l’implementazione, consulta la documentazione dello standard di consenso che stai implementando:
+Seguendo questa guida, hai configurato l’estensione Platform Web SDK per inviare i dati sul consenso ad Experienci Platform. Per informazioni su come testare l’implementazione, consulta la documentazione dello standard di consenso che stai implementando:
 
 * [Standard Adobe](./adobe/overview.md#test)
 * [Standard TCF 2.0](./iab/overview.md#test)

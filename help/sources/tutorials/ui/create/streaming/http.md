@@ -5,7 +5,7 @@ exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
 source-wordcount: '1000'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ Seleziona **[!UICONTROL Carica file]** per caricare i dati. In alternativa, puoi
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
-Con i dati caricati, puoi utilizzare il lato destro dell’interfaccia per visualizzare in anteprima la gerarchia dei file. Seleziona **[!UICONTROL Successivo]** per procedere.
+Con i dati caricati, puoi utilizzare il lato destro dell’interfaccia per visualizzare in anteprima la gerarchia dei file. Seleziona **[!UICONTROL Avanti]** per procedere.
 
 ![preview-sample-data](../../../../images/tutorials/create/http/preview-sample-data.png)
 

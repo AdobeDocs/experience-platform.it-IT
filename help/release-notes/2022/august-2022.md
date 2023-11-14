@@ -5,7 +5,7 @@ exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
 source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
 workflow-type: tm+mt
 source-wordcount: '2082'
-ht-degree: 6%
+ht-degree: 27%
 
 ---
 
@@ -30,13 +30,13 @@ I servizi di intelligenza artificiale e machine learning consentono agli analist
 
 ### IA per l’attribuzione
 
-Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
+Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzata dai marketer per quantificare l’impatto di ogni punto di contatto di marketing lungo i percorsi della clientela.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto per la privacy | <ul><li> Attribution AI ora supporta la definizione dei ruoli utente e dei criteri di accesso da gestire [autorizzazioni](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Da a [controllo degli accessi basato su attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l&#39;accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette. Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici che corrispondono a tali campi.</li><li>Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale.  </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. Platform Data Encryption si applica ai dati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione di [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
+| Supporto per la privacy | <ul><li> Attribution AI ora supporta la definizione dei ruoli utente e dei criteri di accesso da gestire [autorizzazioni](../../../help/access-control/abac/ui/permissions.md) per funzioni e oggetti all’interno di un’applicazione di prodotto. </li><li>Le risorse del registro di controllo vengono registrate automaticamente quando si verifica l’attività.</li><li> Da a [controllo degli accessi basato su attributi](../../access-control/abac/overview.md), gli amministratori possono controllare l&#39;accesso a oggetti e/o funzionalità specifici in base a determinati attributi, che possono essere metadati aggiunti a un oggetto, ad esempio le etichette.Gli amministratori possono inoltre definire ruoli utente che hanno accesso solo a campi e dati specifici che corrispondono a tali campi.</li><li>Attribution AI sfrutta i set di dati di Platform. Per supportare le richieste di diritti dei consumatori che un brand può ricevere, i brand devono utilizzare Platform Privacy Service per inviare ai consumatori le richieste di accesso e cancellazione per rimuovere i propri dati attraverso il data lake, il servizio Identity e il profilo cliente in tempo reale.  </li><li>Tutti i set di dati utilizzati per l’input/output dei modelli seguiranno le linee guida di Platform. Platform Data Encryption si applica ai dati in transito e a riposo. Per ulteriori informazioni, consulta la documentazione di [crittografia dei dati](../../../help/landing/governance-privacy-security/encryption.md).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Per ulteriori informazioni su [!DNL Data Prep], vedere [[!DNL Data Prep] panoram
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Funzioni nuove o aggiornate**
 
@@ -106,11 +106,11 @@ Per ulteriori informazioni su [!DNL Data Prep], vedere [[!DNL Data Prep] panoram
 
 {style="table-layout:auto"}
 
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## Experience Data Model (XDM) {#xdm}
 
-XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+XDM è una specifica open-source che fornisce strutture e definizioni comuni (schemi) per i dati inseriti in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sull’esperienza cliente possono essere incorporati in una rappresentazione comune per fornire approfondimenti in modo più rapido e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuovi componenti XDM**
 
@@ -126,22 +126,22 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Tipo di componente | Nome | Descrizione |
 | --- | --- | --- |
 | Gruppo di campi | [[!UICONTROL Campi comuni evento passaggio Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Sono state aggiunte due nuove proprietà: `origTimeStamp` e `experienceID`. |
-| Gruppo di campi | [[!UICONTROL Dettagli sull’iscrizione al segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL Profilo individuale XDM], questo gruppo di campi ora può essere utilizzato anche in schemi basati sulla classe XDM Business Account. |
+| Gruppo di campi | [[!UICONTROL Dettagli sull’appartenenza a segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Oltre a [!UICONTROL Profilo individuale XDM], questo gruppo di campi ora può essere utilizzato anche in schemi basati sulla classe XDM Business Account. |
 | Gruppo di campi | (Multiplo) | Diversi gruppi di campi relativi alle attività B2B di Marketo sono stati aggiornati a uno stato stabile. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1593/files) per i dettagli. |
 | Gruppo di campi | (Multiplo) | Diversi gruppi di campi correlati al meteo sono stati aggiornati per correggere gli errori che si verificavano per `uvIndex` e `sunsetTime`. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1602/files) per i dettagli. |
 | Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Una nuova proprietà `productImageUrl` è stato aggiunto. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati Qoe]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nuova proprietà `framesPerSecond` è stato aggiunto. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dei dati QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Una nuova proprietà `framesPerSecond` è stato aggiunto. |
 | Tipo di dati | [[!UICONTROL Informazioni sui dettagli della sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` è stato rinominato come `appVersion`. `meta:enum` e `description` Anche i campi di sono stati aggiornati. |
 | Tipi di dati e gruppi di campi | (Multiplo) | Diversi tipi di dati multimediali e gruppi di campi dispongono di nuovi campi e descrizioni aggiornate. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1582/files) per i dettagli. |
-| (Tutto) | (Multiplo) | Tutti gli oggetti dello schema che contengono un `enum` ora contiene anche un `meta:enum` per indicare i valori visualizzati per ciascun vincolo. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) per i dettagli. |
+| (Tutto) | (Multiplo) | Tutti gli oggetti dello schema che contengono un `enum` ora contiene anche un valore corrispondente `meta:enum` per indicare i valori visualizzati per ciascun vincolo. Vedi quanto segue [richiesta pull](https://github.com/adobe/xdm/pull/1601/files) per i dettagli. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su XDM in Platform, consulta [Panoramica del sistema XDM](../../xdm/home.md).
+Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul sistema XDM](../../xdm/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti. Il profilo ti consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i dati clienti in una visualizzazione unificata che offre un account utilizzabile e dotato di marca temporale per ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
@@ -150,11 +150,11 @@ Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coor
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l’utilizzo dei dati del profilo, leggi [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
+Per ulteriori informazioni sul Profilo cliente in tempo reale, inclusi tutorial e best practice per l’utilizzo dei dati del profilo, inizia consultando la [Panoramica sul Profilo cliente in tempo reale](../../profile/home.md).
 
 ## Servizio di segmentazione {#segmentation}
 
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo commerciabile di persone all’interno della tua base clienti. I segmenti possono essere basati su dati record (ad esempio informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
 
 **Nuove funzioni**
 
@@ -162,21 +162,21 @@ Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e bes
 | ------- | ----------- |
 | Supporto per 4000 segmenti | Tutte le organizzazioni con Platform possono ora supportare fino a 4000 definizioni di segmenti. Per ulteriori informazioni su come questa modifica influisce sulle API dei processi di segmentazione, leggi [guida dell’endpoint del processo di segmento](../../segmentation/api/segment-jobs.md) |
 
-Per ulteriori informazioni su [!DNL Segmentation Service], consultare il [Panoramica sulla segmentazione](../../segmentation/home.md).
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Disponibilità generale di origini self-service (SDK batch) | Sviluppa, testa e integra l’origine dati REST basata su API per acquisire i dati batch in Experience Platform utilizzando specifiche di origine facili da configurare. Con l’SDK Sources puoi: <ul><li>Configura una nuova origine nel catalogo Experience Platform.</li><li>Definisci le specifiche per l’origine, incluse le informazioni relative ai tipi di autenticazione supportati, alla pianificazione e al modo in cui vengono recuperati i dati delle risorse.</li><li>Crea una documentazione rivolta all’utente per la nuova sorgente.</li></ul> Per ulteriori informazioni, consulta la documentazione su [Origini self-service (SDK batch)](../../sources/sources-sdk/overview.md). |
+| Disponibilità generale di origini self-service (SDK batch) | Sviluppa, testa e integra l’origine dati REST basata su API per acquisire i dati batch in Experienci Platform utilizzando specifiche di origine facili da configurare. Con l’SDK Sources puoi: <ul><li>Configura una nuova origine nel catalogo Experienci Platform.</li><li>Definisci le specifiche per l’origine, incluse le informazioni relative ai tipi di autenticazione supportati, alla pianificazione e al modo in cui vengono recuperati i dati delle risorse.</li><li>Crea una documentazione rivolta all’utente per la nuova sorgente.</li></ul> Per ulteriori informazioni, consulta la documentazione su [Origini self-service (SDK batch)](../../sources/sources-sdk/overview.md). |
 | Disponibilità generale di [!DNL Google BigQuery] sorgente | Utilizza il [!DNL Google BigQuery] origine per acquisire dati dal [!DNL Google BigQuery] data warehouse da Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Google BigQuery] sorgente](../../sources/connectors/databases/bigquery.md). |
-| [!DNL Teradata Vantage] sorgente (Beta) | Utilizza il [!DNL Teradata Vantage] origine per acquisire i dati da ambienti ibridi multi-cloud ad Experience Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Teradata Vantage] sorgente](../../sources/connectors/databases/teradata-vantage.md). |
+| [!DNL Teradata Vantage] sorgente (Beta) | Utilizza il [!DNL Teradata Vantage] origine per acquisire i dati da ambienti ibridi multi-cloud ad Experienci Platform. Per ulteriori informazioni, consulta la documentazione sul [[!DNL Teradata Vantage] sorgente](../../sources/connectors/databases/teradata-vantage.md). |
 | Supporto per aree geografiche diverse per origine Adobe Analytics | È ora possibile acquisire suite di rapporti da qualsiasi area geografica (Stati Uniti, Regno Unito o Singapore). Le suite di rapporti devono essere mappate sulla stessa organizzazione dell’istanza Sandbox di Experience Platform in cui viene creata la connessione di origine. Per ulteriori informazioni, consulta la guida su [creazione di una connessione sorgente Adobe Analytics nell’interfaccia utente](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style="table-layout:auto"}

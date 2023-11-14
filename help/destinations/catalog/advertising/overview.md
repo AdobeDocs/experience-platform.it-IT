@@ -20,7 +20,7 @@ Quando ti connetti a una destinazione pubblicitaria, i tipi di pubblico vengono 
 
 ## Destinazioni pubblicitarie supportate {#supported-destinations}
 
-Attualmente, Experience Platform supporta le destinazioni pubblicitarie elencate di seguito.
+Attualmente, Experienci Platform supporta le destinazioni pubblicitarie elencate di seguito.
 
 Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessioni](../../destination-types.md#connections) nella pagina Tipi e categorie di destinazione.
 
@@ -55,7 +55,7 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Estensione Google gtag](gtag-advertising.md)
 * [Estensione tag linkedIn Insight](linkedin.md)
 * [Estensione per il tracciamento delle conversioni di pinterest](pinterest-extension.md)
-* [Estensione tag per sito web twitter Universal](twitter-uwt.md)
+* [Estensione tag twitter per sito Web universale](twitter-uwt.md)
 
 ## Connetti a una nuova destinazione pubblicitaria {#connect-destination}
 

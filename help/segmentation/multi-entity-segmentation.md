@@ -21,8 +21,8 @@ La segmentazione multi-entità richiede una buona comprensione dei vari servizi 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): fornisce un profilo consumer unificato in tempo reale, basato su dati aggregati provenienti da più origini.
    * [Guardrail del profilo](../profile/guardrails.md): best practice per la creazione di modelli di dati supportati da [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): consente di creare tipi di pubblico da [!DNL Real-Time Customer Profile] dati.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
-   * [Nozioni di base sulla composizione dello schema](../xdm/schema/composition.md#union): scopri le best practice per la composizione degli schemi da utilizzare in Experience Platform. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../xdm/schema/best-practices.md).
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
+   * [Nozioni di base sulla composizione dello schema](../xdm/schema/composition.md#union): scopri le best practice per la composizione degli schemi da utilizzare in Experienci Platform. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../xdm/schema/best-practices.md).
 
 ## Casi d’uso
 

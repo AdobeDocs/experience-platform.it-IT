@@ -2,12 +2,12 @@
 solution: Experience Platform
 title: Creare un set di dati per l’esportazione di un pubblico
 type: Tutorial
-description: Scopri come creare un set di dati che può essere utilizzato per esportare un pubblico utilizzando l’interfaccia utente di Experience Platform.
+description: Scopri come creare un set di dati che può essere utilizzato per esportare un pubblico utilizzando l’interfaccia utente di Experienci Platform.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] consente di segmentare i profili dei clienti in tipi di pubblico in base ad attributi specifici. Una volta creata la definizione di un segmento, puoi esportare il pubblico risultante in un set di dati in cui è possibile accedervi e intervenire. Affinché l’esportazione abbia esito positivo, il set di dati deve essere configurato correttamente.
 
-Questo tutorial illustra i passaggi necessari per creare un set di dati che può essere utilizzato per esportare un pubblico utilizzando [!DNL Experience Platform] UI.
+Questo tutorial illustra i passaggi necessari per creare un set di dati che possa essere utilizzato per esportare un pubblico utilizzando [!DNL Experience Platform] UI.
 
 Questo tutorial è direttamente correlato ai passaggi descritti in esso [valutazione e accesso ai risultati della segmentazione](./evaluate-a-segment.md). L’esercitazione sulla valutazione della definizione del segmento descrive i passaggi per creare un set di dati utilizzando [!DNL Catalog Service] , mentre questo tutorial illustra i passaggi per creare un set di dati utilizzando [!DNL Experience Platform] UI.
 

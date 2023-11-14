@@ -185,7 +185,7 @@ Se selezionata, **Aggiungi evento** consente di aggiungere campi aggiuntivi. sel
 
 ![aggiungi evento](./images/user-guide/touchpoint_add_event.png)
 
-Selezione **Aggiungi gruppo** consente di creare campi aggiuntivi separati dall&#39;originale. Con l&#39;aggiunta di gruppi, un blu *E* viene visualizzato. Seleziona **E** per modificare il parametro, viene utilizzato il nuovo parametro &quot;Or&quot; per definire più percorsi riusciti. Questo particolare punto di contatto ha un solo percorso di successo, pertanto &quot;Or&quot; non è necessario.
+Selezione **Aggiungi gruppo** consente di creare campi aggiuntivi separati dall&#39;originale. Con l&#39;aggiunta di gruppi, un blu *E* viene visualizzato. Seleziona **E** per modificare il parametro, viene utilizzato il nuovo parametro &quot;Or&quot; per definire più percorsi riusciti. Questo particolare punto di contatto ha un solo percorso di successo, quindi &quot;Or&quot; non è necessario.
 
 ![panoramica del punto di contatto](./images/user-guide/add_group_touchpoint.png)
 

@@ -21,7 +21,7 @@ I componenti delle regole hanno tre tipi di base:
 
 | Tipo di componente regola | Descrizione |
 | --- | --- |
-| Eventi | Un evento attiva una regola. La regola viene avviata quando l’evento si verifica in fase di runtime sul dispositivo client. Esempi di eventi sono [!UICONTROL Library Load] (caricamento della libreria), [!UICONTROL Page Top] (parte superiore pagina) e [!UICONTROL Click]. |
+| Eventi | Un evento attiva una regola. La regola viene avviata quando l’evento si verifica in fase di runtime sul dispositivo client. Esempi di eventi sono [!UICONTROL Library Load] (Libreria caricata), [!UICONTROL Page Top] (Inizio pagina) e [!UICONTROL Click] (Clic). |
 | Condizioni | Una condizione determina i criteri che devono essere rispettati prima che venga eseguita un’azione. Quando si verifica un evento, le condizioni vengono valutate. Le azioni della regola vengono eseguite solo se sono soddisfatte tutte le condizioni. |
 | Azioni | Queste sono le azioni che la regola dovrà effettivamente eseguire, ad esempio inviare un beacon Adobe Analytics, recuperare un ID visitatore personalizzato o attivare una particolare mbox. |
 

@@ -6,7 +6,7 @@ exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
 source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
 source-wordcount: '966'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -151,9 +151,9 @@ Il **[!UICONTROL Rimuovi gruppo utenti]** viene visualizzata una finestra di dia
 
 Verrai reindirizzato al **[!UICONTROL Gruppi di utenti]** scheda.
 
-## Aggiunta di utenti all’Experience Platform tramite un profilo di prodotto
+## Aggiunta di utenti a Experience Platform tramite un profilo di prodotto
 
-Per aggiungere un utente a un profilo di prodotto, accedi all’Admin Console e seleziona **[!UICONTROL Aggiungi utenti]**
+Per aggiungere un utente a un profilo di prodotto, accedi a Admin Console e seleziona **[!UICONTROL Aggiungi utenti]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Il supporto per i provider di consenso e preferenze include [!DNL OneTrust Integration].
+Experienci Platform fornisce supporto per l’acquisizione dei dati da una piattaforma di gestione delle preferenze e del consenso di terze parti. Il supporto per i provider di consenso e preferenze include [!DNL OneTrust Integration].
 
 La documentazione seguente fornisce informazioni sulle modalità di connessione [!DNL OneTrust Integration] in Platform tramite API o l’interfaccia utente:
 

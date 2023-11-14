@@ -5,7 +5,7 @@ description: Adobe Experience Platform Privacy Service elabora le richieste dei 
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Questo documento descrive i concetti essenziali relativi all’elaborazione dell
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di accesso ai dati personali per l’archivio dati di identità in Experience Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-Time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati personali nel data lake](../catalog/privacy.md) e alla guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di accesso ai dati personali per l’archivio dati di identità in Experienci Platform. Se prevedi anche di effettuare richieste di privacy per il data lake di Platform o [!DNL Real-Time Customer Profile], consulta la guida su [elaborazione della richiesta di accesso a dati personali nel data lake](../catalog/privacy.md) e alla guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -119,4 +119,4 @@ Consulta la sezione [[!DNL Privacy Service] documentazione](../privacy-service/h
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali in [!DNL Identity Service]. Per informazioni sull’elaborazione delle richieste di accesso a dati personali per altri [!DNL Experience Cloud] applicazioni, consulta il documento su [[!DNL Privacy Service] and [!DNL Experience Cloud] applicazioni](../privacy-service/experience-cloud-apps.md).
+Dopo aver letto questo documento, ti vengono presentati i concetti importanti relativi all’elaborazione delle richieste di accesso a dati personali in [!DNL Identity Service]. Per informazioni sull’elaborazione delle richieste di accesso a dati personali per altri [!DNL Experience Cloud] applicazioni, consulta il documento su [[!DNL Privacy Service] e [!DNL Experience Cloud] applicazioni](../privacy-service/experience-cloud-apps.md).

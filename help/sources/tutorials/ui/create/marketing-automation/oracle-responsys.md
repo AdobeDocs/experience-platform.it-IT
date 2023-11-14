@@ -8,7 +8,7 @@ exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -49,7 +49,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto [!UICONTROL Automazione del marketing] categoria, seleziona **[!UICONTROL Responsys Oracle]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto [!UICONTROL Automazione del marketing] categoria, seleziona **[!UICONTROL Responsys Oracle]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Catalogo delle origini di Adobe Experience Platform con l&#39;Oracle Origine Responsys evidenziato.](../../../../images/tutorials/create/oracle-responsys/catalog.png)
 

@@ -165,5 +165,5 @@ La documentazione seguente fornisce informazioni su come estrarre i dati dal [!D
 
 >[!IMPORTANT]
 >
->I collegamenti privati non sono attualmente supportati per la connessione ad Experience Platform tramite [!DNL Data Landing Zone]. Gli unici metodi supportati per l&#39;accesso sono quelli elencati [qui](#manage-the-contents-of-your-data-landing-zone).
+>I collegamenti privati non sono attualmente supportati per la connessione ad Experienci Platform tramite [!DNL Data Landing Zone]. Gli unici metodi supportati per l&#39;accesso sono quelli elencati [qui](#manage-the-contents-of-your-data-landing-zone).
 

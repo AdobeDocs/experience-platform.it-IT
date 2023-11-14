@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -38,31 +38,31 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 
 | Risorsa | Azioni |
 | --- | --- |
-| [Criterio di controllo dell’accesso (controllo dell’accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [istanza Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
+| [Criterio di controllo dell’accesso (controllo dell’accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Account (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [istanza Attribution AI](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
 | [Registri di controllo](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Esporta</li></ul> |
-| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| Attributo calcolato | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
-| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
-| [Datastream](../../../datastreams/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../datastreams/data-prep.md)</li></ul> |
-| [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Destinazione](../../../destinations/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
-| [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| Attributo calcolato | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Istanza di Customer AI](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li></ul> |
+| [Set di dati](../../../catalog/datasets/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per [Profilo cliente in tempo reale](../../../profile/home.md)</li><li>Disattiva per profilo</li><li>Aggiungi dati</li><li>Elimina batch</li></ul> |
+| [Datastream](../../../datastreams/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>[Modifica mappatura](../../../datastreams/data-prep.md)</li></ul> |
+| [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
+| [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Grafico delle identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
-| [Spazio dei nomi dell’identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Crea</li><li>Aggiornamento</li></ul> |
-| [Criterio di unione](../../../profile/merge-policies/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Spazio dei nomi dell’identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Creare</li><li>Aggiornamento</li></ul> |
+| [Criterio di unione](../../../profile/merge-policies/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Esegui</li></ul> |
-| [Modello di query](../../../query-service/ui/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Ruolo (controllo dell’accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Aggiungi utente</li><li>Rimuovi utente</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
-| [Query pianificata](../../../query-service/ui/overview.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per Profilo</li></ul> |
-| [Segmento](../../../segmentation/home.md) | <ul><li>Crea</li><li>Elimina</li><li>Attivazione segmento</li><li>Rimozione segmento</li></ul> |
-| [Flusso di dati sorgente](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Crea</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimuovi set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
-| [Ordine di lavoro](../../../hygiene/home.md) | <ul><li>Crea</li></ul> |
+| [Modello di query](../../../query-service/ui/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Ruolo (controllo dell’accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Aggiungi utente</li><li>Rimuovi utente</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
+| [Query pianificata](../../../query-service/ui/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per Profilo</li></ul> |
+| [Segmento](../../../segmentation/home.md) | <ul><li>Creare</li><li>Elimina</li><li>Attivazione segmento</li><li>Rimozione segmento</li></ul> |
+| [Flusso di dati sorgente](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimuovi set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
+| [Ordine di lavoro](../../../hygiene/home.md) | <ul><li>Creare</li></ul> |
 
 ## Accedere ai registri di audit
 

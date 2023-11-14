@@ -1,6 +1,6 @@
 ---
 title: Registrazione lato client per i dati A4T in Platform Web SDK
-description: Scopri come abilitare la registrazione lato client per Adobe Analytics for Target (A4T) utilizzando l’SDK web di Experience Platform.
+description: Scopri come abilitare la registrazione lato client per Adobe Analytics for Target (A4T) utilizzando l’SDK web di Experienci Platform.
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;logging;web sdk;experience;platform;
@@ -428,7 +428,7 @@ In sintesi, quando si applicano attività del Compositore esperienza basato su m
 1. Invia il `decisioning.propositionDisplay` evento di notifica;
 1. Raccogli i token di visualizzazione di Analytics dalla risposta SDK e crea un payload per l’hit di Analytics;
 1. Inviare il payload ad Analytics utilizzando [API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
-1. Se nelle proposte consegnate sono presenti metriche di clic, i listener di clic devono essere configurati in modo che, quando viene eseguito un clic, invii il `decisioning.propositionInteract` notifica. Il `onBeforeEventSend` il gestore deve essere configurato in modo che, quando si intercetta `decisioning.propositionInteract` eventi, si verificano le seguenti azioni:
+1. Se nelle proposte consegnate sono presenti metriche di clic, i listener di clic devono essere configurati in modo che, quando viene eseguito un clic, invii il `decisioning.propositionInteract` evento di notifica. Il `onBeforeEventSend` il gestore deve essere configurato in modo che, quando si intercetta `decisioning.propositionInteract` eventi, si verificano le seguenti azioni:
    1. Raccolta dei token di click Analytics da `xdm._experience.decisioning.propositions`
    1. Invio dell&#39;hit di analisi dei clic con il payload di Analytics raccolto tramite [API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 

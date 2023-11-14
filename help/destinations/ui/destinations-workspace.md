@@ -24,7 +24,7 @@ Il **[!UICONTROL Panoramica]** visualizza la scheda [!UICONTROL Destinazioni] fo
 
 >[!NOTE]
 >
->Se la tua organizzazione ha poca esperienza con Experience Platform e non dispone ancora di destinazioni attive, il [!UICONTROL Destinazioni] dashboard e [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] dalla barra di navigazione a sinistra viene visualizzata la [[!UICONTROL Catalogo] scheda](#catalog).
+>Se la tua organizzazione ha poca esperienza con Experienci Platform e non dispone ancora di destinazioni attive, il [!UICONTROL Destinazioni] dashboard e [!UICONTROL Panoramica] non sono visibili. Invece, selezionando [!UICONTROL Destinazioni] dalla barra di navigazione a sinistra viene visualizzata la [[!UICONTROL Catalogo] scheda](#catalog).
 
 ![La scheda Panoramica del dashboard Destinazioni.](../../dashboards/images/destinations/dashboard-overview.png)
 
@@ -108,7 +108,7 @@ Il **[!UICONTROL Sfoglia]** Questa scheda mostra le destinazioni con le quali ha
 | [!UICONTROL Nome utente] | Credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Dati di attivazione] | Indica il numero di tipi di pubblico attivati in questa destinazione. Seleziona questo controllo per ulteriori informazioni sui tipi di pubblico attivati. Fai riferimento a [Dati di attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione per ulteriori informazioni sui tipi di pubblico attivati. |
 | [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione verso la destinazione. Seleziona il simbolo freccia su/giù per ordinare i flussi di attivazione in base al primo più recente o al primo meno recente. |
-| [!UICONTROL Stato] | `Enabled` o `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
+| [!UICONTROL Stato] | `Enabled` oppure `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
 

@@ -87,7 +87,7 @@ L’ultimo passaggio nella preparazione dello schema consiste nell’aggiungere 
 
 ![Un gruppo di sottocampi aggiunti a un campo all’interno dello schema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Creare un flusso di dati
+## Crea un flusso di dati
 
 Al termine dell’impostazione dello schema, ora puoi procedere con la creazione di un flusso di dati per i dati delle attività personalizzate.
 

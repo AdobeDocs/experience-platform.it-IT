@@ -6,7 +6,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -20,17 +20,17 @@ Questa guida dell’interfaccia utente richiede una comprensione dei vari [!DNL 
 
 * [[!DNL Real-Time Customer Profile] panoramica](../home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-Time Customer Profile] collegando le identità da diverse origini dati quando vengono acquisite in [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
 
 ## [!UICONTROL Panoramica]
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Panoramica]** scheda che visualizza il dashboard del profilo.
+Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Profili]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Panoramica]** scheda che visualizza il dashboard del profilo.
 
 >[!NOTE]
 >
 >Se la tua organizzazione non utilizza ancora Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il [!UICONTROL Profili] dashboard non visibile. Al contrario, [!UICONTROL Panoramica] Questa scheda mostra collegamenti e documentazione utili per iniziare a utilizzare Real-Time Customer Profile.
 
-### Dashboard dei profili {#profile-dashboard}
+### Dashboard profili {#profile-dashboard}
 
 La dashboard dei profili delinea le metriche chiave relative ai dati di profilo della tua organizzazione.
 
@@ -54,7 +54,7 @@ Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ulti
 
 ### Conteggio dei profili {#profile-count}
 
-Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experience Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
+Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experienci Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
 
 Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all’interno di Platform.
 
@@ -186,4 +186,4 @@ IMMAGINE
 
 ## Passaggi successivi
 
-Leggendo questa guida, sai come visualizzare e gestire i dati del profilo della tua organizzazione utilizzando l’interfaccia utente di Experience Platform. Per informazioni su come lavorare con i dati del profilo utilizzando le API Experience Platform, consulta la [Guida all’API del profilo cliente in tempo reale](../api/overview.md).
+Leggendo questa guida, sai come visualizzare e gestire i dati del profilo della tua organizzazione utilizzando l’interfaccia utente di Experienci Platform. Per informazioni su come lavorare con i dati del profilo utilizzando le API di Experienci Platform, consulta la [Guida all’API del profilo cliente in tempo reale](../api/overview.md).

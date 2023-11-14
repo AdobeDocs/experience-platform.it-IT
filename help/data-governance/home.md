@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
 workflow-type: tm+mt
 source-wordcount: '1518'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ Il framework per la governance dei dati include tre elementi chiave: Etichette, 
 1. **Criteri:** Descrivi i tipi di azioni di marketing consentite o non consentite per l’esecuzione su dati specifici.
 1. **Applicazione:** Utilizza il framework delle politiche per consigliare e applicare le politiche in diversi modelli di accesso ai dati.
 
-## Etichette di utilizzo dati
+## Etichette di utilizzo dei dati
 
 La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di campo schema e di set di dati per categorizzare i dati in base al tipo di criteri applicati.
 
@@ -110,7 +110,7 @@ La tabella seguente illustra i termini chiave relativi alla governance dei dati 
 | **Dati intersito** | I dati intersito sono la combinazione di dati provenienti da diversi siti, inclusa una combinazione di dati nel sito e dati esterni al sito o una combinazione di dati provenienti da diverse origini esterne al sito. |
 | **Governance dei dati** | La governance dei dati include le strategie e le tecnologie utilizzate per garantire la conformità dei dati alle normative e alle politiche aziendali in relazione all’utilizzo dei dati. |
 | **Amministratore dati** | L’amministratore dei dati è la persona responsabile della gestione, della supervisione e dell’applicazione delle risorse di dati di un’organizzazione. Un data steward garantisce inoltre che i criteri di governance dei dati siano salvaguardati e mantenuti in modo da essere conformi alle normative governative e ai criteri organizzativi. |
-| **Etichette di utilizzo dati** | Le etichette di utilizzo dei dati consentono agli utenti di categorizzare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e alle politiche aziendali. |
+| **Etichette di utilizzo dei dati** | Le etichette di utilizzo dei dati consentono agli utenti di categorizzare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali conformi alle normative e alle politiche aziendali. |
 | **Etichette set di dati** | È possibile aggiungere etichette a uno schema. Tutti i campi all’interno di un set di dati ereditano le etichette dello schema. |
 | **Etichette campo** | Le etichette dei campi sono etichette di governance dei dati ereditate da uno schema o applicate direttamente a un campo. Le etichette di governance dei dati applicate a un campo non vengono ereditate fino al livello dello schema. |
 | **Recinto geografico** | Un recinto geografico è un confine geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da una determinata area. |
@@ -127,6 +127,6 @@ Il video seguente ha lo scopo di aiutarti a comprendere il framework di governan
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi e ai set di dati in Experience Platform.
+Il video seguente fornisce indicazioni su come applicare le etichette di utilizzo dei dati agli schemi e ai set di dati in Experienci Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

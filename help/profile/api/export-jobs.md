@@ -29,7 +29,7 @@ Gli endpoint API utilizzati in questa guida fanno parte del [!DNL Real-Time Cust
 
 ## Creare un processo di esportazione
 
-Esportazione [!DNL Profile] I dati richiedono innanzitutto la creazione di un set di dati in cui esportare i dati, quindi l’avvio di un nuovo processo di esportazione. Entrambi i passaggi possono essere eseguiti utilizzando le API Experience Platform, con la prima che utilizza l’API Catalog Service e la seconda che utilizza l’API Profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ciascun passaggio sono descritte nelle sezioni che seguono.
+Esportazione [!DNL Profile] I dati richiedono innanzitutto la creazione di un set di dati in cui esportare i dati, quindi l’avvio di un nuovo processo di esportazione. Entrambi i passaggi possono essere eseguiti utilizzando le API Experienci Platform, con la prima che utilizza l’API Catalog Service e la seconda che utilizza l’API Profilo cliente in tempo reale. Le istruzioni dettagliate per il completamento di ciascun passaggio sono descritte nelle sezioni che seguono.
 
 ### Creare un set di dati di destinazione
 
@@ -403,7 +403,7 @@ curl -X GET \
 
 ## Annullare un processo di esportazione
 
-Experience Platform consente di annullare un processo di esportazione esistente. Ciò può essere utile per diversi motivi, tra cui se il processo di esportazione non è stato completato o si è bloccato nella fase di elaborazione. Per annullare un processo di esportazione, è possibile eseguire una richiesta DELETE al `/export/jobs` e includere `id` del processo di esportazione che desideri annullare nel percorso della richiesta.
+Experienci Platform consente di annullare un processo di esportazione esistente. Ciò può essere utile per diversi motivi, tra cui se il processo di esportazione non è stato completato o si è bloccato nella fase di elaborazione. Per annullare un processo di esportazione, è possibile eseguire una richiesta DELETE al `/export/jobs` e includere `id` del processo di esportazione che desideri annullare nel percorso della richiesta.
 
 **Formato API**
 
@@ -432,7 +432,7 @@ In caso di esito positivo, la richiesta di eliminazione restituisce lo stato HTT
 
 ## Passaggi successivi
 
-Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno del Data Lake in Experience Platform. È quindi possibile utilizzare [API di accesso ai dati](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da diversi file.
+Una volta completata correttamente l’esportazione, i dati sono disponibili all’interno del Data Lake in Experienci Platform. È quindi possibile utilizzare [API di accesso ai dati](https://www.adobe.io/experience-platform-apis/references/data-access/) per accedere ai dati utilizzando `batchId` associato all’esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da diversi file.
 
 Per istruzioni dettagliate sull’utilizzo dell’API di accesso ai dati per accedere e scaricare file batch, segui la [Tutorial sull’accesso ai dati](../../data-access/tutorials/dataset-data.md).
 

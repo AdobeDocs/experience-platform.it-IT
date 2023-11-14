@@ -22,13 +22,13 @@ Dopo aver completato la configurazione delle etichette, dei criteri di governanc
 Questa guida illustra l’intero processo di configurazione e applicazione di un criterio di governance dei dati nell’interfaccia utente di Platform. Per informazioni più dettagliate sulle funzioni utilizzate in questa guida, consulta la documentazione di panoramica sui seguenti argomenti:
 
 * [Governance dei dati Adobe Experience Platform](./home.md)
-* [Etichette di utilizzo dati](./labels/overview.md)
+* [Etichette di utilizzo dei dati](./labels/overview.md)
 * [Criteri di utilizzo dei dati](./policies/overview.md)
 * [Applicazione dei criteri](./enforcement/overview.md)
 
 >[!NOTE]
 >
->Questa guida illustra come impostare e applicare i criteri per l’utilizzo o l’attivazione dei dati in Experience Platform. Se stai cercando di limitare **accesso** ai dati stessi per alcuni utenti di Platform all’interno della tua organizzazione, consulta la guida end-to-end su [controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md) invece. Anche il controllo dell’accesso basato su attributi utilizza etichette e criteri, ma per un caso d’uso diverso dalla governance dei dati.
+>Questa guida illustra come impostare e applicare i criteri per l’utilizzo o l’attivazione dei dati in Experienci Platform. Se stai cercando di limitare **accesso** ai dati stessi per alcuni utenti di Platform all’interno della tua organizzazione, consulta la guida end-to-end su [controllo degli accessi basato su attributi](../access-control/abac/end-to-end-guide.md) invece. Anche il controllo dell’accesso basato su attributi utilizza etichette e criteri, ma per un caso d’uso diverso dalla governance dei dati.
 
 ## Applica etichette {#labels}
 
@@ -129,7 +129,7 @@ Se selezioni più etichette, puoi utilizzare le opzioni nella barra a destra per
 
 ![Immagine che mostra la configurazione di base del criterio completata nell’interfaccia utente](./images/e2e/configure-policy.png)
 
-Nella schermata successiva, seleziona le azioni di marketing per le quali questo criterio limiterà l’utilizzo delle etichette selezionate in precedenza. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
+Nella schermata successiva, seleziona le azioni di marketing per le quali questo criterio limiterà l’utilizzo delle etichette selezionate in precedenza. Seleziona **[!UICONTROL Avanti]** per continuare.
 
 ![Immagine che mostra l’azione di marketing assegnata a un criterio nell’interfaccia utente](./images/e2e/select-marketing-action.png)
 
@@ -165,6 +165,6 @@ Vedi il documento su [applicazione automatica delle policy](./enforcement/auto-e
 
 Questa guida descrive i passaggi necessari per configurare e applicare i criteri di governance dei dati nei flussi di lavoro di attivazione. Per informazioni più dettagliate sui componenti Governance dei dati coinvolti in questa guida, consulta la seguente documentazione:
 
-* [Etichette di utilizzo dati](./labels/overview.md)
+* [Etichette di utilizzo dei dati](./labels/overview.md)
 * [Criteri di utilizzo dei dati](./policies/overview.md)
 * [Applicazione dei criteri](./enforcement/overview.md)

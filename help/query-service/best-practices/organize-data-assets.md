@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Passaggi successivi
 
-La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare ad acquisire familiarità con le best practice di Query Service leggendo informazioni su [documentazione sulla deduplicazione dei dati](../essential-concepts/deduplication.md).
+La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare ad acquisire familiarità con le best practice di Query Service consultando [documentazione sulla deduplicazione dei dati](../essential-concepts/deduplication.md).

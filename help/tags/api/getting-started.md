@@ -4,8 +4,8 @@ description: Scopri come iniziare a utilizzare l’API di Reactor, compresi i pa
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '921'
+ht-degree: 47%
 
 ---
 
@@ -43,17 +43,17 @@ Dopo aver creato un progetto, seleziona **Add API** (Aggiungi API) nella scherma
 
 ![](../images/api/getting-started/add-api-button.png)
 
-Viene visualizzata la schermata **Add an API** (Aggiungi un’API). Seleziona **API EXPERIENCE PLATFORM LAUNCH** dall’elenco delle API disponibili prima di selezionare **Successivo**.
+Viene visualizzata la schermata **Add an API** (Aggiungi un’API). Seleziona **API EXPERIENCI PLATFORM LAUNCH** dall’elenco delle API disponibili prima di selezionare **Successivo**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experience Platform.
+Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experienci Platform.
 
 >[!IMPORTANT]
 >
 >Seleziona la **[!UICONTROL OAuth Server-to-Server]** poiché questo sarà l’unico metodo supportato per andare avanti. Il **[!UICONTROL Account di servizio (JWT)]** è obsoleto. Anche se le integrazioni che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo metodo server-to-server OAuth prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](/help/landing/api-authentication.md#jwt) nel tutorial sull’autenticazione API di Platform.
 
-Seleziona **Next** (Avanti) per continuare.
+Seleziona **Avanti** per continuare.
 
 ![Selezionare il metodo di autenticazione server-to-server OAuth.](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
@@ -69,7 +69,7 @@ Seleziona i profili di prodotto desiderati dall’elenco, quindi seleziona **Sav
 
 ### Raccogli le credenziali {#gather-credentials}
 
-Una volta aggiunta l’API al progetto, la **[!UICONTROL API EXPERIENCE PLATFORM]** Nella pagina del progetto vengono visualizzate le seguenti credenziali necessarie in tutte le chiamate alle API Experience Platform:
+Una volta aggiunta l’API al progetto, la **[!UICONTROL API EXPERIENCI PLATFORM]** Nella pagina del progetto vengono visualizzate le seguenti credenziali necessarie in tutte le chiamate alle API Experienci Platform:
 
 * `{API_KEY}` ([!UICONTROL ID client])
 * `{ORG_ID}` ([!UICONTROL ID organizzazione])
@@ -99,7 +99,7 @@ Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo neg
 
 #### Generazione automatica dei token {#auto-token}
 
-Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, consulta la sezione su [utilizzo di Postman per autenticare e testare le chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di autenticazione API di Experience Platform.
+Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, consulta la sezione su [utilizzo di Postman per autenticare e testare le chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di autenticazione API di Experienci Platform.
 
 ## Verifica credenziali API {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Una volta confermato il funzionamento delle credenziali di accesso, continua a e
 
 ## Lettura delle chiamate API di esempio {#read-sample-api-calls}
 
-Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
+Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
 
 ## Passaggi successivi {#next-steps}
 

@@ -24,11 +24,11 @@ Per una guida all’utilizzo di [!DNL Real-Time Customer Profile] dati in [!DNL 
 
 >[!IMPORTANT]
 >
->La funzionalità degli attributi calcolati è disponibile in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+La funzionalità degli attributi calcolati è disponibile in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate in segmentazione, attivazione e personalizzazione.
 
-Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative ad aspetti quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza dover eseguire manualmente calcoli complessi ogni volta che sono necessarie le informazioni. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un pubblico o accessibili tramite diversi modelli di accesso.
+Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative a fattori quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza richiedere di eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un pubblico o accessibili tramite diversi modelli di accesso.
 
 È possibile creare, visualizzare, modificare ed eliminare attributi calcolati utilizzando `ca/attributes/` endpoint. Per informazioni su come utilizzare gli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per le operazioni API, visita [guida dell’endpoint API per attributi calcolati](../computed-attributes/api.md).
 

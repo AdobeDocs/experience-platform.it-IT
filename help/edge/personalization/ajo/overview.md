@@ -1,12 +1,12 @@
 ---
 title: Utilizzo di Adobe Journey Optimizer con Platform Web SDK
-description: Scopri come eseguire il rendering di contenuti personalizzati con l’SDK per web di Experience Platform utilizzando Adobe Journey Optimizer
+description: Scopri come eseguire il rendering di contenuti personalizzati con Experienci Platform Web SDK utilizzando Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe percorsi optimizer;renderDecisions;superfici;decisioni;proposte;ambito;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Leggi le [Documentazione di Adobe Journey Optimizer Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) per informazioni su come iniziare a utilizzare [!DNL Journey Optimizer Web] creazione di esperienze e reporting.
+>Leggi le [Documentazione di Adobe Journey Optimizer Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=it) per informazioni su come iniziare a utilizzare [!DNL Journey Optimizer Web] creazione di esperienze e reporting.
 
 ## Terminologia {#terminology}
 

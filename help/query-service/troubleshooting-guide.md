@@ -92,7 +92,7 @@ SELECT * FROM customers LIMIT 0;
 
 +++Risposta Nei passaggi seguenti viene descritto come visualizzare una visualizzazione tabulare di un set di dati tramite l’interfaccia utente, inclusi tutti i campi e le colonne nidificati in un modulo appiattito.
 
-- Dopo aver effettuato l’accesso a Experience Platform, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra dell’interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
+- Dopo aver effettuato l’accesso a Experienci Platform, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra dell’interfaccia utente per passare a [!UICONTROL Set di dati] dashboard.
 - I set di dati [!UICONTROL Sfoglia] viene visualizzata la scheda. Puoi utilizzare la barra di ricerca per perfezionare le opzioni disponibili. Seleziona un set di dati dall’elenco visualizzato.
 
 ![Il dashboard Set di dati nell’interfaccia utente di Platform, con la barra di ricerca e un set di dati evidenziati.](./images/troubleshooting/dataset-selection.png)
@@ -512,7 +512,7 @@ WHERE T2.ID IS NULL
 
 - Query Service supporta il controllo degli accessi basato su attributi. Puoi limitare l’accesso ai dati a livello di colonna/foglia e/o di struttura. Per ulteriori informazioni sul controllo degli accessi basato su attributi, consulta la documentazione.
 
-### È possibile specificare una modalità SSL per la connessione a un client di terze parti? È possibile, ad esempio, utilizzare &#39;verify-full&#39; con Power BI?
+### È possibile specificare una modalità SSL per la connessione a un client di terze parti? È possibile, ad esempio, utilizzare &quot;verify-full&quot; con Power BI?
 
 +++Risposta Sì, sono supportate le modalità SSL. Consulta la [Documentazione sulle modalità SSL](./clients/ssl-modes.md) suddividendo le diverse modalità SSL disponibili e il livello di protezione che offrono.
 +++

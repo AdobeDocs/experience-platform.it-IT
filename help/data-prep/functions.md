@@ -11,7 +11,7 @@ ht-degree: 3%
 
 ---
 
-# Funzioni di mappatura della preparazione dati
+# Funzioni di mappatura della preparazione dei dati
 
 Le funzioni di preparazione dati possono essere utilizzate per calcolare i valori in base a ciò che viene immesso nei campi sorgente.
 

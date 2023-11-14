@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;catalogo;ricerca oggetti multipli;api
 solution: Experience Platform
 title: Cerca più oggetti catalogo
-description: Se desideri visualizzare diversi oggetti specifici, invece di effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
+description: Se desideri visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Puoi utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco separato da virgole di ID.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt

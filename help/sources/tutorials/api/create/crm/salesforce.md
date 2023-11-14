@@ -8,7 +8,7 @@ exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
 source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ Per ulteriori informazioni su come iniziare, visita [questo documento Salesforce
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Crea una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 

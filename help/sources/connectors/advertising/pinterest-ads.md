@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Pinterest Ads].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema pubblicitario di terze parti. Il supporto per i provider pubblicitari include [!DNL Pinterest Ads].
 
 [[!DNL Pinterest]](https://www.pinterest.com) è un motore di scoperta visiva per trovare ricette, arredamento della casa, ispirazione di stile e altre idee attraverso il web. Questi vengono presentati su piccola scala utilizzando immagini, GIF animati e video in formato bacheca. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) consente di crescere e raggiungere i 400 milioni di persone utilizzando [!DNL Pinterest].
 

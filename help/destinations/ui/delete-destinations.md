@@ -28,7 +28,7 @@ Esistono due modi per eliminare le destinazioni dal [!DNL Platform] [!DNL UI]. P
 
 Per eliminare una destinazione dal menu, effettua le seguenti operazioni [!UICONTROL Sfoglia] scheda.
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
+1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -47,7 +47,7 @@ Per eliminare una destinazione dal menu, effettua le seguenti operazioni [!UICON
 
 Per eliminare una destinazione dalla pagina dei dettagli della destinazione, segui la procedura riportata di seguito.
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
+1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Per visualizzare le destinazioni esistenti, seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto.
 
    ![Sfoglia destinazioni](../assets/ui/delete-destinations/browse-destinations.png)
 

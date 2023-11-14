@@ -6,7 +6,7 @@ exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -20,10 +20,10 @@ Con le destinazioni social, puoi attivare profili per le campagne per il targeti
 
 Adobe Experience Platform attualmente supporta le seguenti destinazioni per i social network:
 
-* [[!DNL Facebook] connessione](facebook.md)
-* [[!DNL LinkedIn Matched Audiences] connessione](linkedin.md)
-* [[!DNL TikTok] connessione](tiktok.md)
-* [[!DNL Twitter Custom Audiences] connessione](twitter.md)
+* [Connessione [!DNL Facebook]](facebook.md)
+* [Connessione [!DNL LinkedIn Matched Audiences]](linkedin.md)
+* [Connessione [!DNL TikTok]](tiktok.md)
+* [Connessione [!DNL Twitter Custom Audiences]](twitter.md)
 
 ## Connetti a una nuova destinazione social {#connect-destination}
 

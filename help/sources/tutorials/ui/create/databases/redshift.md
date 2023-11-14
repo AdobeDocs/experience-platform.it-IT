@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Questo tutorial descrive come collegare [!DNL Amazon Redshift] (in seguito denom
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    - [Esercitazione sull’editor di schemi](../../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -75,4 +75,4 @@ Per collegare un account esistente, seleziona la [!DNL Redshift] account con cui
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione con il tuo [!DNL Redshift] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per inserire dati in Experience Platform](../../dataflow/databases.md).
+Seguendo questa esercitazione, hai stabilito una connessione con il tuo [!DNL Redshift] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per inserire dati in Experienci Platform](../../dataflow/databases.md).

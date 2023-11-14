@@ -17,7 +17,7 @@ Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei sin
 
 Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare questi profili di sola lettura e informazioni importanti su ciascuno dei singoli clienti, incluse le preferenze, gli eventi passati, le interazioni e i tipi di pubblico a cui appartengono i singoli utenti.
 
-Adobe Real-time Customer Data Platform è basato su Adobe Experience Platform ed è quindi in grado di utilizzare le funzionalità di visualizzazione del profilo nell’interfaccia utente di Experience Platform. Per una guida dettagliata alla visualizzazione dei profili dei clienti nell’interfaccia utente di Platform, consulta [Guida utente di Real-Time Customer Profile](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform è basato su Adobe Experience Platform ed è quindi in grado di utilizzare le funzionalità di visualizzazione del profilo nell’interfaccia utente di Experienci Platform. Per una guida dettagliata alla visualizzazione dei profili dei clienti nell’interfaccia utente di Platform, consulta [Guida utente di Real-Time Customer Profile](../../profile/ui/user-guide.md).
 
 ## Miglioramenti del profilo per Real-Time CDP, edizione B2B
 
@@ -43,7 +43,7 @@ Per ulteriori informazioni sulla visualizzazione e l’esplorazione dei profili 
 
 ### Scheda Opportunità
 
-Il **[!UICONTROL Opportunità]** fornisce dettagli relativi alle opportunità aperte e chiuse correlate all’account. Queste opportunità possono essere acquisite in Experience Platform da più origini, tuttavia Real-Time CDP, B2B Edition consente agli esperti di marketing di vedere tutte queste opportunità insieme in un’unica posizione.
+Il **[!UICONTROL Opportunità]** fornisce dettagli relativi alle opportunità aperte e chiuse correlate all’account. Queste opportunità possono essere acquisite in Experienci Platform da più origini, tuttavia Real-Time CDP, B2B Edition consente agli esperti di marketing di vedere tutte queste opportunità insieme in un’unica posizione.
 
 Ogni opportunità include informazioni quali il nome, l&#39;importo, la fase e se l&#39;opportunità è aperta, chiusa, vinta o persa.
 

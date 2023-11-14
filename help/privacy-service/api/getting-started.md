@@ -4,8 +4,8 @@ description: Scopri come eseguire l’autenticazione nell’API Privacy Service 
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '862'
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,7 @@ Questa guida richiede una buona conoscenza di [Privacy Service](../home.md) e co
 
 Per creare le credenziali di accesso per l’API, un amministratore dell’organizzazione deve aver precedentemente configurato i profili di prodotto per Privacy Service in Adobe Admin Console. Il profilo di prodotto assegnato a un’integrazione API determina di quali autorizzazioni dispone l’integrazione quando si accede alle funzionalità di Privacy Service. Consulta la guida su [gestione delle autorizzazioni di Privacy Service](../permissions.md) per ulteriori informazioni.
 
-## Raccogli i valori per le intestazioni richieste {#gather-values-required-headers}
+## Raccogliere i valori per le intestazioni richieste {#gather-values-required-headers}
 
 Per effettuare chiamate all’API Privacy Service, devi innanzitutto raccogliere le credenziali di accesso da utilizzare nelle intestazioni richieste:
 
@@ -95,15 +95,15 @@ Viene generato un nuovo token di accesso, e un pulsante consente di copiarlo neg
 
 #### Generazione automatica dei token {#auto-token}
 
-Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, consulta la sezione su [utilizzo di Postman per autenticare e testare le chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di autenticazione API di Experience Platform.
+Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token di accesso. Per ulteriori informazioni, consulta la sezione su [utilizzo di Postman per autenticare e testare le chiamate API](/help/landing/api-authentication.md#use-postman) nella guida di autenticazione API di Experienci Platform.
 
 ## Lettura delle chiamate API di esempio {#read-sample-api-calls}
 
-Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
+Ogni guida dell’endpoint fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva per le API di Platform.
 
 ## Passaggi successivi {#next-steps}
 
 Ora che sai quali intestazioni utilizzare, puoi iniziare a effettuare chiamate all’API Privacy Service. Seleziona una delle guide endpoint per iniziare:
 
-* [Lavori sulla privacy](./privacy-jobs.md)
+* [Processi di privacy](./privacy-jobs.md)
 * [Consenso](./consent.md)

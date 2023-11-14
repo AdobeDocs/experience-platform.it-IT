@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
 solution: Experience Platform
 title: Definire i campi XDM nell’interfaccia utente
-description: Scopri come definire i campi XDM nell’interfaccia utente di Experience Platform.
+description: Scopri come definire i campi XDM nell’interfaccia utente di Experienci Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt

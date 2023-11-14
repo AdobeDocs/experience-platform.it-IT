@@ -7,7 +7,7 @@ exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 5%
+ht-degree: 33%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 5%
 
 [!DNL Catalog Service] è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. [!DNL Catalog] funge da archivio o &quot;catalogo&quot; di metadati in cui è possibile trovare informazioni sui dati all’interno di [!DNL Experience Platform], senza dover accedere ai dati stessi. Consulta la [[!DNL Catalog] panoramica](../home.md) per ulteriori informazioni.
 
-Questa guida per sviluppatori descrive i passaggi per iniziare a utilizzare [!DNL Catalog] API. La guida fornisce quindi esempi di chiamate API per eseguire operazioni chiave tramite [!DNL Catalog].
+Questa guida per sviluppatori descrive i passaggi per iniziare a utilizzare l’API di [!DNL Catalog]. La guida fornisce quindi esempi di chiamate API per eseguire operazioni chiave tramite [!DNL Catalog].
 
 ## Prerequisiti
 
 [!DNL Catalog] tiene traccia dei metadati per diversi tipi di risorse e operazioni in [!DNL Experience Platform]. Questa guida per sviluppatori richiede una buona conoscenza delle varie [!DNL Experience Platform] servizi coinvolti nella creazione e nella gestione di queste risorse:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
 * [Acquisizione in batch](../../ingestion/batch-ingestion/overview.md): Come [!DNL Experience Platform] acquisisce e memorizza dati da file di dati, come CSV e Parquet.
 * [Acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md): Come [!DNL Experience Platform] acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
@@ -29,11 +29,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ## Lettura delle chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
 
-## Raccogli i valori per le intestazioni richieste
+## Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate alle API di [!DNL Platform], devi prima completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -61,7 +61,7 @@ Poiché alcune query possono comportare un carico pesante sull’API, i limiti g
 
 ## Passaggi successivi
 
-In questo documento sono state trattate le conoscenze preliminari necessarie per effettuare chiamate [!DNL Catalog] API. Ora puoi passare alle chiamate di esempio fornite in questa guida per sviluppatori e seguire le loro istruzioni.
+Questo documento tratta le conoscenze preliminari necessarie per effettuare chiamate alle API di [!DNL Catalog]. Ora puoi passare alle chiamate di esempio fornite in questa guida per sviluppatori e seguire le relative istruzioni.
 
 La maggior parte degli esempi contenuti in questa guida utilizza `/dataSets` endpoint, ma i principi possono essere applicati ad altri endpoint all’interno di [!DNL Catalog] (ad esempio `/batches`). Consulta la [Riferimento API di Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) per un elenco completo di tutte le chiamate e le operazioni disponibili per ciascun endpoint.
 

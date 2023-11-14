@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;IAB;IAB 2.0;consenso;Consenso;Consenso
 solution: Experience Platform
-title: Supporto IAB TCF 2.0 in Experience Platform
+title: Supporto IAB TCF 2.0 in Experienci Platform
 description: Scopri come configurare le operazioni sui dati e gli schemi per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Supporto IAB TCF 2.0 in Experience Platform
+# Supporto IAB TCF 2.0 in Experienci Platform
 
 Il [!DNL Transparency & Consent Framework] (TCF), come indicato dalla [!DNL Interactive Advertising Bureau] (IAB), è un quadro tecnico basato su standard aperti destinato a consentire alle organizzazioni di ottenere, registrare e aggiornare il consenso dei consumatori per il trattamento dei loro dati personali, in conformità con il [!DNL General Data Protection Regulation] (RGPD). La seconda iterazione del framework, TCF 2.0, offre maggiore flessibilità su come i consumatori possono fornire o negare il consenso, compreso se e come i fornitori possono utilizzare determinate caratteristiche del trattamento dei dati, come una precisa geolocalizzazione.
 
@@ -37,7 +37,7 @@ Per seguire questa guida, devi utilizzare una piattaforma di gestione del consen
 
 Questa guida richiede anche una buona conoscenza dei seguenti servizi di Platform:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
 * [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](../../../../profile/home.md): utilizza [!DNL Identity Service] per creare in tempo reale profili cliente dettagliati dai set di dati. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
@@ -59,7 +59,7 @@ Platform consente di raccogliere i dati sul consenso del cliente tramite il segu
 1. Utilizzando Platform Web SDK, i dati del consenso generati (restituiti dalla CMP) vengono inviati a Adobe Experience Platform.
 1. I dati sul consenso raccolti vengono acquisiti in una [!DNL Profile]Set di dati abilitato con schema contenente campi di consenso TCF.
 
-Oltre ai comandi SDK attivati dagli hook di modifica del consenso CMP, i dati del consenso possono anche fluire in Experience Platform tramite qualsiasi dato XDM generato dal cliente e caricato direttamente in un [!DNL Profile]Set di dati abilitato da.
+Oltre ai comandi SDK attivati dagli hook di modifica del consenso CMP, i dati del consenso possono anche fluire in Experienci Platform tramite qualsiasi dato XDM generato dal cliente e caricato direttamente in un [!DNL Profile]Set di dati abilitato da.
 
 Qualsiasi segmento condiviso con Platform da Adobe Audience Manager (tramite [!DNL Audience Manager] (connettore di origine o altro) possono contenere anche dati sul consenso, purché i campi appropriati siano stati applicati a tali segmenti tramite [!DNL Experience Cloud Identity Service]. Per ulteriori informazioni sulla raccolta dei dati sul consenso in [!DNL Audience Manager], consulta il documento sulla [Plug-in Adobe Audience Manager per IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=it).
 
@@ -104,19 +104,19 @@ Dopo aver creato un’ [!DNL Profile]: set di dati abilitato per la raccolta dei
 
 Per ulteriori informazioni su come utilizzare i criteri di unione, consulta [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Quando configuri i criteri di unione, devi assicurarti che i segmenti includano tutti gli attributi di consenso richiesti forniti da [Gruppo di campi dello schema di privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
 
-## Integrare Experience Platform Web SDK per raccogliere i dati sul consenso del cliente {#sdk}
+## Integrare Experienci Platform Web SDK per raccogliere i dati sul consenso del cliente {#sdk}
 
 >[!NOTE]
 >
->Per elaborare i dati del consenso direttamente in Adobe Experience Platform è necessario utilizzare l’SDK per web di Experience Platform. [!DNL Experience Cloud Identity Service] non è attualmente supportato.
+>Per elaborare i dati del consenso direttamente in Adobe Experience Platform è necessario utilizzare l’SDK per web di Experienci Platform. [!DNL Experience Cloud Identity Service] non è attualmente supportato.
 >
 >[!DNL Experience Cloud Identity Service] è ancora supportato per l’elaborazione del consenso in Adobe Audience Manager, tuttavia, e la conformità a TCF 2.0 richiede solo che la libreria sia aggiornata a [versione 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
-Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario integrare l’SDK per web di Experience Platform per raccogliere tali stringhe e inviarle a Platform. Platform SDK fornisce due comandi che possono essere utilizzati per inviare i dati di consenso TCF a Platform (descritti nelle sottosezioni seguenti) e che devono essere utilizzati quando un cliente fornisce informazioni sul consenso per la prima volta e in qualsiasi momento successivo.
+Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario integrare l’SDK per web di Experienci Platform per raccogliere tali stringhe e inviarle a Platform. Platform SDK fornisce due comandi che possono essere utilizzati per inviare i dati di consenso TCF a Platform (descritti nelle sottosezioni seguenti) e che devono essere utilizzati quando un cliente fornisce informazioni sul consenso per la prima volta e in qualsiasi momento successivo.
 
 **L’SDK non si interfaccia con alcuna CMP predefinita**. Sta a te determinare come integrare l’SDK nel tuo sito web, ascoltare le modifiche del consenso nella CMP e chiamare il comando appropriato.
 
-### Creare un nuovo flusso di dati
+### Creare un nuovo stream di dati
 
 Affinché l’SDK possa inviare dati all’Experience Platform, devi prima creare un nuovo flusso di dati per Platform. I passaggi specifici per la creazione di un nuovo flusso di dati sono descritti in [Documentazione SDK](../../../../datastreams/overview.md).
 
@@ -126,8 +126,8 @@ Dopo aver fornito un nome univoco per lo stream di dati, seleziona il pulsante a
 | --- | --- |
 | [!UICONTROL Sandbox] | Nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati necessari per impostare lo stream di dati. |
 | [!UICONTROL Ingresso streaming] | Ad Experience Platform, una connessione in streaming valida. Guarda il tutorial su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se non disponi di una presa di streaming esistente. |
-| [!UICONTROL Set di dati evento] | Seleziona la [!DNL XDM ExperienceEvent] set di dati creato in [passaggio precedente](#datasets). Se hai incluso il [[!UICONTROL Consenso IAB TCF 2.0] gruppo di campi](../../../../xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando [`sendEvent`](#sendEvent) , archiviando tali dati in questo set di dati. I valori di consenso memorizzati in questo set di dati sono **non** utilizzato nei flussi di lavoro di applicazione automatica. |
-| [!UICONTROL Set di dati profilo] | Seleziona la [!DNL XDM Individual Profile] set di dati creato in [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso CMP utilizzando [`setConsent`](#setConsent) , i dati raccolti verranno memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
+| [!UICONTROL Set di dati di evento] | Seleziona la [!DNL XDM ExperienceEvent] set di dati creato in [passaggio precedente](#datasets). Se hai incluso il [[!UICONTROL Consenso IAB TCF 2.0] gruppo di campi](../../../../xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando [`sendEvent`](#sendEvent) , archiviando tali dati in questo set di dati. I valori di consenso memorizzati in questo set di dati sono **non** utilizzato nei flussi di lavoro di applicazione automatica. |
+| [!UICONTROL Set di dati di profilo] | Seleziona la [!DNL XDM Individual Profile] set di dati creato in [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso CMP utilizzando [`setConsent`](#setConsent) , i dati raccolti verranno memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 

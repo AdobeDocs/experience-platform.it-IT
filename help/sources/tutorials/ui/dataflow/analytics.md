@@ -24,7 +24,7 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
 
 * [Sorgenti](../../../home.md): Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -75,7 +75,7 @@ Quindi, seleziona la **[!UICONTROL Set di dati profilo]** attiva per abilitare i
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle origini tramite l’interfaccia utente](../alerts.md).
 
-Una volta completati i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![avvisi](../../../images/tutorials/dataflow/table-based/alerts.png)
 

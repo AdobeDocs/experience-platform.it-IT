@@ -19,7 +19,7 @@ In Adobe Experience Platform, puoi modificare vari componenti dei flussi di dati
 
 Per modificare i flussi di dati di attivazione esistenti, effettua le seguenti operazioni:
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
+1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/edit-activation/browse-destinations.png)
 

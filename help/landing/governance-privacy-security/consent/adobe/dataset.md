@@ -7,7 +7,7 @@ exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Affinché Adobe Experience Platform possa elaborare i dati di consenso/preferenza del cliente, questi devono essere inviati a un set di dati il cui schema contiene campi relativi ai consensi e ad altre autorizzazioni. In particolare, questo set di dati deve essere basato su [!DNL XDM Individual Profile] e abilitato per l&#39;utilizzo in [!DNL Real-Time Customer Profile].
 
-Questo documento descrive i passaggi per configurare un set di dati per elaborare i dati sul consenso in Experience Platform. Per una panoramica dell’intero flusso di lavoro per l’elaborazione dei dati di consenso/preferenza in Platform, consulta [panoramica sull’elaborazione del consenso](./overview.md).
+Questo documento descrive i passaggi per configurare un set di dati per elaborare i dati sul consenso in Experienci Platform. Per una panoramica dell’intero flusso di lavoro per l’elaborazione dei dati di consenso/preferenza in Platform, consulta [panoramica sull’elaborazione del consenso](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Questo documento descrive i passaggi per configurare un set di dati per elaborar
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Experience Data Model (XDM)](../../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
-   * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM.
+   * [Nozioni di base sulla composizione degli schemi](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM.
 * [Profilo cliente in tempo reale](../../../../profile/home.md): consolida i dati dei clienti da origini diverse in una visualizzazione completa e unificata, offrendo al tempo stesso un conto fruibile e con marca temporale di ogni interazione con il cliente.
 
 >[!IMPORTANT]
@@ -127,7 +127,7 @@ L’area di lavoro viene visualizzata nuovamente, mostrando che il `consents` e 
 >
 >Se stai creando un nuovo schema o modificando uno schema esistente non abilitato per Profilo, devi [abilita lo schema per il profilo](../../../../xdm/ui/resources/schemas.md#profile) prima del salvataggio.
 
-Se lo schema modificato viene utilizzato da [!UICONTROL Set di dati profilo] specificato nel flusso di dati dell’SDK per web di Platform, tale set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare al [guida all’elaborazione del consenso](./overview.md#merge-policies) per continuare la procedura di configurazione di Experience Platform per elaborare i dati sul consenso. Se non hai creato un set di dati per questo schema, segui i passaggi descritti nella sezione successiva.
+Se lo schema modificato viene utilizzato da [!UICONTROL Set di dati profilo] specificato nel flusso di dati dell’SDK per web di Platform, tale set di dati includerà ora i nuovi campi di consenso. Ora puoi tornare al [guida all’elaborazione del consenso](./overview.md#merge-policies) per continuare la procedura di configurazione di Experienci Platform per elaborare i dati sul consenso. Se non hai creato un set di dati per questo schema, segui i passaggi descritti nella sezione successiva.
 
 ## Creare un set di dati in base allo schema di consenso {#dataset}
 

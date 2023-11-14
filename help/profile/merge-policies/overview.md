@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizza per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare una vista unificata.
 
-Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questo documento fornisce una panoramica dei criteri di unione e del ruolo che svolgono all’interno di Experience Platform.
+Utilizzando le API RESTful o l’interfaccia utente di, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questo documento fornisce una panoramica dei criteri di unione e del ruolo che svolgono all’interno di Experienci Platform.
 
 ## Introduzione
 
@@ -54,7 +54,7 @@ Per creare un criterio di unione utilizzando **[!UICONTROL Precedenza set di dat
 
 ### Timestamp ordinato {#timestamp-ordered}
 
-Quando i record di profilo vengono acquisiti in Experience Platform, al momento dell’acquisizione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Quando **[!UICONTROL Timestamp ordinato]** è selezionato come metodo di unione per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l’unione viene eseguita in base alla marca temporale di quando il record è stato acquisito in Platform.
+Quando i record di profilo vengono acquisiti in Experienci Platform, al momento dell’acquisizione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Quando **[!UICONTROL Timestamp ordinato]** è selezionato come metodo di unione per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l’unione viene eseguita in base alla marca temporale di quando il record è stato acquisito in Platform.
 
 ## Unione identità {#id-stitching}
 
@@ -79,4 +79,4 @@ Se si crea un nuovo criterio di unione e lo si imposta come predefinito, il crit
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, saprai cosa sono i criteri di unione e il ruolo che svolgono all’interno di Experience Platform. Per iniziare a utilizzare i criteri di unione nell’interfaccia utente di Experience Platform, consulta [guida dell’interfaccia utente per i criteri di unione](ui-guide.md). Per utilizzare i criteri di unione tramite l’API, visita la [guida dell’endpoint API per i criteri di unione](../api/merge-policies.md).
+Dopo aver letto questa guida, saprai cosa sono i criteri di unione e il ruolo che svolgono all’interno di Experienci Platform. Per iniziare a utilizzare i criteri di unione nell’interfaccia utente di Experienci Platform, consulta [guida dell’interfaccia utente per i criteri di unione](ui-guide.md). Per utilizzare i criteri di unione tramite l’API, visita la [guida dell’endpoint API per i criteri di unione](../api/merge-policies.md).

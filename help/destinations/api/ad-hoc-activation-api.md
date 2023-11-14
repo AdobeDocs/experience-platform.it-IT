@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Dopo aver completato la fase Beta, [!DNL ad-hoc activation API] è ora generalmente disponibile (GA) per tutti i clienti Experience Platform. Nella versione GA, l’API è stata aggiornata alla versione 2. Passaggio 4 ([Ottieni l’ID del processo di esportazione del pubblico più recente](#segment-export-id)) non è più richiesto, in quanto l’API non richiede più l’ID di esportazione.
+>Dopo aver completato la fase Beta, [!DNL ad-hoc activation API] è ora generalmente disponibile (GA) per tutti i clienti Experienci Platform. Nella versione GA, l’API è stata aggiornata alla versione 2. Passaggio 4 ([Ottieni l’ID del processo di esportazione del pubblico più recente](#segment-export-id)) non è più richiesto, in quanto l’API non richiede più l’ID di esportazione.
 >
 >Consulta [Eseguire il processo di attivazione ad hoc](#activation-job) più avanti in questo tutorial per ulteriori informazioni.
 
@@ -36,15 +36,15 @@ Il diagramma seguente illustra il flusso di lavoro end-to-end per l’attivazion
 
 ### Vendite o promozioni Flash
 
-Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc di Experience Platform, il team di marketing può esportare i tipi di pubblico on-demand e inviare rapidamente e-mail promozionali alla base clienti.
+Un rivenditore online sta preparando una vendita flash limitata e desidera avvisare i clienti con un breve preavviso. Tramite l’API di attivazione ad hoc di Experienci Platform, il team di marketing può esportare i tipi di pubblico on-demand e inviare rapidamente e-mail promozionali alla base clienti.
 
 ### Attualità o ultime notizie
 
-Un hotel si aspetta un tempo inclemente nei giorni successivi e il team vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand e avvisare gli ospiti.
+Un hotel si aspetta un tempo inclemente nei giorni successivi e il team vuole informare rapidamente gli ospiti in arrivo, in modo che possano pianificare di conseguenza. Il team marketing può utilizzare l’API di attivazione ad hoc di Experienci Platform per esportare i tipi di pubblico on-demand e avvisare gli ospiti.
 
 ### Test di integrazione
 
-I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experience Platform per esportare i tipi di pubblico on-demand, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e garantire il corretto funzionamento di tutto.
+I responsabili IT possono utilizzare l’API di attivazione ad hoc di Experienci Platform per esportare i tipi di pubblico on-demand, in modo da testare la loro integrazione personalizzata con Adobe Experience Platform e garantire il corretto funzionamento di tutto.
 
 ## Guardrail {#guardrails}
 
@@ -68,19 +68,19 @@ Prima di poter effettuare chiamate alle API di Adobe Experience Platform, assicu
 
 ## Passaggio 2: raccogliere le credenziali {#credentials}
 
-Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experienci Platform, come mostrato di seguito:
 
 * Autorizzazione: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Le risorse di Experience Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
+Le risorse di Experienci Platform possono essere isolate in specifiche sandbox virtuali. Nelle richieste alle API di Platform, puoi specificare il nome e l’ID della sandbox in cui verrà eseguita l’operazione. Si tratta di parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Experience Platform, consulta la sezione [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in Experienci Platform, consulta la sezione [documentazione di panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
@@ -249,4 +249,4 @@ Quando utilizzi l’API di attivazione ad hoc, puoi incontrare messaggi di error
 ## Informazioni correlate {#related-information}
 
 * [Connettersi alle destinazioni batch e attivare i dati utilizzando l’API del servizio Flusso](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](/help/destinations/ui/export-file-now.md)
+* [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](/help/destinations/ui/export-file-now.md)

@@ -1,6 +1,6 @@
 ---
 title: Deprecare un campo XDM nell’interfaccia utente
-description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) utilizzando l’Editor di schema in Experience Platform.
+description: Scopri come rendere obsoleti i campi Experience Data Model (XDM) utilizzando l’Editor di schema in Experienci Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
 workflow-type: tm+mt
@@ -21,7 +21,7 @@ Poiché i campi obsoleti sono nascosti dall’interfaccia utente per impostazion
 
 Una volta acquisiti i dati nello schema, non puoi più rimuovere i campi dallo schema senza apportare modifiche che causano interruzioni. In questo caso, puoi rendere obsoleto un campo indesiderato all’interno di uno schema o di una risorsa personalizzata utilizzando [Editor schema](./create-schema-ui.md) o [API del registro dello schema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM utilizzando l’Editor di schema nell’interfaccia utente di Experience Platform. Per i passaggi relativi alla rimozione di un campo XDM da un’API, consulta l’esercitazione su [deprecazione di un campo XDM tramite l’API Schema Registry](./field-deprecation-api.md).
+Questo documento illustra come rendere obsoleti i campi per diverse risorse XDM utilizzando l’Editor di schema nell’interfaccia utente di Experienci Platform. Per i passaggi relativi alla rimozione di un campo XDM da un’API, consulta l’esercitazione su [deprecazione di un campo XDM tramite l’API Schema Registry](./field-deprecation-api.md).
 
 ## Deprecare un campo {#deprecate}
 
@@ -37,7 +37,7 @@ Il campo viene ora rimosso dalla vista dell’interfaccia utente.
 
 >[!NOTE]
 >
->Una volta dichiarati obsoleti, le interfacce utente a valle come Segmentation dashboards, Customer Journey Analytics e Adobe Journey Optimizer non visualizzano più i campi obsoleti come parte del flusso di lavoro. Tuttavia, le interfacce utente a valle hanno la possibilità di mostrare i campi obsoleti se necessario e continuare a trattare il campo obsoleto come normale. Per ulteriori informazioni, consulta la relativa documentazione. Le query e i tipi di pubblico che utilizzano il campo obsoleto continueranno a essere eseguiti come previsto.
+>Una volta dichiarati obsoleti, le interfacce utente a valle come le dashboard di segmentazione, Customer Journey Analytics e Adobe Journey Optimizer non visualizzano più i campi obsoleti come parte del flusso di lavoro. Tuttavia, le interfacce utente a valle hanno la possibilità di mostrare i campi obsoleti se necessario e continuare a trattare il campo obsoleto come normale. Per ulteriori informazioni, consulta la relativa documentazione. Le query e i tipi di pubblico che utilizzano il campo obsoleto continueranno a essere eseguiti come previsto.
 
 ## Mostra campi obsoleti {#show-deprecated}
 

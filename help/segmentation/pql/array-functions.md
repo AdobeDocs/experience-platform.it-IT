@@ -72,7 +72,7 @@ La seguente query PQL definisce gli utenti i cui colori preferiti includono alme
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersezione
+## Intersezione 
 
 Il `intersection` La funzione viene utilizzata per determinare i membri comuni di due array o elenchi.
 

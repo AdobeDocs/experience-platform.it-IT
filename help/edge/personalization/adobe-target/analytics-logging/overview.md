@@ -1,6 +1,6 @@
 ---
 title: Registrazione di Adobe Analytics for Target (A4T) in Platform Web SDK
-description: Scopri come controllare la raccolta di dati di Adobe Analytics for Target (A4T) utilizzando Experience Platform Web SDK.
+description: Scopri come controllare la raccolta di dati di Adobe Analytics for Target (A4T) utilizzando Experienci Platform Web SDK.
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t;registrazione;analytics;sdk;web sdk;

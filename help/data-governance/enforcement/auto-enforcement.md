@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;Applicazione automatica;Imposizione basata su API;governance dei dati
 solution: Experience Platform
 title: Applicazione automatica dei criteri
-description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experience Platform.
+description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experienci Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
@@ -70,7 +70,7 @@ Ciascuna fase del calendario di cui sopra rappresenta un’entità che può cont
 | --- | --- |
 | Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di campo schema o di intero set di dati) che definiscono i casi di utilizzo per i quali è possibile utilizzare l’intero set di dati o campi specifici. Se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio, si verificheranno violazioni dei criteri.<br><br>Nei set di dati vengono memorizzati anche tutti gli attributi di consenso raccolti dai clienti. Se hai accesso ai criteri di consenso, tutti i profili che non soddisfano i requisiti di attributo del consenso dei tuoi criteri verranno esclusi dai tipi di pubblico attivati per una destinazione. |
 | Criterio di unione | I criteri di unione sono le regole utilizzate da Platform per determinare il modo in cui assegnare la priorità ai dati quando si uniscono frammenti da più set di dati. Se i criteri di unione sono configurati in modo che i set di dati con etichette con restrizioni vengano attivati in una destinazione, si verificheranno violazioni dei criteri. Consulta la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) per ulteriori informazioni. |
-| Destinatari | Le regole di segmentazione definiscono quali attributi devono essere inclusi dai profili dei clienti. A seconda dei campi inclusi in una definizione di segmento, il pubblico erediterà tutte le etichette di utilizzo applicate per tali campi. Se attivi un pubblico le cui etichette ereditate sono limitate dai criteri applicabili della destinazione target, in base al caso di utilizzo di marketing, si verificheranno violazioni dei criteri. |
+| Pubblico | Le regole di segmentazione definiscono quali attributi devono essere inclusi dai profili dei clienti. A seconda dei campi inclusi in una definizione di segmento, il pubblico erediterà tutte le etichette di utilizzo applicate per tali campi. Se attivi un pubblico le cui etichette ereditate sono limitate dai criteri applicabili della destinazione target, in base al caso di utilizzo di marketing, si verificheranno violazioni dei criteri. |
 | Destinazione | Durante la configurazione di una destinazione, è possibile definire un’azione di marketing (talvolta denominata caso di utilizzo di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio. In altre parole, l’azione di marketing che definisci per una destinazione determina quali criteri di utilizzo dei dati e criteri di consenso sono applicabili a tale destinazione.<br><br>Le violazioni dei criteri di utilizzo dei dati si verificano se si attiva un pubblico le cui etichette di utilizzo sono limitate per l’azione di marketing della destinazione.<br><br>(Beta) Quando un pubblico viene attivato, tutti i profili che non contengono gli attributi di consenso richiesti per l’azione di marketing (come definiti dai criteri di consenso) vengono esclusi dal pubblico attivato. |
 
 >[!IMPORTANT]
@@ -181,4 +181,4 @@ Se una delle azioni di cui sopra attiva una violazione, tale azione non può ess
 
 ## Passaggi successivi
 
-In questo documento viene illustrato il funzionamento dell’applicazione automatica delle policy in Experience Platform. Per i passaggi su come integrare in modo programmatico l’applicazione dei criteri nelle applicazioni utilizzando le chiamate API, consulta la guida su [Imposizione basata su API](./api-enforcement.md).
+In questo documento viene illustrato il funzionamento dell’applicazione automatica delle policy in Experienci Platform. Per i passaggi su come integrare in modo programmatico l’applicazione dei criteri nelle applicazioni utilizzando le chiamate API, consulta la guida su [Imposizione basata su API](./api-enforcement.md).

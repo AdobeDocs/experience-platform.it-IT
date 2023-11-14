@@ -24,7 +24,7 @@ Per utilizzare Destination SDK, accertati di soddisfare i prerequisiti tecnici e
 
 ## Prerequisiti tecnici per le destinazioni batch {#batch-prerequisites}
 
-1. Hai una posizione di destinazione ospitata su [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], o privato [!DNL Data Landing Zone], dove puoi ricevere i file esportati da Experience Platform.
+1. Hai una posizione di destinazione ospitata su [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], o privato [!DNL Data Landing Zone], dove puoi ricevere i file esportati da Experienci Platform.
 2. La piattaforma di destinazione può acquisire i file nel formato configurato tramite [opzioni di formattazione file](functionality/destination-server/file-formatting.md) in Destination SDK per le destinazioni batch.
 3. (Facoltativo) Hai un pubblico che crea/recupera/aggiorna/elimina ([!DNL CRUD]) Endpoint API o API per la gestione dei metadati programmatici.
 

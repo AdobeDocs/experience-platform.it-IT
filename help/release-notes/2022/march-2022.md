@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione di Adobe Experience Platform, marzo 2022
-description: Note sulla versione di marzo 2022 per Adobe Experience Platform.
+title: Note sulla versione di Adobe Experience Platform - Marzo 2022
+description: Note sulla versione di Adobe Experience Platform di marzo 2022.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 Nuove funzioni di Adobe Experience Platform:
 
-- [Registri di controllo](#audit-logs)
+- [Registri di audit](#audit-logs)
 - [Account correlati in Real-Time CDP B2B Edition](#related-accounts)
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
@@ -28,7 +28,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Registri di audit {#audit-logs}
 
-Experience Platform consente di controllare l’attività dell’utente per vari servizi e funzionalità. I registri di audit forniscono informazioni su chi ha fatto cosa e quando.
+Experienci Platform consente di controllare l’attività dell’utente per vari servizi e funzionalità. I registri di audit forniscono informazioni su chi ha fatto cosa e quando.
 
 **Nuove funzioni**
 
@@ -51,7 +51,7 @@ Le aziende B2B spesso dispongono di informazioni sui propri clienti archiviate i
 
 Ulteriori informazioni sulla funzione sono disponibili nelle seguenti pagine della documentazione:
 
-- [Panoramica sugli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Panoramica degli account correlati in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Scheda Account correlati nella guida dell’interfaccia utente del profilo account](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Come utilizzare gli account correlati nelle definizioni dei segmenti](../../rtcdp/segmentation/b2b.md#related-accounts)
 
@@ -77,7 +77,7 @@ Adobe Experience Platform offre più [!DNL dashboards] attraverso cui è possibi
 
 ### Dashboard dei profili
 
-Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experience Platform.
+Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experienci Platform.
 
 **Funzioni aggiornate**
 
@@ -94,7 +94,7 @@ Per ulteriori informazioni sulle dashboard dei profili, consulta [Panoramica del
 
 ### Dashboard di destinazione
 
-Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni abilitate dalla tua organizzazione in Experience Platform.
+Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni abilitate dalla tua organizzazione in Experienci Platform.
 
 **Funzioni aggiornate**
 
@@ -115,7 +115,7 @@ Platform fornisce una suite di tecnologie che consente di raccogliere i dati sul
 | Funzione | Descrizione |
 | --- | --- |
 | Impostazioni globali dello stream di dati | Ora puoi configurare diverse nuove impostazioni globali durante la configurazione di un flusso di dati: geolocalizzazione, cookie ID di prime parti e sincronizzazione ID di terze parti. Consulta la sezione su [configurazione di uno stream di dati](../../datastreams/overview.md#create) per ulteriori informazioni, consulta la guida all’interfaccia utente per gli stream di dati. |
-| [API del server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con la rete Edge di Experience Platform utilizzando un nuovo endpoint autenticato, per supportare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
+| [API del server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con la rete Edge di Experienci Platform utilizzando un nuovo endpoint autenticato, per supportare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 
@@ -135,7 +135,7 @@ Per ulteriori informazioni sulle funzioni disponibili, consulta [Panoramica di Q
 
 ## Origini {#sources}
 
-Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
+Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio da applicazioni Adobe, dall’archiviazione basata su cloud, da software di terze parti e dal sistema CRM.
 
 Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire l’acquisizione dei dati in.
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Il **[!UICONTROL Account]** Questa scheda mostra i dettagli sulle connessioni stabilite con varie destinazioni. Consulta la sezione [Panoramica sugli account](../ui/destinations-workspace.md#accounts) per tutte le informazioni che puoi ottenere su ciascun account di destinazione.
 
-Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experience Platform.
+Questo tutorial illustra i passaggi necessari per aggiornare i dettagli dell’account di destinazione utilizzando l’interfaccia utente di Experienci Platform.
 
 Puoi aggiornare i dettagli dell’account di destinazione per aggiornare e autenticare nuovamente le credenziali per gli account correnti o scaduti per le destinazioni attualmente in uso. In genere, i token OAuth e bearer hanno una durata limitata, a seconda della piattaforma di destinazione. Quando questi token scadono, puoi aggiornarli nel flusso di lavoro descritto di seguito. Questo flusso di lavoro ti indirizza a passare attraverso il flusso di lavoro OAuth o a reinserire un token. Analogamente, se nella piattaforma a valle è stata modificata una password o un accesso utente, è possibile aggiornare le credenziali.
 
@@ -29,7 +29,7 @@ Per le destinazioni batch, puoi aggiornare l’accesso o la chiave segreta, se �
 
 Per aggiornare i dettagli di connessione alle destinazioni esistenti, segui la procedura riportata di seguito.
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** nell’intestazione in alto per visualizzare i tuoi account esistenti.
+1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Account]** nell’intestazione in alto per visualizzare i tuoi account esistenti.
 
    ![Scheda Account](../assets/ui/update-accounts/accounts-tab.png)
 

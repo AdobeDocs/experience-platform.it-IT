@@ -6,7 +6,7 @@ description: Questo documento spiega passo-passo come accedere a un account svil
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 9%
 
 ---
@@ -220,7 +220,7 @@ Puoi utilizzare la stessa chiave API, lo stesso segreto client e lo stesso JWT p
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `token_type` | Tipo di token restituito. Per i token di accesso questo valore è sempre `bearer`. |
+| `token_type` | Il tipo of token restituito. Per i token di accesso questo valore è sempre `bearer`. |
 | `access_token` | Il valore generato `{ACCESS_TOKEN}`. Questo valore è preceduto dalla parola `Bearer`, è richiesto in quanto `Authentication` intestazione per tutte le chiamate API di Platform. |
 | `expires_in` | Il numero di millisecondi rimanenti fino alla scadenza del token di accesso. Quando questo valore raggiunge 0, è necessario generare un nuovo token di accesso per continuare a utilizzare le API di Platform. |
 

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Panoramica end-to-end sulla raccolta dati
 
-Adobe Experience Platform raccoglie e trasferisce i dati ad altri prodotti Adobe e destinazioni di terze parti. Per inviare i dati dell’evento dall’applicazione alla rete Edge di Experience Platform, è importante comprendere queste tecnologie di base e configurarle in modo da fornire i dati alle destinazioni necessarie, quando necessario.
+Adobe Experience Platform raccoglie e trasferisce i dati ad altri prodotti Adobe e destinazioni di terze parti. Per inviare i dati dell’evento dall’applicazione alla rete Edge di Experienci Platform, è importante comprendere queste tecnologie di base e configurarle in modo da fornire i dati alle destinazioni necessarie, quando necessario.
 
 Questa guida fornisce un tutorial di alto livello su come inviare un evento tramite la rete Edge utilizzando le funzionalità di raccolta dati di Platform. In particolare, il tutorial illustra i passaggi necessari per installare e configurare l’estensione tag Adobe Experience Platform Web SDK nell’interfaccia utente di Data Collection (precedentemente Adobe Experience Platform Launch).
 
@@ -19,7 +19,7 @@ Questa guida fornisce un tutorial di alto livello su come inviare un evento tram
 >
 >Se non desideri utilizzare i tag, puoi anche scegliere di installare e configurare manualmente l’SDK, ma i passaggi successivi devono ancora essere completati come descritto di seguito.
 >
->Tutti i passaggi che riguardano l’interfaccia utente di Data Collection possono essere eseguiti anche nell’interfaccia utente di Experience Platform.
+>Tutti i passaggi che riguardano l’interfaccia utente di Data Collection possono essere eseguiti anche nell’interfaccia utente di Experienci Platform.
 
 ## Prerequisiti
 
@@ -30,7 +30,7 @@ Questa esercitazione utilizza l’interfaccia utente di Data Collection per crea
 
 Consulta la guida su [gestione delle autorizzazioni per la raccolta dati](./permissions.md) per scoprire come concedere l’accesso a proprietà e diritti di proprietà.
 
-Per utilizzare i vari prodotti di raccolta dati menzionati in questa guida, devi anche avere accesso agli stream di dati e la possibilità di creare e gestire gli schemi. Se hai bisogno di accedere a una di queste funzioni, contatta il team del tuo account di Adobe per aiutarti a ottenere l’accesso necessario. Se non hai acquistato Adobe Experience Platform, Adobe ti fornirà l’accesso necessario per utilizzare l’SDK senza costi aggiuntivi.
+Per utilizzare i vari prodotti di raccolta dati menzionati in questa guida, devi anche avere accesso agli stream di dati e la possibilità di creare e gestire gli schemi. Se hai bisogno di accedere a una di queste funzioni, contatta il team del tuo account Adobe per ottenere l’accesso necessario. Se non hai acquistato Adobe Experience Platform, Adobe ti fornirà l’accesso necessario per utilizzare l’SDK senza costi aggiuntivi.
 
 Se disponi già dell’accesso a Platform, devi assicurarti di disporre di tutte le [autorizzazioni](../access-control/home.md#permissions) nelle seguenti categorie abilitate:
 
@@ -49,7 +49,7 @@ Il processo di configurazione della raccolta dati per il sito web può essere ri
 
 Una volta che sei in grado di inviare dati alla rete Edge, puoi anche, facoltativamente [configurare l’inoltro degli eventi](#event-forwarding) se la tua organizzazione dispone di una licenza per questo prodotto.
 
-## Creare uno schema {#schema}
+## Crea uno schema {#schema}
 
 [Experience Data Model (XDM)](../xdm/home.md) è una specifica open-source che fornisce strutture e definizioni comuni per i dati sotto forma di schemi. In altre parole, XDM è un modo per strutturare e formattare i dati in modo utilizzabile dalla rete Edge e da altre applicazioni Adobe Experience Cloud.
 
@@ -250,7 +250,7 @@ Per informazioni su come creare una libreria, aggiungere estensioni e regole all
 
 Dopo aver creato la libreria e aver assegnato la relativa build a un ambiente, puoi installare tale ambiente sul lato client del sito web. Consulta la sezione su [installazione di ambienti](../tags/ui/publishing/environments.md#installation) per ulteriori informazioni.
 
-Dopo aver installato l’ambiente sul sito web, puoi [testare l’implementazione](../tags/ui/publishing/embed-code-testing.md) utilizzando Adobe Experience Platform Debugger.
+Dopo aver installato l’ambiente sul sito web, puoi [testare l’implementazione](../tags/ui/publishing/embed-code-testing.md) utilizzando Adobi Experience Platform Debugger.
 
 ## Configurare l’inoltro degli eventi (facoltativo) {#event-forwarding}
 

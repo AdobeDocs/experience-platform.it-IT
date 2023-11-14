@@ -5,7 +5,7 @@ exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,7 @@ Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla
 
 Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *Customer Success* categoria, seleziona **[!UICONTROL Zendesk]**, quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *Customer Success* categoria, seleziona **[!UICONTROL Zendesk]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![catalogo](../../../../images/tutorials/create/zendesk/catalog.png)
 
@@ -69,7 +69,7 @@ Se stai creando un nuovo account, seleziona **[!UICONTROL Nuovo account]** e qui
 
 ### Selezionare i dati
 
-Una volta autenticata l’origine, la pagina si aggiorna in una struttura ad albero interattiva dello schema che consente di esplorare e ispezionare la gerarchia dei dati. Seleziona **[!UICONTROL Successivo]** per procedere.
+Una volta autenticata l’origine, la pagina si aggiorna in una struttura ad albero interattiva dello schema che consente di esplorare e ispezionare la gerarchia dei dati. Seleziona **[!UICONTROL Avanti]** per procedere.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 

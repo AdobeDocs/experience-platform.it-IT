@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
-Experience Platform fornisce supporto per l’acquisizione di dati da un’applicazione di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Mixpanel].
+Experienci Platform fornisce supporto per l’acquisizione di dati da un’applicazione di analisi di terze parti. Il supporto per i provider di analisi include [!DNL Mixpanel].
 
 [[!DNL Mixpanel]](https://www.mixpanel.com) è uno strumento di analisi dei prodotti che consente di acquisire dati sul modo in cui gli utenti interagiscono con un prodotto digitale. Mixpanel consente di analizzare questi dati di prodotto con rapporti semplici e interattivi che consentono di eseguire query e visualizzare i dati con pochi clic.
 
-Le origini sfruttano [API di esportazione eventi Mixpanel > Scarica](https://developer.mixpanel.com/reference/raw-event-export) per scaricare i dati dell’evento così come vengono ricevuti e memorizzati in [!DNL Mixpanel], insieme a tutte le proprietà evento (tra cui `distinct_id`) e la marca temporale esatta in cui l&#39;evento è stato inviato all&#39;Experience Platform. Mixpanel utilizza token bearer come meccanismo di autenticazione per comunicare con l’API di esportazione degli eventi Mixpanel.
+Le origini sfruttano [API di esportazione eventi Mixpanel > Scarica](https://developer.mixpanel.com/reference/raw-event-export) per scaricare i dati dell’evento così come vengono ricevuti e memorizzati in [!DNL Mixpanel], insieme a tutte le proprietà evento (tra cui `distinct_id`) e la marca temporale esatta in cui l&#39;evento è stato inviato all&#39;Experienci Platform. Mixpanel utilizza token bearer come meccanismo di autenticazione per comunicare con l’API di esportazione degli eventi Mixpanel.
 
 ## ELENCO CONSENTITI di indirizzo IP
 

@@ -5,7 +5,7 @@ exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
 workflow-type: tm+mt
 source-wordcount: '1192'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ Questo tutorial descrive come impostare [!DNL Flow Service] allo stato di bozza 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ### Utilizzo delle API di Platform
 
@@ -951,4 +951,4 @@ In caso di esito positivo, la risposta restituisce l’ID e i corrispondenti `et
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai imparato a creare bozze delle tue [!DNL Flow Service] e pubblicare queste bozze. Per ulteriori informazioni sulle origini, leggere [panoramica sulle origini](../../home.md).
+Seguendo questa esercitazione, hai imparato a creare bozze delle tue [!DNL Flow Service] e pubblicare queste bozze. Per ulteriori informazioni sulle origini, consulta la [panoramica sulle origini](../../home.md).

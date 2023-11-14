@@ -73,7 +73,7 @@ Adobe Experience Platform fornisce un archivio di dati e gli strumenti necessari
 
 ## Passaggi successivi
 
-Una volta letto questo documento, sarai in grado di capire [!DNL Query Service] influisce non solo sulla qualità dei dati e sulla facilità di segmentazione, ma anche sulla sua importanza nell’architettura dei dati per l’intero flusso di lavoro end-to-end. Per esempi SQL più applicabili che utilizzano Adobe Analytics con [!DNL Query Service], vedere [Caso di utilizzo delle variabili di merchandising di Adobe Analytics](./merchandising-variables.md).
+Una volta letto questo documento, sarai in grado di capire [!DNL Query Service] influisce non solo sulla qualità dei dati e sulla facilità di segmentazione, ma anche sulla sua importanza all’interno dell’architettura dei dati per l’intero flusso di lavoro end-to-end. Per esempi SQL più applicabili che utilizzano Adobe Analytics con [!DNL Query Service], vedere [Caso di utilizzo delle variabili di merchandising di Adobe Analytics](./merchandising-variables.md).
 
 Altri documenti che dimostrano i vantaggi di [!DNL Query Service] per informazioni aziendali strategiche della tua organizzazione: [caso di utilizzo del filtro bot](./bot-filtering.md) esempio.
 

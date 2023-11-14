@@ -296,7 +296,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del segreto.
 }
 ```
 
-## Crea un segreto {#create}
+## Creare un segreto {#create}
 
 Per creare un segreto, devi eseguire una richiesta POST.
 
