@@ -60,7 +60,7 @@ Per avviare la sessione multimediale sul server, utilizzare l&#39;endpoint di in
 
 Prima di effettuare la richiesta di avvio della sessione, è necessario disporre dei seguenti elementi:
 
-* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
+* Il `datastreamId`- parametro obbligatorio per la richiesta di inizio sessione POST. Per recuperare un `datastreamId`, vedi [Configurare uno stream di dati](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=it).
 
 * Un oggetto JSON per il payload della richiesta che contiene i dati minimi richiesti (come mostrato nella richiesta di esempio seguente).
 
