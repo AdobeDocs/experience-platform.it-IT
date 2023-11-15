@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 | Guardrail | Limite | Note |
 | --- | --- | --- |
 | Numero di identità in un grafico | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità più vecchia per fare spazio all’identità più recente. L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
+| Numero di collegamenti a un’identità per un’acquisizione batch singola | 50 | Un singolo batch può contenere identità anomale che causano unioni di grafici indesiderate. Per evitare questo problema, il servizio Identity non acquisisce le identità già collegate a 50 o più identità. |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di caratteri per un nome visualizzato dello spazio dei nomi o un simbolo di identità | Nessuna | Non vi sono limiti al numero di caratteri di un nome visualizzato dello spazio dei nomi o di un simbolo di identità. |
@@ -42,7 +43,7 @@ La tabella seguente illustra le regole esistenti da seguire per garantire la cor
 
 | Namespace | Regola di convalida | Comportamento del sistema quando la regola viene violata |
 | --- | --- | --- |
-| ECID | <ul><li>Il valore identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore identità di un ECID deve essere costituito solo da numeri.</li></ul> | <ul><li>Se il valore identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità dell’ECID contiene caratteri non numerici, il record viene ignorato.</li></ul> |
+| ECID | <ul><li>Il valore identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore identità di un ECID deve essere costituito solo da numeri.</li><li>I valori di identità non possono essere &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; o essere una stringa vuota (ad esempio: &quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Se il valore identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità dell’ECID contiene caratteri non numerici, il record viene ignorato.</li><li>L’acquisizione dell’identità verrà bloccata.</li></ul> |
 | Non ECID | Il valore identità non può superare i 1024 caratteri. | Se il valore di identità supera i 1024 caratteri, il record viene ignorato. |
 
 ### Acquisizione dello spazio dei nomi dell’identità
@@ -114,6 +115,8 @@ Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di ge
 
 * [Configurare la mappa di identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Dati di identità in Experienci Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## Passaggi successivi
 
