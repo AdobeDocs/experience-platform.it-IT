@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione in streaming API HTTP utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra come creare una connessione in streaming utilizzando l’origine API HTTP per i dati grezzi e XDM mediante l’API del servizio Flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 3%
+source-wordcount: '1552'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +30,7 @@ Inoltre, la creazione di una connessione in streaming richiede uno schema XDM di
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Creare una connessione di base
+## Crea una connessione di base
 
 Una connessione di base specifica l’origine e contiene le informazioni necessarie per rendere il flusso compatibile con le API Streaming Ingestion. Quando si crea una connessione di base, è possibile creare una connessione non autenticata e autenticata.
 
@@ -108,7 +108,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | --- | --- |
 | `name` | Nome della connessione di base. Verificare che il nome sia descrittivo, in quanto è possibile utilizzarlo per cercare informazioni sulla connessione di base. |
 | `description` | (Facoltativo) Proprietà che è possibile includere per fornire ulteriori informazioni sulla connessione di base. |
-| `connectionSpec.id` | L’ID della specifica di connessione che corrisponde all’API HTTP. Questo ID è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
+| `connectionSpec.id` | ID della specifica di connessione che corrisponde all’API HTTP. Questo ID è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`. |
 | `auth.params.dataType` | Il tipo di dati per la connessione in streaming. I valori supportati includono: `xdm` e `raw`. |
 | `auth.params.name` | Nome della connessione in streaming che si desidera creare. |
 
@@ -459,9 +459,9 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 | Proprietà | Descrizione |
 | --- | --- |
 
-## Creare un flusso di dati
+## Crea un flusso di dati
 
-Dopo aver creato le connessioni di origine e di destinazione, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST al `/flows` endpoint.
+Una volta create le connessioni di origine e di destinazione, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST al `/flows` endpoint.
 
 **Formato API**
 
@@ -562,7 +562,6 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 }
 ```
 
-
 ## Pubblica i dati da acquisire in Platform {#ingest-data}
 
 Dopo aver creato il flusso, puoi inviare il messaggio JSON all’endpoint di streaming creato in precedenza.
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{INLET_URL}` | URL dell&#39;endpoint di streaming. Per recuperare l’URL, effettua una richiesta GET al `/connections` mentre fornisci l’ID connessione di base. |
+| `{FLOW_ID}` | ID del flusso di dati in streaming API HTTP. |
 
 **Richiesta**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Dati non elaborati]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
