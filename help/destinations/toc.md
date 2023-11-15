@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1204'
 ht-degree: 9%
 
 ---
@@ -90,6 +90,7 @@ ht-degree: 9%
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione per il tracciamento delle conversioni di pinterest](./catalog/advertising/pinterest-extension.md)
       * [Connessione a elenco clienti pinterest](./catalog/advertising/pinterest.md)
+      * [Aggiornamento della connessione pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Connessione Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [La connessione a Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Beta) La connessione CRM del Trade Desk](./catalog/advertising/tradedesk-emails.md)
