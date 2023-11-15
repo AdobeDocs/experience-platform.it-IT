@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ Per ulteriori informazioni sugli spazi dei nomi di identità in [!DNL Experience
 
 ## Invio di richieste {#submit}
 
-Le sezioni seguenti descrivono come effettuare richieste di accesso a dati personali per [!DNL Real-Time Customer Profile] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, è consigliabile rivedere [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione relativa ai passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità utente inviati nei payload di richiesta.
+Le sezioni seguenti descrivono come effettuare richieste di accesso a dati personali per [!DNL Real-Time Customer Profile] utilizzando [!DNL Privacy Service] API o interfaccia utente. Prima di leggere queste sezioni, è necessario rivedere o essere a conoscenza di [API PRIVACY SERVICE](../privacy-service/api/getting-started.md) o [Interfaccia utente di Privacy Service](../privacy-service/ui/overview.md) documentazione. Questi documenti forniscono i passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità utente inviati nei payload di richiesta.
 
 >[!IMPORTANT]
 >
 >Privacy Service è in grado di elaborare solo [!DNL Profile] dati utilizzando un criterio di unione che non esegue l’unione di identità. Consulta la sezione su [limitazioni dei criteri di unione](#merge-policy-limitations) per ulteriori informazioni.
 >
->Tieni presente che il tempo necessario per completare una richiesta di accesso a dati personali **non può** essere garantita. Se si verificano modifiche nel [!DNL Profile] durante l’elaborazione di una richiesta, non è possibile garantire anche se tali record vengono elaborati o meno.
+>Tieni presente che le richieste di accesso a dati personali vengono elaborate in modo asincrono in conformità ai requisiti normativi e che il tempo necessario per completarle può variare. Se si verificano modifiche nel [!DNL Profile] mentre una richiesta è ancora in elaborazione, non è garantito che anche tali record in ingresso vengano elaborati in tale richiesta. Solo i profili presenti nel data lake o nell’archivio profili al momento della richiesta del processo di privacy possono essere eliminati. Se acquisisci i dati del profilo relativi all’oggetto di una richiesta di eliminazione durante il processo di eliminazione, non è garantita l’eliminazione di tutti i frammenti di profilo.
+>È tua responsabilità essere a conoscenza di eventuali dati in arrivo in Platform o nel servizio profili al momento di una richiesta di cancellazione, in quanto tali dati verranno inseriti negli archivi record. Devi essere prudente nell’acquisire i dati che sono stati eliminati o che sono in corso di eliminazione.
 
 ### Mediante l’API
 
