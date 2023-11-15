@@ -1,11 +1,11 @@
 ---
 title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti
-description: Scopri come coinvolgere e acquisire nuovi clienti attraverso la ricerca di casi d’uso, senza affidarsi a cookie di terze parti.
+description: Scopri come coinvolgere e acquisire nuovi clienti attraverso possibili casi d’uso, senza affidarti a cookie di terze parti.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
 source-wordcount: '2077'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 

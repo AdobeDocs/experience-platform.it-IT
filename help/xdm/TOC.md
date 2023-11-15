@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Experience Data Model (XDM)
-user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experienci Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
+user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 18%
+ht-degree: 23%
 
 ---
 

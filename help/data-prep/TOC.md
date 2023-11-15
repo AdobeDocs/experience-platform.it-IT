@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guida alla preparazione dei dati
-user-guide-description: Prepara i dati per l’acquisizione in Adobe Experience Platform e scopri come la preparazione dati può aiutarti a mappare, trasformare e convalidare i dati.
+user-guide-description: Prepara i dati per l’acquisizione in Adobe Experience Platform e scopri come la preparazione dati può aiutarti a mapparli, trasformarli e convalidarli.
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 29%
+ht-degree: 65%
 
 ---
 
