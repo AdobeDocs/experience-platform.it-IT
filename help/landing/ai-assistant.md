@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -63,19 +63,19 @@ Seleziona la **[!UICONTROL Icona Assistente]** dall’intestazione al pannello A
 
 ![La home page dell’interfaccia utente di Experience Platform con l’icona Assistente selezionata.](./images/ai-assistant/ai-assistant.png)
 
-+++Usa modalità immersiva
+<!-- +++Use immersive mode
 
-Da utilizzare [!DNL Immersive mode] selezionare l&#39;icona stato attivo nella navigazione dell&#39;intestazione dell&#39;Assistente.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
-![coinvolgente](./images/ai-assistant/select-immersive.png)
+![select-immersive](./images/ai-assistant/select-immersive.png)
 
-Al centro dello schermo viene visualizzata un&#39;interfaccia popup dedicata per l&#39;Assistente.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
-![modalità immersiva](./images/ai-assistant/immersive-mode.png)
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-Da qui è possibile inserire la domanda nella casella di testo e interrogare l&#39;Assistente per i concetti relativi ai dati o ai tipi di pubblico. Puoi anche porre domande sugli oggetti dati per capire meglio come utilizzarli nel rispettivo caso d’uso.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema
 
@@ -97,25 +97,45 @@ Una determinata risposta fornisce collegamenti ipertestuali a qualsiasi entità 
 
 Assistente consente di convalidare la risposta visualizzandone l&#39;origine. Vengono forniti collegamenti alla documentazione per le domande sui concetti, mentre le domande sull’utilizzo dei dati possono essere verificate con una query SQL che illustra come è stata calcolata la risposta.
 
-![Opzioni fornite dall&#39;Assistente dopo la restituzione di una risposta.](./images/ai-assistant/options-post-answer.png)
-
-#### Suggerimenti correlati
-
-Puoi anche approfondire l’argomento della query selezionando uno dei suggerimenti correlati forniti da Assistant.
-
-![Suggerimenti correlati](./images/ai-assistant/related-suggestions.png)
+![Opzioni fornite dall&#39;Assistente dopo la restituzione di una risposta.](./images/ai-assistant/options.png)
 
 #### Domande di follow-up
 
++++Selezionare questa opzione per visualizzare un esempio di una domanda di completamento
+
 Per saperne di più su un particolare argomento, fai una domanda di follow-up. Nell’esempio successivo, all’Assistente viene chiesto come può essere utilizzato eventType nella segmentazione.
 
-![Una domanda e una risposta di follow-up visualizzate sull&#39;Assistente, ad Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![Una domanda e una risposta di follow-up visualizzate sull&#39;Assistente, ad Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Domanda di utilizzo dati
 
++++Selezionare questa opzione per visualizzare un esempio di una domanda di utilizzo dei dati
+
 Puoi anche porre all’Assistente domande relative all’utilizzo dei tuoi dati. Quando si richiedono informazioni sull&#39;utilizzo dei dati, è necessario trovarsi in una sandbox attiva affinché l&#39;Assistente possa rispondere alla query.
 
+Per le risposte che includono informazioni sull&#39;utilizzo dei dati, l&#39;Assistente fornisce collegamenti alle entità in questione. Inoltre, l&#39;Assistente fornisce una spiegazione su come ha calcolato la risposta.
+
 ![Una domanda sull’utilizzo dei dati, che chiede quanti segmenti ha un utente.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Usa completamento automatico
+
++++Selezionare per visualizzare un esempio di completamento automatico
+
+È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. Sono disponibili consigli di completamento automatico per i seguenti domini: segmenti, schemi, set di dati, origini e destinazioni.
+
+Per utilizzare il completamento automatico, immettere un simbolo più (**`+`**) come parte della domanda. In alternativa, è possibile selezionare il simbolo più (**`+`**) nella casella di immissione testo. Viene quindi visualizzata una finestra con un elenco degli oggetti dati consigliati presenti nella sandbox.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Quindi, selezionare l&#39;oggetto dati di cui si desidera eseguire la query per completare la domanda e inviare la domanda.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Portata
 
@@ -168,13 +188,9 @@ Dovrai accedere a una sandbox per informazioni su dati specifici relativi a ogge
 
 Con ogni risposta, l&#39;Assistente fornisce le citazioni a cui è possibile fare riferimento per la verifica o per ulteriori informazioni.
 
-Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla documentazione a cui l’Assistente fa riferimento per calcolare la risposta.
+Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla documentazione a cui l’Assistente fa riferimento per calcolare la risposta. Quando selezioni un collegamento alla documentazione a cui si fa riferimento, si passa alla sezione pertinente di quella particolare pagina, con le informazioni specifiche evidenziate.
 
-![Collegamenti all&#39;origine visualizzati nell&#39;Assistente.](./images/ai-assistant/sources.png)
-
-Per le risposte che includono informazioni sull&#39;utilizzo dei dati, l&#39;Assistente fornisce collegamenti alle entità in questione. Inoltre, l&#39;Assistente fornisce una spiegazione su come ha calcolato la risposta.
-
-![spiegazione](./images/ai-assistant/explanation.png)
+![Collegamenti all&#39;origine visualizzati nell&#39;Assistente.](./images/ai-assistant/show-sources.png)
 
 ## Fornire feedback
 
@@ -208,7 +224,7 @@ Seleziona l’icona miniature in basso per fornire feedback su cosa potrebbe ess
 
 Seleziona l’icona del flag per fornire ulteriori rapporti sulla tua esperienza utilizzando l’Assistente.
 
-![Finestra dei risultati del rapporto.](./images/ai-assistant/report-results.png)
+![Finestra dei risultati del rapporto.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
