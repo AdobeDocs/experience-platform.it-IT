@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 4%
 
 ---
@@ -264,6 +264,10 @@ Puoi selezionare su un singolo **[!UICONTROL ID batch]** per accedere a **[!UICO
 ![Vengono visualizzati i dettagli del batch selezionato. Ciò include il numero di record acquisiti, il numero di record non riusciti, lo stato del batch, la dimensione del file, l’ora di inizio e di fine dell’acquisizione, il set di dati e gli ID batch, l’ID organizzazione, il nome del set di dati e le informazioni di accesso.](../images/datasets/user-guide/batch-overview.png)
 
 Se desideri eliminare il batch, seleziona **[!UICONTROL Elimina batch]** in alto a destra nel dashboard. L’eliminazione di un batch rimuove anche i relativi record dal set di dati in cui è stato originariamente acquisito il batch.
+
+>[!NOTE]
+>
+>Se i dati acquisiti sono stati abilitati per il profilo ed elaborati, l’eliminazione di un batch non comporta l’eliminazione di tali dati dall’archivio profili.
 
 ![Il pulsante Elimina batch è evidenziato nella pagina dei dettagli del set di dati.](../images/datasets/user-guide/delete-batch.png)
 
