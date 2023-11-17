@@ -1,9 +1,9 @@
 ---
 title: Gestire gli eventi di visualizzazione in Web SDK
-description: Questo articolo cosa sono gli eventi di visualizzazione e come funzionano in Web SDK.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: Questo articolo spiega cosa sono gli eventi di visualizzazione e come utilizzarli in Web SDK.
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
