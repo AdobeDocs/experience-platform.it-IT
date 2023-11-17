@@ -2,14 +2,19 @@
 title: Connessione a elenco clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '844'
 ht-degree: 3%
 
 ---
 
 # Connessione [!DNL Pinterest Customer List]
+
+>[!IMPORTANT]
+>
+>* A partire dal 16 novembre 2023, puoi visualizzare due schede Pinterest affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento dell’API dell’inserzionista Pinterest utilizzata per esportare i dati in Pinterest. Il connettore di destinazione Pinterest esistente è stato rinominato in **[!UICONTROL (Obsoleto) Pinterest]** e una nuova scheda **[!UICONTROL (Nuovo) Pinterest]** è ora disponibile per te.
+>* Utilizza il **[!UICONTROL (Nuovo) Pinterest]** connessione nel catalogo per qualsiasi campagna a Pinterest. Se disponi di flussi di dati attivi per **[!UICONTROL (Obsoleto) Pinterest]** destinazione, leggi [documentazione di aggiornamento](/help/destinations/catalog/advertising/pinterest-upgrade.md) per comprendere le azioni da eseguire in modo da evitare interruzioni delle campagne.
 
 ## Panoramica {#overview}
 
@@ -71,7 +76,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
-* **[!UICONTROL ID inserzionista]**: ID dell’inserzionista Pinterest.
+* **[!UICONTROL ID account annuncio]**: ID dell’inserzionista Pinterest.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -95,3 +100,15 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 ## Risorse aggiuntive {#additional-resources}
 
 Consulta la sezione [Pagina del Centro assistenza pinterest](https://help.pinterest.com/en/business/article/audience-targeting) per ulteriori informazioni.
+
++++ Visualizza changelog
+
+
+| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+|---|---|---|
+| Novembre 2023 | Aggiornamento della funzionalità e della documentazione | La destinazione Pinterest in Real-Time CDP ora utilizza l’API dell’inserzionista v5. |
+
+{style="table-layout:auto"}
+
+
++++
