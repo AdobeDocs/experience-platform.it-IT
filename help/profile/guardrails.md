@@ -1,18 +1,18 @@
 ---
-title: Guardrail predefiniti per dati Real-Time Customer Profile
+title: Guardrail predefiniti per dati e segmentazione del profilo cliente in tempo reale
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. In questo documento trovi informazioni sui limiti predefiniti di utilizzo e tasso, che ti aiuteranno a modellare i dati profilo in modo da ottenere prestazioni di sistema ottimali.
+description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione per garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2202'
+ht-degree: 2%
 
 ---
 
-# Guardrail predefiniti per [!DNL Real-Time Customer Profile] dati
+# Guardrail predefiniti per [!DNL Real-Time Customer Profile] dati e segmentazione
 
 Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
 
@@ -108,16 +108,17 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 {style="table-layout:auto"}
 
-## Guardrail di segmentazione
+## Guardrail di segmentazione {#segmentation-guardrails}
 
 I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in totale, purché ci siano meno di 4000 tipi di pubblico in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. |
-| Pubblico Edge per sandbox | 150 | Guardrail delle prestazioni | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. |
-| Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Un’organizzazione può avere più di 500 pubblici di streaming in totale, purché ci siano meno di 500 pubblici di streaming in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. |
+| Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in totale, purché ci siano meno di 4000 tipi di pubblico in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni su [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il generatore di segmenti. |
+| Pubblico Edge per sandbox | 150 | Guardrail delle prestazioni | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
+| Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Un’organizzazione può avere più di 500 pubblici di streaming in totale, purché ci siano meno di 500 pubblici di streaming in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
 | Pubblico in batch per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in batch in totale, purché ci siano meno di 4000 tipi di pubblico in batch in ogni singola sandbox. Il tentativo di creare un pubblico batch aggiuntivo può influire sulle prestazioni del sistema. |
+| Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Non puoi creare più di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il **[!UICONTROL Creare un pubblico]** Il controllo è disattivato quando si tenta di creare un nuovo pubblico di account. Ulteriori informazioni su [pubblico dell’account](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 

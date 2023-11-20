@@ -4,10 +4,10 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
-source-git-commit: dd6cb79431ed6c0bb2326e60f1de3a6a4e435ed6
+source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 37%
+source-wordcount: '191'
+ht-degree: 36%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 37%
 
 - [Panoramica del servizio di segmentazione](home.md)
 - [Tipi di dati di segmentazione](data-types.md)
+- [Guardrail di segmentazione](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API di segmentazione {#api}
    - [Panoramica](api/overview.md)
    - [Introduzione](api/getting-started.md)
