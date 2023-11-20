@@ -3,14 +3,18 @@ title: Migrazione della destinazione pinterest alla nuova API. Azione del client
 description: Pinterest sta rendendo obsoleta l’API dell’inserzionista v4 attualmente utilizzata dalla destinazione Pinterest in Real-Time CDP. Comprendi le azioni da eseguire per passare facilmente alla nuova API senza interrompere le campagne Pinterest.
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # Aggiornamento della destinazione pinterest alla nuova API. Azione cliente richiesta entro il 15 dicembre 2023
+
+>[!IMPORTANT]
+>
+>Le voci di azione cliente in questa pagina sono applicabili se l’organizzazione ha impostato flussi di dati per esportare dati in Pinterest prima del 16 novembre 2023, data in cui **[!UICONTROL (Nuovo) Pinterest]** La destinazione, utilizzando l’API Pinterest più recente, è stata aggiunta al catalogo delle destinazioni.
 
 ## Cosa succede?
 
@@ -26,7 +30,7 @@ Adobe sta rilasciando una nuova scheda di destinazione Pinterest che sfrutta l�
 
 ## Devo fare qualcosa per mantenere attivi i tipi di pubblico?
 
-Sì, una volta che Adobe completa l’aggiornamento e rilascia la nuova destinazione Pinterest, è necessario autenticare nuovamente in Pinterest con l’account dell’inserzionista Pinterest in Real-Time CDP. Consulta le istruzioni dettagliate di seguito.
+Sì, dopo il 16 novembre 2023, devi eseguire l’autenticazione nella nuova destinazione Pinterest con l’account dell’inserzionista Pinterest in Real-Time CDP. Consulta le istruzioni dettagliate di seguito.
 
 ### Autentica di nuovo in Pinterest {#reauthenticate}
 
