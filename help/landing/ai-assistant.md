@@ -5,7 +5,7 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema
+### Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Assistente consente di convalidare la risposta visualizzandone l&#39;origine. Ve
 
 ![Opzioni fornite dall&#39;Assistente dopo la restituzione di una risposta.](./images/ai-assistant/options.png)
 
-#### Domande di follow-up
+### Domande di follow-up {#follow-up-question}
 
 +++Selezionare questa opzione per visualizzare un esempio di una domanda di completamento
 
@@ -109,7 +109,7 @@ Per saperne di più su un particolare argomento, fai una domanda di follow-up. N
 
 +++
 
-#### Domanda di utilizzo dati
+### Domanda di utilizzo dati {#data-usage-question}
 
 +++Selezionare questa opzione per visualizzare un esempio di una domanda di utilizzo dei dati
 
@@ -121,7 +121,7 @@ Per le risposte che includono informazioni sull&#39;utilizzo dei dati, l&#39;Ass
 
 +++
 
-#### Multi-turn
+### Multi-turn {#multi-turn}
 
 +++Selezionare per visualizzare un esempio di tornitura multipla
 
@@ -137,7 +137,7 @@ Successivamente, l&#39;Assistente riceve un&#39;altra richiesta di completamento
 
 +++
 
-#### Usa completamento automatico
+### Usa completamento automatico {#use-auto-complete}
 
 +++Selezionare per visualizzare un esempio di completamento automatico
 
@@ -153,7 +153,7 @@ Quindi, selezionare l&#39;oggetto dati di cui si desidera eseguire la query per 
 
 +++
 
-## Portata
+## Portata {#scope}
 
 L’Assistente può rispondere a domande relative ai concetti di Real-Time CDP e Experienci Platform, nonché all’utilizzo di dati specifici per il tuo account utente. L’Assistente può anche dedurre il contesto in base alla pagina dell’interfaccia utente in cui ti trovi. È in grado di identificare:
 
@@ -163,13 +163,13 @@ L’Assistente può rispondere a domande relative ai concetti di Real-Time CDP e
 * La risorsa (inclusi tipo e ID) che stai visualizzando sullo schermo.
 * Se si sta eseguendo un particolare Experience Platform o flusso di lavoro Real-Time CDP, l&#39;Assistente può dedurre l&#39;intento.
 
-### Documentazione
+### Documentazione {#documentation}
 
 Attualmente, l’indice della documentazione copre Adobe Experience Platform (Real-Time CDP e Audiences). L’indice viene aggiornato periodicamente.
 
 Il modello di recupero della documentazione di è addestrato su Experienci Platform (Real-Time CDP e Audiences). Non è possibile rispondere a domande che esulano dall’ambito di Adobe Experience Platform, come ad esempio domande su altri prodotti Adobe come Adobe Target e la suite di Creative Cloud.
 
-### Utilizzo dati
+### Utilizzo dati {#data-usage}
 
 Puoi anche porre domande sull’utilizzo dei dati da parte dell’Assistente nei seguenti domini:
 
@@ -184,7 +184,7 @@ Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato
 
 Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come schemi, set di dati, attributi, destinazioni e segmenti.
 
-### Esempi di domande sull’utilizzo dei dati
+### Esempi di domande sull’utilizzo dei dati {#example-data-usage-questions}
 
 +++Seleziona per visualizzare un elenco di esempi di domande sull’utilizzo dei dati
 
@@ -196,11 +196,11 @@ Dovrai accedere a una sandbox per informazioni su dati specifici relativi a ogge
 
 +++
 
-## Verifica la risposta
+## Verifica la risposta {#verify-the-response}
 
 È possibile verificare la risposta restituita dall&#39;Assistente in diversi modi.
 
-### Citazioni per la documentazione
+### Citazioni per la documentazione {#citations}
 
 Con ogni risposta, l&#39;Assistente fornisce le citazioni a cui è possibile fare riferimento per la verifica o per ulteriori informazioni.
 
@@ -208,7 +208,7 @@ Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla doc
 
 ![Collegamenti all&#39;origine visualizzati nell&#39;Assistente.](./images/ai-assistant/show-sources.png)
 
-## Fornire feedback
+## Fornire feedback {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ Seleziona l’icona del flag per fornire ulteriori rapporti sulla tua esperienza
 
 +++
 
-## Informazioni aggiuntive
+## Informazioni aggiuntive {#additional-information}
 
 Fare riferimento a questa sezione per ulteriori informazioni sull&#39;Assistente, ad Experience Platform.
 
-### Avvertenze e limitazioni
+### Avvertenze e limitazioni {#caveats-and-limitations}
 
 La sezione seguente illustra le avvertenze e le limitazioni correnti da considerare quando si utilizza l’Assistente.
 <!-- 
@@ -318,7 +318,7 @@ L&#39;Assistente può dare un&#39;impressione imprecisa di ciò che può fare. P
 | &quot;Lo sai che **x** lingua?&quot; | L&#39;Assistente attualmente supporta solo l&#39;inglese, ma potrebbe rispondere &quot;sì&quot; a causa del modello sottostante in grado di supportarlo. |
 | &quot;Puoi fare...?&quot; | L&#39;Assistente può rispondere di sì, anche se non può. |
 
-### Suggerimenti
+### Suggerimenti {#tips}
 
 La sezione seguente illustra alcuni suggerimenti e soluzioni da prendere in considerazione quando si utilizza l&#39;Assistente.
 
