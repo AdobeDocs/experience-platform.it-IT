@@ -1,11 +1,13 @@
 ---
 title: Account correlati in Real-Time CDP B2B Edition
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione account correlati in Experience Platform Real-Time CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione account correlati in Experienci Platform Real-Time CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '441'
 ht-degree: 5%
 
 ---
@@ -18,19 +20,19 @@ Le aziende B2B spesso dispongono di informazioni sui propri clienti archiviate i
 
 | ID | Nome | Sito web | Settore | Stato | Telefono | Ha un&#39;opportunità aperta con importo > `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | Software | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | Software | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Software | CA | 4085366000 | x |
-| 3 | Acme Inc. |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc. |   |   | CA | (408)5366000 |   |
 | 4 | Servizio di consulenza Acme | `http://www.acme.com/consulting` | Consulenza tecnologica | NY | (212)471-0904 | x |
-| 5 | Acme IT |  |  | CA |  |  |
+| 5 | Acme IT |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 
 Con account correlati, [!DNL Real-Time CDP B2B] ora mostra un elenco di account simili a quelli che stai esplorando.
 
-![Schermata che mostra gli account correlati nell’interfaccia utente di Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![Schermata che mostra gli account correlati nell’interfaccia utente di Experienci Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Utilizza questa funzione per visualizzare i profili account correlati per un profilo account nell’interfaccia utente di Experience Platform e quindi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi ai segmenti.
+Utilizza questa funzione per visualizzare i profili account correlati per un profilo account nell’interfaccia utente di Experienci Platform e quindi includere gli account correlati nelle definizioni dei segmenti per ampliare la portata o applicare criteri più ampi ai segmenti.
 
 ## Abilita il servizio account correlati {#enable}
 
@@ -56,7 +58,7 @@ Consulta la documentazione per ulteriori informazioni su [processi account corre
 
 ## Come visualizzare gli account correlati {#how-to-view}
 
-Puoi visualizzare gli account correlati per un account che stai esplorando nell’interfaccia utente di Experience Platform.
+Puoi visualizzare gli account correlati per un account che stai esplorando nell’interfaccia utente di Experienci Platform.
 
 Consulta la documentazione per ulteriori informazioni su [come trovare account correlati nell’interfaccia utente](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 

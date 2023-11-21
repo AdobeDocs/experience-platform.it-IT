@@ -3,10 +3,12 @@ keywords: RTCDP;CDP;Edizione B2B;Real-time Customer Data Platform;real time cust
 solution: Experience Platform
 title: Guida introduttiva all’edizione B2B di Real-time Customer Data Platform
 description: Utilizza questo scenario di esempio per configurare l’implementazione di Adobe Real-time Customer Data Platform B2B Edition.
+feature: Get Started, B2B
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
@@ -54,7 +56,7 @@ Real-Time Customer Profile unisce dati provenienti da origini diverse per creare
 >
 >![visualizzazione dell’interfaccia utente predefinita per identità schema e relazioni](./assets/b2b-tutorial/schema-identity-relationship.png)
 
-## Inserire i dati in Experience Platform
+## Inserire i dati in Experienci Platform
 
 Successivamente, l’addetto al marketing di Bodea utilizza [Connettore Marketo Engage](../sources/connectors/adobe-applications/marketo/marketo.md) acquisire i dati in Platform per l’utilizzo nei servizi a valle. È inoltre possibile acquisire i dati utilizzando una delle origini approvate per Real-Time CDP B2B Edition.
 
@@ -72,7 +74,7 @@ Il connettore di origine del Marketo Engage fornisce una funzione di mappatura a
 > 
 >Se hai creato gruppi di campi personalizzati negli schemi XDM, è possibile che in questa fase del processo siano presenti campi non collegati. Verifica tutti i valori che popolano i gruppi di campi personalizzati.
 
-L’addetto al marketing di Bodea controlla che tutti i gruppi di campi siano mappati in modo appropriato e continua il processo di configurazione delle origini inizializzando un flusso di dati. Creando un flusso di dati per inserire dati Marketo, i dati in arrivo possono essere utilizzati dai servizi Platform a valle. Durante il processo di acquisizione iniziale, i dati vengono inseriti in Experience Platform come batch. Successivamente, i dati acquisiti successivi vengono quindi inviati in streaming al profilo con aggiornamenti in tempo quasi reale.
+L’addetto al marketing di Bodea controlla che tutti i gruppi di campi siano mappati in modo appropriato e continua il processo di configurazione delle origini inizializzando un flusso di dati. Creando un flusso di dati per inserire dati Marketo, i dati in arrivo possono essere utilizzati dai servizi Platform a valle. Durante il processo di acquisizione iniziale, i dati vengono inseriti in Experienci Platform come batch. Successivamente, i dati acquisiti successivi vengono quindi inviati in streaming al profilo con aggiornamenti in tempo quasi reale.
 
 ## Creare un segmento per valutare i dati
 

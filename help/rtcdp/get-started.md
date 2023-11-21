@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Guida introduttiva a Real-time Customer Data Platform
 description: Utilizza questo scenario di esempio per la configurazione dell’implementazione di Adobe Real-time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '2333'
 ht-degree: 2%
@@ -259,7 +260,7 @@ Puoi anche pianificare l’inizio o la fine del segmento in un determinato momen
 
 Seleziona **[!UICONTROL Salva]** per passare alla pagina successiva.
 
-Quando un cliente in questo pubblico effettua un acquisto, la sua iscrizione a questo pubblico viene eliminata in tempo reale. Non sono più idonei perché il loro stato è cambiato.
+Quando un cliente in questo pubblico effettua un acquisto, la sua iscrizione a questo pubblico viene eliminata in tempo reale. Non si qualificano più perché il loro stato è cambiato.
 
 In questo modo il direttore del team multimediale Luma risparmia centinaia di migliaia di dollari non utilizzando l’inventario per un pubblico non qualificato.
 

@@ -1,8 +1,9 @@
 ---
 title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
+feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 79%

@@ -1,11 +1,13 @@
 ---
 title: Punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
-description: Panoramica e ulteriori informazioni sulla funzione di punteggio predittivo di lead e account in Experience Platform CDP B2B.
+description: Panoramica e ulteriori informazioni sulla funzione di punteggio predittivo di lead e account in Experienci Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '869'
 ht-degree: 2%
 
 ---
@@ -14,7 +16,7 @@ ht-degree: 2%
 
 Gli esperti di marketing B2B si trovano ad affrontare diverse sfide nella parte superiore del funnel di marketing. Per essere efficaci, gli esperti di marketing B2B hanno bisogno di un modo automatizzato per qualificare un numero elevato di persone in modo che possano concentrarsi sui target di alto valore. La qualifica deve essere allineata con il risultato finale delle vendite, non solo con la conversione marketing.
 
-I conti sono le entità finali che acquistano prodotti e servizi B2B. Per commercializzare e vendere in modo efficace, gli addetti al marketing B2B devono conoscere non solo la probabilità di acquistare dell’individuo, ma anche quella dell’account.
+I conti sono le entità finali che acquistano prodotti e servizi B2B. Per commercializzare e vendere in modo efficace, gli esperti di marketing B2B devono conoscere non solo la probabilità di acquistare dell’individuo, ma anche quella dell’account.
 
 Il marketing basato sull’account, in particolare, definisce gli account come obiettivi di marketing. I punteggi relativi alla propensione all’acquisto dell’account aiutano notevolmente gli esperti di marketing B2B a stabilire la priorità tra gli account in modo da massimizzare il ritorno sull’investimento.
 

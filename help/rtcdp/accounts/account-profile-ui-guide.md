@@ -2,10 +2,12 @@
 keywords: profilo rtcdp;profili rtcdp;rtcdp identità;criteri di unione rtcdp;real-time customer profile
 title: Guida dell’interfaccia utente del profilo account
 description: Tramite l’utilizzo dei profili di account, Adobe Real-time Customer Data Platform B2B Edition consente di unificare le informazioni sull’account da più origini. Questa guida fornisce dettagli per interagire con i profili dell’account nell’interfaccia utente di Adobe Experience Platform.
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
@@ -88,7 +90,7 @@ Dopo aver selezionato un&#39;origine, è necessario immettere un **[!UICONTROL I
 
 Real-Time CDP, B2B Edition consente di eseguire una ricerca diretta consentendo l&#39;immissione di **[!UICONTROL Nome origine]**, **[!UICONTROL Istanza sorgente]**, e **[!UICONTROL ID account]** per un account che desideri visualizzare. Immettendo direttamente il nome e l’istanza di origine, è possibile fornire il contesto necessario, ad Experience Platform per cercare e visualizzare i dati corretti del profilo dell’account.
 
-La capacità di eseguire una ricerca diretta è utile in circostanze in cui non è possibile una connessione sorgente diretta ai dati. Ad esempio, se nell’organizzazione sono in vigore criteri di governance dei dati che impediscono la connessione diretta a un sistema di gestione delle relazioni con i clienti, puoi esportare i dati in un sistema di archiviazione cloud e quindi acquisirli in Experience Platform.
+La capacità di eseguire una ricerca diretta è utile in circostanze in cui non è possibile una connessione sorgente diretta ai dati. Ad esempio, se nell’organizzazione sono in vigore criteri di governance dei dati che impediscono la connessione diretta a un sistema di gestione delle relazioni con i clienti, puoi esportare i dati in un sistema di archiviazione cloud e quindi acquisirli in Experienci Platform.
 
 Un altro esempio potrebbe essere che stai eseguendo una trasformazione sui dati tra il momento in cui esce da un sistema ed entra in Platform. Puoi utilizzare la funzionalità di ricerca diretta per fornire contesto per i dati (ad esempio per specificare che si tratta di dati di Marketo, nonostante il fatto che provengano da un bucket Amazon S3, ad esempio) in modo che il sistema sappia dove cercare i dati e come eseguirne correttamente il rendering.
 
@@ -132,7 +134,7 @@ Oltre a mostrare un&#39;istantanea delle informazioni per il contatto, ogni pers
 
 ## Scheda Opportunità {#opportunities-tab}
 
-Il **[!UICONTROL Opportunità]** fornisce informazioni per le opportunità aperte e chiuse relative all’account. Queste opportunità possono essere acquisite in Experience Platform da più origini, tuttavia Real-Time CDP, B2B Edition consente agli esperti di marketing di vedere tutte queste opportunità insieme in un’unica posizione.
+Il **[!UICONTROL Opportunità]** fornisce informazioni per le opportunità aperte e chiuse relative all’account. Queste opportunità possono essere acquisite in Experienci Platform da più origini, tuttavia Real-Time CDP, B2B Edition consente agli esperti di marketing di vedere tutte queste opportunità insieme in un’unica posizione.
 
 >[!NOTE]
 >
@@ -150,7 +152,6 @@ Il **[!UICONTROL Account correlati]** Questa scheda fornisce informazioni su alt
 >
 >* Un gruppo di account correlati può avere un massimo di 30 profili di account. Se sono stati trovati più di 30 profili di account correlati, questi vengono arbitrariamente suddivisi in più gruppi, ciascuno dei quali non ha più di 30 membri. Il gruppo Account correlati di un profilo di account include sempre se stesso.
 >* Il [!UICONTROL Account correlati] La scheda visualizza attualmente un elenco di un massimo di 25 account correlati associati all’account che stai esplorando. Si tratta di una limitazione che sarà affrontata in un aggiornamento futuro. Nonostante questo limite dell’interfaccia utente, quando utilizzi account correlati nelle definizioni dei segmenti, per gruppi di 30 profili di account correlati tutti i profili vengono utilizzati per il targeting.
-
 
 Ogni account correlato include informazioni quali l’ID e il nome del profilo dell’account, la chiave di origine dell’account e ulteriori informazioni relative a home page, indirizzo, account principale, telefono, settore e ricavi annuali.
 

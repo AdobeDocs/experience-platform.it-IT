@@ -2,10 +2,12 @@
 title: Lead per la corrispondenza dell’account in Real-Time CDP B2B
 type: Documentation
 description: Panoramica e ulteriori informazioni sulla funzione di corrispondenza lead-account in Experienci Platform CDP B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '626'
 ht-degree: 3%
 
 ---

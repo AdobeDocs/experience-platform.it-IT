@@ -2,8 +2,9 @@
 keywords: governance dei dati rtcdp;rtcdp governance dei dati;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy in Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform consente di semplificare il processo di conformità delle operazioni sui dati alle normative sulla privacy.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -34,7 +35,7 @@ Vedi il documento su [rispetto delle richieste di rinuncia](../../segmentation/c
 
 [!DNL Real-Time CDP] è basato su Adobe Experience Platform, che fa parte di [elenco fornitori](https://iabeurope.eu/vendor-list-tcf-v2-0/) per [!DNL Transparency & Consent Framework (TCF)], come indicato dalla [!DNL Interactive Advertising Bureau (IAB)]. In conformità ai requisiti TCF 2.0, Platform consente di raccogliere dati dettagliati sul consenso del cliente e di integrarli nei profili cliente memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per determinare se alcuni profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso d’uso.
 
-Consulta la panoramica su [Supporto IAB TCF 2.0 in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) per ulteriori informazioni.
+Consulta la panoramica su [Supporto IAB TCF 2.0 in Experienci Platform](../../landing/governance-privacy-security/consent/iab/overview.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 

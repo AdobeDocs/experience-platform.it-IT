@@ -3,10 +3,12 @@ keywords: profilo;real-time customer profile;risoluzione dei problemi;guardrail;
 title: Guardrail predefiniti per Real-time Customer Data Platform B2B Edition
 type: Documentation
 description: Adobe Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali. Questo documento fornisce limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per prestazioni di sistema ottimali utilizzando Adobe Real-time Customer Data Platform B2B Edition.
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1662'
 ht-degree: 2%
 
 ---
@@ -17,7 +19,7 @@ ht-degree: 2%
 >
 >I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
-Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experience Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
 
 Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
@@ -49,7 +51,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Morbido | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [schemi nella documentazione di Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experience Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.* |
+| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Morbido | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [schemi nella documentazione di Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experienci Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.* |
 | Relazioni legacy tra più entità | 20 | Morbido | Si consiglia di definire un massimo di 20 relazioni tra più entità tra entità principali ed entità dimensione. Non è consigliabile eseguire mapping di relazioni aggiuntivi finché non viene rimossa o disabilitata una relazione esistente. |
 | Relazioni molti-a-uno per classe XDM | 2 | Morbido | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 
@@ -97,7 +99,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 ## Guardrail di segmentazione
 
-I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei segmenti che un’organizzazione può creare in Experience Platform, nonché alla mappatura e all’attivazione dei segmenti nelle destinazioni.
+I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei segmenti che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei segmenti nelle destinazioni.
 
 >[!NOTE]
 >

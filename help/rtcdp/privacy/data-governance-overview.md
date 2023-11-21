@@ -2,8 +2,9 @@
 keywords: governance dei dati rtcdp;rtcdp governance dei dati;governance dei dati dei clienti in tempo reale
 title: Panoramica sulla governance dei dati
 description: La governance dei dati consente di gestire i dati dei clienti e garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati.
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 3%

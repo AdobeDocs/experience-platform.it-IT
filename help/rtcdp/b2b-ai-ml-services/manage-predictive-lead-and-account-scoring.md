@@ -1,12 +1,14 @@
 ---
 title: Gestire il punteggio predittivo di lead e account in Real-Time CDP B2B
 type: Documentation
-description: Questo documento fornisce informazioni sulla gestione della funzione di punteggio predittivo di lead e account in Experience Platform CDP B2B.
+description: Questo documento fornisce informazioni sulla gestione della funzione di punteggio predittivo di lead e account in Experienci Platform CDP B2B.
+feature: Profiles, B2B
+badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 2%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -134,23 +136,23 @@ Viene visualizzata di nuovo la **[!UICONTROL Servizi]** in cui non è più possi
 | 402 | ERRORE 402. Pipeline di IA per i lead interrotta: numero di contatti validi insufficiente per il punteggio dei contatti. Numero di contatti: {}. |
 | 403 | ERRORE 403. Pipeline di IA per i lead interrotta: volume di attività insufficiente per l’apprendimento del modello. Numero di eventi: {}. |
 | 404 | ERRORE 404. Pipeline di IA per i lead interrotta: conversioni insufficienti per l’apprendimento del modello. Numero di conversioni: {}. |
-| 405 | ERRORE 405. Pipeline di IA dei lead interrotta: attività troppo sparsa per un apprendimento del modello valido. Solo il {}% degli account ha attività. |
-| 406 | ERRORE 406. Pipeline di IA dei lead interrotta: attività troppo sparsa per un apprendimento del modello valido. Solo il {}% dei contatti ha attività. |
+| 405 | ERRORE 405. Pipeline di IA dei lead interrotta: attività troppo sparsa per un apprendimento del modello valido. Solo {} la percentuale di account ha attività. |
+| 406 | ERRORE 406. Pipeline di IA dei lead interrotta: attività troppo sparsa per un apprendimento del modello valido. Solo {} la percentuale di contatti ha attività. |
 | 407 | ERRORE 407. Pipeline di IA per i lead interrotta: i tipi di attività di dati per il punteggio non corrispondono ai dati di apprendimento. |
 | 408 | ERRORE 408. Pipeline di IA dei lead interrotta: il tasso di mancanti è troppo alto per le funzioni dell’attività. Percentuale mancante: {}. |
-| 409 | ERRORE 409. Pipeline di IA dei lead interrotta: auc di test troppo bassa. Test auc: {}. |
-| 410 | ERRORE 410. Pipeline di IA dei lead interrotta: l’auc del test è troppo bassa dopo la regolazione dei parametri. Test auc: {}. |
+| 409 | ERRORE 409. Pipeline di IA dei lead interrotta: auc di test troppo bassa. Prova auc: {}. |
+| 410 | ERRORE 410. Pipeline di IA dei lead interrotta: l’auc del test è troppo bassa dopo la regolazione dei parametri. Prova auc: {}. |
 | 411 | ERRORE 411. Pipeline di IA dei lead interrotta: i dati di apprendimento non hanno abbastanza conversioni per produrre un modello affidabile. Conversioni: {}. |
 | 412 | ERRORE 412. Pipeline di IA dei lead interrotta: i dati del test non hanno alcuna conversione per calcolare l’AUC-ROC. |
 
 | Codice di avvertenza/informazione | Messaggio |
 | --- | --- |
-| 100 | INFO 100. Controllo di qualità di IA per i lead: il numero di account è: {}. |
-| 101 | INFO 101. Controllo di qualità dell’intelligenza artificiale dei lead: il numero di contatti è: {}. |
-| 102 | INFO 102. Controllo di qualità dell’intelligenza artificiale dei lead: il conteggio delle opportunità è: {}. |
-| 103 | INFO 103. Lead AI controllo qualità: l’auc di test è bassa. Avvia tuning dei parametri. Verifica dell&#39;auc: {}. |
-| 200 | AVVISO 200. Controllo di qualità dell’intelligenza artificiale dei lead: il tasso di funzionalità firmografiche mancanti è: {}. |
-| 201 | AVVISO 201. Controllo di qualità dell’intelligenza artificiale dei lead: il tasso di funzionalità attività mancanti è: {}. |
+| 100 | INFO 100. Controllo qualità IA lead: il conteggio dei conti è: {}. |
+| 101 | INFO 101. Controllo qualità IA lead: il numero di contatti è: {}. |
+| 102 | INFO 102. Controllo qualità IA lead: il conteggio delle opportunità è: {}. |
+| 103 | INFO 103. Lead AI controllo qualità: l’auc di test è bassa. Avvia tuning dei parametri. Test dell&#39;auc: {}. |
+| 200 | AVVISO 200. Controllo qualità IA lead: il tasso di funzionalità firmografiche mancanti è: {}. |
+| 201 | AVVISO 201. Controllo di qualità di IA per l’analisi dei lead: il tasso di funzioni di attività mancanti è: {}. |
 
 ## Passaggi successivi
 
