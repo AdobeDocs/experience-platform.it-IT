@@ -5,14 +5,14 @@ feature: Customer AI
 title: Controllo dell’accesso per IA per l’analisi dei clienti
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi per IA per l’analisi dei clienti.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
-# Controllo dell’accesso basato su attributi
+# Controllo dell’accesso basato su attributi in Customer AI
 
 >[!IMPORTANT]
 >

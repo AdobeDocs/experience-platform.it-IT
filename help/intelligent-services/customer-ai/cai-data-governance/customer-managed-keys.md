@@ -3,14 +3,14 @@ keywords: insights;customer ai;customer ai insights;AAI query service;customer a
 title: Chiavi gestite dal cliente in IA per l’analisi dei clienti.
 description: Scopri come impostare le chiavi gestite dal cliente per IA per l’analisi dei clienti.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 21%
+source-wordcount: '176'
+ht-degree: 19%
 
 ---
 
-# Chiavi gestite dal cliente
+# Chiavi gestite dal cliente in IA per l’analisi dei clienti
 
 IA per l’analisi dei clienti fornisce l’opzione per [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) e i clienti di Privacy &amp; Security Shield a utilizzare le chiavi gestite dal cliente di Azure (CMK) da applicare ai dati di IA per l’analisi dei clienti. Il processo di configurazione è lo stesso [Configurazione CMK di Adobe Experience Platform](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) e puoi seguire i passaggi descritti in.
 
