@@ -3,9 +3,9 @@ title: Personalizzazione ibrida tramite Web SDK e API del server di rete Edge
 description: Questo articolo illustra come utilizzare l’SDK per web in combinazione con l’API server per distribuire la personalizzazione ibrida sulle proprietà web.
 keywords: personalizzazione; ibrida; api server; lato server; implementazione ibrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Quando [configurare uno stream di dati](../../datastreams/overview.md) con Analy
 Il campione di questa implementazione utilizza due diversi flussi di dati:
 
 * Un flusso di dati configurato per Analytics. Questo flusso di dati viene utilizzato per le interazioni Web SDK.
-* Un secondo stream di dati senza una configurazione Analytics. Questo flusso di dati viene utilizzato per le richieste API server.
+* Un secondo stream di dati senza una configurazione Analytics. Questo flusso di dati viene utilizzato per le richieste API server. Devi configurare questo stream di dati con la stessa configurazione di destinazione dello stream di dati configurato per Analytics.
 
 In questo modo, la richiesta lato server non registra alcun evento Analytics, ma le richieste lato client. Questo fa sì che le richieste di Analytics vengano conteggiate con precisione.
 
