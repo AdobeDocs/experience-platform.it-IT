@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurare un’istanza di Customer AI
 description: I servizi AI/ML forniscono IA per l’analisi dei clienti come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti illustrano i passaggi per la configurazione di un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2824'
 ht-degree: 0%
 
 ---
@@ -197,15 +197,11 @@ Puoi definire importanti campi del set di dati profilo (con marche temporali) ne
 
 #### Seleziona gli attributi del profilo dall’esportazione dello snapshot del profilo
 
-Puoi anche scegliere di includere gli attributi del profilo dall’esportazione giornaliera dello snapshot del profilo. Questi attributi vengono sincronizzati con l’esportazione dello snapshot del profilo e visualizzano l’ultimo valore disponibile.
+Puoi anche scegliere di includere gli attributi del profilo dall’esportazione giornaliera dello snapshot del profilo. Questi attributi vengono sincronizzati con l’esportazione dello snapshot del profilo e visualizzano l’ultimo valore disponibile. Vengono visualizzati automaticamente e non richiedono la selezione di un set di dati nel passaggio di configurazione.
 
 >[!WARNING]
 >
-> Fai attenzione a non selezionare un attributo di profilo aggiornato in seguito all’obiettivo di previsione o altamente correlato con l’obiettivo di previsione. Questo causa la perdita di dati e il sovraadattamento del modello. Un esempio di tale attributo è `total_purchases_in_the_last_3_months` che prevede la conversione degli acquisti.
-
->[!NOTE]
->
->Il supporto per l’utilizzo degli attributi del profilo dall’esportazione delle istantanee UPS è disponibile nell’interfaccia utente su richiesta.
+> Non selezionare un attributo di profilo che sia stato aggiornato in seguito all’obiettivo di previsione o sia altamente correlato con tale obiettivo. Questo determina perdite di dati e sovraadattamento del modello. Ad esempio: `total_purchases_in_the_last_3_months` è un attributo che prevede la conversione di acquisto.
 
 ### Aggiunta di un esempio di evento personalizzato {#custom-event}
 
@@ -264,3 +260,5 @@ Il seguente video è progettato per comprendere il flusso di lavoro di configura
 > Il seguente video non è aggiornato. Per informazioni aggiornate, consulta la documentazione.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
+<!-- comment -->

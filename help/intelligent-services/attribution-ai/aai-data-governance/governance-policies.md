@@ -4,14 +4,14 @@ feature: Attribution AI
 title: Politiche di governance per l’Attribution AI
 description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati delle esperienze raccolte.
 exl-id: 448b10c8-8eac-41cb-9b77-66aa283c0a9d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: eba23d39ade399f7df058da103fbd54883dc5b65
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
 
-# Criteri di governance
+# Politiche di governance in Attribution AI
 
 Una volta eseguito il flusso di lavoro per creare un modello e inviarne la configurazione, il [applicazione dei criteri](../../../data-governance/enforcement/auto-enforcement.md) controlla se ci sono violazioni. Se si verifica una violazione dei criteri, viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. In questo modo, le operazioni sui dati e le azioni di marketing in Platform saranno conformi ai criteri di utilizzo dei dati.
 
