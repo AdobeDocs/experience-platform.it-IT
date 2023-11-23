@@ -3,16 +3,16 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1739'
 ht-degree: 19%
 
 ---
 
 # Guida end-to-end al controllo degli accessi basato su attributi
 
-Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che offre ai clienti multimarca e attenti alla privacy una maggiore flessibilità per gestire l’accesso degli utenti. L’accesso a singoli oggetti, come campi e segmenti dello schema, può essere concesso/negato con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
+Utilizza il controllo degli accessi basato sugli attributi su Adobe Experience Platform per offrire a te stesso e ad altri clienti multi-brand attenti alla privacy una maggiore flessibilità nella gestione degli accessi utente. L’accesso a singoli oggetti, come campi e segmenti dello schema, può essere concesso con criteri basati sugli attributi e sul ruolo dell’oggetto. Questa funzione ti consente di concedere o revocare l’accesso a singoli oggetti per specifici utenti di Platform nella tua organizzazione.
 
 Questa funzionalità consente di categorizzare campi schema, segmenti e così via con etichette che definiscono ambiti di utilizzo organizzativi o dei dati. Puoi applicare queste stesse etichette a percorsi, Offerte e altri oggetti in Adobe Journey Optimizer. Parallelamente, gli amministratori possono definire i criteri di accesso relativi ai campi dello schema Experience Data Model (XDM) e gestire meglio quali utenti o gruppi (interni, esterni o di terze parti) possono accedere a tali campi.
 

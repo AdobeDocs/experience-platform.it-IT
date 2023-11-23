@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 3%
 
 ---
@@ -85,8 +85,8 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Alerts] | [!UICONTROL Gestire gli avvisi] | Accesso per leggere, creare, modificare ed eliminare la cronologia degli avvisi. |
 | [!DNL Computed Attributes] | [!UICONTROL Visualizza attributi calcolati] | Accesso in sola lettura per la scheda degli attributi calcolati, l’inventario e i dettagli. |
 | [!DNL Computed Attributes] | [!UICONTROL Gestisci attributi calcolati] | Accesso per leggere, creare, eliminare bozze e disattivare attributi calcolati. |
-| [!DNL Data Hygiene] | [!UICONTROL Visualizza igiene dei dati] | Accesso in sola lettura per l’igiene dei dati. |
-| [!DNL Data Hygiene] | [!UICONTROL Gestire l’igiene dei dati] | Accesso per leggere, creare, modificare ed eliminare l’igiene dei dati. |
+| [!DNL Data Lifecycle] | [!UICONTROL Visualizza ciclo di vita dei dati] | Accesso in sola lettura per il ciclo di vita dei dati. |
+| [!DNL Data Lifecycle] | [!UICONTROL Gestire il ciclo di vita dei dati] | Accesso per leggere, creare, modificare ed eliminare il ciclo di vita dei dati. |
 | [!DNL Data Modeling] | [!UICONTROL Gestire gli schemi] | Accesso per leggere, creare, modificare ed eliminare schemi e risorse correlate. |
 | [!DNL Data Modeling] | [!UICONTROL Visualizzare gli schemi] | Accesso in sola lettura agli schemi e alle risorse correlate. |
 | [!DNL Data Modeling] | [!UICONTROL Gestire le relazioni] | Accesso per leggere, creare, modificare ed eliminare le relazioni tra schemi. |
@@ -123,7 +123,7 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accesso per creare, accettare e rifiutare handshake partner per connettere due organizzazioni e abilitare [!DNL Segment Match] flussi. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accesso a lettura, creazione, modifica e pubblicazione [!DNL Segment Match] feed con partner attivi. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestire Data Science Workspace] | Accesso a lettura, creazione, modifica ed eliminazione in [!DNL Data Science Workspace]. |
-| Governance dei dati | [!UICONTROL Applica etichette di utilizzo dati] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
+| Governance dei dati | [!UICONTROL Gestisci etichette di utilizzo] | Accesso per leggere, creare ed eliminare le etichette di utilizzo. |
 | Governance dei dati | [!UICONTROL Gestire i criteri di utilizzo dei dati] | Accesso per leggere, creare, modificare ed eliminare i criteri di utilizzo dei dati. |
 | Governance dei dati | [!UICONTROL Visualizza criteri di utilizzo dati] | Accesso in sola lettura per i criteri di utilizzo dei dati appartenenti alla tua organizzazione. |
 | Governance dei dati | [!UICONTROL Visualizza registro attività utente] | Accesso in sola lettura per visualizzare i dati registrati [registri di audit](../landing/governance-privacy-security/audit-logs/overview.md) delle attività di Platform. |
