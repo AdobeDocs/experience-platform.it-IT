@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -72,23 +72,6 @@ Quando un grafico completo viene aggiornato con una nuova identità, queste due 
 >
 >Se l’identità designata per essere eliminata è collegata a più altre identità nel grafico, verranno eliminati anche i collegamenti che collegano tale identità.
 
->[!BEGINSHADEBOX]
-
-**Rappresentazione visiva della logica di eliminazione**
-
-![Un esempio dell’identità più vecchia che viene eliminata per contenere l’identità più recente](./images/graph-limits-v3.png)
-
-*Note diagramma:*
-
-* `t` = timestamp.
-* Il valore di una marca temporale corrisponde all’attualità di una determinata identità. Ad esempio: `t1` rappresenta la prima identità collegata (più vecchia) e `t51` rappresenterebbe l’identità collegata più recente.
-
-In questo esempio, prima che il grafico a sinistra possa essere aggiornato con una nuova identità, Identity Service elimina prima l’identità esistente con la marca temporale più vecchia. Tuttavia, poiché l’identità meno recente è un ID dispositivo, Identity Service ignora tale identità fino a quando non arriva allo spazio dei nomi con un tipo più alto nell’elenco di priorità di eliminazione, che in questo caso è `ecid-3`. Una volta rimossa l’identità meno recente con un tipo di priorità di eliminazione più elevato, il grafico viene quindi aggiornato con un nuovo collegamento, `ecid-51`.
-
-* Nel raro caso in cui vi siano due identità con la stessa marca temporale e lo stesso tipo di identità, Identity Service ordinerà gli ID in base a [XID](./api/list-native-id.md) ed eseguirne la cancellazione.
-
->[!ENDSHADEBOX]
-
 ### Implicazioni sull&#39;implementazione
 
 Le sezioni seguenti descrivono le implicazioni della logica di eliminazione per Identity Service, Real-Time Customer Profile e Web SDK.
@@ -116,7 +99,83 @@ Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di ge
 * [Configurare la mappa di identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Dati di identità in Experienci Platform Web SDK](../edge/identity/overview.md#using-identitymap)
 
+### Scenari di esempio
 
+#### Esempio 1: grafico grande tipico
+
+*Note diagramma:*
+
+* `t` = timestamp.
+* Il valore di una marca temporale corrisponde all’attualità di una determinata identità. Ad esempio: `t1` rappresenta la prima identità collegata (più vecchia) e `t51` rappresenterebbe l’identità collegata più recente.
+
+In questo esempio, prima che il grafico a sinistra possa essere aggiornato con una nuova identità, Identity Service elimina prima l’identità esistente con la marca temporale più vecchia. Tuttavia, poiché l’identità meno recente è un ID dispositivo, Identity Service ignora tale identità fino a quando non arriva allo spazio dei nomi con un tipo più alto nell’elenco di priorità di eliminazione, che in questo caso è `ecid-3`. Una volta rimossa l’identità meno recente con un tipo di priorità di eliminazione più elevato, il grafico viene quindi aggiornato con un nuovo collegamento, `ecid-51`.
+
+* Nel raro caso in cui vi siano due identità con la stessa marca temporale e lo stesso tipo di identità, Identity Service ordinerà gli ID in base a [XID](./api/list-native-id.md) ed eseguirne la cancellazione.
+
+![Un esempio dell’identità più vecchia che viene eliminata per contenere l’identità più recente](./images/graph-limits-v3.png)
+
+#### Esempio 2: &quot;suddivisione del grafico&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento in ingresso]
+
+*Note diagramma:*
+
+* Il diagramma seguente presuppone che `timestamp=50`, 50 identità esistono nel grafico delle identità.
+* `(...)` indica le altre identità già collegate all’interno del grafico.
+
+In questo esempio, ECID:32110 viene acquisito e collegato a un grafico di grandi dimensioni in `timestamp=51`, superando quindi il limite di 50 identità.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Processo di eliminazione]
+
+Di conseguenza, Identity Service elimina l’identità meno recente in base alla marca temporale e al tipo di identità. In questo caso, ECID:35577 viene eliminato.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Output grafico]
+
+In seguito all’eliminazione di ECID:35577, vengono eliminati anche i bordi che hanno collegato ID CRM:60013 e ID CRM:25212 con l’ECID:35577 ora eliminato. Questo processo di eliminazione fa sì che il grafico venga diviso in due grafici più piccoli.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Esempio tre: &quot;hub and spoke&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Evento in ingresso]
+
+*Note diagramma:*
+
+* Il diagramma seguente presuppone che `timestamp=50`, 50 identità esistono nel grafico delle identità.
+* `(...)` indica le altre identità già collegate all’interno del grafico.
+
+In virtù della logica di eliminazione, alcune identità &quot;hub&quot; possono anche essere eliminate. Queste identità hub si riferiscono a nodi collegati a diverse identità singole che altrimenti verrebbero scollegate.
+
+Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafico in `timestamp=51`, superando quindi il limite di 50 identità.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Processo di eliminazione]
+
+Di conseguenza, Identity Service elimina l’identità meno recente, che in questo caso è ECID:35577. L’eliminazione di ECID:35577 comporta anche l’eliminazione dei seguenti elementi:
+
+* Il collegamento tra ID CRM: 60013 e l’ECID:35577 ora eliminato, risultante in uno scenario di suddivisione del grafico.
+* IDFA: 32110, IDFA: 02383, e le altre identità rappresentate da `(...)`. Queste identità vengono eliminate perché singolarmente non sono collegate ad altre identità e pertanto non possono essere rappresentate in un grafico.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Output grafico]
+
+Infine, il processo di eliminazione produce due grafici più piccoli.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Passaggi successivi
 

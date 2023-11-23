@@ -2,13 +2,13 @@
 title: Retargeting fuori sede di visitatori non autenticati
 description: Scopri come eseguire il retargeting degli utenti non autenticati utilizzando gli ID potenziali clienti per creare un attributo calcolato che può essere utilizzato per creare un pubblico di utenti non autenticati.
 feature: Use Cases, Customer Acquisition
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 2%
 
 ---
-
 
 # Retargeting fuori sede dei visitatori non autenticati
 
