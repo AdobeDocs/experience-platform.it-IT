@@ -4,9 +4,9 @@ title: Sfogliare i profili in Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform consente di sfogliare i dati Real-Time Customer Profile tramite l’interfaccia utente di Adobe Experience Platform.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Per esplorare questi miglioramenti, inizia seguendo i passaggi descritti in [Gui
 I dettagli del profilo includono l’accesso a [!UICONTROL Account], [!UICONTROL Opportunità], e [!UICONTROL Record di origine] oltre alle informazioni standard fornite nel profilo cliente, migliorate anche con eventi e attributi B2B.
 
 ![](images/b2b-profile-detail.png)
+
+Per ulteriori informazioni sui dettagli del profilo forniti nell’interfaccia utente di Platform, consulta [sezione dei dettagli della documentazione del dashboard Profili](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Scheda Account
 

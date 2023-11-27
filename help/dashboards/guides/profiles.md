@@ -4,10 +4,10 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 11%
+source-wordcount: '4900'
+ht-degree: 10%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 Il [!UICONTROL Sfoglia] Questa scheda ti consente di cercare e visualizzare i profili di sola lettura acquisiti nell’organizzazione. Da qui puoi vedere informazioni importanti appartenenti al profilo sulle loro preferenze, eventi passati, interazioni e tipi di pubblico.
 
-Per ulteriori informazioni sulle funzionalità di visualizzazione dei profili fornite nell’interfaccia utente di Platform, consulta la documentazione su [esplorazione dei profili in Adobe Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+## Dettagli profilo {#profile-details}
+
+Per aprire [!UICONTROL Profili] [!UICONTROL Dettaglio] workspace, seleziona un [!UICONTROL ID profilo] dall&#39;elenco.
+
+![Nella scheda Sfoglia profili è evidenziato un ID profilo.](../images/profiles/profile-id.png)
+
+Il [!UICONTROL Profili] [!UICONTROL Dettaglio] workspace visualizza diversi widget preconfigurati che trasmettono informazioni specifiche di quel profilo. Queste informazioni consentono di comprendere rapidamente gli attributi chiave del profilo. Puoi anche personalizzare il tuo [!UICONTROL Profili] [!UICONTROL Dettaglio] creando widget personalizzati. Consulta la sezione su [come aggiungere widget](#add-widgets) per ulteriori dettagli.
+
+![Il [!UICONTROL Profili] [!UICONTROL Dettaglio] workspace con [!UICONTROL Dettaglio] scheda evidenziata.](../images/profiles/profile-details-workspace.png)
+
+### Widget dettagli profilo {#widgets}
+
+I widget dei dettagli del profilo preconfigurati sono i seguenti:
+
+#### Profilo cliente {#customer-profile}
+
+Il [!UICONTROL Profilo cliente] Il widget mostra il nome e il cognome dell’utente associato al profilo, nonché [!UICONTROL ID profilo]. Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo. Per ulteriori informazioni sulle identità e sugli spazi dei nomi delle identità, consulta [panoramica delle identità](../../rtcdp/profile/identities-overview.md).
+
+![Il widget Profilo cliente.](../images/profiles/customer-profile.png)
+
+#### Attributi di base {#basic-attributes}
+
+Il [!UICONTROL Attributi di base] widget mostra gli attributi più comunemente utilizzati per definire un singolo profilo.
+
+![Widget attributi di base.](../images/profiles/basic-attributes.png)
+
+#### Identità collegate {#linked-identities}
+
+Il [!UICONTROL Identità collegate] widget mostra tutte le altre identità associate al profilo.
+
+Per visualizzare i dettagli di identità del profilo in modo più approfondito e passare alla [!UICONTROL Identità] workspace, seleziona **[!UICONTROL Visualizza grafo identità]**.
+
+![Widget identità collegate.](../images/profiles/linked-identities.png)
+
+#### Preferenze canale {#channel-preferences}
+
+Il [!UICONTROL Preferenze canale] widget mostra i canali di comunicazione da cui l’utente ha acconsentito a ricevere comunicazioni. Un segno di spunta indica ogni canale da cui l’utente ha acconsentito a ricevere comunicazioni.
+
+<!-- image needs a blue tick added below -->
+
+![Il widget delle preferenze del canale.](../images/profiles/channel-preferences.png)
+
+Il consenso del cliente e le preferenze di contatto sono argomenti complessi. Per scoprire come raccogliere, elaborare e filtrare le preferenze di consenso e contesto in questo Experience Platform, ti consigliamo di leggere i seguenti documenti:
+
+* Per informazioni sui gruppi di campi dello schema necessari per [raccogliere i dati sul consenso in base allo standard Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), consulta la documentazione su questi gruppi di campi schema abilitati per il profilo.
+   * [[!UICONTROL Dettagli su consenso e preferenze]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)
+* Per informazioni su come elaborare i dati di consenso e preferenze del cliente utilizzando lo standard di Adobe, consulta la panoramica su [elaborazione del consenso in Experienci Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* È possibile utilizzare una governance dei dati e un criterio di consenso combinati per filtrare i profili per la segmentazione in base alle loro preferenze di consenso e alle regole organizzative stabilite. Per informazioni su come creare e utilizzare questi criteri combinati, consulta la guida utente su [gestione dei criteri di utilizzo dei dati](../../data-governance/policies/user-guide.md#combine-policies).
+
+### Aggiungi widget {#add-widgets}
+
+Per aggiungere widget personalizzati al [!UICONTROL Profili] [!UICONTROL Dettaglio] workspace, seleziona **[!UICONTROL Personalizza dettagli profilo]**.
+
+![L’area di lavoro Dettagli profili con [!UICONTROL Personalizza dettagli profilo] evidenziato.](../images/profiles/customize-profile-details.png)
+
+Ora potete modificare l&#39;area di lavoro ridimensionando o riposizionando i widget. Seleziona **[!UICONTROL Aggiungi widget]** per creare un widget con attributi personalizzati.
+
+![Profili [!UICONTROL Dettaglio] workspace con [!UICONTROL Aggiungi widget] evidenziato.](../images/profiles/add-widget.png)
+
+Viene visualizzato il creatore del widget. Immetti un nome descrittivo per il widget in [!UICONTROL Titolo carta] campo di testo e selezione **[!UICONTROL Aggiungi attributi]**.
+
+![L’area di lavoro di creazione del widget con [!UICONTROL Titolo carta] campo e [!UICONTROL Aggiungi attributi] evidenziato.](../images/profiles/widget-creator.png)
+
+Viene visualizzata una finestra di dialogo che contiene una visualizzazione dello schema di unione del profilo. Utilizza il campo di ricerca o scorri per trovare gli attributi sui quali desideri creare rapporti con il tuo widget. Selezionare la casella di controllo per gli attributi che si desidera includere. Seleziona **[!UICONTROL Seleziona]** per continuare il flusso di lavoro di creazione.
+
+>[!TIP]
+>
+>Una selezione della casella di controllo di primo livello include tutti gli elementi figlio.
+
+![Il diagramma schema di unione con la casella di controllo dell’attributo fedeltà e [!UICONTROL Seleziona] evidenziato.](../images/profiles/union-schema-attributes.png)
+
+Nell’area di lavoro viene visualizzata un’anteprima del widget completato. Una volta scelti gli attributi desiderati, seleziona **[!UICONTROL Salva]** per confermare le scelte e tornare al [!UICONTROL Profili] [!UICONTROL Dettaglio] Workspace. Il widget appena creato è ora visibile nell’area di lavoro.
+
+![L&#39;area di lavoro di creazione del widget con Salva evidenziato e visualizzazione dell&#39;anteprima del widget.](../images/profiles/widget-preview.png)
 
 ## Criteri di unione {#merge-policies}
 

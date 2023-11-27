@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurare un set di dati per acquisire dati su consenso e preferenze
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenze in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 1%
@@ -96,8 +96,8 @@ Il gruppo di campi fornisce un singolo campo di tipo oggetto, `consents`, le cui
 
 Per raccogliere i dati sul consenso utilizzando lo standard Adobe, è necessario disporre di uno schema abilitato per il profilo che contiene i due gruppi di campi seguenti:
 
-* [!UICONTROL Dettagli su consenso e preferenze]
-* [!UICONTROL IdentityMap] (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)
+* [[!UICONTROL Dettagli su consenso e preferenze]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (richiesto se si utilizza Platform Web SDK o Mobile SDK per inviare segnali di consenso)
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra, seleziona quindi **[!UICONTROL Sfoglia]** per visualizzare un elenco degli schemi esistenti. Da qui, seleziona il nome del [!DNL Profile]schema abilitato a cui desideri aggiungere campi di consenso. Le schermate in questa sezione utilizzano lo schema &quot;Membri fedeltà&quot; integrato in [tutorial sulla creazione di schemi](../../../../xdm/tutorials/create-schema-ui.md) come esempio.
 
