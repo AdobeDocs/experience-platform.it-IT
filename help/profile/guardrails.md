@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione per garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
+source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2230'
 ht-degree: 2%
 
 ---
@@ -118,8 +118,8 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 | Pubblico Edge per sandbox | 150 | Guardrail delle prestazioni | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
 | Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Un’organizzazione può avere più di 500 pubblici di streaming in totale, purché ci siano meno di 500 pubblici di streaming in ogni singola sandbox. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
 | Pubblico in batch per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in batch in totale, purché ci siano meno di 4000 tipi di pubblico in batch in ogni singola sandbox. Il tentativo di creare un pubblico batch aggiuntivo può influire sulle prestazioni del sistema. |
-| Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Non puoi creare più di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il **[!UICONTROL Creare un pubblico]** Il controllo è disattivato quando si tenta di creare un nuovo pubblico di account. Ulteriori informazioni su [pubblico dell’account](/help/segmentation/ui/account-audiences.md). |
-| Composizioni pubblicate per sandbox | 10 | Guardrail delle prestazioni | In una sandbox non possono essere pubblicate più di 10 composizioni. Ulteriori informazioni su [composizione del pubblico nella guida dell’interfaccia utente](/help/segmentation/ui/audience-composition.md). |
+| Pubblico dell’account per sandbox | 50 | Guarddrail imposto dal sistema | Puoi creare un massimo di 50 tipi di pubblico di account in una sandbox. Dopo aver raggiunto 50 tipi di pubblico in una sandbox, il **[!UICONTROL Creare un pubblico]** Il controllo è disattivato quando si tenta di creare un nuovo pubblico di account. Ulteriori informazioni su [pubblico dell’account](/help/segmentation/ui/account-audiences.md). |
+| Composizioni pubblicate per sandbox | 10 | Guardrail delle prestazioni | Puoi avere un massimo di 10 composizioni pubblicate in una sandbox. Ulteriori informazioni su [composizione del pubblico nella guida dell’interfaccia utente](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
