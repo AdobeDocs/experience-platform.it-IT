@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Panoramica della personalizzazione del dashboard
 description: Scopri come personalizzare i dati visualizzati nelle dashboard di Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ I dashboard di profili, segmenti e destinazioni disponibili in Adobe Experience 
 
 >[!NOTE]
 >
->I widget visualizzati nella [!UICONTROL Utilizzo licenze] impossibile personalizzare il dashboard. Per ulteriori informazioni su questa dashboard univoca, leggi [documentazione del dashboard utilizzo licenze](../guides/license-usage.md).
+>Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
 
 ## Modifica dashboard
 
@@ -24,7 +24,7 @@ Selezione **[!UICONTROL Modifica dashboard]** dai dashboard profili, segmenti o 
 
 ## La libreria widget
 
-La libreria di widget all’interno di Experience Platform è dove puoi visualizzare tutte le [standard](#standard-widgets) e [personalizzato](#custom-widgets) widget disponibili per la tua organizzazione. Dalle dashboard (ad esempio, la dashboard dei profili), puoi selezionare **[!UICONTROL Modifica dashboard]** per visualizzare **[!UICONTROL Libreria widget]** pulsante.
+La libreria di widget all’interno di Experienci Platform è dove puoi visualizzare tutte le [standard](#standard-widgets) e [personalizzato](#custom-widgets) widget disponibili per la tua organizzazione. Dalle dashboard (ad esempio, la dashboard dei profili), puoi selezionare **[!UICONTROL Modifica dashboard]** per visualizzare **[!UICONTROL Libreria widget]** pulsante.
 
 ![Il quadro comandi Profili (Profiles) con Modifica (Modify) evidenziato.](../images/customization/modify-dashboard.png)
 
@@ -54,4 +54,4 @@ Per istruzioni dettagliate sulla modifica dello schema dell’organizzazione per
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, puoi iniziare a personalizzare i dashboard di Experience Platform modificando le dimensioni, la forma e l’ordine dei widget esistenti, aggiungendo widget standard forniti da Adobe oppure creando e condividendo widget personalizzati con la tua organizzazione.
+Dopo aver letto questo documento, puoi iniziare a personalizzare i dashboard di Experienci Platform modificando le dimensioni, la forma e l’ordine dei widget esistenti, aggiungendo widget standard forniti da Adobe oppure creando e condividendo widget personalizzati con la tua organizzazione.

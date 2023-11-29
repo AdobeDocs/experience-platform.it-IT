@@ -2,10 +2,10 @@
 title: Mappare un file CSV a uno schema XDM utilizzando la funzione di Recommendations generata da IA
 description: Questo tutorial illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 1%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -21,14 +21,14 @@ Per acquisire i dati CSV in [!DNL Adobe Experience Platform], i dati devono esse
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
-   * Devi comprendere almeno il concetto di [comportamenti in XDM](../../../xdm/home.md#data-behaviors), in modo da poter decidere se mappare i dati su [!UICONTROL Profilo] classe (comportamento record) o [!UICONTROL ExperienceEvent] classe (comportamento delle serie temporali).
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
+   * Come minimo, devi comprendere il concetto di [comportamenti in XDM](../../../xdm/home.md#data-behaviors), in modo da poter decidere se mappare i dati su [!UICONTROL Profilo] classe (comportamento record) o [!UICONTROL ExperienceEvent] classe (comportamento delle serie temporali).
 * [Acquisizione in batch](../../batch-ingestion/overview.md): il metodo con cui [!DNL Platform] acquisisce i dati dai file di dati forniti dall’utente.
 * [Preparazione dati di Adobe Experience Platform](../../batch-ingestion/overview.md): suite di funzionalità che consente di mappare e trasformare i dati acquisiti per renderli conformi agli schemi XDM. La documentazione su [Funzioni di preparazione dati](../../../data-prep/functions.md) è particolarmente rilevante per la mappatura dello schema.
 
 ## Fornisci i dettagli del flusso di dati
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sorgenti]** nel menu di navigazione a sinistra. Il giorno **[!UICONTROL Catalogo]** visualizzare, passare alla **[!UICONTROL Sistema locale]** categoria. Sotto **[!UICONTROL Caricamento di file locali]**, seleziona **[!UICONTROL Aggiungi dati]**.
+Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Sorgenti]** nel menu di navigazione a sinistra. Il giorno **[!UICONTROL Catalogo]** visualizzare, passare alla **[!UICONTROL Sistema locale]** categoria. Sotto **[!UICONTROL Caricamento di file locali]**, seleziona **[!UICONTROL Aggiungi dati]**.
 
 ![Il [!UICONTROL Sorgenti] nell’interfaccia utente di Platform, con [!UICONTROL Aggiungi dati] in [!UICONTROL Caricamento di file locali] in fase di selezione.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
@@ -62,7 +62,7 @@ Il giorno **[!UICONTROL Seleziona dati]** , utilizza la colonna sinistra per car
 
 ![Il [!UICONTROL Scegli i file] e l&#39;area di trascinamento evidenziata all&#39;interno del [!UICONTROL Seleziona dati] passaggio.](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
-Dopo aver caricato il file, viene visualizzata una sezione di dati di esempio che mostra le prime dieci righe dei dati ricevuti, in modo da verificare che siano stati caricati correttamente. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
+Dopo aver caricato il file, viene visualizzata una sezione di dati di esempio che mostra le prime dieci righe dei dati ricevuti, in modo da verificare che siano stati caricati correttamente. Seleziona **[!UICONTROL Avanti]** per continuare.
 
 ![Le righe di dati di esempio vengono popolate all’interno dell’area di lavoro](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
 
@@ -71,6 +71,10 @@ Dopo aver caricato il file, viene visualizzata una sezione di dati di esempio ch
 I modelli ML vengono eseguiti per generare un nuovo schema basato sulla configurazione del flusso di dati e sul file CSV caricato. Al termine del processo, il [!UICONTROL Mappatura] step compila per mostrare le mappature per ogni singolo campo, insieme alla vista completamente navigabile della struttura dello schema generata.
 
 ![Il [!UICONTROL Mappatura] nell’interfaccia utente, mostrando tutti i campi CSV mappati e la struttura dello schema risultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+
+>[!NOTE]
+>
+>Puoi filtrare tutti i campi nello schema in base a diversi criteri durante il flusso di lavoro di mappatura dei campi da origine a destinazione. Per impostazione predefinita, vengono visualizzati tutti i campi mappati. Per modificare i campi visualizzati, seleziona l’icona del filtro accanto al campo di input della ricerca e scegli tra le opzioni a discesa.<br> ![La fase di mappatura del flusso di lavoro di creazione dello schema CSV-XDM con l’icona del filtro e il menu a discesa evidenziati.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "La fase di mappatura del flusso di lavoro di creazione dello schema CSV-XDM con l’icona del filtro e il menu a discesa evidenziati."){width="100" zoomable="yes"}
 
 Da qui, puoi opzionalmente [modificare le mappature dei campi](#edit-mappings) o [modificare i gruppi di campi a cui sono associati](#edit-schema) in base alle tue esigenze. Quando sei soddisfatto, seleziona **[!UICONTROL Fine]** per completare la mappatura e avviare il flusso di dati configurato in precedenza. I dati CSV vengono acquisiti nel sistema e popolano un set di dati in base alla struttura dello schema generato, pronto per essere utilizzato dai servizi Platform a valle.
 
@@ -96,4 +100,4 @@ Al termine della regolazione dei consigli di schema per i campi sorgente, selezi
 
 Questa guida illustra come mappare un file CSV a uno schema XDM utilizzando i consigli generati dall’intelligenza artificiale, per portare tali dati in Platform tramite l’acquisizione batch.
 
-Per i passaggi sulla mappatura di un file CSV a uno schema esistente, consulta [flusso di lavoro di mappatura schema esistente](./existing-schema.md). Per informazioni sullo streaming dei dati in Platform in tempo reale tramite connessioni sorgente predefinite, consulta [panoramica sulle origini](../../../sources/home.md).
+Per i passaggi sulla mappatura di un file CSV a uno schema esistente, consulta [flusso di lavoro di mappatura schema esistente](./existing-schema.md). Per informazioni sullo streaming di dati in Platform in tempo reale tramite connessioni di origine predefinite, consulta [panoramica sulle origini](../../../sources/home.md).

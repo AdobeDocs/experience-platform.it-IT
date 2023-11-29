@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 in Experienci Platform
 description: Scopri come configurare le operazioni sui dati e gli schemi per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Il [!DNL Transparency & Consent Framework] (TCF), come indicato dalla [!DNL Inte
 >
 >Ulteriori informazioni su TCF 2.0 sono disponibili sul sito [Sito web di IAB Europe](https://iabeurope.eu/tcf-2-0/), compresi i materiali di supporto e le specifiche tecniche.
 
-Adobe Experience Platform fa parte del [Elenco fornitori IAB TCF 2.0](https://iabeurope.eu/vendor-list-tcf-v2-0/), sotto l&#39;ID **565**. In conformità ai requisiti TCF 2.0, Platform consente di raccogliere i dati sul consenso dei clienti e di integrarli nei profili dei clienti memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per stabilire se i profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso d’uso.
+Adobe Experience Platform fa parte del [Elenco fornitori IAB TCF 2.0](https://iabeurope.eu/vendor-list-tcf/), sotto l&#39;ID **565**. In conformità ai requisiti TCF 2.0, Platform consente di raccogliere i dati sul consenso dei clienti e di integrarli nei profili dei clienti memorizzati. Questi dati sul consenso possono quindi essere presi in considerazione per stabilire se i profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso d’uso.
 
 >[!IMPORTANT]
 >

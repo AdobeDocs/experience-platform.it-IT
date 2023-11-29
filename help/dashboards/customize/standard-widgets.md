@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Widget dashboard standard
 description: Questa guida fornisce istruzioni dettagliate per aggiungere widget standard alle dashboard di Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,13 @@ ht-degree: 0%
 
 In Adobe Experience Platform puoi visualizzare e interagire con i dati della tua organizzazione utilizzando più dashboard. È inoltre possibile aggiornare alcune dashboard aggiungendo nuovi widget alla vista dashboard. In questo Adobe viene fornita una selezione di widget standard che è possibile scegliere di aggiungere alle dashboard.
 
-Il [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] ogni dashboard ha un widget predefinito al momento della creazione di una nuova istanza Platform. Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
+Il [[!UICONTROL Profili]](../guides/profiles.md#default-widgets), [[!UICONTROL Tipi di pubblico]](../guides/audiences.md#default-widgets), e [[!UICONTROL Destinazioni]](../guides/destinations.md#default-widgets) ogni dashboard ha un widget predefinito al momento della creazione di una nuova istanza Platform. Questa guida fornisce istruzioni dettagliate per aggiungere widget standard per personalizzare [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
 
 >[!NOTE]
 >
->Dal 26 luglio 2023, [!UICONTROL Profili], [!UICONTROL Tipi di pubblico], e [!UICONTROL Destinazioni] Le dashboard Panoramica sono state reimpostate su un nuovo widget predefinito per tutti gli utenti che non hanno modificato le proprie visualizzazioni nei sei mesi precedenti.
->Consulta la documentazione in [Profili](../guides/profiles.md#default-widgets), [Tipi di pubblico](../guides/audiences.md#default-widgets), e [Destinazioni](../guides/destinations.md#default-widgets) sezioni di widget predefinite per i dettagli sui widget inclusi come parte dei caricamenti di widget predefiniti.
+>Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
 
 Per ulteriori informazioni sui widget personalizzati, consulta la guida per [creazione di widget personalizzati](custom-widgets.md).
-
->[!NOTE]
->
->I widget visualizzati nella [!UICONTROL Utilizzo licenze] impossibile personalizzare il dashboard. Per ulteriori informazioni su questa dashboard univoca, leggi [documentazione del dashboard utilizzo licenze](../guides/license-usage.md).
 
 ## Libreria widget {#widget-library}
 

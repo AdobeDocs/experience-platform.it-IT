@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
+source-wordcount: '4384'
 ht-degree: 1%
 
 ---
@@ -535,6 +535,16 @@ WHERE T2.ID IS NULL
 ### Query Service supporta il comando &quot;INSERT OVERWRITE INTO&quot;?
 
 +++Risposta no, Query Service non supporta il comando &quot;INSERT OVERWRITE INTO&quot;.
++++
+
+### Con quale frequenza vengono aggiornati i dati di utilizzo nel dashboard utilizzo licenze per le ore di calcolo di Data Distiller?
+
++++Risposta La dashboard sull&#39;utilizzo delle licenze per le ore del computer Data Distiller viene aggiornata quattro volte al giorno, ogni sei ore.
++++
+
+### È possibile utilizzare il comando CREATE VIEW senza accedere a Data Distiller?
+
++++Risposta Sì, è possibile utilizzare `CREATE VIEW` senza accesso a Data Distiller. Questo comando fornisce una vista logica dei dati ma non li riscrive nel data lake.
 +++
 
 ## Esportazione dei dati {#exporting-data}

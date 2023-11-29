@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Panoramica della libreria dei widget del dashboard
 description: Questa guida fornisce istruzioni dettagliate per accedere alla libreria dei widget in Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e inte
 
 Questa guida fornisce istruzioni dettagliate per accedere al [!UICONTROL Libreria widget] in Experience Platform, è possibile selezionare widget standard e creare widget personalizzati per personalizzare le informazioni visualizzate nei dashboard.
 
-Per informazioni su come modificare la posizione e le dimensioni dei widget già visualizzati nei dashboard, fare riferimento al [guida alle dashboard di modifica](modify.md).
-
 >[!NOTE]
 >
->I widget visualizzati nella [!UICONTROL Utilizzo licenze] impossibile personalizzare il dashboard. Per ulteriori informazioni su questa dashboard univoca, leggi [documentazione del dashboard utilizzo licenze](../guides/license-usage.md).
+>Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
+
+Per informazioni su come modificare la posizione e le dimensioni dei widget già visualizzati nei dashboard, fare riferimento al [guida alle dashboard di modifica](modify.md).
 
 ## Accedere alla libreria widget {#access}
 
@@ -61,4 +61,4 @@ Il [!UICONTROL Libreria widget] contiene due schede:
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, ora puoi accedere alla libreria dei widget nell’interfaccia utente di Experience Platform. Per modificare le dimensioni e la posizione dei widget visualizzati nel dashboard, fare riferimento alla [guida alle dashboard di modifica](modify.md).
+Dopo aver letto questo documento, ora puoi accedere alla libreria dei widget nell’interfaccia utente di Experienci Platform. Per modificare le dimensioni e la posizione dei widget visualizzati nel dashboard, fare riferimento alla [guida alle dashboard di modifica](modify.md).

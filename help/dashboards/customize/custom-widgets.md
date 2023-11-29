@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Creazione di widget personalizzati per dashboard
 description: Questa guida fornisce istruzioni dettagliate per la creazione di widget personalizzati da utilizzare nelle dashboard di Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ In Adobe Experience Platform, puoi visualizzare e interagire con i dati della tu
 
 Questa guida fornisce istruzioni dettagliate per creare e aggiungere widget personalizzati alla [!UICONTROL Profili], [!UICONTROL Segmenti], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
 
-Per ulteriori informazioni sui widget standard, consulta la guida per [aggiunta di widget standard alle dashboard](standard-widgets.md).
-
 >[!NOTE]
 >
->I widget visualizzati nella [!UICONTROL Utilizzo licenze] impossibile personalizzare il dashboard. Per ulteriori informazioni su questa dashboard univoca, leggi [documentazione del dashboard utilizzo licenze](../guides/license-usage.md).
+>Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
+
+Per ulteriori informazioni sui widget standard, consulta la guida per [aggiunta di widget standard alle dashboard](standard-widgets.md).
 
 ## Libreria widget {#widget-library}
 
-Questa guida richiede l’accesso a [!UICONTROL Libreria widget] all’interno di Experience Platform. Per ulteriori informazioni sulla libreria dei widget e su come accedervi nell’interfaccia utente, leggi [panoramica della libreria widget](widget-library.md).
+Questa guida richiede l’accesso a [!UICONTROL Libreria widget] all’interno di Experienci Platform. Per ulteriori informazioni sulla libreria dei widget e su come accedervi nell’interfaccia utente, leggi [panoramica della libreria widget](widget-library.md).
 
 ## Guida introduttiva ai widget personalizzati
 

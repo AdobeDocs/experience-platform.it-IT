@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaccia utente;dashboard;dashboard;profili;seg
 title: Modificare le dashboard di Platform nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati Adobe Experience Platform dell’organizzazione nei dashboard.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare e interagire con i dati dell’organizzazione utilizzando più dashboard. I widget e le metriche predefiniti visualizzati nelle dashboard possono essere regolati a livello di singolo utente per visualizzare i dati preferiti; i widget possono essere creati e condivisi tra gli utenti della stessa organizzazione.
 
-Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati del dashboard in [!UICONTROL Profili], [!UICONTROL Segmenti], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
-
 >[!NOTE]
 >
->I widget visualizzati nel dashboard utilizzo licenze non possono essere personalizzati. Consulta la sezione [documentazione del dashboard utilizzo licenze](../guides/license-usage.md) per ulteriori informazioni su questa dashboard univoca.
+>Tutti gli aggiornamenti apportati alle dashboard sono per organizzazione e per sandbox.
+
+Questa guida fornisce istruzioni dettagliate per personalizzare la modalità di visualizzazione dei dati del dashboard in [!UICONTROL Profili], [!UICONTROL Segmenti], e [!UICONTROL Destinazioni] dashboard nell’interfaccia utente di Platform.
 
 ## Introduzione
 
