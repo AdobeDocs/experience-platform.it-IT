@@ -2,7 +2,7 @@
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 10%
@@ -24,7 +24,7 @@ Prima di continuare con questa guida, leggere [Guida dell’interfaccia utente d
 
 >[!NOTE]
 >
->Nell’interfaccia utente di Adobe Experience Platform, le query con parametri sono supportate solo a livello principale dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli figlio devono essere statici e non possono avere parametri dinamici. Consulta la [documentazione sui modelli in linea](../essential-concepts/inline-templates.md) per ulteriori informazioni.
+>Nell’interfaccia utente di Adobe Experience Platform, le query con parametri sono supportate solo a livello principale dei modelli in linea. Ciò significa che le query con parametri funzionano solo se utilizzate nel modello originale. I modelli figlio devono essere statici e non possono avere parametri dinamici. Consulta la [documentazione sui modelli in linea](../key-concepts/inline-templates.md) per ulteriori informazioni.
 
 ## Sintassi delle query con parametri {#syntax}
 

@@ -2,7 +2,7 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -161,7 +161,7 @@ Le query che utilizzano blocchi anonimi per comporre le istruzioni SQL vengono s
 >
 >I dettagli di esecuzione di un blocco anonimo che utilizza il comando DROP **non** essere segnalato come sottoquery separata. Sono disponibili dettagli di esecuzione separati per le query CTAS, le query ITAS e le istruzioni COPY utilizzate come sottoquery di blocco anonime. I dettagli di esecuzione del comando DROP non sono attualmente supportati.
 
-I blocchi anonimi sono identificati mediante l’uso di un `$$` prima della query. Per ulteriori informazioni sui blocchi anonimi nel servizio di query, consulta [documento blocco anonimo](../essential-concepts/anonymous-block.md).
+I blocchi anonimi sono identificati mediante l’uso di un `$$` prima della query. Per ulteriori informazioni sui blocchi anonimi nel servizio di query, consulta [documento blocco anonimo](../key-concepts/anonymous-block.md).
 
 Le sottoquery di blocco anonime dispongono di schede a sinistra dello stato di esecuzione. Selezionare una scheda per visualizzare i dettagli dell&#39;esecuzione.
 

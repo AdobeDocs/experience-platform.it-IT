@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2022
 description: Note sulla versione di Adobe Experience Platform di gennaio 2022.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 20%
@@ -91,7 +91,7 @@ Per informazioni più generali sulle destinazioni, consulta [panoramica sulle de
 
 | Funzione | Descrizione |
 | --- | --- |
-| Blocco anonimo | Il costrutto SQL per blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi di riutilizzarle ed eseguirle in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, vedere [query di esempio per la documentazione del blocco anonimo](../../query-service/essential-concepts/anonymous-block.md). |
+| Blocco anonimo | Il costrutto SQL per blocchi anonimi consente di suddividere i processi di preparazione dei dati su larga scala in Query Service in attività più piccole, quindi di riutilizzarle ed eseguirle in sequenza per il caricamento incrementale dei dati. Per ulteriori informazioni, vedere [query di esempio per la documentazione del blocco anonimo](../../query-service/key-concepts/anonymous-block.md). |
 | Organizzazione del set di dati | Fornisce una struttura logica coerente dei dati per organizzare le risorse di dati da utilizzare con Query Service man mano che aumenta la quantità di risorse di dati all’interno della sandbox. Per ulteriori informazioni, vedere [organizzare la documentazione delle risorse dati](../../query-service/best-practices/organize-data-assets.md). |
 
 Per ulteriori informazioni su [!DNL Query Service], consultare il [[!DNL Query Service] panoramica](../../query-service/home.md).

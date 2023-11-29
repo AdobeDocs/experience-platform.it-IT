@@ -2,7 +2,7 @@
 title: Best practice per l’organizzazione delle risorse dati in Query Service
 description: Questo documento illustra un modo logico di organizzare i dati per facilitarne l’utilizzo con Query Service.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## Passaggi successivi
 
-La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare ad acquisire familiarità con le best practice di Query Service consultando [documentazione sulla deduplicazione dei dati](../essential-concepts/deduplication.md).
+La lettura di questo documento consente di comprendere meglio le best practice relative all’organizzazione e alla struttura delle risorse dati da utilizzare con Adobe Experience Platform Query Service. Si consiglia di continuare ad acquisire familiarità con le best practice di Query Service consultando [documentazione sulla deduplicazione dei dati](../key-concepts/deduplication.md).

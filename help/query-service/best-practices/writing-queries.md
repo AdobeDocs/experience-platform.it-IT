@@ -5,7 +5,7 @@ title: Linee guida generali per l’esecuzione di query in Query Service
 type: Tutorial
 description: Questo documento illustra dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 3%
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Deduplica
 
-Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, leggere [Guida alla deduplicazione di Query Service](../essential-concepts/deduplication.md).
+Query Service supporta la deduplicazione dei dati o la rimozione di righe duplicate dai dati. Per ulteriori informazioni sulla deduplicazione, leggere [Guida alla deduplicazione di Query Service](../key-concepts/deduplication.md).
 
 ## Calcoli del fuso orario in Query Service
 

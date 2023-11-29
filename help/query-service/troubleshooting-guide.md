@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![Lo schema XDM e la vista a tabella dei dati appiattiti. Il nome della colonna di un set di dati nidificato viene evidenziato nell’interfaccia utente.](./images/troubleshooting/column-name.png)
 
-Consulta la documentazione per istruzioni complete su [come utilizzare le strutture di dati nidificate](./essential-concepts/nested-data-structures.md) utilizzando Query Editor o un client di terze parti.
+Consulta la documentazione per istruzioni complete su [come utilizzare le strutture di dati nidificate](./key-concepts/nested-data-structures.md) utilizzando Query Editor o un client di terze parti.
 +++
 
 ### Come velocizzare una query su un set di dati contenente array?
@@ -142,7 +142,7 @@ Viene visualizzato un banner a discesa contenente [!UICONTROL Guida e supporto] 
 
 +++Risposta La funzione di blocco anonimo consente di concatenare una o più istruzioni SQL eseguite in sequenza. Consentono inoltre di gestire le eccezioni.
 
-Consulta la [documentazione di blocco anonimo](./essential-concepts/anonymous-block.md) per ulteriori dettagli.
+Consulta la [documentazione di blocco anonimo](./key-concepts/anonymous-block.md) per ulteriori dettagli.
 +++
 
 ### Come si implementa l’attribuzione personalizzata in Query Service?
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### Come posso elaborare rapidamente i nuovi dati che entrano nel sistema ogni giorno?
 
-+++Rispondi [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) può essere utilizzata per leggere in modo incrementale i dati su una tabella basata su un ID snapshot. Questa funzione è ideale per l&#39;utilizzo con [carico incrementale](./essential-concepts/incremental-load.md) modello di progettazione che elabora solo le informazioni nel set di dati creato o modificato dopo l’ultima esecuzione del caricamento. Di conseguenza, aumenta l’efficienza di elaborazione e può essere utilizzato sia con l’elaborazione dei dati in streaming che in batch.
++++Rispondi [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) può essere utilizzata per leggere in modo incrementale i dati su una tabella basata su un ID snapshot. Questa funzione è ideale per l&#39;utilizzo con [carico incrementale](./key-concepts/incremental-load.md) modello di progettazione che elabora solo le informazioni nel set di dati creato o modificato dopo l’ultima esecuzione del caricamento. Di conseguenza, aumenta l’efficienza di elaborazione e può essere utilizzato sia con l’elaborazione dei dati in streaming che in batch.
 +++
 
 ### Perché esiste una differenza tra i numeri visualizzati nell’interfaccia utente del profilo e i numeri calcolati dal set di dati di esportazione del profilo?

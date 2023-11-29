@@ -2,7 +2,7 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Controlla la [panoramica delle destinazioni di e-mail marketing](../../destinati
 
 ## Visualizzare i dati di analisi restituiti dalla campagna {#post-campaign-data-analysis}
 
-I dati provenienti dalle origini ora possono essere [elaborato in modo incrementale](../essential-concepts/incremental-load.md) come parte di un aggiornamento pianificato del modello dati nell’archivio dati accelerato. Eventuali eventi di risposta dai clienti possono essere acquisiti in Adobe Experience Platform così come si verificano o in batch. Il modello dati può essere aggiornato una o più volte al giorno, a seconda delle impostazioni o dei connettori di origine. Consulta la [panoramica dell’API per l’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md) o [panoramica sull’acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md) per ulteriori informazioni.
+I dati provenienti dalle origini ora possono essere [elaborato in modo incrementale](../key-concepts/incremental-load.md) come parte di un aggiornamento pianificato del modello dati nell’archivio dati accelerato. Eventuali eventi di risposta dai clienti possono essere acquisiti in Adobe Experience Platform così come si verificano o in batch. Il modello dati può essere aggiornato una o più volte al giorno, a seconda delle impostazioni o dei connettori di origine. Consulta la [panoramica dell’API per l’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md) o [panoramica sull’acquisizione in streaming](../../ingestion/streaming-ingestion/overview.md) per ulteriori informazioni.
 
 Una volta aggiornato il modello dati, i widget del dashboard personalizzati forniscono segnali significativi che consentono di misurare e visualizzare il valore del ciclo di vita del cliente.
 

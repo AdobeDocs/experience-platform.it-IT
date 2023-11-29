@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 19%
@@ -215,7 +215,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 | Funzione | Descrizione |
 | --- | --- |
 | API di sottoscrizione avvisi | Adobe Experience Platform Query Service consente di ricevere avvisi sia per le query ad hoc che per quelle pianificate. Gli avvisi possono essere ricevuti tramite e-mail, nell’interfaccia di Platform o in entrambe le modalità. Attualmente, gli avvisi di query possono essere abbonati solo utilizzando [API servizio query](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Esempi di set di dati | Gli esempi di set di dati di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Consulta la [guida agli esempi di set di dati](../../query-service/essential-concepts/dataset-samples.md) per ulteriori informazioni. |
+| Esempi di set di dati | Gli esempi di set di dati di Query Service consentono di eseguire query esplorative sui big data con tempi di elaborazione notevolmente ridotti a scapito della precisione delle query. Consulta la [guida agli esempi di set di dati](../../query-service/key-concepts/dataset-samples.md) per ulteriori informazioni. |
 
 Per ulteriori informazioni su [!DNL Query Service], consultare il [[!DNL Query Service] panoramica](../../query-service/home.md).
 

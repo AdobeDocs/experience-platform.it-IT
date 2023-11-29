@@ -4,7 +4,7 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 20%
@@ -52,6 +52,15 @@ ht-degree: 20%
    - [Restituire e utilizzare le variabili di merchandising dai dati di Analytics](use-cases/merchandising-variables.md)
    - [Visualizzare il rapporto di aggregazione per un visitatore](use-cases/roll-up-report-of-a-visitor.md)
    - [Approfondimenti sull’analisi web e mobile](use-cases/analytics-insights.md)
+- Concetti chiave {#key-concepts}
+   - [Utilizzo delle strutture di dati nidificate](key-concepts/nested-data-structures.md)
+   - [Appiattire le strutture di dati nidificate](key-concepts/flatten-nested-data.md)
+   - [Blocco anonimo](key-concepts/anonymous-block.md)
+   - [Modello in linea](key-concepts/inline-templates.md)
+   - [Caricamento incrementale](key-concepts/incremental-load.md)
+   - [Deduplicazione dei dati](key-concepts/deduplication.md)
+   - [Esempi di set di dati](key-concepts/dataset-samples.md)
+   - [Calcolo delle statistiche del set di dati](key-concepts/dataset-statistics.md)
 - Connettere i client a Query Service {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Modalità SSL](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 20%
 - Best practice {#best-practices}
    - [Esecuzione della query](best-practices/writing-queries.md)
    - [Organizzazione delle risorse dati](./best-practices/organize-data-assets.md)
-- Concetti essenziali {#essential-concepts}
-   - [Utilizzo delle strutture di dati nidificate](essential-concepts/nested-data-structures.md)
-   - [Appiattire le strutture di dati nidificate](essential-concepts/flatten-nested-data.md)
-   - [Blocco anonimo](essential-concepts/anonymous-block.md)
-   - [Modello in linea](essential-concepts/inline-templates.md)
-   - [Caricamento incrementale](essential-concepts/incremental-load.md)
-   - [Deduplicazione dei dati](essential-concepts/deduplication.md)
-   - [Esempi di set di dati](essential-concepts/dataset-samples.md)
-   - [Calcolo delle statistiche del set di dati](essential-concepts/dataset-statistics.md)
 - Riferimento SQL {#sql}
    - [Panoramica di SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)

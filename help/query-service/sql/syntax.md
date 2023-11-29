@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento mostra la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 95d1aec09477480532d4df1bdc7488d3f5a39394
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '4134'
 ht-degree: 2%
@@ -765,7 +765,7 @@ L’output della console viene visualizzato come illustrato di seguito.
 (1 row)
 ```
 
-Puoi quindi eseguire direttamente una query sulle statistiche calcolate facendo riferimento al `Statistics ID`. L’istruzione di esempio seguente ti consente di visualizzare l’output completo quando viene utilizzato con `Statistics ID` o il nome dell’alias. Per ulteriori informazioni su questa funzione, consulta [documentazione del nome alias](../essential-concepts/dataset-statistics.md#alias-name).
+Puoi quindi eseguire direttamente una query sulle statistiche calcolate facendo riferimento al `Statistics ID`. L’istruzione di esempio seguente ti consente di visualizzare l’output completo quando viene utilizzato con `Statistics ID` o il nome dell’alias. Per ulteriori informazioni su questa funzione, consulta [documentazione del nome alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -788,7 +788,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Consulta la [documentazione delle statistiche dei set di dati](../essential-concepts/dataset-statistics.md) per ulteriori informazioni.
+Consulta la [documentazione delle statistiche dei set di dati](../key-concepts/dataset-statistics.md) per ulteriori informazioni.
 
 #### TABELLAMPIO {#tablesample}
 
@@ -806,7 +806,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Consulta la [documentazione sugli esempi di set di dati](../essential-concepts/dataset-samples.md) per ulteriori informazioni.
+Consulta la [documentazione sugli esempi di set di dati](../key-concepts/dataset-samples.md) per ulteriori informazioni.
 
 ### INIZIO
 

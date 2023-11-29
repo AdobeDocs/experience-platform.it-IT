@@ -2,7 +2,7 @@
 title: Analisi esplorativa dei dati
 description: Scopri come utilizzare Data Distiller per esplorare e analizzare i dati da un notebook Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 16%
@@ -42,7 +42,7 @@ df
 
 ## Creare una versione campionata di set di dati di grandi dimensioni {#create-dataset-sample}
 
-Se il set di dati da ricercare è molto grande o se non sono necessari risultati esatti da query esplorative, utilizza [funzionalità di campionamento](../../essential-concepts/dataset-samples.md) disponibile per le query di Data Distiller. Si tratta di un processo in due fasi:
+Se il set di dati da ricercare è molto grande o se non sono necessari risultati esatti da query esplorative, utilizza [funzionalità di campionamento](../../key-concepts/dataset-samples.md) disponibile per le query di Data Distiller. Si tratta di un processo in due fasi:
 
 - In primo luogo, **analizzare** il set di dati per creare una versione campionata con una proporzione di campionamento specificata
 - Esegui quindi una query sulla versione campionata del set di dati. A seconda delle funzioni applicate al set di dati campionato, può essere opportuno scalare l’output in base ai numeri fino al set di dati completo
