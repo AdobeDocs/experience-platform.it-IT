@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
 description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 1%
 Upsert in streaming [!DNL Data Prep] consente di inviare aggiornamenti di riga parziali a [!DNL Real-Time Customer Profile] e allo stesso tempo creare e stabilire nuovi collegamenti di identità con una singola richiesta API.
 
 Gli aggiornamenti in streaming consentono di mantenere il formato dei dati durante la traduzione [!DNL Real-Time Customer Profile] Richieste PATCH durante l’acquisizione. In base agli input forniti, [!DNL Data Prep] consente di inviare un singolo payload API e tradurre i dati in entrambi [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] Creare le richieste.
+
+>[!WARNING]
+>
+>L’acquisizione dei messaggi di aggiornamento entità (con operazioni JSON PATCH) in Experience Data Model (XDM) per gli aggiornamenti del profilo tramite l’ingresso DCS è stata dichiarata obsoleta. In alternativa, puoi: [Inserire dati non elaborati nell&#39;ingresso DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e specifica le mappature di dati necessarie per trasformare i dati in messaggi conformi a XDM per gli aggiornamenti del profilo.
 
 Questo documento fornisce informazioni su come eseguire lo streaming degli upsert in [!DNL Data Prep].
 
