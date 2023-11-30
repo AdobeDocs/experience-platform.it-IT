@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 description: Scopri come accelerare il time-to-value copiando le risorse generate nella sandbox end inspirational in altre sandbox.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 
-I playbook di casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. In Adobe Experience Platform, questi modelli fanno riferimento a diversi campi e gruppi di campi standard. In alcuni casi, tuttavia, potrebbero essere già stati impostati schemi, campi e gruppi di campi personalizzati. In questo modo alcune delle risorse generate dai modelli del caso d’uso, ad esempio i percorsi, potrebbero risultare incompatibili con i dati. Leggi questa esercitazione per scoprire come utilizzare la funzionalità di riconoscimento dei dati per allineare e integrare meglio le risorse generate con le risorse esistenti.
+I playbook di casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. In Adobe Experience Platform, questi modelli fanno riferimento a diversi campi e gruppi di campi standard. In alcuni casi, tuttavia, potrebbero essere già stati impostati schemi, campi e gruppi di campi personalizzati. In questo modo alcune delle risorse generate dai modelli del caso d’uso, ad esempio i percorsi, potrebbero risultare incompatibili con i dati. Per informazioni su come utilizzare la funzionalità di riconoscimento dei dati per allineare e integrare meglio le risorse generate con le risorse esistenti, leggi questa esercitazione.
 
 ## Prerequisiti {#prerequisites}
 
@@ -31,7 +31,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 
    ![Una finestra modale per la creazione di un pacchetto](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Accedi a **Sandbox** nella barra di navigazione a sinistra e seleziona la **Pacchetti** , individua il pacchetto e pubblicalo. Per pubblicare un pacchetto in stato di bozza, segui i passaggi descritti in [strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) documento.
+3. Accedi a **Sandbox** nella barra di navigazione a sinistra e seleziona la **Pacchetti** , trovare il pacchetto e pubblicarlo. Per pubblicare un pacchetto in stato di bozza, segui i passaggi descritti in [strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) documento.
 
    ![Pacchetto in stato bozza o non pubblicato](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
@@ -45,7 +45,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
    >
    > Poiché non è possibile importare il pacchetto mentre è ancora in modalità bozza, aprire la pagina dei dettagli del pacchetto e pubblicare il pacchetto.
 
-5. Seleziona la **+** per avviare il flusso di lavoro e importare le risorse generate dal playbook del caso d’uso in **[!UICONTROL Sandbox di Target]**. Seleziona una sandbox di destinazione e conferma il nome del pacchetto da importare utilizzando il menu a discesa. Aggiungere i dettagli del job, ad esempio il nome e la descrizione, prima di procedere al passaggio successivo.
+5. Seleziona la **+** controllare e avviare il flusso di lavoro per importare in **[!UICONTROL Sandbox di Target]**. Seleziona una sandbox di destinazione e conferma il nome del pacchetto da importare utilizzando il menu a discesa. Aggiungere i dettagli del job, ad esempio il nome e la descrizione, prima di procedere al passaggio successivo.
 
    ![Avvia il flusso di lavoro di importazione, seleziona la destinazione, conferma il pacchetto, aggiungi i dettagli del processo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 
 ### Mappare gli schemi {#map-schemas}
 
-1. Mappa il primo schema. La finestra di dialogo di mappatura dello schema visualizza un elenco a discesa per selezionare lo schema di destinazione. Se lo schema di origine è uno schema di profilo, non vi sono altre opzioni dello schema di destinazione oltre a [schema del profilo di unione individuale](/help/xdm/classes/individual-profile.md). Puoi vedere i consigli di mappatura generati automaticamente tra i dati di origine e i campi di destinazione quando la pagina viene visualizzata per la prima volta. Puoi modificare le mappature selezionando il campo di destinazione e quindi un nuovo campo. Se apporti modifiche alle mappature suggerite, utilizza **Convalida** per convalidare le nuove mappature e visualizzare gli eventuali errori collegati alle nuove mappature. Seleziona **Salva** una volta completata la mappatura.
+1. Mappa il primo schema. La finestra di dialogo di mappatura dello schema visualizza un elenco a discesa per selezionare lo schema di destinazione. Se lo schema di origine è uno schema di profilo, non vi sono altre opzioni dello schema di destinazione oltre a [schema del profilo di unione individuale](/help/xdm/classes/individual-profile.md). Puoi vedere i consigli di mappatura generati automaticamente tra i dati di origine e i campi di destinazione quando la pagina viene visualizzata per la prima volta. Puoi modificare le mappature selezionando il campo di destinazione e quindi un nuovo campo. Se modifichi le mappature suggerite, utilizza **Convalida** per convalidare le nuove mappature e visualizzare gli eventuali errori collegati alle nuove mappature. Seleziona **Salva** una volta completata la mappatura.
 
    ![Finestra di dialogo di mappatura dello schema con un menu a discesa per selezionare uno schema di destinazione.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 
    >[!NOTE]
    >
-   > Non è possibile intervenire su alcuna risorsa, a eccezione degli schemi, in quanto si tratta di una sandbox ispiratrice, ma vengono visualizzati in quanto dipendenze del pacchetto.
+   > Non puoi modificare le risorse a eccezione degli schemi, in quanto si tratta di una sandbox illuminante, ma vengono visualizzati in quanto dipendenze del pacchetto.
 
 ### Stato importazione {#import-status}
 
@@ -89,7 +89,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 
    ![Pagina che mostra l’avanzamento dell’importazione](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Durante l’importazione del pacchetto, le relative risorse vengono create nella sandbox di destinazione. Una volta completati, faranno riferimento ai campi appena mappati nel processo di importazione. Il processo è ora completo e le risorse della sandbox che ispira sono ora presenti anche nella sandbox di destinazione per il test.
+2. Durante l’importazione del pacchetto, le relative risorse vengono create nella sandbox di destinazione. Una volta completati, fanno riferimento ai campi mappati durante il processo di importazione. Il processo è ora completo e le risorse della sandbox che ispira sono ora presenti anche nella sandbox di destinazione per il test.
 
    ![Risorse generate nella sandbox di destinazione](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
