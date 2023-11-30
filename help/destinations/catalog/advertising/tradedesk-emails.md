@@ -3,9 +3,9 @@ title: (Beta) Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in tes
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
 | E-mail | Indirizzi e-mail (testo non crittografato) | Input `email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo e-mail. |
-| Email_LC_SHA256 | Gli indirizzi e-mail devono avere un hash utilizzando SHA256 e lettere minuscole. Assicurati di seguire qualsiasi [normalizzazione e-mail](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) regole richieste. Non potrai modificare questa impostazione in un secondo momento. | Input `hashed_email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo Email_LC_SHA256. |
+| Email_LC_SHA256 | Gli indirizzi e-mail devono avere un hash utilizzando SHA256 e lettere minuscole. Non potrai modificare questa impostazione in un secondo momento. | Input `hashed_email` come identità di destinazione quando l’identità di origine è uno spazio dei nomi o un attributo Email_LC_SHA256. |
 
 {style="table-layout:auto"}
 
