@@ -2,9 +2,9 @@
 title: Blocco anonimo in Query Service
 description: Il blocco anonimo è una sintassi SQL supportata da Adobe Experience Platform Query Service che consente di eseguire in modo efficiente una sequenza di query
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## Blocco anonimo con client di terze parti {#third-party-clients}
+
+Alcuni client di terze parti possono richiedere un identificatore separato prima e dopo un blocco SQL per indicare che una parte dello script deve essere gestita come una singola istruzione. Se viene visualizzato un messaggio di errore quando si utilizza Query Service con un client di terze parti, è necessario fare riferimento alla documentazione del client di terze parti relativa all&#39;utilizzo di un blocco SQL.
+
+Ad esempio: **DbVisualizer** richiede che il delimitatore sia l&#39;unico testo sulla riga. In DbVisualizer, il valore predefinito per l&#39;identificatore iniziale è `--/` e per l’identificatore finale è `/`. Di seguito è riportato un esempio di blocco anonimo in DbVisualizer:
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+In particolare, per DbVisualizer è disponibile un’opzione nell’interfaccia utente per &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Consulta la [Documentazione di DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) per ulteriori informazioni.
+
 ## Passaggi successivi
 
-Una volta letto questo documento, avrai una chiara comprensione dei blocchi anonimi e della loro struttura. [Per ulteriori informazioni sull’esecuzione delle query](../best-practices/writing-queries.md), leggi la guida sull’esecuzione delle query in Query Service.
+Una volta letto questo documento, avrai una chiara comprensione dei blocchi anonimi e della loro struttura. Leggi le [guida all’esecuzione delle query](../best-practices/writing-queries.md) per ulteriori informazioni sulla scrittura di query.
 
-Leggi anche informazioni su [utilizzo del blocco anonimo con il modello di progettazione del caricamento incrementale](./incremental-load.md) per aumentare l’efficienza delle query.
+Leggi anche informazioni su [utilizzo dei blocchi anonimi con il modello di progettazione del caricamento incrementale](./incremental-load.md) per aumentare l’efficienza delle query.
