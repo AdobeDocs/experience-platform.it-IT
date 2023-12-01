@@ -3,12 +3,12 @@ title: Guardrail predefiniti per dati e segmentazione del profilo cliente in tem
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione per garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
+description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
 workflow-type: tm+mt
 source-wordcount: '2230'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
