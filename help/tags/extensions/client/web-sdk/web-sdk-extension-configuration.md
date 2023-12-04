@@ -2,10 +2,10 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 10%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -39,7 +39,7 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 
 ![Immagine che mostra le impostazioni generali dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Nome]**: l’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza viene impostato automaticamente su `alloy`. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
+* **[!UICONTROL Nome]**: l’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza viene impostato automaticamente su `alloy`. Tuttavia, puoi modificare il nome dell’istanza con qualsiasi nome di oggetto JavaScript valido.
 * **[!UICONTROL ID organizzazione IMS]**: ID dell’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
 * **[!UICONTROL Dominio Edge]**: dominio da cui l’estensione invia e riceve i dati. L’Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
@@ -65,7 +65,7 @@ Il livello di consenso predefinito non viene salvato nel profilo utente.
 
 | [!UICONTROL Livello di consenso predefinito] | Descrizione |
 | --- | --- |
-| [!UICONTROL In] | Raccogli eventi che si verificano prima che l’utente fornisca le preferenze di consenso. |
+| [!UICONTROL In entrata] | Raccogli eventi che si verificano prima che l’utente fornisca le preferenze di consenso. |
 | [!UICONTROL Uscita] | Elimina gli eventi che si verificano prima che l’utente fornisca le preferenze di consenso. |
 | [!UICONTROL In sospeso] | Metti in coda eventi che si verificano prima che l’utente fornisca le preferenze di consenso. Quando vengono fornite le preferenze di consenso, gli eventi vengono raccolti o eliminati in base alle preferenze fornite. |
 | [!UICONTROL Fornito dall’elemento dati] | Il livello di consenso predefinito è determinato da un elemento dati separato da te definito. Quando utilizzi questa opzione, devi specificare l’elemento dati utilizzando il menu a discesa fornito. |
@@ -85,13 +85,25 @@ Questa sezione ti consente di definire il comportamento dell’SDK web quando si
 
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
-Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato.
-
-È possibile specificare gli elementi da nascondere nell&#39;editor di stili pre-hiding. È quindi possibile copiare il frammento predefinito di pre-hiding fornito e incollarlo all&#39;interno del `<head>` elemento del sito [!DNL HTML] codice.
+Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
 
 ![Immagine che mostra le impostazioni di personalizzazione dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migrare Target da at.js a Web SDK]**: utilizza questa opzione per abilitare [!DNL Web SDK] per leggere e scrivere la versione precedente `mbox` e `mboxEdgeCluster` cookie utilizzati da at.js `1.x` o `2.x` librerie. Questo ti aiuta a mantenere il profilo visitatore durante il passaggio da una pagina che utilizza l’SDK per web a una pagina che utilizza at.js `1.x` o `2.x` e viceversa.
+
+### Stile pre-hiding {#prehiding-style}
+
+L’editor di stili che nasconde anticipatamente ti consente di definire regole CSS personalizzate per nascondere sezioni specifiche di una pagina. Quando la pagina viene caricata, Web SDK utilizza questo stile per nascondere le sezioni che devono essere personalizzate, recupera la personalizzazione e quindi rimuove le sezioni della pagina personalizzata. In questo modo, i visitatori visualizzano le pagine già personalizzate senza visualizzare il processo di recupero della personalizzazione.
+
+### Frammento pre-hiding {#prehiding-snippet}
+
+Il frammento pre-hiding è utile quando la libreria SDK Web viene caricata in modo asincrono. In questa situazione, per evitare sfarfallii, consigliamo di nascondere il contenuto prima che venga caricata la libreria dell’SDK web.
+
+Per utilizzare il frammento pre-hiding, copiarlo e incollarlo all&#39;interno del `<head>` della pagina.
+
+>[!IMPORTANT]
+>
+>Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare lo stesso [!DNL CSS] regola come quella utilizzata da [stile pre-hiding](#prehiding-style).
 
 ## Configurare le impostazioni di raccolta dati {#data-collection}
 
@@ -110,7 +122,7 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
 1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
-2. Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’estensione tag di Web SDK.
+2. Quindi, devi inviare le sostituzioni a Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
 
 Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](../../../../datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
 
