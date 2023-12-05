@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione Adobe Media Analytics for Audio and Video
 description: Scopri l’estensione tag Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 98%
+source-wordcount: '949'
+ht-degree: 97%
 
 ---
 
@@ -121,18 +121,19 @@ L&#39;estensione MA espone i moduli condivisi `get-instance` e `media-heartbeat`
 
    * Un oggetto delegato valido che espone queste funzioni:
 
-      | Metodo |  Descrizione   |
-      | :--- | :--- |
-      | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. |
-      | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dell&#39;indicatore di riproduzione. Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. Per il tracciamento LIVE/LIVE, il valore viene specificato in secondi dall&#39;inizio del programma. |
+     | Metodo |  Descrizione   |
+     | :--- | :--- |
+     | `getQoSObject()` | Restituisce l&#39;istanza `MediaObject` che contiene le informazioni QoS correnti. Questo metodo verrà chiamato più volte durante una sessione di riproduzione. L&#39;implementazione del lettore deve restituire sempre i dati QoS disponibili più di recente. |
+     | `getCurrentPlaybackTime()` | Restituisce la posizione corrente dell&#39;indicatore di riproduzione. Per il tracciamento VOD, il valore è specificato in secondi dall&#39;inizio dell&#39;elemento multimediale. Per il tracciamento LIVE/LIVE, il valore viene specificato in secondi dall&#39;inizio del programma. |
 
    * Un oggetto di configurazione facoltativo che espone queste proprietà:
 
-      | Proprietà | Descrizione | Obbligatorio |
-      | :--- | :--- | :--- |
-      | Online Video Provider | Nome della piattaforma video online tramite la quale il contenuto è distribuito. | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
-      | Player Name | Nome del lettore multimediale in uso (ad esempio &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
-      | Channel | Proprietà nome canale | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
+     | Proprietà | Descrizione | Obbligatorio |
+     | :--- | :--- | :--- |
+     | Online Video Provider | Nome della piattaforma video online tramite la quale il contenuto è distribuito. | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
+     | Player Name | Nome del lettore multimediale in uso (ad esempio &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
+     | Channel | Proprietà nome canale | No. Se presente, sostituisce il valore definito durante la configurazione dell&#39;estensione. |
+
    **Valore restituito:** una promessa che risolve con un&#39;istanza `MediaHeartbeat` o rifiuta con un messaggio di errore.
 
 1. **Accesso a costanti MediaHeartbeat:** `media-heartbeat` modulo condiviso
@@ -173,7 +174,7 @@ L&#39;estensione MA espone i moduli condivisi `get-instance` e `media-heartbeat`
    ...
    ```
 
-1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html?lang=it) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
+1. Utilizzando l’istanza Media Heartbeat, segui la [documentazione JS Media SDK](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e la [documentazione API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) per implementare il tracciamento multimediale.
 
 >[!NOTE]
 >
