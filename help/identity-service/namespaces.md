@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 8%
+source-wordcount: '1787'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,24 @@ Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe
 
 ## Informazioni sugli spazi dei nomi delle identità
 
+![Illustrazione del flusso di lavoro dei dati con Identity Service.](images/identity-service-stitching.png)
+
 Un’identità completa include due componenti: **valore identità** e un **spazio dei nomi delle identità**. Ad esempio, se il valore di un’identità è `scott@acme.com`, quindi uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono, e `3126ABC` come ID CRM. Essenzialmente, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano dati record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo; il valore di identità e lo spazio dei nomi devono corrispondere.
 
 Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;, pertanto Experienci Platform è in grado di vedere che questi frammenti sono in realtà lo stesso individuo e uniscono i dati nel grafico delle identità dell’individuo.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Spiegazione dello spazio dei nomi dell’identità**
+
+Un altro modo per comprendere meglio il concetto di spazio dei nomi è considerare esempi reali come le città e i loro stati corrispondenti. Ad esempio, Portland, Maine e Portland, Oregon sono due luoghi diversi negli Stati Uniti. Mentre le città condividono lo stesso nome, lo stato opera come uno spazio dei nomi e fornisce il contesto necessario che distingue le due città l&#39;una dall&#39;altra.
+
+Applicazione della stessa logica al servizio Identity:
+
+* In breve, il valore di identità di: `1-234-567-8900` può sembrare un numero di telefono. Tuttavia, dal punto di vista del sistema, questo valore avrebbe potuto essere configurato come ID CRM. Identity Service non avrebbe modo di applicare il contesto necessario a questo valore di identità senza uno spazio dei nomi corrispondente.
+* Un altro esempio è il valore identità di: `john@gmail.com`. Anche se questo valore di identità può essere facilmente considerato un E-mail, è del tutto possibile che sia configurato come un ID CRM dello spazio dei nomi personalizzato. Con lo spazio dei nomi, puoi distinguere `Email:john@gmail.com` da `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Componenti di uno spazio dei nomi
 
@@ -61,7 +74,7 @@ In Experienci Platform sono disponibili i seguenti tipi di identità:
 | ID multi-dispositivo | Gli ID multi-dispositivo identificano un individuo e solitamente associano insieme altri ID. Alcuni esempi includono un ID di accesso, un ID CRM e un ID fedeltà. Questo è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 | ID dispositivo | Gli ID dispositivo identificano i dispositivi hardware, come IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e possono essere condivisi da più persone nelle famiglie. |
 | Indirizzo e-mail | Gli indirizzi e-mail sono spesso associati a una singola persona e possono quindi essere utilizzati per identificarla tra canali diversi. Le identità di questo tipo includono informazioni personali (PII, personally identifiable information). Questo è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
-| Identificatore non personale | Gli ID non-people vengono utilizzati per memorizzare gli identificatori che richiedono spazi dei nomi ma non sono connessi a un cluster di persone. Ad esempio, uno SKU di prodotto, dati relativi a prodotti, organizzazioni o negozi. |
+| Identificatore non persone | Gli ID non-people vengono utilizzati per memorizzare gli identificatori che richiedono spazi dei nomi ma non sono connessi a un cluster di persone. Ad esempio, uno SKU di prodotto, dati relativi a prodotti, organizzazioni o negozi. |
 | ID partner | <ul><li>Gli ID partner sono identificatori utilizzati dai partner di dati per rappresentare le persone. Gli ID partner sono spesso pseudonimi in modo da non rivelare la vera identità di una persona e possono essere probabilistici. In Real-time Customer Data Platform, gli ID partner vengono utilizzati principalmente per l’attivazione estesa del pubblico e l’arricchimento dei dati e non per la creazione di collegamenti del grafico delle identità.</li><li>I grafici delle identità non vengono generati durante l’acquisizione di un’identità che include uno spazio dei nomi di identità specificato come tipo di ID partner.</li><li>La mancata acquisizione dei dati dei partner utilizzando il tipo di identità ID partner potrebbe comportare il raggiungimento di limitazioni del grafico del sistema per Identity Service, nonché l’unione indesiderata di profili.</li><ul> |
 | Numero di telefono | I numeri di telefono sono spesso associati a una singola persona e possono quindi essere utilizzati per identificare tale persona su canali diversi. Le identità di questo tipo includono PII. Questa è un’indicazione per [!DNL Identity Service] per gestire il valore in modo sensibile. |
 
@@ -87,7 +100,7 @@ I seguenti spazi dei nomi standard sono forniti per l’utilizzo da parte di tut
 | Google Ad ID (GAID) | Spazio dei nomi che rappresenta un ID Google Advertising. Vedi il seguente documento su [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) per ulteriori informazioni. |
 | ID clic Google | Spazio dei nomi che rappresenta un ID clic di Google. Vedi il seguente documento su [Tracciamento dei clic in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) per ulteriori informazioni. |
 | Telefono | Uno spazio dei nomi che rappresenta un numero di telefono. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
-| Telefono (E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata, un prefisso locale e un numero di telefono. Ad esempio: `(+)(country code)(area code)(phone number)`. |
+| Telefono (E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash nel formato E.164. Il formato E.164 include un segno più (`+`), un codice internazionale di chiamata, un prefisso locale e un numero di telefono. Esempio: `(+)(country code)(area code)(phone number)`. |
 | Telefono (SHA256) | Spazio dei nomi che rappresenta i numeri di telefono che devono essere sottoposti a hashing utilizzando SHA256. È necessario rimuovere simboli, lettere ed eventuali zeri iniziali. È inoltre necessario aggiungere come prefisso il codice di chiamata del paese. |
 | Telefono (SHA256_E.164) | Uno spazio dei nomi che rappresenta i numeri di telefono non elaborati con hash che devono essere eseguiti utilizzando sia il formato SHA256 che il formato E.164. |
 | TNTID | Uno spazio dei nomi che rappresenta Adobe Target. Vedi il seguente documento su [Target](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) per ulteriori informazioni. |
