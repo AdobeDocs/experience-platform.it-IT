@@ -3,9 +3,9 @@ title: Panoramica del connettore di origine degli hub eventi di Azure
 description: Scopri come collegare gli hub eventi di Azure a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Per aumentare la velocità di acquisizione sul lato Platform, Platform deve aume
 
 ## Utilizzare una rete virtuale a cui connettersi [!DNL Event Hubs] alla piattaforma
 
-È possibile configurare una rete virtuale per la connessione [!DNL Event Hubs] su Platform mentre le misure firewall sono abilitate. Per configurare una rete virtuale, passare a questo [[!DNL Event Hubs] documento set di regole di rete](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) e segui i passaggi elencati di seguito:
+È possibile configurare una rete virtuale per la connessione [!DNL Event Hubs] su Platform mentre le misure firewall sono abilitate. Per configurare una rete virtuale, passare a questo [[!DNL Event Hubs] documento set di regole di rete](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) e segui i passaggi elencati di seguito:
 
 * Seleziona **Prova** dal pannello API REST;
 * Autentica il tuo [!DNL Azure] utilizzando le credenziali nello stesso browser;
@@ -117,7 +117,7 @@ Per le diverse aree delle subnet Platform, consulta l’elenco seguente:
 }
 ```
 
-Vedi quanto segue [[!DNL Event Hubs] documento](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) per ulteriori informazioni sui set di regole di rete.
+Vedi quanto segue [[!DNL Event Hubs] documento](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) per ulteriori informazioni sui set di regole di rete.
 
 ## Connetti [!DNL Event Hubs] alla piattaforma
 

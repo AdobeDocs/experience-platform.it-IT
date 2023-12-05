@@ -2,9 +2,9 @@
 title: Creare una connessione di base di Google Ads utilizzando l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a Google Ads utilizzando l’API del servizio Flusso.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '727'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ Per ottenere [!DNL Flow Service] per connettersi con Google Ads, è necessario f
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `clientCustomerId` | L’ID cliente client è il numero di account che corrisponde all’account client di Google Ads che desideri gestire con l’API di Google Ads. Questo ID segue il modello di `123-456-7890`. |
-| `loginCustomerId` | L’ID cliente di accesso è il numero di account che corrisponde all’account di Google Ads Manager e viene utilizzato per recuperare i dati del rapporto da un cliente operativo specifico. Per ulteriori informazioni sull’ID cliente di accesso, leggi [Documentazione API di Google Ads](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| `loginCustomerId` | L’ID cliente di accesso è il numero di account che corrisponde all’account di Google Ads Manager e viene utilizzato per recuperare i dati del rapporto da un cliente operativo specifico. Per ulteriori informazioni sull’ID cliente di accesso, leggi [Documentazione API di Google Ads](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | `developerToken` | Il token sviluppatore ti consente di accedere all’API di Google Ads. Puoi utilizzare lo stesso token sviluppatore per effettuare richieste su tutti gli account Google Ads. Recupera il token di sviluppo tramite [accesso al tuo account manager](https://ads.google.com/home/tools/manager-accounts/) e quindi passare al [!DNL API Center] pagina. |
 | `refreshToken` | Il token di aggiornamento fa parte di [!DNL OAuth2] autenticazione. Questo token ti consente di rigenerare i token di accesso dopo la scadenza. |
 | `clientId` | L’ID client viene utilizzato insieme al segreto client come parte di [!DNL OAuth2] autenticazione. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto dell’account identificando l’applicazione in Google. |
@@ -48,7 +48,7 @@ Leggi il documento di panoramica API per [ulteriori informazioni su come iniziar
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Crea una connessione di base
+## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
