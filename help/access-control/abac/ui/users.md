@@ -3,14 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Gestione degli utenti con controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla gestione di utenti e gruppi di utenti tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 1%
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
-# Gestisci utenti
+# Gestione utenti
 
 Se desideri visualizzare i dettagli utente e i ruoli a cui sono assegnati, seleziona la **[!UICONTROL Utenti]** scheda.
 
@@ -26,13 +26,13 @@ Seleziona la **[!UICONTROL Ruoli]** per visualizzare i ruoli a cui l&#39;utente 
 
 ![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
 
-## Controllo degli accessi a sviluppatori e API con autorizzazioni Experience Platform
+## Controllo degli accessi a sviluppatori e API con autorizzazioni Experienci Platform
 
 >[!NOTE]
 >
 >Solo gli amministratori di sistema possono visualizzare e gestire le credenziali API in Autorizzazioni.
 
-La transizione alle autorizzazioni Adobe Experience Platform prevede passaggi aggiuntivi che devono essere completati per il flusso di lavoro API per sviluppatori che in precedenza si basava sui profili di prodotto. Consulta la guida su [Autenticazione API](../../../landing/api-authentication.md) per ulteriori informazioni.
+La transizione alle autorizzazioni Adobe Experience Platform prevede passaggi aggiuntivi da completare per il flusso di lavoro API per sviluppatori che in precedenza si basava sui ruoli. Consulta la guida su [Autenticazione API](../../../landing/api-authentication.md) per ulteriori informazioni.
 
 ## Passaggi successivi
 

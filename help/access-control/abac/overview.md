@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 17%
+source-wordcount: '1840'
+ht-degree: 13%
 
 ---
 
@@ -40,17 +40,17 @@ Il controllo dell’accesso basato su attributi include i seguenti componenti:
 | Risorsa | Una risorsa è la risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere segmenti o campi schema. |
 | Ruoli | I ruoli consentono di classificare i tipi di utenti che interagiscono con l’istanza Platform e sono elementi fondamentali nei criteri di controllo degli accessi. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. |
 | Oggetto | Un oggetto è l’utente che richiede l’accesso a una risorsa per eseguire un’azione. |
-| Gruppi utente | I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno l’accesso per eseguire le stesse funzioni. |
+| Gruppi di utenti | I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno l’accesso per eseguire le stesse funzioni. |
 
 ## Autorizzazioni
 
 >[!IMPORTANT]
 >
->Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Profili di prodotto in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
+>Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
 
 Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Mediante le Autorizzazioni di , , puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere [Guida alle autorizzazioni](ui/browse.md).
+Tramite le Autorizzazioni, puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico. Per ulteriori informazioni, vedere [Guida alle autorizzazioni](ui/browse.md).
 
 ## API di controllo dell’accesso basata su attributi
 
@@ -62,7 +62,7 @@ Le sezioni seguenti forniscono informazioni su come il controllo degli accessi b
 
 ### Controllo degli accessi
 
-Piattaforma utilizza [Adobe Admin Console](https://adminconsole.adobe.com) profili di prodotto per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l’accesso a diverse funzionalità di Platform, tra cui la modellazione di dati, la gestione dei profili e l’amministrazione delle sandbox. Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Profili di prodotto in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
+Piattaforma utilizza [Adobe Admin Console](https://adminconsole.adobe.com) ruoli per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l’accesso a diverse funzionalità di Platform, tra cui la modellazione di dati, la gestione dei profili e l’amministrazione delle sandbox. Una volta che l’organizzazione è abilitata per il controllo degli accessi basato su attributi, puoi iniziare a utilizzare Autorizzazioni su Adobe Experience Cloud, anziché Ruoli in Adobe Admin Console, per gestire le autorizzazioni per gli utenti, le funzionalità, le etichette e altre risorse dell’organizzazione.
 
 La disponibilità del controllo degli accessi basato su attributi per i clienti che acquistano prodotti sanitari e/o scudi per la privacy è limitata. Le caratteristiche di questa funzionalità includono:
 
@@ -74,13 +74,13 @@ I flussi di lavoro di amministrazione per tutte le applicazioni alimentate da Ex
 
 >[!IMPORTANT]
 >
->Quando l’organizzazione è abilitata, i profili di prodotto vengono migrati automaticamente all’interfaccia Autorizzazioni. I profili di prodotto in Admin Console rimarranno invariati. Per favore **non** modifica i profili di prodotto dopo l’abilitazione dell’organizzazione.
+>Quando l’organizzazione è abilitata, i ruoli vengono migrati automaticamente all’interfaccia Autorizzazioni. I ruoli nell’Admin Console rimarranno invariati per il momento. Per favore **non** modifica i ruoli dopo l’abilitazione dell’organizzazione.
 
 Per ulteriori informazioni sul controllo degli accessi, vedere [panoramica sul controllo degli accessi](../home.md).
 
 ### Destinazioni {#destinations}
 
-[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
@@ -109,7 +109,7 @@ Per ulteriori informazioni su [!DNL Identity Service], fare riferimento a [[!DNL
 
 ### Profilo cliente in tempo reale
 
- Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+Platform ti consente di promuovere esperienze coordinate, coerenti e rilevanti per i tuoi clienti, indipendentemente da dove o quando interagiscono con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. Il profilo ti consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 In qualità di amministratore, puoi utilizzare funzionalità di controllo dell’accesso basate su attributi per:
 
