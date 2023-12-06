@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1735'
 ht-degree: 4%
 
 ---
@@ -136,11 +136,11 @@ Utilizza le caselle di controllo a sinistra dei nomi dei set di dati per selezio
 
 In **[!UICONTROL Pianificazione]** passaggio, puoi impostare una data di inizio e una cadenza di esportazione per le esportazioni dei set di dati.
 
-Il **[!UICONTROL Esporta file incrementali]** viene selezionata automaticamente. Questo attiva un’esportazione in cui il primo file è uno snapshot completo del set di dati e i file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente.
+Il **[!UICONTROL Esporta file incrementali]** viene selezionata automaticamente. Questo attiva un’esportazione di uno o più file che rappresentano un’istantanea completa del set di dati. I file successivi sono aggiunte incrementali al set di dati dall’esportazione precedente.
 
 >[!IMPORTANT]
 >
->Il primo file incrementale esportato include tutti i dati esistenti nel set di dati, che funziona come retrocompilazione.
+>La prima esportazione incrementale di file include tutti i dati esistenti nel set di dati, che funziona come retrocompilazione. L’esportazione può contenere uno o più file.
 
 ![Flusso di lavoro di esportazione del set di dati che mostra il passaggio di pianificazione.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -167,7 +167,7 @@ Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepil
 
 ## Verificare l’esportazione del set di dati {#verify}
 
-Durante l’esportazione dei set di dati, Experienci Platform crea un’ `.json` o `.parquet` nel percorso di archiviazione fornito. È necessario che un nuovo file venga depositato nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
+Durante l’esportazione dei set di dati, in Experienci Platform ne vengono creati uno o più `.json` o `.parquet` file nel percorso di archiviazione fornito. I nuovi file verranno archiviati nel percorso di archiviazione in base alla pianificazione di esportazione fornita.
 
 In Experience Platform viene creata una struttura di cartelle nel percorso di archiviazione specificato, in cui vengono depositati i file del set di dati esportati. Per ogni esportazione viene creata una nuova cartella, seguendo il modello riportato di seguito:
 
