@@ -3,14 +3,14 @@ keywords: pubblicità; ufficio commerciale; ufficio commerciale di pubblicità
 title: La connessione a Trade Desk
 description: Trade Desk è una piattaforma self-service per consentire agli acquirenti di annunci di eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di visualizzazione, video e inventario mobile.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '739'
 ht-degree: 3%
 
 ---
 
-# Connessione [!DNL The Trade Desk]
+# [!DNL The Trade Desk] connessione
 
 ## Panoramica {#overview}
 
@@ -26,9 +26,9 @@ In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico ba
 
 ## Identità supportate {#supported-identities}
 
-[!DNL The Trade Desk] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] supporta l’attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
-| Identità di destinazione | Descrizione |
+| Identità | Descrizione |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |

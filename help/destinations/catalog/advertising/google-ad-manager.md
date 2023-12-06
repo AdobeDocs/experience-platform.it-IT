@@ -3,14 +3,14 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '938'
 ht-degree: 5%
 
 ---
 
-# Connessione [!DNL Google Ad Manager]
+# [!DNL Google Ad Manager] connessione
 
 ## Panoramica {#overview}
 
@@ -27,12 +27,12 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Google Ad Manager] supporta l’attivazione delle identità descritte nella tabella seguente.
+[!DNL Google Ad Manager] supporta l’attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
-| Identità di destinazione | Descrizione | Considerazioni |
+| Identità | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
-| IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
+| GAID | [!DNL Google Advertising ID] |  |
+| IDFA | [!DNL Apple ID for Advertisers] |  |
 | UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audienci Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |

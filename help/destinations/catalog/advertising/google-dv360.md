@@ -3,14 +3,14 @@ keywords: Doppio clic su Gestione offerte;Doppio clic su Gestione offerte;Doppio
 title: Google Display e connessione Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager, è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 5%
+source-wordcount: '1000'
+ht-degree: 4%
 
 ---
 
-# Connessione [!DNL Google Display & Video 360]
+# [!DNL Google Display & Video 360] connessione
 
 ## Panoramica {#overview}
 
@@ -29,12 +29,12 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Google Display & Video 360] supporta l’attivazione delle identità descritte nella tabella seguente.
+[!DNL Google Display & Video 360] supporta l’attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
-| Identità di destinazione | Descrizione | Considerazioni |
+| Identità | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi GAID. |
-| IDFA | [!DNL Apple ID for Advertisers] | Selezionare questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
+| GAID | [!DNL Google Advertising ID] |  |
+| IDFA | [!DNL Apple ID for Advertisers] |  |
 | UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audienci Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
 | RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |

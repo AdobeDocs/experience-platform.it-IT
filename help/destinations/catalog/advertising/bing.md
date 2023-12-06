@@ -3,14 +3,14 @@ keywords: pubblicità; bing;
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, puoi eseguire campagne digitali di retargeting e mirate al pubblico in tutta Microsoft Advertising Network, inclusi Display advertising, Search e Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '684'
 ht-degree: 10%
 
 ---
 
-# Connessione [!DNL Microsoft Bing] {#bing-destination}
+# [!DNL Microsoft Bing] connessione {#bing-destination}
 
 ## Panoramica {#overview}
 
@@ -26,9 +26,9 @@ In qualità di addetto al marketing, voglio poter utilizzare tipi di pubblico ba
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Microsoft Bing] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supporta l’attivazione di tipi di pubblico in base alle identità mostrate nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
-| Identità di destinazione | Descrizione |
+| Identità | Descrizione |
 |---|---|
 | DOMESTICA | Microsoft Advertising ID |
 
