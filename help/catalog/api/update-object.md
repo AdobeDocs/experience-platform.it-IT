@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aggiornare un oggetto catalogo
 description: Per aggiornare parte di un oggetto Catalog, devi includere il relativo ID nel percorso di una richiesta PATCH. In questo documento viene descritto l’utilizzo dei campi e della notazione Patch JSON per l’esecuzione di operazioni PATCH sugli oggetti Catalog.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 296a988a67871933723ad0474c113cb93fdbf255
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 4%
+source-wordcount: '371'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**
@@ -69,11 +69,7 @@ In caso di esito positivo, la risposta restituisce un array contenente l’ID de
 
 La chiamata di esempio seguente illustra come aggiornare un oggetto utilizzando Patch JSON, come descritto in [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
-<!-- (Include once API fundamentals guide is published) 
-
-For more information on JSON Patch syntax, see the [API fundamentals guide](). 
-
--->
+Per ulteriori informazioni sulla sintassi delle patch JSON, vedi [Guida di base sulle API](../../landing/api-fundamentals.md#json-patch).
 
 **Formato API**
 
@@ -83,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell’oggetto specifico da aggiornare. |
 
 **Richiesta**

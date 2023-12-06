@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Sviluppo di integrazioni ETL per Adobe Experience Platform
 description: La guida all’integrazione di ETL illustra i passaggi generali per la creazione di connettori sicuri e a elevate prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
-ht-degree: 1%
+source-wordcount: '3978'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ La guida all’integrazione di ETL illustra i passaggi generali per la creazione
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Autenticazione e autorizzazione per le API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
+- [Autenticazione e autorizzazione per le API di Experienci Platform](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Questa guida include anche esempi di chiamate API da utilizzare durante la progettazione di un connettore ETL, con collegamenti alla documentazione che ne descrive ognuna [!DNL Experience Platform] e l&#39;utilizzo della relativa API.
@@ -52,11 +52,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
-### Raccogli i valori per le intestazioni richieste
+### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -196,7 +196,7 @@ curl -X GET \
 
 Il formato della risposta dipende dal tipo di intestazione Accept inviata nella richiesta. Le richieste di ricerca richiedono anche una `version` essere incluso nell’intestazione Accept. La tabella seguente illustra le intestazioni Accept per le ricerche:
 
-| Accept | Descrizione |
+| Accetta | Descrizione |
 | ------ | ----------- |
 | `application/vnd.adobe.xed-id+json` | Elencare (GET) richieste, titoli, ID e versioni |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf risolto, con titoli e descrizioni |
@@ -319,7 +319,7 @@ La risposta includerà un set di dati (`limit=1`) che mostra la proprietà &quot
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
@@ -787,7 +787,7 @@ Al momento Adobe Experience Platform non identifica i dati differiti, pertanto l
 
 | Data | Azione | Descrizione |
 | ---- | ------ | ----------- |
-| 2019-01-19 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati includevano in precedenza una proprietà &quot;fields&quot; contenente una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, questa deve essere ignorata e deve essere utilizzato &quot;observedSchema&quot; o &quot;schemaRef&quot;. |
-| 2019-03-15 | Proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i potenziali campi che potrebbero essere utilizzati dal set di dati. |
-| 2019-03-15 | Tutti gli identificatori dell’utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | IdentityMap è un’incapsulazione di tutti gli identificatori univoci di un soggetto, come l’ID del sistema di gestione delle relazioni con i clienti, l’ECID o l’ID del programma fedeltà. Questa mappa è utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un soggetto, formando un unico grafico delle identità per ogni utente finale. |
-| 2019-05-30 | Fine del ciclo di vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati ha fornito un collegamento di riferimento allo schema utilizzando la proprietà obsoleta `/xdms` endpoint nella [!DNL Catalog] API. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce l’&quot;id&quot;, la &quot;versione&quot; e il &quot;contentType&quot; dello schema come riferimento nel nuovo [!DNL Schema Registry] API. |
+| 19/01/2019 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati includevano in precedenza una proprietà &quot;fields&quot; contenente una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, questa deve essere ignorata e deve essere utilizzato &quot;observedSchema&quot; o &quot;schemaRef&quot;. |
+| 15/03/2019 | Proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i potenziali campi che potrebbero essere utilizzati dal set di dati. |
+| 15/03/2019 | Tutti gli identificatori dell’utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | IdentityMap è un’incapsulazione di tutti gli identificatori univoci di un soggetto, come l’ID del sistema di gestione delle relazioni con i clienti, l’ECID o l’ID del programma fedeltà. Questa mappa è utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un soggetto, formando un unico grafico delle identità per ogni utente finale. |
+| 30/05/2019 | Fine del ciclo di vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati ha fornito un collegamento di riferimento allo schema utilizzando la proprietà obsoleta `/xdms` endpoint nella [!DNL Catalog] API. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce l’&quot;id&quot;, la &quot;versione&quot; e il &quot;contentType&quot; dello schema come riferimento nel nuovo [!DNL Schema Registry] API. |
