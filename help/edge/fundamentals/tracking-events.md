@@ -1,9 +1,9 @@
 ---
 title: Tracciare gli eventi utilizzando Adobe Experience Platform Web SDK
 description: Scopri come tenere traccia degli eventi di Adobe Experience Platform Web SDK.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,9 @@ In questo esempio, il livello dati viene clonato serializzandolo in JSON, quindi
 
 ## Invio di dati non XDM
 
-I dati che non corrispondono a uno schema XDM devono essere inviati utilizzando `data` opzione del `sendEvent` comando. Questa funzione è supportata nelle versioni 2.5.0 e successive di Web SDK.
+I dati che non corrispondono a uno schema XDM devono essere inviati utilizzando `data` opzione del `sendEvent` comando. Questa funzione è supportata nelle versioni 2.5.0 e successive di Web SDK. Quando si utilizza questa opzione, i dati dovranno essere mappati su uno schema XDM supportato lato server tramite [Preparazione per la raccolta dati](../../datastreams/data-prep.md#create-mapping).
 
-Questa funzione è utile se devi aggiornare un profilo Adobe Target o inviare gli attributi Recommendations di Target. [Ulteriori informazioni su queste funzioni di Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-In futuro, potrai inviare l’intero livello di dati sotto `data` e mapparlo sul lato server XDM.
+Questa funzione è utile anche se devi aggiornare un profilo Adobe Target o inviare gli attributi Recommendations di Target. Ulteriori informazioni su [Personalizzazione Target](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Come inviare attributi di profilo e Recommendations ad Adobe Target:**
 
