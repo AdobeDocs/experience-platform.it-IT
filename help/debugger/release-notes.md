@@ -4,14 +4,27 @@ description: Note aggiornate sulla versione di Adobe Experience Platform Debugge
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '660'
 ht-degree: 3%
 
 ---
 
 # Note sulla versione di Adobi Experience Platform Debugger
+
+## Versione 1.5.3 - 6 dicembre 2023
+
+### Nuove funzioni
+
+* È stata aggiunta l’impostazione &quot;Blocca sulla scheda attiva all’apertura del debugger&quot;.
+
+### Correzioni e miglioramenti
+
+* È stato risolto un problema a causa del quale nei domini privati mancavano le richieste Analytics.
+* È stato risolto un problema che causava l’assenza di dati Activity Map nella tabella delle richieste di Analytics.
+* È stato risolto un problema che causava un arresto anomalo durante la visualizzazione della traccia di Target.
+* È stato aggiunto un avviso quando Debugger non riesce a configurare l’infrastruttura su pagina in Firefox.
 
 ## Versione 1.5.1 - 2 novembre 2023
 
@@ -23,7 +36,7 @@ ht-degree: 3%
 
 ## Versione 1.5.0 - 19 ottobre 2023
 
-### Nuove funzionalità
+### Nuove funzioni
 
 * Mostra collegamenti a proprietà, ambiente e regole nel riepilogo e nei registri dei tag.
 
