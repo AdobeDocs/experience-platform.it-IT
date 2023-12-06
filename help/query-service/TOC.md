@@ -4,10 +4,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 20%
+source-wordcount: '309'
+ht-degree: 18%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 20%
    - [Elencare le visualizzazioni di pagina di un utente](use-cases/list-visitor-sessions.md)
    - [Elencare i visitatori in base alle loro visualizzazioni di pagina](use-cases/visitors-by-number-of-page-views.md)
    - [Punteggio tendenza](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Esempio di funzione Lambda: recupero di record simili](use-cases/retrieve-similar-records.md)
    - [Restituire e utilizzare le variabili di merchandising dai dati di Analytics](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Visualizzare il rapporto di aggregazione per un visitatore](use-cases/roll-up-report-of-a-visitor.md)
    - [Approfondimenti sull’analisi web e mobile](use-cases/analytics-insights.md)
 - Concetti chiave {#key-concepts}
