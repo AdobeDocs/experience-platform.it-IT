@@ -1,18 +1,17 @@
 ---
 title: Installare Adobe Experience Platform Web SDK
 description: Scopri come installare Experienci Platform Web SDK.
-keywords: installazione web sdk;installazione web sdk;internet explorer;promise;npm package
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
-# Installare l’SDK {#installing-the-sdk}
 
-Sono disponibili tre modi supportati per utilizzare Adobe Experience Platform Web SDK:
+# Installare Web SDK {#installing-the-sdk}
+
+Sono disponibili tre modi supportati per installare Adobe Experience Platform Web SDK:
 
 1. Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite l’interfaccia utente di Data Collection o l’interfaccia utente di Experienci Platform.
 1. Adobe Experience Platform Web SDK è disponibile anche su una rete CDN (Content Delivery Network).
@@ -29,7 +28,6 @@ La versione predefinita è disponibile su una rete CDN. Puoi fare riferimento al
 Struttura URL: https://cdn1.adoberesources.net/alloy/[VERSIONE]/alloy.min.js OR alloy.js per la versione non minimizzata.
 
 Ad esempio:
-
 
 * Minimizzato: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * Non minimizzato: [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -77,7 +75,7 @@ Per determinare se si dispone già di `window.Promise` poleriempito:
 
 1. Apri il sito web in [!DNL Internet Explorer].
 1. Apri la console di debug del browser.
-1. Tipo `window.Promise` nella console, quindi premere Invio.
+1. Tipo `window.Promise` e premere Invio.
 
 Se qualcosa di diverso da `undefined` è probabile che sia già stato eseguito il polyfill `window.Promise`. Un altro modo per determinare se `window.Promise` è polyfill è caricando il tuo sito web dopo aver completato le istruzioni di installazione di cui sopra. Se l’SDK genera un errore nel menzionare qualcosa su una promessa, probabilmente non sei stato polilemizzato `window.Promise`.
 
@@ -97,7 +95,7 @@ Questo tag carica uno script che assicura che `window.Promise` è un’implement
 
 Come spiegato nella sezione [Aggiunta del codice](#adding-the-code), il codice di base copiato e incollato nel HTML del sito web carica un file esterno. Il file esterno contiene le funzionalità principali dell’SDK. Qualsiasi comando che si tenta di eseguire durante il caricamento del file viene messo in coda e quindi elaborato dopo il caricamento del file. Il caricamento del file in modo asincrono è il metodo di installazione più performante.
 
-In determinate circostanze, tuttavia, potrebbe essere utile caricare il file in modo sincrono \(ulteriori dettagli su queste circostanze verranno documentati in seguito\). In questo modo si impedisce al resto del documento HTML di essere analizzato e renderizzato dal browser fino a quando il file esterno non viene caricato ed eseguito. Questo ritardo aggiuntivo prima di visualizzare il contenuto principale agli utenti è in genere sconsigliato, ma può essere utile a seconda delle circostanze.
+In determinate circostanze, tuttavia, potrebbe essere necessario caricare il file in modo sincrono. In questo modo si impedisce al resto del documento HTML di essere analizzato e renderizzato dal browser fino a quando il file esterno non viene caricato ed eseguito. Questo ritardo aggiuntivo prima di visualizzare il contenuto principale agli utenti è in genere sconsigliato, ma può essere utile a seconda delle circostanze.
 
 Per caricare il file in modo sincrono anziché asincrono, rimuovere `async` attributo dal secondo `script` come mostrato di seguito:
 

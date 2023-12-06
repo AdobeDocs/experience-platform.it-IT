@@ -1,28 +1,27 @@
 ---
-title: Dati di identità in Platform Web SDK
+title: Dati di identità in Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
-keywords: Identity;Identity;Identity Service;3rd Party Identity;Migration ID;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;id spazio dei nomi;authenticationState;hashEnabled;
-exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 1%
+source-wordcount: '1339'
+ht-degree: 0%
 
 ---
 
-# Dati di identità in Platform Web SDK
 
-Adobe Experience Platform Web SDK sfrutta [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) per tenere traccia del comportamento del visitatore. Utilizzando gli ECID, puoi garantire che ogni dispositivo abbia un identificatore univoco che possa persistere in più sessioni, collegando a un dispositivo specifico tutti gli hit che si verificano durante e tra sessioni web.
+# Dati di identità in Web SDK
+
+Adobe Experience Platform Web SDK utilizza [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) per tenere traccia del comportamento del visitatore. Utilizzando gli ECID, puoi garantire che ogni dispositivo abbia un identificatore univoco che possa persistere in più sessioni, collegando a un dispositivo specifico tutti gli hit che si verificano durante e tra sessioni web.
 
 Questo documento fornisce una panoramica su come gestire gli ECID utilizzando Platform Web SDK.
 
 ## Tracciamento degli ECID tramite l’SDK
 
-Platform Web SDK assegna e tiene traccia degli ECID tramite l’utilizzo di cookie, con diversi metodi disponibili per configurare la modalità di generazione di questi cookie.
+Platform Web SDK assegna e tiene traccia degli ECID utilizzando i cookie, con diversi metodi disponibili per configurare la modalità di generazione di questi cookie.
 
 Quando un nuovo utente arriva sul sito web, Adobe Experience Cloud Identity Service tenta di impostare un cookie di identificazione del dispositivo per tale utente. Per i visitatori nuovi, viene generato un ECID che viene restituito nella prima risposta dalla rete Edge di Adobe Experience Platform. Per i visitatori ripetuti, l’ECID viene recuperato da `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e aggiunti al payload dalla rete Edge.
 
-Una volta impostato il cookie contenente l’ECID, ogni richiesta successiva generata dall’SDK web includerà un ECID codificato nel `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
+Una volta impostato il cookie contenente l’ECID, ogni richiesta successiva generata dall’SDK web include un ECID codificato nel `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
 Quando si utilizzano i cookie per l’identificazione del dispositivo, è possibile interagire con la rete Edge in due modi:
 
@@ -35,7 +34,7 @@ Come spiegato nelle sezioni seguenti, il metodo di raccolta dei dati che scegli 
 
 La raccolta di dati di terze parti comporta l’invio diretto dei dati al dominio della rete Edge `adobedc.net`.
 
-Negli ultimi anni, i browser web sono diventati sempre più restrittivi nella gestione dei cookie impostati da terze parti. Per impostazione predefinita, alcuni browser bloccano i cookie di terze parti. Se utilizzi cookie di terze parti per identificare i visitatori del sito, la durata di tali cookie è quasi sempre più breve di quella che sarebbe altrimenti disponibile utilizzando i cookie di prima parte. In alcuni casi, un cookie di terze parti scadrà in appena sette giorni.
+Negli ultimi anni, i browser web sono diventati sempre più restrittivi nella gestione dei cookie impostati da terze parti. Per impostazione predefinita, alcuni browser bloccano i cookie di terze parti. Se utilizzi cookie di terze parti per identificare i visitatori del sito, la durata di tali cookie è quasi sempre più breve di quella che sarebbe altrimenti disponibile utilizzando i cookie di prima parte. A volte, un cookie di terze parti scade entro appena sette giorni.
 
 Inoltre, quando si utilizza la raccolta dati di terze parti, alcuni ad blocker limitano il traffico agli endpoint di raccolta dati di Adobe.
 
@@ -47,11 +46,11 @@ Anche se i browser trattano i cookie impostati dagli endpoint CNAME in modo simi
 
 ### Effetti della durata dei cookie sulle applicazioni Adobe Experience Cloud {#lifespans}
 
-Indipendentemente dal fatto che si scelga la raccolta dati di prima parte o di terze parti, il periodo di tempo in cui un cookie può persistere ha un impatto diretto sul numero di visitatori in Adobe Analytics e nel Customer Journey Analytics. Inoltre, gli utenti finali possono riscontrare esperienze di personalizzazione incoerenti quando sul sito viene utilizzato Adobe Target o Offer Decisioning.
+Indipendentemente dal fatto che si scelga la raccolta dati di prima parte o di terze parti, il periodo di tempo in cui un cookie può persistere ha un impatto diretto sul numero di visitatori in Adobe Analytics e nel Customer Journey Analytics. Inoltre, gli utenti finali possono riscontrare esperienze di personalizzazione incoerenti quando sul sito vengono utilizzati Adobe Target o Offer Decisioning.
 
-Ad esempio, considera una situazione in cui hai creato un’esperienza di personalizzazione che promuoverà qualsiasi elemento nella home page se un utente lo ha visualizzato tre volte negli ultimi sette giorni.
+Ad esempio, considera una situazione in cui hai creato un’esperienza di personalizzazione che promuove qualsiasi elemento nella home page se un utente lo ha visualizzato tre volte negli ultimi sette giorni.
 
-Se un utente finale visita il sito tre volte alla settimana e poi non vi ritorna per sette giorni, tale utilizzo potrebbe essere considerato come un nuovo utente quando ritorna al sito, in quanto i suoi cookie potrebbero essere stati eliminati da una policy del browser (a seconda del browser che stava utilizzando quando ha visitato il sito). In questo caso, lo strumento Analytics tratterà il visitatore come un nuovo utente anche se ha visitato il sito poco più di sette giorni fa. Inoltre, ricomincia qualsiasi tentativo di personalizzare l’esperienza per l’utente.
+Se un utente finale visita il sito tre volte alla settimana e poi non vi ritorna per sette giorni, potrebbe essere considerato un nuovo utente quando ritorna sul sito, perché i suoi cookie potrebbero essere stati eliminati da una policy del browser (a seconda del browser che stava utilizzando quando ha visitato il sito). In questo caso, lo strumento Analytics tratta il visitatore come un nuovo utente, anche se ha visitato il sito poco più di sette giorni fa. Inoltre, ricomincia qualsiasi tentativo di personalizzare l’esperienza per l’utente.
 
 ### ID dispositivo di prime parti
 
@@ -63,7 +62,7 @@ Per recuperare l’ECID univoco per il visitatore corrente, utilizza `getIdentit
 
 >[!NOTE]
 >
->Questo metodo viene in genere utilizzato con soluzioni personalizzate che richiedono la lettura di [!DNL Experience Cloud] ID o suggerimento di posizione per Adobe Audience Manager. Non viene utilizzata da un’implementazione standard.
+>Questo metodo viene in genere utilizzato con soluzioni personalizzate che richiedono la lettura di [!DNL Experience Cloud] ID o suggerimento di posizione per Adobe Audience Manager. Non viene utilizzato da un’implementazione standard.
 
 ```javascript
 alloy("getIdentity")
@@ -127,11 +126,11 @@ Durante la migrazione da utilizzando l’API visitatore, puoi anche eseguire la 
 
 * Quando alcune pagine di un dominio utilizzano l’API Visitor e altre pagine utilizzano questo SDK. Per supportare questo caso, l’SDK legge i cookie AMCV esistenti e scrive un nuovo cookie con l’ECID esistente. Inoltre, l&#39;SDK scrive i cookie AMCV in modo che, se l&#39;ECID viene ottenuto per primo su una pagina instrumentata con l&#39;SDK, le pagine successive instrumentate con l&#39;API visitatore abbiano lo stesso ECID.
 * Quando Adobe Experience Platform Web SDK è configurato in una pagina che dispone anche dell’API visitatore. Per supportare questo caso, se il cookie AMCV non è impostato, l&#39;SDK cerca l&#39;API visitatore nella pagina e la chiama per ottenere l&#39;ECID.
-* Quando l’intero sito utilizza Adobe Experience Platform Web SDK e non dispone dell’API visitatore, è utile migrare gli ECID in modo da mantenere le informazioni sul visitatore di ritorno. Dopo che l’SDK è stato distribuito con `idMigrationEnabled` per un periodo di tempo tale da consentire la migrazione della maggior parte dei cookie del visitatore, l’impostazione può essere disattivata.
+* Quando l’intero sito utilizza Adobe Experience Platform Web SDK e non dispone dell’API visitatore, è utile migrare gli ECID in modo che vengano conservate le informazioni sul visitatore restituite. Dopo che l’SDK è stato distribuito con `idMigrationEnabled` per un periodo di tempo tale da consentire la migrazione della maggior parte dei cookie del visitatore, l’impostazione può essere disattivata.
 
 ### Aggiornamento delle caratteristiche per la migrazione
 
-Quando i dati formattati XDM vengono inviati ad Audienci Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche dovranno essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando [Strumento BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) l’Audience Manager è stato creato.
+Quando si inviano dati in formato XDM a Audienci Manager, questi devono essere convertiti in segnali durante la migrazione. Le caratteristiche devono essere aggiornate per riflettere le nuove chiavi fornite da XDM. Questo processo è semplificato utilizzando [Strumento BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) l’Audience Manager è stato creato.
 
 ## Utilizzo nell’inoltro degli eventi
 

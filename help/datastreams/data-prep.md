@@ -1,11 +1,10 @@
 ---
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '906'
+ht-degree: 85%
 
 ---
 
@@ -31,7 +30,7 @@ Per una dimostrazione rapida del processo di preparazione dei dati per la raccol
 
 Dopo aver completato la configurazione di base per uno stream di dati, seleziona **[!UICONTROL Salva e Aggiungi mappatura]** e verrà visualizzato il passaggio **[!UICONTROL Seleziona dati]**. Da qui, devi fornire un oggetto JSON di esempio che rappresenta la struttura dei dati che intendi inviare a Platform.
 
-Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le proprietà secondarie dell’oggetto `data` devono quindi essere create in modo da essere mappate sulle proprietà del livello dati che desideri acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
+Per acquisire proprietà direttamente dal livello dati, l’oggetto JSON deve avere una singola proprietà principale `data`. Le sottoproprietà del `data` L’oggetto deve quindi essere costruito in modo da essere mappato sulle proprietà del livello dati che desideri acquisire. Seleziona la sezione seguente per visualizzare un esempio di oggetto JSON formattato correttamente con una radice `data`.
 
 +++File JSON di esempio con radice `data`
 
@@ -137,12 +136,12 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 Viene visualizzato il passaggio di **[!UICONTROL mappatura]**, consentendoti di mappare i campi nei dati di origine su quelli dello schema dell’evento di destinazione in Platform. Da qui puoi configurare la mappatura in due modi:
 
-* [Creare nuove regole di mappatura](#create-mapping) per questo stream di dati attraverso un processo manuale.
+* [Creare regole di mappatura](#create-mapping) per questo flusso di dati attraverso un processo manuale.
 * [Importare regole di mappatura](#import-mapping) da un flusso di dati esistente.
 
-### Creare una nuova mappatura {#create-mapping}
+### Creare regole di mappatura {#create-mapping}
 
-Per iniziare, seleziona **[!UICONTROL Aggiungi nuova mappatura]** per creare una nuova riga di mappatura.
+Per creare una regola di mappatura, seleziona **[!UICONTROL Aggiungi nuova mappatura]**.
 
 ![Aggiunta di una nuova mappatura](assets/data-prep/add-new-mapping.png)
 
@@ -166,11 +165,11 @@ Viene visualizzata di nuovo la pagina della mappatura con la mappatura di campi 
 
 ### Importare regole di mappatura esistenti {#import-mapping}
 
-Se in precedenza hai creato uno stream di dati, puoi riutilizzarne le regole di mappatura configurate per un nuovo stream di dati.
+Se in precedenza hai creato un flusso di dati, puoi riutilizzarne le regole di mappatura configurate per un nuovo flusso di dati.
 
 >[!WARNING]
 >
->L’importazione delle regole di mappatura da un altro stream di dati sovrascriverà eventuali mappature di campo aggiunte prima dell’importazione.
+>L’importazione di regole di mappatura da un altro stream di dati sovrascrive eventuali mappature di campo aggiunte prima dell’importazione.
 
 Per iniziare, seleziona **[!UICONTROL Importa mappatura]**.
 
@@ -196,7 +195,7 @@ La schermata successiva mostra un’anteprima delle regole di mappatura salvate 
 
 Continua a seguire i passaggi precedenti per mappare il resto dei campi sullo schema di destinazione. Anche se non è necessario mappare tutti i campi sorgente disponibili, tutti i campi nello schema di destinazione impostati come richiesto devono essere mappati per completare questo passaggio. Il contatore dei **[!UICONTROL Campi obbligatori]** indica quanti campi obbligatori non sono ancora mappati nella configurazione corrente.
 
-Una volta che il conteggio dei campi obbligatori raggiunge zero e la mappatura è soddisfacente, seleziona **[!UICONTROL Salva]** per finalizzare le modifiche.
+Una volta che il conteggio dei campi richiesto raggiunge zero e la mappatura è soddisfacente, seleziona **[!UICONTROL Salva]** per finalizzare le modifiche.
 
 ![Mappatura completata](assets/data-prep/mapping-complete.png)
 

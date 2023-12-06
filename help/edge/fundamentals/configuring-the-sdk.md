@@ -1,17 +1,15 @@
 ---
 title: Configurare Adobe Experience Platform Web SDK
 description: Scopri come configurare Adobe Experience Platform Web SDK.
-seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configurare;configurazione;SDK;edge;Web SDK;configurare;edgeConfigId;contesto;web;dispositivo;ambiente;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacità;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 9%
+source-wordcount: '1088'
+ht-degree: 8%
 
 ---
 
-# Configurare l’SDK web per Platform
+
+# Configurare Web SDK
 
 La configurazione per l&#39;SDK viene eseguita con `configure` comando.
 
@@ -56,7 +54,7 @@ Indica le categorie di contesto da raccogliere automaticamente come descritto in
 
 >[!IMPORTANT]
 >
->Tutte le proprietà di contesto, ad eccezione di `highEntropyUserAgentHints`, sono attivate per impostazione predefinita. Se hai specificato manualmente le proprietà del contesto nella configurazione dell’SDK Web, devi abilitare tutte le proprietà del contesto per continuare a raccogliere le informazioni necessarie.
+>Tutte le proprietà di contesto, tranne `highEntropyUserAgentHints`, sono attivate per impostazione predefinita. Se hai specificato manualmente le proprietà del contesto nella configurazione dell’SDK Web, devi abilitare tutte le proprietà del contesto per continuare a raccogliere le informazioni necessarie.
 
 Per abilitare [hint client ad alta entropia](user-agent-client-hints.md#enabling-high-entropy-client-hints) nella distribuzione dell’SDK Web, è necessario includere i `highEntropyUserAgentHints` insieme alla configurazione esistente.
 
@@ -75,7 +73,7 @@ Ad esempio, per recuperare gli hint client ad alta entropia dalle proprietà web
 
 Indica se il debug è abilitato. Impostazione di questa configurazione su `true` abilita le seguenti funzionalità:
 
-| **Funzione** | **Funzione** |
+| **Funzionalità** | **Funzione** |
 | ---------------------- | ------------------ |
 | Registrazione della console | Consente di visualizzare i messaggi di debug nella console JavaScript del browser |
 
@@ -83,7 +81,7 @@ Indica se il debug è abilitato. Impostazione di questa configurazione su `true`
 
 ### `edgeDomain` {#edge-domain}
 
-Popola questo campo con il tuo dominio di prime parti. Per maggiori dettagli, vedere [documentazione](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
+Popola questo campo con il tuo dominio di prime parti. Per ulteriori dettagli, vedi [documentazione](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it).
 
 Il dominio è simile a `data.{customerdomain.com}` per un sito web all’indirizzo www.{customerdomain.com}
 
@@ -143,7 +141,7 @@ Quando filtri il tracciamento dei collegamenti utilizzando la struttura DOM, puo
 
 Per modificare i dati inviati, modifica il `xdm` e/o `data` oggetti. All&#39;interno del callback, il `xdm` L&#39;oggetto dispone già dei dati passati nel comando event e delle informazioni raccolte automaticamente.
 
-* Qualsiasi valore diverso da `false` consentirà l’elaborazione dell’evento e l’invio del callback.
+* Qualsiasi valore diverso da `false` consente di elaborare l’evento e di inviare il callback.
 * Se il callback restituisce `false` l’elaborazione dell’evento viene interrotta senza errori e l’evento non viene inviato. Questo meccanismo consente di filtrare alcuni eventi esaminando i dati dell’evento e restituendoli `false` se l’evento non deve essere inviato.
 * Se il callback genera un&#39;eccezione, l&#39;elaborazione dell&#39;evento viene interrotta e l&#39;evento non viene inviato.
 
