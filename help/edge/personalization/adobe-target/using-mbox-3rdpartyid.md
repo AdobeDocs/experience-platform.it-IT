@@ -3,18 +3,18 @@ title: Sincronizzazione dei profili in tempo reale per mbox3rdPartyId
 description: Scopri come utilizzare mbox3rdPartyId con Adobe Experience Platform Web SDK.
 keywords: personalizzazione;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 exl-id: 677d1054-0769-4ec6-811e-e02d4b247c2a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 30%
+source-wordcount: '156'
+ht-degree: 5%
 
 ---
 
-# Che cosa è `mbox3rdPartyId`
+# Cos’è `mbox3rdPartyId`
 
 L’ID mbox3rdPartyId in Adobe Target è l’ID visitatore della tua azienda, ad esempio l’ID di iscrizione al programma fedeltà.
 
-Quando si accede al sito di una società, l’azienda generalmente crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori validi per tale società. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
+Quando un visitatore accede al sito di un’azienda, l’azienda in genere crea un ID associato all’account del visitatore, alla carta fedeltà, al numero di iscrizione o ad altri identificatori applicabili per l’azienda. [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
 
 
 ## Come usare `mbox3rdPartyId` con Web SDK
@@ -24,7 +24,7 @@ Quando si accede al sito di una società, l’azienda generalmente crea un ID as
 Configurare `Target Third Party ID Namespace` nel tuo [Datastream](../../../datastreams/overview.md), utilizzando l’ID Namespace che desideri utilizzare come ID di terze parti mbox.
 [Ulteriori informazioni sugli spazi dei nomi ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=it)
 
-![](assets/mbox3rdpartyid.png)
+![Interfaccia utente di Platform che mostra il campo spazio dei nomi dell’ID di terze parti di Target.](assets/mbox3rdpartyid.png)
 
 ### Passaggio 2: inviare `mbox3rdpartyId` a Target
 

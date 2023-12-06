@@ -2,9 +2,9 @@
 title: Gestione degli errori
 description: Scopri i possibili errori che potresti riscontrare durante l’esecuzione di richieste API all’API del server di rete Edge di Adobe Experience Platform.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '766'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,6 @@ Gli errori non irreversibili sono rappresentati nel _Dettagli problema_ ma sono 
 ```
 
 ## Gestione `4xx` e `5xx` Risposte
-
 
 | Codice errore | Descrizione |
 |---|---|

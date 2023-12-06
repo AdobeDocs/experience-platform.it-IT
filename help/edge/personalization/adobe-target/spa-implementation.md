@@ -3,22 +3,23 @@ title: Implementazione di un'applicazione a pagina singola per Adobe Experience 
 description: Scopri come creare un’implementazione di un’applicazione a pagina singola (SPA) di Adobe Experience Platform Web SDK utilizzando Adobe Target.
 keywords: target;adobe target;visualizzazioni xdm; visualizzazioni;applicazioni a pagina singola;SPA;SPA lifecycle;lato client;test AB;AB;Targeting esperienza;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 13%
+source-wordcount: '1817'
+ht-degree: 7%
 
 ---
+
 
 # Implementazione di un&#39;applicazione a pagina singola
 
 Adobe Experience Platform Web SDK offre funzioni avanzate che consentono di eseguire personalizzazioni su tecnologie lato client di nuova generazione, come le applicazioni a pagina singola (SPA).
 
-I siti web tradizionali funzionavano su modelli di navigazione “da pagina a pagina”, altrimenti noti come Applicazioni a più pagine, in cui le progettazioni del sito web erano strettamente collegate a URL e le transizioni da una pagina web a un’altra richiedevano un caricamento di pagina.
+I siti web tradizionali funzionavano su modelli di navigazione &quot;da pagina a pagina&quot;, altrimenti noti come Applicazioni a più pagine, in cui le progettazioni del sito web erano strettamente collegate a URL e le transizioni da una pagina web a un’altra richiedevano un caricamento di pagina.
 
 Le applicazioni web moderne, come le applicazioni a pagina singola, hanno invece adottato un modello che attiva rapidamente il rendering dell’interfaccia utente del browser, spesso indipendente dai ricaricamenti delle pagine. Queste esperienze possono essere attivate dalle interazioni dei clienti, ad esempio scorrimento, clic e movimenti del cursore. Con l’evolversi dei paradigmi del web moderno, la rilevanza degli eventi generici tradizionali, come il caricamento di una pagina, per distribuire personalizzazione e sperimentazione non funziona più.
 
-![](assets/spa-vs-traditional-lifecycle.png)
+![Diagramma che mostra il ciclo di vita dell’SPA rispetto al ciclo di vita tradizionale delle pagine.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Vantaggi di Platform Web SDK per SPA
 
@@ -36,23 +37,23 @@ Per spiegare ulteriormente cosa sono le visualizzazioni, nell’esempio seguente
 
 Dopo aver visitato la home page, un’immagine protagonista promuove una vendita di Pasqua e gli ultimi prodotti disponibili sul sito. In questo caso, è possibile definire una visualizzazione per l&#39;intera schermata iniziale. Questa visualizzazione potrebbe semplicemente essere chiamata &quot;home&quot;.
 
-![](assets/example-views.png)
+![Immagine di esempio di un&#39;applicazione a pagina singola in una finestra del browser.](assets/example-views.png)
 
 Quando il cliente diventa più interessato ai prodotti venduti dall’azienda, decide di fare clic sul pulsante **Prodotti** collegamento. Come con la home page, l’intero sito dei prodotti può essere definito come visualizzazione. Questa visualizzazione potrebbe essere denominata &quot;products-all&quot; (tutti i prodotti).
 
-![](assets/example-products-all.png)
+![Immagine di esempio di un&#39;applicazione a pagina singola in una finestra del browser, con tutti i prodotti visualizzati.](assets/example-products-all.png)
 
 Poiché una visualizzazione può essere definita come un intero sito o come un gruppo di elementi visivi su un sito, i quattro prodotti visualizzati sul sito dei prodotti possono essere raggruppati e considerati come una visualizzazione. Questa visualizzazione potrebbe essere denominata &quot;products&quot; (prodotti).
 
-![](assets/example-products.png)
+![Immagine di esempio di un&#39;applicazione a pagina singola in una finestra del browser, con prodotti di esempio visualizzati.](assets/example-products.png)
 
 Quando il cliente decide di fare clic su **Carica di più** per esplorare altri prodotti sul sito, l’URL del sito web non cambia in questo caso, ma è possibile creare una visualizzazione qui per rappresentare solo la seconda riga di prodotti visualizzati. Il nome della visualizzazione potrebbe essere &quot;products-page-2&quot;.
 
-![](assets/example-load-more.png)
+![Immagine di esempio di un&#39;applicazione a pagina singola in una finestra del browser, con prodotti di esempio visualizzati in una pagina aggiuntiva.](assets/example-load-more.png)
 
 Il cliente decide di acquistare alcuni prodotti dal sito e procede alla schermata di pagamento. Sul sito di pagamento al cliente vengono date le opzioni per scegliere la consegna normale o express. Una visualizzazione può essere qualsiasi gruppo di elementi visivi su un sito, quindi può essere creata per le preferenze di consegna e denominata, &quot;Preferenze di consegna&quot;.
 
-![](assets/example-check-out.png)
+![Immagine di esempio di una pagina di estrazione di un&#39;applicazione a pagina singola in una finestra del browser.](assets/example-check-out.png)
 
 Il concetto di Viste può essere esteso molto di più. Questi sono solo alcuni esempi di visualizzazioni che possono essere definite su un sito.
 
@@ -89,7 +90,7 @@ Questa sezione illustra tre esempi che mostrano come richiamare `sendEvent()` fu
 
 Il team marketing desidera eseguire test A/B sull’intera home page.
 
-![](assets/use-case-1.png)
+![Immagine di esempio di un&#39;applicazione a pagina singola in una finestra del browser.](assets/use-case-1.png)
 
 Per eseguire test A/B sull&#39;intero sito principale, `sendEvent()` deve essere richiamato con XDM `viewName` imposta su `home`:
 
@@ -133,7 +134,7 @@ history.listen(onViewChange);
 
 Il team marketing desidera personalizzare la seconda riga di prodotti cambiando il colore dell’etichetta del prezzo in rosso dopo che un utente fa clic su **Carica di più**.
 
-![](assets/use-case-2.png)
+![Immagine di esempio di un’applicazione a pagina singola in una finestra del browser, con offerte personalizzate.](assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -159,7 +160,7 @@ class Products extends Component {
   } 
 
   handleLoadMoreClicked() { 
-    var page = this.state.page + 1; // assuming page number is derived from component’s state 
+    var page = this.state.page + 1; // assuming page number is derived from component's state 
     this.setState({page: page}); 
     onViewChange('PRODUCTS-PAGE-' + page); 
   } 
@@ -171,7 +172,7 @@ class Products extends Component {
 
 Il team marketing desidera eseguire un test A/B per verificare se cambiare il colore del pulsante da blu a rosso quando **Consegna express** L’opzione può aumentare le conversioni (invece di mantenere il pulsante blu con entrambe le opzioni di consegna).
 
-![](assets/use-case-3.png)
+![Immagine di esempio di un’applicazione a pagina singola in una finestra del browser, con test A/B.](assets/use-case-3.png)
 
 Per personalizzare il contenuto sul sito a seconda della preferenza di consegna selezionata, è possibile creare una visualizzazione per ogni preferenza di consegna. Quando **Consegna normale** , la visualizzazione può essere denominata &quot;checkout-normal&quot;. Se **Consegna express** , la visualizzazione può essere denominata &quot;checkout-express&quot;.
 
@@ -226,13 +227,13 @@ Una volta completata la definizione delle viste XDM e implementato `sendEvent()`
 
 Il pannello Modifiche acquisisce le azioni create per una visualizzazione specifica. Tutte le azioni di una visualizzazione sono raggruppate sotto di essa.
 
-![](assets/modifications-panel.png)
+![Il pannello Modifiche con le opzioni di caricamento della pagina visualizzate nella barra laterale della finestra del browser.](assets/modifications-panel.png)
 
 ### Azioni
 
 Facendo clic su un’azione viene evidenziato l’elemento del sito dove questa verrà applicata. Ogni azione del Compositore esperienza visivo creata in una visualizzazione presenta le icone seguenti: **Informazioni**, **Modifica**, **Clona**, **Sposta**, e **Elimina**. Queste icone sono spiegate più dettagliatamente nella tabella seguente.
 
-![](assets/action-icons.png)
+![Icone delle azioni](assets/action-icons.png)
 
 | Icona | Descrizione |
 |---|---|
@@ -255,7 +256,7 @@ In precedenza, in questo documento era stata definita una visualizzazione denomi
 
 Per apportare questi aggiornamenti nel Compositore esperienza visivo, seleziona **Componi** e applicare tali modifiche alla vista &quot;home&quot;.
 
-![](assets/vec-home.png)
+![Pagina di esempio del Compositore esperienza visivo.](assets/vec-home.png)
 
 ### Esempio 2: modificare le etichette dei prodotti
 
@@ -269,7 +270,7 @@ Per apportare questi aggiornamenti nel Compositore esperienza visivo, è necessa
 4. Seleziona **Componi** nel Compositore esperienza visivo.
 5. Applica azioni per modificare l’etichetta di testo in **Prezzo di vendita** e il colore diventa rosso.
 
-![](assets/vec-products-page-2.png)
+![Pagina di esempio del Compositore esperienza visivo con le etichette dei prodotti.](assets/vec-products-page-2.png)
 
 ### Esempio 3: personalizzare lo stile delle preferenze di consegna
 
@@ -289,4 +290,4 @@ Per apportare questi aggiornamenti nel Compositore esperienza visivo, è necessa
 >
 >La visualizzazione &quot;checkout-express&quot; non viene visualizzata nel pannello Modifiche fino a quando **Consegna express** è selezionato il pulsante di opzione. Questo perché il `sendEvent()` funzione viene eseguita quando **Consegna express** è selezionato il pulsante di opzione, pertanto il Compositore esperienza visivo non è a conoscenza della visualizzazione &quot;checkout-express&quot; finché il pulsante di opzione non viene selezionato.
 
-![](assets/vec-delivery-preference.png)
+![Compositore esperienza visivo con selettore delle preferenze di consegna.](assets/vec-delivery-preference.png)

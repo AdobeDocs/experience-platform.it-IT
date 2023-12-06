@@ -3,10 +3,10 @@ title: Confronto di at.js con Experienci Platform Web SDK
 description: Scopri le caratteristiche di at.js rispetto a Experienci Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 7%
+source-wordcount: '2167'
+ht-degree: 6%
 
 ---
 
@@ -857,7 +857,7 @@ Il payload di Analytics (`tnta` token) devono essere inclusi nell&#39;hit di Ana
 La registrazione lato server di Analytics può essere attivata impostando `analyticsLogging: server_side` nelle impostazioni at.js o eseguendo l’override di `window.targetglobalSettings` oggetto.
 I dati scorrono quindi come segue:
 
-![](assets/a4t-server-side-atjs.png)
+![Diagramma che mostra il flusso di lavoro Registrazione lato server di Analytics](assets/a4t-server-side-atjs.png)
 
 [Ulteriori informazioni](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ L’SDK per web supporta anche:
 
 La funzione di registrazione lato client di Analytics è abilitata quando Adobe Analytics è disabilitata per tale configurazione di DataStream.
 
-![](assets/analytics-disabled-datastream-config.png)
+![Diagramma che mostra il flusso di lavoro Registrazione lato client di Analytics](assets/analytics-disabled-datastream-config.png)
 
 Il cliente ha accesso al token di Analytics (`tnta`) che deve essere condiviso con Analytics tramite [API di inserimento dati](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 in mediante concatenamento `sendEvent` e iterazione attraverso l’array di proposte risultante.
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 Ecco un diagramma per mostrare il flusso dei dati quando è abilitato Analytics Client Side:
 
-![](assets/analytics-client-side-logging.png)
+![Diagramma del flusso dei dati nella registrazione lato client di Analytics](assets/analytics-client-side-logging.png)
 
 #### Registrazione lato server di Analytics
 
 La funzione di registrazione lato server di Analytics è abilitata quando Analytics è abilitata per tale configurazione di DataStream.
 
-![](assets/analytics-enabled-datastream-config.png)
+![Interfaccia utente per i flussi di dati che mostra le impostazioni di Analytics.](assets/analytics-enabled-datastream-config.png)
 
 Quando la registrazione Analytics lato server è abilitata, il payload A4T che deve essere condiviso con Analytics in modo che i rapporti di Analytics mostrino le impression e le conversioni corrette venga condiviso a livello di rete Edge, in modo che il cliente non debba eseguire alcuna elaborazione aggiuntiva.
 
 Ecco come fluiscono i dati nei nostri sistemi quando è abilitata la registrazione di Analytics lato server:
 
-![](assets/analytics-server-side-logging.png)
+![Diagramma che mostra il flusso di dati nella registrazione di Analytics lato server](assets/analytics-server-side-logging.png)
 
 ## Come impostare le impostazioni globali di Target
 
@@ -1130,9 +1130,9 @@ SDK per web supporta l’ID di terze parti di Target. Tuttavia, richiede alcuni 
 Identity Map consente ai clienti di inviare più identità. Tutte le identità sono namespace. Ogni spazio dei nomi può avere una o più identità. Una particolare identità può essere contrassegnata come primaria.
 Tenendo conto di queste informazioni, possiamo vedere quali sono i passaggi necessari per impostare l’SDK web per utilizzare l’ID di terze parti di Target.
 
-1. Imposta lo spazio dei nomi che conterrà l’ID di terze parti di Target nella vista Configurazione del flusso di dati:
+1. Imposta lo spazio dei nomi che conterrà l’ID di terze parti di Target nella pagina di configurazione dello stream di dati:
 
-![](assets/mbox-3-party-id-setup.png)
+![Interfaccia utente per i flussi di dati che mostra il campo Spazio dei nomi dell’ID di terze parti di Target](assets/mbox-3-party-id-setup.png)
 
 1. Invia lo spazio dei nomi dell’identità in ogni comando sendEvent come segue:
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### Utilizzo di Web SDK
 
-Utilizzando Web SDK i clienti possono impostare la proprietà a un livello più alto, durante la configurazione del flusso di dati, in Adobe Target namespace:
-![](assets/at-property-setup.png)
+Utilizzando Web SDK, i clienti possono impostare la proprietà a un livello più alto, durante la configurazione del flusso di dati, in Adobe Target namespace:
+![Interfaccia utente per gli stream di dati che mostra le impostazioni di Adobe Target.](assets/at-property-setup.png)
 Ciò significa che ogni chiamata di Target per quella specifica configurazione di Flusso di dati conterrà quel token di proprietà.
 
 ## Come posso preacquisire gli elementi mbox

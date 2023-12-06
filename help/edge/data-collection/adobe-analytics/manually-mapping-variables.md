@@ -1,13 +1,13 @@
 ---
 title: Mappatura manuale delle variabili di Adobe Analytics in Adobe Experience Platform Web SDK
-description: Scopri come mappare manualmente le variabili in Adobe Analytics utilizzando le regole di elaborazione in Experience Platform Web SDK.
+description: Scopri come mappare manualmente le variabili in Adobe Analytics utilizzando le regole di elaborazione in Experienci Platform Web SDK.
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analisi;variabili;mappatura variabili;mappatura variabili;contextData;context Data;Processing rules;rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '333'
+ht-degree: 1%
 
 ---
 
@@ -52,8 +52,7 @@ Tutti i dati raccolti dalla rete Edge sono accessibili tramite [regole di elabor
 
 Ad esempio, nella regola seguente, Adobe Analytics è impostato per compilare **Termini di ricerca interni (eVar2)** con i dati associati a **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![Immagine dell’interfaccia utente di Analytics che mostra un esempio di regola.](assets/examplerule.png)
 
 ## Schema XDM
 

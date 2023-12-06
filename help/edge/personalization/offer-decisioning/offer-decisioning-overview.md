@@ -3,10 +3,10 @@ title: Utilizzo di Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o l’API di Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;offerte personalizzate;consegnare offerte;consegna offerte;personalizzazione delle offerte;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 5%
+source-wordcount: '849'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >L’utilizzo di Offer Decisioning in Adobe Experience Platform Web SDK è disponibile in accesso anticipato per alcuni utenti. Questa funzionalità non è disponibile per tutte le organizzazioni.
 
-Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente (UI) o le API di Offer Decisioning.
+Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o le API di Offer Decisioning.
 
 ## Prerequisiti
 
@@ -51,7 +51,7 @@ Quando si lavora con Offer Decisioning, è importante comprendere la seguente te
   >
   >Puoi copiare il valore dell’ambito della decisione dalla sezione **Panoramica delle attività** nell&#39;interfaccia utente.
 
-  ![](assets/decision-scope-copy.png)
+  ![Impostazioni copia decisione.](assets/decision-scope-copy.png)
 
 * **Flussi di dati:** Per ulteriori informazioni, leggere [flussi di dati](../../../datastreams/overview.md) documentazione.
 
@@ -85,7 +85,7 @@ Per abilitare l’Offer decisioning, effettua le seguenti operazioni:
    * Installare l’SDK tramite tag
 
       1. [Creare una proprietà tag](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Aggiungere il codice di incorporamento ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Aggiungere il codice di incorporamento](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Installa e configura l’estensione Platform Web SDK con lo stream di dati creato selezionando la configurazione dal menu a discesa &quot;Stream di dati&quot;. Consulta la documentazione su [estensioni](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)

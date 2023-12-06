@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Guida introduttiva alle API Media Edge
 description: Guida introduttiva alle API Media Edge
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 4%
+source-wordcount: '806'
+ht-degree: 2%
 
 ---
+
 
 # Guida introduttiva all’API Media Edge
 
@@ -45,9 +46,9 @@ Questa guida illustra come tenere traccia dei seguenti eventi dopo l’avvio del
 A parte lievi differenze nel modello e nei percorsi chiamati, l’API Media Edge ha la stessa implementazione del [API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). I dettagli di implementazione di Media Collection rimangono validi per l’API Media Edge, come descritto nella seguente documentazione:
 
 * [Impostazione del tipo di richiesta HTTP nel lettore](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
-* [Invio di eventi ping ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
-* [Condizioni di timeout ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
-* [Controllo dell’ordine degli eventi ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
+* [Invio di eventi ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Condizioni di timeout](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [Controllo dell’ordine degli eventi](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Authorization {#authorization}
 

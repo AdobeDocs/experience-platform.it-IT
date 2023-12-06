@@ -2,18 +2,19 @@
 title: Raccolta di dati non interattivi
 description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta dati non interattiva.
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
+
 
 # Raccolta di dati non interattivi
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati per eventi non interattivi vengono utilizzati per inviare più eventi a set di dati Experience Platform o ad altre prese.
+Gli endpoint di raccolta dati per eventi non interattivi vengono utilizzati per inviare più eventi a set di dati Experienci Platform o ad altre prese.
 
 L’invio di eventi in batch è consigliato quando gli eventi dell’utente finale vengono messi in coda localmente per un breve periodo di tempo (ad esempio quando non vi è alcuna connessione di rete).
 
@@ -92,7 +93,6 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | `dataStreamId` | `String` | Sì | ID dello stream di dati utilizzato dall’endpoint di raccolta dati. |
 | `requestId` | `String` | No | Specifica un ID di traccia della richiesta esterno. Se non ne viene fornito alcuno, la rete Edge ne genererà uno per te e lo restituirà nel corpo/nelle intestazioni della risposta. |
 | `silent` | `Boolean` | No | Parametro booleano facoltativo che indica se la rete Edge deve restituire un `204 No Content` risposta con un payload vuoto o meno. Gli errori critici vengono segnalati utilizzando il codice di stato HTTP e il payload corrispondenti. |
-
 
 ### Risposta {#response}
 

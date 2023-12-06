@@ -2,10 +2,10 @@
 title: Autenticazione
 description: Scopri come configurare l’autenticazione per l’API del server di rete Edge di Adobe Experience Platform.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Le risorse di Experienci Platform possono essere isolate in specifiche sandbox v
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
-* Content-Type: `application/json`
+* Tipo di contenuto: `application/json`
 
 ## Configurare le autorizzazioni di scrittura del set di dati {#dataset-write-permissions}
 
