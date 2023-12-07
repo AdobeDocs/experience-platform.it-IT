@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze clienti personalizzate in tempo reale con guide, documentazione e tutorial.
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: a3ba26fd6ee7b473d74cc3cf3d142e0f3ff069bb
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 30%
+source-wordcount: '276'
+ht-degree: 24%
 
 ---
 
@@ -74,6 +74,8 @@ ht-degree: 30%
 * Utilizzo delle licenze e guardrail {#license}
    * [Best practice per l’adesione alle licenze di gestione dati](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Dashboard utilizzo licenze](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [Guardrail Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)

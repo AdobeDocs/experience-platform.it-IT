@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;attivazione;risoluzione dei problemi;guardrail;linee guida;limite
-title: Guardrail predefiniti per i dati di attivazione
+title: Guardrail predefiniti per l'attivazione dei dati
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 1%
 
 ---
 
-# Guardrail per i dati di attivazione
+# Guardrail per l&#39;attivazione dei dati
 
 Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comportamento di attivazione. Quando si esaminano i seguenti guardrail, si presume che siano presenti correttamente [connesso alle destinazioni](/help/destinations/ui/connect-destination.md).
 
