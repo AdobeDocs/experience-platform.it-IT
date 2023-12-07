@@ -4,10 +4,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 13%
+source-wordcount: '993'
+ht-degree: 10%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 13%
          - [Connettore Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guida all’autenticazione di Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Spazi dei nomi e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Advertising {#advertising}
+   - Pubblicità {#advertising}
       - [Connettore Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
    - Analytics {#analytics}
@@ -91,6 +91,8 @@ ht-degree: 13%
       - [Connettore streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connettore Snowflake](connectors/databases/snowflake.md)
       - [Connettore Teradata Vantage](connectors/databases/teradata-vantage.md)
+   - Partner dati {#data-partner}
+      - [Risoluzione identità organizzazione Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [Commerce SAP](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -114,8 +116,8 @@ ht-degree: 13%
    - Streaming {#streaming}
       - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
-   - Crea una connessione di base {#create}
-      - Advertising {#advertising}
+   - Creare una connessione di base {#create}
+      - Pubblicità {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/api/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -233,7 +235,7 @@ ht-degree: 13%
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Attività personalizzate Marketo](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-      - Advertising {#advertising}
+      - Pubblicità {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [Pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
@@ -277,7 +279,7 @@ ht-degree: 13%
          - [Azure synapse di Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -289,6 +291,8 @@ ht-degree: 13%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+      - Partner dati {#data-partner}
+         - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [Commerce SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
