@@ -3,10 +3,10 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 1%
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
@@ -37,14 +37,18 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
 | Numero di caratteri per un nome visualizzato dello spazio dei nomi o un simbolo di identità | Nessuna | Non vi sono limiti al numero di caratteri di un nome visualizzato dello spazio dei nomi o di un simbolo di identità. |
 
+{style="table-layout:auto"}
+
 ### Convalida del valore identità
 
 La tabella seguente illustra le regole esistenti da seguire per garantire la corretta convalida del valore di identità.
 
 | Namespace | Regola di convalida | Comportamento del sistema quando la regola viene violata |
 | --- | --- | --- |
-| ECID | <ul><li>Il valore identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore identità di un ECID deve essere costituito solo da numeri.</li><li>I valori di identità non possono essere &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; o essere una stringa vuota (ad esempio: &quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Se il valore identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità dell’ECID contiene caratteri non numerici, il record viene ignorato.</li><li>L’acquisizione dell’identità verrà bloccata.</li></ul> |
-| Non ECID | Il valore identità non può superare i 1024 caratteri. | Se il valore di identità supera i 1024 caratteri, il record viene ignorato. |
+| ECID | <ul><li>Il valore identità di un ECID deve essere esattamente di 38 caratteri.</li><li>Il valore identità di un ECID deve essere costituito solo da numeri.</li></ul> | <ul><li>Se il valore identità di ECID non è esattamente di 38 caratteri, il record viene ignorato.</li><li>Se il valore di identità dell’ECID contiene caratteri non numerici, il record viene ignorato.</li></ul> |
+| Non ECID | <ul><li>Il valore identità non può superare i 1024 caratteri.</li><li>I valori di identità non possono essere &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; o essere una stringa vuota (ad esempio: &quot;, &quot;&quot;, &quot; &quot;).</li></ul> | <ul><li>Se il valore di identità supera i 1024 caratteri, il record viene ignorato.</li><li>L’acquisizione dell’identità verrà bloccata.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Acquisizione dello spazio dei nomi dell’identità
 
@@ -105,7 +109,7 @@ Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di ge
 
 *Note diagramma:*
 
-* `t` = timestamp.
+* `t` = marca temporale.
 * Il valore di una marca temporale corrisponde all’attualità di una determinata identità. Ad esempio: `t1` rappresenta la prima identità collegata (più vecchia) e `t51` rappresenterebbe l’identità collegata più recente.
 
 In questo esempio, prima che il grafico a sinistra possa essere aggiornato con una nuova identità, Identity Service elimina prima l’identità esistente con la marca temporale più vecchia. Tuttavia, poiché l’identità meno recente è un ID dispositivo, Identity Service ignora tale identità fino a quando non arriva allo spazio dei nomi con un tipo più alto nell’elenco di priorità di eliminazione, che in questo caso è `ecid-3`. Una volta rimossa l’identità meno recente con un tipo di priorità di eliminazione più elevato, il grafico viene quindi aggiornato con un nuovo collegamento, `ecid-51`.
