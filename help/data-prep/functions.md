@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 3%
+source-wordcount: '5080'
+ht-degree: 2%
 
 ---
 
-# Funzioni di mappatura della preparazione dei dati
+# Funzioni di mappatura della preparazione dati
 
 Le funzioni di preparazione dati possono essere utilizzate per calcolare i valori in base a ciò che viene immesso nei campi sorgente.
 
@@ -52,7 +52,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | substr | Restituisce una sottostringa di una determinata lunghezza. | <ul><li>INPUT: **Obbligatorio** Stringa di input.</li><li>START_INDEX: **Obbligatorio** Indice della stringa di input da cui inizia la sottostringa.</li><li>LUNGHEZZA: **Obbligatorio** Lunghezza della sottostringa.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;Questo è un test di sottostringa&quot;, 7, 8) | &quot;a subst&quot; |
 | lower /<br>lcase | Converte una stringa in minuscolo. | <ul><li>INPUT: **Obbligatorio** Stringa che verrà convertita in minuscolo.</li></ul> | lower(INPUT) | lower(&quot;HeLo&quot;)<br>lcase(&quot;HeLo&quot;) | &quot;ciao&quot; |
 | upper /<br>caso | Converte una stringa in maiuscolo. | <ul><li>INPUT: **Obbligatorio** Stringa che verrà convertita in maiuscolo.</li></ul> | upper(INPUT) | upper(&quot;HeLo&quot;)<br>ucase(&quot;HeLo&quot;) | &quot;CIAO&quot; |
-| split | Divide una stringa di input in un separatore. Il seguente separatore **esigenze** da evitare con `\`: `\`. Se si includono più delimitatori, la stringa verrà suddivisa in base a **qualsiasi** dei delimitatori presenti nella stringa. | <ul><li>INPUT: **Obbligatorio** Stringa di input che verrà divisa.</li><li>SEPARATORE: **Obbligatorio** Stringa utilizzata per dividere l&#39;input.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
+| split | Divide una stringa di input in un separatore. Il seguente separatore **esigenze** da evitare con `\`: `\`. Se si includono più delimitatori, la stringa verrà suddivisa in base a **qualsiasi** dei delimitatori presenti nella stringa. **Nota:** Questa funzione restituisce solo indici non nulli dalla stringa, indipendentemente dalla presenza del separatore. Se tutti gli indici, compresi i valori Null, sono necessari nell&#39;array risultante, utilizzare la funzione &quot;explode&quot;. | <ul><li>INPUT: **Obbligatorio** Stringa di input che verrà divisa.</li><li>SEPARATORE: **Obbligatorio** Stringa utilizzata per dividere l&#39;input.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
 | unire | Unisce un elenco di oggetti utilizzando il separatore. | <ul><li>SEPARATORE: **Obbligatorio** Stringa che verrà utilizzata per unire gli oggetti.</li><li>OGGETTI: **Obbligatorio** Matrice di stringhe che verranno unite.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Aggiunge il lato sinistro di una stringa alla stringa specificata. | <ul><li>INPUT: **Obbligatorio** La stringa che verrà imbottita. Questa stringa può essere null.</li><li>CONTEGGIO: **Obbligatorio** Dimensione della stringa da aggiungere.</li><li>SPAZIATURA: **Obbligatorio** Stringa con cui incollare l’input. Se null o vuoto, verrà considerato come un singolo spazio.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | yzyzybat |
 | rpad | Aggiunge il lato destro di una stringa alla stringa specificata. | <ul><li>INPUT: **Obbligatorio** La stringa che verrà imbottita. Questa stringa può essere null.</li><li>CONTEGGIO: **Obbligatorio** Dimensione della stringa da aggiungere.</li><li>SPAZIATURA: **Obbligatorio** Stringa con cui incollare l’input. Se null o vuoto, verrà considerato come un singolo spazio.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -166,13 +166,13 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Restituisce il primo oggetto non nullo in una matrice specificata. | <ul><li>INPUT: **Obbligatorio** Matrice di cui trovare il primo oggetto non Null.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | primo | Recupera il primo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare il primo elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| ultimo | Recupera l’ultimo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare l’ultimo elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| ultimo | Recupera l’ultimo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare l’ultimo elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | 3&quot; |
 | add_to_array | Aggiunge elementi alla fine dell&#39;array. | <ul><li>ARRAY: **Obbligatorio** Matrice a cui si stanno aggiungendo elementi.</li><li>VALORI: gli elementi che desideri aggiungere alla matrice.</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | add_to_array&#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_array | Combina gli array tra loro. | <ul><li>ARRAY: **Obbligatorio** Matrice a cui si stanno aggiungendo elementi.</li><li>VALORI: gli array che si desidera aggiungere all’array principale.</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [d&#39;, e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prende un elenco di input e lo converte in un array. | <ul><li>INCLUDE_NULLS: **Obbligatorio** Valore booleano per indicare se includere o meno valori Null nella matrice di risposta.</li><li>VALORI: **Obbligatorio** Elementi da convertire in un array.</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Restituisce la dimensione dell&#39;input. | <ul><li>INPUT: **Obbligatorio** Oggetto di cui stai cercando le dimensioni.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | Questa funzione viene utilizzata per aggiungere tutti gli elementi dell’intero array di input alla fine dell’array in Profilo. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array a cui aggiungere l’array nel profilo.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi in un array. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array che sostituisce l’array nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_append | Questa funzione viene utilizzata per aggiungere tutti gli elementi dell’intero array di input alla fine dell’array in Profilo. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array a cui aggiungere l’array nel profilo.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [124, 456] |
+| upsert_array_replace | Questa funzione viene utilizzata per sostituire gli elementi in un array. Questa funzione è **solo** applicabile durante gli aggiornamenti. Se utilizzata nel contesto degli inserti, questa funzione restituisce l’input così com’è. | <ul><li>ARRAY: **Obbligatorio** Array che sostituisce l’array nel profilo.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [124, 456] |
 
 {style="table-layout:auto"}
 
@@ -185,7 +185,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se viene trovata una chiave oppure restituisce un valore predefinito se presente nell’array. | <ul><li>CHIAVE: **Obbligatorio** Chiave da associare.</li><li>OPTIONS: **Obbligatorio** Array piatto di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice stato dato è &quot;ca&quot;, &quot;California&quot;.<br>Se il codice dello stato dato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
-| iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatorio** Espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
+| iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatorio** Espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore che viene restituito se l’espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;Vero&quot; |
 
 {style="table-layout:auto"}
 
@@ -210,9 +210,9 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| to_bigint | Converte una stringa in un BigInteger. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
-| to_decimal | Converte una stringa in un valore Double. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
-| to_float | Converte una stringa in un elemento mobile. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in Mobile.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_bigint | Converte una stringa in un BigInteger. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in un BigInteger.</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
+| to_decimal | Converte una stringa in un valore Double. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
+| to_float | Converte una stringa in un elemento mobile. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in Mobile.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Converte una stringa in un numero intero. | <ul><li>STRINGA: **Obbligatorio** Stringa da convertire in un numero intero.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 {style="table-layout:auto"}
@@ -259,9 +259,9 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggi [elenco dei v
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Estrae il nome del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Estrae la versione principale del sistema operativo dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | Estrae la versione del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_version | Estrae la versione del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
 | ua_os_name_version | Estrae il nome e la versione del sistema operativo dalla stringa agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | Estrae la versione dell’agente dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version | Estrae la versione dell’agente dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
 | ua_agent_version_major | Estrae il nome e la versione principale dell’agente dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_version_major&#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Estrae il nome dell&#39;agente dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Estrae la classe device dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefono |
@@ -327,7 +327,7 @@ La tabella seguente delinea un elenco di caratteri riservati e dei corrispondent
 | # | %23 |
 | $ | %24 |
 | % | %25 |
-| &amp; | %26 |
+| E | %26 |
 | &#39; | %27 |
 | ( | %28 |
 | ). | %29 |
