@@ -3,14 +3,14 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 7%
+source-wordcount: '1949'
+ht-degree: 6%
 
 ---
 
-# Connessione [!DNL Facebook]
+# [!DNL Facebook] connessione
 
 ## Panoramica {#overview}
 
@@ -18,7 +18,7 @@ Attivare i profili per il [!DNL Facebook] campagne per il targeting, la personal
 
 Puoi utilizzare questa destinazione per il targeting del pubblico in [!DNL Facebook's] famiglia di app supportate da [!DNL Custom Audiences], tra cui [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], e [!DNL Messenger]. La selezione dell’app su cui desideri eseguire la campagna è indicata al livello di posizionamento in [!DNL Facebook Ads Manager].
 
-![Destinazione facebook nell’interfaccia utente di Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destinazione facebook nell’interfaccia utente di Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casi d’uso
 
@@ -30,7 +30,7 @@ Un rivenditore online desidera raggiungere i clienti esistenti tramite piattafor
 
 ### #2 del caso d’uso
 
-Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno di questi livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di loro non hanno effettuato l&#39;accesso al sito web della compagnia. Gli unici identificatori di questi clienti di cui dispone l’azienda sono gli ID iscrizione e gli indirizzi e-mail.
+Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno di questi livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di loro non hanno effettuato l&#39;accesso al sito web della compagnia. Gli unici identificatori di cui dispone l’azienda su questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
 
 Per eseguire il targeting tra i social media, può integrare i dati del cliente dal CRM in Adobe Experience Platform, utilizzando gli indirizzi e-mail come identificatori.
 
@@ -50,7 +50,7 @@ Successivamente, può utilizzare i propri dati offline, inclusi gli ID di iscriz
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -74,9 +74,9 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
 
-* Il tuo [!DNL Facebook] l&#39;account utente deve avere accesso completo al [!DNL Facebook Business Account] proprietario dell’account dell’annuncio che utilizzerai.
+* Il tuo [!DNL Facebook] l&#39;account utente deve avere accesso completo al [!DNL Facebook Business Account] proprietario dell’account dell’annuncio che stai utilizzando.
 * Il tuo [!DNL Facebook] l&#39;account utente deve avere **[!DNL Manage campaigns]** Autorizzazione abilitata per l’account annuncio che intendi utilizzare.
-* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Seleziona `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
+* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Utilizza `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
   >[!IMPORTANT]
   >
   > Durante la configurazione delle autorizzazioni per Adobe Experience Cloud, devi abilitare **Gestire le campagne** autorizzazione. L’autorizzazione è necessaria per [!DNL Adobe Experience Platform] integrazione.
@@ -123,7 +123,7 @@ Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di sod
 > L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione.
 > Il **[!UICONTROL Applica trasformazione]** L&#39;opzione viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
-![Trasformazione mappatura identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Applica il controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
@@ -149,7 +149,7 @@ Il video seguente illustra anche i passaggi per configurare una [!DNL Facebook] 
 
 1. Trova la destinazione Facebook nel catalogo di destinazione e seleziona **[!UICONTROL Configurazione]**.
 2. Seleziona **[!UICONTROL Connetti alla destinazione]**.
-   ![Autentica in Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![Esegui l’autenticazione in Facebook, passaggio visualizzato nel flusso di lavoro di attivazione.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Immetti le credenziali Facebook e seleziona **Accedi**.
 
 ### Inserire i dettagli della destinazione {#destination-details}
@@ -176,7 +176,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine del pubblico"
->abstract="Scegli come sono stati originariamente raccolti i dati cliente nel pubblico. I dati verranno visualizzati in Facebook quando un utente è oggetto di targeting da parte del segmento"
+>abstract="Scegli come sono stati originariamente raccolti i dati cliente nel pubblico. I dati vengono visualizzati in Facebook quando un utente è interessato dal segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubb
 
 In **[!UICONTROL Pianificazione del segmento]** passaggio, devi fornire [!UICONTROL Origine del pubblico] quando si inviano tipi di pubblico a [!DNL Facebook Custom Audiences].
 
-![Origine del pubblico di facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Menu a discesa Origine del pubblico visualizzato nel passaggio di attivazione di Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Esempio di mappatura: attivazione dei dati sul pubblico in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Selezione dei campi di destinazione:
 > 
 >L&#39;hash dei dati di origine degli attributi non viene eseguito automaticamente. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione.
 
-![Mappatura identità](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Applica il controllo di trasformazione evidenziato nel passaggio di mappatura.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Dati esportati {#exported-data}
 
@@ -251,4 +251,4 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 Questo errore si verifica quando i clienti utilizzano account appena creati e il [!DNL Facebook] autorizzazioni non ancora attive.
 
-Se riceve il `400 Bad Request` messaggio di errore dopo aver seguito i passaggi in [Prerequisiti per l’account facebook](#facebook-account-prerequisites), attendi qualche giorno per [!DNL Facebook] autorizzazioni per entrare in vigore.
+Se riceve il `400 Bad Request` messaggio di errore dopo aver seguito i passaggi in [Prerequisiti per l’account facebook](#facebook-account-prerequisites), attendi alcuni giorni per [!DNL Facebook] autorizzazioni per entrare in vigore.

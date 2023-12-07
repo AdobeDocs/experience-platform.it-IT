@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1739'
 ht-degree: 4%
 
 ---
@@ -71,7 +71,7 @@ Guarda il video seguente per una spiegazione end-to-end del flusso di lavoro des
 
 Al momento, puoi esportare i set di dati nelle destinazioni di archiviazione cloud evidenziate nella schermata ed elencate di seguito.
 
-![Destinazioni che supportano le esportazioni di set di dati](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Pagina del catalogo delle destinazioni che mostra quali destinazioni supportano le esportazioni dei set di dati.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ Consulta i documenti di descrizione del prodotto per capire la quantità di dati
 
 I diritti all’esportazione di dati per diverse applicazioni non sono additivi. Ciò significa, ad esempio, che se acquisti Real-Time CDP Ultimate e Adobe Journey Optimizer Ultimate, il diritto all’esportazione del profilo sarà il più grande tra i due diritti, in base alle descrizioni del prodotto. Il volume di adesioni viene calcolato moltiplicando il numero totale di profili con licenza per 500 KB per Real-Time CDP Prime o 700 KB per Real-Time CDP Ultimate per determinare il volume di dati a cui hai diritto.
 
-Se invece si acquistano componenti aggiuntivi come Data Distiller, il limite di esportazione dei dati a cui si ha diritto rappresenta la somma del livello prodotto e del componente aggiuntivo.
+Se invece sono stati acquistati componenti aggiuntivi come Data Distiller, il limite di esportazione dei dati a cui hai diritto rappresenta la somma del livello prodotto e del componente aggiuntivo.
 
 Puoi visualizzare e tenere traccia delle esportazioni di profili in base ai limiti contrattuali nel dashboard delle licenze.
 

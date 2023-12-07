@@ -3,14 +3,14 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1793'
-ht-degree: 4%
+source-wordcount: '1756'
+ht-degree: 3%
 
 ---
 
-# Connessione [!DNL LiveRamp - Onboarding] {#liveramp-onboarding}
+# [!DNL LiveRamp - Onboarding] connessione {#liveramp-onboarding}
 
 Utilizza il [!DNL LiveRamp - Onboarding] connessione ai tipi di pubblico onboarding da Adobe Real-time Customer Data Platform a [!DNL LiveRamp Connect].
 
@@ -34,7 +34,7 @@ In [passaggio di mappatura](#map) del flusso di lavoro di attivazione, devi defi
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

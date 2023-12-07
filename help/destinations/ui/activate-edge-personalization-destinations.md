@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1922'
 ht-degree: 2%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-Adobe Experience Platform utilizza [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) insieme alle destinazioni edge di per consentire ai clienti di creare e indirizzare il pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
+Adobe Experience Platform utilizza [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) insieme a [destinazioni edge](/help/destinations/destination-types.md#edge-personalization-destinations) per consentire ai clienti di creare e indirizzare il pubblico su larga scala, in tempo reale. Questa funzionalità consente di configurare casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 
 Esempi di destinazioni Edge sono [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e [Personalizzazione personalizzata](../../destinations/catalog/personalization/custom-personalization.md) connessioni.
 
 >[!NOTE]
 >
->Quando [configurazione della connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) senza l’utilizzo di un ID dello stream di dati, i casi d’uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
+>Quando [configurazione della connessione Adobe Target](../catalog/personalization/adobe-target-connection.md) *senza* utilizzando un ID dello stream di dati, i casi d’uso descritti in questo articolo non sono supportati. In assenza di uno stream di dati, sono supportati solo i casi di utilizzo di personalizzazione della sessione successiva.
 
 >[!IMPORTANT]
 > 
@@ -31,7 +31,7 @@ Esempi di destinazioni Edge sono [Adobe Target](../../destinations/catalog/perso
 > 
 > Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni Edge di Adobe Experience Platform. Se usato insieme a [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) e l’ [mappatura attributi profilo](#mapping), queste destinazioni abilitano i casi d’uso per la personalizzazione della stessa pagina e della pagina successiva nelle tue proprietà web e mobili.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni edge di Adobe Experience Platform. Se usato insieme a [segmentazione Edge](../../segmentation/ui/edge-segmentation.md) e l’ [mappatura attributi profilo](#mapping), queste destinazioni abilitano i casi d’uso per la personalizzazione della stessa pagina e della pagina successiva nelle tue proprietà web e mobili.
 
 Per una breve panoramica su come configurare la connessione Adobe Target per la personalizzazione Edge, guarda il video seguente.
 
@@ -47,7 +47,7 @@ Per una breve panoramica su come condividere tipi di pubblico e attributi di pro
 
 ## Casi d’uso {#use-cases}
 
-Le destinazioni di personalizzazione Edge ti consentono di utilizzare soluzioni di personalizzazione Adobe, come Adobe Target, o piattaforme partner di personalizzazione personalizzate (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) destinazione. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experienci Platform Edge Network.
+Utilizza soluzioni di personalizzazione di Adobe, come Adobe Target, o piattaforme partner di personalizzazione (ad esempio, [!DNL Optimizely], [!DNL Pega]), nonché sistemi proprietari (ad esempio, CMS interno) per fornire ai clienti un&#39;esperienza di personalizzazione più approfondita tramite [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) destinazione. Tutto questo sfruttando anche le funzionalità di raccolta dati e segmentazione di Experienci Platform Edge Network.
 
 I casi d’uso descritti di seguito includono sia la personalizzazione del sito che la pubblicità mirata nel sito.
 
@@ -55,11 +55,11 @@ Per abilitare questi casi d’uso, i clienti necessitano di un modo rapido e sem
 
 ### Personalizzazione stessa pagina {#same-page}
 
-Un utente visita una pagina del sito web. Il cliente può utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l’azione o la decisione successiva (ad esempio, personalizzazione) utilizzando [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) connessione per piattaforme non Adobi (ad esempio, [!DNL Pega], [!DNL Optimizely], ecc.).
+Un utente visita una pagina del sito web. Puoi utilizzare le informazioni sulla visita della pagina corrente (ad esempio, URL di riferimento, lingua del browser, informazioni sul prodotto incorporate) per selezionare l’azione o la decisione successiva (ad esempio, personalizzazione) utilizzando [Personalizzazione personalizzata](../catalog/personalization/custom-personalization.md) connessione per piattaforme non Adobi (ad esempio, [!DNL Pega], [!DNL Optimizely] o altri.).
 
 ### Personalizzazione della pagina successiva {#next-page}
 
-Un utente visita la pagina A del sito web. In base a questa interazione, l’utente si è qualificato per un set di tipi di pubblico. L’utente fa quindi clic su un collegamento che li porta dalla pagina A alla pagina B. I tipi di pubblico per i quali l’utente si era qualificato durante la precedente interazione sulla pagina A, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per potenziare l’azione/decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
+Un utente visita la pagina A del sito web. In base a questa interazione, l’utente si è qualificato per un set di tipi di pubblico. L’utente fa quindi clic su un collegamento che li porta dalla pagina A alla pagina B. I tipi di pubblico per i quali l’utente si era qualificato durante la precedente interazione sulla pagina A, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per potenziare l’azione o la decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
 
 ### Personalizzazione sessione successiva {#next-session}
 
@@ -67,9 +67,9 @@ Un utente visita diverse pagine del sito web. In base a queste interazioni, l’
 
 Il giorno successivo, l’utente ritorna allo stesso sito web del cliente. I tipi di pubblico per i quali erano qualificati durante la precedente interazione con tutte le pagine del sito web visitate, insieme agli aggiornamenti del profilo determinati dalla visita del sito web corrente, verranno utilizzati per selezionare l’azione/decisione successiva (ad esempio, quale banner pubblicitario mostrare al visitatore o, in caso di test A/B, quale versione della pagina visualizzare).
 
-### Personalizzazione di un banner di una home page {#home-page-banner}
+### Personalizzare un banner di una pagina iniziale {#home-page-banner}
 
-Un’azienda di noleggio e vendita di immobili vuole personalizzare la propria pagina principale con un banner, in base alle qualifiche del pubblico in Adobe Experience Platform. L’azienda può selezionare i tipi di pubblico che dovranno ottenere un’esperienza personalizzata e inviarla ad Adobe Target come criterio di targeting per l’offerta Target.
+Un’azienda di noleggio e vendita di immobili vuole personalizzare la propria pagina principale con un banner, in base alle qualifiche del pubblico in Adobe Experience Platform. L’azienda può selezionare i tipi di pubblico che dovranno ottenere un’esperienza personalizzata e inviarli ad Adobe Target come criteri di targeting per l’offerta Target.
 
 ## Prerequisiti {#prerequisites}
 
@@ -79,7 +79,7 @@ Il primo passaggio nella configurazione della destinazione di personalizzazione 
 
 Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experience Platform]** assicurati che entrambi **[!UICONTROL Segmentazione Edge]** e **[!UICONTROL Destinazioni di personalizzazione]** sono selezionati.
 
-![Configurazione dello stream di dati](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Configurazione dello stream di dati con Segmentazione Edge e Destinazioni di personalizzazione evidenziate.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzioni descritte nella sezione [Documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
 
@@ -97,7 +97,7 @@ Segui le istruzioni su [creazione di un criterio di unione](../../profile/merge-
 
 Dopo aver creato [!DNL Active-On-Edge] criterio di unione, devi creare un nuovo pubblico in Platform.
 
-Segui le [audience builder](../../segmentation/ui/segment-builder.md) per creare il nuovo pubblico e assicurati di [assegnarlo](../../segmentation/ui/segment-builder.md#merge-policies) il [!DNL Active-On-Edge] criterio di unione creato nel passaggio 3.
+Segui le [audience builder](../../segmentation/ui/segment-builder.md) per creare il nuovo pubblico e assicurati di [assegnarlo](../../segmentation/ui/segment-builder.md#merge-policies) il [!DNL Active-On-Edge] criterio di unione creato nel passaggio precedente.
 
 ### Creare una connessione di destinazione {#connect-destination}
 
@@ -116,15 +116,15 @@ Dopo aver completato i prerequisiti, ora puoi selezionare la destinazione di per
 
 1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda.
 
-   ![Scheda Catalogo di destinazione](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![La scheda Catalogo di destinazione è evidenziata nell’interfaccia utente di Experienci Platform.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione di personalizzazione in cui desideri attivare i tipi di pubblico, come illustrato nell’immagine seguente.
 
-   ![Attiva pulsanti](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
+   ![Attiva il controllo del pubblico evidenziato su una scheda di destinazione nel catalogo.](../assets/ui/activate-edge-personalization-destinations/activate-audiences-button.png)
 
 1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi fai clic su **[!UICONTROL Successivo]**.
 
-   ![Seleziona destinazione](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
+   ![Seleziona il passaggio di destinazione nel flusso di lavoro di attivazione.](../assets/ui/activate-edge-personalization-destinations/select-destination.png)
 
 1. Passa alla sezione successiva a [seleziona i tipi di pubblico](#select-audiences).
 
@@ -140,7 +140,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 * **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
-![Seleziona i tipi di pubblico](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
+![Seleziona il passaggio del pubblico del flusso di lavoro di attivazione evidenziando diversi tipi di pubblico.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
 ## Mappa attributi {#mapping}
 
@@ -156,13 +156,13 @@ Seleziona gli attributi in base ai quali desideri abilitare i casi di utilizzo d
 
 L’aggiunta di attributi è facoltativa e puoi comunque procedere al passaggio successivo e abilitare la personalizzazione della stessa pagina e della pagina successiva senza selezionare gli attributi. Se non aggiungi attributi in questo passaggio, la personalizzazione verrà comunque eseguita in base all’iscrizione al pubblico e alle qualifiche della mappa di identità per i profili.
 
-![Immagine che mostra il passaggio di mappatura con un attributo selezionato](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
+![Immagine che mostra il passaggio di mappatura con un attributo selezionato.](../assets/ui/activate-edge-personalization-destinations/mapping-step.png)
 
 ### Seleziona attributi sorgente {#select-source-attributes}
 
 Per aggiungere attributi di origine, selezionare **[!UICONTROL Aggiungi nuovo campo]** controllo sul **[!UICONTROL Campo di origine]** e cerca o passa al campo dell’attributo XDM desiderato, come mostrato di seguito.
 
-![Registrazione schermata che mostra come selezionare un attributo target nel passaggio di mappatura](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
+![Registrazione su schermo che mostra come selezionare un attributo target nel passaggio di mappatura.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
 ### Seleziona attributi di destinazione {#select-target-attributes}
 
@@ -180,11 +180,11 @@ Per impostazione predefinita, il [!UICONTROL Pianificazione del pubblico] Questa
 
 Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza l’opzione di filtro e disattiva il **[!UICONTROL Mostra solo i nuovi tipi di pubblico]** filtro.
 
-![Tutti i tipi di pubblico](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
+![Il filtro Tutti i tipi di pubblico è evidenziato.](../assets/ui/activate-edge-personalization-destinations/all-audiences.png)
 
 Il giorno **[!UICONTROL Pianificazione del pubblico]** , seleziona ogni pubblico, quindi utilizza la **[!UICONTROL Data di inizio]** e **[!UICONTROL Data di fine]** selettori per configurare l’intervallo di tempo per l’invio di dati alla destinazione.
 
-![Pianificazione del pubblico](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
+![Passaggio di pianificazione del pubblico del flusso di lavoro di attivazione con data di inizio e di fine evidenziate.](../assets/ui/activate-edge-personalization-destinations/audience-schedule.png)
 
 Seleziona **[!UICONTROL Successivo]** per passare al [!UICONTROL Revisione] pagina.
 
@@ -202,7 +202,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
-![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
+![Esempio di violazione dei criteri per i dati.](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 

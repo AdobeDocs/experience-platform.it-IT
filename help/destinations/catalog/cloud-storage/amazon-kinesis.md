@@ -4,14 +4,14 @@ title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale allo storage Amazon Kinesis per inviare dati da Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1981'
 ht-degree: 5%
 
 ---
 
-# Connessione [!DNL Amazon Kinesis]
+# [!DNL Amazon Kinesis] connessione
 
 ## Panoramica {#overview}
 
@@ -37,7 +37,7 @@ Ad esempio, un potenziale cliente ha scaricato un white paper che li qualifica c
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

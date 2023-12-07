@@ -3,14 +3,14 @@ title: Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '878'
 ht-degree: 2%
 
 ---
 
-# Connessione [!DNL Azure Data Lake Storage Gen2]
+# [!DNL Azure Data Lake Storage Gen2] connessione
 
 ## Panoramica {#overview}
 
@@ -23,7 +23,7 @@ Leggi questa pagina per scoprire come creare una connessione in uscita al tuo [[
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

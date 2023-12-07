@@ -2,16 +2,16 @@
 title: Panoramica sulle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione fluida dei dati da Adobe Experience Platform. Puoi utilizzare le Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
 
 # Panoramica di [!DNL Destinations] {#overview}
 
-![Banner panoramica sulle destinazioni](./assets/overview/destinations-overview-banner.png)
+![Banner di panoramica sulle destinazioni.](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
@@ -29,7 +29,7 @@ Una delle funzionalità principali di Platform è l’acquisizione dei dati di p
 ## Passaggi delle destinazioni {#steps}
 
 * Scegli da un [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Platform.
-* Utilizza le destinazioni per inviare profili o tipi di pubblico a piattaforme di automazione marketing, piattaforme di pubblicità digitale e altro ancora.
+* Utilizza le destinazioni per inviare tipi di pubblico o set di dati a piattaforme di automazione marketing, piattaforme di pubblicità digitale e altro ancora.
 * Pianifica le esportazioni di dati nelle destinazioni preferite a intervalli regolari.
 
 ## Controlli {#controls}
@@ -39,12 +39,13 @@ I controlli in [area di lavoro destinazioni](./ui/destinations-workspace.md) con
 * Sfoglia il catalogo delle piattaforme di destinazione in cui puoi attivare i tuoi dati;
 * Creare, modificare, attivare e disattivare flussi di dati per le destinazioni nel catalogo;
 * Creare un account in un percorso di archiviazione o collegare Platform all’account nella piattaforma di destinazione;
-* Seleziona i tipi di pubblico da attivare sulle destinazioni;
-* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare quando si attivano tipi di pubblico su destinazioni di e-mail marketing.
+* Seleziona i tipi di pubblico o i set di dati da attivare nelle destinazioni;
+* Seleziona quale [Campi Experience Data Model (XDM)](../xdm/home.md) da esportare durante l’attivazione di tipi di pubblico in determinate destinazioni, ad esempio destinazioni di e-mail marketing, piattaforme di gestione delle relazioni con i clienti, posizioni di archiviazione cloud e altro ancora.
+* Attiva diversi tipi di profili e tipi di pubblico per le destinazioni: persone, account e potenziali clienti.
 
 ## Tipi e categorie di destinazione {#types-and-categories}
 
-Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, vedi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
+Ad Experience Platform, puoi attivare i dati per vari tipi di destinazioni, per soddisfare i casi d’uso di attivazione. Le destinazioni variano da integrazioni basate su API a integrazioni con sistemi di ricezione di file, destinazioni di ricerca dei profili e altro ancora. Per informazioni dettagliate su tutte le destinazioni disponibili, leggi [panoramica sui tipi e sulle categorie di destinazione](./destination-types.md).
 
 ## Destinazioni create da Adobi e da partner {#adobe-and-partner-built-destinations}
 
@@ -54,7 +55,7 @@ Per i connettori creati e gestiti dal partner, ciò significa che potrebbe esser
 
 ## Destinazioni e controlli di accesso {#access-controls}
 
-La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo degli accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, è possibile visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, consulta [Controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
+La funzionalità delle destinazioni in Platform funziona con le autorizzazioni di controllo degli accessi di Adobe Experience Platform. A seconda del livello di autorizzazione dell’utente, è possibile visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, vai a [controllo degli accessi in Adobe Experience Platform](../access-control/home.md) e scorri verso il basso fino alla tabella nella parte inferiore della pagina.
 
 La tabella seguente illustra le autorizzazioni e le combinazioni di autorizzazioni necessarie per eseguire determinate azioni sulle destinazioni:
 
@@ -81,7 +82,9 @@ Per ulteriori informazioni sul funzionamento delle destinazioni con i controlli 
 
 Dopo aver stabilito una connessione a una destinazione e aver completato il flusso di lavoro di attivazione, puoi monitorare le esportazioni di dati nel sistema di ricezione. Leggi le [guida sul monitoraggio dei flussi di dati per le destinazioni nell’interfaccia utente](/help/dataflows/ui/monitor-destinations.md) per ulteriori informazioni.
 
-Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experienci Platform.
+![Esempio di pagina di monitoraggio delle destinazioni.](./assets/overview/monitoring-page-example.png)
+
+Puoi anche verificare se i dati arrivano correttamente alla destinazione. La maggior parte delle pagine della documentazione di destinazione nel catalogo presenta un *Convalida sezione esportazione dati*, che indica come verificare nella piattaforma di destinazione che i dati siano stati correttamente importati da Experienci Platform. Visualizza un esempio di questa sezione per [Destinazione Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrizioni alla governance dei dati per l’attivazione dei dati nelle destinazioni {#data-governance}
 

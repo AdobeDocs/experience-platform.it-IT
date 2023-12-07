@@ -1,12 +1,11 @@
 ---
-keywords: attivare destinazioni profilo;attivare destinazioni;attivare dati; attivare destinazioni e-mail marketing; attivare destinazioni archiviazione cloud
 title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profili in batch
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3765'
 ht-degree: 11%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 11%
 
 ## Panoramica {#overview}
 
-Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico nelle destinazioni basate su profili batch di Adobe Experience Platform, ad esempio l’archiviazione cloud e le destinazioni del marketing via e-mail.
+Questo articolo spiega il flusso di lavoro necessario per attivare i tipi di pubblico in Adobe Experience Platform per mettere in batch destinazioni basate su file di profilo, come l’archiviazione cloud e le destinazioni del marketing via e-mail.
 
 ## Prerequisiti {#prerequisites}
 
@@ -46,15 +45,15 @@ Seleziona il formato file desiderato per l’esportazione quando [creazione di u
 
 1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda.
 
-   ![Immagine che evidenzia come arrivare alla scheda del catalogo delle destinazioni](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Immagine che evidenzia come accedere alla scheda del catalogo delle destinazioni.](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione in cui desideri attivare i tipi di pubblico, come illustrato nell’immagine seguente.
 
-   ![Immagine che evidenzia il pulsante Attiva pubblico](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![Attiva il controllo dei tipi di pubblico evidenziato nella pagina del catalogo.](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi fai clic su **[!UICONTROL Successivo]**.
 
-   ![Immagine che evidenzia come selezionare una o più destinazioni in cui attivare i tipi di pubblico](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Sono state evidenziate delle caselle di controllo per selezionare una o più destinazioni a cui attivare i tipi di pubblico.](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Passa alla sezione successiva a [seleziona i tipi di pubblico](#select-audiences).
 
@@ -68,7 +67,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 * **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
-![Immagine che evidenzia come selezionare uno o più tipi di pubblico da attivare](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![Caselle di controllo visualizzate quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >title="Pianificazione"
 >abstract="Utilizza l’icona della matita per impostare il tipo di esportazione dei file (file completi o incrementali) e la frequenza di esportazione."
 
-[!DNL Adobe Experience Platform] esporta dati per e-mail marketing e destinazioni di archiviazione cloud sotto forma di [!DNL CSV] file. In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
+[!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >
 >Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un’esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
-Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al pubblico da inviare alla destinazione.
+Seleziona la **[!UICONTROL Crea pianificazione]** controllo corrispondente al pubblico che si desidera inviare alla destinazione.
 
-![Immagine che evidenzia il pulsante Crea pianificazione](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Crea controllo della pianificazione evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Esportare file completi {#export-full-files}
 
@@ -113,14 +112,14 @@ Seleziona la **[!UICONTROL Crea pianificazione]** corrispondente al pubblico da 
 
 Seleziona **[!UICONTROL Esporta file completi]** per attivare l’esportazione di un file contenente un’istantanea completa di tutti i requisiti del profilo per il pubblico selezionato.
 
-![Immagine dell’interfaccia utente con l’opzione Esporta file completi selezionata.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Opzione Esporta file interi selezionata.](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Utilizza il **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
    * **[!UICONTROL Una volta]**: pianifica un’esportazione di file completi una tantum su richiesta.
    * **[!UICONTROL Giornaliero]**: pianifica le esportazioni di file completi una volta al giorno, ogni giorno, all’ora specificata.
 
-1. Utilizza il **[!UICONTROL Ora]** attiva per selezionare se l’esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un’ora specificata. Quando si seleziona **[!UICONTROL Pianificato]** , è possibile utilizzare il selettore per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
+2. Utilizza il **[!UICONTROL Ora]** attiva per selezionare se l’esportazione deve avvenire immediatamente dopo la valutazione del pubblico o su base pianificata, a un’ora specificata. Quando si seleziona **[!UICONTROL Pianificato]** , è possibile utilizzare il selettore per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ Utilizza il **[!UICONTROL Pianificato]** per l&#39;esecuzione del processo di at
 
    ![Immagine che evidenzia l’opzione Pianificato nel flusso di attivazione per le destinazioni batch e che mostra il selettore dell’ora.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. Utilizza il **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione. Per le esportazioni giornaliere, si consiglia di impostare la data di inizio e la data di fine in base alla durata delle campagne nelle piattaforme a valle.
+3. Utilizza il **[!UICONTROL Data]** selettore per scegliere il giorno o l’intervallo in cui deve aver luogo l’esportazione. Per le esportazioni giornaliere, si consiglia di impostare la data di inizio e la data di fine in base alla durata delle campagne nelle piattaforme a valle.
 
    >[!IMPORTANT]
    >
    > Quando si seleziona un intervallo di esportazione, l’ultimo giorno dell’intervallo non viene incluso nelle esportazioni. Ad esempio, se selezioni un intervallo tra il 4 e l’11 gennaio, l’ultima esportazione di file avrà luogo il 10 gennaio.
 
-1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
+4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 ### Esportare file incrementali {#export-incremental-files}
 
@@ -151,22 +150,22 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazi
 >
 >Il primo file incrementale esportato include tutti i profili idonei per un pubblico, che fungono da retrocompilazione.
 
-![Immagine dell’interfaccia utente con l’opzione Esporta file incrementali selezionata.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Opzione Esporta file incrementali selezionata.](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Utilizza il **[!UICONTROL Frequenza]** per selezionare la frequenza di esportazione:
 
    * **[!UICONTROL Giornaliero]**: pianifica le esportazioni di file incrementali una volta al giorno, ogni giorno, all’ora specificata.
    * **[!UICONTROL Ogni ora]**: pianifica le esportazioni di file incrementali ogni 3, 6, 8 o 12 ore.
 
-1. Utilizza il **[!UICONTROL Ora]** per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
+2. Utilizza il **[!UICONTROL Ora]** per scegliere l’ora del giorno, in [!DNL UTC] , quando deve essere effettuata l&#39;esportazione.
 
-1. Utilizza il **[!UICONTROL Data]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione. Si consiglia di impostare la data di inizio e di fine in modo che sia allineata alla durata delle campagne nelle piattaforme a valle.
+3. Utilizza il **[!UICONTROL Data]** per scegliere l&#39;intervallo di esecuzione dell&#39;esportazione. Si consiglia di impostare la data di inizio e di fine in modo che sia allineata alla durata delle campagne nelle piattaforme a valle.
 
    >[!IMPORTANT]
    >
    >L&#39;ultimo giorno dell&#39;intervallo non è incluso nelle esportazioni. Ad esempio, se selezioni un intervallo tra il 4 e l’11 gennaio, l’ultima esportazione di file avrà luogo il 10 gennaio.
 
-1. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
+4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
 ### Configurare nomi file {#file-names}
 
@@ -199,7 +198,7 @@ Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nom
 | **[!UICONTROL ID destinazione]** | ID del flusso di dati di destinazione utilizzato per esportare il pubblico. |
 | **[!UICONTROL Nome destinazione]** | Il nome del flusso di dati di destinazione utilizzato per esportare il pubblico. |
 | **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experienci Platform. |
-| **[!UICONTROL Nome della sandbox]** | ID della sandbox utilizzato per esportare il pubblico. |
+| **[!UICONTROL Nome sandbox]** | ID della sandbox utilizzato per esportare il pubblico. |
 
 {style="table-layout:auto"}
 
@@ -215,7 +214,7 @@ Dopo aver configurato tutti i tipi di pubblico, seleziona **[!UICONTROL Successi
 
 In questo passaggio, devi selezionare gli attributi del profilo che desideri aggiungere ai file esportati nella destinazione di destinazione. Per selezionare gli attributi e le identità del profilo per l&#39;esportazione:
 
-1. In **[!UICONTROL Mappatura]** pagina, seleziona **[!UICONTROL Aggiungi nuovo campo]**.
+1. In **[!UICONTROL Mappatura]** pagina, seleziona **[!UICONTROL Aggiungi nuova mappatura]**.
 
    ![Aggiungi nuovo controllo campo evidenziato nel flusso di lavoro di mappatura.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ Ulteriori informazioni su [comportamento di esportazione del profilo per destina
 
 La selezione degli spazi dei nomi delle identità per l’esportazione, come illustrato nell’immagine seguente, non è attualmente supportata. La selezione di qualsiasi spazio dei nomi di identità per l’esportazione genererà un errore in **[!UICONTROL Revisione]** passaggio.
 
-![Mappatura non supportata che mostra le esportazioni di identità](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![Mappatura non supportata che mostra le esportazioni di identità.](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di identità ai file esportati durante la versione beta, puoi effettuare le seguenti operazioni:
 * Utilizza le destinazioni dell’archiviazione cloud legacy per i flussi di dati in cui desideri includere spazi dei nomi di identità nelle esportazioni
@@ -517,7 +516,7 @@ Seleziona **[!UICONTROL Successivo]** per passare al [Revisione](#review) passag
 
 Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
-![Riepilogo della selezione nel passaggio di revisione.](../assets/ui/activate-batch-profile-destinations/review.png)
+![Riepilogo della selezione visualizzato nel passaggio di revisione.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
-![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
+![Esempio di violazione dei criteri dei dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 

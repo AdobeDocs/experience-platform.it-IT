@@ -3,14 +3,14 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmettere facilmente i dati del pubblico Adobe a Airship come attributi del pubblico per il targeting all'interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---
 
-# Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
+# [!DNL Airship Attributes] connessione {#airship-attributes-destination}
 
 ## Panoramica {#overview}
 
@@ -37,7 +37,7 @@ Prima di poter inviare i tipi di pubblico a [!DNL Airship], è necessario:
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

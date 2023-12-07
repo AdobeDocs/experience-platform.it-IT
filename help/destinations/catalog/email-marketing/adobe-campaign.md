@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;destinazioni e-mail;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un insieme di soluzioni che ti aiutano a personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '906'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Per inviare i dati sul pubblico ad Adobe Campaign, devi prima [connettere la des
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -40,11 +40,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## ELENCO CONSENTITI di indirizzo IP {#allow-list}
+## Indirizzo IP inserito nell&#39;elenco Consentiti {#allow-list}
 
-Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP all’elenco consentiti.
+Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al tuo inserisco nell&#39;elenco Consentiti di.
 
-Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere degli IP di Adobe all’elenco consentiti.
+Fai riferimento a [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere IP di Adobe al tuo inserisco nell&#39;elenco Consentiti di.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -101,7 +101,7 @@ Quando si attivano i tipi di pubblico in questa destinazione, Adobe consiglia di
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Adobe Campaign] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [verificare l’attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di audience activation.
+Per [!DNL Adobe Campaign] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [verificare l’attivazione del pubblico](../../ui/activate-batch-profile-destinations.md#verify) nell’esercitazione di Audience Activation.
 
 ## Configurare l’importazione dei dati in Adobe Campaign {#import-data-into-campaign}
 

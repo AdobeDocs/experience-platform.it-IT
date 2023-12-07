@@ -3,18 +3,18 @@ title: Connessione Google Cloud Storage
 description: Scopri come connettersi a Google Cloud Storage e attivare tipi di pubblico o esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 3%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
-# Connessione [!DNL Google Cloud Storage]
+# [!DNL Google Cloud Storage] connessione
 
 ## Panoramica {#overview}
 
-Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform ai tuoi bucket.
+Creare una connessione in uscita a [!DNL Google Cloud Storage] per esportare periodicamente file di dati da Adobe Experience Platform nei bucket personali.
 
 ## Connetti al tuo [!DNL Google Cloud Storage] archiviazione tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -23,7 +23,7 @@ Crea una connessione in uscita a [!DNL Google Cloud Storage] per esportare perio
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

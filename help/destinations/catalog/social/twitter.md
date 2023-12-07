@@ -2,14 +2,14 @@
 title: Connessione twitter tipi di pubblico personalizzati
 description: Effettua il targeting dei tuoi follower e clienti esistenti nel Twitter e crea campagne di remarketing rilevanti attivando i tipi di pubblico incorporati in Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '859'
 ht-degree: 5%
 
 ---
 
-# Connessione [!DNL Twitter Custom Audiences]
+# [!DNL Twitter Custom Audiences] connessione
 
 ## Panoramica {#overview}
 
@@ -35,7 +35,7 @@ Prima di configurare [!DNL Twitter Custom Audiences] destinazione, assicurati di
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

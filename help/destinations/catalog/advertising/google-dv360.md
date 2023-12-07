@@ -1,12 +1,11 @@
 ---
-keywords: Doppio clic su Gestione offerte;Doppio clic su Gestione offerte;Doppio clic;Schermo e video 360;schermo 360;video 360;Video 360;Schermo 360;Schermo e video
 title: Google Display e connessione Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager, è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 4%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -14,18 +13,18 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-[!DNL Display & Video 360], precedentemente noto come [!DNL DoubleClick Bid Manager], è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra le origini di inventario Display, Video e Mobile.
+[!DNL Display & Video 360], precedentemente noto come [!DNL DoubleClick Bid Manager], è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di inventario Display, Video e Mobile.
 
 ## Specifiche della destinazione {#specifics}
 
 Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360] destinazioni:
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
-* L’attivazione dei backfill del pubblico in [!DNL Google Display & Video 360] la destinazione è pianificata per essere eseguita 24-48 ore dopo che un pubblico è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde alla politica di Google di attendere 24 ore prima dell’acquisizione dei dati ed è inteso a migliorare le percentuali di corrispondenza tra Real-Time CDP e [!DNL Google Display & Video 360]. Tieni presente che si tratta di una configurazione back-end applicabile solo a questa destinazione e che non è correlata ad alcuna opzione di pianificazione configurabile dalla clientela nell’interfaccia utente.
+* L’attivazione dei backfill del pubblico in [!DNL Google Display & Video 360] la destinazione è pianificata per essere eseguita 24-48 ore dopo che un pubblico è stato mappato per la prima volta a una connessione di destinazione. Questo aggiornamento risponde alla politica di Google di attendere 24 ore prima dell’acquisizione dei dati ed è inteso a migliorare le percentuali di corrispondenza tra Real-Time CDP e [!DNL Google Display & Video 360]. Si tratta di una configurazione back-end applicabile solo a questa destinazione e non correlata ad alcuna opzione di pianificazione configurabile dal cliente nell’interfaccia utente.
 
 >[!IMPORTANT]
 >
->Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato la funzione [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+>Se desideri creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato la funzione [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), rivolgiti al servizio di consulenza o assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ## Identità supportate {#supported-identities}
 
@@ -43,7 +42,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Display & Video 360
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -67,10 +66,10 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!NOTE]
 >
->L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Display & Video 360] in Platform. Verifica che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato entro [!DNL Google] prima di creare una destinazione.
+>L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Display & Video 360] in Platform. Assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
 >L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audienci Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
-Prima di creare [!DNL Google Display & Video 360] destinazione in Platform, devi contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere il tuo account all’elenco consentiti. Contattare Google e fornire le seguenti informazioni:
+Prima di creare [!DNL Google Display & Video 360] destinazione in Platform, devi contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere il tuo account al inserisco nell&#39;elenco Consentiti di. Contattare Google e fornire le seguenti informazioni:
 
 * **ID account**: ID account di Adobe con Google. ID account: 87933855.
 * **ID cliente**: ID account cliente di Adobe con Google. ID cliente: 89690775.
@@ -97,7 +96,7 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 >[!NOTE]
 >
->Durante la configurazione di un [!DNL Google Display & Video 360] destinazione, utilizza il tuo [!DNL Google Account Manager] o un rappresentante Adobe per capire quale tipo di account si dispone.
+>Durante la configurazione di un [!DNL Google Display & Video 360] destinazione, utilizzare [!DNL Google Account Manager] o un rappresentante Adobe per capire quale tipo di account si dispone.
 
 ### Abilita avvisi {#enable-alerts}
 

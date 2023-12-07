@@ -2,7 +2,7 @@
 title: Modello self-service // Sostituisci con il nome della tua destinazione
 description: Utilizza questo modello per creare la documentazione pubblica per la destinazione nel catalogo Adobe Experience Platform. // Sostituisci con il paragrafo nella sezione Panoramica
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 2%
@@ -76,7 +76,7 @@ Per aiutarti a capire meglio come e quando utilizzare il *Destinazione* destinaz
 
 *Aggiungi in questa sezione informazioni sui tipi di pubblico supportati dalla destinazione. Abbiamo precompilato la tabella con alcuni valori standard. Utilizza il `✓` e `X` caratteri per contrassegnare se il tipo di pubblico è supportato da questa destinazione.*
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

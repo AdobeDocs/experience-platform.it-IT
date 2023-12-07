@@ -3,14 +3,14 @@ keywords: e-mail;E-mail;Destinazioni e-mail;oracle eloqua;oracle
 title: (File) Oracle di connessione Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 3%
+source-wordcount: '717'
+ht-degree: 2%
 
 ---
 
-# Connessione [!DNL (Files) Oracle Eloqua]
+# [!DNL (Files) Oracle Eloqua] connessione
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da [!DNL Oracle] che ha lo scopo di aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.
 
@@ -18,7 +18,7 @@ Per inviare dati sul pubblico a [!DNL Oracle Eloqua], devi prima [connettere la 
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -63,12 +63,12 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
 * Per **[!UICONTROL SFTP con password]** connessioni, devi fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta ]
+   * [!UICONTROL Porta]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Password]
 * Per **[!UICONTROL SFTP con chiave SSH]** connessioni, devi fornire:
    * [!UICONTROL Dominio]
-   * [!UICONTROL Porta ]
+   * [!UICONTROL Porta]
    * [!UICONTROL Nome utente]
    * [!UICONTROL Chiave SSH]
 

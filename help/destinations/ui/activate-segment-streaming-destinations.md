@@ -1,13 +1,12 @@
 ---
-keywords: attivare destinazioni di streaming pubblico;attivare destinazioni di streaming pubblico;attivare dati
 title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1121'
+ht-degree: 7%
 
 ---
 
@@ -34,15 +33,15 @@ Per attivare i tipi di pubblico nelle destinazioni, è necessario aver completat
 
 1. Vai a **[!UICONTROL Connessioni > Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda.
 
-   ![Scheda Catalogo di destinazione](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Scheda Catalogo delle destinazioni che mostra varie destinazioni di streaming.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. Seleziona **[!UICONTROL Attiva tipi di pubblico]** sulla scheda corrispondente alla destinazione in cui desideri attivare i tipi di pubblico, come illustrato nell’immagine seguente.
 
-   ![Attiva pulsanti](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Attiva il controllo evidenziato nel catalogo delle destinazioni.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Seleziona la connessione di destinazione da utilizzare per attivare i tipi di pubblico, quindi fai clic su **[!UICONTROL Successivo]**.
 
-   ![Seleziona destinazione](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Una connessione di destinazione evidenziata nel passaggio Seleziona destinazione.](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Passa alla sezione successiva a [seleziona i tipi di pubblico](#select-audiences).
 
@@ -56,7 +55,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 * **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
-![Seleziona i tipi di pubblico](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Diversi tipi di pubblico sono stati evidenziati nel passaggio Seleziona tipi di pubblico.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Mappare attributi e identità {#mapping}
 
@@ -68,23 +67,23 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 1. In **[!UICONTROL Mappatura]** pagina, seleziona **[!UICONTROL Aggiungi nuova mappatura]**.
 
-   ![Aggiungi nuova mappatura](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![Aggiungi nuovo controllo di mappatura evidenziato.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. Selezionare la freccia a destra della **[!UICONTROL Campo di origine]** voce.
 
-   ![Seleziona campo di origine](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Selezionare il controllo campo sorgente evidenziato.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. In **[!UICONTROL Seleziona campo di origine]** , utilizza la **[!UICONTROL Seleziona attributi]** o **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** opzioni per passare tra le due categorie di campi sorgente disponibili. Dal menu [!DNL XDM] attributi del profilo e spazi dei nomi di identità, seleziona quelli che desideri mappare sulla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   ![Seleziona la pagina del campo sorgente](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![Seleziona la pagina del campo sorgente che mostra diversi campi sorgente disponibili.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. Seleziona il pulsante a destra del **[!UICONTROL Campo di destinazione]** voce.
 
-   ![Seleziona campo di destinazione](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Selezionare il campo di destinazione evidenziato.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. In **[!UICONTROL Seleziona campo di destinazione]** , selezionare lo spazio dei nomi dell&#39;identità di destinazione a cui si desidera mappare il campo di origine e scegliere **[!UICONTROL Seleziona]**.
 
-   ![Pagina Seleziona campo di destinazione](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Seleziona la pagina del campo di destinazione che mostra le opzioni disponibili per le mappature dei campi di destinazione.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. Per aggiungere altre mappature, ripetere i passaggi da 1 a 5.
 
@@ -97,7 +96,7 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 Quando mappi gli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla **Applica trasformazione** opzione per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi sorgente all’attivazione.
 
-![Mappatura identità](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Applica il controllo di trasformazione evidenziato nel passaggio di mappatura identità.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Pianificare l’esportazione del pubblico {#scheduling}
 
@@ -114,19 +113,19 @@ Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza 
 
 1. Il giorno **[!UICONTROL Pianificazione del pubblico]** , seleziona ogni pubblico, quindi utilizza la **[!UICONTROL Data di inizio]** e **[!UICONTROL Data di fine]** selettori per configurare l’intervallo di tempo per l’invio di dati alla destinazione.
 
-   ![Pianificazione del pubblico](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Filtro pianificazione pubblico evidenziato.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * Alcune destinazioni richiedono la selezione di **[!UICONTROL Origine del pubblico]** per ogni pubblico, utilizzando il menu a discesa sotto i selettori del calendario. Se la destinazione non include questo selettore, salta questo passaggio.
 
-     ![ID di mappatura](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Menu a discesa ID mappatura evidenziato.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Alcune destinazioni richiedono la mappatura manuale [!DNL Platform] pubblico alla controparte nella destinazione target. A questo scopo, seleziona ogni pubblico, quindi inserisci l’ID del pubblico corrispondente dalla piattaforma di destinazione in **[!UICONTROL ID mappatura]** campo. Se la destinazione non include questo campo, salta questo passaggio.
 
-     ![ID di mappatura](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Elenco a discesa Origine del pubblico evidenziato.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Alcune destinazioni richiedono l’immissione di un **[!UICONTROL ID app]** durante l&#39;attivazione [!DNL IDFA] o [!DNL GAID] pubblico. Se la destinazione non include questo campo, salta questo passaggio.
 
-     ![ID app](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![Menu a discesa ID app evidenziato.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Seleziona **[!UICONTROL Successivo]** per passare al [!UICONTROL Revisione] pagina.
 
@@ -144,7 +143,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
-![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
+![Esempio di violazione dei criteri per i dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 
 ### Filtrare i tipi di pubblico {#filter-audiences}
 

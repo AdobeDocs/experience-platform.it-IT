@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 16%
+source-wordcount: '1109'
+ht-degree: 15%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target è un’applicazione che fornisce funzionalità di personalizzazion
 
 Adobe Target è una connessione di personalizzazione nel catalogo delle destinazioni di Adobe Experience Platform.
 
+## Video introduttivo {#video-overview}
+
 Per una breve panoramica su come configurare la connessione Adobe Target in Experienci Platform, guarda il video seguente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Per configurare la connessione Adobe Target senza utilizzare un ID dello stream 
 
 >[!IMPORTANT]
 >
->Prima di creare un’ [!DNL Adobe Target] connessione, leggi la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform. La personalizzazione della stessa pagina e della pagina successiva richiede l’utilizzo di un ID dello stream di dati durante la configurazione della connessione Adobe Target.
+>Prima di creare un’ [!DNL Adobe Target] connessione, leggi la guida su come [configurare le destinazioni di personalizzazione per la personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md). Questa guida descrive i passaggi di configurazione richiesti per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, su più componenti di Experience Platform. Per ottenere casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva, devi utilizzare un ID dello stream di dati durante la configurazione della connessione Adobe Target.
 
 ### Prerequisiti in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -54,7 +56,7 @@ Ulteriori informazioni sulla concessione di autorizzazioni per [Target Premium](
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -133,7 +135,7 @@ Letto [Attivare i tipi di pubblico per Edge Personalization Destinations](../../
 
 ## Dati esportati {#exported-data}
 
-Adobe Target legge i dati del profilo da Adobe Experience Platform Edge Network, quindi non viene esportato alcun dato.
+Adobe Target *legge* dati di profilo da Adobe Experience Platform Edge Network, quindi non vengono esportati dati.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

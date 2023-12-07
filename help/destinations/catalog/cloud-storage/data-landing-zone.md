@@ -3,9 +3,9 @@ title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1509'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati 
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -62,11 +62,11 @@ Prima di poter utilizzare il [!DNL Data Landing Zone] destinazione.
 
 In [!DNL Azure Storage Explorer] UI, seleziona l’icona della connessione nella barra di navigazione a sinistra. Il **Seleziona risorsa** viene visualizzata una finestra che fornisce le opzioni per la connessione. Seleziona **[!DNL Blob container]** per connettersi al tuo [!DNL Data Landing Zone] archiviazione.
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Seleziona la risorsa evidenziata nell’interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Quindi, seleziona **URL firma di accesso condiviso (SAS)** come metodo di connessione e quindi selezionare **Successivo**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Seleziona il metodo di connessione evidenziato nell’interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Dopo aver selezionato il metodo di connessione, devi fornire un **nome visualizzato** e **[!DNL Blob]URL SAS contenitore** che corrisponde al tuo [!DNL Data Landing Zone] contenitore.
 
@@ -82,7 +82,7 @@ Devi utilizzare le API di Platform per recuperare [!DNL Data Landing Zone] crede
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
-| Parametri query | Descrizione |
+| Parametri di query | Descrizione |
 | --- | --- |
 | `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
 
@@ -133,7 +133,7 @@ Se necessario, puoi anche aggiornare le credenziali. È possibile aggiornare `SA
 POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
 ```
 
-| Parametri query | Descrizione |
+| Parametri di query | Descrizione |
 | --- | --- |
 | `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
 | `refresh` | Il `refresh` consente di reimpostare le credenziali della zona di destinazione e generare automaticamente un nuovo `SASToken`. |
@@ -171,15 +171,15 @@ La seguente risposta restituisce valori aggiornati per il `SASToken` e `SASUri`.
 
 Immetti il nome visualizzato (`containerName`) e [!DNL Data Landing Zone] URL SAS, come restituito nella chiamata API descritta in precedenza, quindi selezionare **Successivo**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Immetti le informazioni di connessione evidenziate nell’interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 Il **Riepilogo** viene visualizzata una finestra che fornisce una panoramica delle impostazioni, incluse informazioni [!DNL Blob] endpoint e autorizzazioni. Quando è pronto, seleziona **Connetti**.
 
-![riepilogo](/help/sources/images/tutorials/create/dlz/summary.png)
+![Riepilogo delle impostazioni visualizzate nell’interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Una connessione corretta aggiorna il tuo [!DNL Azure Storage Explorer] Interfaccia utente con [!DNL Data Landing Zone] contenitore.
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Riepilogo del contenitore utenti DLZ evidenziato nell’interfaccia utente di Azure.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Con [!DNL Data Landing Zone] contenitore connesso a [!DNL Azure Storage Explorer], ora puoi iniziare a esportare i file da Experienci Platform al tuo [!DNL Data Landing Zone] contenitore. Per esportare i file, è necessario stabilire una connessione con [!DNL Data Landing Zone] nell’interfaccia utente di Experienci Platform, come descritto nella sezione seguente.
 

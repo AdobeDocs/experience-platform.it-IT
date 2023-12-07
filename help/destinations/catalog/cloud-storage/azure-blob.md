@@ -2,14 +2,14 @@
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita all’archiviazione BLOB di Azure per esportare periodicamente i file di dati CSV da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 8%
+source-wordcount: '1045'
+ht-degree: 7%
 
 ---
 
-# Connessione [!DNL Azure Blob]
+# [!DNL Azure Blob] connessione
 
 ## Registro modifiche destinazione {#changelog}
 
@@ -42,7 +42,7 @@ Se disponi già di un [!DNL Blob] destinazione, è possibile saltare il resto de
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

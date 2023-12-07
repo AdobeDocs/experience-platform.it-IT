@@ -1,26 +1,25 @@
 ---
-keywords: e-mail;e-mail;destinazioni e-mail;salesforce;destinazione salesforce
 title: Connessione Marketing Cloud Salesforce
 description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la propria esperienza.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 4%
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
-# Connessione [!DNL (Files) Salesforce Marketing Cloud]
+# [!DNL (Files) Salesforce Marketing Cloud] connessione
 
 ## Panoramica {#overview}
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per consentire a visitatori e clienti di personalizzare la propria esperienza.
 
-Per inviare dati sul pubblico a [!DNL Salesforce Marketing Cloud], devi prima [connettere la destinazione](#connect-destination) in Platform, quindi [impostare un’importazione di dati](#import-data-into-salesforce) dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
+Per inviare dati sul pubblico a [!DNL Salesforce Marketing Cloud], devi prima [connettersi alla destinazione](#connect-destination) in Platform, quindi [impostare un’importazione di dati](#import-data-into-salesforce) dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -40,11 +39,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## ELENCO CONSENTITI di indirizzo IP {#allow-list}
+## Indirizzo IP inserito nell&#39;elenco Consentiti {#allow-list}
 
-Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP all’elenco consentiti.
+Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al tuo inserisco nell&#39;elenco Consentiti di.
 
-Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere degli IP di Adobe all’elenco consentiti.
+Fai riferimento a [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere IP di Adobe al tuo inserisco nell&#39;elenco Consentiti di.
 
 ## Connettersi alla destinazione {#connect}
 

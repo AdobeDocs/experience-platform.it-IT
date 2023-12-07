@@ -1,12 +1,11 @@
 ---
-keywords: connettere destinazione;destinazione connettere;come connettere destinazione
 title: Creare una nuova connessione di destinazione
 type: Tutorial
 description: Scopri come connettersi a una destinazione in Adobe Experience Platform, abilitare gli avvisi e impostare azioni di marketing per la destinazione connessa.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---

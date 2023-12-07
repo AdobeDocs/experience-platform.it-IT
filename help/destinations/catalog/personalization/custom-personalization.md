@@ -3,10 +3,10 @@ keywords: personalizzazione personalizzata; destinazione; destinazione personali
 title: Connessione di personalizzazione personalizzata
 description: Questa destinazione fornisce personalizzazione esterna, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sul sito in modo da recuperare informazioni sul pubblico da Adobe Experience Platform. Questa destinazione fornisce una personalizzazione in tempo reale in base all’iscrizione al pubblico del profilo utente.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 10%
+source-wordcount: '907'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione personalizzata]** La destinazione richiede l&#39;utilizzo di [API server di rete Edge](/help/server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario utilizzare il [API server di rete Edge](/help/server-api/overview.md) durante la configurazione di **[!UICONTROL Personalizzazione personalizzata]** destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../../server-api/authentication.md).
 >
 ><br>Se utilizzi già Web SDK o Mobile SDK per l’integrazione, puoi recuperare gli attributi tramite l’API server aggiungendo un’integrazione lato server.
 >
@@ -31,7 +31,7 @@ ht-degree: 10%
 
 ## Panoramica {#overview}
 
-Questa destinazione offre un modo per recuperare informazioni sul pubblico da Adobe Experience Platform a piattaforme di personalizzazione esterne, sistemi di gestione dei contenuti, server di annunci e altre applicazioni in esecuzione sui siti web dei clienti.
+Configura questa destinazione per consentire alle piattaforme di personalizzazione esterne, ai sistemi di gestione dei contenuti, ai server di annunci e ad altre applicazioni in esecuzione sui siti web dei clienti di recuperare informazioni sul pubblico da Adobe Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 
@@ -43,7 +43,7 @@ Questa integrazione è basata su [Adobe Experience Platform Web SDK](../../../ed
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

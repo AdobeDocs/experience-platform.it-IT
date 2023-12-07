@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;tipi di destinazione;destinations;destinatio
 title: Tipi e categorie di destinazione
 description: Scopri i diversi tipi e categorie di destinazioni in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni A
 
 ## Tipi di destinazione {#destination-types}
 
-In Adobe Experience Platform, distinguiamo tra diversi tipi di destinazione: connessioni, esportazioni di set di dati ed estensioni. Esistono diversi tipi di destinazioni di connessione che consentono di esportare dati in destinazioni basate su API:
+In Adobe Experience Platform, distinguiamo tra diversi tipi di destinazione: connessioni, esportazioni di set di dati ed estensioni. Esistono diversi tipi di destinazioni di connessione che ti consentono di esportare dati in destinazioni basate su API, destinazioni social, piattaforme di gestione delle relazioni con i clienti e molto altro.
 
 Infine, è possibile distinguere le connessioni tra le destinazioni pubbliche disponibili in tutte le organizzazioni nel catalogo delle destinazioni e le destinazioni private che i clienti di Real-Time CDP Ultimate possono creare per soddisfare i propri casi di utilizzo specifici per l&#39;esportazione.
 
@@ -68,6 +68,21 @@ Ulteriori informazioni su come [configurare le destinazioni di personalizzazione
 Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Tipi di pubblico esportati {#exported-audiences-types}
+
+Puoi esportare tre tipi di pubblico da Experienci Platform in varie destinazioni:
+
+* Pubblico persone
+* Pubblico dell’account
+* Pubblico potenziale
+
+Ulteriori informazioni su [vari tipi di pubblico](/help/segmentation/ui/account-audiences.md#terminology).
+
+Un simbolo sulla scheda di destinazione mostra quali tipi di pubblico puoi esportare in ogni destinazione.
+
+![Esempio di scheda di destinazione con simboli che mostrano quali tipi di pubblico possono essere esportati.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Destinazioni di esportazione del set di dati {#dataset-export-destinations}
 

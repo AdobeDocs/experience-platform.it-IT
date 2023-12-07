@@ -3,14 +3,14 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico Adobe a Airship come tag del pubblico per il targeting allâ€™interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '967'
 ht-degree: 2%
 
 ---
 
-# Connessione [!DNL Airship Tags] {#airship-tags-destination}
+# [!DNL Airship Tags] connessione {#airship-tags-destination}
 
 ## Panoramica
 
@@ -38,7 +38,7 @@ Prima di poter inviare il pubblico Adobe Experience Platform a [!DNL Airship], Ã
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|

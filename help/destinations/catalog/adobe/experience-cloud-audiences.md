@@ -3,10 +3,10 @@ title: Experience Cloud Audiences
 description: Scopri come condividere i tipi di pubblico da Real-time Customer Data Platform a varie app di Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 2%
 
 ---
 

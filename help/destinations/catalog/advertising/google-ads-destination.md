@@ -2,9 +2,9 @@
 title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di pagare per clic su ricerche testuali, visualizzazioni grafiche, video YouTube e display mobili in-app.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ads] destinazioni:
 
 >[!IMPORTANT]
 >
->Se desideri creare la prima destinazione con [!DNL Google Ads] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audienci Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+>Se desideri creare la prima destinazione con [!DNL Google Ads] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audienci Manager o altre applicazioni), rivolgiti alla consulenza o all’assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi configurato le integrazioni Google in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ## Identità supportate {#supported-identities}
 
@@ -44,7 +44,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ads] destinazioni:
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
-Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
+Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportati | Descrizione |
 ---------|----------|----------|
@@ -70,16 +70,16 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 >[!IMPORTANT]
 >
-> [!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire i passaggi di elenco consentiti nella sezione successiva, è necessario disporre di un’integrazione esistente con [!DNL Google Ads]. Di conseguenza, l’approccio consigliato per l’utilizzo di [!DNL Google Ads] sta impostando un [!DNL Google Customer Match] integrazione. Per ulteriori dettagli sulla creazione di un’ [!DNL Google Customer Match] integrazione, leggi il tutorial sulla creazione di un [[!DNL Google Customer Match]](./google-customer-match.md) connessione.
+> [!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire i passaggi del inserisco nell&#39;elenco Consentiti di nella sezione successiva, è necessario disporre di un’integrazione esistente con [!DNL Google Ads]. Di conseguenza, l’approccio consigliato per l’utilizzo di [!DNL Google Ads] sta impostando un [!DNL Google Customer Match] integrazione. Per ulteriori dettagli sulla creazione di un’ [!DNL Google Customer Match] integrazione, leggi l’esercitazione sulla creazione di una [[!DNL Google Customer Match]](./google-customer-match.md) connessione.
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
 >[!NOTE]
 >
->L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Ads] in Platform. Verifica che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato entro [!DNL Google] prima di creare una destinazione.
+>L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la prima [!DNL Google Ads] in Platform. Assicurati che il processo di inserimento nell’elenco Consentiti descritto di seguito sia stato completato da [!DNL Google] prima di creare una destinazione.
 >L&#39;eccezione a questa regola è per [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audienci Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
-Prima di creare [!DNL Google Ads] destinazione in Platform, è necessario contattare [!DNL Google] ad Adobe da inserire nell’elenco dei fornitori di dati consentiti e per aggiungere il tuo account all’elenco consentiti. Contatto [!DNL Google] e fornisci le seguenti informazioni:
+Prima di creare [!DNL Google Ads] destinazione in Platform, è necessario contattare [!DNL Google] ad Adobe per essere inserito nell’elenco dei provider di dati consentiti e per l’account da aggiungere al inserisco nell&#39;elenco Consentiti di. Contatto [!DNL Google] e fornisci le seguenti informazioni:
 
 * **ID account**: ID account di Adobe con Google. ID account: 87933855.
 * **ID cliente**: ID account cliente di Adobe con Google. ID cliente: 89690775.
@@ -131,6 +131,6 @@ Durante la configurazione di questa destinazione, potrebbe venire visualizzato i
 
 Questo errore si verifica quando gli account del cliente non sono conformi al [prerequisiti](#prerequisites) o quando i clienti tentano di configurare la destinazione senza un [!DNL Google Ads] account.
 
-[!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire [elenco Consentiti](#allow-listing) passaggi, è necessaria un’integrazione esistente con [!DNL Google Ads].
+[!DNL Google] ha dichiarato obsoleto [!DNL Google Ads] integrazioni di cookie con fornitori di terze parti. Per eseguire [INSERISCO NELL&#39;ELENCO CONSENTITI DI](#allow-listing) passaggi, è necessaria un’integrazione esistente con [!DNL Google Ads].
 
 L’approccio consigliato per l’utilizzo di [!DNL Google Ads] sta impostando un [[!DNL Google Customer Match]](google-customer-match.md) integrazione.

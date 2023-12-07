@@ -3,18 +3,18 @@ keywords: crm;CRM;crm destinazioni;salesforce crm;salesforce crm destinazione
 title: Connessione CRM Salesforce
 description: La destinazione di gestione delle relazioni con i clienti di Salesforce ti consente di esportare i dati del tuo account e di attivarli all’interno di Salesforce CRM per le tue esigenze aziendali.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
 
-# Connessione [!DNL Salesforce CRM]
+# [!DNL Salesforce CRM] connessione
 
 ## Panoramica {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) è una popolare piattaforma di gestione delle relazioni con i clienti (CRM) e supporta quanto segue:
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) è una popolare piattaforma di gestione delle relazioni con i clienti (Customer Relationship Management, CRM) e supporta i tipi di profili descritti di seguito:
 
 * [Lead](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Un lead è il nome di una persona o di un&#39;azienda che può (o non può) essere interessata ai prodotti o ai servizi che si vendono.
 * [Contatti](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Un contatto è una persona con cui uno dei vostri rappresentanti ha stabilito una relazione ed è stato qualificato come potenziale cliente.
@@ -27,7 +27,7 @@ Quando [attivazione dei segmenti](#activate), puoi scegliere tra lead o contatti
 
 ## Casi d’uso {#use-cases}
 
-In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai tuoi utenti, in base agli attributi dei loro profili Adobe Experience Platform. Puoi creare tipi di pubblico dai dati offline e inviarli a Salesforce CRM per visualizzarli nei feed degli utenti non appena i tipi di pubblico e i profili vengono aggiornati in Adobe Experience Platform.
+In qualità di addetto al marketing, puoi fornire esperienze personalizzate ai tuoi utenti, in base agli attributi dei loro profili Adobe Experience Platform. Puoi creare tipi di pubblico dai dati offline e inviarli a Salesforce CRM per aggiornare l’iscrizione a CRM non appena tipi di pubblico e profili vengono aggiornati in Adobe Experience Platform.
 
 ## Prerequisiti {#prerequisites}
 

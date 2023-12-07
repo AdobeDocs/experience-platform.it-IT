@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1662'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comp
 >[!NOTE]
 >
 >* La maggior parte dei clienti non supera questi limiti predefiniti. Per informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.
->* I limiti delineati nel presente documento vengono costantemente migliorati. Controlla regolarmente se ci sono aggiornamenti.
+>* I limiti delineati nel presente documento vengono costantemente migliorati. Controlla regolarmente la disponibilità di aggiornamenti.
 >* A seconda delle limitazioni individuali a valle, alcune destinazioni potrebbero avere guardrail più rigidi rispetto a quelle documentate in questa pagina. Assicurati anche di controllare il [catalogo](/help/destinations/catalog/overview.md) della destinazione a cui si sta effettuando la connessione e l&#39;attivazione dei dati.
 
 ## Tipi di guardrail {#limit-types}
