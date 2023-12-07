@@ -2,10 +2,10 @@
 title: Test dei codici da incorporare tramite Adobe Experience Platform Debugger
 description: Scopri come utilizzare Platform Debugger per testare localmente diversi codici da incorporare per Adobe Experience Platform sul tuo sito Web.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 93%
+source-wordcount: '488'
+ht-degree: 88%
 
 ---
 
@@ -21,10 +21,9 @@ Se desideri apportare modifiche alle versioni della libreria di tag in Adobe Exp
 
 Questo tutorial richiede una buona conoscenza dell’utilizzo di ambienti e codici di incorporamento per i tag. Per ulteriori informazioni, consulta la [panoramica degli ambienti](./environments.md).
 
-Questo tutorial richiede inoltre l’installazione dell’estensione Platform Debugger per il browser. Platform Debugger è disponibile solo per i browser Chrome e Firefox. Prima di iniziare il tutorial, installa l’estensione da uno dei seguenti collegamenti:
+Questo tutorial richiede inoltre l’installazione dell’estensione Platform Debugger per il browser. Platform Debugger è disponibile per il browser Chrome. Utilizza il seguente collegamento per installare l&#39;estensione prima di avviare l&#39;esercitazione:
 
 * [Platform Debugger per Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Platform Debugger per Firefox](https://addons.mozilla.org/it/firefox/addon/adobe-experience-platform-dbg/)
 
 ## Aprire Platform Debugger sul sito web
 

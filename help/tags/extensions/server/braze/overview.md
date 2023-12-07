@@ -4,10 +4,10 @@ title: Estensione Inoltro Evento Braze
 description: Questa estensione di inoltro degli eventi Adobe Experience Platform invia gli eventi di Edge Network a Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 3%
+source-wordcount: '1692'
+ht-degree: 2%
 
 ---
 
@@ -51,7 +51,7 @@ L&#39;estensione utilizza due di [!DNL Braze]Le API di e i relativi limiti sono 
 
 ### Punti dati fatturabili
 
-Invio di attributi personalizzati aggiuntivi a [!DNL Braze] può aumentare il [!DNL Braze] consumo dei punti dati. Consulta con il tuo [!DNL Braze] account manager prima di inviare attributi personalizzati aggiuntivi. Consulta la sezione [!DNL Braze] documentazione su [punti dati fatturabili](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) per ulteriori informazioni.
+Invio di attributi personalizzati aggiuntivi a [!DNL Braze] può aumentare il [!DNL Braze] consumo dei punti dati. Consulta con il tuo [!DNL Braze] account manager prima di inviare attributi personalizzati aggiuntivi. Consulta la sezione [!DNL Braze] documentazione su [punti dati fatturabili](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) per ulteriori informazioni.
 
 ### Raccogliere i dettagli di configurazione richiesti {#configuration-details}
 
@@ -107,7 +107,7 @@ Dopo aver installato l’estensione, crea un nuovo inoltro eventi [regola](../..
 
 | Input | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| [!UICONTROL Nome evento &#x200B;] | Nome dell’evento. | Sì |
+| [!UICONTROL &#x200B; nome evento] | Nome dell’evento. | Sì |
 | [!UICONTROL Ora evento] | Data-ora come stringa in ISO 8601 o in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sì |
 | [!UICONTROL Identificatore app] | L’identificatore dell’app o <strong>app_id</strong> è un parametro che associa l’attività a una specifica app nel gruppo di app. Indica con quale app all’interno del gruppo di app stai interagendo. Ulteriori informazioni su [Tipi di identificatori API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL &#x200B; proprietà evento] | Oggetto JSON contenente le proprietà personalizzate dell’evento. |  |
@@ -163,10 +163,10 @@ Dopo aver installato l’estensione, crea un nuovo inoltro eventi [regola](../..
 
 | Input | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| [!UICONTROL ID prodotto &#x200B;] | Identificatore per l’acquisto. (ad esempio, nome del prodotto o categoria del prodotto) | Sì |
+| [!UICONTROL &#x200B; ID prodotto] | Identificatore per l’acquisto. (ad esempio, nome del prodotto o categoria del prodotto) | Sì |
 | [!UICONTROL Tempo di acquisto] | Data-ora come stringa in ISO 8601 o in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. | Sì |
-| [!UICONTROL Valuta &#x200B;] | Valuta come stringa in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Formato del codice valuta alfabetico. | Sì |
-| [!UICONTROL Prezzo &#x200B;] | Prezzo. | Sì |
+| [!UICONTROL &#x200B; valuta] | Valuta come stringa in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) Formato del codice valuta alfabetico. | Sì |
+| [!UICONTROL &#x200B; del prezzo] | Prezzo. | Sì |
 | [!UICONTROL Quantità &#x200B;] | Se non viene specificato, il valore predefinito sarà 1. Il valore massimo deve essere inferiore a 100. | |
 | [!UICONTROL Identificatore app] | L’identificatore dell’app o <strong>app_id</strong> è un parametro che associa l’attività a una specifica app nel gruppo di app. Indica con quale app all’interno del gruppo di app stai interagendo. Ulteriori informazioni su [Tipi di identificatori API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL &#x200B; Proprietà acquisto] | Oggetto JSON contenente le proprietà personalizzate dell’acquisto. |  |

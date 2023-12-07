@@ -2,7 +2,7 @@
 title: Estensione di inoltro eventi Zendesk
 description: Estensione di inoltro eventi Zendesk per Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # [!DNL Zendesk] Panoramica dell’estensione API Events
 
-[Zendesk](https://www.zendesk.com) è una soluzione di assistenza clienti e uno strumento di vendita. Lo Zendesk [inoltro eventi](../../../ui/event-forwarding/overview.md) l&#39;estensione sfrutta [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) per inviare eventi da Adobe Experience Platform Edge Network a Zendesk per ulteriore elaborazione. Puoi utilizzare l’estensione per raccogliere le interazioni del profilo cliente da utilizzare nell’analisi e nell’azione a valle.
+[Zendesk](https://www.zendesk.com) è una soluzione di assistenza clienti e uno strumento di vendita. Lo Zendesk [inoltro eventi](../../../ui/event-forwarding/overview.md) l&#39;estensione sfrutta [[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) per inviare eventi da Adobe Experience Platform Edge Network a Zendesk per ulteriore elaborazione. Puoi utilizzare l’estensione per raccogliere le interazioni del profilo cliente da utilizzare nell’analisi e nell’azione a valle.
 
 Questo documento illustra come installare e configurare l’estensione nell’interfaccia utente di.
 
@@ -66,7 +66,7 @@ Questi elementi dati devono essere mappati come indicato di seguito.
 
 ### `event` tasti
 
-`event` è un oggetto JSON che rappresenta l’evento attivato dall’utente. Consulta il documento Zendesk sulla [anatomia di un evento](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) per informazioni dettagliate sulle proprietà acquisite da `event` oggetto.
+`event` è un oggetto JSON che rappresenta l’evento attivato dall’utente. Consulta il documento Zendesk sulla [anatomia di un evento](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) per informazioni dettagliate sulle proprietà acquisite da `event` oggetto.
 
 È possibile fare riferimento alle seguenti chiavi all&#39;interno di `event` oggetto durante il mapping agli elementi dati:
 
@@ -82,7 +82,7 @@ Questi elementi dati devono essere mappati come indicato di seguito.
 
 >[!NOTE]
 >
->Consulta la sezione [[!DNL Zendesk Events API] documentazione](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) per ulteriori informazioni sulle proprietà dell’evento.
+>Consulta la sezione [[!DNL Zendesk Events API] documentazione](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) per ulteriori informazioni sulle proprietà dell’evento.
 
 ### `profile` tasti
 
@@ -147,10 +147,10 @@ Durante l’utilizzo o la configurazione dell’estensione, l’API degli eventi
 
 Questo documento illustra come installare e configurare l’estensione di inoltro degli eventi Zendesk nell’interfaccia utente. Per ulteriori informazioni sulla raccolta dei dati sull’evento in Zendesk, consulta la documentazione ufficiale:
 
-* [Guida introduttiva agli eventi](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [Guida introduttiva agli eventi](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
 * [API per eventi Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [Informazioni sull’API degli eventi](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [Anatomia di un evento](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [Informazioni sull’API degli eventi](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [Anatomia di un evento](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
 * [API dei profili Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
 * [Informazioni sull’API Profiles](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
 * [Anatomia di un profilo](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

@@ -2,9 +2,9 @@
 title: Variabile libera “turbine”
 description: Scopri l’oggetto turbine, una variabile libera che fornisce informazioni e utility specifiche per il runtime dei tag di Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '606'
 ht-degree: 86%
 
 ---
@@ -112,7 +112,7 @@ Recupera un modulo che è stato condiviso da un’altra estensione. Se non viene
 turbine.logger.error('Error!');
 ```
 
-Utility di registrazione utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Per attivare il debug, si consiglia di utilizzare [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). In alternativa, è possibile eseguire il comando `_satellite.setDebug(true)` seguente nella console di sviluppo del browser. Il logger dispone dei seguenti metodi:
+Utility di registrazione utilizzata per registrare i messaggi nella console. I messaggi vengono mostrati nella console solo se il debug è attivato dall’utente. Per attivare il debug, si consiglia di utilizzare [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). In alternativa, è possibile eseguire il comando `_satellite.setDebug(true)` seguente nella console di sviluppo del browser. Il logger dispone dei seguenti metodi:
 
 * `logger.log(message: string)`: registra un messaggio nella console.
 * `logger.info(message: string)`: registra un messaggio informativo nella console.
@@ -137,8 +137,8 @@ Oggetto contenente le seguenti impostazioni definite dall’utente per la propri
 
 * `propertySettings.domains: Array<String>`
 
-   Array di domini coperti dalla proprietà.
+  Array di domini coperti dalla proprietà.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Questa impostazione non dovrebbe interessare gli sviluppatori di estensioni.
+  Questa impostazione non dovrebbe interessare gli sviluppatori di estensioni.
