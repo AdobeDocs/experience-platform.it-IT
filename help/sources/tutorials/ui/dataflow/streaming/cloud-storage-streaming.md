@@ -5,9 +5,9 @@ title: Creare un flusso di dati in streaming per un’origine di archiviazione c
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial descrive come configurare un nuovo flusso di dati utilizzando il connettore di archiviazione cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -35,12 +35,16 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 ## Aggiungi dati
 
+>[!NOTE]
+>
+>Puoi creare un solo flusso di dati di origine per gruppo di consumer per un determinato hub eventi.
+
 Dopo aver creato l’autenticazione dell’account di archiviazione cloud in streaming, il **[!UICONTROL Seleziona dati]** viene visualizzata un’interfaccia che consente di selezionare il flusso di dati da portare su Platform.
 
 - La parte sinistra dell’interfaccia è un browser che ti consente di visualizzare i flussi di dati disponibili all’interno del tuo account;
 - La parte destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file JSON.
 
-![interfaccia](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
+![Interfaccia](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
 Seleziona il flusso di dati che desideri utilizzare, quindi fai clic su **[!UICONTROL Scegli file]** per caricare uno schema di esempio.
 
@@ -110,7 +114,7 @@ Una volta mappati i dati di origine, seleziona **[!UICONTROL Successivo]**.
 
 ![mappatura](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
-## Dettaglio del flusso di dati
+## Dettagli del flusso di dati
 
 Il **[!UICONTROL Dettagli del flusso di dati]** viene visualizzato un passaggio che consente di denominare e fornire una breve descrizione del nuovo flusso di dati.
 

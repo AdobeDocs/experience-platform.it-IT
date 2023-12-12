@@ -5,10 +5,10 @@ title: Creare un flusso di dati in streaming per i dati non elaborati utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi per recuperare i dati in streaming e importarli in Platform utilizzando i connettori e le API di origine.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 4%
+source-wordcount: '1138'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    - [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    - [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experienci Platform.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): l’acquisizione in streaming per Platform fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server all’Experience Platform in tempo reale.
 - [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -413,7 +413,7 @@ In caso di esito positivo, la risposta restituisce un elenco di specifiche del f
 }
 ```
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati in streaming è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
@@ -481,6 +481,86 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## Pubblica dati per l’acquisizione
+
+Per esempi di codice JSON non elaborato o conforme a XDM da inviare per l’acquisizione, visualizza il payload di esempio riportato di seguito.
+
+>[!TIP]
+>
+>Gli esempi seguenti si applicano a tutti e tre:
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Dati non elaborati]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Dati XDM]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## Passaggi successivi
 
