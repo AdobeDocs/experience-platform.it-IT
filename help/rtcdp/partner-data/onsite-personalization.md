@@ -1,16 +1,16 @@
 ---
-title: Personalizzare le esperienze nel sito di visitatori sconosciuti utilizzando il riconoscimento visitatori supportato dai partner
+title: Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 91%
+source-wordcount: '2673'
+ht-degree: 89%
 
 ---
 
-# Personalizzare le esperienze nel sito di visitatori sconosciuti utilizzando il riconoscimento visitatori supportato dai partner
+# Personalizzare le esperienze nel sito per visitatori sconosciuti utilizzando il riconoscimento dei visitatori supportato dai partner
 
 >[!AVAILABILITY]
 >
@@ -39,7 +39,7 @@ Questo marchio sceglie di sfruttare la tecnologia di riconoscimento partner per 
 Quando prevedi di utilizzare gli attributi forniti dai partner per offrire esperienze personalizzate ai visitatori autenticati e non autenticati, prendi in considerazione i prerequisiti seguenti nel processo di pianificazione:
 
 * Quali input sono previsti dalla tecnologia di riconoscimento partner in modo che possa creare livelli su attributi aggiuntivi?
-* In che misura sei a tuo agio nel distribuire la personalizzazione in canali diversi e per diversi casi d’uso basati su attributi derivati in modo probabilistico rispetto ad attributi confermati deterministicamente?
+* In che misura sei a tuo agio nel distribuire la personalizzazione in canali diversi e per casi d’uso diversi basati su set di dati derivati probabilisticamente, rispetto ad attributi confermati deterministicamente?
 * In che modo deve cambiare l’esperienza di un visitatore pre-autenticato ma riconosciuto durante l’autenticazione?
 
 ### Funzionalità dell’interfaccia utente, componenti della piattaforma e prodotti di Experience Cloud che utilizzerai {#ui-functionality-and-elements}

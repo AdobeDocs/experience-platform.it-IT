@@ -2,9 +2,9 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ L’infografica seguente illustra il ciclo di raccolta, manipolazione, analisi e
 
 ![L’infografica di andata e ritorno dei dati dall’osservazione all’analisi all’azione.](../images/use-cases/infographic-use-case-cycle.png)
 
-Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi attributi derivati possono quindi essere applicati ai dati del profilo Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare l’attributo derivato da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
+Questo caso d’uso end-to-end illustra come acquisire e modificare i segnali di dati per calcolare l’attributo derivato del valore del ciclo di vita del cliente. Questi set di dati derivati possono quindi essere applicati ai dati del profilo di Real-Time CDP e sono disponibili per l’utilizzo con dashboard definiti dall’utente per creare una dashboard per l’analisi approfondita. Tramite Data Distiller, puoi estendere il modello dati di Real-Time CDP Insights e utilizzare i set di dati derivati da CLV e le informazioni della dashboard per creare un nuovo pubblico e attivarlo nella destinazione desiderata. Questi tipi di pubblico ad alte prestazioni possono quindi essere utilizzati per sviluppare la tua prossima campagna di marketing.
 
 Questa guida è stata progettata per aiutarti a comprendere meglio la customer experience misurando i segnali di dati tra i punti di contatto chiave che guidano CLV e implementando un caso d’uso simile nell’ambiente. L’intero processo è riassunto nell’immagine seguente.
 
@@ -34,9 +34,9 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 Questa guida richiede di avere [Data Distiller](../data-distiller/overview.md) SKU come parte dell’offerta del pacchetto. In caso di dubbi, contatta il rappresentante del servizio Adobe.
 
-## Creare un attributo derivato {#create-derived-attribute}
+## Creare un set di dati derivato {#create-derived-dataset}
 
-Il primo passo per stabilire il CLV consiste nel creare un attributo derivato dai segnali di dati acquisiti dalle azioni utente. Questo caso d’uso particolare è trattato in un documento separato relativo a uno schema di fidelizzazione di una compagnia aerea. Consulta la guida per scoprire come [utilizzare Query Service per creare attributi derivati basati su decile da utilizzare con i dati del profilo](./deciles-use-case.md). Il documento contiene esempi e spiegazioni completi che illustrano i seguenti passaggi:
+Il primo passo per stabilire il proprio CLV consiste nel creare un set di dati derivato dai segnali di dati acquisiti dalle azioni dell&#39;utente. Questo caso d’uso particolare è trattato in un documento separato relativo a uno schema di fidelizzazione di una compagnia aerea. Consulta la guida per scoprire come [utilizzare Query Service per creare set di dati derivati basati su decile da utilizzare con i dati del profilo](./deciles-use-case.md). Il documento contiene esempi e spiegazioni completi che illustrano i seguenti passaggi:
 
 * Crea uno schema per consentire il bucket decile.
 * Utilizza Query Service per creare decili.

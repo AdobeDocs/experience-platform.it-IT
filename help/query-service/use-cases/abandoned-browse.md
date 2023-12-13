@@ -3,10 +3,10 @@ keywords: Experience Platform;servizio query;servizio query;query service;query 
 title: Caso di utilizzo di esempio per Adobe Experience Platform Query Service
 description: Un esempio end-to-end per dimostrare la versatilità e i vantaggi di Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Questo documento e la relativa presentazione video forniscono un flusso di lavor
 * Modi per creare la query in base all’architettura dati esistente.
 * Assicurati una qualità dei dati che soddisfi le tue esigenze e metodi per ridurre le carenze.
 * Processo per pianificare l’esecuzione di una query a una frequenza impostata per l’utilizzo a valle nella segmentazione e nelle destinazioni per la personalizzazione.
-* La facilità con cui gli esperti di marketing includono attributi derivati nei propri tipi di pubblico grazie alla potenza di [!DNL Query Service].
+* La facilità con cui gli esperti di marketing includono set di dati derivati nei propri tipi di pubblico grazie alla potenza di [!DNL Query Service].
 
 ## Obiettivi {#objectives}
 

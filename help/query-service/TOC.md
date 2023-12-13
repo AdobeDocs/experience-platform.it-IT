@@ -4,7 +4,7 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 18%
@@ -22,13 +22,13 @@ ht-degree: 18%
 - Data Distiller {#data-distiller}
    - [Panoramica](data-distiller/overview.md)
    - [Utilizzo delle licenze](data-distiller/license-usage.md)
+   - Set di dati derivati {#derived-datasets}
+      - [Panoramica](data-distiller/derived-datasets/overview.md)
+      - [Flusso SQL senza interruzioni](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Archivio accelerato query {#query-accelerated-store}
       - [Inviare query accelerate](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Guida al modello dati per insights di reporting](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - Attributi derivati {#derived-attributes}
-      - [Panoramica](data-distiller/derived-attributes/overview.md)
-      - [Flusso SQL senza interruzioni](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [Creare attributi derivati basati su decile](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Pipeline per funzioni AI/ML {#ml-feature-pipelines}
       - [Panoramica](data-distiller/ml-feature-pipelines/overview.md)
       - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 18%
    - [Creare un rapporto con tendenze degli eventi](use-cases/trended-report-of-events.md)
    - [Analisi del consenso](use-cases/consent-analysis.md)
    - [Valore della durata del cliente](use-cases/customer-lifetime-value.md)
-   - [Attributi derivati basati su decile](use-cases/deciles-use-case.md)
+   - [Set di dati derivati basati sul decile](use-cases/deciles-use-case.md)
    - [Corrispondenza fuzzy](use-cases/fuzzy-match.md)
    - [Elencare le visualizzazioni di pagina di un utente](use-cases/list-visitor-sessions.md)
    - [Elencare i visitatori in base alle loro visualizzazioni di pagina](use-cases/visitors-by-number-of-page-views.md)

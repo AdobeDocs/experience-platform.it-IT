@@ -1,25 +1,25 @@
 ---
-title: 'Caso di utilizzo: attributi derivati basati su decile'
-description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare attributi derivati basati su decile da utilizzare con i dati del profilo.
+title: Caso di utilizzo dei set di dati derivati basati su Decile
+description: Questa guida illustra i passaggi necessari per utilizzare Query Service per creare set di dati derivati basati su decile da utilizzare con i dati del profilo.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 2%
+source-wordcount: '1511'
+ht-degree: 0%
 
 ---
 
-# Caso di utilizzo: attributi derivati basati su decile
+# Caso di utilizzo dei set di dati derivati basati su Decile
 
-Gli attributi derivati semplificano casi d’uso complicati per l’analisi di dati provenienti dal data lake che possono essere utilizzati con altri servizi Platform a valle o pubblicati nei dati del profilo cliente in tempo reale.
+I set di dati derivati semplificano casi d’uso complessi per l’analisi di dati provenienti dal data lake che possono essere utilizzati con altri servizi Platform a valle o pubblicati nei dati del profilo cliente in tempo reale.
 
-Questo caso d’uso di esempio illustra come creare attributi derivati basati su decile da utilizzare con i dati del profilo cliente in tempo reale. Utilizzando come esempio uno scenario di fidelizzazione di una compagnia aerea, questa guida ti spiega come creare un set di dati che utilizza decili per categoria per segmentare e creare tipi di pubblico in base agli attributi classificati.
+Questo caso d’uso di esempio illustra come creare set di dati derivati basati su decile da utilizzare con i dati del profilo cliente in tempo reale. Utilizzando come esempio uno scenario di fidelizzazione di una compagnia aerea, questa guida ti spiega come creare un set di dati che utilizza decili per categoria per segmentare e creare tipi di pubblico in base agli attributi classificati.
 
 Sono illustrati i seguenti concetti chiave:
 
 * Creazione di schemi per il bucket decile.
 * Creazione decile categorica.
-* Creazione di attributi derivati complessi.
+* Creazione di set di dati derivati complessi.
 * Calcolo dei decili in un periodo di lookback.
 * Una query di esempio per dimostrare l’aggregazione, la classificazione e l’aggiunta di identità univoche che consentono la generazione di tipi di pubblico in base a questi bucket di decile.
 
@@ -34,9 +34,9 @@ Questa guida richiede una buona conoscenza di [esecuzione di query in Query Serv
 
 ## Obiettivi
 
-L’esempio fornito in questo documento utilizza i decili per creare attributi derivati per la classificazione dei dati da uno schema di fedeltà per compagnie aeree. Gli attributi derivati consentono di massimizzare l’utilità dei dati identificando un pubblico in base alla &quot;n&quot; % superiore per una categoria selezionata.
+L’esempio fornito in questo documento utilizza i decili per creare set di dati derivati per la classificazione dei dati da uno schema di fedeltà delle compagnie aeree. I set di dati derivati ti consentono di massimizzare l’utilità dei dati identificando un pubblico in base al primo &quot;n&quot; % per una categoria selezionata.
 
-## Creare attributi derivati basati su decile
+## Creare set di dati derivati basati su decile
 
 Per definire la classificazione dei decili in base a una dimensione particolare e a una metrica corrispondente, è necessario progettare uno schema per consentire il bucket decile.
 
@@ -56,7 +56,7 @@ Il set di dati iniziale sulla fedeltà della compagnia aerea per questo esempio 
 
 **Dati di esempio**
 
-Nella tabella seguente vengono visualizzati i dati di esempio contenuti nel `_profilefoundationreportingstg` oggetto utilizzato per questo esempio. Fornisce il contesto per l&#39;utilizzo di bucket decile per creare attributi derivati complessi.
+Nella tabella seguente vengono visualizzati i dati di esempio contenuti nel `_profilefoundationreportingstg` oggetto utilizzato per questo esempio. Fornisce il contesto per l’utilizzo di bucket decile per creare set di dati derivati complessi.
 
 >[!NOTE]
 >
@@ -64,11 +64,11 @@ Nella tabella seguente vengono visualizzati i dati di esempio contenuti nel `_pr
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | STATUS_MILES | Nuovo membro | 5000 | VOLANTINO |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | JFK-FRA | 7500 | ARGENTO |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | STATUS_MILES | JFK-FRA | 7500 | ARGENTO |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | ARGENTO |
-| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | STATUS_MILES | Nuova carta di credito | 10000 | VOLANTINO |
+| C435678623 | sfeldmark1vr@studiopress.com | 01/01/2022 | STATUS_MILES | Nuovo membro | 5000 | VOLANTINO |
+| B 789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | AWARD_MILES | JFK-FRA | 7500 | ARGENTO |
+| B 789279247 | pgalton32n@barnesandnoble.com | 01/02/2022 | STATUS_MILES | JFK-FRA | 7500 | ARGENTO |
+| B 789279247 | pgalton32n@barnesandnoble.com | 10/02/2022 | AWARD_MILES | FRA-JFK | 5000 | ARGENTO |
+| A123487284 | rritson1zn@sciencedaily.com | 07/01/2022 | STATUS_MILES | Nuova carta di credito | 10000 | VOLANTINO |
 
 {style="table-layout:auto"}
 
@@ -82,7 +82,7 @@ Crea uno &quot;Schema del decile per la fedeltà della compagnia aerea&quot; per
 
 ### Abilitare lo schema per Real-Time Customer Profile
 
-I dati acquisiti in Experience Platform per l’utilizzo da parte di Real-Time Customer Profile devono essere conformi a [uno schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Per abilitare uno schema per il profilo, è necessario implementare la classe XDM Individual Profile o XDM ExperienceEvent.
+I dati acquisiti in Experienci Platform per l’utilizzo da parte di Real-Time Customer Profile devono essere conformi a [uno schema Experience Data Model (XDM) abilitato per il profilo](../../xdm/ui/resources/schemas.md). Per abilitare uno schema per il profilo, è necessario implementare la classe XDM Individual Profile o XDM ExperienceEvent.
 
 [Abilita lo schema per l’utilizzo in Real-Time Customer Profile utilizzando lo Schema Registry API (API del registro degli schemi).](../../xdm/tutorials/create-schema-api.md) o [Interfaccia utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).  Le istruzioni dettagliate su come abilitare uno schema per il profilo sono disponibili nella rispettiva documentazione.
 
@@ -299,4 +299,4 @@ Esegui la query per popolare il set di dati decile. Puoi anche salvare la query 
 
 ## Passaggi successivi
 
-Il caso di utilizzo di esempio fornito sopra evidenzia i passaggi per rendere disponibili gli attributi decile in Real-Time Customer Profile. Questo consente al servizio di segmentazione, tramite un’interfaccia utente o un’API RESTful, di generare tipi di pubblico in base a questi decile bucket. Consulta la [Panoramica del servizio di segmentazione](../../segmentation/home.md) per informazioni su come creare, valutare e accedere ai segmenti.
+Il caso d’uso di esempio fornito sopra evidenzia i passaggi per rendere disponibili i set di dati derivati basati su decile in Real-Time Customer Profile. Questo consente al servizio di segmentazione, tramite un’interfaccia utente o un’API RESTful, di generare tipi di pubblico in base a questi decile bucket. Consulta la [Panoramica del servizio di segmentazione](../../segmentation/home.md) per informazioni su come creare, valutare e accedere ai segmenti.
