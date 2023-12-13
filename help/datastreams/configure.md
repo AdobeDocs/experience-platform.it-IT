@@ -2,10 +2,10 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 55%
 
 ---
 
@@ -44,7 +44,7 @@ Le impostazioni di geolocalizzazione e ricerca di rete consentono di definire il
 
 Espandi **[!UICONTROL Geolocalizzazione e ricerca di rete]** per configurare le impostazioni descritte di seguito.
 
-![Schermata dell’interfaccia utente di Platform che mostra la schermata di configurazione dello stream di dati con le impostazioni di geolocalizzazione e ricerca di rete evidenziate.](assets/configure/geolookup.png)
+![Schermata di configurazione dello stream di dati con le impostazioni di geolocalizzazione e ricerca di rete evidenziate.](assets/configure/geolookup.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
@@ -63,7 +63,7 @@ Il **[!UICONTROL Ricerca dispositivo]** Le impostazioni consentono di selezionar
 
 Espandi **[!UICONTROL Ricerca dispositivo]** per configurare le impostazioni descritte di seguito.
 
-![Schermata dell’interfaccia utente di Platform che mostra la schermata di configurazione dello stream di dati con le impostazioni di ricerca del dispositivo evidenziate.](assets/configure/device-lookup.png)
+![Schermata di configurazione dello stream di dati con le impostazioni di ricerca del dispositivo evidenziate.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Da qui, se stai configurando uno stream di dati per Experience Platform, segui i
 
 Dopo aver configurato un nuovo stream di dati o averne selezionato uno esistente da visualizzare, viene visualizzata la pagina Dettagli dello stream di dati. Qui puoi trovare ulteriori informazioni sullo stream di dati, incluso il relativo ID.
 
-![Pagina dei dettagli di uno stream di dati creato](assets/configure/view-details.png)
+![Pagina dei dettagli dello stream di dati.](assets/configure/view-details.png)
 
 Dalla schermata Dettagli dello stream di dati, puoi [aggiungere servizi](#add-services) per attivare le funzionalità dei prodotti Adobe Experience Cloud a cui hai accesso. Puoi modificare anche la [configurazione di base](#create) dello stream di dati, aggiornare le relative [regole di mappatura](./data-prep.md), [copiare lo stream di dati](#copy) oppure eliminarlo completamente.
 
@@ -117,11 +117,11 @@ Dalla schermata Dettagli dello stream di dati, puoi [aggiungere servizi](#add-se
 
 Nella pagina dei dettagli di uno stream di dati, seleziona **[!UICONTROL Aggiungi servizio]** per iniziare ad aggiungere i servizi disponibili per lo stream di dati.
 
-![Seleziona Aggiungi servizio per continuare](assets/configure/add-service.png)
+![Seleziona Aggiungi servizio per continuare.](assets/configure/add-service.png)
 
 Nella schermata successiva, utilizza il menu a discesa per selezionare un servizio da configurare per tale stream di dati. In questo elenco vengono visualizzati solo i servizi a cui si ha accesso.
 
-![Seleziona un servizio dall’elenco](assets/configure/service-selection.png)
+![Seleziona un servizio dall’elenco.](assets/configure/service-selection.png)
 
 Seleziona il servizio desiderato, compila le opzioni di configurazione visualizzate e quindi seleziona **[!UICONTROL Salva]** per aggiungere il servizio allo stream di dati. Tutti i servizi aggiunti vengono visualizzati nella vista Dettagli dello stream di dati.
 
@@ -137,7 +137,7 @@ Le sottosezioni seguenti descrivono le opzioni di configurazione per ciascun ser
 
 Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe Analytics. Ulteriori dettagli sono disponibili nella guida all’[invio di dati ad Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Blocco impostazioni di Adobe Analytics](assets/configure/analytics-config.png)
+![Impostazioni dello stream di dati di Adobe Analytics.](assets/configure/analytics-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
@@ -148,7 +148,7 @@ Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe An
 
 Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe Audience Manager. Per inviare dati ad Audience Manager, è sufficiente abilitare questa sezione. Le altre impostazioni sono facoltative, ma consigliate.
 
-![Blocco delle impostazioni di Adobe Audience Manager](assets/configure/audience-manager-config.png)
+![Adobe di impostazioni dello stream di dati di Audience Manager.](assets/configure/audience-manager-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
@@ -167,7 +167,7 @@ Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe Au
 
 Il servizio controlla se e in che modo i dati vengono inviati ad Adobe Experience Platform.
 
-![Blocco impostazioni di Adobe Experience Platform](assets/configure/platform-config.png)
+![Impostazioni dello stream di dati di Adobe Experience Platform.](assets/configure/platform-config.png)
 
 | Impostazione | Descrizione |
 |---| --- |
@@ -182,7 +182,7 @@ Il servizio controlla se e in che modo i dati vengono inviati ad Adobe Experienc
 
 Questo servizio controlla se e in che modo i dati vengono inviati ad Adobe Target.
 
-![Blocco impostazioni di Adobe Target](assets/configure/target-config.png)
+![Impostazioni dello stream di dati di Adobe Target.](assets/configure/target-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
@@ -195,7 +195,7 @@ Questo servizio controlla se e in che modo i dati vengono inviati ad Adobe Targe
 
 Questo servizio controlla se e in che modo i dati vengono inviati all’[inoltro eventi](../tags/ui/event-forwarding/overview.md).
 
-![Sezione Inoltro eventi dell’interfaccia utente di configurazione](assets/configure/event-forwarding-config.png)
+![Sezione Inoltro eventi della schermata di configurazione dello stream di dati.](assets/configure/event-forwarding-config.png)
 
 | Impostazione | Descrizione |
 | --- | --- |
@@ -216,15 +216,15 @@ Puoi creare una copia di uno stream di dati esistente e modificarne i dettagli i
 
 Nella pagina principale nell’area di lavoro [!UICONTROL Stream di dati], seleziona i puntini di sospensione (**...**) per lo stream di dati in questione, quindi seleziona **[!UICONTROL Copia]**.
 
-![Immagine che mostra l’opzione [!UICONTROL Copia] selezionata dalla vista a elenco dello stream di dati](assets/configure/copy-datastream-list.png)
+![Immagine che mostra l’opzione Copia selezionata dalla vista a elenco dello stream di dati.](assets/configure/copy-datastream-list.png)
 
 In alternativa, è possibile selezionare **[!UICONTROL Copia stream di dati]** dalla vista dei dettagli di un determinato stream di dati.
 
-![Immagine che mostra l’opzione [!UICONTROL Copia] selezionata dalla vista dettagli dello stream di dati](assets/configure/copy-datastream-details.png)
+![Opzione Copia selezionata dalla vista dei dettagli dello stream di dati.](assets/configure/copy-datastream-details.png)
 
 Viene visualizzata una finestra di dialogo di conferma in cui viene richiesto di fornire un nome univoco per il nuovo stream di dati da creare, insieme ai dettagli sulle opzioni di configurazione che verranno copiate. Quando è tutto pronto, seleziona **[!UICONTROL Copia]**.
 
-![Immagine della finestra di dialogo di conferma per la copia di uno stream di dati](assets/configure/copy-datastream-confirm.png)
+![Finestra di dialogo di conferma per copiare un flusso di dati.](assets/configure/copy-datastream-confirm.png)
 
 La pagina principale dell’area di lavoro [!UICONTROL Stream di dati] viene nuovamente visualizzata con il nuovo stream di dati elencato.
 

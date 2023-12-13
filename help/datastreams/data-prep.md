@@ -1,13 +1,13 @@
 ---
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 64%
+source-wordcount: '1192'
+ht-degree: 59%
 
 ---
-
 
 # Preparazione dei dati per la raccolta dati
 
@@ -154,7 +154,7 @@ Per acquisire proprietà da un elemento dati di un oggetto XDM, all’oggetto JS
 
 È possibile selezionare l’opzione per caricare l’oggetto come file oppure incollarlo nella casella di testo specificata. Se il JSON è valido, nel pannello di destra viene visualizzato uno schema di anteprima. Seleziona **[!UICONTROL Avanti]** per continuare.
 
-![Esempio JSON di dati in arrivo previsti](assets/data-prep/select-data.png)
+![Esempio JSON di dati in arrivo previsti.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ Viene visualizzato il passaggio di **[!UICONTROL mappatura]**, consentendoti di 
 
 Per creare una regola di mappatura, seleziona **[!UICONTROL Aggiungi nuova mappatura]**.
 
-![Aggiunta di una nuova mappatura](assets/data-prep/add-new-mapping.png)
+![Aggiunta di una nuova mappatura.](assets/data-prep/add-new-mapping.png)
 
 Seleziona l’icona della sorgente (![Icona sorgente](assets/data-prep/source-icon.png)) e nella finestra di dialogo visualizzata seleziona il campo di origine che desideri mappare nell’area di lavoro fornita. Dopo aver scelto un campo, utilizza il pulsante **[!UICONTROL Seleziona]** per continuare.
 
-![Selezione del campo da mappare nello schema di origine](assets/data-prep/source-mapping.png)
+![Selezione del campo da mappare nello schema di origine.](assets/data-prep/source-mapping.png)
 
 Quindi, seleziona l’icona dello schema (![Icona dello schema](assets/data-prep/schema-icon.png)) per aprire una finestra di dialogo simile per lo schema dell’evento di destinazione. Scegli il campo in cui mappare i dati prima di confermare con **[!UICONTROL Seleziona]**.
 
-![Selezione del campo da mappare nello schema di destinazione](assets/data-prep/target-mapping.png)
+![Seleziona il campo da mappare nello schema di destinazione.](assets/data-prep/target-mapping.png)
 
 Viene visualizzata di nuovo la pagina della mappatura con la mappatura di campi completata. La sezione **[!UICONTROL Avanzamento della mappatura]** viene aggiornata per riflettere il numero totale di campi mappati correttamente.
 
-![Campo mappato correttamente con avanzamento riflesso](assets/data-prep/field-mapped.png)
+![Campo mappato correttamente con avanzamento riflesso.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Per mappare un array di oggetti (nel campo di origine) su un array di oggetti diversi (nel campo di destinazione), aggiungi `[*]` dopo il nome dell’array nei percorsi dei campi di origine e di destinazione, come illustrato di seguito.
 >
->![Mappatura di oggetti dell’array](assets/data-prep/array-object-mapping.png)
+>![Mappatura di oggetti array.](assets/data-prep/array-object-mapping.png)
 
 ### Importare regole di mappatura esistenti {#import-mapping}
 
@@ -201,11 +201,11 @@ Se in precedenza hai creato un flusso di dati, puoi riutilizzarne le regole di m
 
 Per iniziare, seleziona **[!UICONTROL Importa mappatura]**.
 
-![Immagine che mostra il pulsante [!UICONTROL Importa mappatura] selezionato](assets/data-prep/import-mapping-button.png)
+![Pulsante Importa mappatura selezionato.](assets/data-prep/import-mapping-button.png)
 
 Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desideri importare le regole di mappatura. Una volta scelto lo stream di dati, seleziona **[!UICONTROL Anteprima]**.
 
-![Immagine che mostra uno stream di dati esistente che viene selezionato](assets/data-prep/select-mapping-rules.png)
+![Selezione di uno stream di dati esistente.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Nella finestra di dialogo visualizzata, seleziona lo stream di dati di cui desid
 
 La schermata successiva mostra un’anteprima delle regole di mappatura salvate per lo stream di dati selezionato. Assicurati che le mappature visualizzate siano quelle previste, quindi seleziona **[!UICONTROL Importa]** per confermare e aggiungere le mappature al nuovo stream di dati.
 
-![Immagine che mostra le regole di mappatura da importare](assets/data-prep/import-mapping-rules.png)
+![Regole di mappatura da importare.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
