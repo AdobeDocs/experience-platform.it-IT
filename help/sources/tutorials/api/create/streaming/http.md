@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione in streaming API HTTP utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra come creare una connessione in streaming utilizzando l’origine API HTTP per i dati grezzi e XDM mediante l’API del servizio Flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 5%
+source-wordcount: '1568'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ Inoltre, la creazione di una connessione in streaming richiede uno schema XDM di
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../../../landing/api-guide.md).
 
-## Crea una connessione di base
+## Creare una connessione di base
 
 Una connessione di base specifica l’origine e contiene le informazioni necessarie per rendere il flusso compatibile con le API Streaming Ingestion. Quando si crea una connessione di base, è possibile creare una connessione non autenticata e autenticata.
 
@@ -459,7 +459,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 | Proprietà | Descrizione |
 | --- | --- |
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 Una volta create le connessioni di origine e di destinazione, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST al `/flows` endpoint.
 
@@ -563,6 +563,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 con i detta
 ```
 
 ## Pubblica i dati da acquisire in Platform {#ingest-data}
+
+>[!NOTE]
+>
+>È necessario aggiungere un ritardo di almeno ~5 minuti tra la creazione del flusso di dati e l’acquisizione di eventuali dati in streaming. Questo consente di abilitare completamente il flusso di dati prima dell’acquisizione di qualsiasi dato.
 
 Dopo aver creato il flusso, puoi inviare il messaggio JSON all’endpoint di streaming creato in precedenza.
 

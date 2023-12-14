@@ -5,9 +5,9 @@ title: Creare un flusso di dati in streaming per i dati non elaborati utilizzand
 type: Tutorial
 description: Questo tutorial illustra i passaggi per recuperare i dati in streaming e importarli in Platform utilizzando i connettori e le API di origine.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
@@ -486,13 +486,15 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 
 Per esempi di codice JSON non elaborato o conforme a XDM da inviare per l’acquisizione, visualizza il payload di esempio riportato di seguito.
 
->[!TIP]
+>[!NOTE]
 >
->Gli esempi seguenti si applicano a tutti e tre:
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>È necessario aggiungere un ritardo di almeno ~5 minuti tra la creazione del flusso di dati e l’acquisizione di eventuali dati in streaming. Questo consente di abilitare completamente il flusso di dati prima dell’acquisizione di qualsiasi dato.
+
+Gli esempi seguenti si applicano a tutti:
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 
