@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Endpoint API per tipi di dati
 description: L’endpoint /datatypes nell’API Schema Registry consente di gestire in modo programmatico i tipi di dati XDM all’interno dell’applicazione Experience.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 4%
+source-wordcount: '1247'
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,13 @@ ht-degree: 4%
 
 I tipi di dati vengono utilizzati come campi del tipo di riferimento nelle classi o nei gruppi di campi dello schema allo stesso modo dei campi letterali di base, con la differenza fondamentale che i tipi di dati possono definire più sottocampi. Sebbene siano simili ai gruppi di campi in quanto consentono l’utilizzo coerente di una struttura a più campi, i tipi di dati sono più flessibili in quanto possono essere inclusi ovunque nella struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo al livello principale. Il `/datatypes` endpoint nella [!DNL Schema Registry] API consente di gestire in modo programmatico i tipi di dati all’interno dell’applicazione Experience.
 
+>[!NOTE]
+>
+>Se un campo è definito come tipo di dati specifico, non è possibile creare lo stesso campo con un tipo di dati diverso in un altro schema. Questo vincolo si applica a tutto il tenant dell’organizzazione.
+
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte del [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Recuperare un elenco di tipi di dati {#list}
 

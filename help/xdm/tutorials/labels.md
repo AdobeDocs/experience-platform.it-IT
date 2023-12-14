@@ -2,10 +2,10 @@
 title: Gestire le etichette di utilizzo dati per uno schema
 description: Scopri come aggiungere etichette di utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 9%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ Questo tutorial illustra i passaggi necessari per aggiungere etichette a uno sch
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM) System]](../home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
    * [Editor schema](../ui/overview.md): scopri come creare e gestire schemi e altre risorse nell’interfaccia utente di Platform.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornisce l’infrastruttura per applicare le restrizioni di utilizzo dei dati sulle operazioni di Platform, utilizzando criteri che definiscono quali azioni di marketing possono o non possono essere eseguite sui dati con etichetta.
 
@@ -43,6 +43,10 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 Per iniziare ad aggiungere le etichette, devi prima [seleziona uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [crea un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell&#39;Editor di schema.
 
 Per modificare le etichette di un singolo campo, è possibile selezionare il campo nell&#39;area di lavoro e quindi selezionare **[!UICONTROL Gestisci accesso]** nella barra a destra.
+
+>[!IMPORTANT]
+>
+>È possibile applicare un massimo di 300 etichette a qualsiasi schema.
 
 ![Seleziona un campo dall’area di lavoro dell’Editor di schema](../images/tutorials/labels/manage-access.png)
 

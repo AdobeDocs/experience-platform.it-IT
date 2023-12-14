@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida API del registro dello schema
 description: L’API Schema Registry consente agli sviluppatori di gestire in modo programmatico tutti gli schemi e le relative risorse Experience Data Model (XDM) all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1141'
 ht-degree: 5%
 
 ---
@@ -48,6 +48,10 @@ I gruppi di campi sono componenti riutilizzabili che definiscono uno o più camp
 ## Tipi di dati
 
 I tipi di dati vengono utilizzati come campi del tipo di riferimento nelle classi o nei gruppi di campi allo stesso modo dei campi letterali di base, con la differenza fondamentale che i tipi di dati possono definire più sottocampi. Sebbene siano simili ai gruppi di campi in quanto consentono l’utilizzo coerente di una struttura a più campi, i tipi di dati sono più flessibili in quanto possono essere inclusi ovunque nella struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo al livello principale. Consulta la [guida dell’endpoint &quot;data types&quot;](./data-types.md) per ulteriori informazioni sull’utilizzo dei tipi di dati nell’API.
+
+>[!NOTE]
+>
+>Se un campo è definito come tipo di dati specifico, non è possibile creare lo stesso campo con un tipo di dati diverso in un altro schema. Questo vincolo si applica a tutto il tenant dell’organizzazione.
 
 ## Descrittori
 
