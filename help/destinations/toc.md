@@ -4,10 +4,10 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 9%
+source-wordcount: '1188'
+ht-degree: 5%
 
 ---
 
@@ -91,6 +91,7 @@ ht-degree: 9%
       * [Estensione per il tracciamento delle conversioni di pinterest](./catalog/advertising/pinterest-extension.md)
       * [Connessione a elenco clienti pinterest](./catalog/advertising/pinterest.md)
       * [Aggiornamento della connessione pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * [Connessione PubMatic](./catalog/advertising/pubmatic.md)
       * [Connessione Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [La connessione a Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Beta) La connessione CRM del Trade Desk](./catalog/advertising/tradedesk-emails.md)
@@ -100,7 +101,7 @@ ht-degree: 9%
       * [Panoramica sulle destinazioni di Analytics](./catalog/analytics/overview.md)
       * [Estensione di tracciamento del sito web Adform](./catalog/analytics/adform.md)
       * [Estensione Adobe Analytics](./catalog/analytics/adobe-analytics.md)
-      * [Estensione Adobe Media Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
+      * [Estensione Adobe Medium Analytics for Audio and Video](./catalog/analytics/adobe-video-analytics.md)
       * [Estensione Clicktale](./catalog/analytics/clicktale.md)
       * [Estensione Contentsquare](./catalog/analytics/contentsquare.md)
       * [Estensione decibel](./catalog/analytics/decibel.md)
@@ -147,7 +148,7 @@ ht-degree: 9%
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connessione Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Categorie di interesse Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
-      * [Connessione Eloqua Oracle (API)](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [(API) Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(File) Oracle di connessione Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connessione Responsys Oracle](./catalog/email-marketing/oracle-responsys.md)
       * [(API) Connessione Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -183,7 +184,7 @@ ht-degree: 9%
       * [Connessione facebook](./catalog/social/facebook.md)
       * [Connessione di linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [Connessione TikTok](./catalog/social/tiktok.md)
-      * [Connessione [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
+      * [[!DNL Twitter Custom Audiences] connessione](./catalog/social/twitter.md)
    * Destinazioni di streaming {#streaming}
       * [Connessione API HTTP](./catalog/streaming/http-destination.md)
       * [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming](./catalog/streaming/ip-address-allow-list.md)
@@ -201,7 +202,7 @@ ht-degree: 9%
       * [Connessione Medallia](./catalog/voice/medallia-connector.md)
       * [Estensione Medallia](./catalog/voice/medallia.md)
       * [Estensione casella in entrata URL di conversazione](./catalog/voice/talkurl.md)
-* SDK di destinazione {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [Panoramica](./destination-sdk/overview.md)
    * [Prerequisiti per l’integrazione](./destination-sdk/integration-prerequisites.md)
    * [Guida introduttiva a Destination SDK](./destination-sdk/getting-started.md)

@@ -3,10 +3,10 @@ keywords: destinazioni pubblicitarie;destinazioni;destinazioni piattaforma pubbl
 title: Panoramica sulle destinazioni Advertising
 description: Collega Adobe Experience Platform a una piattaforma pubblicitaria di terze parti (ad esempio DSP, ad network, SSP) e condividi tipi di pubblico pseudonimi su tali piattaforme.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 1%
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -36,6 +36,7 @@ Per comprendere la differenza tra connessioni ed estensioni, consulta [Connessio
 * [Connessione Customer Match di Google](google-customer-match.md)
 * [Connessione Microsoft Bing](bing.md)
 * [Connessione a elenco clienti pinterest](pinterest.md)
+* [Destinazione PubMatic Connect](pubmatic.md)
 * [(Beta) Connessione Snapchat Ads](snap-inc.md)
 * [La connessione a Trade Desk](tradedesk.md)
 * [(Beta) La connessione CRM del Trade Desk](tradedesk-emails.md)
