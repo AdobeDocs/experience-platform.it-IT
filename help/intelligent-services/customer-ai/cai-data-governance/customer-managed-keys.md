@@ -3,10 +3,10 @@ keywords: insights;customer ai;customer ai insights;AAI query service;customer a
 title: Chiavi gestite dal cliente in IA per l’analisi dei clienti.
 description: Scopri come impostare le chiavi gestite dal cliente per IA per l’analisi dei clienti.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 19%
+source-wordcount: '163'
+ht-degree: 13%
 
 ---
 
@@ -18,6 +18,6 @@ Puoi leggere la documentazione su [Chiavi gestite dal cliente in Adobe Experienc
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] sono attualmente disponibili solo per le organizzazioni che hanno acquistato [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=it) offerta di componenti aggiuntivi.
+>[!DNL Customer Managed Keys] sono attualmente disponibili solo per le organizzazioni che hanno acquistato [!DNL Healthcare Shield or Privacy & Security Shield] offerta di componenti aggiuntivi.
 
 Tutti i dati utilizzati da Platform sono crittografati sia durante il trasferimento che quando sono inattivi per proteggerli con o senza CMK. Per informazioni sulla crittografia di Adobe Experience Platform, consulta la documentazione su [Crittografia dei dati](../../../landing/governance-privacy-security/encryption.md).
