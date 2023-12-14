@@ -2,10 +2,10 @@
 title: Connettore di origine di Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1110'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Questo documento fornisce una panoramica di [!DNL Analytics] e descrive i casi d
 
 ![Grafico che illustra il percorso di dati provenienti da diverse applicazioni Adobe, incluso Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-Ad alto livello, [!DNL Analytics] raccoglie dati da vari canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Una volta completata l&#39;elaborazione dei dati non elaborati, questi vengono considerati pronti per essere consumati da [!DNL Real-Time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono inseriti in micro-batch e acquisiti in set di dati di Platform per l’utilizzo da parte di [!DNL Data Science Workspace], [!DNL Query Service]e altre applicazioni di data discovery.
+Ad alto livello, [!DNL Analytics] raccoglie dati da vari canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Una volta completata l&#39;elaborazione dei dati non elaborati, questi vengono considerati pronti per essere consumati da [!DNL Real-Time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono inseriti in micro-batch e acquisiti in set di dati di Platform per l’utilizzo da parte di [!DNL Query Service]e altre applicazioni di data discovery.
 
 Consulta la [panoramica delle regole di elaborazione](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=it) per ulteriori informazioni sulle regole di elaborazione.
 
