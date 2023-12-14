@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Questo documento fornisce una panoramica della classe XDM ExperienceEvent e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 093f4881f2224d0a0c888c7be688000d31114944
+source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2663'
 ht-degree: 1%
 
 ---
@@ -78,6 +78,7 @@ L&#39;Adobe fornisce diversi gruppi di campi standard da utilizzare con [!DNL XD
 * [[!UICONTROL Prenotazione del volo]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL Consenso IAB TCF 2.0]](../field-groups/event/iab.md)
 * [[!UICONTROL Prenotazione alloggio]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Dettagli dell’interazione di Media Analytics]](../field-groups/event/mediaanalytics-interaction.md)
 * [[!UICONTROL Dettagli richiesta preventivo]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL Dettagli prenotazione]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Dettagli web]](../field-groups/event/web-details.md)

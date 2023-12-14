@@ -4,10 +4,10 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 23%
+source-wordcount: '561'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 23%
 * [Panoramica del sistema XDM](home.md)
 * Schemi {#schema}
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
-   * [Procedure consigliate per la modellazione dati](schema/best-practices.md)
+   * [Best practice per la modellazione dei dati](schema/best-practices.md)
    * [Dati sensibili e personali](./schema/sensitive-and-personal-data.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
    * [Spazio dei nomi in XDM](./schema/namespaces.md)
@@ -58,7 +58,7 @@ ht-degree: 23%
       * [Dettagli dei membri del settore sanitario](./field-groups/profile/healthcare-member-details.md)
       * [Dettagli fedeltà](./field-groups/profile/loyalty-details.md)
       * [Dettagli di contatto personali](./field-groups/profile/personal-contact-details.md)
-      * [Dettagli sull’appartenenza a segmento](./field-groups/profile/segmentation.md)
+      * [Dettagli sull’iscrizione al segmento](./field-groups/profile/segmentation.md)
       * [Abbonamento Telecom](./field-groups/profile/telecom-subscription.md)
       * [Dettagli contatto di lavoro](./field-groups/profile/work-contact-details.md)
       * [Componenti della persona aziendale XDM](./field-groups/profile/business-person-components.md)
@@ -80,6 +80,7 @@ ht-degree: 23%
       * [Prenotazione del volo](./field-groups/event/flight-reservation.md)
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Prenotazione alloggio](./field-groups/event/lodging-reservation.md)
+      * [Dettagli dell’interazione di Media Analytics](./field-groups/event/mediaanalytics-interaction.md)
       * [Dettagli richiesta preventivo](./field-groups/event/quote-request-details.md)
       * [Dettagli prenotazione](./field-groups/event/reservation-details.md)
       * [Dettagli Sitetool](./field-groups/event/sitetool-details.md)
@@ -93,7 +94,7 @@ ht-degree: 23%
       * [Dettagli sui membri della campagna aziendale XDM](./field-groups/b2b-campaign-members/details.md)
    * Medicinale {#medication}
       * [Medicinale sanitario](./field-groups/medication/healthcare-medication.md)
-   * Pianificare {#plan}
+   * Piano {#plan}
       * [Dettagli piano sanitario](./field-groups/plan/healthcare-plan-details.md)
    * Prodotto {#product}
       * [Catalogo prodotti](./field-groups/product/product-catalog.md)
@@ -104,17 +105,22 @@ ht-degree: 23%
 * Tipi di dati {#data-types}
    * [Dettagli account](./data-types/account-details.md)
    * [Interruzione pubblicitaria](./data-types/ad-break.md)
+   * [Informazioni sui dettagli della pubblicità](./data-types/advertising-details-information.md)
+   * [Informazioni sui dettagli di Advertising pod](./data-types/advertising-pod-details-information.md)
    * [Applicazione](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Dettagli browser](./data-types/browser-details.md)
    * [Origine B2B](./data-types/b2b-source.md)
+   * [Informazioni sui dettagli dei capitoli](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [Stringa di consenso](./data-types/consent-string.md)
    * [Consensi e preferenze](./data-types/consents.md)
    * [Valuta](./data-types/currency.md)
+   * [Informazioni sui dettagli dei metadati personalizzati](./data-types/custom-metadata-details-information.md)
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
+   * [Informazioni dettagli errore](./data-types/error-details-information.md)
    * [Canale esperienza](./data-types/experience-channel.md)
    * [Attributi di controllo del sistema di sorgente esterna](./data-types/external-source-system-audit-attributes.md)
    * [Conto finanziario](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 23%
    * [Coppia chiave-valore](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Misura](./data-types/measure.md)
+   * [Informazioni sui dettagli dei contenuti multimediali](./data-types/media-details-information.md)
+   * [Informazioni evento multimediale](./data-types/media-event-information.md)
    * [Ordine](./data-types/order.md)
    * [Voce di pagamento](./data-types/payment-item.md)
    * [Persona](./data-types/person.md)
    * [Nome della persona](./data-types/person-name.md)
    * [Numero di telefono](./data-types/phone-number.md)
    * [Contesto del luogo](./data-types/place-context.md)
+   * [Informazioni sui dati dello stato del lettore](./data-types/player-state-data-information.md)
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
    * [Elemento dell’elenco prodotti](./data-types/product-list-item.md)
+   * [Informazioni dettagli dati QoE](./data-types/qoe-data-details-information.md)
    * [Ricerca](./data-types/search.md)
+   * [Informazioni sui dettagli della sessione](./data-types/session-details-information.md)
    * [Abbonamento](./data-types/subscription.md)
    * [Abbonamento Telecom](./data-types/telecom-subscription.md)
    * [Transazione](./data-types/transaction.md)
@@ -153,7 +164,7 @@ ht-degree: 23%
    * [Dettagli pagina web](./data-types/webpage-details.md)
 * [!UICONTROL Schemi] UI {#ui}
    * [Panoramica](./ui/overview.md)
-   * [Esplorare le risorse XDM](./ui/explore.md)
+   * [Esplora risorse XDM](./ui/explore.md)
    * Creare e modificare le risorse {#resources}
       * [Schemi](./ui/resources/schemas.md)
       * [Classi](./ui/resources/classes.md)
