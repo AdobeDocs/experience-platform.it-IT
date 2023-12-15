@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Ottobre 2022
 description: Note sulla versione di ottobre 2022 per Adobe Experience Platform.
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 34%
+source-wordcount: '1135'
+ht-degree: 29%
 
 ---
 
@@ -86,7 +86,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | --- | --- | --- |
 | Tipo di dati | [[!UICONTROL Informazioni sui dettagli della sessione]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | È stato aggiornato il `authorized` da tipo booleano a stringa. `season` e `episode` sono stati modificati da interi a stringhe. |
 | Tipo di dati | [[!UICONTROL Informazioni sui dettagli della pubblicità]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` è stato rinominato in `friendlyName`, e `ID` è stato rinominato in `name`. |
-| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dell’errore]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` è stato rinominato come `name`. |
+| Tipo di dati | [[!UICONTROL Informazioni sui dettagli dell’errore]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` è stato rinominato in `name`. |
 
 {style="table-layout:auto"}
 
@@ -101,10 +101,10 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 | Funzione | Descrizione |
 | --- | --- |
 | Monitorare le query tramite l’interfaccia utente di Platform | Servizio query [!UICONTROL Query pianificate] fornisce una migliore visibilità dello stato di tutti i processi di query tramite l’interfaccia utente. Ora puoi trovare informazioni importanti sullo stato delle esecuzioni della query, inclusi messaggi di errore e codici in caso di esito negativo, da [!UICONTROL Query pianificate] scheda. Puoi anche abbonarti agli avvisi tramite l’interfaccia utente per ciascuna di queste query in base al loro stato. Consulta la [Monitorare il documento delle query](../../query-service/ui/monitor-queries.md) per ulteriori informazioni su questa funzione. |
-| Query del modello dati per informazioni di reporting accelerate | Come parte dello SKU di Data Distiller, lo store con query accelerata consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. Con l’archivio con query accelerata puoi creare un modello di dati personalizzato e/o estendere modelli di dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni sul reporting e le relative visualizzazioni. Consulta la [documento query accelerated store reporting insights](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) per ulteriori informazioni su questa funzione. |
+| Query del modello dati per informazioni di reporting accelerate | Come parte dello SKU di Data Distiller, lo store con query accelerata consente di ridurre il tempo e la potenza di elaborazione necessari per ottenere informazioni critiche dai dati. Con l’archivio con query accelerata puoi creare un modello di dati personalizzato e/o estendere modelli di dati Adobe Real-time Customer Data Platform esistenti per migliorare le informazioni sul reporting e le relative visualizzazioni. Consulta la [documento query accelerated store reporting insights](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) per ulteriori informazioni su questa funzione. |
 
 {style="table-layout:auto"}
 
-Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
+Per ulteriori informazioni su Query Services, consulta [Panoramica di Query Service](../../query-service/home.md).
 Nuove funzioni di Adobe Experience Platform:
 

@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 18%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 18%
       - [Panoramica](data-distiller/derived-datasets/overview.md)
       - [Flusso SQL senza interruzioni](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Archivio accelerato query {#query-accelerated-store}
-      - [Inviare query accelerate](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [Guida al modello dati per insights di reporting](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Approfondimenti personalizzabili per reporting esteso dell’app {#customizable-insights}
+      - [Panoramica](data-distiller/customizable-insights/overview.md)
+      - [Inviare query accelerate](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [Guida al modello dati per insights di reporting](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pipeline per funzioni AI/ML {#ml-feature-pipelines}
       - [Panoramica](data-distiller/ml-feature-pipelines/overview.md)
       - [Connetti a Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)

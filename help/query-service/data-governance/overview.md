@@ -2,9 +2,9 @@
 title: Governance dei dati in Query Service
 description: Questa panoramica descrive i principali elementi di governance dei dati in Experienci Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3129'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Il `CREATE VIEW` parola chiave definisce una vista di una query, ma la vista non
 
 #### Creare restrizioni di accesso basate sul campo per i set di dati accelerati {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Con il [funzionalità di controllo degli accessi basata su attributi](../../access-control/abac/overview.md) puoi definire ambiti di utilizzo organizzativi o dei dati per i set di dati fact e dimensionali nella sezione [archivio accelerato](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Questo consente agli amministratori di gestire l’accesso a segmenti specifici e di gestire meglio l’accesso concesso a utenti o gruppi di utenti.
+Con il [funzionalità di controllo degli accessi basata su attributi](../../access-control/abac/overview.md) puoi definire ambiti di utilizzo organizzativi o dei dati per i set di dati fact e dimensionali nella sezione [archivio accelerato](../data-distiller/customizable-insights/send-accelerated-queries.md). Questo consente agli amministratori di gestire l’accesso a segmenti specifici e di gestire meglio l’accesso concesso a utenti o gruppi di utenti.
 
 Per creare restrizioni di accesso basate sui campi per i set di dati accelerati, puoi utilizzare le query CTAS di Query Service per creare set di dati accelerati e strutturarli in base a schemi XDM o schemi ad hoc esistenti. Gli amministratori possono quindi [aggiungere e modificare le etichette di utilizzo dei dati per lo schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [schema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puoi applicare, creare e modificare le etichette negli schemi dalla sezione [!UICONTROL Etichette] area di lavoro in [!UICONTROL Schemi] UI.
 

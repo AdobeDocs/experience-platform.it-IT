@@ -2,7 +2,7 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Il primo passo per stabilire il proprio CLV consiste nel creare un set di dati d
 
 ## Estendere il modello dati di insights e pianificare gli aggiornamenti {#extend-data-model-and-set-refresh-schedule}
 
-Successivamente, devi creare un modello dati personalizzato o estendere un modello dati Adobe Real-Time CDP esistente per interagire con le informazioni di reporting di CLV. Consulta la documentazione per scoprire come [creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Il tutorial illustra i seguenti passaggi:
+Successivamente, devi creare un modello dati personalizzato o estendere un modello dati Adobe Real-Time CDP esistente per interagire con le informazioni di reporting di CLV. Consulta la documentazione per scoprire come [creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Il tutorial illustra i seguenti passaggi:
 
 * Crea un modello per la generazione di rapporti di approfondimenti con Data Distiller.
 * Crea tabelle, relazioni e popola i dati.

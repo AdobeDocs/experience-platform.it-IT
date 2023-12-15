@@ -2,16 +2,16 @@
 title: Modello dati di Real-time Customer Data Platform Insights
 description: Scopri come utilizzare le query SQL con i modelli dati di Real-time Customer Data Platform Insights per personalizzare i rapporti Real-Time CDP per i casi d’uso di marketing e KPI.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Modello dati di Real-time Customer Data Platform Insights
 
-La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori di prestazioni chiave (KPI, Key Performance Indicator) e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato delle query. [come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+La funzione Real-time Customer Data Platform Insights Data Model espone i modelli di dati e le istruzioni SQL che alimentano le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori di prestazioni chiave (KPI, Key Performance Indicator) e di marketing. Queste informazioni possono quindi essere utilizzate come widget personalizzati per le dashboard definite dall’utente. Per informazioni, consulta la documentazione sulle informazioni di reporting per archivio accelerato delle query. [come creare un modello dati per le informazioni di reporting tramite Query Service da utilizzare con dati di archivio accelerati e dashboard definiti dall’utente](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 ## Prerequisiti
 
@@ -239,7 +239,7 @@ FROM
 
 #### Caso di utilizzo di tipi di pubblico attivati di recente
 
-La logica per [!UICONTROL Pubblico attivato di recente] Il widget fornisce un elenco degli ultimi tipi di pubblico mappati su una destinazione. Questo elenco fornisce uno snapshot dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la [[!UICONTROL Pubblico attivato di recente] documentazione widget](./guides/destinations.md#recently-activated-audiences) per ulteriori informazioni.
+La logica per [!UICONTROL Pubblico attivato di recente] Il widget fornisce un elenco degli ultimi tipi di pubblico mappati su una destinazione. Questo elenco fornisce un’istantanea dei tipi di pubblico e delle destinazioni attivamente utilizzati nel sistema e può essere utile per risolvere eventuali mappature errate. Consulta la [[!UICONTROL Pubblico attivato di recente] documentazione widget](./guides/destinations.md#recently-activated-audiences) per ulteriori informazioni.
 
 SQL che genera il codice [!UICONTROL Pubblico attivato di recente] Il widget è visibile nella sezione comprimibile sottostante.
 
