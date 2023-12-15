@@ -2,10 +2,10 @@
 title: Acquisizione su richiesta per flussi di dati di origini nell’interfaccia utente
 description: Scopri come creare flussi di dati on-demand per le connessioni sorgente utilizzando l’interfaccia utente di Experienci Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,10 @@ Le esecuzioni del flusso rappresentano un’istanza dell’esecuzione del flusso
 >[!ENDSHADEBOX]
 
 ## Introduzione
+
+>[!NOTE]
+>
+>Per creare un’esecuzione del flusso, devi innanzitutto disporre dell’ID di flusso di un flusso di dati pianificato per l’acquisizione una tantum.
 
 Questo documento richiede una buona conoscenza dei seguenti elementi di Experience Platform:
 
