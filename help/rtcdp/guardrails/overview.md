@@ -3,10 +3,10 @@ title: Guardrail Real-Time CDP
 description: Scopri i guardrail dei dati nei vari servizi e aree di Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '369'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,12 @@ Inizia qui e segui i collegamenti riportati di seguito per comprendere tutti i g
 * [Guardrail per [!DNL Identity Service] dati](/help/identity-service/guardrails.md)
 * [Guardrail per [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Guardrail per l’attivazione dei dati tramite destinazioni](/help/destinations/guardrails.md)
+* [Guardrail per Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->Inoltre, vedi [questa pagina](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) per informazioni sui guardrail per altre app di Experience Platform, come [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it) e [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it), e [diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+>Inoltre, visita [blueprint dell’esperienza digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) per ulteriori informazioni quali [diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
+
 
 ## Tipi di guardrail {#guardrail-types}
 
@@ -46,6 +48,13 @@ Inoltre, fare riferimento ai collegamenti di descrizione del prodotto riportati 
 * [Real-time Customer Data Platform (versione B2C - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (B2P Edition - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Edizione B2B - Pacchetti Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Guardrail per altre applicazioni Experienci Platform  {#guardrails-other-aep-apps}
+
+Guardrail simili esistono per altre applicazioni Experienci Platform. Per ulteriori informazioni, visitare i collegamenti riportati di seguito:
+
+* [Guardrail Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Guardrail del Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Passaggi successivi
 
