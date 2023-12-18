@@ -3,22 +3,26 @@ keywords: Experience Platform;home;argomenti popolari;preparazione dati;preparaz
 title: Inviare Aggiornamenti Parziali Delle Righe A Real-Time Customer Profile Tramite La Preparazione Dei Dati
 description: Scopri come inviare aggiornamenti parziali delle righe a Real-Time Customer Profile utilizzando la preparazione dati.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
+source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 1%
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 # Invia aggiornamenti riga parziali a [!DNL Real-Time Customer Profile] utilizzo [!DNL Data Prep]
 
+>[!WARNING]
+>
+>L’acquisizione dei messaggi di aggiornamento entità (con operazioni JSON PATCH) in Experience Data Model (XDM) per gli aggiornamenti del profilo tramite l’ingresso DCS è stata dichiarata obsoleta. In alternativa, puoi: [Inserire dati non elaborati nell&#39;ingresso DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e specifica le mappature di dati necessarie per trasformare i dati in messaggi conformi a XDM per gli aggiornamenti del profilo.
+
 Upsert in streaming [!DNL Data Prep] consente di inviare aggiornamenti di riga parziali a [!DNL Real-Time Customer Profile] e allo stesso tempo creare e stabilire nuovi collegamenti di identità con una singola richiesta API.
 
 Gli aggiornamenti in streaming consentono di mantenere il formato dei dati durante la traduzione [!DNL Real-Time Customer Profile] Richieste PATCH durante l’acquisizione. In base agli input forniti, [!DNL Data Prep] consente di inviare un singolo payload API e tradurre i dati in entrambi [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] Creare le richieste.
 
->[!WARNING]
+>[!NOTE]
 >
->L’acquisizione dei messaggi di aggiornamento entità (con operazioni JSON PATCH) in Experience Data Model (XDM) per gli aggiornamenti del profilo tramite l’ingresso DCS è stata dichiarata obsoleta. In alternativa, puoi: [Inserire dati non elaborati nell&#39;ingresso DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e specifica le mappature di dati necessarie per trasformare i dati in messaggi conformi a XDM per gli aggiornamenti del profilo.
+>Per sfruttare le funzionalità di upsert, è consigliabile disattivare le configurazioni compatibili con XDM durante l’acquisizione dei dati e mappare nuovamente il payload in ingresso utilizzando [Mapper preparazione dati](./ui/mapping.md).
 
 Questo documento fornisce informazioni su come eseguire lo streaming degli upsert in [!DNL Data Prep].
 
