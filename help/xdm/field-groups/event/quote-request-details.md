@@ -1,10 +1,10 @@
 ---
 title: Gruppo di campi schema dettagli richiesta preventivo
-description: Questo documento fornisce una panoramica del gruppo di campi schema Dettagli richiesta preventivo.
+description: Scopri il gruppo di campi schema Dettagli richiesta preventivo.
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '133'
 ht-degree: 6%
 
 ---

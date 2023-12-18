@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi dello schema per i dettagli pubblicitari
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli pubblicità.
+description: Scopri il gruppo di campi dello schema Dettagli pubblicitari.
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 9%
+source-wordcount: '992'
+ht-degree: 4%
 
 ---
 
@@ -45,10 +45,10 @@ Il `adAssetReference` l’oggetto acquisisce le informazioni sulla risorsa relat
 | `_dc.title` | Stringa | Nome leggibile e intuitivo della risorsa dell’annuncio. |
 | `_xmpDM.duration` | Intero | Lunghezza o durata della risorsa in secondi. |
 | `_id` | Stringa | Un identificatore univoco della risorsa dell’annuncio, seguendo [Standard Ad-ID](https://datatracker.ietf.org/doc/html/rfc8107). |
-| `advertiser` | Stringa | Azienda o marchio il cui prodotto è inserito nell’annuncio. |
+| `advertiser` | Stringa | Azienda o marchio il cui prodotto è presentato nell’annuncio. |
 | `campaign` | Stringa | ID della campagna pubblicitaria. |
-| `creativeID` | Stringa | ID del contenuto creativo. |
-| `creativeURL` | Stringa | URL del contenuto dell’annuncio. |
+| `creativeID` | Stringa | ID della creatività dell’annuncio. |
+| `creativeURL` | Stringa | URL della creatività dell’annuncio. |
 | `placementID` | Stringa | ID di posizionamento dell’annuncio. |
 | `siteID` | Stringa | ID del sito dell’annuncio. |
 
@@ -64,7 +64,7 @@ Il `adAssetViewDetails` l’oggetto acquisisce i dettagli della visualizzazione 
 | --- | --- | --- |
 | `adBreak` | [[!UICONTROL Interruzione pubblicitaria]](../../data-types/ad-break.md) | Descrive come un annuncio a tempo viene inserito in un contenuto multimediale a tempo. |
 | `index` | Intero | L’indice dell’annuncio all’interno dell’interruzione pubblicitaria principale. Ad esempio, il primo annuncio ha un indice `0` e il secondo annuncio ha l’indice `1`. |
-| `playerName` | Stringa | Nome del lettore che esegue il rendering dell’annuncio. |
+| `playerName` | Stringa | Nome del lettore responsabile del rendering dell’annuncio. |
 
 {style="table-layout:auto"}
 

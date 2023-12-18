@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Gruppo di campi schema Dettagli Web
-description: In questo documento viene fornita una panoramica del gruppo di campi dello schema Dettagli Web.
+description: Scopri il gruppo di campi dello schema Dettagli web.
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 2%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 

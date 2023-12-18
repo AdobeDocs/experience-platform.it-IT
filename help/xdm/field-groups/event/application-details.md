@@ -1,10 +1,10 @@
 ---
 title: Gruppo di campi schema dettagli applicazione
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli applicazione.
+description: Scopri il gruppo di campi dello schema Dettagli applicazione.
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '123'
 ht-degree: 3%
 
 ---

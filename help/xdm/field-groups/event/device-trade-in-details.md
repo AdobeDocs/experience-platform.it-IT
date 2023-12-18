@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;schema design;gruppo di campi;gruppo di campi;dispositivo;permuta;trade-in;trade in;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli di permuta del dispositivo
-description: Questo documento fornisce una panoramica del gruppo di campi schema Dettagli permuta dispositivo.
+description: Scopri il gruppo di campi schema Dettagli permuta dispositivo.
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '150'
 ht-degree: 4%
 
 ---

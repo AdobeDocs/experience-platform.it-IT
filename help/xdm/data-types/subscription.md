@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;sottoscrizione;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati abbonamento
-description: Questo documento fornisce una panoramica del tipo di dati XDM (Subscription Experience Data Model).
+description: Scopri il tipo di dati Subscription Experience Data Model (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 10%
+source-wordcount: '388'
+ht-degree: 6%
 
 ---
 

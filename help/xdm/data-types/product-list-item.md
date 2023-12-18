@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;indirizzo;xdm:address;datatype;data-type;data type;data type;
 solution: Experience Platform
 title: Tipo di dati elemento elenco prodotti
-description: Questo documento fornisce una panoramica del tipo di dati XDM per la voce dell’elenco dei prodotti.
+description: Scopri il tipo di dati XDM per l’elemento dell’elenco dei prodotti.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '342'
 ht-degree: 3%
 
 ---

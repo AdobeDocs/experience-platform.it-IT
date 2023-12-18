@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;struttura dello schema;gruppo di campi;gruppo di campi;prenotazione;alloggio;
 title: Gruppo di campi dello schema di prenotazione alloggio
-description: Questo documento fornisce una panoramica del gruppo di campi Schema prenotazione alloggio.
+description: Scopri il gruppo di campi Schema prenotazione alloggio.
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '655'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 [!UICONTROL Prenotazione alloggio] è un gruppo di campi di schema standard per [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilizzato per acquisire informazioni relative a una prenotazione di alloggio.
 
-Il gruppo di campi è un&#39;estensione del [!UICONTROL Dettagli prenotazione] e contiene tutti gli stessi campi in un unico campo di tipo oggetto, `reservations`. Oltre a questi campi generici, [!UICONTROL Prenotazione alloggio] include anche `lodgingReservations` array. Questo array di oggetti viene utilizzato per descrivere una o più prenotazioni con proprietà esclusive dell&#39;alloggio.
+Il gruppo di campi è un&#39;estensione del [!UICONTROL Dettagli prenotazione] e contiene tutti gli stessi campi in un unico campo di tipo oggetto, `reservations`. Oltre a questi campi generici, [!UICONTROL Prenotazione alloggio] include anche `lodgingReservations` array. Questo array di oggetti viene utilizzato per descrivere una o più prenotazioni con proprietà univoche per l’alloggio.
 
 >[!NOTE]
 >

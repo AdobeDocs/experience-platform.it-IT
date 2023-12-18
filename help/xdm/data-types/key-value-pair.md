@@ -1,10 +1,10 @@
 ---
 title: Tipo di dati coppia di valori chiave
-description: Questo documento fornisce una panoramica del tipo di dati Experience Data Model (XDM) della coppia chiave-valore.
+description: Scopri il tipo di dati Experience Data Model (XDM) della coppia di valori chiave.
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '104'
 ht-degree: 5%
 
 ---

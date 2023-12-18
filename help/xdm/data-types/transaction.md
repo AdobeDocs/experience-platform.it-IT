@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;transazione;tipo di dati;tipo di dati;tipo di dati;
 title: Tipo di dati transazione
-description: Questo documento fornisce una panoramica del tipo di dati Transaction Experience Data Model (XDM).
+description: Scopri il tipo di dati Transaction Experience Data Model (XDM).
 exl-id: 47b7152f-a853-44f0-8962-e902631ad8a4
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '92'
 ht-degree: 7%
 
 ---

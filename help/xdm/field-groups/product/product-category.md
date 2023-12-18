@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi schema categoria prodotto
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Categoria di prodotto.
+description: Scopri il gruppo di campi dello schema Categoria di prodotto.
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 8%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 

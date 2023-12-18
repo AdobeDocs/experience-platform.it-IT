@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;schema design;gruppo di campi;gruppo di campi;prenotazione;volo;
 title: Gruppo di campi schema prenotazione volo
-description: Questo documento fornisce una panoramica del gruppo di campi schema Prenotazione del volo.
+description: Scopri il gruppo di campi dello schema Prenotazione del volo.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '625'
 ht-degree: 4%
 
 ---

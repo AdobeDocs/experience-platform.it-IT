@@ -1,10 +1,10 @@
 ---
 title: Classe di opportunità di business XDM
-description: Questo documento fornisce una panoramica della classe XDM Business Opportunity in Experience Data Model (XDM).
+description: Scopri la classe XDM Business Opportunity in Experience Data Model (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '309'
 ht-degree: 3%
 
 ---

@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;struttura dello schema;gruppo di campi;gruppo di campi;enduserids;utente finale;id;
 solution: Experience Platform
 title: Gruppo di campi dello schema Dettagli ID utente finale
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli ID utente finale.
+description: Scopri il gruppo di campi dello schema Dettagli ID utente finale.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 5%
+source-wordcount: '200'
+ht-degree: 6%
 
 ---
 

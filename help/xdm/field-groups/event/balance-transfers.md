@@ -1,10 +1,10 @@
 ---
 title: Gruppo di campi schema trasferimenti saldo
-description: Questo documento fornisce una panoramica del gruppo di campi schema Trasferimenti saldo.
+description: Scopri il gruppo di campi dello schema Trasferimenti saldo.
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '101'
 ht-degree: 3%
 
 ---

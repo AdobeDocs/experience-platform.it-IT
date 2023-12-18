@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;dettagli personali;schema design;gruppo di campi;gruppo di campi;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli di contatto personali
-description: In questo documento viene fornita una panoramica del gruppo di campi dello schema Dettagli contatto personale.
+description: Scopri il gruppo di campi dello schema Dettagli contatto personale.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 3%
+source-wordcount: '143'
+ht-degree: 2%
 
 ---
 

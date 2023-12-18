@@ -1,10 +1,10 @@
 ---
 title: Gruppo di campi dello schema dei dettagli dei membri della campagna aziendale XDM
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli membro della campagna aziendale XDM.
+description: Scopri il gruppo di campi schema Dettagli membro della campagna aziendale XDM.
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '335'
 ht-degree: 4%
 
 ---

@@ -1,11 +1,11 @@
 ---
 title: Tipo di dati Dettagli implementazione
-description: Questo documento fornisce una panoramica dei dettagli di implementazione del tipo di dati Experience Data Model (XDM).
+description: Scopri i dettagli dell’implementazione per il tipo di dati Experience Data Model (XDM).
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 5%
+source-wordcount: '101'
+ht-degree: 6%
 
 ---
 

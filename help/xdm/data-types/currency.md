@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;dispositivo;tipo di dati;tipo di dati;tipo di dati;valuta;
 solution: Experience Platform
 title: Tipo di dati valuta
-description: Questo documento fornisce una panoramica del tipo di dati XDM Valuta.
+description: Scopri il tipo di dati XDM Valuta.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 4%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 

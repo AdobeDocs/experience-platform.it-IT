@@ -1,11 +1,11 @@
 ---
 title: Tipo di dati di ricerca sito interno
-description: Questo documento fornisce una panoramica del tipo di dati XDM per ricerca interna del sito.
+description: Scopri il tipo di dati XDM per ricerca interna al sito.
 exl-id: 3cab9445-f641-4a44-9699-cd8a62da8a61
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 5%
+source-wordcount: '383'
+ht-degree: 3%
 
 ---
 

@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Gruppo di campi schema dettagli canale
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli canale.
+description: Scopri il gruppo di campi dello schema Dettagli canale.
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 2%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 

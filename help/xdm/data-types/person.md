@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;persona;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati della persona
-description: Questo documento fornisce una panoramica del tipo di dati Person Experience Data Model (XDM).
+description: Scopri il tipo di dati Person Experience Data Model (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 4%
+source-wordcount: '318'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 4%
 | `gender` | Stringa | L’identità di genere della persona. Il valore di questa proprietà deve essere uguale a uno dei seguenti valori enum noti. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> Il valore predefinito è `not_specified`. |
 | `maritalStatus` | Stringa | Descrive la relazione di una persona con un altro soggetto significativo. Il valore di questa proprietà deve essere uguale a uno dei seguenti valori enum. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> Il valore predefinito è `not_specified`. |
 | `nationality` | Stringa | Il rapporto giuridico tra una persona e il suo stato rappresentato utilizzando il codice ISO 3166-1 Alpha-2. Il formato di questa proprietà deve essere conforme a questa espressione regolare `^[A-Z]{2}$`. |
-| `taxId` | Stringa | Il codice fiscale della persona, ad esempio il codice fiscale (TIN) negli Stati Uniti o il Certificado de Identificación Fiscal (CIF/NIF) in Spagna. |
+| `taxId` | Stringa | Il codice fiscale della persona, ad esempio il codice fiscale (Taxpayer Identification Number, TIN) negli Stati Uniti o il Certificado de Identificación Fiscal (CIF/NIF) in Spagna. |
 
 {style="table-layout:auto"}
 

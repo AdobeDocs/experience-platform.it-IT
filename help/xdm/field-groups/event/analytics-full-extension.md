@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi dello schema di estensione completa Adobe Analytics ExperienceEvent
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Estensione completa Adobe Analytics ExperienceEvent.
+description: Scopri il gruppo di campi schema Estensione completa Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 9%
+source-wordcount: '811'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ Il gruppo di campi fornisce un singolo `_experience` oggetto a uno schema, che c
 | `eVars` | Oggetto | Un oggetto che acquisisce fino a 250 variabili di conversione ([eVar](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=it)). Le proprietà di questo oggetto sono codificate `eVar1` a `eVar250` e accetta solo stringhe per il relativo tipo di dati. |
 | `hierarchies` | Oggetto | Oggetto che acquisisce fino a cinque variabili gerarchiche personalizzate ([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=it)). Le proprietà di questo oggetto sono codificate `hier1` a `hier5`, che sono a loro volta oggetti con le seguenti sottoproprietà:<ul><li>`delimiter`: delimitatore originale utilizzato per generare l’elenco fornito in `values`.</li><li>`values`: elenco delimitato di nomi di livello gerarchico, rappresentati da una stringa.</li></ul> |
 | `listProps` | Oggetto | Un oggetto che cattura fino a 75 [prop elenco](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). Le proprietà di questo oggetto sono codificate `prop1` a `prop75`, che sono a loro volta oggetti con le seguenti sottoproprietà:<ul><li>`delimiter`: delimitatore originale utilizzato per generare l’elenco fornito in `values`.</li><li>`values`: elenco delimitato di valori per il prop, rappresentato da una stringa.</li></ul> |
-| `lists` | Oggetto | Un oggetto che acquisisce fino a tre [elenchi](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=it). Le proprietà di questo oggetto sono codificate `list1` a `list3`. Ognuna di queste proprietà contiene un singolo `list` array di [[!UICONTROL Coppia chiave-valore]](../../data-types/key-value-pair.md) tipi di dati. |
+| `lists` | Oggetto | Un oggetto che acquisisce fino a tre [elenchi](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). Le proprietà di questo oggetto sono codificate `list1` a `list3`. Ognuna di queste proprietà contiene un singolo `list` array di [[!UICONTROL Coppia chiave-valore]](../../data-types/key-value-pair.md) tipi di dati. |
 | `props` | Oggetto | Un oggetto che cattura fino a 75 [prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=it). Le proprietà di questo oggetto sono codificate `prop1` a `prop75` e accetta solo stringhe per il relativo tipo di dati. |
 | `postalCode` | Stringa | Codice postale o CAP fornito dal cliente. |
 | `stateProvince` | Stringa | Stato o località della provincia fornito dal client. |

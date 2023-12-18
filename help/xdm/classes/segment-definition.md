@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: Classe definizione segmento
-description: Questo documento fornisce una panoramica della classe di definizione dei segmenti in Experience Data Model (XDM).
+description: Scopri la classe di definizione dei segmenti in Experience Data Model (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '370'
 ht-degree: 1%
 
 ---

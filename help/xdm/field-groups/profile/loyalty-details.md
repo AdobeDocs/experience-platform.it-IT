@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;dettagli fedeltà;progettazione schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli fedeltà
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli fedeltà.
+description: Scopri il gruppo di campi dello schema Dettagli fedeltà.
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '281'
 ht-degree: 3%
 
 ---

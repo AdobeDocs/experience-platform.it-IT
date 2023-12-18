@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;beacon;dettagli interazione;datatype;data-type;data type;data type;
 solution: Experience Platform
 title: Tipo di dati beacon
-description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
+description: Scopri la classe Profilo individuale XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '233'
 ht-degree: 4%
 
 ---

@@ -1,11 +1,11 @@
 ---
 title: Tipo di dati attributi di controllo del sistema di sorgente esterna
-description: Questo documento fornisce una panoramica del tipo di dati Attributi di controllo del sistema di sorgente esterna Experience Data Model (XDM).
+description: Scopri il tipo di dati Experience Data Model (XDM) per gli attributi di controllo del sistema di origine esterna.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 4%
 
 ---
 

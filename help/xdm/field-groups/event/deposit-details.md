@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi schema dettagli versamento
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli versamento.
+description: Scopri il gruppo di campi dello schema Dettagli versamento.
 exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 4%
+source-wordcount: '94'
+ht-degree: 5%
 
 ---
 

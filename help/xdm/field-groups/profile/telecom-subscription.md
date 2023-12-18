@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;telecomunicazioni;abbonamento;telecomunicazioni;schema;progettazione dello schema;gruppo di campi;gruppo di campi;
 solution: Experience Platform
 title: Gruppo di campi dello schema di abbonamento Telecom
-description: Questo documento fornisce una panoramica del gruppo di campi Schema abbonamento telecomunicazioni.
+description: Scopri il gruppo di campi Schema abbonamento telecomunicazioni.
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '692'
 ht-degree: 6%
 
 ---

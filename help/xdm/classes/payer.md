@@ -1,10 +1,10 @@
 ---
 title: Classe payer
-description: Questo documento fornisce una panoramica della classe Payer in Experience Data Model (XDM).
+description: Scopri la classe Payer in Experience Data Model (XDM).
 exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '129'
 ht-degree: 5%
 
 ---

@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;iab;tcf;consent;
 solution: Experience Platform
 title: Gruppo di campi per il consenso IAB TCF 2.0 per gli schemi evento
-description: Questo documento fornisce una panoramica del gruppo di campi Schema di consenso IAB TCF 2.0 per la classe XDM ExperienceEvent.
+description: Scopri il gruppo di campi Schema di consenso IAB TCF 2.0 per la classe XDM ExperienceEvent.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---

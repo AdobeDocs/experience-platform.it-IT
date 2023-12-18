@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli Commerce
-description: Questo documento fornisce una panoramica del gruppo di campi schema Dettagli commerciali.
+description: Scopri il gruppo di campi dello schema Commerce Details.
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 2%
+source-wordcount: '158'
+ht-degree: 3%
 
 ---
 

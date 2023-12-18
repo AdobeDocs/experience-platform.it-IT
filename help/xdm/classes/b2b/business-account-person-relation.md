@@ -1,10 +1,10 @@
 ---
 title: Classe di relazione della persona dell’account aziendale XDM
-description: Questo documento fornisce una panoramica della classe di relazione della persona dell’account aziendale XDM in Experience Data Model (XDM).
+description: Scopri la classe di relazione della persona dell’account aziendale XDM in Experience Data Model (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '432'
 ht-degree: 3%
 
 ---

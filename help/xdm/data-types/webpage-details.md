@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;dettagli pagina web;tipo dati;tipo dati;tipo dati;pagina web;home;popular topic;schema;Schema;XDM;fields;schemas;Schemas;Webpage details;datatype;data-type;data type;data type;webpage
 solution: Experience Platform
 title: Tipo di dati Dettagli pagina web
-description: Questo documento fornisce una panoramica del tipo di dati Experience Data Model (XDM) dei dettagli della pagina web.
+description: Scopri i dettagli della pagina web Tipo di dati Experience Data Model (XDM).
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '383'
 ht-degree: 3%
 
 ---

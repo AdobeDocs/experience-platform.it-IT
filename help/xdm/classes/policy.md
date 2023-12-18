@@ -1,11 +1,11 @@
 ---
 title: Classe criterio
-description: Questo documento fornisce una panoramica della classe Policy in Experience Data Model (XDM).
+description: Scopri la classe Policy in Experience Data Model (XDM).
 exl-id: 56cc8c69-84a0-493e-85c5-e0cd994e4bee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 5%
+source-wordcount: '237'
+ht-degree: 4%
 
 ---
 

@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;identità;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati identità
-description: Questo documento fornisce una panoramica del tipo di dati XDM per l’identità.
+description: Scopri il tipo di dati XDM per l’identità.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 4%
 
 ---

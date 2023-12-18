@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli di marketing della campagna
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli marketing campagna.
+description: Scopri il gruppo di campi dello schema Dettagli marketing campagna.
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 2%
+source-wordcount: '124'
+ht-degree: 3%
 
 ---
 

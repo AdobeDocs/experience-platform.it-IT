@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi schema provider di servizi sanitari
-description: Questo documento fornisce una panoramica del gruppo di campi schema Operatore sanitario.
+description: Scopri il gruppo di campi dello schema per l’operatore sanitario.
 exl-id: e39b4082-4b66-47b3-a8e2-951d8a96f742
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 4%
+source-wordcount: '254'
+ht-degree: 3%
 
 ---
 

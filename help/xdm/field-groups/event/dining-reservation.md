@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;gruppo di campi;gruppo di campi;prenotazione;pranzo;
 title: Gruppo di campi Schema prenotazione ristorante
-description: Questo documento fornisce una panoramica del gruppo di campi Schema prenotazione ristorante.
+description: Scopri il gruppo di campi Schema prenotazione ristorante.
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 5%
 
 ---

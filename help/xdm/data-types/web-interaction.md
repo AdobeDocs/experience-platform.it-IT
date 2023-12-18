@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;interazione web;tipo dati;tipo dati;tipo dati;
 solution: Experience Platform
 title: Tipo di dati dell’interazione web
-description: Questo documento fornisce una panoramica del tipo di dati Experience Data Model (XDM) di interazione web.
+description: Scopri il tipo di dati Experience Data Model (XDM) di interazione web.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 3%
+source-wordcount: '164'
+ht-degree: 4%
 
 ---
 

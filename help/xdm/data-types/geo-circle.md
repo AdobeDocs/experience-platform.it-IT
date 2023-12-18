@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;geo;circle;datatype;data-type;data type;data type;
 solution: Experience Platform
 title: Tipo di dati Cerchio geografico
-description: Questo documento fornisce una panoramica del tipo di dati XDM Geo Circle.
+description: Scopri il tipo di dati XDM Geo Circle.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '124'
 ht-degree: 5%
 
 ---

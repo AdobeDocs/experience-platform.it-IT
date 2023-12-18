@@ -1,10 +1,10 @@
 ---
 title: Gruppo di campi Schema per il medicinale sanitario
-description: Questo documento fornisce una panoramica del gruppo di campi Schema del farmaco sanitario.
+description: Scopri il gruppo di campi Schema del medicinale per l’assistenza sanitaria.
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '197'
 ht-degree: 6%
 
 ---

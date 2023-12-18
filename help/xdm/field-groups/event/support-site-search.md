@@ -1,11 +1,11 @@
 ---
 title: Gruppo di campi dello schema di ricerca del sito di supporto
-description: Questo documento fornisce una panoramica del gruppo di campi Schema per la ricerca del sito di supporto.
+description: Scopri il gruppo di campi dello schema di ricerca del sito di supporto.
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 7%
+source-wordcount: '77'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `supportSiteSearch` | [[!UICONTROL Ricerca sito interna]](../../data-types/internal-site-search.md) | Acquisisce i dettagli sull’evento di ricerca. |
+| `supportSiteSearch` | [[!UICONTROL Ricerca interna al sito]](../../data-types/internal-site-search.md) | Acquisisce i dettagli sull’evento di ricerca. |
 
 {style="table-layout:auto"}
 

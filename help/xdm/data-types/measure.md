@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;misura;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Misura tipo di dati
-description: Questo documento fornisce una panoramica del tipo di dati Misura Experience Data Model (XDM).
+description: Scopri il tipo di dati Misura Experience Data Model (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '204'
 ht-degree: 2%
 
 ---

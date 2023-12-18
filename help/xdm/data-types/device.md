@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;dispositivo;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati dispositivo
-description: Questo documento fornisce una panoramica del tipo di dati XDM per dispositivo.
+description: Scopri il tipo di dati XDM per dispositivo.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '305'
 ht-degree: 5%
 
 ---

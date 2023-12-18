@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;telefonia;abbonamento;tipo dati;tipo dati;tipo dati;
 solution: Experience Platform
 title: Tipo di dati abbonamento telefonia
-description: Questo documento fornisce una panoramica del tipo di dati XDM (Telecom Subscription Experience Data Model).
+description: Scopri il tipo di dati XDM (Telecom Subscription Experience Data Model).
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 10%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 

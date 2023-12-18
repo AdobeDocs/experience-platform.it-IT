@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Gruppo di campi dello schema dei dettagli dell’iscrizione al segmento
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli appartenenza al segmento.
+description: Scopri il gruppo di campi dello schema Dettagli appartenenza al segmento.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 2%
+source-wordcount: '398'
+ht-degree: 3%
 
 ---
 

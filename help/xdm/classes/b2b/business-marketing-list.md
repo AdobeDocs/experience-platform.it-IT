@@ -1,11 +1,11 @@
 ---
 title: Classe elenco di marketing aziendale XDM
-description: Questo documento fornisce una panoramica della classe XDM Business Marketing List in Experience Data Model (XDM).
+description: Scopri la classe XDM Business Marketing List in Experience Data Model (XDM).
 exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 2%
+source-wordcount: '299'
+ht-degree: 3%
 
 ---
 

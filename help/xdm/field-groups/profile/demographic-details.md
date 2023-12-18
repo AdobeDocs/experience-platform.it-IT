@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;struttura dello schema;gruppo di campi;gruppo di campi;persona;dettagli persona;dettagli persona profilo;persona;
 solution: Experience Platform
 title: Gruppo di campi schema dettagli demografici
-description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli demografici.
+description: Scopri il gruppo di campi dello schema Dettagli demografici.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 | `person.gender` | Stringa | L’identità di genere della persona. |
 | `person.martialStatus` | Stringa | Descrive la relazione di una persona con un altro soggetto significativo. |
 | `person.nationality` | Stringa | Il rapporto giuridico tra una persona e il suo stato rappresentato utilizzando il codice ISO 3166-1 Alpha-2. |
-| `person.taxId` | Stringa | L’ID fiscale della persona, ad esempio il TIN negli Stati Uniti o il CIF/NIF in Spagna. |
+| `person.taxId` | Stringa | L’ID fiscale della persona, ad esempio il TIN negli Stati Uniti o l’CIF/NIF in Spagna. |
 
 {style="table-layout:auto"}
 
