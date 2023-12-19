@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,12 @@ Quando invii eventi condivisi, accertati di includere un ID evento e un nome con
 >* La funzione di avvio rapido è disponibile per i clienti che hanno acquistato il pacchetto Real-Time CDP Prime e Ultimate. Per ulteriori informazioni, contatta il rappresentante del tuo Adobe.
 >* Questa funzione è destinata alle nuove implementazioni nette e al momento non supporta l’installazione automatica di estensioni e configurazioni su tag e proprietà di inoltro degli eventi esistenti.
 
+>[!NOTE]
+>
+>Qualsiasi client esistente può utilizzare i flussi di lavoro di avvio rapido per creare un’implementazione di riferimento che può essere utilizzata per i seguenti elementi:
+>* Utilizzala come inizio di un’implementazione completamente nuova.
+>* Sfruttala come implementazione di riferimento da esaminare per vedere come è stata configurata e replicarla nelle implementazioni di produzione correnti.
+
 La funzione di avvio rapido consente di effettuare la configurazione con facilità ed efficienza con l’API Meta Conversions e le estensioni Meta Pixel. Questo strumento automatizza più passaggi eseguiti nei tag Adobe e nell’inoltro degli eventi, riducendo in modo significativo il tempo di configurazione.
 
 Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experienci Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e Experienci Platform Edge Network.
@@ -152,7 +158,7 @@ Dalla sezione **[!UICONTROL Aggiungi codice sul sito]** finestra di dialogo copi
 
 ![Aggiungi il codice nella finestra di dialogo del sito](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-Il [!UICONTROL Risultati convalida] Questa finestra di dialogo mostra i risultati dell’implementazione dell’estensione Meta. Seleziona **[!UICONTROL Avanti]**. Puoi anche visualizzare ulteriori risultati di convalida selezionando la **[!UICONTROL Assurance]** collegamento.
+Il [!UICONTROL Risultati convalida] Questa finestra di dialogo mostra i risultati dell’implementazione dell’estensione Meta. Seleziona **[!UICONTROL Successivo]**. Puoi anche visualizzare ulteriori risultati di convalida selezionando la **[!UICONTROL Assurance]** collegamento.
 
 ![Finestra di dialogo dei risultati del test con i risultati dell’implementazione](../../../images/extensions/server/meta/test-results.png)
 
