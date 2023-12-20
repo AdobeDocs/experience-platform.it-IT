@@ -2,10 +2,10 @@
 description: Questa pagina descrive i vari flussi di autorizzazione OAuth 2 supportati da Destination SDK e fornisce istruzioni per impostare l’autorizzazione OAuth 2 per la destinazione.
 title: Autorizzazione OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 4%
+source-wordcount: '2181'
+ht-degree: 2%
 
 ---
 
@@ -33,11 +33,16 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 ### Prerequisiti nel sistema {#prerequisites}
 
-Come primo passo, devi creare un’app per Adobe Experience Platform o registrare in altro modo un Experience Platform. L’obiettivo è generare un ID client e un segreto client, necessari per autenticare l’Experience Platform nella destinazione. Come parte di questa configurazione nel tuo sistema, devi disporre degli URL di reindirizzamento/callback di Adobe Experience Platform OAuth 2, che puoi ottenere dall’elenco seguente.
+Come primo passo, devi creare un’app per Adobe Experience Platform o registrare in altro modo un Experience Platform. L’obiettivo è generare un ID client e un segreto client, necessari per autenticare l’Experience Platform nella destinazione.
+
+Come parte di questa configurazione nel tuo sistema, devi disporre degli URL di reindirizzamento/callback di Adobe Experience Platform OAuth 2, che puoi ottenere dall’elenco seguente.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
@@ -445,7 +450,7 @@ Puoi utilizzare i seguenti parametri in `accessTokenRequest` per personalizzare 
 
 | Parametro | Tipo | Descrizione |
 |---------|----------|------|
-| `accessTokenRequest.destinationServerType` | Stringa | Seleziona `URL_BASED`. |
+| `accessTokenRequest.destinationServerType` | Stringa | Utilizzare `URL_BASED`. |
 | `accessTokenRequest.urlBasedDestination.url.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se utilizzi i modelli per il valore in `accessTokenRequest.urlBasedDestination.url.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.urlBasedDestination.url.value` è una costante. </li></li> |
 | `accessTokenRequest.urlBasedDestination.url.value` | Stringa | L’URL in cui Experienci Platform richiede il token di accesso. |
 | `accessTokenRequest.httpTemplate.requestBody.templatingStrategy` | Stringa | <ul><li>Utilizzare `PEBBLE_V1` se utilizzi i modelli per i valori in `accessTokenRequest.httpTemplate.requestBody.value`.</li><li> Utilizzare `NONE` se il valore nel campo `accessTokenRequest.httpTemplate.requestBody.value` è una costante. </li></li> |
