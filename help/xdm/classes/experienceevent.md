@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Scopri la classe XDM ExperienceEvent e le best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2656'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] classe
 
-[!DNL XDM ExperienceEvent] è una classe XDM (Experience Data Model) standard che consente di creare un’istantanea con marca temporale del sistema quando si verifica un evento specifico o viene raggiunto un determinato set di condizioni.
+[!DNL XDM ExperienceEvent] è una classe XDM (Experience Data Model) standard. Utilizzare questa classe per creare uno snapshot con marca temporale del sistema quando si verifica un evento specifico o viene raggiunto un determinato set di condizioni.
 
 Un evento esperienza è una registrazione fattuale di ciò che si è verificato, incluso il momento e l’identità dell’individuo coinvolto. Gli eventi possono essere espliciti (azioni umane direttamente osservabili) o impliciti (generati senza un&#39;azione umana diretta) e sono registrati senza aggregazione o interpretazione. Per ulteriori informazioni di alto livello sull’utilizzo di questa classe nell’ecosistema Platform, consulta [Panoramica di XDM](../home.md#data-behaviors).
 
-Il [!DNL XDM ExperienceEvent] La classe stessa fornisce a uno schema diversi campi relativi a serie temporali. Due campi (`_id` e `timestamp`) sono **obbligatorio** per tutti gli schemi basati sulla classe, mentre gli altri sono facoltativi. I valori di alcuni campi vengono compilati automaticamente al momento dell’acquisizione dei dati.
+Il [!DNL XDM ExperienceEvent] La classe stessa fornisce a uno schema diversi campi relativi a serie temporali. Due campi (`_id` e `timestamp`) sono **obbligatorio** per tutti gli schemi basati su questa classe, mentre gli altri sono facoltativi. I valori di alcuni campi vengono compilati automaticamente al momento dell’acquisizione dei dati.
 
-![Struttura di XDM ExperienceEvent visualizzata nell’interfaccia utente di Platform](../images/classes/experienceevent/structure.png)
+![La struttura di ExperienceEvent XDM così come viene visualizzata nell’interfaccia utente di Platform.](../images/classes/experienceevent/structure.png)
 
 | Proprietà | Descrizione |
 | --- | --- |
@@ -50,7 +50,7 @@ Mantenendo la marca temporale a livello di classe separata da altri valori di da
 
 Alcune interazioni nelle applicazioni di esperienza possono causare più eventi correlati che tecnicamente condividono la stessa marca temporale dell’evento e possono quindi essere rappresentati come un singolo record di evento. Ad esempio, se un cliente visualizza un prodotto sul sito web, questo può causare un record di evento con due potenziali `eventType` valori: un evento &quot;product view&quot; (`commerce.productViews`) o un evento generico di &quot;visualizzazione pagina&quot; (`web.webpagedetails.pageViews`). In questi casi, puoi utilizzare i campi calcolati per acquisire gli attributi più importanti quando più eventi vengono acquisiti in un singolo hit.
 
-[Preparazione dati di Adobe Experience Platform](../../data-prep/home.md) consente di mappare, trasformare e convalidare i dati da e verso XDM. Utilizzo del [funzioni di mappatura](../../data-prep/functions.md) fornito dal servizio, è possibile richiamare operatori logici per assegnare priorità, trasformare e/o consolidare dati da record con più eventi al momento dell’acquisizione in Experienci Platform. Nell’esempio precedente, puoi designare `eventType` come campo calcolato che dà priorità a una &quot;visualizzazione prodotto&quot; rispetto a una &quot;visualizzazione pagina&quot; ogni volta che si verificano entrambe.
+Utilizzare [Preparazione dati di Adobe Experience Platform](../../data-prep/home.md) mappare, trasformare e convalidare i dati da e verso XDM. Utilizzo del [funzioni di mappatura](../../data-prep/functions.md) fornito dal servizio, è possibile richiamare operatori logici per assegnare priorità, trasformare e/o consolidare dati da record con più eventi al momento dell’acquisizione in Experienci Platform. Nell’esempio precedente, puoi designare `eventType` come campo calcolato che dà priorità a una &quot;visualizzazione prodotto&quot; rispetto a una &quot;visualizzazione pagina&quot; ogni volta che si verificano entrambe.
 
 Se acquisisci manualmente i dati in Platform tramite l’interfaccia utente, consulta la guida su [campi calcolati](../../data-prep/ui/mapping.md#calculated-fields) per passaggi specifici su come creare campi calcolati.
 

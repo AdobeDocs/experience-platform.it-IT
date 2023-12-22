@@ -4,44 +4,44 @@ solution: Experience Platform
 title: Panoramica del sistema XDM
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2117'
 ht-degree: 3%
 
 ---
 
 # Panoramica del sistema XDM
 
-La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di Adobe Experience Platform. [!DNL Experience Data Model] (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
+La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
 
 XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni che consentono a qualsiasi applicazione di comunicare con i servizi di Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che può fornire informazioni in modo più veloce e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti ed esprimere gli attributi dei clienti a scopo di personalizzazione.
 
-XDM è il framework fondamentale che consente a Adobe Experience Cloud, basato su Experienci Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, nel momento esatto giusto. La metodologia su cui è basato l’Experience Platform, il sistema XDM, funziona [!DNL Experience Data Model] schemi per l’utilizzo da parte dei servizi Platform.
+XDM è il framework fondamentale che consente a Adobe Experience Cloud, basato su Experienci Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, nel momento esatto giusto. La metodologia su cui viene creato l’Experience Platform, XDM System, rende operativi gli schemi Experience Data Model per l’utilizzo da parte dei servizi di Platform.
 
 Scopri il ruolo del sistema XDM in Experienci Platform.
 
-## Schemi XDM
+## Schemi XDM {#xdm-schemas}
 
 Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i sistemi, diventa più semplice mantenere un significato e quindi ottenere valore dai dati.
 
 Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe base e da zero o più gruppi di campi schema.
 
-Per ulteriori informazioni sul modello di composizione dello schema, inclusi i principi di progettazione e le best practice, vedi [nozioni di base sulla composizione dello schema](schema/composition.md).
+Per ulteriori informazioni sul modello di composizione dello schema, inclusi i principi di progettazione e le best practice, vedere [nozioni di base sulla composizione dello schema](schema/composition.md).
 
-### Componenti XDM standard
+### Componenti XDM standard {#Standard-xdm-components}
 
 XDM fornisce una solida raccolta di gruppi di campi e tipi di dati standard, pensati per acquisire concetti e casi d’uso comuni a diversi settori. Experienci Platform consente di filtrare questi componenti per settore, consentendo di creare schemi in modo rapido e sicuro che supportano al meglio le specifiche esigenze aziendali.
 
 Durante la costruzione di schemi nell’interfaccia utente di Experienci Platform, i gruppi di campi elencati vengono visualizzati con una metrica di popolarità. Questa metrica è determinata dalla frequenza con cui altri utenti di Platform utilizzano il gruppo di campi nei loro schemi. Più alto è il numero, più popolare sarà il gruppo di campi. Per impostazione predefinita, i risultati vengono visualizzati da quelli più popolari a quelli meno popolari, per tenerti informato sulle tendenze di modellazione dei dati nel tuo settore.
 
-![Popolarità del gruppo di campi](./images/overview/popularity.png)
+![La colonna popolarità della [!UICONTROL Aggiungi gruppo di campi] .](./images/overview/popularity.png)
 
-### [!DNL Schema Library]
+### [!DNL Schema Library] {#schema-library}
 
 L’Experience Platform fornisce un’interfaccia utente e un’API RESTful da cui è possibile visualizzare e gestire tutte le risorse relative allo schema presenti nell’Experience Platform **[!DNL Schema Library]**. Il [!DNL Schema Library] contiene i componenti XDM standard resi disponibili da Adobe, nonché le risorse dei partner e dei fornitori Experienci Platform di cui utilizzi le applicazioni.
 
-Utilizzo di [!DNL Schema Registry API] o [!UICONTROL Schemi] nell’interfaccia utente di Platform, puoi anche creare e gestire nuovi schemi e risorse specifici per la tua organizzazione.
+Puoi anche creare e gestire nuovi schemi e risorse specifici per la tua organizzazione utilizzando [!DNL Schema Registry API]o [!UICONTROL Schemi] nell’interfaccia utente di Platform.
 
 Per ulteriori informazioni su come gestire e interagire con gli schemi in Platform, consulta la seguente documentazione:
 
@@ -53,7 +53,7 @@ Per ulteriori informazioni su come gestire e interagire con gli schemi in Platfo
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamenti dei dati"
->abstract="I dati da utilizzare in Experience Platform sono raggruppati secondo tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto. Gli schemi di serie temporali acquisiscono uno snapshot del sistema al momento dell’esecuzione di un’azione. Gli schemi ad hoc acquisiscono campi di spazi dei nomi da utilizzare solo per un singolo set di dati. Per ulteriori informazioni sui comportamenti dei dati in Platform, consulta la documentazione."
+>abstract="I dati da utilizzare in Experience Platform sono raggruppati secondo tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto. Gli schemi di serie temporali acquisiscono uno snapshot del sistema al momento dell’esecuzione di un’azione. Gli schemi ad hoc acquisiscono campi con namespace utilizzabili solo da un singolo set di dati. Per ulteriori informazioni sui comportamenti dei dati in Platform, consulta la documentazione."
 
 I dati da utilizzare in Experienci Platform sono raggruppati in tre tipi di comportamento:
 
@@ -71,7 +71,7 @@ Anche se è possibile definire classi personalizzate all&#39;interno del [!DNL S
 
 ### [!UICONTROL Profilo individuale XDM] {#xdm-individual-profile}
 
-[!UICONTROL Profilo individuale XDM] è una classe basata su record che costituisce una singola rappresentazione degli attributi sia dei soggetti identificati che parzialmente identificati. I profili altamente identificati possono essere utilizzati per comunicazioni personali o impegni mirati e possono contenere informazioni personali dettagliate come nome, genere, data di nascita, posizione e informazioni di contatto, inclusi numeri di telefono e indirizzi e-mail.
+[!UICONTROL Profilo individuale XDM] è una classe basata su record che costituisce una singola rappresentazione degli attributi sia dei soggetti identificati che parzialmente identificati. I profili altamente identificati possono essere utilizzati per comunicazioni personali o impegni mirati. I profili altamente identificati possono contenere informazioni personali dettagliate come nome, genere, data di nascita, posizione e informazioni di contatto, inclusi numeri di telefono e indirizzi e-mail.
 
 I profili meno identificati possono essere costituiti solo da segnali comportamentali anonimi come i cookie del browser. In questo caso, i dati di profilo sparsi vengono utilizzati per creare una base di informazioni in cui gli interessi e le preferenze del profilo anonimo vengono raccolti e memorizzati. Questi identificatori possono diventare più dettagliati nel tempo, man mano che il soggetto si iscrive a notifiche, abbonamenti, acquisti e così via. Questo aumento degli attributi del profilo può infine causare un soggetto identificato e consentire un livello più elevato di coinvolgimento mirato.
 
@@ -87,49 +87,53 @@ Gli eventi esperienza possono essere espliciti o impliciti. Gli eventi espliciti
 
 Anche se non tutti gli eventi sono facilmente categorizzati in tutte le origini dati, è estremamente utile armonizzare eventi simili in tipi simili, ove possibile per l’elaborazione.
 
-![Percorso clienti ExperienceEvent](images/overview/experience-event-journey.png)
+![Un’infografica del Percorso di clienti visualizzata con eventi di esperienza nel tempo.](images/overview/experience-event-journey.png)
 
 Consulta la [[!UICONTROL XDM ExperienceEvent] guida di riferimento](./classes/experienceevent.md) per ulteriori informazioni sulla struttura e sul caso d’uso dei campi forniti dalla classe.
 
-## Schemi XDM e servizi Experienci Platform
+## Schemi XDM e servizi Experienci Platform {#schemas-and-platform-services}
 
 L’Experience Platform è indipendente dallo schema, il che significa che qualsiasi schema conforme allo standard XDM viene reso disponibile ai servizi Platform. Di seguito sono descritti più dettagliatamente i modi in cui i diversi servizi Platform utilizzano gli schemi.
 
-### Catalog Service, acquisizione dati e Data Lake
+### Catalog Service, acquisizione dati e data lake {#ingestion-catalog-and-storage}
 
 Catalog Service è il sistema di registrazione per le risorse Experienci Platform e i relativi schemi. Il catalogo non contiene i file di dati o le directory effettive, ma contiene i metadati e le descrizioni di tali file e directory.
 
-I dati del catalogo vengono memorizzati nel Data Lake, un archivio di dati altamente granulare contenente tutti i dati gestiti da Platform, indipendentemente dall’origine o dal formato di file.
+I dati del catalogo vengono memorizzati nel data lake, un archivio di dati altamente granulare contenente tutti i dati gestiti da Platform, indipendentemente dall’origine o dal formato del file.
 
-Per iniziare a acquisire i dati in Experienci Platform, puoi utilizzare Catalog Service per creare un set di dati. Il set di dati fa riferimento a uno schema XDM che descrive la struttura dei dati da acquisire. Se un set di dati viene creato senza uno schema, Experienci Platform deriva uno &quot;schema osservato&quot; esaminando il tipo e il contenuto dei campi di dati acquisiti. I set di dati vengono quindi tracciati in Catalog e memorizzati nel Data Lake insieme agli schemi e agli schemi osservati su cui si basano.
+Per iniziare a acquisire i dati in Experienci Platform, puoi utilizzare Catalog Service per creare un set di dati. Il set di dati fa riferimento a uno schema XDM che descrive la struttura dei dati da acquisire. Se un set di dati viene creato senza uno schema, Experienci Platform deriva uno &quot;schema osservato&quot; esaminando il tipo e il contenuto dei campi di dati acquisiti. I set di dati vengono quindi tracciati in Catalog Service e memorizzati nel data lake insieme agli schemi e agli schemi osservati su cui si basano.
 
-Per ulteriori informazioni sul catalogo, consulta [Panoramica di Catalog Service](../catalog/home.md). Per ulteriori informazioni sull’acquisizione dei dati di Adobe Experience Platform, consulta [Panoramica sull’acquisizione dei dati](../ingestion/home.md).
+Consulta la [Panoramica di Catalog Service](../catalog/home.md) per ulteriori informazioni. Consulta la [Panoramica sull’acquisizione dei dati](../ingestion/home.md) per ulteriori informazioni su Acquisizione dati di Adobe Experience Platform.
 
-### Servizio query
+### Servizio query {#query-service}
 
-Adobe Experience Platform Query Service consente di utilizzare SQL standard per eseguire query sui dati di Experience Platform e supportare molti casi d’uso diversi.
+È possibile utilizzare SQL standard per eseguire query sui dati di Experience Platform per supportare molti casi d’uso diversi con Adobe Experience Platform Query Service.
 
-Dopo aver composto uno schema e creato un set di dati che fa riferimento a tale schema, i dati vengono quindi acquisiti e memorizzati nel Data Lake. Utilizzando Query Service, puoi unire qualsiasi set di dati nel Data Lake e acquisire i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, nell’apprendimento automatico o per l’inserimento in Real-Time Customer Profile.
+Dopo aver composto uno schema e creato un set di dati che fa riferimento a tale schema, i dati vengono quindi acquisiti e memorizzati nel data lake. Puoi quindi utilizzare Query Service per unire qualsiasi set di dati nel data lake e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting, nell’apprendimento automatico o nell’acquisizione in Real-Time Customer Profile.
 
 Consulta la sezione [Panoramica di Query Service](../query-service/home.md) per ulteriori informazioni sul servizio.
 
-### Profilo cliente in tempo reale
+### Profilo cliente in tempo reale {#real-time-customer-profile}
 
-Real-Time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché resoconti con marca temporale utilizzabili di eventi che hanno coinvolto l’individuo che si sono verificati in qualsiasi sistema utilizzato con Experienci Platform.
+Real-Time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi e include account con marca temporale utilizzabile di eventi che coinvolgono l’oggetto del profilo. Questi eventi possono essersi verificati in uno qualsiasi dei sistemi utilizzati con Experienci Platform.
 
-Real-Time Customer Profile utilizza dati in formato schema basati su [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] e risponde alle query basate su tali dati. Il profilo non supporta l’utilizzo di schemi basati su altre classi.
+Real-Time Customer Profile utilizza dati in formato schema basati su [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] e risponde alle query basate su tali dati.
 
-Il sistema gestisce un’istanza di ciascun profilo cliente, unendo i dati in modo da formare un’unica fonte di verità per l’individuo. Questi dati unificati vengono rappresentati utilizzando quello che è noto come &quot;schema di unione&quot; (a volte indicato come &quot;visualizzazione unione&quot;). Uno schema di unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un singolo schema.  Durante la composizione di uno schema tramite l’interfaccia utente o l’API, puoi abilitare lo schema per l’utilizzo con Real-Time Customer Profile e assegnare i tag necessari per l’inclusione nell’unione. Lo schema con tag farà quindi parte della definizione dello schema da inviare al profilo.
+>[!NOTE]
+>
+>Il profilo cliente in tempo reale esegue **non** supportare schemi basati su classi diverse da [!UICONTROL XDM ExperienceEvent] classe.
 
-As [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] I dati vengono acquisiti nel Data Lake, Real-Time Customer Profile acquisisce tutti i dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più solidi saranno i singoli profili.
+Il sistema gestisce un’istanza di ciascun profilo cliente, unendo i dati in modo da formare un’unica fonte di verità per l’individuo. Questi dati unificati vengono rappresentati utilizzando quello che è noto come &quot;schema di unione&quot; (a volte indicato come &quot;visualizzazione unione&quot;). Uno schema di unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un singolo schema. Durante la composizione di uno schema tramite l’interfaccia utente o l’API, puoi abilitare lo schema per l’utilizzo con Real-Time Customer Profile e assegnare i tag necessari per l’inclusione nell’unione. Lo schema con tag farà quindi parte della definizione dello schema da inviare al profilo.
+
+As [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] I dati vengono acquisiti nel data lake. Real-Time Customer Profile acquisisce tutti i dati abilitati per il relativo utilizzo. Più interazioni e dettagli vengono acquisiti, più solidi saranno i singoli profili.
 
 [!UICONTROL Profilo individuale XDM] I dati di consentono di informare e abilitare le azioni su qualsiasi canale o integrazione di prodotto Adobe. Se associati a una ricca cronologia di dati comportamentali e di interazione, questi dati possono essere utilizzati per potenziare l’apprendimento automatico. L’API del profilo cliente in tempo reale può essere utilizzata anche per arricchire le funzionalità di soluzioni di terze parti, CRM e soluzioni proprietarie.
 
 Consulta la [Panoramica del profilo cliente in tempo reale](../profile/home.md) per ulteriori informazioni.
 
-### Data Science Workspace
+### Data Science Workspace {#data-science-workspace}
 
-Adobe Experience Platform Data Science Workspace utilizza l’apprendimento automatico e l’intelligenza artificiale per acquisire informazioni approfondite dai dati memorizzati in Experienci Platform. Data Science Workspace consente ai data scientist di creare ricette basate su [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] i dati sui clienti e le loro attività, facilitando previsioni come la propensione all’acquisto e le offerte consigliate che l’individuo probabilmente apprezzerà e utilizzerà.
+Adobe Experience Platform Data Science Workspace utilizza l’apprendimento automatico e l’intelligenza artificiale per acquisire informazioni approfondite dai dati memorizzati in Experienci Platform. Data Science Workspace consente ai data scientist di creare ricette basate su [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] dati sui clienti e sulle loro attività. Queste ricette facilitano le previsioni come la propensione all&#39;acquisto e le offerte consigliate che l&#39;individuo è in grado di apprezzare e utilizzare.
 
 Con Data Science Workspace, i data scientist possono creare facilmente API di servizi intelligenti basate sull’apprendimento automatico. Questi servizi funzionano con altre soluzioni di Adobe, tra cui Adobe Target e Adobe Analytics Cloud, per aiutarti ad automatizzare esperienze digitali personalizzate e mirate.
 

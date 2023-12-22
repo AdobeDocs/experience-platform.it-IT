@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;sql spark;sql spark;spark;sql spark;funzioni sql spark;function;
 solution: Experience Platform
 title: Funzioni SQL Spark in Query Service
-description: Questa documentazione contiene informazioni sulle funzioni SQL Spark che estendono le funzionalità SQL.
+description: Scopri le funzioni SQL di Spark supportate che estendono le funzionalità SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
 workflow-type: tm+mt
-source-wordcount: '3866'
+source-wordcount: '1903'
 ht-degree: 0%
 
 ---
 
 # [!DNL Spark] Funzioni SQL
 
-Adobe Experience Platform Query Service fornisce diverse funzioni Spark SQL integrate per estendere le funzionalità SQL. Questo documento elenca le funzioni SQL di Spark supportate da Query Service.
+È possibile utilizzare diverse funzioni SQL Spark incorporate per estendere le funzionalità SQL con Adobe Experience Platform Query Service. Questo documento elenca le funzioni SQL di Spark supportate da Query Service.
 
-Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utilizzo e alcuni esempi, consulta la [Documentazione della funzione SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
+Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l&#39;utilizzo e alcuni esempi, leggere [Documentazione della funzione SQL Spark](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) o [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Non logico |
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Minore di |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_9) | Minore o uguale a |
-| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Uguale a |
+| [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_12) | Uguale |
 | [`>`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Maggiore di |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Maggiore o uguale a |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | OR esclusivo bit per bit |
@@ -129,7 +129,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Restituisce il giorno del mese |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Restituisce il giorno della settimana (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Restituisce il giorno dell’anno |
-| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Restituisce la data in ora Unix |
+| [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Restituisce la data in ora UNIX® |
 | [`from_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#from_utc_timestamp) | Restituisce la data in ora UTC |
 | [`hour`](https://spark.apache.org/docs/latest/api/sql/index.html#hour) | Restituisce l’ora dell’input |
 | [`last_day`](https://spark.apache.org/docs/latest/api/sql/index.html#last_day) | Restituisce l’ultimo giorno del mese a cui appartiene la data |
@@ -141,10 +141,10 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`second`](https://spark.apache.org/docs/latest/api/sql/index.html#second) | Restituisce il secondo della stringa |
 | [`to_date`](https://spark.apache.org/docs/latest/api/sql/index.html#to_date) | Converte la stringa in una data. **Nota:** La stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
 | [`to_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_timestamp) | Converte la stringa in una marca temporale. **Nota:** La stringa **deve** essere nel formato `yyyy-mm-ddTHH24:MM:SS`. |
-| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte la stringa in una marca temporale Unix |
+| [`to_unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_unix_timestamp) | Converte la stringa in una marca temporale UNIX® |
 | [`to_utc_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#to_utc_timestamp) | Converte la stringa in una marca temporale UTC |
 | [`trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#trunc) | Tronca la data |
-| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Restituisce il timestamp Unix |
+| [`unix_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#unix_timestamp) | Restituisce la marca temporale UNIX® |
 | [`weekday`](https://spark.apache.org/docs/latest/api/sql/index.html#weekday) | Giorno della settimana (0-6) |
 | [`weekofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#weekofyear) | Restituisce la settimana dell’anno per una data specificata |
 | [`year`](https://spark.apache.org/docs/latest/api/sql/index.html#year) | Restituisce l’anno della stringa |
@@ -175,7 +175,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Appiattisce un array di array |
 | [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separa la matrice di strutture in una tabella, escludendo null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Separa la matrice di strutture in una tabella, incluso null |
-| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separa gli elementi dell’array in più righe con posizioni, escluso il valore null |
+| [`posexplode`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplode) | Separare gli elementi di un array in più righe con posizioni, escluso il valore null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Inverti elementi dell’array |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Restituisce una permutazione casuale dell’array |
 | [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Sottoimposta un array |
@@ -217,7 +217,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`from_json`](https://spark.apache.org/docs/latest/api/sql/index.html#from_json), [`get_json_object`](https://spark.apache.org/docs/latest/api/sql/index.html#get_json_object) | Ottieni dati da JSON |
 | [`hash`](https://spark.apache.org/docs/latest/api/sql/index.html#hash) | Restituisce il valore hash |
 | [`hex`](https://spark.apache.org/docs/latest/api/sql/index.html#hex) | Convertire l&#39;argomento in un valore esadecimale |
-| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Cambia la stringa in modo che il titolo sia maiuscolo |
+| [`initcap`](https://spark.apache.org/docs/latest/api/sql/index.html#initcap) | Modifica la stringa in modo che sia maiuscola/minuscola |
 | [`lcase`](https://spark.apache.org/docs/latest/api/sql/index.html#lcase), [`lower`](https://spark.apache.org/docs/latest/api/sql/index.html#lower) | Cambia la stringa in minuscolo. |
 | [`lpad`](https://spark.apache.org/docs/latest/api/sql/index.html#lpad) | Aggiunge il lato sinistro di una stringa. |
 | [`map`](https://spark.apache.org/docs/latest/api/sql/index.html#map) | Creare una mappa |
@@ -305,7 +305,7 @@ Per informazioni più dettagliate sulle funzioni, tra cui la sintassi, l’utili
 | [`current_date`](https://spark.apache.org/docs/latest/api/sql/index.html#current_date) | Restituisce la data corrente |
 | [`current_timestamp`](https://spark.apache.org/docs/latest/api/sql/index.html#current_timestamp), [`now`](https://spark.apache.org/docs/latest/api/sql/index.html#now) | Restituisce il timestamp corrente |
 
-### Funzioni ordine superiore {#higher-order}
+### Funzioni di ordine superiore {#higher-order}
 
 | Funzione | Descrizione |
 | -------- | ----------- |
