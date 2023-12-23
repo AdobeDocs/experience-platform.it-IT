@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Privacy Service
 description: Questo documento fornisce le risposte alle domande frequenti su Privacy Service, nonché informazioni sugli errori più comuni riscontrati nell’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ Per ulteriori dettagli, consulta la sezione su [ricerca di un processo in base a
 
 Il giorno [!DNL Privacy Service] nell&#39;interfaccia utente, trova il processo che desideri scaricare da **Richieste di lavoro** widget. Selezionare l&#39;ID del job per aprire la pagina Dettagli job. Da qui, seleziona **Scarica** nell’angolo in alto a destra per scaricare il file ZIP. Consulta la [Guida utente di Privacy Service](ui/user-guide.md) per passaggi più dettagliati.
 
-## Messaggi di errore comuni
+## Messaggi di errore comuni {#common-error-messages}
 
 La tabella seguente illustra alcuni errori comuni in [!DNL Privacy Service], con descrizioni per aiutarli a risolvere i rispettivi problemi.
 
@@ -111,3 +111,4 @@ La tabella seguente illustra alcuni errori comuni in [!DNL Privacy Service], con
 | Sono necessari l’accesso e le autorizzazioni. | Per utilizzare sono necessari l’accesso e le autorizzazioni [!DNL Privacy Service]. Contatta l’amministratore per ottenere l’accesso. |
 | Si è verificato un problema durante il caricamento e l’archiviazione dei dati di accesso. | Quando si verifica questo errore, ricarica i dati di accesso e riprova. |
 | Il carico di lavoro è stato superato per il limite di frequenza documenti corrente. | In questo caso, riduci il tasso di invio e riprova. |
+| Troppe richieste<br>(errori HTTP 429) | Se i modelli di invio superano il limite monitorato di processi consentiti per l’interessato, verrà visualizzato un errore HTTP 429 in risposta al traffico continuo dall’organizzazione. Privacy Service è destinato al trattamento delle richieste di privacy delle persone interessate. Non deve essere utilizzato per la pulizia dei dati. Se ricevi errori HTTP 429, i limiti di limitazione e di richiesta vengono implementati per proteggere gli Adobi da abusi che potrebbero mettere a rischio il lavoro di conformità legittimo.<br>Metodi alternativi per ridurre al minimo i dati sono forniti da [impostazione delle pianificazioni di scadenza dei set di dati](../hygiene/ui/dataset-expiration.md) e utilizzando [caratteristica di eliminazione record](../hygiene/ui/record-delete.md). Per ulteriori informazioni su come applicare queste funzionalità, consulta la relativa documentazione. |
