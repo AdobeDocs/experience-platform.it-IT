@@ -2,9 +2,9 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 7%
 
 ---
@@ -22,8 +22,6 @@ Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe
 * [[!DNL Privacy Service]](../privacy-service/home.md): gli spazi dei nomi di identità vengono utilizzati nelle richieste di conformità per le normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
 ## Informazioni sugli spazi dei nomi delle identità
-
-![Illustrazione del flusso di lavoro dei dati con Identity Service.](images/identity-service-stitching.png)
 
 Un’identità completa include due componenti: **valore identità** e un **spazio dei nomi delle identità**. Ad esempio, se il valore di un’identità è `scott@acme.com`, quindi uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono, e `3126ABC` come ID CRM. Essenzialmente, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano dati record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo; il valore di identità e lo spazio dei nomi devono corrispondere.
 

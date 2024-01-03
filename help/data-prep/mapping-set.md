@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sui set di mappatura
 description: Scopri come utilizzare i set di mappatura con la preparazione dati di Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -74,8 +74,8 @@ Il seguente codice JSON è un esempio di un set di mappatura tipico:
 | `outputSchema` | Lo schema XDM a cui i dati di input verranno trasformati per essere conformi. |
 | `mappings` | Matrice di mappature campo-campo dallo schema di origine allo schema di destinazione. |
 | `sourceType` | Per ogni mappatura elencata, i relativi `sourceType` attributo indica il tipo di origine da mappare. Può essere uno di `ATTRIBUTE`, `STATIC`, o `EXPRESSION`: <ul><li> `ATTRIBUTE` viene utilizzato per qualsiasi valore presente nel percorso di origine. </li><li>`STATIC` viene utilizzato per i valori inseriti nel percorso di destinazione. Questo valore rimane costante e non è influenzato dallo schema di origine.</li><li> `EXPRESSION` viene utilizzato per un’espressione che verrà risolta durante il runtime. Un elenco delle espressioni disponibili è disponibile nella sezione [guida alle funzioni di mappatura](./functions.md).</li> </ul> |
-| `source` | Per ogni mappatura elencata, `source` attributo indica il campo che si desidera mappare. Ulteriori informazioni su come configurare l’origine sono disponibili nella sezione [sezione delle sorgenti](#sources). |
-| `destination` | Per ogni mappatura elencata, `destination` attributo indica il campo, o il percorso del campo, in cui il valore estratto dal campo `source` il campo verrà inserito. Ulteriori informazioni su come configurare le destinazioni sono disponibili nella sezione [sezione di destinazione](#destination). |
+| `source` | Per ogni mappatura elencata, `source` attributo indica il campo che si desidera mappare. Ulteriori informazioni su come configurare l’origine sono disponibili nella sezione [panoramica sulle origini](../sources/home.md). |
+| `destination` | Per ogni mappatura elencata, `destination` attributo indica il campo, o il percorso del campo, in cui il valore estratto dal campo `source` il campo verrà inserito. Ulteriori informazioni su come configurare le destinazioni sono disponibili nella sezione [panoramica sulla destinazione](../destinations/home.md). |
 | `mappings.name` | (*Facoltativo* a) Nome per la mappatura. |
 | `mappings.description` | (*Facoltativo*) Descrizione della mappatura. |
 
