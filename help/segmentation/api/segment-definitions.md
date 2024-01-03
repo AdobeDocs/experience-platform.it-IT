@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Endpoint API per le definizioni dei segmenti
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-**Parametri query**
+**Parametri di query**
 
 | Parametro | Descrizione | Esempio |
 | --------- | ----------- | ------- |
@@ -153,6 +153,10 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 200 con un elen
 
 Per creare una nuova definizione di segmento, devi effettuare una richiesta POST al `/segment/definitions` endpoint.
 
+>[!IMPORTANT]
+>
+>Definizioni dei segmenti create tramite l’API **non può** possono essere modificati utilizzando Segment Builder.
+
 **Formato API**
 
 ```http
@@ -199,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `name` | Un nome univoco in base al quale fare riferimento alla definizione del segmento. |
-| `description` | (Facoltativo.) Una descrizione della definizione del segmento che stai creando. |
-| `evaluationInfo` | (Facoltativo.) Il tipo di definizione del segmento che stai creando. Se desideri creare un segmento batch, imposta `evaluationInfo.batch.enabled` per essere vero. Se desideri creare un segmento di streaming, imposta `evaluationInfo.continuous.enabled` per essere vero. Se desiderate creare un segmento di spigolo, impostate `evaluationInfo.synchronous.enabled` per essere vero. Se viene lasciata vuota, la definizione del segmento verrà creata come **batch** segmento. |
+| `description` | (Facoltativo) Una descrizione della definizione del segmento che stai creando. |
+| `evaluationInfo` | (Facoltativo) Il tipo di definizione del segmento che stai creando. Se desideri creare un segmento batch, imposta `evaluationInfo.batch.enabled` per essere vero. Se desideri creare un segmento di streaming, imposta `evaluationInfo.continuous.enabled` per essere vero. Se desiderate creare un segmento di spigolo, impostate `evaluationInfo.synchronous.enabled` per essere vero. Se viene lasciata vuota, la definizione del segmento verrà creata come **batch** segmento. |
 | `schema` | Lo schema associato alle entità nel segmento. È costituito da un `id` o `name` campo. |
 | `expression` | Un’entità che contiene informazioni sui campi relative alla definizione del segmento. |
 | `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
