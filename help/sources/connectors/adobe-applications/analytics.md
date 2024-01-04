@@ -2,7 +2,7 @@
 title: Connettore di origine di Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
+source-git-commit: 5ec22fcf0f4c48efc28a3abd343bb00a19756281
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 2%
@@ -51,7 +51,7 @@ La latenza prevista per i dati di Analytics su Platform è descritta nella tabel
 | -------------- | ---------------- |
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **non** abilitato) | &lt; 2 minuti |
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **è** abilitato) | fino a 30 minuti |
-| Nuovi dati in Data Lake | &lt; 90 minuti |
+| Nuovi dati in Data Lake | &lt; 2,25 ore |
 | Backfill di meno di 10 miliardi di eventi | &lt; 4 settimane |
 
 Il valore predefinito della retrocompilazione di Analytics per le sandbox di produzione è 13 mesi. Per i dati di Analytics nelle sandbox non di produzione, la retrocompilazione è impostata su tre mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza prevista.
