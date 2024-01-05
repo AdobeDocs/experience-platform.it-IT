@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -69,12 +69,16 @@ Per ulteriori informazioni, leggere il documento [algoritmo di ottimizzazione id
 >
 >Le priorità dello spazio dei nomi non sono attualmente disponibili per Alfa.
 
-È possibile utilizzare la priorità dello spazio dei nomi per definire quali spazi dei nomi sono più importanti degli altri. La gerarchia impostata per gli spazi dei nomi viene quindi utilizzata per definire le identità primarie e archiviare i frammenti di profilo. Se sono configurate le impostazioni di priorità, l’impostazione di identità primaria su Web SDK non verrà più utilizzata per determinare quali frammenti di profilo sono memorizzati.
+È possibile utilizzare la priorità dello spazio dei nomi per definire quali spazi dei nomi sono più importanti degli altri. La priorità impostata per gli spazi dei nomi viene quindi utilizzata per definire le identità primarie, ovvero l’identità che memorizza i frammenti di profilo (dati di attributi ed eventi) in Real-Time Customer Profile. Se sono configurate le impostazioni di priorità, l’impostazione di identità primaria su Web SDK non verrà più utilizzata per determinare quali frammenti di profilo sono memorizzati.
 
 * I limiti e la priorità sono configurazioni indipendenti e **non** influenzarsi a vicenda:
    * Limiti è una configurazione del grafico delle identità in Identity Service.
    * Priorità è una configurazione di frammento di profilo in Real-Time Customer Profile.
    * Priorità **non** influenza i guardrail di sistema del grafo delle identità.
+* **La priorità dello spazio dei nomi è un valore numerico** assegnato a uno spazio dei nomi che ne indica l’importanza relativa. Si tratta di una proprietà di uno spazio dei nomi.
+* **L’identità primaria è l’identità in cui è memorizzato un frammento di profilo in base a**. Un frammento di profilo è un record di dati che memorizza informazioni su un determinato utente: attributi (di solito acquisiti tramite record di gestione delle relazioni con i clienti) o eventi (di solito acquisiti da eventi di esperienza o dati online).
+* La priorità dello spazio dei nomi determina l’identità primaria degli eventi esperienza.
+   * Per i record di profilo, puoi utilizzare l’area di lavoro schemi nell’interfaccia utente di Experienci Platform per definire i campi di identità, inclusa l’identità primaria. Leggi la guida su [definizione dei campi di identità nell’interfaccia utente](../../xdm/ui/fields/identity.md) per ulteriori informazioni.
 
 >[!BEGINSHADEBOX]
 
