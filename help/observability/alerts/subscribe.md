@@ -4,10 +4,10 @@ title: Iscriviti alle notifiche degli eventi di Adobe I/O
 description: Questo documento descrive come abbonarsi alle notifiche di eventi Adobe I/O per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme ai collegamenti a ulteriore documentazione su come interpretare i dati evento restituiti per ogni evento applicabile [!DNL Platform] servizio.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 49f4cf07d2f002e45e27dffac4fd0049446bc68f
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 3%
+source-wordcount: '769'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 [!DNL Observability Insights] ti consente di abbonarti alle notifiche degli eventi di Adobe I/O relative alle attività di Adobe Experience Platform. Questi eventi vengono inviati a un webhook configurato per facilitare l’automazione efficiente del monitoraggio delle attività.
 
-Questo documento descrive come abbonarsi alle notifiche di eventi Adobe I/O per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme ai collegamenti a ulteriore documentazione su come interpretare i dati evento restituiti per ogni evento applicabile [!DNL Platform] servizio.
+In questo documento vengono descritti i passaggi necessari per iscriversi alle notifiche degli eventi Adobe I/O per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme ai collegamenti a ulteriore documentazione su come interpretare i dati dell’evento restituiti per ogni evento applicabile [!DNL Platform] servizio.
 
 ## Introduzione
 
@@ -39,13 +39,17 @@ Vai a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e acce
 
 ## Iscriviti agli eventi
 
+>[NOTA!]
+>
+>La notifica di acquisizione dati verrà rimossa dalla sottoscrizione I/O Adobe. Al loro posto, utilizza **Informazioni sull&#39;esecuzione del flusso origini** Evento di I/O.
+
 Dopo aver creato un nuovo progetto, passa alla schermata di panoramica del progetto. Da qui, seleziona **[!UICONTROL Aggiungi evento]**.
 
 ![](../images/notifications/add-event-button.png)
 
 Viene visualizzata una finestra di dialogo che consente di aggiungere un provider di eventi al progetto:
 
-* Se ti abboni agli avvisi di Experience Platform, seleziona **[!UICONTROL Notifiche della piattaforma]**
+* Se ti abboni agli avvisi di Experienci Platform, seleziona **[!UICONTROL Notifiche della piattaforma]**
 * Se ti iscrivi a Adobe Experience Platform [!DNL Privacy Service] notifiche, seleziona **[!UICONTROL Eventi Privacy Service]**
 
 Dopo aver scelto un provider di eventi, seleziona **[!UICONTROL Successivo]**.
@@ -61,7 +65,6 @@ Nella schermata successiva viene visualizzato un elenco dei tipi di evento a cui
 >* [Notifiche della piattaforma](./rules.md)
 >* [Notifiche Privacy Service](../../privacy-service/privacy-events.md)
 
-
 ![](../images/notifications/choose-event-subscriptions.png)
 
 Nella schermata successiva viene richiesto di creare un token web JSON (JWT). Puoi generare automaticamente una coppia di chiavi o caricare la tua chiave pubblica generata nel terminale.
@@ -72,7 +75,7 @@ Ai fini di questa esercitazione, viene seguita la prima opzione. Seleziona la ca
 
 Quando la coppia di chiavi viene generata, viene scaricata automaticamente dal browser. Devi archiviare questo file in modo autonomo poiché non viene mantenuto in Developer Console.
 
-La schermata successiva consente di rivedere i dettagli della coppia di chiavi appena generata. Seleziona **[!UICONTROL Next]** (Avanti) per continuare.
+La schermata successiva consente di rivedere i dettagli della coppia di chiavi appena generata. Seleziona **[!UICONTROL Avanti]** per continuare.
 
 ![](../images/notifications/keypair-generated.png)
 
