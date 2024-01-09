@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Autorizzazioni per la gestione dei ruoli di controllo dell'accesso basato su attributi
 description: Questo documento fornisce informazioni sulla configurazione delle autorizzazioni per un ruolo tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 6%
+source-wordcount: '986'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 Autorizzazioni è l’area di Experience Cloud in cui gli amministratori possono definire i ruoli utente e i criteri di accesso per gestire le autorizzazioni di accesso per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Mediante le Autorizzazioni di , , puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
+Tramite le Autorizzazioni, puoi creare e gestire i ruoli, nonché assegnare le autorizzazioni per le risorse desiderate per tali ruoli. Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Immediatamente dopo [creazione di un nuovo ruolo](#create-a-new-role), si ritorna al **[!UICONTROL Ruoli]** scheda. Se si stanno modificando le autorizzazioni per un ruolo esistente, selezionare il ruolo dall&#39; **[!UICONTROL Ruoli]** scheda. In alternativa, utilizza l’opzione di filtro per filtrare i risultati e trovare un ruolo.
 
@@ -101,6 +101,10 @@ Per rimuovere un utente da un ruolo, selezionare **X** accanto al nome dell’ut
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
+Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+
 ## Gestione delle credenziali API per il ruolo {#manage-api-credentials-for-role}
 
 Seleziona la **[!UICONTROL Credenziali API]** per aprire la pagina ruoli: Credenziali API, quindi seleziona **[!UICONTROL Aggiungi credenziali API]** per assegnare le credenziali API al ruolo.
@@ -153,7 +157,7 @@ Verrai reindirizzato al **[!UICONTROL Gruppi di utenti]** scheda.
 
 ## Aggiunta di utenti a Experience Platform tramite un profilo di prodotto
 
-Per aggiungere un utente a un profilo di prodotto, accedi a Admin Console e seleziona **[!UICONTROL Aggiungi utenti]**
+Per aggiungere un utente a un profilo di prodotto, accedi all’Admin Console e seleziona **[!UICONTROL Aggiungi utenti]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

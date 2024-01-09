@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Creazione di un ruolo tramite il controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sulla gestione dei ruoli tramite l’interfaccia Autorizzazioni in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '531'
 ht-degree: 7%
 
 ---
@@ -47,6 +47,10 @@ Il nuovo ruolo è stato creato e l&#39;utente viene reindirizzato al **[!UICONTR
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
 Consulta le sezioni relative a [gestione delle autorizzazioni per un ruolo](#manage-permissions-for-a-role) per ulteriori dettagli su come gestire le autorizzazioni dei ruoli dopo la loro creazione.
+
+Il video seguente ha lo scopo di aiutare a comprendere come creare un nuovo ruolo e come gestire gli utenti per tale ruolo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Duplicare un ruolo
 

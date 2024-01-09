@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire gli utenti per un profilo di prodotto
 description: Questo documento illustra come gestire gli utenti per un profilo di prodotto nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '228'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Per assegnare o rimuovere utenti da un profilo di prodotto, apri la pagina dei dettagli del profilo e passa a **[!UICONTROL Utenti]** scheda. Da qui, seleziona **[!UICONTROL Aggiungi utente]**.
 
-![add-user](../images/add-user.png)
+![La pagina dei dettagli del profilo di prodotto mostra gli utenti elencati nella [!UICONTROL Utenti] scheda.](../images/add-user.png)
 
 Il **[!UICONTROL Aggiungi utente]** viene visualizzata. Utilizzando il campo di ricerca, puoi cercare gli utenti da aggiungere per nome o per e-mail. Durante la digitazione, gli utenti corrispondenti verranno visualizzati in una finestra di completamento automatico sotto la casella di testo.
 
@@ -25,7 +25,11 @@ Il **[!UICONTROL Aggiungi utente]** viene visualizzata. Utilizzando il campo di 
 
 Dopo aver selezionato un utente, seleziona **[!UICONTROL Salva]** per aggiungerli al profilo di prodotto.
 
-![save-user](../images/save-user.png)
+![Aggiungi gli utenti alla pagina del profilo di prodotto, evidenziandone i dettagli.](../images/save-user.png)
+
+Il video seguente ha lo scopo di illustrare come gestire gli amministratori per un profilo di prodotto.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## Passaggi successivi
 
