@@ -1,13 +1,13 @@
 ---
 title: Installare Adobe Experience Platform Web SDK
 description: Scopri come installare Experienci Platform Web SDK.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
-
 
 # Installare Web SDK {#installing-the-sdk}
 
@@ -68,6 +68,10 @@ In questo esempio, la funzione globale viene rinominata `mycustomname`, invece d
 Questo codice di base, oltre a creare una funzione globale, carica anche il codice aggiuntivo contenuto in un file esterno \(`alloy.js`\) ospitato su un server. Per impostazione predefinita, questo codice viene caricato in modo asincrono per consentire alla pagina Web di ottenere le massime prestazioni possibili. Questa è l’implementazione consigliata.
 
 ### Supporto di Internet Explorer {#support-internet-explore}
+
+>[!IMPORTANT]
+>
+>Alla fine di aprile 2024, Adobe Experience Platform Web SDK rimuoverà il supporto per tutte le versioni di Internet Explorer.
 
 Questo SDK utilizza le promesse, un metodo per comunicare il completamento di attività asincrone. Il [Promessa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) L&#39;implementazione utilizzata dall&#39;SDK è supportata in modalità nativa da tutti i browser di destinazione eccetto [!DNL Internet Explorer]. Per utilizzare l’SDK su [!DNL Internet Explorer], devi avere `window.Promise` [poleriempito](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
