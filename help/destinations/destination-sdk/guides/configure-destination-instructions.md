@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi per configurare una destinazione di streaming con Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione di streaming
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -264,6 +264,10 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
 ## Passaggio 5: configurare l’autenticazione {#set-up-authentication}
 
 A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione precedente, puoi impostare l&#39;autenticazione per la destinazione utilizzando `/destination` o `/credentials` endpoint.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` è la più comune delle due regole di autenticazione ed è quella da utilizzare se richiedi agli utenti di fornire una forma di autenticazione alla destinazione prima di poter impostare una connessione ed esportare dati.
 
 Se hai selezionato `"authenticationRule": "CUSTOMER_AUTHENTICATION"` nella configurazione di destinazione e la destinazione supporta il metodo di autenticazione OAuth 2, leggi [Autenticazione OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 

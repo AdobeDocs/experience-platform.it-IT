@@ -2,9 +2,9 @@
 description: Questa pagina elenca e descrive i passaggi necessari per configurare una destinazione basata su file utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione basata su file
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Prima di procedere con i passaggi illustrati di seguito, leggere la [Destination
 
 Inizia per [creazione di un server e configurazione di file](../authoring-api/destination-server/create-destination-server.md) utilizzando `/destinations-server` endpoint.
 
-Di seguito è riportato un esempio di configurazione per un [!DNL Amazon S3] destinazione. Per configurare altri tipi di destinazioni basate su file, vedi le corrispondenti [configurazioni server](../functionality/destination-server/server-specs.md).
+Di seguito è riportato un esempio di configurazione per un [!DNL Amazon S3] destinazione. Per ulteriori dettagli sui campi utilizzati nella configurazione e per configurare altri tipi di destinazioni basate su file, vedi le corrispondenti [configurazioni server](../functionality/destination-server/server-specs.md).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 Di seguito è riportato un esempio di configurazione di destinazione, creata utilizzando `/destinations` Endpoint API
 
-Per connettere il server e la configurazione file nel passaggio 1 a questa configurazione di destinazione, aggiungi l’ID istanza del server e la configurazione modello come `destinationServerId` qui.
+Per connettere il server e la configurazione di file dal passaggio 1 a questa configurazione di destinazione, aggiungere `instance ID` della configurazione del server e dei file come `destinationServerId` qui.
 
 **Formato API**
 
@@ -124,7 +124,7 @@ Per connettere il server e la configurazione file nel passaggio 1 a questa confi
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ Per alcune destinazioni, Destination SDK richiede la configurazione di una confi
 
 Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla configurazione di destinazione creata nel passaggio 2. Aggiungi l&#39;ID istanza della configurazione dei metadati del pubblico alla configurazione di destinazione come `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ Se utilizzi una configurazione di metadati di pubblico, devi collegarla alla con
 ## Passaggio 4: configurare l’autenticazione {#set-up-authentication}
 
 A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o `"authenticationRule": "PLATFORM_AUTHENTICATION"` nella configurazione di destinazione precedente, puoi impostare l&#39;autenticazione per la destinazione utilizzando `/destination` o `/credentials` endpoint.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` è la più comune delle due regole di autenticazione ed è quella da utilizzare se richiedi agli utenti di fornire una forma di autenticazione alla destinazione prima di poter impostare una connessione ed esportare dati.
 
 * Se hai selezionato `"authenticationRule": "CUSTOMER_AUTHENTICATION"` nella configurazione di destinazione, consulta le sezioni seguenti per i tipi di autenticazione supportati da Destination SDK per le destinazioni basate su file:
 
@@ -384,10 +418,10 @@ A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
 
 Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare [strumento di test di destinazione](../testing-api/batch-destinations/file-based-destination-testing-overview.md) per testare l’integrazione tra Adobe Experience Platform e la tua destinazione.
 
-Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experienci Platform per creare i segmenti, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experienci Platform, consulta le due risorse seguenti:
+Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experienci Platform per creare tipi di pubblico, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experienci Platform, consulta le due risorse seguenti:
 
-* [Creare una pagina di documentazione del pubblico](/help/segmentation/ui/overview.md#create-segment)
-* [Procedura dettagliata per la creazione di un video sul pubblico](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/overview.md#create-segment)
+* [Creazione di un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Passaggio 6: pubblicare la destinazione {#publish-destination}
 
