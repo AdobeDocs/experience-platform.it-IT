@@ -2,16 +2,16 @@
 description: Scopri come configurare gli attributi dell’interfaccia utente, ad esempio il collegamento alla documentazione, la categoria della scheda di destinazione e il tipo e la frequenza di connessione della destinazione, per le destinazioni create con Destination SDK.
 title: Attributi dell’interfaccia utente
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
 # Attributi dell’interfaccia utente
 
-Gli attributi dell’interfaccia utente definiscono gli elementi visivi che Adobe deve visualizzare per la scheda di destinazione nell’interfaccia utente di Adobe Experience Platform, ad esempio il logo della piattaforma di destinazione, un collegamento alla pagina della documentazione, una descrizione della destinazione e la relativa categoria e tipo.
+Gli attributi dell’interfaccia utente definiscono gli elementi visivi che Adobe deve visualizzare per la scheda di destinazione nell’interfaccia utente di Adobe Experience Platform, ad esempio un logo, un collegamento alla pagina della documentazione, una descrizione della destinazione e la relativa categoria e tipo.
 
 Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) oppure consulta le seguenti pagine di panoramica sulla configurazione di destinazione:
 
@@ -21,10 +21,10 @@ Per capire dove questo componente si inserisce in un’integrazione creata con D
 Quando [creazione di una destinazione](../../authoring-api/destination-configuration/create-destination-configuration.md) attraverso la Destination SDK, `uiAttributes` definisce le seguenti proprietà visive della scheda di destinazione:
 
 * L&#39;URL della pagina di documentazione di destinazione in [catalogo di destinazione](../../../catalog/overview.md).
-* L’URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni.
 * La categoria in cui la destinazione sarà visibile nell’interfaccia utente di Platform.
 * La frequenza di esportazione dei dati per la destinazione.
 * Il tipo di connessione di destinazione, ad esempio Amazon S3, BLOB di Azure e così via.
+* L’URL in cui hai ospitato l’icona da visualizzare nella scheda del catalogo delle destinazioni.
 
 Puoi configurare gli attributi dell’interfaccia utente tramite `/authoring/destinations` endpoint. Consulta le seguenti pagine di riferimento API per esempi dettagliati di chiamate API, in cui puoi configurare i componenti mostrati in questa pagina.
 
@@ -82,14 +82,6 @@ Gli utenti possono visualizzare l’elenco delle categorie di destinazione sul l
 
 ![Immagine dell&#39;interfaccia utente che mostra la posizione della categoria di destinazione.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` è un parametro di stringa che fa riferimento al tipo di connessione, a seconda della destinazione. Valori supportati: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -113,6 +105,14 @@ Se la destinazione che stai creando con Destination SDK sarà disponibile per un
 A questo scopo, puoi utilizzare `isBeta: "true"` nella sezione degli attributi dell’interfaccia utente della configurazione di destinazione per contrassegnare la scheda di destinazione in modo appropriato.
 
 ![Immagine dell’interfaccia utente che mostra una scheda di destinazione contrassegnata come beta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+
+### `icon` {#icon}
+
+È possibile aggiungere un&#39;icona del logo alla destinazione, come illustrato nell&#39;immagine seguente.
+
+![Immagine dell’interfaccia utente che mostra la posizione dell’icona.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+Per aggiungere un logo alla scheda di destinazione, devi condividere l’immagine desiderata con il team di Adobi quando [invia la destinazione per la revisione](../../guides/submit-destination.md#logo).
 
 ## Passaggi successivi {#next-steps}
 
