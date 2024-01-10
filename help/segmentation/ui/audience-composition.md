@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ Il **[!UICONTROL Proprietà composizione]** viene visualizzato popover. È possi
 
 >[!NOTE]
 >
->In caso affermativo **non** assegnate alla composizione un titolo, avrà un titolo &quot;Composizione&quot; seguito dalla data e dall&#39;ora di creazione per impostazione predefinita.
+>In caso affermativo **non** assegnate alla composizione un titolo, avrà un titolo &quot;Composizione&quot; seguito dalla data e dall&#39;ora di creazione per impostazione predefinita. Inoltre, ogni composizione **deve** hanno un proprio nome univoco.
 
 Dopo aver aggiornato i dettagli della composizione, seleziona **[!UICONTROL Salva]** per confermare questi aggiornamenti. L’area di lavoro per la composizione del pubblico viene nuovamente visualizzata.
 
 L’area di lavoro per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Pubblico]](#audience-block)**, **[[!UICONTROL Escludi]](#exclude-block)**, **[[!UICONTROL Classifica]](#rank-block)**, e **[[!UICONTROL Dividi]](#split-block)**.
 
-## [!UICONTROL Pubblico] {#audience-block}
+## [!UICONTROL Destinatari] {#audience-block}
 
 Il **[!UICONTROL Pubblico]** il tipo di blocco ti consente di aggiungere i sottogruppi di pubblico che desideri comporre il nuovo pubblico più grande. Per impostazione predefinita, un **[!UICONTROL Pubblico]** Il blocco è incluso nella parte superiore dell’area di lavoro della composizione.
 
@@ -67,7 +67,7 @@ I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra qua
 | Tipo di unione | Descrizione |
 | ---------- | ----------- |
 | [!UICONTROL Unione] | I tipi di pubblico vengono combinati in un unico pubblico. Equivale a un&#39;operazione OR. |
-| [!UICONTROL Intersezione ] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
+| [!UICONTROL Intersection] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
 | [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **uno, ma non tutti** di quelli che vengono aggiunti. Equivale a un&#39;operazione XOR. |
 
 ### [!UICONTROL Genera regola] {#build-rule}
