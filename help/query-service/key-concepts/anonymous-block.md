@@ -2,9 +2,9 @@
 title: Blocco anonimo in Query Service
 description: Il blocco anonimo è una sintassi SQL supportata da Adobe Experience Platform Query Service che consente di eseguire in modo efficiente una sequenza di query
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,9 @@ Adobe Experience Platform Query Service supporta blocchi anonimi. La funzione di
 
 La funzione di blocco anonimo rappresenta un modo efficiente per eseguire una sequenza di operazioni o query. La catena di query all’interno del blocco può essere salvata come modello e pianificata per l’esecuzione in un determinato momento o intervallo. Queste query possono essere utilizzate per scrivere e accodare dati per creare un nuovo set di dati e vengono in genere utilizzate nei casi in cui si dispone di una dipendenza.
 
->[!IMPORTANT]
->
->La pianificazione delle query tramite blocchi anonimi è attualmente possibile solo tramite [!DNL Query Service] API. Consulta la documentazione per [istruzioni complete sulla pianificazione delle query tramite l’API](../api/scheduled-queries.md).
-
 La tabella fornisce un raggruppamento delle sezioni principali del blocco: esecuzione e gestione delle eccezioni. Le sezioni sono definite dalle parole chiave `BEGIN`, `END`, e `EXCEPTION`.
 
-| pagina | descrizione |
+| sezione | descrizione |
 |---|---|
 | esecuzione | Una sezione eseguibile inizia con la parola chiave `BEGIN` e termina con la parola chiave `END`. Qualsiasi insieme di istruzioni incluso nel `BEGIN` e `END` le parole chiave vengono eseguite in sequenza e garantiscono che le query successive non vengano eseguite fino al completamento della query precedente nella sequenza. |
 | gestione delle eccezioni | La sezione facoltativa per la gestione delle eccezioni inizia con la parola chiave `EXCEPTION`. Contiene il codice per intercettare e gestire le eccezioni in caso di errore di una qualsiasi delle istruzioni SQL nella sezione di esecuzione. Se una delle query ha esito negativo, l’intero blocco viene interrotto. |

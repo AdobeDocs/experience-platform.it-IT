@@ -1,7 +1,8 @@
 ---
 title: 'Esempio di funzione Lambda: recupero di record simili'
 description: Scopri come identificare e recuperare record simili o correlati da uno o più set di dati in base a una metrica di somiglianza e a una soglia di somiglianza. Questo flusso di lavoro può evidenziare relazioni significative o sovrapposizioni tra set di dati diversi.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%
