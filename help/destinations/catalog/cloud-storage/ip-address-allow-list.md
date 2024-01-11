@@ -3,9 +3,9 @@ title: Destinazioni SFTP di elenco consentiti di indirizzo IP
 type: Documentation
 description: Questa pagina fornisce intervalli IP che puoi aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experienci Platform al server SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,17 @@ L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#
 
 * `52.252.71.64/29`
 
+## Clienti Canada
+
+* `20.220.135.16/29`
+
 ## Clienti EMEA
 
 * `51.137.8.208/29`
+
+## Clienti britannici
+
+* `20.26.133.96/29`
 
 ## Clienti APAC
 
