@@ -2,12 +2,11 @@
 solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
-badgeLimitedAvailability: label="Disponibilità limitata" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2121'
-ht-degree: 10%
+source-wordcount: '2212'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Tieni presente che le informazioni e i tipi di pubblico simili sono in **disponibilità limitata**.
+>Approfondimenti simili e tipi di pubblico simili sono disponibili solo nel **Edizione B2C**.
 
 In Adobe Experience Platform, i tipi di pubblico per similarità forniscono informazioni intelligenti su ciascuno dei tipi di pubblico, sfruttando le informazioni basate sull’apprendimento automatico per identificare e indirizzare i clienti di alto valore con le campagne di marketing.
 
@@ -29,6 +28,15 @@ Prima di iniziare a utilizzare tipi di pubblico simili, assicurati di comprender
 - **Modello lookalike**: un modello lookalike è un modello di apprendimento automatico che viene addestrato su ogni pubblico di base idoneo senza alcun input da parte del cliente. Ogni modello lookalike crea i fattori influenti e i grafici di somiglianza. Un modello lookalike **non** ottenere un punteggio.
 - **Pubblico simile**: un pubblico per similarità è il pubblico che viene creato quando al pubblico di base viene applicato un modello lookalike con una soglia di similarità selezionata. Puoi creare più tipi di pubblico per similarità utilizzando lo stesso modello per similarità. Il pubblico per somiglianza è ciò che viene valutato.
 - **Dimensione totale del pubblico indirizzabile**: la dimensione totale del pubblico indirizzabile corrisponde al numero totale di profili negli ultimi 30 giorni meno la popolazione del pubblico di base negli ultimi 30 giorni. Ad esempio, se un cliente ha 10 milioni di profili negli ultimi 30 giorni e il pubblico di base ha 1 milione di profili negli ultimi 30 giorni, la dimensione totale del pubblico indirizzabile è di 9 milioni di profili.
+
+## Idoneità {#eligibility}
+
+Per utilizzare informazioni simili, il pubblico di base **deve** soddisfano i seguenti criteri di idoneità:
+
+- Il pubblico di base **deve** essere creato in Platform.
+   - I pubblici generati esternamente sono **non** idoneo per approfondimenti simili.
+- Il pubblico di base **deve** utilizza il criterio di unione predefinito.
+- Il pubblico di base **deve** non utilizzare campi soggetti a restrizioni dalla governance dei dati.
 
 ## Dettagli del modello Look-Alike {#details}
 
@@ -177,13 +185,19 @@ Viene visualizzata la pagina dei dettagli del pubblico. Per ulteriori informazio
 
 ## Escludere i campi di dati dalla modellazione lookalike {#exclude}
 
+>[!IMPORTANT]
+>
+> **Tu** sono responsabili di garantire che i dati, inclusi i dati sensibili, siano etichettati in modo appropriato e che i criteri di utilizzo dei dati siano stati definiti e abilitati per rispettare gli obblighi legali e normativi in base ai quali operi. È inoltre necessario tenere presente che i campi di dati o le appartenenze ai segmenti che sono **non** la correlazione diretta con i campi di dati tipicamente associati a tipi di dati sensibili o protetti può essere fonte di potenziali distorsioni. **Tu** sono responsabili dell’analisi dei dati per identificare, etichettare e applicare le policy di utilizzo dei dati appropriate ai tuoi dati, inclusi eventuali campi di dati che possono fungere da proxy per tipi di dati sensibili o protetti e che devono essere esclusi dalla modellazione.
+
 I tipi di pubblico simili possono essere configurati in modo da escludere i campi di dati per i quali sono impostate restrizioni per l’azione di marketing &quot;Data Science&quot;, applicando le etichette e i criteri di utilizzo dei dati pertinenti. I dati etichettati come non utilizzabili per la data science verranno rimossi dalla considerazione quando si formatta un modello di pubblico per similarità e quando si genera un pubblico per similarità dal modello addestrato. 
+
+>[!NOTE]
+>
+>L’entrata in vigore delle modifiche alle etichette di utilizzo dei dati sul pubblico di base può richiedere fino a 48 ore.
 
 L’etichetta standard &quot;C9&quot; può essere utilizzata per etichettare i dati che non devono essere utilizzati per la scienza dei dati e può essere applicata abilitando la politica standard &quot;Limita scienza dei dati&quot;. Puoi anche creare criteri aggiuntivi per limitare i dati con altre etichette, comprese le etichette sensibili, dall’utilizzo per data science. Per ulteriori informazioni sulla gestione dei criteri di utilizzo dei dati, consulta [guida dell’interfaccia utente dei criteri di utilizzo dei dati](../../data-governance/policies/user-guide.md). Per ulteriori informazioni sulla gestione delle etichette di utilizzo dei dati, consulta [guida dell’interfaccia utente per le etichette di utilizzo dei dati](../../data-governance/labels/user-guide.md).
 
 Per impostazione predefinita, il processo di modellazione per i tipi di pubblico simili escluderà **qualsiasi** campo, set di dati o pubblico in base all’informativa sulla privacy abilitata per la tua organizzazione. Se il pubblico di base non dispone di etichette di contratto, il processo di modellazione escluderà **qualsiasi** campo, set di dati o pubblico in base all’informativa sulla privacy abilitata per la tua organizzazione.
-
-Tieni presente che **tu** sono responsabili di garantire che i dati, inclusi i dati sensibili, siano etichettati in modo appropriato e che i criteri di utilizzo dei dati siano stati definiti e abilitati in modo da rispettare gli obblighi legali e normativi in base ai quali operi. È inoltre necessario tenere presente che i campi di dati o le appartenenze a segmenti che sono **non** la correlazione diretta con i campi di dati tipicamente associati a tipi di dati sensibili o protetti può essere fonte di potenziali distorsioni. **Tu** sono responsabili dell’analisi dei dati per identificare, etichettare e applicare le policy di utilizzo dei dati appropriate ai tuoi dati, inclusi eventuali campi di dati che possono fungere da proxy per tipi di dati sensibili o protetti e che devono essere esclusi dalla modellazione.
 
 ## Passaggi successivi
 
