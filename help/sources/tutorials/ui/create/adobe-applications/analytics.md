@@ -2,10 +2,10 @@
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 6%
+source-wordcount: '2695'
+ht-degree: 4%
 
 ---
 
@@ -109,7 +109,7 @@ Il [!UICONTROL Mappare i campi standard] mostra i pannelli per [!UICONTROL Mappa
 
 Per visualizzare in anteprima [!DNL Analytics] Gruppo di campi schema modello ExperienceEvent, seleziona **[!UICONTROL Visualizza]** nel [!UICONTROL Mappature standard applicate] pannello.
 
-![view](../../../../images/tutorials/create/analytics/view.png)
+![visualizza](../../../../images/tutorials/create/analytics/view.png)
 
 Il [!UICONTROL Gruppo di campi dello schema del modello Adobe Analytics ExperienceEvent] fornisce un’interfaccia da utilizzare per esaminare la struttura dello schema. Al termine, seleziona **[!UICONTROL Chiudi]**.
 
@@ -133,8 +133,8 @@ A seconda delle tue esigenze, puoi selezionare: **[!UICONTROL Aggiungi nuova map
 
 La documentazione seguente fornisce ulteriori risorse sulla preparazione dati, sui campi calcolati e sulle funzioni di mappatura:
 
-* [Panoramica sulla preparazione dei dati](../../../../../data-prep/home.md)
-* [Funzioni di mappatura della preparazione dei dati](../../../../../data-prep/functions.md)
+* [Panoramica sulla preparazione dati](../../../../../data-prep/home.md)
+* [Funzioni di mappatura della preparazione dati](../../../../../data-prep/functions.md)
 * [Aggiungere campi calcolati](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Una volta completate le mappature per [!DNL Analytics] per i dati della suite di rapporti, puoi applicare regole e condizioni di filtro per includere o escludere selettivamente i dati dall’acquisizione nel Profilo cliente in tempo reale. Il supporto per il filtro è disponibile solo per [!DNL Analytics] dati e dati vengono filtrati solo prima dell’immissione [!DNL Profile.] Tutti i dati vengono acquisiti nel data lake.
 
+>[!BEGINSHADEBOX]
+
+**Informazioni aggiuntive sulla preparazione dei dati e sul filtraggio dei dati di Analytics per Real-Time Customer Profile**
+
+* Puoi utilizzare la funzionalità di filtro per i dati che vanno nel profilo, ma non per i dati che vanno nel data lake.
+* Puoi utilizzare il filtro per i dati live, ma non puoi filtrare i dati di retrocompilazione.
+   * Il [!DNL Analytics] La sorgente non effettua il backfill dei dati nel profilo.
+* Se utilizzi le configurazioni di Preparazione dati durante la configurazione iniziale di un’ [!DNL Analytics] , queste modifiche vengono applicate anche alla retrocompilazione automatica di 13 mesi.
+   * Tuttavia, questo non avviene per il filtro, perché il filtro è riservato solo ai dati live.
+* La preparazione dati viene applicata ai percorsi di acquisizione in streaming e in batch. Se modifichi una configurazione di Preparazione dati esistente, tali modifiche vengono quindi applicate ai nuovi dati in arrivo attraverso i percorsi di acquisizione in streaming e in batch.
+   * Tuttavia, eventuali configurazioni della preparazione dati non si applicano ai dati che sono già stati acquisiti in Experienci Platform, indipendentemente dal fatto che si tratti di dati in streaming o batch.
+* Gli attributi standard di Analytics vengono sempre mappati automaticamente. Pertanto, non è possibile applicare trasformazioni agli attributi standard.
+   * Tuttavia, puoi filtrare gli attributi standard purché non siano richiesti in Identity Service o Profile.
+* Non è possibile utilizzare il filtro a livello di colonna per filtrare i campi obbligatori e i campi di identità.
+* Anche se è possibile filtrare le identità secondarie, in particolare AAID e AACustomID, non è possibile filtrare ECID.
+* Quando si verifica un errore di trasformazione, la colonna corrispondente restituisce NULL.
+
+>[!ENDSHADEBOX]
+
 #### Filtro a livello di riga
 
 >[!IMPORTANT]
 >
->Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati da **escludere dall’acquisizione per il profilo**.
+>Utilizza il filtro a livello di riga per applicare condizioni e stabilire quali dati **includere nell’acquisizione per il profilo**. Utilizza il filtro a livello di colonna per selezionare le colonne di dati che desideri **escludi per l’acquisizione del profilo**.
 
 Puoi filtrare i dati per [!DNL Profile] acquisizione a livello di riga e di colonna. Il filtro a livello di riga consente di definire criteri quali stringa contiene, è uguale a, inizia o termina con. È inoltre possibile utilizzare il filtro a livello di riga per unire le condizioni utilizzando `AND` nonché `OR`, e nega condizioni utilizzando `NOT`.
 
@@ -201,14 +220,14 @@ Per configurare diverse condizioni, seleziona **[!UICONTROL è uguale a]** quind
 
 L’elenco delle condizioni configurabili include:
 
-* [!UICONTROL è uguale a]
+* [!UICONTROL equals]
 * [!UICONTROL non è uguale a]
 * [!UICONTROL inizia con]
 * [!UICONTROL termina con]
 * [!UICONTROL non termina con]
 * [!UICONTROL contiene]
 * [!UICONTROL non contiene]
-* [!UICONTROL esiste]
+* [!UICONTROL exists]
 * [!UICONTROL non esiste]
 
 ![condizioni](../../../../images/tutorials/create/analytics/conditions.png)
