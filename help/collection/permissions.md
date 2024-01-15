@@ -2,10 +2,10 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experienci Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 29%
+source-wordcount: '1285'
+ht-degree: 28%
 
 ---
 
@@ -54,11 +54,12 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’
 | Diritti di proprietà | Approvazione | Consente di approvare una build della libreria come parte della [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Sviluppa | Consente di sviluppare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Modifica proprietà | Consente di modificare la configurazione di base per le proprietà a cui un utente ha accesso. |
-| Diritti di proprietà | Gestire gli ambienti | Consente di gestire [ambienti](../tags/ui/publishing/environments.md) per le proprietà a cui un utente ha accesso. |
+| Diritti di proprietà | Gestisci ambienti | Consente di gestire [ambienti](../tags/ui/publishing/environments.md) per le proprietà a cui un utente ha accesso. |
 | Diritti di proprietà | Gestire le estensioni | Consente di gestire [estensioni](../tags/ui/managing-resources/extensions/overview.md) per le proprietà a cui un utente ha accesso. |
-| Diritti di proprietà | Pubblica | Consente di pubblicare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
+| Diritti di proprietà | Pubblicazione | Consente di pubblicare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti aziendali | Sviluppare estensioni | Consente di creare e modificare pacchetti di estensione di proprietà dell’organizzazione, incluse versioni private e richieste di versioni pubbliche. |
-| Diritti aziendali | Gestire le estensioni | Questa autorizzazione è applicabile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso a messaggi mobili in-app e push. Questo consente di gestire le app conosciute da Adobe Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio Firebase Cloud Messaging e il servizio Apple Push Notification. |
+| Diritti aziendali | Gestione configurazioni app | Questa autorizzazione è applicabile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso a messaggi mobili in-app e push. Questo consente di gestire le app conosciute da Adobe Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio Firebase Cloud Messaging e il servizio Apple Push Notification. |
+| Diritti aziendali | Gestisci proprietà | Consente di creare e gestire tag (proprietà web), inoltro eventi (proprietà edge) e proprietà mobili. |
 
 {style="table-layout:auto"}
 
