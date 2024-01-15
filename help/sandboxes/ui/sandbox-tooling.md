@@ -2,10 +2,10 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 9%
+source-wordcount: '1859'
+ht-degree: 5%
 
 ---
 
@@ -67,19 +67,14 @@ I tipi di identità personalizzati non sono supportati come oggetti dipendenti d
 >Tutte le azioni di esportazione vengono registrate nei registri di audit.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Salva ed esci dal pacchetto"
->abstract="Per uscire dal pacchetto e salvare, gli utenti possono semplicemente utilizzare l’opzione Indietro."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Rimuovere un oggetto"
->abstract="L’utente deve selezionare la riga e quindi utilizzare l’opzione Elimina (disponibile al momento della selezione) per rimuoverla."
+>abstract="Per rimuovere un oggetto dal pacchetto, selezionare la riga da rimuovere e quindi utilizzare l&#39;opzione Elimina, disponibile al momento della selezione. Non è possibile rimuovere oggetti dai pacchetti pubblicati."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Impostazioni di scadenza pacchetto"
->abstract="La data è impostata per 90 giorni a partire da oggi. Questa data continua a cambiare fino alla pubblicazione del pacchetto. Se un utente visita il pacchetto in stato di bozza domani, la data viene spostata di +1 giorno (a meno che non sia stata impostata dall’utente)."
+>abstract="I pacchetti sono impostati per scadere dopo un periodo di inattività nello stato Bozza. La data predefinita è impostata su 90 giorni a partire da oggi. Questa data continua a cambiare fino alla pubblicazione del pacchetto. Se domani visiti il pacchetto con lo stato Bozza, la data viene spostata di +1 giorno, a meno che non venga impostato manualmente."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
