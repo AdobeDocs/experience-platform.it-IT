@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 7%
+source-wordcount: '1869'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,19 @@ Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe
 * [[!DNL Identity Service]](./home.md): ottieni una visione migliore dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
 * [[!DNL Privacy Service]](../privacy-service/home.md): gli spazi dei nomi di identità vengono utilizzati nelle richieste di conformità per le normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
-## Informazioni sugli spazi dei nomi delle identità
+## Informazioni sugli spazi dei nomi delle identità {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Spazio dei nomi delle identità"
+>abstract="Uno spazio dei nomi delle identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere a **nome<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere a `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Valori identità"
+>abstract="Un valore di identità è un identificatore che rappresenta una persona, organizzazione o risorsa univoca. Il contesto o il tipo di identità che il valore rappresenta è definito da uno spazio dei nomi delle identità corrispondente. Quando si abbinano i dati del record tra i frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere. Quando si abbinano i dati del record tra i frammenti di profilo, lo spazio dei nomi e il valore dell’identità devono corrispondere."
+>text="Learn more in documentation"
 
 Un’identità completa include due componenti: **valore identità** e un **spazio dei nomi delle identità**. Ad esempio, se il valore di un’identità è `scott@acme.com`, quindi uno spazio dei nomi fornisce contesto a questo valore distinguendolo come indirizzo e-mail. Analogamente, uno spazio dei nomi può distinguere `555-123-456` come numero di telefono, e `3126ABC` come ID CRM. Essenzialmente, **uno spazio dei nomi fornisce contesto a una determinata identità**. Quando si abbinano dati record tra frammenti di profilo, come quando [!DNL Real-Time Customer Profile] unisce i dati del profilo; il valore di identità e lo spazio dei nomi devono corrispondere.
 
