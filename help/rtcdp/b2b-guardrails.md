@@ -6,9 +6,9 @@ description: Adobe Experience Platform utilizza un modello di dati ibridi altame
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 | Nessuna relazione legacy nidificata | 0 | Morbido | Non creare una relazione tra due[!DNL XDM Individual Profile] schemi. La possibilità di creare relazioni non è consigliata per gli schemi che non fanno parte di [!DNL Profile] schema di unione. |
 | Solo gli oggetti B2B possono partecipare a relazioni molti-a-uno | 0 | Rigido | Il sistema supporta solo relazioni molti-a-uno tra oggetti B2B. Per ulteriori informazioni sulle relazioni molti-a-uno, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 | Profondità massima delle relazioni nidificate tra oggetti B2B | 3 | Rigido | La profondità massima delle relazioni nidificate tra oggetti B2B è 3. Ciò significa che in uno schema con annidamento elevato non dovrebbe esistere una relazione tra oggetti B2B nidificati a più di 3 livelli di profondità. |
+| Schema singolo per ogni entità dimensione | 1 | Rigido | Ogni entità dimensione deve avere un singolo schema. Il tentativo di utilizzare le entità dimensione create da più schemi può influire sui risultati della segmentazione. È previsto che entità di dimensione diverse abbiano schemi separati. |
 
 ## Limiti di dimensione dei dati
 
@@ -93,7 +94,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Dimensione totale per tutte le entità dimensionali | 5 GB | Morbido | La dimensione totale consigliata per tutte le entità dimensionali è 5 GB. L&#39;inserimento di entità di dimensioni grandi può influire sulle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
+| Dimensione totale per tutte le entità dimensionali | 5GB | Morbido | La dimensione totale consigliata per tutte le entità dimensionali è 5 GB. L&#39;inserimento di entità di dimensioni grandi può influire sulle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
 | Set di dati per schema di entità dimensionale | 5 | Morbido | Si consiglia un massimo di 5 set di dati associati a ogni schema di entità dimensionale. Ad esempio, se crei uno schema per &quot;prodotti&quot; e aggiungi cinque set di dati contributivi, non devi creare un sesto set di dati associato allo schema prodotti. |
 | Batch di entità Dimension acquisiti al giorno | 4 per entità | Morbido | Il numero massimo consigliato di batch di entità dimensione acquisiti al giorno è 4 per entità. Ad esempio, puoi acquisire gli aggiornamenti di un catalogo di prodotti fino a 4 volte al giorno. L&#39;acquisizione di batch di entità di dimensione aggiuntivi per la stessa entità può influire sulle prestazioni del sistema. |
 
