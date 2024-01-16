@@ -1,13 +1,13 @@
 ---
 title: ID dispositivo di prime parti in Web SDK
 description: Scopri come configurare gli ID dispositivo di prime parti (FPID) per Adobe Experience Platform Web SDK.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
-
 
 # ID dispositivo di prime parti in Web SDK
 
@@ -16,6 +16,11 @@ Adobe Experience Platform Web SDK assegna [Adobe Experience Cloud ID (ECID)](htt
 >[!NOTE]
 >
 >Il supporto per ID dispositivo di prime parti è disponibile solo quando si inviano dati a Platform Edge Network tramite Platform Web SDK.
+
+>[!IMPORTANT]
+>
+>Gli ID dispositivo di prime parti non sono compatibili con [cookie di terze parti](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) funzionalità di Web SDK.
+>Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
 
 Questo documento illustra come configurare gli ID dispositivo di prime parti per l’implementazione di Platform Web SDK.
 

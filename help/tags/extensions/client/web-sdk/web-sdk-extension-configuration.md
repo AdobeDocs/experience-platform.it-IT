@@ -2,9 +2,9 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ Questa sezione ti consente di definire il comportamento dell’SDK web quando si
 * **[!UICONTROL Migrazione di ECID da VisitorAPI]**: questa opzione è attivata per impostazione predefinita. Quando questa funzione è abilitata, l&#39;SDK può leggere `AMCV` e `s_ecid` cookie e impostare `AMCV` cookie utilizzato da [!DNL Visitor.js]. Questa funzione è importante durante la migrazione a Web SDK, in quanto alcune pagine potrebbero ancora utilizzare [!DNL Visitor.js]. Questa opzione consente all’SDK di continuare a utilizzare lo stesso [!DNL ECID] in modo che gli utenti non vengano identificati come due utenti distinti.
 * **[!UICONTROL Utilizzare i cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, l’SDK potrebbe ancora non essere in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o se è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, l’SDK memorizza l’identificatore solo nel dominio di prime parti.
 
+  >[!IMPORTANT]
+  >>I cookie di terze parti non sono compatibili con [ID dispositivo di prime parti](../../../../edge/identity/first-party-device-ids.md) funzionalità di Web SDK.
+Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
+  >
 ## Configurare le impostazioni di personalizzazione {#personalization}
 
 Questa sezione ti consente di configurare come nascondere determinate parti di una pagina durante il caricamento del contenuto personalizzato. In questo modo i visitatori potranno vedere solo la pagina personalizzata.
@@ -103,7 +107,7 @@ Per utilizzare il frammento pre-hiding, copiarlo e incollarlo all&#39;interno de
 
 >[!IMPORTANT]
 >
->Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare lo stesso [!DNL CSS] regola come quella utilizzata da [stile pre-hiding](#prehiding-style).
+Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare lo stesso [!DNL CSS] regola come quella utilizzata da [stile pre-hiding](#prehiding-style).
 
 ## Configurare le impostazioni di raccolta dati {#data-collection}
 
@@ -130,7 +134,7 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 
 >[!IMPORTANT]
 >
-> Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
+Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
 ![L’immagine che mostra le sostituzioni della configurazione dello stream di dati nella pagina dell’estensione tag di Web SDK.](assets/datastream-overrides.png)
 
