@@ -5,10 +5,10 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 37%
+source-wordcount: '770'
+ht-degree: 45%
 
 ---
 
@@ -159,7 +159,7 @@ ht-degree: 37%
       * [Decibel](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [Privacy differenziale](https://exchange.adobe.com/apps/ec/104535)
-      * [Visualizzatori Dynamic Media](https://exchange.adobe.com/apps/ec/103048)
+      * [Visualizzatori Dynamic Medie](https://exchange.adobe.com/apps/ec/103048)
       * [Helper EDDL](https://exchange.adobe.com/apps/ec/107691)
       * [OneTag intermittente](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
@@ -230,7 +230,7 @@ ht-degree: 37%
          * [Panoramica](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Panoramica](./extensions/server/linkedin/overview.md)
-      * [!DNL Mailchimp] Edge {#mailchimp}
+      * [!DNL Mailchimp] Bordo {#mailchimp}
          * [Panoramica](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Panoramica](./extensions/server/meta/overview.md)
@@ -321,10 +321,5 @@ ht-degree: 37%
 * [Domande frequenti](./faq.md)
 * [Aggiornamenti terminologici](./term-updates.md)
 * [Supporto obsoleto per Internet Explorer 10 e 11](./ie-deprecation.md)
-* Note sulla versione {#release-notes}
-   * [Più recente](./release-notes/current.md)
-   * [Note sulla versione 2021](./release-notes/2021.md)
-   * [Note sulla versione 2020](./release-notes/2020.md)
-   * [Note sulla versione 2019](./release-notes/2019.md)
-   * [Note sulla versione 2018](./release-notes/2018.md)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
 
