@@ -2,10 +2,10 @@
 title: Riferimento oggetto satellite
 description: Scopri l’oggetto _satellite lato client e le varie funzioni che consente di eseguire con esso nei tag.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
@@ -61,6 +61,10 @@ var rule = _satellite.getVar('return event rule', event);
 ```
 
 ## `setVar`
+
+>[!NOTE]
+>
+>Il `setVar` Il codice è completamente separato da un elemento dati specificato in Tag.
 
 **Codice**
 
