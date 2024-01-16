@@ -2,10 +2,10 @@
 title: Elementi dati
 description: Gli elementi dati sono i blocchi costitutivi per il dizionario dati (o mappa dati). Utilizza elementi dati per raccogliere, organizzare e distribuire dati in tutta la tecnologia marketing e pubblicitaria.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 93%
+source-wordcount: '1614'
+ht-degree: 90%
 
 ---
 
@@ -91,9 +91,11 @@ Quando crei o modifichi elementi, puoi salvarli e generarli nella [libreria atti
 
 ## Tipi di elementi dati {#types-of-data-elements}
 
-I tipi di elementi dati sono determinati dall&#39;estensione. Non vi sono limiti ai tipi che è possibile creare.
+>[!NOTE]
+>
+>I tipi di elementi dati sono determinati dall&#39;estensione. Non vi sono limiti ai tipi che è possibile creare.
 
-Nelle sezioni seguenti sono descritti i tipi di elementi dati disponibili nell&#39;estensione Core. Altre estensioni utilizzano altri tipi di elementi dati.
+Nelle sezioni seguenti sono descritti i tipi di elementi dati disponibili in **Estensione core**. Altre estensioni utilizzano altri tipi di elementi dati.
 
 ### Cookie
 
@@ -161,7 +163,7 @@ Ottieni il valore di:
 
 È possibile fare riferimento a qualsiasi oggetto o variabile JavaScript disponibile utilizzando il campo path.
 
-Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori.  questo modo, puoi fare riferimento all&#39;elemento dati in tutte le tue regole e, se l&#39;origine dei dati dovesse cambiare, devi modificare il riferimento all&#39;origine (l&#39;elemento dati) in un&#39;unica posizione in .
+Se desideri raccogliere variabili JavaScript o proprietà di oggetto nel markup e utilizzarle con una delle tue estensioni o regole, puoi utilizzare elementi dati per acquisire questi valori. In questo modo, puoi fare riferimento all’elemento dati in tutte le tue regole e, se l’origine dei dati dovesse mai cambiare, devi modificare il riferimento all’origine (l’elemento dati) in un’unica posizione.
 
 Ad esempio, supponiamo che il markup contenga una variabile JavaScript denominata `Page_Name`, come segue:
 
