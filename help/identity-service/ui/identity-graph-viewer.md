@@ -2,9 +2,9 @@
 title: Visualizzatore grafico identità
 description: Un grafo di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva di come il cliente interagisce con il brand su canali diversi.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1402'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ L’utilizzo del visualizzatore del grafo delle identità richiede una comprensi
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Identità]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Grafico delle identità]** dall’elenco di schede nell’intestazione.
 
-![L’area di lavoro Identità nell’interfaccia utente di Experience Platform, con la scheda Grafico identità selezionata.](../images/graph-viewer/identity-graph.png)
+![L’area di lavoro Identità nell’interfaccia utente di Experienci Platform, con la scheda Grafico identità selezionata.](../images/graph-viewer/identity-graph.png)
 
 Per visualizzare un grafo delle identità, fornisci uno spazio dei nomi delle identità e il relativo valore corrispondente, quindi seleziona **[!UICONTROL Visualizza]**.
 
@@ -60,7 +60,7 @@ Il grafo delle identità visualizza tutte le identità collegate alla combinazio
 
 >[!IMPORTANT]
 >
->Un grafo delle identità richiede la generazione di almeno due identità collegate e una combinazione valida di spazio dei nomi e valore dell’identità. Il numero massimo di identità visualizzabili dal visualizzatore grafico è 150. Consulta la [appendice](#appendix) per ulteriori informazioni.
+>Un grafo delle identità richiede la generazione di almeno due identità collegate e una combinazione valida di spazio dei nomi e valore dell’identità. Il numero massimo di identità visualizzabili dal visualizzatore grafico è 50. Consulta la [appendice](#appendix) per ulteriori informazioni.
 
 ![Il visualizzatore del grafico delle identità con cinque identità collegate.](../images/graph-viewer/graph.png)
 
@@ -115,7 +115,7 @@ Possono verificarsi errori durante l’accesso al visualizzatore del grafico del
 
 - Un valore di identità deve esistere nello spazio dei nomi selezionato.
 - Il visualizzatore del grafo delle identità richiede almeno due identità collegate da generare. È possibile che esista un solo valore di identità e che non siano presenti identità collegate e, in questo caso, che il valore esista solo in [!DNL Profile] visualizzatore.
-- Il visualizzatore del grafo delle identità non può superare il massimo di 150 identità.
+- Il visualizzatore del grafo delle identità non può superare il massimo di 50 identità.
 
 ![schermata di errore](../images/graph-viewer/error-screen.png)
 
@@ -141,6 +141,6 @@ Dopo aver letto questo documento, hai imparato a esplorare i grafici delle ident
 
 | Data | Azione |
 | ---- | ------ |
-| 2021-01 | <ul><li>È stato aggiunto il supporto per lo streaming di dati acquisiti e di sandbox non di produzione.</li><li>Correzioni di bug minori.</li></ul> |
-| 2021-02 | <ul><li>Il visualizzatore del grafico delle identità è reso accessibile tramite l’anteprima del set di dati.</li><li>Correzioni di bug minori.</li><li>Il visualizzatore del grafo delle identità è reso disponibile in generale.</li></ul> |
-| 2023-01 | <ul><li>Aggiornamenti dell’interfaccia utente.</li></ul> |
+| 01/2021 | <ul><li>È stato aggiunto il supporto per lo streaming di dati acquisiti e di sandbox non di produzione.</li><li>Correzioni di bug minori.</li></ul> |
+| 02/2021 | <ul><li>Il visualizzatore del grafico delle identità è reso accessibile tramite l’anteprima del set di dati.</li><li>Correzioni di bug minori.</li><li>Il visualizzatore del grafo delle identità è reso disponibile in generale.</li></ul> |
+| 01/2023 | <ul><li>Aggiornamenti dell’interfaccia utente.</li></ul> |
