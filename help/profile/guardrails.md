@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2434'
 ht-degree: 2%
@@ -36,7 +36,7 @@ I seguenti servizi di Experience Platform sono coinvolti nella modellazione dei 
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
 | Tipo di guardrail | Descrizione |
-|----------|---------|
+| -------------- | ----------- |
 | **Guardrail delle prestazioni (limite morbido)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
 | **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
@@ -55,7 +55,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 ### Guardrail dell’entità primaria
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Set di dati della singola classe di profilo XDM | 20 | Guardrail delle prestazioni | Si consiglia un massimo di 20 set di dati che sfruttano la classe Profilo individuale XDM. |
 | Set di dati della classe XDM ExperienceEvent | 20 | Guardrail delle prestazioni | Si consiglia un massimo di 20 set di dati che sfruttano la classe ExperienceEvent XDM. |
 | Set di dati della suite di rapporti di Adobe Analytics abilitati per il profilo | 1 | Guardrail delle prestazioni | Per il profilo deve essere abilitato un massimo di un (1) set di dati della suite di rapporti di Analytics. Il tentativo di abilitare più set di dati della suite di rapporti di Analytics per il profilo può avere conseguenze indesiderate sulla qualità dei dati. Per ulteriori informazioni, consulta la sezione su [Set di dati di Adobe Analytics](#aa-datasets) nell&#39;appendice. |
@@ -70,7 +70,7 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 ### guardrail entità Dimension
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Non sono consentiti dati di serie temporali per le[!DNL XDM Individual Profile] entità | 0 | Guarddrail imposto dal sistema | **I dati delle serie temporali non sono consentiti per i[!DNL XDM Individual Profile] entità nel servizio profili.** Se un set di dati di serie temporali è associato a un[!DNL XDM Individual Profile] ID, il set di dati non deve essere abilitato per [!DNL Profile]. |
 | Nessuna relazione nidificata | 0 | Guardrail delle prestazioni | Non creare una relazione tra due[!DNL XDM Individual Profile] schemi. La possibilità di creare relazioni non è consigliata per gli schemi che non fanno parte di [!DNL Profile] schema di unione. |
 | Profondità JSON per il campo ID primario | 4 | Guardrail delle prestazioni | La profondità JSON massima consigliata per il campo ID primario è 4. Ciò significa che in uno schema altamente nidificato, non devi selezionare un campo come ID primario se è nidificato a più di 4 livelli di profondità. Un campo che si trova al quarto livello nidificato può essere utilizzato come ID primario. |
@@ -88,7 +88,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 ### Guardrail dell’entità primaria
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Dimensione massima ExperienceEvent | 10KB | Guarddrail imposto dal sistema | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno ignorati. |
 | Dimensione massima record profilo | 100KB | Guarddrail imposto dal sistema | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, ma i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
 | Dimensione massima del frammento di profilo | 50 MB | Guarddrail imposto dal sistema | **La dimensione massima di un singolo frammento di profilo è di 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi [frammento di profilo](#profile-fragments) superiore a 50 MB. |
@@ -101,7 +101,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 ### guardrail entità Dimension
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Dimensione totale per tutte le entità dimensionali | 5GB | Guardrail delle prestazioni | La dimensione totale consigliata per tutte le entità dimensionali è 5 GB. L&#39;inserimento di entità di dimensioni grandi può influire sulle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
 | Set di dati per schema di entità dimensionale | 5 | Guardrail delle prestazioni | Si consiglia un massimo di 5 set di dati associati a ogni schema di entità dimensionale. Ad esempio, se crei uno schema per &quot;prodotti&quot; e aggiungi cinque set di dati contributivi, non devi creare un sesto set di dati associato allo schema prodotti. |
 | Batch di entità Dimension acquisiti al giorno | 4 per entità | Guardrail delle prestazioni | Il numero massimo consigliato di batch di entità dimensione acquisiti al giorno è 4 per entità. Ad esempio, puoi acquisire gli aggiornamenti di un catalogo di prodotti fino a 4 volte al giorno. L&#39;acquisizione di batch di entità di dimensione aggiuntivi per la stessa entità può influire sulle prestazioni del sistema. |
@@ -113,7 +113,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in totale, purché ci siano meno di 4000 tipi di pubblico in ogni singola sandbox. Sono inclusi i tipi di pubblico batch, in streaming e edge. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni su [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il generatore di segmenti. |
 | Pubblico Edge per sandbox | 150 | Guardrail delle prestazioni | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
 | Velocità effettiva Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione Edge supporta un valore massimo di 1500 eventi in entrata al secondo per l’accesso alla rete Edge di Adobe Experience Platform. La segmentazione Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo che è entrato nella rete Edge di Adobe Experience Platform. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |

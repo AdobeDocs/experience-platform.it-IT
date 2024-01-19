@@ -6,9 +6,9 @@ description: Adobe Experience Platform utilizza un modello di dati ibridi altame
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
+source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1794'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,10 @@ Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti 
 
 In questo documento sono disponibili due tipi di limiti predefiniti:
 
-* **Limite soft:** È possibile superare un limite soft, tuttavia i limiti soft forniscono una linea guida consigliata per le prestazioni del sistema.
-
-* **Limite rigido:** Un limite rigido fornisce un massimo assoluto.
+| Tipo di guardrail | Descrizione |
+| -------------- | ----------- |
+| **Guardrail delle prestazioni (limite morbido)** | I guardrail di prestazioni sono limiti di utilizzo relativi all’ambito dei tuoi casi d’uso. Quando si superano i guardrail delle prestazioni, è possibile che si verifichi un peggioramento delle prestazioni e della latenza. L’Adobe non è responsabile di tale degrado delle prestazioni. I clienti che superano costantemente il limite di prestazioni possono scegliere di concedere licenze aggiuntive per evitare il degrado delle prestazioni. |
+| **Guardrail applicati dal sistema (limite rigido)** | I guardrail applicati dal sistema vengono applicati dall’interfaccia utente o dall’API di Real-Time CDP. Questi sono i limiti che non puoi superare, poiché l’interfaccia utente e l’API ti impediranno di farlo o restituiranno un errore. |
 
 >[!INFO]
 >
@@ -50,10 +51,11 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 >I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
-| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Morbido | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [schemi nella documentazione di Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experienci Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.* |
-| Relazioni legacy tra più entità | 20 | Morbido | Si consiglia di definire un massimo di 20 relazioni tra più entità tra entità principali ed entità dimensione. Non è consigliabile eseguire mapping di relazioni aggiuntivi finché non viene rimossa o disabilitata una relazione esistente. |
-| Relazioni molti-a-uno per classe XDM | 2 | Morbido | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
+| --------- | ----- | ---------- | ----------- |
+| Set di dati di classe XDM standard di Real-Time CDP B2B Edition | 60 | Guardrail delle prestazioni | Si consiglia un massimo di 60 set di dati che sfruttano le classi standard Experience Data Model (XDM) fornite da Real-Time CDP B2B Edition. Per un elenco completo delle classi XDM standard per i casi di utilizzo B2B, consulta [schemi nella documentazione di Real-Time CDP B2B Edition](schemas/b2b.md). <br/><br/>*Nota: a causa della natura del modello di dati ibridi denormalizzati di Experienci Platform, la maggior parte dei clienti non supera questo limite. Per domande su come modellare i dati o per ulteriori informazioni sui limiti personalizzati, contatta il rappresentante dell’assistenza clienti.* |
+| Conteggio delle identità per un singolo account in un grafico delle identità | 50 | Guardrail delle prestazioni | Il numero massimo di identità in un grafico delle identità per un singolo account è 50. Tutti i profili con più di 50 identità sono esclusi da segmentazione, esportazioni e ricerche. |
+| Relazioni legacy tra più entità | 20 | Guardrail delle prestazioni | Si consiglia di definire un massimo di 20 relazioni tra più entità tra entità principali ed entità dimensione. Non è consigliabile eseguire mapping di relazioni aggiuntivi finché non viene rimossa o disabilitata una relazione esistente. |
+| Relazioni molti-a-uno per classe XDM | 2 | Guardrail delle prestazioni | Si consiglia un massimo di 2 relazioni molti-a-uno definite per classe XDM. Non è consigliabile creare una relazione aggiuntiva finché non viene rimossa o disabilitata una relazione esistente. Per i passaggi su come creare una relazione tra due schemi, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
 
 ### guardrail entità Dimension
 
@@ -62,11 +64,11 @@ Le seguenti protezioni forniscono i limiti consigliati per la modellazione dei d
 >I limiti del modello dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
-| Nessuna relazione legacy nidificata | 0 | Morbido | Non creare una relazione tra due[!DNL XDM Individual Profile] schemi. La possibilità di creare relazioni non è consigliata per gli schemi che non fanno parte di [!DNL Profile] schema di unione. |
-| Solo gli oggetti B2B possono partecipare a relazioni molti-a-uno | 0 | Rigido | Il sistema supporta solo relazioni molti-a-uno tra oggetti B2B. Per ulteriori informazioni sulle relazioni molti-a-uno, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
-| Profondità massima delle relazioni nidificate tra oggetti B2B | 3 | Rigido | La profondità massima delle relazioni nidificate tra oggetti B2B è 3. Ciò significa che in uno schema con annidamento elevato non dovrebbe esistere una relazione tra oggetti B2B nidificati a più di 3 livelli di profondità. |
-| Schema singolo per ogni entità dimensione | 1 | Rigido | Ogni entità dimensione deve avere un singolo schema. Il tentativo di utilizzare le entità dimensione create da più schemi può influire sui risultati della segmentazione. È previsto che entità di dimensione diverse abbiano schemi separati. |
+| --------- | ----- | ---------- | ----------- |
+| Nessuna relazione legacy nidificata | 0 | Guardrail delle prestazioni | Non creare una relazione tra due[!DNL XDM Individual Profile] schemi. La creazione di relazioni è **non** consigliato per tutti gli schemi che non fanno parte di [!DNL Profile] schema di unione. |
+| Solo gli oggetti B2B possono partecipare a relazioni molti-a-uno | 0 | Guarddrail imposto dal sistema | Il sistema supporta solo relazioni molti-a-uno tra oggetti B2B. Per ulteriori informazioni sulle relazioni molti-a-uno, consulta l’esercitazione su [definizione delle relazioni tra schemi B2B](../xdm/tutorials/relationship-b2b.md). |
+| Profondità massima delle relazioni nidificate tra oggetti B2B | 3 | Guarddrail imposto dal sistema | La profondità massima delle relazioni nidificate tra oggetti B2B è 3. Ciò significa che in uno schema con annidamento elevato non dovrebbe esistere una relazione tra oggetti B2B nidificati a più di 3 livelli di profondità. |
+| Schema singolo per ogni entità dimensione | 1 | Guarddrail imposto dal sistema | Ogni entità dimensione deve avere un singolo schema. Il tentativo di utilizzare le entità dimensione create da più schemi può influire sui risultati della segmentazione. È previsto che entità di dimensione diverse abbiano schemi separati. |
 
 ## Limiti di dimensione dei dati
 
@@ -83,8 +85,8 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 >I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
-| Batch acquisiti per classe XDM al giorno | 45 | Morbido | Il numero totale di batch acquisiti ogni giorno per classe XDM non deve superare 45. L&#39;acquisizione di batch aggiuntivi può impedire prestazioni ottimali. |
+| --------- | ----- | ---------- | ----------- |
+| Batch acquisiti per classe XDM al giorno | 45 | Guardrail delle prestazioni | Il numero totale di batch acquisiti ogni giorno per classe XDM non deve superare 45. L&#39;acquisizione di batch aggiuntivi può impedire prestazioni ottimali. |
 
 ### guardrail entità Dimension
 
@@ -93,10 +95,10 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 >I limiti di dimensione dei dati descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
-| Dimensione totale per tutte le entità dimensionali | 5GB | Morbido | La dimensione totale consigliata per tutte le entità dimensionali è 5 GB. L&#39;inserimento di entità di dimensioni grandi può influire sulle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
-| Set di dati per schema di entità dimensionale | 5 | Morbido | Si consiglia un massimo di 5 set di dati associati a ogni schema di entità dimensionale. Ad esempio, se crei uno schema per &quot;prodotti&quot; e aggiungi cinque set di dati contributivi, non devi creare un sesto set di dati associato allo schema prodotti. |
-| Batch di entità Dimension acquisiti al giorno | 4 per entità | Morbido | Il numero massimo consigliato di batch di entità dimensione acquisiti al giorno è 4 per entità. Ad esempio, puoi acquisire gli aggiornamenti di un catalogo di prodotti fino a 4 volte al giorno. L&#39;acquisizione di batch di entità di dimensione aggiuntivi per la stessa entità può influire sulle prestazioni del sistema. |
+| --------- | ----- | ---------- | ----------- |
+| Dimensione totale per tutte le entità dimensionali | 5GB | Guardrail delle prestazioni | La dimensione totale consigliata per tutte le entità dimensionali è 5 GB. L&#39;inserimento di entità di dimensioni grandi può influire sulle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
+| Set di dati per schema di entità dimensionale | 5 | Guardrail delle prestazioni | Si consiglia un massimo di 5 set di dati associati a ogni schema di entità dimensionale. Ad esempio, se crei uno schema per &quot;prodotti&quot; e aggiungi cinque set di dati contributivi, non devi creare un sesto set di dati associato allo schema prodotti. |
+| Batch di entità Dimension acquisiti al giorno | 4 per entità | Guardrail delle prestazioni | Il numero massimo consigliato di batch di entità dimensione acquisiti al giorno è 4 per entità. Ad esempio, puoi acquisire gli aggiornamenti di un catalogo di prodotti fino a 4 volte al giorno. L&#39;acquisizione di batch di entità di dimensione aggiuntivi per la stessa entità può influire sulle prestazioni del sistema. |
 
 ## Guardrail di segmentazione
 
@@ -107,8 +109,8 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 >I limiti di segmentazione descritti in questa sezione rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 | Guardrail | Limite | Tipo limite | Descrizione |
-| --- | --- | --- | --- |
-| Segmenti per sandbox B2B | 400 | Morbido | Un’organizzazione può avere più di 400 segmenti in totale, purché ci siano meno di 400 segmenti in ogni singola sandbox B2B. Il tentativo di creare segmenti aggiuntivi può influire sulle prestazioni del sistema. |
+| --------- | ----- | ---------- | ----------- |
+| Definizioni dei segmenti per sandbox B2B | 400 | Guardrail delle prestazioni | Un’organizzazione può avere più di 400 definizioni di segmenti in totale, purché ci siano meno di 400 definizioni di segmenti in ogni singola sandbox B2B. Il tentativo di creare ulteriori definizioni di segmenti può influire sulle prestazioni del sistema. |
 
 ## Passaggi successivi
 
