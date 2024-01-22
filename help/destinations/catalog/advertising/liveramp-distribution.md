@@ -2,14 +2,14 @@
 title: LiveRamp - Connessione di distribuzione
 description: Scopri come utilizzare il connettore LiveRamp - Distribuzione per orchestrare e attivare i tipi di pubblico precedentemente integrati in LiveRamp, per le destinazioni pubblicitarie a valle.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2722'
 ht-degree: 38%
 
 ---
 
-# Connessione [!DNL LiveRamp - Distribution]
+# [!DNL LiveRamp - Distribution] connessione
 
 Il [!DNL LiveRamp - Distribution] La connessione consente di attivare i tipi di pubblico da Experienci Platform a publisher premium su dispositivi mobili, web, display e TV connesse.
 
@@ -65,7 +65,7 @@ Dopo aver effettuato l’onboarding dei tipi di pubblico in LiveRamp, continua i
 
 >[!IMPORTANT]
 > 
->Per connettersi alla destinazione, è necessario **[!UICONTROL Gestire le destinazioni]** [autorizzazione per il controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per connettersi alla destinazione, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Gestire le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
@@ -195,7 +195,7 @@ Per configurare i dettagli per la destinazione, compila i campi seguenti.
 
 * **[!UICONTROL Accordo sui termini di destinazione dei dati per gli inserzionisti]**: digita `I AGREE` confermare il riconoscimento e l&#39;accordo ai termini di dati degli inserzionisti Disney.
 * **[!UICONTROL Nome client]**: inserisci il nome della tua società come desideri che venga mostrato al partner di destinazione.
-* **[!UICONTROL Indirizzo e-mail]**: immetti un indirizzo e-mail associato a un individuo. Questo indirizzo e-mail funge da firma per il contratto sulle condizioni dei dati dell’inserzionista.
+* **[!UICONTROL Indirizzo e-mail]**: immetti un indirizzo e-mail associato a un individuo. Questo indirizzo e-mail funge da firma per il contratto sui termini di dati dell’inserzionista.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -431,7 +431,7 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 
 >[!IMPORTANT]
 > 
->Per attivare i dati, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+>Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Il [!DNL LiveRamp - Distribution] attiva i tipi di pubblico già caricati sul tuo account LiveRamp tramite [LiveRamp - Onboarding](liveramp-onboarding.md) connessione.
 

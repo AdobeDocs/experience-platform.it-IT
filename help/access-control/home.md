@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 3%
+source-wordcount: '1706'
+ht-degree: 1%
 
 ---
 
@@ -106,17 +106,17 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Profile Management] | [!UICONTROL Gestire IA B2B] | Accesso per leggere, creare, modificare ed eliminare impostazioni e configurazioni per tutti i servizi di IA/ML B2B. |
 | [!DNL Profile Management] | [!UICONTROL Visualizza profilo B2B] | Accesso in sola lettura a profili di entità B2B (come Account, Opportunità e così via), impostazioni e configurazioni per tutti i servizi AI/ML B2B e i widget del dashboard B2B. |
 | [!DNL Profile Management] | [!UICONTROL Gestisci profilo B2B] | Accesso per leggere, creare, modificare ed eliminare profili di entità B2B (come Account, Opportunità e così via). Accesso in sola lettura per impostazioni e configurazioni per tutti i servizi AI/ML B2B e i widget del dashboard B2B. |
-| [!DNL Identity Management] | [!UICONTROL Manage Identity Namespaces (Gestisci spazi dei nomi di identità)] | Accesso per leggere, creare, modificare ed eliminare spazi dei nomi di identità. |
+| [!DNL Identity Management] | [!UICONTROL Gestire gli spazi dei nomi delle identità] | Accesso per leggere, creare, modificare ed eliminare spazi dei nomi di identità. |
 | [!DNL Identity Management] | [!UICONTROL Visualizzare gli spazi dei nomi delle identità] | Accesso in sola lettura per gli spazi dei nomi di identità. |
 | [!DNL Identity Management] | [!UICONTROL Visualizza grafico delle identità] | Accesso in sola lettura per i grafici di identità. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestione sandbox] | Accesso alle sandbox di lettura, creazione, modifica ed eliminazione. |
-| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes (Visualizza sandbox)] | Accesso in sola lettura per le sandbox appartenenti alla tua organizzazione. |
+| [!DNL Sandbox Administration] | [!UICONTROL Visualizza Sandbox] | Accesso in sola lettura per le sandbox appartenenti alla tua organizzazione. |
 | [!DNL Sandbox Administration] | [!UICONTROL Ripristinare una sandbox] | Possibilità di ripristinare una sandbox. |
-| [!DNL Destinations] | [!UICONTROL Gestire le destinazioni] | Accesso per leggere, creare ed eliminare flussi di attivazione delle destinazioni e account di destinazione. |
-| [!DNL Destinations] | [!UICONTROL Visualizza destinazioni] | Accesso in sola lettura alle destinazioni disponibili in **[!UICONTROL Catalogo]** e le destinazioni autenticate in **[!UICONTROL Sfoglia]** scheda. |
-| [!DNL Destinations] | [!UICONTROL Attivare le destinazioni] | Consente agli utenti di attivare i segmenti nelle destinazioni esistenti. Abilita il passaggio di mappatura nel flusso di lavoro di attivazione. Questa autorizzazione richiede [!UICONTROL Visualizza destinazioni] o [!UICONTROL Gestire le destinazioni] da concedere all’utente che attiverà i dati nelle destinazioni. |
-| [!DNL Destinations] | [!UICONTROL Attiva segmento senza mappatura] | Consente agli utenti di attivare i segmenti nelle destinazioni esistenti, senza visualizzare [passaggio di mappatura](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gli utenti possono aggiungere e rimuovere segmenti nei flussi di lavoro di attivazione, ma non possono aggiungere o rimuovere gli attributi o le identità mappate. Questa autorizzazione richiede [!UICONTROL Attivare le destinazioni] autorizzazione da concedere all’utente che attiverà i dati nelle destinazioni. |
-| [!DNL Destinations] | [!UICONTROL Gestire e attivare le destinazioni dei set di dati] | Possibilità di leggere, creare, modificare e disabilitare i flussi di esportazione dei set di dati. Possibilità di attivare i dati anche per i set di dati attivi che sono stati creati. |
+| [!DNL Destinations] | [!UICONTROL Visualizza destinazioni] | Accesso in sola lettura per visualizzare le destinazioni disponibili in **[!UICONTROL Catalogo]** e le destinazioni autenticate in **[!UICONTROL Sfoglia]** scheda. |
+| [!DNL Destinations] | [!UICONTROL Gestire le destinazioni] | Accesso per leggere, creare ed eliminare connessioni di destinazione e account di destinazione. |
+| [!DNL Destinations] | [!UICONTROL Attivare le destinazioni] | Consente agli utenti di attivare i segmenti nelle destinazioni esistenti. Abilita il passaggio di mappatura nel flusso di lavoro di attivazione. Questa autorizzazione richiede anche [!UICONTROL Visualizza destinazioni] autorizzazione da concedere all’utente che attiverà i dati nelle destinazioni. |
+| [!DNL Destinations] | [!UICONTROL Attiva segmento senza mappatura] | Consente agli utenti di attivare i segmenti nelle destinazioni esistenti, senza visualizzare [passaggio di mappatura](../destinations/ui/activate-batch-profile-destinations.md#mapping). Gli utenti possono aggiungere e rimuovere segmenti nei flussi di lavoro di attivazione, ma non possono aggiungere o rimuovere attributi o identità mappati. Questa autorizzazione richiede anche [!UICONTROL Visualizza destinazioni] autorizzazione da concedere all’utente che attiverà i dati nelle destinazioni. |
+| [!DNL Destinations] | [!UICONTROL Gestire e attivare le destinazioni dei set di dati] | Possibilità di leggere, creare, modificare e disabilitare i flussi di esportazione dei set di dati. Possibilità di attivare i dati anche per i set di dati attivi che sono stati creati. Questa autorizzazione richiede anche [!UICONTROL Visualizza destinazioni] autorizzazione da concedere all’utente che attiverà i dati nelle destinazioni. |
 | [!DNL Destinations] | [!UICONTROL Authoring delle destinazioni] | Possibilità di creare destinazioni utilizzando [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL Gestisci origini] | Accesso per leggere, creare, modificare e disabilitare le origini. |
 | [!DNL Data Ingestion] | [!UICONTROL Visualizza origini] | Accesso in sola lettura alle origini disponibili in **[!UICONTROL Catalogo]** e le origini autenticate in **[!UICONTROL Sfoglia]** scheda. |

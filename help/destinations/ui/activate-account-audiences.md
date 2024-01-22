@@ -5,9 +5,9 @@ description: Scopri come attivare i tipi di pubblico dell’account nelle destin
 badgeLimitedAvailability: label="Disponibilità limitata" type="Caution"
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona 
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per attivare i tipi di pubblico dell’account, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per attivare i tipi di pubblico dell’account, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Attivare le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico dell’account, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** , quindi si dispone delle autorizzazioni appropriate.
 

@@ -3,9 +3,9 @@ title: Attiva i tipi di pubblico potenziali nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico potenziali per le destinazioni
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona 
 
 ### Autorizzazioni necessarie {#permissions}
 
-Per attivare i tipi di pubblico potenziali, è necessario **[!UICONTROL Gestire le destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
+Per attivare i tipi di pubblico potenziali, è necessario **[!UICONTROL Visualizza destinazioni]** e **[!UICONTROL Attivare le destinazioni]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Per assicurarti di disporre delle autorizzazioni necessarie per attivare i tipi di pubblico potenziali, sfoglia il catalogo delle destinazioni. Se una destinazione ha **[!UICONTROL Attiva]** , quindi si dispone delle autorizzazioni appropriate.
 
