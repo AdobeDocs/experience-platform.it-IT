@@ -2,19 +2,14 @@
 title: Connessione a elenco clienti pinterest
 description: Crea tipi di pubblico dagli elenchi dei clienti, dagli utenti che hanno visitato il tuo sito o dagli utenti che hanno già interagito con i tuoi contenuti su Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
 
-# Connessione [!DNL Pinterest Customer List]
-
->[!IMPORTANT]
->
->* A partire dal 16 novembre 2023, puoi visualizzare due schede Pinterest affiancate nel catalogo delle destinazioni. Ciò è dovuto a un aggiornamento dell’API dell’inserzionista Pinterest utilizzata per esportare i dati in Pinterest. Il connettore di destinazione Pinterest esistente è stato rinominato in **[!UICONTROL (Obsoleto) Pinterest]** e una nuova scheda **[!UICONTROL (Nuovo) Pinterest]** è ora disponibile per te.
->* Utilizza il **[!UICONTROL (Nuovo) Pinterest]** connessione nel catalogo per qualsiasi campagna a Pinterest. Se disponi di flussi di dati attivi per **[!UICONTROL (Obsoleto) Pinterest]** destinazione, leggi [documentazione di aggiornamento](/help/destinations/catalog/advertising/pinterest-upgrade.md) per comprendere le azioni da eseguire in modo da evitare interruzioni delle campagne.
+# [!DNL Pinterest Customer List] connessione
 
 ## Panoramica {#overview}
 
