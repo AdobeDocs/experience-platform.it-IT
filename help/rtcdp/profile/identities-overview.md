@@ -4,9 +4,9 @@ title: Identità in Real-time Customer Data Platform
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una migliore visione dei clienti e del loro comportamento, collegando le identità tra dispositivi e sistemi diversi.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service]
 
 ## Grafici delle identità
 
-Un grafo di identità è una mappa delle relazioni tra diversi spazi dei nomi di identità, che ti fornisce una rappresentazione visiva di come il cliente interagisce con il tuo marchio su canali diversi. Tutti i grafici delle identità dei clienti sono gestiti e aggiornati collettivamente da [!DNL Identity Service] quasi in tempo reale, in risposta all’attività del cliente.
+Un grafo di identità è una mappa delle relazioni tra identità diverse, che ti fornisce una rappresentazione visiva di come il cliente interagisce con il tuo marchio su canali diversi. Tutti i grafici delle identità dei clienti sono gestiti e aggiornati collettivamente dal servizio Identity, in risposta all’attività del cliente.
 
-[!DNL Identity Service] gestisce un grafo di identità visibile solo dalla tua organizzazione e basato sui tuoi dati, o grafo privato. [!DNL Identity Service] potenzia il grafico privato quando un record di dati acquisito contiene più di un’identità, aggiungendo una relazione tra le identità trovate.
+[!DNL Identity Service] gestisce un grafo di identità visibile solo alla tua organizzazione e basato sui tuoi dati. [!DNL Identity Service] potenzia il grafico quando un record di dati acquisito contiene più di un’identità, aggiungendo una relazione tra le identità trovate.
 
 ## Passaggi successivi
 
