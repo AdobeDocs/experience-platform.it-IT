@@ -5,9 +5,9 @@ title: Aggiornare i flussi di dati di destinazione utilizzando l’API del servi
 type: Tutorial
 description: Questa esercitazione illustra i passaggi per aggiornare un flusso di dati di destinazione. Scopri come abilitare o disabilitare il flusso di dati, aggiornarne le informazioni di base o aggiungere e rimuovere tipi di pubblico e attributi utilizzando l’API del servizio Flusso.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
 workflow-type: tm+mt
-source-wordcount: '2408'
+source-wordcount: '2404'
 ht-degree: 4%
 
 ---
@@ -499,13 +499,13 @@ curl -X PATCH \
 | `value` | Il nuovo valore con cui desideri aggiornare il parametro. |
 | `id` | Specifica l’ID del pubblico che stai aggiungendo al flusso di dati di destinazione. |
 | `name` | **(Facoltativo)**. Specifica il nome del pubblico che stai aggiungendo al flusso di dati di destinazione. Tieni presente che questo campo non è obbligatorio e puoi aggiungere correttamente un pubblico al flusso di dati di destinazione senza specificarne il nome. |
-| `filenameTemplate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: Obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: Obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: **(Facoltativo)**. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Facoltativo)**. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experienci Platform.</li><li>`custom-text`: **(Facoltativo)**. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
-| `exportMode` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona `"DAILY_FULL_EXPORT"` (Mostra origine dati) o `"FIRST_FULL_THEN_INCREMENTAL"` (Blocca selezione). Per ulteriori informazioni sulle due opzioni, consulta [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione di attivazione delle destinazioni batch. |
+| `filenameTemplate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Questo campo determina il formato del nome file dei file esportati nella destinazione. <br> Sono disponibili le seguenti opzioni: <br> <ul><li>`%DESTINATION_NAME%`: obbligatorio. I file esportati contengono il nome della destinazione.</li><li>`%SEGMENT_ID%`: obbligatorio. I file esportati contengono l’ID del pubblico esportato.</li><li>`%SEGMENT_NAME%`: **(Facoltativo)**. I file esportati contengono il nome del pubblico esportato.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: **(Facoltativo)**. Seleziona una di queste due opzioni per includere l&#39;ora in cui vengono generati da Experienci Platform.</li><li>`custom-text`: **(Facoltativo)**. Sostituire questo segnaposto con qualsiasi testo personalizzato che si desidera aggiungere alla fine dei nomi dei file.</li></ul> <br> Per ulteriori informazioni sulla configurazione dei nomi di file, consultare [configurare i nomi dei file](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) nell’esercitazione di attivazione delle destinazioni batch. |
+| `exportMode` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio Seleziona `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Per ulteriori informazioni sulle due opzioni, consulta [esporta file completi](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [esportare file incrementali](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) nell’esercitazione di attivazione delle destinazioni batch. |
 | `startDate` | Seleziona la data in cui il pubblico deve iniziare a esportare i profili nella tua destinazione. |
-| `frequency` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Per *destinazioni batch* solo. Questo campo è obbligatorio solo quando si seleziona `"DAILY_FULL_EXPORT"` modalità in `frequency` selettore. <br> Obbligatorio. <br> <ul><li>Seleziona `"AFTER_SEGMENT_EVAL"` far eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. In questo modo, quando viene eseguito il processo di attivazione, i profili più aggiornati vengono esportati nella destinazione.</li><li>Seleziona `"SCHEDULED"` per fare in modo che il processo di attivazione venga eseguito a un orario fisso. In questo modo i dati del profilo di Experience Platform vengono esportati ogni giorno alla stessa ora, ma i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione. Quando selezioni questa opzione, devi aggiungere anche una `startTime` per indicare in quale momento in UTC devono essere effettuate le esportazioni giornaliere.</li></ul> |
+| `frequency` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio <br> <ul><li>Per `"DAILY_FULL_EXPORT"` modalità di esportazione, puoi selezionare `ONCE` o `DAILY`.</li><li>Per `"FIRST_FULL_THEN_INCREMENTAL"` modalità di esportazione, puoi selezionare `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | Per *destinazioni batch* solo. Questo campo è obbligatorio solo quando si seleziona `"DAILY_FULL_EXPORT"` modalità in `frequency` selettore. <br> Obbligatorio <br> <ul><li>Seleziona `"AFTER_SEGMENT_EVAL"` far eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. In questo modo, quando viene eseguito il processo di attivazione, i profili più aggiornati vengono esportati nella destinazione.</li><li>Seleziona `"SCHEDULED"` per fare in modo che il processo di attivazione venga eseguito a un orario fisso. In questo modo i dati del profilo di Experience Platform vengono esportati ogni giorno alla stessa ora, ma i profili esportati potrebbero non essere quelli più aggiornati, a seconda che il processo di segmentazione batch sia stato completato prima dell’avvio del processo di attivazione. Quando selezioni questa opzione, devi aggiungere anche una `startTime` per indicare in quale momento in UTC devono essere effettuate le esportazioni giornaliere.</li></ul> |
 | `endDate` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Non applicabile durante la selezione `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Imposta la data in cui i membri del pubblico cessano di essere esportati nella destinazione. |
-| `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio. Seleziona il momento in cui generare ed esportare nella destinazione i file contenenti i membri del pubblico. |
+| `startTime` | Per *destinazioni batch* solo. Questo campo è necessario solo quando si aggiunge un pubblico a un flusso di dati in destinazioni di esportazione di file batch come Amazon S3, SFTP o Azure Blob. <br> Obbligatorio Seleziona il momento in cui generare ed esportare nella destinazione i file contenenti i membri del pubblico. |
 
 **Risposta**
 
@@ -543,7 +543,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/0",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -552,7 +552,7 @@ curl -X PATCH \
 },
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/1",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -565,7 +565,7 @@ curl -X PATCH \
 | Proprietà | Descrizione |
 | --------- | ----------- |
 | `op` | Chiamata di operazione utilizzata per definire l’azione necessaria per aggiornare il flusso di dati. Le operazioni includono: `add`, `replace`, e `remove`. Per rimuovere un pubblico da un flusso di dati, utilizza `remove` operazione. |
-| `path` | Specifica quale pubblico esistente deve essere rimosso dal flusso di dati di destinazione, in base all’indice del selettore del pubblico. Per recuperare l’ordine dei tipi di pubblico in un flusso di dati, esegui una chiamata GET al `/flows` e ispezionare il `transformations.segmentSelectors` proprietà. Per eliminare il primo pubblico nel flusso di dati, utilizza `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Specifica quale pubblico esistente deve essere rimosso dal flusso di dati di destinazione, in base all’indice del selettore del pubblico. Per recuperare l’ordine dei tipi di pubblico in un flusso di dati, esegui una chiamata GET al `/flows` e ispezionare il `transformations.segmentSelectors` proprietà. Per eliminare il primo pubblico nel flusso di dati, utilizza `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Risposta**
