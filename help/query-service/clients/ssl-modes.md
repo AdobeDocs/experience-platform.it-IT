@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;Query service;query servic
 title: Opzioni SSL di Query Service
 description: Scopri il supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service e come connettersi utilizzando la modalità SSL verify-full.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ Quando stabilisci una connessione di terze parti a un database Platform, ti cons
 
 ## Imposta un certificato radice per la verifica del server {#root-certificate}
 
+>[!IMPORTANT]
+>
+>I certificati TLS/SSL sugli ambienti di produzione per l’API Query Service Interactive Postgres sono stati aggiornati mercoledì 24 gennaio 2024.<br>Anche se si tratta di un requisito annuale, in questa occasione il certificato principale nella catena è cambiato anche in seguito all’aggiornamento della gerarchia dei certificati da parte del provider di certificati TLS/SSL di Adobe. Questo problema può interessare alcuni client Postgres se nell’elenco delle autorità di certificazione manca il certificato radice. Ad esempio, un client CLI PSQL potrebbe dover aggiungere i certificati radice a un file esplicito `~/postgresql/root.crt`, altrimenti può causare un errore. Ad esempio, `psql: error: SSL error: certificate verify failed`. Consulta la [documentazione ufficiale PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) per ulteriori informazioni su questo problema.<br>Il certificato principale da aggiungere può essere scaricato da [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
+
 Per garantire una connessione sicura, l’utilizzo SSL deve essere configurato sia sul client che sul server prima che venga stabilita la connessione. Se SSL è configurato solo sul server, il client potrebbe inviare informazioni riservate come le password prima che venga stabilito che il server richiede un livello di protezione elevato.
 
 Per impostazione predefinita, [!DNL PostgreSQL] non esegue alcuna verifica del certificato del server. Verificare l&#39;identità del server e assicurare una connessione sicura prima dell&#39;invio di dati sensibili (come parte di SSL) `verify-full` ), è necessario inserire un certificato radice (autofirmato) nel computer locale (`root.crt`) e un certificato foglia firmato dal certificato radice sul server.
@@ -61,7 +65,7 @@ Se hai bisogno di controlli di sicurezza più severi rispetto a `sslmode=require
 >Sono disponibili molte opzioni per ottenere un certificato SSL. A causa di una tendenza crescente nei certificati non autorizzati, DigiCert viene utilizzato in questa guida in quanto è un provider globale affidabile di soluzioni TLS/SSL, PKI, IoT e di firma ad alta affidabilità.
 
 1. Accedi a [elenco dei certificati radice DigiCert disponibili](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Cerca &quot;[!DNL DigiCert Global Root CA]&quot; dall’elenco dei certificati disponibili.
+1. Cerca &quot;[!DNL DigiCert Global Root G2]&quot; dall’elenco dei certificati disponibili.
 1. Seleziona [!DNL **Scarica PEM**] per scaricare il file sul computer locale.
    ![Elenco dei certificati radice DigiCert disponibili con Download PEM evidenziato.](../images/clients/ssl-modes/digicert.png)
 1. Rinomina il file del certificato di protezione in `root.crt`.
@@ -73,7 +77,7 @@ Se hai bisogno di controlli di sicurezza più severi rispetto a `sslmode=require
 >
 >Per trovare `%appdata%` in un sistema operativo Windows, premere ⊞ **Win + R** e input `%appdata%` nel campo di ricerca.
 
-Dopo il [!DNL DigiCert Global Root CA] Il file CRT è disponibile nel [!DNL PostgreSQL] cartella, è possibile connettersi a [!DNL Query Service] utilizzando `sslmode=verify-full` o `sslmode=verify-ca` opzione.
+Dopo il [!DNL DigiCert Global Root G2] Il file CRT è disponibile nel [!DNL PostgreSQL] cartella, è possibile connettersi a [!DNL Query Service] utilizzando `sslmode=verify-full` o `sslmode=verify-ca` opzione.
 
 ## Passaggi successivi
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettere i client a Query Service
 description: In questo documento viene illustrato come connettersi a Query Service da diverse applicazioni client desktop e come verificare tali connessioni.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Connetti client a [!DNL Query Service]
 
 Questa sezione spiega come connettersi a [!DNL Query Service] da diverse applicazioni client desktop e come verificare tali connessioni. [!DNL Query Service] utilizza [!DNL PostgreSQL] , quindi le istruzioni in questa sezione spiegano come utilizzare [!DNL PostgreSQL] strumenti e driver per la connessione e la scrittura di query.
+
+>[!IMPORTANT]
+>
+>I certificati TLS/SSL sugli ambienti di produzione per l’API Query Service Interactive Postgres sono stati aggiornati mercoledì 24 gennaio 2024.<br>Anche se si tratta di un requisito annuale, in questa occasione il certificato principale nella catena è cambiato anche in seguito all’aggiornamento della gerarchia dei certificati da parte del provider di certificati TLS/SSL di Adobe. Questo problema può interessare alcuni client Postgres se nell’elenco delle autorità di certificazione manca il certificato radice. Ad esempio, un client CLI PSQL potrebbe dover aggiungere i certificati radice a un file esplicito `~/postgresql/root.crt`, altrimenti può causare un errore. Ad esempio, `psql: error: SSL error: certificate verify failed`. Consulta la [documentazione ufficiale PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) per ulteriori informazioni su questo problema.<br>Il certificato principale da aggiungere può essere scaricato da [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Le istruzioni sono fornite per i seguenti clienti:
 
