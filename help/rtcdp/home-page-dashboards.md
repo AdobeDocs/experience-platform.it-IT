@@ -4,10 +4,10 @@ title: Home page e dashboard di Real-time Customer Data Platform
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 1%
+source-wordcount: '850'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,13 @@ Il [!UICONTROL Guida introduttiva a Real-Time Customer Profile] il widget è div
 
 ![La home page dell’interfaccia utente di Platform che mostra il widget per iniziare](assets/platform-home/getting-started-widget.png)
 
-## Dashboard delle metriche
+## Dashboard delle metriche {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="Numero totale di profili"
+>abstract="Il numero totale di profili di cui dispone la tua organizzazione in Experienci Platform. Questo conteggio si basa sul criterio di unione della tua organizzazione e non include frammenti di profilo. Il numero di profili viene aggiornato una volta ogni 24 ore."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 Il dashboard delle metriche mostra informazioni aggiornate sui dati dell’Experience Platform. Il dashboard è diviso in due sezioni:
 
@@ -44,7 +50,7 @@ La classifica mostra il numero totale corrente di schemi, set di dati, profili e
 
 * **Schemi totali**: Il **Schemi totali** contatore indica il numero di schemi nel sistema. Questo contatore viene aggiornato quando si crea uno schema. Per ulteriori informazioni, leggere [panoramica degli schemi](../xdm/home.md).
 * **Set di dati totali**: Il **Set di dati totali** mostra il numero di set di dati nel sistema e la quantità di dati in [!DNL Platform]. Questo contatore viene aggiornato quando viene creato un set di dati. Per ulteriori informazioni sui set di dati, consulta [panoramica dei set di dati](../catalog/datasets/overview.md).
-* **Profili totali**: Il **Profili** conteggio mostra il numero totale di persone con profili nel [!DNL Real-Time Customer Profile]. Non include frammenti di profilo. Questo è il tuo pubblico indirizzabile totale. Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione del criterio di unione in Profilo unificato. Il numero di profili viene aggiornato una volta ogni 24 ore. Per ulteriori informazioni sui profili, consulta [Panoramica del profilo cliente in tempo reale](../profile/home.md).
+* **Profili totali**: Il **Profili** count mostra il numero totale di profili di cui dispone l’organizzazione in Experienci Platform. Non include frammenti di profilo. Questo è il tuo pubblico indirizzabile totale. Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione dei criteri di unione in Real-Time Customer Profile. Il numero di profili viene aggiornato una volta ogni 24 ore. Per ulteriori informazioni sui profili, consulta [Panoramica del profilo cliente in tempo reale](../profile/home.md).
 * **Segmenti totali**: **Segmenti** mostra il numero totale di segmenti creati per l’organizzazione. Questo numero viene aggiornato quando vengono creati nuovi segmenti. Per ulteriori informazioni sui segmenti, consulta [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
 ### Elementi recenti
