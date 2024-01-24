@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2739'
 ht-degree: 1%
 
 ---
@@ -108,6 +108,7 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 | Data di pubblicazione | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì |
 | Inattivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì |
 | Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No |
+| Attivo | Questo stato è stato **obsoleto** ed è sostituito da **Pubblicato** stato. | N/D | N/D | N/D | N/D | N/D | N/D |
 
 ### In che modo Audience Portal e Audience Composition interagiranno con il rilascio di Real-Time CDP Partner Data?
 

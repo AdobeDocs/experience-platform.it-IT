@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ Se si esclude per attributo, è possibile selezionare gli attributi da escludere
 Viene visualizzato un elenco di attributi di profilo. Seleziona il tipo di attributo da escludere, seguito da **[!UICONTROL Seleziona]** per aggiungerli al blocco di esclusione.
 
 ![Viene visualizzato un elenco di attributi.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Quando si esclude per attributo, è possibile specificare **uno** valore da escludere. L&#39;utilizzo di qualsiasi tipo di separatore, ad esempio una virgola o un punto e virgola, determina l&#39;esclusione del valore esatto. Ad esempio, impostando il valore come `red, blue` comporterà l’esclusione del termine `red, blue` dall&#39;attributo, ma **non** si traduce nell’esclusione di uno dei termini `red` o `blue`.
 
 ## [!UICONTROL Arricchire] {#enrich-block}
 

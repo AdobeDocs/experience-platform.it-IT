@@ -2,10 +2,10 @@
 title: Guida dell’interfaccia utente Attributi calcolati
 description: Scopri come creare, visualizzare e aggiornare gli attributi calcolati utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 8%
+source-wordcount: '1576'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ Questo documento fornisce una guida su come creare e aggiornare attributi calcol
 Questa guida dell’interfaccia utente richiede una comprensione dei vari [!DNL Experience Platform] servizi coinvolti nella gestione [!DNL Real-Time Customer Profiles]. Prima di leggere questa guida o di lavorare nell’interfaccia utente, consulta la documentazione dei seguenti servizi:
 
 - [[!DNL Real-Time Customer Profile]](../home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
 
 ## Visualizza attributi calcolati {#view}
 
@@ -41,7 +41,7 @@ Per selezionare i campi visibili, è possibile selezionare ![icona configura col
 | [!UICONTROL Metodo di valutazione] | Il metodo di valutazione per l&#39;attributo calcolato. In questo momento, solo **batch** è supportato. |
 | [!UICONTROL Ultima valutazione eseguita] | Questo timestamp rappresenta l’ultima esecuzione di valutazione riuscita. Solo gli eventi che si sono verificati **prima di** questo timestamp viene considerato nell’ultima valutazione riuscita. |
 | [!UICONTROL Stato ultima valutazione] | Lo stato che indica se l’attributo calcolato è stato calcolato correttamente o meno nell’ultima esecuzione della valutazione. I valori possibili includono **[!UICONTROL Completato]** o **[!UICONTROL Non riuscito]**. |
-| [!UICONTROL Refresh frequency (Frequenza di aggiornamento)] | Indicazione della frequenza con cui si prevede di aggiornare l&#39;attributo calcolato. I valori possibili includono orario, giornaliero, settimanale o mensile. |
+| [!UICONTROL Frequenza di aggiornamento] | Indicazione della frequenza con cui si prevede di aggiornare l&#39;attributo calcolato. I valori possibili includono orario, giornaliero, settimanale o mensile. |
 | [!UICONTROL Aggiornamento rapido] | Valore che indica se l&#39;aggiornamento rapido è abilitato o meno per questo attributo di calcolo. Se è abilitato l&#39;aggiornamento rapido, l&#39;attributo calcolato può essere aggiornato su base giornaliera anziché settimanale, bisettimanale o mensile. Questo valore è applicabile solo per attributi calcolati con un periodo di lookback superiore a una base settimanale. |
 | [!UICONTROL Stato del ciclo di vita] | Stato corrente dell&#39;attributo calcolato. Esistono tre stati possibili: <ul><li>**[!UICONTROL Bozza]:** L’attributo calcolato **non** hai già creato un campo nello schema. In questo stato, l’attributo calcolato può essere modificato. </li><li>**[!UICONTROL Pubblicato]:** L’attributo calcolato ha un campo creato nello schema ed è pronto per essere utilizzato. In questo stato, l’attributo calcolato **non può** essere modificata.</li><li>**[!UICONTROL Inattivo]:** L’attributo calcolato è disabilitato. Per ulteriori informazioni sullo stato di inattività, leggere [Pagina Domande frequenti](./faq.md#inactive-status). </li> |
 | [!UICONTROL Creato] | Timestamp che mostra la data e l’ora di creazione dell’attributo calcolato. |
@@ -155,6 +155,10 @@ Quando si seleziona una bozza di attributo calcolato, **[!UICONTROL Modifica att
 >Ad esempio, se stai creando una definizione di segmento che cerca &quot;Tutti i profili con un indirizzo e-mail valido&quot; in cui il campo dell’indirizzo e-mail è popolato da un attributo calcolato con la funzione più recente, **deve** includi sia il valore dell’indirizzo e-mail che esiste **e** il timestamp dell’indirizzo e-mail esiste già.
 
 Dopo aver creato un attributo calcolato, puoi utilizzare **pubblicato** attributi calcolati in altri servizi a valle. Poiché gli attributi calcolati sono campi di attributi di profilo creati nello schema di unione profili, puoi cercare valori di attributi calcolati per un profilo cliente in tempo reale, utilizzarli in un pubblico, attivarli in una destinazione o utilizzarli per la personalizzazione nei percorsi in Adobe Journey Optimizer.
+
+>[!NOTE]
+>
+>Attributi calcolati **non può** essere utilizzato nel pubblico **composizioni**.
 
 ![Viene visualizzato il Generatore di segmenti, che mostra un attributo calcolato come parte della composizione di definizione del segmento.](./images/ui/use-ca.png)
 
