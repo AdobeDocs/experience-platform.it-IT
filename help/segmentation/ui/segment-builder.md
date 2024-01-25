@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
-ht-degree: 7%
+source-wordcount: '3426'
+ht-degree: 6%
 
 ---
 
@@ -73,10 +73,10 @@ Ad esempio, considera una situazione in cui disponevi di due suite di rapporti c
 
 | Campo | Schema suite di rapporti A | Schema B suite di rapporti |
 | ----- | --------------------- | --------------------- |
-| eVar1 | Dominio di riferimento | Accesso effettuato S/N |
-| eVar2 | Nome pagina | ID fedeltà membro |
-| eVar3 | URL | Nome pagina |
-| eVar4 | Termini di ricerca | Nome prodotto |
+| EVAR 1 | Dominio di riferimento | Accesso effettuato S/N |
+| EVAR 2 | Nome pagina | ID fedeltà membro |
+| EVAR 3 | URL | Nome pagina |
+| EVAR 4 | Termini di ricerca | Nome prodotto |
 | event1 | Clic | Page Views |
 | event2 | Page Views | Aggiunte carrello |
 | event3 | Aggiunte carrello | Pagamenti |
@@ -265,7 +265,11 @@ Continuando a creare la definizione del segmento, puoi visualizzare un’antepri
 
 >[!NOTE]
 >
->Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione di stime per le definizioni dei segmenti sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione di definizioni di segmenti.
+>Le stime del pubblico vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità.
+>
+>Inoltre, questa stima si basa su quando è stato eseguito l’ultimo processo di esempio del profilo. Ciò significa che se utilizzi una funzione data relativa, ad esempio &quot;Oggi&quot; o &quot;Questa settimana&quot;, la stima baserà i suoi calcoli sull’ultimo tempo di esecuzione del processo di esempio del profilo. Ad esempio, se oggi è il 24 gennaio e l’ultimo processo di esempio del profilo è stato eseguito il 22 gennaio, la funzione di data relativa &quot;Ieri&quot; si baserà sul 21 gennaio e non sul 23 gennaio.
+>
+>Ulteriori informazioni sulla generazione di stime per le definizioni dei segmenti sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione di definizioni di segmenti.
 
 Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se desideri conoscere i tipi di valutazione per i quali è qualificata questa definizione di segmento, puoi selezionare l’icona Sfoglia ![icona cartella con lente di ingrandimento](../images/ui/segment-builder/segment-evaluation-select-icon.png) per visualizzare un elenco dei metodi di valutazione delle definizioni dei segmenti disponibili.
 
