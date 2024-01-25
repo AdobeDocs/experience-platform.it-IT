@@ -4,7 +4,7 @@ title: Identità in Real-time Customer Data Platform
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una migliore visione dei clienti e del loro comportamento, collegando le identità tra dispositivi e sistemi diversi.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Ora, invece di cinque clienti distinti che interagiscono con il tuo marchio attr
 
 ## Spazio dei nomi delle identità
 
-Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service] e fungono da indicatori che forniscono ulteriore contesto alle identità dei clienti. Un esempio di spazio dei nomi ID comunemente utilizzato è &quot;E-mail&quot;, dove l’utilizzo dello stesso indirizzo e-mail su più siti web consente di unire diverse identità, ciascuna con un ID cliente univoco, come appartenenti in realtà allo stesso cliente. [!DNL Experience Platform] consente di utilizzare gli spazi dei nomi ID per cercare singoli profili all’interno dell’interfaccia utente. Per ulteriori informazioni sulla visualizzazione dei profili, consulta [panoramica sulla navigazione del profilo](profile-browse.md). Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md).
+Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service] e fungono da indicatori che forniscono ulteriore contesto alle identità dei clienti. Un esempio di spazio dei nomi ID comunemente utilizzato è &quot;E-mail&quot;, dove l’utilizzo dello stesso indirizzo e-mail su più siti web consente di unire diverse identità, ciascuna con un ID cliente univoco, come appartenenti in realtà allo stesso cliente. [!DNL Experience Platform] consente di utilizzare gli spazi dei nomi ID per cercare singoli profili all’interno dell’interfaccia utente. Per ulteriori informazioni sulla visualizzazione dei profili, consulta [panoramica sulla navigazione del profilo](profile-browse.md). Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md).
 
 ## Grafici delle identità
 

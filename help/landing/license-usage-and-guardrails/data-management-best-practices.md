@@ -2,9 +2,9 @@
 title: Best practice per l’adesione alle licenze di gestione dati
 description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2264'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ L’archivio Profili è composto dai seguenti componenti:
 | Frammenti di profilo | Ogni profilo cliente è composto da più **frammenti di profilo** che sono stati uniti per formare un’unica vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio attraverso diversi canali, la tua organizzazione avrà più **frammenti di profilo** relativo al singolo cliente visualizzato in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti utilizzando il grafico delle identità per creare un singolo profilo per quel cliente. **Frammenti di profilo** consistere in uno spazio dei nomi di identità come identificatore, con dati di record e/o dati di serie temporali associati. |
 | Registra dati (attributi) | Un profilo è una rappresentazione di un soggetto, un’organizzazione o un individuo, composta da molti **Attributi** (noto anche come **registrare dati**). Ad esempio, il profilo di un prodotto può includere uno SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. **Registra dati** di solito ha un volume basso/moderato, ma è utile per lunghi periodi di tempo. |
 | Dati delle serie temporali (Comportamento) | **Dati delle serie temporali** fornisce informazioni sul comportamento di un utente. Rappresentata dalla classe di schema standard Experience Data Model (XDM) [!DNL ExperienceEvent], i dati delle serie temporali possono descrivere eventi quali elementi aggiunti al carrello, collegamenti su cui viene fatto clic e video visualizzati. Il valore del comportamento può diminuire nel tempo. |
-| Spazio dei nomi dell’identità (identità) | Quando i dati del cliente si uniscono, vengono uniti in un unico profilo tramite l’utilizzo di **spazi dei nomi di identità** e la possibilità di unire queste identità man mano che si acquisiscono maggiori informazioni sull’utente. Consulta la [panoramica degli spazi dei nomi delle identità](../../identity-service/namespaces.md) per ulteriori informazioni. |
+| Spazio dei nomi dell’identità (identità) | Quando i dati del cliente si uniscono, vengono uniti in un unico profilo tramite l’utilizzo di **spazi dei nomi di identità** e la possibilità di unire queste identità man mano che si acquisiscono maggiori informazioni sull’utente. Consulta la [panoramica degli spazi dei nomi delle identità](../../identity-service/features/namespaces.md) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
 

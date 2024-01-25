@@ -2,9 +2,9 @@
 title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ L’eliminazione dei record richiede una buona conoscenza del funzionamento dei 
 Per ulteriori informazioni sulle identità in Platform, consulta la seguente documentazione:
 
 * [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui si conformano.
-* [Spazi dei nomi delle identità](../../identity-service/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi of informazioni sull’identità che possono riferirsi a una singola persona e che sono un componente obbligatorio per ogni campo di identità.
+* [Spazi dei nomi delle identità](../../identity-service/features/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi of informazioni sull’identità che possono riferirsi a una singola persona e che sono un componente obbligatorio per ogni campo di identità.
 * [Profilo cliente in tempo reale](../../profile/home.md): utilizza grafici di identità per fornire profili di consumatori unificati basati su dati aggregati provenienti da più origini, aggiornati in tempo quasi reale.
 * [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Platform tramite l’utilizzo di schemi. Tutti i set di dati di Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
 * [Campi di identità](../../xdm/ui/fields/identity.md): scopri come viene definito un campo di identità in uno schema XDM.

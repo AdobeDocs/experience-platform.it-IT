@@ -2,22 +2,22 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 26%
+source-wordcount: '2257'
+ht-degree: 24%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 28 settembre 2023**
+**Data di rilascio: venerdì 28 settembre 2023**
 
 Nuove funzioni di Adobe Experience Platform:
 
 - [Attributi calcolati](#computed-attributes)
 
-Aggiornamenti alle funzioni esistenti in Experience Platform:
+Aggiornamenti alle funzioni esistenti in Experienci Platform:
 
 - [Avvisi](#alerts)
 - [Dashboard](#dashboards)
@@ -99,7 +99,7 @@ Experienci Platform fornisce una suite di funzionalità di igiene dei dati che c
 | Funzione | Descrizione |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni avanzate di gestione del ciclo di vita dei dati in Adobe Experience Platform: Scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatizzata dei set di dati, puoi eliminare interi set di dati e impostare una data e un’ora per il set di dati da eliminare.<br>L’eliminazione dei record ti consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Consulta la [Documentazione sull’eliminazione dei record](../../hygiene/ui/record-delete.md) per ulteriori informazioni |
-| Scadenze set di dati | Riduci al minimo i dati e tieni sotto controllo i contratti di licenza con Scadenza set di dati automatica. Riduci i volumi di dati eliminando interi set di dati e imposta una data e un’ora per l’eliminazione del set di dati. Consulta la [documentazione sulle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md) per ulteriori informazioni. |
+| Scadenze dei set di dati | Riduci al minimo i dati e tieni sotto controllo i contratti di licenza con Scadenza set di dati automatica. Riduci i volumi di dati eliminando interi set di dati e imposta una data e un’ora per l’eliminazione del set di dati. Consulta la [documentazione sulle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
 
@@ -190,7 +190,7 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 
 | Funzione | Descrizione |
 | --- | --- |
-| Miglioramenti dell’interfaccia utente di Identity Service | Utilizza lo strumento di creazione dello spazio dei nomi personalizzato migliorato nell’interfaccia utente di Experienci Platform per gestire meglio gli spazi dei nomi personalizzati e i corrispondenti tipi di identità. L’interfaccia utente avanzata del servizio Identity offre: <ul><li>Esperienza contestuale: suggerimenti visivi, chiarezza e contesto per definire lo spazio dei nomi e i tipi di identità.</li><li>Precisione: è stata migliorata la gestione degli errori, senza più nomi di identità duplicati.</li><li>Discoverability: accesso alla documentazione da una finestra di dialogo interna al prodotto.</li></ul> Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati](../../identity-service/namespaces.md#create-namespaces). |
+| Miglioramenti dell’interfaccia utente di Identity Service | Utilizza lo strumento di creazione dello spazio dei nomi personalizzato migliorato nell’interfaccia utente di Experienci Platform per gestire meglio gli spazi dei nomi personalizzati e i corrispondenti tipi di identità. L’interfaccia utente avanzata del servizio Identity offre: <ul><li>Esperienza contestuale: suggerimenti visivi, chiarezza e contesto per definire lo spazio dei nomi e i tipi di identità.</li><li>Precisione: è stata migliorata la gestione degli errori, senza più nomi di identità duplicati.</li><li>Discoverability: accesso alla documentazione da una finestra di dialogo interna al prodotto.</li></ul> Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati](../../identity-service/features/namespaces.md#create-namespaces). |
 | Modifiche ai limiti del grafo delle identità | Il limite del grafico delle identità è cambiato da 150 a 50. Quando una nuova identità viene acquisita in un grafico completo, l’identità meno recente in base alla marca temporale e al tipo di identità dell’acquisizione viene eliminata. Ai tipi di identità dei cookie viene assegnata una priorità per l’eliminazione. Contatta il team dell’account Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> Queste richieste verranno elaborate manualmente da Adobe Engineering. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md) e guida su [best practice per l’adesione alle licenze di gestione dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

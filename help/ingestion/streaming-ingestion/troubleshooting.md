@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di acquisizione in streaming
 description: Questo documento fornisce le risposte alle domande più frequenti sull’acquisizione in streaming su Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Puoi raggruppare più messaggi all’interno di un singolo payload di richiesta 
 
 Tutti i dati inviati a [!DNL Platform] (correttamente o altrimenti) viene memorizzato come file batch prima di essere mantenuto nei set di dati. Lo stato di elaborazione dei batch viene visualizzato all’interno del set di dati a cui sono stati inviati.
 
-Puoi verificare se i dati sono stati acquisiti correttamente controllando l’attività del set di dati utilizzando [Interfaccia utente di Experience Platform](https://platform.adobe.com). Clic **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra per visualizzare un elenco di set di dati. Seleziona dall’elenco visualizzato il set di dati a cui stai eseguendo il flusso per aprirne i **[!UICONTROL Attività set di dati]** mostra tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida su [monitoraggio dei flussi di dati](../quality/monitor-data-ingestion.md).
+Puoi verificare se i dati sono stati acquisiti correttamente controllando l’attività del set di dati utilizzando [Interfaccia utente di Experienci Platform](https://platform.adobe.com). Clic **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra per visualizzare un elenco di set di dati. Seleziona dall’elenco visualizzato il set di dati a cui stai eseguendo il flusso per aprirne i **[!UICONTROL Attività set di dati]** mostra tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida su [monitoraggio dei flussi di dati](../quality/monitor-data-ingestion.md).
 
 Se i dati non vengono acquisiti correttamente e desideri recuperarli da [!DNL Platform], è possibile recuperare le batch non riuscite inviando i relativi ID al [!DNL Data Access API]. Consulta la guida su [recupero batch non riusciti](../quality/retrieve-failed-batches.md) per ulteriori informazioni.
 
@@ -97,6 +97,6 @@ Il seguente JSON è un oggetto di risposta di esempio per una richiesta API con 
 
 Se [!DNL Real-Time Customer Profile] rifiuta un messaggio, probabilmente a causa di informazioni di identità errate. Questo può essere il risultato della fornitura di un valore o uno spazio dei nomi non valido per un’identità.
 
-Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando utilizzi spazi dei nomi personalizzati, accertati che lo spazio dei nomi sia stato registrato in [!DNL Identity Service]. Consulta la [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md) per ulteriori informazioni sull’utilizzo degli spazi dei nomi predefiniti e personalizzati.
+Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando utilizzi spazi dei nomi personalizzati, accertati che lo spazio dei nomi sia stato registrato in [!DNL Identity Service]. Consulta la [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md) per ulteriori informazioni sull’utilizzo degli spazi dei nomi predefiniti e personalizzati.
 
 È possibile utilizzare [[!DNL Experience Platform UI]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui l’acquisizione di un messaggio non è riuscita. Clic **[!UICONTROL Monitorare]** nel menu di navigazione a sinistra, quindi visualizza **[!UICONTROL Streaming end-to-end]** per visualizzare i batch di messaggi inviati in streaming durante un periodo di tempo selezionato.

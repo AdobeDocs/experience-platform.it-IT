@@ -2,10 +2,10 @@
 title: Definire una relazione tra due schemi nell’edizione B2B di Real-time Customer Data Platform
 description: Scopri come definire una relazione molti-a-uno tra due schemi in Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 14%
+source-wordcount: '1363'
+ht-degree: 15%
 
 ---
 
@@ -61,7 +61,7 @@ Per tenere conto di ciò, tutte le classi B2B standard contengono campi &quot;ch
 
 >[!NOTE]
 >
->Quando [impostazione di un campo XDM come identità](../ui/fields/identity.md), devi fornire uno spazio dei nomi delle identità in cui definire l’identità. Può trattarsi di uno spazio dei nomi standard fornito da Adobe o di uno spazio dei nomi personalizzato definito dalla tua organizzazione. In pratica, lo spazio dei nomi è semplicemente una stringa contestuale e può essere impostato su qualsiasi valore desiderato, a condizione che sia significativo per la tua organizzazione per la categorizzazione del tipo di identità. Consulta la panoramica su [spazi dei nomi di identità](../../identity-service/namespaces.md) per ulteriori informazioni.
+>Quando [impostazione di un campo XDM come identità](../ui/fields/identity.md), devi fornire uno spazio dei nomi delle identità in cui definire l’identità. Può trattarsi di uno spazio dei nomi standard fornito da Adobe o di uno spazio dei nomi personalizzato definito dalla tua organizzazione. In pratica, lo spazio dei nomi è semplicemente una stringa contestuale e può essere impostato su qualsiasi valore desiderato, a condizione che sia significativo per la tua organizzazione per la categorizzazione del tipo di identità. Consulta la panoramica su [spazi dei nomi di identità](../../identity-service/features/namespaces.md) per ulteriori informazioni.
 
 A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni schema utilizzato in questo tutorial prima che sia stata definita una relazione. Tieni presente dove sono state definite le identità primarie nella struttura dello schema e gli spazi dei nomi personalizzati utilizzati.
 

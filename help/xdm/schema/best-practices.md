@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -206,7 +206,7 @@ Se non sei sicuro se un particolare campo sia necessario da includere in uno sch
 
 Ad Experience Platform, i campi XDM contrassegnati come identità vengono utilizzati per unire informazioni su singoli clienti provenienti da più origini dati. Anche se uno schema può avere più campi contrassegnati come identità, è necessario definire un’unica identità primaria affinché lo schema possa essere abilitato per l’utilizzo in [!DNL Real-Time Customer Profile]. Consulta la sezione su [campi di identità](./composition.md#identity) nelle nozioni di base sulla composizione dello schema, per informazioni più dettagliate sul caso d’uso di questi campi.
 
-Durante la progettazione degli schemi, eventuali chiavi primarie nelle tabelle del database relazionale sono probabilmente candidate per le identità primarie. Altri esempi di campi di identità applicabili sono gli indirizzi e-mail dei clienti, i numeri di telefono, gli ID account e [ECID](../../identity-service/ecid.md).
+Durante la progettazione degli schemi, eventuali chiavi primarie nelle tabelle del database relazionale sono probabilmente candidate per le identità primarie. Altri esempi di campi di identità applicabili sono gli indirizzi e-mail dei clienti, i numeri di telefono, gli ID account e [ECID](../../identity-service/features/ecid.md).
 
 ### Adobe di gruppi di campi dello schema dell’applicazione {#adobe-application-schema-field-groups}
 

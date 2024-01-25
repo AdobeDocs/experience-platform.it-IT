@@ -5,7 +5,7 @@ title: Esplorare le risorse dello schema nell’interfaccia utente
 description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Se il campo che stai esaminando è un campo enum, nella barra a destra verranno 
 
 Durante l’analisi degli schemi che contengono campi di identità, questi campi sono elencati nella barra a sinistra sotto la classe o il gruppo di campi che li fornisce allo schema. Seleziona il nome del campo di identità nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente dalla profondità di nidificazione.
 
-I campi di identità sono evidenziati nell’area di lavoro con l’icona di un’impronta digitale (![Immagine icona impronta digitale](../images/ui/explore/identity-symbol.png)). Se selezioni il nome del campo di identità, puoi visualizzare informazioni aggiuntive come [spazio dei nomi delle identità](../../identity-service/namespaces.md) e se il campo rappresenta o meno l’identità primaria dello schema.
+I campi di identità sono evidenziati nell’area di lavoro con l’icona di un’impronta digitale (![Immagine icona impronta digitale](../images/ui/explore/identity-symbol.png)). Se selezioni il nome del campo di identità, puoi visualizzare informazioni aggiuntive come [spazio dei nomi delle identità](../../identity-service/features/namespaces.md) e se il campo rappresenta o meno l’identità primaria dello schema.
 
 ![](../images/ui/explore/identity-field.png)
 

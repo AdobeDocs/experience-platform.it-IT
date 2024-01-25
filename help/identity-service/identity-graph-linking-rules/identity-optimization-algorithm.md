@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -55,7 +55,7 @@ Per dispositivo condiviso si intende un dispositivo utilizzato da più utenti. A
 
 | Namespace | Limite |
 | --- | --- |
-| ID del sistema di gestione delle relazioni con i clienti | 1 |
+| ID CRM | 1 |
 | E-mail | 1 |
 | ECID | N/D |
 
@@ -72,7 +72,7 @@ In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei n
 
 | Namespace | Limite |
 | --- | --- |
-| ID del sistema di gestione delle relazioni con i clienti | 1 |
+| ID CRM | 1 |
 | ECID | N/D |
 
 In questo esempio, lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti è designato come spazio dei nomi univoco.
@@ -93,7 +93,7 @@ In alcuni casi, un utente potrebbe immettere valori non validi per i propri nume
 
 | Namespace | Limite |
 | --- | --- |
-| ID del sistema di gestione delle relazioni con i clienti | 1 |
+| ID CRM | 1 |
 | E-mail | 1 |
 | ECID | N/D |
 
@@ -134,5 +134,5 @@ Per ulteriori informazioni sulle regole di collegamento del grafico delle identi
 
 * [Panoramica delle regole di collegamento del grafico delle identità](./overview.md)
 * [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md)
-* [Logica di collegamento dell’identità](./identity-linking-logic.md)
-* [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
+* [Logica di collegamento dell’identità](../features/identity-linking-logic.md)
+* [Servizio Identity e Real-Time Customer Profile](../identity-and-profile.md)

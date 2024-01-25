@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica del connettore di origine degli attributi del cliente
 description: Scopri come collegare Attributi del cliente a Adobe Experience Platform utilizzando le API o l’interfaccia utente
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 8%
+source-wordcount: '381'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ Il [!DNL Customer Attributes] origine crea automaticamente il set di dati in cui
 
 ## Identità
 
-L’identità primaria di un set di dati è contenuta nella prima colonna del file CSV dei dati sorgente. Il [!DNL Customer Attributes] L&#39;origine presuppone che l&#39;identità sia sempre mappata al [`CORE` namespace](../../../identity-service/namespaces.md), spazio dei nomi generato dal sistema e supportato da [[!DNL Identity Service]](../../../identity-service/home.md).
+L’identità primaria di un set di dati è contenuta nella prima colonna del file CSV dei dati sorgente. Il [!DNL Customer Attributes] L&#39;origine presuppone che l&#39;identità sia sempre mappata al [`CORE` namespace](../../../identity-service/features/namespaces.md), spazio dei nomi generato dal sistema e supportato da [[!DNL Identity Service]](../../../identity-service/home.md).
 
 Non è possibile selezionare uno spazio dei nomi esistente per l’identità quando si utilizza [!DNL Customer Attributes] origine perché [!DNL Customer Attributes] presuppone che l’identità primaria dello schema sia sempre nella mappa delle identità. [!DNL Customer Attributes] crea quindi la mappatura dell’ID sorgente all’UUID della mappa di identità in modo automatico.
 

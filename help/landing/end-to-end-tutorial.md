@@ -3,10 +3,10 @@ keywords: Experience Platform;home;argomenti popolari;CJA;analisi percorso;anali
 title: Flusso di lavoro di esempio end-to-end di Adobe Experience Platform
 description: Scopri ad alto livello il flusso di lavoro end-to-end di base per Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 3%
+source-wordcount: '1832'
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ Questo flusso di lavoro end-to-end utilizza più servizi Adobe Experience Platfo
 
 Prima di acquisire i dati in Platform, è necessario creare uno schema XDM per descrivere la struttura di tali dati. Quando acquisisci i dati nel passaggio successivo, mapperai i dati in arrivo su questo schema. Per scoprire come creare un esempio di schema XDM, leggi l’esercitazione su [creazione di uno schema tramite l’Editor di schema](../xdm/tutorials/create-schema-ui.md).
 
-L’esercitazione precedente mostra come impostare i campi di identità per gli schemi. Un campo di identità rappresenta un campo che può essere utilizzato per identificare una singola persona correlata a un record o a un evento di serie temporale. I campi di identità sono un componente fondamentale della costruzione dei grafici di identità del cliente in Platform, che influisce in ultima analisi sul modo in cui Real-Time Customer Profile unisce frammenti di dati diversi per ottenere una visualizzazione completa del cliente. Per ulteriori dettagli su come visualizzare i grafici delle identità in Platform, consulta l’esercitazione su [come utilizzare il visualizzatore del grafico delle identità](../identity-service/ui/identity-graph-viewer.md).
+L’esercitazione precedente mostra come impostare i campi di identità per gli schemi. Un campo di identità rappresenta un campo che può essere utilizzato per identificare una singola persona correlata a un record o a un evento di serie temporale. I campi di identità sono un componente fondamentale della costruzione dei grafici di identità del cliente in Platform, che influisce in ultima analisi sul modo in cui Real-Time Customer Profile unisce frammenti di dati diversi per ottenere una visualizzazione completa del cliente. Per ulteriori dettagli su come visualizzare i grafici delle identità in Platform, consulta l’esercitazione su [come utilizzare il visualizzatore del grafico delle identità](../identity-service/features/identity-graph-viewer.md).
 
 Devi abilitare lo schema per l’utilizzo in Real-Time Customer Profile in modo che i profili dei clienti possano essere costruiti dai dati in base allo schema. Consulta la sezione su [abilitazione di uno schema per il profilo](../xdm/ui/resources/schemas.md#profile) nella guida dell’interfaccia utente degli schemi per ulteriori informazioni.
 
@@ -94,7 +94,7 @@ Per istruzioni su come attivare i dati nelle destinazioni di marketing in batch 
 
 Platform consente di monitorare il modo in cui i dati vengono elaborati attraverso l’utilizzo di flussi di dati, che sono rappresentazioni di processi che spostano i dati tra i vari componenti di Platform. Questi flussi di dati sono configurati tra servizi diversi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e [!DNL Real-Time Customer Profile] prima di essere infine attivato sulle destinazioni. La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati. Per informazioni su come monitorare i flussi di dati nell’interfaccia utente di Platform, consulta i tutorial su [monitoraggio dei flussi di dati per le origini](../dataflows/ui/monitor-sources.md) e [monitoraggio dei flussi di dati per le destinazioni](../dataflows/ui/monitor-destinations.md).
 
-Puoi anche monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi utilizzando [!DNL Observability Insights]. Puoi abbonarti alle notifiche di avviso tramite l’interfaccia utente di Platform o inviarle a un webhook configurato. Per ulteriori dettagli su come visualizzare, abilitare, disabilitare e sottoscrivere gli avvisi disponibili dall’interfaccia utente di Experience Platform, vedi [[!UICONTROL Avvisi] Guida all’interfaccia utente](../observability/alerts/ui.md). Per informazioni dettagliate su come ricevere gli avvisi tramite i webhook, consulta la guida su [abbonamento a notifiche Adobe I/O Event](../observability/alerts/subscribe.md).
+Puoi anche monitorare le attività di Platform tramite l’utilizzo di metriche statistiche e notifiche di eventi utilizzando [!DNL Observability Insights]. Puoi abbonarti alle notifiche di avviso tramite l’interfaccia utente di Platform o inviarle a un webhook configurato. Per ulteriori dettagli su come visualizzare, abilitare, disabilitare e sottoscrivere gli avvisi disponibili dall’interfaccia utente di Experienci Platform, vedi [[!UICONTROL Avvisi] Guida all’interfaccia utente](../observability/alerts/ui.md). Per informazioni dettagliate su come ricevere gli avvisi tramite i webhook, consulta la guida su [abbonamento a notifiche Adobe I/O Event](../observability/alerts/subscribe.md).
 
 ## Passaggi successivi
 

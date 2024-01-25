@@ -3,9 +3,9 @@ title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze 
 description: Scopri come coinvolgere e acquisire nuovi clienti attraverso possibili casi d’uso, senza affidarti a cookie di terze parti.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Leggi le sezioni seguenti, che includono collegamenti a un ulteriore documentazi
 
 Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai le funzionalità di Real-Time CDP ed elementi dell’interfaccia utente seguenti (elencati nell’ordine in cui verranno utilizzati). Assicurati di disporre delle autorizzazioni di controllo degli accessi basate su attributi necessarie per tutte queste aree o richiedi all’amministratore di sistema di concedere le autorizzazioni necessarie.
 
-* [Identità](/help/identity-service/namespaces.md)
+* [Identità](/help/identity-service/features/namespaces.md)
 * [Schemi](/help/xdm/home.md)
 * [Etichette di utilizzo dei dati](/help/data-governance/labels/overview.md)
 * [Set di dati](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Inizia creando un nuovo tipo di identità per i profili che riceverai dal partne
 
 ![Crea un nuovo spazio dei nomi identità di ID partner.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* Per ulteriori informazioni sullo spazio dei nomi ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/namespaces.md).
+* Per ulteriori informazioni sullo spazio dei nomi ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/features/namespaces.md).
 * Ulteriori informazioni su [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
 
 #### Crea un nuovo schema con la classe del **[!UICONTROL Profilo individuale potenziale cliente XDM]**

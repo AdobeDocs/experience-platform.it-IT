@@ -3,7 +3,7 @@ keywords: crm;CRM;destinazioni crm;Outreach;Outreach crm destination
 title: Connessione di uscita
 description: La destinazione Outreach ti consente di esportare i dati del tuo account e attivarli in Outreach per le tue esigenze aziendali.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -71,7 +71,7 @@ Consulta la sezione [[!DNL Outreach] documentazione](https://api.outreach.io/api
 
 ## Identità supportate {#supported-identities}
 
-[!DNL Outreach] supporta l’aggiornamento delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+[!DNL Outreach] supporta l’aggiornamento delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|

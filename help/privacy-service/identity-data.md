@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Dati di identità per richieste di privacy
 description: Questo documento fornisce indicazioni generali su come configurare le operazioni sui dati e sfruttare le tecnologie Adobe per recuperare in modo efficace le informazioni di identità appropriate per le richieste dei clienti sulla privacy.
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 2%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Ad esempio, quando gestisci le richieste di dati dei clienti in [!DNL Privacy Se
 
 È pertanto necessario che ogni identità inviata a [!DNL Privacy Service] è accompagnato da uno spazio dei nomi che fornisce contesto correlando il valore di identità al relativo sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l’identità a un’applicazione specifica, come un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
-Il servizio Adobe Experience Platform Identity gestisce un archivio di spazi dei nomi di identità definiti a livello globale e dall’utente. Per informazioni più dettagliate sugli spazi dei nomi, vedi [panoramica dello spazio dei nomi delle identità](../identity-service/namespaces.md). Per un elenco degli spazi dei nomi standard e dei qualificatori degli spazi dei nomi comunemente utilizzati in [!DNL Privacy Service], vedere [sezione dell&#39;appendice](api/appendix.md) nella guida dell’API.
+Il servizio Adobe Experience Platform Identity gestisce un archivio di spazi dei nomi di identità definiti a livello globale e dall’utente. Per informazioni più dettagliate sugli spazi dei nomi, vedi [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md). Per un elenco degli spazi dei nomi standard e dei qualificatori degli spazi dei nomi comunemente utilizzati in [!DNL Privacy Service], vedere [sezione dell&#39;appendice](api/appendix.md) nella guida dell’API.
 
 ## ECID e servizio Opt-in
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM
 description: Risposte alle domande frequenti su Experience Data Model (XDM), compresi i passaggi per risolvere gli errori API più comuni.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,6 @@ Questo errore viene visualizzato quando il sistema non è riuscito a trovare una
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 Per ulteriori informazioni sulla creazione di percorsi di ricerca nell’API, consulta la sezione [contenitore](./api/getting-started.md#container) e [identificazione risorsa](api/getting-started.md#resource-identification) sezioni in [!DNL Schema Registry] guida per gli sviluppatori.
 
 ### Titolo non univoco
@@ -181,14 +180,13 @@ Le risorse definite dall’organizzazione devono assegnare uno spazio dei nomi a
 
 >[!NOTE]
 >
->A seconda della natura specifica dell’errore dello spazio dei nomi, questo errore può utilizzare uno dei seguenti `type` URI con dettagli di messaggio diversi:
+>A seconda della natura specifica dell’errore dello spazio dei nomi, questo errore può utilizzare uno dei seguenti `type` URI insieme a diversi dettagli del messaggio:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1022-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
-
 
 Esempi dettagliati delle strutture di dati corrette per le risorse XDM sono disponibili nella guida dell’API del registro dello schema:
 
@@ -225,7 +223,6 @@ A seconda dell&#39;endpoint che si sta utilizzando, il `detailed-message` propri
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 Per gli elenchi di intestazioni compatibili di Accept per diverse richieste API, consulta le sezioni corrispondenti nella [Guida per gli sviluppatori del registro dello schema](./api/overview.md).
 
@@ -277,7 +274,7 @@ Per abilitare gli schemi che contengono descrittori di relazione da utilizzare i
 
 Assicurati che `xdm:namespace` il valore del campo di identità dello schema di riferimento corrisponde a quello del `xdm:identityNamespace` nel descrittore dell&#39;identità di riferimento del campo sorgente per risolvere questo problema.
 
-Per un elenco dei codici dello spazio dei nomi di identità standard, consulta la sezione su [spazi dei nomi standard](../identity-service/namespaces.md) nella panoramica dello spazio dei nomi delle identità.
+Per un elenco dei codici dello spazio dei nomi di identità standard, consulta la sezione su [spazi dei nomi standard](../identity-service/features/namespaces.md) nella panoramica dello spazio dei nomi delle identità.
 
 #### Lo schema deve includere un identityMap o un’identità primaria
 

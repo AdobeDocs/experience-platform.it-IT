@@ -2,9 +2,9 @@
 title: Comportamento di esportazione del profilo
 description: Scopri come il comportamento di esportazione del profilo varia tra i diversi modelli di integrazione supportati nelle destinazioni di Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Per quanto riguarda i dati esportati per un determinato profilo, è importante c
 
 | Cosa determina un’esportazione di destinazione | Cosa è incluso nell’esportazione di destinazione |
 |---------|----------|
-| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Una modifica nella mappa delle identità è definita come un’identità aggiunta/rimossa per [grafo delle identità](/help/identity-service/ui/identity-graph-viewer.md) del profilo, per gli spazi dei nomi di identità mappati per l’esportazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, per gli attributi mappati alla destinazione.</li></ul> | <ul><li>I tipi di pubblico mappati sulla destinazione e modificati verranno inclusi nel `segmentMembership` oggetto. In alcuni scenari potrebbero essere esportati utilizzando più chiamate. Inoltre, in alcuni scenari, alcuni tipi di pubblico che non sono stati modificati potrebbero essere inclusi nella chiamata. In ogni caso, verranno esportati solo i tipi di pubblico mappati.</li><li>Tutte le identità dagli spazi dei nomi mappati alla destinazione in `identityMap` sono inclusi anche gli oggetti.</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
+| <ul><li>Gli attributi e i tipi di pubblico mappati fungono da spunto per un’esportazione di destinazione. Ciò significa che se un pubblico mappato cambia stato (da `null` a `realized` o da `realized` a `exiting`) o se vengono aggiornati eventuali attributi mappati, viene avviata un’esportazione di destinazione.</li><li>Una modifica nella mappa delle identità è definita come un’identità aggiunta/rimossa per [grafo delle identità](/help/identity-service/features/identity-graph-viewer.md) del profilo, per gli spazi dei nomi di identità mappati per l’esportazione.</li><li>Per modifica di un attributo si intende qualsiasi aggiornamento dell&#39;attributo, per gli attributi mappati alla destinazione.</li></ul> | <ul><li>I tipi di pubblico mappati sulla destinazione e modificati verranno inclusi nel `segmentMembership` oggetto. In alcuni scenari potrebbero essere esportati utilizzando più chiamate. Inoltre, in alcuni scenari, alcuni tipi di pubblico che non sono stati modificati potrebbero essere inclusi nella chiamata. In ogni caso, verranno esportati solo i tipi di pubblico mappati.</li><li>Tutte le identità dagli spazi dei nomi mappati alla destinazione in `identityMap` sono inclusi anche gli oggetti.</li><li>Nell’esportazione della destinazione sono inclusi solo gli attributi mappati.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ In una qualsiasi delle situazioni di esportazione precedenti, i file esportati i
 
 Non tutti gli aggiornamenti di un profilo qualificano un profilo da includere nelle esportazioni di file incrementali. Ad esempio, se un attributo è stato aggiunto o rimosso da un profilo, questo non include il profilo nell’esportazione. Solo i profili per i quali `segmentMembership` L&#39;attributo modificato verrà incluso nei file esportati. In altre parole, solo se il profilo diventa parte del pubblico o viene rimosso dal pubblico, è incluso nelle esportazioni di file incrementali.
 
-Analogamente, se una nuova identità (nuovo indirizzo e-mail, numero di telefono, ECID e così via) viene aggiunta a un profilo in [grafo delle identità](/help/identity-service/ui/identity-graph-viewer.md), che non rappresenta un motivo per includere il profilo in una nuova esportazione di file incrementale.
+Analogamente, se una nuova identità (nuovo indirizzo e-mail, numero di telefono, ECID e così via) viene aggiunta a un profilo in [grafo delle identità](/help/identity-service/features/identity-graph-viewer.md), che non rappresenta un motivo per includere il profilo in una nuova esportazione di file incrementale.
 
 L’aggiunta di un nuovo pubblico a una mappatura di destinazione non influisce sulle qualifiche e sulle esportazioni di un altro segmento. Le pianificazioni di esportazione sono configurate singolarmente per pubblico e i file vengono esportati separatamente per ogni segmento, anche se i tipi di pubblico sono stati aggiunti allo stesso flusso di dati di destinazione.
 

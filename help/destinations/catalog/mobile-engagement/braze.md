@@ -3,7 +3,7 @@ keywords: mobile; braze; messaggistica;
 title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -40,7 +40,7 @@ In qualità di addetto al marketing, voglio indirizzare l’attività agli utent
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| external_id | Personalizzato [!DNL Braze] identificatore che supporta la mappatura di qualsiasi identità. | Puoi inviare qualsiasi [identità](../../../identity-service/namespaces.md) al [!DNL Braze] destinazione, purché mappata sulla destinazione [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personalizzato [!DNL Braze] identificatore che supporta la mappatura di qualsiasi identità. | Puoi inviare qualsiasi [identità](../../../identity-service/features/namespaces.md) al [!DNL Braze] destinazione, purché mappata sulla destinazione [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experienci Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 28%
@@ -34,7 +34,7 @@ Le autorizzazioni in Adobe Experience Platform includono l’accesso a flussi di
 | Sandbox | (N/D) | A seconda della [sandbox](../sandboxes/home.md) che sono state create nell’organizzazione, puoi controllare l’accesso a ciascuna di esse tramite questa categoria di autorizzazioni in Admin Console. |
 | Modellazione dati | Gestire gli schemi | Consente di visualizzare, creare e modificare [Schemi Experience Data Model (XDM)](../xdm/home.md). |
 | Modellazione dati | Visualizzare gli schemi | Consente l’accesso in sola lettura agli schemi. |
-| Gestione identità | Manage Identity Namespaces (Gestisci spazi dei nomi di identità) | Consente di visualizzare, creare e modificare [spazi dei nomi di identità](../identity-service/namespaces.md). |
+| Gestione identità | Manage Identity Namespaces (Gestisci spazi dei nomi di identità) | Consente di visualizzare, creare e modificare [spazi dei nomi di identità](../identity-service/features/namespaces.md). |
 | Gestione identità | Visualizzare gli spazi dei nomi delle identità | Consente l’accesso in sola lettura agli spazi dei nomi delle identità. |
 | Raccolta dati | Gestire gli stream di dati | Consente di visualizzare, creare e modificare [flussi di dati](../datastreams/overview.md). |
 | Raccolta dati | Visualizzare gli stream di dati | Consente l’accesso in sola lettura agli stream di dati. |

@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Guida all’interfaccia utente di Attribution AI
 description: Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 1%
+source-wordcount: '2450'
+ht-degree: 0%
 
 ---
 
 # Guida all’interfaccia utente di Attribution AI
 
-Attribution AI, parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase del percorso del cliente.
+Attribution AI, parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l’influenza e l’impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase dei loro percorsi.
 
 Questo documento funge da guida per l’interazione con Attribution AI nell’interfaccia utente di Intelligent Services.
 
@@ -103,7 +103,7 @@ Se in uno spazio dei nomi sono disponibili più identità, assicurati di selezio
 
 >[!NOTE]
 >
-> Se non esiste un tipo di identità (spazio dei nomi) valido per un set di dati, è necessario impostare un’identità primaria e assegnarla a uno spazio dei nomi di identità utilizzando [editor schema](../../xdm/schema/composition.md#identity). Per ulteriori informazioni sugli spazi dei nomi e sulle identità, visita [Spazi dei nomi di Identity Service](../../identity-service/namespaces.md) documentazione.
+> Se non esiste un tipo di identità (spazio dei nomi) valido per un set di dati, è necessario impostare un’identità primaria e assegnarla a uno spazio dei nomi di identità utilizzando [editor schema](../../xdm/schema/composition.md#identity). Per ulteriori informazioni sugli spazi dei nomi e sulle identità, visita [Spazi dei nomi di Identity Service](../../identity-service/features/namespaces.md) documentazione.
 
 ## Mappatura dei campi del canale e della campagna multimediale {#aai-mapping}
 

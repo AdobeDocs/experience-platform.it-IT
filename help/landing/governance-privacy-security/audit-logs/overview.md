@@ -2,10 +2,10 @@
 title: Panoramica dei registri di controllo
 description: Scopri come i registri di audit consentono di vedere chi ha eseguito determinate azioni in Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 45%
+source-wordcount: '1291'
+ht-degree: 42%
 
 ---
 
@@ -50,8 +50,8 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | [Tipi di dati](../../../xdm/schema/composition.md#data-type) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Destinazione](../../../destinations/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimozione set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
 | [Gruppo di campi](../../../xdm/schema/composition.md#field-group) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Grafico delle identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
-| [Spazio dei nomi dell’identità](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Creare</li><li>Aggiornamento</li></ul> |
+| [Grafo identità](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>Visualizzazione</li></ul> |
+| [Spazio dei nomi dell’identità](../../../identity-service/features/namespaces.md) | <ul><li>Creare</li><li>Aggiornamento</li></ul> |
 | [Criterio di unione](../../../profile/merge-policies/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Profilo di prodotto](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
 | [Query](../../../query-service/ui/overview.md) | <ul><li>Esegui</li></ul> |
@@ -59,7 +59,7 @@ La tabella seguente illustra le azioni per le quali le risorse vengono registrat
 | [Ruolo (controllo dell’accesso basato su attributi)](../../../access-control/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Aggiungi utente</li><li>Rimuovi utente</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Ripristino</li><li>Elimina</li></ul> |
 | [Query pianificata](../../../query-service/ui/overview.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per Profilo</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita per profilo</li></ul> |
 | [Segmento](../../../segmentation/home.md) | <ul><li>Creare</li><li>Elimina</li><li>Attivazione segmento</li><li>Rimozione segmento</li></ul> |
 | [Flusso di dati sorgente](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Creare</li><li>Aggiornamento</li><li>Elimina</li><li>Abilita</li><li>Disattiva</li><li>Attivazione set di dati</li><li>Rimuovi set di dati</li><li>Attivazione profilo</li><li>Rimozione profilo</li></ul> |
 | [Ordine di lavoro](../../../hygiene/home.md) | <ul><li>Creare</li></ul> |
@@ -136,7 +136,7 @@ Nella finestra di dialogo visualizzata, seleziona il formato preferito (sceglien
 
 ## Gestione dei registri di audit nell’API
 
-Tutte le azioni che possono essere eseguite nell’interfaccia utente possono essere eseguite anche utilizzando le chiamate API. Per maggiori informazioni, consulta la [documentazione delle API ](https://www.adobe.io/experience-platform-apis/references/audit-query/).
+Tutte le azioni che possono essere eseguite nell’interfaccia utente possono essere eseguite anche utilizzando le chiamate API. Consulta la [Documento di riferimento API](https://www.adobe.io/experience-platform-apis/references/audit-query/) per ulteriori informazioni.
 
 ## Gestione dei registri di audit per Adobe Admin Console
 

@@ -1,9 +1,9 @@
 ---
 title: Guida all’implementazione per il servizio Identity
 description: Scopri come vengono elaborati i dati forniti a Adobe Experience Platform prima di essere utilizzati da Identity Service per creare grafici delle identità.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ A seconda della strategia di raccolta dati aziendale, i campi dati etichettati c
 
 ## Creare spazi dei nomi di identità aggiuntivi
 
-Sebbene Experienci Platform offra diversi spazi dei nomi standard, potrebbe essere necessario creare spazi dei nomi aggiuntivi per categorizzare correttamente le identità. Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati per l’organizzazione](./namespaces.md).
+Sebbene Experienci Platform offra diversi spazi dei nomi standard, potrebbe essere necessario creare spazi dei nomi aggiuntivi per categorizzare correttamente le identità. Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati per l’organizzazione](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Ad esempio, etichettando i campi del numero di telefono come campi di identità,
 >
 >* I campi di tipo matrice e mappa non sono supportati e non possono essere contrassegnati ed etichettati come campi di identità.
 >* Lo spazio dei nomi delle identità risultanti viene fornito quando il campo viene etichettato.
+
+Per ulteriori informazioni, consulta la guida su [definizione dei campi di identità nell’interfaccia utente](../xdm/ui/fields/identity.md).
 
 ## Configurare un set di dati per Identity Service
 

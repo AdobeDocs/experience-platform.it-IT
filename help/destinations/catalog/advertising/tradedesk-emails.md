@@ -3,7 +3,7 @@ title: (Beta) Il Trade Desk - Connessione CRM
 description: Attiva i profili nel tuo account di Trade Desk per il targeting e l’eliminazione del pubblico in base ai dati CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 5%
@@ -38,11 +38,11 @@ Prima di poter attivare i tipi di pubblico su [!DNL The Trade Desk], è necessar
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
-A seconda del tipo di ID che acquisisci in Adobe Experience Platform, devi rispettare i requisiti corrispondenti. Leggi le [Panoramica sullo spazio dei nomi delle identità](/help/identity-service/namespaces.md) per ulteriori informazioni.
+A seconda del tipo di ID che acquisisci in Adobe Experience Platform, devi rispettare i requisiti corrispondenti. Leggi le [Panoramica sullo spazio dei nomi delle identità](/help/identity-service/features/namespaces.md) per ulteriori informazioni.
 
 ## Identità supportate {#supported-identities}
 
-[!DNL The Trade Desk] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione sui requisiti di corrispondenza ID e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash.
 

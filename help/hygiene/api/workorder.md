@@ -2,10 +2,10 @@
 title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 3%
+source-wordcount: '1281'
+ht-degree: 2%
 
 ---
 
@@ -87,7 +87,7 @@ curl -X POST \
 | `datasetId` | Se stai eliminando dati da un singolo set di dati, questo valore deve essere l’ID del set di dati in questione. Se stai eliminando da tutti i set di dati, imposta il valore su `ALL`.<br><br>Se specifichi un singolo set di dati, lo schema Experience Data Model (XDM) associato al set di dati deve avere un’identità primaria definita. Se il set di dati non ha un’identità primaria, per poter essere modificato da una richiesta del ciclo di vita dei dati deve disporre di una mappa di identità.<br>Se esiste una mappa di identità, questa sarà presente come campo di livello principale denominato `identityMap`.<br>Tieni presente che una riga di set di dati può avere molte identità nella relativa mappa di identità, ma solo una può essere contrassegnata come principale. `"primary": true` deve essere incluso per forzare `id` affinché corrisponda a un’identità primaria. |
 | `displayName` | Nome visualizzato per la richiesta di eliminazione del record. |
 | `description` | Descrizione della richiesta di eliminazione record. |
-| `identities` | Matrice contenente le identità di almeno un utente di cui desideri eliminare le informazioni. Ogni identità è composta da un [spazio dei nomi delle identità](../../identity-service/namespaces.md) e un valore:<ul><li>`namespace`: contiene una singola proprietà stringa, `code`, che rappresenta lo spazio dei nomi dell’identità. </li><li>`id`: valore di identità.</ul>Se `datasetId` specifica un singolo set di dati, ogni entità in `identities` deve utilizzare lo stesso spazio dei nomi dell’identità primaria dello schema.<br><br>Se `datasetId` è impostato su `ALL`, il `identities` l’array non è vincolato a un singolo spazio dei nomi poiché ogni set di dati potrebbe essere diverso. Tuttavia, le richieste di sono ancora vincolate agli spazi dei nomi disponibili per la tua organizzazione, come segnalato da [Servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | Matrice contenente le identità di almeno un utente di cui desideri eliminare le informazioni. Ogni identità è composta da un [spazio dei nomi delle identità](../../identity-service/features/namespaces.md) e un valore:<ul><li>`namespace`: contiene una singola proprietà stringa, `code`, che rappresenta lo spazio dei nomi dell’identità. </li><li>`id`: valore di identità.</ul>Se `datasetId` specifica un singolo set di dati, ogni entità in `identities` deve utilizzare lo stesso spazio dei nomi dell’identità primaria dello schema.<br><br>Se `datasetId` è impostato su `ALL`, il `identities` l’array non è vincolato a un singolo spazio dei nomi poiché ogni set di dati potrebbe essere diverso. Tuttavia, le richieste di sono ancora vincolate agli spazi dei nomi disponibili per la tua organizzazione, come segnalato da [Servizio identità](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="layout tabella:automatico"}
 
@@ -114,7 +114,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | Il tuo ID organizzazione. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
@@ -192,7 +192,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’operazione 
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | Il tuo ID organizzazione. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |
@@ -280,7 +280,7 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 | Proprietà | Descrizione |
 | --- | --- |
 | `workorderId` | ID dell’ordine di eliminazione. Questa può essere utilizzata per cercare lo stato dell’eliminazione in un secondo momento. |
-| `orgId` | Il tuo ID organizzazione. |
+| `orgId` | ID organizzazione. |
 | `bundleId` | ID del bundle a cui è associato questo ordine di eliminazione, utilizzato a scopo di debug. Più ordini di eliminazione sono raggruppati per essere elaborati dai servizi a valle. |
 | `action` | Azione eseguita dall&#39;ordine di lavoro. Per le eliminazioni di record, il valore è `identity-delete`. |
 | `createdAt` | Un timestamp indicante quando è stato creato l’ordine di eliminazione. |

@@ -2,9 +2,9 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ Durante la creazione di una destinazione tramite Destination SDK, oltre a [confi
 
 Dopo una tale azione, gli utenti potranno scegliere anche di selezionare le identità di destinazione, oltre agli attributi del profilo di destinazione.
 
-Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/features/namespaces.md).
 
 Quando configuri gli spazi dei nomi di identità per la destinazione, puoi ottimizzare la mappatura identità di destinazione supportata dalla destinazione, ad esempio:
 
 * Consente agli utenti di mappare gli attributi XDM agli spazi dei nomi delle identità.
-* Consentire agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/namespaces.md#standard) nei tuoi spazi dei nomi di identità.
-* Consentire agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/namespaces.md#manage-namespaces) nei tuoi spazi dei nomi di identità.
+* Consentire agli utenti di mappare [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) nei tuoi spazi dei nomi di identità.
+* Consentire agli utenti di mappare [spazi dei nomi di identità personalizzati](../../../../identity-service/features/namespaces.md#manage-namespaces) nei tuoi spazi dei nomi di identità.
 
 Per capire dove questo componente si inserisce in un’integrazione creata con Destination SDK, consulta il diagramma riportato di seguito. [opzioni di configurazione](../configuration-options.md) o consulta la guida su come [utilizzare Destination SDK per configurare una destinazione basata su file](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Quando definisci le identità di destinazione supportate dalla destinazione, puo
 |---------|----------|---|------|
 | `acceptsAttributes` | Booleano | Facoltativo | Indica se i clienti possono mappare gli attributi di profilo standard all’identità che stai configurando. |
 | `acceptsCustomNamespaces` | Booleano | Facoltativo | Indica se i clienti possono mappare gli spazi dei nomi di identità personalizzati allo spazio dei nomi di identità che stai configurando. |
-| `acceptedGlobalNamespaces` | - | Facoltativo | Indica quale [spazi dei nomi di identità standard](../../../../identity-service/namespaces.md#standard) (ad esempio, [!UICONTROL IDFA]) i clienti possono eseguire il mapping all&#39;identità che stai configurando. |
+| `acceptedGlobalNamespaces` | - | Facoltativo | Indica quale [spazi dei nomi di identità standard](../../../../identity-service/features/namespaces.md#standard) (ad esempio, [!UICONTROL IDFA]) i clienti possono eseguire il mapping all&#39;identità che stai configurando. |
 | `transformation` | Stringa | Facoltativo | Visualizza la [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) nell’interfaccia utente di Platform, quando il campo di origine è un attributo XDM o uno spazio dei nomi di identità personalizzato. Utilizza questa opzione per consentire agli utenti di aggiungere hash agli attributi sorgente durante l’esportazione. Per abilitare questa opzione, imposta il valore su `sha256(lower($))`. |
 | `requiredTransformation` | Stringa | Facoltativo | Quando i clienti selezionano questo spazio dei nomi dell’identità di origine, il [[!UICONTROL Applica trasformazione]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) La casella di controllo viene applicata automaticamente alla mappatura e i clienti non possono disattivarla. Per abilitare questa opzione, imposta il valore su `sha256(lower($))`. |
 
@@ -84,7 +84,7 @@ Indicare quale [!DNL Platform] identità che i clienti possono esportare nella t
 Gli spazi dei nomi delle identità non richiedono una corrispondenza da 1 a 1 tra [!DNL Platform] e la tua destinazione.
 Ad esempio, i clienti possono mappare una [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL IDFA] dalla destinazione, oppure possono mappare lo stesso [!DNL Platform] [!DNL IDFA] spazio dei nomi in un [!DNL Customer ID] dello spazio dei nomi nella destinazione.
 
-Ulteriori informazioni sulle identità in [panoramica dello spazio dei nomi delle identità](../../../../identity-service/namespaces.md).
+Ulteriori informazioni sulle identità in [panoramica dello spazio dei nomi delle identità](../../../../identity-service/features/namespaces.md).
 
 ## Considerazioni sulla mappatura
 

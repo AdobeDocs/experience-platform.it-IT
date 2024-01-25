@@ -4,10 +4,10 @@ user-guide-title: Servizio Adobe Experience Platform Identity
 breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
-source-git-commit: e861faf6fcd910fa5515efd94897fdf4ad067571
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 25%
+source-wordcount: '124'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,14 @@ ht-degree: 25%
 # Servizio Adobe Experience Platform Identity {#identity}
 
 - [Panoramica del servizio Identity](home.md)
-- [Panoramica sullo spazio dei nomi delle identità](namespaces.md)
+- [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
+- Funzioni {#features}
+   - [Spazio dei nomi dell’identità](./features/namespaces.md)
+   - [Logica di collegamento dell’identità](./features/identity-linking-logic.md)
+   - [Visualizzatore del grafico delle identità](./features/identity-graph-viewer.md)
+   - [Eliminazioni nel servizio Identity](./features/deletion.md)
+   - [Panoramica di ECID](./features/ecid.md)
+- [Guida all’implementazione](implementation.md)
 - [Guardrail per i dati di identità](guardrails.md)
 - API del servizio Identity {#api}
    - [Guida introduttuva](api/getting-started.md)
@@ -26,20 +33,13 @@ ht-degree: 25%
    - [Elenca gli spazi dei nomi disponibili](api/list-namespaces.md)
    - [Creare uno spazio dei nomi personalizzato](api/create-custom-namespace.md)
    - [Elencare l’ID nativo di un’identità](api/list-native-id.md)
-- Interfaccia utente del servizio Identity {#ui}
-   - [Visualizzatore del grafico delle identità](ui/identity-graph-viewer.md)
-   - [Rilevamento di dispositivi condivisi](ui/shared-device-detection.md)
-   - [Definire i campi di identità nell’interfaccia utente](ui/label-identities.md)
+   - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/identity-service)
+- [Rilevamento di dispositivi condivisi](shared-device-detection.md)
+- [Definire i campi di identità nell’interfaccia utente](label-identities.md)
 - [Regole di collegamento del grafo delle identità] {#identity-graph-linking-rules}
    - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
    - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
    - [Scenari di esempio](./identity-graph-linking-rules/example-scenarios.md)
-   - [Servizio Identity e Real-Time Customer Profile](./identity-graph-linking-rules/identity-and-profile.md)
-   - [Logica di collegamento dell’identità](./identity-graph-linking-rules/identity-linking-logic.md)
-- [Panoramica di ECID](ecid.md)
-- [Guida all’implementazione](implementation.md)
-- [Eliminazioni nel servizio Identity](deletion.md)
 - [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-- [Riferimento API](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definire i campi di identità nell’interfaccia utente
 description: Scopri come definire un campo di identità nell’interfaccia utente di Experienci Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -20,7 +20,7 @@ In Experience Data Model (XDM), un campo di identità rappresenta un campo che p
 I campi di identità sono un componente fondamentale della costruzione dei grafici di identità del cliente in Platform, che influisce in ultima analisi sul modo in cui Real-Time Customer Profile unisce frammenti di dati diversi per ottenere una visualizzazione completa del cliente. Prima di definire i campi di identità negli schemi, consulta la seguente documentazione per scoprire i servizi e i concetti chiave relativi ai campi di identità:
 
 * [Servizio Adobe Experience Platform Identity](../../../identity-service/home.md): collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui si conformano.
-   * [Spazi dei nomi delle identità](../../../identity-service/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ogni campo di identità.
+   * [Spazi dei nomi delle identità](../../../identity-service/features/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ogni campo di identità.
 * [Profilo cliente in tempo reale](../../../profile/home.md): sfrutta i grafici di identità del cliente per fornire un profilo di consumatore unificato basato su dati aggregati provenienti da più origini, aggiornati in tempo quasi reale.
 
 ## Definire un campo di identità {#define-a-identity-field}
@@ -56,6 +56,6 @@ Se hai definito un’identità primaria per lo schema, ora puoi procedere con [a
 
 ## Passaggi successivi
 
-Questa guida illustra come definire un campo di identità nell’interfaccia utente. Man mano che i dati vengono acquisiti utilizzando questo schema, i grafici di identità del cliente si aggiorneranno per riflettere i campi di identità dello schema. Consulta la guida sulla [visualizzatore grafo identità](../../../identity-service/ui/identity-graph-viewer.md) per scoprire come esplorare il grafo privato della tua organizzazione nell’interfaccia utente.
+Questa guida illustra come definire un campo di identità nell’interfaccia utente. Man mano che i dati vengono acquisiti utilizzando questo schema, i grafici di identità del cliente si aggiorneranno per riflettere i campi di identità dello schema. Consulta la guida sulla [visualizzatore grafo identità](../../../identity-service/features/identity-graph-viewer.md) per scoprire come esplorare il grafo privato della tua organizzazione nell’interfaccia utente.
 
 Consulta la panoramica su [definizione dei campi nell’interfaccia utente](./overview.md#special) per scoprire come definire altri tipi di campi XDM in [!DNL Schema Editor].

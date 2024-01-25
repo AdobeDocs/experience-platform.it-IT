@@ -4,7 +4,7 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 4%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Visualizza le identità disponibili da utilizzare nello schema di input
 
-La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Questa risposta restituisce entrambi [standard](/help/identity-service/namespaces.md#standard) e [personalizzato](/help/identity-service/namespaces.md#manage-namespaces) spazi dei nomi di identità configurati in Experienci Platform.
+La risposta restituisce le identità utilizzabili durante la creazione dello schema di input. Questa risposta restituisce entrambi [standard](/help/identity-service/features/namespaces.md#standard) e [personalizzato](/help/identity-service/features/namespaces.md#manage-namespaces) spazi dei nomi di identità configurati in Experienci Platform.
 
 ```json
 [

@@ -2,7 +2,7 @@
 title: Classe profilo cliente individuale XDM
 description: Scopri la classe XDM Individual Prospect Profile in Experience Data Model (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 3%
@@ -23,7 +23,7 @@ In Experience Data Model (XDM), la [!UICONTROL Profilo potenziale individuale XD
 | `_id` | [!UICONTROL Stringa] | Identificatore di stringa univoco generato dal sistema per il record. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo record, evitare la duplicazione dei dati e cercare tale record nei servizi a valle.<br><br>Poiché questo campo è generato dal sistema, non fornisce un valore esplicito durante l’acquisizione dei dati. Tuttavia, se lo desideri, puoi fornire valori ID univoci. |
 | `createdByBatchID` | [!UICONTROL Stringa] | ID del batch acquisito che ha causato la creazione del record. |
 | `modifiedByBatchID` | [!UICONTROL Stringa] | ID dell’ultimo batch acquisito che ha causato l’aggiornamento del record. |
-| `partnerID` | [!UICONTROL Stringa] | In genere, un identificatore pseudonimo univoco che identifica un singolo potenziale cliente potenziale. Consulta la documentazione su [tipi di identità](../../identity-service/namespaces.md#identity-type) per ulteriori informazioni sul Partner ID e sugli altri tipi di identità disponibili in Adobe Experience Platform. |
+| `partnerID` | [!UICONTROL Stringa] | In genere, un identificatore pseudonimo univoco che identifica un singolo potenziale cliente potenziale. Consulta la documentazione su [tipi di identità](../../identity-service/features/namespaces.md#identity-type) per ulteriori informazioni sul Partner ID e sugli altri tipi di identità disponibili in Adobe Experience Platform. |
 | `repositoryCreatedBy` | [!UICONTROL Stringa] | ID dell&#39;utente che ha creato il record. |
 | `repositoryLastModifiedBy` | [!UICONTROL Stringa] | ID dell&#39;ultimo utente che ha modificato il record. Al momento della creazione del record, `modifiedByUser` viene impostato come `createdByUser` valore. |
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel data lake
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come stabilito dalle normative legali e organizzative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Questo documento descrive i concetti essenziali relativi all’elaborazione dell
 
 >[!NOTE]
 >
->Questa guida descrive solo come effettuare richieste di privacy per il data lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l’archivio dati Profilo cliente in tempo reale, consulta la guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
+>Questa guida descrive solo come effettuare richieste di privacy per il data lake in Experienci Platform. Se prevedi anche di effettuare richieste di privacy per l’archivio dati Profilo cliente in tempo reale, consulta la guida su [elaborazione della richiesta di accesso a dati personali per il profilo](../profile/privacy.md) oltre a questa esercitazione.
 >
 >Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta [Documentazione di Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Identity Service] collega i dati di identità de
 
 [!DNL Identity Service] mantiene un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall&#39;utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l’organizzazione può anche creare spazi dei nomi personalizzati in base alle sue esigenze specifiche.
 
-Per ulteriori informazioni sugli spazi dei nomi di identità in [!DNL Experience Platform], vedere [panoramica dello spazio dei nomi delle identità](../identity-service/namespaces.md).
+Per ulteriori informazioni sugli spazi dei nomi di identità in [!DNL Experience Platform], vedere [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md).
 
 ## Aggiunta di dati di identità ai set di dati
 
@@ -61,7 +61,7 @@ Esistono due metodi per aggiungere un descrittore di identità a uno schema di s
 
 ### Utilizzo dell’interfaccia utente {#identity-ui}
 
-In [!DNL Experience Platform ]interfaccia utente, il **[!UICONTROL Schemi]** Workspace consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionalo dall’elenco e segui i passaggi per [impostazione di un campo schema come campo identità](../xdm/tutorials/create-schema-ui.md#identity-field) nel [!DNL Schema Editor] esercitazione.
+In [!DNL Experience Platform]interfaccia utente, il **[!UICONTROL Schemi]** Workspace consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionalo dall’elenco e segui i passaggi per [impostazione di un campo schema come campo identità](../xdm/tutorials/create-schema-ui.md#identity-field) nel [!DNL Schema Editor] esercitazione.
 
 Dopo aver impostato i campi appropriati all’interno dello schema come campi di identità, puoi procedere alla sezione successiva su [invio di richieste di privacy](#submit).
 

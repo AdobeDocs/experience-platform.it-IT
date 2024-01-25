@@ -3,7 +3,7 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -186,7 +186,7 @@ Infine, il processo di eliminazione produce due grafici più piccoli.
 Per ulteriori informazioni su, consulta la seguente documentazione [!DNL Identity Service]:
 
 * [Panoramica di [!DNL Identity Service]](home.md)
-* [Visualizzatore del grafico delle identità](ui/identity-graph-viewer.md)
+* [Visualizzatore del grafico delle identità](features/identity-graph-viewer.md)
 
 Consulta la seguente documentazione per ulteriori informazioni su altri guardrail dei servizi Experienci Platform, informazioni sulla latenza end-to-end e informazioni sulle licenze dai documenti di descrizione del prodotto Real-Time CDP:
 

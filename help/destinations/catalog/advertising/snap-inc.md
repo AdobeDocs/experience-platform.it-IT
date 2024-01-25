@@ -2,7 +2,7 @@
 title: Connessione Snap Inc
 description: Scopri come connettersi alla piattaforma Snapchat Ads ed esportare i tipi di pubblico da Experienci Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 2%
@@ -37,7 +37,7 @@ Per utilizzare questa destinazione, è necessario disporre di un account Snapcha
 
 ## Identità supportate {#supported-identities}
 
-Il *Snap Inc* la destinazione supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+Il *Snap Inc* la destinazione supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/features/namespaces.md).
 
 Tutti gli identificatori inviati al *Snap Inc* La destinazione deve avere un hash in formato SHA-256. Per aggiungere hash agli identificatori di testo normale prima di inviarli alla destinazione, seleziona la **[!UICONTROL Applica trasformazione]** quando si mappano gli identificatori di destinazione per la destinazione.
 

@@ -1,20 +1,20 @@
 ---
-title: Note sulla versione di Adobe Experience Platform, febbraio 2021
-description: Note sulla versione di febbraio 2021 per Adobe Experience Platform.
+title: Note sulla versione di Adobe Experience Platform - Febbraio 2021
+description: Note sulla versione di Adobe Experience Platform di febbraio 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 6%
+source-wordcount: '1137'
+ht-degree: 22%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 24 febbraio 2021**
+**Data di rilascio: giovedì 24 febbraio 2021**
 
 Nuove funzioni di Adobe Experience Platform:
 
@@ -32,7 +32,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 ## Dashboard (Beta) {#dashboards}
 
-Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell&#39;organizzazione, acquisite durante le istantanee giornaliere.
 
 **Nuove funzioni**
 
@@ -54,9 +54,9 @@ Per informazioni più generali su Data Science Workspace, consulta [Panoramica d
 
 ## [!DNL Dataflows] {#dataflows}
 
-In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di fonti, analizzati all’interno di Experience Platform e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
+In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di fonti, analizzati all’interno di Experienci Platform e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
 
-I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati in Platform. Questi flussi di dati sono configurati tra servizi diversi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e [!DNL Real-Time Customer Profile] prima di essere infine attivato in [!DNL Destinations].
+I flussi di dati sono una rappresentazione dei processi di dati che spostano i dati in Platform. Questi flussi di dati sono configurati tra servizi diversi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e [!DNL Real-Time Customer Profile] prima di essere infine attivato in [!DNL Destinations].
 
 **Nuove funzioni**
 
@@ -68,7 +68,7 @@ Per informazioni più generali sui flussi di dati, consulta [panoramica dei flus
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni preconfigurate con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
+[!DNL Destinations] sono integrazioni predefinite con piattaforme di destinazione che consentono l’attivazione diretta dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 
 **Nuove destinazioni**
 
@@ -76,13 +76,13 @@ Per informazioni più generali sui flussi di dati, consulta [panoramica dei flus
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | Il [!DNL LinkedIn Matched Audiences] connessione consente di attivare i tipi di pubblico in [!DNL LinkedIn] piattaforma social network. |
 
-Per informazioni più generali sulle destinazioni, consulta [panoramica sulle destinazioni](../../destinations/home.md).
+Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
 
-XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che fornisce informazioni in modo più veloce e integrato. Puoi ottenere informazioni preziose dalle azioni dei clienti, definire i tipi di pubblico dei clienti attraverso i segmenti e utilizzare gli attributi dei clienti a scopo di personalizzazione.
+XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune che fornisce informazioni in modo più veloce e integrato. Puoi ottenere approfondimenti importanti dalle azioni della clientela, definire i tipi di pubblico della clientela attraverso i segmenti e utilizzare gli attributi della clientela a scopo di personalizzazione.
 
 **Nuove funzioni**
 
@@ -102,19 +102,19 @@ Adobe Experience Platform [!DNL Identity Service] ti consente di avere una visio
 
 | Funzione | Descrizione |
 | --- | --- |
-| Visualizzatore del grafico delle identità | Il visualizzatore del grafo delle identità consente di convalidare e visualizzare le identità unite nell’interfaccia utente, migliorando il debug e la trasparenza. Consulta la [documento visualizzatore grafo identità](../../identity-service/ui/identity-graph-viewer.md) per ulteriori informazioni. |
+| Visualizzatore del grafico delle identità | Il visualizzatore del grafo delle identità consente di convalidare e visualizzare le identità unite nell’interfaccia utente, migliorando il debug e la trasparenza. Consulta la [documento visualizzatore grafo identità](../../identity-service/features/identity-graph-viewer.md) per ulteriori informazioni. |
 
 Per informazioni più generali su [!DNL Identity Service], fare riferimento a [Panoramica del servizio Identity](../../identity-service/home.md).
 
 ## Profilo cliente in tempo reale {#profile}
 
-Adobe Experience Platform ti consente di offrire ai tuoi clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con Real-Time Customer Profile puoi visualizzare una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi dati online, offline, del sistema CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e pertinenti per la tua clientela, indipendentemente da dove e quando interagisce con il tuo marchio. Con il Profilo cliente in tempo reale puoi avere una visione completa di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Attributi calcolati (alfa) | ***Nota: questa funzionalità è attualmente in formato alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.*** <br/><br/>Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Puoi quindi utilizzare gli aggregati in segmentazione, attivazione e personalizzazione. Alcuni esempi di queste funzioni includono count, sum, average, min, max, true/false. Gli attributi calcolati sono attualmente disponibili solo tramite API. |
+| Attributi calcolati (Alpha) | ***Nota: questa funzionalità è attualmente in formato alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.*** <br/><br/>Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento negli attributi a livello di profilo. Puoi quindi utilizzare gli aggregati in segmentazione, attivazione e personalizzazione. Alcuni esempi di queste funzioni includono count, sum, average, min, max, true/false. Gli attributi calcolati sono attualmente disponibili solo tramite API. |
 
 Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e best practice per l’utilizzo di [!DNL Profile] , per iniziare leggi il [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
@@ -122,7 +122,7 @@ Per ulteriori informazioni su Real-Time Customer Profile, inclusi tutorial e bes
 
 Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e migliorarli utilizzando i servizi di Platform. Puoi acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, software di terze parti e sistema CRM.
 
-Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
+Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva per impostare facilmente le connessioni di origine per vari provider di dati. Queste connessioni di origine consentono di autenticarti e connetterti a sistemi di archiviazione esterni e servizi di gestione delle relazioni con i clienti, impostare i tempi per le esecuzioni dell’acquisizione e gestire la velocità effettiva di acquisizione dei dati.
 
 **Nuove sorgenti**
 

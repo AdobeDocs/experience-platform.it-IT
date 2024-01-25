@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ La risposta include una `data` array, contenente un elenco di oggetti set di dat
 
 È possibile eseguire una richiesta GET al `/previewsamplestatus/report/namespace` per visualizzare il raggruppamento per spazio dei nomi delle identità in tutti i profili uniti nell’archivio profili. Sono incluse sia le identità standard fornite da Adobe, sia le identità personalizzate definite dall’organizzazione.
 
-Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che fungono da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, consulta [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md).
+Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che fungono da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, consulta [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ La risposta include una `data` , con singoli oggetti contenenti i dettagli di og
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
 | `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il `totalRows` valore restituito nella [stato ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
+| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `value` | Il `id` per lo spazio dei nomi. Questo si può trovare quando si lavora con gli spazi dei nomi utilizzando [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
 
 ## Generare il rapporto di sovrapposizione del set di dati
@@ -444,7 +444,7 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 | Proprietà | Descrizione |
 |---|---|
 | `data` | Il `data` L’oggetto contiene elenchi separati da virgole con combinazioni univoche di codici dello spazio dei nomi delle identità e dei rispettivi conteggi dei profili. |
-| Codici dello spazio dei nomi | Il `code` è un formato breve per ogni nome dello spazio dei nomi dell’identità. Una mappatura di ciascun `code` alla sua `name` sono reperibili utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Il `code` è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
+| Codici dello spazio dei nomi | Il `code` è un formato breve per ogni nome dello spazio dei nomi dell’identità. Una mappatura di ciascun `code` alla sua `name` sono reperibili utilizzando [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md). Il `code` è anche denominato [!UICONTROL Simbolo di identità] nell’interfaccia utente di Experienci Platform. Per ulteriori informazioni, visita [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Il timestamp del rapporto. Se un `date` Il parametro è stato fornito durante la richiesta, il rapporto restituito si riferisce alla data specificata. In caso negativo `date` viene fornito il parametro, viene restituito il rapporto più recente. |
 
 ### Interpretazione del rapporto di sovrapposizione dello spazio dei nomi delle identità

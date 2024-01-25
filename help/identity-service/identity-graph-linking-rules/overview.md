@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 0%
 * [Panoramica](./overview.md)
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio](./example-scenarios.md)
-* [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
-* [Logica di collegamento dell’identità](./identity-linking-logic.md)
 
 Con il servizio Adobe Experience Platform Identity e il profilo cliente in tempo reale, è facile presumere che i dati siano acquisiti perfettamente e che tutti i profili uniti rappresentino una singola persona tramite un identificatore di persona, ad esempio un ID del sistema di gestione delle relazioni con i clienti. Tuttavia, esistono scenari possibili in cui alcuni dati potrebbero tentare di unire più profili diversi in un unico profilo (&quot;compressione del profilo&quot;). Per evitare queste unioni indesiderate, puoi utilizzare le configurazioni fornite tramite le regole di collegamento del grafico delle identità e consentire una personalizzazione accurata per i tuoi utenti.
 
@@ -114,5 +112,3 @@ Per ulteriori informazioni sulle regole di collegamento del grafico delle identi
 
 * [Algoritmo di ottimizzazione identità](./identity-optimization-algorithm.md)
 * [Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità](./example-scenarios.md)
-* [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
-* [Logica di collegamento dell’identità](./identity-linking-logic.md)

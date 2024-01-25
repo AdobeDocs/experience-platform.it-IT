@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare set di dati per l’acquisizione di dati sul consenso IAB TCF 2.0
 description: Questo documento descrive i passaggi per configurare i due set di dati richiesti per raccogliere i dati sul consenso di IAB TCF 2.0.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1674'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Experience Data Model (XDM)](../../../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM.
 * [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): consente di collegare le identità dei clienti da diverse origini dati tra dispositivi e sistemi.
-   * [Spazi dei nomi delle identità](../../../../identity-service/namespaces.md): i dati di identità del cliente devono essere forniti in uno spazio dei nomi di identità specifico riconosciuto dal servizio Identity.
+   * [Spazi dei nomi delle identità](../../../../identity-service/features/namespaces.md): i dati di identità del cliente devono essere forniti in uno spazio dei nomi di identità specifico riconosciuto dal servizio Identity.
 * [Profilo cliente in tempo reale](../../../../profile/home.md): utilizza [!DNL Identity Service] per consentirti di creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
 
 ## Gruppi di campi TCF 2.0 {#field-groups}
@@ -52,7 +52,7 @@ Consulta la [guida di riferimento](../../../../xdm/field-groups/profile/iab.md) 
 
 Se desideri tenere traccia degli eventi di modifica del consenso nel tempo, puoi aggiungere [!UICONTROL Dettagli del consenso IAB TCF 2.0] gruppo di campi al tuo [!UICONTROL XDM ExperienceEvent] schema.
 
-Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando applica automaticamente i valori di consenso TCF, Experience Platform utilizza solo le informazioni di consenso più recenti acquisite in [gruppo di campi del profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
+Se non prevedi di tenere traccia degli eventi di modifica del consenso nel tempo, non è necessario includere questo gruppo di campi nello schema dell’evento. Quando applica automaticamente i valori di consenso TCF, Experienci Platform utilizza solo le informazioni di consenso più recenti acquisite in [gruppo di campi del profilo](#profile-field-group). I valori di consenso acquisiti dagli eventi non partecipano ai flussi di lavoro di applicazione automatica.
 
 Consulta la [guida di riferimento](../../../../xdm/field-groups/event/iab.md) per questo gruppo di campi per ulteriori informazioni sulla struttura e sul caso d’uso.
 

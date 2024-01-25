@@ -5,9 +5,9 @@ title: Definire una relazione tra due schemi utilizzando l’Editor di schema
 description: Questo documento fornisce un tutorial per definire una relazione tra due schemi utilizzando l’Editor di schema nell’interfaccia utente di Experienci Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1158'
 ht-degree: 10%
 
 ---
@@ -73,11 +73,11 @@ Lo schema di origine &quot;[!DNL Loyalty Members]&quot; si basa sul [!DNL XDM In
 
 Lo schema di riferimento &quot;[!DNL Hotels]&quot; si basa su un personalizzato &quot;[!DNL Hotels]&quot; e contiene campi che descrivono un hotel. Per poter partecipare a una relazione, lo schema di riferimento deve anche avere un’identità primaria definita ed essere abilitato per [!UICONTROL Profilo]. In questo caso, `_tenantId.hotelId`funge da identità primaria per lo schema, utilizzando un tag personalizzato &quot;[!DNL Hotel ID]&quot; spazio dei nomi delle identità.
 
-![Abilita per Profilo](../images/tutorials/relationship/hotels.png)
+![Abilita per profilo](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Per informazioni su come creare spazi dei nomi di identità personalizzati, consulta [Documentazione del servizio Identity](../../identity-service/namespaces.md#manage-namespaces).
+>Per informazioni su come creare spazi dei nomi di identità personalizzati, consulta [Documentazione del servizio Identity](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Creare un gruppo di campi relazione
 

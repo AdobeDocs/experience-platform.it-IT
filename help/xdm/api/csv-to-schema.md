@@ -2,10 +2,10 @@
 title: Endpoint API di conversione da modello CSV a schema
 description: L’endpoint /rpc/csv2schema nell’API Schema Registry consente di utilizzare i modelli CSV per creare automaticamente gli schemi Experience Data Model (XDM).
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 6%
+source-wordcount: '849'
+ht-degree: 5%
 
 ---
 
@@ -36,7 +36,7 @@ Per utilizzare questo endpoint, devi innanzitutto creare un file CSV con le inte
 | 9 | `isRequired` | Facoltativo | Indica se il campo è obbligatorio per l’acquisizione dei dati. |
 | 10 | `isArray` | Facoltativo | Indica se il campo è una matrice dei campi indicati `dataType`. |
 | 11 | `isIdentity` | Facoltativo | Indica se il campo è un campo di identità. |
-| 12 | `identityNamespace` | Obbligatorio se `isIdentity` è true | Il [spazio dei nomi delle identità](../../identity-service/namespaces.md) per il campo di identità. |
+| 12 | `identityNamespace` | Obbligatorio se `isIdentity` è true | Il [spazio dei nomi delle identità](../../identity-service/features/namespaces.md) per il campo di identità. |
 | 13 | `isPrimaryIdentity` | Facoltativo | Indica se il campo è l’identità primaria dello schema. |
 | 14 | `minimum` | Facoltativo | (Solo per campi numerici) Il valore minimo per il campo. |
 | 15 | `maximum` | Facoltativo | (Solo per campi numerici) Il valore massimo per il campo. |

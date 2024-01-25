@@ -3,9 +3,9 @@ title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Il tutorial video seguente illustra come integrare i tipi di pubblico di prime p
 1. Come **cliente**, gli attributi della licenza vengono forniti dal **partner di dati**.
 2. Come **cliente**, puoi estendere i dati del profilo e il modello di governance per adattare gli attributi forniti dal **partner**.
 3. Come **cliente**, puoi integrare i tipi di pubblico che desideri arricchire con il partner di dati. In genere, questi tipi di pubblico sono ricavati da identificatori di input come elementi PII (Informazioni d’identificazione personale) come e-mail, nome, indirizzo o altri.
-4. Il **partner** aggiunge gli attributi concessi in licenza per i profili con cui è in grado di eseguire il confronto. Facoltativamente, un [ID partner](/help/identity-service/namespaces.md) può essere incluso e acquisito nello spazio dei nomi ID con ambito partner.
+4. Il **partner** aggiunge gli attributi concessi in licenza per i profili con cui è in grado di eseguire il confronto. Facoltativamente, un [ID partner](/help/identity-service/features/namespaces.md) può essere incluso e acquisito nello spazio dei nomi ID con ambito partner.
 5. Come **cliente**, in Real-Time CDP puoi caricare gli attributi del partner di dati nei profili cliente.
 
 ## Come utilizzare il caso d’uso: istruzioni dettagliate {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Anche in questo passaggio, tieni presente come cambia il modello di governance d
 
 >[!TIP]
 >
->Se scegli di integrare i profili dei clienti con un identificatore basato sulla persona del fornitore di dati, puoi creare un nuovo tipo di identità del tipo **[[!UICONTROL ID partner]](/help/identity-service/namespaces.md)**.
+>Se scegli di integrare i profili dei clienti con un identificatore basato sulla persona del fornitore di dati, puoi creare un nuovo tipo di identità del tipo **[[!UICONTROL ID partner]](/help/identity-service/features/namespaces.md)**.
 >
->Per ulteriori informazioni sull’ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/namespaces.md).
+>Per ulteriori informazioni sull’ID partner, consulta la [sezione sui tipi di identità](/help/identity-service/features/namespaces.md).
 >Ulteriori informazioni su [come definire i campi di identità](/help/xdm/ui/fields/identity.md) nell’interfaccia utente di Experience Platform.
 
 ### Esportare i tipi di pubblico che si desidera arricchire quando vengono ricavati dalle PII (Informazioni d’identificazione personale) o PII con hash {#export-audiences}
@@ -130,7 +130,7 @@ Alcuni connettori di origine consigliati a questo scopo possono essere:
 
 Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni presente le seguenti limitazioni:
 
-* Se scegli di utilizzare gli ID partner, tieni presente che non vengono utilizzati durante la creazione del [grafico identità](/help/identity-service/ui/identity-graph-viewer.md).
+* Se scegli di utilizzare gli ID partner, tieni presente che non vengono utilizzati durante la creazione del [grafico identità](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 

@@ -5,9 +5,9 @@ description: Segui questo tutorial per scoprire come utilizzare i tipi di pubbli
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Le definizioni dei segmenti includono informazioni quali il nome, la descrizione
 
 Il primo passaggio per utilizzare tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi delle identità. Gli spazi dei nomi di identità consentono a Platform di associarsi da dove proviene un pubblico.
 
-Per creare uno spazio dei nomi delle identità, segui le istruzioni riportate nella sezione [guida allo spazio dei nomi delle identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi dell’identità, aggiungi i dettagli dell’origine allo spazio dei nomi dell’identità e contrassegnala [!UICONTROL Tipo] as a **[!UICONTROL Identificatore non persone]**.
+Per creare uno spazio dei nomi delle identità, segui le istruzioni riportate nella sezione [guida allo spazio dei nomi delle identità](../../identity-service/features/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi dell’identità, aggiungi i dettagli dell’origine allo spazio dei nomi dell’identità e contrassegnala [!UICONTROL Tipo] as a **[!UICONTROL Identificatore non persone]**.
 
 ![L’identificatore non persona è evidenziato nella finestra modale Crea spazio dei nomi dell’identità.](../images/tutorials/external-audiences/identity-namespace-info.png)
 

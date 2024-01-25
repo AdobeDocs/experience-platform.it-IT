@@ -3,7 +3,7 @@ title: Personalizzare le esperienze nel sito per visitatori sconosciuti utilizza
 description: Scopri come utilizzare il riconoscimento visitatori assistito dal partner per offrire esperienze personalizzate nel sito a chi lo visita.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ Per implementare correttamente questo caso d’uso, devi utilizzare più aree di
    * [Tag](/help/tags/home.md)
    * [Stream di dati](/help/datastreams/overview.md)
 * Gestione dei dati in Real-Time CDP
-   * [Identità](/help/identity-service/namespaces.md)
+   * [Identità](/help/identity-service/features/namespaces.md)
    * [Schemi](/help/xdm/home.md)
    * [Etichette di utilizzo dei dati](/help/data-governance/labels/overview.md)
    * [Set di dati](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Ora puoi effettuare l’integrazione con un motore di personalizzazione per most
 
 Durante l’esplorazione del caso d’uso descritto in questa pagina, tieni presente le seguenti limitazioni:
 
-* Se utilizzi gli ID partner, tieni presente che non vengono utilizzati durante la creazione del [grafico identità](/help/identity-service/ui/identity-graph-viewer.md).
+* Se utilizzi gli ID partner, tieni presente che non vengono utilizzati durante la creazione del [grafico identità](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Altri casi d’uso ottenuti tramite il supporto dei dati dei partner {#other-use-cases}
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida utente;guida interfaccia utente;guida interfaccia utente piattaforma;introduzione a piattaforma;dashboard;
 solution: Experience Platform
-title: Panoramica dell’interfaccia utente di Experience Platform
+title: Panoramica dell’interfaccia utente di Experienci Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 2%
+source-wordcount: '1795'
+ht-degree: 1%
 
 ---
 
@@ -75,7 +75,7 @@ Selezionando il selettore si apre un menu a discesa contenente le organizzazioni
 
 ### Cambiare applicazioni
 
-L’elemento successivo a destra della navigazione superiore è il **commutatore applicazione**, rappresentato dal ![commutatore applicazione](./images/user-guide/app-switcher-icon.png) icona. Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, ad esempio Experience Platform, Analytics, Assets e altre.
+L’elemento successivo a destra della navigazione superiore è il **commutatore applicazione**, rappresentato dal ![commutatore applicazione](./images/user-guide/app-switcher-icon.png) icona. Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, ad esempio Experienci Platform, Analytics, Assets e altre.
 
 ### Aiuto
 
@@ -131,13 +131,13 @@ Il **[!UICONTROL Profili]** Questa sezione ti consente di sfogliare i profili de
 
 Il **[!UICONTROL Segmenti]** consente di creare e gestire le definizioni dei segmenti. Per ulteriori informazioni sull&#39;utilizzo di [!UICONTROL Segmenti] , leggi la sezione [guida utente alla segmentazione](../segmentation/ui/overview.md). Ulteriori informazioni sul servizio di segmentazione sono disponibili nella sezione [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
-Il **[!UICONTROL Identità]** consente di creare e gestire gli spazi dei nomi di identità. Per ulteriori informazioni su [!UICONTROL Identità] , incluse informazioni sugli spazi dei nomi delle identità e su come utilizzare le identità nell’interfaccia utente di Platform, consulta [panoramica dello spazio dei nomi delle identità](../identity-service/namespaces.md).
+Il **[!UICONTROL Identità]** consente di creare e gestire gli spazi dei nomi di identità. Per ulteriori informazioni su [!UICONTROL Identità] , incluse informazioni sugli spazi dei nomi delle identità e su come utilizzare le identità nell’interfaccia utente di Platform, consulta [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
 Il **[!UICONTROL Criteri]** consente di creare e gestire i criteri di utilizzo dei dati. Per ulteriori informazioni sull’utilizzo della sezione Criteri, consulta la sezione [guida utente sui criteri di utilizzo dei dati](../data-governance/policies/user-guide.md). Ulteriori informazioni sui criteri di utilizzo dei dati sono disponibili nella sezione [panoramica dei criteri di utilizzo dei dati](../data-governance/policies/overview.md).
 
-Il **[!UICONTROL Richieste]** consente di creare e gestire le richieste di accesso a dati personali. Tieni presente che per poter accedere all’interfaccia utente di Privacy Service devi essere inserito nell&#39;elenco Consentiti. Per ulteriori informazioni sull’utilizzo della sezione Richieste, consulta la sezione [Guida utente di Privacy Service](../privacy-service/ui/user-guide.md). Ulteriori informazioni su Privacy Service sono disponibili nella sezione [Panoramica di Privacy Service](../privacy-service/home.md).
+Il **[!UICONTROL Richieste]** consente di creare e gestire le richieste di privacy. Tieni presente che per poter accedere all’interfaccia utente di Privacy Service devi essere inserito nell&#39;elenco Consentiti. Per ulteriori informazioni sull’utilizzo della sezione Richieste, consulta la sezione [Guida utente di Privacy Service](../privacy-service/ui/user-guide.md). Ulteriori informazioni su Privacy Service sono disponibili nella sezione [Panoramica di Privacy Service](../privacy-service/home.md).
 
 ### [!UICONTROL Data Science]
 
@@ -159,7 +159,7 @@ Il **[!UICONTROL Monitorare]** consente di monitorare l’acquisizione in batch 
 
 ### [!UICONTROL Decisioning]
 
-Adobe Journey Optimizer è un servizio applicativo basato su Experience Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l’utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività] visita il [Documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
+Adobe Journey Optimizer è un servizio applicativo basato su Experienci Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l’utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività] visita il [Documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
 
 ### [!UICONTROL Amministrazione]
 

@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ La tabella che segue riporta i controlli e i dettagli forniti dalla barra a dest
 | [!UICONTROL Categoria] | Indica il tipo di destinazione. Consulta la [catalogo delle destinazioni](../catalog/overview.md) per ulteriori informazioni. |
 | [!UICONTROL Tipo di connessione] | Indica il modulo tramite il quale i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono [!UICONTROL Cookie] e [!UICONTROL Basato su profilo]. |
 | [!UICONTROL Frequenza] | Indica la frequenza con cui i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono [!UICONTROL Streaming] e [!UICONTROL Batch]. |
-| [!UICONTROL Identità] | Rappresenta lo spazio dei nomi delle identità accettato dalla destinazione, ad esempio `GAID`, `IDFA`, o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, vedi [panoramica dello spazio dei nomi delle identità](../../identity-service/namespaces.md). |
+| [!UICONTROL Identità] | Rappresenta lo spazio dei nomi delle identità accettato dalla destinazione, ad esempio `GAID`, `IDFA`, o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, vedi [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Creato da] | Indica l&#39;utente che ha creato la destinazione. |
 | [!UICONTROL Creato] | Indica il datetime UTC al momento della creazione della destinazione. |
 

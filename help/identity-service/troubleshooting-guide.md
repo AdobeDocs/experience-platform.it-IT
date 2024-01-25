@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio Identity
 description: Questo documento contiene le risposte alle domande più frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori più comuni.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 0%
 
 ---
@@ -71,9 +71,9 @@ I campi di identità devono essere associati a uno spazio dei nomi di identità 
 
 Per istruzioni dettagliate sulla definizione di uno spazio dei nomi durante la creazione di un descrittore di identità tramite l’API, consulta la sezione su [creazione di un descrittore](../xdm/tutorials/create-schema-ui.md) nella guida per gli sviluppatori del registro dello schema. Per contrassegnare un campo schema come identità nell’interfaccia utente, segui i passaggi descritti in [Esercitazione sull’editor di schemi](../xdm/tutorials/create-schema-api.md).
 
-## Quali sono gli spazi dei nomi di identità standard forniti da Experience Platform? {#standard-namespaces}
+## Quali sono gli spazi dei nomi di identità standard forniti da Experienci Platform? {#standard-namespaces}
 
-Gli spazi dei nomi di identità standard sono spazi dei nomi disponibili per tutte le organizzazioni. Consulta la [Panoramica sugli spazi dei nomi delle identità](./namespaces.md) per un elenco completo degli spazi dei nomi standard disponibili.
+Gli spazi dei nomi di identità standard sono spazi dei nomi disponibili per tutte le organizzazioni. Consulta la [Panoramica sugli spazi dei nomi delle identità](./features/namespaces.md) per un elenco completo degli spazi dei nomi standard disponibili.
 
 ## Dove posso trovare l’elenco degli spazi dei nomi di identità disponibili per la mia organizzazione?
 

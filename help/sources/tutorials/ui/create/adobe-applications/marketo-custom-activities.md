@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente di Marketo Engage e un flusso di dati per i dati di attività personalizzati nell’interfaccia utente
 description: Questo tutorial descrive i passaggi necessari per creare una connessione di origine del Marketo Engage e un flusso di dati nell’interfaccia utente per inserire dati personalizzati sulle attività in Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Sorgenti](../../../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Creare e modificare gli schemi nell’interfaccia utente](../../../../../xdm/ui/resources/schemas.md): scopri come creare e modificare gli schemi nell’interfaccia utente di.
-* [Spazi dei nomi delle identità](../../../../../identity-service/namespaces.md): gli spazi dei nomi di identità sono un componente di [!DNL Identity Service] che fungono da indicatori del contesto a cui si riferisce un’identità. Un’identità completa include un valore ID e uno spazio dei nomi.
+* [Spazi dei nomi delle identità](../../../../../identity-service/features/namespaces.md): gli spazi dei nomi di identità sono un componente di [!DNL Identity Service] che fungono da indicatori del contesto a cui si riferisce un’identità. Un’identità completa include un valore ID e uno spazio dei nomi.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -87,7 +87,7 @@ L’ultimo passaggio nella preparazione dello schema consiste nell’aggiungere 
 
 ![Un gruppo di sottocampi aggiunti a un campo all’interno dello schema.](../../../../images/tutorials/create/marketo-custom-activities/add-sub-fields.png)
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 Al termine dell’impostazione dello schema, ora puoi procedere con la creazione di un flusso di dati per i dati delle attività personalizzate.
 
@@ -105,7 +105,7 @@ Seleziona **[!UICONTROL Attività]** dall’elenco di [!DNL Marketo] set di dati
 
 ![Il passaggio Seleziona dati nel flusso di lavoro origini con il set di dati attività selezionato.](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
-### Dettaglio del flusso di dati
+### Dettagli del flusso di dati
 
 Avanti, [fornire informazioni per il flusso di dati](./marketo.md#provide-dataflow-details), inclusi nomi e descrizioni per il set di dati e il flusso di dati, lo schema che verrà utilizzato e le configurazioni per [!DNL Profile] acquisizione, diagnostica degli errori e acquisizione parziale.
 

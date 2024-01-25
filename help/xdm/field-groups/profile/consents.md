@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Gruppo di campi schema Consensi e preferenze
 description: Scopri il gruppo di campi schema Consensi e preferenze.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ Il codice JSON seguente mostra un esempio del tipo di dati che [!UICONTROL Conse
 >* Se il cliente ha rinunciato a livello di canale, qualsiasi consenso o preferenza equivalente in `idSpecific` vengono ignorati.
 >* Se il consenso o la preferenza a livello di canale non è impostata, o il cliente ha acconsentito, allora il consenso o le preferenze equivalenti in `idSpecific` sono onorati.
 
-Ogni chiave nella `idSpecific` L’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../../identity-service/namespaces.md) nella documentazione del servizio Identity.
+Ogni chiave nella `idSpecific` L’oggetto rappresenta uno spazio dei nomi di identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per categorizzare diversi identificatori, si consiglia di utilizzare uno degli spazi dei nomi standard forniti da Identity Service per ridurre le dimensioni di archiviazione per Real-Time Customer Profile. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta [panoramica dello spazio dei nomi delle identità](../../../identity-service/features/namespaces.md) nella documentazione del servizio Identity.
 
 Le chiavi di ciascun oggetto spazio dei nomi rappresentano i valori di identità univoci per i quali il cliente ha impostato le preferenze. Ogni valore di identità può contenere un set completo di consensi e preferenze, formattato come `consents`.
 

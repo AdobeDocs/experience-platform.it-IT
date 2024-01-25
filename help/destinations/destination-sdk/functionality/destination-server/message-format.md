@@ -2,10 +2,10 @@
 description: Questa pagina tratta il formato del messaggio e la trasformazione del profilo nei dati esportati da Adobe Experience Platform nelle destinazioni.
 title: Formato del messaggio
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 1%
+source-wordcount: '2489'
+ht-degree: 0%
 
 ---
 
@@ -92,7 +92,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 Considerando il formato del messaggio, le trasformazioni corrispondenti sono le seguenti:
 
-| Attributo nello schema XDM del partner sul lato Adobe | Transformation (Trasformazione) | Attributo nel messaggio HTTP sul tuo lato |
+| Attributo nello schema XDM del partner sul lato Adobe | Trasformazione | Attributo nel messaggio HTTP sul tuo lato |
 |---------|----------|---------|
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
@@ -380,7 +380,7 @@ Profilo 2:
 
 ### Identità {#identities}
 
-Per informazioni sulle identità in Experienci Platform, consulta [Panoramica sullo spazio dei nomi delle identità](../../../../identity-service/namespaces.md).
+Per informazioni sulle identità in Experienci Platform, consulta [Panoramica sullo spazio dei nomi delle identità](../../../../identity-service/features/namespaces.md).
 
 **Input**
 
