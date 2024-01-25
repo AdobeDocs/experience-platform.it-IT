@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -69,12 +69,12 @@ I tipi di identità personalizzati non sono supportati come oggetti dipendenti d
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Rimuovere un oggetto"
->abstract="Per rimuovere un oggetto dal pacchetto, selezionare la riga da rimuovere e quindi utilizzare l&#39;opzione Elimina, disponibile al momento della selezione. Non è possibile rimuovere oggetti dai pacchetti pubblicati."
+>abstract="Per rimuovere un oggetto dal pacchetto, seleziona la riga da rimuovere e quindi utilizza l’opzione elimina, disponibile al momento della selezione. Non è possibile rimuovere oggetti dai pacchetti pubblicati."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Impostazioni di scadenza pacchetto"
->abstract="I pacchetti sono impostati per scadere dopo un periodo di inattività nello stato Bozza. La data predefinita è impostata su 90 giorni a partire da oggi. Questa data continua a cambiare fino alla pubblicazione del pacchetto. Se domani visiti il pacchetto con lo stato Bozza, la data viene spostata di +1 giorno, a meno che non venga impostato manualmente."
+>abstract="I pacchetti sono impostati per scadere dopo un periodo di inattività in stato di bozza. La data predefinita è impostata a 90 giorni a partire da oggi. Questa data continua a cambiare fino alla pubblicazione del pacchetto. Se un utente visita il pacchetto in stato di bozza domani, la data viene spostata di 1 giorno (a meno che non venga impostata manualmente)."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

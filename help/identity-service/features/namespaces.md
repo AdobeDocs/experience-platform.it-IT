@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -21,12 +21,12 @@ Gli spazi dei nomi di identità richiedono la comprensione di vari servizi Adobe
 * [[!DNL Identity Service]](../home.md): ottieni una visione migliore dei singoli clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
 * [[!DNL Privacy Service]](../../privacy-service/home.md): gli spazi dei nomi di identità vengono utilizzati nelle richieste di conformità per le normative legali sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Ogni richiesta di accesso a dati personali viene effettuata in relazione a uno spazio dei nomi per identificare quali dati dei consumatori dovrebbero essere interessati.
 
-## Informazioni sugli spazi dei nomi delle identità {#understanding-identity-namespaces}
+## Comprendere gli spazi dei nomi delle identità {#understanding-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Spazio dei nomi delle identità"
->abstract="Uno spazio dei nomi delle identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere a **nome<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere a `555-555-1234`."
+>abstract="Uno spazio dei nomi dell’identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere a **nome<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere a `555-555-1234`."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
