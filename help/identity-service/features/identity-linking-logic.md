@@ -2,9 +2,9 @@
 title: Logica di collegamento del servizio Identity
 description: Scopri in che modo il servizio Identity collega identità diverse per creare una visualizzazione completa di un cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ Esistono due tipi di identità collegate:
 
 * **Record profilo**: queste identità di solito provengono dai sistemi di gestione delle relazioni con i clienti.
 * **Eventi esperienza**: queste identità provengono in genere dall’implementazione Web SDK o dal sorgente Adobe Analytics.
+
+## Significato semantico della creazione di collegamenti
+
+Un’identità rappresenta un’entità del mondo reale. Se esiste un collegamento stabilito tra due identità, ciò significa che le due identità sono associate l’una all’altra. Di seguito sono riportati alcuni esempi che illustrano questo concetto:
+
+| Azione | Collegamenti stabiliti | Significato |
+| --- | --- | --- |
+| Un utente finale accede utilizzando un computer. | L’ID del sistema di gestione delle relazioni con i clienti e l’ECID sono collegati tra loro. | Una persona (ID del sistema di gestione delle relazioni con i clienti) possiede un dispositivo con un browser (ECID). |
+| Un utente finale naviga in modo anonimo utilizzando un iPhone. | IDFA è collegato a ECID. | Il dispositivo hardware Apple (IDFA), ad esempio un iPhone, è associato al browser (ECID). |
+| Un utente finale accede utilizzando Google Chrome e quindi Firefox. | L’ID del sistema di gestione delle relazioni con i clienti è collegato a due diversi ECID. | Una persona (ID CRM) è associata a 2 browser web (**Nota**: ogni browser avrà il proprio ECID). |
+| Un ingegnere dati acquisisce un record CRM che include due campi contrassegnati come identità: ID CRM e E-mail. | L’ID del sistema di gestione delle relazioni con i clienti e l’E-mail sono collegati. | All’indirizzo e-mail è associata una persona (ID CRM). |
 
 ## Informazioni sulla logica di collegamento del servizio Identity
 
@@ -85,10 +96,13 @@ Hai anche implementato Web SDK e acquisito un set di dati Web SDK (Experience Ev
 | `t=3` | ECID:44675 | Visualizza home page |
 | `t=4` | ECID:44675, ID CRM: 31260XYZ | Visualizza cronologia acquisti |
 
+L’identità primaria di ciascun evento verrà determinata in base a [configurazione dei tipi di elementi dati](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Indica un campo contrassegnato come identità, con ECID contrassegnato come primario.
->* Per impostazione predefinita, l’identificatore della persona (in questo caso, l’ID del sistema di gestione delle relazioni con i clienti) è designato come identità primaria. Se l’identificatore della persona non esiste, allora l’identificatore del cookie (in questo caso, l’ECID) diventa l’identità primaria.
+>* Se selezioni l’ID del sistema di gestione delle relazioni con i clienti come principale, gli eventi autenticati (eventi con mappa di identità contenente l’ID del sistema di gestione delle relazioni con i clienti ed ECID) avranno un’identità primaria dell’ID del sistema di gestione delle relazioni con i clienti. Per gli eventi non autenticati (gli eventi con la mappa di identità contenente solo ECID) avranno un’identità primaria di ECID. L’Adobe consiglia questa opzione.
+>
+>* Se selezioni l’ECID come principale, indipendentemente dallo stato di autenticazione, l’ECID diventa l’identità principale.
 
 In questo esempio:
 
