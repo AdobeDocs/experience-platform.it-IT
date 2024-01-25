@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
+source-git-commit: 4d9c04909cba29b0c6685c357dbb84af9fa14b47
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1007'
 ht-degree: 10%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 10%
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
       - [Connettore Mailchimp](connectors/marketing-automation/mailchimp.md)
       - [Connettore Eloqua in Oracle](connectors/marketing-automation/oracle-eloqua.md)
+      - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Connettore Responsys Oracle](connectors/marketing-automation/oracle-responsys.md)
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
@@ -183,6 +184,8 @@ ht-degree: 10%
          - [Campagna MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membri MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Eloqua Oracle](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle attività NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle di entità NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Responsys Oracle](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
@@ -306,6 +309,8 @@ ht-degree: 10%
          - [Campagne Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Membri Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Eloqua Oracle](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle attività NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [Oracle di entità NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Responsys Oracle](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
