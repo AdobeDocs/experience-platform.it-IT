@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2313'
 ht-degree: 3%
 
 ---
@@ -26,13 +26,6 @@ Per ulteriori informazioni sui concetti e le funzionalità di [!DNL Query Servic
 [!DNL Query Editor] fornisce un’esecuzione flessibile delle query tramite la connessione a [!DNL Query Service]Le query, e vengono eseguite solo quando la connessione è attiva.
 
 ## Accesso [!DNL Query Editor] {#accessing-query-editor}
-
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="Obbligo di governance dei dati"
->abstract="Ricorda che è tua esclusiva responsabilità rispettare le politiche di governance dei dati della tua organizzazione e soddisfare i requisiti normativi. Experienci Platform fornisce strumenti di governance dei dati per gestire gli obblighi in materia di utilizzo dei dati. Applica le etichette di utilizzo dei dati appropriate prima di eseguire query o elaborare dati. Consulta la documentazione per scoprire gli strumenti di governance dei dati e le best practice."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it" text="Panoramica sulla governance dei dati"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it" text="Panoramica delle etichette per la governance dei dati"
 
 In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Query]** nel menu di navigazione sinistro per aprire [!DNL Query Service] Workspace. Quindi, per iniziare a scrivere le query, seleziona **[!UICONTROL Crea query]** in alto a destra. Questo collegamento è disponibile da una qualsiasi delle pagine di [!DNL Query Service] Workspace.
 

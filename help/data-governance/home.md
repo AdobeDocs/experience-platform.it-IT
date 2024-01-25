@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Panoramica sulla governance dei dati
 description: La governance dei dati di Adobe Experience Platform consente di gestire i dati dei clienti e di garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati. Svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, derivazione dei dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 2b16ecb840e63baa244d8061a0349a9e39e726b2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 3%
+source-wordcount: '1623'
+ht-degree: 4%
 
 ---
 
-# Panoramica sulla governance dei dati
+# Panoramica sulla governance dei dati {#data-governance-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_datagovernance_framework"
+>title="Obbligo di governance dei dati"
+>abstract="Ricorda che è tua esclusiva responsabilità rispettare le politiche di governance dei dati della tua organizzazione e soddisfare i requisiti normativi. Experienci Platform fornisce strumenti di governance dei dati per gestire gli obblighi in materia di utilizzo dei dati. Applica le etichette di utilizzo dei dati appropriate prima di eseguire query o elaborare dati. Consulta la documentazione per scoprire gli strumenti di governance dei dati e le best practice."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it" text="Panoramica sulla governance dei dati"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it" text="Panoramica delle etichette per la governance dei dati"
 
 Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere i clienti. Questi dati possono essere soggetti a restrizioni di utilizzo definite dalla tua organizzazione o da normative legali. È quindi importante garantire che le operazioni sui dati in [!DNL Platform] sono conformi ai criteri di utilizzo dei dati.
 

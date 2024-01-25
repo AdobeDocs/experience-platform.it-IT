@@ -2,10 +2,10 @@
 title: Gestire le etichette di utilizzo dati per uno schema
 description: Scopri come aggiungere etichette di utilizzo dei dati ai campi dello schema Experience Data Model (XDM) nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
+source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 7%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -39,12 +39,6 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 >id="platform_schemas_editgovernancelabels"
 >title="Modificare le etichette di governance"
 >abstract="Applica un’etichetta a un campo dello schema per indicare i criteri di utilizzo applicati ai dati contenuti in quel campo specifico."
-
->[!CONTEXTUALHELP]
->id="platform_schemas_labelusageacknowledgement"
->title="Utilizzo delle etichette"
->abstract="Prima di modificare le etichette per questo oggetto, tenete presente i seguenti effetti a valle:<br>Criteri di governance: utilizza le etichette per determinare se i dati possono essere attivati per le destinazioni a valle. Un utilizzo non corretto delle etichette potrebbe impedire l’accesso ai dati a valle.<br>Criteri di consenso: utilizza le etichette per applicare i consensi e le preferenze dei clienti durante l’inclusione di profili nei segmenti. Un utilizzo non corretto delle etichette potrebbe impedire l’accesso ai dati a valle.<br>Criterio di accesso: il controllo dell’accesso basato su attributi utilizza le etichette per determinare quali ruoli utente possono accedere a risorse specifiche. L’utilizzo involontario delle etichette potrebbe impedire ad alcuni utenti dell’organizzazione di utilizzare risorse a cui avevano precedentemente accesso."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=it" text="Panoramica sul controllo degli accessi basato su attributi"
 
 Per iniziare ad aggiungere le etichette, devi prima [seleziona uno schema esistente da modificare](../ui/resources/schemas.md#edit) o [crea un nuovo schema](../ui/resources/schemas.md#create) per visualizzarne la struttura nell&#39;Editor di schema.
 
