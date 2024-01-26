@@ -4,10 +4,10 @@ title: Trovare il playbook adatto
 description: Scopri come trovare il playbook adatto per il tuo caso d’uso e abilitare i playbook.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ La mappa concettuale inizia con una definizione della persona a cui si rivolge i
 
 
 ### Riepilogo {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Risorse"
+>abstract="Queste sono le risorse generate da questo playbook. Dopo aver creato un’istanza del playbook, puoi visualizzare le risorse nella sandbox che ispira e promuoverle in altre sandbox, a seconda delle esigenze."
 
 Esamina la sezione di riepilogo per capire quali risorse vengono generate una volta create le istanze dal playbook. Le risorse generate per ogni playbook sono personalizzate in base al caso d’uso abilitato dal playbook. Di seguito trovi ulteriori informazioni su tutti gli elementi nella sezione di riepilogo.
 
