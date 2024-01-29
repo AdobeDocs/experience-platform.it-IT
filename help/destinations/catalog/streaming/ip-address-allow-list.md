@@ -4,7 +4,7 @@ title: INSERIRE NELL'ELENCO CONSENTITI Indirizzo IP per le destinazioni di strea
 type: Documentation
 description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati da Experienci Platform all’endpoint API REST HTTP, all’istanza di Amazon Kinesis o all’istanza di Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
+source-git-commit: d4833821105433518ee30415fe08f281effa5616
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -83,6 +83,7 @@ L’Adobe consiglia di aggiungere i seguenti intervalli IP a un inserisco nell&#
 `40.74.7.192/28`
 `51.105.144.81`
 `51.124.70.4`
+`20.101.233.128`
 
 ## AUS5: clienti APAC {#apac}
 
