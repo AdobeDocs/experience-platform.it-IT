@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 description: Scopri come accelerare il time-to-value copiando le risorse generate nella sandbox end inspirational in altre sandbox.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 
-I playbook di casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. In Adobe Experience Platform, questi modelli fanno riferimento a diversi campi e gruppi di campi standard. In alcuni casi, tuttavia, potrebbero essere già stati impostati schemi, campi e gruppi di campi personalizzati. In questo modo alcune delle risorse generate dai modelli del caso d’uso, ad esempio i percorsi, potrebbero risultare incompatibili con i dati. Per informazioni su come utilizzare la funzionalità di riconoscimento dei dati per allineare e integrare meglio le risorse generate con le risorse esistenti, leggi questa esercitazione.
+I playbook per casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. Puoi testare le risorse create dai playbook nella sandbox ispiratrice e, quando sei pronto, puoi importare le risorse in altre sandbox di sviluppo per ulteriori test con i dati disponibili in tali sandbox. Una volta superato il test, puoi spostare le risorse dalle sandbox di sviluppo a quelle di produzione.
+
+Tuttavia, in alcuni casi, è possibile che siano già stati impostati schemi, campi e gruppi di campi personalizzati in altre sandbox di sviluppo. In questo modo alcune delle risorse generate dai modelli del caso d’uso, ad esempio i percorsi, potrebbero risultare incompatibili con i dati. Per informazioni su come utilizzare la funzionalità di riconoscimento dei dati per allineare e integrare meglio le risorse generate con le risorse esistenti, leggi questa esercitazione.
 
 ## Prerequisiti {#prerequisites}
 
@@ -22,6 +23,10 @@ Prima di leggere questa esercitazione, sfoglia [modelli di playbook per casi d�
 La creazione di un’istanza genera un set di risorse come percorsi, segmenti, schemi e messaggi nella sandbox ispiratrice. Continua a leggere per scoprire come copiare queste risorse in altre sandbox.
 
 ### Creare e pubblicare un pacchetto {#create-publish-package}
+
+>[!NOTE]
+>
+> Puoi importare i pacchetti solo in altre sandbox di sviluppo. Dopo aver apportato tutte le modifiche o gli aggiornamenti necessari, puoi importare le risorse o i pacchetti da tali sandbox di sviluppo in produzione. Non è possibile importare direttamente dalle sandbox di Playbook di casi d’uso in produzione.
 
 1. Per importare oggetti dalla sandbox di ispirazione in un’altra sandbox, individua l’istanza desiderata di un playbook con casi d’uso e seleziona **[!UICONTROL Pubblica in un’altra sandbox]** per esportare gli artefatti come pacchetto.
 
@@ -48,10 +53,6 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 5. Seleziona la **+** controllare e avviare il flusso di lavoro per importare in **[!UICONTROL Sandbox di Target]**. Seleziona una sandbox di destinazione e conferma il nome del pacchetto da importare utilizzando il menu a discesa. Aggiungere i dettagli del job, ad esempio il nome e la descrizione, prima di procedere al passaggio successivo.
 
    ![Avvia il flusso di lavoro di importazione, seleziona la destinazione, conferma il pacchetto, aggiungi i dettagli del processo.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > Puoi importare i pacchetti solo in altre sandbox di sviluppo. Per queste importazioni, la sandbox di produzione è disabilitata.
 
 6. In **[!UICONTROL Visualizza dipendenze]** fase, puoi mappare gli schemi e copiare altre risorse dalla sandbox inspirational alla sandbox target. Il **[!UICONTROL Fine]** è disattivato finché non mappi ogni schema.
 
@@ -96,3 +97,7 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 ## Passaggi successivi
 
 Dopo aver letto questa guida, ora hai una migliore comprensione di come sfruttare i playbook dei casi d’uso insieme a [strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) per creare percorsi eseguibili che fanno riferimento agli schemi. Ulteriori informazioni sulla [Casi d’uso di Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### Ulteriori informazioni su questo argomento
+
+[Strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md)

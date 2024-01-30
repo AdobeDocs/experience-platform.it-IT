@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Creare, condividere e riutilizzare le istanze del playbook
 description: Scopri come creare, condividere e riutilizzare le istanze del playbook per eseguire il caso d’uso di marketing.
-badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '740'
+ht-degree: 86%
 
 ---
 
-# Creare, condividere e riutilizzare le istanze del playbook (Beta)
-
->[!AVAILABILITY]
->
->Questa funzionalità è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+# Creare, condividere e riutilizzare le istanze del playbook
 
 Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [!UICONTROL Playbook]**. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
 
@@ -48,7 +43,7 @@ Dopo aver creato un’istanza basata su un playbook, puoi personalizzarla per di
 
 È importante comprendere che le risorse generate differiscono in base al caso d’uso che si sta abilitando:
 
-* Vengono generate risorse diverse per diversi tipi di playbook. Queste risorse vengono create specificatamente per il caso d’uso ottenuto attraverso il playbook. Ad esempio, un playbook genera uno schema, un segmento, un percorso e i messaggi. Un altro playbook genera uno schema, un segmento e una destinazione in cui attivare i dati.
+* Vengono generate risorse diverse per diversi tipi di playbook. Queste risorse vengono create specificatamente per il caso d’uso ottenuto attraverso il playbook. Un playbook, ad esempio, genera uno schema, un pubblico, un percorso e dei messaggi. Un altro playbook genera uno schema, un pubblico e una destinazione in cui attivare i dati.
 * Le risorse stesse differiscono tra i playbook. Ad esempio, per il playbook **[!UICONTROL Invia un messaggio di auguri di compleanno agli ospiti]**, il pubblico creato ha la regola `birthday=today AND year=any`.
 
 Per illustrare un esempio, per il playbook **[!UICONTROL Carrello abbandonato: merchandising]**, puoi vedere che viene creato un percorso specifico che include i messaggi creati per questo caso d’uso.
@@ -67,7 +62,7 @@ Il comportamento descritto sopra vale per tutte le risorse create, ad eccezione 
 >
 >Esegui il test nella sandbox di sviluppo e, quando è pronto, passa alla produzione.
 >
->Una volta generati gli oggetti, puoi continuare a testarli nelle sandbox di sviluppo aggiungendo dati. Puoi testare le risorse per tutto il tempo che desideri nella sandbox di sviluppo e replicare la logica delle risorse (definizioni di segmenti, percorsi, schemi e così via) nella sandbox di produzione quando è tutto pronto.
+>Una volta generati gli oggetti, puoi continuare a testarli nelle sandbox di sviluppo aggiungendo dati. Puoi testare le risorse per tutto il tempo desiderato nella sandbox di sviluppo e replicare la logica delle risorse (definizioni di pubblico, percorsi, schemi e così via) nella sandbox di produzione quando lo desideri. Puoi passare alla sandbox di sviluppo e quindi alla sandbox di produzione utilizzando [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Riutilizzare i playbook {#reuse-playbooks}
 

@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Trovare il playbook adatto
 description: Scopri come trovare il playbook adatto per il tuo caso d’uso e abilitare i playbook.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Versione beta) Trovare il playbook adatto
-
->[!AVAILABILITY]
->
->Questa funzionalità è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+# Trovare il playbook adatto
 
 Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [!UICONTROL Playbook]**. Sfoglia e utilizza le varie opzioni di ricerca e filtro disponibili nella pagina per selezionare e iniziare a utilizzare un playbook specifico.
 
@@ -48,7 +43,6 @@ La sezione della mappa concettuale di un playbook illustra i passaggi del flusso
 La mappa concettuale inizia con una definizione della persona a cui si rivolge il percorso utente e descrive in ogni passaggio l’eventuale consegna gestita dal sistema Adobe (come un nuovo messaggio o un promemoria) oppure l’azione compiuta dall’utente target in seguito alla quale viene attivato il prossimo messaggio o evento.
 
 ![Mappa concettuale del playbook evidenziata.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Riepilogo {#summary}
 
