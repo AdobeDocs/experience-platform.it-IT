@@ -4,10 +4,10 @@ title: Guida al dashboard delle destinazioni
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 20%
+source-wordcount: '3244'
+ht-degree: 19%
 
 ---
 
@@ -51,6 +51,10 @@ Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria widget e vi
 
 Dalla libreria dei widget, puoi sfogliare la selezione di widget di pubblico standard e personalizzati. Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
 
+### Visualizza SQL {#view-sql}
+
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate sul tuo dashboard con un interruttore [!UICONTROL Panoramica] Workspace. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzione, consulta [Visualizza la guida dell’interfaccia utente SQL](../view-sql.md).
+
 ## Widget predefiniti {#default-widgets}
 
 Per tutte le nuove istanze di Adobe Experience Platform viene fornito un widget predefinito che evidenzia le informazioni più recenti disponibili dai dati. I seguenti widget sono preconfigurati nella vista dei segmenti fin dall’inizio. Per informazioni complete sullo scopo e la funzione dei widget, vedi sotto.
@@ -87,9 +91,9 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
 * [[!UICONTROL Tipi di pubblico non mappati per identità]](#unmapped-audiences-by-identity)
 * [[!UICONTROL Tipi di pubblico mappati per identità]](#mapped-audiences-by-identity)
-* [[!UICONTROL Segmenti di pubblico comuni]](#common-audiences)
+* [[!UICONTROL Tipi di pubblico comuni]](#common-audiences)
 * [[!UICONTROL Pubblico mappato]](#mapped-audiences)
-* [[!UICONTROL Integrità del pubblico mappato]](#mapped-audience-health)
+* [[!UICONTROL Stato del pubblico mappato]](#mapped-audience-health)
 * [[!UICONTROL Conteggio delle destinazioni]](#destinations-count)
 * [[!UICONTROL Stato della destinazione]](#destination-status)
 * [[!UICONTROL Destinazioni attive per piattaforma di destinazione]](#active-destinations-by-destination-platform)
@@ -192,7 +196,7 @@ Il **[!UICONTROL Tendenza dimensione pubblico]** Il widget fornisce un [!UICONTR
 
 Il **[!UICONTROL Tipi di pubblico non mappati per identità]** widget elenca i primi cinque **non mappato** i tipi di pubblico sono classificati in base al conteggio delle identità discendenti per una determinata destinazione e identità. Evidenzia i tipi di pubblico più utili da mappare sull’account di destinazione scelto in base all’ID scelto.
 
-Il menu a discesa ID destinazione filtra i tipi di pubblico disponibili. Gli ID dei filtri elencati nel menu a discesa del cambiano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica.
+Il menu a discesa ID destinazione filtra i tipi di pubblico disponibili. Gli ID filtro elencati nel menu a discesa cambiano a seconda dell’account di destinazione selezionato nella parte superiore della pagina della panoramica.
 
 La colonna delle identità conta il numero di ID sorgente all’interno del pubblico che possono essere mappati all’ID scelto nel menu a discesa ID widget.
 

@@ -4,10 +4,10 @@ title: Guida alla dashboard dei profili
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati Real-Time Customer Profile della tua organizzazione.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 10%
+source-wordcount: '4996'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ I dati attributo nello snapshot mostrano i dati esattamente come vengono visuali
 >
 >Eventuali modifiche o aggiornamenti apportati ai dati dal momento in cui è stata acquisita l’istantanea non verranno riflessi nel dashboard fino all’acquisizione dell’istantanea successiva.
 
-## Esplorazione del dashboard Profili
+## Esplorare il dashboard Profili {#explore-dashboard}
 
 Per passare al dashboard Profili nell’interfaccia utente di Platform, seleziona **[!UICONTROL Profili]** nella barra a sinistra, seleziona quindi **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
@@ -37,7 +37,7 @@ Per passare al dashboard Profili nell’interfaccia utente di Platform, selezion
 
 ![Dashboard dei profili di Experience Platform con Profili e Panoramica evidenziati.](../images/profiles/dashboard-overview.png)
 
-### Modifica del dashboard Profili
+### Modificare il dashboard Profili {#modify-dashboard}
 
 Potete modificare l&#39;aspetto del quadro comandi Profili (Profiles) selezionando **[!UICONTROL Modifica dashboard]**. È possibile spostare, aggiungere, ridimensionare e rimuovere widget dal dashboard, nonché accedere a **[!UICONTROL Libreria widget]** per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
@@ -50,6 +50,10 @@ Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria widget e vi
 ![Panoramica del dashboard Profili con l’evidenziazione Aggiungi widget.](../images/profiles/profiles-overview-add-widget.png)
 
 Dalla libreria dei widget è possibile sfogliare la selezione di widget di pubblico standard e personalizzati. Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
+
+### Visualizza SQL {#view-sql}
+
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate sul tuo dashboard con un interruttore [!UICONTROL Panoramica] Workspace. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzione, consulta [Visualizza la guida dell’interfaccia utente SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -386,7 +390,7 @@ Per ulteriori informazioni sulle identità, consulta [Documentazione del servizi
 >title="Profili a identità singola"
 >abstract="Questo widget fornisce un conteggio dei profili della tua organizzazione con un solo tipo di ID che ne crea l’identità. Questo tipo di ID può essere un indirizzo e-mail o un ECID."
 
-Il [!UICONTROL Profili di identità singola] Il widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che crea la loro identità. Questo tipo di ID può essere un indirizzo e-mail o un ECID. Il conteggio dei profili viene generato dai dati contenuti nello snapshot più recente.
+Il [!UICONTROL Profili di identità singola] Il widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che crea la loro identità. Questo tipo di ID può essere un’e-mail o un ECID. Il conteggio dei profili viene generato dai dati contenuti nello snapshot più recente.
 
 ![Widget per profili di identità singoli.](../images/profiles/single-identity-profiles.png)
 

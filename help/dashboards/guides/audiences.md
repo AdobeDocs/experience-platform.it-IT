@@ -4,9 +4,9 @@ title: Guida al dashboard di Audiences
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3133'
 ht-degree: 9%
 
 ---
@@ -50,6 +50,10 @@ Seleziona **[!UICONTROL Aggiungi widget]** per passare alla libreria widget e vi
 ![Il [!UICONTROL Tipi di pubblico] panoramica della dashboard con [!UICONTROL Aggiungi widget] evidenziato.](../images/audiences/audiences-overview-add-widget.png)
 
 Dalla libreria dei widget, puoi sfogliare la selezione di widget di pubblico standard e personalizzati. Per informazioni su come aggiungere widget, consulta la documentazione della libreria di widget su come [aggiungi un widget](../customize/widget-library.md#add-widgets).
+
+### Visualizza SQL {#view-sql}
+
+Puoi visualizzare il codice SQL che genera le informazioni visualizzate sul tuo dashboard con un interruttore [!UICONTROL Panoramica] Workspace. Puoi trarre ispirazione dall’SQL delle informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni su questa funzione, consulta [Visualizza la guida dell’interfaccia utente SQL](../view-sql.md).
 
 ## Selezionare un pubblico {#select-audience}
 
