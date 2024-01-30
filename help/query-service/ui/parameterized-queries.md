@@ -2,10 +2,10 @@
 title: Query con parametri
 description: Scopri come utilizzare le query con parametri nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 10%
+source-wordcount: '690'
+ht-degree: 11%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 Per creare una query con parametri nell’interfaccia utente, passa all’editor delle query. Consulta la sezione su [accesso all’editor query](./user-guide.md#accessing-query-editor) per ulteriori istruzioni.
 
-Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, aggiungi il valore mancante per la chiave nella [!UICONTROL Parametri di query] sotto l’editor. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Un&#39;icona di avviso.](../images/ui/parameterized-queries/alert-icon.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi [!UICONTROL Valore] campi di input.
+Utilizza la premessa `'$'` per immettere un parametro di query nella query nell’editor di testo. Quindi, seleziona la **[!UICONTROL Parametri di query]** accanto alla scheda [!UICONTROL Console] aggiungi il valore mancante per la chiave. Impossibile eseguire la query se si omette di aggiungere un valore a una delle chiavi richieste. Un&#39;icona di avviso (![Un&#39;icona di avviso.](../images/ui/parameterized-queries/alert-icon.png)) viene visualizzato nella sezione Parametri query accanto a qualsiasi [!UICONTROL Valore] campi di input.
+
+>[!NOTE]
+>
+>Se la query non accetta parametri, è comunque possibile immettere parametri non necessari nell&#39;editor di query. L’editor delle query ignora tutte le coppie chiave-valore non necessarie e non ha alcun effetto sull’esecuzione o sui risultati della query.
 
 ![Vengono evidenziati l&#39;Editor query con una query con parametri e la sezione Parametri query.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Cambia schede da [!UICONTROL Parametri di query] a [!UICONTROL Console] per visualizzare l’output della console della query.
-
-Se si rimuove un parametro e si tenta di eseguire di nuovo la query dopo che è già stata eseguita, nella viene visualizzato un messaggio di errore [!UICONTROL Parametri di query] sezione per avvisarti.
-
->[!NOTE]
->
->Se la query non accetta parametri, è comunque possibile immettere parametri non necessari nell&#39;editor di query. L’editor delle query ignora tutte le coppie chiave-valore non necessarie e non ha alcun effetto sull’esecuzione o sui risultati della query.
-
-![L’editor delle query con un campo valore vuoto e l’errore Parametri query sono evidenziati.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Utilizzare i dettagli dei registri di query per verificare i valori dei parametri {#check-parameter-values}
 

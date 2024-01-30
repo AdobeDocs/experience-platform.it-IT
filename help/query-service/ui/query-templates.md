@@ -1,10 +1,10 @@
 ---
 title: Modelli di query
-description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando Query Editor o Query Service API e sono disponibili per l’utilizzo su tutti i set di dati di Experience Platform.
+description: I modelli di query sono query SQL salvate riutilizzabili che possono essere riutilizzate da altri utenti per risparmiare tempo e fatica. Possono essere create utilizzando Query Editor o Query Service API e sono disponibili per l’utilizzo su tutti i set di dati di Experienci Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 1a44be939a4678078b414658199472e07dee153b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Questo documento fornisce le informazioni necessarie per creare modelli di query
 
 Per istruzioni su come utilizzare l’editor di query per [scrivere](./user-guide.md#query-authoring) e [salvare le query](./user-guide.md#saving-queries). Una volta denominata e salvata la query, questa può essere riutilizzata come modello di query dall&#39; [!UICONTROL Modelli] scheda.
 
+>[!TIP]
+>
+>Quando salvi una query nell’editor delle query, viene visualizzato un messaggio di conferma per informarti dell’azione riuscita. Questo messaggio a comparsa contiene un collegamento che consente di accedere facilmente all’area di lavoro di pianificazione delle query. Consulta la [documentazione sulle query di pianificazione](./query-schedules.md) per scoprire come eseguire query su una cadenza personalizzata.
+
 ## Sfoglia modelli di query {#browse}
 
 Dall’area di lavoro Query dell’interfaccia utente di Platform, seleziona **[!UICONTROL Modelli]** per visualizzare l&#39;elenco delle query salvate disponibili.
@@ -37,10 +41,11 @@ Per trovare informazioni rilevanti sul modello, seleziona un modello di query da
 
 ![Il pannello dei dettagli nell’area di lavoro query con l’ID query evidenziato.](../images/ui/query-templates/details-panel.png)
 
-Dal pannello dei dettagli puoi eseguire quattro azioni separate:
+Dal pannello dei dettagli è possibile eseguire le azioni seguenti:
 
-* Seleziona **[!UICONTROL Set di dati di output]** per modificare il set di dati di output per il modello selezionato.
-* Seleziona **[!UICONTROL Visualizza pianificazione]** per passare al [!UICONTROL Schedules] scheda. Questa visualizzazione contiene tutte le informazioni sulla programmazione associate alla query.
+* Seleziona **[!UICONTROL Esegui come CTAS]** per creare una nuova tabella selezionando i dati da una o più tabelle esistenti. Questa opzione è disponibile solo se si dispone di una query SELECT.
+* Seleziona **[!UICONTROL Aggiungi pianificazione]** per iniziare a modificare la pianificazione per il modello di query.
+* Seleziona **[!UICONTROL Visualizza pianificazione]** per passare al [!UICONTROL Schedules] dell&#39;editor di query. Questa visualizzazione contiene tutte le informazioni sulla programmazione associate alla query.
 * Seleziona **[!UICONTROL Elimina query]** per eliminare il modello.
 * Selezionare il nome del modello per passare all&#39;editor di query in cui l&#39;istruzione SQL è precompilata per la modifica.
 

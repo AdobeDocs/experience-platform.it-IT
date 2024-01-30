@@ -2,7 +2,7 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -174,9 +174,3 @@ Nel caso in cui una query di blocco anonimo non riesca, puoi trovare il codice d
 Seleziona **[!UICONTROL Query]** per tornare alla schermata dettagli pianificazione, oppure **[!UICONTROL Query pianificate]** per tornare al [!UICONTROL Query pianificate] scheda.
 
 ![La schermata dei dettagli dell’esecuzione con Query evidenziata.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->

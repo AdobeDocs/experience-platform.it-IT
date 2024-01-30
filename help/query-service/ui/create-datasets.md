@@ -5,9 +5,9 @@ title: Genera set di dati di output dai risultati della query
 type: Tutorial
 description: Adobe Experience Platform Query Service consente di creare set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi d’uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,15 @@ Per creare set di dati dall’interfaccia utente di Adobe Experience Platform, e
 
 2. Nell’interfaccia utente di Platform, passa a **[!UICONTROL Query]** seguito da **[!UICONTROL Modelli]** e selezionare la query creata. Per ulteriori dettagli su come visualizzare le query create e salvate per la tua organizzazione nell’interfaccia utente di Platform, leggi [[!DNL Query Service] panoramica](./overview.md#browse).
 
-3. Nel pannello Dettagli query, seleziona **[!UICONTROL Set di dati di output]**.
+3. Nel pannello Dettagli query, seleziona **[!UICONTROL Esegui come CTAS]**.
 
-   ![La scheda Modelli dell’area di lavoro Query con Seleziona set di dati di output evidenziato.](../images/ui/create-datasets/output-dataset.png)
+   ![Area di lavoro Query [!UICONTROL Modelli] scheda con Seleziona [!UICONTROL Esegui come CTAS] evidenziato.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Nella finestra di dialogo visualizzata, inserisci il nome di un set di dati aggiunto all’ID LDAP. Il nome del set di dati non deve essere univoco o sicuro per SQL. Tieni presente che il nome della tabella per il set di dati verrà generato in base al nome del set di dati creato qui.
 
-5. Quindi, immetti una descrizione per il set di dati in [!UICONTROL Descrizione] e seleziona **[!UICONTROL Esegui query]**.
+5. Quindi, immetti una descrizione per il set di dati in [!UICONTROL Descrizione] e seleziona **[!UICONTROL Esegui come CTAS]**.
 
-   ![Finestra di dialogo Set di dati di output con i dettagli del set di dati ed esegui query evidenziata](../images/ui/create-datasets/run-query.png)
+   ![La finestra di dialogo Set di dati di output con i dettagli del set di dati e [!UICONTROL Esegui come CTAS] evidenziato](../images/ui/create-datasets/run-query.png)
 
 6. Una volta completata l’esecuzione della query, passa a **[!UICONTROL Set di dati]** per visualizzare il set di dati creato. Per ulteriori informazioni su come eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Platform, consulta [Guida all’interfaccia utente dei set di dati](../../catalog/datasets/user-guide.md).
 

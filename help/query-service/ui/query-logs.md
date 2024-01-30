@@ -2,9 +2,9 @@
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ Ogni riga rappresenta i dati di registro per un&#39;esecuzione di query associat
 
 ![L’area di lavoro Registro query con una riga selezionata ed evidenziati i dati di registro nella barra laterale a destra.](../images/ui/query-log/log-details.png)
 
-Nel pannello dei dettagli del registro, puoi selezionare un nuovo set di dati di output e visualizzare o copiare la query SQL completa utilizzata nell’esecuzione.
+Nel pannello dei dettagli del registro, potete eseguire diverse azioni. È possibile eseguire la query come CTAS, che crea un nuovo set di dati di output, visualizzare o copiare la query SQL completa utilizzata nell&#39;esecuzione oppure eliminare la query.
 
-![L’area di lavoro Registro query con una riga selezionata ed evidenziati il set di dati di output e la query SQL.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>Opzione per [!UICONTROL Esegui come CTAS] è disponibile solo per una query SELECT.
+
+![L&#39;area di lavoro Registro query con una riga selezionata, Esegui come CTAS, Elimina query e l&#39;icona Copia SQL evidenziata.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -78,7 +82,7 @@ Nella tabella seguente viene fornita una descrizione di ogni filtro.
 | Filtro | Descrizione |
 | ------ | ----------- |
 | [!UICONTROL Escludere le query del dashboard] | Questa casella di controllo è attivata per impostazione predefinita ed esclude i registri generati dalle query utilizzate per generare le informazioni. Queste query sono generate dal sistema e nascondono i record dei registri generati dagli utenti e necessari per il monitoraggio, l’amministrazione e la risoluzione dei problemi. Per visualizzare i registri generati dal sistema, deseleziona la casella di controllo. |
-| [!UICONTROL Start date (Data di inizio)] | Per filtrare i registri per le query create durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di inizio] sezione. |
+| [!UICONTROL Data di inizio] | Per filtrare i registri per le query create durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di inizio] sezione. |
 | [!UICONTROL Data di completamento] | Per filtrare i registri per le query completate durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di completamento] sezione. |
 | [!UICONTROL Stato] | Per filtrare i registri in base al [!UICONTROL Stato] della query, selezionare il pulsante di opzione appropriato. Le opzioni disponibili includono [!UICONTROL Inviato], [!UICONTROL In corso], [!UICONTROL Completato], e [!UICONTROL Non riuscito]. Puoi filtrare i registri solo in base a una condizione di stato alla volta. |
 | [!UICONTROL Client] | Per filtrare i registri in base al client di query utilizzato, immetti uno dei seguenti valori accettati nel campo di testo libero: `API`, `Adobe Query Service UI`, o `QsAccel`. |
