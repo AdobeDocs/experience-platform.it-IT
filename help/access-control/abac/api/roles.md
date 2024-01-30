@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i ruoli
 description: L’endpoint /roles nell’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli in Adobe Experience Platform.
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 6%
 
 ---
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **Risposta**
 
-In caso di esito positivo, viene restituito il ruolo aggiornato, inclusi i nuovi valori per il nome, la descrizione e il tipo di ruolo.
+In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi i nuovi valori per il nome, la descrizione e il tipo di ruolo.
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ Per aggiornare gli oggetti associati a un ruolo, effettua una richiesta PATCH al
 **Formato API**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | Parametro | Descrizione |
@@ -520,7 +520,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
+In caso di esito positivo, la risposta restituisce il ruolo aggiornato, inclusi i nuovi valori per i soggetti.
+
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
 
 ## Eliminare una mansione {#delete}
 
