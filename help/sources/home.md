@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 1%
 
 ---
@@ -161,11 +161,13 @@ Experienci Platform fornisce supporto per l’acquisizione di dati dal sistema l
 
 Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema di automazione del marketing di terze parti. Per ulteriori informazioni su connettori di origine specifici, consulta i seguenti documenti correlati:
 
+- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Batch]{type=Informative}
+- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Batch]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
