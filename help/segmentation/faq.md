@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Sì, i tipi di pubblico predefiniti generati esternamente sono supportati con Au
 
 ### Quali autorizzazioni devo avere per caricare i tipi di pubblico generati esternamente?
 
-Per caricare tipi di pubblico generati esternamente, devi disporre delle autorizzazioni &quot;Gestisci tipi di pubblico/segmenti&quot; e &quot;Gestisci set di dati&quot;. Non sono necessari controlli specifici basati sul ruolo per caricare tipi di pubblico generati esternamente.
+Per caricare tipi di pubblico generati esternamente, devi disporre delle autorizzazioni &quot;Visualizza tipi di pubblico/segmenti&quot;, &quot;Gestisci tipi di pubblico/segmenti&quot;, &quot;Visualizza set di dati&quot;, &quot;Gestisci set di dati&quot;, &quot;Visualizza origini&quot; e &quot;Gestisci origini&quot;. Non sono necessari controlli specifici basati sul ruolo per caricare tipi di pubblico generati esternamente.
 
 ### Cosa succede quando carico un pubblico generato esternamente?
 
