@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Panoramica sui playbook di casi d’uso
 description: Scopri come utilizzare la funzione Playbook di casi d’uso in Experience Platform per iniziare a utilizzare vari casi d’uso di marketing
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ Cosa troverai in questa documentazione di guida:
 * Creazione di risorse diverse da utilizzare, testare e promuovere in produzione quando sono pronte.
 
 ![Vista di tutti i playbook](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 Ogni playbook include informazioni sul caso d’uso specifico che risolve.
 
