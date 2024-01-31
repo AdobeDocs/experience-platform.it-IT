@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
+source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2576'
 ht-degree: 2%
 
 ---
@@ -120,6 +120,10 @@ Per ridurre al minimo il tempo di sviluppo, ti consigliamo di sviluppare le quer
 ### Formato testo {#format-text}
 
 Il [!UICONTROL Formato testo] rende la query più leggibile aggiungendo uno stile di sintassi standardizzato. Seleziona **[!UICONTROL Formato testo]** per standardizzare tutto il testo all&#39;interno dell&#39;editor di query.
+
+>[!NOTE]
+>
+>Il [!UICONTROL Formato testo] La funzionalità non funziona con blocchi anonimi. Per informazioni su come concatenare una o più istruzioni SQL in sequenza, vedere [documentazione di blocco anonimo](../key-concepts/anonymous-block.md).
 
 ![Editor query con [!UICONTROL Formato testo] e le istruzioni SQL evidenziate.](../images/ui/query-editor/format-text.png)
 
