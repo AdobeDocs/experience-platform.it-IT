@@ -3,9 +3,9 @@ title: Documentazione del prodotto Real-Time CDP
 description: Scopri come utilizzare Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1071'
 ht-degree: 3%
 
 ---
@@ -20,17 +20,17 @@ Dai un’occhiata ai miglioramenti più recenti del prodotto e della documentazi
 
 >[!BEGINTABS]
 
+>[!TAB Playbook di casi d’uso]
+
+Il [!UICONTROL Playbook di casi d’uso] Questa funzionalità è ora generalmente disponibile per tutti i clienti Real-Time CDP e Adobe Journey Optimizer. [!UICONTROL Playbook di casi d’uso] sono progettati per aiutare gli utenti a superare le sfide quando iniziano con Real-time Customer Data Platform o Adobe Journey Optimizer. Quando non sai da dove iniziare o come creare le risorse giuste per i casi d’uso desiderati, i playbook basati su casi d’uso ti forniscono ispirazione e creano diverse risorse da testare e importare negli ambienti di produzione quando sono pronti.
+
+[![immagine](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Strumenti sandbox]
 
 Utilizza la funzione di strumenti sandbox per migliorare la precisione della configurazione nelle sandbox ed esportare e importare facilmente le configurazioni tra sandbox. È possibile utilizzare la funzione degli strumenti sandbox per selezionare oggetti diversi ed esportarli in un pacchetto.
 
 [![immagine](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (GA limitato) Attiva i tipi di pubblico dell’account]
-
-I clienti B2B di Real-Time CDP ora possono attivare [pubblico dell’account](/help/segmentation/ui/account-audiences.md) verso determinate destinazioni.
-
-[![immagine](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB Attributi calcolati]
 
