@@ -3,9 +3,9 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ La tabella seguente illustra i limiti statici applicati ai dati di identità.
 
 | Guardrail | Limite | Note |
 | --- | --- | --- |
-| Numero di identità in un grafico | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità più vecchia per fare spazio all’identità più recente. L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
+| Numero di identità in un grafico | 50 | Quando un grafico con 50 identità collegate viene aggiornato, Identity Service applica un meccanismo &quot;first in first out&quot; ed elimina l’identità meno recente per fare spazio all’identità più recente per questo grafico (**Nota**: Real-Time Customer Profile non viene modificato). L’eliminazione si basa sul tipo di identità e sulla marca temporale. Il limite viene applicato a livello di sandbox. Per ulteriori informazioni, consulta la sezione su [informazioni sulla logica di eliminazione](#deletion-logic). |
 | Numero di collegamenti a un’identità per un’acquisizione batch singola | 50 | Un singolo batch può contenere identità anomale che causano unioni di grafici indesiderate. Per evitare questo problema, il servizio Identity non acquisisce le identità già collegate a 50 o più identità. |
 | Numero di identità in un record XDM | 20 | Il numero minimo di record XDM richiesti è due. |
 | Numero di spazi dei nomi personalizzati | Nessuna | Non esistono limiti al numero di spazi dei nomi personalizzati che è possibile creare. |
@@ -135,7 +135,7 @@ In questo esempio, ECID:32110 viene acquisito e collegato a un grafico di grandi
 
 >[!TAB Processo di eliminazione]
 
-Di conseguenza, Identity Service elimina l’identità meno recente in base alla marca temporale e al tipo di identità. In questo caso, ECID:35577 viene eliminato.
+Di conseguenza, Identity Service elimina l’identità meno recente in base alla marca temporale e al tipo di identità. In questo caso, ECID:35577 viene eliminato solo dal grafo delle identità.
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ Nell’esempio seguente, ECID:21011 viene acquisito e collegato al grafico in `t
 
 >[!TAB Processo di eliminazione]
 
-Di conseguenza, Identity Service elimina l’identità meno recente, che in questo caso è ECID:35577. L’eliminazione di ECID:35577 comporta anche l’eliminazione dei seguenti elementi:
+Di conseguenza, Identity Service elimina l’identità meno recente solo dal grafo delle identità, che in questo caso è ECID:35577. L’eliminazione di ECID:35577 comporta anche l’eliminazione dei seguenti elementi:
 
 * Il collegamento tra ID CRM: 60013 e l’ECID:35577 ora eliminato, risultante in uno scenario di suddivisione del grafico.
 * IDFA: 32110, IDFA: 02383, e le altre identità rappresentate da `(...)`. Queste identità vengono eliminate perché singolarmente non sono collegate ad altre identità e pertanto non possono essere rappresentate in un grafico.
