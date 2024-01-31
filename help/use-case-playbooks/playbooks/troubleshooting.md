@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Limitazioni note e risoluzione dei problemi relativi ai playbook
 description: Scopri di più sui problemi noti e i problemi comuni dei playbook e come risolverli
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # Risoluzione dei problemi e limitazioni note {#troubleshooting-known-limitations}
 
+Scopri come risolvere gli errori durante l’utilizzo dei playbook basati su casi d’uso e le limitazioni note della versione con disponibilità generale.
+
 ## Risoluzione dei problemi {#troubleshooting}
+
+Visualizza suggerimenti per la risoluzione dei problemi relativi a errori comuni durante l’utilizzo dei playbook basati su casi d’uso
 
 ### Adobe Journey Optimizer Surfaces non configurato
 
@@ -35,7 +40,7 @@ Quando crei un’istanza di un playbook e generi risorse, vengono visualizzate a
 
 * Quando si utilizza [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md) per promuovere lo schema dalla sandbox inspirational alla sandbox di sviluppo, potresti visualizzare alcuni errori simili ai seguenti:
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Errori visualizzati nel flusso di lavoro di mappatura schema.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 Ciò si verifica perché alcuni dei campi generati dallo schema non sono presenti nello schema nella sandbox di sviluppo in cui si sta copiando. Cercate quali sono questi campi. Quindi, torna alla sandbox di sviluppo dove puoi:
 

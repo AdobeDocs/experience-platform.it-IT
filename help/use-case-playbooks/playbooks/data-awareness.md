@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 description: Scopri come accelerare il time-to-value copiando le risorse generate nella sandbox end inspirational in altre sandbox.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
+# Pubblicare risorse generate dal playbook in altre sandbox {#publish-to-other-sandboxes}
 
 I playbook per casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. Puoi testare le risorse create dai playbook nella sandbox ispiratrice e, quando sei pronto, puoi importare le risorse in altre sandbox di sviluppo per ulteriori test con i dati disponibili in tali sandbox. Una volta superato il test, puoi spostare le risorse dalle sandbox di sviluppo a quelle di produzione.
 
@@ -97,7 +98,3 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 ## Passaggi successivi
 
 Dopo aver letto questa guida, ora hai una migliore comprensione di come sfruttare i playbook dei casi d’uso insieme a [strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) per creare percorsi eseguibili che fanno riferimento agli schemi. Ulteriori informazioni sulla [Casi d’uso di Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Ulteriori informazioni su questo argomento
-
-[Strumenti sandbox](/help/sandboxes/ui/sandbox-tooling.md)

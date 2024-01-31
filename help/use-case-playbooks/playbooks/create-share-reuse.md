@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Creare, condividere e riutilizzare le istanze del playbook
 description: Scopri come creare, condividere e riutilizzare le istanze del playbook per eseguire il caso d’uso di marketing.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ Creando più istanze dello stesso playbook, puoi implementare lo stesso caso d�
 Puoi condividere l’istanza e le risorse generate con altri membri del team. A questo scopo, copia il collegamento URL dal browser e condividilo con il tuo team per offrire una panoramica delle risorse generate.
 
 ![URL evidenziato in una vista del playbook del caso d’uso.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## Video introduttivo sul processo del playbook completo
+
+Guarda questo video per scoprire come individuare, creare, pubblicare e risolvere problemi relativi a istanze di un playbook con casi d’uso end-to-end, nonché come copiare le risorse generate dal playbook in altre sandbox configurate nella tua organizzazione.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Passaggi successivi {#next-steps}
 

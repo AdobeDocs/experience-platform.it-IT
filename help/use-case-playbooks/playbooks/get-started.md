@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Introduzione
 description: Scopri come iniziare a utilizzare la funzionalità Playbook di casi d’uso.
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 14%
 
 ---
@@ -65,7 +66,7 @@ Per creare e gestire gli schemi, utilizza le autorizzazioni di modellazione dati
 
 **Autorizzazioni per le destinazioni**
 
-Per creare e gestire le destinazioni, utilizza le autorizzazioni Destinazioni; **[!UICONTROL Gestisci]**, **[!UICONTROL Destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Gestire e attivare la destinazione del set di dati]**, UICONTROL Authoring delle destinazioni*.
+Per creare e gestire le destinazioni, utilizza le autorizzazioni Destinazioni; **[!UICONTROL Gestisci]**, **[!UICONTROL Destinazioni]**, **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Attiva segmento senza mappatura]**, **[!UICONTROL Gestire e attivare la destinazione del set di dati]**, **[!UICONTROL Authoring delle destinazioni]**.
 
 **Autorizzazioni per i percorsi**
 

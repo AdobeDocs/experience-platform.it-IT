@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: Trovare il playbook adatto
 description: Scopri come trovare il playbook adatto per il tuo caso d’uso e abilitare i playbook.
+role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 91%

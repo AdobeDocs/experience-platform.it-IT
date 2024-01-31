@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Playbook di casi d’uso disponibili per Real-time Customer Data Platform e Adobe Journey Optimizer.
 description: Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -54,18 +55,18 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 
 | Nome playbook | Descrizione |
 | ------------- | ----------- |
-| Carrello abbandonato: materiale promozionale - Per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce al carrello. |
-| Carrello abbandonato: prodotto - per attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo l’aggiunta di prodotti al carrello. |
-| Carrello abbandonato: prenotazione - Per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
-| Promozione destinazione - Per attivazione | Effettua una prenotazione durante una promozione continua con destinazione di viaggio. |
-| Promozione giochi - Per attivazione | Scegli i tifosi di acquistare i biglietti per una partita in programma. |
+| Carrello abbandonato: materiale promozionale, per l&#39;attivazione | Effettua il retargeting dei fan dopo che hanno lasciato il sito web o l’app dopo aver aggiunto la merce al carrello. |
+| Carrello abbandonato: prodotto, per l&#39;attivazione | Effettua il retargeting degli acquirenti dopo che hanno lasciato il sito web o l’app dopo l’aggiunta di prodotti al carrello. |
+| Carrello abbandonato: prenotazione - per attivazione | Effettua il retargeting degli ospiti dopo che hanno lasciato il sito web o l’app dopo aver aggiunto una nuova prenotazione al carrello. |
+| Promozione destinazione: per attivazione | Effettua una prenotazione durante una promozione continua con destinazione di viaggio. |
+| Promozione giochi: per attivazione | Scegli i tifosi di acquistare i biglietti per una partita in programma. |
 | Aumenta l&#39;acquisto di materiale promozionale durante il gioco - Per l&#39;attivazione | Scegli i fan per acquistare della merce quando si trovano vicino al sito di gioco. |
-| Aumentare l&#39;acquisto di prodotti durante la visita al negozio - Per l&#39;attivazione | Eseguire il targeting degli acquirenti per acquistare merci mentre si trovano vicino al negozio. |
-| Aumento dell&#39;acquisto di prodotti e servizi durante il soggiorno - Per l&#39;attivazione | Effettua il targeting degli ospiti per acquistare prodotti e servizi mentre si trovano nella proprietà. |
-| Promozione prodotto - Per l&#39;attivazione | Puoi indirizzare l’acquisto ai clienti per acquistare i prodotti durante una campagna promozionale in corso. |
-| Invia Un Messaggio Di Compleanno Ai Fan - Per L&#39;Attivazione | Per festeggiare il compleanno, rivolgiti ai fan con un messaggio &quot;Buon compleanno&quot; e un’offerta esclusiva. |
-| Invia Un Messaggio Di Compleanno Agli Ospiti - Per L&#39;Attivazione | Per il compleanno, rivolgiti agli ospiti con un messaggio &quot;Buon compleanno&quot; e un’offerta esclusiva. |
-| Invia un messaggio di compleanno agli acquirenti - Per l&#39;attivazione | Per festeggiare il compleanno, invia un messaggio di &quot;Buon compleanno&quot; e un’offerta esclusiva. |
+| Aumentare l&#39;acquisto di prodotti durante la visita al negozio, per l&#39;attivazione | Eseguire il targeting degli acquirenti per acquistare merci mentre si trovano vicino al negozio. |
+| Aumento dell&#39;acquisto di prodotti e servizi durante il soggiorno, per l&#39;attivazione | Effettua il targeting degli ospiti per acquistare prodotti e servizi mentre si trovano nella proprietà. |
+| Promozione prodotto: per l&#39;attivazione | Puoi indirizzare l’acquisto ai clienti per acquistare i prodotti durante una campagna promozionale in corso. |
+| Inviare Un Messaggio Di Compleanno Ai Fan, Per L&#39;Attivazione | Per festeggiare il compleanno, rivolgiti ai fan con un messaggio &quot;Buon compleanno&quot; e un’offerta esclusiva. |
+| Invia Un Messaggio Di Compleanno Agli Ospiti, Per L&#39;Attivazione | Per il compleanno, rivolgiti agli ospiti con un messaggio &quot;Buon compleanno&quot; e un’offerta esclusiva. |
+| Inviare un messaggio di compleanno agli acquirenti, per l&#39;attivazione | Per festeggiare il compleanno, invia un messaggio di &quot;Buon compleanno&quot; e un’offerta esclusiva. |
 
 {style="table-layout:auto"}
 
