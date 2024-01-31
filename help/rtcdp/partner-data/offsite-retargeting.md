@@ -3,10 +3,10 @@ title: Retargeting fuori sede di visitatori non autenticati
 description: Scopri come eseguire il retargeting degli utenti non autenticati utilizzando gli ID potenziali clienti per creare un attributo calcolato che può essere utilizzato per creare un pubblico di utenti non autenticati.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 2%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ Il **[!UICONTROL Crea attributo calcolato]** viene visualizzata. In questa pagin
 
 Per questo caso d’uso, puoi creare un attributo calcolato che, se esiste l’ID partner, ottiene il valore più recente dell’ID partner entro le ultime 24 ore.
 
-Utilizzando la barra di ricerca, puoi individuare e aggiungere l’evento &quot;Partner ID&quot; all’area di lavoro degli attributi calcolati.
+Utilizzando la barra di ricerca, puoi individuare e aggiungere l’evento &quot;Partner ID&quot; che [creato durante il caso di utilizzo della personalizzazione nel sito](#get-data-in) nell’area di lavoro degli attributi calcolati.
 
 ![Il [!UICONTROL Eventi] e la barra di ricerca.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -109,7 +109,7 @@ Seleziona la nuova aggiunta **[!UICONTROL Visualizzazione pagina]** evento. Modi
 
 Dopo aver aggiunto l’evento, devi aggiungere un attributo. Poiché stai lavorando con visitatori non autenticati, puoi aggiungere l’attributo calcolato appena creato. Questo attributo calcolato appena creato consente di collegare gli ID partner a un pubblico.
 
-Per aggiungere l’attributo calcolato, in **[!UICONTROL Attributi]**, seleziona **[!UICONTROL Profilo individuale XDM]**, seguito da **[!UICONTROL _tag]**, **[!UICONTROL SystemComputedAttributes]**, e **[!UICONTROL PartnerID]**. Aggiungi ora il **[!UICONTROL Valore]** dell’attributo calcolato alla sezione attributes dell’area di lavoro.
+Per aggiungere l’attributo calcolato, in **[!UICONTROL Attributi]**, seleziona **[!UICONTROL Profilo individuale XDM]**, seguito da **[ID tenant della tua organizzazione](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, e **[!UICONTROL PartnerID]**. Aggiungi ora il **[!UICONTROL Valore]** dell’attributo calcolato alla sezione attributes dell’area di lavoro.
 
 ![Viene visualizzato il percorso della cartella per accedere all’attributo calcolato.](../assets/offsite-retargeting/access-computed-attribute.png)
 
