@@ -4,10 +4,10 @@ title: Home page e dashboard di Real-time Customer Data Platform
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 2%
+source-wordcount: '915'
+ht-degree: 6%
 
 ---
 
@@ -25,10 +25,10 @@ Questo documento fornisce una panoramica della home page di Real-Time CDP e del 
 
 Il [!UICONTROL Guida introduttiva a Real-Time Customer Profile] il widget è diviso in quattro sezioni:
 
-* **Inserire dati in Platform**: questo widget indirizza l’utente al catalogo delle origini. Utilizza il catalogo origini per selezionare un’origine e acquisire i dati da Experience Platform. Per ulteriori informazioni, leggere [panoramica sulle origini](../sources/home.md)
-* **Modellare le strutture di dati**: questo widget reindirizza alla panoramica degli schemi. Utilizza la panoramica degli schemi per cercare gli schemi esistenti o creare blocchi predefiniti che descrivono la struttura dei dati. Per ulteriori informazioni, leggere [panoramica degli schemi](../xdm/home.md).
-* **Segmentazione dei tipi di pubblico**: questo widget indirizza l’utente al [!DNL Segment Builder] nell’interfaccia utente. Utilizza il [!DNL Segment Builder] per interagire con gli elementi dati del profilo e definire regole per i segmenti. Per ulteriori informazioni, leggere [Panoramica del servizio di segmentazione](../segmentation/home.md).
-* **Inviare dati alle destinazioni**: questo widget indirizza l’utente al catalogo delle destinazioni. Utilizza il catalogo delle destinazioni per selezionare una destinazione a cui poi puoi connettersi e inviare segmenti. Per ulteriori informazioni, leggere [panoramica sulle destinazioni](../destinations/home.md)
+* **Inserire dati in Platform**: questo widget indirizza l’utente al catalogo delle origini. Utilizza il catalogo origini per selezionare un’origine e acquisire i dati da Experience Platform. Seleziona **[Configurare le origini]** per passare al catalogo delle origini. Per ulteriori informazioni, leggere [panoramica sulle origini](../sources/home.md).
+* **Modellare le strutture di dati**: questo widget reindirizza alla panoramica degli schemi. Utilizza la panoramica degli schemi per cercare gli schemi esistenti o creare una blueprint che descriva la struttura dei tuoi dati. Seleziona **[!UICONTROL Crea schema]** per passare all’interfaccia di creazione dello schema. Per ulteriori informazioni, leggere [panoramica degli schemi](../xdm/home.md).
+* **Creare tipi di pubblico**: questo widget indirizza al Generatore di segmenti nell’interfaccia utente. Utilizza Segment Builder (Generatore di segmenti) per interagire con gli elementi dati del profilo e definire i criteri per la definizione del segmento. Seleziona **[!UICONTROL Creare un pubblico]** per passare al Generatore di segmenti. Per ulteriori informazioni, leggere [Panoramica del servizio di segmentazione](../segmentation/home.md).
+* **Inviare dati alle destinazioni**: questo widget indirizza l’utente al catalogo delle destinazioni. Utilizza il catalogo delle destinazioni per selezionare una destinazione a cui poi puoi connettersi e inviare segmenti. Seleziona **[!UICONTROL Impostare le destinazioni]** per passare al catalogo delle destinazioni. Per ulteriori informazioni, leggere [panoramica sulle destinazioni](../destinations/home.md).
 
 ![La home page dell’interfaccia utente di Platform che mostra il widget per iniziare](assets/platform-home/getting-started-widget.png)
 
@@ -37,8 +37,8 @@ Il [!UICONTROL Guida introduttiva a Real-Time Customer Profile] il widget è div
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
 >title="Numero totale di profili"
->abstract="Il numero totale di profili di cui dispone la tua organizzazione in Experienci Platform. Questo conteggio si basa sul criterio di unione della tua organizzazione e non include frammenti di profilo. Il numero di profili viene aggiornato una volta ogni 24 ore."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="Ulteriori informazioni sono disponibili nella documentazione"
+>abstract="Il numero totale di profili di cui dispone la tua organizzazione in Experience Platform. Questo conteggio si basa sul criterio di unione della tua organizzazione e non include frammenti di profilo. Il numero di profili viene aggiornato ogni 24 ore."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=it#profile-count" text="Ulteriori informazioni sono disponibili nella documentazione"
 
 Il dashboard delle metriche mostra informazioni aggiornate sui dati dell’Experience Platform. Il dashboard è diviso in due sezioni:
 
@@ -49,9 +49,9 @@ La classifica mostra il numero totale corrente di schemi, set di dati, profili e
 ![La sezione classifica nella home page dell’interfaccia utente di Platform.](assets/platform-home/leaderboard.png)
 
 * **Schemi totali**: Il **Schemi totali** contatore indica il numero di schemi nel sistema. Questo contatore viene aggiornato quando si crea uno schema. Per ulteriori informazioni, leggere [panoramica degli schemi](../xdm/home.md).
-* **Set di dati totali**: Il **Set di dati totali** mostra il numero di set di dati nel sistema e la quantità di dati in [!DNL Platform]. Questo contatore viene aggiornato quando viene creato un set di dati. Per ulteriori informazioni sui set di dati, consulta [panoramica dei set di dati](../catalog/datasets/overview.md).
-* **Profili totali**: Il **Profili** count mostra il numero totale di profili di cui dispone l’organizzazione in Experienci Platform. Non include frammenti di profilo. Questo è il tuo pubblico indirizzabile totale. Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione dei criteri di unione in Real-Time Customer Profile. Il numero di profili viene aggiornato una volta ogni 24 ore. Per ulteriori informazioni sui profili, consulta [Panoramica del profilo cliente in tempo reale](../profile/home.md).
-* **Segmenti totali**: **Segmenti** mostra il numero totale di segmenti creati per l’organizzazione. Questo numero viene aggiornato quando vengono creati nuovi segmenti. Per ulteriori informazioni sui segmenti, consulta [Panoramica del servizio di segmentazione](../segmentation/home.md).
+* **Set di dati totali**: Il **Set di dati totali** contatore mostra il numero di set di dati nel sistema e la quantità di dati in Experienci Platform. Questo contatore viene aggiornato quando viene creato un set di dati. Per ulteriori informazioni sui set di dati, consulta [panoramica dei set di dati](../catalog/datasets/overview.md).
+* **Profili totali**: Il **Profili** count mostra il numero totale di profili di cui dispone l’organizzazione in Experienci Platform. Non include frammenti di profilo. Questo è il tuo pubblico indirizzabile totale. Questo conteggio utilizza il valore predefinito [criterio di unione](profile/merge-policies.md) come impostato nella configurazione dei criteri di unione in Real-Time Customer Profile. Il numero di profili viene aggiornato una volta ogni 24 ore. Seleziona **[!UICONTROL Profili]** per passare alla pagina Panoramica profili e visualizzare tutte le metriche del profilo. Per ulteriori informazioni sui profili, consulta [Panoramica del profilo cliente in tempo reale](../profile/home.md).
+* **Pubblico totale**: Il **Pubblico totale** contatore mostra il numero totale di tipi di pubblico creati per l’organizzazione. Questo numero viene aggiornato quando vengono creati nuovi tipi di pubblico. Per ulteriori informazioni sui tipi di pubblico, consulta [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
 ### Elementi recenti
 
