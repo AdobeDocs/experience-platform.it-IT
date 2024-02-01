@@ -4,9 +4,9 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
 workflow-type: tm+mt
-source-wordcount: '4335'
+source-wordcount: '4404'
 ht-degree: 4%
 
 ---
@@ -390,38 +390,58 @@ Prendi nota della riga evidenziata con commenti in linea nella [!DNL connection 
 {
     "items": [
         {
-            "id": "4fce964d-3f37-408f-9778-e597338a21ee",
-            "name": "Amazon S3",
-            "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
-            "version": "1.0",
-            "authSpec": [ // describes the authentication parameters
-                {
-                    "name": "Access Key",
-                    "type": "KeyBased",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "description": "Defines auth params required for connecting to amazon-s3",
-                        "type": "object",
-                        "properties": {
-                            "s3AccessKey": {
-                                "description": "Access key id",
-                                "type": "string",
-                                "pattern": "^[A-Z2-7]{20}$"
-                            },
-                            "s3SecretKey": {
-                                "description": "Secret access key for the user account",
-                                "type": "string",
-                                "format": "password",
-                                "pattern": "^[A-Za-z0-9\/\\+]{40}$"
-                            }
-                        },
-                        "required": [
-                            "s3SecretKey",
-                            "s3AccessKey"
-                        ]
-                    }
+        "id": "4fce964d-3f37-408f-9778-e597338a21ee",
+        "name": "amazon-s3",
+        "providerId": "14e34fac-d307-11e9-bb65-2a2ae2dbcce4",
+        "version": "1.0",
+        "authSpec": [
+            {
+            "name": "Access Key",
+            "type": "KeyBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3AccessKey": {
+                    "description": "Access key id",
+                    "type": "string",
+                    "pattern": "^[A-Z2-7]{20}$"
+                },
+                "s3SecretKey": {
+                    "description": "Secret access key for the user account",
+                    "type": "string",
+                    "format": "password",
+                    "pattern": "^[A-Za-z0-9\\/\\+]{40}$"
                 }
-            ],
+                },
+                "required": [
+                "s3SecretKey",
+                "s3AccessKey"
+                ]
+            }
+            },
+            {
+            "name": "Assumed Role",
+            "type": "S3RoleBased",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "description": "Defines role based auth params required for connecting to amazon-s3",
+                "type": "object",
+                "properties": {
+                "s3Role": {
+                    "title": "Role",
+                    "description": "S3 role",
+                    "type": "string",
+                    "format": "password"
+                }
+                },
+                "required": [
+                "s3Role"
+                ]
+            }
+            }
+        ],
 //...
 ```
 
@@ -691,7 +711,7 @@ Utilizzando le proprietà specificate nella specifica di autenticazione (ad es. 
 
 **Richiesta**
 
-+++[!DNL Amazon S3] - Richiesta di connessione di base
++++[!DNL Amazon S3] - Richiesta di connessione di base con autenticazione chiave di accesso e chiave segreta
 
 >[!TIP]
 >
@@ -714,6 +734,39 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "s3SecretKey": "<Add secret key>",
       "s3AccessKey": "<Add access key>"
+    }
+  },
+  "connectionSpec": {
+    "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec
+    "version": "1.0"
+  }
+}'
+```
+
++++
+
+++[!DNL Amazon S3] - Richiesta di connessione di base con autenticazione ruolo assunta
+
+>[!TIP]
+>
+>Per informazioni su come ottenere le credenziali di autenticazione richieste, fare riferimento a [autentica nella destinazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) sezione della pagina della documentazione di destinazione di Amazon S3.
+
+Nell’esempio di richiesta, annota le righe evidenziate con commenti in linea, che forniscono informazioni aggiuntive. Rimuovi i commenti in linea nella richiesta quando copia e incolla la richiesta nel terminale scelto.
+
+```shell {line-numbers="true" start-line="1" highlight="17"}
+curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
+--header 'accept: application/json' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "name": "Amazon S3 Base Connection",
+  "auth": {
+    "specName": "Assumed Role",
+    "params": {
+      "s3Role": "<Add s3 role>"
     }
   },
   "connectionSpec": {

@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2024
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 40%
+source-wordcount: '1038'
+ht-degree: 38%
 
 ---
 
@@ -74,6 +74,14 @@ Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzaz
 | Destinazione | Descrizione |
 | ----------- | ----------- |
 | [Connessione pubblica](../../destinations/catalog/advertising/pubmatic.md) | Utilizza questa destinazione per inviare i dati del pubblico a [!DNL PubMatic Connect] piattaforma. |
+
+{style="table-layout:auto"}
+
+**Funzionalità nuove o aggiornate** {#destinations-new-updated-functionality}
+
+| Funzionalità | Descrizione |
+| ----------- | ----------- |
+| Nuovo **ruolo presunto** tipo di autenticazione per le destinazioni Amazon S3 | Utilizza il nuovo tipo di autenticazione del ruolo presunto per collegare Experienci Platform ai bucket Amazon S3 se non desideri condividere le chiavi dell’account e le chiavi segrete con Experienci Platform. Ulteriori informazioni sul nuovo metodo di autenticazione sono disponibili in [sezione di autenticazione](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) della documentazione di Amazon S3. |
 
 {style="table-layout:auto"}
 
