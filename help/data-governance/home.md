@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="Obbligo di governance dei dati"
->abstract="Ricorda che è tua esclusiva responsabilità rispettare le politiche di governance dei dati della tua organizzazione e soddisfare i requisiti normativi. Experienci Platform fornisce strumenti di governance dei dati per gestire gli obblighi in materia di utilizzo dei dati. Applica le etichette di utilizzo dei dati appropriate prima di eseguire query o elaborare dati. Consulta la documentazione per scoprire gli strumenti di governance dei dati e le best practice."
+>abstract="Ricorda che è tua esclusiva responsabilità rispettare i criteri di governance dei dati della tua organizzazione e soddisfare i requisiti normativi. Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire gli obblighi in materia di utilizzo dei dati. Applica le etichette di utilizzo dei dati appropriate prima di eseguire query o elaborare dati. Consulta la documentazione per scoprire gli strumenti di governance dei dati e le best practice."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=it" text="Panoramica sulla governance dei dati"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=it" text="Panoramica delle etichette per la governance dei dati"
 
