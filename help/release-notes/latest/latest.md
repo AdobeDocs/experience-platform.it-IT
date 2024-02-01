@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ee30e00bceb392b775d15ca2cad95b746698dc4
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 40%
@@ -46,7 +46,7 @@ La preparazione dei dati consente ai data engineer di mappare, trasformare e con
 
 | Funzione | Descrizione |
 | --- | --- |
-| Nuove funzioni di mappatura | <ul><li>`object_to_map`: utilizza `object_to_map` funzione per creare tipi di dati mappa. Questa funzione supporta diverse sintassi. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - oggetti](../../data-prep/functions.md#objects). </li><li>`to_map`: utilizza `to_map` per creare una mappa con le coppie di nome campo e valore specificate utilizzando gli oggetti. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#objects). </li><li>`array_to_map`: utilizza `array_to_map` funzione per creare una mappa con coppie di nome campo e valore specificate utilizzando matrici di oggetti. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#objects). |
+| Nuove funzioni di mappatura | <ul><li>`object_to_map`: utilizza `object_to_map` funzione per creare tipi di dati mappa. Questa funzione supporta diverse sintassi. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - oggetti](../../data-prep/functions.md#objects). </li><li>`to_map`: utilizza `to_map` per creare una mappa con le coppie di nome campo e valore specificate utilizzando gli oggetti. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilizza `array_to_map` funzione per creare una mappa con coppie di nome campo e valore specificate utilizzando matrici di oggetti. Per ulteriori informazioni, consulta la guida su [funzioni per gerarchie - mappe](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
