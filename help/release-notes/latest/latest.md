@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 30%
+source-wordcount: '1551'
+ht-degree: 28%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform fornisce più dashboard attraverso le quali è possibi
 
 | Funzione | Descrizione |
 | --- | --- |
-| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i profili, i tipi di pubblico, le destinazioni e le informazioni personalizzate, quindi eseguire la query su richiesta tramite l’editor delle query. Ispirati all’SQL di oltre 40 informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Per ulteriori informazioni, consulta la guida su [visualizzazione di insight SQL](../../dashboards/view-sql.md). |
+| Visualizza SQL | Ora puoi visualizzare le istruzioni SQL sottostanti i tuoi profili, tipi di pubblico, destinazioni e informazioni personalizzate con l’interruttore Visualizza SQL, quindi eseguire la query su richiesta tramite l’editor delle query. L’accesso a SQL che alimenta le informazioni di Real-time Customer Data Platform consente di comprendere la logica alla base dell’analisi del modello dati. Questa trasparenza rende i dati Real-time CDP di un Adobe più accessibili, comprensibili e di impatto per il processo decisionale.<br>Ispirati all’SQL di oltre 40 informazioni esistenti per creare nuove query che derivano informazioni univoche dai dati di Platform in base alle esigenze aziendali. Il codice SQL è disponibile anche per [Profili](../../dashboards/insights/profiles.md), [Tipi di pubblico](../../dashboards/insights/audiences.md), e [Destinazioni](../../dashboards/insights/destinations.md) approfondimenti nella documentazione di Experience League. Questi documenti evidenziano i casi di utilizzo aziendali a cui è possibile rispondere con le informazioni standard. Per ulteriori informazioni, consulta la guida su [visualizzazione di insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
