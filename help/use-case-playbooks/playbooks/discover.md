@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ La mappa concettuale inizia con una definizione della persona a cui si rivolge i
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="Risorse"
->abstract="Queste sono le risorse generate da questo playbook. Dopo aver creato un’istanza del playbook, puoi visualizzare le risorse nella sandbox che ispira e promuoverle in altre sandbox, a seconda delle esigenze."
+>abstract="Queste sono le risorse generate da questo playbook. Dopo aver creato un’istanza del playbook, puoi visualizzare le risorse nella sandbox di ispirazione e promuoverle in altre sandbox, come si desidera."
 
 Esamina la sezione di riepilogo per capire quali risorse vengono generate una volta create le istanze dal playbook. Le risorse generate per ogni playbook sono personalizzate in base al caso d’uso abilitato dal playbook. Di seguito trovi ulteriori informazioni su tutti gli elementi nella sezione di riepilogo.
 

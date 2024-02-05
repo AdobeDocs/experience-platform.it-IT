@@ -7,7 +7,7 @@ exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 81%
+ht-degree: 83%
 
 ---
 
@@ -19,8 +19,8 @@ Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="Crea istanza"
->abstract="Genera un elenco di risorse come percorsi, tipi di pubblico, schemi o destinazioni da utilizzare in scenari di percorso o attivazione."
+>title="Creare un’istanza"
+>abstract="Generare un elenco di risorse come percorsi, tipi di pubblico, schemi o destinazioni da utilizzare in scenari di percorso o di attivazione."
 
 Prima di creare un’istanza del playbook, esplora i playbook disponibili per [trovare il playbook adatto a te](/help/use-case-playbooks/playbooks/discover.md). Quando sei pronto a procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche.
 
