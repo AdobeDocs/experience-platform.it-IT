@@ -4,7 +4,7 @@ title: Iscriviti alle notifiche degli eventi di Adobe I/O
 description: Questo documento descrive come abbonarsi alle notifiche di eventi Adobe I/O per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme ai collegamenti a ulteriore documentazione su come interpretare i dati evento restituiti per ogni evento applicabile [!DNL Platform] servizio.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Vai a [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) e acce
 
 >[!NOTE]
 >
->La notifica di acquisizione dati verrà rimossa dalla sottoscrizione I/O Adobe. Al loro posto, utilizza **Informazioni sull&#39;esecuzione del flusso origini** Evento di I/O.
+>L’evento di notifica dell’acquisizione dei dati è stato dichiarato obsoleto nell’Adobe I/O. Al loro posto, utilizza **Informazioni sull&#39;esecuzione del flusso origini** Evento di I/O.
 
 Dopo aver creato un nuovo progetto, passa alla schermata di panoramica del progetto. Da qui, seleziona **[!UICONTROL Aggiungi evento]**.
 
