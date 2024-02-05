@@ -4,9 +4,9 @@ title: Introduzione
 description: Scopri come iniziare a utilizzare la funzionalità Playbook di casi d’uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,11 @@ Guarda questo video per scoprire i passaggi necessari per creare la sandbox, con
 ## Creare una sandbox di sviluppo {#create-development-sandbox}
 
 I playbook basati su casi d’uso utilizzano un tipo speciale di sandbox di sviluppo. Per iniziare e accedere alla funzionalità [[!UICONTROL Playbook di casi d’uso]](/help/use-case-playbooks/playbooks/overview.md), [crea una nuova sandbox di sviluppo](/help/sandboxes/ui/user-guide.md#create) (accertati di non selezionare una sandbox di produzione) il cui nome (non il titolo) contiene `-ucp` o `-UCP` nel suffisso, come illustrato di seguito.
+
+>[!IMPORTANT]
+>
+>Quando crei una nuova sandbox di sviluppo, accertati che il nome contenga `-ucp` o `-UCP` nel suffisso.
+
 
 ![Crea una sandbox di sviluppo per i playbook di casi d’uso](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
