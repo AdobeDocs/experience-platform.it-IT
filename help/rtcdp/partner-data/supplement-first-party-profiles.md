@@ -3,7 +3,7 @@ title: Integrare i profili di prime parti con gli attributi forniti dai partner
 description: Scopri come integrare i profili di prime parti con attributi di partner di dati affidabili, per migliorare le basi dati, acquisire nuove informazioni sulla clientela e una migliore ottimizzazione del pubblico.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ Adobe è consapevole del fatto che non esiste un approccio universale che consen
 
 Ad esempio, segui i passaggi descritti in questo caso d’uso quando devi arricchire i record dei clienti con segnali demografici e intenzionali.
 
-## Prerequisiti e pianificazione {#prerequisites-and-planning}
+## Prerequisiti e pianificazione
 
 Se prendi in considerazione l’integrazione dei profili di prime parti con gli attributi dei partner di dati, dovresti discutere e indirizzare i seguenti dettagli sul ciclo di arricchimento dei dati con il partner dati:
 

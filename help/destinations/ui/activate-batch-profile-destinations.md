@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
-ht-degree: 11%
+source-wordcount: '3797'
+ht-degree: 12%
 
 ---
 
@@ -142,7 +142,12 @@ Utilizza il **[!UICONTROL Pianificato]** per l&#39;esecuzione del processo di at
 
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Esportare file incrementali {#export-incremental-files}
+### Esportare file incrementali
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configurare il nome file"
+>abstract="Per le destinazioni basate su file, viene generato un nome di file univoco per pubblico. Utilizza l’editor dei nomi dei file per creare e modificare un nome di file univoco oppure mantieni il nome predefinito."
 
 Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazione in cui il primo file è un’istantanea completa di tutte le qualifiche di profilo per il pubblico selezionato e i file successivi sono qualifiche di profilo incrementali rispetto all’esportazione precedente.
 
@@ -167,7 +172,7 @@ Seleziona **[!UICONTROL Esporta file incrementali]** per attivare un’esportazi
 
 4. Seleziona **[!UICONTROL Crea]** per salvare la pianificazione.
 
-### Configurare nomi file {#file-names}
+### Configurare nomi file
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
