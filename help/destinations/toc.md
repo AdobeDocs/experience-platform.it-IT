@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
+source-git-commit: ed3d672c2f6c06259c341c87451d049d00a41268
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1194'
 ht-degree: 5%
 
 ---
@@ -166,6 +166,7 @@ ht-degree: 5%
       * [Connessione moenging](./catalog/mobile-engagement/moengage.md)
    * Destinazioni di personalizzazione {#personalization}
       * [Panoramica delle destinazioni di personalizzazione](./catalog/personalization/overview.md)
+      * [(Disponibilità limitata) Audience Analysis](./catalog/personalization/audience-analysis.md)
       * [Connessione Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Connessione Adobe Target](./catalog/personalization/adobe-target-connection.md)
       * [Estensione Adobe Target](./catalog/personalization/adobe-target.md)
