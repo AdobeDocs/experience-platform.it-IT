@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Best Practice Per La Modellazione Dei Dati
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
 workflow-type: tm+mt
-source-wordcount: '3096'
+source-wordcount: '3245'
 ht-degree: 1%
 
 ---
@@ -231,13 +231,27 @@ Per Adobe Analytics, ECID è l’identità primaria predefinita. Se un valore EC
 
 ## Campi di convalida dei dati {#data-validation-fields}
 
-Per evitare che dati errati vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo durante la creazione degli schemi. Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire [!UICONTROL Proprietà campo] barra laterale. Consulta la documentazione su [proprietà del campo specifiche del tipo](../ui/fields/overview.md#type-specific-properties) per una descrizione esatta dei campi disponibili.
+Quando si acquisiscono i dati nel data lake, la convalida dei dati viene applicata solo per i campi vincolati. Per convalidare un particolare campo durante un’acquisizione batch, è necessario contrassegnare il campo come vincolato nello schema XDM. Per evitare che dati errati vengano acquisiti in Platform, ti consigliamo di definire i criteri per la convalida a livello di campo quando crei gli schemi.
+
+>[!IMPORTANT]
+>
+>La convalida non viene applicata alle colonne nidificate. Se il formato del campo si trova all’interno di una colonna array, i dati non verranno convalidati.
+
+Per impostare vincoli per un campo specifico, selezionare il campo dall&#39;Editor schema per aprire **[!UICONTROL Proprietà campo]** barra laterale. Consulta la documentazione su [proprietà del campo specifiche del tipo](../ui/fields/overview.md#type-specific-properties) per una descrizione esatta dei campi disponibili.
 
 ![Editor di schema con i campi vincolo evidenziati nel [!UICONTROL Proprietà campo] barra laterale.](../images/best-practices/data-validation-fields.png)
 
->[!TIP]
->
->Di seguito è riportata una raccolta di suggerimenti per la modellazione dei dati durante la creazione di uno schema:<br><ul><li>**Considerare le identità primarie**: ad Adobe prodotti come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, `identityMap` Questo campo spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.</li><li>**Evita di utilizzare `_id` come identità**: evita di utilizzare `_id` negli schemi Experience Event come identità. Ha lo scopo di garantire l&#39;univocità dei record e non di utilizzarli come identità.</li><li>**Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime per i campi contrassegnati come identità. Queste limitazioni contribuiscono a mantenere la coerenza e la qualità dei dati.</li><li>**Applicare pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, utilizza [!UICONTROL Pattern] per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.</li><li>**Limitare le eVar nello schema di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.</li><li>**Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all’identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono.</li></ul>
+### Suggerimenti per mantenere l&#39;integrità dei dati {#data-integrity-tips}
+
+Di seguito è riportata una raccolta di suggerimenti per mantenere l&#39;integrità dei dati durante la creazione di uno schema.
+
+* **Considerare le identità primarie**: ad Adobe prodotti come Web SDK, Mobile SDK, Adobe Analytics e Adobe Journey Optimizer, `identityMap` Questo campo spesso funge da identità primaria. Evita di designare campi aggiuntivi come identità primarie per tale schema.
+* **Evita di utilizzare `_id` come identità**: evita di utilizzare `_id` negli schemi Experience Event come identità. Ha lo scopo di garantire l&#39;univocità dei record e non di utilizzarli come identità.
+* **Imposta vincoli di lunghezza**: è consigliabile impostare lunghezze minime e massime per i campi contrassegnati come identità. Un avviso viene attivato se si tenta di assegnare uno spazio dei nomi personalizzato a un campo di identità senza soddisfare i vincoli di lunghezza minima e massima. Queste limitazioni contribuiscono a mantenere la coerenza e la qualità dei dati.
+* **Applicare pattern per valori coerenti**: se i valori di identità seguono un pattern specifico, utilizza **[!UICONTROL Pattern]** per applicare questo vincolo. Questa impostazione può includere solo regole come cifre, lettere maiuscole o minuscole o combinazioni di caratteri specifiche. Utilizza espressioni regolari per far corrispondere i pattern nelle stringhe.
+* **Limitare le eVar negli schemi di Analytics**: in genere, uno schema di Analytics deve avere un solo eVar designato come identità. Se intendi utilizzare più di un eVar come identità, devi verificare nuovamente se la struttura dati può essere ottimizzata.
+* **Assicurare l&#39;univocità di un campo selezionato**: il campo scelto deve essere univoco rispetto all’identità primaria nello schema. In caso contrario, non contrassegnarlo come identità. Ad esempio, se più clienti possono fornire lo stesso indirizzo e-mail, lo spazio dei nomi non è un’identità adatta. Questo principio si applica anche ad altri spazi dei nomi di identità come i numeri di telefono.
+* **I vincoli attivano gli avvisi per i campi dello spazio dei nomi personalizzati**: imposta i vincoli per attivare un avviso quando un campo schema è contrassegnato con uno spazio dei nomi personalizzato senza specificare sia la lunghezza minima che quella massima. L’avviso funge da importante avvertimento per mantenere l’integrità dei dati. Consulta la [proprietà del campo specifiche del tipo](../ui/fields/overview.md#type-specific-properties) documentazione per informazioni su come impostare vincoli per un particolare campo.
 
 ## Passaggi successivi
 
