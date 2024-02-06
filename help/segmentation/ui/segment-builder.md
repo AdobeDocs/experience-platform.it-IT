@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
+source-wordcount: '3562'
 ht-degree: 6%
 
 ---
@@ -255,9 +255,17 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 >abstract="Puoi aggiornare le stime della definizione di segmento per visualizzare subito un’anteprima del numero di profili idonei per la definizione di segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=it#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
-Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà segmento]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
+Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà del pubblico]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
-Il **[!UICONTROL Proprietà segmento]** Questa sezione consente inoltre di specificare informazioni importanti sulla definizione del segmento, tra cui nome, descrizione e tipo di valutazione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare la definizione del segmento tra quelle definite dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
+**[!UICONTROL Profili qualificati]** indica il **effettivo** numero di profili che corrispondono alle regole della definizione del segmento. Questo numero viene aggiornato ogni 24 ore, dopo l’esecuzione del processo di valutazione del segmento.
+
+Il timestamp per i profili qualificati indica il più recente **batch** processo di valutazione del segmento ed è **non** visualizzato per le definizioni dei segmenti valutate utilizzando lo streaming o la segmentazione Edge. Se modifichi la definizione del segmento, il numero di profili idonei rimarrà invariato fino all’esecuzione del processo di valutazione del segmento successivo.
+
+**[!UICONTROL Profili stimati]** indica un **approssimare** numero di profili in base a **processo di esempio**. Puoi visualizzare una versione aggiornata di questo valore dopo l’aggiunta delle nuove regole o condizioni e dopo aver selezionato **[!UICONTROL Aggiorna stima]**. Selezionando la bolla di informazioni si ottiene la soglia di errore e il tempo del processo di campionamento più recente.
+
+![I profili qualificati e i profili stimati sono evidenziati nella sezione delle proprietà Pubblico.](../images/ui/segment-builder/audience-estimates.png)
+
+Il **[!UICONTROL Proprietà del pubblico]** Questa sezione consente inoltre di specificare informazioni importanti sulla definizione del segmento, tra cui nome, descrizione e tipo di valutazione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare la definizione del segmento tra quelle definite dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
 
 Continuando a creare la definizione del segmento, puoi visualizzare un’anteprima impaginata del pubblico selezionando **[!UICONTROL Visualizza profili]**.
 

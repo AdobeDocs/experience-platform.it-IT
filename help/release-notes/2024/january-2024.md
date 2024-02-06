@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Gennaio 2024
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 28%
+source-wordcount: '1655'
+ht-degree: 30%
 
 ---
 
@@ -25,6 +25,7 @@ Aggiornamenti alle funzioni esistenti in Experienci Platform:
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Profilo cliente in tempo reale](#profile)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
 ## Playbook di casi d’uso {#use-case-playbooks}
@@ -155,6 +156,21 @@ Adobe Experience Platform ti consente di promuovere esperienze coordinate, coere
 {style="table-layout:auto"}
 
 Per ulteriori informazioni su Real-Time Customer Profile, consulta [Panoramica del profilo](../../profile/home.md)
+
+## Servizio di segmentazione {#segmentation}
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabile all’interno della tua clientela. I segmenti possono essere basati su dati dei record (ad esempio informazioni demografiche) o su eventi della serie temporale che rappresentano le interazioni della clientela con il tuo marchio.
+
+**Funzioni nuove o aggiornate**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Caricamento di pubblico generato esternamente | Il numero massimo di colonne è stato aumentato a **25**. |
+| Stime di Segment Builder | Le stime e i profili qualificati vengono ora visualizzati nella sezione delle proprietà del pubblico. Per ulteriori informazioni su questa modifica, leggere [Guida dell’interfaccia utente di Segment Builder](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## Origini {#sources}
 

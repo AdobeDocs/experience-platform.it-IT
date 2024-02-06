@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 3%
@@ -331,7 +331,7 @@ Il **[!UICONTROL Importa CSV pubblico]** viene visualizzato workflow. Puoi selez
 
 >[!NOTE]
 >
->Il pubblico generato esterno **deve** essere in formato CSV, avere **massimo** di 11 colonne e deve essere inferiore a 1 GB.
+>Il pubblico generato esterno **deve** essere in formato CSV, avere **massimo** di 25 colonne e deve essere inferiore a 1 GB.
 
 Dopo aver selezionato il file CSV da importare, viene visualizzato un elenco di dati di esempio per questo pubblico generato esternamente. Dopo aver verificato la correttezza dei dati di esempio, seleziona **[!UICONTROL Successivo]**.
 
