@@ -2,9 +2,9 @@
 title: Connessione Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 1%
 Adobe Campaign Managed Cloud Services fornisce una piattaforma per la progettazione di customer experience cross-channel e un ambiente per l’orchestrazione visiva delle campagne, la gestione delle interazioni in tempo reale e l’esecuzione cross-channel. [Introduzione a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Utilizza Campaign per:
+
 * Stimolare la personalizzazione e il coinvolgimento attraverso un’unica vista accessibile del cliente,
 * Integrare nel percorso clienti canali e-mail, mobili, online e offline,
 * Automatizza la consegna di messaggi e offerte significativi e tempestivi.
@@ -32,6 +33,7 @@ Utilizza Campaign per:
 >* Per ogni segmento, puoi aggiungere fino a 20 campi per [mappa](#map) ad Adobe Campaign,
 >* Conservazione dei dati in Azure Blob Storage Data Landing Zone (DLZ): 7 giorni,
 >* La frequenza di attivazione è di almeno 3 ore.
+>* La lunghezza massima del nome file supportata da questa connessione è di 255 caratteri. Quando [configurare il nome del file esportato](../../ui/activate-batch-profile-destinations.md#configure-file-names), assicurarsi che il nome del file non superi i 255 caratteri. Il superamento della lunghezza massima del nome file causa errori di attivazione.
 
 ## Casi d’uso {#use-cases}
 
