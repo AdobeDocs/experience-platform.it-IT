@@ -5,7 +5,7 @@ title: Monitorare i flussi di dati per le origini di streaming nell’interfacci
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 10%
 
 ---
@@ -42,7 +42,7 @@ La tabella seguente contiene ulteriori informazioni sugli stati di esecuzione de
 | Stato | Descrizione |
 | ------ | ----------- |
 | Completato | Il `Completed` lo stato indica che tutti i record per l’esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un’ora. A `Completed` Lo stato può comunque contenere errori nelle esecuzioni del flusso di dati. |
-| Operazione riuscita | Il `Success` lo stato indica che tutti i record per l’esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un’ora e che non sono stati rilevati errori durante l’esecuzione del flusso di dati. |
+| Success (Operazione riuscita) | Il `Success` lo stato indica che tutti i record per l’esecuzione del flusso di dati corrispondente sono stati elaborati entro il periodo di un’ora e che non sono stati rilevati errori durante l’esecuzione del flusso di dati. |
 | Elaborazione | Il `Processing` Lo stato indica che un flusso di dati non è ancora attivo. Questo stato si verifica spesso subito dopo la creazione di un nuovo flusso di dati. |
 | Errore | Il `Error` lo stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 | Nessuna esecuzione | Il `No runs` Lo stato indica che il flusso di dati è stato creato ma non è stata avviata alcuna esecuzione del flusso di dati. |

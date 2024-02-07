@@ -4,7 +4,7 @@ description: Scopri come configurare i segreti nell’interfaccia utente per l�
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2426'
 ht-degree: 3%
 
 ---
@@ -176,7 +176,7 @@ Viene visualizzata una finestra di dialogo che consente di immettere le credenzi
 >
 >Se nell’organizzazione è impostato un criterio di riautenticazione per le applicazioni Google Cloud, i segreti creati non vengono aggiornati correttamente alla scadenza dell’autenticazione (tra 1 e 24 ore a seconda della configurazione del criterio).
 >
->Per risolvere questo problema, accedi a Google Admin Console e passa a **[!DNL App access control]** in modo da poter contrassegnare l’app di inoltro eventi (Inoltro eventi di Adobe Real-Time CDP) come [!DNL Trusted]. Consulta la documentazione di Google su [impostazione della durata delle sessioni per i servizi Google Cloud](https://support.google.com/a/answer/9368756?hl=it) per ulteriori informazioni.
+>Per risolvere questo problema, accedi a Google Admin Console e passa a **[!DNL App access control]** in modo da poter contrassegnare l’app di inoltro eventi (Inoltro eventi di Adobe Real-Time CDP) come [!DNL Trusted]. Consulta la documentazione di Google su [impostazione della durata delle sessioni per i servizi Google Cloud](https://support.google.com/a/answer/9368756) per ulteriori informazioni.
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 

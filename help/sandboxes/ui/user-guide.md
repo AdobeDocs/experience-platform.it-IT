@@ -6,8 +6,8 @@ description: In questo documento sono descritti i passaggi necessari per eseguir
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 7%
+source-wordcount: '940'
+ht-degree: 5%
 
 ---
 
@@ -126,7 +126,7 @@ L’eliminazione di una sandbox di produzione o di sviluppo comporta la rimozion
 
 Seleziona la sandbox da eliminare dall’elenco delle sandbox. Nel pannello di navigazione a destra visualizzato, seleziona **[!UICONTROL Elimina]**.
 
-![delete](../images/ui/delete.png)
+![eliminare](../images/ui/delete.png)
 
 Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare la scelta. Seleziona **[!UICONTROL Continua]** per procedere.
 

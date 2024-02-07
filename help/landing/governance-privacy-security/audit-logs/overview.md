@@ -91,7 +91,7 @@ Seleziona un evento dall’elenco per visualizzarne i dettagli nella barra a des
 
 >[!NOTE]
 >
-Poiché si tratta di una nuova funzione, i dati visualizzati risalgono solo a marzo 2022. A seconda della risorsa selezionata, i dati precedenti potrebbero essere disponibili da gennaio 2022.
+>Poiché si tratta di una nuova funzione, i dati visualizzati risalgono solo a marzo 2022. A seconda della risorsa selezionata, i dati precedenti potrebbero essere disponibili da gennaio 2022.
 
 
 Seleziona l’icona funnel (![Icona Filtro](../../images/audit-logs/icon.png)) per visualizzare un elenco di controlli filtro che consentono di limitare i risultati. Vengono visualizzati solo gli ultimi 1.000 record, indipendentemente dai filtri selezionati.

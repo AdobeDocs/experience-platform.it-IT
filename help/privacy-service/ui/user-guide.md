@@ -6,8 +6,8 @@ description: Scopri come utilizzare l’interfaccia utente di Privacy Service pe
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 15%
+source-wordcount: '1456'
+ht-degree: 14%
 
 ---
 
@@ -38,18 +38,18 @@ Dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widget 
 
 | Etichetta interfaccia utente | Regolamento |
 | --- | --- |
-| [!UICONTROL APA_AUS] | Le selezioni del menu [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | Le selezioni del menu [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | Le selezioni del menu [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | Le selezioni del menu [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | Le selezioni del menu [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | dell&#39;Unione europea [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | Le selezioni del menu [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | del Brasile [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | La Nuova Zelanda [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | thailandese [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | Le selezioni del menu [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | Le selezioni del menu [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 

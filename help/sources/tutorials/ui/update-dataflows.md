@@ -58,7 +58,7 @@ Il [!UICONTROL Aggiungi dati] viene visualizzato il passaggio. Selezionare il fo
 
 ![add-data](../../images/tutorials/update-dataflows/add-data.png)
 
-### Dettaglio del flusso di dati
+### Dettagli del flusso di dati
 
 In [!UICONTROL Dettagli del flusso di dati] pagina, puoi fornire un nome e una descrizione aggiornati per il flusso di dati e riconfigurare la soglia di errore del flusso di dati. Durante questo passaggio, puoi anche configurare o modificare le impostazioni per l’abbonamento agli avvisi.
 
