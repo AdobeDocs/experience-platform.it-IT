@@ -3,10 +3,10 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 1%
+source-wordcount: '881'
+ht-degree: 2%
 
 ---
 
@@ -31,10 +31,6 @@ Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello 
 Ogni attributo calcolato contiene un’espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative a fattori quali il valore di acquisto del ciclo di vita, il tempo che intercorre tra un acquisto e l&#39;altro o il numero di aperture dell&#39;applicazione, senza richiedere di eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Questi valori di attributo calcolati possono quindi essere visualizzati in un profilo, utilizzati per creare un pubblico o accessibili tramite diversi modelli di accesso.
 
 È possibile creare, visualizzare, modificare ed eliminare attributi calcolati utilizzando `ca/attributes/` endpoint. Per informazioni su come utilizzare gli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per le operazioni API, visita [guida dell’endpoint API per attributi calcolati](../computed-attributes/api.md).
-
-## Proiezioni spigolo {#edge-projections}
-
-Adobe Experience Platform consente la personalizzazione in tempo reale delle esperienze dei clienti rendendo i dati facilmente accessibili su server in posizione strategica denominati &quot;edge&quot;. Il [!DNL Real-Time Customer Profile] L’API fornisce endpoint per l’utilizzo degli spigoli tramite componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati devono essere proiettati a ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni Edge, visitare il sito Web [guida alle configurazioni di proiezione e agli endpoint di destinazione](edge-projections.md).
 
 ## Entità ([!DNL Profile] access) {#entities}
 

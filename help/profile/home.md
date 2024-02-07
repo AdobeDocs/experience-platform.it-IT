@@ -2,9 +2,9 @@
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -104,10 +104,6 @@ Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico
 ### Acquisizione e segmentazione in streaming
 
 L’input in tempo reale è possibile tramite un processo denominato acquisizione in streaming. Al momento dell’acquisizione dei dati di profilo e serie temporali, [!DNL Real-Time Customer Profile] decide automaticamente di includere o escludere tali dati dai tipi di pubblico tramite un processo continuo denominato segmentazione in streaming, prima di unirli ai dati esistenti e di aggiornare la visualizzazione unione. Di conseguenza, puoi eseguire istantaneamente i calcoli e prendere decisioni per fornire esperienze avanzate e personalizzate ai clienti mentre interagiscono con il tuo marchio. Durante l’acquisizione, i dati vengono sottoposti anche a convalida per garantirne la corretta acquisizione e la conformità allo schema su cui si basa il set di dati. Per ulteriori informazioni sulla convalida eseguita durante l’acquisizione, leggi [panoramica sulla qualità dell’acquisizione dei dati](../ingestion/quality/overview.md).
-
-## Proiezioni spigolo
-
-Per fornire ai clienti esperienze coordinate, coerenti e personalizzate in tempo reale su più canali, i dati giusti devono essere prontamente disponibili e continuamente aggiornati in base alle modifiche apportate. Adobe Experience Platform consente questo accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server posizionato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano Edge per fornire ai clienti esperienze personalizzate in tempo reale. I dati vengono instradati a uno spigolo da una proiezione, con una destinazione di proiezione che definisce lo spigolo a cui verranno inviati i dati e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sullo spigolo. Per ulteriori informazioni e iniziare a utilizzare le proiezioni utilizzando [!DNL Real-Time Customer Profile] API, fai riferimento alla [guida degli endpoint di proiezione edge](api/edge-projections.md).
 
 ## Acquisizione di dati in [!DNL Profile]
 

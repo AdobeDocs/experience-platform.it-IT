@@ -4,9 +4,9 @@ title: Guida alla risoluzione dei problemi dei profili cliente in tempo reale
 type: Documentation
 description: Questo documento fornisce le risposte alle domande più frequenti su Real-Time Customer Profile, nonché una guida alla risoluzione dei problemi relativi agli errori più comuni durante l’utilizzo dei dati del profilo con Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -122,18 +122,6 @@ Questo errore si verifica quando viene fornito un payload non valido per un proc
 ```
 
 Questo errore si verifica quando non è possibile trovare un batch valido durante il tentativo di creare una richiesta di eliminazione per i dati del profilo. Prima di riprovare, verifica di aver immesso l’ID corretto per un set di dati abilitato per il profilo.
-
-### La destinazione della proiezione non è ancora stata creata
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-Questo errore si verifica quando `destinationId` fornito in un `POST /config/projections` richiesta non valida. Prima di riprovare, verifica di aver fornito un ID di destinazione valido. Per creare una nuova destinazione, segui i passaggi descritti in [Guida per gli sviluppatori di profili](./api/edge-projections.md#create-a-destination).
 
 ### Tipo di file multimediale non supportato
 

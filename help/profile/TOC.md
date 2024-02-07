@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 30%
+source-wordcount: '129'
+ht-degree: 24%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 30%
 * [!DNL Profile] API {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
-   * [Proiezioni spigolo](api/edge-projections.md)
    * [Entità ([!DNL Profile] access)](api/entities.md)
    * [Processi di esportazione ([!DNL Profile] export)](api/export-jobs.md)
    * [Anteprima stato campione ([!DNL Profile] preview)](api/preview-sample-status.md)
