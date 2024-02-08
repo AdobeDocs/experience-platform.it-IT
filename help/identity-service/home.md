@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del servizio Identity
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi diversi e consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Prima di immergerti nei dettagli del servizio Identity, leggi la tabella seguent
 | Termine | Definizione |
 | --- | --- |
 | Identità | Un’identità è un dato univoco di un’entità. In genere si tratta di un oggetto reale, ad esempio una singola persona, un dispositivo hardware o un browser web (rappresentato da un cookie). Un’identità pienamente qualificata si compone di due elementi: **spazio dei nomi delle identità** e un **valore identità**. |
-| Spazio dei nomi dell’identità | Uno spazio dei nomi delle identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere a **julien<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere a `555-555-1234`. Per ulteriori informazioni, leggere [panoramica dello spazio dei nomi delle identità](./features/namespaces.md) |
+| Spazio dei nomi dell’identità | Uno spazio dei nomi dell’identità è il contesto di una determinata identità. Ad esempio, uno spazio dei nomi di `Email` potrebbe corrispondere al valore di identità: **julien<span>@acme.com**. Analogamente, uno spazio dei nomi di `Phone` potrebbe corrispondere al valore di identità: `555-555-1234`. Per ulteriori informazioni, leggere [panoramica dello spazio dei nomi delle identità](./features/namespaces.md). |
 | Valore identità | Un valore di identità è una stringa che rappresenta un’entità reale ed è categorizzata all’interno di Identity Service tramite uno spazio dei nomi. Ad esempio, il valore di identità (stringa) **julien<span>@acme.com** potrebbe essere classificato come `Email` spazio dei nomi. |
 | Tipo di identità | Un tipo di identità è un componente di uno spazio dei nomi di identità. Il tipo di identità indica se i dati di identità sono collegati o meno in un grafico delle identità. |
 | Collegamento | Un collegamento o un collegamento è un metodo per stabilire che due identità diverse rappresentano la stessa entità. Ad esempio, un collegamento tra &quot;`Email` = julien<span>@acme.com&quot; e &quot;`Phone` = 555-555-1234&quot; significa che entrambe le identità rappresentano la stessa entità. Ciò suggerisce che il cliente che ha interagito con il tuo marchio sia con l’indirizzo e-mail di julien<span>@acme.com e il numero di telefono di 555-555-1234 è lo stesso. |
