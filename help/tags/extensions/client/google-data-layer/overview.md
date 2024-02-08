@@ -2,10 +2,10 @@
 title: Estensione Google Data Layer
 description: Scopri l’estensione tag Google Client Data Layer in Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 13%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +13,7 @@ ht-degree: 13%
 
 L’estensione Google Data Layer consente di utilizzare un livello dati Google nell’implementazione dei tag. L&#39;estensione può essere utilizzata in modo indipendente o simultaneo con le soluzioni Google e con open source di Google [Libreria helper livello dati](https://github.com/google/data-layer-helper).
 
-La libreria helper offre funzionalità basate su eventi simili a quelle di Adobe Client Data Dayer (ACDL). Gli elementi dati, le regole e le azioni dell’estensione Google Data Layer forniscono funzionalità simili a quelle della [Estensione ACDL](../client-data-layer/overview.md).
-
-## Maturità
-
-La versione 1.2.x è una versione beta recente attualmente in produzione.
+La libreria helper fornisce funzionalità basate su eventi simili a quelle di Adobe Client Data Layer (ACDL). Gli elementi dati, le regole e le azioni dell’estensione Google Data Layer forniscono funzionalità simili a quelle della [Estensione ACDL](../client-data-layer/overview.md).
 
 ## Installazione
 
@@ -44,13 +40,22 @@ Il nome predefinito del livello dati è il nome predefinito di Google `dataLayer
 > - Eventi JavaScript.
 > - Dati inviati al livello dati con _evento_ parola chiave.
 
-
 L’estensione consente di ascoltare le modifiche sul livello dati.
 
 >[!NOTE]
 >
 >È importante comprendere l&#39;uso del _evento_ parola chiave quando i dati vengono inviati a un livello dati di Google, in modo simile a Adobe Client Data Layer. Il _evento_ parola chiave modifica il comportamento del livello dati di Google e quindi di questa estensione.\
 > Leggi la documentazione di Google o fai ricerche se non sei sicuro su questo punto.
+
+### Tipi di evento Google
+
+Google supporta due metodi per trasmettere gli eventi: Google Tag Manager, che utilizza `push()` e Google Analytics 4, utilizzando il `gtag()` metodo.
+
+Le versioni di Google Data Layer precedenti alla 1.2.1 supportavano solo gli eventi creati da `push()`, come illustrato negli esempi di codice di questa pagina.
+
+Le versioni 1.2.1 e successive supportano gli eventi creati con `gtag()`.  Questo è facoltativo e può essere abilitato nella finestra di dialogo di configurazione dell’estensione.
+
+Per ulteriori informazioni su `push()` e `gtag()` eventi, consulta [Documentazione di Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Le informazioni sono fornite anche nelle finestre di dialogo di configurazione e regola dell’estensione.
 
 ### Ascolta tutti i push al livello dati
 
@@ -117,15 +122,15 @@ L’estensione fornisce due azioni per inviare JSON al livello dati: un campo di
 
 #### JSON per testo libero
 
-L’azione testo libero consente di utilizzare gli elementi dati direttamente nel JSON. All’interno dell’editor JSON, è necessario fare riferimento agli elementi dati utilizzando la notazione percentuale. Ad esempio: `%dataElementName%`.
+L’azione testo libero consente di utilizzare gli elementi dati direttamente nel JSON. All’interno dell’editor JSON, è necessario fare riferimento agli elementi dati utilizzando la notazione percentuale. Ad esempio, `%dataElementName%`.
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 

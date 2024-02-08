@@ -2,10 +2,10 @@
 title: Note sulla versione di Google Data Layer
 description: Note aggiornate sulla versione dell’estensione tag Google Data Layer in Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -37,3 +37,7 @@ Un miglioramento significativo e una correzione di bug derivanti dal feedback de
 * È stato corretto un bug che, in alcune circostanze, causava un errore durante il salvataggio di un elemento dati.
 * Aggiunge documentazione alla finestra di dialogo dell&#39;evento che illustra l&#39;utilizzo dell&#39;oggetto evento Tag.
 * Aggiunge un avviso relativo a cicli infiniti nella finestra di dialogo dell&#39;evento.
+
+## Versione 1.2.2
+
+* Aggiunge il supporto per gli eventi Google Analytics gtag().
