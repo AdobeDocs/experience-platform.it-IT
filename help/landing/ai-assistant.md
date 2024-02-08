@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >L&#39;Assistente per Adobe Experience Platform è attualmente in fase di Alpha. La funzione e la documentazione sono soggette a modifiche.
 
-L’Assistente per Adobe Experience Platform è una funzione dell’interfaccia utente che consente di navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
+L&#39;Assistente è una funzione dell&#39;interfaccia utente che consente di navigare e comprendere i concetti di Adobe Experience Platform e Real-time Customer Data Platform e le informazioni sull&#39;utilizzo degli oggetti.
 
 È possibile eseguire una query sull&#39;Assistente per ottenere informazioni quali:
 
@@ -26,7 +26,7 @@ L’Assistente per Adobe Experience Platform è una funzione dell’interfaccia 
 * Stati e metriche degli oggetti dati esistenti nell’organizzazione.
 * Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, set di dati, destinazioni, schemi, segmenti e origini.
 
-In questo documento vengono fornite informazioni su come accedere e utilizzare l&#39;Assistente per porre domande e ricevere risposte sui concetti di Experienci Platform e Real-Time CDP.
+Leggi la guida di seguito per scoprire come utilizzare l’Assistente per navigare e comprendere i flussi di lavoro di Experienci Platform e Real-Time CDP.
 
 >[!BEGINSHADEBOX]
 
@@ -55,101 +55,125 @@ Prima di eseguire una query dell&#39;Assistente, è necessario considerare due c
 
 >[!ENDSHADEBOX]
 
-## Accedi all’Assistente per Experience Platform nell’interfaccia utente
+## Accesso facilitato nell’interfaccia utente di Experienci Platform
 
-Puoi accedere all’Assistente dalla navigazione dell’intestazione nell’interfaccia utente di Experienci Platform.
+Per avviare Assistente, selezionare **[!UICONTROL Icona Assistente]** dall’intestazione superiore dell’interfaccia utente di Experienci Platform.
 
-Seleziona la **[!UICONTROL Icona Assistente]** dall’intestazione al pannello Assistente di avvio.
+![La home page dell&#39;Experience Platform, con l&#39;icona Assistente selezionata e l&#39;interfaccia Assistente aperta.](./images/ai-assistant/ai-assistant.png)
 
-![La home page dell’interfaccia utente di Experience Platform con l’icona Assistente selezionata.](./images/ai-assistant/ai-assistant.png)
+Viene visualizzata l&#39;interfaccia dell&#39;Assistente, che fornisce immediatamente le informazioni per iniziare. Puoi utilizzare le opzioni fornite in [!UICONTROL Idee per iniziare] per rispondere a domande e comandi quali:
 
-<!-- +++Use immersive mode
+* [!UICONTROL Quali dei miei segmenti sono attivati?]
+* [!UICONTROL Che cos’è uno schema?]
+* [!UICONTROL Alcuni casi d’uso comuni per Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![La sezione &quot;idee per iniziare&quot; di Assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Per interagire con l&#39;Assistente, utilizzare la casella di input per digitare nelle query o nei comandi. È inoltre possibile utilizzare (**`+`**) per utilizzare la funzione di completamento automatico e l&#39;icona del segnalibro per accedere alle query e ai comandi con segnalibro.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![Viene evidenziata la casella di input dell&#39;Assistente.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema {#example-use-case}
+## Esempio di utilizzo: utilizza l’Assistente per accelerare il processo di creazione dello schema
 
 >[!NOTE]
 >
->Il flusso di lavoro di esempio seguente utilizza il processo di creazione dello schema ExperienceEvent per illustrare come utilizzare l’Assistente quando si utilizza l’interfaccia utente di Experienci Platform.
+>Il seguente flusso di lavoro è un esempio che utilizza il processo di creazione dello schema di evento esperienza per illustrare come utilizzare l’Assistente quando si utilizza l’interfaccia utente di Experienci Platform.
 
-Considera un caso d’uso in cui stai creando una **Schema permuta dispositivo in evento**. Durante il processo di creazione dello schema ExperienceEvent, incappi nel `eventType` campo. A questo punto, puoi uscire dal flusso di lavoro e fare riferimento alla documentazione del [nozioni di base su una composizione di schema](../xdm/schema/composition.md), oppure è possibile utilizzare l&#39;Assistente per recuperare risposte immediate alle domande.
+Considera un caso d’uso in cui stai creando una **Schema permuta dispositivo in evento**. Durante il processo di creazione dello schema dell’evento esperienza, ti imbatti nel `eventType` campo. &quot;A questo punto, puoi scegliere di uscire dal flusso di lavoro e fare riferimento a [nozioni di base su una composizione di schema](../xdm/schema/composition.md) oppure puoi utilizzare l’Assistente per recuperare le risposte alle tue domande e trovare risorse aggiuntive tramite i collegamenti alla documentazione consigliati dall’Assistente.&quot;
 
 Per iniziare, immettere la domanda nella casella di testo fornita. Nell’esempio seguente, Assistant riceve la domanda: &quot;**Qual è il campo eventType in uno schema ExperienceEvent?**&quot;
 
-![L’Assistente, ad Experience Platform, con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/ai-assistant/question.png)
+![Assistente per Experience Platform con la seguente domanda preparata per la query: &quot;Qual è il campo eventType in uno schema ExperienceEvent?](./images/ai-assistant/question.png)
 
 L&#39;Assistente esegue quindi una query sulla knowledge base e calcola una risposta. Dopo alcuni istanti, l&#39;Assistente restituisce una risposta e suggerimenti correlati che è possibile utilizzare come prompt di follow-up.
 
-Una determinata risposta fornisce collegamenti ipertestuali a qualsiasi entità di riferimento. Nell’esempio seguente, seleziona **[!UICONTROL Schemi]** per visualizzare un elenco degli schemi a cui si fa riferimento, oppure **[!UICONTROL Segmenti]** per visualizzare un elenco dei segmenti di riferimento.
-
 ![Assistente, ad Experience Platform con una risposta alla query precedente.](./images/ai-assistant/answer.png)
 
-Assistente consente di convalidare la risposta visualizzandone l&#39;origine. Vengono forniti collegamenti alla documentazione per le domande sui concetti, mentre le domande sull’utilizzo dei dati possono essere verificate con una query SQL che illustra come è stata calcolata la risposta.
+Dopo aver ricevuto una risposta dall&#39;Assistente, è possibile scegliere tra diverse opzioni per decidere come procedere.
 
-![Opzioni fornite dall&#39;Assistente dopo la restituzione di una risposta.](./images/ai-assistant/options.png)
+### Salvare la query {#save-your-query}
 
-### Domande di follow-up {#follow-up-question}
++++Selezionare questa opzione per visualizzare un esempio di come salvare una query
 
-+++Selezionare questa opzione per visualizzare un esempio di una domanda di completamento
+Per salvare la query, selezionare l&#39;icona del segnalibro accanto alla domanda.
 
-Per saperne di più su un particolare argomento, fai una domanda di follow-up. Nell’esempio successivo, all’Assistente viene chiesto come può essere utilizzato eventType nella segmentazione.
+![Schermata di un segnalibro selezionato.](./images/ai-assistant/save-your-query.png)
 
-![Una domanda e una risposta di follow-up visualizzate sull&#39;Assistente, ad Experience Platform.](./images/ai-assistant/follow-up-question.png)
+Per accedere alle query salvate, seleziona l’icona del segnalibro sotto la casella di input, quindi seleziona la query da eseguire.
 
-+++
-
-### Domanda di utilizzo dati {#data-usage-question}
-
-+++Selezionare questa opzione per visualizzare un esempio di una domanda di utilizzo dei dati
-
-Puoi anche porre all’Assistente domande relative all’utilizzo dei tuoi dati. Quando si richiedono informazioni sull&#39;utilizzo dei dati, è necessario trovarsi in una sandbox attiva affinché l&#39;Assistente possa rispondere alla query.
-
-Per le risposte che includono informazioni sull&#39;utilizzo dei dati, l&#39;Assistente fornisce collegamenti alle entità in questione. Inoltre, l&#39;Assistente fornisce una spiegazione su come ha calcolato la risposta.
-
-![Una domanda sull’utilizzo dei dati, che chiede quanti segmenti ha un utente.](./images/ai-assistant/data-usage-question.png)
+![Schermata dell’icona del segnalibro e un elenco delle query salvate.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Multi-turn {#multi-turn}
+### Visualizzare i dati nella sandbox {#view-data-in-your-sandbox}
 
-+++Selezionare per visualizzare un esempio di tornitura multipla
++++Seleziona per visualizzare l’esempio
 
-È possibile utilizzare le funzionalità multi-turn di Assistant per avere una conversazione più naturale durante la tua esperienza. L&#39;Assistente è in grado di rispondere alle domande di follow-up dato che il contesto può essere dedotto da un&#39;interazione precedente.
+A seconda della query, l’Assistente fornisce informazioni aggiuntive relative ai dati nella sandbox. Per visualizzare il modo in cui la risposta alla query si applica alla sandbox, seleziona **[!UICONTROL Nella sandbox].**
 
-Nell’esempio seguente, a Assistant viene richiesto di elencare i segmenti esistenti nell’organizzazione, come follow-up di una query precedente sul numero totale di segmenti.
+Durante questo passaggio, l&#39;Assistente può fornire collegamenti diretti alle pagine dell&#39;interfaccia utente di determinati oggetti in questione. Nell&#39;esempio seguente, l&#39;Assistente fornisce collegamenti diretti al [!UICONTROL Schemi] e [!UICONTROL Segmenti] Pagine dell’interfaccia utente.
 
-![](./images/ai-assistant/multi-turn-one.png)
+![Schermata dell’opzione &quot;Nella sandbox&quot;.](./images/ai-assistant/in-your-sandbox.png)
 
-Successivamente, l&#39;Assistente riceve un&#39;altra richiesta di completamento. Questa volta, l’Assistente risponde elencando i segmenti esistenti ordinati in base alle rispettive dimensioni.
++++
 
-![](./images/ai-assistant/multi-turn-two.png)
+### Verifica la risposta {#verify-the-response}
+
++++Seleziona per visualizzare un esempio di come visualizzare le sorgenti
+
+Per visualizzare le citazioni e convalidare la risposta dell&#39;Assistente, selezionare **[!UICONTROL Mostra origini]**. L’Assistente fornisce collegamenti alla documentazione che ne conferma la risposta. È inoltre possibile utilizzare le query fornite dall&#39;Assistente in [!UICONTROL Suggerimenti correlati] per esplorare ulteriormente gli argomenti relativi alla query originale.
+
+![Schermata di &quot;Show sources&quot; (Mostra sorgenti).](./images/ai-assistant/show-sources.png)
+
++++
+
+### Utilizzo e visualizzazione dei dati {#data-usage-and-visualization}
+
++++Seleziona per visualizzare un esempio di domande sull’utilizzo dei dati e visualizzazione dei dati
+
+È possibile richiedere informazioni sull&#39;utilizzo dei dati all&#39;Assistente. Per rispondere a una domanda sull’utilizzo dei dati relativa ai dati dell’organizzazione, è necessario trovarsi in una sandbox attiva.
+
+![Rispondi alla domanda sull’utilizzo dei dati.](./images/ai-assistant/data-usage-question.png)
+
+Quando viene richiesta una domanda sull&#39;utilizzo dei dati, l&#39;Assistente fornisce anche una spiegazione di come ha calcolato la risposta. Nell’esempio seguente, l’Assistente illustra i passaggi necessari per visualizzare segmenti con più di 1000 profili e i rispettivi stati di attivazione.
+
+![Domande di follow-up sui segmenti che illustrano come l’Assistente ha calcolato la risposta.](./images/ai-assistant/results-explained.png)
+
+Inoltre, l’Assistente esegue il rendering dei grafici per visualizzare i dati. È inoltre possibile fornire filtri e modifiche alle query e istruire l&#39;Assistente affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi richiedere all’Assistente di mostrare una tendenza dei segmenti di conteggio nell’ordine della data di creazione, rimuovere segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
+
+![Segui la domanda che illustra la visualizzazione dei dati.](./images/ai-assistant/data-visualization.png)
 
 +++
 
 ### Usa completamento automatico {#use-auto-complete}
 
-+++Selezionare per visualizzare un esempio di completamento automatico
++++Seleziona per visualizzare un esempio di completamento automatico
 
 È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. Sono disponibili consigli di completamento automatico per i seguenti domini: segmenti, schemi, set di dati, origini e destinazioni.
 
-Per utilizzare il completamento automatico, immettere un simbolo più (**`+`**) come parte della domanda. In alternativa, è possibile selezionare il simbolo più (**`+`**) nella casella di immissione testo. Viene quindi visualizzata una finestra con un elenco degli oggetti dati consigliati presenti nella sandbox.
+È possibile utilizzare il completamento automatico includendo il simbolo più (**`+`**) nella query. In alternativa, è possibile selezionare il segno più (**`+`**) che si trova nella parte inferiore della casella di immissione testo. Viene visualizzata una finestra con un elenco degli oggetti dati consigliati dalla sandbox.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Esempio di completamento automatico](./images/ai-assistant/auto-complete-one.png)
 
 Quindi, selezionare l&#39;oggetto dati di cui si desidera eseguire la query per completare la domanda e inviare la domanda.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Esempio di completamento automatico con domanda e risposta](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### Usa multi-giro {#use-multi-turn}
+
++++Selezionare per visualizzare un esempio di tornitura multipla
+
+È possibile utilizzare le funzionalità multi-turn di Assistant per avere una conversazione più naturale durante la tua esperienza. L&#39;assistente è in grado di rispondere alle domande di follow-up, fornite. tale contesto può essere dedotto da un’interazione precedente.
+
+Nell’esempio seguente, a Assistant viene richiesto il numero totale di flussi di dati nell’organizzazione corrente.
+
+![Esempio di multi-turn](./images/ai-assistant/multi-turn-one.png)
+
+Successivamente, l&#39;Assistente riceve un&#39;altra richiesta di completamento. Questa volta, l’Assistente risponde elencando i flussi di dati attualmente presenti nell’organizzazione.
+
+![Esempio di multi-turn con domanda e risposta](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -178,7 +202,7 @@ Puoi anche porre domande sull’utilizzo dei dati da parte dell’Assistente nei
 * Destinazioni _Al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati._
 * Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
 * Segmenti
-* Origini _(Al momento non è possibile rispondere alle domande relative ai conti)._
+* Sorgenti _(Al momento non è possibile rispondere alle domande relative ai conti)._
 
 Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il segmento con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} segmento creato?&quot;
 
@@ -196,18 +220,6 @@ Dovrai accedere a una sandbox per informazioni su dati specifici relativi a ogge
 
 +++
 
-## Verifica la risposta {#verify-the-response}
-
-È possibile verificare la risposta restituita dall&#39;Assistente in diversi modi.
-
-### Citazioni per la documentazione {#citations}
-
-Con ogni risposta, l&#39;Assistente fornisce le citazioni a cui è possibile fare riferimento per la verifica o per ulteriori informazioni.
-
-Seleziona **[!UICONTROL Mostra origine]** per un elenco di collegamenti alla documentazione a cui l’Assistente fa riferimento per calcolare la risposta. Quando selezioni un collegamento alla documentazione a cui si fa riferimento, si passa alla sezione pertinente di quella particolare pagina, con le informazioni specifiche evidenziate.
-
-![Collegamenti all&#39;origine visualizzati nell&#39;Assistente.](./images/ai-assistant/show-sources.png)
-
 ## Fornire feedback {#feedback}
 
 >[!BEGINSHADEBOX]
@@ -220,7 +232,7 @@ Per fornire un feedback, selezionare la casella di controllo Miniatura in alto o
 
 >[!ENDSHADEBOX]
 
-+++Fornire feedback
++++Fornisci feedback
 
 >[!BEGINTABS]
 
