@@ -4,9 +4,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '315'
 ht-degree: 18%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 18%
    - [Utilizzo delle licenze](data-distiller/license-usage.md)
    - Set di dati derivati {#derived-datasets}
       - [Panoramica](data-distiller/derived-datasets/overview.md)
-      - [Flusso SQL senza interruzioni](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Creare set di dati derivati con SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Approfondimenti personalizzabili per reporting esteso dell’app {#customizable-insights}
       - [Panoramica](data-distiller/customizable-insights/overview.md)

@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform - Febbraio 2023
 description: Note sulla versione di Adobe Experience Platform di febbraio 2023.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 97%
@@ -102,7 +102,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 | Funzione | Descrizione |
 | --- | --- |
-| Abilitare i set di dati per il profilo con SQL | [Utilizza LABEL nelle query CTAS per rendere un set di dati “abilitato per il profilo”](../../query-service/sql/syntax.md#create-table-as-select), oppure utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. È possibile utilizzare questo costrutto SQL esteso per fornire supporto senza soluzione di continuità per i set di dati derivati per i casi di utilizzo aziendali di Real-Time Customer Profile. Consulta la [Flusso SQL semplice per il documento dei set di dati derivati](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) per ulteriori dettagli. |
+| Abilitare i set di dati per il profilo con SQL | [Utilizza LABEL nelle query CTAS per rendere un set di dati “abilitato per il profilo”](../../query-service/sql/syntax.md#create-table-as-select), oppure utilizza ALTER per aggiornare i set di dati esistenti da abilitare per il profilo. È possibile utilizzare questo costrutto SQL esteso per fornire supporto senza soluzione di continuità per i set di dati derivati per i casi di utilizzo aziendali di Real-Time Customer Profile. Consulta la [Flusso SQL semplice per il documento dei set di dati derivati](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) per ulteriori dettagli. |
 | Monitorare le query pianificate | Utilizza la [Scheda query pianificate](../../query-service/ui/monitor-queries.md) per trovare informazioni importanti sulle esecuzioni delle query e abbonarti agli avvisi. Monitora le query per i dettagli della pianificazione, lo stato e i messaggi/codici di errore in caso di esito negativo. |
 | Attiva/disattiva la funzione di completamento automatico | Elimina alcuni comandi relativi ai metadati e migliora i tempi di elaborazione tramite l’[attivazione/disattivazione della funzione di completamento automatico dell’Editor di query](../../query-service/ui/user-guide.md#auto-complete). Questa funzione suggerisce automaticamente le potenziali parole chiave SQL e i dettagli della tabella per la query durante la scrittura. |
 | Esempi di set di dati | Specifica una frequenza di campionamento nella query e [utilizza gli esempi di set di dati per creare un campione casuale uniforme](../../query-service/key-concepts/dataset-samples.md) oppure creare campioni condizionali in base a criteri specifici. |
