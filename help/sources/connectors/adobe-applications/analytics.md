@@ -2,9 +2,9 @@
 title: Connettore di origine di Adobe Analytics per i dati della suite di rapporti
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,11 @@ La latenza prevista per i dati di Analytics su Platform è descritta nella tabel
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **non** abilitato) | &lt; 2 minuti |
 | Nuovi dati in [!DNL Real-Time Customer Profile] (A4T **è** abilitato) | fino a 30 minuti |
 | Nuovi dati in Data Lake | &lt; 2,25 ore |
+| Nuovi dati in CJA senza [unione](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 ore |
+| Nuovi dati in CJA con unione | &lt; 7 ore |
 | Backfill di meno di 10 miliardi di eventi | &lt; 4 settimane |
+
+Per ulteriori informazioni sulle latenze di CJA, consulta: [Guardrail Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 Il valore predefinito della retrocompilazione di Analytics per le sandbox di produzione è 13 mesi. Per i dati di Analytics nelle sandbox non di produzione, la retrocompilazione è impostata su tre mesi. Il limite di 10 miliardi di eventi menzionato nella tabella precedente è strettamente in relazione alla latenza prevista.
 
