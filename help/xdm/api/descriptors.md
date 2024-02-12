@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint API per i descrittori
 description: L’endpoint /descriptors nell’API Schema Registry consente di gestire in modo programmatico i descrittori XDM all’interno dell’applicazione Experience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1905'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Il `/descriptors` endpoint nella [!DNL Schema Registry] API consente di gestire 
 
 ## Introduzione
 
-L’endpoint utilizzato in questa guida fa parte dell’[[!DNL Schema Registry] API di ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint utilizzato in questa guida fa parte del [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Recuperare un elenco di descrittori {#list}
 
@@ -51,14 +51,14 @@ Il formato della risposta dipende da `Accept` intestazione inviata nella richies
 
 >[!IMPORTANT]
 >
->I descrittori richiedono univoci `Accept` intestazioni che sostituiscono `xed` con `xdm`, e offrono anche un `link` opzione univoca per i descrittori. Il corretto `Accept` le intestazioni sono state incluse negli esempi di chiamate riportati di seguito, ma è necessario prestare particolare attenzione per assicurarsi che vengano utilizzate le intestazioni corrette quando si lavora con i descrittori.
+>I descrittori richiedono univoci `Accept` intestazioni che sostituiscono `xed` con `xdm`, e offrono anche un `link` opzione univoca per i descrittori. Il corretto `Accept` le intestazioni sono state incluse negli esempi di chiamate riportati di seguito, ma è necessario prestare particolare attenzione per assicurarsi che vengano utilizzate le intestazioni corrette durante l’utilizzo dei descrittori.
 
 | `Accept` intestazione | Descrizione |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Restituisce una matrice di ID descrittori |
 | `application/vnd.adobe.xdm-link+json` | Restituisce una matrice di percorsi API descrittori |
 | `application/vnd.adobe.xdm+json` | Restituisce una matrice di oggetti descrittori espansi |
-| `application/vnd.adobe.xdm-v2+json` | Questo `Accept` per utilizzare le funzionalità di paging, è necessario utilizzare l’intestazione. |
+| `application/vnd.adobe.xdm-v2+json` | Questo `Accept` l’intestazione deve essere utilizzata per utilizzare le funzionalità di paging. |
 
 {style="table-layout:auto"}
 
@@ -215,7 +215,7 @@ Questa richiesta riscrive essenzialmente il descrittore, pertanto il corpo della
 
 >[!IMPORTANT]
 >
->Come per la creazione di descrittori con richieste POST, ogni tipo di descrittore richiede l’invio di campi specifici nei payload di richieste PUT. Consulta la [appendice](#defining-descriptors) per un elenco completo dei descrittori e dei campi necessari per definirli.
+>Come per la creazione di descrittori tramite richieste POST, ogni tipo di descrittore richiede l’invio di campi specifici nei payload di richieste PUT. Consulta la [appendice](#defining-descriptors) per un elenco completo dei descrittori e dei campi necessari per definirli.
 
 L’esempio seguente aggiorna un descrittore di identità in modo che faccia riferimento a un diverso `xdm:sourceProperty` (`mobile phone`) e modificare la `xdm:namespace` a `Phone`.
 
@@ -248,7 +248,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e 
 }
 ```
 
-Esecuzione di una [richiesta di ricerca (GET)](#lookup) per visualizzare il descrittore, i campi sono stati aggiornati per riflettere le modifiche inviate nella richiesta PUT.
+Esecuzione di una [richiesta di ricerca (GET)](#lookup) per visualizzare il descrittore, mostra che i campi sono stati aggiornati per riflettere le modifiche inviate nella richiesta PUT.
 
 ## Eliminare un descrittore {#delete}
 
@@ -291,6 +291,10 @@ La sezione seguente fornisce informazioni aggiuntive sull’utilizzo dei descrit
 
 Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibili, inclusi i campi obbligatori per la definizione di un descrittore per ciascun tipo.
 
+>[!IMPORTANT]
+>
+>Non è possibile assegnare un’etichetta all’oggetto spazio dei nomi tenant, poiché il sistema applicherebbe tale etichetta a ogni campo personalizzato nella sandbox. È invece necessario specificare il nodo foglia sotto l’oggetto da etichettare.
+
 #### Descrittore di identità
 
 Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; del &quot;[!UICONTROL sourceSchema]&quot; è un [!DNL Identity] campo come descritto da [Servizio Adobe Experience Platform Identity](../../identity-service/home.md).
@@ -314,7 +318,7 @@ Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | Il `$id` URI dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | Versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l’identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;properties&quot; nel percorso (ad esempio, utilizza &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | Il `id` o `code` valore dello spazio dei nomi dell’identità. È possibile trovare un elenco di spazi dei nomi utilizzando [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:namespace` | Il `id` o `code` valore dello spazio dei nomi dell’identità. È possibile trovare un elenco di spazi dei nomi utilizzando [[!DNL Identity Service API]](https://developer.adobe.com/experience-platform-apis/references/identity-service). |
 | `xdm:property` | o `xdm:id` o `xdm:code`, a seconda della `xdm:namespace` utilizzato. |
 | `xdm:isPrimary` | Valore booleano facoltativo. Se è true, indica il campo come identità primaria. Gli schemi possono contenere una sola identità primaria. |
 
