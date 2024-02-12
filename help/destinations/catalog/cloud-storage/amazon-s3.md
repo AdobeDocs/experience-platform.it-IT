@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -72,7 +72,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**. La destinazione Amazon S3 supporta due metodi di autenticazione:
 
 * Autenticazione chiave di accesso e chiave segreta
-* Autenticazione ruolo assunta
+* Autenticazione del ruolo assunta
 
 #### Autenticazione chiave di accesso e chiave segreta
 
@@ -89,8 +89,8 @@ Utilizza questo metodo di autenticazione quando vuoi inserire la chiave di acces
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="Autenticazione ruolo assunta"
->abstract="Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experienci Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato su ruolo. Incolla l’ARN del ruolo creato in AWS per l’utente Adobe. Il pattern è simile a `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="Autenticazione del ruolo assunta"
+>abstract="Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experience Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato sul ruolo. Incolla l’ARN del ruolo creato in AWS per l’utente Adobe. Il pattern è simile a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![Immagine dei campi obbligatori quando si seleziona l’autenticazione per il ruolo assunto.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
