@@ -4,16 +4,16 @@ title: Soluzioni personalizzate per l’accessibilità, ad Experience Platform
 type: Documentation
 description: Ulteriori informazioni sulle soluzioni di accessibilità personalizzate nell’interfaccia utente di Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
 
 # Soluzioni di accessibilità personalizzate, ad Experience Platform
 
-Adobe Experience Platform viene continuamente migliorato per soddisfare le esigenze di tutti i tipi di utenti e aderire agli standard mondiali che includono le persone con disabilità visive, uditive, di mobilità o di altro tipo. Questo documento illustra le soluzioni di accessibilità personalizzate all’interno dell’interfaccia utente di Experience Platform.
+Adobe Experience Platform viene continuamente migliorato per soddisfare le esigenze di tutti i tipi di utenti e aderire agli standard mondiali che includono le persone con disabilità visive, uditive, di mobilità o di altro tipo. Questo documento illustra le soluzioni di accessibilità personalizzate all’interno dell’interfaccia utente di Experienci Platform.
 
 ## Panoramica della pagina principale e dell’interfaccia utente
 
@@ -21,13 +21,13 @@ L’interfaccia utente di Experience Platform soddisfa le proporzioni di contras
 
 In Platform, gli elementi dell’interfaccia utente cliccabili o utilizzabili con un puntatore possono essere attivati anche utilizzando una tastiera. Ciò include la navigazione a sinistra, lettori video, tabelle e altro ancora.
 
-Experience Platform si impegna a soddisfare gli standard internazionali di accessibilità, tra cui le linee guida per l’accessibilità dei contenuti web 2.1, di livello A e AA, e gli standard web WAI-ARIA (Accessible Rich Internet Applications) dell’iniziativa per l’accessibilità dei contenuti web.
+Experienci Platform si impegna a soddisfare gli standard internazionali di accessibilità, tra cui le linee guida per l’accessibilità dei contenuti web 2.1, di livello A e AA, e gli standard web WAI-ARIA (Accessible Rich Internet Applications) dell’iniziativa per l’accessibilità dei contenuti web.
 
 ![Pagina principale dell’interfaccia utente di Adobe Experience Platform.](images/homepage.png)
 
 ## Pannello di navigazione a sinistra
 
-La barra di navigazione a sinistra nell’interfaccia utente di Experience Platform è accessibile da tastiera e fornisce un contrasto del colore negli stati normale, al passaggio del mouse e di selezione che soddisfano gli standard di accessibilità.
+La barra di navigazione a sinistra nell’interfaccia utente di Experienci Platform è accessibile da tastiera e fornisce un contrasto del colore negli stati normale, al passaggio del mouse e di selezione che soddisfano gli standard di accessibilità.
 
 Dalla schermata Home, gli utenti possono passare alla navigazione a sinistra. Selezione **Maiusc+Tab** riporta l’utente alla schermata iniziale.
 
@@ -47,7 +47,7 @@ Alcune funzioni di Platform non sono abilitate per tutti gli utenti. Questi elem
 
 ## Finestra di dialogo del video incorporato
 
-I video possono essere visualizzati in Experience Platform utilizzando la navigazione da tastiera per evidenziare e selezionare un collegamento video disponibile. Viene aperta una finestra di dialogo con video incorporato nell’interfaccia utente di Platform.
+I video possono essere visualizzati in Experienci Platform utilizzando la navigazione da tastiera per evidenziare e selezionare un collegamento video disponibile. Viene aperta una finestra di dialogo con video incorporato nell’interfaccia utente di Platform.
 
 ![Un bordo blu che appare intorno a un elemento selezionato per indicare che è applicato lo stato attivo.](images/profile-overview-tab.png)
 
@@ -60,7 +60,7 @@ La finestra di dialogo del video incorporato può essere visualizzata anche util
 | Riproduci e Pausa | Linguetta<br/>Barra spaziatrice | Utilizzare **Linguetta** per impostare lo stato attivo sul pulsante di riproduzione. **Barra spaziatrice** avvia la riproduzione del video e la mette in pausa. |
 | Scrubber | Linguetta<br/>Freccia sinistra<br/>Freccia destra | Durante la riproduzione del video, utilizza **Linguetta** per mettere a fuoco lo scorrimento. Con lo scorrimento a fuoco, **tasti freccia sinistra e destra** salta la riproduzione video avanti e indietro di 5 secondi, rispettivamente. |
 | Disattiva audio | Linguetta<br/>Barra spaziatrice | Utilizzare **Linguetta** per attivare l&#39;elemento volume disattivato. Utilizzare **barra spaziatrice** per disattivare o disattivare la riproduzione video. |
-| Volume | Linguetta<br/>Freccia sinistra<br/>Freccia destra | Utilizzare **Linguetta** per concentrarsi sull&#39;elemento volume. **Freccia sinistra e freccia destra** spostare il volume verso l&#39;alto o verso il basso, rispettivamente. |
+| Volume | Linguetta<br/>Freccia sinistra<br/>Freccia destra | Utilizzare **Linguetta** per concentrarsi sull&#39;elemento volume. **Freccia sinistra e freccia destra** spostare il volume rispettivamente verso l&#39;alto o verso il basso. |
 | [!UICONTROL Sottotitoli] (&quot;cc&quot;) | Linguetta<br/>Invio<br/>Freccia su<br/>Freccia giù | **Linguetta** a [!UICONTROL Sottotitoli] (cc). Utilizzare **Invio** per aprire il menu e **tasti freccia su e giù** per selezionare una lingua per i sottotitoli. **Invio** conferma la selezione. |
 | [!UICONTROL Qualità] | Linguetta<br/>Invio<br/>Freccia su<br/>Freccia giù | Utilizzare **Linguetta** per concentrare [!UICONTROL Qualità] elemento. Utilizzare **Invio** per aprire il menu e **tasti freccia su e giù** per selezionare la qualità video. **Invio** conferma la selezione. |
 | Schermo intero | Linguetta<br/>Barra spaziatrice o Invio<br/>Escape | Utilizzare **Linguetta** per mettere a fuoco l’elemento a schermo intero. Utilizzare **barra spaziatrice o Invio** per attivare la visualizzazione a schermo intero. **Escape** (&quot;esc&quot;) esce dalla modalità a schermo intero. |
@@ -88,7 +88,7 @@ L’utilizzo del mouse per selezionare la zona di trascinamento attiva anche l�
 
 ## Sfoglia tabella
 
-Tutte le tabelle all’interno dell’interfaccia utente di Experience Platform sono accessibili da tastiera. È possibile navigare e interagire con le righe e le colonne della tabella tramite una serie di scelte rapide da tastiera:
+Tutte le tabelle all’interno dell’interfaccia utente di Experienci Platform sono accessibili da tastiera. È possibile navigare e interagire con le righe e le colonne della tabella tramite una serie di scelte rapide da tastiera:
 
 * Dall’intestazione della tabella, utilizza **freccia giù** per sfogliare la tabella. Le intestazioni della tabella sono selezionabili quando si naviga tramite **Linguetta** e puoi modificare l’ordinamento utilizzando **barra spaziatrice**.
 * **Tasti freccia su e freccia giù** si sposta verso l&#39;alto o il basso nelle righe della tabella.
@@ -126,7 +126,7 @@ L’interfaccia utente dell’Editor schema è resa accessibile dalle seguenti f
 
 ## Interfaccia utente di Segment Builder
 
-Quando utilizzi l’interfaccia utente del Generatore di segmenti per creare, modificare e interagire con i segmenti all’interno di Experience Platform, le seguenti funzioni migliorano l’accessibilità:
+Quando utilizzi l’interfaccia utente del Generatore di segmenti per creare, modificare e interagire con i segmenti all’interno di Experienci Platform, le seguenti funzioni migliorano l’accessibilità:
 
 * L’interfaccia utente del Generatore di segmenti è accessibile tramite navigazione da tastiera.
 * Gli assistenti vocali devono riconoscere i tag di markup per i titoli e possono annunciare l’intestazione e il relativo livello.
@@ -142,6 +142,10 @@ Nell’editor di Query Service sono disponibili le seguenti funzioni di accessib
 
 * Il contrasto cromatico nell’interfaccia utente dell’editor di Query Service è conforme all’accessibilità.
 * La navigazione tramite tastiera è supportata al di fuori dell’interfaccia utente dell’editor. L’interfaccia utente dell’editor è un Code Mirror incorporato.
+
+>[!NOTE]
+>
+>L’editor delle query non gestisce il **Linguetta** per impostazione predefinita. Per richiamare **Linguetta** nell&#39;editor, è necessario premere il tasto **Escape** e quindi premere **Linguetta** subito dopo. Premi **Linguetta** di nuovo, per spostare lo stato attivo oltre l’editor.
 
 ## Scheda Vista sistema in Origini e destinazioni
 
