@@ -3,10 +3,10 @@ keywords: destinazioni analytics;destinazione analytics
 title: Panoramica sulle destinazioni di Analytics
 description: Le destinazioni di Analytics tengono traccia di come i visitatori interagiscono con i contenuti sul sito e raccolgono dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni uniche sul coinvolgimento e sulla conversione dei visitatori più importanti.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 6%
+source-wordcount: '175'
+ht-degree: 2%
 
 ---
 
@@ -22,12 +22,13 @@ Al momento, Adobe Experience Platform supporta le destinazioni di analisi elenca
 
 * [Estensione di tracciamento del sito web Adform](adform.md)
 * [Estensione Adobe Analytics](adobe-analytics.md)
-* [Estensione Adobe Media Analytics for Audio and Video](adobe-video-analytics.md)
+* [Estensione Adobe Medium Analytics for Audio and Video](adobe-video-analytics.md)
 * [Estensione Clicktale](clicktale.md)
 * [Estensione Contentsquare](contentsquare.md)
 * [Estensione decibel](decibel.md)
 * [Estensione Demandbase](demandbase.md)
 * [Estensione Dialogtech](dialogtech.md)
+* [Gainsight PX](gainsight-px.md)
 * [Estensione Google Global Site Tag Analytics](gtag-analytics.md)
 * [Estensione Google Universal Analytics](google-universal-analytics.md)
 * [Estensione JW Player Analytics (Beta)](jw-player-analytics.md)
