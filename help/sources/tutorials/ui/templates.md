@@ -3,7 +3,7 @@ description: Scopri come utilizzare i modelli nell’interfaccia utente di Adobe
 title: Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -51,7 +51,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Experie
 >id="platform_sources_templates_accounttype"
 >title="Selezionare il tipo di azienda"
 >abstract="Seleziona il tipo di azienda appropriato per il tuo caso d’uso. L’accesso può variare a seconda dell’account di abbonamento Real-time Customer Data Platform."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it" text="Panoramica di Real-Time CDP"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Panoramica di Real-Time CDP"
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] e visualizzare un catalogo delle origini disponibili in Experienci Platform.
 
