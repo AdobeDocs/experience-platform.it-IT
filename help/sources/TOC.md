@@ -4,9 +4,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1012'
 ht-degree: 10%
 
 ---
@@ -296,6 +296,7 @@ ht-degree: 10%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Partner dati {#data-partner}
          - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Importazione dati di previsione Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
          - [Commerce SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
