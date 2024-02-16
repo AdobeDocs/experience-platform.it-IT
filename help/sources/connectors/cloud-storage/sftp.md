@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Panoramica del connettore di origine SFTP
 description: Scopri come collegare un server SFTP a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # Connettore SFTP
+
+>[!IMPORTANT]
+>
+>Il [!DNL SFTP] il server a cui Adobe Experience Platform si connette deve essere in grado di supportare il blocco, il che significa più connessioni a un singolo file. Se il [!DNL SFTP] Il server non supporta il blocco. Potrebbe essere visualizzato un messaggio di errore che impedisce l&#39;acquisizione dei file.
 
 Adobe Experience Platform fornisce connettività nativa per i provider di cloud come AWS, [!DNL Google Cloud Platform], e [!DNL Azure], che consente di estrarre i dati da questi sistemi.
 
@@ -40,7 +44,7 @@ Il [!DNL SFTP] l’origine supporta l’autenticazione tramite [!DNL Base64]Chia
 
 Se si utilizza un [!DNL Windows] macchina, apri la **Inizio** e quindi selezionare **Impostazioni**.
 
-![del profilo](../../images/tutorials/create/sftp/settings.png)
+![impostazioni](../../images/tutorials/create/sftp/settings.png)
 
 Dalla sezione **Impostazioni** menu visualizzato, selezionare **App**.
 
