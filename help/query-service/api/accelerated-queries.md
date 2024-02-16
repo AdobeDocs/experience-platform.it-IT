@@ -2,9 +2,9 @@
 title: Endpoint "Accelerated Queries"
 description: Scopri come accedere alle query dell’archivio accelerato in modo stateless per restituire rapidamente risultati basati su dati aggregati. Questo documento fornisce un esempio di richiesta HTTP e di risposta per l’endpoint Query Service con query accelerate.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: ea2a1cddf299bec750875c4a9125cdd065f18d8b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ POST /accelerated-queries
 La richiesta seguente invia una query SQL nel corpo della richiesta all&#39;archivio accelerato.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 Questa richiesta alternativa invia un ID modello nel corpo della richiesta all’archivio accelerato. L&#39;istruzione SQL del modello corrispondente viene utilizzata per eseguire una query sull&#39;archivio accelerato.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
+curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
  -H 'Authorization: {ACCESS_TOKEN}'
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}'
