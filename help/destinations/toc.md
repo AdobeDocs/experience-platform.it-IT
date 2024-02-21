@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1202'
 ht-degree: 5%
 
 ---
@@ -139,6 +139,8 @@ ht-degree: 5%
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni di Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Estensione Audienci Manager DIL](./catalog/data-management/aam-dil-extension.md)
+   * Destinazioni eCommerce {#ecommerce}
+      * [Commerce SAP](./catalog/ecommerce/sap-commerce.md)
    * Destinazioni e-mail {#email}
       * [Estensione Bizible](./catalog/email/bizible.md)
       * [Estensione Marketo](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 5%
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
       * [Connessione Adobe Campaign Managed Cloud Services](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Categorie di interesse Mailchimp](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Tag Mailchimp](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(File) Oracle di connessione Eloqua](./catalog/email-marketing/oracle-eloqua.md)
       * [Connessione Responsys Oracle](./catalog/email-marketing/oracle-responsys.md)

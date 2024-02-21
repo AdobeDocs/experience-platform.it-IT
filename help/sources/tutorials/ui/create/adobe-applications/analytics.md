@@ -2,9 +2,9 @@
 title: Creare una connessione sorgente Adobe Analytics nell’interfaccia utente
 description: Scopri come creare una connessione sorgente Adobe Analytics nell’interfaccia utente per inserire i dati dei consumatori in Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2755'
 ht-degree: 4%
 
 ---
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtraggio in base a profilo cliente in tempo reale {#filtering-for-profile}
+## Filtraggio in base a profilo cliente in tempo reale {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Una volta completate le mappature per [!DNL Analytics] per i dati della suite di
 
 >[!ENDSHADEBOX]
 
-#### Filtro a livello di riga
+### Filtro a livello di riga
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Al termine, seleziona **[!UICONTROL Successivo]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filtraggio a livello di colonna
+### Filtraggio a livello di colonna
 
 Seleziona **[!UICONTROL Filtro colonna]** dall’intestazione per applicare il filtro a livello di colonna.
 
@@ -267,6 +267,14 @@ Per impostazione predefinita, tutti [!DNL Analytics] vai a [!DNL Profile] e ques
 Al termine, seleziona **[!UICONTROL Successivo]**.
 
 ![colonne selezionate](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filtra identità secondarie
+
+Utilizza un filtro a colonne per escludere le identità secondarie dall’acquisizione del profilo. Per filtrare le identità secondarie, seleziona **[!UICONTROL Filtro colonna]** e quindi seleziona **[!UICONTROL _identità]**.
+
+Il filtro si applica solo quando un’identità è contrassegnata come secondaria. Se sono selezionate identità ma arriva un evento con una delle identità contrassegnate come primarie, queste non vengono filtrate.
+
+![secondarie-identità](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Fornisci i dettagli del flusso di dati
 

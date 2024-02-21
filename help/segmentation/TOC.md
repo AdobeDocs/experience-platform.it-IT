@@ -4,10 +4,10 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 36%
+source-wordcount: '183'
+ht-degree: 33%
 
 ---
 
@@ -40,6 +40,7 @@ ht-degree: 36%
    - [Segmentazione Edge](ui/edge-segmentation.md)
    - [Segmentazione in streaming](ui/streaming-segmentation.md)
    - [Segmentazione in streaming (video)](video/streaming-segmentation-overview.md)
+   - [Ignora aggiornamento vincoli di tempo anno](ui/ignore-year.md)
    - [Refactoring di vincoli temporali](ui/segment-refactoring.md)
    - Corrispondenza segmento {#segment-match}
       - [Panoramica di Segment Match](ui/segment-match/overview.md)
@@ -61,7 +62,7 @@ ht-degree: 36%
    - [Quantificatori logici](pql/logical-quantifiers.md)
    - [Funzioni varie](pql/misc-functions.md)
 - Tutorial {#tutorials}
-   - [Crea un segmento](tutorials/create-a-segment.md)
+   - [Creare un segmento](tutorials/create-a-segment.md)
    - [Creare un segmento (video)](video/create-segment.md)
    - [Creare un segmento dinamico (video)](video/create-a-dynamic-segment.md)
    - [Creare un segmento con più entità (video)](video/create-multi-entity-segments.md)

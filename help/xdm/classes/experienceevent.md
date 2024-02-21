@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Classe XDM ExperienceEvent
 description: Scopri la classe XDM ExperienceEvent e le best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: f7d8cd295dd6aa11048c3cb0f9a54a3702b83473
 workflow-type: tm+mt
-source-wordcount: '2656'
+source-wordcount: '2672'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Il [!DNL XDM ExperienceEvent] La classe stessa fornisce a uno schema diversi cam
 | `eventType` | Stringa che indica il tipo o la categoria dell&#39;evento. Questo campo può essere utilizzato se desideri distinguere diversi tipi di evento all’interno dello stesso schema e set di dati, ad esempio per distinguere un evento di visualizzazione prodotto da un evento add-to-shopping-cart per una società di vendita al dettaglio.<br><br>I valori standard per questa proprietà sono forniti nel [sezione dell&#39;appendice](#eventType), incluse le descrizioni del caso d’uso previsto. Questo campo è un enum estensibile, il che significa che puoi utilizzare anche stringhe di tipo evento personalizzate per categorizzare gli eventi che stai tracciando.<br><br>`eventType` limita l’utilizzo di un solo evento per hit nell’applicazione; pertanto, è necessario utilizzare campi calcolati per comunicare al sistema quale evento è più importante. Per ulteriori informazioni, consulta la sezione su [best practice per i campi calcolati](#calculated). |
 | `producedBy` | Valore stringa che descrive il produttore o l’origine dell’evento. Questo campo può essere utilizzato per filtrare alcuni produttori di eventi, se necessario a scopo di segmentazione.<br><br>Alcuni valori suggeriti per questa proprietà sono forniti nel [sezione dell&#39;appendice](#producedBy). Questo campo è un enum estensibile, il che significa che puoi utilizzare anche stringhe personalizzate per rappresentare diversi produttori di eventi. |
 | `identityMap` | Campo mappa che contiene un set di identità con spazio dei nomi per l’individuo a cui si applica l’evento. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Consulta la sezione sulle mappe di identità in [nozioni di base sulla composizione dello schema](../schema/composition.md#identityMap) per ulteriori informazioni sul caso d’uso. |
-| `timestamp`<br>**(Obbligatorio)** | Una marca temporale ISO 8601 del momento in cui si è verificato l’evento, formattata come da [RFC 3339 Sezione 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Questa marca temporale deve essere nel passato. Vedi la sezione seguente su [marche temporali](#timestamps) per le best practice sull’utilizzo di questo campo. |
+| `timestamp`<br>**(Obbligatorio)** | Una marca temporale ISO 8601 del momento in cui si è verificato l’evento, formattata come da [RFC 3339 Sezione 5.6](https://datatracker.ietf.org/doc/html/rfc3339). Questa marca temporale **deve** si verificano in passato, ma **deve** dal 1970 in poi. Vedi la sezione seguente su [marche temporali](#timestamps) per le best practice sull’utilizzo di questo campo. |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ Le sezioni seguenti descrivono le best practice per la progettazione di schemi E
 
 ### Marca temporale {#timestamps}
 
-La radice `timestamp` campo di uno schema evento può **solo** rappresenta l’osservazione dell’evento stesso e deve verificarsi nel passato. Se i casi di utilizzo della segmentazione richiedono l’uso di marche temporali che possono verificarsi in futuro, questi valori devono essere vincolati altrove nello schema Evento esperienza.
+La radice `timestamp` campo di uno schema evento può **solo** rappresenta l’osservazione dell’evento stesso e deve verificarsi nel passato. Tuttavia, l’evento **deve** dal 1970 in poi. Se i casi di utilizzo della segmentazione richiedono l’uso di marche temporali che possono verificarsi in futuro, questi valori devono essere vincolati altrove nello schema Evento esperienza.
 
 Ad esempio, se un’azienda nel settore dei viaggi e dell’ospitalità sta modellando un evento di prenotazione di un volo, il `timestamp` rappresenta il momento in cui è stato osservato l’evento di prenotazione. Altre marche temporali correlate all’evento, come la data di inizio della prenotazione del viaggio, devono essere acquisite in campi separati forniti da gruppi di campi standard o personalizzati.
 
