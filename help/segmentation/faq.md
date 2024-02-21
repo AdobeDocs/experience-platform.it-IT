@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '3122'
 ht-degree: 1%
 
 ---
@@ -246,6 +246,26 @@ Per ulteriori informazioni sul blocco Split, leggi [Guida dell’interfaccia ute
 
 Sì, tutti i tipi di segmentazione ([segmentazione batch, segmentazione in streaming e segmentazione Edge](./home.md#evaluate-segments)) sono supportate nel flusso di lavoro Composizione pubblico. Tuttavia, poiché le composizioni vengono attualmente eseguite solo una volta al giorno, anche se sono inclusi i tipi di pubblico valutati in streaming o edge, il risultato sarà basato sull’iscrizione al pubblico al momento dell’esecuzione della composizione.
 
-## Come posso confermare l’appartenenza di un profilo a un pubblico?
+## Iscrizione al pubblico
+
+Nella sezione seguente sono elencate le domande relative all’iscrizione al pubblico.
+
+### Come posso confermare l’appartenenza di un profilo a un pubblico?
 
 Per confermare l’iscrizione al pubblico di un profilo, visita la pagina dei dettagli del profilo che desideri confermare. Seleziona **[!UICONTROL Attributi]**, seguito da **[!UICONTROL Visualizza JSON]** e confermare che il `segmentMembership` L’oggetto contiene l’ID del pubblico.
+
+### In che modo la segmentazione batch risolve l’appartenenza al profilo?
+
+I tipi di pubblico valutati utilizzando la segmentazione in batch si risolvono quotidianamente, registrando i risultati dell’iscrizione al pubblico nel `segmentMembership` attributo. Le ricerche di profilo generano una nuova versione del profilo al momento della ricerca, ma ciò accade **non** aggiorna i risultati della segmentazione batch.
+
+Di conseguenza, quando vengono apportate modifiche al profilo, ad esempio l’unione di due profili, tali modifiche **will** nel profilo quando viene cercato, ma **non** essere riflessi nel `segmentMembership` finché il processo di valutazione del segmento non viene eseguito nuovamente.
+
+Ad esempio, supponiamo che tu abbia creato due tipi di pubblico reciprocamente esclusivi: il pubblico A è per le persone che vivono a Washington e il pubblico B è per le persone che lo fanno **non** vive a Washington. Ci sono due profili: il profilo 1 per una persona che vive a Washington e il profilo 2 per una persona che vive in Oregon.
+
+Quando viene eseguito il processo di valutazione della segmentazione batch, il profilo 1 passa al pubblico A, mentre il profilo 2 passa al pubblico B. Successivamente, ma prima dell’esecuzione del processo di valutazione della segmentazione batch del giorno successivo, entra in Platform un evento che riconcilia i due profili. Di conseguenza, viene creato un singolo profilo unito contenente i profili 1 e 2.
+
+Fino all’esecuzione del successivo processo di valutazione del segmento batch, il nuovo profilo unito avrà l’iscrizione al pubblico in **entrambi** profilo 1 e profilo 2. Di conseguenza, questo significa che sarà membro di **entrambi** Pubblico A e Pubblico B, nonostante il fatto che questi tipi di pubblico abbiano definizioni contraddittorie. Per l’utente finale, è il **identica situazione** come prima i profili erano collegati, poiché c’era sempre solo l’unica persona coinvolta, e Platform lo ha appena fatto **non** disporre di informazioni sufficienti per collegare i due profili.
+
+Se utilizzi la ricerca dei profili per recuperare il nuovo profilo creato e osservarne l’iscrizione al pubblico, questo dimostrerà che è un membro di **entrambi** Pubblico A e Pubblico B, nonostante il fatto che entrambi questi tipi di pubblico abbiano definizioni contraddittorie. Una volta eseguito il processo di valutazione della segmentazione batch giornaliera, l’iscrizione al pubblico verrà aggiornata per riflettere questo stato aggiornato dei dati del profilo.
+
+Se hai bisogno di una risoluzione del pubblico in tempo reale, utilizza lo streaming o la segmentazione Edge.
