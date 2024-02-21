@@ -2,9 +2,9 @@
 title: Spazi dei nomi e schemi B2B
 description: Questo documento fornisce una panoramica degli spazi dei nomi personalizzati necessari per la creazione di un connettore di origine B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ In caso di esito positivo, la richiesta crea gli spazi dei nomi e gli schemi nec
 
 ## Spazi dei nomi B2B
 
-Gli spazi dei nomi delle identità sono un componente di [[!DNL Identity Service]](../../../../identity-service/home.md) che servono a distinguere il contesto o il tipo di un’identità. Un’identità completa include un valore ID e uno spazio dei nomi. Consulta la [panoramica degli spazi dei nomi](../../../../identity-service/features/namespaces.md) per ulteriori informazioni.
+Gli spazi dei nomi delle identità sono un componente di [[!DNL Identity Service]](../../../../identity-service/home.md) che servono a distinguere il contesto di un&#39;identità. Un’identità completa include un valore di identità e uno spazio dei nomi. Leggi le [panoramica degli spazi dei nomi](../../../../identity-service/features/namespaces.md) per ulteriori informazioni.
 
 Gli spazi dei nomi B2B vengono utilizzati nell’identità primaria dell’entità.
 
