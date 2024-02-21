@@ -6,16 +6,16 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
-# Refactorizzazione dei vincoli di tempo {#refactorization}
+# Rifattorizzazione dei vincoli di tempo {#refactorization}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
->title="Refactorizzazione dei vincoli di tempo"
->abstract="I vincoli di tempo a livello di regola e di gruppo sono stati rimossi per chiarire l’utilizzo dei vincoli di tempo. Riscrivere il vincolo come vincolo di tempo a livello di area di lavoro o di scheda."
+>title="Rifattorizzazione dei vincoli di tempo"
+>abstract="I vincoli di tempo a livello di regola e di gruppo sono stati rimossi per chiarire l’utilizzo del vincolo di tempo. Riscrivi il vincolo come vincolo di tempo a livello di area di lavoro o di scheda."
 
 La versione di gennaio 2024 per Adobe Experience Platform ha introdotto modifiche al servizio di segmentazione di Adobe Experience Platform che aggiungono nuove restrizioni a dove è possibile definire i vincoli di tempo. Queste modifiche interessano i segmenti appena creati o modificati tramite l’interfaccia utente di Segment Builder (Generatore di segmenti). Questa guida spiega come mitigare queste modifiche.
 
