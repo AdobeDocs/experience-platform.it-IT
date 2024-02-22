@@ -2,12 +2,12 @@
 title: Attivare il pubblico dell’account nelle destinazioni
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico dell’account nelle destinazioni
-badgeLimitedAvailability: label="Disponibilità limitata" type="Caution"
-badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Edizione B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funzionalità per attivare il pubblico dell’account nelle destinazioni è disponibile solo nel [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Inoltre, la funzionalità di pubblico dell’account è attualmente in **disponibilità limitata**. Contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe per richiedere l’accesso a questa funzionalità.
+>La funzionalità per attivare il pubblico dell’account nelle destinazioni è disponibile per le aziende che acquistano [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) edizioni Real-time Customer Data Platform.
 
 Questo articolo spiega il flusso di lavoro necessario per esportare [pubblico dell’account](/help/segmentation/ui/account-audiences.md) da Adobe Experience Platform alla destinazione preferita.
 
@@ -79,7 +79,7 @@ Per il resto del flusso di lavoro di attivazione per esportare i tipi di pubblic
 
 ## Callout importanti e limitazioni note {#important-callouts-known-limitations}
 
-Tieni presente i seguenti callout importanti e le limitazioni note per il rilascio di disponibilità limitata della funzionalità di attivazione dei tipi di pubblico dell’account.
+Tieni presente i seguenti callout importanti e le limitazioni note per la versione con disponibilità generale della funzionalità di attivazione dei tipi di pubblico dell’account.
 
 ### Coppie di mappatura necessarie nella fase di mappatura quando si attivano i tipi di pubblico dell’account per **[!UICONTROL (Aziende) Tipi di pubblico LinkedIn corrispondenti]** destinazione {#required-mappings}
 

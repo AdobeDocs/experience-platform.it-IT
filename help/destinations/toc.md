@@ -4,9 +4,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1201'
 ht-degree: 5%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 5%
       * [Attivare i tipi di pubblico per Edge Personalization Destinations](./ui/activate-edge-personalization-destinations.md)
       * [Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp](./ui/activate-curated-destinations.md)
       * [Attiva i tipi di pubblico potenziali nelle destinazioni](./ui/activate-prospect-audiences.md)
-      * [(Disponibilità limitata) Attiva i tipi di pubblico dell’account sulle destinazioni](./ui/activate-account-audiences.md)
+      * [Attivare il pubblico dell’account nelle destinazioni](./ui/activate-account-audiences.md)
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
