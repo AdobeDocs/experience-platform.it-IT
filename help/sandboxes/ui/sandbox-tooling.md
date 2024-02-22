@@ -2,10 +2,10 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1859'
-ht-degree: 9%
+source-wordcount: '1961'
+ht-degree: 8%
 
 ---
 
@@ -30,10 +30,11 @@ La tabella seguente elenca [!DNL Adobe Real-Time Customer Data Platform] oggetti
 | Piattaforma | Oggetto | Dettagli |
 | --- | --- | --- |
 | Customer Data Platform | Origini | Le credenziali dell’account di origine non vengono replicate nella sandbox di destinazione per motivi di sicurezza e sarà necessario aggiornarle manualmente. Per impostazione predefinita, il flusso di dati di origine viene copiato in stato di bozza. |
-| Customer Data Platform | Tipi di pubblico | Solo il **[!UICONTROL Pubblico cliente]** tipo **[!UICONTROL Servizio di segmentazione]** è supportato. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. |
+| Customer Data Platform | Tipi di pubblico | Solo il **[!UICONTROL Pubblico cliente]** tipo **[!UICONTROL Servizio di segmentazione]** è supportato. Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Il sistema selezionerà automaticamente il criterio di unione predefinito nella sandbox di destinazione con la stessa classe XDM durante il controllo delle dipendenze dei criteri di unione. |
 | Customer Data Platform | Identità | Durante la creazione nella sandbox di destinazione, il sistema deduplica automaticamente gli spazi dei nomi di identità standard Adobe. I tipi di pubblico possono essere copiati solo quando tutti gli attributi nelle regole del pubblico sono abilitati nello schema di unione. Gli schemi necessari devono prima essere spostati e abilitati per il profilo unificato. |
-| Customer Data Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. Lo stato del profilo unificato dello schema verrà copiato così come è dalla sandbox di origine. Se lo schema è abilitato per il profilo unificato nella sandbox di origine, tutti gli attributi vengono spostati nello schema di unione. Il caso edge delle relazioni di schema non è incluso nel pacchetto. |
+| Customer Data Platform | Schemi | Le etichette esistenti per il consenso e la governance verranno copiate nello stesso processo di importazione. L’utente dispone della flessibilità necessaria per importare schemi senza l’opzione Profilo unificato abilitata. Il caso edge delle relazioni di schema non è incluso nel pacchetto. |
 | Customer Data Platform | Set di dati | I set di dati vengono copiati con l’impostazione di profilo unificato disabilitata per impostazione predefinita. |
+| Customer Data Platform | Criteri di consenso e governance | Aggiungi a un pacchetto i criteri personalizzati creati da un utente e spostali tra le diverse sandbox. |
 
 I seguenti oggetti vengono importati ma sono in stato bozza o disabilitato:
 
@@ -52,6 +53,7 @@ La tabella seguente elenca [!DNL Adobe Journey Optimizer] oggetti attualmente su
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Pubblico | Un pubblico può essere copiato come oggetto dipendente dell’oggetto percorso. Puoi selezionare Crea un nuovo pubblico o riutilizzarne uno esistente nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Schema | Gli schemi utilizzati nel percorso possono essere copiati come oggetti dipendenti. Puoi selezionare Crea un nuovo schema o riutilizzarne uno esistente nella sandbox di destinazione. |
+| [!DNL Adobe Journey Optimizer] | Criterio di unione | I criteri di unione utilizzati nel percorso possono essere copiati come oggetti dipendenti. Nella sandbox di destinazione, puoi **non può** creare un nuovo criterio di unione, è possibile utilizzarne solo uno esistente. |
 | [!DNL Adobe Journey Optimizer] | Percorso - dettagli area di lavoro | La rappresentazione del percorso nell’area di lavoro include gli oggetti del percorso, quali condizioni, azioni, eventi, tipi di pubblico letti e così via, che vengono copiati. L’attività Salta viene esclusa dalla copia. |
 | [!DNL Adobe Journey Optimizer] | Evento | Gli eventi e i dettagli dell’evento utilizzati nel percorso vengono copiati. Crea sempre una nuova versione nella sandbox di destinazione. |
 | [!DNL Adobe Journey Optimizer] | Azione | I messaggi e-mail e push utilizzati nel percorso possono essere copiati come oggetti dipendenti. Le attività di azione del canale utilizzate nei campi del percorso, che vengono utilizzate per la personalizzazione nel messaggio, non vengono controllate per completezza. I blocchi di contenuto non vengono copiati.<br><br>È possibile copiare l&#39;azione di aggiornamento del profilo utilizzata nel percorso. Vengono copiati anche le azioni personalizzate e i dettagli delle azioni utilizzati nel percorso. Crea sempre una nuova versione nella sandbox di destinazione. |
@@ -135,19 +137,23 @@ Per importare il pacchetto in una sandbox di destinazione, passa a Sandbox **[!U
 
 ![Le sandbox **[!UICONTROL Sfoglia]** evidenziare la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Utilizzando il menu a discesa, seleziona la **[!UICONTROL Nome pacchetto]** desideri importare nella sandbox di destinazione. Aggiungi un elemento **[!UICONTROL Nome processo]**, che verrà utilizzato per il monitoraggio futuro, quindi seleziona **[!UICONTROL Successivo]**.
+Utilizzando il menu a discesa, seleziona la **[!UICONTROL Nome pacchetto]** desideri importare nella sandbox di destinazione. Aggiungi un elemento **[!UICONTROL Nome processo]**, che saranno utilizzati per il monitoraggio futuro. Per impostazione predefinita, il profilo unificato viene disabilitato quando vengono importati gli schemi del pacchetto. Attiva/Disattiva **Abilitare gli schemi per il profilo** per abilitare questa funzione, seleziona **[!UICONTROL Successivo]**.
 
 ![La pagina dei dettagli di importazione che mostra [!UICONTROL Nome pacchetto] selezione a discesa](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-Il [!UICONTROL Oggetto pacchetto e dipendenze] fornisce un elenco di tutte le risorse incluse in questo pacchetto. Il sistema rileva automaticamente gli oggetti dipendenti necessari per la corretta importazione degli oggetti padre selezionati.
+Il [!UICONTROL Oggetto pacchetto e dipendenze] fornisce un elenco di tutte le risorse incluse in questo pacchetto. Il sistema rileva automaticamente gli oggetti dipendenti necessari per la corretta importazione degli oggetti padre selezionati. Eventuali attributi mancanti vengono visualizzati nella parte superiore della pagina. Seleziona **[!UICONTROL Visualizza dettagli]** per una suddivisione più dettagliata.
 
-![Il [!UICONTROL Oggetto pacchetto e dipendenze] mostra un elenco di risorse incluse nel pacchetto.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![Il [!UICONTROL Oggetto pacchetto e dipendenze] pagina mostra gli attributi mancanti.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Gli oggetti dipendenti possono essere sostituiti con quelli esistenti nella sandbox di destinazione, consentendo di riutilizzare gli oggetti esistenti anziché creare una nuova versione. Ad esempio, quando importi un pacchetto che include schemi, puoi riutilizzare gli spazi dei nomi dei gruppi di campi personalizzati e delle identità esistenti nella sandbox di destinazione. In alternativa, quando importi un pacchetto che include Percorsi, puoi riutilizzare i segmenti esistenti nella sandbox di destinazione.
 
-Per utilizzare un oggetto esistente, selezionare l&#39;icona della matita accanto all&#39;oggetto dipendente. Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. Seleziona **[!UICONTROL Usa esistente]**.
+Per utilizzare un oggetto esistente, selezionare l&#39;icona della matita accanto all&#39;oggetto dipendente.
+
+![Il [!UICONTROL Oggetto pacchetto e dipendenze] mostra un elenco di risorse incluse nel pacchetto.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+Vengono visualizzate le opzioni per creare nuovi o utilizzare quelli esistenti. Seleziona **[!UICONTROL Usa esistente]**.
 
 ![Il [!UICONTROL Oggetto pacchetto e dipendenze] pagina che mostra le opzioni oggetto dipendente [!UICONTROL Crea nuovo] e [!UICONTROL Usa esistente].](../images/ui/sandbox-tooling/use-existing-object.png)
 
