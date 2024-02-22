@@ -5,7 +5,7 @@ description: Scopri come attivare i tipi di pubblico dell’account nelle destin
 badgeB2B: label="Edizione B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funzionalità per attivare il pubblico dell’account nelle destinazioni è disponibile per le aziende che acquistano [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2b) edizioni Real-time Customer Data Platform.
+>La funzionalità per attivare il pubblico dell’account nelle destinazioni è disponibile per le aziende che acquistano [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) edizioni Real-time Customer Data Platform.
 
 Questo articolo spiega il flusso di lavoro necessario per esportare [pubblico dell’account](/help/segmentation/ui/account-audiences.md) da Adobe Experience Platform alla destinazione preferita.
 

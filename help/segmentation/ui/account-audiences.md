@@ -1,12 +1,12 @@
 ---
 title: Pubblico dell’account
 description: Scopri come creare e utilizzare i tipi di pubblico dell’account per eseguire il targeting dei profili dell’account nelle destinazioni a valle.
-badgeLimitedAvailability: label="Disponibilità limitata" type="Caution"
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->I tipi di pubblico dell’account sono disponibili solo in [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). Inoltre, la funzionalità di pubblico dell’account è attualmente in **disponibilità limitata**. Contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe per richiedere l’accesso a questa funzionalità.
+>I tipi di pubblico dell’account sono disponibili solo in [Edizione B2B di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) e [Edizione B2P di Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Con la segmentazione dell’account, Adobe Experience Platform ti consente di rendere l’esperienza di segmentazione del marketing completamente semplice e sofisticata, dal pubblico basato sulle persone a quello basato sull’account.
 
