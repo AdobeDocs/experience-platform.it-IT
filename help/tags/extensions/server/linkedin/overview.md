@@ -3,9 +3,9 @@ title: Estensione di inoltro eventi API LinkedIn Conversions
 description: Questa estensione per l’inoltro di eventi Adobe Experience Platform consente di misurare le prestazioni della campagna di marketing LinkedIn.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## Prerequisiti {#prerequisites}
 
-Devi creare una regola di conversione nel [!DNL LinkedIn] account degli annunci di campaign. [!DNL Adobe] consiglia di includere &quot;CAPI&quot; all’inizio del nome della regola di conversazione per distinguerlo dagli altri tipi di regole di conversione che potrebbero essere stati configurati.
+Devi [creare una regola di conversione](https://www.linkedin.com/help/lms/answer/a1657171) nel tuo [!DNL LinkedIn Campaign Manager] account. [!DNL Adobe] consiglia di includere &quot;CAPI&quot; all’inizio del nome della regola di conversazione per distinguerlo dagli altri tipi di regole di conversione che potrebbero essere stati configurati.
 
 ### Creare un segreto e un elemento dati
 
@@ -40,7 +40,7 @@ Nella schermata successiva, immetti il segreto dell&#39;elemento dati creato in 
 
 Una volta configurati tutti gli elementi dati, puoi iniziare a creare regole di inoltro degli eventi che determinano quando e come verranno inviati gli eventi a [!DNL LinkedIn].
 
-Crea un nuovo inoltro eventi [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL LinkedIn]**. Quindi, seleziona **[!UICONTROL Invia conversione web]** per **[!UICONTROL Tipo di azione]**.
+Crea un nuovo inoltro eventi [regola](../../../ui/managing-resources/rules.md) nella proprietà di inoltro degli eventi. Sotto **[!UICONTROL Azioni]**, aggiungi una nuova azione e imposta l&#39;estensione su **[!UICONTROL LinkedIn]**. Quindi, seleziona **[!UICONTROL Invia conversione]** per **[!UICONTROL Tipo di azione]**.
 
 ![La vista Regole proprietà inoltro eventi, con i campi necessari per aggiungere una configurazione dell’azione della regola di inoltro eventi evidenziati.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Dopo la selezione, vengono visualizzati controlli aggiuntivi per configurare ult
 
 | Input | Descrizione |
 | --- | --- |
-| [!UICONTROL Conversione] | ID della regola di conversione creata in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) o attraverso [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversione] | ID della regola di conversione creata in [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Seleziona la regola di conversione per ottenere l’ID, quindi copia l’ID dall’URL del browser (ad esempio, `/campaignmanager/accounts/508111232/conversions/15588877`) come `/conversions/<id>`. |
 | [!UICONTROL Tempo di conversione] | Ogni timestamp in millisecondi in cui si è verificato l’evento di conversione. <br><br> Nota: se l’origine registra il timestamp di conversione in secondi, inserisci 000 alla fine per trasformarlo in millisecondi. |
 | [!UICONTROL Valuta] | Codice valuta in formato ISO. |
 | [!UICONTROL Quantità] | Valore della conversione in stringa decimale (ad esempio, &quot;100.05&quot;). |
-| [!UICONTROL ID evento] | L’ID univoco generato dagli inserzionisti per indicare ogni evento. Questo è un campo facoltativo e viene utilizzato per la deduplicazione. |
+| [!UICONTROL ID evento] | L’ID univoco generato dagli inserzionisti per indicare ogni evento. Questo è un campo facoltativo e viene utilizzato per [deduplicazione](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ Dopo la selezione, vengono visualizzati controlli aggiuntivi per configurare ult
 
 ## Passaggi successivi
 
-Questa guida illustra come inviare dati a [!DNL LinkedIn] utilizzando [!DNL LinkedIn Conversions API] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in [!DNL Adobe Experience Platform], fare riferimento a [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+Questa guida illustra come inviare dati a [!DNL LinkedIn] utilizzando [!DNL LinkedIn Conversions API] estensione di inoltro degli eventi. Per ulteriori informazioni sulle funzionalità di inoltro degli eventi in [!DNL Adobe Experience Platform], leggi [panoramica sull’inoltro degli eventi](../../../ui/event-forwarding/overview.md).
+
+Per informazioni dettagliate su come eseguire il debug dell’implementazione utilizzando lo strumento di monitoraggio Experienci Platform Debugger e inoltro eventi, leggi [Panoramica Adobe Experience Platform Debugger](../../../../debugger/home.md) e [Monitorare le attività nell’inoltro degli eventi](../../../ui/event-forwarding/monitoring.md).
