@@ -3,10 +3,10 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 12%
+source-wordcount: '3879'
+ht-degree: 11%
 
 ---
 
@@ -73,6 +73,10 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >
 >Selezione dei tipi di pubblico provenienti da **[!UICONTROL Caricamenti personalizzati]** abilita automaticamente [Seleziona attributi di arricchimento](#select-enrichment-attributes) passaggio.
 
+>[!TIP]
+>
+>Puoi rimuovere i tipi di pubblico dai flussi di attivazione esistenti dalla **[!UICONTROL Dati di attivazione]** pagina. Consulta la [documentazione dedicata](../ui/destination-details-page.md#bulk-remove) per i dettagli.
+
 ## Pianificare l’esportazione del pubblico {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >title="Pianificazione"
 >abstract="Utilizza l’icona della matita per impostare il tipo di esportazione dei file (file completi o incrementali) e la frequenza di esportazione."
 
-[!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare. La configurazione della pianificazione è obbligatoria, ma il nome del file è facoltativo.
+[!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare.
+
+Experienci Platform imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Puoi modificare la pianificazione predefinita in base alle tue esigenze, selezionando l’icona a forma di matita accanto a ogni pianificazione e definendo una pianificazione personalizzata.
+
+![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>Puoi modificare le pianificazioni di attivazione del pubblico per i flussi di attivazione esistenti dalla sezione **[!UICONTROL Dati di attivazione]** pagina. Consulta la documentazione su [modifica in serie delle pianificazioni di attivazione](../ui/destination-details-page.md#bulk-edit-schedule) per i dettagli.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] divide automaticamente i file di esportazione in 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
 >
 >Ai nomi dei file suddivisi viene aggiunto un numero che indica che il file fa parte di un’esportazione più grande: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Seleziona la **[!UICONTROL Crea pianificazione]** controllo corrispondente al pubblico che si desidera inviare alla destinazione.
-
-![Crea controllo della pianificazione evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Esportare file completi {#export-full-files}
 
@@ -247,6 +255,14 @@ In questo passaggio, devi selezionare gli attributi del profilo che desideri agg
 1. Il campo selezionato per l&#39;esportazione viene ora visualizzato nella vista di mappatura e l&#39;intestazione modificata viene visualizzata nel file esportato.
 
    ![Finestra modale che mostra gli attributi del profilo che possono essere esportati nella destinazione.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+
+   ![Registrazione che mostra i campi di mappatura che vengono riordinati tramite trascinamento.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Facoltativo) Puoi selezionare il campo esportato come [chiave obbligatoria](#mandatory-keys) o un [chiave di deduplicazione](#deduplication-keys).
 

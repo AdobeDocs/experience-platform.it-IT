@@ -3,9 +3,9 @@ title: Esportare i set di dati nelle destinazioni di archiviazione cloud
 type: Tutorial
 description: Scopri come esportare i set di dati da Adobe Experience Platform nella posizione di archiviazione cloud preferita.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
+source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1857'
 ht-degree: 4%
 
 ---
@@ -195,9 +195,9 @@ Quando vengono compressi, si noti la differenza di formato tra i due tipi di fil
 * Durante l’esportazione di file JSON compressi, il formato del file esportato è `json.gz`
 * Quando si esportano file parquet compressi, il formato di file esportato è `gz.parquet`
 
-## Rimuovi set di dati dalla destinazione {#remove-dataset}
+## Rimuovere i set di dati dalle destinazioni {#remove-dataset}
 
-Per rimuovere un set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
+Per rimuovere i set di dati da un flusso di dati esistente, effettua le seguenti operazioni:
 
 1. Accedi a [Interfaccia utente Experienci Platform](https://experience.adobe.com/platform/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare i flussi di dati di destinazione esistenti.
 
@@ -211,14 +211,19 @@ Per rimuovere un set di dati da un flusso di dati esistente, effettua le seguent
 
    ![L’opzione di navigazione dei set di dati disponibili è evidenziata nella colonna Dati di attivazione.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. Il **[!UICONTROL Dati di attivazione]** viene visualizzata la pagina della destinazione. Seleziona **[!UICONTROL Rimuovi set di dati]** nella barra a destra per attivare la finestra di dialogo rimuovi conferma set di dati.
+1. Il **[!UICONTROL Dati di attivazione]** viene visualizzata la pagina della destinazione. Seleziona il set di dati da rimuovere, quindi seleziona **[!UICONTROL Rimuovi set di dati]** nella barra a destra per attivare la finestra di dialogo di conferma della rimozione del set di dati.
 
    ![Finestra di dialogo Rimuovi set di dati che mostra il controllo Rimuovi set di dati nella barra a destra.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. Nella finestra di dialogo di conferma, seleziona **[!UICONTROL Rimuovi]** per rimuovere immediatamente il set di dati dalle esportazioni nella destinazione.
 
    ![Finestra di dialogo che mostra l’opzione Conferma rimozione set di dati dal flusso di dati.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Diritti di esportazione del set di dati {#licensing-entitlement}
 

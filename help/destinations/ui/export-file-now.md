@@ -3,9 +3,9 @@ title: (Beta) Esportare file on-demand in destinazioni batch utilizzando l’int
 type: Tutorial
 description: Scopri come esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '722'
 ht-degree: 8%
 
 ---
@@ -48,13 +48,9 @@ Per esportare i file on-demand nelle destinazioni batch, è necessario avere [co
 
    ![Immagine che evidenzia un flusso di dati filtrato.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Seleziona la **[!UICONTROL Dati di attivazione]** e selezionare il pubblico per il quale si desidera esportare un file su richiesta e selezionare **[!UICONTROL Esporta subito il file]** controllo per attivare un&#39;esportazione una tantum che invierà un file alla destinazione batch.
+3. Seleziona la **[!UICONTROL Dati di attivazione]** e selezionare i tipi di pubblico per i quali si desidera esportare i file su richiesta, quindi selezionare **[!UICONTROL Esporta subito il file]** per attivare un’esportazione una tantum che distribuirà un file per ogni pubblico selezionato alla destinazione batch.
 
-   >[!IMPORTANT]
-   >
-   >La selezione di più tipi di pubblico per esportare i file in blocco su richiesta non è attualmente supportata nell’interfaccia utente di. Utilizza il [API di attivazione ad hoc](/help/destinations/api/ad-hoc-activation-api.md) a tal fine.
-
-   ![Immagine che evidenzia il pulsante Export file now (Esporta file ora).](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Immagine che evidenzia il pulsante Export file now (Esporta file ora).](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Seleziona **[!UICONTROL Sì]** per confermare e attivare l&#39;esportazione dei file.
 
