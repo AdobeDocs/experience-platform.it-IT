@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Namespace in Experience Data Model (XDM)
 description: Scopri come lo spazio dei nomi in Experience Data Model (XDM) consente di estendere gli schemi e prevenire conflitti di campi quando diversi componenti dello schema vengono uniti.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
 
 # Namespace in Experience Data Model (XDM)
+
+>[!IMPORTANT]
+>
+>In XDM, lo spazio dei nomi (l’argomento di questa pagina) viene utilizzato per distinguere i campi in uno schema. Questo è diverso dal concetto di spazio dei nomi delle identità in Identity Service, in cui lo spazio dei nomi viene utilizzato per distinguere i valori di identità. Leggi la documentazione su [spazio dei nomi in Identity Service](../../identity-service/features/namespaces.md) per ulteriori informazioni.
 
 A tutti i campi degli schemi Experience Data Model (XDM) è associato uno spazio dei nomi. Questi spazi dei nomi ti consentono di estendere gli schemi ed evitare conflitti di campi in quanto diversi componenti dello schema vengono uniti. Questo documento fornisce una panoramica degli spazi dei nomi in XDM e di come sono rappresentati in [API del registro dello schema](../api/overview.md).
 
