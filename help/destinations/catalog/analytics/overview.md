@@ -3,9 +3,9 @@ keywords: destinazioni analytics;destinazione analytics
 title: Panoramica sulle destinazioni di Analytics
 description: Le destinazioni di Analytics tengono traccia di come i visitatori interagiscono con i contenuti sul sito e raccolgono dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni uniche sul coinvolgimento e sulla conversione dei visitatori più importanti.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Al momento, Adobe Experience Platform supporta le destinazioni di analisi elenca
 * [Estensione decibel](decibel.md)
 * [Estensione Demandbase](demandbase.md)
 * [Estensione Dialogtech](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Connessione PX Gainsight](gainsight-px.md)
 * [Estensione Google Global Site Tag Analytics](gtag-analytics.md)
 * [Estensione Google Universal Analytics](google-universal-analytics.md)
 * [Estensione JW Player Analytics (Beta)](jw-player-analytics.md)
