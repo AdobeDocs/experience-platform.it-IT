@@ -5,16 +5,16 @@ description: Scopri come configurare una CSP per l’SDK per web di Experience P
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configurazione;configurazione;SDK;edge;Web SDK;configurare;contesto;web;dispositivo;ambiente;impostazioni web sdk;informativa sulla sicurezza dei contenuti;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # Configurazione di un CSP
 
-A [Informativa sulla sicurezza dei contenuti](https://developer.mozilla.org/it-IT/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) viene utilizzato per limitare le risorse che un browser può utilizzare. I CSP possono anche limitare la funzionalità delle risorse di script e di stile. Adobe Experience Platform Web SDK non richiede un CSP, ma l’aggiunta di un CSP può ridurre la superficie di attacco per prevenire attacchi dannosi.
+A [Informativa sulla sicurezza dei contenuti](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) viene utilizzato per limitare le risorse che un browser può utilizzare. I CSP possono anche limitare la funzionalità delle risorse di script e di stile. Adobe Experience Platform Web SDK non richiede un CSP, ma l’aggiunta di un CSP può ridurre la superficie di attacco per prevenire attacchi dannosi.
 
 I CSP devono riflettere come [!DNL Platform Web SDK] è implementato e configurato. I CSP seguenti mostrano le modifiche necessarie per il corretto funzionamento dell’SDK. A seconda dell’ambiente specifico, potrebbero essere necessarie ulteriori impostazioni CSP.
 
@@ -60,3 +60,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >L’Adobe fa **non** consiglia di specificare `unsafe-inline` perché consente l’esecuzione di qualsiasi script sulla pagina, il che limita i vantaggi dei CSP.
+
+## Configurare un CSP per la messaggistica in-app {#in-app-messaging}
+
+Quando si configura [Messaggistica Web in-app](../personalization/web-in-app-messaging.md), devi includere la seguente direttiva nel CSP:
+
+```
+default-src  blob:;
+```
