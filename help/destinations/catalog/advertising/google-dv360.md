@@ -2,7 +2,7 @@
 title: Google Display e connessione Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager, è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra le origini di inventario Display, Video e Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
+source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 > Google sta rilasciando modifiche al [API di Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)e [API Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) al fine di garantire la conformità e i requisiti relativi al consenso definiti [Legge sui mercati digitali](https://digital-markets-act.ec.europa.eu/index_en) (DMA) nell&#39;Unione europea ([Politica di consenso degli utenti UE](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso dovrebbe entrare in vigore a partire dal 6 marzo 2024.
-><br/><br/>
+><br/>
 >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi dell’accordo DMA nell’Unione Europea.
-><br/><br/>
+><br/>
 >Clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non è necessario eseguire alcuna azione.
-><br/><br/>
+><br/>
 >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare [definizione del segmento](../../../segmentation/home.md#segment-definitions) funzionalità di [Generatore di segmenti](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati, in modo da continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
 [!DNL Display & Video 360], precedentemente noto come [!DNL DoubleClick Bid Manager], è uno strumento utilizzato per eseguire campagne digitali di retargeting e targeting del pubblico tra sorgenti di inventario Display, Video e Mobile.

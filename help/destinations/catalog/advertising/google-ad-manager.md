@@ -3,7 +3,7 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
+source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 4%
@@ -15,11 +15,11 @@ ht-degree: 4%
 >[!IMPORTANT]
 >
 > Google sta rilasciando modifiche al [API di Google Ads](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)e [API Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) al fine di garantire la conformità e i requisiti relativi al consenso definiti [Legge sui mercati digitali](https://digital-markets-act.ec.europa.eu/index_en) (DMA) nell&#39;Unione europea ([Politica di consenso degli utenti UE](https://www.google.com/about/company/user-consent-policy/)). L’applicazione di queste modifiche ai requisiti di consenso dovrebbe entrare in vigore a partire dal 6 marzo 2024.
-><br/><br/>
+><br/>
 >Per aderire alla politica di consenso degli utenti dell’UE e continuare a creare elenchi di pubblico per gli utenti dello Spazio economico europeo (SEE), gli inserzionisti e i partner devono assicurarsi di trasmettere il consenso degli utenti finali durante il caricamento dei dati sul pubblico. In qualità di partner Google, Adobe fornisce gli strumenti necessari per soddisfare i requisiti di consenso ai sensi dell’accordo DMA nell’Unione Europea.
-><br/><br/>
+><br/>
 >Clienti che hanno acquistato Adobe Privacy &amp; Security Shield e hanno configurato un [criterio di consenso](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per filtrare i profili non autorizzati non è necessario eseguire alcuna azione.
-><br/><br/>
+><br/>
 >I clienti che non hanno acquistato Adobe Privacy &amp; Security Shield devono utilizzare [definizione del segmento](../../../segmentation/home.md#segment-definitions) funzionalità di [Generatore di segmenti](../../../segmentation/ui/segment-builder.md) per filtrare i profili non autorizzati, in modo da continuare a utilizzare senza interruzioni le destinazioni Real-Time CDP Google esistenti.
 
 
