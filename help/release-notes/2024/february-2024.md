@@ -27,7 +27,7 @@ Un Experience Platform consente di abbonarti agli avvisi basati su eventi per va
 **Funzioni nuove o aggiornate**
 | Funzionalità | Descrizione | | — | — | | Scheda Cronologia avvisi | In qualità di amministratore di Experienci Platform, puoi utilizzare la funzione di gestione degli abbonati agli avvisi per assegnare un avviso a un ID utente, un indirizzo e-mail esterno o un elenco di gruppi e-mail di Adobe. Per ulteriori informazioni, vedere [documentazione dell’interfaccia utente avvisi](../../observability/alerts/ui.md) per ulteriori informazioni sulla scheda cronologia. |
 
-{style="table-layout:auto"}
+
 
 Per ulteriori informazioni sugli avvisi, leggere [[!DNL Observability Insights] panoramica](../../observability/home.md).
 
