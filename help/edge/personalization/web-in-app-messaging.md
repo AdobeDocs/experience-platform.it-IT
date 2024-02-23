@@ -1,7 +1,7 @@
 ---
 title: Configurare il supporto per la messaggistica Web in-app in Web SDK
 description: Scopri come configurare l’estensione tag Web SDK per supportare la messaggistica in-app web.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
