@@ -3,9 +3,9 @@ title: Experience Cloud Audiences
 description: Scopri come condividere i tipi di pubblico da Real-time Customer Data Platform a varie app di Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 2%
 
 ---
@@ -95,6 +95,7 @@ Prendi nota delle seguenti limitazioni note e dei callout importanti durante l�
 * Attualmente, è supportata una singola destinazione Tipi di pubblico di Experience Cloud. Il tentativo di configurare una seconda connessione di destinazione genera un errore.
 * Quando ti connetti alla destinazione, puoi vedere un’opzione per [abilitare gli avvisi del flusso di dati](../../ui/alerts.md). Anche se visibile nell’interfaccia utente, il **l’opzione abilita avvisi non è attualmente supportata**.
 * **Supporto per la retrocompilazione del pubblico**: la prima esportazione in Audienci Manager o in altre soluzioni Experience Cloud include una popolazione storica dei tipi di pubblico. Utenti di [integrazione legacy di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) chi configura questa destinazione deve aspettarsi una differenza di backfill di circa sei ore.
+* Tipi di pubblico provenienti da [Composizione del pubblico](../../../segmentation/ui/audience-composition.md) non sono supportate direttamente. Per attivare il pubblico composito in questa destinazione è necessario creare una definizione di pubblico tramite [Generatore di segmenti](../../../segmentation/ui/segment-builder.md) in base al pubblico composito, e attiva il pubblico appena creato.
 
 ### Latenza durante l’attivazione dei tipi di pubblico {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ I tipi di pubblico e le caratteristiche in Audienci Manager sono soggetti a [Con
 
 I tipi di pubblico esportati da Real-Time CDP vengono assegnati a un’origine dati specifica nell’Audience Manager denominato **[!UICONTROL Segmenti Experienci Platform]**.
 
-Per consentire solo a determinati utenti di accedere ai tipi di pubblico, puoi applicare i controlli di accesso ai tipi di pubblico appartenenti all’origine dati. In Audienci Manager, imposta le nuove autorizzazioni di controllo degli accessi per questi tipi di pubblico e le caratteristiche create dai segmenti di Real-Time CDP.
+Per consentire solo a determinati utenti di accedere ai tipi di pubblico, utilizza [Controlli dell’accesso basati sul ruolo](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) per configurare l’accesso degli utenti ai tipi di pubblico e alle caratteristiche creati da tipi di pubblico di Real-Time CDP.
