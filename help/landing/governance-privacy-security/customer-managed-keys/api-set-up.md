@@ -2,10 +2,10 @@
 title: Configurare e configurare le chiavi gestite dal cliente tramite l’API
 description: Scopri come configurare l’app CMK con il tenant di Azure e inviare l’ID della chiave di crittografia a Adobe Experience Platform.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 2%
+source-wordcount: '1002'
+ht-degree: 1%
 
 ---
 
@@ -78,6 +78,10 @@ Dopo aver completato il processo di autenticazione, torna al [!DNL Azure] Key Va
 
 Nella schermata successiva viene richiesto di scegliere un ruolo per l&#39;assegnazione. Seleziona **[!DNL Key Vault Crypto Service Encryption User]** prima di selezionare **[!DNL Next]** per continuare.
 
+>[!NOTE]
+>
+>Se si dispone di [!DNL Managed-HSM Key Vault] livello, è necessario selezionare il **[!DNL Managed HSM Crypto Service Encryption User]** ruolo utente.
+
 ![Dashboard di Microsoft Azure con [!DNL Key Vault Crypto Service Encryption User] evidenziato.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 Nella schermata successiva scegliere **[!DNL Select members]** per aprire una finestra di dialogo nella barra a destra. Utilizzare la barra di ricerca per individuare l&#39;entità servizio per l&#39;applicazione CMK e selezionarla dall&#39;elenco. Al termine, seleziona **[!DNL Save]**.
@@ -133,8 +137,8 @@ curl -X POST \
 | --- | --- |
 | `name` | Un nome per la configurazione. Assicurati di ricordare questo valore in quanto necessario per controllare lo stato della configurazione in un [passaggio successivo](#check-status). Il valore distingue tra maiuscole e minuscole. |
 | `type` | Il tipo di configurazione. Deve essere impostato su `BYOK_CONFIG`. |
-| `imsOrgId` | Il tuo ID organizzazione. Questo ID deve essere lo stesso valore fornito in `x-gw-ims-org-id` intestazione. |
-| `configData` | Questa proprietà contiene i seguenti dettagli sulla configurazione:<ul><li>`providerType`: Deve essere impostato su `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: URI dell’insieme di credenziali delle chiavi copiato [precedente](#send-to-adobe).</li></ul> |
+| `imsOrgId` | ID organizzazione. Questo ID deve essere lo stesso valore fornito in `x-gw-ims-org-id` intestazione. |
+| `configData` | Questa proprietà contiene i seguenti dettagli sulla configurazione:<ul><li>`providerType`: deve essere impostato su `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`: URI dell’insieme di credenziali delle chiavi copiato [precedente](#send-to-adobe).</li></ul> |
 
 +++
 

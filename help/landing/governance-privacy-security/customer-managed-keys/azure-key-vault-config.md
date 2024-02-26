@@ -2,10 +2,10 @@
 title: Configurare un archivio chiavi di Azure
 description: Scopri come creare un nuovo account Enterprise con Azure o utilizzare un account Enterprise esistente e creare l’insieme di credenziali delle chiavi.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 1%
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Le chiavi gestite dal cliente (CMK) supportano solo le chiavi di un [!DNL Micros
 
 >[!IMPORTANT]
 >
->Solo i livelli di servizio Premium e Standard per [!DNL Azure] Sono supportati Key Vault. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] e [!DNL Azure Payments HSM] non sono supportati. Consulta la sezione [[!DNL Azure] documentazione](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) per ulteriori informazioni sui servizi di gestione delle chiavi offerti.
+>Solo i livelli HSM Standard, Premium e Managed per [!DNL Azure] Sono supportati Key Vault. [!DNL Azure Dedicated HSM] e [!DNL Azure Payments HSM] non sono supportati. Consulta la sezione [[!DNL Azure] documentazione](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) per ulteriori informazioni sui servizi di gestione delle chiavi offerti.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Quindi, abilita il controllo degli accessi basato sul ruolo di Azure per l’ins
 
 Se l&#39;insieme di credenziali delle chiavi è configurato per limitare l&#39;accesso pubblico a determinate reti virtuali o disabilitare completamente l&#39;accesso pubblico, è necessario concedere [!DNL Microsoft] un&#39;eccezione firewall.
 
-Seleziona **[!DNL Networking]** (Progetti) nel pannello di navigazione a sinistra. Sotto **[!DNL Firewalls and virtual networks]**, seleziona la casella di controllo **[!DNL Allow trusted Microsoft services to bypass this firewall]**, quindi seleziona **[!DNL Apply]**.
+Seleziona **[!DNL Networking]** nel menu di navigazione a sinistra. Sotto **[!DNL Firewalls and virtual networks]**, seleziona la casella di controllo **[!DNL Allow trusted Microsoft services to bypass this firewall]**, quindi seleziona **[!DNL Apply]**.
 
 ![Il [!DNL Networking] scheda di [!DNL Microsoft Azure] con [!DNL Networking] e [!DNL Allow trusted Microsoft surfaces to bypass this firewall] eccezione evidenziata.](../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
@@ -63,7 +63,7 @@ Dopo aver creato un Key Vault, puoi generare una nuova chiave. Accedi a **[!DNL 
 
 ![Il [!DNL Keys] scheda di [!DNL Azure] con [!DNL Generate import] evidenziato.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilizza il modulo fornito per fornire un nome per la chiave e seleziona **RSA** per il tipo di chiave. Come minimo, il **[!DNL RSA key size]** deve essere almeno **3072** bit come richiesto da [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] è compatibile anche con RSA 3027.
+Utilizza il modulo fornito per fornire un nome per la chiave e seleziona una delle seguenti opzioni **RSA** o **RSA-HSM** per il tipo di chiave. Come minimo, il **[!DNL RSA key size]** deve essere almeno **3072** bit come richiesto da [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] è compatibile anche con RSA 3027.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Utilizza il modulo fornito per fornire un nome per la chiave e seleziona **RSA**
 
 Utilizzare i controlli rimanenti per configurare la chiave che si desidera generare o importare in base alle proprie esigenze. Al termine, seleziona **[!DNL Create]**.
 
-![La dashboard Crea chiave con [!DNL 3072] bit evidenziati.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![Il [!DNL Create a key] dashboard con [!DNL 3072] bit evidenziati.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 La chiave configurata viene visualizzata nell&#39;elenco delle chiavi per l&#39;archivio.
 
