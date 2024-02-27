@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Viene visualizzato un elenco di attributi di profilo. In questo popover, puoi se
 
 Dopo aver selezionato l’attributo, puoi selezionare l’ordine in base al quale classificarlo. In ordine crescente (dal più basso al più alto) o decrescente (dal più alto al più basso).
 
-Inoltre, puoi limitare il numero di tipi di pubblico restituiti abilitando la funzione **[!UICONTROL Aggiungi limite profilo]** attivare/disattivare. Quando questa opzione è abilitata, puoi impostare il numero massimo di tipi di pubblico restituiti all’interno del **[!UICONTROL Profili inclusi]** campo.
+Inoltre, puoi limitare il numero di profili restituiti abilitando la funzione **[!UICONTROL Aggiungi limite profilo]** attivare/disattivare. Quando questa opzione è abilitata, puoi impostare il numero massimo di profili restituiti all’interno del **[!UICONTROL Profili inclusi]** campo.
 
-![Viene evidenziata l’opzione Aggiungi limite profilo, che consente di limitare il numero di tipi di pubblico restituiti.](../images/ui/audience-composition/add-profile-limit.png)
+![Viene evidenziata l’opzione Aggiungi limite profilo, che consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Dividere] {#split-block}
 
