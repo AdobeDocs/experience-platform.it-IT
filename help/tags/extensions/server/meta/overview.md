@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
+source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 Il [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) ti consente di collegare i dati di marketing lato server a [!DNL Meta] tecnologie per ottimizzare il targeting degli annunci, ridurre i costi per azione e misurare i risultati. Gli eventi sono collegati a un [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID e vengono elaborati in modo simile agli eventi lato client.
 
 Utilizzo di [!DNL Meta Conversions API] , puoi sfruttare le funzionalità dell&#39;API nella tua [inoltro eventi](../../../ui/event-forwarding/overview.md) regole a cui inviare i dati [!DNL Meta] dalla rete Edge di Adobe Experience Platform. Questo documento illustra come installare l’estensione e utilizzarne le funzionalità in un inoltro di eventi [regola](../../../ui/managing-resources/rules.md).
+
+## Demo
+
+Il seguente video ha lo scopo di aiutarti a comprendere il [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## Prerequisiti
 
