@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
+source-git-commit: aba148f4155ff5403e89039a9c59acd4d450539e
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2369'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ L&#39;Assistente è una funzione dell&#39;interfaccia utente che consente di nav
 
 * Linee guida su come eseguire attività relative a dati e tipi di pubblico.
 * Stati e metriche degli oggetti dati esistenti nell’organizzazione.
-* Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, set di dati, destinazioni, schemi, segmenti e origini.
+* Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, flussi di dati, set di dati, destinazioni, schemi, segmenti e origini.
 
 Leggi la guida di seguito per scoprire come utilizzare l’Assistente per navigare e comprendere i flussi di lavoro di Experienci Platform e Real-Time CDP.
 
@@ -131,17 +131,25 @@ Per visualizzare le citazioni e convalidare la risposta dell&#39;Assistente, sel
 
 +++Seleziona per visualizzare un esempio di domande sull’utilizzo dei dati e visualizzazione dei dati
 
-È possibile richiedere informazioni sull&#39;utilizzo dei dati all&#39;Assistente. Per rispondere a una domanda sull’utilizzo dei dati relativa ai dati dell’organizzazione, è necessario trovarsi in una sandbox attiva.
+Affinché Assistant possa rispondere a una query sull’utilizzo dei dati all’interno della tua organizzazione, devi trovarti in una sandbox attiva.
+
+Nell’esempio seguente, l’Assistente viene fornito con la seguente query: **&quot;Mostra definizioni di segmenti con più di 1000 profili e includi lo stato di attivazione.&quot;** L’Assistente risponde quindi con un grafico che visualizza i dati di segmenti e profili.
 
 ![Rispondi alla domanda sull’utilizzo dei dati.](./images/ai-assistant/data-usage-question.png)
 
-Quando viene richiesta una domanda sull&#39;utilizzo dei dati, l&#39;Assistente fornisce anche una spiegazione di come ha calcolato la risposta. Nell’esempio seguente, l’Assistente illustra i passaggi necessari per visualizzare segmenti con più di 1000 profili e i rispettivi stati di attivazione.
+Puoi passare il cursore sopra una singola barra per visualizzare dati specifici. È inoltre possibile selezionare l&#39;icona di espansione per ingrandire la visualizzazione del grafico.
+
+![Segui la domanda che illustra la visualizzazione dei dati.](./images/ai-assistant/data-visualization.png)
+
+Viene visualizzata una vista espansa della visualizzazione. Puoi utilizzare la finestra modale espansa per esaminare ulteriormente i dati ed è particolarmente utile quando la visualizzazione restituisce un numero elevato di colonne.
+
+![Grafico espanso.](./images/ai-assistant/chart-expanded.png)
+
+Quando viene richiesta una domanda sull&#39;utilizzo dei dati, l&#39;Assistente fornisce una spiegazione di come ha calcolato la risposta. Nell’esempio seguente, l’Assistente illustra i passaggi necessari per visualizzare le definizioni dei segmenti con più di 1000 profili e i rispettivi stati di attivazione.
 
 ![Domande di follow-up sui segmenti che illustrano come l’Assistente ha calcolato la risposta.](./images/ai-assistant/results-explained.png)
 
-Inoltre, l’Assistente esegue il rendering dei grafici per visualizzare i dati. È inoltre possibile fornire filtri e modifiche alle query e istruire l&#39;Assistente affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi richiedere all’Assistente di mostrare una tendenza dei segmenti di conteggio nell’ordine della data di creazione, rimuovere segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
-
-![Segui la domanda che illustra la visualizzazione dei dati.](./images/ai-assistant/data-visualization.png)
+È inoltre possibile fornire filtri e modifiche alle query e istruire l&#39;Assistente affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi richiedere all’Assistente di mostrare una tendenza delle definizioni dei segmenti di conteggio nell’ordine della data di creazione, rimuovere le definizioni dei segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
 
 +++
 
@@ -177,27 +185,18 @@ Successivamente, l&#39;Assistente riceve un&#39;altra richiesta di completamento
 
 +++
 
-## Portata {#scope}
-
-L’Assistente può rispondere a domande relative ai concetti di Real-Time CDP e Experienci Platform, nonché all’utilizzo di dati specifici per il tuo account utente. L’Assistente può anche dedurre il contesto in base alla pagina dell’interfaccia utente in cui ti trovi. È in grado di identificare:
-
-* Account utente in uso.
-* L’organizzazione a cui appartieni.
-* Pagina visualizzata sullo schermo.
-* La risorsa (inclusi tipo e ID) che stai visualizzando sullo schermo.
-* Se si sta eseguendo un particolare Experience Platform o flusso di lavoro Real-Time CDP, l&#39;Assistente può dedurre l&#39;intento.
-
-### Documentazione {#documentation}
+## Documentazione {#documentation}
 
 Attualmente, l’indice della documentazione copre Adobe Experience Platform (Real-Time CDP e Audiences). L’indice viene aggiornato periodicamente.
 
 Il modello di recupero della documentazione di è addestrato su Experienci Platform (Real-Time CDP e Audiences). Non è possibile rispondere a domande che esulano dall’ambito di Adobe Experience Platform, come ad esempio domande su altri prodotti Adobe come Adobe Target e la suite di Creative Cloud.
 
-### Utilizzo dati {#data-usage}
+## Utilizzo dati {#data-usage}
 
 Puoi anche porre domande sull’utilizzo dei dati da parte dell’Assistente nei seguenti domini:
 
 * Attributi
+* Flussi di dati
 * Set di dati
 * Destinazioni _Al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati._
 * Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
