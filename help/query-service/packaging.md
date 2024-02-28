@@ -2,9 +2,9 @@
 title: Packaging servizio query
 description: Il documento seguente illustra il pacchetto di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '963'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ La tabella seguente illustra i principali diritti di Query Service in base al mo
 | Tolleranza esportazione dati | Il diritto totale all’esportazione dipende dalle licenze delle applicazioni basate su piattaforma. Ad esempio, Real-Time CDP, AJO, CJA e così via. | Sì: viene fornito un diritto di esportazione aggiuntivo per consentire l’esportazione di set di dati derivati creati utilizzando Data Distiller.<br>Il limite di esportazione dei dati annuale viene misurato in terabyte (TB) e dipende dalla quantità di ore di calcolo acquistate. Per ulteriori informazioni, consulta la descrizione del prodotto. |
 | Interfaccia di esecuzione query | <ul><li>Interfaccia utente di Query Service</li><li>Interfaccia utente client di terze parti</li><li>[!DNL PostgresSQL] interfaccia utente client</li></ul> | <ul><li>Interfaccia utente di Query Service </li><li>Interfaccia utente client di terze parti</li><li>[!DNL PostgresSQL] interfaccia utente client</li><li>API REST</li></ul> |
 | Risultati Query Restituiti Tramite | Interfaccia utente client | Set di dati derivati archiviato nel data lake |
-| Limite risultati | <ul><li>Interfaccia utente di Query Service: il numero di righe di output può essere [configurato con un’impostazione dell’interfaccia utente](./ui/user-guide.md#result-count) tra 50 e 500 righe.</li><li>Clienti di terze parti - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | <ul><li>Interfaccia utente di Query Service: il numero di righe di output può essere [configurato con un’impostazione dell’interfaccia utente](./ui/user-guide.md#result-count) tra 50 e 500 righe.<br>Nota: le query CTAS e ITAS generano messaggi di successo solo quando l’output della query viene memorizzato in set di dati derivati.</li><li>Client di terze parti (nessun limite superiore alle righe)</li><li>[!DNL PostgresSQL] client (nessun limite superiore alle righe)</li><li>API REST (nessun limite superiore alle righe)</li></ul> |
+| Limite risultati | <ul><li>Interfaccia utente di Query Service: il numero di righe di output può essere [configurato con un’impostazione dell’interfaccia utente](./ui/user-guide.md#result-count) tra 50 e 500 righe.</li><li>Clienti di terze parti - 50.000</li><li>[!DNL PostgresSQL] client - 50.000</li></ul> | Le query CTAS e ITAS generano messaggi di successo solo quando l’output della query viene memorizzato in set di dati derivati. |
 | Capacità set di dati di lettura | Sì | Sì |
 | Capacità del set di dati di scrittura | No | Sì |
 | Capacità di programmazione | No | Sì |
