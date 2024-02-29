@@ -5,9 +5,9 @@ breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 45%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 45%
    * [Implementare i tag JavaScript per gestire il consenso dei clienti](./ui/client-side/consent.md)
    * [Supporto di Content Security Policy (CSP)](./ui/client-side/content-security-policy.md)
    * [Supporto di Subresource Integrity (SRI)](./ui/client-side/sri.md)
+   * [Transport Layer Security](./ui/client-side/transport-layer-security.md)
 * Inoltro eventi {#event-forwarding}
    * [Panoramica](./ui/event-forwarding/overview.md)
    * [Introduzione](./ui/event-forwarding/getting-started.md)
@@ -321,5 +322,5 @@ ht-degree: 45%
 * [Domande frequenti](./faq.md)
 * [Aggiornamenti terminologici](./term-updates.md)
 * [Supporto obsoleto per Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes_it)
 
