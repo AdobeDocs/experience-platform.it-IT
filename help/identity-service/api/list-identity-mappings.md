@@ -3,11 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;identità;identità
 solution: Experience Platform
 title: Elenca mappature identità
 description: Una mappatura è una raccolta di tutte le identità in un cluster, per uno spazio dei nomi specificato.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 4%
+source-wordcount: '278'
+ht-degree: 3%
 
 ---
 

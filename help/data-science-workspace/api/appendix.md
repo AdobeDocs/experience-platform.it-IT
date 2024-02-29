@@ -3,11 +3,12 @@ keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Works
 solution: Experience Platform
 title: Appendice alla guida API di apprendimento automatico di Sensei
 description: Le sezioni seguenti forniscono informazioni di riferimento per varie funzioni dell’API di apprendimento automatico di Sensei.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -32,7 +33,7 @@ Il [!DNL Sensei Machine Learning] L’API fornisce supporto per i parametri di q
 
 ## Configurazioni CPU e GPU Python {#cpu-gpu-config}
 
-I motori Python hanno la possibilità di scegliere tra una CPU o una GPU per i loro scopi di formazione o punteggio ed è definito su un [MLInstance](./mlinstances.md) come specifica di un&#39;attività (`tasks.specification`).
+I motori Python hanno la possibilità di scegliere tra una CPU o una GPU per i loro scopi di formazione o punteggio, ed è definita su [MLInstance](./mlinstances.md) come specifica di un&#39;attività (`tasks.specification`).
 
 Di seguito è riportata una configurazione di esempio che specifica l’utilizzo di una CPU per l’apprendimento e di una GPU per il punteggio:
 

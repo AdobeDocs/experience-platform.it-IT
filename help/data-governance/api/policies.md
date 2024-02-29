@@ -2,11 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;Applicazione delle policy;applicazione basata su API;governance dei dati
 solution: Experience Platform
 title: Endpoint API per i criteri di governance dei dati
-description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati di Experience Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
+description: I criteri di governance dei dati sono regole adottate dall’organizzazione che descrivono i tipi di azioni di marketing che possono essere eseguiti o meno sui dati di Experienci Platform. L’endpoint /policies viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all’aggiornamento o all’eliminazione dei criteri di governance dei dati.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 3%
 
 ---

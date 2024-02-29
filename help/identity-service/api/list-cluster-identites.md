@@ -3,11 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;elenco identità;elenco cl
 solution: Experience Platform
 title: Elencare tutte le identità in un cluster
 description: Le identità correlate in un grafico delle identità, indipendentemente dallo spazio dei nomi, sono considerate parte dello stesso "cluster" in tale grafico delle identità. Le opzioni seguenti consentono di accedere a tutti i membri del cluster.
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 3%
+source-wordcount: '365'
+ht-degree: 2%
 
 ---
 

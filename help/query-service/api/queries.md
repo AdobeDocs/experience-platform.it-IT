@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;guida api;q
 solution: Experience Platform
 title: Endpoint API per query
 description: Le sezioni seguenti descrivono le chiamate che puoi effettuare utilizzando l’endpoint /queries nell’API del servizio di query.
+role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '950'
 ht-degree: 2%
 
 ---
@@ -30,7 +31,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 - `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito.
 
-**Parametri query**
+**Parametri di query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query disponibili per la tua organizzazione.
 

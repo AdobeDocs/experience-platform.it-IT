@@ -3,10 +3,11 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Endpoint API entità (accesso profilo)
 type: Documentation
 description: Adobe Experience Platform consente di accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l’interfaccia utente di. Questa guida illustra come accedere alle entità, più comunemente note come "profili", utilizzando l’API di profilo.
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1734'
 ht-degree: 2%
 
 ---
@@ -893,7 +894,7 @@ Seguendo questa guida si è effettuato l&#39;accesso [!DNL Real-Time Customer Pr
 
 La sezione seguente fornisce informazioni supplementari sull’accesso a [!DNL Profile] dati utilizzando l’API.
 
-### Parametri query {#query-parameters}
+### Parametri di query {#query-parameters}
 
 I seguenti parametri vengono utilizzati nel percorso per le richieste di GET a `/access/entities` endpoint. Servono a identificare l’entità profilo a cui desideri accedere e a filtrare i dati restituiti nella risposta. I parametri richiesti sono etichettati, mentre gli altri sono facoltativi.
 

@@ -3,8 +3,9 @@ keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Works
 solution: Experience Platform
 title: Endpoint API per esperimenti
 description: Lo sviluppo e l’addestramento dei modelli si verificano a livello di esperimento, dove un esperimento è costituito da un’istanza MLI, esecuzioni di addestramento e esecuzioni di punteggio.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%

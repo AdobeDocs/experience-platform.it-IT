@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;servizio qu
 solution: Experience Platform
 title: Endpoint Schedules
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per le query pianificate con l’API Query Service.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1214'
 ht-degree: 3%
 
 ---
@@ -32,7 +33,7 @@ GET /schedules?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
-**Parametri query**
+**Parametri di query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query pianificate. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query pianificate disponibili per la tua organizzazione.
 

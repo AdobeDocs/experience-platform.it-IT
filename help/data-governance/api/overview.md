@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Guida API del servizio criteri
 description: L’API del servizio criteri consente agli sviluppatori di gestire le etichette e i criteri di utilizzo dei dati, ad Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---

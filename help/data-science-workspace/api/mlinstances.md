@@ -3,11 +3,12 @@ keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Works
 solution: Experience Platform
 title: Endpoint API MLInstance
 description: Un'istanza MLInstance è un accoppiamento di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 

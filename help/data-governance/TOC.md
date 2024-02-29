@@ -4,10 +4,11 @@ user-guide-title: Guida alla governance dei dati di Adobe Experience Platform
 breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri di governance.
 feature: Data Governance
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+role: User,Developer,Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 48%
+source-wordcount: '90'
+ht-degree: 42%
 
 ---
 
@@ -16,12 +17,12 @@ ht-degree: 48%
 
 * [Panoramica sulla governance dei dati](home.md)
 * [Guida completa](./e2e.md)
-* Etichette di utilizzo dei dati {#labels}
+* Etichette di utilizzo dati {#labels}
    * [Panoramica](labels/overview.md)
    * [Glossario delle etichette](labels/reference.md)
    * [Gestire le etichette nell’interfaccia utente](labels/user-guide.md)
    * [Gestire le etichette per i set di dati utilizzando le API](labels/dataset-api.md)
-* Criteri di utilizzo dei dati {#policies}
+* Criteri di utilizzo dati {#policies}
    * [Panoramica](policies/overview.md)
    * [Gestire i criteri nell’interfaccia utente](policies/user-guide.md)
    * [Creare un criterio nell’API](policies/create.md)

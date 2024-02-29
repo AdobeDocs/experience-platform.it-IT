@@ -3,10 +3,11 @@ keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Works
 solution: Experience Platform
 title: Endpoint API di Insights
 description: Gli insights contengono metriche utilizzate per consentire a un data scientist di valutare e scegliere modelli ML ottimali visualizzando metriche di valutazione rilevanti.
+role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---

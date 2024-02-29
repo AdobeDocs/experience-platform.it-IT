@@ -1,8 +1,9 @@
 ---
 title: Endpoint API quota
 description: L’endpoint /quota nell’API di igiene dei dati consente di monitorare l’utilizzo della gestione avanzata del ciclo di vita dei dati in base ai limiti di quota mensili dell’organizzazione per ciascun tipo di processo.
+role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 3%

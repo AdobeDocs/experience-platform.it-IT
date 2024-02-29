@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;modelli que
 solution: Experience Platform
 title: Endpoint API per modelli di query
 description: Questa guida descrive le varie chiamate API dei modelli di query che puoi effettuare utilizzando l’API di Query Service.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '977'
 ht-degree: 3%
 
 ---
@@ -34,7 +35,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
-**Parametri query**
+**Parametri di query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco dei modelli di query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperati tutti i modelli di query disponibili per la tua organizzazione.
 

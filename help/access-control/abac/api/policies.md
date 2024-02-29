@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;api;Attribute-Based Access
 solution: Experience Platform
 title: Endpoint API per i criteri di controllo degli accessi
 description: L’endpoint /policies nell’API di controllo dell’accesso basato su attributi consente di gestire in modo programmatico i criteri in Adobe Experience Platform.
+role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 3%

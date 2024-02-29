@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;eseguire qu
 solution: Experience Platform
 title: La query pianificata esegue l’endpoint API
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per eseguire query pianificate con l’API di Query Service.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -33,7 +34,7 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 | `{SCHEDULE_ID}` | Il `id` valore della query pianificata da recuperare. |
 | `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso della richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e commerciali (`&`). I parametri disponibili sono elencati di seguito. |
 
-**Parametri query**
+**Parametri di query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle esecuzioni per una query pianificata specificata. Tutti questi parametri sono facoltativi. Se si effettua una chiamata a questo endpoint senza parametri, verranno recuperate tutte le esecuzioni disponibili per la query pianificata specificata.
 

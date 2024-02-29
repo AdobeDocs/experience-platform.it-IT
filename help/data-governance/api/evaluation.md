@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;Applicazione dei criteri;A
 solution: Experience Platform
 title: Endpoint API per la valutazione dei criteri
 description: Dopo aver creato le azioni di marketing e definito i criteri, è possibile utilizzare l’API del servizio criteri per valutare se alcuni criteri sono violati da determinate azioni. I vincoli restituiti assumono la forma di un set di criteri che verrebbero violati se si tentasse di eseguire un’azione di marketing sui dati specificati contenenti le etichette di utilizzo dei dati.
+role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1538'
 ht-degree: 2%
 
 ---

@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;guida per sviluppatori san
 solution: Experience Platform
 title: Endpoint API per la gestione delle sandbox
 description: L’endpoint /sandbox nell’API Sandbox consente di gestire in modo programmatico le sandbox in Adobe Experience Platform.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1474'
 ht-degree: 4%
 
 ---
@@ -17,7 +18,7 @@ Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati 
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Recuperare un elenco di sandbox {#list}
 

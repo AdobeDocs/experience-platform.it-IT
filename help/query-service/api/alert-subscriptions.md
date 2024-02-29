@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;avviso;
 title: Endpoint sottoscrizioni avvisi
 description: Questa guida fornisce esempi di richieste HTTP e risposte per le varie chiamate API che puoi effettuare all’endpoint di abbonamenti agli avvisi con l’API Query Service.
+role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2666'
 ht-degree: 2%
 
 ---
@@ -57,7 +58,7 @@ GET /alert-subscriptions?{QUERY_PARAMETERS}
 | --------- | ----------- |
 | `{QUERY_PARAMETERS}` | (Facoltativo) Sono stati aggiunti dei parametri al percorso della richiesta per configurare i risultati restituiti nella risposta. È possibile includere più parametri, separati dal simbolo &amp;. I parametri disponibili sono elencati di seguito. |
 
-**Parametri query**
+**Parametri di query**
 
 Di seguito è riportato un elenco dei parametri di query disponibili per l&#39;elenco delle query. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le query disponibili per la tua organizzazione.
 

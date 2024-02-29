@@ -3,10 +3,11 @@ keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Works
 solution: Experience Platform
 title: Endpoint API MLServices
 description: Un MLService è un modello pubblicato e addestrato che offre all’organizzazione la possibilità di accedere e riutilizzare i modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base pianificata. Le esecuzioni pianificate dei corsi di formazione possono contribuire a mantenere l’efficienza e l’accuratezza di un modello, mentre le esecuzioni pianificate dei punteggi possono garantire la generazione coerente di nuove informazioni.
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---

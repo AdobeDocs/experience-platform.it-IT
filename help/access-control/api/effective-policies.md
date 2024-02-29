@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;criteri efficaci;access co
 solution: Experience Platform
 title: Endpoint API per criteri effettivi
 description: Scopri come visualizzare criteri di accesso efficaci utilizzando l’API di controllo degli accessi per Adobe Experience Platform.
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%

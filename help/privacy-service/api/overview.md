@@ -1,11 +1,12 @@
 ---
 title: Guida all’API di Privacy Service
 description: Scopri come utilizzare l’API Privacy Service per gestire in modo programmatico i processi relativi alla privacy per le applicazioni Adobe Experience Cloud supportate.
+role: Developer
 exl-id: 665466ac-2447-4a9d-a8cf-62092c09e431
-source-git-commit: bda8d0ee1db4b58b4b856a23a8790cd7f76c0656
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +20,7 @@ L’API Privacy Service fornisce diversi endpoint che consentono di gestire in m
 
 Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visitare il [Riferimento API di Privacy Service](https://www.adobe.io/experience-platform-apis/references/privacy-service/).
 
-## Lavori sulla privacy
+## Processi di privacy
 
 Quando Privacy Service riceve una richiesta di accesso o di cancellazione dei dati personali di un soggetto, crea dei lavori sulla privacy per soddisfare tale richiesta. Ogni processo di privacy contiene informazioni di identità relative all’interessato, metadati sul prodotto Adobe Experience Cloud a cui si applica il processo e lo stato di elaborazione del processo.
 

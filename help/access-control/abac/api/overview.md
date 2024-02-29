@@ -3,11 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;api;controllo degli access
 solution: Experience Platform
 title: Guida dell’API di controllo dell’accesso basato su attributi
 description: L’API di controllo dell’accesso basata su attributi consente di gestire in modo programmatico i ruoli e i criteri di accesso all’interno di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '450'
-ht-degree: 15%
+ht-degree: 8%
 
 ---
 
@@ -19,13 +20,13 @@ L’API di controllo dell’accesso basata su attributi viene utilizzata per acc
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per i passaggi su come sfruttare in modo programmatico queste funzionalità.
+>Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experienci Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [Guida API del servizio criteri](../../../data-governance/api/overview.md) per i passaggi su come sfruttare in modo programmatico queste funzionalità.
 
 Questi endpoint sono descritti di seguito. Per informazioni dettagliate, consulta le guide dei singoli endpoint e fai riferimento a [guida introduttiva](./getting-started.md) per informazioni importanti sulle intestazioni richieste, leggi le chiamate API di esempio e altro ancora.
 
 ## Ruoli
 
-I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. Consulta la [guida dell’endpoint &quot;roles&quot;](./roles.md) per ulteriori informazioni sull’utilizzo dei ruoli nell’API.
+I ruoli definiscono l’accesso di un amministratore, uno specialista o un utente finale alle risorse della tua organizzazione. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di visualizzazione o dell’accesso in scrittura di cui hanno bisogno. Consulta la [guida dell’endpoint &quot;roles&quot;](./roles.md) per ulteriori informazioni sull’utilizzo dei ruoli nell’API.
 
 ## Criteri
 

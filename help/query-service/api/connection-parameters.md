@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;servizio query;guida api;p
 solution: Experience Platform
 title: Endpoint API per i parametri di connessione
 description: Per recuperare i parametri di connessione per l’utilizzo del servizio interattivo, effettua una richiesta di GET all’endpoint /connection_parameters.
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 3%

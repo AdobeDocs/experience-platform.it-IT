@@ -4,10 +4,11 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasmetti i dati a Experience Platform tramite l’acquisizione in batch o in streaming.
 feature: Data Ingestion
-source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 26%
+source-wordcount: '145'
+ht-degree: 21%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 26%
    - [Panoramica](streaming-ingestion/overview.md)
    - [Connettore Kafka](streaming-ingestion/kafka.md)
    - [Risoluzione dei problemi](streaming-ingestion/troubleshooting.md)
-- Acquisizione batch{#batch}
+- Acquisizione in batch{#batch}
    - [Guida introduttiva alle API di acquisizione batch](batch-ingestion/getting-started.md)
    - [Panoramica API](batch-ingestion/overview.md)
    - [Guida per gli sviluppatori API](batch-ingestion/api-overview.md)
@@ -39,7 +40,7 @@ ht-degree: 26%
    - [Trasmissione di più messaggi](tutorials/streaming-multiple-messages.md)
 - Qualità dei dati e monitoraggio{#quality}
    - [Panoramica](quality/overview.md)
-   - [Monitoraggio dell’acquisizione di dati](quality/monitor-data-ingestion.md)
+   - [Monitorare l’acquisizione dei dati](quality/monitor-data-ingestion.md)
    - [Recupera diagnostica degli errori](quality/error-diagnostics.md)
    - [Recupera batch non riusciti](quality/retrieve-failed-batches.md)
    - [Convalida acquisizione in streaming](quality/streaming-validation.md)

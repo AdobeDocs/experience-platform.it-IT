@@ -3,11 +3,12 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida introduttiva all’API del profilo cliente in tempo reale
 type: Documentation
 description: La guida introduttiva all’API di profilo descrive i concetti chiave e le funzionalità di base necessari per utilizzare gli endpoint API del profilo cliente in tempo reale al fine di eseguire operazioni CRUD di base sui dati del profilo.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 12%
+source-wordcount: '407'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +28,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ## Lettura delle chiamate API di esempio
 
-Il [!DNL Real-Time Customer Profile] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare correttamente le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
+Il [!DNL Real-Time Customer Profile] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare correttamente le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ## Intestazioni richieste
 

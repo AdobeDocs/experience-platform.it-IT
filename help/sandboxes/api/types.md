@@ -3,10 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;elenco sandbox
 solution: Experience Platform
 title: Endpoint API per tipi di sandbox
 description: Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione, devi eseguire una richiesta GET all’endpoint /sandboxTypes.
+role: Developer
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '158'
 ht-degree: 3%
 
 ---
@@ -17,7 +18,7 @@ Per recuperare un elenco dei tipi di sandbox supportati per la tua organizzazion
 
 ## Introduzione
 
-L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+L’endpoint API utilizzato in questa guida fa parte del [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Prima di continuare, controlla [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ## Recuperare un elenco di tipi di sandbox supportati
 

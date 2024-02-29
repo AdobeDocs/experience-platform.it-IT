@@ -1,11 +1,12 @@
 ---
 title: Guida dell’API di igiene dei dati
 description: Scopri come correggere o eliminare in modo programmatico i dati personali memorizzati dai clienti in Adobe Experience Platform.
+role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +36,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 Questo documento fornisce un esempio di chiamata API per dimostrare come formattare le richieste. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/api-guide.md#sample-api) nella guida introduttiva di Experienci Platform API.
 
-## Scadenze set di dati
+## Scadenze dei set di dati
 
 La scadenza di un set di dati è un’azione &quot;elimina un set di dati&quot; posticipata nel tempo. Creando una scadenza del set di dati, si specifica un momento futuro in cui tale set di dati deve essere eliminato. Consulta la [guida dell’endpoint &quot;dataset expiration&quot;](./dataset-expiration.md) per informazioni dettagliate sulla pianificazione delle scadenze dei set di dati nell’API.
 

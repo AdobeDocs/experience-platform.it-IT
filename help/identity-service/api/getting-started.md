@@ -3,11 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;identity service api;guida
 solution: Experience Platform
 title: Guida API di Identity Service
 description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti in tempo quasi reale tra dispositivi e canali diversi, utilizzando i grafici delle identità in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 21%
+source-wordcount: '753'
+ht-degree: 14%
 
 ---
 
@@ -21,17 +22,17 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 - [[!DNL Identity Service]](../home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati del profilo cliente. Ciò avviene collegando le identità tra dispositivi e sistemi in cui i clienti interagiscono con il tuo marchio.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere o disporre di per effettuare correttamente chiamate al [!DNL Identity Service] API.
 
 ### Lettura delle chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
+Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API di [!DNL Platform], devi prima completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -59,8 +60,8 @@ La tabella seguente mostra alcuni percorsi di esempio che utilizzano le regioni:
 
 | Servizio | Regione: VA7 | Regione: NLD2 |
 | ------ | -------- |--------- |
-| [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
-| [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/namespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
+| API [!DNL Identity Service] | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
+| API [!DNL Identity Namespace] | https://</span>platform-va7.adobe.</span>io/data/core/namespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
 >[!NOTE]
 >

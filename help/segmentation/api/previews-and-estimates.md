@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Endpoint API per anteprime e stime
 description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima disponibili in Adobe Experience Platform per visualizzare informazioni di riepilogo utili a isolare il pubblico previsto.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '971'
 ht-degree: 2%
 
 ---

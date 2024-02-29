@@ -1,10 +1,11 @@
 ---
 title: Endpoint API di ricerca segmenti
 description: Nell’API del servizio di segmentazione di Adobe Experience Platform, la ricerca dei segmenti viene utilizzata per cercare i campi contenuti in diverse origini dati e restituirli quasi in tempo reale. Questa guida fornisce informazioni utili per comprendere meglio la Ricerca di segmenti e include chiamate API di esempio per eseguire azioni di base utilizzando l’API.
+role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1189'
 ht-degree: 2%
 
 ---

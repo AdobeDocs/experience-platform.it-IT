@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;label identities
 solution: Experience Platform
 title: Etichettare un campo come identità
 description: I campi che contengono informazioni personali (PII, personally identifiable information) possono essere etichettati come campi di identità. Un valore fornito in un campo di identità viene interpretato come un’identità dal servizio Identity. Lo spazio dei nomi dell’identità è specificato come parte dell’etichettatura del campo.
+role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 1%

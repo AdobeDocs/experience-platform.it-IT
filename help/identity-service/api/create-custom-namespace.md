@@ -3,8 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;spazio dei nomi;spazio dei
 solution: Experience Platform
 title: Creare uno spazio dei nomi personalizzato nell’API del servizio Identity
 description: Utilizzando l’API Spazio dei nomi identità, puoi creare uno spazio dei nomi identità personalizzato che sarà disponibile solo per la tua organizzazione.
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 5%

@@ -2,11 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;controllo degli accessi basato su attributi;
 title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 19%
+source-wordcount: '1714'
+ht-degree: 17%
 
 ---
 
@@ -51,7 +52,7 @@ Effettua le seguenti operazioni:
 
 [!UICONTROL Autorizzazioni] è l’area di Experience Cloud in cui gli amministratori possono definire ruoli utente e criteri per gestire le autorizzazioni per funzioni e oggetti all’interno di un’applicazione di prodotto.
 
-Da a [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni per le risorse desiderate per tali ruoli. [!UICONTROL Le autorizzazioni ti consentono inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.]
+Da a [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni per le risorse desiderate per tali ruoli. [!UICONTROL Autorizzazioni] consente inoltre di gestire le etichette, le sandbox e gli utenti associati a un ruolo specifico.
 
 Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 

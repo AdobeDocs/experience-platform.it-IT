@@ -5,10 +5,11 @@ breadcrumb-title: Guida di Data Science Workspace
 user-guide-description: Utilizza l’apprendimento automatico per sviluppare, addestrare e valutare modelli e ricette con Adobe Sensei e JupyterLab Notebooks.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 19%
+source-wordcount: '225'
+ht-degree: 18%
 
 ---
 
@@ -33,7 +34,7 @@ ht-degree: 19%
    * [Esperimenti](api/experiments.md)
    * [Modelli](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Insights](api/insights.md)
+   * [Approfondimenti](api/insights.md)
    * [Appendice](api/appendix.md)
 * Ricette predefinite {#pre-built-recipes}
    * [Ricetta per consigli sui prodotti](pre-built-recipes/product-recommendations.md)

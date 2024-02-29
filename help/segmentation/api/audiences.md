@@ -1,8 +1,9 @@
 ---
 title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 4%
@@ -722,7 +723,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Lo spazio dei nomi per il pubblico. |
 | `description` | Una descrizione del pubblico. |
 | `type` | Campo generato dal sistema che indica se il pubblico è generato da Platform o da un pubblico generato esternamente. I valori possibili includono `SegmentDefinition` e `ExternalSegment`. A `SegmentDefinition` fa riferimento a un pubblico generato in Platform, mentre un `ExternalSegment` fa riferimento a un pubblico non generato in Platform. |
-| `lifecycleState` | Stato del pubblico. I valori possibili includono `draft`, `published` e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando viene pubblicato il pubblico e `inactive` quando il pubblico non è più attivo. |
+| `lifecycleState` | Stato del pubblico. I valori possibili includono `draft`, `published`, e `inactive`. `draft` rappresenta quando viene creato il pubblico, `published` quando viene pubblicato il pubblico e `inactive` quando il pubblico non è più attivo. |
 | `datasetId` | ID del set di dati in cui è possibile trovare i dati sul pubblico. |
 | `labels` | Etichette di controllo dell’accesso basate su attributi e utilizzo dati a livello di oggetto rilevanti per il pubblico. |
 

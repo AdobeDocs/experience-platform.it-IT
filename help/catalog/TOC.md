@@ -3,10 +3,11 @@ audience: user
 user-guide-title: Guida al catalogo e ai set di dati
 user-guide-description: Esplora la derivazione dei dati, i metadati, le descrizioni dei file, le directory e i set di dati all’interno del Data Lake e scopri di più sul sistema del servizio del Catalogo.
 feature: Catalog
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 36%
+source-wordcount: '112'
+ht-degree: 33%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 36%
    * [Etichette di utilizzo dei dati](api/labels.md)
    * [Appendice](api/appendix.md)
 * Set di dati {#datasets}
-   * [Set di dati - Panoramica](datasets/overview.md)
+   * [Panoramica sui set di dati](datasets/overview.md)
    * [Guida utente sui set di dati](datasets/user-guide.md)
    * [Creare e popolare un set di dati utilizzando le API](datasets/create.md)
    * [Abilitare un set di dati per profilo e identità](datasets/enable-for-profile.md)

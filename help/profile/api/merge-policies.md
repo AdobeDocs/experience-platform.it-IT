@@ -3,10 +3,11 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Endpoint API per i criteri di unione
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli in modo da ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare come i dati avranno priorità e quali saranno combinati per creare una vista unificata.
+role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2465'
 ht-degree: 2%
 
 ---
