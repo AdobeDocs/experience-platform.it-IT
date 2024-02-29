@@ -4,9 +4,9 @@ description: Scopri come creare e utilizzare i tipi di pubblico dell’account p
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ Il [!UICONTROL Sfoglia] viene visualizzata una pagina con un elenco di tutti i t
 
 Questa vista elenca informazioni sul pubblico, tra cui nome, conteggio dei profili, origine, stato del ciclo di vita, data di creazione e data dell’ultimo aggiornamento.
 
+Puoi anche utilizzare la funzionalità di ricerca e filtro per cercare e ordinare rapidamente tipi di pubblico specifici per l’account. Ulteriori informazioni su questa funzione sono disponibili nella [guida all’interfaccia utente di segmentazione](./overview.md#manage-audiences).
+
 ## Creare un pubblico {#create}
+
+>[!NOTE]
+>
+>I tipi di pubblico dell’account vengono valutati utilizzando **batch** e verranno valutati ogni 24 ore.
 
 Per creare un pubblico di tipo account, seleziona **[!UICONTROL Creare un pubblico]** il [!UICONTROL Sfoglia] pagina.
 
 ![Il [!UICONTROL Creare un pubblico] nella pagina di navigazione del pubblico dell’account.](../images/ui/account-audiences/select-create-audience.png)
 
-Viene visualizzato il Generatore di segmenti. Gli attributi dell’account vengono visualizzati sulla barra di navigazione a sinistra.
+Viene visualizzato il Generatore di segmenti. Gli attributi dell’account e i tipi di pubblico vengono visualizzati sulla barra di navigazione a sinistra. Sotto [!UICONTROL Attributi] , puoi aggiungere attributi personalizzati e creati da Platform.
 
-![Viene visualizzato il Generatore di segmenti. Vengono visualizzati solo gli attributi.](../images/ui/account-audiences/segment-builder.png)
+![Viene visualizzato il Generatore di segmenti. Vengono visualizzati solo gli attributi e i tipi di pubblico.](../images/ui/account-audiences/segment-builder.png)
 
 Durante la creazione del pubblico dell’account, tieni presente che gli eventi sono elencati in **[!UICONTROL Persone]**, anziché essere la propria scheda, in quanto questi attributi sono associati alle persone.
 
 ![La posizione in cui trovare gli eventi, che si trova all’interno del [!UICONTROL Persone] cartella, viene evidenziato.](../images/ui/account-audiences/attributes.png)
+
+Sotto [!UICONTROL Tipi di pubblico] , puoi aggiungere tipi di pubblico basati sulle persone creati in precedenza da utilizzare per la creazione del pubblico del tuo account.
+
+![Viene evidenziata la scheda Tipi di pubblico nel Generatore di segmenti.](../images/ui/account-audiences/audiences.png)
 
 Per ulteriori informazioni sull’utilizzo del Generatore di segmenti, consulta la sezione [Guida dell’interfaccia utente di Segment Builder](./segment-builder.md).
 
