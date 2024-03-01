@@ -5,10 +5,10 @@ title: Endpoint API per processi di privacy
 description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 2%
+source-wordcount: '1857'
+ht-degree: 1%
 
 ---
 
@@ -26,25 +26,34 @@ Puoi visualizzare un elenco di tutti i processi di privacy disponibili all’int
 
 **Formato API**
 
-Questo formato di richiesta utilizza un `regulation` parametro di query sul `/jobs` punto finale, quindi inizia con un punto interrogativo (`?`) come illustrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. È possibile separare più parametri utilizzando il simbolo commerciale (`&`).
+Questo formato di richiesta utilizza un `regulation` parametro di query sul `/jobs` punto finale, quindi inizia con un punto interrogativo (`?`) come illustrato di seguito. Quando vengono elencate le risorse, l’API Privacy Service restituisce fino a 1000 processi e impagina la risposta. Usa altri parametri di query (`page`, `size`e filtri di data) per filtrare la risposta. È possibile separare più parametri utilizzando il simbolo commerciale (`&`).
+
+>[!TIP]
+>
+>Utilizza parametri di query aggiuntivi per filtrare ulteriormente i risultati per query specifiche. Ad esempio, puoi scoprire quanti processi relativi alla privacy sono stati inviati in un determinato periodo di tempo e il loro stato utilizzando `status`, `fromDate`, e `toDate` parametri di query.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulta la panoramica su [normative supportate](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
+| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulta la panoramica su [normative supportate](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
-| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il massimo è `100`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
+| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `100` e il massimo è `1000`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
+| `{status}` | Il comportamento predefinito consiste nell’includere tutti gli stati. Se si specifica un tipo di stato, la richiesta restituisce solo i processi di privacy che corrispondono a tale tipo di stato. I valori accettati includono: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | Questo parametro limita i risultati a quelli elaborati prima di una data specificata. Dalla data della richiesta, il sistema può tornare indietro di 45 giorni. Tuttavia, l’intervallo non può essere superiore a 30 giorni.<br>Accetta il formato AAAA-MM-GG. La data fornita viene interpretata come data di cessazione espressa in ora di Greenwich (GMT).<br>Se non fornisci questo parametro (e un corrispondente `fromDate`), il comportamento predefinito restituisce i processi che risalgono agli ultimi sette giorni. Se usa `toDate`, è inoltre necessario utilizzare `fromDate` parametro di query. Se non utilizzi entrambi, la chiamata restituisce un errore 400. |
+| `{fromDate}` | Questo parametro limita i risultati a quelli elaborati dopo una data specificata. Dalla data della richiesta, il sistema può tornare indietro di 45 giorni. Tuttavia, l’intervallo non può essere superiore a 30 giorni.<br>Accetta il formato AAAA-MM-GG. La data fornita viene interpretata come la data di origine della richiesta espressa in ora di Greenwich (GMT).<br>Se non fornisci questo parametro (e un corrispondente `toDate`), il comportamento predefinito restituisce i processi che risalgono agli ultimi sette giorni. Se usa `fromDate`, è inoltre necessario utilizzare `toDate` parametro di query. Se non utilizzi entrambi, la chiamata restituisce un errore 400. |
+| `{filterDate}` | Questo parametro limita i risultati a quelli elaborati in una data specificata. Accetta il formato AAAA-MM-GG. Il sistema può tornare indietro negli ultimi 45 giorni. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **Richiesta**

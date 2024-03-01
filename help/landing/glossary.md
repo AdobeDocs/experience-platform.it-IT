@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossario di Adobe Experience Platform
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
+source-wordcount: '7996'
 ht-degree: 0%
 
 ---
@@ -344,6 +344,8 @@ ht-degree: 0%
 **Metodo di unione**: quando si definisce un criterio di unione utilizzando l’interfaccia utente di Platform, il metodo di unione specifica il modo in cui assegnare la priorità ai frammenti di dati in caso di conflitto. Quando si utilizza l’API Real-Time Customer Profile per definire un criterio di unione, il metodo di unione viene determinato utilizzando `attributeMerge` oggetto.
 
 **Criterio di unione**: i criteri di unione sono regole che Experienci Platform utilizza per determinare in che modo i frammenti di dati dei clienti provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina i dati a cui assegnare la priorità per l’inclusione nel profilo.
+
+**MHMDAa**: Il [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) migliora i diritti dei consumatori alla privacy in relazione ai loro dati sanitari. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
 
 **Mixin**: consulta &quot;Gruppo di campi schema&quot;.
 

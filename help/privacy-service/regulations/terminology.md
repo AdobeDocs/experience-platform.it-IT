@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologia delle normative sulla privacy
 description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 2%
+source-wordcount: '1842'
+ht-degree: 1%
 
 ---
 
@@ -100,6 +100,8 @@ Questo documento fornisce le definizioni dei termini chiave relativi alle normat
 ## M
 
 **Stabilimento principale**: il luogo all’interno dell’Unione in cui vengono prese le principali decisioni relative al trattamento dei dati, per quanto riguarda il responsabile del trattamento.
+
+**MHMDAa**: Il [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) migliora i diritti dei consumatori alla privacy in relazione ai loro dati sanitari. Impone la divulgazione, il consenso dei consumatori e i diritti di cancellazione per i dati sanitari e vieta la vendita di dati sanitari senza autorizzazione. Inoltre, la legge rende illegale l&#39;uso di recinti geografici intorno alle strutture sanitarie.
 
 ## N
 

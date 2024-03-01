@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1458'
 ht-degree: 14%
 
 ---
@@ -46,6 +46,7 @@ Dashboard per [!DNL Privacy Service] L’interfaccia utente fornisce due widget 
 | [!UICONTROL RGPD] | dell&#39;Unione europea [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | del Brasile [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | La Nuova Zelanda [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | thailandese [!DNL Personal Data Protection Act] |
 | [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
