@@ -3,10 +3,10 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 3%
+source-wordcount: '1673'
+ht-degree: 2%
 
 ---
 
@@ -48,6 +48,15 @@ Riattivi il pubblico aggiornato nella stessa destinazione, ma poiché non viene 
 Per garantire che tutti i profili vengano inviati alla destinazione, devi creare un nuovo pubblico con la nuova configurazione, quindi attivarlo nella destinazione.
 
 +++
+
+### Quando un pubblico viene rimosso da una destinazione, esiste un segnale inviato alla destinazione che indica che il pubblico viene rimosso?
+
++++Risposta
+
+No, non esiste alcuna dipendenza tra la destinazione dell&#39;Experience Platform e l&#39;istanza cliente del sistema di destinazione. Dal lato della ricezione, l’unica indicazione che il sistema di destinazione vedrebbe è che ha smesso di ricevere i dati sul pubblico.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -82,7 +91,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++Rispondi prima di poter inviare i tuoi tipi di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
 
 * Il tuo [!DNL Facebook] l&#39;account utente deve avere **[!DNL Manage campaigns]** Autorizzazione abilitata per l’account annuncio che intendi utilizzare.
-* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Seleziona `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
+* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Utilizza `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
 
   >[!IMPORTANT]
   >

@@ -5,10 +5,10 @@ description: Scopri come attivare i tipi di pubblico dell’account nelle destin
 badgeB2B: label="Edizione B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Edizione B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ Questo articolo spiega il flusso di lavoro necessario per esportare [pubblico de
 Vai a **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, e seleziona la **[!UICONTROL Catalogo]** scheda. Utilizza il **[!UICONTROL Tipi di dati]** filtra e seleziona **[!UICONTROL Account]** per visualizzare le destinazioni che supportano l’attivazione dei tipi di pubblico dell’account. Attualmente, l’esportazione del pubblico dell’account è disponibile solo per alcune destinazioni di archiviazione cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Archiviazione BLOB di Azure](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e [(Aziende) Tipi di pubblico LinkedIn corrispondenti](/help/destinations/catalog/social/linkedin.md) destinazione.
 
 ![Destinazioni che supportano i tipi di pubblico dell’account.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Video introduttivo
+
+Guarda il video seguente per una panoramica sulla creazione e l’attivazione dei tipi di pubblico per gli account e sui casi d’uso supportati per l’attivazione di tali tipi di pubblico.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Prerequisiti {#prerequisites}
 
