@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1209'
 ht-degree: 5%
 
 ---
@@ -247,6 +247,7 @@ ht-degree: 5%
          * [Configurare una destinazione di archiviazione Azure Data Lake con le opzioni di formattazione del file personalizzato e la configurazione del nome del file personalizzato](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Configurare una destinazione Data Landing Zone (DLZ) con opzioni di formattazione del file personalizzate e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Configurare una destinazione SFTP con opzioni di formattazione file predefinite e configurazione del nome file personalizzato](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Configurare una destinazione basata su file per esportare i tipi di pubblico potenziali](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Riferimento API per l’authoring delle destinazioni {#authoring-api}
       * [Riferimento API per Destination SDK (authoring delle destinazioni)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operazioni del server di destinazione {#server-operations}
@@ -293,4 +294,4 @@ ht-degree: 5%
       * [Modello self-service della documentazione](./destination-sdk/docs-framework/self-service-template.md)
       * [Best practice di authoring](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Domande frequenti](./destinations-faq.md)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes_it)
