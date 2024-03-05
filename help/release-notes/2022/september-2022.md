@@ -2,16 +2,16 @@
 title: Note sulla versione di Adobe Experience Platform di settembre 2022
 description: Note sulla versione di settembre 2022 per Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 19%
+source-wordcount: '2762'
+ht-degree: 18%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 28 settembre 2022**
+**Data di rilascio: giovedì 28 settembre 2022**
 
 Nuove funzioni di Adobe Experience Platform:
 
@@ -110,8 +110,8 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Integrazione della navigazione a sinistra nell’interfaccia utente di Platform | Tutte le funzionalità che in precedenza erano esclusive dell’interfaccia utente di Data Collection (inclusi tag, inoltro eventi e flussi di dati) ora sono disponibili anche nella barra di navigazione a sinistra di Experienci Platform, nella categoria **[!UICONTROL Raccolta dati]**. Questo elimina la necessità di passare da un’interfaccia utente all’altra quando si lavora con le funzionalità di raccolta dati in Platform. |
 | Attribuzione degli utenti nei tag e nell’inoltro degli eventi | Quando l’inserzione è disponibile [!UICONTROL Proprietà] in tag e inoltro eventi, ogni proprietà elencata ora mostra quando è stata aggiornata per l’ultima volta e quale utente ha effettuato l’aggiornamento. |
 | [[!DNL Snap Conversions API] estensione](https://exchange.adobe.com/apps/ec/108550) per l’inoltro di eventi | Ora puoi inviare dati a [!DNL Snapchat Conversions API] utilizzando un [inoltro eventi](../../tags/ui/event-forwarding/overview.md) estensione. Per ulteriori informazioni su come autenticare e utilizzare l’API, consulta [[!DNL Snapchat Marketing API] documentazione](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] in Web SDK](../../edge/fundamentals/user-agent-client-hints.md) | L’SDK per web ora supporta [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ai proprietari di siti web di accedere a gran parte delle stesse informazioni disponibili in [!DNL User-Agent] stringa, ma in modo più rispettoso della privacy. |
-| [Migrazione pagina per pagina dell’SDK web](../../edge/home.md#migrating-to-web-sdk) | Ora puoi migrare le proprietà web esistenti da altre librerie Experience Cloud, come [!DNL at.js], a Web SDK, una pagina alla volta. Questo consente un approccio graduale alla migrazione dell’SDK web, senza la necessità di eseguire la migrazione di tutte le pagine contemporaneamente. |
+| [User-Agent Client Hints in Web SDK](/help/web-sdk/use-cases/client-hints.md) | L’SDK per web ora supporta [User-Agent Client Hints](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). Gli hint client consentono ai proprietari di siti web di accedere a gran parte delle stesse informazioni disponibili in [!DNL User-Agent] stringa, ma in modo più rispettoso della privacy. |
+| [Migrazione pagina per pagina dell’SDK web](../../web-sdk/home.md#migrating-to-web-sdk) | Ora puoi migrare le proprietà web esistenti da altre librerie Experience Cloud, come [!DNL at.js], a Web SDK, una pagina alla volta. Questo consente un approccio graduale alla migrazione dell’SDK web, senza la necessità di eseguire la migrazione di tutte le pagine contemporaneamente. |
 | [[!DNL Adobe Journey Optimizer] supporto per gli stream di dati](../../datastreams/overview.md#aep) | Il servizio Adobe Experience Platform per gli stream di dati ora supporta [!DNL Adobe Journey Optimizer]. Questa opzione consente di utilizzare i canali in entrata basati su Web e app in [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -126,7 +126,7 @@ Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezi
 
 | Funzione | Descrizione |
 | ----------- | ----------- |
-| SDK di destinazione | Destination SDK fornisce ora supporto completo ai partner e ai clienti che creano destinazioni in batch (o basate su file) prodotte o private. Per ulteriori informazioni, consulta le seguenti pagine della documentazione: <ul><li>[Panoramica di Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurare una destinazione basata su file](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurare le opzioni di formattazione dei file per le destinazioni basate su file](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Verificare le destinazioni basate su file](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK fornisce ora supporto completo ai partner e ai clienti che creano destinazioni in batch (o basate su file) prodotte o private. Per ulteriori informazioni, consulta le seguenti pagine della documentazione: <ul><li>[Panoramica di Destination SDK](../../destinations/destination-sdk/overview.md)</li><li>[Configurare una destinazione basata su file](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[Configurare le opzioni di formattazione dei file per le destinazioni basate su file](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[Verificare le destinazioni basate su file](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -204,7 +204,7 @@ Il servizio Adobe Experience Platform Identity consente di ottenere una visione 
 | --- | --- |
 | Supporto per l’eliminazione di set di dati | Identity Service ora supporta l’eliminazione dei set di dati quando si richiede tramite il [API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/), interfaccia utente o igiene dei dati. Leggi la guida su [eliminazione di set di dati nell’interfaccia utente](../../catalog/datasets/user-guide.md#delete-a-dataset) per ulteriori informazioni. |
 
-Per ulteriori informazioni su Identity Service, consulta la [panoramica su Identity Service](../../identity-service/home.md).
+Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servizio Identity](../../identity-service/home.md).
 
 ## Servizio query {#query-service}
 

@@ -3,7 +3,7 @@ title: Retargeting fuori sede di visitatori non autenticati
 description: Scopri come eseguire il retargeting degli utenti non autenticati utilizzando gli ID potenziali clienti per creare un attributo calcolato che può essere utilizzato per creare un pubblico di utenti non autenticati.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Inoltre, per implementare il caso d’uso, utilizzerai le seguenti funzionalità
 - [Tipi di pubblico](../../segmentation/home.md)
 - [Attributi calcolati](../../profile/computed-attributes/overview.md)
 - [Destinazioni](../../destinations/home.md)
-- [SDK per web](../../edge/home.md)
+- [SDK per web](../../web-sdk/home.md)
 
 ## Trasmettere i dati dei partner in Real-Time CDP {#get-data-in}
 

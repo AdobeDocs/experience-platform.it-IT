@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Panoramica del servizio Identity
 description: Il servizio Adobe Experience Platform Identity consente di ottenere una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi diversi e consentendo di fornire esperienze digitali personali e di impatto in tempo reale.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
 
 ---
 
-# Servizio Adobe Experience Platform Identity
+# Adobe Experience Platform Identity Service
 
 Per offrire esperienze digitali rilevanti, devi disporre di una rappresentazione completa e accurata delle entità del mondo reale che compongono la tua base di clienti.
 
@@ -109,7 +109,7 @@ Il servizio Identity svolge un ruolo fondamentale all’interno di Experienci Pl
 
 * [Schemi](../xdm/home.md): all’interno di uno schema specifico, i campi dello schema contrassegnati come identità consentono di creare grafici di identità.
 * [Set di dati](../catalog/datasets/overview.md): quando un set di dati è abilitato per l’acquisizione in Real-Time Customer Profile, i grafici di identità vengono generati dal set di dati, dato che il set di dati contiene almeno due campi contrassegnati come identità.
-* [SDK per web](../edge/home.md): Web SDK invia eventi di esperienza a Adobe Experience Platform e Identity Service genera un grafico quando esistono due o più identità nell’evento.
+* [SDK per web](../web-sdk/home.md): Web SDK invia eventi di esperienza a Adobe Experience Platform e Identity Service genera un grafico quando esistono due o più identità nell’evento.
 * [Profilo cliente in tempo reale](../profile/home.md): prima dell’unione degli attributi e degli eventi per un determinato profilo, Real-Time Customer Profile poteva fare riferimento al grafico delle identità. Per ulteriori informazioni, consulta la guida su [informazioni sulla relazione tra il servizio Identity e Real-Time Customer Profile](./identity-and-profile.md).
 * [Destinazioni](../destinations/home.md): le destinazioni possono inviare informazioni sul profilo ad altri sistemi in base a uno spazio dei nomi di identità, ad esempio e-mail con hash.
 * [Corrispondenza segmento](../segmentation/ui/segment-match/overview.md): Segment Match corrisponde a due profili in due sandbox diverse che hanno lo stesso spazio dei nomi e lo stesso valore di identità.

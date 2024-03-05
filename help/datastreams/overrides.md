@@ -2,10 +2,10 @@
 title: Configurare gli override dello stream di dati
 description: Scopri come configurare gli override dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite il Web SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 11feeae0409822f0b1ccba2df263f0be466d54e3
+source-git-commit: 90493d179e620604337bda96cb3b7f5401ca4a81
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 67%
+source-wordcount: '1180'
+ht-degree: 61%
 
 ---
 
@@ -27,7 +27,7 @@ Questo articolo spiega il processo di override della configurazione dello stream
 
 >[!IMPORTANT]
 >
->Le sostituzioni dello stream di dati sono supportate solo per [SDK per web](../edge/home.md) e [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/) integrazioni. [API server](../server-api/overview.md) al momento le integrazioni non supportano le sostituzioni dello stream di dati.
+>Le sostituzioni dello stream di dati sono supportate solo per [SDK per web](../web-sdk/home.md) e [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/) integrazioni. [API server](../server-api/overview.md) al momento le integrazioni non supportano le sostituzioni dello stream di dati.
 ><br>
 >Gli override dello stream di dati devono essere utilizzati quando è necessario inviare dati diversi a stream di dati diversi. Non utilizzare le sostituzioni dello stream di dati per i casi d’uso di personalizzazione o i dati di consenso.
 
@@ -116,110 +116,155 @@ Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora
 
 ## Inviare gli override alla rete Edge tramite Web SDK {#send-overrides-web-sdk}
 
->[!NOTE]
->
->In alternativa all’invio degli override di configurazione tramite i comandi di Web SDK, puoi aggiungere gli override di configurazione all’[estensione tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.
+Dopo aver configurato le sostituzioni dello stream di dati nell’interfaccia utente di Data Collection, puoi inviare le sostituzioni alla rete Edge tramite Web SDK o Mobile SDK.
 
-Dopo [aver configurato gli override dello stream di dati](#configure-overrides) nell’interfaccia utente Raccolta dati, puoi inviare gli override alla rete Edge tramite Web SDK.
+* **SDK per web**: vedi [sostituzioni della configurazione dello stream di dati](../web-sdk/commands/datastream-overrides.md#library) per istruzioni sull’estensione tag ed esempi di codice della libreria JavaScript.
+* **SDK per dispositivi mobili**: vedi di seguito.
 
-Se utilizzi Web SDK, inviare le sostituzioni alla rete Edge tramite `edgeConfigOverrides` Il comando è il secondo e ultimo passaggio dell’attivazione delle sostituzioni della configurazione dello stream di dati.
+### Override dell’ID dello stream di dati tramite SDK mobile {#id-override-mobile}
 
-Gli override della configurazione dello stream di dati vengono inviati alla rete Edge tramite il comando `edgeConfigOverrides` di Web SDK. Questo comando crea le sostituzioni dello stream di dati che vengono passate al [!DNL Edge Network] al comando successivo. Se utilizzi il `configure` , le sostituzioni vengono passate per ogni richiesta.
+Gli esempi seguenti mostrano l’aspetto di una sostituzione dell’ID dello stream di dati in un’integrazione SDK per dispositivi mobili. Seleziona le schede seguenti per visualizzare [!DNL iOS] e [!DNL Android] esempi.
 
-Il `edgeConfigOverrides` crea le sostituzioni dello stream di dati che vengono passate al [!DNL Edge Network] al comando successivo.
+>[!BEGINTABS]
 
-Quando viene inviato un override di configurazione con il comando `configure`, viene incluso nei seguenti comandi di Web SDK.
+>[!TAB iOS (Swift)]
 
-* [sendEvent](../edge/fundamentals/tracking-events.md)
-* [setConsent](../edge/consent/iab-tcf/overview.md)
-* [getIdentity](../edge/identity/overview.md)
-* [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
-* [configure](../edge/fundamentals/configuring-the-sdk.md)
+Questo esempio mostra l’aspetto di una sostituzione dell’ID dello stream di dati in un SDK mobile [!DNL iOS] integrazione.
 
-Le opzioni specificate a livello globale possono essere ignorate dall’opzione di configurazione relativa ai singoli comandi.
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
 
-### Invio delle sostituzioni di configurazione tramite Web SDK `sendEvent` comando {#send-event}
-
-L’esempio seguente mostra l’aspetto di un override della configurazione con un comando `sendEvent`.
-
-```js {line-numbers="true" highlight="5-25"}
-alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
-  edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
-    com_adobe_experience_platform: {
-      datasets: {
-        event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
-    },
-    com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
-    },
-    com_adobe_identity: {
-      idSyncContainerId: "1234567"
-    },
-    com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
-});
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-| Parametro | Descrizione |
-|---|---|
-| `edgeConfigOverrides.datastreamId` | Utilizza questo parametro per consentire a una singola richiesta di passare a uno stream di dati diverso da quello definito dal comando `configure`. |
+>[!TAB Android™ (Cotlino)]
 
-### Invio delle sostituzioni di configurazione tramite Web SDK `configure` comando {#send-configure}
+Questo esempio mostra l’aspetto di una sostituzione dell’ID dello stream di dati in un SDK mobile [!DNL Android] integrazione.
 
-L’esempio seguente mostra l’aspetto di un override della configurazione con un comando `configure`.
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
 
-```js {line-numbers="true" highlight="8-30"}
-alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
-  edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
-    },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Override della configurazione dello stream di dati tramite SDK per dispositivi mobili {#config-override-mobile}
+
+Gli esempi seguenti mostrano l’aspetto di una sostituzione della configurazione dello stream di dati in un’integrazione Mobile SDK. Seleziona le schede seguenti per visualizzare [!DNL iOS] e [!DNL Android] esempi.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Questo esempio mostra l’aspetto di una sostituzione della configurazione dello stream di dati in un SDK mobile [!DNL iOS] integrazione.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
       ]
-    },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
-    },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  },
-  onBeforeEventSend: function() { /* … */ });
-};
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-## Inviare le sostituzioni a Edge Network tramite Mobile SDK {#send-overrides-mobile-sdk}
+>[!TAB Android (Kotlin)]
 
-Dopo [configurazione delle sostituzioni dello stream di dati](#configure-overrides) Nell’interfaccia utente di Data Collection, ora puoi inviare le sostituzioni alla rete Edge tramite l’SDK di Mobile.
+Questo esempio mostra l’aspetto di una sostituzione della configurazione dello stream di dati in un SDK mobile [!DNL Android] integrazione.
 
-Per informazioni su come inviare le sostituzioni alla rete Edge, leggi [guida all’invio di sostituzioni tramite sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) o [guida all’invio di sostituzioni tramite regole](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
 
 ## Esempio di payload {#payload-example}
 

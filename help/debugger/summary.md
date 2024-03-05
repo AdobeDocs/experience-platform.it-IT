@@ -6,16 +6,16 @@ seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 74%
+source-wordcount: '711'
+ht-degree: 82%
 
 ---
 
 # Scheda Riepilogo
 
-Per eseguire Adobe Experience Platform Debugger, apri la pagina da esaminare nel browser, quindi seleziona l’icona (![](images/start-icon.jpg)) sulla barra del browser. L’estensione si apre su **Riepilogo** scheda.
+Per eseguire Adobi Experience Platform Debugger, apri la pagina da esaminare nel browser, quindi seleziona l’icona (![](images/start-icon.jpg)) sulla barra del browser. L’estensione si apre su **Riepilogo** scheda.
 
 ![](images/summary.jpg)
 
@@ -81,7 +81,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
   </tr> 
   <tr> 
    <td colname="col1"> <p>Versione </p> </td> 
-   <td colname="col2"> <p>Versione di Turbine.</a> </p> </td> 
+   <td colname="col2"> <p>Versione di Turbine</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Data build </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Versione libreria </p> </td> 
-   <td colname="col2"> <p>Numero della <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">versione della libreria</a> dell’SDK web di Adobe Experience Platform. </p> </td> 
+   <td colname="col2"> <p>Numero della <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">versione della libreria</a> dell’SDK web di Adobe Experience Platform. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Namespace</p> </td> 
@@ -185,7 +185,7 @@ Experience Platform Debugger mostra le seguenti informazioni per ciascuna soluzi
    <td colname="col2"> <p>ID dell’esperienza Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>Nome Nome</p> </td> 
+   <td colname="col1"> <p>Nome offerta</p> </td> 
    <td colname="col2"> <p>Nome dell’<a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> offerta</a> Target. Disponibile senza autenticazione solo se implementi il listener di eventi Debugging nel codice o nel gestore di tag e attivi i <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> token di risposta necessari</a> nell’interfaccia utente di Target. </p> </td> 
   </tr> 
   <tr> 

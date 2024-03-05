@@ -2,10 +2,10 @@
 title: Preparazione dei dati per la raccolta dati
 description: Scopri come mappare i dati su uno schema evento Experience Data Model (XDM) durante la configurazione di uno stream di dati per Adobe Experience Platform Web e Mobile SDK.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Esistono due casi di utilizzo in cui la preparazione dei dati per la raccolta de
 
 ## Inviare un livello dati esistente alla rete Edge tramite Web SDK {#send-datalayer-via-websdk}
 
-Il livello dati esistente deve essere inviato utilizzando `data` opzione del `sendEvent` come descritto nella [Documentazione di Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+Il livello dati esistente deve essere inviato utilizzando [`data`](/help/web-sdk/commands/sendevent/data.md) oggetto all&#39;interno del `sendEvent` comando.
 
-Se utilizzi i Tag, devi utilizzare **[!UICONTROL Dati]** campo del **[!UICONTROL Invia evento]** tipo di azione, come descritto nella [Documentazione dell’estensione tag SDK per web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Se utilizzi i Tag, devi utilizzare **[!UICONTROL Dati]** campo del **[!UICONTROL Invia evento]** tipo di azione, come descritto nella [Documentazione dell’estensione tag SDK per web](/help/tags/extensions/client/web-sdk/action-types.md).
 
 Il resto di questa guida si concentrerà su come mappare il livello dati agli standard XDM dopo che è stato inviato da WebSDK.
 

@@ -2,9 +2,9 @@
 title: Panoramica end-to-end sulla raccolta dati
 description: Panoramica di alto livello su come inviare dati di eventi alle soluzioni Adobe Experience Cloud utilizzando le funzionalità di raccolta dati di Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2616'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,8 @@ Dopo aver creato uno schema e un flusso di dati, il passaggio successivo consist
 >
 >Questa sezione utilizza l’interfaccia utente di Data Collection per configurare l’estensione tag Web SDK, ma puoi anche installarla e configurarla utilizzando codice non elaborato. Per ulteriori informazioni, consulta le seguenti guide:
 >
->* [Installare l’SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configurare l’SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Installare l’SDK](/help/web-sdk/install/overview.md)
+>* [Configurare l’SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Inoltre, anche se desideri utilizzare solo l’inoltro degli eventi, devi comunque installare e configurare l’SDK come descritto prima di configurare l’inoltro degli eventi a [passaggio successivo](#event-forwarding).
 

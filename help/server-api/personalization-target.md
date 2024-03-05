@@ -2,7 +2,7 @@
 title: Personalizzazione tramite Adobe Target
 description: Scopri come utilizzare l’API server per distribuire ed eseguire il rendering di esperienze personalizzate create in Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 2%
@@ -17,7 +17,7 @@ L’API del server di rete Edge può distribuire ed eseguire il rendering di esp
 
 >[!IMPORTANT]
 >
->Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../edge/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
+>Esperienze di personalizzazione create tramite [Compositore esperienza visivo di Target](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) non sono completamente supportati dall’API server. L’API server può **recuperare** attività create dal Compositore esperienza visivo, ma l’API server non può **rendering** attività create dal Compositore esperienza visivo. Se desideri eseguire il rendering delle attività create da VEC, implementa [personalizzazione ibrida](../web-sdk/personalization/hybrid-personalization.md) utilizzando Web SDK e l’API del server di rete Edge.
 
 ## Configurare lo stream di dati {#configure-your-datastream}
 

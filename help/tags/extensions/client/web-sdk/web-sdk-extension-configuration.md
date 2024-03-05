@@ -2,9 +2,9 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Questa sezione ti consente di definire il comportamento dell’SDK web quando si
 * **[!UICONTROL Utilizzare i cookie di terze parti]**: quando questa opzione è abilitata, Web SDK tenta di memorizzare un identificatore utente in un cookie di terze parti. In caso di esito positivo, l’utente viene identificato come un singolo utente mentre si sposta tra più domini, anziché essere identificato come un utente separato su ciascun dominio. Se questa opzione è abilitata, l’SDK potrebbe ancora non essere in grado di memorizzare l’identificatore utente in un cookie di terze parti se il browser non supporta i cookie di terze parti o se è stato configurato dall’utente per non consentire i cookie di terze parti. In questo caso, l’SDK memorizza l’identificatore solo nel dominio di prime parti.
 
   >[!IMPORTANT]
-  >>I cookie di terze parti non sono compatibili con [ID dispositivo di prime parti](../../../../edge/identity/first-party-device-ids.md) funzionalità di Web SDK.
+  >>I cookie di terze parti non sono compatibili con [ID dispositivo di prime parti](../../../../web-sdk/identity/first-party-device-ids.md) funzionalità di Web SDK.
 Puoi utilizzare gli ID dispositivo di prime parti oppure cookie di terze parti, ma non puoi utilizzare entrambe le funzioni contemporaneamente.
   >
 ## Configurare le impostazioni di personalizzazione {#personalization}
@@ -113,9 +113,9 @@ Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare 
 
 ![Immagine che mostra le impostazioni di raccolta dati dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=it) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati alla rete Edge. Per informazioni più dettagliate su come utilizzare questa funzione, consulta [qui](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati alla rete Edge.
 * **[!UICONTROL Abilita raccolta dati di clic]**: Web SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata, ma può essere disabilitata utilizzando questa opzione. I collegamenti sono etichettati anche come collegamenti di download se contengono una delle espressioni di download elencate in [!UICONTROL Qualificatore collegamento di download] casella di testo. In questo Adobe vengono forniti alcuni qualificatori predefiniti per i collegamenti di download. Puoi modificarli in base alle tue esigenze.
-* **[!UICONTROL Dati contestuali raccolti automaticamente]**: per impostazione predefinita, Web SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se desideri visualizzare un elenco delle informazioni raccolte dall’Adobe, puoi trovarlo [qui](../../../../edge/data-collection/automatic-information.md). Se non desideri raccogliere questi dati o desideri solo raccogliere determinate categorie di dati, seleziona **[!UICONTROL Informazioni specifiche sul contesto]** e seleziona i dati che desideri raccogliere.
+* **[!UICONTROL Dati contestuali raccolti automaticamente]**: per impostazione predefinita, Web SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se non desideri raccogliere questi dati o desideri solo raccogliere determinate categorie di dati, seleziona **[!UICONTROL Informazioni specifiche sul contesto]** e seleziona i dati che desideri raccogliere. Consulta [`context`](/help/web-sdk/commands/configure/context.md) per ulteriori informazioni.
 
 ## Configurare gli override dello stream di dati {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 
 L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
-1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../../../datastreams/configure.md).
+1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](/help/datastreams/configure.md).
 2. Quindi, devi inviare le sostituzioni a Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
 
-Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](../../../../datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
+Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](/help/datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
 
 In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi configurare le sostituzioni nella schermata dell’estensione tag mostrata di seguito.
 
@@ -136,10 +136,10 @@ In alternativa al passaggio delle sostituzioni tramite un comando Web SDK, puoi 
 >
 Le sostituzioni dello stream di dati devono essere configurate in base all’ambiente. Gli ambienti di sviluppo, staging e produzione hanno tutti sostituzioni separate. Puoi copiare le impostazioni tra di esse utilizzando le opzioni dedicate mostrate nella schermata seguente.
 
-![L’immagine che mostra le sostituzioni della configurazione dello stream di dati nella pagina dell’estensione tag di Web SDK.](assets/datastream-overrides.png)
+![L’immagine che mostra le sostituzioni della configurazione dello stream di dati utilizzando la pagina dell’estensione tag di Web SDK.](assets/datastream-overrides.png)
 
 ## Configurare le impostazioni avanzate
 
 Utilizza il **[!UICONTROL Percorso base perimetrale]** se è necessario modificare il percorso di base utilizzato per interagire con la rete Edge. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
 
-![Immagine che mostra le impostazioni avanzate nella pagina dell’estensione tag Web SDK.](assets/advanced-settings.png)
+![Immagine che mostra le impostazioni avanzate utilizzando la pagina dell’estensione tag Web SDK.](assets/advanced-settings.png)

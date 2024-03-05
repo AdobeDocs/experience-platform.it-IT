@@ -3,9 +3,9 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 8%
 
 ---
@@ -30,7 +30,7 @@ Questo documento fornisce una panoramica di alto livello sull’inoltro degli ev
 >
 >Per informazioni su come l’inoltro degli eventi si inserisce nell’ecosistema di raccolta dati di Platform, consulta la sezione [panoramica sulla raccolta dati](../../../collection/home.md).
 
-Inoltro di eventi in combinazione con Adobe Experience Platform [SDK per web](../../../edge/home.md) e [SDK per dispositivi mobili](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
+Inoltro di eventi in combinazione con Adobe Experience Platform [SDK per web](/help/web-sdk/home.md) e [SDK per dispositivi mobili](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) offre i seguenti vantaggi:
 
 **Prestazioni**:
 

@@ -2,10 +2,10 @@
 title: Evoluzione da Audience Manager a Real-Time CDP
 description: Comprendere le considerazioni prima di pianificare la migrazione da Audience Manager a Real-Time CDP.
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 84%
+source-wordcount: '498'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Man mano che la tua organizzazione inizia a utilizzare Adobe Real-Time CDP, espl
 
 ## 1. Considerare l’architettura dei dati all’interno di Audience Manager
 
-Nel considerare l’evoluzione da Audience Manager a Real-Time CDP, è giunto il momento di analizzare i tuoi [Segmenti di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) e determinare quali [segnali](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [caratteristiche](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html), e [regole](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) compongono tali segmenti.
+Nel considerare l’evoluzione da Audience Manager a Real-Time CDP, è giunto il momento di analizzare i tuoi [Segmenti di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) e determinare quali [segnali](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [caratteristiche](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) e [regole](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) compongono tali segmenti.
 
 Inoltre, prendi in considerazione le origini dati attualmente utilizzate in Audience Manager.
 
@@ -33,7 +33,7 @@ Adobe consiglia di categorizzare i segmenti nel modo seguente:
 
 ## 2. Quali segmenti è importante inviare tramite il [!UICONTROL Connettore di origine Audience Manager]?
 
-In base ai criteri di valutazione, i segmenti che non hanno dipendenze di dati, nessun problema di destinazione o attivazione e le cui regole di segmentazione possono essere create tramite la raccolta dati di Real-Time CDP come [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) devono essere inviati tramite il connettore di origine di Audience Manager in un secondo momento.
+In base ai criteri di valutazione, i segmenti che non hanno dipendenze di dati, nessun problema di destinazione o attivazione e le cui regole di segmentazione possono essere create tramite la raccolta dati di Real-Time CDP come [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md) devono essere inviati tramite il connettore di origine di Audience Manager in un secondo momento.
 
 ## 3. Utilizzerai la destinazione [!UICONTROL Tipi di pubblico di Experience Cloud] per riportare i dati ad Audience Manager?
 

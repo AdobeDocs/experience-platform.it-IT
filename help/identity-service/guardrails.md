@@ -3,7 +3,7 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -101,7 +101,7 @@ L’eliminazione avviene solo per i dati presenti nel servizio Identity e non pe
 Se desideri mantenere gli eventi autenticati rispetto all’ID del sistema di gestione delle relazioni con i clienti, ti consigliamo di modificare gli ID primari da ECID a CRM. Leggi i seguenti documenti per i passaggi su come implementare questa modifica:
 
 * [Configurare la mappa di identità per i tag di Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Dati di identità in Experienci Platform Web SDK](../edge/identity/overview.md#using-identitymap)
+* [Dati di identità in Experienci Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Scenari di esempio
 

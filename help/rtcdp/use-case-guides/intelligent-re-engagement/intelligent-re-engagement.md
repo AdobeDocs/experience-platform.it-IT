@@ -3,7 +3,7 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente la clientela poco frequente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -147,7 +147,7 @@ Questo gruppo di campi ti consente di testare il percorso prima che venga pubbli
 
 #### Schema transazioni digitali cliente
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite [SDK per web](/help/edge/home.md) ed è necessario per fare riferimento ai vari eventi di navigazione e conversione utilizzati per attivare i percorsi, analizzare in modo dettagliato i clienti online e migliorare le funzionalità di pubblico.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questi dati vengono generalmente acquisiti in [!DNL Adobe Experience Platform] tramite [SDK per web](/help/web-sdk/home.md) ed è necessario per fare riferimento ai vari eventi di navigazione e conversione utilizzati per attivare i percorsi, analizzare in modo dettagliato i clienti online e migliorare le funzionalità di pubblico.
 
 Lo schema delle transazioni digitali del cliente è rappresentato da un [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 
@@ -244,7 +244,7 @@ Attributi di controllo del sistema di origine esterna è un tipo di dati standar
 >
 >Questa è un’implementazione facoltativa se utilizzi il [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questo schema è simile allo schema Customer Digital Transactions ma differisce in quanto è destinato a essere utilizzato quando [SDK per web](/help/edge/home.md) non è un’opzione per la raccolta dati; pertanto, questo schema è necessario quando utilizzi il [!DNL Adobe Analytics Source Connector] per inviare i dati online a [!DNL Adobe Experience Platform] come flusso di dati primario o secondario.
+Questo schema viene utilizzato per strutturare e fare riferimento ai dati dell’evento che costituisce l’attività del cliente che si verifica sul sito web o sulle piattaforme digitali associate. Questo schema è simile allo schema Customer Digital Transactions ma differisce in quanto è destinato a essere utilizzato quando [SDK per web](/help/web-sdk/home.md) non è un’opzione per la raccolta dati; pertanto, questo schema è necessario quando utilizzi il [!DNL Adobe Analytics Source Connector] per inviare i dati online a [!DNL Adobe Experience Platform] come flusso di dati primario o secondario.
 
 Il [!DNL Adobe] lo schema del connettore web è rappresentato da un [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe.
 

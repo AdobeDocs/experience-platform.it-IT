@@ -2,10 +2,10 @@
 title: Interazione con Adobe Analytics
 description: Scopri come utilizzare l’API del server di rete Edge per interagire con Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 2%
+source-wordcount: '180'
+ht-degree: 1%
 
 ---
 
@@ -13,9 +13,7 @@ ht-degree: 2%
 
 ## Panoramica {#overview}
 
-La raccolta dati di Adobe Analytics funziona traducendo i dati XDM in un formato comprensibile ad Adobe Analytics. Diversi campi XDM sono [mappato automaticamente](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) alle variabili di Analytics.
-
-È inoltre possibile [mappare manualmente i valori XDM](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) alle variabili Analytics legacy.
+La raccolta dati di Adobe Analytics funziona traducendo i dati XDM in un formato comprensibile ad Adobe Analytics. Diversi campi XDM sono [mappato automaticamente](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=it) alle variabili di Analytics. Puoi anche mappare manualmente i valori XDM sulle variabili Analytics precedenti.
 
 Per abilitare Adobe Analytics alla ricezione di dati dall’API server, devi [configurare lo stream di dati](../datastreams/overview.md#adobe-analytics-settings) per inoltrare gli eventi ad Adobe Analytics, inserendo l’ID suite di rapporti nella pagina di configurazione dello stream di dati.
 

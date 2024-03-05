@@ -3,7 +3,7 @@ keywords: destinazioni; domande; domande frequenti; FAQ; FAQ destinazioni
 title: Domande frequenti
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 2%
@@ -185,11 +185,11 @@ Per spiegazioni dettagliate sui requisiti di corrispondenza ID, vedi [Requisiti 
 
 ### È necessario utilizzare Experienci Platform Web SDK per inviare tipi di pubblico e attributi ad Adobe Target?
 
-+++Risposta n., [SDK per web](../edge/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++Risposta n., [SDK per web](../web-sdk/home.md) non è necessario per attivare i tipi di pubblico in [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 Tuttavia, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=it) viene utilizzato al posto di Web SDK, è supportata solo la personalizzazione della sessione successiva.
 
-Per [personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md) casi d’uso, è necessario utilizzare [SDK per web](../edge/home.md) o [API server di rete Edge](../server-api/overview.md). Consulta la documentazione su [attivazione di tipi di pubblico nelle destinazioni edge](ui/activate-edge-personalization-destinations.md) per ulteriori dettagli sull’implementazione.
+Per [personalizzazione della stessa pagina e della pagina successiva](ui/activate-edge-personalization-destinations.md) casi d’uso, è necessario utilizzare [SDK per web](../web-sdk/home.md) o [API server di rete Edge](../server-api/overview.md). Consulta la documentazione su [attivazione di tipi di pubblico nelle destinazioni edge](ui/activate-edge-personalization-destinations.md) per ulteriori dettagli sull’implementazione.
 +++
 
 ### Esiste un limite al numero di attributi che posso inviare da Real-time Customer Data Platform ad Adobe Target o a una destinazione di personalizzazione personalizzata?
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Dopo aver creato un pubblico in Experienci Platform, quanto tempo ci vorrà per rendere tale pubblico disponibile per i casi di utilizzo della segmentazione Edge?
 
-+++Le definizioni del pubblico di risposte vengono propagate al [Rete Edge](../edge/home.md) entro un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
++++Le definizioni del pubblico di risposte vengono propagate al [Rete Edge](../web-sdk/home.md) entro un&#39;ora. Tuttavia, se un pubblico viene attivato entro questa prima ora, alcuni visitatori che si sarebbero qualificati per tale pubblico potrebbero non essere presenti.
 +++
 
 ### Dove posso visualizzare gli attributi attivati in Adobe Target?

@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -28,7 +28,7 @@ Un Experience Platform consente di abbonarti agli avvisi basati su eventi per va
 **Funzioni nuove o aggiornate**
 | Funzionalità | Descrizione | | — | — | | Scheda Cronologia avvisi | In qualità di amministratore di Experienci Platform, puoi utilizzare la funzione di gestione degli abbonati agli avvisi per assegnare un avviso a un ID utente, un indirizzo e-mail esterno o un elenco di gruppi e-mail di Adobe. Per ulteriori informazioni, vedere [documentazione dell’interfaccia utente avvisi](../../observability/alerts/ui.md) per ulteriori informazioni sulla scheda cronologia. |
 
-
+{style="table-layout:auto"}
 
 Per ulteriori informazioni sugli avvisi, leggere [[!DNL Observability Insights] panoramica](../../observability/home.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Funzione | Descrizione |
 | --- | --- |
-| [Supporto per la messaggistica Web in-app in Web SDK](../../edge/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK ora supporta la configurazione della messaggistica in-app web per le campagne Adobe Journey Optimizer. |
+| [Supporto per la messaggistica Web in-app in Web SDK](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK ora supporta la configurazione della messaggistica in-app web per le campagne Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 

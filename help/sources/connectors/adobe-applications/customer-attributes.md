@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica del connettore di origine degli attributi del cliente
 description: Scopri come collegare Attributi del cliente a Adobe Experience Platform utilizzando le API o l’interfaccia utente
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Non è possibile selezionare uno spazio dei nomi esistente per l’identità qua
 
 Per [!DNL Customer Attributes] dati da collegare ad altri [!DNL Profile] i set di dati, i relativi dati e le identità devono poter essere associati a un ID Experience Cloud.
 
-È possibile stabilire `CORE` dello spazio dei nomi impostando l’ID Experience Cloud per il visitatore tramite [SDK per web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)o [API del servizio ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
+È possibile stabilire `CORE` dello spazio dei nomi impostando l’ID Experience Cloud per il visitatore tramite [SDK per web](/help/web-sdk/identity/overview.md), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)o [API del servizio ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=it).
 
 Il [!DNL Customer Attributes] Il file non popola ulteriormente altre relazioni di identità. Ad esempio, se un [!DNL Customer Attributes] il set di dati di origine contiene un **E-mail** e un **ID fedeltà** , questi campi devono essere etichettati come campi di identità nello schema per essere elaborati in [!DNL Identity Service].
 

@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2023
 description: Note sulla versione di Adobe Experience Platform di aprile 2023.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2038'
 ht-degree: 98%
 
 ---
@@ -67,7 +67,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Funzione | Descrizione |
 | --- | --- |
 | Offuscamento dell’indirizzo IP per gli stream di dati | Ora puoi definire le opzioni di offuscamento parziale o completo dell’IP a livello di dati nell’[interfaccia utente per la configurazione dello stream di dati](../../datastreams/configure.md). <br><br>L’impostazione di offuscamento dell’IP a livello di stream di dati ha la precedenza su qualsiasi offuscamento dell’IP configurato in Adobe Target e Audience Manager. <br><br>I dati inviati ad Adobe Analytics non sono influenzati dall’impostazione dell’[!UICONTROL Offuscamento IP] a livello di stream di dati. Adobe Analytics attualmente riceve indirizzi IP non offuscati. Affinché Analytics possa ricevere indirizzi IP offuscati, l’offuscamento dell’IP deve essere configurato separatamente in Adobe Analytics. Questo comportamento verrà aggiornato nelle versioni future.<br><br> Per ulteriori dettagli sull’offuscamento dell’IP e istruzioni su come configurarlo, consulta la [documentazione sulla configurazione dello stream di dati](../../datastreams/configure.md#advanced-options). |
-| [Override della configurazione dello stream di dati](../../datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i flussi di dati, che puoi utilizzare per ignorare impostazioni specifiche, ad esempio set di dati evento, il token di proprietà Target, i contenitori di sincronizzazione ID e la suite di rapporti Analytics. <br><br>L’override delle configurazioni dello stream di dati è un processo in due fasi: <ol><li>Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../datastreams/configure.md).</li><li>Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.</li></ol> |
+| [Override della configurazione dello stream di dati](../../datastreams/overrides.md) | Ora puoi definire opzioni di configurazione aggiuntive per i flussi di dati, che puoi utilizzare per ignorare impostazioni specifiche, ad esempio set di dati evento, il token di proprietà Target, i contenitori di sincronizzazione ID e la suite di rapporti Analytics. <br><br>L’override delle configurazioni dello stream di dati è un processo in due fasi: <ol><li>Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](../../datastreams/configure.md).</li><li>Quindi, devi inviare gli override alla rete Edge tramite un comando Web SDK o utilizzando l’[estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) di Web SDK.</li></ol> |
 | Segreto JWT OAuth  | Il [Segreto JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) consente di utilizzare i token di servizio Adobe e Google per supportare le interazioni da server a server nell’inoltro degli eventi. |
 | Estensione [!DNL Pinterest Conversions API] | L’estensione per l’inoltro degli eventi [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=it) consente di sfruttare i dati acquisiti nella rete Edge di Adobe Experience Platform e di inviarli a [!DNL Pinterest] in forma di eventi lato server che utilizzano [!DNL Pinterest Conversions API]. |
 

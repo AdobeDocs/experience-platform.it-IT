@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1983'
 ht-degree: 32%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 32%
 
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
-Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=it).
+Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
 
 ## Versione 2.21.4 - 10 gennaio 2024
 
@@ -81,7 +81,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 **Nuove funzioni**
 
 * Contiene la versione 2.16.0 di Adobe Experience Platform Web SDK.
-* È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](../../../../datastreams/overrides.md).
+* È stato aggiunto il supporto per [sostituzioni della configurazione dello stream di dati](/help/datastreams/overrides.md).
 * Aggiungi avviso di deprecazione al `datasetId` opzione sul `sendEvent` comando.
 
 
@@ -98,7 +98,7 @@ Contiene la versione 2.19.1 di Adobe Experience Platform Web SDK.
 **Nuove funzioni**
 
 * (Beta) aggiunto **[!UICONTROL Aggiorna variabile]** azione e **[!UICONTROL Variabile]** elemento dati.
-* È stata aggiunta la configurazione per [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) callback.
+* È stata aggiunta la configurazione per [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) callback.
 
 **Correzioni e miglioramenti**
 
@@ -176,7 +176,7 @@ Contiene la versione 2.8.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.7.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Ulteriori informazioni da Edge Network sono disponibili nell’evento Send Event Complete, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta. Per ulteriori informazioni, consulta [Tracciamento degli eventi.](../../../../edge/fundamentals/tracking-events.md)
+* Ulteriori informazioni da Edge Network sono disponibili nell’evento Send Event Complete, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
 
 ## Versione 2.7.3 - 7 settembre 2021
 
@@ -223,10 +223,10 @@ Contiene la versione 2.5.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.4.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Aggiunto [&quot;scaricamento documento&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) Casella di controllo per inviare l’interfaccia utente dell’azione Evento.
-* È stato aggiunto il supporto per `out` opzione quando [configurazione del consenso predefinito](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) che rilascia tutti gli eventi fino alla ricezione del consenso (il `pending` option accoda gli eventi e li invia dopo aver ricevuto il consenso).
+* Aggiunto [&quot;Scaricamento documento&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) Casella di controllo per inviare l’interfaccia utente dell’azione Evento.
+* È stato aggiunto il supporto per `out` opzione quando [configurazione del consenso predefinito](/help/web-sdk/commands/configure/defaultconsent.md) che rilascia tutti gli eventi fino alla ricezione del consenso (il `pending` option accoda gli eventi e li invia dopo aver ricevuto il consenso).
 * È stata aggiunta una descrizione comando al campo del consenso predefinito.
-* È stato aggiunto il supporto per [Consenso Adobe 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe quando si utilizza [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
 * Ora viene visualizzato un errore migliore nell’interfaccia utente dell’elemento dati di oggetti XDM se il token di accesso dell’utente non è valido o se il provisioning del token di accesso non è corretto.
 * È stato corretto un errore tra origini diverse (che non influisce sul funzionamento dell’estensione) visualizzato nella console di sviluppo del browser durante la visualizzazione di un elemento dati Oggetto XDM.
 
@@ -251,7 +251,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 ## Versione 2.1.0 - 5 agosto 2020
 
 * Modifica necessaria: rimuovi l’azione `syncIdentity` e includi al suo posto il passaggio di tali ID nell’azione `sendEvent`. Prima di aggiornare l’estensione, disattiva eventuali regole esistenti che utilizzano l’azione rimossa.
-* Aggiornamento ad Alloy v2.1.0 ([Note sulla versione](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=it)).
+* Aggiornamento ad Alloy v2.1.0 ([Note sulla versione](/help/web-sdk/release-notes.md)).
 * È supportato lo standard del consenso IAB 2.0 nell’azione `setConsent`.
 * È supportata la possibilità di ignorare l’ID del set di dati nell’azione `sendEvent`.
 * È stato aggiunto un nuovo elemento dati di tipo `IdentityMap` che può essere utilizzato per compilare la voce `identityMap` nell’elemento dati di oggetti XDM che è ora abilitato e nell’azione `setConsent`.

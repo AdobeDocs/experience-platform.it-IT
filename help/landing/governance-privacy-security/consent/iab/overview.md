@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 in Experienci Platform
 description: Scopri come configurare le operazioni sui dati e gli schemi per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2520'
+source-wordcount: '2492'
 ht-degree: 0%
 
 ---
@@ -37,14 +37,14 @@ Per seguire insieme a questa guida, devi utilizzare una CMP, commerciale o tua, 
 
 Questa guida richiede anche una buona conoscenza dei seguenti servizi di Platform:
 
-* [Experience Data Model (XDM)](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
-* [Servizio Adobe Experience Platform Identity](../../../../identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
-* [Profilo cliente in tempo reale](../../../../profile/home.md): utilizza [!DNL Identity Service] per creare in tempo reale profili cliente dettagliati dai set di dati. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
-   * [Comandi di consenso SDK](../../../../edge/consent/supporting-consent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
-* [Servizio di segmentazione di Adobe Experience Platform](../../../../segmentation/home.md): consente di dividere [!DNL Real-Time Customer Profile] dati in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
+* [Experience Data Model (XDM)](/help/xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
+* [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
+* [Profilo cliente in tempo reale](/help/profile/home.md): utilizza [!DNL Identity Service] per creare in tempo reale profili cliente dettagliati dai set di dati. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
+   * [Comandi di consenso SDK](/help/web-sdk/consent/supporting-consent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
+* [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere [!DNL Real-Time Customer Profile] dati in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 
-Oltre ai servizi di Platform elencati sopra, dovresti avere familiarità con [destinazioni](../../../../data-governance/home.md) e il loro ruolo nell&#39;ecosistema della piattaforma.
+Oltre ai servizi di Platform elencati sopra, dovresti avere familiarità con [destinazioni](/help/data-governance/home.md) e il loro ruolo nell&#39;ecosistema della piattaforma.
 
 ## Riepilogo del flusso di consenso del cliente {#summary}
 
@@ -102,7 +102,7 @@ I dati sul consenso del cliente devono essere inviati a set di dati i cui schemi
 
 Dopo aver creato un’ [!DNL Profile]: set di dati abilitato per la raccolta dei dati sul consenso, devi assicurarti che i criteri di unione siano stati configurati per includere sempre i campi di consenso TCF nei profili cliente. Ciò comporta l’impostazione della precedenza dei set di dati in modo che il set di dati di consenso abbia priorità rispetto ad altri set di dati potenzialmente in conflitto.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, consulta [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Quando configuri i criteri di unione, devi assicurarti che i segmenti includano tutti gli attributi di consenso richiesti forniti da [Gruppo di campi dello schema di privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
+Per ulteriori informazioni su come utilizzare i criteri di unione, consulta [panoramica dei criteri di unione](/help/profile/merge-policies/overview.md). Quando configuri i criteri di unione, devi assicurarti che i segmenti includano tutti gli attributi di consenso richiesti forniti da [Gruppo di campi dello schema di privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
 
 ## Integrare Experienci Platform Web SDK per raccogliere i dati sul consenso del cliente {#sdk}
 
@@ -118,15 +118,15 @@ Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario
 
 ### Creare un flusso di dati
 
-Affinché l’SDK possa inviare dati all’Experience Platform, devi prima creare un flusso di dati per Platform. I passaggi specifici per la creazione di un flusso di dati sono descritti in [Documentazione SDK](../../../../datastreams/overview.md).
+Affinché l’SDK possa inviare dati all’Experience Platform, devi prima creare un flusso di dati per Platform. I passaggi specifici per la creazione di un flusso di dati sono descritti in [Documentazione SDK](/help/datastreams/overview.md).
 
 Dopo aver fornito un nome univoco per lo stream di dati, seleziona il pulsante accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i valori seguenti per completare il resto del modulo:
 
 | Campo stream di dati | Valore |
 | --- | --- |
-| [!UICONTROL Sandbox] | Nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati necessari per impostare lo stream di dati. |
-| [!UICONTROL Ingresso streaming] | Ad Experience Platform, una connessione in streaming valida. Guarda il tutorial su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) se non disponi di una presa di streaming esistente. |
-| [!UICONTROL Set di dati di evento] | Seleziona la [!DNL XDM ExperienceEvent] set di dati creato in [passaggio precedente](#datasets). Se hai incluso il [[!UICONTROL Consenso IAB TCF 2.0] gruppo di campi](../../../../xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando [`sendEvent`](#sendEvent) , archiviando tali dati in questo set di dati. I valori di consenso memorizzati in questo set di dati sono **non** utilizzato nei flussi di lavoro di applicazione automatica. |
+| [!UICONTROL Sandbox] | Nome della piattaforma [sandbox](/help/sandboxes/home.md) che contiene la connessione in streaming e i set di dati necessari per impostare lo stream di dati. |
+| [!UICONTROL Ingresso streaming] | Ad Experience Platform, una connessione in streaming valida. Guarda il tutorial su [creazione di una connessione in streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md) se non disponi di una presa di streaming esistente. |
+| [!UICONTROL Set di dati di evento] | Seleziona la [!DNL XDM ExperienceEvent] set di dati creato in [passaggio precedente](#datasets). Se hai incluso il [[!UICONTROL Consenso IAB TCF 2.0] gruppo di campi](/help/xdm/field-groups/event/iab.md) nello schema di questo set di dati, puoi tenere traccia degli eventi di modifica del consenso nel tempo utilizzando [`sendEvent`](#sendEvent) , archiviando tali dati in questo set di dati. I valori di consenso memorizzati in questo set di dati sono **non** utilizzato nei flussi di lavoro di applicazione automatica. |
 | [!UICONTROL Set di dati di profilo] | Seleziona la [!DNL XDM Individual Profile] set di dati creato in [passaggio precedente](#datasets). Quando si risponde agli hook di modifica del consenso CMP utilizzando [`setConsent`](#setConsent) , i dati raccolti vengono memorizzati in questo set di dati. Poiché questo set di dati è abilitato per il profilo, i valori del consenso memorizzati in questo set di dati vengono rispettati durante i flussi di lavoro di applicazione automatica. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
@@ -137,13 +137,9 @@ Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore della scherma
 
 Dopo aver creato lo stream di dati descritto nella sezione precedente, puoi iniziare a utilizzare i comandi SDK per inviare i dati del consenso a Platform. Le sezioni seguenti forniscono esempi di come ogni comando SDK può essere utilizzato in scenari diversi.
 
->[!NOTE]
->
->Per un’introduzione alla sintassi comune per tutti i comandi dell’SDK di Platform, consulta il documento su [esecuzione di comandi](../../../../edge/fundamentals/executing-commands.md).
-
 #### Utilizzo degli hook per la modifica del consenso di CMP {#setConsent}
 
-Molte CMP forniscono hook pronti all’uso in grado di ascoltare gli eventi di modifica del consenso. Quando si verificano questi eventi, puoi utilizzare `setConsent` per aggiornare i dati di consenso del cliente.
+Molte CMP forniscono hook pronti all’uso in grado di ascoltare gli eventi di modifica del consenso. Quando si verificano questi eventi, puoi utilizzare [`setConsent`](/help/web-sdk/commands/setconsent.md) per aggiornare i dati di consenso del cliente.
 
 Il `setConsent` Il comando prevede due argomenti:
 
@@ -226,7 +222,7 @@ alloy("sendEvent", {
 
 ### Gestione delle risposte SDK
 
-Tutti [!DNL Platform SDK] i comandi restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Consulta la sezione su [gestione di operazioni riuscite o non riuscite](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) nella guida all’esecuzione dei comandi SDK per esempi specifici.
+Molti comandi Web SDK restituiscono promesse che indicano se la chiamata è riuscita o meno. Puoi quindi utilizzare queste risposte per una logica aggiuntiva, ad esempio per visualizzare i messaggi di conferma al cliente. Consulta [Risposte ai comandi](/help/web-sdk/commands/command-responses.md) per ulteriori informazioni.
 
 ## Esportare segmenti {#export}
 

@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Gruppo di campi schema Consensi e preferenze
 description: Scopri il gruppo di campi schema Consensi e preferenze.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https:
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e immediatamente applicate utilizzando [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e immediatamente applicate utilizzando [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
 
 ## Passaggi successivi
 

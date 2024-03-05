@@ -1,17 +1,17 @@
 ---
 title: Panoramica sugli stream di dati
 description: Scopri come i flussi di dati consentono di collegare l’integrazione lato client dell’SDK Experienci Platform con prodotti Adobe e destinazioni di terze parti.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '727'
 ht-degree: 77%
 
 ---
 
-
 # Panoramica sugli stream di dati
 
-Un flusso di dati rappresenta la configurazione lato server quando si implementano gli SDK Web e Mobile di Adobe Experience Platform. Mentre il [configura](../edge/fundamentals/configuring-the-sdk.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni dell’SDK. Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, il `edgeConfigId` viene utilizzato per fare riferimento allo stream di dati. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
+Un flusso di dati rappresenta la configurazione lato server quando si implementano gli SDK Web e Mobile di Adobe Experience Platform. Mentre il [`configure`](/help/web-sdk/commands/configure/overview.md) nell&#39;SDK controlla gli elementi che devono essere gestiti sul client (come il `edgeDomain`), gli stream di dati gestiscono tutte le altre configurazioni dell’SDK. Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, il `edgeConfigId` viene utilizzato per fare riferimento allo stream di dati. Questo consente di aggiornare la configurazione lato server senza dover apportare modifiche al codice sul sito web.
 
 Puoi creare e gestire gli stream di dati selezionando **[!UICONTROL Stream di dati]** nell’area di navigazione a sinistra all’interno dell’interfaccia utente di Adobe Experience Platform o di Raccolta dati.
 

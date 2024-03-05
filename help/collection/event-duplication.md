@@ -1,7 +1,7 @@
 ---
 title: Gestione della duplicazione degli eventi in Experienci Platform
 description: Scopri come Adobe Experience Platform gestisce la duplicazione degli eventi
-source-git-commit: 89cdb0832009bcee31b4339f021bc5a0ce254752
+source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform è un sistema altamente distribuito progettato per massimizzare l&#39;affidabilità e al tempo stesso scalare volumi di dati in continua crescita.
 
-Per la raccolta di dati in tempo reale: [Eventi esperienza](../xdm/classes/experienceevent.md) sono raccolti tramite [Rete Edge](../edge/home.md#edge-network), da origini lato client, come [SDK per web](../edge/home.md) o [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/)e consegnate ai livelli di elaborazione e archiviazione Experienci Platform. Questi livelli compongono soluzioni quali Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it), e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it).
+Per la raccolta di dati in tempo reale: [Eventi esperienza](../xdm/classes/experienceevent.md) sono raccolti tramite [Rete Edge](../web-sdk/home.md#edge-network), da origini lato client, come [SDK per web](../web-sdk/home.md) o [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/)e consegnate ai livelli di elaborazione e archiviazione Experienci Platform. Questi livelli compongono soluzioni quali Experience Platform, [Real-Time CDP](../rtcdp/home.md), [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it), e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it).
 
 Per ridurre al minimo la perdita di eventi esperienza, gli SDK lato client e il servizio di consegna degli Experienci Platform interni si aspettano una conferma della corretta raccolta di un evento.
 

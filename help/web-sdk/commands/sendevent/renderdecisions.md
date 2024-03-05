@@ -1,0 +1,37 @@
+---
+title: renderDecisions
+description: Esegui il rendering di contenuti personalizzati idonei per il rendering automatico.
+source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
+
+---
+
+# `renderDecisions`
+
+Il `renderDecisions` consente di forzare il Web SDK a eseguire il rendering di qualsiasi contenuto personalizzato idoneo per il rendering automatico.
+
+## Eseguire il rendering di contenuti personalizzati tramite l’estensione tag Web SDK
+
+Seleziona la **[!UICONTROL Eseguire il rendering delle decisioni di personalizzazione visiva]** nelle azioni di una regola di tag.
+
+1. Accedi a [experience.adobe.com](https://experience.adobe.com) utilizzando le credenziali di Adobe ID.
+1. Accedi a **[!UICONTROL Raccolta dati]** > **[!UICONTROL Tag]**.
+1. Seleziona la proprietà tag desiderata.
+1. Accedi a **[!UICONTROL Regole]**, quindi seleziona la regola desiderata.
+1. Sotto [!UICONTROL Azioni], seleziona un&#39;azione esistente o creane una.
+1. Imposta il [!UICONTROL Estensione] campo a discesa per **[!UICONTROL Adobe Experience Platform Web SDK]**, e impostare [!UICONTROL Tipo di azione] a **[!UICONTROL Invia evento]**.
+1. Scorri verso il basso fino a [!UICONTROL Personalizzazione] , quindi selezionare la **[!UICONTROL Eseguire il rendering delle decisioni di personalizzazione visiva]** casella di controllo.
+1. Clic **[!UICONTROL Mantieni modifiche]**, quindi esegui il flusso di lavoro di pubblicazione.
+
+## Eseguire il rendering di contenuti personalizzati utilizzando la libreria JavaScript dell’SDK per web
+
+Imposta il `renderDecisions` booleano quando si esegue `sendEvent` comando. Se omesso, il valore predefinito di questa proprietà sarà `false`. Imposta questa proprietà su `true` se desideri eseguire automaticamente il rendering di contenuti personalizzati.
+
+```js
+alloy("sendEvent", {
+  "xdm": adobeDataLayer.getState(reference),
+  "renderDecisions": true
+});
+```
