@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
+source-wordcount: '3629'
 ht-degree: 6%
 
 ---
@@ -282,6 +282,8 @@ Continuando a creare la definizione del segmento, puoi visualizzare un’antepri
 Puoi anche selezionare il metodo di valutazione. Se si conosce il metodo di valutazione da utilizzare, è possibile selezionare il metodo di valutazione desiderato utilizzando l&#39;elenco a discesa. Se desideri conoscere i tipi di valutazione per i quali è qualificata questa definizione di segmento, puoi selezionare l’icona Sfoglia ![icona cartella con lente di ingrandimento](../images/ui/segment-builder/segment-evaluation-select-icon.png) per visualizzare un elenco dei metodi di valutazione delle definizioni dei segmenti disponibili.
 
 Il [!UICONTROL Idoneità al metodo di valutazione] viene visualizzato popover. In questo popover vengono visualizzati i metodi di valutazione disponibili, ovvero batch, streaming e edge. Il popover mostra quali metodi di valutazione sono idonei e non idonei. A seconda dei parametri utilizzati nella definizione del segmento, questo potrebbe non essere idoneo per alcuni metodi di valutazione. Per ulteriori informazioni sui requisiti di ciascun metodo di valutazione, consultare la [segmentazione in streaming](./streaming-segmentation.md#query-types) o [segmentazione Edge](./edge-segmentation.md#query-types) panoramiche.
+
+Puoi anche modificare il metodo di valutazione della definizione del segmento al termine della creazione. Se modifichi il metodo di valutazione da Edge o Streaming a Batch, **non** essere in grado di ripristinarlo a Edge o Streaming. La modifica del metodo di valutazione **solo** diventa effettivo dopo aver selezionato **[!UICONTROL Salva]** nel popover. L’annullamento della finestra di dialogo **mantieni** il metodo di valutazione iniziale.
 
 ![Viene visualizzata la finestra a comparsa per l’idoneità del metodo di valutazione. Questo mostra quali metodi di valutazione sono idonei e non idonei per la definizione del segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 
