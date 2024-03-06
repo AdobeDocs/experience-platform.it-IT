@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
@@ -93,62 +93,62 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Errore intervallo di lookback massimo"
->abstract="L’intervallo di lookback massimo per gli eventi esperienza è di 30 giorni."
+>title="Errore intervallo massimo di lookback"
+>abstract="L’intervallo massimo di lookback per gli eventi di Experience è di 30 giorni."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
 >title="Errore di profondità massima del contenitore nidificato"
->abstract="La profondità massima dei contenitori nidificati è **5**. Ciò significa che **non può** avere più di cinque contenitori nidificati durante la creazione del pubblico."
+>abstract="La profondità massima dei contenitori nidificati è **5**. Ciò significa che **non puoi** avere più di cinque contenitori nidificati durante la creazione del pubblico."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
->title="Errore importo massimo regole"
->abstract="Il numero massimo di regole all’interno di un singolo contenitore è **5**. Questo significa che **non può** avere più di cinque regole in un singolo contenitore durante la creazione del pubblico."
+>title="Errore quantità massima di regole"
+>abstract="Il numero massimo di regole all’interno di un singolo contenitore è **5**. Questo significa che **non puoi** avere più di cinque regole in un singolo contenitore durante la creazione del pubblico."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="Errore importo massimo entità incrociata"
+>title="Errore quantità massima entità incrociate"
 >abstract="Il numero massimo di entità incrociate utilizzabili all’interno di un singolo pubblico è **5**. Un’entità incrociata si verifica quando si passa da un’entità all’altra all’interno del pubblico. Ad esempio, passare da un account a una persona a un elenco di marketing."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
->title="Errore di entità personalizzata"
->abstract="Le entità personalizzate sono **non** consentito."
+>title="Errore entità personalizzata"
+>abstract="**Non** sono consentite entità personalizzate."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
->title="Errore di entità B2B non valido"
->abstract="È consentito utilizzare solo le seguenti entità B2B: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, e `_xdm.classes.campaign`."
+>title="Errore entità B2B non valida"
+>abstract="È consentito utilizzare solo le seguenti entità B2B: `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member` e `_xdm.classes.campaign`."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
->title="Errore di valori massimi"
+>title="Errore valori massimi"
 >abstract="Il numero massimo di valori che è possibile controllare per un singolo campo è **50**."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
 >title="Errore evento inSegment"
->abstract="Gli eventi inSegment sono **non** consentito."
+>abstract="Gli eventi inSegment **non** sono consentiti."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
 >title="Errore evento inSegment"
->abstract="Gli eventi inSegment sono **non** consentito."
+>abstract="Gli eventi inSegment **non** sono consentiti."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
 >title="Errore eventi sequenziali"
->abstract="Gli eventi sequenziali sono **non** consentito."
+>abstract="Gli eventi sequenziali **non** sono consentiti."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
->title="Errore di proprietà Map-type"
->abstract="Le proprietà di tipo mappa sono **non** consentito."
+>title="Errore proprietà Map-type"
+>abstract="Le proprietà Map-type **non** sono consentite."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
->title="Errore massimo di profondità entità nidificata"
+>title="Errore profondità massima entità nidificata"
 >abstract="La profondità massima degli array nidificati è **5**."
 
 >[!CONTEXTUALHELP]
@@ -159,7 +159,7 @@ La sezione seguente fornisce informazioni aggiuntive sui tipi di pubblico dell�
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
 >title="Violazione vincolo"
->abstract="Il pubblico viola un vincolo. Per ulteriori informazioni, leggere il documento collegato."
+>abstract="Il pubblico viola un vincolo. Per ulteriori informazioni, leggi il documento collegato."
 
 Quando si utilizzano i tipi di pubblico dell’account, il pubblico **deve** rispettare i seguenti vincoli:
 
@@ -169,7 +169,7 @@ Quando si utilizzano i tipi di pubblico dell’account, il pubblico **deve** ris
 
 - L’intervallo di lookback massimo per gli eventi esperienza è **30 giorni**.
 - La profondità massima dei contenitori nidificati è **5**.
-   - Ciò significa che **non può** avere più di cinque contenitori nidificati durante la creazione del pubblico.
+   - Ciò significa che **non puoi** avere più di cinque contenitori nidificati durante la creazione del pubblico.
 - Il numero massimo di regole all’interno di un singolo contenitore è **5**.
    - Ciò significa che il pubblico **non può** hai più di cinque regole che compongono il pubblico.
 - Il numero massimo di entità incrociate utilizzabili è **5**.
