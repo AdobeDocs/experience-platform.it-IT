@@ -2,10 +2,10 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
-ht-degree: 55%
+source-wordcount: '2737'
+ht-degree: 54%
 
 ---
 
@@ -142,6 +142,7 @@ Questo servizio controlla se e il modo in cui i dati vengono inviati ad Adobe An
 | Impostazione | Descrizione |
 | --- | --- |
 | [!UICONTROL ID suite di rapporti] | **(Obbligatorio)** L’ID della suite di rapporti di Analytics a cui desideri inviare i dati. Questo ID si trova nell’interfaccia utente di Adobe Analytics in [!UICONTROL Amministrazione] > [!UICONTROL Suite di rapporti]. Se sono specificate più suite di rapporti, i dati vengono copiati in ogni suite. |
+| [!UICONTROL Spazio dei nomi ID visitatore] | (Facoltativo) Lo spazio dei nomi che desideri utilizzare per Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=it). Quando invii un evento con un valore specificato per questo spazio dei nomi, verrà utilizzato automaticamente come `visitorID` in Analytics. |
 | [!UICONTROL Override della suite di rapporti] | In questa sezione puoi aggiungere altri ID della suite di rapporti da utilizzare in sostituzione di quello predefinito. |
 
 ### Impostazioni di Adobe Audience Manager {#audience-manager}
