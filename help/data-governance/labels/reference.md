@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossario delle etichette di utilizzo dati
 description: Questo documento illustra tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
-ht-degree: 3%
+source-wordcount: '2254'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Le etichette &quot;C&quot; del contratto vengono utilizzate per categorizzare i 
 | [C6](#c6) | I dati non possono essere utilizzati per il targeting di annunci nel sito. |
 | [C7](#c7) | I dati non possono essere utilizzati per il targeting dei contenuti sul sito. |
 | [C8](#c8) | I dati non possono essere utilizzati per la misurazione dei siti web o delle app della tua organizzazione. |
-| [C9](#c9) | I dati non possono essere utilizzati nei flussi di lavoro di Data Science. |
+| [C9](#c9) | I dati non possono essere utilizzati nei flussi di lavoro di data science. |
 | [C10](#c10) | I dati non possono essere utilizzati per l’attivazione di identità unite. |
 | [C11](#c11) | I dati non possono essere condivisi con i partner Segment Match. |
 | [C12](#c12) | I dati non possono essere esportati in alcun modo. |
