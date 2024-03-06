@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1021'
 ht-degree: 10%
 
 ---
@@ -92,7 +92,8 @@ ht-degree: 10%
       - [Connettore streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connettore Snowflake](connectors/databases/snowflake.md)
       - [Connettore Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - Partner dati {#data-partner}
+   - Partner dati e identità {#data-partner}
+      - [Importazione dati di previsione Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Risoluzione identità organizzazione Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [Commerce SAP](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 10%
    - Sistema locale {#local-system}
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
    - Automazione del marketing {#marketing-automation}
+      - [Braze correnti](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 10%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Partner dati {#data-partner}
+      - Partner dati e identità {#data-partner}
          - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
          - [Importazione dati di previsione Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 10%
       - Sistema locale {#local-system}
          - [Caricamento di file locali](tutorials/ui/create/local-system/local-file-upload.md)
       - Automazione del marketing {#marketing-automation}
-         - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze correnti](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
@@ -382,4 +384,4 @@ ht-degree: 10%
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes_it)

@@ -3,18 +3,18 @@ title: Creare un flusso di dati per Braze dati nell’interfaccia utente
 description: Scopri come creare un flusso di dati per l’account Braze utilizzando l’interfaccia utente di Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
 
-# Creare un [!DNL Braze] connessione sorgente nell’interfaccia utente
+# Creare un [!DNL Braze Currents] connessione sorgente nell’interfaccia utente
 
 >[!NOTE]
 >
->Il [!DNL Braze] sorgente in versione beta. Leggi le [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+>Il [!DNL Braze Currents] sorgente in versione beta. Leggi le [panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 [!DNL Braze] potenzia in tempo reale le interazioni incentrate sul cliente tra consumatori e marchi. [!DNL Braze Currents] è un flusso di dati in tempo reale di eventi di coinvolgimento dalla piattaforma Braze che rappresenta l’esportazione più solida ma granulare dal [!DNL Braze] piattaforma.
 
@@ -44,7 +44,7 @@ Se si dispone già di un [!DNL Braze] connessione, è possibile saltare il resto
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *Marketing Automation* categoria, seleziona **[!UICONTROL Braze]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Sotto *Marketing Automation* categoria, seleziona **[!UICONTROL Braze correnti]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 ![Catalogo delle origini nell’interfaccia utente di Experienci Platform con l’origine Braze Currents selezionata.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Quindi, configura la mappatura per i dati utilizzando l’interfaccia di mappatu
 
 ### Raccogli le credenziali richieste
 
-Una volta creata la connessione, è necessario raccogliere i seguenti valori delle credenziali, che verranno quindi forniti nel dashboard Braze per inviare i dati a [!DNL Platform]. Per ulteriori informazioni, leggere [!DNL Braze] [guida alla navigazione in Correnti](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Una volta creata la connessione, è necessario raccogliere i seguenti valori delle credenziali, che verranno quindi forniti nel dashboard Braze per inviare i dati ad Experienci Platform. Per ulteriori informazioni, leggere [!DNL Braze] [guida alla navigazione in Correnti](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descrizione |
-| ---------- | ----------- |
-| `Client ID` | L’ID client associato al tuo [!DNL Platform] sorgente. |
-| `Client Secret` | Il segreto client associato al tuo [!DNL Platform] sorgente. |
-| `Tenant ID` | L’ID tenant associato al tuo [!DNL Platform] sorgente. |
-| `Sandbox Name` | La sandbox associata al tuo [!DNL Platform] sorgente. |
-| `Dataflow ID` | L’ID del flusso di dati associato al [!DNL Platform] sorgente. |
-| `Streaming Endpoint` | L&#39;endpoint di streaming associato al tuo [!DNL Platform] sorgente. Tieni presente che Braze lo convertirà automaticamente nell’endpoint di streaming batch. |
+| --- | --- |
+| ID client | L’ID client associato alla sorgente dell’Experience Platform. |
+| Segreto client | Il segreto client associato alla tua origine Experience Platform. |
+| ID tenant | L’ID tenant associato alla tua origine Experience Platform. |
+| Nome sandbox | La sandbox associata alla sorgente di Experience Platform. |
+| ID flusso di dati | L’ID del flusso di dati associato alla sorgente di Experience Platform. |
+| Endpoint di streaming | L’endpoint di streaming associato alla sorgente di Experience Platform. **Nota**: [!DNL Braze] converte automaticamente questo valore nell&#39;endpoint di streaming batch. |
 
 ### Configura [!DNL Braze Currents] per inviare dati all&#39;origine dati in streaming
 
