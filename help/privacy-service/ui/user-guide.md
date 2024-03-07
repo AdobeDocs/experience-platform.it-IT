@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 14%
+source-wordcount: '1511'
+ht-degree: 13%
 
 ---
 
@@ -143,6 +143,8 @@ Il **[!UICONTROL Crea richiesta]** viene visualizzata una finestra di dialogo in
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 Seleziona la **[!UICONTROL Tipo di processo]** della richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e uno o più prodotti disponibili dall’elenco.
+
+Privacy Service supporta due tipi di richieste di lavoro per dati personali: [!UICONTROL Accesso] (leggi) e/o [!UICONTROL Elimina]. È possibile inviare una richiesta per ricevere tutte le informazioni contenute nel prodotto relative all&#39;oggetto della richiesta oppure richiedere la cancellazione di tutte le informazioni relative all&#39;oggetto della richiesta.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

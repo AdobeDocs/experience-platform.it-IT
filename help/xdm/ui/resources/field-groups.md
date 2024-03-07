@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare e modificare gruppi di campi schema nell’interfaccia utente
 description: Scopri come creare e modificare i gruppi di campi dello schema nell’interfaccia utente di Experienci Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0375ddcb7d06208199bf1172b157aa6eb28811f6
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 8%
@@ -24,7 +24,7 @@ Un gruppo di campi definisce le classi con cui è compatibile, in base al compor
 
 Adobe Experience Platform fornisce molti gruppi di campi standard che coprono un&#39;ampia gamma di casi d&#39;uso di marketing. Tuttavia, puoi anche creare e modificare i tuoi gruppi di campi personalizzati per definire concetti aggiuntivi relativi alla tua attività all’interno degli schemi XDM. Questa guida fornisce una panoramica su come creare, modificare e gestire gruppi di campi personalizzati per la tua organizzazione nell’interfaccia utente di Platform.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Questa guida richiede una buona conoscenza del sistema XDM. Consulta la sezione [Panoramica di XDM](../../home.md) per un’introduzione al ruolo di XDM nell’ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) come i gruppi di campi contribuiscono agli schemi XDM.
 
@@ -90,7 +90,7 @@ Una volta aggiunto allo schema, il campo viene assegnato al gruppo di campi sele
 
 Se lo stesso gruppo di campi è già utilizzato in altri schemi, i campi appena aggiunti verranno visualizzati automaticamente in tali schemi.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Questa guida illustra come creare e modificare i gruppi di campi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità di [!UICONTROL Schemi] Workspace, consulta la sezione [[!UICONTROL Schemi] panoramica di workspace](../overview.md).
 

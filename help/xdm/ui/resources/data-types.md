@@ -5,7 +5,7 @@ title: Creare e modificare i tipi di dati tramite l’interfaccia utente
 type: Tutorial
 description: Scopri come creare e modificare i tipi di dati nell’interfaccia utente di Experienci Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform fornisce molti tipi di dati standard che possono esser
 
 Questo tutorial illustra i passaggi necessari per creare e modificare tipi di dati personalizzati nell’interfaccia utente di Platform.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Questa guida richiede una buona conoscenza del sistema XDM. Consulta la sezione [Panoramica di XDM](../../home.md) per un’introduzione al ruolo di XDM nell’ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) come i tipi di dati contribuiscono agli schemi XDM.
 
@@ -105,7 +105,7 @@ Questo dimostra quanto possano essere flessibili i tipi di dati in termini di de
 
 Dopo aver aggiunto i campi al tipo di dati, seleziona **[!UICONTROL Salva]** per salvare le modifiche e aggiungere il tipo di dati al [!DNL Schema Library].
 
-## Aggiungere il tipo di dati a uno schema
+## Aggiungere il tipo di dati a uno schema {#add-data-type}
 
 Dopo aver creato un tipo di dati, puoi iniziare a utilizzarlo negli schemi. Poiché gli schemi XDM sono composti da una classe e da zero o più gruppi di campi, i campi forniti da un tipo di dati non possono essere aggiunti direttamente a uno schema. Devono invece essere inclusi in una classe o in un gruppo di campi.
 
@@ -123,7 +123,7 @@ Il quadro aggiorna il tipo di dati del campo da &quot;[!UICONTROL Oggetto]&quot;
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Questa guida illustra come creare e modificare i tipi di dati utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità di [!UICONTROL Schemi] Workspace, consulta la sezione [[!UICONTROL Schemi] panoramica di workspace](../overview.md).
 

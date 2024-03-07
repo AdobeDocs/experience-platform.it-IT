@@ -2,9 +2,9 @@
 title: Informazioni riservate e personali in XDM
 description: Scopri le considerazioni chiave relative alle informazioni personali sensibili (SPI) e alle informazioni personali identificabili (PII) in Experience Data Model (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -46,8 +46,12 @@ Platform consente di definire gruppi di campi e tipi di dati personalizzati, gar
 * Deprecate fields post-ingestion
 -->
 
+>[!IMPORTANT]
+>
+>SPI e PII devono essere salvati solo nel [Profilo individuale XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md) classi. Come best practice per l’eliminazione dei dati e per scopi di privacy e governance, non salvare SPI e PII in altre classi XDM personalizzate o standard.
+
 ## Passaggi successivi
 
 Questo documento tratta le considerazioni chiave relative ai dati sensibili e personali in XDM. Per ulteriori informazioni su come modellare gli schemi per soddisfare al meglio i casi d’uso aziendali, consulta la guida su [best practice per la modellazione dei dati](./best-practices.md).
 
-Per ulteriori informazioni sulla governance dei dati e sulle funzionalità per la privacy in Experience Platform, consulta la panoramica su [governance, privacy e sicurezza](../../landing/governance-privacy-security/overview.md).
+Per ulteriori informazioni sulla governance dei dati e sulle funzionalità per la privacy in Experienci Platform, consulta la panoramica su [governance, privacy e sicurezza](../../landing/governance-privacy-security/overview.md).

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experienci Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Questa guida fornisce una panoramica su come creare, modificare e gestire gli sc
 >
 >Per una panoramica completa del processo di creazione dello schema, segui insieme alla [tutorial sulla creazione di schemi](../../tutorials/create-schema-ui.md) per creare uno schema di esempio completo e acquisire familiarità con le numerose funzionalità di [!DNL Schema Editor].
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Questa guida richiede una buona conoscenza del sistema XDM. Consulta la sezione [Panoramica di XDM](../../home.md) per un’introduzione al ruolo di XDM nell’ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) per una panoramica della costruzione degli schemi.
 
@@ -350,7 +350,7 @@ Viene visualizzata una nuova finestra di dialogo che richiede di confermare l&#3
 
 Dopo aver confermato la modifica della classe, l’area di lavoro verrà reimpostata e tutti gli avanzamenti della composizione andranno persi.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Questo documento illustra le nozioni di base sulla creazione e la modifica di schemi nell’interfaccia utente di Platform. Si consiglia vivamente di rivedere [tutorial sulla creazione di schemi](../../tutorials/create-schema-ui.md) per un flusso di lavoro completo per la creazione di uno schema completo nell’interfaccia utente, inclusa la creazione di gruppi di campi personalizzati e tipi di dati per casi d’uso univoci.
 

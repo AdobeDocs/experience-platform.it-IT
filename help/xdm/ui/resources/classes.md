@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare e modificare le classi nell’interfaccia utente
 description: Scopri come creare e modificare le classi nell’interfaccia utente di Experienci Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -24,13 +24,13 @@ Adobe fornisce diverse classi standard (&quot;core&quot;) di Experience Data Mod
 
 Questo documento fornisce una panoramica su come creare, modificare e gestire le classi personalizzate nell’interfaccia utente di Experienci Platform.
 
-## Prerequisiti
+## Prerequisiti {#prerequisites}
 
 Questa guida richiede una buona conoscenza del sistema XDM. Consulta la sezione [Panoramica di XDM](../../home.md) per un’introduzione al ruolo di XDM nell’ecosistema Experience Platform e [nozioni di base sulla composizione dello schema](../../schema/composition.md) per scoprire come le classi contribuiscono agli schemi XDM.
 
 Sebbene non sia necessario per questa guida, si consiglia di seguire l’esercitazione anche su [composizione di uno schema nell’interfaccia utente](../../tutorials/create-schema-ui.md) acquisire familiarità con le varie funzionalità dell’Editor di schema.
 
-## Introduzione
+## Introduzione {#getting-started}
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemi]** nel menu di navigazione a sinistra per aprire [!UICONTROL Schemi] , quindi seleziona la **[!UICONTROL Classi]** scheda. Viene visualizzato un elenco delle classi disponibili.
 
@@ -121,7 +121,7 @@ Se in precedenza sono stati creati schemi che utilizzano questa classe, i campi 
 È possibile modificare la classe dello schema in qualsiasi momento durante il processo di creazione iniziale prima che sia stato salvato. Tuttavia, questo deve essere fatto con cautela, in quanto i gruppi di campi sono compatibili solo con determinate classi. La modifica della classe ripristina l’area di lavoro e tutti i campi aggiunti.
 Consulta la guida su [creazione e modifica di schemi](./schemas.md#change-class) per ulteriori informazioni.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Questo documento illustra come creare e modificare le classi utilizzando l’interfaccia utente di Platform. Per ulteriori informazioni sulle funzionalità di [!UICONTROL Schemi] Workspace, consulta la sezione [[!UICONTROL Schemi] panoramica di workspace](../overview.md).
 
