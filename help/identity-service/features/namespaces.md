@@ -2,10 +2,10 @@
 title: Panoramica dello spazio dei nomi dell’identità
 description: Scopri gli spazi dei nomi delle identità in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
-ht-degree: 12%
+source-wordcount: '1920'
+ht-degree: 11%
 
 ---
 
@@ -134,6 +134,10 @@ Viene visualizzata una directory di spazi dei nomi dell’organizzazione contene
 A seconda dei dati organizzativi e dei casi di utilizzo, potrebbe essere necessario specificare spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando [[!DNL Identity Service]](../api/create-custom-namespace.md) tramite l’interfaccia utente.
 
 Per creare uno spazio dei nomi personalizzato, seleziona **[!UICONTROL Creare lo spazio dei nomi delle identità]**.
+
+>[!TIP]
+>
+>Le identità di integrazione sono spazi dei nomi utilizzati per connettersi con altri sistemi. Non vengono utilizzati nella risoluzione delle identità né per unire le identità. Seleziona **[!UICONTROL Visualizzare le identità di integrazione]** per aggiornare l’elenco e includere le identità di integrazione. Tuttavia, le identità di integrazione sono nascoste per impostazione predefinita perché sono di sola visualizzazione e non è necessario configurarle.
 
 ![Il pulsante Crea spazio dei nomi delle identità nell’area di lavoro delle identità.](../images/namespace/create-identity-namespace.png)
 
