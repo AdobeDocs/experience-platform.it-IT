@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 6%
 
 ---
@@ -103,7 +103,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 >
 >Per i tipi di pubblico creati all’interno di Platform, solo quelli con **uguale** verrà visualizzato il criterio di unione.
 
-Il **[!UICONTROL Tipi di pubblico]** Questa scheda elenca tutti i tipi di pubblico importati da origini esterne, ad esempio Adobe Audience Manager, e quelli creati in [!DNL Experience Platform].
+Il **[!UICONTROL Tipi di pubblico]** Questa scheda elenca tutti i tipi di pubblico importati da fonti esterne, come Adobe Audience Manager o Customer Journey Analytics, nonché quelli creati in [!DNL Experience Platform].
 
 Il giorno **[!UICONTROL Tipi di pubblico]** , è possibile visualizzare tutte le origini disponibili come un gruppo di cartelle. Quando selezioni le cartelle, puoi visualizzare le sottocartelle e i tipi di pubblico disponibili. Inoltre, è possibile selezionare l&#39;icona della cartella (come mostrato nell&#39;immagine a destra) per visualizzare la struttura della cartella (un segno di spunta indica la cartella in cui ci si trova attualmente) e tornare facilmente alle cartelle selezionando il nome di una cartella nella struttura.
 

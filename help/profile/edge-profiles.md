@@ -2,9 +2,9 @@
 title: Profili Edge
 description: Scopri i profili edge, la terminologia correlata, le aree disponibili per i profili edge e i servizi disponibili per i profili edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Il servizio XPS (Express Profile Service) recupera i profili sui diversi bordi. 
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta [Panoramica di Edge Network](../web-sdk/home.md).
+Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta [Panoramica di Edge Network](../web-sdk/home.md#edge-network).
 
 ## Appendice
 
@@ -78,3 +78,7 @@ Inoltre, ogni profilo edge dispone di un attributo di schema denominato Area att
 ### Come funzionano le scadenze dei dati con i profili edge?
 
 Per i profili edge, la scadenza dei dati determina per quanto tempo il profilo rimarrà sul bordo prima di essere rimosso. La scadenza dei dati è **continuo**, il che significa che ogni volta che si accede al profilo su Edge, il tempo di scadenza dei dati viene ripristinato. Per impostazione predefinita, la scadenza dei dati dura 14 giorni.
+
+### Quali dati vengono memorizzati sul profilo Edge?
+
+Il profilo Edge memorizza gli attributi del profilo, gli ID profilo e gli ID di pubblico qualificati. Per impostazione predefinita, la scadenza dei dati dura 14 giorni.
