@@ -3,10 +3,10 @@ title: Panoramica dell’estensione Core per l’inoltro degli eventi
 description: Scopri l’estensione Core per l’inoltro degli eventi in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ In questa sezione sono descritti i tipi di condizioni disponibili nell’estensi
 
 ### Custom Code
 
-Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato. L’inoltro degli eventi in Adobe Experience Platform supporta ES6.
+Specifica un codice personalizzato che deve esistere come condizione dell&#39;evento. Utilizza l&#39;editor di codice incorporato per inserire il codice personalizzato. L’inoltro degli eventi in Adobe Experience Platform supporta ES13.
 
 1. Seleziona **[!UICONTROL Apri editor]**.
 1. Digita il codice personalizzato.
@@ -155,7 +155,7 @@ In questa sezione sono descritti i tipi di azioni disponibili nell&#39;estension
 
 ### Custom Code
 
-Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L’inoltro degli eventi in Adobe Experience Platform supporta ES6.
+Fornisci il codice che viene eseguito dopo l&#39;attivazione dell&#39;evento e le condizioni vengono valutate. L’inoltro degli eventi in Adobe Experience Platform supporta ES13.
 
 1. Denomina il codice dell&#39;azione.
 1. Seleziona **[!UICONTROL Apri editor]**.
@@ -203,7 +203,7 @@ return getDataElementValue('section').concat(getDataElementValue('pName'));
 
 È possibile fare riferimento al percorso di una coppia chiave-valore in un evento inviato a Adobe Experience Platform Edge Network utilizzando il tipo di elemento dati Percorso.
 
-Per fare riferimento all&#39;intero oggetto di un evento, immetti `arc` come percorso. L&#39;acronimo `arc` sta per Adobe Resource Context e rappresenta il percorso di livello principale per un evento inviato ad Adobe Experience Platform Edge Network.
+Per fare riferimento all&#39;intero oggetto di un evento, immetti `arc` come percorso. L’acronimo `arc` sta per Adobe Resource Context e rappresenta il percorso di livello principale per un evento inviato ad Adobe Experience Platform Edge Network.
 
 Ad esempio, data la chiamata `interact` dal client a Edge Network, dalla console del browser è visibile la seguente richiesta:
 
