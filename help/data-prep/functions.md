@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 51a4c8e0c667e8f9319e61476a6b709324101dad
+source-git-commit: c7d6ef441f97cbc318bb2dd5c2f1daa08a6db197
 workflow-type: tm+mt
-source-wordcount: '5459'
+source-wordcount: '5794'
 ht-degree: 2%
 
 ---
@@ -285,24 +285,24 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggi [elenco dei v
 
 {style="table-layout:auto"}
 
-<!-- ### Analytics functions {#analytics}
+### Funzioni di Analytics {#analytics}
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table.
+>Per l’acquisizione in streaming puoi utilizzare solo le seguenti funzioni di analisi.
 
-| Function | Description | Parameters | Syntax | Expression | Sample output |
+| Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| aa_get_event_id | Extracts the event ID from an Analytics event string. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract and ID from.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id("event101=5:123456,scOpen", "event101") | 123456 |
-| aa_get_event_value | Extracts the event value from an Analytics event string. If the event value is not specified 1 is returned. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract a value from.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value("event101=5:123456,scOpen", "event101") | 5 |
-| aa_get_product_categories | Extracts the product category from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | [null,"Example category 2"] |
-| aa_get_product_names | Extracts the product name from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | ["Example product 1","Example product 2"] |
-| aa_get_product_quantities | Extracts the quantities from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_quantities(PRODUCTS_STRING) | aa_get_product_quantities(";Example product 1;1;3.50,Example category 2;Example product 2") | ["1", null] |
-| aa_get_product_prices | Extracts the price from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(";Example product 1;1;3.50,Example category 2;Example product 2") | ["3.50", null] |
-| aa_get_product_event_values | Extracts values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event1") | ["2.3", "3"] |
-| aa_get_product_evars | Extracts the evar values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVAR_NAME: **Required** The eVar name to extract.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(";Example product;1;6.69;;eVar1=Merchandising value", "eVar1") | ["Merchandising value"] |
+| aa_get_event_id | Estrae l’ID evento da una stringa evento Analytics. | <ul><li>STRINGA_EVENTO: **Obbligatorio** Stringa dell’evento Analytics separato da virgole.</li><li>NOME_EVENTO: **Obbligatorio** Nome dell’evento da cui estrarre e ID.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| aa_get_event_value | Estrae il valore dell’evento da una stringa dell’evento Analytics. Se il valore dell’evento non è specificato, viene restituito 1. | <ul><li>STRINGA_EVENTO: **Obbligatorio** Stringa dell’evento Analytics separato da virgole.</li><li>NOME_EVENTO: **Obbligatorio** Nome dell’evento da cui estrarre un valore.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| aa_get_product_Categories | Estrae la categoria di prodotto da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li></ul> | aa_get_product_Categories(PRODUCTS_STRING) | aa_get_product_Categories(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2;1;5.99&quot;) | [null,&quot;Esempio di categoria 2&quot;] |
+| aa_get_product_names | Estrae il nome del prodotto da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2;1;5.99&quot;) | [&quot;Esempio di prodotto 1&quot;,&quot;Esempio di prodotto 2&quot;] |
+| aa_get_product_quantity | Estrae le quantità da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li></ul> | aa_get_product_quantity(PRODUCTS_STRING) | aa_get_product_quantity(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2&quot;) | [&quot;1&quot;, nulle] |
+| aa_get_product_price | Estrae il prezzo da una stringa di prodotti Analytics. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li></ul> | aa_get_product_price(PRODUCTS_STRING) | aa_get_product_price(&quot;;Esempio di prodotto 1;1;3.50,Esempio di categoria 2;Esempio di prodotto 2&quot;) | [&quot;3,50&quot;, null] |
+| aa_get_product_event_values | Estrae i valori per l’evento denominato dalla stringa prodotti come array di stringhe. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li><li>NOME_EVENTO: **Obbligatorio** Nome dell’evento da cui estrarre i valori.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(&quot;;Esempio di prodotto 1;1;4.20;event1=2.3\|event2=5:1; Esempio di prodotto 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2,3&quot;, &quot;3&quot;] |
+| aa_get_product_evars | Estrae i valori evar per l’evento denominato dalla stringa prodotti come array di stringhe. | <ul><li>PRODUCTS_STRING: **Obbligatorio** La stringa dei prodotti Analytics.</li><li>NOME_EVAR: **Obbligatorio** Nome eVar da estrarre.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(&quot;;Esempio di prodotto;1;6.69;;eVar 1=valore merchandising&quot;, &quot;eVar 1&quot;) | [&quot;Valore del merchandising&quot;] |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"}
 
 <!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
 | aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
