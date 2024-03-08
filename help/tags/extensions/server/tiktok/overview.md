@@ -2,9 +2,10 @@
 title: Adobe Integrazione dell’estensione API per eventi web di TikTok
 description: Questa API di eventi web di Adobe Experience Platform consente di condividere le interazioni del sito web direttamente con TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1105'
 ht-degree: 3%
 
 ---
@@ -64,7 +65,7 @@ Gli eventi Web e i parametri contengono informazioni generali sull&#39;evento. G
 | Input | Descrizione |
 | --- | --- |
 | Nome evento | Nome dell’evento. Si tratta di azioni con nomi predefiniti create da [!DNL TikTok] ed è un campo obbligatorio. Consulta la sezione [[!DNL TikTok] API di marketing](https://business-api.tiktok.com/portal/docs?id=1741601162187777) per ulteriori informazioni sugli eventi supportati. |
-| Ora evento | Data-ora come stringa in ISO 8601 o in yyyy-MM-dd&#39;T&#39;HH:mm:ss:SSSZ. Questo campo è obbligatorio. |
+| Ora evento | Data-ora come stringa in ISO 8601 o in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` formato. Questo campo è obbligatorio. |
 | ID evento | L’ID univoco generato dagli inserzionisti per indicare ogni evento. Questo è un campo facoltativo e viene utilizzato per la deduplicazione. |
 
 {style="table-layout:auto"}
