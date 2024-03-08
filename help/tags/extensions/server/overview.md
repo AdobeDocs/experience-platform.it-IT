@@ -2,10 +2,10 @@
 title: Riferimento delle estensioni di inoltro eventi
 description: Trova la documentazione per le estensioni di inoltro eventi in Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: af3353000e5545e6d2dc729d6f0bb91a00683b04
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 20%
+source-wordcount: '166'
+ht-degree: 19%
 
 ---
 
@@ -32,13 +32,13 @@ Di seguito è riportato un elenco della documentazione per le estensioni di inol
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Connettore cloud per la Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
-* [Connettore cloud per Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+<!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Core](./core/overview.md)
 * [API evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversioni avanzate di Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [Piattaforma Google Cloud](./google-cloud-platform/overview.md)
 * [[!DNL LinkedIn] API di conversione](./linkedin/overview.md)
-* [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
+* [[!DNL Mailchimp] Bordo](./mailchimp/overview.md)
 * [[!DNL Meta] API di conversione](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)

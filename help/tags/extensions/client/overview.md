@@ -2,9 +2,9 @@
 title: Riferimento estensioni tag
 description: Trova la documentazione relativa alle estensioni tag in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '469'
 ht-degree: 9%
 
 ---
@@ -77,7 +77,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Decibel](https://exchange.adobe.com/apps/ec/100913)*
 * [Demandbase](https://exchange.adobe.com/apps/ec/101605)*
 * [Privacy differenziale](https://exchange.adobe.com/apps/ec/104535)*
-* [Visualizzatori Dynamic Media](https://exchange.adobe.com/apps/ec/103048)*
+* [Visualizzatori Dynamic Medie](https://exchange.adobe.com/apps/ec/103048)*
 * [Helper EDDL](https://exchange.adobe.com/apps/ec/107691)*
 * [OneTag intermittente](https://exchange.adobe.com/apps/ec/101392)*
 * [ForeSee](https://exchange.adobe.com/apps/ec/100164)*
@@ -106,7 +106,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Sondaggio SDI](https://exchange.adobe.com/apps/ec/102991)*
 * [Toolkit SDI](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [Evento modifica visualizzazione SPA](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [Spanner di archiviazione](https://exchange.adobe.com/apps/ec/102990)*
 * [TAG per orizzonte di loop](https://exchange.adobe.com/apps/ec/106092)*
 * [Collezione Tealium](https://exchange.adobe.com/apps/ec/104217)*
