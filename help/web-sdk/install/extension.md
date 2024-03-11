@@ -1,13 +1,13 @@
 ---
 title: Installare Web SDK utilizzando l’estensione tag
 description: Fai riferimento alla libreria SDK web utilizzando Raccolta dati di Adobe Experience Cloud.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # Installare Web SDK utilizzando l’estensione tag
 
@@ -23,6 +23,8 @@ Dopo aver incontrato il [prerequisiti](overview.md), è possibile distribuire l�
 1. Accedi a **[!UICONTROL Estensioni]**, quindi seleziona la **[!UICONTROL Catalogo]** scheda.
 1. Individuare e installare **[!UICONTROL Adobe Experience Platform Web SDK]** estensione.
 1. Seleziona la sandbox e lo stream di dati appropriati per ogni ambiente, quindi fai clic su **[!UICONTROL Salva]**.
+
+Consulta la documentazione su come [configurare l’estensione tag Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) per ulteriori informazioni.
 
 ## Pubblicare il codice tag in Sviluppo
 

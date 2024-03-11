@@ -1,17 +1,17 @@
 ---
 title: Installare l’SDK web utilizzando la libreria JavaScript
 description: Fai riferimento alla libreria dell’SDK web utilizzando un file CDN indipendente.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-
 # Installare l’SDK web utilizzando la libreria JavaScript
 
-Un’opzione per installare l’SDK per web è fare riferimento alla libreria JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
+Alternativa all’installazione dell’SDK per web senza [utilizzo dell’estensione tag](extension.md) fa riferimento alla libreria JavaScript ospitata su una rete CDN. Puoi fare riferimento direttamente alla libreria, oppure scaricarla e ospitarla sulla tua infrastruttura. È disponibile in formati minimizzati e completi.
 
 La libreria SDK web è disponibile utilizzando la seguente struttura URL:
 

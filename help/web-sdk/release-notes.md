@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1725'
 ht-degree: 1%
 
 ---
@@ -213,8 +213,8 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 ## Versione 2.2.0 - ottobre 2020
 
-* Correzione bug: l&#39;oggetto Opt-in impediva ad Alloy di effettuare chiamate quando `idMigrationEnabled` è `true`.
-* Correzione bug: per evitare problemi di sfarfallio, rendi Alloy consapevole delle richieste che devono restituire offerte di personalizzazione.
+* Correzione bug: l&#39;oggetto Opt-in impediva a Web SDK di effettuare chiamate quando `idMigrationEnabled` è `true`.
+* Correzione bug: rende Web SDK consapevole delle richieste che devono restituire offerte di personalizzazione per evitare problemi di sfarfallio.
 
 ## Versione 2.1.0 - Agosto 2020
 
@@ -222,5 +222,5 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 * Supporto dello standard di consenso IAB 2.0.
 * È supportato il passaggio di ID aggiuntivi nella `setConsent` comando.
 * Supporto per la sostituzione di `datasetId` nel `sendEvent` comando.
-* Supporto di monitor in lega ([Ulteriori informazioni](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Supporto degli hook di monitoraggio ([Ulteriori informazioni](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Superato `environment: browser` nei dettagli sull’implementazione, dati contestuali.
