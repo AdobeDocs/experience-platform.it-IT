@@ -5,9 +5,9 @@ title: Esplorare le risorse dello schema nell’interfaccia utente
 description: Scopri come esplorare schemi, classi, gruppi di campi di schema e tipi di dati esistenti nell’interfaccia utente di Experienci Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,14 @@ Dopo aver selezionato una risorsa, la sua struttura si apre nell’area di lavor
 Tutti i campi di tipo oggetto contenenti sottoproprietà vengono compressi per impostazione predefinita quando vengono visualizzati per la prima volta nell’area di lavoro. Per visualizzare le sottoproprietà di qualsiasi campo, seleziona l’icona accanto al nome.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Indicatore di classe e gruppo di campi standard {#standard-class-and-field-group-indicator}
+
+Nell’Editor schema, le classi e i gruppi di campi standard (generati dagli Adobi) sono indicati con l’icona a forma di lucchetto (![Icona del lucchetto.](../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+
+![Editor schema con l’icona lucchetto evidenziata](../images/ui/explore/schema-editor-padlock-icon.png)
+
+Consulta la [Aggiungere campi personalizzati a gruppi di campi standard](./resources/schemas.md) documentazione di riferimento. Impossibile modificare una classe standard.
 
 ### Campi generati dal sistema {#system-fields}
 

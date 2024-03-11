@@ -5,9 +5,9 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '320'
 ht-degree: 18%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 18%
       - [Esportare dati in ambienti ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Flusso di lavoro end-to-end per l’arricchimento della pipeline dati AI/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Casi d’uso {#use-cases}
+   - [Casi d’uso supportati](use-cases/overview.md)
    - [Sfoglia abbandonata](use-cases/abandoned-browse.md)
    - [Analisi dell’attribuzione](use-cases/attribution-analysis.md)
    - [Filtro bot](use-cases/bot-filtering.md)
@@ -114,4 +115,4 @@ ht-degree: 18%
 - [Domande frequenti](troubleshooting-guide.md)
 - [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allowlist.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes_it)

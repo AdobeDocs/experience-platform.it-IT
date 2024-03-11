@@ -2,9 +2,9 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ I casi d’uso trattati in questa guida sono la tendenza del consenso e la sovra
 - **Tendenza del consenso** tiene traccia delle tendenze del consenso degli utenti nel tempo. L’analisi delle modifiche delle preferenze di consenso aiuta gli addetti al marketing a pianificare ed eseguire campagne in grado di adattarsi alle modifiche delle preferenze utente. Ad esempio, potrebbe essere utile eseguire campagne di istruzione mirate, campagne di trasparenza e affidabilità o campagne di incentivi per indirizzare le scelte di consenso. Puoi anche correlare le campagne che potrebbero aver avuto un impatto negativo sul consenso per ridurre in modo proattivo la frequenza di tali campagne.
 - **Sovrapposizione del consenso** utilizza la sovrapposizione tra i canali di consenso per fornire messaggi personalizzati coerenti su più canali per i clienti che hanno acconsentito a più canali. Gli addetti al marketing possono assegnare priorità e allocare risorse a determinati canali in cui un livello più elevato di consenso e di messaggistica personalizzata potrebbe risuonare con i clienti e generare tassi di risposta più elevati.
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## Creare tipi di pubblico consentiti {#create-consent-audiences}
 
 Per creare una dashboard di consenso, devi innanzitutto creare un pubblico di tutti i profili che hanno acconsentito a contattare. Per passare al Generatore di segmenti di Real-time Customer Data Platform, seleziona **[!UICONTROL Tipi di pubblico]** nell’area di navigazione a sinistra dell’interfaccia utente di Platform. Dalla sezione [!UICONTROL Cliente] scheda di [!UICONTROL Tipi di pubblico] dashboard, seleziona **[!UICONTROL Creare un pubblico]** in alto a destra nella vista, quindi **[!UICONTROL Creare regole]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![Il [!UICONTROL Tipi di pubblico] dashboard con [!UICONTROL Cliente], [!UICONTROL Tipi di pubblico], e [!UICONTROL Crea segmento] evidenziato.](../images/insights-use-cases/consent-analysis/create-audience.png)
 

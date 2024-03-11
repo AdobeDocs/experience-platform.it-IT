@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experienci Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
-ht-degree: 2%
+source-wordcount: '3732'
+ht-degree: 1%
 
 ---
 
@@ -126,6 +126,12 @@ Dopo aver scelto i gruppi di campi, seleziona **[!UICONTROL Aggiungi gruppi di c
 Il [!DNL Schema Editor] viene nuovamente visualizzato con i campi forniti dal gruppo di campi rappresentati nell’area di lavoro.
 
 ![Il [!DNL Schema Editor] con uno schema di esempio visualizzato.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>Nell’Editor schema, le classi e i gruppi di campi standard (generati dagli Adobi) sono indicati con l’icona a forma di lucchetto (![Icona del lucchetto.](../../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+>
+>![Editor schema con l’icona lucchetto evidenziata](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Dopo aver aggiunto un gruppo di campi a uno schema, puoi facoltativamente [rimuovi campi esistenti](#remove-fields) o [aggiungi nuovi campi personalizzati](#add-fields) a tali gruppi, in base alle tue esigenze.
 

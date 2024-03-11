@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4695'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ A scopo dimostrativo, i passaggi di questa esercitazione comportano la creazione
 
 Questo tutorial richiede una buona conoscenza dei vari aspetti di Adobe Experience Platform coinvolti nella creazione dello schema. Prima di iniziare questo tutorial, consulta la documentazione per i seguenti concetti:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../schema/composition.md): panoramica degli schemi XDM e dei relativi blocchi predefiniti, tra cui classi, gruppi di campi di schema, tipi di dati e singoli campi.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
@@ -117,6 +117,12 @@ Viene visualizzata di nuovo l’area di lavoro dello schema. Il **[!UICONTROL Gr
 
 ![Editor di schema con i gruppi del campo Dettagli demografici evidenziati.](../images/tutorials/create-schema/demographic-details-structure.png)
 
+>[!NOTE]
+>
+>Nell’Editor schema, le classi e i gruppi di campi standard (generati dagli Adobi) sono indicati con l’icona a forma di lucchetto (![Icona del lucchetto.](../images/ui/explore/padlock-icon.png). Il lucchetto viene visualizzato nella barra a sinistra accanto al nome della classe o del gruppo di campi, nonché accanto a qualsiasi campo nel diagramma dello schema che fa parte di una risorsa generata dal sistema.
+>
+>![Editor schema con l’icona lucchetto evidenziata](../images/ui/explore/padlock-icon-highlight.png)
+
 Questo gruppo di campi contribuisce con diversi campi sotto il nome di livello principale `person` con il tipo di dati &quot;[!UICONTROL Persona]&quot;. Questo gruppo di campi descrive informazioni su un individuo, tra cui nome, data di nascita e genere.
 
 >[!NOTE]
@@ -158,7 +164,7 @@ Per creare un nuovo gruppo di campi, selezionare **[!UICONTROL Aggiungi]** nel *
 
 &quot;[!DNL Custom Loyalty Details]&quot; dovrebbe ora essere visualizzato in **[!UICONTROL Gruppi di campi]** sul lato sinistro dell’area di lavoro, ma non sono ancora presenti campi associati ad essa e pertanto non vengono visualizzati nuovi campi in **[!UICONTROL Struttura]**.
 
-## Aggiungi dei campi al gruppo di campi {#field-group-fields}
+## Aggiungi campi al gruppo di campi {#field-group-fields}
 
 Ora che hai creato il &quot;[!DNL Custom Loyalty Details]&quot;, è il momento di definire i campi che il gruppo di campi contribuirà allo schema.
 
