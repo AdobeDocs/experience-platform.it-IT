@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze clienti personalizzate in tempo reale con guide, documentazione e tutorial.
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 24%
 
 ---
@@ -47,6 +47,7 @@ ht-degree: 24%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=it)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrazioni di Platform con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
    * [Panoramica](./governance-privacy-security/overview.md)
@@ -80,4 +81,4 @@ ht-degree: 24%
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
-* [Note sulla versione](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione](https://www.adobe.com/go/platform-release-notes_it)

@@ -3,10 +3,11 @@ title: Documentazione del prodotto Real-Time CDP
 description: Scopri come utilizzare Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
+exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 3%
+source-wordcount: '1090'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +21,7 @@ Dai un’occhiata ai miglioramenti più recenti del prodotto e della documentazi
 
 >[!BEGINTABS]
 
->[!TAB Playbook di casi d’uso]
+>[!TAB Usare i playbook sui casi d’uso]
 
 Il [!UICONTROL Playbook di casi d’uso] Questa funzionalità è ora generalmente disponibile per tutti i clienti Real-Time CDP e Adobe Journey Optimizer. [!UICONTROL Playbook di casi d’uso] sono progettati per aiutare gli utenti a superare le sfide quando iniziano con Real-time Customer Data Platform o Adobe Journey Optimizer. Quando non sai da dove iniziare o come creare le risorse giuste per i casi d’uso desiderati, i playbook basati su casi d’uso ti forniscono ispirazione e creano diverse risorse da testare e importare negli ambienti di produzione quando sono pronti.
 
@@ -192,9 +193,11 @@ Guarda questi tre video introduttivi per comprendere meglio Real-Time CDP, la su
 
 ## Risorse aggiuntive {#additional-resources}
 
+Sfoglia i collegamenti riportati di seguito per comprendere meglio casi d’uso, servizi e molto altro ancora di Real-Time CDP.
+
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Descrizione del prodotto Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Edizione B2B</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Edizione B2B</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Panoramica sulla sicurezza (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=it" target="_blank">Blueprint di implementazione</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Descrizione del prodotto Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Edizione B2B</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Edizione B2B</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Panoramica sulla sicurezza (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=it" target="_blank">Blueprint di implementazione</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=it" target="_blank">Glossario</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=it" target="_blank">Documentazione</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">Riferimento API - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Corso: introduzione all’Experience Platform</a></a>
