@@ -3,9 +3,9 @@ title: Connessione di Azure Data Lake Storage Gen2
 description: Scopri come connettersi ad Azure Data Lake Storage Gen2 per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '954'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,18 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Prerequisiti {#prerequisites}
+## Esportare i set di dati {#export-datasets}
+
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
+
+## Formato file dei dati esportati {#file-format}
+
+Durante l’esportazione *dati sul pubblico*, Platform crea un `.csv`, `parquet`, o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [formati di file supportati per l’esportazione](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) nell’esercitazione di Audience Activation.
+
+Durante l’esportazione *set di dati*, Platform crea un `.parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [verificare la corretta esportazione del set di dati](../../ui/export-datasets.md#verify) nell’esercitazione esportare set di dati.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -103,13 +114,6 @@ In **[!UICONTROL Pianificazione]** passaggio, puoi [impostare la pianificazione 
 ### Mappare attributi e identità {#map}
 
 In **[!UICONTROL Mappatura]** fase, puoi selezionare l’attributo e i campi di identità da esportare per i profili. Puoi anche scegliere di modificare le intestazioni nel file esportato con qualsiasi nome descrittivo. Per ulteriori informazioni, vedere [passaggio di mappatura](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) nell’esercitazione dell’interfaccia utente attiva destinazioni batch.
-
-## Esportare i set di dati {#export-datasets}
-
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
-
-* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
-* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
 
 ## Convalidare l’esportazione dei dati {#exported-data}
 

@@ -2,9 +2,9 @@
 title: Connessione BLOB di Azure
 description: Crea una connessione in uscita all’archiviazione BLOB di Azure per esportare periodicamente i file di dati CSV da Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1089'
 ht-degree: 7%
 
 ---
@@ -62,11 +62,18 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Formati di file supportati {#file-formats}
+## Esportare i set di dati {#export-datasets}
 
-[!DNL Experience Platform] supporta il seguente formato di file da esportare in [!DNL Azure Blob]:
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 
-* Valori separati da virgole (CSV): il supporto per i file di dati esportati è attualmente limitato a valori separati da virgole.
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
+
+## Formato file dei dati esportati {#file-format}
+
+Durante l’esportazione *dati sul pubblico*, Platform crea un `.csv`, `parquet`, o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [formati di file supportati per l’esportazione](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) nell’esercitazione di Audience Activation.
+
+Durante l’esportazione *set di dati*, Platform crea un `.parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [verificare la corretta esportazione del set di dati](../../ui/export-datasets.md#verify) nell’esercitazione esportare set di dati.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -123,13 +130,6 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 
 Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
-## Esportare i set di dati {#export-datasets}
+## Convalidare l’esportazione dei dati {#exported-data}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
-
-* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
-* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
-
-## Dati esportati {#exported-data}
-
-Per [!DNL Azure Blob Storage] destinazioni, [!DNL Platform] crea un `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di audience activation.
+Per verificare se i dati sono stati esportati correttamente, controlla [!DNL Azure Blob] e assicurati che i file esportati contengano le popolazioni di profilo previste.

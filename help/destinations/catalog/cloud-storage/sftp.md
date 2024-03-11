@@ -2,9 +2,9 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1091'
 ht-degree: 8%
 
 ---
@@ -56,6 +56,19 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 {style="table-layout:auto"}
 
 ![Il tipo di esportazione basato su profilo SFTP è evidenziato nel catalogo delle destinazioni.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Esportare i set di dati {#export-datasets}
+
+Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
+
+* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
+* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
+
+## Formato file dei dati esportati {#file-format}
+
+Durante l’esportazione *dati sul pubblico*, Platform crea un `.csv`, `parquet`, o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [formati di file supportati per l’esportazione](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) nell’esercitazione di Audience Activation.
+
+Durante l’esportazione *set di dati*, Platform crea un `.parquet` o `.json` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedere [verificare la corretta esportazione del set di dati](../../ui/export-datasets.md#verify) nell’esercitazione esportare set di dati.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -129,17 +142,10 @@ Dopo aver stabilito la connessione di autenticazione alla posizione SFTP, fornis
 
 Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
 
-## Esportare i set di dati {#export-datasets}
+## Convalidare l’esportazione dei dati {#exported-data}
 
-Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
-
-* Procedura [esportare i set di dati utilizzando l’interfaccia utente di Platform](/help/destinations/ui/export-datasets.md).
-* Procedura [esportare i set di dati a livello di programmazione utilizzando l’API del servizio Flusso](/help/destinations/api/export-datasets.md).
-
-## Dati esportati {#exported-data}
-
-Per [!DNL SFTP] destinazioni, Platform crea un’ `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del profilo batch](../../ui/activate-batch-profile-destinations.md) nell’esercitazione di audience activation.
+Per verificare se i dati sono stati esportati correttamente, controlla l’archiviazione SFTP e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
 ## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Fai riferimento a [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](ip-address-allow-list.md) se devi aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.
+Consulta la sezione [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allow-list.md) articolo per aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.
