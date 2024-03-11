@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente Sandbox
 description: In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
+source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '929'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Una volta selezionata una sandbox, la schermata si aggiorna e si aggiorna alla s
 
 >[!NOTE]
 >
->Quando crei una nuova sandbox, devi prima aggiungerla al tuo profilo di prodotto in [Adobe Admin Console](https://adminconsole.adobe.com/) prima di iniziare a utilizzare la nuova sandbox. Consulta la documentazione su [gestione delle autorizzazioni per un profilo di prodotto](../../access-control/ui/permissions.md) per informazioni su come effettuare il provisioning di una sandbox per un profilo di prodotto.
+>Per creare una nuova sandbox è necessario aggiungerla a un ruolo in [[!UICONTROL Autorizzazioni]](../../access-control/abac/ui/permissions.md) prima di iniziare a utilizzarlo. Per informazioni su come effettuare il provisioning di una sandbox per un ruolo, consulta [gestione delle sandbox per un ruolo](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) documentazione.
 
 Il video seguente offre una rapida panoramica sull’utilizzo delle Sandbox in Experienci Platform.
 
