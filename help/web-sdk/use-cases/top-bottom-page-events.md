@@ -2,7 +2,7 @@
 title: Configurare gli eventi di inizio e fine pagina in Web SDK
 description: Questo articolo spiega come utilizzare la parte superiore e inferiore degli eventi di pagina in Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## Esempio GitHub {#github-sample}
 
-Il campione trovato in [questo indirizzo](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) illustra come utilizzare Experienci Platform e Web SDK per richiedere la personalizzazione nella parte superiore della pagina e inviare le metriche di analisi nella parte inferiore. Puoi scaricare l’esempio ed eseguirlo localmente per comprendere come funzionano i primi e gli ultimi eventi di pagina.
+Il campione trovato in [questo indirizzo](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) illustra come utilizzare Experienci Platform e Web SDK per richiedere la personalizzazione nella parte superiore della pagina e inviare le metriche di analisi nella parte inferiore. Puoi scaricare l’esempio ed eseguirlo localmente per comprendere come funzionano i primi e gli ultimi eventi di pagina.
