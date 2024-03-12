@@ -2,10 +2,10 @@
 title: Note sulla versione per l’estensione Adobe Target v2
 description: Note sulla versione dell’estensione tag Adobe Target v2 in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 48%
+source-wordcount: '834'
+ht-degree: 42%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 48%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch è stato ridefinito come suite di tecnologie di raccolta dati in Adobe Experience Platform. Di conseguenza, sono state introdotte diverse modifiche terminologiche nella documentazione del prodotto. Consulta questo [documento](../../../term-updates.md) come riferimento consolidato delle modifiche terminologiche.
+
+## v0.20.3 (23 gennaio 2024)
+
+- Aggiornato per supportare `at.js` 2.11.4.
+- È stato corretto un bug per impedire l’invio di dati geografici non validi all’API di consegna.
 
 ## v0.20.2 (29 novembre 2023)
 
@@ -62,7 +67,7 @@ ht-degree: 48%
 - Aggiornato per supportare `at.js` v2.8.1
 - Fisso `pageLoad` mappatura non eseguita su `target-global-mbox` in modalità di esecuzione ibrida ODD
 - È stato risolto un problema relativo ai dettagli di analisi per `mbox` richiesta
-- Sono state aggiornate le dipendenze di sviluppo per correggere alcune vulnerabilità di sicurezza
+- Sono state aggiornate le dipendenze di sviluppo per correggere le vulnerabilità di sicurezza
 
 ## v0.17.0 (7 gennaio 2022)
 
@@ -102,7 +107,7 @@ ht-degree: 48%
 
 ## v0.14 (14 maggio 2021)
 
-- È stata aggiunta la nuova azione Carica Target con [decisioning sul dispositivo](./overview.md#load-target-with-on-device-decisioning), che carica 2.5 con funzionalità Decisioning sul dispositivo.`at.js`
+- È stata aggiunta la nuova azione Carica Target con [Decisioning sul dispositivo](./overview.md#load-target-with-on-device-decisioning), che carica `at.js` 2.5 con funzionalità Decisioning sul dispositivo
 - Aggiornato `at.js` da a 2.5
 
 
