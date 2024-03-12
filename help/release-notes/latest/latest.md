@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di gennaio 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 22%
@@ -25,10 +25,11 @@ Aggiornamenti alle funzioni esistenti in Experienci Platform:
 ## Avvisi {#alerts}
 
 Un Experience Platform consente di abbonarti agli avvisi basati su eventi per varie attività di Platform. È possibile abbonarsi a diverse regole di avviso tramite [!UICONTROL Avvisi] nell’interfaccia utente di Platform e può scegliere di ricevere messaggi di avviso all’interno dell’interfaccia utente stessa o tramite notifiche e-mail.
+
 **Funzioni nuove o aggiornate**
 
-| Funzionalità | Descrizione | 
-| --- | --- | 
+| Funzione | Descrizione |
+| --- | --- |
 | Scheda Cronologia avvisi | In qualità di amministratore di Experienci Platform, puoi utilizzare la funzione di gestione degli abbonati agli avvisi per assegnare un avviso a un ID utente, un indirizzo e-mail esterno o un elenco di gruppi e-mail di Adobe. Per ulteriori informazioni, vedere [documentazione dell’interfaccia utente avvisi](../../observability/alerts/ui.md) per ulteriori informazioni sulla scheda cronologia. |
 
 {style="table-layout:auto"}
