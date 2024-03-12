@@ -4,9 +4,9 @@ description: Scopri come configurare il rilevamento di bot per i flussi di dati,
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 >[!IMPORTANT]
 >
 >Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l’evento al [servizio flusso di dati](configure.md) configurato.
+>
+>Le soluzioni di Adobe possono gestire il punteggio bot in diversi modi. Ad esempio, Adobe Analytics utilizza i propri [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [Elenco bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), quindi il punteggio bot è identico.
 
 Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi attraverso la rete Edge.
 
