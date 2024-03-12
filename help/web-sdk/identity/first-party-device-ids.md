@@ -2,12 +2,13 @@
 title: ID dispositivo di prime parti in Web SDK
 description: Scopri come configurare gli ID dispositivo di prime parti (FPID) per Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # ID dispositivo di prime parti in Web SDK
 
@@ -47,6 +48,28 @@ Per inviare un FPID per un visitatore del sito web alla rete Edge di Platform, d
 Platform Edge Network accetta solo ID conformi alla [Formato UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Gli ID dispositivo non in formato UUIDv4 verranno rifiutati.
 
 La generazione di un UUID si tradurrà quasi sempre in un ID casuale univoco, con una probabilità di collisione trascurabile. Non è possibile eseguire il seeding di UUIDv4 utilizzando indirizzi IP o qualsiasi altra informazione personale identificabile (PII). Gli UUID sono onnipresenti e le librerie possono essere trovate praticamente per ogni linguaggio di programmazione per generarli.
+
+## Impostazione di un cookie ID di prima parte nell’interfaccia utente degli stream di dati {#setting-cookie-datastreams}
+
+Puoi specificare un nome per il cookie nell’interfaccia utente Flussi di dati, dove [!DNL FPID] può risiedere, invece di dover leggere il valore del cookie e includere l’FPID nella mappa Identity.
+
+>[!IMPORTANT]
+>
+>Questa funzione richiede che tu abbia [Raccolta di dati di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) abilitato.
+
+Consulta la [documentazione sugli stream di dati](../../datastreams/configure.md) per informazioni dettagliate su come configurare un flusso di dati.
+
+Durante la configurazione dello stream di dati, abilita **[!UICONTROL Cookie ID di prima parte]** opzione. Questa impostazione indica a Edge Network di fare riferimento a un cookie specificato quando si cerca un ID dispositivo di prime parti, anziché cercare questo valore in [Mappa identità](#identityMap).
+
+Consulta la documentazione su [cookie di prime parti](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=it) per ulteriori dettagli su come funzionano con Adobe Experience Cloud.
+
+![Immagine dell’interfaccia utente di Platform che mostra la configurazione dello stream di dati ed evidenzia l’impostazione del cookie ID di prime parti](../assets/first-party-id-datastreams.png)
+
+Quando abiliti questa impostazione, devi fornire il nome del cookie in cui si prevede che l’ID venga memorizzato.
+
+Quando utilizzi ID di prime parti, non puoi eseguire sincronizzazioni ID di terze parti. Le sincronizzazioni ID di terze parti si basano su [!DNL Visitor ID] servizio e `UUID` generate da tale servizio. Quando si utilizza la funzionalità ID di prima parte, l’ECID viene generato senza l’utilizzo del [!DNL Visitor ID] , che rende impossibile le sincronizzazioni ID di terze parti.
+
+Quando si utilizzano gli ID di prime parti, le funzionalità di Audience Manager mirate all’attivazione nelle piattaforme partner non sono supportate, dato che le sincronizzazioni degli ID partner di Audience Manager si basano principalmente su `UUIDs` o `DIDs`. L’ECID derivato da un ID di prima parte non è collegato a un `UUID`, rendendolo non indirizzabile.
 
 ## Impostazione di un cookie con il tuo server
 
