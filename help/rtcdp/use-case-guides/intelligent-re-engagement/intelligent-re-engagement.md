@@ -3,7 +3,7 @@ title: Nuovo coinvolgimento intelligente
 description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente la clientela poco frequente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Di seguito è riportata una panoramica generale dei tre scenari di ricoinvolgime
 Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazione dei prodotti abbandonati sia sul sito web che sull’app mobile. Questo scenario si attiva quando un prodotto viene visualizzato ma non acquistato o aggiunto al carrello. In questo esempio, il brand engagement viene attivato dopo tre giorni se non ci sono aggiunte di elenchi nelle ultime 24 ore.<p>![Panoramica visiva di alto livello sullo scenario di navigazione intelligente del prodotto abbandonato dal cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Panoramica visiva di alto livello sullo scenario di navigazione intelligente del prodotto abbandonato dal cliente."){width="1920" zoomable="yes"}</p>
 
 1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profilo].
-2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore dati di Analytics, ma potrebbe causare latenza del percorso.
+2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore di origine di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
 4. Puoi creare tipi di pubblico mirati dall’elenco dei profili per verificare se **cliente** ha preso un impegno negli ultimi tre giorni.
 5. Creazione di un percorso di navigazione prodotto abbandonato in [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazi
 Lo scenario del carrello abbandonato si applica quando i prodotti sono stati inseriti nel carrello ma non sono ancora stati acquistati sia sul sito web che sull’app mobile. Inoltre, le campagne Paid Media vengono avviate e interrotte utilizzando questo metodo.<p>![Panoramica visiva di alto livello sullo scenario del carrello abbandonato dal cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Panoramica visiva di alto livello sullo scenario del carrello abbandonato dal cliente."){width="1920" zoomable="yes"}</p>
 
 1. Si creano schemi e set di dati, l’opzione abilita per [!UICONTROL Profilo].
-2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore dati di Analytics, ma potrebbe causare latenza del percorso.
+2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore di origine di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
 4. Puoi creare tipi di pubblico mirati dall’elenco dei profili per verificare se **cliente** ha inserito un articolo nel carrello ma non ha completato l&#39;acquisto. Il **[!UICONTROL Aggiungi al carrello]** l’evento avvia un timer che attende 30 minuti, quindi controlla se è stato acquistato. Se non è stato effettuato alcun acquisto, il **cliente** viene aggiunto al **[!UICONTROL Abbandona carrello]** pubblico.
 5. Si crea un percorso di carrello abbandonato in [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ Lo scenario del carrello abbandonato si applica quando i prodotti sono stati ins
 Lo scenario di conferma dell’ordine si concentra sugli acquisti di prodotti effettuati tramite il sito web e l’app mobile.<p>![Panoramica visiva di alto livello dello scenario di conferma dell’ordine del cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Panoramica visiva di alto livello dello scenario di conferma dell’ordine del cliente."){width="1920" zoomable="yes"}</p>
 
 1. Puoi creare schemi e set di dati, quindi abilitare per [!UICONTROL Profilo].
-2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore dati di Analytics, ma potrebbe causare latenza del percorso.
+2. Acquisisci i dati in Experienci Platform tramite Web SDK, Mobile SDK o API. È possibile utilizzare anche il connettore di origine di Analytics, ma potrebbe causare latenza del percorso.
 3. Acquisisci dati aggiuntivi abilitati per il profilo, che possono essere collegati al visitatore autenticato dell’app web e mobile tramite grafici di identità.
 4. Puoi creare un percorso di conferma in [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] invia un messaggio di conferma dell’ordine utilizzando il canale preferito.
