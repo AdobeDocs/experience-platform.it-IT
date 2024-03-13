@@ -2,9 +2,9 @@
 title: Collegare l'account Salesforce tramite l'interfaccia utente Experienci Platform
 description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente di.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Per autenticare il tuo [!DNL Salesforce] conto a fronte di Experience Platform, 
 | `username` | Nome utente per [!DNL Salesforce] account utente. |
 | `password` | La password per [!DNL Salesforce] account utente. |
 | `securityToken` | Token di sicurezza per [!DNL Salesforce] account utente. |
-| `apiVersion` | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| `apiVersion` | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0` Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
 
 Per ulteriori informazioni sull’autenticazione, consulta [questo [!DNL Salesforce] guida all’autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
