@@ -5,10 +5,10 @@ breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
 role: Developer,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 32%
 * [Eseguire query sui set di dati del dashboard](query.md)
 * [Modello dati di Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Visualizza SQL approfondimento](view-sql.md)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

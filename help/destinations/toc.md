@@ -5,7 +5,7 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 5%
@@ -296,4 +296,4 @@ ht-degree: 5%
       * [Modello self-service della documentazione](./destination-sdk/docs-framework/self-service-template.md)
       * [Best practice di authoring](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Domande frequenti](./destinations-faq.md)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes_it)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

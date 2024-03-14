@@ -5,10 +5,10 @@ breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri di governance.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 42%
    * [Azioni di marketing](api/marketing-actions.md)
    * [Valutazione](api/evaluation.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

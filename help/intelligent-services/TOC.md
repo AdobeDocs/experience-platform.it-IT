@@ -5,10 +5,10 @@ user-guide-title: Guida di Intelligent Services
 breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 32%
       - [Chiavi gestite dal cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governance dei dati](customer-ai/cai-data-governance/data-governance.md)
       - [Criteri di governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

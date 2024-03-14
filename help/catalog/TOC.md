@@ -4,7 +4,7 @@ user-guide-title: Guida al catalogo e ai set di dati
 user-guide-description: Esplora la derivazione dei dati, i metadati, le descrizioni dei file, le directory e i set di dati all’interno del Data Lake e scopri di più sul sistema del servizio del Catalogo.
 feature: Catalog
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 33%
@@ -36,4 +36,4 @@ ht-degree: 33%
    * [Abilitare un set di dati per gli aggiornamenti del profilo (upsert)](datasets/enable-upsert.md)
 * [Elaborazione della richiesta di accesso a dati personali nel Data Lake](privacy.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

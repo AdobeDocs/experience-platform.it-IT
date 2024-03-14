@@ -5,10 +5,10 @@ breadcrumb-title: Guida all’accesso ai dati
 user-guide-description: Trova e accedi ai set di dati acquisiti in Experience Platform.
 feature: Data Access
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '35'
-ht-degree: 65%
+ht-degree: 62%
 
 ---
 
@@ -19,4 +19,4 @@ ht-degree: 65%
 - [API di accesso ai dati](api.md)
 - Tutorial {#tutorials}
    - [Visualizzare i dati del set di dati](tutorials/dataset-data.md)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

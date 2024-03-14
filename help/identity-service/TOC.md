@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 29%
+ht-degree: 28%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 29%
    - [Scenari di esempio](./identity-graph-linking-rules/example-scenarios.md)
 - [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-it)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
