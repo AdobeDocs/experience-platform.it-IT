@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 10%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 10%
       - [Connettore Snowflake](connectors/databases/snowflake.md)
       - [Connettore Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Partner dati e identità {#data-partner}
+      - [Acquisizione dei dati Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importazione dati di previsione Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Risoluzione identità organizzazione Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 10%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Partner dati e identità {#data-partner}
-         - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Acquisizione dei dati Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importazione dati di previsione Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [Commerce SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)

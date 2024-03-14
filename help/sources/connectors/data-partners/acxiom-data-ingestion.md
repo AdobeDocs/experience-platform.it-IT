@@ -1,34 +1,29 @@
 ---
-title: Importazione dati di previsione Acxiom
-description: Scopri come collegare i dati di ricerca di Acxiom a Adobe Experience Platform e Adobe Real-time Customer Data Platform utilizzando l’interfaccia utente.
+title: Acquisizione dei dati Acxiom
+description: Scopri come acquisire [!DNL Acxiom] su Real-time Customer Data Platform, arricchisci i profili di prime parti, migliora i tipi di pubblico e attivali tra i canali di marketing.
 badge: Beta
-exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
 source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
-# [!DNL Acxiom Prospecting Data Import]
+# [!DNL Acxiom Data Ingestion]
 
 >[!NOTE]
 >
 >Il [!DNL Acxiom Prospecting Data Import] sorgente in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
-Adobe Experience Platform fornisce supporto per l’acquisizione dei dati da un’applicazione partner di dati. Il supporto per i partner di dati e identità include [!DNL Acxiom Prospecting Data Import].
+Utilizza il [!DNL Acxiom Data Ingestion] origine da acquisire [!DNL Acxiom] Real-time Customer Data Platform e arricchire i profili di prime parti. Quindi, puoi utilizzare il [!DNL Acxiom]: profili di prime parti arricchiti per migliorare i tipi di pubblico e attivarli tra i canali di marketing.
 
-[!DNL Acxiom]L’importazione di dati di prospezione di per Adobe Real-time Customer Data Platform è un processo per fornire il pubblico di potenziali clienti più produttivo possibile. [!DNL Acxiom] prende i dati di prime parti di Real-Time CDP tramite un’esportazione sicura e li esegue attraverso un sistema pluripremiato di igiene e risoluzione delle identità. Viene prodotto un file di dati che può essere utilizzato come elenco di soppressione. Questo file di dati viene quindi confrontato con [!DNL Acxiom Global] che consente di personalizzare gli elenchi dei prospect per l&#39;importazione.
+![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
-È possibile utilizzare [!DNL Acxiom] origine per recuperare e mappare le risposte da [!DNL Acxiom] servizio prospect tramite [!DNL Amazon S3] come punto di rilascio.
+Per informazioni su come impostare il [!DNL Acxiom Data Ingestion] account di origine.
 
-![acxiom-prospecting-workflow](../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/acxiom-prospecting.png)
+## Prerequisiti {#prerequisites}
 
-Per informazioni su come impostare il [!DNL Acxiom Prospecting Data Import] account di origine.
-
-## Prerequisiti
-
-Per accedere al bucket in Experienci Platform, devi fornire valori validi per le seguenti credenziali:
+Per collegare il tuo [!DNL Acxiom Data Ingestion] account per Experience Platform, è necessario fornire i valori per le seguenti credenziali di autenticazione:
 
 | Credenziali | Descrizione |
 | --- | --- |
@@ -43,9 +38,9 @@ Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco 
 
 ### Configurare le autorizzazioni su Experienci Platform
 
-Devi avere entrambi **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]** autorizzazioni abilitate per il tuo account per connettersi al tuo [!DNL Acxiom Prospecting Data Import] da Experience Platform. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere [guida all’interfaccia utente per il controllo degli accessi](../../../access-control/abac/ui/permissions.md).
+Devi avere entrambi **[!UICONTROL Visualizza origini]** e **[!UICONTROL Gestisci origini]** autorizzazioni abilitate per il tuo account per connettersi al tuo [!DNL Acxiom Data Ingestion] da Experience Platform. Contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie. Per ulteriori informazioni, leggere [guida all’interfaccia utente per il controllo degli accessi](../../../access-control/ui/overview.md).
 
-## Vincoli di denominazione per file e directory
+### Vincoli di denominazione per file e directory
 
 Quando si assegna un nome al file o alla directory di archiviazione cloud, è necessario tenere presenti le restrizioni elencate di seguito:
 
@@ -58,4 +53,4 @@ Quando si assegna un nome al file o alla directory di archiviazione cloud, è ne
 
 ## Passaggi successivi
 
-Una volta letto questo documento, avrai completato la configurazione dei prerequisiti necessaria per portare i dati dal tuo [!DNL Acxiom] da Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Acxiom Prospecting Data Import] per Experienci Platform utilizzando l’interfaccia utente di](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
+Una volta letto questo documento, avrai completato la configurazione dei prerequisiti necessaria per portare i dati dal tuo [!DNL Acxiom] da Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Acxiom Data Ingestion] per Experienci Platform utilizzando l’interfaccia utente di](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
