@@ -2,10 +2,10 @@
 title: Accesso all’ECID
 description: Scopri come accedere all’ID Experience Cloud dalla preparazione dati o dai tag
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 3%
+source-wordcount: '253'
+ht-degree: 1%
 
 ---
 
@@ -33,9 +33,9 @@ Quindi, imposta la destinazione su un percorso XDM in cui il campo è di tipo `s
 Se devi accedere a [!DNL ECID] sul lato client, utilizza l’approccio tag come descritto di seguito.
 
 1. Assicurati che la proprietà sia configurata con [sequenza dei componenti della regola](../../../ui/managing-resources/rules.md#sequencing) abilitato.
-1. Crea una nuova regola.
+1. Crea una nuova regola. Questa regola deve essere utilizzata esclusivamente per acquisire [!DNL ECID] senza altre azioni importanti.
 1. Aggiungi un [!UICONTROL Libreria caricata] alla regola.
-1. Aggiungi un [!UICONTROL Condizione personalizzata] alla regola con il seguente codice (supponendo che il nome configurato per l&#39;istanza dell&#39;SDK sia `alloy`):
+1. Aggiungi un [!UICONTROL Codice personalizzato] alla regola con il seguente codice (supponendo che il nome configurato per l&#39;istanza SDK sia `alloy` e non esiste già un elemento dati con lo stesso nome):
 
    ```js
     return alloy("getIdentity")
