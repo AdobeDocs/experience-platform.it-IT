@@ -1,12 +1,10 @@
 ---
 title: Testare E Inviare L’Origine
 description: Il documento seguente illustra come verificare e testare una nuova origine utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ Il documento seguente illustra i passaggi per testare ed eseguire il debug dell�
 ## Introduzione
 
 * Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
-* Per informazioni su come generare le credenziali per le API di Platform, consulta l’esercitazione su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md).
+* Per informazioni su come generare le credenziali per le API di Platform, consulta l’esercitazione su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md).
 * Per informazioni su come impostare [!DNL Postman] per le API di Platform, consulta l’esercitazione su [configurazione della console per sviluppatori e [!DNL Postman]](../../../landing/postman.md).
 * Per facilitare il processo di test e debug, scarica il file [Raccolta e ambiente di verifica delle origini self-service qui](../assets/sdk-verification.zip) e segui i passaggi descritti di seguito.
 
@@ -36,9 +34,9 @@ Per avviare il test, devi prima impostare la raccolta e l’ambiente su [!DNL Po
 
 | Parametro | Descrizione | Esempio |
 | --- | --- | --- |
-| `x-api-key` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experience Platform. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Identificatore univoco utilizzato per autenticare le chiamate alle API Experienci Platform. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri. Guarda il tutorial su [configurazione della console per sviluppatori e [!DNL Postman]](../../../landing/postman.md) per istruzioni su come recuperare `x-gw-ims-org-id` informazioni. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Il token di autorizzazione necessario per completare le chiamate alle API Experience Platform. Guarda il tutorial su [autenticazione e accesso alle API Experience Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `authorizationToken`. | `Bearer authorizationToken` |
+| `authorizationToken` | Il token di autorizzazione necessario per completare le chiamate alle API Experienci Platform. Guarda il tutorial su [autenticazione e accesso alle API Experienci Platform](../../../landing/api-authentication.md) per informazioni su come recuperare `authorizationToken`. | `Bearer authorizationToken` |
 | `schemaId` | Per utilizzare i dati sorgente in Platform, è necessario creare uno schema di destinazione che strutturi i dati sorgente in base alle tue esigenze. Per i passaggi dettagliati su come creare uno schema XDM di destinazione, consulta l’esercitazione su [creazione di uno schema tramite l’API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Versione univoca corrispondente allo schema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | Il `meta:altId` che viene restituito insieme al  `schemaId` durante la creazione di un nuovo schema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
@@ -71,7 +69,7 @@ Con la nuova origine ora disponibile nella sandbox, devi seguire il flusso di la
 
 ![Catalogo delle origini che visualizza la nuova origine di streaming.](../assets/testing/catalog-test.png)
 
-Il [!UICONTROL Aggiungi dati] viene visualizzato il passaggio. Per verificare che l’origine possa eseguire lo streaming dei dati, utilizza il lato sinistro dell’interfaccia per caricare [un esempio di dati JSON](../assets/testing/raw.json.zip). Una volta caricati i dati, il lato destro dell’interfaccia si aggiorna in un’anteprima della gerarchia dei file dei dati. Seleziona **[!UICONTROL Successivo]** per procedere.
+Il [!UICONTROL Aggiungi dati] viene visualizzato il passaggio. Per verificare che l’origine possa eseguire lo streaming dei dati, utilizza il lato sinistro dell’interfaccia per caricare [un esempio di dati JSON](../assets/testing/raw.json.zip). Una volta caricati i dati, il lato destro dell’interfaccia si aggiorna in un’anteprima della gerarchia dei file dei dati. Seleziona **[!UICONTROL Avanti]** per procedere.
 
 ![Il passaggio Aggiungi dati nel flusso di lavoro delle origini, in cui puoi caricare e visualizzare in anteprima i dati prima dell’acquisizione.](../assets/testing/add-data-test.png)
 
@@ -100,7 +98,7 @@ Dopo aver rivisto il flusso di dati, seleziona **[!UICONTROL Fine]** e lascia un
 
 ![Passaggio di revisione del flusso di lavoro origini.](../assets/testing/review-test.png)
 
-Infine, devi recuperare l’endpoint di streaming del flusso di dati. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experience Platform. Per recuperare l’endpoint di streaming, vai al [!UICONTROL Attività flusso di dati] pagina del flusso di dati appena creato e copia l’endpoint dalla parte inferiore della sezione [!UICONTROL Proprietà] pannello.
+Infine, devi recuperare l’endpoint di streaming del flusso di dati. Questo endpoint verrà utilizzato per abbonarsi al webhook, consentendo alla tua origine di streaming di comunicare con Experienci Platform. Per recuperare l’endpoint di streaming, vai al [!UICONTROL Attività flusso di dati] pagina del flusso di dati appena creato e copia l’endpoint dalla parte inferiore della sezione [!UICONTROL Proprietà] pannello.
 
 ![Endpoint di streaming nell’attività del flusso di dati.](../assets/testing/endpoint-test.png)
 

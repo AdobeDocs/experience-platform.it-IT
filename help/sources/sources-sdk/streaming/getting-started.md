@@ -1,13 +1,11 @@
 ---
 title: Guida introduttiva alle origini self-service (Streaming SDK)
 description: Questo documento fornisce un’introduzione alle informazioni sui prerequisiti da conoscere prima di tentare di creare una nuova origine utilizzando Origini self-service (Streaming SDK).
-hide: true
-hidefromtoc: true
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '523'
+ht-degree: 12%
 
 ---
 
@@ -17,7 +15,7 @@ Origini self-service (Streaming SDK) consente di integrare la propria origine pe
 
 ## Processo di alto livello
 
-Di seguito è descritta la procedura dettagliata per configurare l’origine in Experience Platform:
+Di seguito è descritta la procedura dettagliata per configurare l’origine in Experienci Platform:
 
 ### Integrazione
 
@@ -42,22 +40,22 @@ Puoi scaricare i modelli di documentazione riportati di seguito:
 
 >[!IMPORTANT]
 >
->L’origine che stai integrando con Experience Platform deve essere in grado di supportare un webhook a cui un endpoint può essere abbonato per inviare aggiornamenti.
+>L’origine che stai integrando con Experienci Platform deve essere in grado di supportare un webhook a cui un endpoint può essere abbonato per inviare aggiornamenti.
 
 Per utilizzare Origini self-service (Streaming SDK), è necessario assicurarsi di avere accesso a un’organizzazione sandbox con provisioning di Origini Adobe Experience Platform.
 
 Questa guida richiede anche una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sorgenti](../../home.md): un Experience Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform.
-* [Sandbox](../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
+* [Sandbox](../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
 ## Lettura delle chiamate API di esempio
 
-Sorgenti self-service (SDK di streaming) e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito il codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
+Sorgenti self-service (SDK di streaming) e [!DNL Flow Service] La documentazione API fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-## Raccogli i valori per le intestazioni richieste
+## Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento del tutorial sull’autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte [!DNL Experience Platform] Chiamate API, come mostrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare la sezione [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

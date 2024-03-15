@@ -1,13 +1,11 @@
 ---
 title: Modello self-service della documentazione per l’interfaccia utente di Streaming SDK
 description: Scopri come portare dati in streaming da un’origine a Adobe Experience Platform utilizzando l’interfaccia utente.
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 1%
+source-wordcount: '1186'
+ht-degree: 0%
 
 ---
 
@@ -83,7 +81,7 @@ Al termine, seleziona **[!UICONTROL Successivo]**.
 
 ![Passaggio di anteprima del flusso di lavoro origini.](../assets/streaming/preview.png)
 
-## Dettaglio del flusso di dati
+## Dettagli del flusso di dati
 
 Il **Dettagli del flusso di dati** Questo passaggio ti fornisce le opzioni per utilizzare un set di dati esistente o stabilirne uno nuovo per il flusso di dati, nonché l’opportunità di fornire un nome e una descrizione per il flusso di dati. Durante questo passaggio, puoi anche configurare le impostazioni per l’acquisizione del profilo, la diagnostica degli errori, l’acquisizione parziale e gli avvisi.
 
