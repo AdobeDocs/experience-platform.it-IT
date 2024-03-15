@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente di Privacy Service
 description: Inizia a utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 >title="Richieste degli interessati"
 >abstract="Questo widget mostra il numero di richieste degli interessati inviate e completate che sono state elaborate da Privacy Service per un dato giorno. Per ulteriori informazioni sui processi di Privacy Service, seleziona **Richieste** nella barra di navigazione a sinistra."
 
-Interfaccia utente di Privacy Service [!DNL Privacy Service] consente di coordinare le richieste di privacy e conformità tra le varie applicazioni Adobe Experience Cloud.
+L’interfaccia utente di Privacy Service consente di coordinare le richieste di privacy e conformità tra diverse applicazioni Adobe Experience Cloud.
 
 >[!NOTE]
 >

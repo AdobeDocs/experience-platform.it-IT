@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experienci Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
 # Applicazione automatica dei criteri
 
+Le etichette e i criteri di utilizzo dei dati sono disponibili per tutti gli utenti di Adobe Experience Platform. Definisci i criteri di utilizzo dei dati e applica le etichette di utilizzo dei dati per garantire che tutti i dati sensibili, identificabili o contrattuali vengano gestiti in modo accurato. Queste misure aiutano a applicare le regole di governance dei dati della tua organizzazione su come accedere ai dati, elaborarli, memorizzarli e condividerli.
+
+Per proteggere la tua organizzazione da potenziali rischi e responsabilità, Platform applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni durante l’attivazione dei tipi di pubblico nelle destinazioni.
+
 >[!IMPORTANT]
 >
->L’applicazione automatica dei criteri è disponibile solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
+>I criteri di consenso e l’applicazione automatica dei criteri di consenso sono disponibili solo per le organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**.
 
-Una volta etichettati i dati e definiti i criteri di utilizzo dei dati, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i tipi di pubblico nelle destinazioni, Adobe Experience Platform applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni.
-
->[!NOTE]
->
->Questo documento si concentra sull’applicazione della governance dei dati e dei criteri di consenso. Per informazioni sui criteri di controllo degli accessi, consulta la documentazione su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md).
+Questo documento si concentra sull’applicazione della governance dei dati e dei criteri di consenso. Per informazioni sui criteri di controllo degli accessi, consulta la documentazione su [controllo degli accessi basato su attributi](../../access-control/abac/overview.md).
 
 ## Prerequisiti
 
@@ -94,27 +94,31 @@ Se si verifica una violazione dei criteri dal tentativo di attivare un pubblico 
 
 Selezionare una violazione dei criteri nella colonna sinistra del popover per visualizzare i dettagli relativi a tale violazione.
 
-![](../images/enforcement/violation-policy-select.png)
+![Finestra di dialogo che indica che si è verificata una violazione dei criteri con il nome dei criteri evidenziato.](../images/enforcement/violation-policy-select.png)
 
 Il messaggio di violazione fornisce un riepilogo del criterio violato, incluse le condizioni che il criterio è configurato per verificare, l’azione specifica che ha attivato la violazione e un elenco delle possibili risoluzioni del problema.
 
-![](../images/enforcement/violation-summary.png)
+![Finestra di dialogo per violazione dei criteri con il riepilogo delle violazioni evidenziato.](../images/enforcement/violation-summary.png)
 
 Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazione dei dati che consente di visualizzare i set di dati, i criteri di unione, i tipi di pubblico e le destinazioni coinvolti nella violazione dei criteri. L’entità che stai modificando viene evidenziata nel grafico, indicando quale punto del flusso sta causando la violazione. Puoi selezionare un nome di entità all’interno del grafico per aprire la pagina dei dettagli dell’entità in questione.
 
-![](../images/enforcement/data-lineage.png)
+![Finestra di dialogo per violazione dei criteri con il grafico di derivazione dati evidenziato.](../images/enforcement/data-lineage.png)
 
 È inoltre possibile utilizzare **[!UICONTROL Filtro]** icona (![](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. È necessario selezionare almeno due categorie per visualizzare i dati.
 
-![](../images/enforcement/lineage-filter.png)
+![Finestra di dialogo per violazione dei criteri con il filtro di derivazione dati e il menu a discesa evidenziati.](../images/enforcement/lineage-filter.png)
 
 Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Vista percorso]**.
 
-![](../images/enforcement/list-view.png)
+![Finestra di dialogo per violazione dei criteri con la vista del percorso di derivazione dei dati evidenziata.](../images/enforcement/list-view.png)
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-Se è stato [criteri di consenso creati](../policies/user-guide.md#consent-policy) e quando attivi un pubblico su una destinazione, puoi vedere in che modo i tuoi criteri di consenso influiscono sulla percentuale di profili inclusi nell’attivazione.
+Quando attivi un pubblico in una destinazione, puoi vedere in che modo [criteri di consenso](../policies/user-guide.md#consent-policy) influenzano diverse percentuali di profili inclusi nell’attivazione.
+
+>[!NOTE]
+>
+>I criteri di consenso sono disponibili solo per le organizzazioni che hanno acquistato Adobe Healthcare Shield o Adobe Privacy &amp; Security Shield.
 
 #### Miglioramento dei criteri di consenso per gli elementi multimediali a pagamento {#consent-policy-enhancement}
 

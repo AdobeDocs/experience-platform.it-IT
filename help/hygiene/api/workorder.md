@@ -3,7 +3,7 @@ title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 2%
@@ -126,9 +126,9 @@ In caso di esito positivo, la risposta restituisce i dettagli dell’eliminazion
 
 {style="table-layout:auto"}
 
-## Recuperare lo stato di un&#39;eliminazione record (#lookup)
+## Recuperare lo stato di un&#39;eliminazione record {#lookup}
 
-Dopo [creazione di una richiesta di eliminazione record](#create), puoi controllarne lo stato utilizzando una richiesta GET.
+Dopo di te [creare una richiesta di eliminazione record](#create), puoi controllarne lo stato utilizzando una richiesta GET.
 
 **Formato API**
 
