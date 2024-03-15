@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1031'
 ht-degree: 10%
 
 ---
@@ -115,6 +115,7 @@ ht-degree: 10%
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
       - [Connettore quadrato](connectors/payments/square.md)
+      - [Connettore a Stripe](connectors/payments/stripe.md)
    - Protocoli {#protocols}
       - [Connettore OData generico](connectors/protocols/odata.md)
       - [Connettore API REST generico](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 10%
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Quadrato](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocoli {#protocols}
          - [OData generica](tutorials/api/create/protocols/odata.md)
          - [API REST generica](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 10%
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Quadrato](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocoli {#protocols}
          - [OData generica](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
