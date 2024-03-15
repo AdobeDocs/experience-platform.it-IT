@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1218'
 ht-degree: 5%
 
 ---
@@ -142,6 +142,7 @@ ht-degree: 5%
       * [Estensione Audienci Manager DIL](./catalog/data-management/aam-dil-extension.md)
    * Partner dati e identità {#data-partner}
       * [Eliminazione di Acxiom Prospect](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Miglioramento dei dati Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinazioni eCommerce {#ecommerce}
       * [Commerce SAP](./catalog/ecommerce/sap-commerce.md)
    * Destinazioni e-mail {#email}

@@ -3,9 +3,9 @@ title: Acxiom Prospect-Suppression
 description: Esporta i tipi di pubblico di prime parti nella destinazione Acxiom, per consentire ad Acxiom di eliminare i clienti noti o convertiti. Quindi utilizza il connettore di origine Acxiom per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Per definire una nuova posizione S3 gestita da Acxiom:
 
 ### Account esistente
 
-Gli account già definiti utilizzando la scheda Prospect-Suppression di Acxiom verranno visualizzati in un pop-up di elenco e, se questa opzione è selezionata, forniscono dettagli sull&#39;account.  Questo è mostrato di seguito nell’esempio dall’interfaccia utente, quando passi a **Destinazioni** > **Account**;
+Account già definiti utilizzando [!DNL Acxiom Prospect Suppression] destinazione viene visualizzata in un pop-up elenco. Se questa opzione è selezionata, i dettagli dell’account sono visualizzati nella barra a destra. Visualizza l’esempio dall’interfaccia utente, quando passi a **[!UICONTROL Destinazioni]** > **[!UICONTROL Account]**:
 
 ![Account esistente](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ L’elaborazione richiede elementi di nome e indirizzo, mentre non tutti sono ne
 
 | Campo di destinazione | Descrizione origine |
 |--------------|-------------------------------------------------------------|
-| name | Il valore person.name.fullName in Experienci Platform. |
-| firstName | Il valore person.name.firstName in Experienci Platform. |
-| lastName | Il valore person.name.lastName in Experienci Platform. |
-| address1 | Il valore mailingAddress.street1 in Experienci Platform. |
-| address2 | Il valore mailingAddress.street2 in Experienci Platform. |
-| città | Il valore mailingAddress.city in Experienci Platform. |
-| Stato | Il valore mailingAddress.state in Experienci Platform. |
-| zip | Il valore mailingAddress.postalCode in Experienci Platform. |
+| name | Il `person.name.fullName` valore in Experienci Platform. |
+| firstName | Il `person.name.firstName` valore in Experienci Platform. |
+| lastName | Il `person.name.lastName` valore in Experienci Platform. |
+| address1 | Il `mailingAddress.street1` valore in Experienci Platform. |
+| address2 | Il `mailingAddress.street2` valore in Experienci Platform. |
+| città | Il `mailingAddress.city` valore in Experienci Platform. |
+| Stato | Il `mailingAddress.state` valore in Experienci Platform. |
+| zip | Il `mailingAddress.postalCode` valore in Experienci Platform. |
 
 {style="table-layout:auto"}
 
