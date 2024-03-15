@@ -1,24 +1,25 @@
 ---
 title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
+badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 4%
+source-wordcount: '1566'
+ht-degree: 8%
 
 ---
 
-# [!BADGE Beta]{type=Informative} Elimina record {#record-delete}
+# Elimina record {#record-delete}
 
 Utilizza il [[!UICONTROL Ciclo di vita dei dati] workspace](./overview.md) per eliminare i record in Adobe Experience Platform in base alle identità principali. Questi record possono essere associati a singoli consumatori o a qualsiasi altra entità inclusa nel grafico delle identità.
 
 >[!IMPORTANT]
 > 
-La funzione Record Delete (Elimina record) è attualmente in versione beta e disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
+>La funzione Record Delete (Elimina record) è attualmente in versione beta e disponibile solo in una **versione limitata**. Non è disponibile per tutti i clienti. Le richieste di cancellazione dei record sono disponibili solo per le organizzazioni nella versione limitata.
 > 
 > 
-Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
+>Le eliminazioni di record devono essere utilizzate per la pulizia dei dati, la rimozione di dati anonimi o la minimizzazione dei dati. Sono **non** da utilizzare per le richieste di diritti degli interessati (conformità) relative a normative sulla privacy come il Regolamento generale sulla protezione dei dati (RGPD). Per tutti i casi di utilizzo di conformità, utilizza [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) invece.
 
 ## Prerequisiti {#prerequisites}
 
@@ -27,7 +28,7 @@ L’eliminazione dei record richiede una buona conoscenza del funzionamento dei 
 Per ulteriori informazioni sulle identità in Platform, consulta la seguente documentazione:
 
 * [Servizio Adobe Experience Platform Identity](../../identity-service/home.md): collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui si conformano.
-* [Spazi dei nomi delle identità](../../identity-service/features/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi of informazioni sull’identità che possono riferirsi a una singola persona e che sono un componente obbligatorio per ogni campo di identità.
+* [Spazi dei nomi delle identità](../../identity-service/features/namespaces.md): gli spazi dei nomi di identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ogni campo di identità.
 * [Profilo cliente in tempo reale](../../profile/home.md): utilizza grafici di identità per fornire profili di consumatori unificati basati su dati aggregati provenienti da più origini, aggiornati in tempo quasi reale.
 * [Experience Data Model (XDM)](../../xdm/home.md): fornisce definizioni e strutture standard per i dati di Platform tramite l’utilizzo di schemi. Tutti i set di dati di Platform sono conformi a uno schema XDM specifico e lo schema definisce quali campi sono identità.
 * [Campi di identità](../../xdm/ui/fields/identity.md): scopri come viene definito un campo di identità in uno schema XDM.
@@ -42,7 +43,7 @@ Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per imp
 
 >[!IMPORTANT]
 > 
-Come parte delle modifiche in corso per migliorare l’efficienza e rendere le operazioni sui set di dati meno costose, le organizzazioni che sono state spostate nel formato Delta possono eliminare i dati dal servizio Identity, dal profilo cliente in tempo reale e dal data lake. Questo tipo of utente viene indicato come delta-migrato. Gli utenti delle organizzazioni con migrazione differita possono scegliere di eliminare i record da un singolo set di dati o da tutti. Gli utenti di organizzazioni che non sono state sottoposte a migrazione delta non possono scegliere di eliminare record da un singolo set di dati o da tutti, come illustrato nell’immagine seguente. In questo caso, continua con [fornisci identità](#provide-identities) sezione della guida.
+>Come parte delle modifiche in corso per migliorare l’efficienza e rendere le operazioni sui set di dati meno costose, le organizzazioni che sono state spostate nel formato Delta possono eliminare i dati dal servizio Identity, dal profilo cliente in tempo reale e dal data lake. Questo tipo di utente viene definito delta-migrato. Gli utenti delle organizzazioni con migrazione differita possono scegliere di eliminare i record da un singolo set di dati o da tutti. Gli utenti di organizzazioni che non sono state sottoposte a migrazione delta non possono scegliere di eliminare record da un singolo set di dati o da tutti, come illustrato nell’immagine seguente. In questo caso, continua con [fornisci identità](#provide-identities) sezione della guida.
 
 ![Il flusso di lavoro di creazione delle richieste con [!UICONTROL Elimina record] opzione selezionata ed evidenziata.](../images/ui/record-delete/delete-record.png)
 
@@ -60,31 +61,31 @@ Se desideri eliminare record da tutti i set di dati, seleziona **[!UICONTROL Tut
 
 >[!NOTE]
 >
-Selezione del **[!UICONTROL Tutti i set di dati]** potrebbe richiedere più tempo e non consentire l&#39;eliminazione accurata dei record.
+>Selezione del **[!UICONTROL Tutti i set di dati]** potrebbe richiedere più tempo e non consentire l&#39;eliminazione accurata dei record.
 
 ## Fornire identità {#provide-identities}
 
-[!CONTEXTUALHELP]
-id="platform_hygiene_primaryidentity"
-title="Identità primaria"
-abstract="Un’identità primaria è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo di identità primaria per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna devi fornire il tipo (or spazio dei nomi) per l&#39;identità primaria del record, ad esempio `email` per gli indirizzi e-mail e `ecid` ad Experience Cloud, gli ID. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_primaryidentity"
+>title="Identità primaria"
+>abstract="Un’identità primaria è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo di identità primaria per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per l’identità primaria del record, ad esempio `email` per gli indirizzi e-mail e `ecid` per gli Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
 
-[!CONTEXTUALHELP]
-id="platform_hygiene_identityvalue"
-title="Valore identità"
-abstract="In questa colonna è necessario fornire il valore per l&#39;identità primaria del record, che deve corrispondere al tipo di identità provided nella colonna sinistra. Se il tipo di identità primaria is `email`, il valore deve essere l’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_identityvalue"
+>title="Valore identità"
+>abstract="In questa colonna è necessario fornire il valore per l’identità primaria del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di identità primaria è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
 
 Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al **identità primaria** campo definito dallo schema del set di dati.
 
-Come tutti i campi di identità in Platform, un’identità primaria è composta da due elementi: **tipo** (talvolta denominati spazi dei nomi delle identità) e **valore**. Il tipo di identità provides contesto relativo al modo in cui il campo identifica un record (ad esempio un indirizzo e-mail) e il valore rappresenta l’identità specifica di un record per quel tipo (for esempio: `jdoe@example.com` per `email` tipo di identità). Common i campi utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
+Come tutti i campi di identità in Platform, un’identità primaria è composta da due elementi: **tipo** (talvolta denominati spazi dei nomi delle identità) e **valore**. Il tipo di identità fornisce contesto sul modo in cui il campo identifica un record (ad esempio un indirizzo e-mail) e il valore rappresenta l’identità specifica di un record per quel tipo (ad esempio, `jdoe@example.com` per `email` tipo di identità). I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
 
 >[!TIP]
 >
-Se non conosci l’identità primaria di un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** Workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. L’identità primaria viene visualizzata insieme al nome e alla descrizione dello schema.
+>Se non conosci l’identità primaria di un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** Workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. L’identità primaria viene visualizzata insieme al nome e alla descrizione dello schema.
 >
-![Il dashboard Set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. Viene evidenziato l’ID primario del set di dati.](../images/ui/record-delete/dataset-primary-identity.png)
+>![Il dashboard Set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. Viene evidenziato l’ID primario del set di dati.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Se si eliminano record da un singolo set di dati, tutte le identità specificate devono avere lo stesso tipo, since un set di dati può avere una sola identità primaria. Se elimini da tutti i set di dati, puoi includere più tipi di identità since set di dati diversi possono avere identità primarie diverse.
+Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere una sola identità primaria. Se elimini da tutti i set di dati, puoi includere più tipi di identità in quanto set di dati diversi possono avere identità primarie diverse.
 
 Esistono due opzioni per fornire le identità quando si eliminano i record:
 
@@ -125,7 +126,7 @@ Per immettere manualmente le identità, seleziona **[!UICONTROL Aggiungi identit
 
 ![Il flusso di lavoro di creazione delle richieste con [!UICONTROL Aggiungi identità] opzione evidenziata.](../images/ui/record-delete/add-identity.png)
 
-Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL Identità primaria]**, utilizza il menu a discesa per selezionare il tipo di identità. Under **[!UICONTROL Valore identità]**, fornisci il valore di identità primaria del record.
+Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL Identità primaria]**, utilizza il menu a discesa per selezionare il tipo di identità. Sotto **[!UICONTROL Valore identità]**, fornisci il valore di identità primaria del record.
 
 ![Il flusso di lavoro per la creazione di richieste con un campo di identità aggiunto manualmente.](../images/ui/record-delete/identity-added.png)
 
@@ -139,7 +140,7 @@ Dopo aver aggiunto le identità alla richiesta, in **[!UICONTROL Impostazioni ri
 
 >[!IMPORTANT]
 > 
-Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Una singola richiesta di eliminazione del record tramite l’interfaccia utente consente di inviare 10.000 ID alla volta. Il [Metodo API per eliminare i record](../api/workorder.md#create) consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite dell’ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
+>Esistono limiti diversi per il numero totale di eliminazioni di record di identità univoci che possono essere inviate ogni mese. Questi limiti sono basati sul contratto di licenza. Le organizzazioni che hanno acquistato tutte le edizioni di Adobe Real-time Customer Data Platform e Adobe Journey Optimizer possono inviare fino a 100.000 record di identità eliminati ogni mese. Organizzazioni che hanno acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield** può inviare fino a 600.000 eliminazioni di record di identità al mese.<br>Una singola richiesta di eliminazione del record tramite l’interfaccia utente consente di inviare 10.000 ID alla volta. Il [Metodo API per eliminare i record](../api/workorder.md#create) consente di inviare contemporaneamente 100.000 ID.<br>È consigliabile inviare il maggior numero possibile di ID per richiesta, fino al limite dell’ID. Quando intendi eliminare un volume elevato di ID, devi evitare di inviare un volume basso o un singolo ID per richiesta di cancellazione del record.
 
 ![L&#39;impostazione della richiesta [!UICONTROL Nome] e [!UICONTROL Descrizione] campi con [!UICONTROL Invia] evidenziato.](../images/ui/record-delete/submit.png)
 
@@ -151,7 +152,7 @@ Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene vis
 
 >[!NOTE]
 >
-Consulta la sezione panoramica su [tempistiche e trasparenza](../home.md#record-delete-transparency) per informazioni dettagliate sulla modalità di elaborazione delle eliminazioni dei record dopo l&#39;esecuzione.
+>Consulta la sezione panoramica su [tempistiche e trasparenza](../home.md#record-delete-transparency) per informazioni dettagliate sulla modalità di elaborazione delle eliminazioni dei record dopo l&#39;esecuzione.
 
 ![Il [!UICONTROL Registra] scheda di [!UICONTROL Ciclo di vita dei dati] con la nuova richiesta evidenziata.](../images/ui/record-delete/request-log.png)
 
