@@ -2,7 +2,7 @@
 title: Acquisizione dei dati Acxiom
 description: Scopri come acquisire [!DNL Acxiom] su Real-time Customer Data Platform, arricchisci i profili di prime parti, migliora i tipi di pubblico e attivali tra i canali di marketing.
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -54,3 +54,4 @@ Quando si assegna un nome al file o alla directory di archiviazione cloud, è ne
 ## Passaggi successivi
 
 Una volta letto questo documento, avrai completato la configurazione dei prerequisiti necessaria per portare i dati dal tuo [!DNL Acxiom] da Experience Platform. Ora puoi passare alla guida su [connessione [!DNL Acxiom Data Ingestion] per Experienci Platform utilizzando l’interfaccia utente di](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
