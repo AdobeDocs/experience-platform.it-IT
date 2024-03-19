@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 4%
+source-wordcount: '2932'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Questa guida utente fornisce istruzioni su come eseguire azioni comuni quando si
 La presente guida utente richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Set di dati](overview.md): costrutto di archiviazione e gestione per la persistenza dei dati in [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Experience Platform].
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Experience Platform] organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Editor schema](../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi XDM personalizzati utilizzando [!DNL Schema Editor] all&#39;interno del [!DNL Platform] dell&#39;utente.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -41,12 +41,36 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 
 In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Set di dati]** nel menu di navigazione a sinistra per aprire **[!UICONTROL Set di dati]** dashboard. Il dashboard elenca tutti i set di dati disponibili per l’organizzazione. Vengono visualizzati i dettagli di ciascun set di dati elencato, compreso il nome, lo schema a cui il set di dati aderisce e lo stato dell’esecuzione di acquisizione più recente.
 
-![Immagine che evidenzia l’elemento Set di dati nella barra di navigazione a sinistra.](../images/datasets/user-guide/browse-datasets.png)
+![L’interfaccia utente di Platform con l’elemento Set di dati evidenziato nella barra di navigazione a sinistra.](../images/datasets/user-guide/browse-datasets.png)
 
 Seleziona il nome di un set di dati da [!UICONTROL Sfoglia] scheda per accedere ai relativi **[!UICONTROL Attività set di dati]** e visualizzare i dettagli del set di dati selezionato. La scheda attività include un grafico che mostra il tasso di utilizzo dei messaggi e un elenco di batch con esito positivo o negativo.
 
-![Vengono evidenziati i dettagli del set di dati selezionato.](../images/datasets/user-guide/dataset-activity-1.png)
-![I batch di esempio che appartengono al set di dati selezionato vengono evidenziati.](../images/datasets/user-guide/dataset-activity-2.png)
+![Vengono evidenziate le metriche e le visualizzazioni del set di dati selezionato.](../images/datasets/user-guide/dataset-activity-1.png)
+![Vengono evidenziati i batch di esempio relativi al set di dati selezionato.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## Altre azioni {#more-actions}
+
+È possibile [!UICONTROL Elimina] o [!UICONTROL Abilitare un set di dati per il profilo] dal [!UICONTROL Set di dati] visualizzazione dettagli. Per visualizzare le azioni disponibili, seleziona **[!UICONTROL ... Altro]** in alto a destra nell’interfaccia utente. Viene visualizzato il menu a discesa.
+
+![L’area di lavoro Set di dati con [!UICONTROL ... Altro] menu a discesa evidenziato.](../images/datasets/user-guide/more-actions.png)
+
+Se si seleziona **[!UICONTROL Abilitare un set di dati per il profilo]**, viene visualizzata una finestra di conferma. Seleziona **[!UICONTROL Abilita]** per confermare la scelta.
+
+>[!NOTE]
+>
+>Per abilitare un set di dati per il profilo, lo schema a cui il set di dati aderisce deve essere compatibile per l’utilizzo in Real-Time Customer Profile. Consulta la [Abilitare un set di dati per il profilo](#enable-profile) per ulteriori informazioni.
+
+![La finestra di dialogo Abilita conferma set di dati.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+Se si seleziona **[!UICONTROL Elimina]**, il [!UICONTROL Elimina set di dati] viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Elimina]** per confermare la scelta.
+
+>[!NOTE]
+>
+>Impossibile eliminare i set di dati di sistema.
+
+Puoi anche eliminare un set di dati o aggiungere un set di dati da utilizzare con Real-Time Customer Profile dalle azioni in linea disponibili nella [!UICONTROL Sfoglia] scheda. Consulta la [sezione azioni in linea](#inline-actions) per ulteriori informazioni.
+
+![Finestra di dialogo di conferma Elimina set di dati.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Azioni del set di dati in linea {#inline-actions}
 
@@ -135,13 +159,13 @@ Per metodi più affidabili per accedere ai dati, [!DNL Experience Platform] forn
 
 ## Creare un set di dati {#create}
 
-Per creare un nuovo set di dati, inizia selezionando **[!UICONTROL Creare un set di dati]** nella dashboard del set di dati.****
+Per creare un nuovo set di dati, inizia selezionando **[!UICONTROL Crea set di dati]** nel **[!UICONTROL Set di dati]** dashboard.
 
 ![Viene evidenziato il pulsante Crea set di dati.](../images/datasets/user-guide/select-create.png)
 
 Nella schermata successiva vengono presentate le due opzioni seguenti per la creazione di un nuovo set di dati:
 
-* [Creare un set di dati da uno schema](#schema)
+* [Crea set di dati dallo schema](#schema)
 * [Crea set di dati da file CSV](#csv)
 
 ### Creare un set di dati con uno schema esistente {#schema}
@@ -253,7 +277,7 @@ Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfac
 
 Puoi eliminare un set di dati da [!DNL Profile] archivia solo (lasciando i dati nel Data Lake) utilizzando l’API Real-Time Customer Profile. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md).
 
-## Monitoraggio dell’acquisizione di dati
+## Monitorare l’acquisizione dei dati
 
 In [!DNL Experience Platform] UI, seleziona **[!UICONTROL Monitorare]** nel menu di navigazione a sinistra. Il **[!UICONTROL Monitorare]** la dashboard ti consente di visualizzare gli stati dei dati in entrata dall’acquisizione in batch o in streaming. Per visualizzare gli stati dei singoli batch, selezionare **[!UICONTROL Batch end-to-end]** o **[!UICONTROL Streaming end-to-end]**. Le dashboard elencano tutte le esecuzioni di acquisizione in batch o in streaming, incluse quelle che hanno avuto esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce dettagli sul batch, tra cui l’ID del batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per [!DNL Profile], viene visualizzato anche il numero di record di identità e profilo acquisiti.
 

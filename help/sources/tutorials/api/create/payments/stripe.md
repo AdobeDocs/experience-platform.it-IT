@@ -1,10 +1,8 @@
 ---
 title: Acquisisci i dati dei pagamenti dal tuo [!DNL Stripe] Experience Platform dell’account tramite API
 description: Scopri come acquisire i dati dei pagamenti dall’account di Stripe all’Experience Platform utilizzando l’API del servizio Flow
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 2%

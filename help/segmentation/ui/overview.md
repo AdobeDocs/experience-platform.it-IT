@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4018'
 ht-degree: 3%
 
 ---
@@ -212,6 +212,18 @@ Viene visualizzato l’elenco dei filtri disponibili.
 | [!UICONTROL Data di modifica] | Consente di filtrare in base all’ultima data modificata del pubblico. Puoi scegliere un intervallo di date per filtrare quando il pubblico è stato modificato l’ultima volta. |
 
 ![I filtri disponibili vengono visualizzati ed evidenziati nella pagina Sfoglia pubblico.](../images/ui/overview/filter-audiences.png)
+
+**Azioni in blocco** {#bulk-actions}
+
+Inoltre, puoi selezionare fino a 25 tipi di pubblico diversi ed eseguire varie azioni su di essi. Queste azioni includono [spostamento in una cartella](#folders), [modifica o applicazione di un tag](#tags), [applicazione delle etichette di accesso](../../access-control/abac/ui/labels.md), e [eliminazione](#browse).
+
+![Vengono evidenziate le opzioni disponibili per le azioni in blocco.](../images/ui/overview/bulk-actions.png)
+
+Quando applichi azioni in blocco a questi tipi di pubblico, si applicano le seguenti condizioni:
+
+- Tu **può** seleziona i tipi di pubblico da pagine diverse.
+- Tu **non può** elimina un pubblico utilizzato in un’attivazione di destinazione.
+- Se selezioni un filtro, il pubblico selezionato **will** ripristina.
 
 ### Dettagli del pubblico {#audience-details}
 

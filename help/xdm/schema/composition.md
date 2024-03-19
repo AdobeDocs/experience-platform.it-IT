@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 description: Scopri gli schemi Experience Data Model (XDM) e gli elementi di base, i principi e le best practice per la composizione di schemi in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 6%
 
 ---
@@ -261,7 +261,7 @@ Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincol
 
 >[!NOTE]
 >
->Il tipo di campo &quot;map&quot; consente di usare dati di coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe si trovano nelle classi XDM standard e nei gruppi di campi, ma puoi anche definire mappe personalizzate utilizzando l’API Schema Registry. Guarda il tutorial su [definizione di campi personalizzati](../tutorials/custom-fields-api.md#custom-maps) per ulteriori informazioni.
+>Il tipo di campo &quot;map&quot; consente di usare dati di coppia chiave-valore, inclusi più valori per una singola chiave. Le mappe si trovano nelle classi XDM standard e nei gruppi di campi, ma puoi anche definire mappe personalizzate. Consulta l’esercitazione API su [definizione di campi mappa personalizzati](../tutorials/custom-fields-api.md#custom-maps) oppure la guida su [definizione dei campi mappa nell’interfaccia utente](../ui/fields/map.md) per ulteriori informazioni.
 
 ## Esempio di composizione {#composition-example}
 
@@ -275,7 +275,7 @@ Il diagramma seguente mostra questi schemi e i campi con il contributo di ciascu
 
 ![Un diagramma di flusso costituito da quattro schemi e dai gruppi di campi che vi contribuiscono.](../images/schema-composition/composition.png)
 
-### Union {#union}
+### Unione {#union}
 
 Experienci Platform consente di comporre schemi per casi d’uso specifici, ma ti consente anche di visualizzare un’&quot;unione&quot; di schemi per un tipo di classe specifico. Il diagramma precedente mostra due schemi basati sulla classe ExperienceEvent XDM e due schemi basati su [!DNL XDM Individual Profile] classe. L’unione, illustrata di seguito, aggrega i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] e [!DNL XDM Individual Profile], rispettivamente).
 

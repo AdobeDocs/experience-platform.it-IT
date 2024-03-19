@@ -5,7 +5,7 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -47,7 +47,6 @@ Per ottenere [!DNL Flow Service] per connettersi con [!DNL Snowflake], è necess
 | `role` | (Facoltativo) Ruolo personalizzato che può essere fornito a un utente, per una determinata connessione. Se non specificato, il valore predefinito è `public`. |
 | `connectionSpec.id` | La specifica di connessione restituisce le proprietà del connettore di un&#39;origine, incluse le specifiche di autenticazione relative alla creazione delle connessioni di base e di origine. ID della specifica di connessione per [!DNL Snowflake] è `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-Per ulteriori informazioni sull’autenticazione, consulta [[!DNL Snowflake] documento](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Configurare le impostazioni del ruolo {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Per ulteriori informazioni sulla gestione di ruoli e privilegi, fare riferimento
 Il seguente tutorial descrive i passaggi necessari per collegare [!DNL Snowflake] origine di streaming per l’Experience Platform tramite API:
 
 * [Trasmetti dati da un [!DNL Snowflake] database di cui eseguire l’Experience Platform utilizzando l’API del servizio Flusso](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Trasmetti dati da un [!DNL Snowflake] database di cui eseguire l’Experience Platform utilizzando l’area di lavoro origini nell’interfaccia utente di Experienci Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
