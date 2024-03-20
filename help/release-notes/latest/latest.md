@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1209'
 ht-degree: 33%
 
 ---
@@ -82,6 +82,7 @@ Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla r
 | [(Beta) Connessione di Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nuova | Utilizza questo connettore per attivare profili di prime parti da Real-Time CDP ad Acxiom per l’arricchimento dei dati e l’utilizzo tra i canali di marketing. Puoi quindi utilizzare l’origine Acxiom per importare i profili con dati migliorati e lavorarci in Real-Time CDP. |
 | [(Beta) Connessione di eliminazione di Acxiom Prospect](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nuova | Esporta i tipi di pubblico di prime parti nella destinazione Acxiom, per consentire ad Acxiom di eliminare i clienti noti o convertiti. Quindi, utilizza [Importazione dati di ricerca di Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connettore di origine per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi. |
 | [Connessione Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Aggiornamento | Durante l’esportazione dei dati nella destinazione Amazon Ads, ora è possibile indirizzare i dati all’DSP di Amazon o al Marketing Cloud Amazon (nuovo). |
+| [Connessione di onboarding LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Aggiornamento | La destinazione di onboarding LiveRamp ora supporta le consegne in Europa e Australia [!DNL LiveRamp] [!DNL SFTP] istanze. Anche la dimensione massima del file esportato è stata aumentata a 10 milioni di righe (rispetto ai 5 milioni precedenti). |
 
 {style="table-layout:auto"}
 

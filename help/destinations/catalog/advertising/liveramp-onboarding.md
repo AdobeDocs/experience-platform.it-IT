@@ -3,9 +3,9 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1941'
 ht-degree: 3%
 
 ---
@@ -70,6 +70,9 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 ![Schermata di esempio che mostra come autenticare nella destinazione utilizzando SFTP con password](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Porta]**: porta utilizzata per [!DNL LiveRamp - Onboarding] percorso di archiviazione.  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
+   * **[!UICONTROL NA]**: porta di utilizzo `22`
+   * **[!UICONTROL AU]**: porta di utilizzo `2222`
 * **[!UICONTROL Nome utente]**: nome utente per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
 * **[!UICONTROL Password]**: password per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
 * **[!UICONTROL Chiave di crittografia PGP/GPG]**: in alternativa, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Visualizza un esempio di chiave di crittografia formattata correttamente nell’immagine seguente.
@@ -80,6 +83,8 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 ![Schermata di esempio che mostra come autenticare nella destinazione utilizzando la chiave SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Porta]**: porta utilizzata per [!DNL LiveRamp - Onboarding] percorso di archiviazione.  Utilizza la porta corrispondente alla tua posizione geografica, come descritto di seguito:
+   * **[!UICONTROL UE]**: porta di utilizzo `4222`
 * **[!UICONTROL Nome utente]**: nome utente per il [!DNL LiveRamp - Onboarding] percorso di archiviazione.
 * **[!UICONTROL Chiave SSH]**: privato [!DNL SSH] chiave utilizzata per accedere al [!DNL LiveRamp - Onboarding] percorso di archiviazione. La chiave privata deve essere formattata come [!DNL Base64]Stringa con codifica -e non deve essere protetta da password.
 
@@ -99,10 +104,11 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
-![Schermata dell’interfaccia utente di Platform che mostra come inserire i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Schermata dell’interfaccia utente di Platform che mostra come inserire i dettagli per la destinazione](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nome]**: nome con cui riconoscerai questa destinazione in futuro.
 * **[!UICONTROL Descrizione]**: descrizione che ti aiuterà a identificare questa destinazione in futuro.
+* **[!UICONTROL Regione]**: area geografica per l’istanza dell’archiviazione SFTP LiveRamp.
 * **[!UICONTROL Percorso cartella]**: percorso di [!DNL LiveRamp] `uploads` sottocartella che ospiterà i file esportati. Il `uploads` il prefisso viene aggiunto automaticamente al percorso della cartella. [!DNL LiveRamp] consiglia di creare una sottocartella dedicata per le consegne da Adobe Real-Time CDP per mantenere i file separati da tutti gli altri feed esistenti e garantire il corretto funzionamento di tutta l’automazione.
    * Ad esempio, se desideri esportare i file in `uploads/my_export_folder`, digitare `my_export_folder` nel **[!UICONTROL Percorso cartella]** campo.
 * **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati. Le opzioni disponibili sono **[!UICONTROL GZIP]** o **[!UICONTROL Nessuno]**.
@@ -179,6 +185,8 @@ Dopo aver aggiunto tutte le mappature desiderate, seleziona **[!UICONTROL Succes
 
 I dati vengono esportati in [!DNL LiveRamp - Onboarding] percorso di archiviazione configurato come file CSV.
 
+I file esportati hanno una dimensione massima di 10 milioni di righe. Experienci Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite di file singolo, contatta il tuo [!DNL LiveRamp] e chiedere loro di configurare l’acquisizione batch per te.
+
 Durante l&#39;esportazione di file in [!DNL LiveRamp - Onboarding] di destinazione, Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md).
 
 Ad esempio, prendiamo in considerazione i seguenti tipi di pubblico:
@@ -238,3 +246,18 @@ Tutti [!DNL Adobe Experience Platform] le destinazioni sono conformi ai criteri 
 ## Risorse aggiuntive {#additional-resources}
 
 Per ulteriori dettagli su come configurare [!DNL LiveRamp - Onboarding] di archiviazione, vedere [documentazione ufficiale](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Changelog {#changelog}
+
+Questa sezione acquisisce le funzionalità e i significativi aggiornamenti alla documentazione apportati al connettore di destinazione.
+
++++ Visualizza changelog
+
+| Mese di rilascio | Tipo di aggiornamento | Descrizione |
+|---|---|---|
+| Marzo 2024 | Aggiornamento della funzionalità e della documentazione | <ul><li>È stato aggiunto il supporto per le consegne in Europa e Australia [!DNL LiveRamp] [!DNL SFTP] istanze.</li><li>È stata aggiornata la documentazione per descrivere configurazioni specifiche per le nuove aree geografiche supportate.</li><li>La dimensione massima del file è stata aumentata a 10 milioni di righe (rispetto ai 5 milioni precedenti).</li><li>La documentazione è stata aggiornata per riflettere le maggiori dimensioni dei file.</li></ul> |
+| Luglio 2023 | Versione iniziale | Versione di destinazione iniziale e documentazione pubblicata. |
+
+{style="table-layout:auto"}
+
++++
