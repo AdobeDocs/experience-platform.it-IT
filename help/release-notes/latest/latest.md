@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1061'
-ht-degree: 32%
+source-wordcount: '1175'
+ht-degree: 33%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 32%
 Aggiornamenti alle funzioni esistenti in Experienci Platform:
 
 - [Servizio catalogo](#catalog-service)
+- [Raccolta dati](#data-collection)
 - [Preparazione dei dati](#data-prep)
 - [Destinazioni](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -55,6 +56,20 @@ La preparazione dei dati consente ai data engineer di mappare, trasformare e con
 {style="table-layout:auto"}
 
 Per ulteriori informazioni sulla preparazione dati, consulta [Panoramica sulla preparazione dati](../../data-prep/home.md).
+
+## Raccolta dati {#data-collection}
+
+Adobe Experience Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
+
+**Nuove funzioni**
+
+| Tipo | Funzione | Descrizione |
+| --- | --- | --- |
+| Estensioni | [!DNL Merkury] Estensione tag | Il [[!DNL Merkury] estensione tag](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fornisce percentuali di corrispondenza leader di settore per i visitatori anonimi di siti web a [!DNL Merkury] ID I brand possono sfruttare la potenza del [!DNL Merkury] tag ed Adobi per fornire esperienze personalizzate in tempo reale ai siti web. Inoltre, il [!DNL Merkury] tag consente la crescita di dati digitali di prime parti insieme ai profili cliente online e offline connessi. |
+
+{style="table-layout:auto"}
+
+Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla raccolta dati](../../tags/home.md).
 
 ## Destinazioni {#destinations}
 
