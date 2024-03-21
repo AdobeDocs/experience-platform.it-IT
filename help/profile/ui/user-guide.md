@@ -3,10 +3,10 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Questa guida dell’interfaccia utente richiede una comprensione dei vari [!DNL 
 
 * [[!DNL Real-Time Customer Profile] panoramica](../home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Identity Service]](../../identity-service/home.md): Abilita [!DNL Real-Time Customer Profile] collegando le identità da diverse origini dati quando vengono acquisite in [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente.
 
 ## [!UICONTROL Panoramica]
 
@@ -144,6 +144,12 @@ Questi attributi possono essere visualizzati anche come oggetto JSON selezionand
 
 ![Viene evidenziata la scheda Attributi. Vengono visualizzati gli attributi del profilo.](../images/user-guide/attributes.png)
 
+Per visualizzare gli attributi disponibili sullo spigolo, selezionare **[!UICONTROL Bordo]** sul selettore posizione dati.
+
+![Il selettore della posizione dei dati all’interno della scheda attributi è evidenziato.](../images/user-guide/attributes-select.png)
+
+Per ulteriori informazioni sui profili edge, consulta la sezione [documentazione dei profili edge](../edge-profiles.md).
+
 ### Scheda Eventi
 
 Il **[!UICONTROL Eventi]** La scheda contiene i dati dei 100 ExperienceEvents più recenti associati al cliente. Questi dati possono includere aperture e-mail, attività del carrello e visualizzazioni di pagina. Selezione **[!UICONTROL Visualizza tutto]** per ogni singolo evento fornisce campi e valori aggiuntivi acquisiti come parte dell’evento.
@@ -158,7 +164,11 @@ Il **[!UICONTROL Iscrizione al pubblico]** Nella scheda viene visualizzato un el
 
 Per ulteriori informazioni sulla segmentazione nell’Experience Platform, consulta la sezione [Adobi Experience Platform di documentazione del servizio di segmentazione](../../segmentation/home.md).
 
-![Viene evidenziata la scheda Appartenenza al pubblico. Vengono visualizzati i dettagli di iscrizione del pubblico del profilo.](../images/user-guide/segment-membership.png)
+![Viene evidenziata la scheda Appartenenza al pubblico. Vengono visualizzati i dettagli di iscrizione del pubblico del profilo.](../images/user-guide/audience-membership.png)
+
+Per visualizzare l’appartenenza al pubblico dei profili disponibili su Edge, seleziona **[!UICONTROL Bordo]** nel selettore posizione dati. Ulteriori informazioni sulla segmentazione Edge sono disponibili nella sezione [guida alla segmentazione edge](../../segmentation/ui/edge-segmentation.md).
+
+![Il selettore della posizione dei dati all’interno della scheda Appartenenza al pubblico viene evidenziato.](../images/user-guide/audience-membership-select.png)
 
 ## Criteri di unione
 
