@@ -2,9 +2,9 @@
 title: Riferimento estensioni tag
 description: Trova la documentazione relativa alle estensioni tag in Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '472'
 ht-degree: 9%
 
 ---
@@ -27,7 +27,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Adform Web Tracking](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
-* [ADOBE ANALYTICS e ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)
+* [ADOBE ANALYTICS e ADOBE TARGET](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
 * [Adobe Analytics e Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
 * [Adobe Analytics e Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [Adobe Analytics Product String](./product-string/overview.md)
@@ -68,7 +68,7 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Plug-in comuni di Web SDK](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
-* [Gestione del consenso per i cookie da parte di CMP utente v2](https://exchange.adobe.com/apps/ec/*107037)
+* [Gestione del consenso per i cookie da parte di CMP utente v2](https://exchange.adobe.com/apps/ec/*107037)*
 * [Core](./core/overview.md)
 * [Registratore di debug personalizzato](https://exchange.adobe.com/apps/ec/104698)*
 * [Riconoscimento cliente](https://exchange.adobe.com/apps/ec/100688)*
@@ -84,12 +84,13 @@ Di seguito è riportato un elenco della documentazione per le estensioni tag lat
 * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)*
 * [Coinvolgimento predittivo Genesys](https://exchange.adobe.com/apps/ec/106148)*
 * [Google Data Layer](./google-data-layer/overview.md)
-* [Tag del sito globale di Google (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)
+* [Tag del sito globale di Google (gtag)](https://exchange.adobe.com/apps/ec/101437/*google-global-site-tag-gtag)*
 * [InMoment](https://exchange.adobe.com/apps/ec/100847)*
 * [Helper JSON](https://exchange.adobe.com/apps/ec/106449)*
-* [Analisi lettore JW](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)
+* [Analisi lettore JW](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/*sdi-toolkit)dobe.com/apps/ec/101523)*
 * [KickFire](https://exchange.adobe.com/apps/ec/101621)*
 * [Tabella di mappatura](https://exchange.adobe.com/apps/ec/103136)*
+* [Tag Merkury](https://exchange.adobe.com/apps/ec/600027/merkury-tag)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Gestione proprietà master](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
