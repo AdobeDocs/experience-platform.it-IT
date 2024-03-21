@@ -3,10 +3,10 @@ title: Monitorare le attività nell’inoltro degli eventi
 description: Scopri come monitorare l’utilizzo, gli errori e il tempo di calcolo nelle proprietà di inoltro degli eventi.
 feature: Event Forwarding
 exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
-source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
+source-git-commit: f8988d08e7009cc613a00f34e8151e8560c479d4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 1%
+source-wordcount: '561'
+ht-degree: 0%
 
 ---
 
@@ -39,6 +39,10 @@ Per visualizzare le metriche per una singola proprietà, seleziona il menu a dis
 ![Immagine che mostra i menu a discesa dell’ambiente delle proprietà nell’interfaccia utente](../../images/ui/event-forwarding/monitoring/property-environment.png)
 
 ## [!UICONTROL Utilizzo]
+
+>[!NOTE]
+>
+>I dati di utilizzo vengono aggiornati ogni mese dopo la fine del mese precedente.
 
 Il **[!UICONTROL Utilizzo]** Il rapporto mostra le chiamate in entrata e in uscita per un determinato periodo di tempo. Le chiamate in arrivo rappresentano i dati inviati all’inoltro di eventi. Le chiamate in uscita rappresentano i dati inviati dall’inoltro degli eventi. Il **[!UICONTROL Eventi totali]** numero nel riquadro a sinistra è la somma delle chiamate in entrata e in uscita per il periodo di tempo specificato.
 
