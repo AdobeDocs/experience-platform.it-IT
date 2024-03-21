@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Un flusso di lavoro di alto livello per l’ottenimento e l’assegnazione delle
 
 - Dopo aver concesso la licenza per Adobe Experience Platform o un servizio applicazione/app che utilizza Experienci Platform, viene inviata un’e-mail all’amministratore specificato durante la gestione della licenza.
 - L’amministratore accede a [Adobe Admin Console](#adobe-admin-console) e seleziona **Adobe Experience Platform** dall’elenco dei prodotti nella pagina della panoramica.
-- Per concedere l’accesso a Experienci Platform, l’amministratore dovrà aggiungere gli utenti al profilo di prodotto predefinito: `AEP-Default-All-Users`.
+- Per concedere l’accesso a Experienci Platform, si consiglia all’amministratore di aggiungere gli utenti al profilo di prodotto predefinito: `AEP-Default-All-Users`.
 - Nell&#39;Experience Platform Autorizzazioni, l&#39;amministratore può creare nuovi ruoli o modificare le autorizzazioni e gli utenti per qualsiasi ruolo esistente.
 - Durante la creazione o la modifica di un ruolo, l&#39;amministratore aggiunge gli utenti al ruolo utilizzando **[!UICONTROL utenti]** e concede le autorizzazioni a questi utenti (ad esempio &quot;[!UICONTROL Leggi set di dati]&quot; o &quot;[!UICONTROL Gestire gli schemi]&quot;) modificando le autorizzazioni del ruolo. Analogamente, l’amministratore può assegnare l’accesso alle sandbox utilizzando la stessa opzione di modifica.
 - Quando gli utenti accedono all’interfaccia utente di Experienci Platform, il loro accesso alle funzionalità di Experienci Platform è guidato dalle autorizzazioni concesse loro dal passaggio precedente. Ad esempio, se un utente non dispone di [!UICONTROL Visualizzare i set di dati] autorizzazione, **[!UICONTROL Set di dati]** nel menu laterale non sarà visibile a tale utente.
