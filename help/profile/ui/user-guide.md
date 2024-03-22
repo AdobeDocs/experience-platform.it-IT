@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ Per ulteriori informazioni sugli schemi di unione, visita il [guida dell’inter
 
 Dall&#39;elenco principale **[!UICONTROL Profili]** , selezionare il **[!UICONTROL Attributi calcolati]** per visualizzare un elenco di attributi calcolati che appartengono alla tua organizzazione.
 
-Per ulteriori informazioni sugli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per ulteriori informazioni su come utilizzare gli attributi calcolati nell’interfaccia utente di Platform, consulta [guida dell’interfaccia utente per attributi calcolati](../computed-attributes/ui.md).
+![Viene evidenziata la scheda Attributi calcolati.](../images/user-guide/computed-attributes.png)
 
-IMMAGINE
+Per ulteriori informazioni sugli attributi calcolati, consulta [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per ulteriori informazioni su come utilizzare gli attributi calcolati nell’interfaccia utente di Platform, consulta [guida dell’interfaccia utente per attributi calcolati](../computed-attributes/ui.md).
 
 ## Passaggi successivi
 
