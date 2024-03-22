@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;connessione streaming;crea
 title: Creare una connessione in streaming API HTTP utilizzando l’API del servizio Flusso
 description: Questo tutorial illustra come creare una connessione in streaming utilizzando l’origine API HTTP per i dati grezzi e XDM mediante l’API del servizio Flusso
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1658'
 ht-degree: 4%
 
 ---
@@ -456,9 +456,6 @@ In caso di esito positivo, la risposta restituisce i dettagli della mappatura ap
 }
 ```
 
-| Proprietà | Descrizione |
-| --- | --- |
-
 ## Creare un flusso di dati
 
 Una volta create le connessioni di origine e di destinazione, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. Puoi creare un flusso di dati eseguendo una richiesta POST al `/flows` endpoint.
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{INLET_URL}` | URL dell&#39;endpoint di streaming. Per recuperare l’URL, effettua una richiesta GET al `/connections` mentre fornisci l’ID connessione di base. |
-| `{FLOW_ID}` | ID del flusso di dati in streaming API HTTP. |
+| `{FLOW_ID}` | ID del flusso di dati in streaming API HTTP. Questo ID è richiesto sia per i dati XDM che per quelli RAW. |
 
 **Richiesta**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Inviare dati XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Dati non elaborati]
+>[!TAB Inviare dati non elaborati con ID flusso come intestazione HTTP]
+
+Quando invii dati non elaborati, puoi specificare l’ID di flusso come parametro di query o come parte dell’intestazione HTTP. L’esempio che segue specifica l’ID di flusso come intestazione HTTP.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Inviare dati non elaborati con ID flusso come parametro di query]
+
+Quando invii dati non elaborati, puoi specificare l’ID di flusso come parametro di query o come intestazione HTTP. L&#39;esempio seguente specifica l&#39;ID di flusso come parametro di query.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
