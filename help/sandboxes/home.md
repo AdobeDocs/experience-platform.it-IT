@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sulle sandbox
 description: Le sandbox sono partizioni virtuali all’interno di un’unica istanza di Experienci Platform, che consentono un’integrazione fluida con il processo di sviluppo delle applicazioni di esperienza digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Infine, la sandbox di produzione predefinita è la prima sandbox di produzione c
 In sintesi, le sandbox offrono i seguenti vantaggi:
 
 * **Gestione del ciclo di vita delle applicazioni**: crea ambienti virtuali separati per sviluppare ed evolvere applicazioni di esperienza digitale.
-* **Gestione di progetti e marchi**: consente l’esecuzione in parallelo di più progetti all’interno della stessa organizzazione, garantendo al contempo l’isolamento e il controllo degli accessi. Le versioni future forniranno supporto per l’implementazione in più aree geografiche.
+* **Gestione di progetti e marchi**: consente l’esecuzione in parallelo di più progetti all’interno della stessa organizzazione, garantendo al contempo l’isolamento e il controllo degli accessi.
 * **Ecosistema di sviluppo flessibile**: fornisce ambienti sandbox in modo semplice, scalabile e conveniente a scopo di esplorazione, abilitazione e dimostrazione.
 
 ## Controllo degli accessi per le sandbox
