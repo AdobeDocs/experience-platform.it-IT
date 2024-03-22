@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads offre una serie di opzioni per aiutarti a raggiungere i tuoi obiettivi pubblicitari per venditori registrati, fornitori di libri, autori di Kindle Direct Publishing (KDP), sviluppatori di app e/o agenzie. L’integrazione di Amazon Ads con Adobe Experience Platform fornisce un’integrazione chiavi in mano ai prodotti Amazon Ads, incluso Amazon DSP (ADSP). Utilizzando la destinazione Amazon Ads in Adobe Experience Platform, gli utenti possono definire i tipi di pubblico degli inserzionisti per il targeting e l’attivazione sull’DSP di Amazon.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Questa integrazione con l’DSP di Amazon consente [!DNL Amazon Ads] gli inserzi
 
 Questa integrazione con [!DNL Amazon Marketing Cloud] (AMC) consente [!DNL Amazon Ads] agli inserzionisti di trasmettere i segmenti CDP da Adobe Experience Platform Form ad AMC. Gli inserzionisti possono quindi unire gli input di CDP con [!DNL Amazon Ads] e condurre analisi personalizzate su argomenti quali l’impatto dei contenuti multimediali, i segmenti di pubblico e i percorsi di clienti in un formato conforme alla privacy. Ad esempio, un inserzionista può caricare un elenco dei propri clienti esistenti per comprendere le prestazioni aggregate della campagna pubblicitaria, o statistiche aggregate di eventi di conversione su Amazon, come la visualizzazione di una pagina dei dettagli di un prodotto, l’aggiunta di un prodotto a un carrello o l’acquisto di un prodotto.
 
-### Ottimizzazione della pubblicità:
+### Ottimizzazione della pubblicità
 
 Questa integrazione con [!DNL Amazon Marketing Cloud] (AMC) consente agli inserzionisti di caricare i propri elenchi di clienti e utilizzando [!DNL Amazon Marketing Cloud] SQL, esegui analisi di sovrapposizione, eliminazioni, aggiunte o ottimizzazioni ai tipi di pubblico su base periodica prima di creare un pubblico pronto per l’attivazione nell’DSP di Amazon per il targeting.
 
