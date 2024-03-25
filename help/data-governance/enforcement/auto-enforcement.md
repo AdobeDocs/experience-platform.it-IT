@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applicazione automatica dei criteri
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano i tipi di pubblico nelle destinazioni in Experienci Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Le sezioni seguenti descrivono i diversi messaggi di applicazione dei criteri vi
 
 Se si verifica una violazione dei criteri dal tentativo di attivare un pubblico (o [apportare modifiche a un pubblico già attivato](#policy-enforcement-for-activated-audiences)) l&#39;azione è impedita e viene visualizzato un messaggio a comparsa che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, **[!UICONTROL Salva]** il pulsante è disattivato per l’entità da modificare finché i componenti appropriati non vengono aggiornati per conformarsi ai criteri di utilizzo dei dati.
 
-Selezionare una violazione dei criteri nella colonna sinistra del popover per visualizzare i dettagli relativi a tale violazione.
+Selezionare un nome di criterio per visualizzare i dettagli della violazione.
 
 ![Finestra di dialogo che indica che si è verificata una violazione dei criteri con il nome dei criteri evidenziato.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazi
 
 ![Finestra di dialogo per violazione dei criteri con il grafico di derivazione dati evidenziato.](../images/enforcement/data-lineage.png)
 
-È inoltre possibile utilizzare **[!UICONTROL Filtro]** icona (![](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. È necessario selezionare almeno due categorie per visualizzare i dati.
+È inoltre possibile utilizzare **[!UICONTROL Filtro]** icona (![Icona di filtro.](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. È necessario selezionare almeno due categorie per visualizzare i dati.
 
 ![Finestra di dialogo per violazione dei criteri con il filtro di derivazione dati e il menu a discesa evidenziati.](../images/enforcement/lineage-filter.png)
 
 Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Vista percorso]**.
 
 ![Finestra di dialogo per violazione dei criteri con la vista del percorso di derivazione dei dati evidenziata.](../images/enforcement/list-view.png)
+
+#### Etichette applicate correttamente {#labels-successfully-applied}
+
+Se crei criteri di utilizzo dei dati prima di etichettare i campi dello schema, potresti incontrare una finestra di dialogo di violazione dei criteri di governance non appena applichi le etichette allo schema. In questo caso, puoi etichettare correttamente parte dello schema. Il [!UICONTROL Etichette applicate correttamente] indica le etichette applicate correttamente, in quanto non sono presenti restrizioni dei criteri per tale campo.
+
+Utilizza il diagramma di derivazione dati per capire quali altre modifiche di configurazione devono essere apportate prima di poter aggiungere l’etichetta al campo schema.
+
+![Finestra di dialogo per violazione dei criteri con [!UICONTROL Etichette applicate correttamente] scheda evidenziata.](../images/enforcement/labels-successfully-applied.png)
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 

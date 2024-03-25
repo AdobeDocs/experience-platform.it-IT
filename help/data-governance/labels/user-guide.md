@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 description: Questa guida descrive i passaggi per lavorare con le etichette di utilizzo dei dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 19%
+source-wordcount: '1538'
+ht-degree: 17%
 
 ---
 
@@ -29,6 +29,14 @@ Consulta la guida su come [configurare le autorizzazioni](https://experienceleag
 ## Gestire le etichette a livello di schema
 
 Puoi aggiungere etichette direttamente a uno schema o a campi all’interno di tale schema. Tutti i campi applicati a livello di schema verranno propagati a tutti i set di dati basati su tale schema.
+
+>[!NOTE]
+>
+>Se i criteri di utilizzo dei dati sono stati creati prima dell’assegnazione dell’etichetta al campo, è possibile che venga visualizzata una finestra di dialogo per la violazione dei criteri di governance quando si applicano le etichette al nuovo schema. Questa finestra di dialogo indica che l’applicazione di questa etichetta violerà un criterio di utilizzo esistente. Utilizza il diagramma di derivazione dati per capire quali altre modifiche di configurazione devono essere apportate prima di poter aggiungere l’etichetta al campo schema.
+>
+>![La violazione dei criteri di governance dei dati ha rilevato una finestra di dialogo con riepilogo delle violazioni e diagramma di derivazione dei dati evidenziati.](../images/labels/policy-violation-dialog.png)
+>
+>Consulta la [documentazione sulle violazioni dei criteri di utilizzo dei dati](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) per ulteriori informazioni sulle violazioni parziali dei criteri.
 
 Per gestire le etichette di utilizzo dei dati a livello di schema, è necessario selezionare uno schema esistente o crearne uno nuovo. Dopo aver effettuato l’accesso a Adobe Experience Platform, seleziona **[!UICONTROL Schemi]** nella barra di navigazione a sinistra per aprire **[!UICONTROL Schemi]** Workspace. Questa pagina elenca tutti gli schemi creati appartenenti alla tua organizzazione, insieme a dettagli utili relativi a ciascuno schema.
 
