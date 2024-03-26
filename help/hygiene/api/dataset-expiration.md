@@ -3,9 +3,9 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
@@ -130,8 +130,6 @@ curl -X GET \
 
 In caso di esito positivo, la risposta restituisce i dettagli della scadenza del set di dati.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di d
 }
 ```
 
-## Creare o aggiornare la scadenza di un set di dati {#create-or-update}
+## Creare una scadenza del set di dati {#create}
 
-Crea o aggiorna una data di scadenza per un set di dati tramite una richiesta PUT. La richiesta PUT utilizza `datasetId` o `ttlId`.
+Per garantire che i dati vengano rimossi dal sistema dopo un determinato periodo, pianifica una scadenza per un set di dati specifico fornendo l’ID del set di dati e la data e l’ora di scadenza nel formato ISO 8601.
+
+Per creare una scadenza del set di dati, esegui una richiesta POST come mostrato di seguito e fornisci i valori menzionati di seguito all’interno del payload.
 
 **Formato API**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `{DATASET_ID}` | ID del set di dati per cui pianificare una scadenza. |
-| `{TTL_ID}` | ID della scadenza del set di dati. |
 
 **Richiesta**
 
-La richiesta seguente pianifica un set di dati `5b020a27e7040801dedbf46e` da sopprimere alla fine del 2022 (ora di Greenwich). Se non viene trovata alcuna scadenza esistente per il set di dati, viene creata una nuova scadenza. Se il set di dati ha già una scadenza in sospeso, tale scadenza viene aggiornata con il nuovo `expiry` valore.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `datasetId` | **Obbligatorio** ID del set di dati di destinazione per cui pianificare una scadenza. |
+| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito.<br>Nota:<ul><li>La richiesta non riuscirà se per il set di dati esiste già una scadenza del set di dati.</li><li>La data e l&#39;ora devono essere almeno **24 ore nel futuro**.</li></ul> |
+| `displayName` | Nome visualizzato facoltativo per la richiesta di scadenza del set di dati. |
+| `description` | Descrizione facoltativa della richiesta di scadenza. |
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e il nuovo stato di scadenza del set di dati, se non vi era alcuna scadenza del set di dati preesistente.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `ttlId` | ID della scadenza del set di dati. |
+| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
+| `datasetName` | Nome visualizzato del set di dati a cui si applica questa scadenza. |
+| `sandboxName` | Il nome della sandbox in cui si trova il set di dati di destinazione. |
+| `imsOrg` | ID organizzazione. |
+| `status` | Lo stato corrente della scadenza del set di dati. |
+| `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
+| `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
+| `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
+| `displayName` | Nome visualizzato per la richiesta di scadenza. |
+| `description` | Descrizione della richiesta di scadenza. |
+
+Se per il set di dati esiste già una scadenza, si verifica uno stato HTTP 400 (richiesta non valida). In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovato) se non esiste alcuna scadenza del set di dati (o se non disponi dell’accesso a tale set di dati).
+
+## Aggiornare la scadenza di un set di dati {#update}
+
+Per aggiornare una data di scadenza per un set di dati, utilizza una richiesta PUT e `ttlId`. È possibile aggiornare `displayName`, `description`, e/o `expiry` informazioni.
+
+>[!NOTE]
+>
+>Se modifichi la data e l’ora di scadenza, devono trascorrere almeno 24 ore nel futuro. Questo ritardo forzato offre la possibilità di annullare o riprogrammare la scadenza ed evitare perdite accidentali di dati.
+
+**Formato API**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{TTL_ID}` | ID della scadenza del set di dati che desideri modificare. |
+
+**Richiesta**
+
+La richiesta seguente ripianifica la scadenza di un set di dati `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` alla fine del 2024 (ora di Greenwich). Se viene trovata la scadenza del set di dati esistente, tale scadenza viene aggiornata con il nuovo `expiry` valore.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `expiry` | Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati vengono sostituite dal nuovo valore di scadenza fornito. |
+| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati vengono sostituite dal nuovo valore di scadenza fornito. La data e l&#39;ora devono essere almeno **24 ore nel futuro**. |
 | `displayName` | Nome visualizzato per la richiesta di scadenza. |
 | `description` | Descrizione facoltativa della richiesta di scadenza. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce i dettagli della scadenza del set di dati, con lo stato HTTP 200 (OK) se è stata aggiornata una scadenza preesistente, oppure 201 (Creato) se non vi era alcuna scadenza preesistente.
+In caso di esito positivo, la risposta restituisce il nuovo stato della scadenza del set di dati e uno stato HTTP 200 (OK) se è stata aggiornata una scadenza preesistente.
 
 ```json
 {
@@ -258,6 +332,8 @@ In caso di esito positivo, la risposta restituisce i dettagli della scadenza del
 | `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
 
 {style="table-layout:auto"}
+
+In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovato) se non esiste una scadenza del set di dati.
 
 ## Annullare la scadenza di un set di dati {#delete}
 
