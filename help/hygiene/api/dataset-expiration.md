@@ -3,7 +3,7 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -489,3 +489,4 @@ La tabella seguente illustra i parametri di query disponibili quando [elenco sca
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Mi piace `createdDate` / `createdFromDate` / `createdToDate`, ma corrisponde all’ora di aggiornamento della scadenza di un set di dati invece dell’ora di creazione.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
