@@ -2,14 +2,19 @@
 title: Aggiornare le specifiche di flusso per Streaming SDK utilizzando l’API del servizio di flusso
 description: Il documento seguente illustra i passaggi necessari per recuperare e aggiornare le specifiche di flusso utilizzando l’API del servizio di flusso per le origini self-service (SDK di streaming).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 2%
+source-wordcount: '423'
+ht-degree: 3%
 
 ---
 
 # Aggiornare le specifiche di flusso utilizzando [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>L’SDK di streaming per origini self-service è in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Dopo aver generato un nuovo ID della specifica di connessione, devi aggiungerlo a una specifica di flusso per creare un flusso di dati.
 

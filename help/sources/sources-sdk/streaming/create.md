@@ -2,14 +2,19 @@
 title: Creare una nuova specifica di connessione per Streaming SDK utilizzando l’API del servizio Flusso
 description: Il documento seguente descrive come creare una specifica di connessione utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
 
 # Creare una nuova specifica di connessione utilizzando [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>L’SDK di streaming per origini self-service è in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 Una specifica di connessione rappresenta la struttura di un&#39;origine. Contiene informazioni sui requisiti di autenticazione di una sorgente, definisce come i dati sorgente possono essere esplorati e ispezionati e fornisce informazioni sugli attributi di una determinata sorgente. Il `/connectionSpecs` endpoint nella [!DNL Flow Service] API consente di gestire in modo programmatico le specifiche di connessione all’interno dell’organizzazione.
 

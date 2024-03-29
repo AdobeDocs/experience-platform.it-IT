@@ -2,14 +2,19 @@
 title: Testare E Inviare L’Origine
 description: Il documento seguente illustra come verificare e testare una nuova origine utilizzando l’API del servizio Flusso e integrare una nuova origine tramite Origini self-service (Streaming SDK).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
 
 # Testare e inviare l’origine
+
+>[!NOTE]
+>
+>L’SDK di streaming per origini self-service è in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 I passaggi finali per integrare la nuova origine in Adobe Experience Platform utilizzando Self-Serve Sources (Streaming SDK) consistono nel testare e inviare la nuova origine. Dopo aver completato la specifica di connessione e aggiornato la specifica del flusso di streaming, puoi iniziare a testare la funzionalità della sorgente tramite l’API o l’interfaccia utente. In caso di esito positivo, puoi inviare la nuova sorgente contattando il rappresentante dell’Adobe.
 

@@ -2,14 +2,19 @@
 title: Aggiornare una specifica di connessione per Streaming SDK utilizzando l’API del servizio Flusso
 description: Il documento seguente illustra i passaggi per specificare una connessione utilizzando l’API del servizio di flusso per le origini self-service (Streaming SDK).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 4%
 
 ---
 
 # Aggiornare una specifica di connessione utilizzando l’API del servizio Flusso
+
+>[!NOTE]
+>
+>L’SDK di streaming per origini self-service è in versione beta. Leggi le [panoramica sulle origini](../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
 
 È possibile aggiornare le proprietà di una specifica di connessione tramite un&#39;operazione PUT. Quando si aggiorna una specifica di connessione tramite una richiesta PUT, il corpo deve includere tutti i campi necessari per la creazione di una nuova specifica di connessione in una richiesta POST.
 
