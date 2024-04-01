@@ -3,10 +3,10 @@ keywords: piattaforma;destinazioni;area di lavoro;area di lavoro;interfaccia ute
 title: Area di lavoro destinazioni
 description: 'L’area di lavoro Destinazioni è costituita da cinque sezioni: Panoramica, Catalogo, Sfoglia, Account e Visualizzazione sistema. Sono descritte nelle sezioni seguenti.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1231'
+ht-degree: 1%
 
 ---
 
@@ -108,9 +108,9 @@ Il **[!UICONTROL Sfoglia]** Questa scheda mostra le destinazioni con le quali ha
 | [!UICONTROL Nome utente] | Credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Dati di attivazione] | Indica il numero di tipi di pubblico attivati in questa destinazione. Seleziona questo controllo per ulteriori informazioni sui tipi di pubblico attivati. Fai riferimento a [Dati di attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione per ulteriori informazioni sui tipi di pubblico attivati. |
 | [!UICONTROL Creato] | Data e ora UTC in cui è stato creato il flusso di attivazione verso la destinazione. Seleziona il simbolo freccia su/giù per ordinare i flussi di attivazione in base al primo più recente o al primo meno recente. |
-| [!UICONTROL Stato] | `Enabled` oppure `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
+| [!UICONTROL Stato] | `Enabled` o `Disabled`. Indica se i dati vengono attivati in questa destinazione. |
 
-Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
+Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra, come ID destinazione, descrizione, numero di tipi di pubblico attivati e altro ancora.
 
 ![Fai clic sulla riga di destinazione](../assets/ui/workspace/click-destination-row.png)
 
@@ -120,8 +120,8 @@ Seleziona il nome della destinazione per visualizzare informazioni sui tipi di p
 
 Il **[!UICONTROL Vista sistema]** In questa scheda viene visualizzata una rappresentazione grafica dei flussi di attivazione impostati in Adobe Experience Platform.
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![Flussi di dati1](../assets/ui/workspace/data-flows1.png)
 
 Seleziona una delle destinazioni visualizzate nella pagina e fai clic su **[!UICONTROL Visualizza flussi di dati]** per visualizzare informazioni su tutte le connessioni impostate per ciascuna destinazione.
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![Flussi di dati2](../assets/ui/workspace/data-flows2.png)
