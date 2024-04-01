@@ -3,16 +3,16 @@ title: Utilizzo di Adobe Journey Optimizer con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experienci Platform Web SDK utilizzando Adobe Journey Optimizer
 keywords: ajo;ajo web;adobe percorsi optimizer;renderDecisions;superfici;decisioni;proposte;ambito;schema
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
 
 # Utilizzo di [!DNL Adobe Journey Optimizer] con [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] può distribuire ed eseguire il rendering di esperienze personalizzate gestite in [!DNL Adobe Journey Optimizer] al canale web. È possibile utilizzare un editor WYSIWYG, [!DNL Adobe Journey Optimizer] [Interfaccia utente di Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), per creare, attivare e consegnare [!DNL Journey Optimizer Web] campagne e esperienze di personalizzazione.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] può distribuire ed eseguire il rendering di esperienze personalizzate gestite in [!DNL Adobe Journey Optimizer] al canale web. È possibile utilizzare un editor WYSIWYG, [!DNL Adobe Journey Optimizer] [Canale web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)o un&#39;interfaccia non visiva, [Canale esperienza basato su codice](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) per creare, attivare e distribuire [!DNL Journey Optimizer Web] campagne e esperienze di personalizzazione.
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## Terminologia {#terminology}
 
-**[!UICONTROL Superficie]**: una superficie web è una proprietà web identificata da un URL in cui [!DNL Adobe Journey Optimizer] il contenuto dell’esperienza verrà consegnato.
+**[!UICONTROL Superficie]**: una superficie web è una pagina web o una posizione in una pagina identificata da un URI in cui [!DNL Adobe Journey Optimizer] il contenuto dell’esperienza verrà consegnato.
 
 **[!UICONTROL Proposte]**: In [!DNL Adobe Journey Optimizer], le proposte sono correlate all’esperienza selezionata da un [!DNL Journey Optimizer Campaign].
 

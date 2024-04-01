@@ -2,20 +2,20 @@
 title: Panoramica sulla personalizzazione
 description: Scopri come utilizzare l’API del server di rete Edge di Adobe Experience Platform per recuperare contenuti personalizzati dalle soluzioni di personalizzazione Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 10%
 
 ---
 
 # Panoramica sulla personalizzazione
 
-Con il [!DNL Server API], puoi recuperare contenuti personalizzati dalle soluzioni di personalizzazione Adobe, tra cui [Adobe Target](https://business.adobe.com/it/products/target/adobe-target.html) e [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=it).
+Con il [!DNL Server API], puoi recuperare contenuti personalizzati dalle soluzioni di personalizzazione Adobe, tra cui [Adobe Target](https://business.adobe.com/it/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), e [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=it).
 
 Inoltre, il [!DNL Server API] potenzia le funzionalità di personalizzazione della stessa pagina e della pagina successiva tramite destinazioni di personalizzazione Adobe Experience Platform, come [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) e [connessione di personalizzazione personalizzata](../destinations/catalog/personalization/custom-personalization.md). Per informazioni su come configurare l’Experience Platform per la personalizzazione della stessa pagina e della pagina successiva, consulta [guida dedicata](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Quando utilizzi l’API server, devi integrare la risposta fornita dal motore di personalizzazione con la logica utilizzata per eseguire il rendering del contenuto sul sito. A differenza della [SDK per web](../web-sdk/home.md), il [!DNL Server API] non dispone di un meccanismo per applicare automaticamente il contenuto restituito da [!DNL Adobe Target] e [!DNL Offer Decisioning].
+Quando utilizzi l’API server, devi integrare la risposta fornita dal motore di personalizzazione con la logica utilizzata per eseguire il rendering del contenuto sul sito. A differenza della [SDK per web](../web-sdk/home.md), il [!DNL Server API] non dispone di un meccanismo per applicare automaticamente il contenuto restituito dalle soluzioni di personalizzazione Adobe.
 
 ## Terminologia {#terminology}
 
@@ -34,24 +34,30 @@ Il recupero di contenuto personalizzato richiede un oggetto query di richiesta e
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | Attributo | Tipo | Obbligatorio/facoltativo | Descrizione |
 | --- | --- | --- | ---|
