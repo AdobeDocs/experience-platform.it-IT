@@ -1,9 +1,10 @@
 ---
 title: Definire i campi mappa nell’interfaccia utente
 description: Scopri come definire un campo mappa nell’interfaccia utente di Experienci Platform.
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL Tipo di valore mappa] viene visualizzata la proprietà. Questo val
 Dopo aver configurato il sottocampo, è necessario assegnarlo a un gruppo di campi. Utilizza il **[!UICONTROL Gruppo di campi]** menu a discesa o campo di ricerca e selezionare **[!UICONTROL Applica]**. Puoi continuare ad aggiungere campi all’oggetto utilizzando lo stesso processo, oppure selezionare **[!UICONTROL Salva]** per confermare le impostazioni.
 
 ![Registrazione della selezione del gruppo di campi e delle impostazioni applicate.](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## Limitazioni di utilizzo {#restrictions}
+
+XDM pone le seguenti restrizioni sull’utilizzo di questo tipo di dati:
+
+* I tipi di mappa DEVONO essere di tipo `object`.
+* I tipi di mappa NON DEVONO avere proprietà definite (in altre parole, definiscono oggetti &quot;vuoti&quot;).
+* I tipi di mappa DEVONO includere un `additionalProperties.type` che descrive i valori che possono essere inseriti nella mappa, `string` o `integer`.
+
+Assicurati di utilizzare campi di tipo mappa solo quando assolutamente necessario, in quanto presentano i seguenti svantaggi in termini di prestazioni:
+
+* Tempo di risposta da [Servizio query Adobe Experience Platform](../../../query-service/home.md) si riducono da tre a dieci secondi per 100 milioni di record.
+* Le mappe devono avere meno di 16 chiavi altrimenti si rischia un ulteriore degrado.
 
 >[!NOTE]
 >
