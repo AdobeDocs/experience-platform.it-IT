@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Scopri i guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: b217dd84d9be630a5097e7179af08619ebc135f8
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '579'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ La tabella seguente illustra i guardrail da considerare quando si utilizza [API 
 
 | Tipo di acquisizione | Linee guida | Note |
 | --- | --- | --- |
-| Acquisizione del data lake tramite l’API di acquisizione batch | <ul><li>Puoi acquisire fino a 20 GB di dati all’ora nel data lake utilizzando l’API di acquisizione batch.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione massima del batch è di 100 GB.</li><li>È 10000 il numero massimo di proprietà o campi per riga.</li><li>Il numero massimo di batch al minuto per utente è 138.</li></ul> |
+| Acquisizione del data lake tramite l’API di acquisizione batch | <ul><li>Puoi acquisire fino a 20 GB di dati all’ora nel data lake utilizzando l’API di acquisizione batch.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione massima del batch è di 100 GB.</li><li>È 10000 il numero massimo di proprietà o campi per riga.</li><li>Il numero massimo di batch al minuto per utente è 138.</li></ul> | |
 | Acquisizione del data lake tramite origini batch | <ul><li>Puoi acquisire fino a 200 GB di dati all’ora nel data lake utilizzando origini di acquisizione batch come [!DNL Azure Blob], [!DNL Amazon S3], e [!DNL SFTP].</li><li>La dimensione del batch deve essere compresa tra 256 MB e 100 GB. Questo vale sia per i dati non compressi che per quelli compressi. Quando i dati compressi non sono compressi nel data lake, si applicano queste limitazioni.</li><li>Il numero massimo di file per batch è 1500.</li><li>La dimensione minima di un file o di una cartella è di 1 byte. Non è possibile acquisire cartelle o file di dimensioni pari a 0 byte.</li></ul> | Leggi le [panoramica sulle origini](../sources/home.md) per un catalogo di origini che puoi utilizzare per l’acquisizione dei dati. |
-| Acquisizione in batch nel profilo | <ul><li>La dimensione massima di una classe di record è 100 KB (soft).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (soft).</li><li>La dimensione massima di un singolo record è 1 MB.</li></ul> |
+| Acquisizione in batch nel profilo | <ul><li>La dimensione massima di una classe di record è 100 KB (rigido).</li><li>La dimensione massima di una classe ExperienceEvent è 10 KB (rigido).</li></ul> | |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato di batch di profili ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L&#39;acquisizione di batch aggiuntivi influisce sulle prestazioni del sistema. | Si tratta di un limite non vincolante. È possibile superare un limite non superabile, tuttavia, i limiti non superabili forniscono una linea guida consigliata per le prestazioni del sistema. |
 
 ## Guardrail per acquisizione in streaming

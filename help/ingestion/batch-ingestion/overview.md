@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dell’API per l’acquisizione in batch
 description: L’API per l’acquisizione in batch di Adobe Experience Platform consente di acquisire i dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo provenienti da un file flat in un sistema di gestione delle relazioni con i clienti (ad esempio un file Parquet) o i dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 6%
+source-wordcount: '1388'
+ht-degree: 7%
 
 ---
 
@@ -23,7 +23,7 @@ Il diagramma seguente illustra il processo di acquisizione batch:
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Prima di continuare, controlla [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experience Platform.
+Gli endpoint API utilizzati in questa guida fanno parte del [API di acquisizione in batch](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Prima di continuare, controlla [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida per la lettura delle chiamate API di esempio di questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente le chiamate a qualsiasi API di Experienci Platform.
 
 ### [!DNL Data Ingestion] prerequisiti
 
@@ -44,7 +44,7 @@ L’acquisizione di dati batch presenta alcuni vincoli:
 - Numero massimo di file per batch: 1500
 - Dimensione massima batch: 100 GB
 - Numero massimo di proprietà o campi per riga: 10000
-- Numero massimo di batch al minuto per utente: 138
+- Numero massimo di batch nel data lake al minuto per utente: 138
 
 >[!NOTE]
 >
@@ -62,16 +62,16 @@ La tabella seguente mostra le conversioni supportate durante l’acquisizione de
 
 | In entrata (riga) e Target (colonna) | Stringa | Byte | Breve | Intero | Lungo | Doppio | Data | Data-ora | Oggetto | Mappa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Stringa | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Breve | X | X | X | X | X | X |  |  |  |  |
-| Intero | X | X | X | X | X | X |  |  |  |  |
-| Lungo | X | X | X | X | X | X | X | X |  |  |
-| Doppio | X | X | X | X | X | X |  |  |  |  |
-| Data |  |  |  |  |  |  | X |  |  |  |
-| Data-ora |  |  |  |  |  |  |  | X |  |  |
-| Oggetto |  |  |  |  |  |  |  |  | X | X |
-| Mappa |  |  |  |  |  |  |  |  | X | X |
+| Stringa | X | X | X | X | X | X | X | X |   |   |
+| Byte | X | X | X | X | X | X |   |   |   |   |
+| Breve | X | X | X | X | X | X |   |   |   |   |
+| Intero | X | X | X | X | X | X |   |   |   |   |
+| Lungo | X | X | X | X | X | X | X | X |   |   |
+| Doppio | X | X | X | X | X | X |   |   |   |   |
+| Data |   |   |   |   |   |   | X |   |   |   |
+| Data-ora |   |   |   |   |   |   |   | X |   |   |
+| Oggetto |   |   |   |   |   |   |   |   | X | X |
+| Mappa |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | `id` | ID del batch appena creato (utilizzato nelle richieste successive). |
 | `relatedObjects.id` | ID del set di dati in cui caricare i file. |
 
-## Caricamento di file
+## Caricamento file
 
 Dopo aver creato correttamente un nuovo batch per il caricamento, i file possono essere caricati in un set di dati specifico.
 

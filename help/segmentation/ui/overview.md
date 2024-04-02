@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
+source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
 workflow-type: tm+mt
-source-wordcount: '4018'
+source-wordcount: '4014'
 ht-degree: 3%
 
 ---
@@ -78,7 +78,7 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Condividi con i partner] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Condivide il pubblico con altri utenti di Platform. Per ulteriori informazioni su questa funzione, leggere [Panoramica di Segment Match](./segment-match/overview.md). |
 | [!UICONTROL Gestione tag] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce i tag definiti dall’utente che appartengono al pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
 | [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
-| [!UICONTROL Copia] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Duplica il pubblico selezionato. |
+| [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. |
 | [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archivia] | Caricamento personalizzato | Archivia il pubblico selezionato. |
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
