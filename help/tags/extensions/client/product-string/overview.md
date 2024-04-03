@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione Adobe Analytics Product String
 description: Scopri l’estensione tag Adobe Analytics Product String in Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 96%
 
 ---
@@ -89,7 +89,7 @@ Se la tua implementazione utilizza eventi personalizzati o eVar per merchandisin
 
 Questa azione deve essere seguita da un’azione “Adobe Analytics - Imposta variabili”, che imposta gli eventi riusciti corrispondenti, e da un’azione “Adobe Analytics - Invia beacon”. Di seguito è illustrata la sequenza corretta delle azioni.
 
-![Campi standard](./images/screenshot-price-type.png)
+![Campi standard](./images/screenshot-action-type.png)
 
 ### Requisiti
 
