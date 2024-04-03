@@ -2,9 +2,9 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 In questo Experience Platform vengono utilizzati gli spazi dei nomi delle identità per descrivere il tipo di identità specifiche. Ad esempio, uno spazio dei nomi delle identità denominato `Email` identifica un valore come `name@email.com` come indirizzo e-mail.
 
-Durante la creazione di una destinazione tramite Destination SDK, oltre a [configurazione di uno schema partner](schema-configuration.md) Affinché gli utenti possano mappare gli attributi e le identità del profilo su, puoi anche definire gli spazi dei nomi delle identità supportati dalla piattaforma di destinazione.
+Durante la creazione di destinazioni in tempo reale (streaming) tramite Destination SDK, oltre a [configurazione di uno schema partner](schema-configuration.md) affinché gli utenti possano mappare gli attributi e le identità del profilo a, devi anche definire gli spazi dei nomi delle identità supportati dalla piattaforma di destinazione. Ad esempio, se la piattaforma di destinazione accetta e-mail con hash e [!DNL IDFA], è necessario definire queste due identità come [descritti più avanti in questo documento](#supported-parameters).
 
-Dopo una tale azione, gli utenti potranno scegliere anche di selezionare le identità di destinazione, oltre agli attributi del profilo di destinazione.
+Quando si attivano tipi di pubblico su destinazioni di streaming, gli utenti devono mappare anche le identità di destinazione, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+
+Quando si crea una destinazione basata su file tramite Destination SDK, la configurazione degli spazi dei nomi di identità è facoltativa.
 
 Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Consulta la tabella seguente per informazioni dettagliate sui tipi di integrazio
 
 | Tipo di integrazione | Supporta la funzionalità |
 |---|---|
-| Integrazioni in tempo reale (streaming) | Sì |
-| Integrazioni basate su file (batch) | Sì |
+| Integrazioni in tempo reale (streaming) | Sì (obbligatorio) |
+| Integrazioni basate su file (batch) | Sì (facoltativo) |
 
 ## Parametri supportati {#supported-parameters}
 
