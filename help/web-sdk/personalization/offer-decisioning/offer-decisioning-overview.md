@@ -3,9 +3,9 @@ title: Utilizzo di Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in Offer Decisioning. Puoi creare le offerte e altri oggetti correlati utilizzando l’interfaccia utente o l’API di Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;offerte personalizzate;consegnare offerte;consegna offerte;personalizzazione delle offerte;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 0449718b1f536055d3dca27dfed1346c066e0325
+source-git-commit: 22477c11a977059849d9b47871a5c2aef1da4b24
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '818'
 ht-degree: 3%
 
 ---
@@ -27,8 +27,6 @@ Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il renderi
 ## Terminologia
 
 Quando si lavora con Offer Decisioning, è importante comprendere la seguente terminologia. Per ulteriori informazioni e per visualizzare i termini aggiuntivi, visitare il [Glossario di Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
-
-* **Contenitore:** Un contenitore è un meccanismo di isolamento per tenere separate le diverse preoccupazioni. L’ID contenitore è il primo elemento percorso per tutte le API dell’archivio. Tutti gli oggetti decisioning si trovano all’interno di un contenitore.
 
 * **Ambiti decisionali:** Ad Offer decisioning, gli ambiti decisionali sono le stringhe con codifica Base64 di JSON contenenti gli ID di attività e posizionamento che il servizio offer decisioning deve utilizzare per proporre le offerte.
 
