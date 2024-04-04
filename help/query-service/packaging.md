@@ -2,9 +2,9 @@
 title: Packaging servizio query
 description: Il documento seguente illustra il pacchetto di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 2%
 
 ---
@@ -52,9 +52,11 @@ La tabella seguente illustra i principali diritti di Query Service in base al mo
 
 Ad Experience Platform, il controllo degli accessi viene gestito tramite [Adobe Admin Console](https://adminconsole.adobe.com/) i profili di prodotto collegano gli utenti con autorizzazioni e sandbox. Consulta la [panoramica sul controllo degli accessi](../access-control/home.md) per ulteriori informazioni.
 
-Per utilizzare Query Service, è necessario [!DNL Manage Queries] l&#39;autorizzazione deve essere abilitata in Admin Console. Questa autorizzazione consente agli utenti di eseguire query ad hoc e batch. Istruzioni dettagliate per la richiesta di accesso al profilo di prodotto [!DNL Manage Queries] dell&#39;autorizzazione sono descritti nel [gestire le autorizzazioni per un profilo di prodotto](../access-control/ui/permissions.md) e [gestire gli utenti per un profilo di prodotto](../access-control/ui/users.md) documenti.
+Consulta la [Gestire le autorizzazioni per un profilo di prodotto](../access-control/ui/permissions.md) e [Gestire gli utenti per un profilo di prodotto](../access-control/ui/users.md) documenti per istruzioni dettagliate sulla richiesta di accesso alle autorizzazioni del profilo di prodotto
 
-Dopo aver acquistato il [!DNL Data Distiller] componente aggiuntivo, [!DNL Write Dataset] deve essere concessa l’autorizzazione. Questa autorizzazione consente [!DNL Data Distiller] utenti per eseguire query batch.
+### Autorizzazioni pertinenti di Query Service {#query-service-permissions}
+
+Per utilizzare Query Service, **[!DNL Manage Queries]** l&#39;autorizzazione deve essere abilitata in Admin Console. Questa autorizzazione consente agli utenti di eseguire query ad hoc e batch.
 
 La tabella seguente illustra gli effetti della [!DNL Manage Queries] autorizzazione:
 
@@ -62,6 +64,17 @@ La tabella seguente illustra gli effetti della [!DNL Manage Queries] autorizzazi
 |---|---|
 | [!DNL Manage Queries] (senza autorizzazione per la scrittura dei dati) | Consente di accedere per eseguire query ad hoc |
 | [!DNL Manage Queries] (con autorizzazione per la scrittura dei dati) | Fornisce l’accesso per eseguire query batch |
+
+{style="table-layout:auto"}
+
+### Permessi Approfondimenti personalizzabili rilevanti {#customizable-insights-permissions}
+
+Per creare Data Distiller [Approfondimenti personalizzabili](./data-distiller/customizable-insights/overview.md) nei dashboard, sono disponibili le seguenti autorizzazioni **deve** essere abilitato in Admin Console.
+
+| Autorizzazione | Funzione |
+|---|---|
+| [!DNL View Custom Dashboard] | Accesso in visualizzazione a dashboard definiti dall&#39;utente |
+| [!DNL Manage Custom Dashboard] | Accesso di gestione per dashboard definiti dall&#39;utente |
 
 {style="table-layout:auto"}
 
