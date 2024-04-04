@@ -4,10 +4,10 @@ title: Creare una definizione di segmento utilizzando l’API del servizio di se
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 12%
+source-wordcount: '1066'
+ht-degree: 6%
 
 ---
 
@@ -23,17 +23,17 @@ Questo tutorial richiede una buona conoscenza delle varie [!DNL Adobe Experience
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): consente di creare tipi di pubblico utilizzando definizioni di segmenti o altre origini esterne dai dati del profilo cliente in tempo reale.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): framework standardizzato per l’organizzazione dei dati sull’esperienza del cliente in [!DNL Platform]. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): il quadro standardizzato mediante il quale [!DNL Platform] organizza i dati sull’esperienza del cliente. Per utilizzare al meglio la segmentazione, assicurati che i dati vengano acquisiti come profili ed eventi in base alla [best practice per la modellazione dei dati](../../xdm/schema/best-practices.md).
 
 Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conoscere per effettuare correttamente chiamate al [!DNL Platform] API.
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API di [!DNL Platform], devi prima completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -72,11 +72,16 @@ Per visualizzare in anteprima o stimare la definizione del segmento sono necessa
 
 ### Come vengono generate le stime
 
-Gli esempi di dati vengono utilizzati per valutare le definizioni dei segmenti e stimare il numero di profili idonei. I nuovi dati vengono caricati in memoria ogni mattina (tra le 12 e le 2 del mattino PT, che è tra le 7 e le 9 del mattino UTC) e tutte le query di segmentazione vengono stimate utilizzando i dati di esempio di quel giorno. Di conseguenza, eventuali nuovi campi aggiunti o dati aggiuntivi raccolti saranno riflessi nelle stime il giorno successivo.
+Quando i dati abilitati per Real-Time Customer Profile vengono acquisiti in Platform, vengono memorizzati nell’archivio dati Profile. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Se il conteggio dei profili non cambia di oltre il 5%, il processo di campionamento viene eseguito automaticamente su base settimanale.
+
+Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
+
+- Per i flussi di lavoro di dati in streaming, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o riduzione del 5% è stata raggiunta. Se questa soglia è stata raggiunta, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+- Per l’acquisizione batch, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o di riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
 La dimensione del campione dipende dal numero complessivo di entità nell’archivio profili. Queste dimensioni di esempio sono rappresentate nella tabella seguente:
 
-| Entità nell’archivio profili | Dimensione campione |
+| Entità nell&#39;archivio profili | Dimensione campione |
 | ------------------------- | ----------- |
 | Meno di 1 milione | Set di dati completo |
 | Da 1 a 20 milioni | 1 milione |
