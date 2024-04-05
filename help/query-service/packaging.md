@@ -2,7 +2,7 @@
 title: Packaging servizio query
 description: Il documento seguente illustra il pacchetto di funzionalità e prodotti disponibili per Query Service ed evidenzia le differenze tra query ad hoc e batch.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -85,3 +85,4 @@ Le sandbox sono partizioni virtuali all’interno di una singola istanza di Expe
 ## Passaggi successivi
 
 Una volta letto questo documento, sarai in grado di comprendere meglio i diversi tipi di pacchetti e le diverse funzionalità di esecuzione delle query disponibili in Query Service. Per ulteriori informazioni su Query Service, ad esempio sui casi d’uso noti nel settore, consulta [documentazione del caso d’uso](./use-cases/abandoned-browse.md). Per informazioni più generali, visitare il [Panoramica di Query Service](./home.md).
+
