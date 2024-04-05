@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3189'
 ht-degree: 1%
 
 ---
@@ -105,7 +105,7 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 | Stato | Definizione | Visibile in Audience Portal? | Visibile nelle destinazioni? | Influisce sui limiti di segmentazione? | Impatto sui tipi di pubblico basati su file | Impatto sulla valutazione del pubblico | Utilizzabile all’interno di altri tipi di pubblico? |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Può essere valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. |
-| Data di pubblicazione | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì |
+| Pubblicato | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì |
 | Inattivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì |
 | Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No |
 | Attivo | Questo stato è stato **obsoleto** ed è sostituito da **Pubblicato** stato. | N/D | N/D | N/D | N/D | N/D | N/D |
@@ -269,3 +269,10 @@ Fino all’esecuzione del successivo processo di valutazione del segmento batch,
 Se utilizzi la ricerca dei profili per recuperare il nuovo profilo creato e osservarne l’iscrizione al pubblico, questo dimostrerà che è un membro di **entrambi** Pubblico A e Pubblico B, nonostante il fatto che entrambi questi tipi di pubblico abbiano definizioni contraddittorie. Una volta eseguito il processo di valutazione della segmentazione batch giornaliera, l’iscrizione al pubblico verrà aggiornata per riflettere questo stato aggiornato dei dati del profilo.
 
 Se hai bisogno di una risoluzione del pubblico in tempo reale, utilizza lo streaming o la segmentazione Edge.
+
+### Quanto tempo ci vuole affinché i dati in streaming siano disponibili nei flussi di lavoro di segmentazione batch?
+
+Potrebbero essere necessarie fino a tre ore per la disponibilità dei dati in streaming nei flussi di lavoro di segmentazione batch.
+
+Ad esempio, se un processo di segmentazione batch viene eseguito alle 21:00, può contenere anche dati acquisiti in streaming **fino a** 18:00. Streaming dei dati acquisiti che sono stati acquisiti dopo le 18 ma prima delle 21 **maggio** essere inclusi.
+

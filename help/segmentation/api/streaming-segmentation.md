@@ -4,9 +4,9 @@ title: Valutazione degli eventi in tempo quasi reale con segmentazione in stream
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
@@ -454,3 +454,7 @@ Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e a
 ### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile?
 
 È necessaria fino a un’ora perché la definizione di un segmento sia disponibile.
+
+### Ci sono limiti ai dati inviati in streaming?
+
+Per poter utilizzare i dati in streaming nella segmentazione in streaming, è necessario **deve** essere spaziatura tra gli eventi in streaming. Se un numero eccessivo di eventi viene inviato in streaming nello stesso secondo, Platform tratterà tali eventi come dati generati da bot, che verranno eliminati. Come best practice, dovresti aver **almeno** cinque secondi tra i dati dell’evento per garantire il corretto utilizzo dei dati.

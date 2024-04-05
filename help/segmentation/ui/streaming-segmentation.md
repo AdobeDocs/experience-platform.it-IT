@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente Segmentazione streaming
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione quasi in tempo reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, riducendo la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento ora possono essere valutate quando i dati vengono passati in Platform, il che significa che l’iscrizione al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -119,3 +119,7 @@ Di conseguenza, se noti che il numero in &quot;Ultimi X giorni&quot; è zero e a
 ### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile?
 
 È necessaria fino a un’ora perché la definizione di un segmento sia disponibile.
+
+### Ci sono limiti ai dati inviati in streaming?
+
+Per poter utilizzare i dati in streaming nella segmentazione in streaming, è necessario **deve** essere spaziatura tra gli eventi in streaming. Se un numero eccessivo di eventi viene inviato in streaming nello stesso secondo, Platform tratterà tali eventi come dati generati da bot, che verranno eliminati. Come best practice, dovresti aver **almeno** cinque secondi tra i dati dell’evento per garantire il corretto utilizzo dei dati.
