@@ -2,14 +2,18 @@
 title: Creare una connessione di base di Google Ads utilizzando l’API del servizio Flusso
 description: Scopri come collegare Adobe Experience Platform a Google Ads utilizzando l’API del servizio Flusso.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '741'
 ht-degree: 3%
 
 ---
 
 # Creare una connessione di base di Google Ads utilizzando [!DNL Flow Service] API
+
+>[!WARNING]
+>
+>Il [!DNL Google Ads] origine temporaneamente non disponibile. Adobe sta lavorando per risolvere i problemi con questa origine.
 
 >[!NOTE]
 >

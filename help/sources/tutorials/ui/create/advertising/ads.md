@@ -2,14 +2,18 @@
 title: Creare una connessione sorgente di Google Ads nell’interfaccia utente
 description: Scopri come creare una connessione sorgente di Google Ads utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
 # Creare una connessione sorgente Google Ads nell’interfaccia utente
+
+>[!WARNING]
+>
+>Il [!DNL Google Ads] origine temporaneamente non disponibile. Adobe sta lavorando per risolvere i problemi con questa origine.
 
 >[!NOTE]
 >
