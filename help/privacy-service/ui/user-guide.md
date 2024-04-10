@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire i processi relativi alla privacy nell’interfaccia utente di Privacy Service
 description: Scopri come utilizzare l’interfaccia utente di Privacy Service per coordinare e monitorare le richieste di accesso a dati personali tra le varie applicazioni Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 13%
+source-wordcount: '1722'
+ht-degree: 12%
 
 ---
 
@@ -90,17 +90,25 @@ Per visualizzare ulteriori dettagli su un dato punto dati, selezionare il punto 
 >
 >Quando un filtro è stato applicato al widget Richieste di lavoro, è possibile rimuoverlo selezionando il **X** sulla pillola del filtro. Le richieste di lavoro quindi tornano all&#39;elenco di tracciamento predefinito.
 
-### Richieste di lavoro
+### Richieste di lavoro {#job-requests}
 
-Il widget Richieste di lavoro elenca tutte le richieste di lavoro disponibili nell&#39;organizzazione, inclusi dettagli quali il tipo di richiesta, lo stato corrente, la data di scadenza e l&#39;e-mail del richiedente.
+Il [!UICONTROL Richieste di lavoro] workspace elenca i dettagli relativi alle richieste di job recenti nell&#39;organizzazione. I dettagli includono il tipo di richiesta, lo stato corrente, la data di scadenza, l’e-mail del richiedente e così via. Vengono caricati set di 100 record alla volta. Per impostazione predefinita, i processi creati più di recente vengono visualizzati nella parte superiore con più set di record caricati mentre si scorre verso il basso per sfogliare.
 
 >[!NOTE]
 >
 >I dati per i processi creati in precedenza sono accessibili solo per 30 giorni dopo la data di completamento.
 
-Per filtrare l’elenco, digita le parole chiave nella barra di ricerca sotto il titolo Richieste di lavoro. L’elenco filtra automaticamente durante la digitazione, mostrando le richieste che contengono valori che corrispondono ai termini di ricerca. È inoltre possibile utilizzare **[!UICONTROL Richiesto il]** per selezionare un intervallo di tempo per i job elencati.
+È possibile filtrare l&#39;elenco digitando parole chiave nella barra di ricerca sotto [!UICONTROL Richieste di lavoro] titolo. L’elenco filtra automaticamente durante la digitazione, mostrando le richieste che contengono valori che corrispondono ai termini di ricerca. Il campo di ricerca esegue una ricerca &quot;rapida&quot; che corrisponde agli ID del processo di privacy dei processi attualmente renderizzati/caricati nell’interfaccia utente. Non è una ricerca completa di tutti i lavori inviati. Si tratta piuttosto di un filtro applicato ai risultati caricati. Utilizza l’API Privacy Service per: [restituire i processi in base a una normativa specifica, intervalli di date o un singolo processo](../api/privacy-jobs.md#list).
 
-![Opzioni di ricerca della richiesta di lavoro](../images/user-guide/job-search.png)
+>[!TIP]
+>
+>Per caricare i record nell’interfaccia utente degli ultimi 30 giorni, devi scorrere la tabella verso il basso e caricare altri batch di record.
+
+![La sezione Richiesta processo di Privacy Console con il campo di ricerca evidenziato.](../images/user-guide/job-search.png)
+
+In alternativa, utilizza il pulsante di ricerca per eseguire una query del processo di privacy che si estende su un particolare intervallo di date. Questa azione restituisce tutti i processi relativi alla privacy inviati dall’organizzazione durante l’intervallo di tempo specificato. Seleziona la **[!UICONTROL Richiesto il]** per scegliere una data di inizio e una data di fine per la query. Le opzioni disponibili includono [!UICONTROL Oggi], [!UICONTROL Ultimi 7 giorni], [!UICONTROL Ultime 2 settimane], [!UICONTROL Ultimi 30 giorni], o [!UICONTROL Personalizzato]. Se utilizzato con [!UICONTROL Richiesto il] , la funzione di ricerca visualizza solo le richieste di lavoro inviate tra gli intervalli di date scelti.
+
+![La sezione Richiesta di lavoro con il campo di ricerca, il menu a discesa Richiesto e il pulsante Cerca evidenziato.](../images/user-guide/requested-on-dropdown-menu.png)
 
 Per visualizzare i dettagli di una particolare richiesta di processo, seleziona l’ID processo della richiesta dall’elenco per aprire **[!UICONTROL Dettagli processo]** pagina.
 
