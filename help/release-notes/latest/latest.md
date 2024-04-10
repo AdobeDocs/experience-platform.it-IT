@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
+source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1189'
 ht-degree: 33%
 
 ---
@@ -30,10 +30,6 @@ Aggiornamenti alle funzioni esistenti in Experienci Platform:
 ## Servizio catalogo {#catalog-service}
 
 Catalog Service è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experienci Platform vengono memorizzati nel data lake come file e directory, Catalog contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca e monitoraggio.
-
->[!NOTE]
->
->Siamo a conoscenza e stiamo lavorando alla risoluzione di un problema di visualizzazione in cui viene eseguito il rendering della sintassi non necessaria accanto alle immagini nelle tabelle.
 
 | Funzione | Descrizione |
 | --- | --- |
