@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2730'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ L’Assistente AI è una funzione dell’interfaccia utente che consente di navi
 
 * Linee guida su come eseguire attività relative a dati e tipi di pubblico.
 * Stati e metriche degli oggetti dati esistenti nell’organizzazione.
-* Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, flussi di dati, set di dati, destinazioni, schemi, segmenti e origini.
+* Esempi di casi d’uso e sfumature per comprendere meglio gli oggetti dati, inclusi attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, schemi e origini.
 
 Leggi la guida seguente per scoprire come utilizzare l’Assistente AI per navigare e comprendere i flussi di lavoro di Experienci Platform e Real-Time CDP.
 
@@ -51,7 +51,7 @@ Prima di eseguire una query su Assistente IA, è necessario considerare due clas
 * **Domande sull’utilizzo**: le domande sull’utilizzo riguardano gli oggetti dati all’interno dell’organizzazione. Alcuni esempi di domande sull’utilizzo includono:
    * Quanti set di dati ho?
    * Quanti attributi dello schema non sono mai stati utilizzati?
-   * Quali segmenti sono stati attivati?
+   * Quale pubblico è stato attivato?
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ Prima di eseguire una query su Assistente IA, è necessario considerare due clas
 
 È possibile utilizzare l&#39;Assistente IA per obiettivi quali:
 
-| Obiettivo | Descrizione |
-| --- | --- |
-| Experience Platform di apprendimento e concetti di Real-Time CDP | Puoi porre domande concettuali sull’Assistente AI in modo da acquisire dimestichezza con Experienci Platform e Real-Time CDP. È inoltre possibile utilizzare l&#39;Assistente IA per informazioni su oggetti e comportamenti che non si conoscono. |
-| Garantire la pulizia dei dati nelle sandbox | È possibile utilizzare l’Assistente AI per identificare eventuali oggetti duplicati o inutilizzati in modo da mantenere efficiente la pulizia della sandbox. |
-| Orchestrazione dell’analisi dei valori | È possibile utilizzare l’Assistente AI per identificare gli oggetti più utilizzati e valutare eventuali indicatori di prestazioni o trovare i dati più importanti. |
-| Comprensione dell’analisi di impatto | È possibile utilizzare l’Assistente AI per identificare gli oggetti utilizzati in alcuni flussi di lavoro in modo da poter valutare l’impatto di eventuali modifiche. |
-| Monitoraggio dei dati | È possibile utilizzare l’Assistente AI per monitorare qualsiasi flusso di dati, acquisizione o processo di valutazione in modo da poter visualizzare eventuali discrepanze o creare rapporti sull’avanzamento. |
+| Obiettivo | Descrizione | Esempio |
+| --- | --- | --- |
+| Concetti di apprendimento e flussi di lavoro continui | <ul><li>In qualità di utente principiante, puoi utilizzare l’Assistente AI per apprendere i concetti di Real-Time CDP e Adobe Journey Optimizer e integrarti in prodotti e funzionalità che non conosci.</li><li>In qualità di utente esperto, puoi utilizzare l’Assistente IA per risolvere un caso limite che potrebbe bloccare il flusso di lavoro. | <ul><li>Come si imposta una dashboard in Analytics di Percorso?</li><li>Dimmi alcuni casi d’uso per Real-Time CDP.</li></ul> |
+| Risoluzione dei problemi | Utilizza l’Assistente AI per scoprire come eseguire il debug degli errori di base che potrebbero verificarsi nel flusso di lavoro. | <ul><li>Cos’è questo errore {ERROR_MESSAGE} Cioè?</li><li>Perché non sono in grado di eliminare il pubblico denominato &quot;Luma: E-mail Audience&quot;?</li></ul> |
+| Igiene delle sandbox | Utilizza l’Assistente AI per identificare eventuali oggetti duplicati o inutilizzati in modo da poter gestire la sandbox in modo efficiente. | <ul><li>Puoi mostrarmi tipi di pubblico simili?</li><li>Esistono schemi a cui non è associato un set di dati?</li></ul> |
+| Analisi del valore | Utilizza l’Assistente AI per identificare gli oggetti dati più utilizzati e valutare eventuali indicatori di prestazioni o trovare gli oggetti dati più importanti. | <ul><li>Quanti profili ci sono nella definizione del segmento &quot;Luma: Pubblico e-mail&quot;?</li><li>Quando sono stati attivati i tipi di pubblico per la destinazione Tipi di pubblico di Experience Cloud?</li></ul> |
+| Ricerca | Utilizza l’Assistente AI per trovare oggetti Experienci Platform supportati come tipi di pubblico, set di dati, destinazioni, schemi e origini. | <ul><li>Elencare i tipi di pubblico contenenti &quot;Luma&quot; nel nome creati nell’ultimo trimestre.</li><li>Quali attributi sono presenti nello schema XDM &quot;Luma: Azioni personalizzate&quot;?</li></ul> |
+| Analisi dell&#39;impatto | Utilizza l’Assistente AI per identificare gli oggetti dati utilizzati in alcuni flussi di lavoro in modo da poter valutare l’impatto di eventuali modifiche. | <ul><li>Quali tipi di pubblico utilizzano `homeAddress.city` nello schema &quot;Luma: PersonProfiles&quot;?</li><li>Quali set di dati sono `consents.marketing.push.val` attributo profilo memorizzato in?</li></ul> |
 
 ## Accedere all’Assistente AI nell’interfaccia utente di Experienci Platform
 
@@ -75,7 +76,7 @@ Per avviare l&#39;Assistente IA, selezionare **[!UICONTROL Icona Assistente AI]*
 
 Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente le informazioni necessarie per iniziare. Puoi utilizzare le opzioni fornite in [!UICONTROL Idee per iniziare] per rispondere a domande e comandi quali:
 
-* [!UICONTROL Quali dei miei segmenti sono attivati?]
+* [!UICONTROL Quale dei miei tipi di pubblico viene attivato?]
 * [!UICONTROL Che cos’è uno schema?]
 * [!UICONTROL Alcuni casi d’uso comuni per Real-Time CDP]
 
@@ -145,7 +146,7 @@ Per visualizzare le citazioni e convalidare la risposta dell’Assistente AI, se
 
 Affinché l’Assistente AI risponda a una query sull’utilizzo dei dati all’interno della tua organizzazione, devi trovarti in una sandbox attiva.
 
-Nell’esempio seguente, l’Assistente AI viene fornito con la seguente query: **&quot;Mostra definizioni di segmenti con più di 1000 profili e includi lo stato di attivazione.&quot;** L’Assistente AI risponde quindi con un grafico che visualizza i dati di segmenti e profili.
+Nell’esempio seguente, l’Assistente AI viene fornito con la seguente query: **&quot;Mostra le definizioni dei segmenti con più di 1000 profili e includi lo stato di attivazione.&quot;** L’Assistente AI risponde quindi con un grafico che visualizza i dati di segmenti e profili.
 
 ![Rispondi alla domanda sull’utilizzo dei dati.](./images/ai-assistant/data-usage-question.png)
 
@@ -159,7 +160,7 @@ Viene visualizzata una vista espansa della visualizzazione. Puoi utilizzare la f
 
 Quando viene richiesta una domanda sull’utilizzo dei dati, l’Assistente AI spiega come ha calcolato la risposta. Nell’esempio seguente, l’Assistente AI illustra i passaggi necessari per visualizzare le definizioni dei segmenti con più di 1000 profili e i rispettivi stati di attivazione.
 
-![Rispondi alla domanda sui segmenti che illustrano come l’Assistente AI ha calcolato la risposta.](./images/ai-assistant/results-explained.png)
+![Rispondi alla domanda sulle definizioni dei segmenti che illustra come l’Assistente AI ha calcolato la risposta.](./images/ai-assistant/results-explained.png)
 
 Puoi anche fornire filtri e modifiche alle query e istruire l’Assistente AI affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi chiedere all’Assistente AI di mostrare una tendenza delle definizioni dei segmenti di conteggio nell’ordine della data di creazione, rimuovere le definizioni dei segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
 
@@ -169,7 +170,7 @@ Puoi anche fornire filtri e modifiche alle query e istruire l’Assistente AI af
 
 +++Seleziona per visualizzare un esempio di completamento automatico
 
-È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. Sono disponibili consigli di completamento automatico per i seguenti domini: segmenti, schemi, set di dati, origini e destinazioni.
+È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. I consigli di completamento automatico sono disponibili per i seguenti domini: pubblico, schemi, set di dati, origini e destinazioni.
 
 È possibile utilizzare il completamento automatico includendo il simbolo più (**`+`**) nella query. In alternativa, è possibile selezionare il segno più (**`+`**) che si trova nella parte inferiore della casella di immissione testo. Viene visualizzata una finestra con un elenco degli oggetti dati consigliati dalla sandbox.
 
@@ -208,16 +209,16 @@ Il modello di recupero della documentazione di è addestrato su Experienci Platf
 Puoi anche porre domande all’Assistente AI sull’utilizzo dei dati nei seguenti domini:
 
 * Attributi
+* Tipi di pubblico
 * Flussi di dati
 * Set di dati
 * Destinazioni _Al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati._
 * Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
-* Segmenti
 * Sorgenti _(Al momento non è possibile rispondere alle domande relative ai conti)._
 
-Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il segmento con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} segmento creato?&quot;
+Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il pubblico con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} pubblico creato?&quot;
 
-Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come schemi, set di dati, attributi, destinazioni e segmenti.
+Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come tipi di pubblico, schemi, set di dati, attributi e destinazioni.
 
 ### Esempi di domande sull’utilizzo dei dati {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ Dovrai accedere a una sandbox per informazioni su dati specifici relativi a ogge
 
 | Tipo di domanda | Descrizione | Esempi |
 | --- | --- | --- | 
-| Derivazione dei dati | Tracciare l&#39;utilizzo di uno o più oggetti tra altri oggetti Experienci Platform | <ul><li>Quali set di dati utilizzano {SCHEMA_NAME} schema?</li><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quali set di dati sono stati utilizzati nei segmenti attivati?</li><li>Elencare gli schemi con attributi utilizzati nei segmenti attivati.</li><li>Mostra i segmenti attivati in {DESTINATION_ACCOUNT_NAME} e avere più di 1000 profili.</li><li>Mostra gli attributi utilizzati nei segmenti attivati che sono stati modificati dopo gennaio 2023.</li><li>Quali set di dati vengono acquisiti tramite {SOURCE_NAME}?</li><li>Quali flussi di dati sono associati a {DATAFLOW_NAME}</li><li>Elencare gli schemi relativi ai segmenti attivati e creati nell’ultimo anno.</li></ul> |
-| Distribuzione e aggregazioni | Domande basate su riepilogo sull&#39;utilizzo degli oggetti di Experience Platform | <ul><li>Qual è la percentuale di segmenti attivati?</li><li>Quanti campi vengono utilizzati nella segmentazione?</li><li>Quali segmenti vengono attivati nel maggior numero di destinazioni?</li><li>Elencare i segmenti duplicati.</li><li>Mostra i segmenti attivati in {DESTINATION_ACCOUNT_NAME} e li classifica in base alle dimensioni del profilo.</li><li>Qual è la percentuale dei segmenti che non sono stati attivati ma hanno più di 100 profili. Mostratemi i loro nomi.</li><li>Elenca i 3 connettori di origine che acquisiscono i dati nei miei set di dati.</li><li>Elencami i primi 5 attributi utilizzati nei segmenti attivati in base alla loro occorrenza.</li></ul> |
-| Ricerca oggetto | Recuperare o accedere a un oggetto Experience Platform o alle relative proprietà. | <ul><li>A quali set di dati non è associato alcuno schema</li><li>Elencare gli attributi utilizzati per {SEGMENT_NAME}?</li><li>Dammi l’elenco degli schemi abilitati per il profilo ma non modificati dalla loro creazione.</li><li>Quali segmenti sono stati modificati nell’ultima settimana?</li><li>Elencami i segmenti che hanno le stesse definizioni di segmenti insieme alla relativa data di creazione.</li><li>Quali set di dati sono abilitati per il profilo e includono anche il numero di segmenti creati da ciascun set di dati.</li><li>Quali account di origine sono associati al set di dati XYZ?</li><li>Mostra la definizione del segmento e la data di modifica di {SEGMENT_NAME}.</li></ul> |
+| Derivazione dei dati | Tracciare l&#39;utilizzo di uno o più oggetti tra altri oggetti Experienci Platform | <ul><li>Quali set di dati utilizzano {SCHEMA_NAME} schema?</li><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quali set di dati sono stati utilizzati nei tipi di pubblico attivati?</li><li>Elencare gli schemi con attributi utilizzati nei tipi di pubblico attivati.</li><li>Mostra i tipi di pubblico attivati per {DESTINATION_ACCOUNT_NAME} e avere più di 1000 profili.</li><li>Mostra gli attributi utilizzati nei tipi di pubblico attivati che sono stati modificati dopo gennaio 2023.</li><li>Quali set di dati vengono acquisiti tramite {SOURCE_NAME}?</li><li>Quali flussi di dati sono associati a {DATAFLOW_NAME}</li><li>Elencare gli schemi relativi ai tipi di pubblico attivati e creati nell’ultimo anno.</li></ul> |
+| Distribuzione e aggregazioni | Domande basate su riepilogo sull&#39;utilizzo degli oggetti di Experience Platform | <ul><li>Qual è la percentuale di pubblico attivato?</li><li>Quanti campi vengono utilizzati nella segmentazione?</li><li>Quali tipi di pubblico vengono attivati nel maggior numero di destinazioni?</li><li>Elencare tipi di pubblico duplicati.</li><li>Mostra i tipi di pubblico attivati in {DESTINATION_ACCOUNT_NAME} e li classifica in base alle dimensioni del profilo.</li><li>Qual è la percentuale di tipi di pubblico che non sono stati attivati ma hanno più di 100 profili. Mostratemi i loro nomi.</li><li>Elenca i 3 connettori di origine che acquisiscono i dati nei miei set di dati.</li><li>Elencami i primi 5 attributi utilizzati nei tipi di pubblico attivati in base alla loro occorrenza.</li></ul> |
+| Ricerca oggetto | Recuperare o accedere a un oggetto Experience Platform o alle relative proprietà. | <ul><li>A quali set di dati non è associato alcuno schema</li><li>Elencare gli attributi utilizzati per {AUDIENCE_NAME}?</li><li>Dammi l’elenco degli schemi abilitati per il profilo ma non modificati dalla loro creazione.</li><li>Quali tipi di pubblico sono stati modificati nell&#39;ultima settimana?</li><li>Elencami i tipi di pubblico che hanno le stesse definizioni di segmenti insieme alla loro data di creazione.</li><li>Quali set di dati sono abilitati per il profilo e includono anche quanti tipi di pubblico sono stati creati da ciascun set di dati.</li><li>Quali account di origine sono associati al set di dati XYZ?</li><li>Mostra la definizione del segmento e la data di modifica di {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ Fai riferimento a questa sezione per ulteriori informazioni sull’Assistente IA
 ### Avvertenze e limitazioni {#caveats-and-limitations}
 
 La sezione seguente illustra le avvertenze e le limitazioni correnti da considerare quando si utilizza l’Assistente IA.
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### Piccolo talk limitato
 
@@ -356,6 +307,6 @@ Leggi la tabella seguente per alcuni esempi:
 
 | Domanda errata | Buona domanda | Note |
 | --- | --- | --- |
-| Qual è il segmento più grande? | Qual è il segmento più grande? Utilizzo dei dati. | Indica esplicitamente all’Assistente IA che desideri che la risposta sia basata sui dati. |
-| Qual è il segmento più grande? | Elencate il mio segmento più grande. | Esistono casi in cui una domanda &quot;cosa...&quot; può essere scambiata per una domanda basata su documentazione. L’utilizzo di un comando come &quot;list&quot; è un indicatore più forte del fatto che ti stai ponendo una domanda con i dati nel contesto. |
-| Quanti set di dati ho? | Conta i miei set di dati. | La domanda originale funziona per i segmenti, ma potrebbe non funzionare con i set di dati. |
+| Qual è il mio pubblico più grande? | Qual è il mio pubblico più grande? Utilizzo dei dati. | Indica esplicitamente all’Assistente IA che desideri che la risposta sia basata sui dati. |
+| Qual è il mio pubblico più grande? | Elencate il mio pubblico più grande. | Esistono casi in cui una domanda &quot;cosa...&quot; può essere scambiata per una domanda basata su documentazione. L’utilizzo di un comando come &quot;list&quot; è un indicatore più forte del fatto che ti stai ponendo una domanda con i dati nel contesto. |
+| Quanti set di dati ho? | Conta i miei set di dati. | La domanda originale funziona per i tipi di pubblico, ma potrebbe non funzionare con i set di dati. |
