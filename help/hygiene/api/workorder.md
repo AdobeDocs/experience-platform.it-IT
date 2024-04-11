@@ -3,10 +3,11 @@ title: Endpoint API ordine di lavoro
 description: L’endpoint /workorder nell’API di igiene dei dati consente di gestire in modo programmatico le attività di eliminazione per le identità.
 badgeBeta: label="Beta" type="Informative"
 role: Developer
+badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 59585ce832b10dfc28474e498c9308453da86d0c
+source-git-commit: 2259bf70e1503cf468f72a73345592ace0f58f63
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---

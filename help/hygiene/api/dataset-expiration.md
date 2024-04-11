@@ -3,9 +3,9 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ La scadenza di un set di dati è solo un’operazione di eliminazione ritardata 
 
 In qualsiasi momento, prima che l’eliminazione del set di dati venga effettivamente avviata, puoi annullare la scadenza o modificarne l’ora di attivazione. Dopo aver annullato la scadenza di un set di dati, puoi riaprirlo impostando una nuova scadenza.
 
-Una volta avviata l’eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing`e non può essere ulteriormente modificata. Il set di dati può essere recuperato per un massimo di sette giorni, ma solo tramite un processo manuale avviato tramite una richiesta di servizio Adobe. Durante l’esecuzione della richiesta, il data lake, Identity Service e Real-Time Customer Profile avviano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come `executed`.
+Una volta avviata l’eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing`e non può essere ulteriormente modificata. Il set di dati può essere recuperato per un massimo di sette giorni, ma solo tramite un processo manuale avviato tramite una richiesta di servizio Adobe. Durante l’esecuzione della richiesta, il data lake, Identity Service e Real-Time Customer Profile avviano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Risposta**
 
 In caso di esito positivo, la risposta elenca le scadenze risultanti del set di dati. L&#39;esempio seguente è stato troncato per motivi di spazio.
+
+>[!IMPORTANT]
+>
+>Il `ttlId` nella risposta viene anche indicato come `{DATASET_EXPIRATION_ID}`. Entrambi fanno riferimento all’identificatore univoco per la scadenza del set di dati.
 
 ```json
 {
@@ -90,26 +94,30 @@ In caso di esito positivo, la risposta elenca le scadenze risultanti del set di 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `totalRecords` | Il conteggio delle scadenze del set di dati che corrispondono ai parametri della chiamata di elenco. |
-| `ttlDetails` | Contiene i dettagli delle scadenze dei set di dati restituiti. Per ulteriori dettagli sulle proprietà di scadenza di un set di dati, consulta la sezione della risposta per creare un [chiamata di ricerca](#lookup). |
+| `total_count` | Il conteggio delle scadenze del set di dati che corrispondono ai parametri della chiamata di elenco. |
+| `results` | Contiene i dettagli delle scadenze dei set di dati restituiti. Per ulteriori dettagli sulle proprietà di scadenza di un set di dati, consulta la sezione della risposta per creare un [chiamata di ricerca](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Cercare una scadenza del set di dati {#lookup}
 
-Per cercare la scadenza di un set di dati, effettua una richiesta GET con `datasetId` o `ttlId`.
+Per cercare la scadenza di un set di dati, effettua una richiesta GET con `{DATASET_ID}` o `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>Il `{DATASET_EXPIRATION_ID}` è denominato `ttlId` nella risposta. Entrambi fanno riferimento all’identificatore univoco per la scadenza del set di dati.
 
 **Formato API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati di cui desideri cercare la scadenza. |
-| `{TTL_ID}` | ID della scadenza del set di dati. |
+| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e il nuovo stato di scadenza del set di dati, se non vi era alcuna scadenza del set di dati preesistente.
+In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e il nuovo stato di scadenza del set di dati.
 
 ```json
 {
@@ -254,7 +262,7 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 201 (Creato) e 
 | `displayName` | Nome visualizzato per la richiesta di scadenza. |
 | `description` | Descrizione della richiesta di scadenza. |
 
-Se per il set di dati esiste già una scadenza, si verifica uno stato HTTP 400 (richiesta non valida). In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovato) se non esiste alcuna scadenza del set di dati (o se non disponi dell’accesso a tale set di dati).
+Se per il set di dati esiste già una scadenza, si verifica uno stato HTTP 400 (richiesta non valida). In caso di esito negativo, la risposta restituisce lo stato HTTP 404 (Non trovato) se non esiste una scadenza del set di dati (o se non disponi dell’accesso al set di dati).
 
 ## Aggiornare la scadenza di un set di dati {#update}
 
@@ -267,14 +275,12 @@ Per aggiornare una data di scadenza per un set di dati, utilizza una richiesta P
 **Formato API**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{TTL_ID}` | ID della scadenza del set di dati che desideri modificare. |
+| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati che desideri modificare. Nota: questa funzione è denominata `ttlId` nella risposta. |
 
 **Richiesta**
 
@@ -297,7 +303,7 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati vengono sostituite dal nuovo valore di scadenza fornito. La data e l&#39;ora devono essere almeno **24 ore nel futuro**. |
+| `expiry` | **Obbligatorio** Data e ora nel formato ISO 8601. Se la stringa non presenta scostamenti di fuso orario espliciti, si presume che il fuso orario sia UTC. La durata dei dati all’interno del sistema viene impostata in base al valore di scadenza fornito. Eventuali marche temporali di scadenza precedenti per lo stesso set di dati devono essere sostituite dal nuovo valore di scadenza fornito. La data e l&#39;ora devono essere almeno **24 ore nel futuro**. |
 | `displayName` | Nome visualizzato per la richiesta di scadenza. |
 | `description` | Descrizione facoltativa della richiesta di scadenza. |
 
@@ -374,19 +380,19 @@ In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun con
 
 ## Recuperare la cronologia dello stato di scadenza di un set di dati {#retrieve-expiration-history}
 
-Puoi cercare la cronologia dello stato di scadenza di un set di dati specifico utilizzando il parametro di query `include=history` in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, su eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile). È inoltre possibile utilizzare `ttlId` della scadenza del set di dati.
+Per cercare la cronologia dello stato di scadenza di un set di dati specifico, utilizza `{DATASET_ID}` e `include=history` parametro di query in una richiesta di ricerca. Il risultato include informazioni sulla creazione della scadenza del set di dati, su eventuali aggiornamenti applicati e sulla relativa cancellazione o esecuzione (se applicabile). È inoltre possibile utilizzare `{DATASET_EXPIRATION_ID}` per recuperare la cronologia dello stato di scadenza del set di dati.
 
 **Formato API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati di cui desideri cercare la cronologia delle scadenze. |
-| `{TTL_ID}` | ID della scadenza del set di dati. |
+| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati. Nota: questa funzione è denominata `ttlId` nella risposta. |
 
 {style="table-layout:auto"}
 
