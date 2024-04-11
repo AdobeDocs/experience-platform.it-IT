@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
+source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1866'
 ht-degree: 13%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 13%
 
 Il controllo degli accessi basato sugli attributi è una funzionalità di Adobe Experience Platform che consente agli amministratori di controllare l’accesso a oggetti e/o funzionalità specifici in base agli attributi. Gli attributi possono essere metadati aggiunti a un oggetto, ad esempio un’etichetta aggiunta a un campo o a un segmento dello schema. Un amministratore definisce i criteri di accesso che includono attributi per gestire le autorizzazioni di accesso degli utenti.
 
-Questa funzionalità consente di etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. Parallelamente, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso relativi ai campi dello schema XDM e gestire in modo migliore l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo dell’accesso basato su attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
+Utilizza questa funzionalità per etichettare i campi dello schema Experience Data Model (XDM) con etichette che definiscono gli ambiti di utilizzo organizzativi o dei dati. Parallelamente, gli amministratori possono utilizzare l’interfaccia di amministrazione di utenti e ruoli per definire i criteri di accesso relativi ai campi dello schema XDM e gestire in modo migliore l’accesso concesso a utenti o gruppi di utenti (utenti interni, esterni o di terze parti). Inoltre, il controllo dell’accesso basato su attributi consente agli amministratori di gestire l’accesso a segmenti specifici.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ La disponibilità del controllo degli accessi basato su attributi per i clienti 
 
 * Interfaccia autorizzazioni: fornisce un’interfaccia che consente di definire ruoli utente, autorizzazioni e criteri per il controllo degli accessi basato su attributi.
 
-* Etichette: aggiungi, modifica e rimuovi etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati per sfruttare i criteri di controllo di accesso.
+* Etichette: aggiungi, modifica e rimuovi etichette ai ruoli utente, ai campi dello schema, ai segmenti e ad altri oggetti supportati per sfruttare i criteri di controllo di accesso. **Nota:** Qualsiasi segmento che utilizza un attributo etichettato deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
 
 I flussi di lavoro di amministrazione per tutte le applicazioni alimentate da Experienci Platform da Admin Console alla nuova interfaccia Autorizzazioni sono in fase di commutazione.
 

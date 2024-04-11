@@ -4,9 +4,9 @@ title: Guida end-to-end al controllo degli accessi basato su attributi
 description: Questo documento fornisce una guida end-to-end sul controllo degli accessi basato su attributi in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 17%
 
 ---
@@ -132,6 +132,10 @@ Il **[!UICONTROL Modifica etichette]** viene visualizzata una finestra di dialog
 >Quando un’etichetta viene aggiunta a un campo, viene applicata alla risorsa principale del campo (una classe o un gruppo di campi). Se la classe o il gruppo di campi padre è utilizzato da altri schemi, questi ereditano la stessa etichetta.
 
 ## Applicare etichette ai segmenti
+
+>[!NOTE]
+>
+>Qualsiasi segmento che utilizza un attributo etichettato deve essere etichettato allo stesso modo se desideri che ad esso vengano applicate le stesse restrizioni di accesso.
 
 Dopo aver completato l’etichettatura dei campi dello schema, ora puoi iniziare a etichettare i segmenti.
 
