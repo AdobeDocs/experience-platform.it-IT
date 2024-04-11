@@ -2,10 +2,10 @@
 title: Panoramica dell’estensione di tracciamento di video YouTube
 description: Scopri l’estensione tag per il tracciamento di video YouTube in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 97%
+source-wordcount: '895'
+ht-degree: 81%
 
 ---
 
@@ -23,7 +23,7 @@ Per ogni proprietà tag in Adobe Experience Platform, le seguenti estensioni dev
 * Servizio ID visitatore di Experience Cloud
 * Estensione core
 
-Utilizza lo snippet di codice riportato nella sezione sull’[incorporamento di un player con i tag \&lt;iframe\>](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds), nella documentazione per sviluppatori di Google, nell’HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video.
+Utilizza il [&quot;Incorporare un lettore utilizzando un \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) frammento di codice dai documenti per sviluppatori di Google nel HTML di ogni pagina web in cui deve essere eseguito il rendering di un lettore video.
 
 Con la versione 2.0.1 di questa estensione è possibile incorporare uno o più video YouTube in una singola pagina web inserendo un attributo `id` con valore univoco nel tag di script iframe e aggiungendo `enablejsapi=1` e `rel=0` alla fine del valore dell’attributo `src`, se non già incluso. Esempio:
 
@@ -75,18 +75,18 @@ Nell’estensione sono disponibili otto eventi; solo Tracciamento punto di cue p
 Le regole prevedono tre azioni:
 
 * **Imposta variabili:** imposta le variabili Adobe Analytics (mappa tutti o alcuni elementi di dati inclusi).
-* **Invia beacon:** invia il beacon Adobe Analytics come chiamata di tracciamento dei collegamenti personalizzata e specifica un valore “Nome collegamento”.
+* **Invia beacon:** Invia il beacon di Adobe Analytics come chiamata di tracciamento dei collegamenti personalizzata e specifica un valore &quot;Nome collegamento&quot;.
 * **Cancella variabili:** cancella le variabili Adobe Analytics.
 
-## Esempio di regola di tag per “Video Start”
+## Esempio di regola tag per “Video Start”
 
 Devono essere inclusi i seguenti oggetti di estensione video.
 
-* **Eventi**: “Inizio video” (questo evento causa l’attivazione della regola quando il visitatore avvia un video YouTube).
+* **Eventi**: &quot;Video Start&quot; (questo evento causa l’attivazione della regola quando il visitatore avvia un video YouTube).
 
 * **Condizione**: nessuna
 
-* **Azioni**: Utilizza l’**estensione Analytics** per impostare le variabili, per mappare:
+* **Azioni**: utilizza **Estensione Analytics** per mappare l’azione &quot;Imposta variabili&quot;:
 
    * l’evento per Inizio video;
    * una prop/eVar per l’elemento dati Durata video;
@@ -94,13 +94,13 @@ Devono essere inclusi i seguenti oggetti di estensione video.
    * un prop/eVar per l’elemento dati Nome video;
    * una prop/eVar per l’elemento dati URL video.
 
-   Quindi, includi l’azione “Invia beacon” (`s.tl`) con il nome del collegamento “video start”, seguita dall’azione “Cancella variabili”.
+  Quindi, includi l’azione &quot;Invia beacon&quot; (`s.tl`) con il nome del collegamento &quot;video start&quot;, seguito dall&#39;azione &quot;Cancella variabili&quot;.
 
 >[!TIP]
 > 
 >Per le implementazioni in cui non è possibile utilizzare più eVar o proprietà per ciascun elemento video, i valori degli elementi dati possono essere concatenati in Platform, analizzati nei rapporti di classificazione utilizzando lo strumento Generatore regole di classificazione, come spiegato in [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=it), e quindi applicati come segmento in Analysis Workspace.
 
-Per concatenare i valori delle informazioni video, crea un nuovo elemento di dati denominato “Video Meta Data” e programmalo per richiamare e assemblare tutti gli elementi dati video (elencati sopra). Esempio:
+Per concatenare i valori delle informazioni video, crea un nuovo elemento dati denominato &quot;Video Meta Data&quot; e programmalo per richiamare e assemblare tutti gli elementi dati video (elencati sopra). Ad esempio:
 
 ```javascript
 var r = [];
@@ -113,3 +113,5 @@ r.push(_satellite.getVar('Extension Version'));
 
 return r.join('|');
 ```
+
+Per ulteriori informazioni su come creare e sfruttare in modo efficace gli elementi dati in Platform, leggi [elementi dati](../../../ui/managing-resources/data-elements.md) documentazione.
