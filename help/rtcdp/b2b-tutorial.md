@@ -6,9 +6,9 @@ description: Utilizza questo scenario di esempio per configurare l’implementaz
 feature: Get Started, B2B
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -76,33 +76,33 @@ Il connettore di origine del Marketo Engage fornisce una funzione di mappatura a
 
 L’addetto al marketing di Bodea controlla che tutti i gruppi di campi siano mappati in modo appropriato e continua il processo di configurazione delle origini inizializzando un flusso di dati. Creando un flusso di dati per inserire dati Marketo, i dati in arrivo possono essere utilizzati dai servizi Platform a valle. Durante il processo di acquisizione iniziale, i dati vengono inseriti in Experienci Platform come batch. Successivamente, i dati acquisiti successivi vengono quindi inviati in streaming al profilo con aggiornamenti in tempo quasi reale.
 
-## Creare un segmento per valutare i dati
+## Creare un pubblico per valutare i dati
 
 La prossima attività consiste nel creare un pubblico per la nuova campagna di e-mail marketing di Bodea, basato su attributi specifici di entità correlate nei dati di origine. Nell’interfaccia utente di Platform, l’addetto al marketing di Bodea seleziona innanzitutto **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra, quindi **[!UICONTROL Crea segmento]**.
 
-In questo esempio, il segmento trova tutte le persone che lavorano nel reparto vendite e sono correlate a qualsiasi account che ha almeno un’opportunità aperta. Questo segmento richiede un collegamento tra la classe Profilo individuale XDM, la classe Conto aziendale XDM e la classe Opportunità aziendale XDM.
+In questo esempio, il pubblico trova tutte le persone che lavorano nel reparto vendite e sono correlate a qualsiasi account che ha almeno un’opportunità aperta. Questo pubblico richiede un collegamento tra la classe Profilo individuale XDM, la classe Account aziendale XDM e la classe Opportunità aziendale XDM.
 
 ![Segmento del caso d’uso](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Per istruzioni su come creare segmenti per valutare i dati, consulta [Guida dell’interfaccia utente di Segment Builder](../segmentation/ui/segment-builder.md). Per casi di utilizzo più specifici di segmentazione B2B, consulta [Panoramica sulla segmentazione per Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Per istruzioni su come creare tipi di pubblico per valutare i dati, consulta [Guida dell’interfaccia utente di Segment Builder](../segmentation/ui/segment-builder.md). Per casi di utilizzo più specifici di segmentazione B2B, consulta [Panoramica sulla segmentazione per Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 Il Generatore di segmenti consente di creare un pubblico commerciabile dai dati del profilo cliente in tempo reale e di visualizzare stime del pubblico potenziale in base alla combinazione di attributi, eventi e pubblici esistenti definiti.
 
 ## Attivare i dati valutati in una destinazione
 
-Una volta creato correttamente il segmento, in viene fornito un riepilogo [!UICONTROL Dettagli] dell&#39;area di lavoro. Poiché non è attualmente attivata alcuna destinazione per il segmento, l’addetto marketing di Bodea deve esportare il pubblico in un set di dati in cui è possibile accedervi e su cui intervenire.
+Una volta creato correttamente il pubblico, in viene fornito un riepilogo [!UICONTROL Dettagli] dell&#39;area di lavoro. Poiché non è attualmente attivata alcuna destinazione per la definizione del segmento, l’addetto marketing di Bodea deve esportare il pubblico in un set di dati in cui è possibile accedervi e su cui intervenire.
 
 All&#39;interno del [!UICONTROL Segmenti] dell’interfaccia utente di Platform, l’addetto al marketing di Bodea seleziona **[!UICONTROL Attiva nella destinazione]**.
 
-![Attiva il segmento in una destinazione](./assets/b2b-tutorial/activate-to-destination.png)
+![Attivare il pubblico in una destinazione](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Guarda il tutorial su [attivazione di un segmento in una destinazione](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) per passaggi completi su come eseguire questa operazione.
+>Guarda il tutorial su [attivazione di un pubblico in una destinazione](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) per passaggi completi su come eseguire questa operazione.
 
-L’addetto al marketing di Bodea attiva il segmento nella destinazione Marketo, consentendo loro di inviare i dati del segmento da Platform a Marketi Engage sotto forma di elenco statico. Consulta la guida sulla [Destinazione Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) per ulteriori informazioni.
+L’addetto al marketing di Bodea attiva il pubblico nella destinazione Marketo, consentendo loro di inviare i dati del pubblico da Platform a Marketi Engage sotto forma di elenco statico. Consulta la guida sulla [Destinazione Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) per ulteriori informazioni.
 
 ## Passaggi successivi
 

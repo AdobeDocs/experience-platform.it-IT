@@ -4,9 +4,9 @@ title: Panoramica sulla governance dei dati
 description: La governance dei dati consente di gestire i dati dei clienti e garantire la conformità alle normative, alle restrizioni e alle politiche applicabili all’utilizzo dei dati.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Puoi impostare restrizioni sull’utilizzo dei dati per una destinazione definen
 >
 >Per ulteriori informazioni sulle azioni di marketing e sul loro utilizzo nei criteri di utilizzo dei dati, consulta [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md) nel [!DNL Experience Platform] documentazione.
 
-La definizione delle azioni di marketing sulle destinazioni ti consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. Pertanto, devi aggiungere alle destinazioni le azioni di marketing appropriate in base alle esigenze della tua organizzazione per applicare le restrizioni dei criteri all’attivazione.
+La definizione delle azioni di marketing sulle destinazioni ti consente di garantire che tutti i profili o i tipi di pubblico inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. Pertanto, devi aggiungere alle destinazioni le azioni di marketing appropriate in base alle esigenze della tua organizzazione per applicare le restrizioni dei criteri all’attivazione.
 
 Le azioni di marketing possono essere selezionate solo al primo avvio della configurazione di una destinazione. A seconda del tipo di destinazione con cui stai lavorando, l’opportunità di configurare le azioni di marketing verrà visualizzata in punti diversi nel flusso di lavoro di configurazione. Consulta la [documentazione sulle destinazioni](../destinations/overview.md) per i passaggi su come configurare una particolare destinazione.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform fornisce diversi criteri di base per i casi d’uso co
 
 ## Applicazione della conformità all’utilizzo dei dati {#enforce}
 
-Una volta etichettati i dati e definiti i criteri di utilizzo, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico nelle destinazioni in Real-Time CDP, la governance dei dati applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni.
+Una volta etichettati i dati e definiti i criteri di utilizzo, puoi applicare la conformità dell’utilizzo dei dati ai criteri. Quando si attivano i tipi di pubblico nelle destinazioni in Real-Time CDP, la governance dei dati applica automaticamente i criteri di utilizzo nel caso in cui si verifichino violazioni.
 
 Vedi il documento su [applicazione automatica delle policy](../../data-governance/enforcement/auto-enforcement.md) per ulteriori informazioni.
 

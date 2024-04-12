@@ -3,7 +3,7 @@ title: Guardrail Real-Time CDP
 description: Scopri i guardrail dei dati nei vari servizi e aree di Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 1%
@@ -27,7 +27,6 @@ Inizia qui e segui i collegamenti riportati di seguito per comprendere tutti i g
 >[!TIP]
 >
 >Inoltre, visita [blueprint dell’esperienza digitale](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) per ulteriori informazioni quali [diagrammi di latenza end-to-end](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) per vari servizi di Experience Platform.
-
 
 ## Tipi di guardrail {#guardrail-types}
 

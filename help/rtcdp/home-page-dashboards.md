@@ -1,13 +1,13 @@
 ---
 keywords: panoramica metriche; panoramica metriche rtcdp
 title: Home page e dashboard di Real-time Customer Data Platform
-description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
+description: Scopri diverse dashboard, la pagina Home e l’esperienza del primo utente di Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 6%
+source-wordcount: '919'
+ht-degree: 5%
 
 ---
 
@@ -28,7 +28,7 @@ Il [!UICONTROL Guida introduttiva a Real-Time Customer Profile] il widget è div
 * **Inserire dati in Platform**: questo widget indirizza l’utente al catalogo delle origini. Utilizza il catalogo origini per selezionare un’origine e acquisire i dati da Experience Platform. Seleziona **[Configurare le origini]** per passare al catalogo delle origini. Per ulteriori informazioni, leggere [panoramica sulle origini](../sources/home.md).
 * **Modellare le strutture di dati**: questo widget reindirizza alla panoramica degli schemi. Utilizza la panoramica degli schemi per cercare gli schemi esistenti o creare una blueprint che descriva la struttura dei tuoi dati. Seleziona **[!UICONTROL Crea schema]** per passare all’interfaccia di creazione dello schema. Per ulteriori informazioni, leggere [panoramica degli schemi](../xdm/home.md).
 * **Creare tipi di pubblico**: questo widget indirizza al Generatore di segmenti nell’interfaccia utente. Utilizza Segment Builder (Generatore di segmenti) per interagire con gli elementi dati del profilo e definire i criteri per la definizione del segmento. Seleziona **[!UICONTROL Creare un pubblico]** per passare al Generatore di segmenti. Per ulteriori informazioni, leggere [Panoramica del servizio di segmentazione](../segmentation/home.md).
-* **Inviare dati alle destinazioni**: questo widget indirizza l’utente al catalogo delle destinazioni. Utilizza il catalogo delle destinazioni per selezionare una destinazione a cui poi puoi connettersi e inviare segmenti. Seleziona **[!UICONTROL Impostare le destinazioni]** per passare al catalogo delle destinazioni. Per ulteriori informazioni, leggere [panoramica sulle destinazioni](../destinations/home.md).
+* **Inviare dati alle destinazioni**: questo widget indirizza l’utente al catalogo delle destinazioni. Utilizza il catalogo delle destinazioni per selezionare una destinazione a cui poi puoi connettersi e inviare tipi di pubblico. Seleziona **[!UICONTROL Impostare le destinazioni]** per passare al catalogo delle destinazioni. Per ulteriori informazioni, leggere [panoramica sulle destinazioni](../destinations/home.md).
 
 ![La home page dell’interfaccia utente di Platform che mostra il widget per iniziare](assets/platform-home/getting-started-widget.png)
 
@@ -44,7 +44,7 @@ Il dashboard delle metriche mostra informazioni aggiornate sui dati dell’Exper
 
 ### La classifica
 
-La classifica mostra il numero totale corrente di schemi, set di dati, profili e segmenti nell’organizzazione, nonché la data del loro aggiornamento più recente.
+La classifica mostra il numero totale corrente di schemi, set di dati, profili e tipi di pubblico nell’organizzazione, nonché la data del loro aggiornamento più recente.
 
 ![La sezione classifica nella home page dell’interfaccia utente di Platform.](assets/platform-home/leaderboard.png)
 
@@ -55,13 +55,13 @@ La classifica mostra il numero totale corrente di schemi, set di dati, profili e
 
 ### Elementi recenti
 
-Articoli recenti elenca le modifiche più recenti apportate all&#39;organizzazione. Nell’esempio seguente, le modifiche più recenti riguardano set di dati, origini, segmenti e destinazioni.
+Articoli recenti elenca le modifiche più recenti apportate all&#39;organizzazione. Nell’esempio seguente, le modifiche più recenti riguardano set di dati, origini, pubblico e destinazioni.
 
 ![La sezione degli elementi recenti nella home page dell’interfaccia utente di Platform.](assets/platform-home/recent-items.png)
 
 * **Set di dati recenti**: Il **[!UICONTROL Set di dati recenti]** mostra i cinque set di dati più recenti creati all’interno dell’organizzazione. Questo elenco viene aggiornato quando viene creato un nuovo set di dati. Seleziona un set di dati per visualizzare i dettagli di tale elemento oppure seleziona **[!UICONTROL Visualizza tutto]** per un elenco di set di dati. Da qui, puoi selezionare un’origine specifica per i dettagli. Per ulteriori informazioni sui set di dati, consulta [panoramica dei set di dati](../catalog/datasets/overview.md).
 * **Origini recenti**: Il **[!UICONTROL Origini recenti]** La scheda metrica mostra le cinque origini più recenti create all’interno dell’organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova origine. Selezionare un&#39;origine per visualizzare i dettagli dell&#39;elemento oppure selezionare **[!UICONTROL Visualizza tutto]** per un elenco di origini. Da qui, puoi selezionare un’origine specifica per i dettagli. Per ulteriori informazioni sulle origini, consulta [Panoramica sulle origini](../sources/home.md).
-* **Segmenti recenti**: Il **[!UICONTROL Segmenti recenti]** La scheda metrica mostra i cinque segmenti più recenti creati all’interno dell’organizzazione. Questo elenco viene aggiornato quando viene creato un nuovo segmento. Seleziona un segmento per visualizzare i dettagli di quell’elemento, oppure seleziona **[!UICONTROL Visualizza tutto]** per un elenco di segmenti. Per ulteriori informazioni sui segmenti, consulta [Panoramica del servizio di segmentazione](../segmentation/home.md).
+* **Tipi di pubblico recenti**: Il **[!UICONTROL Tipi di pubblico recenti]** scheda metrica mostra i cinque tipi di pubblico più recenti creati all’interno dell’organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo pubblico. Seleziona un pubblico per visualizzare i dettagli di quell’elemento, oppure seleziona **[!UICONTROL Visualizza tutto]** per un elenco di tipi di pubblico. Per ulteriori informazioni sui tipi di pubblico, consulta [Panoramica del servizio di segmentazione](../segmentation/home.md).
 * **Destinazioni recenti**: Il **[!UICONTROL Destinazioni recenti]** La scheda metrica mostra le cinque destinazioni più recenti create all’interno dell’organizzazione. Questo elenco viene aggiornato quando viene creata una nuova destinazione. Selezionare una destinazione per visualizzare i dettagli dell&#39;elemento oppure selezionare **[!UICONTROL Visualizza tutto]** per un elenco di destinazioni. Per ulteriori informazioni, leggere [panoramica sulle destinazioni](../destinations/home.md).
 
 ## Risorse

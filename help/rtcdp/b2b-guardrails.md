@@ -6,7 +6,7 @@ description: Adobe Experience Platform utilizza un modello di dati ibridi altame
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 2%
@@ -102,7 +102,7 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 ## Guardrail di segmentazione
 
-I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei segmenti che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei segmenti nelle destinazioni.
+I guardrail descritti in questa sezione si riferiscono al numero e alla natura dei tipi di pubblico che un’organizzazione può creare in Experienci Platform, nonché alla mappatura e all’attivazione dei tipi di pubblico nelle destinazioni.
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Gli attributi indipendenti dal tempo, noti anche come &quot;dati record&quot;, v
 
 #### Entità Dimension
 
-Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con piccole entità dimensionali per creare segmenti in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
+Anche se l’archivio dati profilo che gestisce i dati profilo non è un archivio relazionale, Profilo consente l’integrazione con entità dimensionali di piccole dimensioni per creare tipi di pubblico in modo semplificato e intuitivo. Questa integrazione è nota come [segmentazione con più entità](../segmentation/multi-entity-segmentation.md).
 
 La tua organizzazione può anche definire classi XDM per descrivere elementi diversi dai singoli utenti, ad esempio store, prodotti o proprietà. Questi non[!DNL XDM Individual Profile] gli schemi sono denominati &quot;entità dimensione&quot; (anche note come &quot;entità di ricerca&quot;) e non contengono dati di serie temporali. Gli schemi che rappresentano entità dimensione sono collegati alle entità profilo tramite l’utilizzo di [relazioni tra schemi](../xdm/tutorials/relationship-ui.md).
 

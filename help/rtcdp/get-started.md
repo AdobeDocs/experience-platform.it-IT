@@ -4,10 +4,10 @@ title: Guida introduttiva a Real-time Customer Data Platform
 description: Utilizza questo scenario di esempio per la configurazione dell’implementazione di Adobe Real-time Customer Data Platform.
 feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '2333'
-ht-degree: 2%
+source-wordcount: '2325'
+ht-degree: 1%
 
 ---
 
@@ -55,7 +55,7 @@ Questo tutorial include i seguenti passaggi:
 1. Utilizzare [più origini dati](#using-multiple-data-sources).
 1. [Configurare un’origine dati](#configuring-a-data-source).
 1. [Raccogliere i dati](#bringing-the-data-together-for-a-specific-customer) per un cliente specifico.
-1. Configurazione [segmenti](#segments).
+1. Configurazione [audience](#audiences).
 1. Configurazione [destinazioni](#destinations).
 1. [Unire il profilo tra i dispositivi](#cross-device-identity-stitching).
 1. [Analizzare il profilo](#analyzing-the-profile).
@@ -158,7 +158,7 @@ Ad esempio, per acquisire i dati CRM di Luma, filtra il catalogo per *CRM* e tut
 
    Ad esempio, seleziona **[!UICONTROL Contatti]**. Viene caricata automaticamente un&#39;anteprima dei dati dei contatti, in modo da poter verificare che l&#39;aspetto sia quello previsto.
 
-   Adobe Experience Platform consente di eseguire molte operazioni manuali eseguendo la mappatura automatica dei campi standard su [!DNL Experience Data Model] Schema del profilo (XDM).
+   Real-Time CDP consente di eseguire molte operazioni manuali eseguendo la mappatura automatica dei campi standard in [!DNL Experience Data Model] Schema del profilo (XDM).
 
 1. Controlla le mappature dei campi.
 
@@ -181,13 +181,15 @@ Luma dispone di molte policy interne che limitano l’utilizzo di alcuni tipi di
 
 Una volta applicate le etichette di utilizzo dei dati, Luma può quindi utilizzare la governance dei dati per creare criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni che è consentito eseguire sui dati che contengono determinate etichette. Quando si tenta di eseguire in Real-Time CDP un’azione che costituisce una violazione della policy, l’azione viene impedita e viene visualizzato un avviso per mostrare quale policy è stata violata e perché.
 
+Inoltre, Real-Time CDP
+
 ## Riunire i dati per un cliente specifico
 
 In questo scenario, cerca i profili per Sarah Rose. Viene visualizzato il suo profilo, con l’e-mail che utilizzava per accedere.
 
 <!-- ![image](assets/luma-find-profile.png) -->
 
-Tutte le informazioni di profilo di Luma su Sarah vengono visualizzate. Ciò include informazioni personali come indirizzo e numero di telefono, preferenze di comunicazione e i segmenti per i quali ha i requisiti necessari.
+Tutte le informazioni di profilo di Luma su Sarah vengono visualizzate. Ciò include le sue informazioni personali come l&#39;indirizzo e il numero di telefono, le preferenze di comunicazione e i tipi di pubblico per cui si qualifica.
 
 | Categoria | Descrizione |
 |---|---|
@@ -198,9 +200,9 @@ Il profilo Real-Time CDP riduce il flusso di lavoro del team di marketing Luma d
 
 Il team marketing può utilizzare questo [!DNL Real-Time Customer Profile] per personalizzare meglio l’esperienza di Sarah e aumentare la sua brand loyalty con Luma.
 
-## Segmenti
+## Tipi di pubblico
 
-Le potenti funzionalità di segmentazione di Adobe Experience Platform consentono agli addetti al marketing di combinare attributi, eventi e segmenti esistenti, in base ai dati acquisiti in [!DNL Real-Time Customer Profile].
+Le potenti funzionalità di segmentazione di Adobe Experience Platform consentono agli esperti di marketing di combinare attributi, eventi e tipi di pubblico esistenti, in base ai dati acquisiti in [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -210,9 +212,9 @@ Il team di Data Science di Luma ha creato modelli sulla propensione all’acquis
 
 <!-- ![image](assets/luma-gift.png) -->
 
-### Definizione di un segmento
+### Definire un pubblico
 
-Modifica o crea un segmento che rappresenta gli utenti che abbandonano il carrello e che sembrano in procinto di acquistare un regalo:
+Utilizza le varie opzioni dell’editor di espressioni visive o basate su codice nell’area di lavoro tipi di pubblico per modificare o creare un pubblico che rappresenti utenti che abbandonano il carrello e che sembrano in procinto di acquistare un regalo:
 
 ```sql
 Profile: Category != Preferred Category 
@@ -231,11 +233,11 @@ Poiché Sarah ha aggiunto un oggetto regalo apparente nel carrello e lo ha abban
 
 ## Destinazioni
 
-Dopo aver aggiunto il segmento &quot;Abbandoni del carrello regali&quot;, puoi vedere approssimativamente quante persone fanno parte di questo segmento. Puoi intervenire e renderla disponibile per la personalizzazione su tutti i canali.
+Dopo aver aggiunto il pubblico &quot;Abbandoni del carrello regali&quot;, puoi vedere approssimativamente quante persone fanno parte di questo pubblico. Puoi intervenire e renderla disponibile per la personalizzazione su tutti i canali.
 
 Seleziona **[!UICONTROL Invia a destinazioni]**.
 
-In Real-Time CDP, Luma può agire direttamente sui segmenti di pubblico per la personalizzazione.\
+In Real-Time CDP, Luma può agire direttamente sui propri tipi di pubblico a scopo di personalizzazione.\
 Qui vediamo tutte le destinazioni disponibili per l’invio di questa destinazione da parte di Luma, sia per le soluzioni Adobi che per quelle non Adobi:
 
 ![immagine](assets/luma-dest.png)
@@ -252,7 +254,7 @@ In questo scenario, Luma desidera eseguire il retargeting del pubblico con la pe
 
 ### Pianificazione delle destinazioni
 
-Puoi anche pianificare l’inizio o la fine del segmento in un determinato momento. Il segmento verrà pubblicato e aggiornato automaticamente nelle piattaforme configurate alle date pianificate.
+Puoi anche pianificare l’esportazione del pubblico in modo che inizi o finisca in un determinato momento. Il pubblico verrà pubblicato e aggiornato automaticamente nelle piattaforme configurate alle date pianificate.
 
 >[!NOTE]
 >
@@ -266,17 +268,21 @@ In questo modo il direttore del team multimediale Luma risparmia centinaia di mi
 
 ### Applicazione dei criteri di utilizzo dei dati per le destinazioni
 
-Adobe Experience Platform include controlli di privacy e sicurezza per determinare se un segmento è disponibile per essere attivato in una particolare destinazione. L’attivazione è abilitata o limitata in base agli scopi di marketing assegnati alla destinazione al momento della creazione e ai criteri di utilizzo dei dati definiti dall’organizzazione.
+Adobe Experience Platform include controlli di privacy e sicurezza per determinare se un pubblico è disponibile per essere attivato su una particolare destinazione. L’attivazione è abilitata o limitata in base agli scopi di marketing assegnati alla destinazione al momento della creazione e ai criteri di utilizzo dei dati definiti dall’organizzazione.
 
 Se l’attività viola i criteri, viene visualizzato un avviso. Questo avviso contiene informazioni sulla derivazione dei dati che possono aiutarti a identificare il motivo della violazione dei criteri e cosa puoi fare per risolvere la violazione.
 
 Con questi controlli, [!DNL Experience Platform] aiuta Luma a rispettare le normative e a commercializzare in modo responsabile. Questi controlli sono flessibili e possono essere modificati per soddisfare i requisiti dei team di sicurezza e governance di Luma, consentendo loro di soddisfare in modo sicuro i requisiti regionali e organizzativi per la gestione di dati noti e sconosciuti dei clienti.
 
-### Area di lavoro del flusso di dati
+<!--
 
-Quando salvi, un’area di lavoro del flusso di dati visivi mostra il segmento mappato dal profilo unificato alle tre destinazioni selezionate.
+### Data flow canvas
 
-![immagine](assets/luma-flow.png)
+When you save, a visual data flow canvas shows the segment mapped from the unified profile to the three destinations you selected.
+
+![image](assets/luma-flow.png)
+
+-->
 
 ## Unione delle identità tra dispositivi
 
@@ -297,8 +303,8 @@ Grazie alle funzionalità di soppressione del pubblico, Sarah non sarà presa di
 
 ## Analisi del profilo
 
-Gli esperti di marketing Luma utilizzano Adobe Experience Platform per esaminare il segmento dei gift giver nella dashboard di Real-Time CDP. Vedono i risultati di questa iniziativa nel tempo e vedono che sta crescendo. I clienti rispondono alle offerte e spendono di più.
+Gli esperti di marketing Luma utilizzano Adobe Experience Platform per esaminare il pubblico dei gift giver nella dashboard di Real-Time CDP. Vedono i risultati di questa iniziativa nel tempo e vedono che sta crescendo. I clienti rispondono alle offerte e spendono di più.
 
-Queste informazioni consentono agli esperti di marketing di intervenire su questo segnale, alimentato dalla disponibilità di questi dati in CDP e dall’associazione di clienti come Sarah al segmento.
+Queste informazioni consentono agli esperti di marketing di intervenire su questo segnale, che è stato alimentato dalla disponibilità di questi dati in CDP e dalla partecipazione al pubblico di clienti come Sarah.
 
 Luma utilizza questi dati CDP per incrementare la fedeltà e la soddisfazione dei clienti.

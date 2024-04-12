@@ -1,12 +1,12 @@
 ---
 title: Documentazione del prodotto Real-Time CDP
-description: Scopri come utilizzare Adobe Real-Time CDP.
+description: Inizia a usare Adobe Real-Time CDP, scopri le sue avanzate funzionalità e come può essere utile per la tua azienda. Utilizza questa pagina come punto di partenza per scoprire di più sul prodotto.
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: 882852b186779c29c5d2b46a56b73809b8611dd6
+source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1114'
 ht-degree: 4%
 
 ---

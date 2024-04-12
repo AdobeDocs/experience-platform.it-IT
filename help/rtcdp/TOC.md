@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
-user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
+user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, tipi di pubblico da tali profili e attivarli in destinazioni di terze parti.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 58%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 69%
    * [Guida dell’interfaccia utente del profilo account](accounts/account-profile-ui-guide.md)
 * Amministrazione {#admin}
    * [Panoramica sull’amministrazione](administration/admin-overview.md)
+* Tipi di pubblico e segmentazione {#segmentation}
+   * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
+   * [Guida al Generatore di segmenti](segmentation/segment-builder-guide.md)
+   * [Segmentazione nell’Edizione B2B di Real-Time CDP](segmentation/b2b.md)
+   * [IA per l’analisi dei clienti](segmentation/customer-ai.md)
 * Set di dati {#datasets}
    * [Set di dati](datasets/dataset.md)
    * [Qualità dei dati su Platform](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 69%
 * Schemi {#schemas}
    * [Panoramica sugli schemi](schemas/overview.md)
    * [Schemi nell’Edizione B2B di Real-Time CDP](schemas/b2b.md)
-* Segmenti {#segmentation}
-   * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
-   * [Guida a Segment Builder](segmentation/segment-builder-guide.md)
-   * [Segmentazione nell’Edizione B2B di Real-Time CDP](segmentation/b2b.md)
-   * [IA per l’analisi dei clienti](segmentation/customer-ai.md)
 * Origini {#sources}
    * [Panoramica sulle origini](sources/sources-overview.md)
    * [Origini nell’Edizione B2B di Real-Time CDP](sources/b2b.md)

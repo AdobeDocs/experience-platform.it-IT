@@ -4,9 +4,9 @@ description: Panoramica dei vari casi di utilizzo della versione B2B di Adobe Re
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Questo documento fornisce esempi di definizioni di segmenti in Adobe Real-time C
 Prima di poter utilizzare gli attributi di segmentazione per le classi B2B, è necessario completare i passaggi seguenti:
 
 1. Creare schemi che utilizzano le classi B2B. Le classi dell’edizione B2B includono Account, Campaign, Opportunity, Marketing List e altro ancora. Per informazioni su [come impostare schemi da utilizzare con le classi B2B](../schemas/b2b.md) consulta la documentazione sullo schema.
-1. Crea relazioni tra gli schemi B2B di Experience Data Model (XDM). I segmenti basati sugli attributi della versione B2B richiedono relazioni tra le classi per utilizzare appieno la funzionalità di segmentazione B2B estesa. Consulta la documentazione su [come definire una relazione tra due schemi B2B](../../xdm/tutorials/relationship-b2b.md) per ulteriori informazioni.
-1. Acquisire dati utilizzando set di dati basati sugli schemi B2B. Consulta la documentazione delle sorgenti per [informazioni su come acquisire i dati](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Leggi le [Guida utente per il Generatore di segmenti](../../segmentation/ui/segment-builder.md) per una guida più dettagliata su come creare tipi di pubblico.
+2. Crea relazioni tra gli schemi B2B di Experience Data Model (XDM). I tipi di pubblico basati sugli attributi della versione B2B richiedono relazioni tra le classi per utilizzare appieno la funzionalità di segmentazione B2B estesa. Consulta la documentazione su [come definire una relazione tra due schemi B2B](../../xdm/tutorials/relationship-b2b.md) per ulteriori informazioni.
+3. Acquisire dati utilizzando set di dati basati sugli schemi B2B. Consulta la documentazione delle sorgenti per [informazioni su come acquisire i dati](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Leggi le [Guida utente di Segment Builder](../../segmentation/ui/segment-builder.md) per una guida più dettagliata su come creare tipi di pubblico.
 
 Una volta soddisfatti questi requisiti, puoi combinare questi attributi per i casi d’uso B2B comuni.
 
@@ -54,7 +54,7 @@ Questa relazione si riflette nel Generatore di segmenti tramite l’utilizzo di 
 
 Consulta la sezione [schemi nella documentazione di Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) per ulteriori informazioni sulle classi B2B disponibili.
 
-I casi d’uso riportati di seguito forniscono informazioni sulle classi utilizzate per stabilire relazioni tra i diversi schemi al fine di ottenere questi risultati. Questi esempi possono essere utilizzati per creare segmenti personalizzati.
+I casi d’uso riportati di seguito forniscono informazioni sulle classi utilizzate per stabilire relazioni tra i diversi schemi al fine di ottenere questi risultati. Questi esempi possono essere utilizzati per creare tipi di pubblico personalizzati.
 
 ## Esempi di diversi casi di utilizzo della segmentazione {#use-cases}
 

@@ -5,9 +5,9 @@ description: Questo scenario fornisce un esempio per la configurazione dell’im
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 Real-time Customer Data Platform B2B Edition amplia le offerte esistenti di Real-Time CDP e Adobe Experience Platform per supportare i dati e i flussi di lavoro B2B. Questo documento fornisce un esempio di caso d’uso che illustra i vantaggi aggiuntivi forniti dall’edizione B2B. Sono le seguenti:
 
 - Combina i dati di persone e account provenienti da diverse origini dati in silos per produrre una visualizzazione completa che consenta una migliore comprensione dei clienti e una segmentazione più accurata. Consulta la documentazione su [creazione di relazioni tra schemi XDM](./schemas/b2b.md) da utilizzare con varie fonti B2B per ulteriori informazioni.
-- Segmentare un pubblico in base agli attributi delle entità correlate. Ciò include account, opportunità, campagne ed elenchi di marketing. I segmenti non sono più limitati solo agli attributi della persona e agli eventi esperienza. Consulta la [Documentazione sulla segmentazione B2B](./segmentation/b2b.md) per ulteriori esempi sulla creazione di tipi di pubblico specifici per B2B.
+- Segmentare un pubblico in base agli attributi delle entità correlate. Ciò include account, opportunità, campagne ed elenchi di marketing. I tipi di pubblico non sono più limitati solo agli attributi della persona e agli eventi esperienza. Consulta la [Documentazione sulla segmentazione B2B](./segmentation/b2b.md) per ulteriori esempi sulla creazione di tipi di pubblico specifici per B2B.
 - Supporta in modo nativo il caso di utilizzo di una persona correlata a più account.
 
 ## Caso d’uso
@@ -50,9 +50,9 @@ Poiché le informazioni Townsend pertinenti vengono registrate come Account 1 in
 
 Questo impedisce al team di marketing di Bodea di indirizzare in modo efficiente specifici contatti di business presso queste aziende con questa nuova opportunità.
 
-Ad oggi, Townsend ha speso più di un milione di dollari cumulativamente per i prodotti Bodea in tutti i loro account. Tuttavia, un segmento creato utilizzando il loro vecchio sistema non includerebbe nessuno di Townsend a meno che il totale speso all&#39;interno di un singolo sistema di vendita non sia stato superiore a 1 milione di dollari. Questo perché i dati dei ricavi vengono inseriti in un silos nei conti in sistemi di vendita diversi.
+Ad oggi, Townsend ha speso più di un milione di dollari cumulativamente per i prodotti Bodea in tutti i loro account. Tuttavia, un pubblico creato utilizzando il loro vecchio sistema non includerebbe nessuno di Townsend a meno che il totale speso all&#39;interno di un singolo sistema di vendita non ammontasse a più di 1 milione di dollari. Questo perché i dati dei ricavi vengono inseriti in un silos nei conti in sistemi di vendita diversi.
 
-Poiché le spese di Townsend sono ripartite tra i diversi sistemi di vendita e non superano singolarmente un milione di unità, il segmento non troverebbe nessuno qualificato né in Marketo 1 né in Marketo 2.
+Poiché la spesa di Townsend è suddivisa tra diversi sistemi di vendita e non supera singolarmente un milione di unità, la definizione del segmento non troverebbe nessuno qualificato né in Marketo 1 né in Marketo 2.
 
 ### Come Real-Time CDP B2B Edition risolve il problema
 
@@ -77,10 +77,10 @@ Per semplicità e per lo scopo di questo esempio, le persone vengono identificat
 | Opportunità 1, 200.000 dollari |
 | Opportunità 2, 900.000 dollari |
 
-- Crea segmenti univoci utilizzando questi dati aggregati per varie iniziative di marketing. In questo esempio, il segmento trova tutte le persone che:
+- Crea tipi di pubblico univoci utilizzando i dati aggregati per varie iniziative di marketing. In questo esempio, la definizione del segmento trova tutte le persone che:
 
    - Avere opportunità associate (su TUTTI gli account) superiori a 1 milione di dollari in valore
-   - AND
+   - E
    - Hai visitato la pagina del prodotto nell’ultimo mese
 
 - Crea un pubblico che sia il destinatario più efficiente della nuova campagna di marketing di Bodea. In questo esempio, RT-CDP, B2B Edition aiuterà l’addetto al marketing a identificare `p2@townsend.com` come target corretto per questa campagna di marketing.
