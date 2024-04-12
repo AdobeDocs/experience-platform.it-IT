@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2263'
 ht-degree: 24%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
 | Stream di dati | Supporto per la ricerca del dispositivo | Durante la configurazione di un flusso di dati, ora puoi selezionare il livello di informazioni di ricerca del dispositivo da raccogliere. Le informazioni sulla ricerca del dispositivo includono dati sul dispositivo, sull’hardware, sul sistema operativo e sul browser utilizzati per interagire con la pagina. <br>  Non è possibile raccogliere le informazioni di ricerca del dispositivo insieme all’agente utente e agli hint client. La scelta di raccogliere informazioni sul dispositivo disabiliterà la raccolta di hint dell’agente utente e del client e viceversa. Tutte le informazioni di ricerca del dispositivo sono memorizzate in `xdm:device` gruppo di campi. Per ulteriori informazioni, consulta la documentazione su [configurazione degli stream di dati](../../datastreams/configure.md#geolocation-device-lookup). |
-| Estensioni | [!DNL TikTok] estensione API per eventi web | Il [[!DNL TikTok] API per eventi web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti in Adobe Experience Platform Edge Network e di inviarli a [!DNL TikTok] sotto forma di eventi lato server che utilizzano [!DNL TikTok] API per eventi web. |
+| Estensioni | [!DNL TikTok] estensione API per eventi web | Il [[!DNL TikTok] API per eventi web](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) consente di sfruttare i dati acquisiti nell’Edge Network di Adobe Experience Platform e inviarli a [!DNL TikTok] sotto forma di eventi lato server che utilizzano [!DNL TikTok] API per eventi web. |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Experienci Platform fornisce una suite di funzionalità di igiene dei dati che c
 
 | Funzione | Descrizione |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni avanzate di gestione del ciclo di vita dei dati in Adobe Experience Platform: Scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatizzata dei set di dati, puoi eliminare interi set di dati e impostare una data e un’ora per il set di dati da eliminare.<br>L’eliminazione dei record ti consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Consulta la [Documentazione sull’eliminazione dei record](../../hygiene/ui/record-delete.md) per ulteriori informazioni |
+| [!BADGE Beta]Eliminazione record {type=Informative} (versione limitata) | Gestisci il ciclo di vita dei dati in tutti gli archivi dati per rispettare gli impegni dei clienti e i contratti di licenza con le funzioni di Advanced Data Lifecycle Management in Adobe Experience Platform: scadenza automatizzata del set di dati ed eliminazione dei record.<br>Con la scadenza automatizzata dei set di dati, puoi eliminare interi set di dati e impostare una data e un’ora per il set di dati da eliminare.<br>L’eliminazione dei record ti consente di eliminare singoli profili di consumatori eseguendo il targeting delle loro identità primarie. Puoi fornire le identità primarie singolarmente tramite l’interfaccia utente o tramite il caricamento di file CSV/JSON. Consulta la [Documentazione sull’eliminazione dei record](../../hygiene/ui/record-delete.md) per ulteriori informazioni |
 | Scadenze dei set di dati | Riduci al minimo i dati e tieni sotto controllo i contratti di licenza con Scadenza set di dati automatica. Riduci i volumi di dati eliminando interi set di dati e imposta una data e un’ora per l’eliminazione del set di dati. Consulta la [documentazione sulle scadenze dei set di dati](../../hygiene/ui/dataset-expiration.md) per ulteriori informazioni. |
 
 {style="table-layout:auto"}

@@ -1,11 +1,11 @@
 ---
 title: Panoramica di Advanced Data Lifecycle Management
-description: La gestione avanzata del ciclo di vita dei dati consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
+description: Advanced Data Lifecycle Management consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica delle funzionalità di Platform relative al ciclo di vita dei dati. Per iniziare a effettuare richieste di igiene dei dati nell’interfaccia utente, consulta [Guida all’interfaccia utente](./ui/overview.md). Per informazioni su come creare processi del ciclo di vita dei dati a livello di programmazione, consultare [Guida dell’API di igiene dei dati](./api/overview.md)
+Questo documento fornisce una panoramica delle funzionalità del ciclo di vita dei dati di Platform. Per iniziare a effettuare richieste di igiene dei dati nell’interfaccia utente, consulta [Guida all’interfaccia utente](./ui/overview.md). Per informazioni su come creare processi del ciclo di vita dei dati a livello di programmazione, consulta [Guida dell’API di igiene dei dati](./api/overview.md)

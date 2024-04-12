@@ -5,7 +5,7 @@ breadcrumb-title: Guida avanzata alla gestione del ciclo di vita dei dati
 user-guide-description: Elimina singoli record e pianifica le scadenze dei set di dati in Experience Platform per la pulizia dei dati, la rimozione di dati anonimi e la minimizzazione dei dati.
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 63%
@@ -13,7 +13,7 @@ ht-degree: 63%
 ---
 
 
-# Gestione avanzata del ciclo di vita dei dati {#data-lifecycle}
+# Advanced Data Lifecycle Management {#data-lifecycle}
 
 * [Panoramica di Advanced Data Lifecycle Management](./home.md)
 * Interfaccia utente del ciclo di vita dei dati {#ui}

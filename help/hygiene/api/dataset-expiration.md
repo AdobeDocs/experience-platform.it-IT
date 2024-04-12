@@ -3,9 +3,9 @@ title: Endpoint API di scadenza set di dati
 description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2166'
 ht-degree: 2%
 
 ---
@@ -197,6 +197,10 @@ Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di d
 Per garantire che i dati vengano rimossi dal sistema dopo un determinato periodo, pianifica una scadenza per un set di dati specifico fornendo l’ID del set di dati e la data e l’ora di scadenza nel formato ISO 8601.
 
 Per creare una scadenza del set di dati, esegui una richiesta POST come mostrato di seguito e fornisci i valori menzionati di seguito all’interno del payload.
+
+>[!NOTE]
+>
+>Se ricevi un errore 404, accertati che la richiesta non contenga ulteriori barre. Una barra finale può causare un errore nella richiesta POST.
 
 **Formato API**
 
