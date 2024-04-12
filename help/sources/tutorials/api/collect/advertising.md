@@ -5,10 +5,10 @@ title: Creare un flusso di dati per le origini pubblicitarie utilizzando l’API
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione pubblicitaria di terze parti e acquisirli in Platform utilizzando i connettori di origine e l’API del servizio Flow.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 3%
+source-wordcount: '1340'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,8 @@ Questo tutorial illustra i passaggi necessari per recuperare i dati da un’appl
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine pubblicitaria. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#advertising) per un elenco di fonti pubblicitarie con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine pubblicitaria. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#advertising) per un elenco di fonti pubblicitarie con cui è possibile creare una connessione di base.
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 
@@ -27,7 +28,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experienci Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch.
 * [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -592,7 +593,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati pubblicitari è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 

@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un’origine di successo del cliente
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial illustra come creare un flusso di dati per un’origine di successo del cliente tramite l’interfaccia utente di Platform.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine di successo del cliente. Un elenco di esercitazioni per la creazione di diversi account di origine di successo dei clienti nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#customer-success).
+>* Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine di successo del cliente. Un elenco di esercitazioni per la creazione di diversi account di origine di successo dei clienti nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#customer-success).
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 

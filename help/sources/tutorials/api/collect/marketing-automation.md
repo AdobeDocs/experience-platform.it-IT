@@ -5,10 +5,10 @@ title: Creare un flusso di dati per le origini di automazione marketing utilizza
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un sistema di automazione marketing e inserirli in Adobe Experience Platform utilizzando connettori e API di origine.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 3%
+source-wordcount: '1349'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,8 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di automazione marketing. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#marketing-automation) per un elenco di origini di automazione marketing con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di automazione marketing. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#marketing-automation) per un elenco di origini di automazione marketing con cui è possibile creare una connessione di base.
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 
@@ -27,7 +28,7 @@ Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di A
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experienci Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch.
 * [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -558,7 +559,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati di automazione del marketing è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 

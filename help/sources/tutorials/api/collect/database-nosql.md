@@ -5,10 +5,10 @@ title: Creare un flusso di dati per le origini del database utilizzando l’API 
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un database e acquisirli in Platform utilizzando i connettori e le API di origine.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 3%
+source-wordcount: '1416'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,8 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un&#39;origine di database. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#database) per un elenco di origini di database con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un&#39;origine di database. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#database) per un elenco di origini di database con cui è possibile creare una connessione di base.
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC. L’unico timestamp supportato per [[!DNL Snowflake] sorgente](../../../connectors/databases/snowflake.md) è TIMESTAMP_NTZ con ora UTC.
 
 ## Introduzione
 
@@ -27,7 +28,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experienci Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch.
 * [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -587,7 +588,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati consiste nel creare un flusso di dati. A questo punto, è necessario preparare i seguenti valori obbligatori:
 
@@ -701,8 +702,8 @@ Nella sezione seguente sono elencati i diversi connettori di origine dell’arch
 | Nome connettore | ID specifica di connessione |
 | -------------- | --------------- |
 | [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| [!DNL Apache Hive] su [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| [!DNL Apache Spark] su [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Apache Hive] il [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] il [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |

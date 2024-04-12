@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un’origine pubblicitaria nell’in
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial descrive come creare un flusso di dati per un’origine pubblicitaria utilizzando l’interfaccia utente di Platform.
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine pubblicitaria. Un elenco di esercitazioni per la creazione di diversi account di origine per annunci pubblicitari nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#advertising).
+>* Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine pubblicitaria. Un elenco di esercitazioni per la creazione di diversi account di origine per annunci pubblicitari nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#advertising).
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 

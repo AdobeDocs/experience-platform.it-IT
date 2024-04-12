@@ -5,9 +5,9 @@ title: Creare un flusso di dati per le origini di e-commerce utilizzando l’API
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per recuperare i dati da un sistema eCommerce di terze parti e acquisirli in Platform utilizzando i connettori e le API di origine.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1304'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine e
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine E-commerce. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#ecommerce) per un elenco di origini di e-commerce con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine E-commerce. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#ecommerce) per un elenco di origini di e-commerce con cui è possibile creare una connessione di base.
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 
@@ -561,7 +562,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati consiste nel creare un flusso di dati. A questo punto, è necessario preparare i seguenti valori obbligatori:
 

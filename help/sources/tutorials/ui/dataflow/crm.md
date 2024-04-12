@@ -5,9 +5,9 @@ title: Creare un flusso di dati utilizzando un’origine CRM nell’interfaccia 
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati di Platform. Questo tutorial descrive come creare un flusso di dati per un’origine di gestione delle relazioni con i clienti utilizzando l’interfaccia utente di Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,15 @@ Un flusso di dati è un’attività pianificata che recupera e acquisisce dati d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine di gestione delle relazioni con i clienti. Un elenco di esercitazioni per la creazione di diversi account di origine CRM nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#crm).
+>* Per creare un flusso di dati, è necessario disporre già di un account autenticato con un’origine di gestione delle relazioni con i clienti. Un elenco di esercitazioni per la creazione di diversi account di origine CRM nell’interfaccia utente è disponibile nella sezione [panoramica sulle origini](../../../home.md#crm).
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Platform:
 
 * [Sorgenti](../../../home.md): Platform consente di acquisire dati da varie origini, consentendoti allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] servizi.
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experience Platform organizza i dati sull’esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Esercitazione sull’editor di schemi](../../../../xdm/tutorials/create-schema-ui.md): scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -76,7 +77,7 @@ Quindi, seleziona la **[!UICONTROL Set di dati profilo]** attiva per abilitare i
 
 Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati. Seleziona un avviso dall’elenco per abbonarti e ricevere notifiche sullo stato del flusso di dati. Per ulteriori informazioni sugli avvisi, consulta la guida su [abbonamento agli avvisi sulle origini tramite l’interfaccia utente](../alerts.md).
 
-Una volta completati i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
+Dopo aver fornito i dettagli del flusso di dati, seleziona **[!UICONTROL Successivo]**.
 
 ![avvisi](../../../images/tutorials/dataflow/table-based/alerts.png)
 

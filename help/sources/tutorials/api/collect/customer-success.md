@@ -5,9 +5,9 @@ title: Creare un flusso di dati per le origini del successo del cliente tramite 
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un sistema di successo del cliente e acquisirli in Platform utilizzando i connettori e le API di origine.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1257'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,8 @@ Questo tutorial illustra i passaggi necessari per recuperare i dati da un’orig
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di successo del cliente. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#customer-success) per un elenco delle origini del successo del cliente con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di successo del cliente. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#customer-success) per un elenco delle origini del successo del cliente con cui è possibile creare una connessione di base.
+>* Ad Experience Platform, per acquisire i dati, i fusi orari per tutte le origini batch basate su tabelle devono essere configurati in formato UTC.
 
 ## Introduzione
 

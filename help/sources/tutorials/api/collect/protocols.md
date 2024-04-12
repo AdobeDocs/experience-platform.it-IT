@@ -5,10 +5,10 @@ title: Creare un flusso di dati per le origini dei protocolli utilizzando l’AP
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per recuperare i dati da un’applicazione di protocolli e acquisirli in Platform utilizzando connettori e API di origine.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 3%
+source-wordcount: '1314'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un’origine d
 
 >[!NOTE]
 >
->Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di protocolli. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#protocols) per un elenco di origini di protocolli con cui è possibile creare una connessione di base.
+>* Per creare un flusso di dati, è necessario disporre già di un ID connessione di base valido con un’origine di protocolli. Se non disponi di questo ID, consulta [panoramica sulle origini](../../../home.md#protocols) per un elenco di origini di protocolli con cui è possibile creare una connessione di base.
 
 ## Introduzione
 
@@ -27,7 +27,7 @@ Questo tutorial richiede anche una buona conoscenza dei seguenti componenti di A
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): framework standardizzato tramite il quale Experienci Platform organizza i dati sull’esperienza del cliente.
    * [Nozioni di base sulla composizione dello schema](../../../../xdm/schema/composition.md): scopri gli elementi di base degli schemi XDM, compresi i principi chiave e le best practice nella composizione dello schema.
    * [Guida per gli sviluppatori del registro dello schema](../../../../xdm/api/getting-started.md): include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all’API Schema Registry. Ciò include `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accept e ai suoi possibili valori).
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog è il sistema di registrazione per la posizione e la derivazione dei dati in Experience Platform.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): catalogo è il sistema di registrazione per la posizione e la derivazione dei dati in Experienci Platform.
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): l’API per l’acquisizione in batch consente di acquisire i dati in Experienci Platform come file batch.
 * [Sandbox](../../../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
@@ -606,7 +606,7 @@ In caso di esito positivo, la risposta restituisce i dettagli della specifica de
 
 +++
 
-## Crea un flusso di dati
+## Creare un flusso di dati
 
 L’ultimo passaggio per la raccolta dei dati consiste nel creare un flusso di dati. A questo punto, è necessario preparare i seguenti valori obbligatori:
 
