@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2661'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Utilizzo di [!DNL Query Editor], puoi scrivere, eseguire e salvare query per i d
 
 >[!IMPORTANT]
 >
->L’editor legacy verrà ritirato il 30 aprile 2024 e non sarà più disponibile.
+>Il 30 aprile 2024 l’Editor query avanzato sarà l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 30 maggio 2024 e non sarà più disponibile.
 
 ## Opzione Editor di query ottimizzata {#enhanced-editor-toggle}
 
