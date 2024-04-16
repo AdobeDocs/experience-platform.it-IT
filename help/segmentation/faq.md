@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Se attivati in una destinazione batch, i dati del pubblico generato esternamente
 
 ### Posso eliminare un pubblico generato esternamente?
 
-A questo punto, puoi disattivare solo un pubblico generato esternamente. In questo stato, i profili **will** rimane attivo per l’utilizzo in applicazioni a valle. Il supporto per l’eliminazione dei tipi di pubblico generati esternamente verrà aggiunto in una versione successiva.
+Sì! I tipi di pubblico generati esternamente possono essere eliminati in Audience Portal.
 
 ### Cosa devo fare se ho caricato accidentalmente un pubblico generato esternamente?
 
