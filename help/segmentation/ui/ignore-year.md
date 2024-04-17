@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Ignora aggiornamento vincoli di anno
 description: Scopri come risolvere un problema relativo al vincolo di tempo ignora anno.
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
+source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 9%
+source-wordcount: '246'
+ht-degree: 8%
 
 ---
-
 
 # Ignora aggiornamento vincoli di tempo annuale {#ignore-year}
 
@@ -16,6 +16,10 @@ ht-degree: 9%
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="Ignora aggiornamento annuale"
 >abstract="Ignora vincolo di tempo annuale è stato aggiornato. Salva di nuovo il pubblico."
+
+>[!IMPORTANT]
+>
+>Puoi utilizzare il vincolo di tempo &quot;ignore year&quot; (ignora anno) solo in una definizione di segmento valutata utilizzando **segmentazione batch**. L’aggiunta del vincolo di tempo &quot;ignore year&quot; (ignora anno) alla definizione del segmento renderà il pubblico risultante **non idoneo** per lo streaming o la segmentazione Edge.
 
 La versione di febbraio 2024 per Adobe Experience Platform ha introdotto modifiche al servizio di segmentazione di Adobe Experience Platform che risolve un problema con l’opzione &quot;ignora anno&quot; nella creazione e valutazione del pubblico.
 

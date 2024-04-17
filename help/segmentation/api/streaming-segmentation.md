@@ -4,9 +4,9 @@ title: Valutazione degli eventi in tempo quasi reale con segmentazione in stream
 description: Questo documento contiene esempi su come utilizzare la segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ Una definizione di segmento **non** essere abilitato per la segmentazione in str
 - La definizione del segmento include più entità (query con più entità).
 - La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
    - Tuttavia, se il segmento contenuto in `inSegment` evento è solo profilo, la definizione del segmento **will** per la segmentazione in streaming.
+- La definizione del segmento utilizza &quot;Ignora anno&quot; come parte dei vincoli di tempo.
 
 Tieni presente che le seguenti linee guida sono applicabili quando esegui la segmentazione in streaming:
 

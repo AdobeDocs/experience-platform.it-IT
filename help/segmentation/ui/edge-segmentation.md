@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente per la segmentazione di Edge
 description: Scopri come utilizzare la segmentazione Edge per valutare le definizioni dei segmenti in Platform istantaneamente al limite, abilitando casi di utilizzo di personalizzazione della pagina stessa e successiva.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ Una definizione di segmento **non** essere abilitato per la segmentazione Edge n
 
 - La definizione del segmento include una combinazione di un singolo evento e un `inSegment` evento.
    - Tuttavia, se la definizione del segmento contenuta nel `inSegment` evento è solo profilo, la definizione del segmento **will** essere abilitato per la segmentazione Edge.
+- La definizione del segmento utilizza &quot;Ignora anno&quot; come parte dei vincoli di tempo.
 
 ## Passaggi successivi
 
@@ -64,6 +65,6 @@ Questa guida spiega come valutare le definizioni dei segmenti con la segmentazio
 
 Nella sezione seguente sono elencate le domande frequenti relative alla segmentazione Edge:
 
-### Quanto tempo ci vuole affinché una definizione di segmento sia disponibile sulla rete Edge?
+### Quanto tempo ci vuole affinché la definizione di un segmento sia disponibile nell’Edge Network?
 
-È necessaria fino a un’ora perché la definizione di un segmento sia disponibile sulla rete Edge.
+È necessaria fino a un’ora perché la definizione di un segmento sia disponibile nell’Edge Network.
