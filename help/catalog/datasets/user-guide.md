@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2943'
 ht-degree: 3%
 
 ---
@@ -273,9 +273,9 @@ Viene visualizzata una casella di conferma. Seleziona **[!UICONTROL Elimina]** p
 
 ## Eliminare un set di dati abilitato per il profilo
 
-Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e dall’archivio profili in Platform.
+Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e anche da tutti i dati di profilo associati a tale set di dati nell’archivio Profili.
 
-Puoi eliminare un set di dati da [!DNL Profile] archivia solo (lasciando i dati nel Data Lake) utilizzando l’API Real-Time Customer Profile. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md).
+Puoi eliminare i dati profilo associati a un set di dati da [!DNL Profile] archiviare (lasciando i dati nel data lake) utilizzando l’API Real-Time Customer Profile. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md).
 
 ## Monitorare l’acquisizione dei dati
 

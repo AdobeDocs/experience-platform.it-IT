@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati Profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare l’API di profilo per creare un processo di sistema del profilo o eliminare una richiesta.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 3%
 
 ---
 
 # Endpoint &quot;profile system jobs&quot; (richieste di eliminazione)
 
-Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. Dati acquisiti in [!DNL Platform] è memorizzato in [!DNL Data Lake], e se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati nel [!DNL Real-Time Customer Profile] anche l’archivio dati. A volte può essere necessario eliminare un set di dati o un batch dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare [!DNL Real-Time Customer Profile] API per creare un [!DNL Profile] processo di sistema, oppure `delete request`, che possono anche essere modificate, monitorate o rimosse se necessario.
+Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. Dati acquisiti in [!DNL Platform] è memorizzato in [!DNL Data Lake], e se i set di dati sono stati abilitati per Profilo, tali dati vengono memorizzati nel [!DNL Real-Time Customer Profile] anche l’archivio dati. Talvolta può essere necessario eliminare i dati di profilo associati a un set di dati dall’archivio Profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare [!DNL Real-Time Customer Profile] API per creare un [!DNL Profile] processo di sistema, oppure `delete request`, che possono anche essere modificate, monitorate o rimosse se necessario.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ La risposta include un array &quot;figlio&quot; con un oggetto per ogni richiest
 
 L’avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta POST a `/systems/jobs` endpoint, in cui l’ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
 
-### Eliminare un set di dati
+### Eliminare un set di dati e i dati del profilo associati
 
-Per eliminare un set di dati dall’archivio Profili, l’ID del set di dati deve essere incluso nel corpo della richiesta POST. Questa azione eliminerà TUTTI i dati per un dato set di dati. [!DNL Experience Platform] consente di eliminare i set di dati in base a schemi di serie temporali e di record.
+Per eliminare un set di dati e tutti i dati di profilo associati al set di dati dall’archivio profili, l’ID del set di dati deve essere incluso nel corpo della richiesta POST. Questa azione eliminerà TUTTI i dati per un dato set di dati. [!DNL Experience Platform] consente di eliminare i set di dati in base a schemi di serie temporali e di record.
 
 **Formato API**
 
