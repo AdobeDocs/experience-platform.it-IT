@@ -4,7 +4,7 @@ description: Scopri come configurare il rilevamento di bot per i flussi di dati,
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Il traffico proveniente da entità non umane, come programmi automatizzati, web scraper, ragni, scanner scriptati, può rendere più difficile identificare gli eventi che si verificano dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati.
 
-Il rilevamento dei bot consente di identificare gli eventi generati dai[SDK per web](../web-sdk/home.md), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) come generate da spider e bot noti.
+Il rilevamento dei bot consente di identificare gli eventi generati dai [SDK per web](../web-sdk/home.md), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../server-api/overview.md) come generate da spider e bot noti.
 
 Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici che desideri classificare come eventi bot.
 
 L’identificazione del traffico da bot può fornire una misurazione più accurata dell’attività degli utenti sul sito o sull’app mobile.
 
-Quando una richiesta inviata a Edge Network corrisponde a una qualsiasi delle regole di rilevamento bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1), come illustrato di seguito.
+Quando una richiesta all’Edge Network corrisponde a una qualsiasi delle regole di rilevamento di bot, lo schema XDM viene aggiornato con un punteggio bot (sempre impostato su 1), come mostrato di seguito.
 
 ```json
 {
@@ -37,9 +37,9 @@ Questo punteggio bot consente alle soluzioni che ricevono la richiesta di identi
 >
 >Il rilevamento dei bot non elimina alcuna richiesta di bot. Aggiorna lo schema XDM solo con il punteggio bot e inoltra l’evento al [servizio flusso di dati](configure.md) configurato.
 >
->Le soluzioni di Adobe possono gestire il punteggio bot in diversi modi. Ad esempio, Adobe Analytics utilizza i propri [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato da Edge Network. I due servizi utilizzano lo stesso [Elenco bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), quindi il punteggio bot è identico.
+>Le soluzioni di Adobe possono gestire il punteggio bot in diversi modi. Ad esempio, Adobe Analytics utilizza i propri [servizio di filtro bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e non utilizza il punteggio impostato dall’Edge Network. I due servizi utilizzano lo stesso [Elenco bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), quindi il punteggio bot è identico.
 
-Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi attraverso la rete Edge.
+Dopo la creazione, le regole di rilevamento dei bot possono richiedere fino a 15 minuti per propagarsi nell’Edge Network.
 
 ## Prerequisiti {#prerequisites}
 
