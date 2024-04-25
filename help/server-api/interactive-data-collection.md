@@ -1,11 +1,11 @@
 ---
 title: Raccolta interattiva di dati
-description: Scopri in che modo l’API del server di rete Edge di Adobe Experience Platform esegue la raccolta interattiva dei dati.
+description: Scopri in che modo l’API Adobe Experience Platform Edge Network Server esegue la raccolta interattiva dei dati.
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 7%
+source-wordcount: '179'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 7%
 
 ## Panoramica {#overview}
 
-Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che venga restituita una risposta dal server di rete Edge di Adobe Experience Platform. Questi endpoint possono inoltre restituire contenuto da altri servizi di rete Edge, durante l’esecuzione della raccolta dati.
+Gli endpoint di raccolta dati interattivi ricevono un singolo evento e vengono utilizzati quando il client prevede che venga restituita una risposta dal server di Edge Network di Adobe Experience Platform. Durante la raccolta dei dati, questi endpoint possono restituire anche il contenuto di altri servizi Edge Network.
+
+>[!IMPORTANT]
+>
+>Il `/interact` L’endpoint è progettato principalmente per essere utilizzato dagli SDK Experienci Platform. Questo endpoint è soggetto a cambiamenti aggiuntivi e il suo comportamento può evolvere senza preavviso. Ad esempio, nuovi elementi potrebbero essere aggiunti al payload di risposta in futuro.
 
 La risposta del server include uno o più `Handle` come mostrato di seguito.
 
@@ -63,7 +67,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Parametro | Tipo | Obbligatorio | Descrizione |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sì. | ID dello stream di dati. |
-| `requestId` | `String` | No | Fornisci un ID casuale client per correlare le richieste interne del server. Se non ne viene fornito alcuno, la rete Edge ne genererà uno e lo restituirà nella risposta. |
+| `requestId` | `String` | No | Fornisci un ID casuale client per correlare le richieste interne del server. Se non viene fornito nessuno, l’Edge Network ne genera uno e lo restituisce nella risposta. |
 
 ### Risposta {#response}
 
