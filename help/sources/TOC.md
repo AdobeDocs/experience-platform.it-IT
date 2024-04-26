@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 10%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 10%
       - [Importazione dati di previsione Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Risoluzione identità organizzazione Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
-      - [Commerce SAP](connectors/ecommerce/sap-commerce.md)
+      - [COMMERCE SAP](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - Sistema locale {#local-system}
@@ -111,6 +111,7 @@ ht-degree: 10%
       - [Connettore Eloqua in Oracle](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Connettore Responsys Oracle](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactory](connectors/marketing-automation/pathfactory.md)
       - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
@@ -179,7 +180,7 @@ ht-degree: 10%
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
-         - [Commerce SAP](tutorials/api/create/ecommerce/sap-commerce.md)
+         - [COMMERCE SAP](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - Automazione del marketing {#marketing-automation}
@@ -192,6 +193,7 @@ ht-degree: 10%
          - [Oracle attività NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle di entità NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Responsys Oracle](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -306,7 +308,7 @@ ht-degree: 10%
          - [Importazione dati di previsione Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
-         - [Commerce SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
+         - [COMMERCE SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema locale {#local-system}
@@ -322,6 +324,7 @@ ht-degree: 10%
          - [Oracle attività NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle di entità NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Responsys Oracle](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
