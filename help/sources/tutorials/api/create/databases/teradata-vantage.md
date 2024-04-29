@@ -3,18 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;Teradata Vantage
 title: Creare una connessione di base Teradata Vantage utilizzando l’API del servizio Flow
 description: Scopri come collegare Adobe Experience Platform a Teradata Vantage utilizzando l’API del servizio Flow.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---
 
-# (Beta) Creare un [!DNL Teradata Vantage] connessione di base tramite [!DNL Flow Service] API
-
->[!NOTE]
->
->Il [!DNL Teradata Vantage] sorgente in versione beta. Consulta la [Panoramica sulle origini](../../../../home.md#terms-and-conditions) per ulteriori informazioni sull’utilizzo di fonti etichettate beta.
+# Creare un [!DNL Teradata Vantage] connessione di base tramite [!DNL Flow Service] API
 
 Una connessione di base rappresenta la connessione autenticata tra un&#39;origine e Adobe Experience Platform.
 
@@ -44,7 +40,7 @@ Per ottenere [!DNL Flow Service] per connettersi con [!DNL Teradata Vantage], è
 
 Per ulteriori informazioni su come iniziare, consulta questa [[!DNL Teradata Vantage] documento](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
-## Crea una connessione di base
+## Creare una connessione di base
 
 Una connessione di base mantiene le informazioni tra l’origine e Platform, incluse le credenziali di autenticazione dell’origine, lo stato corrente della connessione e l’ID univoco della connessione di base. L’ID della connessione di base consente di esplorare e navigare tra i file dall’interno dell’origine e identificare gli elementi specifici che desideri acquisire, comprese le informazioni relative ai tipi di dati e ai formati.
 
