@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 10%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 10%
       - [Flusso di dati di connessione del pagamento](tutorials/ui/dataflow/payments.md)
       - [Flusso di dati della connessione del protocollo](tutorials/ui/dataflow/protocols.md)
    - [Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente](tutorials/ui/templates.md)
+   - [Filtrare gli oggetti di origine](tutorials/ui/filter.md)
    - [Acquisizione su richiesta](tutorials/ui/on-demand-ingestion.md)
    - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
    - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
@@ -393,4 +394,4 @@ ht-degree: 10%
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Domande frequenti](./troubleshooting.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
