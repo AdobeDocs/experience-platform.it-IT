@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;monitorare gli account;monitorare i flussi di dati;origini
-description: Questa esercitazione fornisce i passaggi per monitorare il flusso di dati, utilizzando sia la vista di monitoraggio aggregato che il monitoraggio interservizio.
-solution: Experience Platform
+description: Scopri come utilizzare il dashboard di monitoraggio per monitorare i dati acquisiti dalle sorgenti.
 title: Monitorare i flussi di dati per le origini nell’interfaccia utente
-type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1256'
 ht-degree: 8%
 
 ---
@@ -18,13 +15,9 @@ ht-degree: 8%
 >
 >Origini di streaming, come [Origine API HTTP](../../sources/connectors/streaming/http.md) non sono attualmente supportati dal dashboard di monitoraggio. Al momento, è possibile utilizzare il dashboard solo per monitorare le origini batch.
 
-In Adobe Experience Platform, i dati vengono acquisiti da un’ampia varietà di fonti, analizzati all’interno di Experienci Platform e attivati in un’ampia varietà di destinazioni. Platform semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
+Leggi questo documento per scoprire come utilizzare il dashboard di monitoraggio per monitorare i flussi di dati di origine nell’interfaccia utente di Experienci Platform.
 
-La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati. Puoi utilizzare una vista di monitoraggio aggregata e passare verticalmente dal livello di origine a un flusso di dati e a un’esecuzione di flusso di dati, per visualizzare le metriche corrispondenti che contribuiscono al successo o all’errore di un flusso di dati. Puoi anche utilizzare la capacità di monitoraggio cross-service del dashboard di monitoraggio per monitorare il percorso di un flusso di dati da un’origine a [!DNL Identity Service], e a [!DNL Profile].
-
-Questa esercitazione fornisce i passaggi per monitorare il flusso di dati, utilizzando sia la vista di monitoraggio aggregato che il monitoraggio interservizio.
-
-## Introduzione {#getting-started}
+## Introduzione {#get-started}
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -35,7 +28,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 * [Profilo cliente in tempo reale](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md): Experienci Platform fornisce sandbox virtuali che permettono di suddividere una singola istanza Platform in ambienti virtuali separati, utili per le attività di sviluppo e aggiornamento delle applicazioni di esperienza digitale.
 
-## Vista di monitoraggio aggregato {#aggregated-monitoring-view}
+## Monitorare i dati delle origini tramite il dashboard di monitoraggio
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -49,89 +42,101 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 >abstract="L’elaborazione delle origini contiene informazioni sullo stato e le metriche delle attività sui dati nel servizio Data Lake, compresi i record acquisiti e quelli con errori. Consulta la guida alla definizione delle metriche per ulteriori informazioni su metriche e grafi."
 >text="Learn more in documentation"
 
-In [Interfaccia utente di Platform](https://platform.adobe.com), seleziona **[!UICONTROL Monitorare]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Monitorare] dashboard. Il [!UICONTROL Monitorare] la dashboard contiene metriche e informazioni su tutti i flussi di dati di origine, incluse informazioni sullo stato del traffico dati da un’origine a [!DNL Identity Service], e a [!DNL Profile].
+<!-- In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
-Al centro del dashboard è presente [!UICONTROL Acquisizione sorgente] , che contiene metriche e grafici che visualizzano i dati sui record acquisiti e sui record con errori.
+At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-![monitoraggio-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+Nel dashboard di monitoraggio, seleziona [!UICONTROL Sorgenti] dall’intestazione principale per aggiornare il dashboard con una visualizzazione del tasso di acquisizione del flusso di dati di origine.
 
-Per impostazione predefinita, i dati visualizzati contengono i tassi di acquisizione delle ultime 24 ore. Seleziona **[!UICONTROL Ultime 24 ore]** per regolare l&#39;intervallo di tempo dei record visualizzati.
+![Dashboard di monitoraggio con la scheda Sorgenti selezionata.](../assets/ui/monitor-sources/sources.png)
 
-![change-date](../assets/ui/monitor-sources/change-date.png)
+Il [!UICONTROL Tasso di acquisizione] graph mostra il tasso di acquisizione dei dati in base all’intervallo di tempo configurato. Per impostazione predefinita, nel dashboard di monitoraggio viene visualizzato il tasso di acquisizione delle ultime 24 ore. Per informazioni su come configurare l’intervallo di tempo, consulta la guida su [configurazione dell’intervallo temporale di monitoraggio](monitor.md#configure-monitoring-time-frame).
 
-Viene visualizzata una finestra a comparsa del calendario che fornisce opzioni per intervalli di tempo di acquisizione alternativi. Seleziona **[!UICONTROL Ultimi 30 giorni]** e quindi seleziona **[!UICONTROL Applica]**
+Per impostazione predefinita, il grafico è abilitato alla visualizzazione. Per nascondere il grafico, seleziona **[!UICONTROL Metriche e grafici]** per disattivare e nascondere il grafico.
 
-![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
+![Il grafico delle metriche del tasso di acquisizione.](../assets/ui/monitor-sources/metrics-graph.png)
 
-I grafici sono attivati per impostazione predefinita e puoi disattivarli per espandere l’elenco delle sorgenti di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
+Nella parte inferiore del dashboard viene visualizzata una tabella che illustra il rapporto delle metriche correnti per tutti i flussi di dati di origine esistenti.
 
-![metriche e grafici](../assets/ui/monitor-sources/metrics-graphs.png)
+![Tabella delle metriche del dashboard di monitoraggio.](../assets/ui/monitor-sources/metrics-table.png)
 
-| Acquisizione di origine | Descrizione |
-| ---------------- | ----------- |
-| [!UICONTROL Record acquisiti] | Numero totale di record acquisiti. |
-| [!UICONTROL Record con errori] | Numero totale di record che non sono stati acquisiti a causa di errori nei dati. |
-| [!UICONTROL Totale flussi di dati non riusciti] | Numero totale di flussi di dati con un `failed` stato. |
+| Metriche | Descrizione |
+| --- | --- |
+| Record ricevuti | Numero totale di record ricevuti dall&#39;origine. |
+| Record acquisiti | Numero totale di record acquisiti nel data lake. |
+| Record ignorati | Numero totale di record ignorati. |
+| Record con errori | Numero totale di record che non è stato possibile acquisire a causa di errori. |
+| Velocità di acquisizione | La percentuale di record acquisiti in base al numero totale di record ricevuti. |
+| Totale flussi di dati non riusciti | Numero totale di flussi di dati non riusciti. |
 
-Nell’elenco di acquisizione delle origini vengono visualizzate tutte le origini che contengono almeno un account esistente. L’elenco include anche informazioni sul tasso di acquisizione di ogni origine, sul numero di record con errori e sul numero totale di flussi di dati con errori in base all’intervallo di tempo applicato.
+{style="table-layout:auto"}
 
-![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
+Puoi filtrare ulteriormente i dati utilizzando le opzioni fornite sopra la tabella delle metriche:
 
-Per ordinare l&#39;elenco delle origini, selezionare **[!UICONTROL Le mie sorgenti]** quindi seleziona la categoria desiderata dal menu a discesa. Ad esempio, per concentrarti sugli archivi cloud, seleziona  **[!UICONTROL Archiviazione cloud]**
+| Opzioni di filtro | Descrizione |
+| --- | --- |
+| Cerca | Utilizzare la barra di ricerca per filtrare la visualizzazione in base a un singolo tipo di origine. |
+| Origini | Seleziona **[!UICONTROL Sorgenti]** per filtrare la visualizzazione e visualizzare i dati delle metriche in base al tipo di origine. Questa è la visualizzazione predefinita utilizzata dal dashboard di monitoraggio. |
+| Flussi di dati | Seleziona **[!UICONTROL Flussi dati]** per filtrare la visualizzazione e visualizzare i dati delle metriche per flusso di dati. |
+| Mostra solo errori | Seleziona **[!UICONTROL Mostra solo errori]** per filtrare la visualizzazione e visualizzare solo i flussi di dati che hanno segnalato errori di acquisizione. |
+| Le mie sorgenti | È possibile filtrare ulteriormente la visualizzazione utilizzando [!UICONTROL Le mie sorgenti] menu a discesa. Utilizza il menu a discesa per filtrare la vista per categoria. In alternativa, è possibile selezionare **[!UICONTROL Tutte le origini]** per visualizzare le metriche su tutte le origini o, oppure seleziona **[!UICONTROL Le mie sorgenti]** per visualizzare solo le origini con cui si dispone di un account corrispondente. |
 
-![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
+{style="table-layout:auto"}
 
-Per visualizzare tutti i flussi di dati esistenti tra tutte le origini, seleziona **[!UICONTROL Flussi dati]**.
+Per monitorare i dati acquisiti in un flusso di dati specifico, seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a una sorgente.
 
-![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
+![Monitora un flusso di dati specifico selezionando l’icona del filtro accanto a una determinata origine.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
-In alternativa, è possibile immettere un&#39;origine nella barra di ricerca per isolare una singola origine. Una volta identificata l’origine, seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto per visualizzare un elenco dei relativi flussi di dati attivi.
+La tabella delle metriche viene aggiornata con una tabella di flussi di dati attivi che corrispondono all’origine selezionata. Durante questo passaggio, puoi visualizzare ulteriori informazioni sui flussi di dati, tra cui il set di dati e il tipo di dati corrispondenti, nonché una marca temporale per indicare quando sono stati attivi per l’ultima volta.
 
-![ricerca](../assets/ui/monitor-sources/search.png)
+Per esaminare ulteriormente un flusso di dati, seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a un flusso di dati.
 
-Viene visualizzato un elenco di flussi di dati. Per limitare l’elenco e concentrarti sui flussi di dati con errori, seleziona **[!UICONTROL Mostra solo errori]**.
+![Tabella dei flussi di dati nel dashboard di monitoraggio.](../assets/ui/monitor-sources/select-dataflow.png)
 
-![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
+Viene quindi visualizzata un’interfaccia che elenca tutte le iterazioni di esecuzione del flusso di dati selezionato.
 
-Individua il flusso di dati che desideri monitorare, quindi seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto a esso, per visualizzare ulteriori informazioni sul suo stato di esecuzione.
+Le esecuzioni del flusso di dati rappresentano un’istanza dell’esecuzione del flusso di dati. Ad esempio, se un flusso di dati è pianificato per essere eseguito ogni ora alle 09:00, alle 00:00 e alle 00:00, sono disponibili tre istanze di un flusso. Le esecuzioni del flusso sono specifiche per la tua particolare organizzazione.
 
-![flusso di dati](../assets/ui/monitor-sources/dataflow.png)
+Per verificare le metriche di una specifica iterazione di esecuzione del flusso di dati, seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto al flusso di dati.
 
-La pagina di esecuzione del flusso di dati visualizza informazioni sulla data di inizio dell’esecuzione del flusso di dati, sulle dimensioni dei dati, sullo stato e sulla durata dell’elaborazione. Seleziona l’icona del filtro ![filter](../assets/ui/monitor-sources/filter.png) accanto all’ora di inizio dell’esecuzione del flusso di dati per visualizzarne i dettagli.
+![Pagina Metrica di esecuzione del flusso di dati.](../assets/ui/monitor-sources/dataflow-page.png)
 
-![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
+Utilizza la pagina dei dettagli dell’esecuzione del flusso di dati per visualizzare le metriche e le informazioni dell’iterazione di esecuzione selezionata.
 
-Il [!UICONTROL Dettagli dell’esecuzione del flusso di dati] Questa pagina visualizza informazioni sui metadati del flusso di dati, sullo stato di acquisizione parziale e sul riepilogo degli errori. Il riepilogo degli errori contiene l’errore specifico di primo livello che mostra in quale fase il processo di acquisizione ha riscontrato un errore.
+![La pagina dei dettagli dell’esecuzione del flusso di dati.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-Scorri verso il basso per visualizzare informazioni più specifiche sull’errore che si è verificato.
+| Dettagli dell’esecuzione del flusso di dati | Descrizione |
+| --- | --- |
+| Record acquisiti | Numero totale di record acquisiti dall’esecuzione del flusso di dati. |
+| Record con errori | Numero totale di record che non sono stati acquisiti a causa di errori nell’esecuzione del flusso di dati. |
+| File totali | Numero totale di file nell’esecuzione del flusso di dati. |
+| Dimensione dei dati | Dimensione totale dei dati contenuti nell’esecuzione del flusso di dati. |
+| ID esecuzione flusso di dati | ID dell’iterazione di esecuzione del flusso di dati. |
+| ID organizzazione | ID dell’organizzazione in cui è stata creata l’esecuzione del flusso di dati. |
+| Stato | Stato dell’esecuzione del flusso di dati. |
+| Avvio esecuzione flusso di dati | Un timestamp che indica quando è iniziata l’esecuzione del flusso di dati. |
+| Fine esecuzione flusso di dati | Un timestamp che indica quando è terminata l’esecuzione del flusso di dati. |
+| Set di dati | Set di dati utilizzato per creare il flusso di dati. |
+| Tipo di dati | Il tipo di dati che era nel flusso di dati. |
+| Acquisizione parziale | L’acquisizione in batch parziale consente di acquisire dati contenenti errori, fino a una determinata soglia configurabile. Questa funzione consente di acquisire correttamente in Experienci Platform tutti i dati accurati, mentre tutti i dati errati vengono raggruppati separatamente con informazioni sul motivo della validità. Puoi abilitare l’acquisizione parziale durante il processo di creazione del flusso di dati. |
+| Diagnostica degli errori | La diagnostica degli errori indica all’origine di produrre diagnostica degli errori a cui puoi fare riferimento in seguito durante il monitoraggio dell’attività del set di dati e dello stato del flusso di dati. Puoi abilitare la diagnostica degli errori durante il processo di creazione del flusso di dati. |
+| Riepilogo errori | Dato un flusso di dati non riuscito, nel riepilogo degli errori vengono visualizzati un codice e una descrizione di errore che riepilogano il motivo per cui l’iterazione dell’esecuzione non è riuscita. |
 
-![dettagli dell’esecuzione del flusso di dati](../assets/ui/monitor-sources/dataflow-run-details.png)
+{style="table-layout:auto"}
 
-Il [!UICONTROL Errori di esecuzione del flusso di dati] nel pannello viene visualizzato l’errore specifico e il codice di errore che ha provocato l’errore di acquisizione del flusso di dati. In questo scenario, si è verificato un errore di trasformazione del mapper, che ha causato il fallimento di 24 record.
+Se il flusso di dati viene eseguito e segnala degli errori, puoi scorrere verso il basso fino alla parte inferiore della pagina utilizzando [!UICONTROL Errori di esecuzione del flusso di dati] di rete.
 
-Seleziona **[!UICONTROL File]** per ulteriori informazioni.
+Utilizza il [!UICONTROL Record non riusciti] per visualizzare le metriche sui record che non sono stati acquisiti a causa di errori. Per visualizzare un report completo degli errori, selezionare **[!UICONTROL Anteprima diagnostica errori]**. Per scaricare una copia della diagnostica degli errori e del manifesto del file, seleziona **[!UICONTROL Scarica]** e quindi copia la chiamata API di esempio da utilizzare con [!DNL Data Access] API.
 
-![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+>[!NOTE]
+>
+>È possibile utilizzare la diagnostica degli errori solo se la funzione è stata abilitata durante il processo di creazione della connessione di origine.
 
-Il [!UICONTROL File] Il pannello contiene informazioni sul nome e il percorso del file.
-
-Per una rappresentazione più granulare dell’errore, seleziona **[!UICONTROL Anteprima diagnostica errori]**.
-
-![file](../assets/ui/monitor-sources/files.png)
-
-Il [!UICONTROL Anteprima diagnostica errori] viene visualizzata una finestra che mostra un’anteprima di un massimo di 100 errori nel flusso di dati. Puoi selezionare **[!UICONTROL Scarica]** per recuperare un comando curl, che consente di scaricare la diagnostica degli errori.
-
-Al termine, seleziona **[!UICONTROL Chiudi]**
-
-![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
-
-Puoi utilizzare il sistema di breadcrumb nell’intestazione superiore per tornare al [!UICONTROL Monitorare] dashboard. Seleziona **[!UICONTROL Avvio esecuzione: 2/14/2021, 21:47]** per tornare alla pagina precedente, quindi selezionare **[!UICONTROL Flusso di dati: demo di acquisizione dati fedeltà - Non riuscito]** per tornare alla pagina dei flussi di dati.
-
-![percorso di navigazione](../assets/ui/monitor-sources/breadcrumbs.png)
+![Il pannello degli errori di esecuzione del flusso di dati.](../assets/ui/monitor-sources/errors.png)
 
 ## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai monitorato correttamente il flusso di dati di acquisizione dal livello di origine utilizzando **[!UICONTROL Monitorare]** dashboard. Inoltre, hai identificato correttamente gli errori che hanno contribuito al fallimento dei flussi di dati durante il processo di acquisizione. Per ulteriori informazioni, consulta i seguenti documenti:
 
-* [Monitoraggio delle identità nei flussi di dati](./monitor-identities.md)
-* [Monitoraggio dei profili nei flussi di dati](./monitor-profiles.md)
+* [Monitoraggio dei dati di identità](./monitor-identities.md).
+* [Monitoraggio dei dati del profilo](./monitor-profiles.md).

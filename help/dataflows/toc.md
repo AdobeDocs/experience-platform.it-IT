@@ -4,10 +4,10 @@ user-guide-title: Guida ai flussi di dati
 user-guide-description: Scopri i flussi di dati e come configurarli per i diversi servizi.
 feature: Dataflows
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 24%
+source-wordcount: '60'
+ht-degree: 23%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 24%
    - [Monitorare i flussi di dati](./api/monitor.md)
    - [Ordinare e filtrare le risposte API](./api/sort-and-filter.md)
 - Guide dell’interfaccia utente {#ui}
+   - [Panoramica del dashboard di monitoraggio](./ui/monitor.md)
    - [Monitorare i flussi di dati nelle origini](./ui/monitor-sources.md)
    - [Monitorare i flussi di dati nelle identità](./ui/monitor-identities.md)
    - [Monitorare i flussi di dati nei profili](./ui/monitor-profiles.md)
