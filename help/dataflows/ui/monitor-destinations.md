@@ -1,13 +1,13 @@
 ---
-description: Le destinazioni consentono di attivare i dati da Adobe Experience Platform a innumerevoli partner esterni. Questo tutorial fornisce istruzioni su come monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
+description: Scopri come monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
 solution: Experience Platform
 title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
+source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
-source-wordcount: '3290'
-ht-degree: 10%
+source-wordcount: '3337'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 
 Utilizza le varie destinazioni nel catalogo di Experienci Platform per attivare i tuoi dati da Platform a innumerevoli partner esterni. Platform semplifica il processo di tracciamento del flusso di dati nelle destinazioni fornendo trasparenza con i flussi di dati.
 
-La dashboard di monitoraggio fornisce una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione in cui i dati vengono attivati. Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
+La dashboard di monitoraggio offre una rappresentazione visiva del percorso di un flusso di dati, inclusa la destinazione in cui vengono attivati i dati, il tipo di dati che stai visualizzando, i dati esportati per ogni esecuzione del flusso di dati e molto altro.
+
+Questa esercitazione fornisce istruzioni su come monitorare i flussi di dati direttamente nell’area di lavoro delle destinazioni o utilizzare il dashboard di monitoraggio per monitorare i flussi di dati per le destinazioni utilizzando l’interfaccia utente di Experienci Platform.
 
 ## Introduzione {#getting-started}
 
@@ -48,7 +50,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
+>abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -58,7 +60,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Identità attivate"
->abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati."
+>abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -76,7 +78,7 @@ Le identità rappresentano i diversi facet di un profilo. Ad esempio, se un prof
 
 Viene visualizzato un elenco di singole esecuzioni e delle relative metriche specifiche, insieme ai seguenti totali per le identità:
 
-- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo ignorate per l’attivazione in base ad attributi mancanti e violazioni del consenso.
 - **[!UICONTROL Identità non riuscite]**: numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 
@@ -89,7 +91,7 @@ Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
    - Per **[!UICONTROL completato]** , la metrica del tempo di elaborazione mostra sempre un’ora.
    - Per le esecuzioni del flusso di dati che si trovano ancora in una **[!UICONTROL elaborazione]** state, la finestra per acquisire tutte le metriche rimane aperta per più di un’ora, per elaborare tutte le metriche che corrispondono all’esecuzione del flusso di dati. Ad esempio, un’esecuzione di un flusso di dati avviata alle 09:30 potrebbe rimanere in uno stato di elaborazione per un’ora e trenta minuti per acquisire ed elaborare tutte le metriche. Quindi, una volta chiusa la finestra di elaborazione e aggiornato lo stato dell’esecuzione del flusso di dati a **completato**, il tempo di elaborazione visualizzato viene modificato in un’ora.
 - **[!UICONTROL Profili ricevuti]**: numero totale di profili ricevuti nel flusso di dati.
-- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata nell’ambito dell’esecuzione del flusso di dati. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata nell’ambito dell’esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall’attivazione in base ad attributi mancanti e a violazioni del consenso.
 - **[!UICONTROL Identità non riuscite]** Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
 - **[!UICONTROL Tasso di attivazione]**: percentuale di identità ricevute che sono state attivate correttamente o saltate. La formula seguente illustra come viene calcolato questo valore:
@@ -111,7 +113,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli dell’esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
+>abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=it#dataflow-runs-for-streaming-destinations" text="Esecuzioni del flusso di dati per le destinazioni di streaming"
 
 >[!CONTEXTUALHELP]
@@ -122,7 +124,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Identità attivate"
->abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati."
+>abstract="Conteggio delle singole identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -131,7 +133,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 
 Per le destinazioni batch, il [!UICONTROL Il flusso di dati viene eseguito] fornisce dati sulle metriche durante l’esecuzione del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e delle relative metriche specifiche, insieme ai seguenti totali per le identità:
 
-- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: conteggio delle singole identità di profilo escluse dall’attivazione per la destinazione selezionata, in base agli attributi mancanti e alla violazione del consenso.
 
 ![Il flusso di dati esegue la vista per le destinazioni batch.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -139,10 +141,10 @@ Per le destinazioni batch, il [!UICONTROL Il flusso di dati viene eseguito] forn
 Ogni singola esecuzione del flusso di dati mostra i seguenti dettagli:
 
 - **[!UICONTROL Avvio esecuzione flusso di dati]**: ora di inizio dell’esecuzione del flusso di dati.
-- **[!UICONTROL Segmento]**: nome del segmento associato a ogni esecuzione del flusso di dati.
+- **[!UICONTROL Pubblico]**: nome del pubblico associato a ogni esecuzione del flusso di dati.
 - **[!UICONTROL Tempo di elaborazione]**: tempo necessario per l’elaborazione dell’esecuzione del flusso di dati.
 - **[!UICONTROL Profili ricevuti]**: numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
-- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata nell’ambito dell’esecuzione del flusso di dati. Questa metrica include identità create, aggiornate e rimosse dai segmenti esportati.
+- **[!UICONTROL Identità attivate]**: numero totale di identità di profilo attivate correttamente nella destinazione selezionata nell’ambito dell’esecuzione del flusso di dati. Questa metrica include le identità create, aggiornate e rimosse dai tipi di pubblico esportati.
 - **[!UICONTROL Identità escluse]**: numero totale di identità di profilo escluse dall’attivazione in base ad attributi mancanti e a violazioni del consenso.
 - **[!UICONTROL Stato]**: rappresenta lo stato in cui si trova il flusso di dati. Può essere uno dei tre stati seguenti: [!UICONTROL Completato], [!UICONTROL Non riuscito], e [!UICONTROL Elaborazione]. [!UICONTROL Completato] significa che il flusso di dati è attivo ed esporta i dati in base alla pianificazione fornita. [!UICONTROL Non riuscito] significa che l’attivazione dei dati è stata sospesa a causa di errori. [!UICONTROL Elaborazione] significa che il flusso di dati non è ancora attivo e si verifica generalmente quando viene creato un nuovo flusso di dati.
 
@@ -150,7 +152,7 @@ Per visualizzare i dettagli di un’esecuzione specifica del flusso di dati, sel
 
 >[!NOTE]
 >
->Le esecuzioni del flusso di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un’esecuzione separata del flusso di dati per ogni [criterio di unione](../../profile/merge-policies/overview.md) applicati a un segmento.
+>Le esecuzioni del flusso di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un’esecuzione separata del flusso di dati per ogni [criterio di unione](../../profile/merge-policies/overview.md) applicati a un pubblico.
 
 La pagina dei dettagli di un flusso di dati, oltre ai dettagli riportati nell’elenco dei flussi di dati, visualizza informazioni più specifiche su di esso:
 
@@ -174,11 +176,15 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="La vista Attivazione della destinazione contiene informazioni sullo stato di attivazione del segmento e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche."
+>abstract="La vista di attivazione della destinazione contiene informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche."
 
 Per accedere al [!UICONTROL Monitorare] dashboard, seleziona **[!UICONTROL Monitorare]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nel menu di navigazione a sinistra. Una volta al [!UICONTROL Monitorare] pagina, seleziona [!UICONTROL Destinazioni]. Il [!UICONTROL Monitorare] il dashboard contiene metriche e informazioni sui processi eseguiti di destinazione.
 
-Utilizza il [!UICONTROL Destinazioni] per avere un’idea generale dello stato dei flussi di attivazione. Inizia ottenendo informazioni su un livello aggregato per tutte le destinazioni di batch e streaming, quindi approfondisci le viste dettagliate per i flussi di dati, le esecuzioni dei flussi di dati e i segmenti attivati per una panoramica approfondita dei dati di attivazione. Schermi in [!UICONTROL Monitorare] le dashboard forniscono informazioni fruibili tramite metriche e descrizioni degli errori per aiutarti a risolvere eventuali problemi che potrebbero verificarsi negli scenari di attivazione.
+Utilizza il [!UICONTROL Destinazioni] per avere un’idea generale dello stato dei flussi di attivazione. Inizia ottenendo informazioni su un livello aggregato per tutte le destinazioni di batch e streaming, quindi approfondisci le viste dettagliate per i flussi di dati, le esecuzioni dei flussi di dati e i tipi di pubblico attivati, per una panoramica approfondita dei dati di attivazione. Schermi in [!UICONTROL Monitorare] le dashboard forniscono informazioni fruibili tramite metriche e descrizioni degli errori per aiutarti a risolvere eventuali problemi che potrebbero verificarsi negli scenari di attivazione.
+
+Puoi filtrare le informazioni visualizzate per tipo di dati: clienti, account (solo per l’edizione B2B di Adobe Real-Time CDP), potenziali clienti e arricchimento dell’account. Per ulteriori informazioni su queste opzioni, consulta [guida al dashboard di monitoraggio](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+
+![Il filtro del tipo di dati è evidenziato nella vista del dashboard di monitoraggio.](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
 Al centro del dashboard è presente [!UICONTROL Attivazione] Questo pannello contiene metriche e grafici che visualizzano i dati sulla velocità di attivazione dei dati esportati nelle destinazioni di streaming, nonché sul flusso di dati batch non riuscito eseguito nelle destinazioni batch.
 
@@ -202,7 +208,7 @@ Utilizza l’icona freccia (![icona freccia](/help/dataflows/assets/ui/monitor-d
 
 Il **[!UICONTROL Attivazione]** il grafico viene visualizzato per impostazione predefinita e puoi disattivarlo per espandere l’elenco delle destinazioni di seguito. Seleziona la **[!UICONTROL Metriche e grafici]** per disattivare i grafici.
 
-Il **[!UICONTROL Attivazione]** Nel pannello viene visualizzato un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, identità attivate, identità non riuscite, identità escluse, tasso di attivazione, flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente illustra le metriche disponibili per tipo di destinazione, streaming o batch.
+Il **[!UICONTROL Attivazione]** Nel pannello viene visualizzato un elenco di destinazioni che contengono almeno un account esistente. Questo elenco include anche informazioni sui profili ricevuti, identità attivate, identità non riuscite, identità escluse, tasso di attivazione, flussi di dati totali non riusciti e la data dell’ultimo aggiornamento per queste destinazioni. Non tutte le metriche sono disponibili per tutti i tipi di destinazione. La tabella seguente illustra le metriche e le informazioni disponibili per tipo di destinazione, streaming o batch.
 
 | Metrica | Tipo di destinazione |
 ---------|----------|
@@ -230,7 +236,7 @@ Viene visualizzato un elenco di flussi di dati, ordinati in base all’ultima es
 
 ![Tutti i flussi di dati sono evidenziati nel dashboard di monitoraggio.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-Dopo aver selezionato un flusso di dati per un’ulteriore ispezione, la pagina dei dettagli del flusso di dati contiene un interruttore che consente di visualizzare i dati attivati nel flusso di dati, suddivisi per esecuzioni o segmenti del flusso di dati.
+Dopo aver selezionato un flusso di dati per un’ulteriore ispezione, la pagina dei dettagli del flusso di dati contiene un interruttore che consente di visualizzare i dati attivati nel flusso di dati, suddivisi per esecuzioni di flussi di dati o tipi di pubblico.
 
 ### Visualizzazione esecuzioni flusso di dati {#dataflow-runs-view}
 
@@ -240,7 +246,7 @@ Quando **[!UICONTROL Il flusso di dati viene eseguito]** è selezionato, puoi vi
 >
 >Per i flussi di dati verso le destinazioni di streaming, un’esecuzione dei flussi di dati viene suddivisa in finestre orarie. Ogni finestra oraria genera un ID esecuzione flusso di dati corrispondente.
 >
->Per i flussi di dati verso destinazioni batch, ogni segmento ha una corrispondente esecuzione di flusso di dati generata, in base alla frequenza pianificata di attivazione del segmento. Ad esempio, se imposti un’attivazione pianificata giornaliera per cinque segmenti nello stesso flusso di dati di destinazione, ogni giorno verranno generati cinque flussi di dati separati.
+>Per i flussi di dati verso destinazioni batch, ogni pubblico ha una corrispondente esecuzione di flusso di dati generata, in base alla frequenza pianificata di attivazione del pubblico. Ad esempio, se imposti un’attivazione pianificata giornaliera per cinque tipi di pubblico nello stesso flusso di dati di destinazione, ogni giorno verranno generati cinque flussi di dati separati.
 
 ![Il flusso di dati esegue il pannello evidenziando diverse esecuzioni.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
@@ -248,34 +254,34 @@ Utilizza il **[!UICONTROL Mostra solo errori]** attiva per visualizzare solo le 
 
 ![Il flusso di dati esegue la visualizzazione con l’opzione Mostra errori solo evidenziata](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### Vista a livello di segmento {#segment-level-view}
+### Visualizzazione a livello di pubblico {#segment-level-view}
 
-Quando **[!UICONTROL Segmenti]** è selezionato, viene visualizzato un elenco dei segmenti che sono stati attivati nel flusso di dati selezionato, all’interno dell’intervallo di tempo selezionato. Questa schermata include informazioni a livello di segmento sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati. Esaminando le metriche per le identità escluse e attivate, puoi verificare se un segmento è stato attivato correttamente o meno.
+Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nel flusso di dati selezionato, all’interno dell’intervallo di tempo selezionato. Questa schermata include informazioni a livello di pubblico sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati. Esaminando le metriche per le identità escluse e attivate, puoi verificare se un pubblico è stato attivato correttamente o meno.
 
-Ad esempio, stai attivando un segmento denominato &quot;Membri fedeltà in California&quot; in una destinazione Amazon S3 &quot;Membri fedeltà California December&quot;. Supponiamo che nel segmento selezionato siano presenti 100 profili, ma solo 80 profili su 100 contengono gli attributi ID fedeltà e che le regole di mappatura dell’esportazione siano state definite come `loyalty.id` è obbligatorio. In questo caso, a livello di segmento, vedrai 80 identità attivate e 20 identità escluse.
+Ad esempio, stai attivando un pubblico denominato &quot;Membri fedeltà in California&quot; in una destinazione Amazon S3 &quot;Membri fedeltà California December&quot;. Supponiamo che nel pubblico selezionato siano presenti 100 profili, ma solo 80 profili su 100 contengono gli attributi ID fedeltà e che le regole di mappatura dell’esportazione siano state definite come `loyalty.id` è obbligatorio. In questo caso, a livello di pubblico, vedrai 80 identità attivate e 20 identità escluse.
 
 >[!IMPORTANT]
 >
->Tieni presente le limitazioni correnti relative alle metriche a livello di segmento:
->- La visualizzazione a livello di segmento è attualmente disponibile solo per le destinazioni batch.
->- Le metriche a livello di segmento sono attualmente registrate solo per le esecuzioni riuscite del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi.
+>Tieni presente le limitazioni correnti relative alle metriche a livello di pubblico:
+>- La visualizzazione a livello di pubblico è attualmente disponibile solo per le destinazioni batch.
+>- Le metriche a livello di pubblico sono attualmente registrate solo per l’esecuzione corretta del flusso di dati. Non vengono registrati per le esecuzioni dei flussi di dati non riuscite e i record esclusi.
 
-![Segmenti evidenziati nel pannello dei flussi di dati.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![Tipi di pubblico evidenziati nel pannello del flusso di dati.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
-Nella vista a livello di segmento, le metriche vengono aggregate su più flussi di dati eseguiti all’interno dell’intervallo di tempo selezionato. In presenza di più esecuzioni del flusso di dati, puoi eseguire il drill-down dal livello del segmento per visualizzare il raggruppamento per ogni esecuzione del flusso di dati, filtrato in base al segmento selezionato.
-Utilizza il pulsante Filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) per eseguire il drill-down nel flusso di dati, esegue la vista per ogni segmento del flusso di dati.
+Nella vista a livello di pubblico, le metriche sono aggregate tra più flussi di dati eseguiti all’interno dell’intervallo di tempo selezionato. In presenza di più esecuzioni del flusso di dati, puoi approfondire la ricerca dal livello di pubblico per visualizzare il raggruppamento di ogni esecuzione del flusso di dati, filtrato in base al pubblico selezionato.
+Utilizza il pulsante Filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) per approfondire il flusso di dati, viene eseguita una visualizzazione per ogni pubblico nel flusso di dati.
 
 ### Pagina di esecuzione del flusso di dati {#dataflow-runs-page}
 
 La pagina Esecuzioni flusso di dati visualizza informazioni sulle esecuzioni del flusso di dati, tra cui l’ora di inizio dell’esecuzione del flusso di dati, il tempo di elaborazione, i profili ricevuti, le identità attivate, le identità escluse, le identità non riuscite, il tasso di attivazione e lo stato.
 
-Quando esegui il drill-down nella pagina del flusso di dati, da [vista a livello di segmento](#segment-level-view), puoi filtrare il flusso di dati eseguito in base alle seguenti opzioni:
+Quando esegui il drill-down nella pagina del flusso di dati, da [vista a livello di pubblico](#segment-level-view), puoi filtrare il flusso di dati eseguito in base alle seguenti opzioni:
 
-- **[!UICONTROL Il flusso di dati viene eseguito con identità non riuscite]**: per il segmento selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati che non sono riuscite per l’attivazione. Per verificare il motivo per cui l’esecuzione di un determinato flusso di dati non è riuscita, consulta [pagina dettagli esecuzione flusso di dati](#dataflow-run-details-page) per l’esecuzione del flusso di dati.
-- **[!UICONTROL Il flusso di dati viene eseguito con le identità saltate]**: per il segmento selezionato, questa opzione elenca tutti i flussi di dati in cui alcune identità non sono state completamente attivate e alcuni profili sono stati saltati. Per verificare perché le identità in una determinata esecuzione del flusso di dati sono state ignorate, vedi [pagina dettagli esecuzione flusso di dati](#dataflow-run-details-page) per l’esecuzione del flusso di dati.
-- **[!UICONTROL Il flusso di dati viene eseguito con le identità attivate]**: per il segmento selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati con identità attivate correttamente.
+- **[!UICONTROL Il flusso di dati viene eseguito con identità non riuscite]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati che non sono riuscite per l’attivazione. Per verificare il motivo per cui l’esecuzione di un determinato flusso di dati non è riuscita, consulta [pagina dettagli esecuzione flusso di dati](#dataflow-run-details-page) per l’esecuzione del flusso di dati.
+- **[!UICONTROL Il flusso di dati viene eseguito con le identità saltate]**: per il pubblico selezionato, questa opzione elenca tutti i flussi di dati in cui alcune identità non sono state completamente attivate e alcuni profili sono stati saltati. Per verificare perché le identità in una determinata esecuzione del flusso di dati sono state ignorate, vedi [pagina dettagli esecuzione flusso di dati](#dataflow-run-details-page) per l’esecuzione del flusso di dati.
+- **[!UICONTROL Il flusso di dati viene eseguito con le identità attivate]**: per il pubblico selezionato, questa opzione elenca tutte le esecuzioni del flusso di dati con identità attivate correttamente.
 
-![Pulsanti di opzione che mostrano come filtrare il flusso di dati viene eseguito per i segmenti.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![Pulsanti di scelta che mostrano come filtrare il flusso di dati per i tipi di pubblico.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
 Per visualizzare ulteriori dettagli su un flusso di dati specifico, seleziona il filtro ![filter](../assets/ui/monitor-destinations/filter-add.png) accanto all’ora di inizio dell’esecuzione del flusso di dati per visualizzare la pagina dettagli esecuzione flusso di dati.
 
@@ -289,15 +295,15 @@ La pagina dei dettagli di esecuzione del flusso di dati, oltre ai dettagli ripor
 - **[!UICONTROL ID organizzazione IMS]**: l’organizzazione a cui appartiene il flusso di dati.
 - **[!UICONTROL Ultimo aggiornamento]**: ora dell’ultimo aggiornamento del flusso di dati.
 
-La pagina dei dettagli dispone anche di un pulsante per passare da un errore di esecuzione del flusso di dati a un segmento e viceversa. Questa opzione è disponibile solo per i flussi di dati eseguiti in destinazioni batch.
+La pagina dei dettagli dispone anche di un interruttore per passare dagli errori di esecuzione del flusso di dati ai tipi di pubblico e viceversa. Questa opzione è disponibile solo per i flussi di dati eseguiti in destinazioni batch.
 
 La visualizzazione degli errori di esecuzione del flusso di dati mostra un elenco di identità non riuscite e di identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, inclusi il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco vengono visualizzate le identità con errori. Per visualizzare le identità ignorate, seleziona la **[!UICONTROL Identità escluse]** attivare/disattivare.
 
 ![Le identità escluse vengono evidenziate nella vista di monitoraggio](../assets/ui/monitor-destinations/identities-excluded.png)
 
-Quando **[!UICONTROL Segmenti]** è selezionato, viene visualizzato un elenco dei segmenti attivati nell’esecuzione del flusso di dati selezionato. Questa schermata include informazioni a livello di segmento sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati.
+Quando **[!UICONTROL Tipi di pubblico]** è selezionato, viene visualizzato un elenco dei tipi di pubblico attivati nell’esecuzione del flusso di dati selezionato. Questa schermata include informazioni a livello di pubblico sulle identità attivate, sulle identità escluse, nonché sullo stato e sull’ora dell’ultima esecuzione del flusso di dati.
 
-![Visualizzazione dei segmenti nella schermata dei dettagli dell’esecuzione del flusso di dati.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![Visualizzazione dei tipi di pubblico nella schermata dei dettagli dell’esecuzione del flusso di dati.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Passaggi successivi {#next-steps}
 
