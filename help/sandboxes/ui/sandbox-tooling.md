@@ -2,10 +2,10 @@
 title: Strumenti sandbox
 description: Esporta e importa facilmente le configurazioni Sandbox tra sandbox.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 8%
+source-wordcount: '2241'
+ht-degree: 7%
 
 ---
 
@@ -165,6 +165,52 @@ Viene visualizzata di nuovo la [!UICONTROL Oggetto pacchetto e dipendenze] pagin
 
 ![Il [!UICONTROL Oggetto pacchetto e dipendenze] mostra un elenco delle risorse incluse nel pacchetto, evidenziando [!UICONTROL Fine].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## Esportare e importare un’intera sandbox
+
+>[!NOTE]
+>
+>Per l’esportazione/importazione di una sandbox completa sono supportati solo gli oggetti Real-time Customer Data Platform. Gli oggetti percorso non verranno inclusi.
+
+### Esportare un’intera sandbox {#export-entire-sandbox}
+
+Per esportare un’intera sandbox, passa a [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]** e seleziona **[!UICONTROL Crea pacchetto]**.
+
+![Il [!UICONTROL Sandbox] **[!UICONTROL Pacchetti]** evidenziazione scheda [!UICONTROL Crea pacchetto].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Seleziona **[!UICONTROL Intera sandbox]** per [!UICONTROL Tipo di pacchetto] nel [!UICONTROL Crea pacchetto] . Fornisci un [!UICONTROL Nome pacchetto] per il nuovo pacchetto e selezionare **[!UICONTROL Sandbox]** dal menu a discesa. Infine, seleziona **[!UICONTROL Crea]** per confermare i dati immessi.
+
+![Il [!UICONTROL Crea pacchetto] finestra di dialogo che mostra i campi completati ed evidenzia [!UICONTROL Crea].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+Il pacchetto è stato creato correttamente, seleziona **[!UICONTROL Pubblica]** per pubblicare il pacchetto.
+
+![Elenco dei pacchetti sandbox che evidenziano il nuovo pacchetto pubblicato.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+Viene visualizzata di nuovo la **[!UICONTROL Pacchetti]** scheda in [!UICONTROL Sandbox] ambiente, in cui puoi visualizzare il nuovo pacchetto pubblicato.
+
+### Importare l’intero pacchetto sandbox {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>Tutti gli oggetti verranno importati nella sandbox di destinazione come nuovi oggetti. È consigliabile importare un pacchetto sandbox completo in una sandbox vuota.
+
+Per importare il pacchetto in una sandbox di destinazione, passa a [!UICONTROL Sandbox] **[!UICONTROL Sfoglia]** e seleziona l’opzione più (+) accanto al nome della sandbox.
+
+![Le sandbox **[!UICONTROL Sfoglia]** evidenziare la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Utilizzando il menu a discesa, seleziona la sandbox completa utilizzando **[!UICONTROL Nome pacchetto]** a discesa. Aggiungi un **[!UICONTROL Nome processo]**, che sarà utilizzato per il monitoraggio futuro e un **[!UICONTROL Descrizione processo]**, quindi seleziona **[!UICONTROL Successivo]**.
+
+![La pagina dei dettagli di importazione che mostra [!UICONTROL Nome pacchetto] selezione a discesa](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>È necessario disporre delle autorizzazioni complete per tutti gli oggetti inclusi nel pacchetto. Se non disponi delle autorizzazioni necessarie, l’operazione di importazione non riuscirà e verranno visualizzati messaggi di errore.
+
+Sei portato al [!UICONTROL Oggetto pacchetto e dipendenze] pagina in cui è possibile visualizzare il numero di oggetti e dipendenze importati ed esclusi. Da qui, seleziona **[!UICONTROL Importa]** per completare l&#39;importazione del pacchetto.
+
+![Il [!UICONTROL Oggetto pacchetto e dipendenze] mostra il messaggio in linea dei tipi di oggetto non supportati, evidenziando [!UICONTROL Importa].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+Attendere il completamento dell&#39;importazione. Il tempo necessario per il completamento può variare a seconda del numero di oggetti nel pacchetto. Puoi monitorare il processo di importazione da [!UICONTROL Sandbox] **[!UICONTROL Processi]** scheda.
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## Monitorare i processi di importazione e visualizzare i dettagli degli oggetti di importazione
+## Monitorare i dettagli di importazione {#view-import-details}
 
-Per visualizzare gli oggetti e i dettagli importati, passare alla [!UICONTROL Sandbox] **[!UICONTROL Importazioni]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
+Per visualizzare i dettagli importati, passare alla [!UICONTROL Sandbox] **[!UICONTROL Processi]** e selezionare il pacchetto dall&#39;elenco. In alternativa, utilizza la barra di ricerca per cercare il pacchetto.
 
-![Le sandbox [!UICONTROL Importazioni] nella scheda viene evidenziata la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
+![Le sandbox [!UICONTROL Processi] nella scheda viene evidenziata la selezione del pacchetto di importazione.](../images/ui/sandbox-tooling/imports-tab.png)
 
-### Visualizza oggetti importati {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-Il giorno **[!UICONTROL Importazioni]** scheda in [!UICONTROL Sandbox] ambiente, seleziona **[!UICONTROL Visualizza oggetti importati]** nel riquadro dei dettagli a destra.
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-Seleziona **[!UICONTROL Visualizza oggetti importati]** dal riquadro dei dettagli a destra nella **[!UICONTROL Importazioni]** scheda in [!UICONTROL Sandbox] ambiente.
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![Le sandbox [!UICONTROL Importazioni] La scheda evidenzia [!UICONTROL Visualizza oggetti importati] nel riquadro di destra.](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-Utilizzare le frecce per espandere gli oggetti e visualizzare l&#39;elenco completo dei campi importati nel pacchetto.
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![Le sandbox [!UICONTROL Oggetti importati] visualizzazione di un elenco di oggetti importati nel pacchetto.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### Visualizza dettagli importazione {#view-import-details}
-
-Seleziona **[!UICONTROL Visualizza dettagli importazione]** dal riquadro dei dettagli a destra nella **[!UICONTROL Importazioni]** nell’ambiente Sandbox.
+Seleziona **[!UICONTROL Visualizza riepilogo importazioni]** dal riquadro dei dettagli a destra nella **[!UICONTROL Processi]** nell’ambiente Sandbox.
 
 ![Le sandbox [!UICONTROL Importazioni] La scheda evidenzia [!UICONTROL Visualizza dettagli importazione] nel riquadro di destra.](../images/ui/sandbox-tooling/view-import-details.png)
 
-Il **[!UICONTROL Dettagli importazione]** mostra una suddivisione dettagliata delle importazioni.
-
-![Il [!UICONTROL Dettagli importazione] finestra di dialogo che mostra una ripartizione dettagliata delle importazioni.](../images/ui/sandbox-tooling/import-details.png)
+Il **[!UICONTROL Riepilogo importazione]** mostra una suddivisione delle importazioni con avanzamento in percentuale.
 
 >[!NOTE]
 >
->Al termine di un’importazione, riceverai notifiche nell’interfaccia utente di Platform. Puoi accedere a queste notifiche dall’icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
+>È possibile visualizzare un elenco di oggetti passando a pagine di inventario specifiche.
+
+![Il [!UICONTROL Dettagli importazione] finestra di dialogo che mostra una ripartizione dettagliata delle importazioni.](../images/ui/sandbox-tooling/import-details.png)
+
+Al termine dell’importazione, viene ricevuta una notifica nell’interfaccia utente di Platform. Puoi accedere a queste notifiche dall’icona degli avvisi. Se un processo non riesce, puoi passare alla risoluzione dei problemi da qui.
 
 ## Esercitazione video
 
