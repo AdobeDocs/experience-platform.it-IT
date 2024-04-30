@@ -1,13 +1,13 @@
 ---
 keywords: panoramica metriche; panoramica metriche rtcdp
 title: Home page e dashboard di Real-time Customer Data Platform
-description: Scopri diverse dashboard, la pagina Home e l’esperienza del primo utente di Adobe Real-Time CDP.
+description: Informazioni sulle le diverse dashboard, la pagina Home e la prima esperienza utente di Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
