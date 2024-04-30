@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> L’Assistente AI per Adobe Experience Platform è attualmente in versione beta. La funzione e la documentazione sono soggette a modifiche.
+>L’Assistente AI per Adobe Experience Platform è attualmente in versione beta. La funzione e la documentazione sono soggette a modifiche.
 
 L’Assistente AI è una funzione dell’interfaccia utente che consente di navigare e comprendere i concetti e le informazioni di utilizzo di Adobe Experience Platform e Real-time Customer Data Platform relativi agli oggetti.
 
