@@ -2,10 +2,10 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 4%
+source-wordcount: '1742'
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Quando crei campi dati del cliente personalizzati, puoi utilizzare i parametri d
 | `enum` | Stringa | Facoltativo | Esegue il rendering del campo personalizzato come menu a discesa ed elenca le opzioni disponibili per l&#39;utente. |
 | `default` | Stringa | Facoltativo | Definisce il valore predefinito da un `enum` elenco. |
 | `hidden` | Booleano | Facoltativo | Indica se il campo dati del cliente viene visualizzato o meno nell’interfaccia utente. |
-| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il campo **[!UICONTROL Alias di integrazione]** in [Personalizzazione personalizzata](../../../catalog/personalization/custom-personalization.md) la destinazione deve essere univoca, vale a dire che due flussi di dati separati verso questa destinazione non possono avere lo stesso valore per questo campo. |
+| `unique` | Booleano | Facoltativo | Utilizza questo parametro quando devi creare un campo dati cliente il cui valore deve essere univoco in tutti i flussi di dati di destinazione impostati dall’organizzazione di un utente. Ad esempio, il **[!UICONTROL Alias di integrazione]** campo in [Personalizzazione personalizzata](../../../catalog/personalization/custom-personalization.md) la destinazione deve essere univoca, il che significa che due flussi di dati separati verso questa destinazione non possono avere lo stesso valore per questo campo. |
 | `readOnly` | Booleano | Facoltativo | Indica se il cliente può modificare il valore del campo. |
 
 {style="table-layout:auto"}
@@ -261,7 +261,7 @@ I selettori a discesa dinamici sono identici ai [selettori a discesa regolari](#
 
 Per creare un selettore a discesa dinamico, devi configurare due componenti:
 
-**Passaggio 1.** [Creare un server di destinazione](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un `responseFields` modello per la chiamata API dinamica, come mostrato di seguito.
+**Passaggio 1:** [Creare un server di destinazione](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) con un `responseFields` modello per la chiamata API dinamica, come mostrato di seguito.
 
 ```json
 {
@@ -309,7 +309,7 @@ Per creare un selettore a discesa dinamico, devi configurare due componenti:
 }
 ```
 
-**Passaggio 2.** Utilizza il `dynamicEnum` come mostrato di seguito. Nell’esempio seguente, il `User` Il menu a discesa viene recuperato utilizzando dynamic server.
+**Passaggio 2:** Utilizza il `dynamicEnum` come mostrato di seguito. Nell’esempio seguente, il `User` Il menu a discesa viene recuperato utilizzando dynamic server.
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -340,6 +340,56 @@ Per creare un selettore a discesa dinamico, devi configurare due componenti:
 
 Imposta il `destinationServerId` all&#39;ID del server di destinazione creato al passaggio 1. Puoi visualizzare l’ID del server di destinazione nella risposta di [recuperare una configurazione del server di destinazione](../../authoring-api/destination-server/retrieve-destination-server.md) Chiamata API.
 
+## Creare campi dati cliente nidificati {#nested-fields}
+
+Puoi creare campi dati cliente nidificati per modelli di integrazione complessi. Questo consente di concatenare una serie di selezioni per il cliente.
+
+Ad esempio, puoi aggiungere campi dati cliente nidificati per richiedere ai clienti di selezionare un tipo di integrazione con la destinazione, seguito immediatamente da un’altra selezione. La seconda selezione è un campo nidificato nel tipo di integrazione.
+
+Per aggiungere un campo nidificato, utilizza `properties` come mostrato di seguito. Nell’esempio di configurazione seguente, puoi visualizzare tre diversi campi nidificati all’interno del **Yourdestination - Impostazioni specifiche per l’integrazione** campo dati cliente.
+
+>[!TIP]
+>
+>A partire dalla versione di aprile 2024, è possibile impostare un’ `isRequired` parametro sui campi nidificati. Ad esempio, nel frammento di configurazione seguente, i primi due campi nidificati sono contrassegnati come obbligatori (riga xxx evidenziata) e i clienti non possono procedere a meno che non selezionino un valore per il campo. Ulteriori informazioni sui campi obbligatori in [parametri supportati](#supported-parameters) sezione.
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Creare campi dati cliente condizionali {#conditional-options}
 
 Puoi creare campi dati cliente condizionali, che vengono visualizzati nel flusso di lavoro di attivazione solo quando gli utenti selezionano una determinata opzione.
@@ -358,7 +408,7 @@ Per impostare un campo come condizionale, utilizzare `conditional` come mostrato
 }
 ```
 
-In un contesto più ampio, è possibile visualizzare `conditional` nella configurazione di destinazione seguente, insieme al campo `fileType` stringa e `csvOptions` oggetto in cui è definito.
+In un contesto più ampio, è possibile visualizzare `conditional` nella configurazione di destinazione seguente, insieme al campo `fileType` stringa e `csvOptions` oggetto in cui è definito. I campi condizionali sono definiti nella sezione `properties` parametro.
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
