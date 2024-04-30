@@ -3,9 +3,9 @@ title: Creare una connessione di origine degli hub eventi di Azure nell’interf
 description: Scopri come creare una connessione di origine Azure Event Hubs utilizzando l’interfaccia utente di Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1680cc4e1d5c1576767053a74e560bc2eb8c24cb
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,32 @@ Per autenticare il tuo [!DNL Event Hubs] connettore di origine, è necessario fo
 | Namespace | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
 | Nome hub eventi | Il nome per il [!DNL Event Hubs] sorgente. |
 
->[!ENDTABS]
+Per ulteriori informazioni sull&#39;autenticazione delle firme di accesso condiviso (SAS) per [!DNL Event Hubs], leggi [[!DNL Azure] guida all&#39;utilizzo di SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-Per ulteriori informazioni su questi valori, consulta [questo documento Hub eventi](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+>[!TAB Hub eventi Azure Active Directory Auth]
+
+| Credenziali | Descrizione |
+| --- | --- |
+| ID tenant | ID tenant a cui desideri richiedere l’autorizzazione. L’ID tenant può essere formattato come GUID o come nome descrittivo. **Nota**: l’ID tenant è indicato come &quot;ID directory&quot; nella sezione [!DNL Microsoft Azure] di rete. |
+| ID client | L&#39;ID applicazione assegnato alla tua app. Puoi recuperare questo ID da [!DNL Microsoft Entra ID] portale in cui è stata effettuata la registrazione [!DNL Azure Active Directory]. |
+| Valore segreto client | Segreto client utilizzato insieme all’ID client per autenticare l’app. Puoi recuperare il segreto del client da [!DNL Microsoft Entra ID] portale in cui è stata effettuata la registrazione [!DNL Azure Active Directory]. |
+| Namespace | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
+
+Per ulteriori informazioni su [!DNL Azure Active Directory], leggi [Guida di Azure sull’utilizzo di Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Autenticazione Azure Active Directory con ambito hub eventi]
+
+| Credenziali | Descrizione |
+| --- | --- |
+| ID tenant | ID tenant a cui desideri richiedere l’autorizzazione. L’ID tenant può essere formattato come GUID o come nome descrittivo. **Nota**: l’ID tenant è indicato come &quot;ID directory&quot; nella sezione [!DNL Microsoft Azure] di rete. |
+| ID client | L&#39;ID applicazione assegnato alla tua app. Puoi recuperare questo ID da [!DNL Microsoft Entra ID] portale in cui è stata effettuata la registrazione [!DNL Azure Active Directory]. |
+| Valore segreto client | Segreto client utilizzato insieme all’ID client per autenticare l’app. Puoi recuperare il segreto del client da [!DNL Microsoft Entra ID] portale in cui è stata effettuata la registrazione [!DNL Azure Active Directory]. |
+| Namespace | Lo spazio dei nomi del [!DNL Event Hubs] si sta effettuando l&#39;accesso. Un [!DNL Event Hubs] namespace fornisce un contenitore di ambito univoco, nel quale è possibile creare uno o più [!DNL Event Hubs]. |
+| Nome hub eventi | Il nome per il [!DNL Event Hubs] sorgente. |
+
+Per ulteriori informazioni su [!DNL Azure Active Directory], leggi [Guida di Azure sull’utilizzo di Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!ENDTABS]
 
 Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Event Hubs] da Experience Platform.
 
@@ -90,7 +113,7 @@ Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e quindi f
 
 >[!TAB Autenticazione standard]
 
-Per creare un [!DNL Event Hubs] account con autenticazione standard, seleziona **[!UICONTROL Autenticazione standard]** e quindi fornisci i valori per [!UICONTROL Nome chiave SAS], [!UICONTROL Chiave SAS], e [!UICONTROL Namespace].
+Per creare un [!DNL Event Hubs] con autenticazione standard, utilizza [!UICONTROL Autenticazione account] menu a discesa, quindi selezionare **[!UICONTROL Autenticazione standard]**. Quindi, fornisci i valori per [!UICONTROL Nome chiave SAS], [!UICONTROL Chiave SAS], e [!UICONTROL Namespace].
 
 Dopo aver immesso le credenziali di autenticazione, seleziona **[!UICONTROL Connetti all&#39;origine]**.
 
@@ -98,11 +121,23 @@ Dopo aver immesso le credenziali di autenticazione, seleziona **[!UICONTROL Conn
 
 >[!TAB Autenticazione SAS]
 
-Per creare un [!DNL Event Hubs] account con autenticazione SAS, selezionare **[!UICONTROL Autenticazione SAS]** e quindi fornisci i valori per [!UICONTROL Nome chiave SAS], [!UICONTROL Chiave SAS], [!UICONTROL Namespace], e [!UICONTROL Nome hub eventi].
+Per creare un [!DNL Event Hubs] con autenticazione SAS, utilizzare [!UICONTROL Autenticazione account] menu a discesa, quindi selezionare **[!UICONTROL Autenticazione SAS]**. Quindi, fornisci i valori per [!UICONTROL Nome chiave SAS], [!UICONTROL Chiave SAS], [!UICONTROL Namespace], e [!UICONTROL Nome hub eventi].
 
 Dopo aver immesso le credenziali di autenticazione, seleziona **[!UICONTROL Connetti all&#39;origine]**.
 
 ![Interfaccia di autenticazione SAS per gli hub eventi di Azure.](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB Hub eventi Azure Active Directory Auth]
+
+Per creare un [!DNL Event Hubs] con l&#39;autenticazione di Azure Active Directory dell&#39;hub eventi, utilizzare [!UICONTROL Autenticazione account] menu a discesa, quindi selezionare **[!UICONTROL Azure Active Directory dell’hub eventi]**. Quindi, fornisci i valori per [!UICONTROL ID tenant], [!UICONTROL ID client], [!UICONTROL Valore segreto client], e [!UICONTROL Namespace].
+
+![Azure Event Hub Autenticazione di Azure Active Directory](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB Autenticazione Azure Active Directory con ambito hub eventi]
+
+Per creare un [!DNL Event Hubs] account con autenticazione Azure Active Directory con ambito hub eventi, utilizzare [!UICONTROL Autenticazione account] menu a discesa, quindi selezionare **[!UICONTROL Azure Active Directory con ambito hub eventi]**. Quindi, fornisci i valori per [!UICONTROL ID tenant], [!UICONTROL ID client], [!UICONTROL Valore segreto client], [!UICONTROL Namespace], e [!UICONTROL Nome hub eventi].
+
+![Autenticazione Azure Activity Directory con ambito hub eventi di Azure](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 
