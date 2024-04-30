@@ -2,10 +2,10 @@
 title: Regole
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 81%
+source-wordcount: '2028'
+ht-degree: 73%
 
 ---
 
@@ -51,15 +51,19 @@ Le azioni sono la parte *Then* di una regola. Definiscono ciò che si desidera c
 
 Crea una regola specificando le azioni che si verificano se viene soddisfatta una condizione.
 
+>[!TIP]
+>
+>Puoi visualizzare le risorse aggiuntive disponibili per ulteriori informazioni su questa funzione selezionando ![informazioni su](../../images/ui/event-forwarding/overview/about.png) nel pannello a destra.
+
 1. Apri la scheda [!UICONTROL Regole], quindi seleziona **[!UICONTROL Crea nuova regola]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Scheda Regole che evidenzia il campo del nome.](../../images/launch-rule-builder.png)
 
 1. Denomina la regola.
 1. Fai clic sull’icona **[!UICONTROL Aggiungi]** degli Eventi.
-1. Scegli l’estensione e uno dei tipi di evento disponibili per tale estensione, quindi configura le Impostazioni dell’evento.
+1. Seleziona l’estensione e uno dei tipi di evento disponibili per tale estensione, quindi configura le impostazioni dell’evento.
 
-   ![](../../images/rule-event-config.png)
+   ![Pagina Configurazione evento regole.](../../images/rule-event-config.png)
 
    I tipi di evento disponibili dipendono dall’estensione selezionata. Le impostazioni dell’evento variano a seconda del tipo di evento. Alcuni eventi non dispongono di impostazioni da configurare.
 
@@ -85,11 +89,11 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
    * Le regole che hanno lo stesso ordine vengono eseguite senza nessun ordine specifico.
    * Le regole vengono attivate in ordine, ma non necessariamente completate nello stesso ordine. Se la Regola A e la Regola B condividono un evento e assegni l&#39;ordine in modo che la Regola A arrivi per prima, se la Regola A esegue un elemento in modo asincrono, non c&#39;è garanzia che la Regola A termini prima dell&#39;avvio della Regola B.
 
-      Se desideri che venga eseguita in un secondo momento, impostala con un numero maggiore di 50. Per ulteriori informazioni sull&#39;ordinamento, consulta [Ordinamento delle regole](rules.md#rule-ordering).
+     Se desideri che venga eseguita in un secondo momento, impostala con un numero maggiore di 50. Per ulteriori informazioni sull&#39;ordinamento, consulta [Ordinamento delle regole](rules.md#rule-ordering).
 
-1. Fai clic sull’icona **[!UICONTROL Aggiungi]** delle Condizioni, quindi scegli un tipo di logica, un’estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Seleziona le Condizioni **[!UICONTROL Aggiungi]** , quindi seleziona un tipo di logica, un’estensione, un tipo di condizione e configura le impostazioni della condizione. Quindi, seleziona **[!UICONTROL Mantieni modifiche]**.
 
-   ![](../../images/condition-settings.png)
+   ![Pagina di configurazione della condizione delle regole.](../../images/condition-settings.png)
 
    I tipi di condizioni disponibili dipendono dall’estensione selezionata. Le impostazioni delle condizioni variano a seconda del tipo di condizione.
 
@@ -102,9 +106,9 @@ Crea una regola specificando le azioni che si verificano se viene soddisfatta un
 
    È possibile aggiungere tutte le condizioni desiderate. Più condizioni all’interno della stessa regola sono collegate da AND.
 
-1. Fai clic sull’icona **[!UICONTROL Aggiungi]** delle Azioni, quindi scegli l’estensione e uno dei tipi di azione disponibili, configura le impostazioni per l’azione e seleziona **[!UICONTROL Mantieni modifiche]**.
+1. Seleziona le azioni **[!UICONTROL Aggiungi]** , quindi seleziona l’estensione e uno dei tipi di azione disponibili per l’estensione, configura le impostazioni per l’azione, quindi seleziona **[!UICONTROL Mantieni modifiche]**.
 
-   ![](../../images/action-settings.png)
+   ![Pagina di configurazione dell&#39;azione delle regole.](../../images/action-settings.png)
 
    I tipi di azioni disponibili dipendono dall’estensione selezionata. Le impostazioni delle azioni variano a seconda del tipo di azione.
 
@@ -136,7 +140,7 @@ Si consiglia vivamente di ordinare le regole con numeri positivi compresi tra 1 
 
 ### Gestione delle regole lato client
 
-L&#39;ordine di caricamento delle regole dipende dal fatto che l&#39;azione delle regole sia configurata con JavaScript, HTML o altro codice lato client, e che le regole utilizzino un evento fine pagina, principale o un altro tipo di evento.
+L’ordine di caricamento delle regole dipende dal fatto che l’azione delle regole sia configurata con JavaScript, HTML o altro codice lato client, e che le regole utilizzino un evento fine pagina, principale o un altro tipo di evento.
 
 Puoi utilizzare `document.write` tra gli script personalizzati indipendentemente dagli eventi configurati per la regola.
 
@@ -146,7 +150,7 @@ Puoi ordinare diversi tipi di codici personalizzati tra loro. Ad esempio, puoi u
 
 Gli eventi e le condizioni delle regole sono sempre raggruppati nella libreria principale di tag. Le azioni possono essere raggruppate nella libreria principale o caricate in ritardo come risorse secondarie, a seconda delle necessità. Il fatto che le azioni siano raggruppate o meno è determinato dal tipo di evento della regola.
 
-### Regole con eventi “Core - libreria caricata” o “Core - parte superiore della pagina”
+### Regole con eventi “Core - Library Loaded“ (Libreria caricata) o “Core - Page Top“ (Inizio pagina)
 
 Questi eventi devono essere eseguiti quasi sempre (a meno che le condizioni non vengano valutate come false), quindi per maggiore efficienza vengono raggruppati nella libreria principale, il file a cui fa riferimento il codice da incorporare.
 
@@ -163,7 +167,7 @@ Adobe non è in grado di garantire che vengano attivate altre regole e che sia n
 
 ## Sequenza dei componenti della regola {#sequencing}
 
-Il comportamento dell’ambiente runtime dei dipende dall’abilitazione o meno di **[!UICONTROL Esegui componenti regola in sequenza]** per la tua proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
+Il comportamento dell’ambiente di runtime dipende dal fatto se **[!UICONTROL Eseguire componenti regola in sequenza]** è attivato o disattivato per la proprietà. Questa impostazione determina se i componenti di una regola possono essere valutati in parallelo (in modo asincrono) o se devono essere valutati in sequenza.
 
 >[!IMPORTANT]
 >
@@ -177,7 +181,7 @@ Se l’impostazione è abilitata quando un evento viene attivato in fase di runt
 
 Se una condizione risulta false o raggiunge il timeout definito, le condizioni e le azioni successive della regola vengono rimosse dalla coda.
 
-Se un’azione ha esito negativo o raggiunge il timeout definito, le azioni successive della regola vengono rimosse dalla coda. 
+Se un’azione non riesce o raggiunge il timeout definito, le azioni successive della regola vengono rimosse dalla coda.
 
 ### Disabilitata
 

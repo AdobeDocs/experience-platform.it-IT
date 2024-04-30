@@ -2,10 +2,10 @@
 title: Panoramica sui tag
 description: I tag in Adobe Experience Platform costituiscono la soluzione Adobe di nuova generazione per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate significative.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 96%
+source-wordcount: '588'
+ht-degree: 91%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 96%
 
 I tag in Adobe Experience Platform costituiscono la soluzione Adobe di nuova generazione per la gestione dei tag. I tag offrono ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate significative.
 
-I tag permettono a chiunque di generare e mantenere le proprie integrazioni, o *estensioni*. Queste sono disponibili per i clienti [!DNL Adobe Experience Cloud] di in un&#39;esperienza di tipo app-store per velocizzarne l&#39;installazione, la configurazione e l&#39;implementazione dei tag.
+I tag permettono a chiunque di generare e mantenere le proprie integrazioni, o *estensioni*. Con tali estensioni, disponibili in un&#39;esperienza di tipo app-store, i clienti di [!DNL Adobe Experience Cloud] possono velocizzare l’installazione, la configurazione e l’implementazione dei propri tag.
 
 I tag sono offerti ai clienti di [!DNL Adobe Experience Cloud] come funzionalità incluse a valore aggiunto.
 
@@ -28,6 +28,10 @@ I tag sono offerti ai clienti di [!DNL Adobe Experience Cloud] come funzionalit�
 * Esperienze coinvolgenti tramite l&#39;integrazione di dati e tecnologie di marketing mediante un modulo per la generazione di regole.
 
 ## Funzioni chiave {#key-features}
+
+Utilizza il nella guida del prodotto nel pannello a destra per ulteriori informazioni sui tag e visualizzare le risorse disponibili aggiuntive.
+
+![Proprietà dei tag nell’interfaccia utente di Data Collection.](./images/ui/tags-overview/tags-properties.png)
 
 ### Estensioni {#extensions}
 

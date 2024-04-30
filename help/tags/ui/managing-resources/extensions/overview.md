@@ -2,10 +2,10 @@
 title: Estensioni
 description: Scopri come funzionano le estensioni tag in Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 93%
+source-wordcount: '523'
+ht-degree: 88%
 
 ---
 
@@ -25,7 +25,7 @@ Le estensioni determinano gli elementi disponibili per la creazione di propriet�
 * Elementi dati
 * Codice lato client
 
-Utilizza i collegamenti nella parte superiore dell&#39;elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
+Utilizza i collegamenti nella parte superiore dell’elenco Estensioni per visualizzare le estensioni installate, il catalogo delle estensioni o gli aggiornamenti.
 
 Seleziona un’estensione, quindi fai clic su [!UICONTROL Configura] per visualizzarne e modificarne le impostazioni. Per ulteriori informazioni, consulta la sezione su [aggiunta di una nuova estensione](#add-a-new-extension) per informazioni sulle opzioni di estensione,
 
@@ -43,13 +43,13 @@ La pagina Estensioni offre tre visualizzazioni:
 
 * Installate
 
-   Mostra tutte le estensioni installate.
+  Mostra tutte le estensioni installate.
 
 * Catalogo
 * Mostra tutte le estensioni disponibili.
 * Aggiornamenti
 
-   Mostra aggiornamenti alle estensioni installate.
+  Mostra aggiornamenti alle estensioni installate.
 
 Fai clic su **[!UICONTROL Estensioni]** per visualizzare tutte le estensioni installate. Puoi inoltre utilizzare il catalogo per visualizzare un elenco di tutte le estensioni disponibili e per quali estensioni sono disponibili aggiornamenti.
 
@@ -59,10 +59,14 @@ Per informazioni sulle estensioni proprietarie di Adobe, consulta la [documentaz
 
 I tag sono altamente estensibili. Le estensioni aggiungono funzionalità di base ai tag. Un uso comune delle estensioni consiste nel creare integrazioni con altre applicazioni.
 
+>[!TIP]
+>
+>Utilizza le nella guida del prodotto nel pannello a destra per ulteriori informazioni sulle estensioni e visualizzare le risorse disponibili aggiuntive.
+
 1. Dalla pagina della panoramica di una proprietà, apri la scheda **[!UICONTROL Estensioni]**.
 1. Selezionare un&#39;estensione.
 
-   ![Estensione core](../../../images/extensions.png)
+   ![Scheda Catalogo che mostra le estensioni principali nella scheda Estensioni.](../../../images/extensions.png)
 
    * Se l&#39;estensione esiste, selezionala dal catalogo delle estensioni.
    * Passa il cursore sopra un&#39;estensione nell&#39;elenco per configurarla o disattivarla.
