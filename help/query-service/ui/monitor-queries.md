@@ -2,9 +2,9 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
+source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,12 @@ La tabella seguente descrive ogni colonna disponibile.
 | **[!UICONTROL Nome]** | Il campo del nome corrisponde al nome del modello o ai primi caratteri della query SQL. Tutte le query create tramite l’interfaccia utente con l’editor delle query sono denominate all’inizio. Se la query è stata creata tramite l’API, il nome diventa un frammento dell’istruzione SQL iniziale utilizzata per creare la query. Per visualizzare un elenco di tutte le esecuzioni associate alla query, selezionare un elemento dal [!UICONTROL Nome] colonna. Per ulteriori informazioni, vedere [la query esegue i dettagli della pianificazione](#query-runs) sezione. |
 | **[!UICONTROL Modello]** | Nome del modello della query. Selezionate un nome di modello per passare all&#39;editor di query. Il modello di query viene visualizzato nell’editor delle query per comodità. Se non è presente alcun nome di modello, la riga viene contrassegnata con un trattino e non è possibile reindirizzare all’editor delle query per visualizzare la query. |
 | **[!UICONTROL SQL]** | Frammento della query SQL. |
-| **[!UICONTROL Frequenza di esecuzione]** | La frequenza con cui la query è impostata per l&#39;esecuzione. I valori disponibili sono `Run once` e `Scheduled`. Le query possono essere filtrate in base alla loro frequenza di esecuzione. |
+| **[!UICONTROL Frequenza di esecuzione]** | La frequenza con cui la query è impostata per l&#39;esecuzione. I valori disponibili sono `Run once` e `Scheduled`. |
 | **[!UICONTROL Creato da]** | Nome dell&#39;utente che ha creato la query. |
 | **[!UICONTROL Creato]** | La marca temporale in formato UTC in cui è stata creata la query. |
 | **[!UICONTROL Timestamp dell’ultima esecuzione]** | Il timestamp più recente in cui è stata eseguita la query. In questa colonna viene evidenziato se una query è stata eseguita in base alla pianificazione corrente. |
 | **[!UICONTROL Stato ultima esecuzione]** | Stato dell’esecuzione della query più recente. I valori dello stato sono: `Success`, `Failed`, `In progress`, e `No runs`. |
-| **[!UICONTROL Stato pianificazione]** | Stato corrente della query pianificata. Esistono cinque valori potenziali, [!UICONTROL Registrazione], [!UICONTROL Attivo], [!UICONTROL Inattivo], [!UICONTROL Eliminato]e un trattino. <ul><li>Il trattino indica che la query pianificata è una query occasionale non ricorrente.</li><li>Il [!UICONTROL Registrazione] Lo stato indica che il sistema sta ancora elaborando la creazione della nuova pianificazione per la query. Non è possibile disattivare o eliminare una query pianificata durante la registrazione.</li><li>Il [!UICONTROL Attivo] lo stato indica che la query pianificata ha **non ancora passato** la data e l’ora di completamento.</li><li>Il [!UICONTROL Inattivo] lo stato indica che la query pianificata ha **passato** la data e l’ora di completamento.</li><li>Il [!UICONTROL Eliminato] lo stato indica che la pianificazione della query è stata eliminata.</li></ul> |
+| **[!UICONTROL Stato pianificazione]** | Stato corrente della query pianificata. Esistono sei valori potenziali, [!UICONTROL Registrazione], [!UICONTROL Attivo], [!UICONTROL Inattivo], [!UICONTROL Eliminato], un trattino e [!UICONTROL In quarantena].<ul><li>Il **[!UICONTROL Registrazione]** Lo stato indica che il sistema sta ancora elaborando la creazione della nuova pianificazione per la query. Non è possibile disattivare o eliminare una query pianificata durante la registrazione.</li><li>Il **[!UICONTROL Attivo]** lo stato indica che la query pianificata ha **non ancora passato** la data e l’ora di completamento.</li><li>Il **[!UICONTROL Inattivo]** lo stato indica che la query pianificata ha **passato** la data e l’ora di completamento o è stato contrassegnato da un utente come inattivo.</li><li>Il **[!UICONTROL Eliminato]** lo stato indica che la pianificazione della query è stata eliminata.</li><li>Il trattino indica che la query pianificata è una query occasionale non ricorrente.</li><li>Il **[!UICONTROL In quarantena]** Lo stato indica che la query non è riuscita per dieci esecuzioni consecutive e richiede l’intervento dell’utente prima di poter eseguire ulteriori esecuzioni.</li></ul> |
 
 >[!TIP]
 >
@@ -63,15 +63,19 @@ Per rimuovere o aggiungere una colonna di tabella, attiva o disattiva le caselle
 
 ## Gestire le query pianificate con azioni in linea {#inline-actions}
 
-Il [!UICONTROL Query pianificate] visualizza offre diverse azioni in linea per gestire tutte le query pianificate da un’unica posizione. Le azioni in linea sono indicate con puntini di sospensione in ogni riga. Selezionare i puntini di sospensione di una query pianificata che si desidera gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le opzioni disponibili includono [[!UICONTROL Disattiva pianificazione]](#disable) o [!UICONTROL Abilita pianificazione], [[!UICONTROL Elimina pianificazione]](#delete), e [[!UICONTROL Abbonati]](#alert-subscription) per eseguire query sugli avvisi.
+Il [!UICONTROL Query pianificate] visualizza offre diverse azioni in linea per gestire tutte le query pianificate da un’unica posizione. Le azioni in linea sono indicate con puntini di sospensione in ogni riga. Selezionare i puntini di sospensione di una query pianificata che si desidera gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le opzioni disponibili includono [[!UICONTROL Disattiva pianificazione]](#disable) o [!UICONTROL Abilita pianificazione], [[!UICONTROL Elimina pianificazione]](#delete), [[!UICONTROL Abbonati]](#alert-subscription) per eseguire query sugli avvisi e [Abilita o [!UICONTROL Disattiva quarantena]](#quarantined-queries).
 
-![Scheda Query pianificate con i puntini di sospensione delle azioni in linea e il menu a comparsa evidenziati.](../images/ui/monitor-queries/disable-inline.png)
+![Scheda Query pianificate con i puntini di sospensione delle azioni in linea e il menu a comparsa evidenziati.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Disattivare o attivare una query pianificata {#disable}
 
 Per disabilitare una query pianificata, seleziona i puntini di sospensione di una query pianificata da gestire, quindi fai clic su **[!UICONTROL Disattiva pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Disattiva]** per confermare l&#39;impostazione.
 
 Dopo aver disabilitato una query pianificata, puoi abilitare la pianificazione attraverso lo stesso processo. Seleziona i puntini di sospensione, quindi seleziona **[!UICONTROL Abilita pianificazione]** dalle opzioni disponibili.
+
+>[!NOTE]
+>
+>Se una query è stata messa in quarantena, è necessario esaminare l&#39;istruzione SQL del modello prima di abilitarne la pianificazione. In questo modo si evita lo spreco di ore di calcolo se la query del modello presenta ancora problemi.
 
 ### Eliminare una query pianificata {#delete}
 
@@ -91,6 +95,10 @@ Il [!UICONTROL Avvisi] viene visualizzata una finestra di dialogo. Il [!UICONTRO
 
 ![Finestra di dialogo Sottoscrizioni avvisi.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>Per ricevere notifiche sulle esecuzioni delle query messe in quarantena, devi prima registrare le esecuzioni delle query pianificate in [funzione di quarantena](#quarantined-queries).
+
 Consulta la [documentazione API per le sottoscrizioni di avvisi](../api/alert-subscriptions.md) per ulteriori informazioni.
 
 ### Visualizzare i dettagli della query {#query-details}
@@ -98,6 +106,16 @@ Consulta la [documentazione API per le sottoscrizioni di avvisi](../api/alert-su
 Seleziona l’icona delle informazioni (![Icona delle informazioni.](../images/ui/monitor-queries/information-icon.png)) per visualizzare il pannello dei dettagli della query. Il pannello dei dettagli contiene tutte le informazioni rilevanti sulla query oltre ai fatti inclusi nella tabella delle query pianificate. Le informazioni aggiuntive includono l’ID della query, la data dell’ultima modifica, l’SQL della query, l’ID della pianificazione e la pianificazione del set corrente.
 
 ![La scheda Query pianificate con l’icona delle informazioni ed evidenziato il pannello dei dettagli.](../images/ui/monitor-queries/details-panel.png)
+
+### Query in quarantena {#quarantined-queries}
+
+Quando si registra nella funzione di quarantena, tutte le query pianificate che non superano dieci esecuzioni consecutive vengono automaticamente inserite in una [!UICONTROL In quarantena] stato. Una query con questo stato diventa inattiva e non viene eseguita alla frequenza pianificata. Quindi richiede il tuo intervento prima che possano aver luogo ulteriori esecuzioni. In questo modo vengono salvaguardate le risorse di sistema in quanto è necessario esaminare e correggere i problemi con l’SQL prima di eseguire ulteriori esecuzioni.
+
+Per attivare una query pianificata per la funzione di quarantena, selezionare i puntini di sospensione (`...`) seguito da [!UICONTROL Abilita quarantena] dal menu a discesa visualizzato.
+
+![La scheda Query pianificate con i puntini di sospensione e Abilita quarantena evidenziati dal menu a discesa delle azioni in linea.](../images/ui/monitor-queries/inline-enable.png)
+
+È inoltre possibile registrare le query nella funzione di quarantena durante il processo di creazione della pianificazione. Consulta la [documentazione pianificazioni query](./query-schedules.md#quarantine) per ulteriori informazioni.
 
 ## Filtrare le query {#filter}
 
@@ -128,7 +146,7 @@ Queste informazioni sono fornite in una tabella a cinque colonne. Ogni riga indi
 | **[!UICONTROL ID esecuzione query]** | ID esecuzione query per l’esecuzione giornaliera. Seleziona la **[!UICONTROL ID esecuzione query]** per passare al [!UICONTROL Panoramica sull’esecuzione delle query]. |
 | **[!UICONTROL Inizio esecuzione query]** | Il timestamp in cui è stata eseguita la query. Il timestamp è in formato UTC. |
 | **[!UICONTROL Esecuzione query completata]** | La marca temporale in cui è stata completata la query. Il timestamp è in formato UTC. |
-| **[!UICONTROL Stato]** | Stato dell’esecuzione della query più recente. I tre valori di stato sono: `successful` `failed` o `in progress`. |
+| **[!UICONTROL Stato]** | Stato dell’esecuzione della query più recente. I valori dello stato sono: `Success`, `Failed`, `In progress`, o `Quarantined`. |
 | **[!UICONTROL Set di dati]** | Il set di dati coinvolto nell’esecuzione. |
 
 I dettagli della query pianificata sono disponibili nella sezione [!UICONTROL Proprietà] pannello. Questo pannello include l’ID della query iniziale, il tipo di client, il nome del modello, l’SQL della query e la frequenza della pianificazione.

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2794'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,16 @@ Se hai scritto più query ma devi eseguirne una sola, puoi evidenziare la query 
 [!UICONTROL Esegui query selezionata] icona. Questa icona è disattivata per impostazione predefinita finché non selezioni la sintassi della query all’interno dell’editor.
 
 ![L’editor delle query con [!UICONTROL Esegui query selezionata] icona evidenziata.](../images/ui/query-editor/run-selected-query.png)
+
+### Annulla sessione editor query {#cancel-query}
+
+Controlla l’esecuzione delle query e migliora la produttività annullando le query con tempi di esecuzione lunghi. Questa azione cancella l&#39;Editor query durante l&#39;esecuzione di una query. Tieni presente che la query continua a essere eseguita in background. Se si tratta di una query CTAS, verrà comunque generato un set di dati di output. Per annullare l&#39;esecuzione nell&#39;editor e continuare a comporre un&#39;istruzione SQL, selezionare **[!UICONTROL Annulla query]** dopo l’esecuzione di una query.
+
+![Editor query con [!UICONTROL Annulla query] evidenziato.](../images/ui/query-editor/cancel-query-run.png)
+
+Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Conferma]** per annullare l&#39;esecuzione della query.
+
+![La finestra di dialogo Annulla conferma query con Conferma è evidenziata.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Conteggio risultati {#result-count}
 
@@ -219,7 +229,11 @@ Quando salvi una query nell’editor delle query, viene visualizzato un messaggi
 
 Le query salvate come modello possono essere pianificate dall&#39;Editor query. La pianificazione delle query consente di automatizzare l’esecuzione delle query su una cadenza personalizzata. Puoi pianificare le query in base a frequenza, data e ora e, se necessario, scegliere anche un set di dati di output per i risultati. Le pianificazioni delle query possono anche essere disabilitate o eliminate tramite l’interfaccia utente.
 
-Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. La stessa limitazione non si applica al [!DNL Query Service] API:
+Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. La stessa limitazione non si applica al [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Le query pianificate che non superano dieci esecuzioni consecutive vengono inserite automaticamente in un [!UICONTROL In quarantena] stato. Una query con questo stato richiede l’intervento dell’utente prima di poter eseguire ulteriori esecuzioni. Consulta la [query in quarantena](./monitor-queries.md#quarantined-queries) per ulteriori dettagli.
 
 Consulta la documentazione sulle pianificazioni delle query per scoprire come [creare pianificazioni di query nell’interfaccia utente](./query-schedules.md). In alternativa, per scoprire come aggiungere pianificazioni utilizzando l’API, leggi [guida dell’endpoint &quot;scheduled queries&quot;](../api/scheduled-queries.md).
 
