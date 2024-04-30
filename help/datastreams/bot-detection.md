@@ -1,10 +1,8 @@
 ---
 title: Configurare il rilevamento di bot per gli stream di dati
 description: Scopri come configurare il rilevamento di bot per i flussi di dati, per differenziare il traffico umano e non umano.
-hide: true
-hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
+source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
