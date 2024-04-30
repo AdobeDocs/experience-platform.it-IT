@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
-ht-degree: 3%
+source-wordcount: '4105'
+ht-degree: 2%
 
 ---
 
@@ -80,7 +80,8 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Sposta nella cartella] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce la cartella a cui appartiene il pubblico. Per ulteriori informazioni su questa funzione, consulta la sezione su [filtraggio e assegnazione di tag](#manage-audiences). |
 | [!UICONTROL Copia] | Servizio di segmentazione | Duplica il pubblico selezionato. |
 | [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archivia] | Caricamento personalizzato | Archivia il pubblico selezionato. |
+| [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consultare [sezione lifecycle state (stato del ciclo di vita) nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
+| [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consultare [sezione lifecycle state (stato del ciclo di vita) nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
 | [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Puoi selezionare **[!UICONTROL Aggiorna riepilogo frequenza]** per visualizzare 
 
 ![Viene evidenziato il pulsante Aggiorna riepilogo frequenza.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico in base alla frequenza di aggiornamento. Il grafico mostra il numero totale di tipi di pubblico al centro. Se passi il cursore del mouse sulle diverse parti del pubblico, viene visualizzato il numero di tipi di pubblico che appartengono a ciascun tipo di frequenza di aggiornamento.
+Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico in base alla frequenza di aggiornamento. Il grafico mostra il numero totale di tipi di pubblico al centro e il tempo di valutazione batch giornaliero in UTC nella parte inferiore. Se passi il cursore del mouse sulle diverse parti del pubblico, viene visualizzato il numero di tipi di pubblico che appartengono a ciascun tipo di frequenza di aggiornamento.
 
-![Viene visualizzato il grafico a torta della frequenza di aggiornamento.](../images/ui/overview/update-frequency-chart.png)
+![Il grafico a torta frequenza di aggiornamento è evidenziato e viene visualizzato anche il tempo di valutazione della segmentazione batch.](../images/ui/overview/update-frequency-chart.png)
 
 ### Personalizza {#customize}
 
@@ -115,7 +116,7 @@ Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico
 | [!UICONTROL Nome] | Il nome del pubblico. |
 | [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
 | [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
-| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, `Published`, e `Archived`. Ulteriori informazioni sugli stati del ciclo di vita, compreso cosa significano i diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, leggi [sezione sullo stato del ciclo di vita nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Bordo], e [!UICONTROL Non pianificato]. |
 | [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
 | [!UICONTROL Creato] | La data e l’ora in UTC in cui è stato creato il pubblico. |
@@ -205,7 +206,7 @@ Viene visualizzato l’elenco dei filtri disponibili.
 | ------ | ----------- |
 | [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. Le opzioni disponibili includono Segmentation Service (Servizio di segmentazione), Custom upload (Caricamento personalizzato), Audience composition (Composizione pubblico) e Audienci Manager. |
 | [!UICONTROL Ha qualsiasi tag] | Consente di filtrare per tag. Puoi scegliere tra **[!UICONTROL Ha qualsiasi tag]** e **[!UICONTROL Ha tutti i tag]**. Quando **[!UICONTROL Ha qualsiasi tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Ha tutti i tag]** è selezionato, i tipi di pubblico filtrati devono includere **tutto** dei tag aggiunti. |
-| [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Attivo], [!UICONTROL Archiviato], [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo], e [!UICONTROL Pubblicato]. |
+| [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo], e [!UICONTROL Pubblicato]. |
 | [!UICONTROL Frequenza di aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico. Le opzioni disponibili includono [!UICONTROL Pianificato], [!UICONTROL Continuo], e [!UICONTROL On-demand]. |
 | [!UICONTROL Creato da] | Consente di filtrare in base alla persona che ha creato il pubblico. |
 | [!UICONTROL Data di creazione] | Consente di filtrare in base alla data di creazione del pubblico. Puoi scegliere un intervallo di date da filtrare al momento della creazione del pubblico. |
@@ -408,7 +409,7 @@ Viene visualizzato un popover che elenca tutti i campi che possono essere visual
 | Campo | Descrizione |
 | ----- | ----------- | 
 | [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Published`, e `Archived`. |
+| [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, `Published`, e `Archived`. |
 | [!UICONTROL Creato] | L’ora e la data di creazione del pubblico. |
 | [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
 | [!UICONTROL Aggiornato] | Ora e data dell’ultimo aggiornamento del pubblico. |

@@ -2,10 +2,10 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 1%
+source-wordcount: '3976'
+ht-degree: 0%
 
 ---
 
@@ -98,18 +98,6 @@ La scadenza corrente dei dati per i tipi di pubblico generati esternamente è **
 
 Al termine del periodo di scadenza dei dati, il set di dati associato sarà ancora visibile all’interno dell’inventario dei set di dati, ma **non** essere in grado di attivare il pubblico e il conteggio dei profili verrà visualizzato come zero.
 
-### Cosa rappresentano i diversi stati del ciclo di vita?
-
-Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano, dove è possibile utilizzare i tipi di pubblico con tale stato e quale impatto hanno sui guardrail di segmentazione.
-
-| Stato | Definizione | Visibile in Audience Portal? | Visibile nelle destinazioni? | Influisce sui limiti di segmentazione? | Impatto sui tipi di pubblico basati su file | Impatto sulla valutazione del pubblico | Utilizzabile all’interno di altri tipi di pubblico? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Può essere valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. |
-| Pubblicato | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì |
-| Inattivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì |
-| Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No |
-| Attivo | Questo stato è stato **obsoleto** ed è sostituito da **Pubblicato** stato. | N/D | N/D | N/D | N/D | N/D | N/D |
-
 ### In che modo Audience Portal e Audience Composition interagiranno con il rilascio di Real-Time CDP Partner Data?
 
 Audience Portal e Audience Composition interagiranno con i dati dei partner in due modi:
@@ -130,9 +118,108 @@ Gli attributi di arricchimento sono attributi che provengono da un set di dati e
 | Destinazioni Real-Time CDP | È possibile attivare sia gli attributi del payload che i tipi di pubblico. | È possibile attivare solo il pubblico. Attributi di arricchimento **non può** essere attivato. |
 | Campagne Adobe Journey Optimizer | Non è possibile attivare né gli attributi del pubblico né quelli del payload. | È possibile attivare sia gli attributi di pubblico che quelli di arricchimento. |
 
+## Stati del ciclo di vita {#lifecycle-states}
+
+Nella sezione seguente sono elencate le domande relative agli stati del ciclo di vita e alla gestione dello stato del ciclo di vita all’interno di Audience Portal.
+
+### Cosa rappresentano i diversi stati del ciclo di vita?
+
+Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano, dove è possibile utilizzare i tipi di pubblico con tale stato e quale impatto hanno sui guardrail di segmentazione.
+
+| Stato | Definizione | Visibile in Audience Portal? | Visibile nelle destinazioni? | Influisce sui limiti di segmentazione? | Impatto sui tipi di pubblico basati su file | Impatto sulla valutazione del pubblico | Utilizzabile all’interno di altri tipi di pubblico? | Modificabile |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Può essere valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
+| Pubblicato | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì | Sì |
+| Inattivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì | Sì |
+| Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No | No |
+
+### In quali stati posso modificare i tipi di pubblico in?
+
+I tipi di pubblico possono essere modificati nei seguenti stati del ciclo di vita:
+
+- **Bozza**: se un pubblico viene modificato nello stato di bozza, rimane nello stato di bozza a meno che non venga esplicitamente pubblicato.
+- **Pubblicato**: se un pubblico viene modificato nello stato di pubblicazione, rimane pubblicato e il pubblico viene aggiornato automaticamente.
+- **Inattivo**: se un pubblico viene modificato nello stato inattivo, rimane inattivo. Ciò significa che non verrà valutato o aggiornato. Se devi aggiornare il pubblico, devi pubblicarlo.
+
+Una volta eliminato un pubblico, **non può** essere modificata.
+
+### In quali stati del ciclo di vita posso spostare un pubblico?
+
+I possibili stati del ciclo di vita in cui un pubblico può essere spostato dipendono dallo stato corrente del pubblico.
+
+![Un diagramma che illustra le possibili transizioni dello stato del ciclo di vita disponibili per i tipi di pubblico.](./images/faq/lifecycle-state-transition.png)
+
+Se il pubblico è in stato di bozza, puoi pubblicarlo o eliminarlo se non ha dipendenti.
+
+Se il pubblico è in stato pubblicato, puoi disattivarlo o eliminarlo se non ha dipendenti.
+
+Se il pubblico è inattivo, puoi ripubblicarlo o eliminarlo se non ha dipendenti.
+
+### Esistono avvertenze per i tipi di pubblico in alcuni stati del ciclo di vita?
+
+I tipi di pubblico con stato di pubblicazione possono essere spostati in un altro stato solo se il pubblico lo fa **non** ha qualsiasi familiare a carico. Ciò significa che se il pubblico viene utilizzato in un servizio a valle, non può essere disattivato o eliminato.
+
+Se un pubblico valutato tramite la segmentazione in batch viene ripubblicato, ossia quando un pubblico passa da inattivo a pubblicato, il pubblico viene aggiornato **dopo** il processo batch giornaliero. Quando viene ripubblicato per la prima volta, i profili e i dati saranno **uguale** come quando il pubblico è stato reso inattivo.
+
+### Come si inserisce un pubblico nello stato di bozza?
+
+Il metodo per inserire un pubblico nello stato di bozza dipende dall’origine del pubblico.
+
+Per i tipi di pubblico creati con Segment Builder (Generatore di segmenti), puoi impostare il pubblico sullo stato Bozza selezionando &quot;[!UICONTROL Salva come bozza]&quot; nel Generatore di segmenti.
+
+Per i tipi di pubblico creati in Composizione pubblico, i tipi di pubblico vengono salvati automaticamente come bozza fino alla pubblicazione.
+
+Per i tipi di pubblico creati esternamente, i tipi di pubblico vengono pubblicati automaticamente.
+
+Quando un pubblico si trova nello stato pubblicato, **non può** riporta il pubblico originale allo stato di bozza. Tuttavia, se copi il pubblico, quello appena copiato sarà in stato di bozza.
+
+### Come si mette un pubblico nello stato pubblicato?
+
+Per i tipi di pubblico creati con il Generatore di segmenti o la Composizione del pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Pubblica]&quot; nelle rispettive interfacce utente.
+
+I tipi di pubblico creati esternamente vengono automaticamente impostati su pubblicato.
+
+### Come si mette un pubblico in stato inattivo?
+
+Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audience Portal e seleziona &quot;[!UICONTROL Disattiva]&quot;.
+
+### Come si ripubblica un pubblico?
+
+>[!NOTE]
+>
+>Lo stato &quot;ripubblicato&quot; è lo stesso dello stato pubblicato per il comportamento del pubblico.
+
+Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Pubblica].
+
+### Come posso impostare un pubblico come eliminato?
+
+>[!IMPORTANT]
+>
+>Puoi eliminare solo i tipi di pubblico che sono **non** utilizzato in qualsiasi attivazione a valle. Inoltre, non puoi eliminare un pubblico a cui viene fatto riferimento in un altro pubblico. Se non puoi eliminare il pubblico, assicurati di **non** utilizzarlo in qualsiasi servizio a valle o come elemento costitutivo di un altro pubblico.
+
+Puoi impostare un pubblico in stato di eliminazione aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Elimina].
+
+### L’utilizzo di un pubblico come pubblico secondario influisce sulle transizioni dello stato del ciclo di vita?
+
+>[!NOTE]
+>
+>Un pubblico principale è un pubblico che **utilizza** un altro pubblico come dipendenza per il pubblico.
+>
+>Un pubblico secondario è un pubblico che **utilizzato come** una dipendenza per il pubblico.
+
+Sì, l’utilizzo di un pubblico come pubblico secondario influisce sugli stati del ciclo di vita che il pubblico secondario e quello principale possono intraprendere.
+
+Per spostare un pubblico secondario allo stato pubblicato, tutto il pubblico principale **deve** essere in stato di pubblicazione. I tipi di pubblico principali possono essere pubblicati prima della pubblicazione del pubblico secondario oppure, se l’utente conferma, possono essere pubblicati automaticamente al momento della pubblicazione del pubblico secondario.
+
+Per spostare il pubblico principale allo stato inattivo o eliminato, tutti i relativi tipi di pubblico secondari **deve** essere disattivate o eliminate.
+
+### Posso fare riferimento a un pubblico che si trova in uno stato del ciclo di vita diverso?
+
+Sì! Se il pubblico è attualmente in stato di bozza, puoi fare riferimento a tipi di pubblico in stato pubblicato o inattivo. Tuttavia, per pubblicare questo pubblico, **deve** pubblica gli altri tipi di pubblico principali.
+
 ## Inventario del pubblico
 
-Nelle sezioni seguenti sono elencate le domande relative all’inventario del pubblico all’interno di Audience Portal.
+Nella sezione seguente sono elencate le domande relative all’inventario del pubblico all’interno di Audience Portal.
 
 ### Sono necessarie autorizzazioni aggiuntive per utilizzare le funzioni di inventario del pubblico?
 
