@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per Edge Personalization Destinations
 description: Scopri come attivare tipi di pubblico da Adobe Experience Platform a destinazioni di personalizzazione Edge per casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 2%
 
 ---
@@ -79,6 +79,10 @@ Il primo passaggio nella configurazione della destinazione di personalizzazione 
 
 Durante la configurazione dello stream di dati, in **[!UICONTROL Adobe Experience Platform]** assicurati che entrambi **[!UICONTROL Segmentazione Edge]** e **[!UICONTROL Destinazioni di personalizzazione]** sono selezionati.
 
+>[!TIP]
+>
+>A partire dalla versione di aprile 2024, non è necessario selezionare la casella di controllo Segmentazione Edge quando [configurazione della connessione ad Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). In questo caso, [personalizzazione della sessione successiva](#next-session) è l’unico caso di utilizzo di personalizzazione disponibile.
+
 ![Configurazione dello stream di dati con Segmentazione Edge e Destinazioni di personalizzazione evidenziate.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Per ulteriori informazioni su come impostare un flusso di dati, segui le istruzioni descritte nella sezione [Documentazione di Platform Web SDK](../../datastreams/configure.md#aep).
@@ -146,7 +150,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 >[!IMPORTANT]
 >
->Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione personalizzata]** La destinazione richiede l&#39;utilizzo di [API server di rete Edge](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
+>Gli attributi del profilo possono contenere dati sensibili. Per proteggere questi dati, è necessario **[!UICONTROL Personalizzazione personalizzata]** La destinazione richiede l&#39;utilizzo di [API server Edge Network](../../server-api/overview.md) durante la configurazione della destinazione per la personalizzazione basata su attributi. Tutte le chiamate API server devono essere effettuate in un [contesto autenticato](../../server-api/authentication.md).
 >
 ><br>Se utilizzi già Web SDK o Mobile SDK per l’integrazione, puoi recuperare gli attributi tramite l’API server aggiungendo un’integrazione lato server.
 >
