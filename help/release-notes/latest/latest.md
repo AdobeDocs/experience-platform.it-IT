@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 16%
+source-wordcount: '1841'
+ht-degree: 17%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform fornisce una suite di tecnologie che consente di racco
 
 | Tipo | Funzione | Descrizione |
 | --- | --- | --- |
-| Approfondimenti | [!DNL Acxiom] Approfondimenti visitatore anonimo | Scopri da dove provengono i visitatori del tuo sito web con [!DNL Acxiom's] Approfondimenti visitatore. Utilizzando la tecnologia di ricerca IP geografica, individuiamo la posizione dei browser anonimi. Una volta identificata, una ricerca rapida nel nostro database organizzato produce ulteriori informazioni che vengono rimandate al browser. Per i creatori di contenuti, ciò significa un’opportunità d’oro per adattare i loro contenuti in modo che corrispondano a questi punti di dati, fornendo un’esperienza più personalizzata e coinvolgente per i visitatori, anche se sono partiti come estranei. |
+| Estensioni | [!DNL Acxiom Anonymous Visitor Insights] Estensione tag | Scopri da dove provengono i visitatori del tuo sito web con [!DNL Acxiom's Visitor Insights]. Utilizzando la tecnologia di ricerca IP geografica, Acxiom può individuare la posizione dei browser anonimi. Una volta identificata, una ricerca nel database organizzato produce ulteriori informazioni che vengono rimandate al browser. I creatori di contenuti possono quindi adattare i loro contenuti in modo che corrispondano a questi punti di dati, fornendo un’esperienza più personalizzata e coinvolgente per i visitatori, anche se hanno iniziato come estranei. |
 | Stream di dati | [Edge Network di rilevamento di bot](../../datastreams/bot-detection.md) | Il traffico proveniente da entità non umane, come programmi automatizzati, web scraper, ragni, scanner scriptati, può rendere più difficile identificare gli eventi che si verificano dai visitatori umani. Questo tipo di traffico può influenzare negativamente importanti metriche aziendali, portando a rapporti di traffico errati. <br>Il rilevamento dei bot consente di identificare gli eventi generati dai [SDK per web](../../web-sdk/home.md), [SDK per dispositivi mobili](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../../server-api/overview.md) come generate da spider e bot noti. Configurando il rilevamento di bot per gli stream di dati, puoi identificare indirizzi IP, intervalli IP e intestazioni di richiesta specifici che desideri classificare come eventi bot. <br> L’identificazione del traffico da bot può fornire una misurazione più accurata dell’attività degli utenti sul sito o sull’app mobile. |
 | Mobile SDK | Versione principale | Sono state rilasciate nuove versioni principali dell’SDK di Mobile per le seguenti piattaforme: iOS Mobile Core 5.x e estensioni compatibili per iOS, Android Mobile Core 3.x ed estensioni compatibili per Android, React Native Core 6.x e estensioni compatibili per React Native, Flutter Core 4.x ed estensioni compatibili per Flutter. Questa versione include diverse nuove funzioni e miglioramenti, tra cui il supporto nell’SDK per Android per Jetpack Compose, il supporto per esperienze basate su codice Adobe Journey Optimizer e la disponibilità generale dell’estensione Adobe Journey Optimizer Messaging per Flutter. Per note sulla versione più dettagliate, consulta [Note sulla versione dell’SDK Mobile](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | Privacy | A causa dell’aggiornamento della policy di Apple, a partire dal 1° maggio 2024, gli sviluppatori devono implementare nuove funzioni per la privacy per inviare il messaggio a App Store. Tutti i clienti Adobe che utilizzano l’SDK di Mobile devono effettuare l’aggiornamento alla versione 5.x dell’SDK se desiderano ricevere l’approvazione di App Store dopo il 1° maggio. |
