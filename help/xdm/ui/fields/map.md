@@ -2,9 +2,9 @@
 title: Definire i campi mappa nell’interfaccia utente
 description: Scopri come definire un campo mappa nell’interfaccia utente di Experienci Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform consente di personalizzare completamente la struttura delle classi XDM (Experience Data Model) personalizzate, dei gruppi di campi dello schema e dei tipi di dati.
 
-Nell’Editor schema puoi anche definire i campi mappa per modellare strutture di dati flessibili e dinamiche o archiviare una raccolta di coppie chiave-valore. La struttura dei dati delle mappe consente di eseguire ricerche, inserire ed eliminare in modo rapido ed efficiente i dati in cui le informazioni sono organizzate e accessibili in base a identificatori univoci.
+Nell’Editor schema puoi anche definire i campi mappa per modellare strutture di dati flessibili e dinamiche o archiviare una raccolta di coppie chiave-valore.
 
 Quando definisci un nuovo campo nell’interfaccia utente di Platform, utilizza **[!UICONTROL Tipo]** e seleziona &quot;**[!UICONTROL Mappa]**&quot; dall’elenco.
 
@@ -34,6 +34,8 @@ XDM pone le seguenti restrizioni sull’utilizzo di questo tipo di dati:
 * I tipi di mappa DEVONO essere di tipo `object`.
 * I tipi di mappa NON DEVONO avere proprietà definite (in altre parole, definiscono oggetti &quot;vuoti&quot;).
 * I tipi di mappa DEVONO includere un `additionalProperties.type` che descrive i valori che possono essere inseriti nella mappa, `string` o `integer`.
+* La segmentazione multi-entità può essere definita solo in base alle chiavi della mappa e non ai valori.
+* Le mappe non sono supportate per i tipi di pubblico dell’account.
 
 Assicurati di utilizzare campi di tipo mappa solo quando assolutamente necessario, in quanto presentano i seguenti svantaggi in termini di prestazioni:
 
