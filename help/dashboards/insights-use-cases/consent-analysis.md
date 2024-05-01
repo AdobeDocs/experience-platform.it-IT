@@ -2,7 +2,7 @@
 title: Analisi e tracciamento del consenso
 description: Scopri come creare un dashboard di analisi del consenso per tenere traccia delle tendenze del consenso degli utenti nel tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -143,7 +143,7 @@ Dopo aver popolato il compositore di widget con i dati della tabella scelta, eff
 >È ora possibile ridimensionare o spostare il widget alle dimensioni e alla posizione desiderate prima di salvare il dashboard.
 
 
-L’immagine seguente illustra come viene visualizzato il widget finito e altre potenziali informazioni personalizzate. Per ulteriori dettagli sui tipi di widget che è possibile creare, fare riferimento a [documentazione del modello dati](../cdp-insights-data-model.md).
+L’immagine seguente illustra come viene visualizzato il widget finito e altre potenziali informazioni personalizzate. Per ulteriori dettagli sui tipi di widget che è possibile creare, fare riferimento a [documentazione del modello dati](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

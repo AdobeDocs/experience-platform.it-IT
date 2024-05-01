@@ -4,10 +4,10 @@ title: Esplorare, verificare ed elaborare i set di dati del dashboard tramite Qu
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profilo, pubblico e destinazione in Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '944'
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ Per comprendere lo schema completo del set di dati di destinazione DIM, puoi vis
 
 La funzione CDP Insights Data Models espone l’SQL che potenzia le informazioni per vari widget di profilo, destinazione e segmentazione. Puoi personalizzare questi modelli di query SQl per creare rapporti CDP per i casi d’uso di marketing e KPI.
 
-Il reporting di CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con il pubblico e le destinazioni. Per informazioni dettagliate su come eseguire questa operazione, consulta la documentazione di CDP Insights Data Model. [applicare i modelli di dati CDP Insights ai tuoi casi d’uso specifici dei KPI](./cdp-insights-data-model.md).
+Il reporting di CDP fornisce informazioni approfondite sui dati del profilo e sulla sua relazione con il pubblico e le destinazioni. Per informazioni dettagliate su come eseguire questa operazione, consulta la documentazione di CDP Insights Data Model. [applicare i modelli di dati CDP Insights ai tuoi casi d’uso specifici dei KPI](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Query di esempio
 

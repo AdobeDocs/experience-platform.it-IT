@@ -1,9 +1,10 @@
 ---
 title: Audiences Insights
 description: Scopri il linguaggio SQL che attiva le informazioni sul pubblico e utilizza queste query per generare informazioni personalizzate per esplorare ulteriormente i dati sul pubblico da Adobe Experience Platform.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -14,8 +15,7 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sul pubblico accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente le identità e i profili che compongono i tipi di pubblico. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
 Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei tipi di pubblico](../guides/audiences.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ Consulta la [Documentazione del widget attivazioni pianificate](../guides/audien
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere le istruzioni SQL per generare informazioni personalizzate.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md) e [Destinazioni](./destinations.md) dashboard.
+Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md), [Profili account](./account-profiles.md) e [Destinazioni](./destinations.md) dashboard.

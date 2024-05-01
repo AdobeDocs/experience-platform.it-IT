@@ -1,9 +1,10 @@
 ---
 title: Approfondimenti destinazioni
 description: Scopri le istruzioni SQL che alimentano gli insight sulle destinazioni e utilizza queste query per generare insights personalizzati per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform.
-source-git-commit: 3d5dd6300952409e2dddb32eb11547fb43a5feac
+exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
+source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -14,8 +15,7 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sulla destinazione accedendo all’SQL che le alimenta, quindi genera informazioni personalizzate per esplorare ulteriormente l’attivazione dei dati da Adobe Experience Platform alle piattaforme di destinazione. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
 Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard delle destinazioni](../guides/destinations.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
 
@@ -511,13 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere queste query SQL per generare informazioni personalizzate.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md) e [Tipi di pubblico](./audiences.md) dashboard.
-
-<!-- 
-SQL MISSING FROM WIKI:
-Unmapped audiences by identity
-Mapped audiences by identity 
--->
+Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Profili](./profiles.md), [Profili account](./account-profiles.md) e [Tipi di pubblico](./audiences.md) dashboard.

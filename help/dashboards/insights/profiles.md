@@ -1,9 +1,10 @@
 ---
 title: Approfondimenti profilo
 description: Scopri il linguaggio SQL che attiva le informazioni sul profilo e utilizza queste query per generare informazioni personalizzate che esplorano ulteriormente i clienti e le loro esperienze utente.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ Le informazioni derivate dall’analisi del modello dati rendono i dati di Adobe
 
 Comprendi le informazioni sul tuo profilo accedendo all’SQL che li alimenta, quindi genera le tue informazioni per esplorare ulteriormente i tuoi clienti e le loro esperienze utente che compongono i tuoi profili. Trasforma i dati non elaborati in nuove informazioni fruibili utilizzando l’SQL esistente del modello dati di Real-Time CDP come ispirazione per creare query per le tue esigenze aziendali specifiche.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
 Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei profili](../guides/profiles.md) o un personalizzato [dashboard definito dall&#39;utente](../user-defined-dashboards.md). Consulta la [panoramica sulla personalizzazione](../customize/overview.md) per istruzioni su come personalizzare il dashboard o [creare e modificare nuovi widget](../customize/custom-widgets.md) nella libreria widget e [dashboard definito dall&#39;utente](../user-defined-dashboards.md#create-widget).
-
-Le informazioni seguenti sono tutte disponibili per l&#39;utilizzo come parte del [Dashboard dei profili](../guides/profiles.md) o un dashboard personalizzato.
 
 ## Sovrapposizione del pubblico con criterio di unione {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Consulta la [Documentazione dei widget di profili non segmentati](../guides/prof
 
 Una volta letto questo documento, potrai comprendere le istruzioni SQL che generano informazioni approfondite sul dashboard e quali sono le domande più comuni che vengono risolte dall’analisi. Ora puoi modificare e ripetere le istruzioni SQL per generare informazioni personalizzate.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Consulta la [Visualizza documentazione SQL](../view-sql.md) per ulteriori informazioni su come adattare le istruzioni SQL degli approfondimenti direttamente tramite l’interfaccia utente di Platform.
 
-Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Tipi di pubblico](./audiences.md) e [Destinazioni](./destinations.md) dashboard.
+Puoi anche leggere e comprendere il codice SQL che genera informazioni approfondite per [Tipi di pubblico](./audiences.md), [Profili account](./account-profiles.md), e [Destinazioni](./destinations.md) dashboard.

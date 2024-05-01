@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;personalizzazione;dashboard profilo;profilo;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Guida al dashboard delle destinazioni
+title: Dashboard delle destinazioni
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sulle destinazioni attive della tua organizzazione.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3244'
+source-wordcount: '3243'
 ht-degree: 19%
 
 ---

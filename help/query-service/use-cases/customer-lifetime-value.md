@@ -2,7 +2,7 @@
 title: Tracciamento dei segnali di dati per generare il valore del ciclo di vita del cliente
 description: Questa guida fornisce una dimostrazione end-to-end su come utilizzare Data Distiller e dashboard definiti dall’utente con Real-time Customer Data Platform per misurare e visualizzare il valore del ciclo di vita del cliente.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Successivamente, devi creare un modello dati personalizzato o estendere un model
 * Crea tabelle dimensione per estendere il modello di reporting insights.
 * Eseguire una query sul modello dati Exaccelerated Store Reporting Insights
 
-Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../dashboards/cdp-insights-data-model.md).
+Per informazioni su come utilizzare questa funzione, consulta la documentazione sul modello dati di Real-time Customer Data Platform Insights. [personalizza i modelli di query SQL per creare rapporti di Real-Time CDP per i casi d’uso degli indicatori prestazioni chiave (KPI, Key Performance Indicator) di marketing](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Assicurati di impostare una pianificazione per aggiornare il modello dati personalizzato a intervalli regolari. In questo modo i dati vengono reinseriti come parte della pipeline di acquisizione in base alle esigenze e popolano le dashboard definite dall’utente. Consulta la [guida alla pianificazione delle query](../ui/query-schedules.md#create-schedule) per scoprire come impostare la pianificazione.
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guida alle dashboard
 user-guide-description: Scopri come visualizzare i dati in Experience Platform tramite dashboard personalizzabili.
 feature: Dashboards
 role: Developer,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 31%
+source-wordcount: '106'
+ht-degree: 27%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 31%
    * [Profili](insights/profiles.md)
    * [Tipi di pubblico](insights/audiences.md)
    * [Destinazioni](insights/destinations.md)
+   * [Profili account](insights/account-profiles.md)
 * Personalizzare le dashboard {#customize}
    * [Panoramica sulla personalizzazione](customize/overview.md)
    * [Modificare le dashboard](customize/modify.md)
@@ -39,9 +40,11 @@ ht-degree: 31%
    * [Modifica di uno schema](customize/edit-schema.md)
 * Casi di utilizzo di Insights {#insights-use-cases}
    * [Analisi del consenso](insights-use-cases/consent-analysis.md)
+* Modelli di dati disponibili {#data-models}
+   * [Edizione B2B del modello dati di Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edizione B2C del modello dati di Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integrazioni di applicazioni {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Eseguire query sui set di dati del dashboard](query.md)
-* [Modello dati di Real-time Customer Data Platform Insights](cdp-insights-data-model.md)
 * [Visualizza SQL approfondimento](view-sql.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

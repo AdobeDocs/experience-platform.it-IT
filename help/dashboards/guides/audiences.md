@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profilo;pubblico;pubblico;segmentazione;interfaccia utente;personalizzazione;dashboard pubblico;dashboard
-title: Guida al dashboard di Audiences
+title: Dashboard dei tipi di pubblico
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui tipi di pubblico creati dalla tua organizzazione.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 9%
 
 ---

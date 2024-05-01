@@ -1,7 +1,8 @@
 ---
 title: Visualizza SQL approfondimento
 description: Visualizza le istruzioni SQL alla base di Profilo, Pubblico, Destinazione e approfondimenti personalizzati ed esegui la query su richiesta tramite l’Editor query.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ Viene visualizzato l&#39;editor delle query. Ora puoi modificare l’istruzione 
 
 ## Passaggi successivi
 
-Dopo aver letto questo documento, sarai in grado di accedere al linguaggio SQL per ottenere informazioni approfondite all’interno dei dashboard standard o di un dashboard definito dall’utente. Se non lo hai già fatto, ti consigliamo di leggere la [Documento del modello dati di Real-time Customer Data Platform Insights](./cdp-insights-data-model.md). Questo documento contiene informazioni sulla personalizzazione dei modelli SQL per i rapporti di Real-Time CDP personalizzati in base alle tue esigenze di marketing e KPI.
+Dopo aver letto questo documento, sarai in grado di accedere al linguaggio SQL per ottenere informazioni approfondite all’interno dei dashboard standard o di un dashboard definito dall’utente. Se non lo hai già fatto, ti consigliamo di leggere la [Documento del modello dati di Real-time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Questo documento contiene informazioni sulla personalizzazione dei modelli SQL per i rapporti di Real-Time CDP personalizzati in base alle tue esigenze di marketing e KPI.
