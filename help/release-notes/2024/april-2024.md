@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Aprile 2024
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 18%
+source-wordcount: '1851'
+ht-degree: 17%
 
 ---
 
@@ -73,12 +74,12 @@ Per ulteriori informazioni sulle raccolte di dati, consulta [panoramica sulla ra
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
 | `isRequired` Il parametro è ora disponibile per i campi dati cliente nidificati in Destination SDK | Durante la configurazione di una destinazione in Destination SDK, ora puoi [imposta i campi dati cliente nidificati come richiesto](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). In questo modo, gli utenti che impostano la destinazione non possono procedere con il flusso di attivazione fino a quando non selezionano un valore per quel campo. |
+| La segmentazione Edge non è più un requisito obbligatorio quando si imposta una destinazione Adobe Target con Web SDK | Precedentemente, durante la configurazione di un’ [Destinazione Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) con Web SDK, lo stream di dati doveva essere abilitato per la personalizzazione e la segmentazione Edge. Requisito per cui lo stream di dati deve essere abilitato per la segmentazione Edge [è stato rimosso](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Tieni presente che questo modello di integrazione ti consente di beneficiare di un sottoinsieme di casi di utilizzo di personalizzazione solo quando utilizzi Adobe Target con Real-Time CDP. Ulteriori informazioni su [casi d’uso abilitati per tipo di integrazione](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Rimuovi più tipi di pubblico e set di dati dai flussi di attivazione | Ora puoi selezionare e rimuovere più tipi di pubblico e set di dati dai flussi di attivazione della destinazione. Consulta la [dettagli della destinazione](../../destinations/ui/destination-details-page.md#bulk-remove) e [esportazione di set di dati](../../destinations/ui/export-datasets.md) per ulteriori dettagli. |
 
 {style="table-layout:auto"}
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica sulle destinazioni](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Identity Service {#identity-service}
 

@@ -2,7 +2,7 @@
 description: Scopri come creare campi di input nell’interfaccia utente di Experienci Platform, che consentono agli utenti di specificare varie informazioni rilevanti per la connessione e l’esportazione di dati nella destinazione.
 title: Campi dati cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -352,7 +352,7 @@ Per aggiungere un campo nidificato, utilizza `properties` come mostrato di segui
 >
 >A partire dalla versione di aprile 2024, è possibile impostare un’ `isRequired` parametro sui campi nidificati. Ad esempio, nel frammento di configurazione seguente, i primi due campi nidificati sono contrassegnati come obbligatori (riga xxx evidenziata) e i clienti non possono procedere a meno che non selezionino un valore per il campo. Ulteriori informazioni sui campi obbligatori in [parametri supportati](#supported-parameters) sezione.
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",
