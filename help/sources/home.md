@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dei connettori di origini
 description: Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Experienci Platform fornisce supporto per l’acquisizione di dati da un sistema
 
 ### Analytics {#analytics}
 
-Experienci Platform fornisce supporto per l’acquisizione di dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Experienci Platform fornisce supporto per l’acquisizione di dati da una piattaforma di analisi di terze parti. Per ulteriori informazioni, leggere i seguenti documenti correlati:
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Batch]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Streaming]{type=Positive}

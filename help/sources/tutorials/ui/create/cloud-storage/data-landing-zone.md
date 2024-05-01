@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Data Landing Zone;data landing zone
 title: Collegare Data Landing Zone a Platform tramite l’interfaccia utente
 description: Scopri come creare un connettore di origine per la Data Landing Zone utilizzando l’interfaccia utente di Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
