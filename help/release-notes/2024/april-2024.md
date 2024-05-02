@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2024
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1897'
 ht-degree: 17%
 
 ---
@@ -31,15 +31,15 @@ Aggiornamenti alle funzioni esistenti in Experienci Platform:
 
 ## Dashboard {#dashboards}
 
-Adobe Experience Platform fornisce più dashboard attraverso i quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
 **Funzioni nuove o aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Informazioni B2B di Real-time Customer Data Platform | Esplora informazioni preconfigurate sui dati B2B di Real-Time CDP relative agli account e alle opportunità per aiutarti a comprendere i tuoi dati e a prendere decisioni aziendali. Puoi anche creare informazioni personalizzate utilizzando il modello di dati B2B di Real-Time CDP per visualizzare ed esplorare i dati e salvare le visualizzazioni personalizzate nel dashboard. |
+| Informazioni B2B di Real-time Customer Data Platform | Esplora pre-configurato [Informazioni sui dati B2B di Real-Time CDP su account e opportunità](../../dashboards/insights/account-profiles.md) per aiutarti a comprendere i tuoi dati e a prendere decisioni commerciali informate. È inoltre possibile [creare informazioni personalizzate utilizzando il modello dati B2B di Real-Time CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) per visualizzare ed esplorare i dati e salvare le visualizzazioni personalizzate nel dashboard. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Per ulteriori informazioni sulle dashboard, tra cui come concedere le autorizzazioni di accesso e creare widget personalizzati, consulta la [panoramica sulle dashboard](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 | Funzione | Descrizione |
 | --- | --- |
-| Quarantena query | Isolamento automatico delle esecuzioni delle query non riuscite per evitare interruzioni e mantenere prestazioni coerenti. |
-| Annulla query | Controlla l’esecuzione delle query e migliora la produttività annullando le query con tempi di esecuzione lunghi. |
-| Avvisi di query pianificate | Notifiche proattive durante la pianificazione delle query per garantire una gestione efficiente e tempestiva delle attività. È possibile sottoscrivere gli avvisi durante la creazione di una query o utilizzando le azioni in linea per le query pianificate esistenti. |
-| Navigazione query pianificata migliorata | Navigazione semplice tra modelli di query ed esecuzioni pianificate per una maggiore produttività. |
-| Output query esteso | Puoi accedere a un massimo di 500 righe di risultati di query nella console per un’analisi più approfondita dei tuoi dati. |
-| Fine dell’editor di query legacy | A partire dal 30 aprile 2024, l’Editor query avanzato è diventato l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 30 maggio 2024 e non sarà più disponibile. |
+| Quarantena query | Isolamento automatico delle esecuzioni delle query non riuscite per evitare interruzioni e mantenere prestazioni coerenti. Consulta la [quarantena query](../../query-service/ui/query-schedules.md#quarantine) per ulteriori informazioni. |
+| Annulla query | Assumi il controllo dell’esecuzione delle query e migliora la produttività annullando le query con tempi di esecuzione lunghi.Consulta la [annulla query](../../query-service/ui/user-guide.md#cancel-query) per ulteriori informazioni. |
+| Avvisi di query pianificate | Notifiche proattive durante la pianificazione delle query per garantire una gestione efficiente e tempestiva delle attività. È possibile [abbonati agli avvisi durante la creazione di una query](../../query-service/ui/query-schedules.md#alerts-for-query-status) o utilizzando le azioni in linea per le query pianificate esistenti. Consulta la [abbonati agli avvisi con azioni in linea](../../query-service/ui/monitor-queries.md#alert-subscription) per ulteriori informazioni. |
+| Navigazione query pianificata migliorata | Navigazione semplice tra modelli di query ed esecuzioni pianificate per una maggiore produttività. Consulta la documentazione su [visualizzazione delle esecuzioni delle query pianificate](../../query-service/ui/query-schedules.md#scheduled-query-runs) per ulteriori informazioni. |
+| Output query esteso | Puoi accedere a un massimo di 500 righe di risultati di query nella console per un’analisi più approfondita dei dati.Consulta la sezione [conteggio dei risultati](../../query-service/ui/user-guide.md#result-count) per ulteriori informazioni. |
+| Fine dell’editor di query legacy | A partire dal 30 aprile 2024, l’Editor query avanzato è diventato l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 30 maggio 2024 e non sarà più disponibile. Consulta la [Guida utente di Query Editor](../../query-service/ui/user-guide.md) per ulteriori informazioni. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servizio query](../../query-service/home.md).
 

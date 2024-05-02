@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Domande frequenti
 description: Questo documento contiene domande e risposte comuni relative a Query Service. Gli argomenti includono esportazione di dati, strumenti di terze parti ed errori PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
-ht-degree: 1%
+source-wordcount: '4425'
+ht-degree: 0%
 
 ---
 
@@ -125,7 +125,7 @@ Un’interrogazione può essere bloccata durante l’elaborazione per diversi mo
 +++Risposta
 [Un elenco completo dei numeri di telefono dell’assistenza clienti Adobe](https://helpx.adobe.com/ca/contact/phone.html) è disponibile nella guida di Adobe. In alternativa, è possibile trovare la guida online completando i passaggi seguenti:
 
-- Accedi a [https://www.adobe.com/](https://www.adobe.com/) nel browser.
+- Accedi a [https://www.adobe.com/](https://www.adobe.com/it/) nel browser.
 - Sul lato destro della barra di navigazione superiore, seleziona **[!UICONTROL Accedi]**.
 
 ![Il sito web di Adobe con l’opzione Accedi evidenziata.](./images/troubleshooting/adobe-sign-in.png)
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 Consulta anche la documentazione per istruzioni su come eseguire [query pianificate nell’interfaccia utente](./ui/user-guide.md#scheduled-queries) e attraverso [l’API](./api/scheduled-queries.md).
 
-Tieni presente che quando utilizzi [!DNL Query Editor] è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. Questo non si applica al [!DNL Query Service] API.
+Tieni presente che quando utilizzi [!DNL Query Editor] è possibile aggiungere una pianificazione solo a una query già creata e salvata. Questo non si applica al [!DNL Query Service] API.
 +++
 
 ### Cosa significa l’errore &quot;Limite di sessione raggiunto&quot;?

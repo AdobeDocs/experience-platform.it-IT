@@ -3,9 +3,10 @@ title: Edizione B2B di Real-time Customer Data Platform Insights Data Model
 description: Scopri come utilizzare le query SQL con Real-time Customer Data Platform Insights Data Models (B2B Edition) per personalizzare i rapporti di Real-Time CDP per i casi d’uso di marketing e KPI.
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ Il diagramma seguente mostra i campi di dati rilevanti in ciascun set di dati, i
 
 ![Diagramma relazionale dell’entità per il modello Profilo conto.](../images/data-models/account-profile-model.png)
 
-#### Caso di utilizzo Account per settore {#accounts-by-industry}
+#### Il nuovo caso d’uso account per settore {#accounts-by-industry}
 
-Logica utilizzata per [!UICONTROL Account per settore] insight restituisce i primi cinque settori in base al loro numero di profili di account e alle loro dimensioni relative l’uno rispetto all’altro. Consulta la [[!UICONTROL Account per settore] documentazione widget](../guides/account-profiles.md#accounts-by-industry) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al loro numero di profili di account e alle loro dimensioni relative l’uno rispetto all’altro. Consulta la [[!UICONTROL Account per settore] documentazione widget](../guides/account-profiles.md#accounts-by-industry) per ulteriori informazioni.
 
 >[!TIP]
 >
 >È possibile personalizzare questa query SQL per restituire un numero maggiore o minore di quello dei primi cinque settori.
 
-SQL che genera il codice [!UICONTROL Account per settore] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Nuovi account per settore] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
 
 Query +++SQL
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### Caso di utilizzo Account per tipo {#accounts-by-type}
+#### Caso di utilizzo: Nuovi account per tipo {#accounts-by-type}
 
-Logica utilizzata per [!UICONTROL Account per tipo] insight restituisce il raggruppamento numerico dei conti per il loro tipo. Questa informazione può essere utile per guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Consulta la [[!UICONTROL Account per tipo] documentazione widget](../guides/account-profiles.md#accounts-by-type) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Nuovi account per tipo] insight restituisce il raggruppamento numerico dei conti per il loro tipo. Questa informazione può essere utile per guidare la strategia e le operazioni aziendali, incluse le strategie di allocazione delle risorse o di marketing. Consulta la [[!UICONTROL Nuovi account per tipo] documentazione widget](../guides/account-profiles.md#accounts-by-type) per ulteriori informazioni.
 
-SQL che genera il codice [!UICONTROL Account per tipo] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
+SQL che genera il codice [!UICONTROL Nuovi account per tipo] per ulteriori informazioni, consulta la sezione comprimibile di seguito.
 
 Query +++SQL
 

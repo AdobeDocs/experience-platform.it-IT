@@ -3,9 +3,10 @@ title: Informazioni sul profilo account
 description: Scopri il linguaggio SQL che attiva le informazioni sul profilo account e utilizza queste query per generare informazioni personalizzate che esplorano ulteriormente i clienti e le loro esperienze utente.
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Account per settore {#accounts-by-industry}
+## Nuovi account per settore {#accounts-by-industry}
 
 Domande a cui questa informazione ha risposto:
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Account per tipo {#accounts-by-type}
+## Nuovi account per tipo {#accounts-by-type}
 
 Domande a cui questa informazione ha risposto:
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunità per ruolo persona {#opportunities-by-person-role}
+## Nuove opportunità per ruolo persona {#opportunities-by-person-role}
 
 Domande a cui questa informazione ha risposto:
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunità per ricavo {#opportunities-by-revenue}
+## Nuove opportunità in base ai ricavi {#opportunities-by-revenue}
 
 Domande a cui questa informazione ha risposto:
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Opportunità per stato e fase {#opportunities-by-status-and-stage}
+## Nuove opportunità per stato e fase {#opportunities-by-status-and-stage}
 
 Domande a cui questa informazione ha risposto:
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Opportunità realizzate {#opportunities-won}
+## Nuove opportunità realizzate {#opportunities-won}
 
 Domande a cui questa informazione ha risposto:
 

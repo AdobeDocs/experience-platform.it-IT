@@ -2,9 +2,9 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ Le informazioni sul profilo account visualizzate nel [!UICONTROL Dettagli] La sc
 
 Questo Adobe fornisce widget standard che puoi utilizzare per visualizzare diverse metriche relative ai profili del tuo account.
 
+>[!IMPORTANT]
+>
+>Se non fornisci un filtro per date, il comportamento predefinito di Insights analizza i dati aggiunti dall’anno precedente fino a oggi.
+
 Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezionare il nome di un widget dall&#39;elenco seguente:
 
 * [Profili account aggiunti](#account-profiles-added)
-* [Account per settore](#accounts-by-industry)
-* [Account per tipo](#accounts-by-type)
+* [Nuovi account per settore](#accounts-by-industry)
+* [Nuovi account per tipo](#accounts-by-type)
 * [Opportunità aggiunte](#opportunities-added)
-* [Opportunità per ruolo persona](#opportunities-by-person-role)
-* [Opportunità per ricavo](#opportunities-by-revenue)
-* [Opportunità per stato e fase](#opportunities-by-status-&-stage)
-* [Opportunità realizzate](#opportunities-won)
+* [Nuove opportunità per ruolo persona](#opportunities-by-person-role)
+* [Nuove opportunità in base ai ricavi](#opportunities-by-revenue)
+* [Nuove opportunità per stato e fase](#opportunities-by-status-&-stage)
+* [Nuove opportunità realizzate](#opportunities-won)
 * [Distribuzione del punteggio predittivo](#predictive-scoring-distribution)
 * [Fattori influenti principali con punteggio predittivo](#predictive-scoring-top-influential-factors)
 * [Totale account per settore](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ Il [!UICONTROL Profili account aggiunti] il widget utilizza un grafico a linee p
 
 ![Il widget Profili account aggiunto.](../images/account-profiles/account-profiles-added.png)
 
-### Account per settore {#accounts-by-industry}
+### Nuovi account per settore {#accounts-by-industry}
 
-Il [!UICONTROL Account per settore] widget mostra il numero totale di account in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei diversi settori che compongono questo totale. Un codice colore fornisce una suddivisione di tutti i settori inclusi. I conteggi individuali per ciascun settore vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
+Il [!UICONTROL Nuovi account per settore] widget mostra il numero totale di account in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei diversi settori che compongono questo totale. Un codice colore fornisce una suddivisione di tutti i settori inclusi. I conteggi individuali per ciascun settore vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
-![Il widget Account per settore.](../images/account-profiles/accounts-by-industry.png)
+![I nuovi account per widget di settore.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Account per tipo {#accounts-by-type}
+### Nuovi account per tipo {#accounts-by-type}
 
-Il [!UICONTROL Account per tipo] widget mostra il numero totale di account in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei diversi tipi di conto che compongono questo totale. Una chiave con codice colore fornisce un raggruppamento di tutti i tipi di conto inclusi. I conteggi individuali per ciascun tipo di account vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
+Il [!UICONTROL Nuovi account per tipo] widget mostra il numero totale di account in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei diversi tipi di conto che compongono questo totale. Una chiave con codice colore fornisce un raggruppamento di tutti i tipi di conto inclusi. I conteggi individuali per ciascun tipo di account vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
-![Il widget Account per tipo.](../images/account-profiles/accounts-by-type.png)
+![Il widget Nuovi account per tipo.](../images/account-profiles/new-accounts-by-type.png)
 
 ### Opportunità aggiunte {#opportunities-added}
 
@@ -107,35 +111,35 @@ Il [!UICONTROL Opportunità aggiunte] il widget utilizza un grafico a linee per 
 
 ![Il widget Opportunità aggiunto.](../images/account-profiles/opportunities-added.png)
 
-### Opportunità per ruolo persona {#opportunities-by-person-role}
+### Nuove opportunità per ruolo persona {#opportunities-by-person-role}
 
-Il [!UICONTROL Opportunità per ruolo persona] widget mostra il numero totale di opportunità in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei ruoli che compongono questo numero totale di opportunità. Una chiave con codice colore fornisce un raggruppamento di tutti i ruoli inclusi. I conteggi individuali per ciascun ruolo vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
+Il [!UICONTROL Nuove opportunità per ruolo persona] widget mostra il numero totale di opportunità in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei ruoli che compongono questo numero totale di opportunità. Una chiave con codice colore fornisce un raggruppamento di tutti i ruoli inclusi. I conteggi individuali per ciascun ruolo vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
 >[!NOTE]
 >
 >Il [!UICONTROL Nessun dato trovato] o [!UICONTROL Impossibile caricare] si verifica un errore quando la tabella bridge &quot;Opportunity-Person&quot; non viene utilizzata nello schema. Se la tua informazione mostra uno di questi errori, controlla lo schema di unione e assicurati che il gruppo di campi &quot;Opportunità-Persona&quot; acquisisca i dati.
 
-![Il widget Opportunità per ruolo persona.](../images/account-profiles/opportunities-by-person-role.png)
+![Il widget Nuove opportunità per ruolo persona.](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Opportunità per ricavo {#opportunities-by-revenue}
+### Nuove opportunità in base ai ricavi {#opportunities-by-revenue}
 
-Il [!UICONTROL Opportunità per ricavo] widget utilizza un grafico a barre per illustrare la quantità totale stimata di ricavi generati dalle opportunità. Il widget supporta fino a sei opportunità.
+Il [!UICONTROL Nuove opportunità in base ai ricavi] widget utilizza un grafico a barre per illustrare la quantità totale stimata di ricavi generati dalle opportunità. Il widget supporta fino a sei opportunità.
 
 Per visualizzare una finestra di dialogo contenente il totale dei ricavi specifici di un’opportunità, utilizza il cursore per passare il puntatore del mouse sulle singole barre.
 
-![Il widget Opportunità per ricavi.](../images/account-profiles/opportunities-by-revenue.png)
+![Il widget Nuove opportunità per ricavi.](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Opportunità per stato e fase {#opportunities-by-status-&-stage}
+### Nuove opportunità per stato e fase {#opportunities-by-status-&-stage}
 
 Questo widget utilizza un grafico a barre per illustrare il numero di opportunità aperte o chiuse in tutte le fasi del funnel marketing/vendite. Il widget utilizza i colori per differenziare lo stadio delle opportunità. Una chiave con codice colore indica le fasi disponibili per le opportunità.
 
-![Il widget Opportunità per stato e fase.](../images/account-profiles/opportunities-by-status-&-stage.png)
+![Il widget Nuove opportunità per stato e fase.](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Opportunità realizzate {#opportunities-won}
+### Nuove opportunità realizzate {#opportunities-won}
 
-Il [!UICONTROL Opportunità realizzate] widget mostra il numero totale di opportunità finalizzate correttamente in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa delle opportunità che vengono vinte o meno. Una chiave con codice colore distingue tra opportunità realizzate e opportunità non realizzate. I conteggi individuali per ciascun ruolo vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
+Il [!UICONTROL Nuove opportunità realizzate] widget mostra il numero totale di opportunità finalizzate correttamente in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa delle opportunità che vengono vinte o meno. Una chiave con codice colore distingue tra opportunità realizzate e opportunità non realizzate. I conteggi individuali per ciascun ruolo vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
-![Il widget Opportunities ha vinto.](../images/account-profiles/opportunities-won.png)
+![Il widget Nuove opportunità ha vinto.](../images/account-profiles/new-opportunities-won.png)
 
 ### Distribuzione del punteggio predittivo {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 ### Totale account per settore {#total-accounts-by-industry}
 
 Questo widget visualizza il numero totale di conti in una singola metrica e utilizza un grafico ad anello per illustrare le dimensioni proporzionali dei conteggi per i settori che compongono il numero complessivo. La chiave fornisce informazioni di codifica del colore per i diversi settori che compongono il grafico ad anello.
+
+>[!NOTE]
+>
+>Le informazioni visualizzate da questa informazione dipendono dall’intervallo di date specificato dall’utente. Se non fornisci un filtro per date, il comportamento predefinito di Insight analizza i dati aggiunti dall’anno precedente fino a oggi.
 
 I conteggi individuali per i diversi settori vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 

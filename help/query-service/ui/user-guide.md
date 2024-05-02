@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 2%
 
 ---
 
 # [!DNL Query Editor] Guida all’interfaccia utente
+
+>[!NOTE]
+>
+>Al 30 aprile 2024 [Editor query avanzato](#enhanced-editor-toggle) è diventato l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 30 maggio 2024 e non sarà più disponibile.
 
 [!DNL Query Editor] è uno strumento interattivo fornito da Adobe Experience Platform [!DNL Query Service], che consente di scrivere, convalidare ed eseguire query per i dati sulla customer experience in [!DNL Experience Platform] dell&#39;utente. [!DNL Query Editor] supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ Quando salvi una query nell’editor delle query, viene visualizzato un messaggi
 
 Le query salvate come modello possono essere pianificate dall&#39;Editor query. La pianificazione delle query consente di automatizzare l’esecuzione delle query su una cadenza personalizzata. Puoi pianificare le query in base a frequenza, data e ora e, se necessario, scegliere anche un set di dati di output per i risultati. Le pianificazioni delle query possono anche essere disabilitate o eliminate tramite l’interfaccia utente.
 
-Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata, salvata ed eseguita. La stessa limitazione non si applica al [!DNL Query Service] API.
+Le pianificazioni vengono impostate nell&#39;editor delle query. Quando si utilizza l&#39;editor delle query, è possibile aggiungere una pianificazione solo a una query già creata e salvata. La stessa limitazione non si applica al [!DNL Query Service] API.
 
 >[!NOTE]
 >
