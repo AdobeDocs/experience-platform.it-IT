@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4274'
 ht-degree: 2%
 
 ---
@@ -82,12 +82,8 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Applica etichette di accesso] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Pubblica] | Caricamento personalizzato, servizio di segmentazione | Pubblica il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consultare [sezione lifecycle state (stato del ciclo di vita) nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Disattivare] | Caricamento personalizzato, servizio di segmentazione | Disattiva il pubblico selezionato. Per ulteriori informazioni sulla gestione dello stato del ciclo di vita, consultare [sezione lifecycle state (stato del ciclo di vita) nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
-| [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. |
+| [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. Tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico **non può** essere soppressa. Per ulteriori informazioni sull’eliminazione del pubblico, consulta la sezione [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> Lo farai **non** essere in grado di eliminare un pubblico utilizzato in un’attivazione di destinazione.
 
 Nella parte superiore della pagina sono presenti opzioni per aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico, creare un nuovo pubblico e visualizzare un raggruppamento della frequenza di aggiornamento.
 
@@ -356,6 +352,15 @@ Quando importi il pubblico generato esternamente, devi selezionare una delle col
 
 ![Il [!UICONTROL Dettagli del pubblico] viene visualizzata.](../images/ui/overview/import-audience-audience-details.png)
 
+Facoltativamente, puoi anche aggiungere alcuni dettagli aggiuntivi al pubblico generato esternamente, ad esempio assegnargli un ID, definirne il criterio di unione o modificarne il tipo di dati di colonna.
+
+>[!NOTE]
+>
+>Se utilizzi un ID pubblico esterno personalizzato, questo deve rispettare le seguenti linee guida:
+>
+> - It **deve** inizia con una lettera (a-z o A-Z), un carattere di sottolineatura (_) o un simbolo del dollaro ($).
+> - Tutti i caratteri successivi possono essere alfanumerici (a-z, A-Z, 0-9), trattini bassi (_) o segni di dollaro ($).
+
 Dopo aver inserito i dettagli del pubblico, seleziona **[!UICONTROL Successivo]**.
 
 ![Il [!UICONTROL Successivo] viene evidenziato sulla [!UICONTROL Dettagli del pubblico] pagina.](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ Seleziona la **[!UICONTROL Composizioni]** per visualizzare un elenco di tutti i
 ![Un elenco di tipi di pubblico creati in Composizione pubblico per la tua organizzazione.](../images/ui/overview/compositions.png)
 
 Per impostazione predefinita, questa visualizzazione elenca informazioni sui tipi di pubblico, tra cui nome, stato, data di creazione, data di creazione, data dell’ultimo aggiornamento e data dell’ultimo aggiornamento di.
+
+Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Selezionando questa opzione viene visualizzato un elenco delle azioni rapide disponibili per il pubblico.
+
+| Azione | Descrizione |
+| ------ | ----------- |
+| Duplica | Copia il pubblico selezionato. |
+| Gestisci accesso | Gestisce le etichette di accesso che appartengono al pubblico. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
+| Elimina | Elimina il pubblico selezionato. Tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico **non può** essere soppressa. Per ulteriori informazioni sull’eliminazione del pubblico, consulta la sezione [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 
 È possibile selezionare ![Personalizza tabella](../images/ui/overview/customize-table.png) per modificare i campi visualizzati.
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Tipi di pubblico simili
 description: Scopri come eseguire il targeting di nuovi tipi di pubblico di alto valore in Adobe Experience Platform utilizzando tipi di pubblico simili.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -197,7 +197,7 @@ I tipi di pubblico simili possono essere configurati in modo da escludere i camp
 
 L’etichetta standard &quot;C9&quot; può essere utilizzata per etichettare i dati che non devono essere utilizzati per la scienza dei dati e può essere applicata abilitando la politica standard &quot;Limita scienza dei dati&quot;. Puoi anche creare criteri aggiuntivi per limitare i dati con altre etichette, comprese le etichette sensibili, dall’utilizzo per data science. Per ulteriori informazioni sulla gestione dei criteri di utilizzo dei dati, consulta [guida dell’interfaccia utente dei criteri di utilizzo dei dati](../../data-governance/policies/user-guide.md). Per ulteriori informazioni sulla gestione delle etichette di utilizzo dei dati, consulta [guida dell’interfaccia utente per le etichette di utilizzo dei dati](../../data-governance/labels/user-guide.md).
 
-Per impostazione predefinita, il processo di modellazione per i tipi di pubblico simili escluderà **qualsiasi** campo, set di dati o pubblico in base all’informativa sulla privacy abilitata per la tua organizzazione. Se il pubblico di base non dispone di etichette di contratto, il processo di modellazione escluderà **qualsiasi** campo, set di dati o pubblico in base all’informativa sulla privacy abilitata per la tua organizzazione.
+Per impostazione predefinita, se un pubblico di base non ha etichette di contratto, il processo di modellazione per i tipi di pubblico simili escluderà **qualsiasi** campo, set di dati o pubblico in base all’informativa sulla privacy abilitata per la tua organizzazione.
 
 ## Passaggi successivi
 
