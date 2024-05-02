@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ Aggiungere tipi di pubblico al blocco Pubblico. seleziona **[!UICONTROL Aggiungi
 >[!IMPORTANT]
 >
 >Tieni presente che **solo** verranno visualizzati i tipi di pubblico definiti utilizzando il criterio di unione predefinito.
+>
+>Inoltre, solo **pubblicato** Puoi utilizzare i tipi di pubblico creati con Segment Builder (Generatore di segmenti). I tipi di pubblico creati utilizzando la Composizione del pubblico e quelli generati esternamente sono **non** disponibile.
 
 Viene visualizzato un elenco di tipi di pubblico. Seleziona i tipi di pubblico da includere, seguito da **[!UICONTROL Aggiungi]** per aggiungerli al blocco di pubblico.
 
@@ -101,6 +103,10 @@ Il **[!UICONTROL Escludi]** viene aggiunto il blocco. Quando questo blocco è se
 Se escludi per pubblico, puoi selezionare i tipi di pubblico da escludere selezionando **[!UICONTROL Aggiungi pubblico]**.
 
 ![Il [!UICONTROL Aggiungi pubblico] che consente di scegliere il pubblico da escludere.](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>Solo **pubblicato** Puoi utilizzare i tipi di pubblico creati con Segment Builder (Generatore di segmenti). I tipi di pubblico creati utilizzando la Composizione del pubblico e quelli generati esternamente sono **non** disponibile.
 
 Viene visualizzato un elenco di tipi di pubblico. Seleziona **[!UICONTROL Aggiungi]** per aggiungere i tipi di pubblico da escludere al blocco di esclusione.
 
