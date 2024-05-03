@@ -2,9 +2,9 @@
 title: Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 description: Estensione tag Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '2024'
 ht-degree: 32%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 32%
 # Note sulla versione dell’estensione Adobe Experience Platform Web SDK
 
 Questo documento descrive le note sulla versione dell’estensione tag Adobe Experience Platform Web SDK. Per le ultime note sulla versione dell’SDK, consulta [Note sulla versione di Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versione 2.22.0 - 3 maggio 2024
+
+**Nuove funzioni**
+
+* Estendere l’elemento dati variabile per supportare gli oggetti dati.
+* L’azione Aggiorna variabile ora supporta la modifica dei dati pass-through di Adobe Analytics, Adobe Audience Manager e Adobe Target.
+
+Contiene la versione 2.19.2 di Adobe Experience Platform Web SDK.
 
 ## Versione 2.21.4 - 10 gennaio 2024
 
@@ -176,7 +185,7 @@ Contiene la versione 2.8.0 della libreria dell’SDK per web di Adobe Experience
 
 Contiene la versione 2.7.0 della libreria dell’SDK per web di Adobe Experience Platform.
 
-* Ulteriori informazioni da Edge Network sono disponibili nell’evento Send Event Complete, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
+* Ulteriori informazioni dall’Edge Network sono disponibili nell’evento Invia evento come completato, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
 
 ## Versione 2.7.3 - 7 settembre 2021
 
