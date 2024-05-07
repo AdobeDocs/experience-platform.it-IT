@@ -1,17 +1,17 @@
 ---
 title: Configurare gli override dello stream di dati
-description: Scopri come configurare gli override dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite il Web SDK.
+description: Scopri come configurare le sostituzioni dello stream di dati nell’interfaccia utente dello stream di dati e attivarle tramite l’SDK per web o l’SDK di Mobile.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # Configurare gli override dello stream di dati
 
-Gli override dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passate alla rete Edge tramite il Web SDK.
+Le sostituzioni dello stream di dati consentono di definire configurazioni aggiuntive per gli stream di dati, che vengono passati all’Edge Network tramite l’SDK per web o l’SDK di Mobile.
 
 Questo consente di attivare comportamenti diversi dello stream di dati rispetto a quelli predefiniti, senza creare uno stream di dati o modificare le impostazioni esistenti.
 
@@ -68,7 +68,7 @@ Dopo aver creato lo stream di dati, modifica il [Adobe Target](configure.md#targ
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora dovresti avere configurato gli override dello stream di dati di Adobe Target. Ora puoi [inviare gli override alla rete Edge tramite Web SDK](#send-overrides).
+Ora dovresti avere configurato gli override dello stream di dati di Adobe Target. Ora puoi [inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override dello stream di dati per Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Seleziona **[!UICONTROL Mostra modalità batch]** per attivare la modifica in ba
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora gli override dello stream di dati di Adobe Analytics saranno configurati. Ora puoi [inviare gli override alla rete Edge tramite Web SDK](#send-overrides).
+Ora gli override dello stream di dati di Adobe Analytics saranno configurati. Ora puoi [inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override di stream di dati per i set di dati evento di Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Dopo aver creato lo stream di dati, modifica il [Adobe Experience Platform](conf
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora dovresti aver configurato gli override dello stream di dati di Adobe Experience Platform. Ora puoi [inviare gli override alla rete Edge tramite Web SDK](#send-overrides).
+Ora dovresti aver configurato gli override dello stream di dati di Adobe Experience Platform. Ora puoi [inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
 ### Override dello stream di dati per i contenitori di sincronizzazione ID di terze parti {#container-overrides}
 
@@ -112,9 +112,9 @@ Quindi, utilizza la sezione **[!UICONTROL Override ID contenitore]** per aggiung
 
 Dopo aver aggiunto gli override desiderati, salva le impostazioni dello stream di dati.
 
-Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora puoi [inviare gli override alla rete Edge tramite Web SDK](#send-overrides).
+Ora gli override del contenitore di sincronizzazione ID saranno configurati. Ora puoi [inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK](#send-overrides).
 
-## Inviare gli override alla rete Edge tramite Web SDK {#send-overrides}
+## Inviare le sostituzioni all’Edge Network {#send-overrides}
 
 Dopo aver configurato le sostituzioni dello stream di dati nell’interfaccia utente di Data Collection, puoi inviare le sostituzioni all’Edge Network tramite Web SDK o Mobile SDK.
 
