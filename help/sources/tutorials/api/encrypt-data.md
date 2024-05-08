@@ -2,16 +2,16 @@
 title: Acquisizione di dati crittografati
 description: Scopri come acquisire i file crittografati tramite le origini batch di archiviazione cloud utilizzando l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
 
 # Acquisizione di dati crittografati
 
-Adobe Experience Platform consente di acquisire file crittografati tramite origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experienci Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
+Puoi acquisire i file di dati crittografati in Adobe Experience Platform utilizzando origini batch di archiviazione cloud. Con l’acquisizione di dati crittografati, puoi sfruttare meccanismi di crittografia asimmetrica per trasferire in modo sicuro i dati batch in Experienci Platform. Attualmente, i meccanismi di crittografia asimmetrica supportati sono PGP e GPG.
 
 Il processo di acquisizione dei dati crittografati è il seguente:
 
@@ -27,7 +27,7 @@ Il processo di acquisizione dei dati crittografati è il seguente:
 
 In questo documento vengono descritti i passaggi necessari per generare una coppia di chiavi di crittografia per crittografare i dati e acquisirli per l’Experience Platform utilizzando origini di archiviazione cloud.
 
-## Introduzione
+## Introduzione {#get-started}
 
 Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -39,9 +39,9 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di Adobe E
 
 Per informazioni su come effettuare correttamente chiamate alle API di Platform, consulta la guida su [introduzione alle API di Platform](../../../landing/api-guide.md).
 
-### Estensioni di file supportate per i file crittografati
+### Estensioni di file supportate per i file crittografati {#supported-file-extensions-for-encrypted-files}
 
-Di seguito è riportato l&#39;elenco delle estensioni di file supportate per i file crittografati:
+L’elenco delle estensioni di file supportate per i file crittografati è:
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Richiesta**
 
++++Visualizza richiesta di esempio
+
 La richiesta seguente genera una coppia di chiavi di crittografia utilizzando l’algoritmo di crittografia PGP.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
 | `params.passPhrase` | La passphrase fornisce un ulteriore livello di protezione per le chiavi di crittografia. Al momento della creazione, Experienci Platform memorizza la passphrase in un archivio protetto diverso dalla chiave pubblica. Specificare una stringa non vuota come passphrase. |
 
++++
+
 **Risposta**
+
++++Visualizza risposta di esempio
 
 In caso di esito positivo, la risposta restituisce la chiave pubblica con codifica Base64, l’ID della chiave pubblica e l’ora di scadenza delle chiavi. Il tempo di scadenza viene impostato automaticamente su 180 giorni dopo la data di generazione della chiave. L’ora di scadenza non è attualmente configurabile.
 
@@ -115,9 +121,93 @@ In caso di esito positivo, la risposta restituisce la chiave pubblica con codifi
 | `publicKeyId` | L’ID della chiave pubblica viene utilizzato per creare un flusso di dati e acquisire i dati di archiviazione cloud crittografati per Experienci Platform. |
 | `expiryTime` | L&#39;ora di scadenza definisce la data di scadenza della coppia di chiavi di crittografia. Questa data viene impostata automaticamente su 180 giorni dopo la data di generazione della chiave e viene visualizzata in formato timestamp unix. |
 
-+++(Facoltativo) Crea una coppia di chiavi di verifica firma per i dati firmati
++++
 
-### Creare una coppia di chiavi gestite dal cliente
+### Recuperare le chiavi di crittografia {#retrieve-encryption-keys}
+
+Per recuperare tutte le chiavi di crittografia dell’organizzazione, effettua una richiesta GET al `/encryption/keys` endpoint=nt.
+
+**Formato API**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
+
+La richiesta seguente recupera tutte le chiavi di crittografia dell’organizzazione.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Risposta**
+
++++Visualizza risposta di esempio
+
+In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, la chiave pubblica, l’ID della chiave pubblica e la corrispondente data di scadenza delle chiavi.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Recupera chiavi di crittografia per ID {#retrieve-encryption-keys-by-id}
+
+Per recuperare un set specifico di chiavi di crittografia, effettuare una richiesta GET al `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
+
+**Formato API**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Risposta**
+
++++Visualizza risposta di esempio
+
+In caso di esito positivo, la risposta restituisce l’algoritmo di crittografia, la chiave pubblica, l’ID della chiave pubblica e la corrispondente data di scadenza delle chiavi.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Creare una coppia di chiavi gestite dal cliente {#create-customer-managed-key-pair}
 
 Facoltativamente, puoi creare una coppia di chiavi per la verifica della firma per firmare e acquisire i dati crittografati.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Richiesta**
+
++++Visualizza richiesta di esempio
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Tipo di algoritmo di crittografia in uso. I tipi di crittografia supportati sono `PGP` e `GPG`. |
 | `publicKey` | La chiave pubblica che corrisponde alle chiavi gestite dal cliente utilizzate per la firma del file crittografato. Questa chiave deve avere la codifica Base64. |
 
++++
+
 **Risposta**
+
++++Visualizza risposta di esempio
 
 ```json
 {    
@@ -196,7 +292,7 @@ Dopo aver creato una connessione di base, è necessario seguire i passaggi descr
 >* [ID chiave pubblica](#create-encryption-key-pair)
 >* [ID connessione sorgente](../api/collect/cloud-storage.md#source)
 >* [ID connessione di destinazione](../api/collect/cloud-storage.md#target)
->* [ID di mappatura](../api/collect/cloud-storage.md#mapping)
+>* [ID mappatura](../api/collect/cloud-storage.md#mapping)
 
 Per creare un flusso di dati, effettua una richiesta POST al `/flows` endpoint del [!DNL Flow Service] API. Per acquisire i dati crittografati, è necessario aggiungere una `encryption` sezione al `transformations` e includere `publicKeyId` creato in un passaggio precedente.
 
@@ -206,11 +302,13 @@ Per creare un flusso di dati, effettua una richiesta POST al `/flows` endpoint d
 POST /flows
 ```
 
-**Richiesta**
-
 >[!BEGINTABS]
 
 >[!TAB Creare un flusso di dati per l’acquisizione di dati crittografati]
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
 
 La seguente richiesta crea un flusso di dati per acquisire dati crittografati per un’origine di archiviazione cloud.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | La frequenza con cui il flusso di dati raccoglierà i dati. I valori accettabili includono: `once`, `minute`, `hour`, `day`, o `week`. |
 | `scheduleParams.interval` | L’intervallo indica il periodo tra due esecuzioni consecutive del flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. Intervallo non richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
 
++++
+
+**Risposta**
+
++++Visualizza risposta di esempio
+
+In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato per i dati crittografati.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Creare un flusso di dati per acquisire dati crittografati e firmati]
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | L’ID della chiave di verifica della firma è uguale all’ID della chiave pubblica recuperato dopo la condivisione della chiave pubblica con codifica Base64 con Experienci Platform. |
 
->[!ENDTABS]
++++
 
 **Risposta**
+
++++Visualizza risposta di esempio
 
 In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di dati appena creato per i dati crittografati.
 
@@ -331,10 +451,92 @@ In caso di esito positivo, la risposta restituisce l’ID (`id`) del flusso di d
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Limitazioni all’acquisizione ricorrente**
+### Elimina chiavi di crittografia {#delete-encryption-keys}
+
+Per eliminare le chiavi di crittografia, invia una richiesta DELETE al `/encryption/keys` e fornire l&#39;ID della chiave pubblica come parametro di intestazione.
+
+**Formato API**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce lo stato HTTP 204 (nessun contenuto) e un corpo vuoto.
+
+### Convalidare le chiavi di crittografia {#validate-encryption-keys}
+
+Per convalidare le chiavi di crittografia, invia una richiesta di GET al `/encryption/keys/validate/` e fornire l&#39;ID della chiave pubblica da convalidare come parametro di intestazione.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Richiesta**
+
++++Visualizza richiesta di esempio
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Risposta**
+
+In caso di esito positivo, la risposta restituisce la conferma che gli ID sono validi o non validi.
+
+>[!BEGINTABS]
+
+>[!TAB Valido]
+
+Un ID di chiave pubblica valido restituisce lo stato `Active` insieme all’ID della chiave pubblica.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Non valido]
+
+Un ID di chiave pubblica non valido restituisce lo stato `Expired` insieme all’ID della chiave pubblica.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Limitazioni all’acquisizione ricorrente {#restrictions-on-recurring-ingestion}
 
 L’acquisizione di dati crittografati non supporta l’acquisizione di cartelle ricorrenti o a più livelli nelle origini. Tutti i file crittografati devono essere contenuti in una singola cartella. Non sono supportati neanche i caratteri jolly con più cartelle in un unico percorso di origine.
 
@@ -356,14 +558,13 @@ In questo scenario, l’esecuzione del flusso non riuscirà e restituirà un mes
 * ACME-clienti
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * Sottocartella1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * fedeltà ACME
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Passaggi successivi
 
