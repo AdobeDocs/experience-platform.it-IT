@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Panoramica di Intelligent Services
 description: I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi di utilizzo dell’esperienza del cliente. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un’azienda utilizzando configurazioni a livello aziendale senza la necessità di competenze in materia di data science. Inoltre, i professionisti del marketing possono attivare le previsioni in applicazioni Adobe Experience Cloud, Adobe Experience Platform e di terze parti.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Panoramica di Intelligent Services
+# Panoramica di Intelligent Services {#intelligent-services-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_home"
+>title="Panoramica di Intelligent Services"
+>abstract=""
 
 I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell’intelligenza artificiale e dell’apprendimento automatico nei casi di utilizzo dell’esperienza del cliente. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un’azienda utilizzando configurazioni a livello aziendale senza la necessità di competenze in materia di data science. Inoltre, i professionisti del marketing possono attivare le previsioni in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform]e applicazioni di terze parti.
 
@@ -41,7 +46,7 @@ Consenti agli esperti di marketing di iniziare subito a utilizzare AI/ML e inizi
 
 I dati del cliente vengono acquisiti e trasformati con Experience Data Model (XDM) in [!DNL Adobe Experience Platform]. Per ulteriori informazioni su XDM, visita [Panoramica di XDM](../xdm/home.md).
 
-### Configura le 
+### Configurare
 
 L’analista marketing configura le previsioni desiderate specificando le regole di business e identificando i dati rilevanti.
 
