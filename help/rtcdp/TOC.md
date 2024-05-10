@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guida di Real-time Customer Data Platform
 user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, tipi di pubblico da tali profili e attivare tali tipi di pubblico in destinazioni di terze parti.
 role: Admin
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 67%
+source-wordcount: '301'
+ht-degree: 66%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 67%
    * Arricchimento del profilo {#profile-enrichment}
       * [Integrare i profili di prime parti con gli attributi forniti dai partner](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Approfondimenti personalizzati e coinvolgimento {#personalization-insights-engagement}
+      * [Valorizzazione del cliente una tantum in base al valore del ciclo di vita](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Coinvolgi di nuovo i tuoi clienti in modo intelligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Coinvolgi nuovamente i tuoi clienti in modo intelligente: esempi di Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Note sulla versione di Experience Platform](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
