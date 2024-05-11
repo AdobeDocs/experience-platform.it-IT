@@ -1,17 +1,18 @@
 ---
-title: Dashboard definiti dall'utente
+title: Dashboard personalizzati
 description: Scopri come creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare le metriche chiave.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 2%
 
 ---
 
-# Dashboard definite dall’utente
+# Dashboard personalizzati
 
-Le dashboard di Adobe Experience Platform consentono di velocizzare le informazioni e personalizzare la visualizzazione tramite la funzione delle dashboard definite dall’utente. Questa funzione ti consente di creare e gestire dashboard personalizzate in cui creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione.
+Utilizza le dashboard di Adobe Experience Platform per velocizzare le informazioni e personalizzare la visualizzazione tramite la funzione Dashboard. Utilizza questa funzione per creare e gestire dashboard personalizzate che consentono di creare, aggiungere e modificare widget personalizzati per visualizzare metriche chiave rilevanti per la tua organizzazione.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Per creare un dashboard personalizzato, passa innanzitutto all’inventario del 
 
 ![Inventario delle dashboard con le dashboard nella barra di navigazione a sinistra ed evidenziata l’opzione &quot;Crea dashboard&quot;.](./images/user-defined-dashboards/create-dashboard.png)
 
-Prima di aggiungere un dashboard personalizzato, l’inventario dei dashboard è vuoto e viene visualizzato il messaggio &quot;Nessun dashboard trovato&quot;. messaggio. Una volta creati, tutti i dashboard definiti dall’utente sono elencati nell’inventario dei dashboard.
+Prima di aggiungere un dashboard personalizzato, l’inventario dei dashboard è vuoto e viene visualizzato il messaggio &quot;Nessun dashboard trovato&quot;. messaggio. Una volta creati, tutti i dashboard vengono elencati nell’inventario dei dashboard.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Per modificare un dashboard esistente, seleziona il nome del dashboard dall’elenco di inventario seguito dall’icona a forma di matita (![Un’icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 Il [!UICONTROL Crea dashboard] viene visualizzata. Immettete un nome descrittivo per la raccolta di widget che intendete creare e selezionate **[!UICONTROL Salva]**.
 
 ![Finestra di dialogo Crea dashboard.](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Gli utenti che hanno acquistato lo SKU di Data Distiller possono utilizzare query SQL personalizzate per ottenere informazioni approfondite. Consulta la [Guida alla creazione di Insight personalizzabile](./data-distiller/customizable-insights/overview.md) per istruzioni su questo flusso di lavoro.
 
 La nuova dashboard vuota creata viene visualizzata con il nome scelto nell&#39;angolo superiore sinistro della visualizzazione.
 
@@ -42,13 +46,13 @@ La nuova dashboard vuota creata viene visualizzata con il nome scelto nell&#39;a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Numero massimo di widget"
->abstract="Le dashboard definite dall’utente supportano fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia."
+>abstract="Dashboard Service supporta fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia."
 
 Dalla nuova vista del dashboard, seleziona **[!UICONTROL Aggiungi nuovo widget]** per avviare il processo di creazione del widget.
 
 >[!IMPORTANT]
 >
->Le dashboard definite dall’utente supportano fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia.
+>Ogni dashboard supporta fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia.
 
 ![Il nuovo dashboard vuoto con Aggiungi nuovo widget evidenziato.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ I widget possono essere ridisposti e ridimensionati mentre si trovano in questa 
 
 Per garantire che ogni query per un dashboard di approfondimenti di Adobe Real-time Customer Data Platform disponga di risorse sufficienti per essere eseguita in modo efficiente, l’API tiene traccia dell’utilizzo delle risorse assegnando slot di concorrenza a ogni query. Il sistema può elaborare fino a quattro query simultanee, pertanto sono disponibili quattro slot di query simultanee in un dato momento. Le query vengono inserite in una coda in base agli slot di concorrenza, quindi attendi nella coda fino a quando non sono disponibili abbastanza slot di concorrenza.
 
-### Duplicare un widget
+### Modificare, duplicare o eliminare un widget {#duplicate}
 
-Dopo aver creato un widget, puoi duplicarne l’intero widget e personalizzarne gli attributi per creare un widget univoco senza dover iniziare da zero. Per duplicare un widget, passa innanzitutto all&#39;inventario del dashboard. Selezionare quindi il nome del dashboard dall&#39;elenco di inventario. Viene visualizzata la dashboard personalizzata.
+Dopo aver creato un widget, è possibile modificarlo, duplicarlo o eliminarlo completamente dal dashboard personalizzato.
 
-![Nell’interfaccia utente di Platform sono evidenziati i dashboard e il nome di un dashboard personalizzato.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Per passare da un dashboard personalizzato all’altro, seleziona Dashboard nella barra di navigazione a sinistra, quindi seleziona il nome del dashboard dall’elenco di inventario.
 
 Seleziona l’icona della matita (![Un’icona a forma di matita.](./images/user-defined-dashboards/edit-icon.png)) in alto a destra nel dashboard personalizzato per accedere alla modalità di modifica.
 
 ![Dashboard personalizzato con l’icona della matita evidenziata.](./images/user-defined-dashboards/edit-mode.png)
 
-Quindi, seleziona le ellissi in alto a destra del widget che desideri copiare, seguite da **[!UICONTROL Duplica]** dall’elenco delle opzioni disponibili.
+Quindi, seleziona i puntini di sospensione in alto a destra del widget che desideri modificare, copiare o eliminare. Seleziona l’azione appropriata dal menu a discesa.
 
-![Un widget in un dashboard definito dall&#39;utente con i puntini di sospensione e Duplica widget evidenziati.](./images/user-defined-dashboards/duplicate.png)
+![Un widget in un dashboard personalizzato con i puntini di sospensione e i widget Duplica evidenziati.](./images/user-defined-dashboards/duplicate.png)
 
-Nel dashboard definito dall&#39;utente viene visualizzato un widget duplicato. Seleziona le ellissi del nuovo widget, seguite da **[!UICONTROL Modifica]**, per personalizzare il nuovo widget.
+>[!NOTE]
+>
+>La duplicazione consente di personalizzare gli attributi di un approfondimento per creare un widget univoco senza dover iniziare da zero. Se si duplica un widget, questo viene visualizzato nel dashboard personalizzato. È quindi possibile selezionare le ellissi del nuovo widget, seguite da **[!UICONTROL Modifica]**, per personalizzare le informazioni.
 
 ## Passaggi successivi e risorse aggiuntive
 
@@ -172,6 +180,6 @@ La lettura di questo documento consente di comprendere meglio come creare un das
 
 Per scoprire le metriche e le visualizzazioni preconfigurate disponibili per [profili](./guides/profiles.md#standard-widgets), [segmenti](./guides/audiences.md#standard-widgets), e [destinazioni](./guides/destinations.md#standard-widgets) dashboard, consulta l’elenco dei widget standard nella rispettiva documentazione.
 
-Per comprendere meglio le dashboard definite dall’utente in questo Experience Platform, guarda il video seguente:
+Per approfondire la comprensione delle dashboard in Experienci Platform, guarda il video seguente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

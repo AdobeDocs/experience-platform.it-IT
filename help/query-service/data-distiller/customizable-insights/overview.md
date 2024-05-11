@@ -1,9 +1,10 @@
 ---
 title: Approfondimenti personalizzabili
 description: Scopri i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare una dashboard di approfondimenti personalizzabile con Data Distiller. Scopri in che modo la funzionalità Approfondimenti personalizzabili di Data Distiller può migliorare la trasparenza e ottenere informazioni operative tra diverse dimensioni, come profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # Approfondimenti personalizzabili
 
 Con Registri personalizzabili di Data Distiller puoi creare modelli di dati per la generazione di rapporti personalizzati, per estrarre informazioni più approfondite, ottimizzare le strategie e adattare le analisi per soddisfare esigenze aziendali specifiche. Utilizza la funzionalità Approfondimenti personalizzabili per migliorare la trasparenza e ottenere informazioni operative dai dati Adobe Experience Platform su dimensioni quali profili, tipi di pubblico, campagne, percorsi, autorizzazioni e consenso. Questa funzionalità offre una soluzione versatile e adattiva per adattare i modelli di dati di reporting della tua organizzazione alle tue esigenze aziendali specifiche.
+
+A [Visualizzare Approfondimenti personalizzabili](../../../dashboards/data-distiller/overview.md) puoi utilizzare [modalità query pro](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) eseguire analisi complesse con query SQL personalizzate e trasformare i dati in grafici facilmente interpretabili. Utilizza la modalità query pro per creare informazioni e visualizzazioni personalizzate sulle dashboard e soddisfare i tipi di pubblico tecnici e non, scaricando le informazioni come file CSV.
 
 Questo documento descrive i casi d’uso, le funzionalità essenziali e i passaggi necessari per sviluppare una dashboard di approfondimenti personalizzabile con Data Distiller.
 

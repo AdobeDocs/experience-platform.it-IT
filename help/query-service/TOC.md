@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Query Service
 user-guide-description: Utilizza il linguaggio SQL standard per eseguire query sui dati nel data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 18%
+source-wordcount: '321'
+ht-degree: 19%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 18%
       - [Creare set di dati derivati basati su decile](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Approfondimenti personalizzabili per reporting esteso dell’app {#customizable-insights}
       - [Panoramica](data-distiller/customizable-insights/overview.md)
+      - [Modalità Query Pro](data-distiller/customizable-insights/query-pro-mode.md)
       - [Inviare query accelerate](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guida al modello dati per insights di reporting](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pipeline per funzioni AI/ML {#ml-feature-pipelines}
@@ -115,4 +116,4 @@ ht-degree: 18%
 - [Domande frequenti](troubleshooting-guide.md)
 - [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allowlist.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
