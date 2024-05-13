@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 13%
+source-wordcount: '1459'
+ht-degree: 11%
 
 ---
 
@@ -139,6 +139,16 @@ Una volta completate le informazioni sulla connessione di destinazione, selezion
 >Per attivare i dati, è necessario **[!UICONTROL Visualizza destinazioni]**, **[!UICONTROL Attivare le destinazioni]**, **[!UICONTROL Visualizza profili]**, e **[!UICONTROL Visualizzare segmenti]** [autorizzazioni di controllo degli accessi](/help/access-control/home.md#permissions). Leggi le [panoramica sul controllo degli accessi](/help/access-control/ui/overview.md) oppure contatta l’amministratore del prodotto per ottenere le autorizzazioni necessarie.
 
 Letto [Attivare i tipi di pubblico per Edge Personalization Destinations](../../ui/activate-edge-personalization-destinations.md) per istruzioni sull’attivazione dei tipi di pubblico in questa destinazione.
+
+## Rimuovere tipi di pubblico da una destinazione {#remove}
+
+Sono necessari passaggi aggiuntivi per rimuovere un pubblico da una connessione Adobe Target esistente quando tale pubblico è già utilizzato in un’Adobe Target [attività](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Se si tenta di rimuovere un pubblico da una connessione Adobe Target, si verifica un errore se il pubblico viene utilizzato da un’attività Adobe Target.
+
+![L’immagine dell’interfaccia utente di Platform mostra un errore causato dal tentativo di rimuovere un pubblico utilizzato da un’attività Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+Per rimuovere un pubblico da una destinazione Target quando il pubblico viene utilizzato in un’attività, devi innanzitutto rimuovere il pubblico dall’attività Target che lo utilizza oppure eliminare completamente l’attività. Quindi, puoi rimuovere il pubblico dalla connessione Target.
+
+Se il pubblico non viene utilizzato in un’attività, vai a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** > **[!UICONTROL Seleziona flusso di dati di destinazione]** > **[!UICONTROL Dati di attivazione]**, seleziona il pubblico da rimuovere, quindi fai clic su **[!UICONTROL Rimuovi tipi di pubblico]**.
 
 ## Dati esportati {#exported-data}
 
