@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
+>abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche estratte dal Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -113,7 +113,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Dettagli dell’esecuzione del flusso di dati"
->abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
+>abstract="I dettagli di esecuzione del flusso di dati di destinazione contengono informazioni sullo stato di attivazione di un pubblico e metriche estratte dal Profilo cliente in tempo reale per generare identità univoche. Per ulteriori informazioni, rivedi la guida alle definizioni delle metriche."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=it#dataflow-runs-for-streaming-destinations" text="Esecuzioni del flusso di dati per le destinazioni di streaming"
 
 >[!CONTEXTUALHELP]
@@ -176,7 +176,7 @@ Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="Activation"
->abstract="La vista di attivazione della destinazione contiene informazioni sullo stato di attivazione di un pubblico e metriche prese da Real-Time Customer Profile per generare identità univoche."
+>abstract="La vista Attivazione della destinazione contiene informazioni sullo stato di attivazione di un pubblico e metriche prelevate dal profilo cliente in tempo reale per generare identità univoche."
 
 Per accedere al [!UICONTROL Monitorare] dashboard, seleziona **[!UICONTROL Monitorare]** (![icona di monitoraggio](../assets/ui/monitor-destinations/monitoring-icon.png)) nel menu di navigazione a sinistra. Una volta al [!UICONTROL Monitorare] pagina, seleziona [!UICONTROL Destinazioni]. Il [!UICONTROL Monitorare] il dashboard contiene metriche e informazioni sui processi eseguiti di destinazione.
 
