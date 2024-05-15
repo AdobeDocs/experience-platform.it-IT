@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connettere Tableau a Query Service
 description: Questo documento illustra i passaggi necessari per collegare Tableau a Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ Istruzioni su come [connettersi a un server PostgreSQL con Tableau](https://help
 | **[!DNL Password]** | Questa stringa alfanumerica è il tuo Experience Platform **[!UICONTROL Password]** credenziali. Se si desidera utilizzare credenziali senza scadenza, questo valore corrisponde agli argomenti concatenati del `technicalAccountID` e `credential` scaricato nel file JSON di configurazione. Il valore della password è il seguente: {technicalAccountId}:{credential}. Il file JSON di configurazione per le credenziali senza scadenza è un download una tantum durante l’inizializzazione di, Adobe di cui non conserva una copia. |
 
 Per ulteriori informazioni su come trovare nome utente, password e credenziali di accesso, leggere [guida alle credenziali](../ui/credentials.md). Per trovare le credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
+
+>[!IMPORTANT]
+>
+>In qualità di utente Tableau o Power BI, puoi collegare il Customer Journey Analytics agli strumenti di business intelligence dalla scheda Credenziali di Query Service. Per istruzioni su come utilizzare, consulta la documentazione sulle credenziali. [collegare gli strumenti BI al Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 Verifica di aver selezionato **[!UICONTROL Richiedi SSL]** prima di tentare la connessione. Consulta la [Documentazione sulle modalità SSL](./ssl-modes.md) per informazioni sul supporto SSL per le connessioni di terze parti a Adobe Experience Platform Query Service.
 
