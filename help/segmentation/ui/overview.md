@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 2%
@@ -112,7 +112,7 @@ Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico
 | [!UICONTROL Nome] | Il nome del pubblico. |
 | [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
 | [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
-| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, `Published`, e `Archived`. Ulteriori informazioni sugli stati del ciclo di vita, compreso cosa significano i diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, leggi [sezione sullo stato del ciclo di vita nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
+| [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso cosa significano i diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, leggi [sezione sullo stato del ciclo di vita nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Bordo], e [!UICONTROL Non pianificato]. |
 | [!UICONTROL Ultimo aggiornamento eseguito da] | Nome dell’ultima persona che ha aggiornato il pubblico. |
 | [!UICONTROL Creato] | La data e l’ora in UTC in cui è stato creato il pubblico. |
@@ -422,7 +422,7 @@ Viene visualizzato un popover che elenca tutti i campi che possono essere visual
 | Campo | Descrizione |
 | ----- | ----------- | 
 | [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, `Published`, e `Archived`. |
+| [!UICONTROL Stato] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, e `Published`. |
 | [!UICONTROL Creato] | L’ora e la data di creazione del pubblico. |
 | [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
 | [!UICONTROL Aggiornato] | Ora e data dell’ultimo aggiornamento del pubblico. |

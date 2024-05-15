@@ -2,16 +2,16 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Note sulla versione di Adobe Experience Platform di aprile 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
-ht-degree: 18%
+source-wordcount: '2670'
+ht-degree: 19%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 27 aprile 2022**
+**Data di rilascio: giovedì 27 aprile 2022**
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
@@ -69,7 +69,7 @@ I flussi di dati sono una rappresentazione dei processi che spostano i dati in P
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Dashboard dei segmenti | Ora puoi utilizzare la dashboard di monitoraggio per monitorare i flussi di dati per i segmenti. Per ulteriori informazioni, consulta la guida su [monitoraggio dei segmenti nell’interfaccia utente](../../dataflows/ui/monitor-segments.md) |
+| Dashboard dei segmenti | Ora puoi utilizzare la dashboard di monitoraggio per monitorare i flussi di dati per i segmenti. Per ulteriori informazioni, consulta la guida su [monitoraggio dei segmenti nell’interfaccia utente](../../dataflows/ui/monitor-audiences.md) |
 
 Per informazioni più generali sui flussi di dati, consulta [panoramica dei flussi di dati](../../dataflows/home.md). Per ulteriori informazioni sulla segmentazione, consulta [panoramica sulla segmentazione](../../segmentation/home.md).
 
@@ -163,7 +163,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 | Tipo di dati | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Sono stati aggiunti diversi campi relativi al carrello. |
 | Tipo di dati | [[!UICONTROL Elemento dell’elenco prodotti]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Sono stati aggiunti nuovi campi per le opzioni selezionate e l’importo dello sconto. |
 | Estensione (Intelligent Services) | [[!UICONTROL Ottimizzazione del tempo di invio di Intelligent Services JourneyAI]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Ottimizza il formato di archiviazione per i punteggi del tempo di invio. |
-| Estensione (Workfront) | [[!UICONTROL Evento modifica di Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Diversi campi sostituiti con un `workfront:customData` campo per campi modulo personalizzati. |
+| Estensione (Workfront) | [[!UICONTROL Evento modifica Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Diversi campi sostituiti con un `workfront:customData` campo per campi modulo personalizzati. |
 | Estensione (Workfront) | [[!UICONTROL Attributi attività di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Sono stati aggiunti diversi campi. |
 | Estensione (Workfront) | [[!UICONTROL Oggetto di lavoro]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Nuovi campi per il tipo di oggetto padre e i campi modulo personalizzati. |
 

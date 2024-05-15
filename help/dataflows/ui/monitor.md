@@ -1,7 +1,8 @@
 ---
 title: Panoramica del dashboard di monitoraggio
 description: Scopri come utilizzare il dashboard di monitoraggio nell’interfaccia utente di Adobe Experience Platform
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 1%
@@ -100,7 +101,7 @@ Seleziona **[!UICONTROL Profili]** per visualizzare il tasso di successo dell’
 
 >[!TAB Tipi di pubblico]
 
-Seleziona **[!UICONTROL Tipi di pubblico]** per visualizzare le metriche sui tipi di pubblico e i processi di segmentazione. Leggi la guida su [monitoraggio dei dati sul pubblico](monitor-segments.md) per ulteriori informazioni.
+Seleziona **[!UICONTROL Tipi di pubblico]** per visualizzare le metriche sui tipi di pubblico e i processi di segmentazione. Leggi la guida su [monitoraggio dei dati sul pubblico](monitor-audiences.md) per ulteriori informazioni.
 
 ![La dashboard di monitoraggio nell’interfaccia utente con la scheda dei tipi di pubblico selezionata.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ Una volta letto questo documento, potrai spostarti all’interno del dashboard d
 * [Monitorare i dati delle origini](monitor-sources.md).
 * [Monitorare i dati di identità](monitor-identities.md).
 * [Monitorare i dati del profilo](monitor-profiles.md).
-* [Monitorare i dati sul pubblico](monitor-segments.md).
+* [Monitorare i dati sul pubblico](monitor-audiences.md).
 * [Monitorare i dati delle destinazioni](monitor-destinations.md).
