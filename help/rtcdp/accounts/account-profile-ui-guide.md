@@ -5,9 +5,9 @@ description: Tramite l’utilizzo dei profili di account, Adobe Real-time Custom
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nella barra di naviga
 
 ![Scheda Panoramica con i widget](images/b2b-account-profile-overview.png)
 
-Consulta la documentazione su [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni.
+Consulta la documentazione su [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni. Consulta la documentazione su [Edizione B2B del modello dati di Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) per ulteriori informazioni su come utilizzare i modelli dati insights per creare grafici personalizzati per le dashboard,
 
 ## Configurare la corrispondenza lead-account {#configure-lead-to-account-matching}
 
