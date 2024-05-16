@@ -2,10 +2,10 @@
 title: Testare un’implementazione di Adobe Target con Adobi Experience Platform Debugger
 description: Scopri come utilizzare Adobi Experience Platform Debugger per testare ed eseguire il debug di un sito web abilitato con Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 5%
+source-wordcount: '1035'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +21,7 @@ Per utilizzare Platform Debugger per Target, il sito web deve utilizzare [Librer
 
 Apri il sito web da testare in un browser, quindi apri l’estensione Platform Debugger.
 
-Seleziona **[!DNL Target]** (Progetti) nel pannello di navigazione a sinistra. Se Platform Debugger rileva che sul sito è in esecuzione una versione compatibile di at.js, vengono visualizzati i dettagli di implementazione di Adobe Target.
+Seleziona **[!DNL Target]** nel menu di navigazione a sinistra. Se Platform Debugger rileva che sul sito è in esecuzione una versione compatibile di at.js, vengono visualizzati i dettagli di implementazione di Adobe Target.
 
 ![La vista Target selezionata in Platform Debugger, che indica che Adobe Target è attivo nella pagina del browser attualmente visualizzata](../images/solutions/target/target-initialized.png)
 
@@ -109,7 +109,7 @@ Seleziona **[!DNL Configuration]** per abilitare o disabilitare una selezione di
 | Strumento di debug | Descrizione |
 | --- | --- |
 | [!DNL Target Console Logging] | Quando è abilitata, ti consente di accedere ai registri at.js nella scheda della console del browser. Questa funzione può essere abilitata anche aggiungendo un’ `mboxDebug` parametro di query (con qualsiasi valore) per l’URL del browser. |
-| [!DNL Target Diable] | Quando è abilitata, tutte le funzionalità di Target sono disabilitate sulla pagina. Questa può essere utilizzata per determinare se l’origine del problema sulla pagina è un’offerta specifica di Target. |
+| [!DNL Target Disable] | Quando è abilitata, tutte le funzionalità di Target sono disabilitate sulla pagina. Questa può essere utilizzata per determinare se l’origine del problema sulla pagina è un’offerta specifica di Target. |
 | [!DNL Target Trace] | **Nota**: per abilitare questa funzione devi aver effettuato l’accesso.<br><br>Quando questa opzione è abilitata, i token di tracciamento vengono inviati con ogni richiesta e in ogni risposta viene restituito un oggetto di traccia. `at.js` analizza la risposta `window.__targetTraces`. Ogni oggetto trace contiene le stesse informazioni del [[!DNL Network Requests] tab], con le seguenti aggiunte:<ul><li>Uno snapshot del profilo, che consente di visualizzare gli attributi prima e dopo le richieste.</li><li>Corrispondenza e non corrispondenza [attività](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), che mostra perché il profilo corrente è idoneo o meno per attività specifiche.<ul><li>Questo può aiutare a identificare i tipi di pubblico per cui un profilo si qualifica in un dato punto e perché.</li><li>I documenti di Target contengono ulteriori informazioni su diversi tipi di attività</li></ul></li></ul> |
 
 {style="table-layout:auto"}
