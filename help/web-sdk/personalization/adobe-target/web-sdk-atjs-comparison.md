@@ -3,9 +3,9 @@ title: Confronto di at.js con Experienci Platform Web SDK
 description: Scopri le caratteristiche di at.js rispetto a Experienci Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;Decisions;scope;schema;diagramma di sistema;diagramma
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 6%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [Ulteriori informazioni](../rendering-personalization-content.md#manually-rendering-content)
 
+**Esempio 3 - Tracciare un evento generato dopo l’esecuzione di un’azione**
+
+Questo esempio tiene traccia di un evento che è stato attivato dopo l’esecuzione di un’azione specifica, ad esempio il clic su un pulsante.
+Puoi aggiungere altri parametri personalizzati tramite `__adobe.target` oggetto dati.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Come attivare una modifica della visualizzazione in un&#39;applicazione a pagina singola
 
 ### Utilizzo di at.js
@@ -893,7 +914,7 @@ La funzione di registrazione lato server di Analytics è abilitata quando Analyt
 
 ![Interfaccia utente per i flussi di dati che mostra le impostazioni di Analytics.](assets/analytics-enabled-datastream-config.png)
 
-Quando la registrazione Analytics lato server è abilitata, il payload A4T che deve essere condiviso con Analytics in modo che i rapporti di Analytics mostrino le impression e le conversioni corrette venga condiviso a livello di rete Edge, in modo che il cliente non debba eseguire alcuna elaborazione aggiuntiva.
+Quando la funzione di registrazione Analytics lato server è abilitata, il payload A4T che deve essere condiviso con Analytics in modo che i rapporti di Analytics mostrino le impression e le conversioni corrette venga condiviso a livello di Edge Network, in modo che il cliente non debba eseguire alcuna elaborazione aggiuntiva.
 
 Ecco come fluiscono i dati nei nostri sistemi quando è abilitata la registrazione di Analytics lato server:
 
