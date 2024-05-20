@@ -4,7 +4,7 @@ title: Attivare i tipi di pubblico nelle destinazioni basate su file utilizzando
 description: Scopri come utilizzare l’API del servizio Flusso per esportare i file con profili qualificati nelle destinazioni dell’archiviazione cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '4404'
 ht-degree: 4%
@@ -745,7 +745,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - Richiesta di connessione di base con autenticazione ruolo assunta
++++[!DNL Amazon S3] - Richiesta di connessione di base con autenticazione ruolo assunta
 
 >[!TIP]
 >

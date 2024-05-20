@@ -3,7 +3,7 @@ title: Valorizzazione del cliente una tantum in base al valore del ciclo di vita
 description: Scopri come creare campagne personalizzate per offrire i migliori prodotti o servizi complementari in base agli attributi, al comportamento e agli acquisti precedenti di un cliente specifico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Considera questi clienti che visitano le tue proprietà e acquistano occasionalm
 * Creare tipi di pubblico
 * Crea percorsi per indirizzare questi tipi di pubblico in Adobe Journey Optimizer e attivarli in Real-Time CDP.
 
-![Passo dopo passo Evoluzione del valore una tantum a valore del ciclo di vita panoramica visiva di alto livello.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![Passo dopo passo Evoluzione del valore una tantum a valore del ciclo di vita panoramica visiva di alto livello.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## Prerequisiti e pianificazione {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due 
 
 Di seguito è riportata una panoramica dell’architettura di alto livello dei vari componenti di Real-Time CDP e Journey Optimizer. Questo diagramma mostra il modo in cui i dati fluiscono attraverso le due app di Experience Platform, dalla raccolta dati al punto in cui vengono attivati tramite percorsi o campagne verso le destinazioni, per ottenere il caso d’uso descritto in questa pagina.
 
-![Panoramica visiva di alto livello dell’architettura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![Panoramica visiva di alto livello dell’architettura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## Come utilizzare il caso d’uso: panoramica di alto livello {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ Inizia inviando un messaggio al tuo pubblico di clienti di alto valore e a bassa
 
 >[!BEGINSHADEBOX]
 
-![Passo dopo passo Evoluzione del valore una tantum a valore del ciclo di vita panoramica visiva di alto livello.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![Passo dopo passo Evoluzione del valore una tantum a valore del ciclo di vita panoramica visiva di alto livello.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. Puoi creare schemi e set di dati, quindi contrassegnarli per [!UICONTROL Profilo].
 2. I dati vengono raccolti e integrati in Experienci Platform tramite Web SDK, Mobile Edge SDK o API. È possibile utilizzare anche il connettore dati di Analytics, ma potrebbe causare latenza del percorso.
@@ -304,7 +304,7 @@ Questo caso d’uso richiede la creazione di due tipi di pubblico per definire a
 
 In particolare, devi creare e utilizzare due tipi di pubblico in diversi passaggi del caso d’uso, come illustrato nell’immagine seguente.
 
-![Tipi di pubblico evidenziati.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Tipi di pubblico evidenziati.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ Per eseguire questo caso d’uso, è necessario creare due percorsi separati:
 * Il percorso del ciclo di vita, che include il messaggio inviato ai clienti a valore elevato e bassa frequenza
 * Il percorso di conferma dell’ordine per gli utenti che rispondono alla chiamata e acquistano un abbonamento.
 
-![Percorsi evidenziati.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Percorsi evidenziati.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 Di seguito sono elencati i dati precisi necessari per ogni ramo del Percorso.
 
@@ -361,7 +361,7 @@ Di seguito sono elencati i dati precisi necessari per ogni ramo del Percorso.
 
 Il percorso &quot;lifetime&quot; si rivolge al pubblico di clienti di alto valore e a bassa frequenza che non sono stati presi di mira negli ultimi 30 giorni. Viene visualizzato un messaggio a questi clienti e quindi, se dopo 7 giorni non effettuano ancora l’acquisto, puoi includere i non acquirenti in un pubblico a cui puoi mostrare annunci multimediali a pagamento. Se acquistano, puoi impostare gli acquirenti su un percorso di conferma dell’ordine, descritto nella scheda separata.
 
-![Panoramica visiva di alto livello del percorso del ciclo di vita.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Panoramica visiva di alto livello sul valore aggiunto una tantum per il percorso a vita."){width="600" zoomable="yes"}
+![Panoramica visiva di alto livello del percorso del ciclo di vita.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Panoramica visiva di alto livello sul valore aggiunto una tantum per il percorso a vita."){zoomable="yes"}
 
 +++Logica di Percorso dettagliata
 
@@ -383,7 +383,7 @@ Il percorso mostrato sopra segue la logica seguente.
 
 Il percorso di conferma dell’ordine si concentra sul fatto che un acquisto sia stato effettuato tramite il sito web o l’app mobile. Dopo che un cliente ha completato con successo l’acquisto di, ad esempio, un abbonamento con la tua azienda, puoi impostarlo su un percorso di conferma dell’ordine.
 
-![Percorso di conferma dell&#39;ordine cliente panoramica visiva di alto livello.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Percorso di conferma dell&#39;ordine cliente panoramica visiva di alto livello."){width="600" zoomable="yes"}
+![Percorso di conferma dell&#39;ordine cliente panoramica visiva di alto livello.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Percorso di conferma dell&#39;ordine cliente panoramica visiva di alto livello."){zoomable="yes"}
 
 +++Logica Percorso
 
