@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
 source-wordcount: '1624'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -46,7 +46,7 @@ La nuova dashboard vuota creata viene visualizzata con il nome scelto nell&#39;a
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Numero massimo di widget"
->abstract="Dashboard Service supporta fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia."
+>abstract="Il servizio dashboard supporta fino a dieci widget. Dopo aver aggiunto dieci widget alla dashboard, l’opzione [!UICONTROL Aggiungi nuovo widget] è disabilitata e appare grigia."
 
 Dalla nuova vista del dashboard, seleziona **[!UICONTROL Aggiungi nuovo widget]** per avviare il processo di creazione del widget.
 
