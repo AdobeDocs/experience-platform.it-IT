@@ -2,10 +2,10 @@
 title: Collegare l'account Salesforce tramite l'interfaccia utente Experienci Platform
 description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente di.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '737'
+ht-degree: 1%
 
 ---
 
@@ -26,17 +26,38 @@ Se disponi già di un [!DNL Salesforce] account, puoi saltare il resto di questo
 
 ### Raccogli le credenziali richieste {#gather-required-credentials}
 
-Per autenticare il tuo [!DNL Salesforce] conto a fronte di Experience Platform, è necessario fornire valori che corrispondono ai seguenti [!DNL Salesforce] credenziali:
+Il [!DNL Salesforce] L&#39;origine supporta l&#39;autenticazione di base e le credenziali client OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione di base]
+
+È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce] tramite autenticazione di base.
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `environmentUrl` | L’URL del [!DNL Salesforce] istanza di origine. |
-| `username` | Nome utente per [!DNL Salesforce] account utente. |
-| `password` | La password per [!DNL Salesforce] account utente. |
-| `securityToken` | Token di sicurezza per [!DNL Salesforce] account utente. |
-| `apiVersion` | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0` Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| URL ambiente | L’URL del [!DNL Salesforce] istanza di origine. |
+| Nome utente | Nome utente per [!DNL Salesforce] account utente. |
+| Password | La password per [!DNL Salesforce] account utente. |
+| Token di sicurezza | Token di sicurezza per [!DNL Salesforce] account utente. |
+| Versione API | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0` Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
 
 Per ulteriori informazioni sull’autenticazione, consulta [questo [!DNL Salesforce] guida all’autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB Credenziali client OAuth2]
+
+È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce] utilizzando le credenziali client OAuth2.
+
+| Credenziali | Descrizione |
+| --- | --- |
+| URL ambiente | L’URL del [!DNL Salesforce] istanza di origine. |
+| ID client | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto dell’account identificando l’applicazione in [!DNL Salesforce]. |
+| Segreto client | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto dell’account identificando l’applicazione in [!DNL Salesforce]. |
+| Versione API | (Facoltativo) La versione REST API di [!DNL Salesforce] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0` Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+
+Per ulteriori informazioni sull’utilizzo di OAuth per [!DNL Salesforce], leggi [[!DNL Salesforce] guida ai flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Salesforce] da Experience Platform.
 
