@@ -4,10 +4,10 @@ title: Connessione API HTTP
 description: Utilizza la destinazione API HTTP in Adobe Experience Platform per inviare i dati del profilo all’endpoint HTTP di terze parti per eseguire le tue analisi o eseguire qualsiasi altra operazione necessaria sui dati del profilo esportati al di fuori di Experienci Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 8%
+source-wordcount: '2639'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ Gli endpoint HTTP possono essere sistemi propri del cliente o soluzioni di terze
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
@@ -63,9 +63,23 @@ Per utilizzare la destinazione API HTTP per esportare dati da Experienci Platfor
 >
 > Puoi anche utilizzare [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) per impostare un’integrazione e inviare i dati del profilo di Experience Platform a un endpoint HTTP.
 
+## Supporto e certificato del protocollo mTLS {#mtls-protocol-support}
+
+È possibile utilizzare [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) per garantire una maggiore sicurezza nelle connessioni in uscita alle connessioni di destinazione API HTTP.
+
+[!DNL mTLS] è un metodo di sicurezza end-to-end per l’autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano chi affermano di essere prima che i dati vengano condivisi. [!DNL mTLS] include un passaggio aggiuntivo rispetto a [!DNL TLS], in cui il server richiede anche il certificato del client e lo verifica alla fine.
+
+Se si desidera utilizzare [!DNL mTLS] con [!DNL HTTP API] destinazioni, l&#39;indirizzo server inserito nel [dettagli della destinazione](#destination-details) la pagina deve avere [!DNL TLS] protocolli disabilitati e solo [!DNL mTLS] abilitato. Se il [!DNL TLS] Il protocollo 1.2 è ancora abilitato sull&#39;endpoint. Nessun certificato inviato per l&#39;autenticazione client. Ciò significa che per utilizzare [!DNL mTLS] con il [!DNL HTTP API] destinazione, l&#39;endpoint del server di &quot;ricezione&quot; deve essere un [!DNL mTLS]Endpoint di connessione abilitato solo da.
+
+### Scarica certificato {#certificate}
+
+Se desideri controllare il [!DNL Common Name] (CN) e [!DNL Subject Alternative Names] (SAN) per eseguire un’ulteriore convalida di terze parti, puoi scaricare il certificato seguente:
+
+* [Certificato pubblico mTLS API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
 ## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per la destinazione API HTTP. Fai riferimento a [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per la destinazione API HTTP. Fai riferimento a [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
 
 ## Tipi di autenticazione supportati {#supported-authentication-types}
 
@@ -94,7 +108,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [Concessione password OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## Connettersi alla destinazione {#connect-destination}
+## Connetti alla destinazione {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -107,7 +121,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="Tipo di credenziali client"
->abstract="Seleziona **Codificato nel corpo del modulo** per includere l’ID client e il segreto client nel corpo della richiesta, oppure seleziona **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Puoi trovare alcuni esempi nella documentazione."
+>abstract="Seleziona **Corpo del modulo codificato** per includere l’ID client e il segreto client nel corpo della richiesta oppure **Autorizzazione di base** per includere l’ID client e il segreto client in un’intestazione di autorizzazione. Visualizza alcuni esempi nella documentazione."
 
 #### Autenticazione token Bearer {#bearer-token-authentication}
 
@@ -150,32 +164,32 @@ Se si seleziona la **[!UICONTROL Credenziali client OAuth 2]** tipo di autentica
    * **[!UICONTROL Corpo del modulo codificato]**: in questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *nel corpo della richiesta* inviato alla tua destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione.
    * **[!UICONTROL Autorizzazione di base]**: in questo caso, il [!DNL client ID] e [!DNL client secret] sono inclusi *in un `Authorization` intestazione* dopo la codifica base64 e l&#39;invio alla destinazione. Ad esempio, consulta [Tipi di autenticazione supportati](#supported-authentication-types) sezione.
 
-### Inserire i dettagli della destinazione {#destination-details}
+### Inserisci i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="Intestazioni"
->abstract="Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, nel formato seguente: `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="Immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, seguendo questo formato: `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Endpoint HTTP"
->abstract="URL dell’endpoint HTTP a cui desideri inviare i dati del profilo."
+>abstract="L’URL dell’endpoint HTTP a cui desideri inviare i dati del profilo."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
->title="Includi nomi dei segmenti"
->abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>title="Includi nomi segmento"
+>abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Visualizza la documentazione di un esempio di esportazione di dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
->title="Includi timestamp dei segmenti"
->abstract="Attiva o disattiva questa opzione se desideri che l’esportazione dei dati includa il timestamp UNIX al momento della creazione e dell’aggiornamento dei tipi di pubblico, nonché il timestamp UNIX al momento della mappatura dei tipi di pubblico sulla destinazione per l’attivazione. Consulta la documentazione per vedere un esempio di esportazione dei dati con questa opzione selezionata."
+>title="Includi marche temporali segmento"
+>abstract="Attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati alla destinazione per l’attivazione. Visualizza la documentazione di un esempio di esportazione di dati con questa opzione selezionata."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="Parametri di query"
->abstract="Facoltativamente, puoi aggiungere dei parametri di query all’URL dell’endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`."
+>abstract="Facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`."
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -185,7 +199,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Descrizione]**: immetti una descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Intestazioni]**: immetti le intestazioni personalizzate che desideri includere nelle chiamate di destinazione, seguendo questo formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL Endpoint HTTP]**: URL dell’endpoint HTTP a cui desideri inviare i dati del profilo.
-* **[!UICONTROL Parametri di query]**: facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. I parametri di query che vuoi utilizzare devono essere nel formato seguente: `parameter1=value&parameter2=value`.
+* **[!UICONTROL Parametri di query]**: facoltativamente, puoi aggiungere parametri di query all’URL dell’endpoint HTTP. Formatta i parametri di query utilizzati in questo modo: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Includi nomi segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa i nomi dei tipi di pubblico che stai esportando. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
 * **[!UICONTROL Includi marche temporali segmento]**: attiva questa opzione se desideri che l’esportazione dei dati includa la marca temporale UNIX di quando i tipi di pubblico sono stati creati e aggiornati, nonché la marca temporale UNIX di quando i tipi di pubblico sono stati mappati sulla destinazione per l’attivazione. Per un esempio di esportazione di dati con questa opzione selezionata, fai riferimento al [Dati esportati](#exported-data) più avanti.
 
@@ -195,7 +209,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attivare tipi di pubblico in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
