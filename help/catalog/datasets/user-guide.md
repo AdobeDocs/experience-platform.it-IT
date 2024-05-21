@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3080'
 ht-degree: 3%
 
 ---
@@ -74,9 +74,66 @@ Puoi anche eliminare un set di dati o aggiungere un set di dati da utilizzare co
 
 ## Azioni del set di dati in linea {#inline-actions}
 
-L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea per ogni set di dati disponibile. Seleziona i puntini di sospensione (...) di un set di dati da gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le azioni disponibili comprendono: [[!UICONTROL Anteprima set di dati]](#preview), [[!UICONTROL Gestire i dati e accedere alle etichette]](#manage-and-enforce-data-governance), [[!UICONTROL Abilita profilo unificato]](#enable-profile), [[!UICONTROL Gestione tag]](#add-tags), [[!UICONTROL Sposta in cartelle]](#move-to-folders), e [[!UICONTROL Elimina]](#delete). Ulteriori informazioni su queste azioni disponibili sono disponibili nelle rispettive sezioni.
+L’interfaccia utente dei set di dati ora offre una raccolta di azioni in linea per ogni set di dati disponibile. Seleziona i puntini di sospensione (...) di un set di dati da gestire per visualizzare le opzioni disponibili in un menu a comparsa. Le azioni disponibili comprendono:
 
-### Aggiungere tag set di dati {#add-tags}
+* [[!UICONTROL Anteprima set di dati]](#preview),
+* [[!UICONTROL Gestire i dati e accedere alle etichette]](#manage-and-enforce-data-governance)
+* [[!UICONTROL Abilita profilo unificato]](#enable-profile)
+* [[!UICONTROL Gestione tag]](#manage-tags)
+* [[!UICONTROL Sposta in cartelle]](#move-to-folders)
+* [[!UICONTROL Elimina]](#delete).
+
+Ulteriori informazioni su queste azioni disponibili sono disponibili nelle rispettive sezioni. Per informazioni su come gestire simultaneamente un numero elevato di set di dati, consulta [azioni in blocco](#bulk-actions) sezione.
+
+### Visualizzare in anteprima un set di dati {#preview}
+
+Puoi visualizzare in anteprima i dati di esempio del set di dati da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da visualizzare in anteprima. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Anteprima set di dati]** dall’elenco delle opzioni disponibili. Se il set di dati è vuoto, il collegamento di anteprima viene disattivato e indica invece che l’anteprima non è disponibile.
+
+![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Anteprima set di dati evidenziata per il set di dati selezionato.](../images/datasets/user-guide/preview-dataset-option.png)
+
+Viene visualizzata la finestra di anteprima, in cui a destra è visualizzata la vista gerarchica dello schema per il set di dati.
+
+![Viene visualizzata la finestra di dialogo di anteprima del set di dati con informazioni sulla struttura del set di dati e valori di esempio.](../images/datasets/user-guide/preview-dataset.png)
+
+In alternativa, da **[!UICONTROL Attività set di dati]** schermata, seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra dello schermo per visualizzare in anteprima fino a 100 righe di dati.
+
+![Viene evidenziato il pulsante Anteprima set di dati.](../images/datasets/user-guide/select-preview.png)
+
+Per metodi più affidabili per accedere ai dati, [!DNL Experience Platform] fornisce servizi a valle come [!DNL Query Service] e [!DNL JupyterLab] per esplorare e analizzare i dati. Per ulteriori informazioni, consulta i seguenti documenti:
+
+* [Panoramica di Query Service](../../query-service/home.md)
+* [Guida utente di JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
+
+### Gestire e applicare la governance dei dati su un set di dati {#manage-and-enforce-data-governance}
+
+Puoi gestire le etichette di governance dei dati per un set di dati selezionando le opzioni in linea di [!UICONTROL Sfoglia] scheda. Seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, seguiti da **[!UICONTROL Gestire i dati e accedere alle etichette]** dal menu a discesa.
+
+Le etichette di utilizzo dei dati, applicate a livello di schema, ti consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette agli schemi per la propagazione ai set di dati.
+
+## Abilitare un set di dati per Real-Time Customer Profile {#enable-profile}
+
+Ogni set di dati ha la capacità di arricchire i profili dei clienti con i dati acquisiti. A questo scopo, lo schema a cui aderisce il set di dati deve essere compatibile per l’utilizzo in [!DNL Real-Time Customer Profile]. Uno schema compatibile soddisfa i seguenti requisiti:
+
+* Lo schema ha almeno un attributo specificato come proprietà di identità.
+* Lo schema ha una proprietà di identità definita come identità primaria.
+
+Per ulteriori informazioni sull’abilitazione di uno schema per [!DNL Profile], vedere [Guida utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).
+
+Puoi abilitare un set di dati per il profilo da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] scheda di [!UICONTROL Set di dati] nell’area di lavoro, seleziona i puntini di sospensione di un set di dati da abilitare per il profilo. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Abilita profilo unificato]** dall’elenco delle opzioni disponibili.
+
+![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e Abilita profilo unificato evidenziati.](../images/datasets/user-guide/enable-for-profile.png)
+
+In alternativa, dal set di dati di **[!UICONTROL Attività set di dati]** , seleziona la **[!UICONTROL Profilo]** attivare/disattivare all&#39;interno di **[!UICONTROL Proprietà]** colonna. Una volta abilitata, anche i dati acquisiti nel set di dati verranno utilizzati per popolare i profili dei clienti.
+
+>[!NOTE]
+>
+>Se un set di dati contiene già dati ed è quindi abilitato per [!DNL Profile], i dati esistenti non vengono utilizzati automaticamente da [!DNL Profile]. Dopo aver abilitato un set di dati per [!DNL Profile], si consiglia di riacquisire tutti i dati esistenti per farli contribuire ai profili dei clienti.
+
+![L’opzione Profilo è evidenziata all’interno della pagina dei dettagli del set di dati.](../images/datasets/user-guide/enable-dataset-profiles.png)
+
+Anche i set di dati abilitati per il profilo possono essere filtrati in base a questo criterio. Consulta la sezione su come [filtrare i set di dati abilitati per il profilo](#filter-profile-enabled-datasets) per ulteriori informazioni.
+
+### Gestire i tag dei set di dati {#manage-tags}
 
 Aggiungi tag personalizzati creati per organizzare i set di dati e migliorare le funzionalità di ricerca, filtro e ordinamento. Dalla sezione [!UICONTROL Sfoglia] scheda di [!UICONTROL Set di dati] nell’area di lavoro, seleziona i puntini di sospensione di un set di dati che desideri gestire e poi **[!UICONTROL Gestione tag]** dal menu a discesa.
 
@@ -91,6 +148,52 @@ Il [!UICONTROL Gestione tag] Questa finestra di dialogo può anche rimuovere i t
 Una volta aggiunto un tag a un set di dati, i set di dati possono essere filtrati in base al tag corrispondente. Consulta la sezione su come [filtrare i set di dati per tag](#enable-profile) per ulteriori informazioni.
 
 Per ulteriori informazioni su come classificare gli oggetti business per individuare e classificare più facilmente gli oggetti, vedere la guida in linea [gestione delle tassonomie dei metadati](../../administrative-tags/ui/managing-tags.md). Questa guida descrive come un utente con le autorizzazioni appropriate può creare tag predefiniti, assegnare categorie ai tag ed eseguire tutte le operazioni CRUD correlate su tag e categorie di tag nell’interfaccia utente di Platform.
+
+### Sposta in cartelle {#move-to-folders}
+
+Per una migliore gestione dei set di dati, puoi inserire i set di dati all’interno di cartelle. Per spostare un set di dati in una cartella, seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, quindi fai clic su **[!UICONTROL Sposta nella cartella]** dal menu a discesa.
+
+![Il [!UICONTROL Set di dati] dashboard con i puntini di sospensione e [!UICONTROL Sposta nella cartella] evidenziato.](../images/datasets/user-guide/move-to-folder.png)
+
+Il [!UICONTROL Sposta] viene visualizzata la finestra di dialogo dataset to folder (set di dati nella cartella). Seleziona la cartella in cui desideri spostare il pubblico, quindi fai clic su **[!UICONTROL Sposta]**. Una notifica a comparsa informa che lo spostamento del set di dati è stato eseguito correttamente.
+
+![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con [!UICONTROL Sposta] evidenziato.](../images/datasets/user-guide/move-dialog.png)
+
+>[!TIP]
+>
+>Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, seleziona l’icona Crea cartella (![Icona Crea cartella.](../images/datasets/user-guide/create-folder-icon.png)) in alto a destra nella finestra di dialogo.
+>
+>![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con l’icona crea cartella evidenziata.](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+Una volta che il set di dati si trova in una cartella, puoi scegliere di visualizzare solo i set di dati che appartengono a una cartella specifica. Per aprire la struttura delle cartelle, seleziona l’icona mostra cartelle (![Icona Mostra cartelle](../images/datasets/user-guide/show-folders-icon.png)). Quindi, seleziona la cartella scelta per visualizzare tutti i set di dati associati.
+
+![Il [!UICONTROL Set di dati] dashboard con la struttura di cartelle dei set di dati visualizzata, l’icona mostra cartelle e una cartella selezionata evidenziata.](../images/datasets/user-guide/folder-structure.png)
+
+### Eliminare un set di dati {#delete}
+
+Puoi eliminare un set di dati dalle azioni in linea del set di dati in [!UICONTROL Sfoglia] o in alto a destra del [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da eliminare. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Elimina]** dal menu a discesa.
+
+![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Elimina evidenziata per il set di dati selezionato.](../images/datasets/user-guide/inline-delete-dataset.png)
+
+Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Elimina]** per confermare.
+
+In alternativa, seleziona **[!UICONTROL Elimina set di dati]** dal **[!UICONTROL Attività set di dati]** schermo.
+
+>[!NOTE]
+>
+>Set di dati creati e utilizzati dalle applicazioni e dai servizi Adobe (ad esempio Adobe Analytics, Adobe Audience Manager o [!DNL Offer Decisioning]) non può essere eliminato.
+
+![Il pulsante Elimina set di dati è evidenziato nella pagina dei dettagli del set di dati.](../images/datasets/user-guide/delete-dataset.png)
+
+Viene visualizzata una casella di conferma. Seleziona **[!UICONTROL Elimina]** per confermare l’eliminazione del set di dati.
+
+![Viene visualizzata la finestra modale di conferma per l’eliminazione, con il pulsante Elimina evidenziato.](../images/datasets/user-guide/confirm-delete.png)
+
+### Eliminare un set di dati abilitato per il profilo
+
+Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e anche da tutti i dati di profilo associati a tale set di dati nell’archivio Profili.
+
+Puoi eliminare i dati profilo associati a un set di dati da [!DNL Profile] archiviare (lasciando i dati nel data lake) utilizzando l’API Real-Time Customer Profile. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md).
 
 ## Cercare e filtrare i set di dati {#search-and-filter}
 
@@ -132,30 +235,24 @@ Simile al filtro per la data di creazione, puoi filtrare i set di dati in base a
 
 Puoi filtrare i set di dati in base allo schema che ne definisce la struttura. Seleziona l’icona a discesa o inserisci il nome dello schema nel campo di testo. Viene visualizzato un elenco di potenziali corrispondenze. Seleziona lo schema appropriato dall’elenco.
 
+## Azioni in blocco {#bulk-actions}
+
+Utilizza azioni in blocco per migliorare l’efficienza operativa ed eseguire più azioni su numerosi set di dati contemporaneamente. È possibile risparmiare tempo e mantenere una struttura di dati organizzata con azioni in blocco come [Sposta nella cartella](#move-to-folders), [Modifica tag](#manage-tags), e [Elimina](#delete) set di dati.
+
+Per agire su più set di dati alla volta, seleziona singoli set di dati con la casella di controllo su ogni riga oppure seleziona un’intera pagina con la casella di controllo dell’intestazione di colonna. Una volta selezionata, viene visualizzata la barra delle azioni di massa.
+
+![Scheda Sfoglia set di dati con numerosi set di dati selezionati ed evidenziata la barra delle azioni di massa.](../images/datasets/user-guide/bulk-actions.png)
+
+Quando applichi azioni in blocco ai set di dati, si applicano le seguenti condizioni:
+
+* Puoi selezionare i set di dati da pagine diverse dell’interfaccia utente.
+* Se selezioni un filtro, i set di dati selezionati verranno reimpostati.
+
 ## Ordinare i set di dati per data di creazione {#sort}
 
 Set di dati in [!UICONTROL Sfoglia] La scheda può essere ordinata in base a date ascendenti o discendenti. Seleziona la [!UICONTROL Creato] o [!UICONTROL Ultimo aggiornamento] intestazioni di colonna per alternare tra crescente e decrescente. Una volta selezionata, la colonna lo indica con una freccia su o giù a lato dell’intestazione della colonna.
 
 ![Scheda Sfoglia dell’area di lavoro Set di dati con le colonne Creato e Ultimo aggiornamento evidenziate.](../images/datasets/user-guide/ascending-descending-columns.png)
-
-## Visualizzare in anteprima un set di dati {#preview}
-
-Puoi visualizzare in anteprima i dati di esempio del set di dati da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da visualizzare in anteprima. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Anteprima set di dati]** dall’elenco delle opzioni disponibili. Se il set di dati è vuoto, il collegamento di anteprima viene disattivato e indica invece che l’anteprima non è disponibile.
-
-![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Anteprima set di dati evidenziata per il set di dati selezionato.](../images/datasets/user-guide/preview-dataset-option.png)
-
-Viene visualizzata la finestra di anteprima, in cui a destra è visualizzata la vista gerarchica dello schema per il set di dati.
-
-![Viene visualizzata la finestra di dialogo di anteprima del set di dati con informazioni sulla struttura del set di dati e valori di esempio.](../images/datasets/user-guide/preview-dataset.png)
-
-In alternativa, da **[!UICONTROL Attività set di dati]** schermata, seleziona **[!UICONTROL Anteprima set di dati]** nell’angolo in alto a destra dello schermo per visualizzare in anteprima fino a 100 righe di dati.
-
-![Viene evidenziato il pulsante Anteprima set di dati.](../images/datasets/user-guide/select-preview.png)
-
-Per metodi più affidabili per accedere ai dati, [!DNL Experience Platform] fornisce servizi a valle come [!DNL Query Service] e [!DNL JupyterLab] per esplorare e analizzare i dati. Per ulteriori informazioni, consulta i seguenti documenti:
-
-* [Panoramica di Query Service](../../query-service/home.md)
-* [Guida utente di JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Creare un set di dati {#create}
 
@@ -201,81 +298,6 @@ Il **[!UICONTROL Aggiungi dati]** viene visualizzato il passaggio. Carica il fil
 >I nomi delle colonne CSV devono iniziare con caratteri alfanumerici e possono contenere solo lettere, numeri e trattini bassi.
 
 ![Viene visualizzata la schermata Aggiungi dati. Viene evidenziato il percorso in cui puoi caricare il file CSV del set di dati.](../images/datasets/user-guide/add-csv-data.png)
-
-## Abilitare un set di dati per Real-Time Customer Profile {#enable-profile}
-
-Ogni set di dati ha la capacità di arricchire i profili dei clienti con i dati acquisiti. A questo scopo, lo schema a cui aderisce il set di dati deve essere compatibile per l’utilizzo in [!DNL Real-Time Customer Profile]. Uno schema compatibile soddisfa i seguenti requisiti:
-
-* Lo schema ha almeno un attributo specificato come proprietà di identità.
-* Lo schema ha una proprietà di identità definita come identità primaria.
-
-Per ulteriori informazioni sull’abilitazione di uno schema per [!DNL Profile], vedere [Guida utente dell’Editor di schema](../../xdm/tutorials/create-schema-ui.md).
-
-Puoi abilitare un set di dati per il profilo da entrambe le opzioni in linea di [!UICONTROL Sfoglia] e la scheda [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] scheda di [!UICONTROL Set di dati] nell’area di lavoro, seleziona i puntini di sospensione di un set di dati da abilitare per il profilo. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Abilita profilo unificato]** dall’elenco delle opzioni disponibili.
-
-![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e Abilita profilo unificato evidenziati.](../images/datasets/user-guide/enable-for-profile.png)
-
-In alternativa, dal set di dati di **[!UICONTROL Attività set di dati]** , seleziona la **[!UICONTROL Profilo]** attivare/disattivare all&#39;interno di **[!UICONTROL Proprietà]** colonna. Una volta abilitata, anche i dati acquisiti nel set di dati verranno utilizzati per popolare i profili dei clienti.
-
->[!NOTE]
->
->Se un set di dati contiene già dati ed è quindi abilitato per [!DNL Profile], i dati esistenti non vengono utilizzati automaticamente da [!DNL Profile]. Dopo aver abilitato un set di dati per [!DNL Profile], si consiglia di riacquisire tutti i dati esistenti per farli contribuire ai profili dei clienti.
-
-![L’opzione Profilo è evidenziata all’interno della pagina dei dettagli del set di dati.](../images/datasets/user-guide/enable-dataset-profiles.png)
-
-Anche i set di dati abilitati per il profilo possono essere filtrati in base a questo criterio. Consulta la sezione su come [filtrare i set di dati abilitati per il profilo](#filter-profile-enabled-datasets) per ulteriori informazioni.
-
-## Gestire e applicare la governance dei dati su un set di dati {#manage-and-enforce-data-governance}
-
-Puoi gestire le etichette di governance dei dati per un set di dati selezionando le opzioni in linea di [!UICONTROL Sfoglia] scheda. Seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, seguiti da **[!UICONTROL Gestire i dati e accedere alle etichette]** dal menu a discesa.
-
-Le etichette di utilizzo dei dati, applicate a livello di schema, ti consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni sulle etichette o fare riferimento a [guida utente delle etichette di utilizzo dati](../../data-governance/labels/overview.md) per istruzioni su come applicare etichette agli schemi per la propagazione ai set di dati.
-
-## Sposta in cartelle {#move-to-folders}
-
-Per una migliore gestione dei set di dati, puoi inserire i set di dati all’interno di cartelle. Per spostare un set di dati in una cartella, seleziona i puntini di sospensione (...) accanto al nome del set di dati che desideri gestire, quindi fai clic su **[!UICONTROL Sposta nella cartella]** dal menu a discesa.
-
-![Il [!UICONTROL Set di dati] dashboard con i puntini di sospensione e [!UICONTROL Sposta nella cartella] evidenziato.](../images/datasets/user-guide/move-to-folder.png)
-
-Il [!UICONTROL Sposta] viene visualizzata la finestra di dialogo dataset to folder (set di dati nella cartella). Seleziona la cartella in cui desideri spostare il pubblico, quindi fai clic su **[!UICONTROL Sposta]**. Una notifica a comparsa informa che lo spostamento del set di dati è stato eseguito correttamente.
-
-![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con [!UICONTROL Sposta] evidenziato.](../images/datasets/user-guide/move-dialog.png)
-
->[!TIP]
->
->Puoi anche creare cartelle direttamente dalla finestra di dialogo Sposta set di dati. Per creare una cartella, seleziona l’icona Crea cartella (![Icona Crea cartella.](../images/datasets/user-guide/create-folder-icon.png)) in alto a destra nella finestra di dialogo.
->
->![Il [!UICONTROL Sposta] finestra di dialogo del set di dati con l’icona crea cartella evidenziata.](/help/catalog/images/datasets/user-guide/create-folder.png)
-
-Una volta che il set di dati si trova in una cartella, puoi scegliere di visualizzare solo i set di dati che appartengono a una cartella specifica. Per aprire la struttura delle cartelle, seleziona l’icona mostra cartelle (![Icona Mostra cartelle](../images/datasets/user-guide/show-folders-icon.png)). Quindi, seleziona la cartella scelta per visualizzare tutti i set di dati associati.
-
-![Il [!UICONTROL Set di dati] dashboard con la struttura di cartelle dei set di dati visualizzata, l’icona mostra cartelle e una cartella selezionata evidenziata.](../images/datasets/user-guide/folder-structure.png)
-
-## Eliminare un set di dati {#delete}
-
-Puoi eliminare un set di dati dalle azioni in linea del set di dati in [!UICONTROL Sfoglia] o in alto a destra del [!UICONTROL Attività set di dati] visualizzazione. Dalla sezione [!UICONTROL Sfoglia] , seleziona i puntini di sospensione (...) accanto al nome del set di dati da eliminare. Viene visualizzato un elenco di opzioni. Quindi, seleziona **[!UICONTROL Elimina]** dal menu a discesa.
-
-![La scheda Sfoglia dell’area di lavoro Set di dati con i puntini di sospensione e l’opzione Elimina evidenziata per il set di dati selezionato.](../images/datasets/user-guide/inline-delete-dataset.png)
-
-Viene visualizzata una finestra di dialogo di conferma. Seleziona **[!UICONTROL Elimina]** per confermare.
-
-In alternativa, seleziona **[!UICONTROL Elimina set di dati]** dal **[!UICONTROL Attività set di dati]** schermo.
-
->[!NOTE]
->
->Set di dati creati e utilizzati dalle applicazioni e dai servizi Adobe (ad esempio Adobe Analytics, Adobe Audience Manager o [!DNL Offer Decisioning]) non può essere eliminato.
-
-![Il pulsante Elimina set di dati è evidenziato nella pagina dei dettagli del set di dati.](../images/datasets/user-guide/delete-dataset.png)
-
-Viene visualizzata una casella di conferma. Seleziona **[!UICONTROL Elimina]** per confermare l’eliminazione del set di dati.
-
-![Viene visualizzata la finestra modale di conferma per l’eliminazione, con il pulsante Elimina evidenziato.](../images/datasets/user-guide/confirm-delete.png)
-
-## Eliminare un set di dati abilitato per il profilo
-
-Se un set di dati è abilitato per il profilo, eliminandolo tramite l’interfaccia utente verrà eliminato dal data lake, da Identity Service e anche da tutti i dati di profilo associati a tale set di dati nell’archivio Profili.
-
-Puoi eliminare i dati profilo associati a un set di dati da [!DNL Profile] archiviare (lasciando i dati nel data lake) utilizzando l’API Real-Time Customer Profile. Per ulteriori informazioni, vedere [guida dell’endpoint API dei processi di sistema del profilo](../../profile/api/profile-system-jobs.md).
 
 ## Monitorare l’acquisizione dei dati
 
