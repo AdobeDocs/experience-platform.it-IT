@@ -2,10 +2,10 @@
 title: Crittografia dei dati in Adobe Experience Platform
 description: Scopri come i dati vengono crittografati in transito e a riposo in Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 5%
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 5%
 
 Adobe Experience Platform è un sistema potente ed estensibile che centralizza e standardizza i dati sull’esperienza del cliente nelle soluzioni aziendali. Tutti i dati utilizzati da Platform sono crittografati in transito e inattivi per proteggerli. Questo documento descrive i processi di crittografia di Platform ad alto livello.
 
-Il seguente diagramma di flusso del processo illustra come i dati vengono acquisiti, crittografati e memorizzati da [!DNL Experience Platform]:
+Il diagramma di flusso seguente illustra il modo in cui Experienci Platform acquisisce, crittografa e salva i dati in modo permanente:
 
-![](../images/governance-privacy-security/encryption/flow.png)
+![Un diagramma che illustra il modo in cui i dati vengono acquisiti, crittografati e mantenuti per Experience Platform.](../images/governance-privacy-security/encryption/flow.png)
 
 ## Dati in transito {#in-transit}
 
@@ -23,14 +23,37 @@ Tutti i dati in transito tra Platform e qualsiasi componente esterno vengono con
 
 In generale, i dati vengono inseriti in Platform in tre modi:
 
-* [Raccolta dati](../../collection/home.md) Le funzionalità consentono a siti web e applicazioni mobili di inviare dati alla rete Edge di Platform per la gestione temporanea e la preparazione per l’acquisizione.
-* [Connettori sorgente](../../sources/home.md) trasmettono i dati direttamente a Platform da applicazioni Adobe Experience Cloud e altre origini dati aziendali.
-* Gli strumenti ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) non di Adobe inviano i dati al [API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per il consumo.
+- [Raccolta dati](../../collection/home.md) Le funzionalità consentono a siti web e applicazioni mobili di inviare dati all’Edge Network di Platform per la gestione temporanea e la preparazione per l’acquisizione.
+- [Connettori sorgente](../../sources/home.md) trasmettono i dati direttamente a Platform da applicazioni Adobe Experience Cloud e altre origini dati aziendali.
+- Gli strumenti ETL (Extract, Transform, Load, cioè Estrai, Trasforma, Carica) non di Adobe inviano i dati al [API di acquisizione batch](../../ingestion/batch-ingestion/overview.md) per il consumo.
 
-Dopo che i dati sono stati inseriti nel sistema e [crittografato a riposo](#at-rest), può quindi essere arricchito dai servizi di Platform e portato fuori dal sistema nei seguenti modi:
+Dopo che i dati sono stati inseriti nel sistema e [crittografato a riposo](#at-rest), i servizi Platform arricchiscono ed esportano i dati nei modi seguenti:
 
-* [Destinazioni](../../destinations/home.md) consente di attivare i dati per applicazioni Adobe e applicazioni partner.
-* Applicazioni della piattaforma nativa come [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) può anche utilizzare i dati.
+- [Destinazioni](../../destinations/home.md) consente di attivare i dati per applicazioni Adobe e applicazioni partner.
+- Applicazioni della piattaforma nativa come [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/ajo-home) può anche utilizzare i dati.
+
+### Supporto del protocollo mTLS {#mtls-protocol-support}
+
+Ora puoi utilizzare Mutual Transport Layer Security (mTLS) per garantire una maggiore sicurezza nelle connessioni in uscita alle destinazioni API HTTP e nelle azioni personalizzate di Adobe Journey Optimizer. mTLS è un metodo di sicurezza end-to-end per l’autenticazione reciproca che garantisce che entrambe le parti che condividono le informazioni siano chi affermano di essere prima che i dati vengano condivisi. mTLS include un ulteriore passaggio rispetto a TLS, in cui il server richiede anche il certificato del client e lo verifica alla loro fine.
+
+#### mTLS in Adobe Journey Optimizer {#mtls-in-adobe-journey-optimizer}
+
+In Adobe Journey Optimizer, mTLS viene utilizzato insieme a [azioni personalizzate](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). Nessun elemento aggiuntivo [configurazione per azioni personalizzate di Adobe Journey Optimizer](https://experienceleague.adobe.com/it/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) è richiesto da parte tua per abilitare mTLS. Quando l’endpoint per un’azione personalizzata è abilitato per mTLS, il sistema recupera il certificato dal keystore di Adobe Experience Platform e lo fornisce automaticamente all’endpoint (come è richiesto per le connessioni mTLS).
+
+Se desideri utilizzare mTLS con questi flussi di lavoro di destinazione Adobe Journey Optimizer e Experienci Platform HTTP API, per l’indirizzo del server inserito nell’interfaccia utente delle azioni dei clienti Adobe Journey Optimizer o nell’interfaccia utente delle destinazioni è necessario che i protocolli TLS siano disabilitati e che sia abilitato solo mTLS. Se il protocollo TLS 1.2 è ancora abilitato su tale endpoint, non viene inviato alcun certificato per l’autenticazione client. Ciò significa che per utilizzare mTLS con questi flussi di lavoro, l’endpoint del server &quot;ricevente&quot; deve essere un mTLS **solo** endpoint di connessione abilitato.
+
+>[!IMPORTANT]
+>
+>Non è richiesta alcuna configurazione aggiuntiva nell’azione personalizzata o nel percorso Adobe Journey Optimizer per attivare mTLS; questo processo si verifica automaticamente quando viene rilevato un endpoint abilitato per mTLS. Il Nome comune (CN) e i Nomi alternativi dei soggetti (SAN) per ciascun certificato sono disponibili nella documentazione come parte del certificato e possono essere utilizzati come livello aggiuntivo di convalida della proprietà, se lo si desidera.
+>
+>La RFC 2818, pubblicata nel maggio 2000, depreca l&#39;uso del campo Common Name (CN) nei certificati HTTPS per la verifica del nome del soggetto. Consiglia invece di utilizzare l’estensione &quot;Subject Alternative Name&quot; (SAN) del tipo &quot;dns name&quot;.
+
+### Scarica certificati {#download-certificates}
+
+Se desideri verificare il CN o la SAN per eseguire un’ulteriore convalida di terze parti, puoi scaricare i certificati pertinenti qui:
+
+- [Il certificato pubblico Adobe Journey Optimizer](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
+- [Il certificato pubblico del servizio Destinazioni](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
 
 ## Dati a riposo {#at-rest}
 
