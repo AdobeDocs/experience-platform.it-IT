@@ -2,9 +2,9 @@
 title: Pianificazioni query
 description: Scopri come automatizzare l’esecuzione di query pianificate, eliminare o disabilitare una pianificazione di query e utilizzare le opzioni di pianificazione disponibili tramite l’interfaccia utente di Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1822'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,23 @@ Dopo aver registrato una query per la funzione di quarantena, puoi attivare gli 
 
 ### Impostare gli avvisi per uno stato di query pianificata {#alerts-for-query-status}
 
-È inoltre possibile abbonarsi agli avvisi di query come parte delle impostazioni di query pianificate. Ciò significa che si ricevono notifiche quando si cambia lo stato della query. Gli avvisi possono essere ricevuti come notifiche pop-up o e-mail. Le opzioni di avviso dello stato della query disponibili includono avvio, operazione riuscita ed errore. Selezionare la casella di controllo per sottoscrivere gli avvisi relativi allo stato della query pianificata.
+È inoltre possibile abbonarsi agli avvisi di query come parte delle impostazioni di query pianificate. Puoi configurare le impostazioni per ricevere notifiche per una serie di situazioni. Gli avvisi possono essere impostati per uno stato di quarantena, ritardi nell’elaborazione delle query o una modifica dello stato della query. Le opzioni di avviso dello stato della query disponibili includono avvio, operazione riuscita ed errore. Gli avvisi possono essere ricevuti come notifiche pop-up o e-mail. Selezionare la casella di controllo per sottoscrivere gli avvisi relativi allo stato della query pianificata.
 
 ![Il pannello Dettagli pianificazione con le opzioni Avviso evidenziate.](../images/ui/query-editor/alerts.png)
+
+La tabella seguente spiega i tipi di avviso per le query supportati:
+
+| Tipo di avviso | Descrizione |
+|---|---|
+| `start` | Questo avviso avvisa quando viene avviata o avviata l&#39;elaborazione di una query pianificata. |
+| `success` | Questo avviso informa l&#39;utente quando una query pianificata viene eseguita correttamente, indicando che la query è stata eseguita senza errori. |
+| `failed` | Questo avviso viene attivato quando una query pianificata viene eseguita con un errore o non viene eseguita correttamente. Consente di identificare e risolvere tempestivamente i problemi. |
+| `quarantine` | Questo avviso viene attivato quando un’esecuzione di query pianificata viene messa in quarantena. Una volta che una query è [iscritto alla funzione di quarantena](#quarantine), qualsiasi query pianificata che non supera dieci esecuzioni consecutive viene automaticamente inserita in una [!UICONTROL In quarantena] stato. Una query in quarantena richiede quindi l’intervento dell’utente prima di poter eseguire ulteriori esecuzioni. Nota: per poter sottoscrivere avvisi di quarantena, è necessario registrare le query per la funzione di quarantena. |
+| `delay` | Questo avviso ti avvisa se è presente [ritardo nell’esito di un’esecuzione di una query pianificata](./monitor-queries.md#query-run-delay) oltre una soglia specificata. È possibile impostare un&#39;ora personalizzata che attivi l&#39;avviso quando la query viene eseguita per tale durata senza completare o non riuscire. Il comportamento predefinito imposta un avviso per 150 minuti dopo l’inizio dell’elaborazione della query. |
+
+>[!NOTE]
+>
+>Se si sceglie di impostare un [!UICONTROL Ritardo esecuzione query] Avviso, è necessario impostare il ritardo desiderato in minuti nell’interfaccia utente di Platform. Immetti la durata in minuti. Il ritardo massimo è di 24 ore (1440 minuti).
 
 Per una panoramica degli avvisi in Adobe Experience Platform, inclusa la struttura della definizione delle regole di avviso, vedi [panoramica degli avvisi](../../observability/alerts/overview.md). Per informazioni sulla gestione degli avvisi e delle regole di avviso nell’interfaccia utente di Adobe Experience Platform, consulta [Guida all’interfaccia utente Avvisi](../../observability/alerts/ui.md).
 

@@ -2,9 +2,9 @@
 title: Registri query
 description: I registri delle query vengono generati automaticamente ogni volta che viene eseguita una query e sono disponibili tramite l’interfaccia utente per facilitare la risoluzione dei problemi. Questo documento illustra come utilizzare e navigare nella sezione Registri di Query Service dell’interfaccia utente.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform mantiene un registro di tutti gli eventi di query che 
 
 I file di registro vengono generati automaticamente da qualsiasi evento di query e contengono informazioni quali l&#39;istruzione SQL utilizzata, lo stato della query, il tempo impiegato e l&#39;ultima esecuzione. È possibile utilizzare i dati di registro delle query come strumento potente per la risoluzione di problemi inefficienti o di query con problemi. Informazioni di registro più complete sono conservate come parte della funzione di registro di audit e sono disponibili nella sezione [documentazione del registro di controllo](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Controllare i registri query
+## Controllare i registri query {#check-query-logs}
 
 Per controllare i registri delle query, seleziona [!UICONTROL Query] per passare all’area di lavoro del servizio query e selezionare [!UICONTROL Log] dalle opzioni disponibili.
+
+>[!NOTE]
+>
+>Per impostazione predefinita, sono escluse sia le query di sistema che le query del dashboard. Consulta la [filtri](#filter-logs) per informazioni su come perfezionare i registri visualizzati in base alle impostazioni.
 
 ![Interfaccia utente di Platform con Query e Registro evidenziati.](../images/ui/query-log/logs.png)
 
@@ -82,6 +86,7 @@ Nella tabella seguente viene fornita una descrizione di ogni filtro.
 | Filtro | Descrizione |
 | ------ | ----------- |
 | [!UICONTROL Escludere le query del dashboard] | Questa casella di controllo è attivata per impostazione predefinita ed esclude i registri generati dalle query utilizzate per generare le informazioni. Queste query sono generate dal sistema e nascondono i record dei registri generati dagli utenti e necessari per il monitoraggio, l’amministrazione e la risoluzione dei problemi. Per visualizzare i registri generati dal sistema, deseleziona la casella di controllo. |
+| [!UICONTROL Escludere le query di sistema] | Questa casella di controllo è attivata per impostazione predefinita ed esclude i registri generati dal sistema. Le query generate dal sistema spesso includono attività in background o operazioni di manutenzione che potrebbero non essere rilevanti per il monitoraggio degli utenti, l’amministrazione o la risoluzione dei problemi. Se devi controllare i registri generati dal sistema, deseleziona questa casella di controllo per includerli nella vista del registro. |
 | [!UICONTROL Data di inizio] | Per filtrare i registri per le query create durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di inizio] sezione. |
 | [!UICONTROL Data di completamento] | Per filtrare i registri per le query completate durante un periodo specifico, imposta [!UICONTROL Inizio] e [!UICONTROL Fine] date in [!UICONTROL Data di completamento] sezione. |
 | [!UICONTROL Stato] | Per filtrare i registri in base al [!UICONTROL Stato] della query, selezionare il pulsante di opzione appropriato. Le opzioni disponibili includono [!UICONTROL Inviato], [!UICONTROL In corso], [!UICONTROL Completato], e [!UICONTROL Non riuscito]. Puoi filtrare i registri solo in base a una condizione di stato alla volta. |

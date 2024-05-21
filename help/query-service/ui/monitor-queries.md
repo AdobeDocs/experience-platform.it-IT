@@ -2,9 +2,9 @@
 title: Monitorare le query pianificate
 description: Scopri come monitorare le query tramite l’interfaccia utente di Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La tabella seguente descrive ogni colonna disponibile.
 
 >[!NOTE]
 >
->L’icona di avviso delle sottoscrizioni è contenuta in ogni riga di una colonna senza titolo. Consulta la [avvisi abbonamenti](#alert-subscription) per ulteriori informazioni.
+>Icona di notifica delle sottoscrizioni (![Icona di notifica delle sottoscrizioni.](../images/ui/monitor-queries/alert-subscription-icon.png)) è contenuto in ogni riga di una colonna senza titolo. Consulta la [avvisi abbonamenti](#alert-subscription) per ulteriori informazioni.
 
 | Colonna | Descrizione |
 |---|---|
@@ -69,7 +69,7 @@ Il [!UICONTROL Query pianificate] visualizza offre diverse azioni in linea per g
 
 ### Disattivare o attivare una query pianificata {#disable}
 
-Per disabilitare una query pianificata, seleziona i puntini di sospensione di una query pianificata da gestire, quindi fai clic su **[!UICONTROL Disattiva pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Disattiva]** per confermare l&#39;impostazione.
+Per disabilitare una query pianificata, seleziona i puntini di sospensione per la query pianificata da gestire, quindi fai clic su **[!UICONTROL Disattiva pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Disattiva]** per confermare l&#39;impostazione.
 
 Dopo aver disabilitato una query pianificata, puoi abilitare la pianificazione attraverso lo stesso processo. Seleziona i puntini di sospensione, quindi seleziona **[!UICONTROL Abilita pianificazione]** dalle opzioni disponibili.
 
@@ -79,21 +79,33 @@ Dopo aver disabilitato una query pianificata, puoi abilitare la pianificazione a
 
 ### Eliminare una query pianificata {#delete}
 
-Per eliminare una query pianificata, seleziona i puntini di sospensione di una query pianificata da gestire, quindi fai clic su **[!UICONTROL Elimina pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Elimina]** per confermare l&#39;impostazione.
+Per eliminare una query pianificata, seleziona i puntini di sospensione per la query pianificata da gestire, quindi fai clic su **[!UICONTROL Elimina pianificazione]** dalle opzioni del menu a comparsa. Viene visualizzata una finestra di dialogo per confermare l’azione. Seleziona **[!UICONTROL Elimina]** per confermare l&#39;impostazione.
 
 Una volta eliminata, la query pianificata **non** è stato rimosso dall’elenco delle query pianificate. Le azioni in linea fornite dai puntini di sospensione vengono rimosse e sostituite dall’icona di aggiunta avviso disattivata. Non è possibile sottoscrivere avvisi per la pianificazione eliminata. La riga rimane nell’interfaccia utente per fornire informazioni sulle esecuzioni eseguite come parte della query pianificata.
 
-![La scheda Query pianificate con una query pianificata eliminata ed un&#39;icona di avviso disattivata evidenziata.](../images/ui/monitor-queries/post-delete.png)
+![La scheda Query pianificate presenta una query pianificata eliminata ed è evidenziata l’icona di abbonamento agli avvisi disattivata.](../images/ui/monitor-queries/post-delete.png)
 
 Se si desidera pianificare le esecuzioni per tale modello di query, selezionare il nome del modello dalla riga appropriata per passare all&#39;editor di query, quindi seguire la [istruzioni per aggiungere una pianificazione a una query](./query-schedules.md#create-schedule) come descritto nella documentazione.
 
-### Iscriversi agli avvisi {#alert-subscription}
+### Abbonati agli avvisi {#alert-subscription}
 
-Per attivare gli avvisi relativi alle esecuzioni delle query pianificate, seleziona i puntini di sospensione di una query pianificata da gestire, quindi seleziona **[!UICONTROL Abbonati]** dalle opzioni del menu a comparsa.
+Per abbonarsi agli avvisi relativi alle esecuzioni pianificate delle query, selezionare `...` (puntini di sospensione) o icona di avviso (![Icona di sottoscrizione di un avviso.](../images/ui/monitor-queries/alert-subscription-icon.png)) per la query pianificata che desideri gestire. Viene visualizzato il menu a discesa delle azioni in linea. Quindi, seleziona **[!UICONTROL Abbonati]** dalle opzioni disponibili.
 
-Il [!UICONTROL Avvisi] viene visualizzata una finestra di dialogo. Il [!UICONTROL Avvisi] La finestra di dialogo ti consente di ricevere notifiche tramite interfaccia utente e avvisi e-mail. Gli avvisi si basano sullo stato della query. Sono disponibili tre opzioni: `start`, `success`, e `failure`. Seleziona la casella o le caselle appropriate e seleziona **[!UICONTROL Salva]** per iscriversi. È possibile iscriversi agli avvisi se non dispongono di un [!UICONTROL Timestamp ultima esecuzione] valore.
+![Nell’area di lavoro delle query pianificate sono evidenziati i puntini di sospensione, l’icona di sottoscrizione dell’avviso e il menu a discesa delle azioni in linea.](../images/ui/monitor-queries/subscribe.png)
+
+Il [!UICONTROL Avvisi] viene visualizzata una finestra di dialogo. Il [!UICONTROL Avvisi] La finestra di dialogo ti consente di ricevere notifiche tramite interfaccia utente e avvisi e-mail. Sono disponibili diverse opzioni di abbonamento agli avvisi: `start`, `success`, `failure`, `quarantine`, e `delay`. Seleziona la casella o le caselle appropriate e seleziona **[!UICONTROL Salva]** per iscriversi.
 
 ![Finestra di dialogo Sottoscrizioni avvisi.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+La tabella seguente spiega i tipi di avviso per le query supportati:
+
+| Tipo di avviso | Descrizione |
+|---|---|
+| `start` | Questo avviso avvisa quando viene avviata o avviata l&#39;elaborazione di una query pianificata. |
+| `success` | Questo avviso informa l&#39;utente quando una query pianificata viene eseguita correttamente, indicando che la query è stata eseguita senza errori. |
+| `failed` | Questo avviso viene attivato quando una query pianificata viene eseguita con un errore o non viene eseguita correttamente. Consente di identificare e risolvere tempestivamente i problemi. |
+| `quarantine` | Questo avviso viene attivato quando un’esecuzione di query pianificata viene messa in quarantena. Quando le query vengono registrate in [funzione di quarantena](#quarantined-queries), qualsiasi query pianificata che non supera dieci esecuzioni consecutive viene automaticamente inserita in una [!UICONTROL In quarantena] stato. Quindi richiedono il tuo intervento prima che possano aver luogo ulteriori esecuzioni. |
+| `delay` | Questo avviso ti avvisa se è presente [ritardo nell’esito di un’esecuzione di una query](#query-run-delay) oltre una soglia specificata. È possibile impostare un&#39;ora personalizzata che attivi l&#39;avviso quando la query viene eseguita per tale durata senza completare o non riuscire. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Seleziona l’icona delle informazioni (![Icona delle informazioni.](../images/u
 
 ![La scheda Query pianificate con l’icona delle informazioni ed evidenziato il pannello dei dettagli.](../images/ui/monitor-queries/details-panel.png)
 
-### Query in quarantena {#quarantined-queries}
+## Query in quarantena {#quarantined-queries}
+
+>[!NOTE]
+>
+>L’avviso di quarantena non è disponibile per le query ad hoc &quot;run-once&quot;. L’avviso di quarantena è applicabile solo per le query batch pianificate (CTAS e ITAS).
 
 Quando si registra nella funzione di quarantena, tutte le query pianificate che non superano dieci esecuzioni consecutive vengono automaticamente inserite in una [!UICONTROL In quarantena] stato. Una query con questo stato diventa inattiva e non viene eseguita alla frequenza pianificata. Quindi richiede il tuo intervento prima che possano aver luogo ulteriori esecuzioni. In questo modo vengono salvaguardate le risorse di sistema in quanto è necessario esaminare e correggere i problemi con l’SQL prima di eseguire ulteriori esecuzioni.
 
@@ -116,6 +132,22 @@ Per attivare una query pianificata per la funzione di quarantena, selezionare i 
 ![La scheda Query pianificate con i puntini di sospensione e Abilita quarantena evidenziati dal menu a discesa delle azioni in linea.](../images/ui/monitor-queries/inline-enable.png)
 
 È inoltre possibile registrare le query nella funzione di quarantena durante il processo di creazione della pianificazione. Consulta la [documentazione pianificazioni query](./query-schedules.md#quarantine) per ulteriori informazioni.
+
+## Ritardo esecuzione query {#query-run-delay}
+
+Tieni sotto controllo le ore di calcolo impostando avvisi per i ritardi nelle query. Puoi monitorare le prestazioni delle query e ricevere notifiche se lo stato di una query rimane invariato dopo un determinato periodo. Utilizza il carattere &#39;[!UICONTROL Ritardo esecuzione query]&#39; avviso da notificare se una query continua a essere elaborata dopo un periodo di tempo specifico senza completamento.
+
+Quando [abbonati agli avvisi](#alert-subscription) per le esecuzioni di query pianificate, uno degli avvisi disponibili è [!UICONTROL Ritardo esecuzione query]. Questo avviso richiede di impostare una soglia per il tempo di esecuzione, nel qual caso viene inviata una notifica del ritardo nell’elaborazione.
+
+Per scegliere una durata di soglia che attivi la notifica, immettere un numero nel campo di immissione testo o utilizzare le frecce su e giù per aumentare di un minuto. Poiché la soglia è impostata in minuti, la durata massima per osservare un ritardo di esecuzione di una query è di 1440 minuti (24 ore). Il periodo di tempo predefinito per un ritardo di esecuzione è di 150 minuti.
+
+>[!NOTE]
+>
+>Un&#39;esecuzione di una query può avere un solo ritardo. Se modifichi la soglia di ritardo, questa viene modificata per l’utente abbonato all’avviso e per l’intera organizzazione.
+
+![La finestra di dialogo Avvisi della scheda Query pianificate con il campo di input Ritardo esecuzione query evidenziato.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Consulta la sezione abbonamento agli avvisi per scoprire come [abbonati a [!UICONTROL Ritardo esecuzione query] avvisi](#alert-subscription).
 
 ## Filtrare le query {#filter}
 
@@ -157,7 +189,7 @@ Selezionare un ID esecuzione query per passare alla pagina dei dettagli esecuzio
 
 ![La schermata dei dettagli della pianificazione con un ID esecuzione evidenziato.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-## Panoramica sull’esecuzione delle query {#query-run-overview}
+## Panoramica dell’esecuzione delle query {#query-run-overview}
 
 Il [!UICONTROL Panoramica sull’esecuzione delle query] fornisce informazioni sulle singole esecuzioni per questa query pianificata e un raggruppamento più dettagliato dello stato di esecuzione. Questa pagina include anche le informazioni sul client e i dettagli di eventuali errori che potrebbero aver causato l’esito negativo della query.
 
