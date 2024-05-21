@@ -3,9 +3,9 @@ title: Creare una connessione sorgente PubSub di Google nell’interfaccia utent
 description: Scopri come creare un connettore di origine Google PubSub utilizzando l’interfaccia utente di Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,8 @@ Se disponi già di un [!DNL PubSub] connessione, è possibile saltare il resto d
 
 ### Raccogli le credenziali richieste
 
-Per connettersi [!DNL PubSub] In Platform, devi fornire un valore valido per le seguenti credenziali:
+È necessario fornire valori per le proprietà di connessione descritte di seguito per connettere il [!DNL PubSub] da Experience Platform. Per ulteriori informazioni sull&#39;autenticazione e sulla configurazione dei prerequisiti, consultare [[!DNL PubSub source] panoramica](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -37,7 +38,7 @@ Per connettersi [!DNL PubSub] In Platform, devi fornire un valore valido per le 
 
 | Credenziali | Descrizione |
 | --- | --- |
-| Progetto ID | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
+| ID Progetto | ID progetto richiesto per l’autenticazione [!DNL PubSub]. |
 | Credenziali | Credenziali necessarie per l&#39;autenticazione [!DNL PubSub]. Assicurati di inserire il file JSON completo dopo aver rimosso gli spazi vuoti dalle credenziali. |
 
 >[!TAB Autenticazione basata su argomenti e sottoscrizioni]
