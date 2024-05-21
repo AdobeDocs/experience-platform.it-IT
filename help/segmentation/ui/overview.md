@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4334'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,11 @@ Accanto a ogni pubblico è presente un’icona con i puntini di sospensione. Sel
 | [!UICONTROL Elimina] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Elimina il pubblico selezionato. Tipi di pubblico utilizzati nelle destinazioni a valle o dipendenti da altri tipi di pubblico **non può** essere soppressa. Per ulteriori informazioni sull’eliminazione del pubblico, consulta la sezione [domande frequenti sulla segmentazione](../faq.md#lifecycle-states). |
 | [!UICONTROL Aggiungi al pacchetto] | Composizione del pubblico, caricamento personalizzato, servizio di segmentazione | Sposta il pubblico da una sandbox all’altra. Per ulteriori informazioni su questa funzione, leggere [guida agli strumenti sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Nella parte superiore della pagina sono presenti opzioni per aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico, creare un nuovo pubblico e visualizzare un raggruppamento della frequenza di aggiornamento.
+>[!IMPORTANT]
+>
+>Prima di eliminare il pubblico, assicurati che sia **non** utilizzato come componente in un pubblico basato su account o in Adobe Journey Optimizer.
+
+Nella parte superiore della pagina sono presenti opzioni per aggiungere tutti i tipi di pubblico a una pianificazione, importare un pubblico, creare un nuovo pubblico e visualizzare un riepilogo della valutazione del pubblico.
 
 Attivazione/disattivazione **[!UICONTROL Pianifica tutti i tipi di pubblico]** abiliterà la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [sezione segmentazione pianificata di questa guida utente](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Selezione **[!UICONTROL Creare un pubblico]** ti consente di creare un pubblico.
 
 ![Viene evidenziata la barra di navigazione superiore nella pagina di navigazione del pubblico. Questa barra contiene un pulsante per creare un pubblico e un pulsante per importare un pubblico.](../images/ui/overview/browse-audiences-top.png)
 
-Puoi selezionare **[!UICONTROL Aggiorna riepilogo frequenza]** per visualizzare un grafico a torta che mostra la frequenza di aggiornamento.
+Puoi selezionare **[!UICONTROL Riepilogo valutazione]** per visualizzare un grafico a torta che mostra un riepilogo delle valutazioni del pubblico.
 
-![Viene evidenziato il pulsante Aggiorna riepilogo frequenza.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![Viene evidenziato il pulsante Riepilogo valutazione.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico in base alla frequenza di aggiornamento. Il grafico mostra il numero totale di tipi di pubblico al centro e il tempo di valutazione batch giornaliero in UTC nella parte inferiore. Se passi il cursore del mouse sulle diverse parti del pubblico, viene visualizzato il numero di tipi di pubblico che appartengono a ciascun tipo di frequenza di aggiornamento.
+Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico in base alla valutazione del pubblico. Il grafico mostra il numero totale di tipi di pubblico al centro e il tempo di valutazione batch giornaliero in UTC nella parte inferiore. Se passi il cursore del mouse sulle diverse parti del pubblico, viene visualizzato il numero di tipi di pubblico che appartengono a ciascun tipo di frequenza di aggiornamento.
 
-![Il grafico a torta frequenza di aggiornamento è evidenziato e viene visualizzato anche il tempo di valutazione della segmentazione batch.](../images/ui/overview/update-frequency-chart.png)
+![Il grafico a torta di valutazione del pubblico è evidenziato e mostra anche il tempo di valutazione della segmentazione in batch.](../images/ui/overview/evaluation-summary.png)
 
 ### Personalizza {#customize}
 
@@ -203,7 +207,7 @@ Viene visualizzato l’elenco dei filtri disponibili.
 | [!UICONTROL Origin] | Consente di filtrare in base all’origine del pubblico. Le opzioni disponibili includono Segmentation Service (Servizio di segmentazione), Custom upload (Caricamento personalizzato), Audience composition (Composizione pubblico) e Audienci Manager. |
 | [!UICONTROL Ha qualsiasi tag] | Consente di filtrare per tag. Puoi scegliere tra **[!UICONTROL Ha qualsiasi tag]** e **[!UICONTROL Ha tutti i tag]**. Quando **[!UICONTROL Ha qualsiasi tag]** è selezionato, i tipi di pubblico filtrati includeranno **qualsiasi** dei tag aggiunti. Quando **[!UICONTROL Ha tutti i tag]** è selezionato, i tipi di pubblico filtrati devono includere **tutto** dei tag aggiunti. |
 | [!UICONTROL Stato del ciclo di vita] | Consente di filtrare in base allo stato del ciclo di vita del pubblico. Le opzioni disponibili includono [!UICONTROL Eliminato], [!UICONTROL Bozza], [!UICONTROL Inattivo], e [!UICONTROL Pubblicato]. |
-| [!UICONTROL Frequenza di aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico. Le opzioni disponibili includono [!UICONTROL Pianificato], [!UICONTROL Continuo], e [!UICONTROL On-demand]. |
+| [!UICONTROL Frequenza di aggiornamento] | Consente di filtrare in base alla frequenza di aggiornamento del pubblico (metodo di valutazione). Le opzioni disponibili includono [!UICONTROL Pianificato], [!UICONTROL Continuo], e [!UICONTROL On-demand]. |
 | [!UICONTROL Creato da] | Consente di filtrare in base alla persona che ha creato il pubblico. |
 | [!UICONTROL Data di creazione] | Consente di filtrare in base alla data di creazione del pubblico. Puoi scegliere un intervallo di date da filtrare al momento della creazione del pubblico. |
 | [!UICONTROL Data di modifica] | Consente di filtrare in base all’ultima data modificata del pubblico. Puoi scegliere un intervallo di date per filtrare quando il pubblico è stato modificato l’ultima volta. |
@@ -329,6 +333,10 @@ Selezione **[!UICONTROL Genera regola]** ti porta al Generatore di segmenti. Que
 ![Viene visualizzata l’area di lavoro del Generatore di segmenti.](../images/ui/overview/segment-builder.png)
 
 ### Importazione di un pubblico {#import-audience}
+
+>[!IMPORTANT]
+>
+>Per importare un pubblico generato esternamente, devi **deve** dispone delle seguenti autorizzazioni: [!UICONTROL Visualizzare i segmenti], [!UICONTROL Gestire i segmenti], e [!UICONTROL Importa pubblico]. Per ulteriori informazioni su queste autorizzazioni, leggere [panoramica sul controllo degli accessi](../../access-control/home.md#permissions).
 
 Puoi selezionare **[!UICONTROL Importa pubblico]** per importare un pubblico generato esternamente.
 

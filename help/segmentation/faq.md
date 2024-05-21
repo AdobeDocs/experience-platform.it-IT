@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '4056'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Sì, i tipi di pubblico predefiniti generati esternamente sono supportati con Au
 
 ### Quali autorizzazioni devo avere per caricare i tipi di pubblico generati esternamente?
 
-Per caricare tipi di pubblico generati esternamente, devi disporre delle autorizzazioni &quot;Visualizza tipi di pubblico/segmenti&quot;, &quot;Gestisci tipi di pubblico/segmenti&quot;, &quot;Visualizza set di dati&quot;, &quot;Gestisci set di dati&quot;, &quot;Visualizza origini&quot; e &quot;Gestisci origini&quot;. Non sono necessari controlli specifici basati sul ruolo per caricare tipi di pubblico generati esternamente.
+Per caricare tipi di pubblico generati esternamente, devi disporre delle autorizzazioni &quot;Visualizza segmenti&quot;, &quot;Gestisci segmenti&quot; e &quot;Importa tipi di pubblico&quot;. Non sono necessari controlli specifici basati sul ruolo per caricare tipi di pubblico generati esternamente.
 
 ### Cosa succede quando carico un pubblico generato esternamente?
 
@@ -198,6 +198,14 @@ Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato 
 >Puoi eliminare solo i tipi di pubblico che sono **non** utilizzato in qualsiasi attivazione a valle. Inoltre, non puoi eliminare un pubblico a cui viene fatto riferimento in un altro pubblico. Se non puoi eliminare il pubblico, assicurati di **non** utilizzarlo in qualsiasi servizio a valle o come elemento costitutivo di un altro pubblico.
 
 Puoi impostare un pubblico in stato di eliminazione aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Elimina].
+
+### Esistono avvertenze per le transizioni dello stato del ciclo di vita?
+
+Sì, è necessario prestare attenzione ad alcune avvertenze che si verificano quando si utilizzano tipi di pubblico nei servizi a valle, come Adobe Journey Optimizer, o tipi di pubblico non basati sul cliente, come i tipi di pubblico basati sull’account.
+
+In questo momento, **deve** verifica manualmente se il pubblico viene utilizzato a valle in Adobe Journey Optimizer, in quanto questo stato non è attualmente controllato automaticamente.
+
+Inoltre, puoi **deve** controlla manualmente se il pubblico viene utilizzato come componente di un pubblico basato sull’account, poiché anche questo stato non viene attualmente controllato automaticamente.
 
 ### L’utilizzo di un pubblico come pubblico secondario influisce sulle transizioni dello stato del ciclo di vita?
 
