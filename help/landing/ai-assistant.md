@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '3122'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Prima di eseguire una query su Assistente IA, è necessario considerare due clas
 
 >[!ENDSHADEBOX]
 
-## Obiettivi che puoi raggiungere con l’Assistente AI
+## Obiettivi che puoi raggiungere con l’Assistente AI {#objectives}
 
 È possibile utilizzare l&#39;Assistente IA per obiettivi quali:
 
@@ -140,15 +140,15 @@ Per visualizzare le citazioni e convalidare la risposta dell’Assistente AI, se
 
 +++
 
-### Utilizzo e visualizzazione dei dati {#data-usage-and-visualization}
+### Dati e visualizzazione di utilizzo {#usage-data-and-visualization}
 
-+++Seleziona per visualizzare un esempio di domande sull’utilizzo dei dati e visualizzazione dei dati
++++Seleziona per visualizzare un esempio di domande sui dati di utilizzo e visualizzazione dei dati
 
-Affinché l’Assistente AI risponda a una query sull’utilizzo dei dati all’interno della tua organizzazione, devi trovarti in una sandbox attiva.
+Affinché l’Assistente AI risponda a una query sui dati di utilizzo all’interno della tua organizzazione, devi trovarti in una sandbox attiva.
 
 Nell’esempio seguente, l’Assistente AI viene fornito con la seguente query: **&quot;Mostra le definizioni dei segmenti con più di 1000 profili e includi lo stato di attivazione.&quot;** L’Assistente AI risponde quindi con un grafico che visualizza i dati di segmenti e profili.
 
-![Rispondi alla domanda sull’utilizzo dei dati.](./images/ai-assistant/data-usage-question.png)
+![Rispondi alla domanda sui dati di utilizzo.](./images/ai-assistant/data-usage-question.png)
 
 Puoi passare il cursore sopra una singola barra per visualizzare dati specifici. È inoltre possibile selezionare l&#39;icona di espansione per ingrandire la visualizzazione del grafico.
 
@@ -158,7 +158,7 @@ Viene visualizzata una vista espansa della visualizzazione. Puoi utilizzare la f
 
 ![Grafico espanso.](./images/ai-assistant/chart-expanded.png)
 
-Quando viene richiesta una domanda sull’utilizzo dei dati, l’Assistente AI spiega come ha calcolato la risposta. Nell’esempio seguente, l’Assistente AI illustra i passaggi necessari per visualizzare le definizioni dei segmenti con più di 1000 profili e i rispettivi stati di attivazione.
+Quando viene richiesta una domanda relativa ai dati di utilizzo, l’Assistente AI spiega in che modo ha calcolato la risposta. Nell’esempio seguente, l’Assistente AI illustra i passaggi necessari per visualizzare le definizioni dei segmenti con più di 1000 profili e i rispettivi stati di attivazione.
 
 ![Rispondi alla domanda sulle definizioni dei segmenti che illustra come l’Assistente AI ha calcolato la risposta.](./images/ai-assistant/results-explained.png)
 
@@ -204,9 +204,9 @@ Attualmente, l’indice della documentazione copre Adobe Experience Platform (Re
 
 Il modello di recupero della documentazione di è addestrato su Experienci Platform (Real-Time CDP e Audiences). Non è possibile rispondere a domande che esulano dall’ambito di Adobe Experience Platform, come ad esempio domande su altri prodotti Adobe come Adobe Target e la suite di Creative Cloud.
 
-## Utilizzo dati {#data-usage}
+## Dati di utilizzo {#usage-date}
 
-Puoi anche porre domande all’Assistente AI sull’utilizzo dei dati nei seguenti domini:
+Puoi anche porre domande all’Assistente AI sui dati di utilizzo nei seguenti domini:
 
 * Attributi
 * Tipi di pubblico
@@ -216,21 +216,50 @@ Puoi anche porre domande all’Assistente AI sull’utilizzo dei dati nei seguen
 * Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
 * Sorgenti _(Al momento non è possibile rispondere alle domande relative ai conti)._
 
-Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Potrebbe essere necessario formattare le domande come: &quot;Quando è stato il pubblico con il titolo {TITLE} creato?&quot; invece di, &quot;Quando è stato il {TITLE} pubblico creato?&quot;
+Per le query di dati di utilizzo, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Inoltre, dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come tipi di pubblico, schemi, set di dati, attributi e destinazioni.
 
-Dovrai accedere a una sandbox per informazioni su dati specifici relativi a oggetti come tipi di pubblico, schemi, set di dati, attributi e destinazioni.
+### Esempi di domande sui dati di utilizzo {#example-usage-data-questions}
 
-### Esempi di domande sull’utilizzo dei dati {#example-data-usage-questions}
++++Seleziona per visualizzare un elenco di esempi di domande sui dati di utilizzo
 
-+++Seleziona per visualizzare un elenco di esempi di domande sull’utilizzo dei dati
+Leggi la tabella seguente per esempi di domande sui dati di utilizzo e i rispettivi casi di utilizzo:
 
-| Tipo di domanda | Descrizione | Esempi |
+| Tipo di domanda | Caso d’uso | Esempi |
 | --- | --- | --- | 
-| Derivazione dei dati | Tracciare l&#39;utilizzo di uno o più oggetti tra altri oggetti Experienci Platform | <ul><li>Quali set di dati utilizzano {SCHEMA_NAME} schema?</li><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quali set di dati sono stati utilizzati nei tipi di pubblico attivati?</li><li>Elencare gli schemi con attributi utilizzati nei tipi di pubblico attivati.</li><li>Mostra i tipi di pubblico attivati per {DESTINATION_ACCOUNT_NAME} e avere più di 1000 profili.</li><li>Mostra gli attributi utilizzati nei tipi di pubblico attivati che sono stati modificati dopo gennaio 2023.</li><li>Quali set di dati vengono acquisiti tramite {SOURCE_NAME}?</li><li>Quali flussi di dati sono associati a {DATAFLOW_NAME}</li><li>Elencare gli schemi relativi ai tipi di pubblico attivati e creati nell’ultimo anno.</li></ul> |
-| Distribuzione e aggregazioni | Domande basate su riepilogo sull&#39;utilizzo degli oggetti di Experience Platform | <ul><li>Qual è la percentuale di pubblico attivato?</li><li>Quanti campi vengono utilizzati nella segmentazione?</li><li>Quali tipi di pubblico vengono attivati nel maggior numero di destinazioni?</li><li>Elencare tipi di pubblico duplicati.</li><li>Mostra i tipi di pubblico attivati in {DESTINATION_ACCOUNT_NAME} e li classifica in base alle dimensioni del profilo.</li><li>Qual è la percentuale di tipi di pubblico che non sono stati attivati ma hanno più di 100 profili. Mostratemi i loro nomi.</li><li>Elenca i 3 connettori di origine che acquisiscono i dati nei miei set di dati.</li><li>Elencami i primi 5 attributi utilizzati nei tipi di pubblico attivati in base alla loro occorrenza.</li></ul> |
-| Ricerca oggetto | Recuperare o accedere a un oggetto Experience Platform o alle relative proprietà. | <ul><li>A quali set di dati non è associato alcuno schema</li><li>Elencare gli attributi utilizzati per {AUDIENCE_NAME}?</li><li>Dammi l’elenco degli schemi abilitati per il profilo ma non modificati dalla loro creazione.</li><li>Quali tipi di pubblico sono stati modificati nell&#39;ultima settimana?</li><li>Elencami i tipi di pubblico che hanno le stesse definizioni di segmenti insieme alla loro data di creazione.</li><li>Quali set di dati sono abilitati per il profilo e includono anche quanti tipi di pubblico sono stati creati da ciascun set di dati.</li><li>Quali account di origine sono associati al set di dati XYZ?</li><li>Mostra la definizione del segmento e la data di modifica di {AUDIENCE_NAME}.</li></ul> |
+| Derivazione dei dati | Tracciare l&#39;utilizzo di uno o più oggetti tra altri oggetti Experienci Platform | <ul><li>Quali set di dati utilizzano lo schema &quot;schema ACME&quot;?</li><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quali set di dati sono stati utilizzati nei tipi di pubblico attivati?</li><li>Elencare gli schemi con attributi utilizzati nei tipi di pubblico attivati.</li><li>Mostra i tipi di pubblico attivati su &quot;Destinazioni ACME&quot; e con più di 1000 profili.</li><li>Mostra gli attributi utilizzati nei tipi di pubblico attivati che sono stati modificati dopo gennaio 2023.</li><li>Quali sono i set di dati acquisiti tramite l’origine &quot;ACME Amazon S3&quot;?</li><li>Quali flussi di dati sono associati a &quot;Flusso di dati sulla fedeltà ACME&quot;?</li><li>Elencare gli schemi relativi ai tipi di pubblico attivati e creati nell’ultimo anno.</li></ul> |
+| Distribuzione e aggregazioni | Domande basate su riepilogo sull&#39;utilizzo degli oggetti di Experience Platform | <ul><li>Qual è la percentuale di pubblico attivato?</li><li>Quanti campi vengono utilizzati nella segmentazione?</li><li>Quali tipi di pubblico vengono attivati nel maggior numero di destinazioni?</li><li>Elencare tipi di pubblico duplicati.</li><li>Mostra i tipi di pubblico attivati in &quot;Destinazioni ACME&quot; e classificali in base alla dimensione del profilo.</li><li>Qual è la percentuale di tipi di pubblico che non sono stati attivati ma hanno più di 100 profili. Mostratemi i loro nomi.</li><li>Elenca i 3 connettori di origine che acquisiscono i dati nei miei set di dati.</li><li>Elencami i primi 5 attributi utilizzati nei tipi di pubblico attivati in base alla loro occorrenza.</li></ul> |
+| Ricerca oggetto | Recuperare o accedere a un oggetto Experience Platform o alle relative proprietà. | <ul><li>A quali set di dati non è associato alcuno schema</li><li>Elencare gli attributi utilizzati per &quot;Pubblico ACME&quot;?</li><li>Dammi l’elenco degli schemi abilitati per il profilo ma non modificati dalla loro creazione.</li><li>Quali tipi di pubblico sono stati modificati nell&#39;ultima settimana?</li><li>Elencami i tipi di pubblico che hanno le stesse definizioni di segmenti insieme alla loro data di creazione.</li><li>Quali set di dati sono abilitati per il profilo e includono anche quanti tipi di pubblico sono stati creati da ciascun set di dati.</li><li>Quali account di origine sono associati al set di dati XYZ?</li><li>Visualizza la definizione del segmento e la data di modifica di &quot;Pubblico ACME&quot;.</li></ul> |
+| Confronto degli oggetti | Identifica tipi di pubblico duplicati. | <ul><li>In base alla definizione del segmento, elenca i tipi di pubblico che sono duplicati.</li><li>Quali tipi di pubblico duplicati vengono attivati nelle &quot;Destinazioni ACME&quot;.</li></ul> |
 
 +++
+
+## Formulazione delle domande {#phrasing-your-questions}
+
+Per ottenere una risposta il più accurata possibile, è necessario formulare le domande all’Assistente IA con chiarezza e contesto. Consulta il seguente elenco di suggerimenti per indicazioni su come porre una domanda chiara con il contesto:
+
+* Dichiara il tuo compito e/o la tua domanda in modo conciso.
+* Evita un linguaggio ambiguo o una sintassi troppo complessa per facilitare la comprensione.
+* Fornisci un contesto rilevante relativo all’attività e/o alla domanda, in quanto il contesto può aiutare l’Assistente AI a generare risposte più rilevanti.
+
+Leggi la tabella seguente per ulteriori indicazioni sulle best practice da seguire quando si pongono domande all’Assistente IA:
+
+| Esegui | Esempio |
+| --- | --- |
+| <ul><li>Specificare l&#39;oggetto o le informazioni da recuperare o analizzare.</li><li>Provare a inserire i nomi degli oggetti dati tra virgolette. Se si conosce solo una parte del nome dell&#39;oggetto, è possibile specificarlo nella domanda.</li><li>Utilizzare [completamento automatico dell&#39;oggetto](./ui-guide.md#use-auto-complete) per aiutare l’Assistente AI a comprendere meglio il contesto della query.</li></ul> | <ul><li>Quali set di dati utilizzano lo schema &quot;Luma - Fedeltà&quot;?</li><li>Mostrami i segmenti attivati il cui nome contiene &quot;Luma&quot;. Classificale in base al numero di profili.</li></ul> |
+| <ul><li>Evita ambiguità e usa un linguaggio chiaro</li><li>Utilizza una terminologia precisa per garantire una maggiore chiarezza nella query.</li><li>Quando fai domande su Adobe Experience Platform, prova a utilizzare la terminologia specifica di Experienci Platform per migliorare la pertinenza delle risposte.</li></ul> | <ul><li>Quanti profili ho in &quot;Pubblico ACME&quot;.</li><li>Mostra i primi 5 attributi XDM utilizzati nei tipi di pubblico attivati.</li></ul> |
+| <ul><li>Fornisci contesto o specifica un criterio per filtrare i risultati.</li><li>Utilizza un criterio di filtro nelle domande per limitare il volume di dati nella risposta.</li></ul> | <ul><li>Mostra i tipi di pubblico che non sono stati attivati e che sono stati creati più di 6 mesi fa e che non sono mai stati modificati.</li><li>Mostra i tipi di pubblico attivati su &quot;Destinazione ACME&quot; e con più di 10000 profili.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Non | Esempio |
+| --- | --- |
+| Utilizza un linguaggio vago o ambiguo. | <ul><li>Datemi informazioni sui set di dati.</li><li>Quanti utenti ho in &quot;ACME Audience&quot;?</li><li>Mostra segmenti.</li><li>Attributi elenco.</li></ul> |
+| Eseguire richieste incomplete. | &quot;Luma - Set di dati fedeltà&quot; |
+| Acquisisci conoscenza senza contesto. | <ul><li>Pubblico negli ultimi 6 mesi.</li><li>Crea una query per me.</li></ul> |
+| Formulare query eccessivamente complesse. | Fornisci un’analisi completa della derivazione dei dati tra tutti gli oggetti e le loro dipendenze. |
+| Omettere criteri o parametri. | Mostra i set di dati. |
+
+{style="table-layout:auto"}
 
 ## Fornire feedback {#feedback}
 
