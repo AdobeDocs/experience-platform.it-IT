@@ -1,21 +1,17 @@
 ---
-title: Flussi di lavoro basati sui campi nell’Editor di schema (Beta)
+title: Flussi di lavoro basati sui campi nell’Editor di schema
 description: Scopri come aggiungere singolarmente i campi dai gruppi di campi esistenti agli schemi Experience Data Model (XDM).
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
+source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
-# Flussi di lavoro basati sui campi nell’Editor di schema (Beta)
-
->[!IMPORTANT]
->
->I flussi di lavoro descritti in questo documento beta sono ora generalmente disponibili in Adobe Experience Platform. Per informazioni aggiornate sui flussi di lavoro basati sui campi nell’Editor di schema, consulta [guida all’interfaccia utente degli schemi](./resources/schemas.md) invece. Questa guida verrà rimossa presto.
+# Flussi di lavoro basati sui campi nell’Editor di schema
 
 Adobe Experience Platform offre un solido set di [gruppi di campi](../schema/composition.md#field-group) da utilizzare negli schemi Experience Data Model (XDM). La struttura e la semantica di questi gruppi di campi sono attentamente personalizzate per soddisfare un’ampia varietà di casi di utilizzo di segmentazione e altre applicazioni a valle in Platform. Puoi anche definire gruppi di campi personalizzati per soddisfare esigenze aziendali specifiche.
 

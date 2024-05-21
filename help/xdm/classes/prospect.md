@@ -2,16 +2,20 @@
 title: Classe profilo cliente individuale XDM
 description: Scopri la classe XDM Individual Prospect Profile in Experience Data Model (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f4ddcf14de7a5cec42b5ebc521203cfdd1498a9f
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 3%
+source-wordcount: '390'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL Profilo potenziale individuale XDM] classe
 
 In Experience Data Model (XDM), la [!UICONTROL Profilo potenziale individuale XDM] la classe acquisisce i profili di potenziali clienti in genere provenienti dai partner dati per casi d’uso di acquisizione clienti top-of-the-funnel.
+
+>[!NOTE]
+>
+>Per impostare un campo nel Profilo potenziale individuale XDM come identità, devi prima creare almeno uno spazio dei nomi ID partner. Per ulteriori informazioni sullo spazio dei nomi ID partner, consulta la [sezione sui tipi di identità](../../identity-service/features/namespaces.md).
 
 ![Il diagramma dello schema della classe Prospect XDM.](../images/classes/individual-prospect-profile.png)
 
