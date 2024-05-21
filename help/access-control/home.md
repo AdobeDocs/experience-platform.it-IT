@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform viene fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto di Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ Nella tabella seguente vengono descritte le autorizzazioni disponibili, ad Exper
 | [!DNL Profile Management] | [!UICONTROL Visualizzare segmenti] | Accesso in sola lettura ai segmenti disponibili. |
 | [!DNL Profile Management] | [!UICONTROL Gestisci criteri di unione] | Accesso per leggere, creare, modificare ed eliminare i criteri di unione. |
 | [!DNL Profile Management] | [!UICONTROL Visualizza criteri di unione] | Accesso in sola lettura ai criteri di unione disponibili. |
+| [!DNL Profile Management] | [!UICONTROL Importa tipi di pubblico] | Accesso per leggere, creare, modificare ed eliminare i tipi di pubblico importati. |
 | [!DNL Profile Management] | [!UICONTROL Esporta pubblico per segmento] | Possibilità di esportare un segmento di pubblico valutato in un set di dati. |
 | [!DNL Profile Management] | [!UICONTROL Valutare un segmento in un pubblico] | Possibilità di generare profili per un pubblico valutando una definizione di segmento. |
 | [!DNL Profile Management] | [!UICONTROL Visualizza IA B2B] | Accesso in sola lettura alle impostazioni e alle configurazioni per tutti i servizi di IA/ML B2B. |
