@@ -1,10 +1,10 @@
 ---
 title: Note sulla versione di Adobe Experience Platform - Maggio 2024
 description: Note sulla versione di Adobe Experience Platform di maggio 2024.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 20%
+source-wordcount: '1596'
+ht-degree: 19%
 
 ---
 
@@ -71,9 +71,9 @@ La governance dei dati di Adobe Experience Platform è una serie di strategie e 
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Riordina i campi di mappatura per le destinazioni batch | Ora puoi modificare l’ordine delle colonne nelle esportazioni CSV trascinando e rilasciando i campi di mappatura nella sezione [passaggio di mappatura](../../destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordine dei campi mappati nell’interfaccia utente si riflette nell’ordine delle colonne nel file CSV esportato, dall’alto verso il basso, con la riga in alto che corrisponde alla colonna più a sinistra nel file CSV. |
+| Riordina i campi di mappatura per le destinazioni batch | Ora puoi modificare l’ordine delle colonne nelle esportazioni CSV trascinando e rilasciando i campi di mappatura nella sezione [passaggio di mappatura](../../destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordine dei campi mappati nell’interfaccia utente si riflette nell’ordine delle colonne nel file CSV esportato, dall’alto verso il basso, con la riga in alto che corrisponde alla colonna più a sinistra nel file CSV. <br> ![Visualizzazione della modalità di riordinamento delle mappature.](../2024/assets/may/reorder-mappings.gif "Visualizzazione della modalità di riordinamento delle mappature."){width="100" zoomable="yes"} |
 | Programmi di esportazione predefiniti preselezionati per le destinazioni batch | Experienci Platform ora imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Consulta la documentazione su [programmazione delle esportazioni del pubblico](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) per informazioni su come modificare la pianificazione predefinita. |
-| Modificare più pianificazioni di attivazione del pubblico per le destinazioni batch | Ora puoi modificare la pianificazione di attivazione per più tipi di pubblico da [pagina dei dettagli della destinazione](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Modificare più pianificazioni di attivazione del pubblico per le destinazioni batch | Ora puoi modificare la pianificazione di attivazione per più tipi di pubblico esportati in destinazione batch (basata su file) dalla sezione **[!UICONTROL Dati di attivazione]** scheda di [pagina dei dettagli della destinazione](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Visualizzare come selezionare più tipi di pubblico e modificare la pianificazione dell’esportazione dei file.](../2024/assets/may/bulk-edit-schedule.gif "Visualizzare come selezionare più tipi di pubblico e modificare la pianificazione dell’esportazione dei file."){width="100" zoomable="yes"} |
 | Esportare più tipi di pubblico on-demand in destinazioni batch | Ora puoi selezionare ed esportare più tipi di pubblico in destinazioni batch, tramite [esportazione di file on-demand](../../destinations/ui/export-file-now.md) funzionalità. |
 
 {style="table-layout:auto"}
