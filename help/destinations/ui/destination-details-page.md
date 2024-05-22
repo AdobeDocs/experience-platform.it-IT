@@ -3,10 +3,10 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 1%
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -125,21 +125,13 @@ Per rimuovere più tipi di pubblico dai flussi di attivazione esistenti, selezio
 
 ![Nella schermata dei dati di attivazione è evidenziata l’opzione Rimuovi tipi di pubblico.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Esporta più file on-demand in destinazioni batch {#bulk-export}
-
->[!NOTE]
->
-Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+### Esportare più file on-demand in destinazioni batch {#bulk-export}
 
 È possibile [esportazione di più file on-demand](../ui/export-file-now.md) dal **[!UICONTROL Dati di attivazione]** pagina. A questo scopo, seleziona i tipi di pubblico per i quali desideri esportare i file on-demand e fai clic su **[!UICONTROL Esporta subito il file]** per attivare un’esportazione una tantum che distribuirà un file per ogni pubblico selezionato alla destinazione batch.
 
 ![Immagine che evidenzia il pulsante Export file now (Esporta file ora).](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE Beta]{type=Informative} Modifica le pianificazioni di attivazione per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-schedule}
-
->[!NOTE]
->
-Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
+### Modificare i programmi di attivazione per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-schedule}
 
 Per modificare la pianificazione di attivazione esistente di più tipi di pubblico contemporaneamente, seleziona i tipi di pubblico desiderati, quindi seleziona **[!UICONTROL Modifica pianificazione]**. Per informazioni dettagliate su come definire o modificare una pianificazione di esportazione, leggere [pianificare l’esportazione del pubblico](../ui/activate-batch-profile-destinations.md#scheduling) sezione.
 
