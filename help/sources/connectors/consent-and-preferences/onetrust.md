@@ -5,9 +5,9 @@ title: Panoramica del connettore di origine dell'integrazione OneTrust
 description: Scopri come collegare l’integrazione OneTrust a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 71b64894f6a08941b62bf8c6990d6bf0295afdd0
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il [!DNL OneTrust Integration] La sorgente supporta solo l’acquisizione dei dati di consenso e preferenze e non dei cookie.
+>Il [!DNL OneTrust Integration] La sorgente supporta solo l’acquisizione dei dati di consenso e preferenze e non dei cookie. Per problemi relativi al connettore di origine, contatta il supporto di OneTrust all&#39;indirizzo https://support.onetrust.com
 
 Adobe Experience Platform consente di acquisire i dati da origini esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi di Platform. È possibile acquisire dati da diverse origini, ad esempio applicazioni Adobe, archiviazione basata su cloud, database e molte altre.
 
