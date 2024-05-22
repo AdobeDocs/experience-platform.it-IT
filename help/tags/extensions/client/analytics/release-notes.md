@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Analytics Extension
 description: Note aggiornate sulla versione dell’estensione tag Adobe Analytics in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
+source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 86%
+source-wordcount: '1438'
+ht-degree: 73%
 
 ---
 
@@ -16,6 +16,14 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 >[!NOTE]
 >
 >L’estensione tag Analytics, se spesso aggiornata in risposta agli aggiornamenti del [Libreria JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=it). Consulta la sezione [Note sulla versione di AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it) per informazioni dettagliate sulle versioni specifiche menzionate di seguito.
+
+## 4 marzo 2024
+
+**Estensione Adobe Analytics 1.9.4**
+
+**Funzioni**:
+
+* Aggiornato a [AppMeasurement alla versione v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 15 settembre 2023
 
@@ -36,7 +44,8 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 * È stata aggiunta una configurazione opzionale (`decodeLinkParameters` predefinito `false`) che decodifica gli URL di collegamento che includono caratteri con codifica a doppio byte.
 
 **Correzioni di bug**:
-* È stata aggiunta una gestione aggiuntiva degli errori per i browser con entropia elevata errata [Hint client agente utente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=it) API.
+
+* È stata aggiunta una gestione aggiuntiva degli errori per i browser con entropia elevata errata [Hint client agente utente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API.
 * Modificato [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) Intestazione Content-Type da utilizzare `x-www-form-urlencoded` per impostazione predefinita.
 
 ## 23 settembre 2022
@@ -56,7 +65,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 * Sono state rimosse alcune istruzioni di debug in AppMeasurement.
 
-## 29 novembre 2021
+## martedì 29 novembre 2021
 
 **Estensione Adobe Analytics 1.8.8**
 
@@ -193,7 +202,7 @@ Di seguito è riportato un elenco delle note sulla versione dell’estensione ta
 
 * Aggiornamento dell&#39;estensione Adobe Analytics per supportare DIL 9.2 per Audience Manager
 
-* Estensione aggiornata per supportare [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=it#version-2.15.0)
+* Estensione aggiornata per supportare [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
 * È stata rimossa la seguente casella di controllo perché non è più supportata: &quot;Do not attach the destination publishing IFRAME to the DOM or fire destinations&quot;
 
 ## 4 giugno 2019
