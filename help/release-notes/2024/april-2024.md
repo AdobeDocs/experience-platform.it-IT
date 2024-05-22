@@ -1,10 +1,9 @@
 ---
-title: Note sulla versione di Adobe Experience Platform - Aprile 2024
+title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 17%
 
 ---
@@ -117,7 +116,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 
 | Funzione | Descrizione |
 | --- | --- |
-| Quarantena query | Isolamento automatico delle esecuzioni delle query non riuscite per evitare interruzioni e mantenere prestazioni coerenti. Consulta la [quarantena query](../../query-service/ui/query-schedules.md#quarantine) per ulteriori informazioni. |
+| Quarantena della query | Isolamento automatico delle esecuzioni delle query non riuscite per evitare interruzioni e mantenere prestazioni coerenti. Consulta la [quarantena query](../../query-service/ui/query-schedules.md#quarantine) per ulteriori informazioni. |
 | Annulla query | Assumi il controllo dell’esecuzione delle query e migliora la produttività annullando le query con tempi di esecuzione lunghi.Consulta la [annulla query](../../query-service/ui/user-guide.md#cancel-query) per ulteriori informazioni. |
 | Avvisi di query pianificate | Notifiche proattive durante la pianificazione delle query per garantire una gestione efficiente e tempestiva delle attività. È possibile [abbonati agli avvisi durante la creazione di una query](../../query-service/ui/query-schedules.md#alerts-for-query-status) o utilizzando le azioni in linea per le query pianificate esistenti. Consulta la [abbonati agli avvisi con azioni in linea](../../query-service/ui/monitor-queries.md#alert-subscription) per ulteriori informazioni. |
 | Navigazione query pianificata migliorata | Navigazione semplice tra modelli di query ed esecuzioni pianificate per una maggiore produttività. Consulta la documentazione su [visualizzazione delle esecuzioni delle query pianificate](../../query-service/ui/query-schedules.md#scheduled-query-runs) per ulteriori informazioni. |
