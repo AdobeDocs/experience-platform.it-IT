@@ -1,7 +1,8 @@
 ---
 title: applyResponse
-description: Utilizza una risposta di Edge Network per inizializzare Web SDK.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Utilizza una risposta dell’Edge Network per inizializzare Web SDK.
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
+source-git-commit: 74725546163f0807d3188aff5b5ffda9b8d6350b
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # `applyResponse`
 
-Il `applyResponse` consente di eseguire varie azioni in base a una risposta della rete Edge. In genere viene utilizzato nelle implementazioni ibride in cui il server effettua una chiamata iniziale alla rete Edge. Questo comando prende la risposta da tale chiamata e inizializza l’SDK web nel browser.
+Il `applyResponse` consente di eseguire varie azioni in base a una risposta dell’Edge Network. Viene generalmente utilizzato nelle implementazioni ibride in cui il server effettua una chiamata iniziale all’Edge Network. Questo comando prende la risposta da tale chiamata e inizializza l’SDK web nel browser.
 
 ## Applicare la risposta utilizzando l’estensione tag Web SDK
 
@@ -31,11 +32,11 @@ Esegui il `applyResponse` quando si chiama l’istanza configurata dell’SDK pe
 
 * **`renderDecisions`**: valore booleano che forza il Web SDK a eseguire il rendering di qualsiasi contenuto personalizzato idoneo per il rendering automatico. Identico a [`renderDecisions`](sendevent/renderdecisions.md) nel [`sendEvent`](sendevent/overview.md) comando.
 * **`responseHeaders`**: mappa dei nomi di intestazione stringa ai valori di intestazione stringa.
-* **`responseBody`**: obbligatorio. Un corpo di risposta JSON dalla chiamata del server alla rete Edge.
+* **`responseBody`**: obbligatorio. Un corpo di risposta JSON dalla chiamata del server all’Edge Network.
 * **`personalization.sendDisplayEvent`**: valore booleano che funziona in modo identico a [`personalization.sendDisplayEvent`](sendevent/personalization.md) nel `sendEvent` comando.
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},
@@ -49,6 +50,6 @@ allow("applyResponse",{
 
 Se decidi di [gestire le risposte](command-responses.md) con questo comando, nell’oggetto di risposta sono disponibili le seguenti proprietà:
 
-* **`propositions`**: array di proposte restituite dalla rete Edge. Le proposte di cui viene eseguito il rendering automatico includono il flag `renderAttempted` imposta su `true`.
+* **`propositions`**: array di proposte restituite dall’Edge Network. Le proposte di cui viene eseguito il rendering automatico includono il flag `renderAttempted` imposta su `true`.
 * **`inferences`**: array di oggetti di inferenza che contengono informazioni di apprendimento automatico su questo utente.
-* **`destinations`**: array di oggetti di destinazione restituiti dalla rete Edge.
+* **`destinations`**: array di oggetti di destinazione restituiti dall’Edge Network.
