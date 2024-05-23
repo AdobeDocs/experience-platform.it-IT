@@ -84,8 +84,8 @@ Per questa visualizzazione dashboard sono disponibili le metriche seguenti:
 | **[!UICONTROL Tipo]** | Indica il tipo di processo di segmentazione. I due tipi di processo supportati sono **attivazione** e **valutazione** processi. |
 | **[!UICONTROL Processo completato]** | La data e l’ora in cui il processo di segmentazione è stato completato. |
 | **[!UICONTROL Tempo di elaborazione]** | Il tempo necessario per il completamento del processo di segmentazione. |
-| **[!UICONTROL Stato del processo]** | Stato del processo di segmentazione. I valori supportati includono **[!UICONTROL Completato]**, **[!UICONTROL In corso]**, e **[!UICONTROL Non riuscito]**. |
-| **[!UICONTROL Conteggio dei profili]** | Il numero di profili che il processo di segmentazione sta valutando. Ogni utente deve avere un profilo univoco. |
+| **[!UICONTROL Stato processo]** | Stato del processo di segmentazione. I valori supportati includono **[!UICONTROL Completato]**, **[!UICONTROL In corso]**, e **[!UICONTROL Non riuscito]**. |
+| **[!UICONTROL Conteggio profili]** | Il numero di profili che il processo di segmentazione sta valutando. Ogni utente deve avere un profilo univoco. |
 | **[!UICONTROL Identità attivata]** | Il numero di identità attivate dal processo di segmentazione. Ogni profilo può avere più identità. Ad esempio, un profilo potrebbe avere come identità un’e-mail, un numero di telefono e un numero fedeltà. |
 | **[!UICONTROL Nome destinazione]** | Il nome della destinazione in cui viene attivato il processo di segmentazione. |
 
@@ -163,13 +163,13 @@ Per [!UICONTROL Tipi di pubblico] , sono disponibili le seguenti metriche:
 | Metrica | Descrizione |
 | ------ | ----------- |
 | **[!UICONTROL Nome]** | Il nome del pubblico che viene valutato. |
-| **[!UICONTROL Conteggio dei profili]** | Il numero di profili che vengono valutati. |
+| **[!UICONTROL Conteggio profili]** | Il numero di profili che vengono valutati. |
 
 ## Monitoraggio del dashboard dei processi di segmentazione {#monitoring-segmentation-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Segmentazione dei processi"
+>title="Processi di segmentazione"
 >abstract="La vista Processi di segmentazione contiene informazioni sui processi di valutazione ed esportazione per tutti i tipi di pubblico."
 
 Per accedere al **[!UICONTROL Segmentazione dei processi]** dashboard, seleziona **[!UICONTROL Segmentazione dei processi]** nel [!UICONTROL Tipi di pubblico] dashboard. Il [!UICONTROL Monitorare] il dashboard contiene metriche e informazioni sui processi di valutazione ed esportazione.
