@@ -47,7 +47,10 @@ Catalog Service è il sistema di registrazione per la posizione e la derivazione
 Adobe Experience Platform fornisce più dashboard attraverso le quali è possibile visualizzare approfondimenti importanti sui dati della tua organizzazione, acquisiti durante le istantanee giornaliere.
 
 **Funzioni nuove o aggiornate**
-| Funzionalità | Descrizione | | — | — | | Approfondimenti personalizzabili per reporting esteso dell’app | Senza soluzione di continuità [transizione dell&#39;output dell&#39;analisi SQL in formati visivi comprensibili e facili da usare](../../dashboards/data-distiller/customizable-insights/overview.md). Utilizza query SQL personalizzate per una manipolazione precisa dei dati e la creazione di grafici dinamici da diversi set di dati strutturati. È possibile utilizzare la modalità query pro per eseguire analisi complesse con SQL e quindi condividere questa analisi con utenti non tecnici tramite grafici nel dashboard personalizzato o esportarli in file CSV. |
+
+| Funzionalità | Descrizione |
+| --- | --- |
+| Approfondimenti personalizzabili per reporting esteso dell’app | Senza soluzione di continuità [transizione dell&#39;output dell&#39;analisi SQL in formati visivi comprensibili e facili da usare](../../dashboards/data-distiller/customizable-insights/overview.md). Utilizza query SQL personalizzate per una manipolazione precisa dei dati e la creazione di grafici dinamici da diversi set di dati strutturati. È possibile utilizzare la modalità query pro per eseguire analisi complesse con SQL e quindi condividere questa analisi con utenti non tecnici tramite grafici nel dashboard personalizzato o esportarli in file CSV. |
 
 {style="table-layout:auto"}
 
