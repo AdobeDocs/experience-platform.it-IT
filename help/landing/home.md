@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica di Adobe Experience Platform
 description: Adobe Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati dei clienti prima di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 2%
+source-wordcount: '431'
+ht-degree: 1%
 
 ---
 
@@ -28,13 +28,13 @@ Basato sulle API RESTful, [!DNL Experience Platform] espone tutte le funzionalit
 
 ## [!DNL Experience Platform] documentazione
 
-[!DNL Experience Platform] La documentazione di è disponibile in più formati per una varietà di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili, visita il [Panoramica della documentazione di Platform](documentation/overview.md).
+[!DNL Experience Platform] La documentazione di è disponibile in più formati per una varietà di funzioni e applicazioni. Per ulteriori informazioni sui tipi di documentazione disponibili, visita il [Panoramica della documentazione di Platform](documentation/overview.md).
 
-Per iniziare ad acquisire ulteriori informazioni su un [!DNL Platform] servizio, torna al [pagina di destinazione della documentazione](https://experienceleague.adobe.com/docs/experience-platform.html?lang=it) e seleziona la guida appropriata.
+Per iniziare ad acquisire ulteriori informazioni su un [!DNL Platform] servizio, torna al [pagina di destinazione della documentazione](https://experienceleague.adobe.com/docs/experience-platform.html) e seleziona la guida appropriata.
 
-### Documentazione per i servizi applicativi basati su [!DNL Experience Platform]
+### Documentazione per le applicazioni create su [!DNL Experience Platform]
 
-Adobe ha creato più servizi applicativi sopra a Experienci Platform. La documentazione relativa a queste applicazioni è disponibile nelle relative guide, al seguente link:
+Adobe ha creato più applicazioni sopra Experienci Platform. La documentazione relativa a queste applicazioni è disponibile nelle relative guide, al seguente link:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,11 +43,11 @@ Adobe ha creato più servizi applicativi sopra a Experienci Platform. La documen
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-Il video seguente descrive i casi di utilizzo di ogni servizio applicativo basato su Experienci Platform.
+Il video seguente descrive i casi di utilizzo di ogni applicazione basata su Experienci Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
-## Esercitazioni del [!DNL Experience Platform]
+## [!DNL Experience Platform] esercitazioni
 
 È possibile iniziare con [!DNL Platform] segui in modo rapido e semplice insieme a tutorial dettagliati che coprono ogni cosa, dalla preparazione dei dati per l’acquisizione ad algoritmi di apprendimento automatico avanzati. Queste esercitazioni sono state progettate per integrare le informazioni disponibili in [!DNL Experience Platform] per ottenere risultati ottimali, tieni a portata di mano la documentazione durante il completamento delle esercitazioni.
 
@@ -64,7 +64,7 @@ Visita il [Esercitazioni di Experience Platform](https://www.adobe.com/go/platfo
 * [**Glossario**](glossary.md)\
   Rivedi la terminologia di Adobe Experience Platform.
 
-* [**Note sulla versione**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
+* [**Note sulla versione**](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)\
   Trova informazioni sulle più recenti [!DNL Experience Platform] rilasciare e rivedere le versioni precedenti.
 
 * [**Guida alla risoluzione dei problemi**](troubleshooting.md)\

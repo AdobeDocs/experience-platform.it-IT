@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
-user-guide-description: Scopri come Experience Platform consente di offrire esperienze clienti personalizzate in tempo reale con guide, documentazione e tutorial.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Scopri come Experienci Platform consente di offrire esperienze personalizzate ai clienti in tempo reale con guide, documentazione e tutorial.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 23%
+source-wordcount: '281'
+ht-degree: 14%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 * [Panoramica della piattaforma](home.md)
 * [Panoramica della piattaforma (video)](video/platform-overview.md)
-* [Tutorial su Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=it)
+* [Tutorial su Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Un’esperienza del cliente basata su Platform (video)](video/customer-experience.md)
 * [Dietro le quinte di un’esperienza del cliente basata su Platform (video)](video/customer-experience-bts.md)
 * Introduzione {#getting-started}
@@ -30,7 +30,7 @@ ht-degree: 23%
    * [Guida all’interfaccia utente Flussi di lavoro](workflows.md)
    * [Supporto di browser e lingue](browser-language-support.md)
    * [Sondaggio di auto-identificazione](self-identification.md)
-   * [Assistente AI](ai-assistant.md)
+   * [Assistente IA](ai-assistant.md)
 * API EXPERIENCI PLATFORM {#platform-apis}
    * [Guida introduttiva alle API di Platform](api-guide.md)
    * [Autenticazione e accesso alle API di Platform](api-authentication.md)
@@ -40,7 +40,7 @@ ht-degree: 23%
 * Documentazione della piattaforma {#documentation}
    * [Panoramica](documentation/overview.md)
    * [Supporto linguistico](documentation/language-support.md)
-* Servizi applicativi basati su Platform {#ecosystem}
+* Applicazioni basate su Platform {#ecosystem}
    * [Panoramica](application-services.md)
    * [Adobe Real-time Customer Data Platform (tutte le edizioni)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Applicazione e Intelligent Services (video)](video/application-intelligent-services.md)
@@ -81,4 +81,4 @@ ht-degree: 23%
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione del data lake di generazione 2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
-* [Note sulla versione](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

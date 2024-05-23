@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Origine della zona di destinazione dati
 description: Scopri come collegare Data Landing Zone a Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Questa pagina è specifica per [!DNL Data Landing Zone] *sorgente* connettore in Experience Platform. Per informazioni sulla connessione al [!DNL Data Landing Zone] *destinazione* connettore, fare riferimento al [[!DNL Data Landing Zone] pagina della documentazione di destinazione](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] è un [!DNL Azure Blob] con il provisioning di Adobe Experience Platform, ti consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per inserire i file in Platform. Puoi accedervi [!DNL Data Landing Zone] contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato al totale dei dati forniti con la licenza Platform Products and Services. Tutti i clienti di Platform e dei relativi servizi applicativi, ad esempio [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], e [!DNL Adobe Real-Time Customer Data Platform] dispongono di un [!DNL Data Landing Zone] contenitore per sandbox. Puoi leggere e scrivere i file nel contenitore tramite [!DNL Azure Storage Explorer] o dall&#39;interfaccia della riga di comando.
+[!DNL Data Landing Zone] è un [!DNL Azure Blob] con il provisioning di Adobe Experience Platform, ti consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per inserire i file in Platform. Puoi accedervi [!DNL Data Landing Zone] contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato al totale dei dati forniti con la licenza Platform Products and Services. Tutti i clienti di Platform e delle sue applicazioni, ad esempio [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], e [!DNL Adobe Real-Time Customer Data Platform] dispongono di un [!DNL Data Landing Zone] contenitore per sandbox. Puoi leggere e scrivere i file nel contenitore tramite [!DNL Azure Storage Explorer] o dall&#39;interfaccia della riga di comando.
 
 [!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con [!DNL Azure Blob] meccanismi di sicurezza dello stoccaggio a riposo e in transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al [!DNL Data Landing Zone] Contenitore, che significa che non è necessario configurare elenchi consentiti o configurazioni per più aree geografiche per la rete. Platform impone una scadenza di sette giorni su tutti i file caricati in un [!DNL Data Landing Zone] contenitore. Tutti i file vengono eliminati dopo sette giorni.
 

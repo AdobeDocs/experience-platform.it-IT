@@ -3,9 +3,9 @@ title: Destinazione Data Landing Zone
 description: Scopri come connettersi alla Data Landing Zone per attivare tipi di pubblico ed esportare set di dati.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1585'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ## Panoramica {#overview}
 
-[!DNL Data Landing Zone] è un’interfaccia di archiviazione [!DNL Azure Blob] fornita da Adobe Experience Platform che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per esportare i file da Platform. Puoi accedervi [!DNL Data Landing Zone] contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato al totale dei dati forniti con la licenza Platform Products and Services. Tutti i clienti di Platform e dei relativi servizi applicativi, ad esempio [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], e [!DNL Real-Time Customer Data Platform] dispongono di un [!DNL Data Landing Zone] contenitore per sandbox. Puoi leggere e scrivere file nel contenitore tramite [!DNL Azure Storage Explorer] o dall&#39;interfaccia della riga di comando.
+[!DNL Data Landing Zone] è un’interfaccia di archiviazione [!DNL Azure Blob] fornita da Adobe Experience Platform che consente di accedere a una struttura di archiviazione dei file sicura e basata su cloud per esportare i file da Platform. Puoi accedervi [!DNL Data Landing Zone] contenitore per sandbox e il volume totale di dati in tutti i contenitori è limitato al totale dei dati forniti con la licenza Platform Products and Services. Tutti i clienti di Platform e delle sue applicazioni, ad esempio [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], e [!DNL Real-Time Customer Data Platform] dispongono di un [!DNL Data Landing Zone] contenitore per sandbox. Puoi leggere e scrivere file nel contenitore tramite [!DNL Azure Storage Explorer] o dall&#39;interfaccia della riga di comando.
 
 [!DNL Data Landing Zone] supporta l&#39;autenticazione basata su SAS e i relativi dati sono protetti con [!DNL Azure Blob] meccanismi di sicurezza dello stoccaggio a riposo e in transito. L&#39;autenticazione basata su SAS consente di accedere in modo sicuro al [!DNL Data Landing Zone] tramite una connessione Internet pubblica. Non sono necessarie modifiche di rete per accedere al [!DNL Data Landing Zone] Contenitore, che significa che non è necessario configurare elenchi consentiti o configurazioni per più aree geografiche per la rete.
 
@@ -34,7 +34,7 @@ Platform applica un TTL (time-to-live) di sette giorni su tutti i file caricati 
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
@@ -52,7 +52,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Esportare i set di dati {#export-datasets}
+## Esporta set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 
@@ -95,7 +95,7 @@ Devi utilizzare le API di Platform per recuperare [!DNL Data Landing Zone] crede
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
-| Parametri di query | Descrizione |
+| Parametri della query | Descrizione |
 | --- | --- |
 | `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
 
@@ -146,7 +146,7 @@ Se necessario, puoi anche aggiornare le credenziali. È possibile aggiornare `SA
 POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
 ```
 
-| Parametri di query | Descrizione |
+| Parametri della query | Descrizione |
 | --- | --- |
 | `dlz_destination` | Il `dlz_destination` Il tipo consente all’API di distinguere un contenitore di destinazione di una zona di destinazione dagli altri tipi di contenitori disponibili. |
 | `refresh` | Il `refresh` consente di reimpostare le credenziali della zona di destinazione e generare automaticamente un nuovo `SASToken`. |
@@ -196,7 +196,7 @@ Una connessione corretta aggiorna il tuo [!DNL Azure Storage Explorer] Interfacc
 
 Con [!DNL Data Landing Zone] contenitore connesso a [!DNL Azure Storage Explorer], ora puoi iniziare a esportare i file da Experienci Platform al tuo [!DNL Data Landing Zone] contenitore. Per esportare i file, è necessario stabilire una connessione con [!DNL Data Landing Zone] nell’interfaccia utente di Experienci Platform, come descritto nella sezione seguente.
 
-## Connettersi alla destinazione {#connect}
+## Connetti alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -204,11 +204,11 @@ Con [!DNL Data Landing Zone] contenitore connesso a [!DNL Azure Storage Explorer
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autenticarsi nella destinazione {#authenticate}
+### Autentica nella destinazione {#authenticate}
 
 Assicurarsi di aver connesso [!DNL Data Landing Zone] contenitore a [!DNL Azure Storage Explorer] come descritto nella [prerequisiti](#prerequisites) sezione. Perché [!DNL Data Landing Zone] è un archivio con provisioning Adobe, non è necessario eseguire ulteriori passaggi nell’interfaccia utente Experienci Platform per l’autenticazione nella destinazione.
 
-### Inserire i dettagli della destinazione {#destination-details}
+### Inserisci i dettagli della destinazione {#destination-details}
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -230,7 +230,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attivare tipi di pubblico in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
