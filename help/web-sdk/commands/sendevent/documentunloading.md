@@ -1,9 +1,10 @@
 ---
 title: documentUnloading
 description: Utilizza l’API sendBeacon di JavaScript per inviare dati ad Adobe.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -30,6 +31,10 @@ Abilita **[!UICONTROL Il documento verrà scaricato]** nelle azioni di una regol
 ## Configurare lo scaricamento dei documenti utilizzando la libreria JavaScript dell’SDK per web
 
 Imposta il `documentUnloading` booleano quando si esegue `sendEvent` comando. Il valore predefinito è `false`. Imposta questa proprietà su `true` se desideri utilizzare il `sendBeacon` metodo per inviare dati ad Adobe.
+
+>[!IMPORTANT]
+>
+>Il `documentUnloading` è incompatibile con [`renderDecisions`](renderdecisions.md) proprietà. Non impostare entrambe le proprietà su `true` simultaneamente.
 
 ```js
 alloy("sendEvent", {

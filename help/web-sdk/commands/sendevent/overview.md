@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Invia dati a Adobe Experience Platform Edge Network.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Invia dati all’Edge Network di Adobe Experience Platform.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ Esegui il `sendEvent` quando si chiama l’istanza configurata dell’SDK per we
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -44,6 +44,6 @@ alloy("sendEvent", {
 
 Se decidi di [gestire le risposte](../command-responses.md) con questo comando, nell’oggetto di risposta sono disponibili le seguenti proprietà:
 
-* **`propositions`**: array di proposte restituite dalla rete Edge. Le proposte di cui viene eseguito il rendering automatico includono il flag `renderAttempted` imposta su `true`.
+* **`propositions`**: array di proposte restituite dall’Edge Network. Le proposte di cui viene eseguito il rendering automatico includono il flag `renderAttempted` imposta su `true`.
 * **`inferences`**: array di oggetti di inferenza che contengono informazioni di apprendimento automatico su questo utente.
-* **`destinations`**: array di oggetti di destinazione restituiti dalla rete Edge.
+* **`destinations`**: array di oggetti di destinazione restituiti dall’Edge Network.
