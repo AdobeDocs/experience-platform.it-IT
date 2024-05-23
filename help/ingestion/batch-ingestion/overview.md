@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica dell’API per l’acquisizione in batch
 description: L’API per l’acquisizione in batch di Adobe Experience Platform consente di acquisire i dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo provenienti da un file flat in un sistema di gestione delle relazioni con i clienti (ad esempio un file Parquet) o i dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
@@ -56,7 +56,7 @@ Durante l’acquisizione dei dati, è importante comprendere in che modo [!DNL E
 
 È disponibile una certa flessibilità durante l’acquisizione dei dati: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch avrà esito negativo con un `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un `date` o `date-time` tipo. Di conseguenza, questi valori sono espressi utilizzando [Stringhe formattate ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o il tempo Unix formattato in millisecondi (1531263959000) e vengono convertiti al momento dell’acquisizione nel tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un `date` o `date-time` tipo. Di conseguenza, questi valori sono espressi utilizzando [Stringhe formattate ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o il tempo Unix formattato in millisecondi (1531263959000) e vengono convertiti al momento dell’acquisizione nel tipo XDM di destinazione.
 
 La tabella seguente mostra le conversioni supportate durante l’acquisizione dei dati.
 
@@ -77,7 +77,7 @@ La tabella seguente mostra le conversioni supportate durante l’acquisizione de
 >
 >I booleani e gli array non possono essere convertiti in altri tipi.
 
-## Mediante l’API
+## Utilizzo dell’API
 
 Il [!DNL Data Ingestion] API consente di acquisire i dati come batch (un’unità di dati costituita da uno o più file da acquisire come una singola unità) in [!DNL Experience Platform] in tre passaggi fondamentali:
 
@@ -138,7 +138,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | `id` | ID del batch appena creato (utilizzato nelle richieste successive). |
 | `relatedObjects.id` | ID del set di dati in cui caricare i file. |
 
-## Caricamento file
+## Caricamento di file
 
 Dopo aver creato correttamente un nuovo batch per il caricamento, i file possono essere caricati in un set di dati specifico.
 
@@ -412,10 +412,10 @@ Il `"status"` campo che mostra lo stato corrente del batch richiesto. I batch po
 | Attivo | Il batch è stato promosso correttamente ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot; (Completato). |
 | Eliminato | I dati per il batch sono stati completamente rimossi. |
 | Non riuscito | Stato del terminale causato da configurazione e/o dati non validi. I dati per un batch non riuscito **non** vieni a trovarti. Questo stato può essere utilizzato in modo intercambiabile con &quot;Errore&quot;. |
-| Inattivo | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
+| Non attivo | Il batch è stato promosso correttamente, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
-| Caricamento | I dati per questo batch sono in fase di caricamento e il batch è attualmente **non** pronto per essere promosso. |
+| Caricamento in corso | I dati per questo batch sono in fase di caricamento e il batch è attualmente **non** pronto per essere promosso. |
 | Nuovo tentativo | Elaborazione dei dati per questo batch in corso. Tuttavia, a causa di un errore di sistema o transitorio, il batch non è riuscito. Di conseguenza, si sta tentando di nuovo di eseguire il batch. |
-| In staging | La fase di staging del processo di promozione per un batch è stata completata e il processo di acquisizione è stato eseguito. |
+| Staging | La fase di staging del processo di promozione per un batch è stata completata e il processo di acquisizione è stato eseguito. |
 | Staging | Dati per il batch in fase di elaborazione. |
-| In stallo | I dati per il batch sono in fase di elaborazione. Tuttavia, la promozione batch si è bloccata dopo una serie di tentativi. |
+| Bloccato | I dati per il batch sono in fase di elaborazione. Tuttavia, la promozione batch si è bloccata dopo una serie di tentativi. |
