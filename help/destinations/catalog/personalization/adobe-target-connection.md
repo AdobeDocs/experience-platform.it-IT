@@ -3,10 +3,10 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
+source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 11%
+source-wordcount: '1531'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 11%
 |---|---|---|
 | Aprile 2024 | Aggiornamento della funzionalità e della documentazione | Quando ti connetti alla destinazione di Target con utilizzando un ID dello stream di dati, ora *non è necessario* per abilitare necessariamente lo stream di dati per la segmentazione Edge. Ciò significa che la destinazione di Target funzionerà con i tipi di pubblico in batch e in streaming, anche se i casi d’uso che puoi eseguire sono diversi. Visualizzare la tabella in [parametri di connessione](#parameters) per ulteriori informazioni. |
 | Gennaio 2024 | Aggiornamento della funzionalità e della documentazione | Ora puoi condividere i tipi di pubblico e gli attributi del profilo con la connessione Adobe Target per la sandbox di produzione predefinita e altre sandbox non predefinite. |
-| Giugno 2023 | Aggiornamento della funzionalità e della documentazione | A partire da giugno 2023, quando configuri una nuova connessione di destinazione Adobe Target, puoi selezionare l’area di lavoro di Adobe Target a cui desideri condividere i tipi di pubblico. Consulta la sezione [parametri di connessione](#parameters) per ulteriori informazioni. Inoltre, consulta il tutorial sulla [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
+| Giugno 2023 | Aggiornamento della funzionalità e della documentazione | A partire da giugno 2023, quando configuri una nuova connessione di destinazione Adobe Target, puoi selezionare l’area di lavoro di Adobe Target a cui desideri condividere i tipi di pubblico. Consulta la sezione [parametri di connessione](#parameters) per ulteriori informazioni. Inoltre, consulta il tutorial sulla [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
 | Maggio 2023 | Aggiornamento della funzionalità e della documentazione | A partire da maggio 2023, la **[!UICONTROL Adobe Target]** supporto di connessione [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
 
 {style="table-layout:auto"}
@@ -29,7 +29,7 @@ Adobe Target è un’applicazione che fornisce funzionalità di personalizzazion
 
 Adobe Target è una connessione di personalizzazione nel catalogo delle destinazioni di Adobe Experience Platform.
 
-## Video introduttivo {#video-overview}
+## Panoramica video {#video-overview}
 
 Per una breve panoramica su come configurare la connessione Adobe Target in Experienci Platform, guarda il video seguente.
 
@@ -60,8 +60,15 @@ Ulteriori informazioni sulla concessione di autorizzazioni per [Target Premium](
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+>[!IMPORTANT]
+>
+>I tipi di pubblico che attiverai in questa destinazione devono utilizzare [Criterio di unione Attivo su Edge](../../../segmentation/ui/segment-builder.md#merge-policies). Il [!DNL Active-On-Edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../../segmentation/ui/edge-segmentation.md) e sono disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
+> Se mappi tipi di pubblico che utilizzano un criterio di unione diverso su destinazioni edge, tali tipi di pubblico non verranno valutati.
+> Segui le istruzioni su [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), e assicurati di abilitare **[!UICONTROL Criterio di unione Attivo su Edge]** attivare/disattivare.
+
+
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
 | Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
 
@@ -72,19 +79,19 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
 
 | Elemento | Tipo | Note |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo di esportazione | **[!DNL Profile request]** | Stai richiedendo un singolo profilo a tutti i tipi di pubblico mappati nella destinazione di Adobe Target. |
 | Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Connettersi alla destinazione {#connect}
+## Connetti alla destinazione {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="Informazioni sugli ID di stream di dati"
->abstract="Questa opzione determina in quale stream di dati di raccolta dati verranno inclusi i tipi di pubblico. Il menu a discesa mostra solo gli stream di dati in cui la configurazione Destinazione è abilitata. Per utilizzare la segmentazione Edge, devi selezionare un ID di stream di dati. Se selezioni Nessuno, tutti i casi d’uso che utilizzano la segmentazione Edge vengono disabilitati."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=it#parameters" text="Ulteriori informazioni sulla selezione degli stream di dati"
+>title="Informazioni sugli ID dello stream di dati"
+>abstract="Questa opzione determina in quale flusso di dati di raccolta dati verranno inclusi i tipi di pubblico. Il menu a discesa mostra solo gli stream di dati per i quali è abilitata la configurazione Target. Per utilizzare la segmentazione Edge, devi selezionare un ID dello stream di dati. Selezionando Nessuno vengono disattivati tutti i casi d’uso che utilizzano la segmentazione Edge."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Ulteriori informazioni sulla selezione degli stream di dati"
 
 >[!IMPORTANT]
 > 
@@ -99,8 +106,8 @@ Adobe Experience Platform si connette automaticamente all’istanza Adobe Target
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="Informazioni sulle aree di lavoro di Adobe Target"
->abstract="Seleziona l’area di lavoro di Adobe Target in cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione ad Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo le etichette di utilizzo dei dati di Experience Platform applicabili."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it" text="Ulteriori informazioni sulle aree di lavoro di Adobe Target"
+>abstract="Seleziona l’area di lavoro di Adobe Target in cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono instradati all’area di lavoro selezionata seguendo le etichette di utilizzo dei dati di Experience Platform applicabili."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Ulteriori informazioni sulle aree di lavoro di Adobe Target"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -116,9 +123,9 @@ Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione,
 
   | Implementazione di Adobe Target *senza* SDK per web | Implementazione di Adobe Target *con* SDK per web | Implementazione di Adobe Target *con* SDK per web *e* segmentazione Edge disattivata |
   |---|---|---|
-  | <ul><li>Non è necessario uno stream di dati. Adobe Target può essere implementato tramite [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=it), [lato server](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), o [ibrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) metodi di implementazione.</li><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere i tipi di pubblico e gli attributi del profilo con la connessione Adobe Target per *sandbox di produzione predefinita* e sandbox non predefinite.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experienci Platform configurati come servizi.</li><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md#use-cases) sono supportati.</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experienci Platform configurati come servizi.</li><li>Quando [configurazione dello stream di dati](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), non selezionare **Segmentazione Edge** casella di controllo.</li><li>[Personalizzazione della sessione successiva](../../ui/activate-edge-personalization-destinations.md#next-session) è supportato.</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> |
+  | <ul><li>Non è necessario uno stream di dati. Adobe Target può essere implementato tramite [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [lato server](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), o [ibrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) metodi di implementazione.</li><li>[Segmentazione Edge](../../../segmentation/ui/edge-segmentation.md) non è supportato.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md) non sono supportati.</li><li>Puoi condividere i tipi di pubblico e gli attributi del profilo con la connessione Adobe Target per *sandbox di produzione predefinita* e sandbox non predefinite.</li><li>Per configurare la personalizzazione della sessione successiva senza utilizzare un ID dello stream di dati, utilizza [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experienci Platform configurati come servizi.</li><li>La segmentazione Edge funziona come previsto.</li><li>[Personalizzazione della stessa pagina e della pagina successiva](../../ui/activate-edge-personalization-destinations.md#use-cases) sono supportati.</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> | <ul><li>È necessario uno stream di dati con Adobe Target e Experienci Platform configurati come servizi.</li><li>Quando [configurazione dello stream di dati](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), non selezionare **Segmentazione Edge** casella di controllo.</li><li>[Personalizzazione della sessione successiva](../../ui/activate-edge-personalization-destinations.md#next-session) è supportato.</li><li>È supportata la condivisione di tipi di pubblico e attributi di profilo da altre sandbox.</li></ul> |
 
-* **Workspace**: seleziona l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=it) a cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione ad Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo la [Experience Platform di etichette di utilizzo dei dati](../../../data-governance/labels/overview.md).
+* **Workspace**: seleziona l’Adobe Target [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) a cui verranno condivisi i tipi di pubblico. Puoi selezionare un’unica area di lavoro per ogni connessione Adobe Target. Al momento dell’attivazione, i tipi di pubblico vengono indirizzati all’area di lavoro selezionata seguendo la [Experience Platform di etichette di utilizzo dei dati](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
@@ -132,7 +139,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attivare tipi di pubblico in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
