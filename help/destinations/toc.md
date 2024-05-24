@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Guida alle destinazioni
-user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
+user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 5%
+source-wordcount: '1224'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 5%
    * [Aggiornare i flussi di dati di destinazione](./api/update-destination-dataflows.md)
    * [Elimina account di destinazione](./api/delete-destination-account.md)
    * [Eliminare i flussi di dati di destinazione](./api/delete-destination-dataflow.md)
-   * [Esportare i set di dati](/help/destinations/api/export-datasets.md)
+   * [Esporta set di dati](/help/destinations/api/export-datasets.md)
    * [Ordinare e filtrare le risposte API per le destinazioni](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guide dell’interfaccia utente {#ui}
    * [Area di lavoro destinazioni](./ui/destinations-workspace.md)
@@ -48,7 +48,7 @@ ht-degree: 5%
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
-      * [(Beta) Utilizzare i campi calcolati per esportare array in file di schema piatto](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
@@ -83,6 +83,7 @@ ht-degree: 5%
       * [Connessione Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Connessione Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connessione Customer Match di Google](./catalog/advertising/google-customer-match.md)
+      * [(Beta) Google Customer Match + connessione DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display e connessione Video 360](./catalog/advertising/google-dv360.md)
       * [Estensione Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Estensione tag linkedIn Insight](./catalog/advertising/linkedin.md)
@@ -125,12 +126,12 @@ ht-degree: 5%
       * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
-      * [Archiviazione Azure Data Lake Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Connessione Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
-      * [Archiviazione cloud Google](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
-      * [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni di archiviazione cloud basata su file](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [Indirizzi IP di cui è stato eseguito il inserisco nell&#39;elenco Consentiti per le destinazioni di archiviazione cloud basate su file](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni di Customer Relationship Management (CRM) {#crm}
       * [Connessione Hubspot](./catalog/crm/hubspot.md)
       * [Connessione CRM Salesforce](./catalog/crm/salesforce.md)
@@ -144,7 +145,7 @@ ht-degree: 5%
       * [Eliminazione di Acxiom Prospect](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Miglioramento dei dati Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinazioni eCommerce {#ecommerce}
-      * [Commerce SAP](./catalog/ecommerce/sap-commerce.md)
+      * [COMMERCE SAP](./catalog/ecommerce/sap-commerce.md)
    * Destinazioni e-mail {#email}
       * [Estensione Bizible](./catalog/email/bizible.md)
       * [Estensione Marketo](./catalog/email/marketo.md)
@@ -297,4 +298,4 @@ ht-degree: 5%
       * [Modello self-service della documentazione](./destination-sdk/docs-framework/self-service-template.md)
       * [Best practice di authoring](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Domande frequenti](./destinations-faq.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
