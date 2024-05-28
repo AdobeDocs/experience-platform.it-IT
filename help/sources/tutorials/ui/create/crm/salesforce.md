@@ -2,10 +2,10 @@
 title: Collegare l'account Salesforce tramite l'interfaccia utente Experienci Platform
 description: Scopri come collegare il tuo account Salesforce e portare i tuoi dati di gestione delle relazioni con i clienti a Experience Platform utilizzando l’interfaccia utente di.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,7 @@ Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata
 
 Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Sotto *CRM* categoria, seleziona **[!DNL Salesforce]** e quindi selezionare **[!UICONTROL Aggiungi dati]**.
+Seleziona **[!DNL Salesforce]** sotto *[!UICONTROL CRM]* categoria, quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
 >[!TIP]
 >

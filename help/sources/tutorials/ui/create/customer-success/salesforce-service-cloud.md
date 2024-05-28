@@ -2,10 +2,10 @@
 title: Collegare l’account Salesforce Service Cloud utilizzando l’interfaccia utente di Experienci Platform
 description: Scopri come collegare il tuo account Salesforce Service Cloud e portare a Experience Platform i dati di successo del cliente tramite l’interfaccia utente di.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 0%
+source-wordcount: '843'
+ht-degree: 3%
 
 ---
 
@@ -26,45 +26,96 @@ Se disponi già di un [!DNL Salesforce Service Cloud] connessione, è possibile 
 
 ### Raccogli le credenziali richieste
 
-Per accedere al tuo [!DNL Salesforce Service Cloud] account di Experience Platform, è necessario fornire i seguenti valori:
+Il [!DNL Salesforce Service Cloud] L&#39;origine supporta l&#39;autenticazione di base e le credenziali client OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Autenticazione di base]
+
+È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce Service Cloud] tramite autenticazione di base.
 
 | Credenziali | Descrizione |
 | --- | --- |
-| `environmentUrl` | L’URL del [!DNL Salesforce Service Cloud] istanza di origine. |
-| `username` | Nome utente per [!DNL Salesforce Service Cloud] account utente. |
-| `password` | La password per [!DNL Salesforce Service Cloud] account utente. |
-| `securityToken` | Token di sicurezza per [!DNL Salesforce Service Cloud] account utente. |
-| `apiVersion` | (Facoltativo) La versione REST API di [!DNL Salesforce Service Cloud] che si sta utilizzando. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+| URL ambiente | L’URL del [!DNL Salesforce Service Cloud] istanza di origine. |
+| Nome utente | Nome utente per [!DNL Salesforce Service Cloud] account utente. |
+| Password | La password per [!DNL Salesforce Service Cloud] account utente. |
+| Token di sicurezza | Token di sicurezza per [!DNL Salesforce Service Cloud] account utente. |
+| Versione API | (Facoltativo) La versione REST API di [!DNL Salesforce Service Cloud] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
 
-Per ulteriori informazioni sull’autenticazione, consulta [questo [!DNL Salesforce] guida all’autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+Per ulteriori informazioni sull’autenticazione, consulta [questo [!DNL Salesforce Service Cloud] guida all’autenticazione](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB Credenziali client OAuth2]
+
+È necessario fornire i valori per le seguenti credenziali per connettere il [!DNL Salesforce Service Cloud] utilizzando le credenziali client OAuth2.
+
+| Credenziali | Descrizione |
+| --- | --- |
+| URL ambiente | L’URL del [!DNL Salesforce Service Cloud] istanza di origine. |
+| ID client | L’ID client viene utilizzato insieme al segreto client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto del tuo account identificando l’applicazione in [!DNL Salesforce Service Cloud]. |
+| Segreto client | Il segreto client viene utilizzato insieme all’ID client come parte dell’autenticazione OAuth2. Insieme, l’ID client e il segreto client consentono all’applicazione di funzionare per conto del tuo account identificando l’applicazione in [!DNL Salesforce Service Cloud]. |
+| Versione API | Versione REST API di [!DNL Salesforce Service Cloud] che si sta utilizzando. Il valore della versione API deve essere formattato con un decimale. Ad esempio, se utilizzi la versione API `52`, è necessario immettere il valore come `52.0`. Se questo campo viene lasciato vuoto, Experienci Platform utilizzerà automaticamente l’ultima versione disponibile. |
+
+Per ulteriori informazioni sull’utilizzo di OAuth per [!DNL Salesforce Service Cloud], leggi [[!DNL Salesforce Service Cloud] guida ai flussi di autorizzazione OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
+
+Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Salesforce Service Cloud] da Experience Platform.
 
 ## Connetti [!DNL Salesforce Service Cloud] account
 
-Dopo aver raccolto le credenziali richieste, puoi seguire la procedura riportata di seguito per collegare il tuo [!DNL Salesforce] da Experience Platform.
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere al [!UICONTROL Sorgenti] Workspace. Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l’origine specifica che si desidera utilizzare utilizzando l’opzione di ricerca.
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sorgenti]** dalla barra di navigazione a sinistra per accedere all’area di lavoro sorgenti. Il *[!UICONTROL Catalogo]* nella schermata vengono visualizzate diverse origini disponibili nel catalogo sorgenti di Experience Platform.
+Seleziona **[!DNL Salesforce Service Cloud]** sotto *[!UICONTROL Customer success]* categoria, quindi selezionare **[!UICONTROL Aggiungi dati]**.
 
-Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare un’origine specifica utilizzando l’opzione di ricerca.
-
-Seleziona **[!UICONTROL Customer success]** dall’elenco delle categorie di origini, quindi seleziona **[!UICONTROL Aggiungi dati]** dal [!DNL Salesforce Service Cloud] Card.
+>[!TIP]
+>
+>Le origini nel catalogo delle origini visualizzano **[!UICONTROL Configurazione]** quando una determinata origine non dispone ancora di un account autenticato. Quando esiste un account autenticato, questa opzione diventa **[!UICONTROL Aggiungi dati]**.
 
 ![Il catalogo delle sorgenti nell’interfaccia utente di Experienci Platform con la scheda sorgente Salesforce Service Cloud selezionata.](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
 Il **[!UICONTROL Connetti a Salesforce Service Cloud]** viene visualizzata. In questa pagina è possibile utilizzare nuove credenziali o credenziali esistenti.
 
+### Usa un account esistente
+
+Per utilizzare un account esistente, seleziona **[!UICONTROL Account esistente]**, quindi selezionare l&#39;account desiderato dall&#39;elenco visualizzato. Al termine, seleziona **[!UICONTROL Successivo]** per procedere.
+
+![Elenco di account Salesforce Service Cloud autenticati già presenti nell’organizzazione.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+
+### Crea un nuovo account
+
+Per creare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci un nome e una descrizione per il nuovo [!DNL Salesforce Service Cloud] account.
+
+![L’interfaccia in cui puoi creare un nuovo account Salesforce Service Cloud fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+
+Quindi, seleziona il tipo di autenticazione che desideri utilizzare per il nuovo account.
+
 >[!BEGINTABS]
 
->[!TAB Usa un account Salesforce Service Cloud esistente]
+>[!TAB Autenticazione di base]
 
-Per utilizzare un account esistente, seleziona **[!UICONTROL Account esistente]** quindi selezionare l&#39;account che si desidera utilizzare dall&#39;elenco visualizzato. Al termine, seleziona **[!UICONTROL Successivo]** per procedere.
+Per l’autenticazione di base, seleziona **[!UICONTROL Autenticazione di base]** e quindi fornisci i valori per le seguenti credenziali:
 
-![Elenco di account Salesforce autenticati già presenti nell’organizzazione.](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
+* URL ambiente
+* Nome utente
+* Password
+* Versione API (opzionale)
 
->[!TAB Crea un nuovo account Salesforce Service Cloud]
+Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]**.
 
-Per utilizzare un nuovo account, seleziona **[!UICONTROL Nuovo account]** e fornisci un nome, una descrizione e [!DNL Salesforce Service Cloud] credenziali di autenticazione. Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]** e lascia qualche secondo per consentire alla nuova connessione di stabilirsi.
+![Interfaccia di autenticazione di base per la creazione dell’account Salesforce.](../../../../images/tutorials/create/salesforce-service-cloud/basic.png)
 
-![L’interfaccia in cui puoi creare un nuovo account Salesforce fornendo le credenziali di autenticazione appropriate.](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+>[!TAB Credenziali client OAuth2]
+
+Per le credenziali client OAuth 2, selezionare **[!UICONTROL Credenziali client OAuth2]** e quindi fornisci i valori per le seguenti credenziali:
+
+* URL ambiente
+* ID client
+* Segreto client
+* Versione API
+
+Al termine, seleziona **[!UICONTROL Connetti all&#39;origine]**.
+
+![L’interfaccia OAuth per la creazione dell’account Salesforce.](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
 
 >[!ENDTABS]
 
