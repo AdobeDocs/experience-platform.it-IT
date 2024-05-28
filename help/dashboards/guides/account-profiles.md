@@ -2,10 +2,10 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 1%
 
 ---
 
@@ -76,14 +76,13 @@ Per ulteriori informazioni su ciascuno dei widget standard disponibili, selezion
 * [Profili account aggiunti](#account-profiles-added)
 * [Nuovi account per settore](#accounts-by-industry)
 * [Nuovi account per tipo](#accounts-by-type)
-* [Opportunità aggiunte](#opportunities-added)
 * [Nuove opportunità per ruolo persona](#opportunities-by-person-role)
 * [Nuove opportunità in base ai ricavi](#opportunities-by-revenue)
 * [Nuove opportunità per stato e fase](#opportunities-by-status-&-stage)
 * [Nuove opportunità realizzate](#opportunities-won)
+* [Opportunità aggiunte](#opportunities-added)
 * [Distribuzione del punteggio predittivo](#predictive-scoring-distribution)
 * [Fattori influenti principali con punteggio predittivo](#predictive-scoring-top-influential-factors)
-* [Totale account per settore](#total-accounts-by-industry)
 
 ### Profili account aggiunti {#account-profiles-added}
 
@@ -102,14 +101,6 @@ Il [!UICONTROL Nuovi account per settore] widget mostra il numero totale di acco
 Il [!UICONTROL Nuovi account per tipo] widget mostra il numero totale di account in una singola metrica all’interno di un grafico ad anello. Il grafico ad anello illustra la composizione relativa dei diversi tipi di conto che compongono questo totale. Una chiave con codice colore fornisce un raggruppamento di tutti i tipi di conto inclusi. I conteggi individuali per ciascun tipo di account vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
 
 ![Il widget Nuovi account per tipo.](../images/account-profiles/new-accounts-by-type.png)
-
-### Opportunità aggiunte {#opportunities-added}
-
-Il [!UICONTROL Opportunità aggiunte] il widget utilizza un grafico a linee per visualizzare il numero di opportunità aggiunte ogni giorno in un periodo di tempo. Utilizza il filtro data globale che si trova nella parte superiore del dashboard per determinare il periodo di analisi. Se non viene fornito alcun filtro di data, il comportamento predefinito elenca le opportunità aggiunte per l’anno precedente a oggi. I risultati possono essere utilizzati per dedurre una tendenza nel numero di opportunità aggiunte.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![Il widget Opportunità aggiunto.](../images/account-profiles/opportunities-added.png)
 
 ### Nuove opportunità per ruolo persona {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ Il [!UICONTROL Nuove opportunità realizzate] widget mostra il numero totale di 
 
 ![Il widget Nuove opportunità ha vinto.](../images/account-profiles/new-opportunities-won.png)
 
+### Opportunità aggiunte {#opportunities-added}
+
+Il [!UICONTROL Opportunità aggiunte] il widget utilizza un grafico a linee per visualizzare il numero di opportunità aggiunte ogni giorno in un periodo di tempo. Utilizza il filtro data globale che si trova nella parte superiore del dashboard per determinare il periodo di analisi. Se non viene fornito alcun filtro di data, il comportamento predefinito elenca le opportunità aggiunte per l’anno precedente a oggi. I risultati possono essere utilizzati per dedurre una tendenza nel numero di opportunità aggiunte.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![Il widget Opportunità aggiunto.](../images/account-profiles/opportunities-added.png)
+
 ### Distribuzione del punteggio predittivo {#predictive-scoring-distribution}
 
 Il [!UICONTROL Distribuzione del punteggio predittivo] widget mostra la distribuzione del punteggio di tutti i profili di account per aiutarti a comprendere lo stato della pipeline delle vendite in breve. I dati di punteggio vengono trasmessi attraverso un grafico ad anello e un istogramma.
@@ -170,18 +169,6 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 >I filtri per l’intervallo di date globale non si applicano agli approfondimenti di valutazione predittiva. I widget con punteggio predittivo analizzano i dati in base al modello di punteggio dell’account selezionato nel menu a discesa.
 
 ![Widget dei fattori influenti principali con punteggio predittivo.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Totale account per settore {#total-accounts-by-industry}
-
-Questo widget visualizza il numero totale di conti in una singola metrica e utilizza un grafico ad anello per illustrare le dimensioni proporzionali dei conteggi per i settori che compongono il numero complessivo. La chiave fornisce informazioni di codifica del colore per i diversi settori che compongono il grafico ad anello.
-
->[!NOTE]
->
->Le informazioni visualizzate da questa informazione dipendono dall’intervallo di date specificato dall’utente. Se non fornisci un filtro per date, il comportamento predefinito di Insight analizza i dati aggiunti dall’anno precedente fino a oggi.
-
-I conteggi individuali per i diversi settori vengono visualizzati in una finestra di dialogo quando il cursore passa sopra la rispettiva sezione del grafico ad anello.
-
-![Il totale dei conti per widget di settore.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Passaggi successivi
 

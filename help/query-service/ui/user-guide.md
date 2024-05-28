@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Query Editor
 description: L’editor delle query è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno dell’interfaccia utente di Experienci Platform. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in Experienci Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->L’editor legacy è stato dichiarato obsoleto il 30 maggio 2024. Non è più accessibile per l’uso. Ora puoi utilizzare la [Editor query avanzato](#enhanced-editor-toggle) per scrivere, convalidare ed eseguire le query
+>L’editor legacy è stato dichiarato obsoleto il 24 maggio 2024. Non è più accessibile per l’uso. Ora puoi utilizzare la [Editor query avanzato](#enhanced-editor-toggle) per scrivere, convalidare ed eseguire le query
 
 Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati sull’esperienza del cliente all’interno di [!DNL Experience Platform] dell&#39;utente. Query Editor supporta lo sviluppo di query per l’analisi e l’esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per popolare i set di dati in [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ Le query eseguite dall’editor delle query vengono eseguite in modo interattivo
 
 >[!NOTE]
 >
->L’editor legacy è stato dichiarato obsoleto il 30 maggio 2024. Non è più accessibile per l’uso. Ora puoi utilizzare l’Editor query avanzato per scrivere, convalidare ed eseguire le query.
+>L’editor legacy è stato dichiarato obsoleto il 24 maggio 2024. Non è più accessibile per l’uso. Ora puoi utilizzare l’Editor query avanzato per scrivere, convalidare ed eseguire le query.
 
 Utilizzando l’editor delle query, puoi scrivere, eseguire e salvare query per i dati sull’esperienza del cliente. Tutte le query eseguite o salvate nell’editor delle query sono disponibili per tutti gli utenti dell’organizzazione che hanno accesso a Query Service.
 

@@ -1,7 +1,7 @@
 ---
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Adobe Experience Platform di aprile 2024.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -121,7 +121,7 @@ Il Servizio query consente di utilizzare SQL standard per eseguire query sui dat
 | Avvisi di query pianificate | Notifiche proattive durante la pianificazione delle query per garantire una gestione efficiente e tempestiva delle attività. È possibile [abbonati agli avvisi durante la creazione di una query](../../query-service/ui/query-schedules.md#alerts-for-query-status) o utilizzando le azioni in linea per le query pianificate esistenti. Consulta la [abbonati agli avvisi con azioni in linea](../../query-service/ui/monitor-queries.md#alert-subscription) per ulteriori informazioni. |
 | Navigazione query pianificata migliorata | Navigazione semplice tra modelli di query ed esecuzioni pianificate per una maggiore produttività. Consulta la documentazione su [visualizzazione delle esecuzioni delle query pianificate](../../query-service/ui/query-schedules.md#scheduled-query-runs) per ulteriori informazioni. |
 | Output query esteso | Puoi accedere a un massimo di 500 righe di risultati di query nella console per un’analisi più approfondita dei dati.Consulta la sezione [conteggio dei risultati](../../query-service/ui/user-guide.md#result-count) per ulteriori informazioni. |
-| Fine dell’editor di query legacy | A partire dal 30 aprile 2024, l’Editor query avanzato è diventato l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 30 maggio 2024 e non sarà più disponibile. Consulta la [Guida utente di Query Editor](../../query-service/ui/user-guide.md) per ulteriori informazioni. |
+| Fine dell’editor di query legacy | A partire dal 30 aprile 2024, l’Editor query avanzato è diventato l’editor predefinito per tutti gli utenti. L’editor legacy diventerà obsoleto il 24 maggio 2024 e non sarà più disponibile. Consulta la [Guida utente di Query Editor](../../query-service/ui/user-guide.md) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
 
