@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida all’interfaccia utente di Audiences
 description: La funzione di composizione del pubblico nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica dei tipi di pubblico per la tua organizzazione.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Dopo aver aggiornato i dettagli della composizione, seleziona **[!UICONTROL Salv
 
 L’area di lavoro per la composizione del pubblico è composta da quattro diversi tipi di blocchi: **[[!UICONTROL Pubblico]](#audience-block)**, **[[!UICONTROL Escludi]](#exclude-block)**, **[[!UICONTROL Classifica]](#rank-block)**, e **[[!UICONTROL Dividi]](#split-block)**.
 
-## [!UICONTROL Destinatari] {#audience-block}
+## [!UICONTROL Pubblico] {#audience-block}
 
 Il **[!UICONTROL Pubblico]** il tipo di blocco ti consente di aggiungere i sottogruppi di pubblico che desideri comporre il nuovo pubblico più grande. Per impostazione predefinita, un **[!UICONTROL Pubblico]** Il blocco è incluso nella parte superiore dell’area di lavoro della composizione.
 
@@ -68,8 +68,8 @@ I tipi di pubblico selezionati vengono ora visualizzati nella barra a destra qua
 
 | Tipo di unione | Descrizione |
 | ---------- | ----------- |
-| [!UICONTROL Unione] | I tipi di pubblico vengono combinati in un unico pubblico. Equivale a un&#39;operazione OR. |
-| [!UICONTROL Intersection] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
+| [!UICONTROL Union] | I tipi di pubblico vengono combinati in un unico pubblico. Equivale a un&#39;operazione OR. |
+| [!UICONTROL Intersezione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **tutto** di quelli che vengono aggiunti. Equivale a un&#39;operazione AND. |
 | [!UICONTROL Escludi sovrapposizione] | I tipi di pubblico vengono combinati, con solo quelli condivisi in **uno, ma non tutti** di quelli che vengono aggiunti. Equivale a un&#39;operazione XOR. |
 
 ### [!UICONTROL Genera regola] {#build-rule}
@@ -230,9 +230,9 @@ Inoltre, puoi limitare il numero di profili restituiti abilitando la funzione **
 
 ![Viene evidenziata l’opzione Aggiungi limite profilo, che consente di limitare il numero di profili restituiti.](../images/ui/audience-composition/add-profile-limit.png)
 
-## [!UICONTROL Dividere] {#split-block}
+## [!UICONTROL Dividi] {#split-block}
 
-Il **[!UICONTROL Dividi]** il tipo di blocco ti consente di suddividere il nuovo pubblico in vari tipi di pubblico secondario. Puoi suddividere questo pubblico in base alla percentuale o a un attributo.
+Il **[!UICONTROL Dividi]** il tipo di blocco ti consente di suddividere il nuovo pubblico in vari tipi di pubblico secondario. Puoi suddividere questo pubblico in base alla percentuale o a un attributo. Quando suddividi il pubblico in sottogruppi, la suddivisione è **persistente**. Ciò significa che il profilo si troverà nello stesso pubblico secondario a ogni valutazione.
 
 Per aggiungere una **[!UICONTROL Dividi]** blocco, seleziona il **+** , seguito da **[!UICONTROL Dividi]**.
 

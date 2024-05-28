@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4064'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Può essere valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
 | Pubblicato | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì | Sì |
-| Inattivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì | Sì |
+| Non attivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì | Sì |
 | Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No | No |
 
 ### In quali stati posso modificare i tipi di pubblico in?
@@ -269,7 +269,7 @@ Il Generatore di segmenti è più adatto al pubblico **creazione** (per creare u
 
 La tabella seguente illustra la differenza tra i due servizi:
 
-| Generatore di segmenti | Composizione del pubblico |
+| Segment Builder | Composizione del pubblico |
 | --------------- | -------------------- |
 | <ul><li>Generazione di pubblico in un’unica fase</li><li>Crea i blocchi di base di tipi di pubblico da dati di profilo, serie temporali e più entità</li><li>Utilizzato per creare **uno** pubblico</li></ul> | <ul><li>Generazione di tipi di pubblico in più fasi tramite operazioni basate su set</li><li>Utilizza i tipi di pubblico creati dal Generatore di segmenti e applica opzioni di arricchimento dei dati, come la classificazione degli attributi del profilo e la suddivisione in tipi di pubblico secondari</li><li>Utilizzato per creare **multiplo** tipi di pubblico contemporaneamente</li></ul> |
 
@@ -333,7 +333,11 @@ La suddivisione del pubblico consente di suddividere ulteriormente il pubblico i
 
 La suddivisione per attributo comporta l&#39;esclusività reciproca tra i gruppi. Ciò significa che se un record soddisfa i criteri di più percorsi di suddivisione, gli verrà assegnato il **primo** percorso da sinistra e **non** assegnati a uno qualsiasi degli altri percorsi.
 
-Quando si suddivide in percentuale, le suddivisioni sono **in modo casuale** completato. Ciò significa che i profili verranno assegnati in modo casuale a ciascun percorso. La divisione è **non** persistente, in modo che il profilo possa trovarsi in un pubblico secondario diverso a ogni valutazione.
+Quando si suddivide in percentuale, le suddivisioni sono **in modo casuale** completato. Ciò significa che i profili verranno assegnati in modo casuale a ciascun percorso. La divisione **è** persistente, il che significa che il profilo si troverà nello stesso pubblico secondario a ogni valutazione.
+
+>[!NOTE]
+>
+>In precedenza, le suddivisioni nella composizione del pubblico erano **non** persistente.
 
 Per ulteriori informazioni sul blocco Split, leggi [Guida dell’interfaccia utente di Audience Composition](./ui/audience-composition.md#split).
 
@@ -341,7 +345,7 @@ Per ulteriori informazioni sul blocco Split, leggi [Guida dell’interfaccia ute
 
 Sì, tutti i tipi di segmentazione ([segmentazione batch, segmentazione in streaming e segmentazione Edge](./home.md#evaluate-segments)) sono supportate nel flusso di lavoro Composizione pubblico. Tuttavia, poiché le composizioni vengono attualmente eseguite solo una volta al giorno, anche se sono inclusi i tipi di pubblico valutati in streaming o edge, il risultato sarà basato sull’iscrizione al pubblico al momento dell’esecuzione della composizione.
 
-## Iscrizione al pubblico
+## Appartenenza al pubblico
 
 Nella sezione seguente sono elencate le domande relative all’iscrizione al pubblico.
 
