@@ -4,10 +4,10 @@ title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e utilizzare i dati del profilo, tra cui la visualizzazione dei profili, la creazione e l’aggiornamento di criteri di unione, l’esportazione o l’esempio di dati del profilo e l’eliminazione dei dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '883'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 

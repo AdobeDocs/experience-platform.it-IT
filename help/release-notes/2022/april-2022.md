@@ -2,10 +2,10 @@
 title: Note sulla versione di Adobe Experience Platform - Aprile 2022
 description: Note sulla versione di Adobe Experience Platform di aprile 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2670'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
@@ -45,7 +45,7 @@ I seguenti widget sono disponibili nella libreria Widget nei rispettivi dashboar
 | [!UICONTROL Destinazioni attive per piattaforma di destinazione] | Destinazioni | Questo widget utilizza una tabella a due colonne per mostrare un elenco di piattaforme di destinazione attive e il numero totale di destinazioni attive per ogni piattaforma di destinazione. |
 | [!UICONTROL Tipi di pubblico attivati su tutte le destinazioni] | Destinazioni | Questo widget fornisce in un’unica metrica il numero totale di tipi di pubblico attivati su tutte le destinazioni. |
 | [!UICONTROL Ordine di attivazione pubblico] | Segmenti | Questo widget fornisce una tabella a tre colonne che elenca il nome della destinazione, la piattaforma e la data di attivazione del pubblico. |
-| [!UICONTROL Tendenza delle dimensioni del pubblico] | Segmenti | Questo widget fornisce un’illustrazione del grafico a linee per il numero totale di profili che soddisfano i criteri di qualsiasi definizione di segmento per periodi di 30 giorni, 90 giorni e 12 mesi. |
+| [!UICONTROL Tendenza dimensione pubblico] | Segmenti | Questo widget fornisce un’illustrazione del grafico a linee per il numero totale di profili che soddisfano i criteri di qualsiasi definizione di segmento per periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza di modifica della dimensione del pubblico] | Segmenti | Questo widget fornisce un grafico a linee che illustra la differenza nel numero totale di profili idonei per un dato segmento tra le istantanee giornaliere più recenti. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 | [!UICONTROL Tendenza dimensione pubblico per identità] | Segmenti | Questo widget illustra la tendenza delle dimensioni del pubblico per un particolare segmento in base a un tipo di identità selezionato. Il periodo di analisi delle tendenze può essere visualizzato in periodi di 30 giorni, 90 giorni e 12 mesi. |
 
@@ -177,7 +177,7 @@ I servizi di intelligenza artificiale e machine learning consentono agli analist
 
 ### IA per l’attribuzione
 
-Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzata dai marketer per quantificare l’impatto di ogni punto di contatto di marketing lungo i percorsi della clientela.
+Attribution AI viene utilizzato per attribuire crediti ai punti di contatto che conducono a eventi di conversione. Può essere utilizzata dai marketer per quantificare l’impatto di ogni punto di contatto di marketing lungo i percorsi della clientela.
 
 **Funzioni aggiornate**
 

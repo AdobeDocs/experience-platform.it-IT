@@ -5,7 +5,7 @@ title: Connettersi alle destinazioni batch e attivare i dati utilizzando l’API
 description: Istruzioni dettagliate per l’utilizzo dell’API del servizio Flusso per creare una destinazione di archiviazione cloud in batch o di e-mail marketing in Experienci Platform e attivare i dati
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
 ht-degree: 3%
@@ -173,7 +173,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `name` | Specifica un nome per la connessione di base all&#39;Experience Platform [!DNL Profile Store]. |
+| `name` | Specifica un nome per la connessione di base all&#39;Experience Platform [!DNL Profile store]. |
 | `description` | In alternativa, è possibile fornire una descrizione della connessione di base. |
 | `connectionSpec.id` | Utilizza l’ID della specifica di connessione per [Archivio profili Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,7 +224,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `name` | Specifica un nome per la connessione sorgente all’Experience Platform [!DNL Profile Store]. |
+| `name` | Specifica un nome per la connessione sorgente all’Experience Platform [!DNL Profile store]. |
 | `description` | Facoltativamente, è possibile fornire una descrizione per la connessione di origine. |
 | `connectionSpec.id` | Utilizza l’ID della specifica di connessione per [Archivio profili Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Utilizza l’ID connessione di base ottenuto nel passaggio precedente. |
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) per la nuova connessione sorgente creata a [!DNL Profile Store]. Ciò conferma che hai effettuato correttamente la connessione al [!DNL Experience Platform] dati. Memorizza questo valore come richiesto in un passaggio successivo.
+In caso di esito positivo, la risposta restituisce l’identificatore univoco (`id`) per la nuova connessione sorgente creata a [!DNL Profile store]. Ciò conferma che hai effettuato correttamente la connessione al [!DNL Experience Platform] dati. Memorizza questo valore come richiesto in un passaggio successivo.
 
 ```json
 {

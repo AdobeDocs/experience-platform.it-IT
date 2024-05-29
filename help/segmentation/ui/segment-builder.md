@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3633'
-ht-degree: 6%
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campi"
->abstract="I tre tipi di campi che compongono una definizione di segmento sono attributi, eventi e pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; i tipi di pubblico consentono di utilizzare tipi di pubblico importati da origini esterne."
+>abstract="I tre tipi di campo che compongono una definizione di segmento sono attributi, eventi e tipi di pubblico. Gli attributi consentono di utilizzare gli attributi del profilo che appartengono alla classe Profilo individuale XDM, gli eventi consentono di creare un pubblico in base ad azioni o eventi che si svolgono utilizzando elementi dati ExperienceEvent XDM e i tipi di pubblico consentono di utilizzare i tipi di pubblico importati da origini esterne."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -76,10 +76,10 @@ Ad esempio, considera una situazione in cui disponevi di due suite di rapporti c
 | EVAR 1 | Dominio di riferimento | Accesso effettuato S/N |
 | EVAR 2 | Nome pagina | ID fedeltà membro |
 | EVAR 3 | URL | Nome pagina |
-| EVAR 4 | Termini di ricerca | Nome prodotto |
+| EVAR 4 | Termini di ricerca | nome del prodotto |
 | event1 | Clic | Page Views |
-| event2 | Page Views | Aggiunte carrello |
-| event3 | Aggiunte carrello | Pagamenti |
+| event2 | Page Views | Aggiunte al carrello |
+| event3 | Aggiunte al carrello | Pagamenti |
 | event4 | Acquisti | Acquisti |
 
 In questo caso, puoi mappare le due suite di rapporti con il seguente schema:
@@ -95,7 +95,7 @@ Una volta mappate le suite di rapporti, puoi utilizzare questi campi appena mapp
 | Scenario | Esperienza schema di unione | Segmentazione variabile generica | Segmentazione mappata variabile |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Suite di rapporti singola | Il descrittore di nome descrittivo è incluso nelle variabili generiche. <br><br>**Esempio:** Nome pagina (eVar2) | <ul><li>Descrittore di nome intuitivo incluso con variabili generiche</li><li>Le query utilizzano i dati del set di dati specifico, in quanto è l’unico</li></ul> | Le query possono utilizzare dati di Adobe Analytics e potenzialmente altre origini. |
-| Suite di rapporti multiple | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** EVAR 2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene l’eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
+| Più suite di rapporti | Con le variabili generiche non sono inclusi descrittori di nomi descrittivi. <br><br>**Esempio:** EVAR 2 | <ul><li>Qualsiasi campo con più descrittori viene visualizzato come generico. Ciò significa che nell’interfaccia utente non vengono visualizzati nomi descrittivi.</li><li>Le query possono utilizzare dati di qualsiasi set di dati che contiene l’eVar, il che può causare risultati misti o errati.</li></ul> | Le query utilizzano correttamente i risultati combinati da più set di dati. |
 
 ### Tipi di pubblico
 
@@ -232,7 +232,7 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]** il contenito
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Criteri di unione"
->abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito, in alternativa puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
 
 [!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizza per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare un profilo.
 
@@ -242,18 +242,18 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![Il selettore dei criteri di unione viene evidenziato. Questo consente di scegliere quale criterio di unione selezionare per la definizione del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà della definizione di segmento {#segment-properties}
+## Proprietà di definizione del segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Proprietà della definizione di segmento"
->abstract="Nella sezione Proprietà della definizione di segmento viene visualizzata una stima della dimensione del segmento risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
+>title="Proprietà di definizione del segmento"
+>abstract="La sezione delle proprietà di definizione del segmento visualizza una stima delle dimensioni della definizione del segmento risultante, visualizzando il numero di profili qualificati rispetto al numero totale di profili. Ciò ti consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="Aggiornare le stime"
->abstract="Puoi aggiornare le stime della definizione di segmento per visualizzare subito un’anteprima del numero di profili idonei per la definizione di segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=it#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
+>title="Aggiorna stime"
+>abstract="Puoi aggiornare le stime della definizione del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per la definizione del segmento proposta. Le stime del pubblico vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
 Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà del pubblico]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
@@ -273,7 +273,7 @@ Continuando a creare la definizione del segmento, puoi visualizzare un’antepri
 
 >[!NOTE]
 >
->Le stime del pubblico vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità.
+>Le stime del pubblico vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio Profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità; e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità.
 >
 >Inoltre, questa stima si basa su quando è stato eseguito l’ultimo processo di esempio del profilo. Ciò significa che se utilizzi una funzione data relativa, ad esempio &quot;Oggi&quot; o &quot;Questa settimana&quot;, la stima baserà i suoi calcoli sull’ultimo tempo di esecuzione del processo di esempio del profilo. Ad esempio, se oggi è il 24 gennaio e l’ultimo processo di esempio del profilo è stato eseguito il 22 gennaio, la funzione di data relativa &quot;Ieri&quot; si baserà sul 21 gennaio e non sul 23 gennaio.
 >

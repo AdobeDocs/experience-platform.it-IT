@@ -4,7 +4,7 @@ title: Anteprima endpoint API di stato campione (anteprima profilo)
 description: L’endpoint per lo stato di anteprima del campione dell’API Real-Time Customer Profile ti consente di visualizzare in anteprima l’ultimo campione riuscito dei dati del profilo, di elencare la distribuzione del profilo per set di dati e per identità e di generare rapporti che mostrano la sovrapposizione dei set di dati, la sovrapposizione delle identità e i profili non uniti.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Per ulteriori informazioni sui profili e sul loro ruolo in Experienci Platform, 
 Come i dati abilitati per Real-Time Customer Profile vengono acquisiti in [!DNL Platform], viene memorizzato nell’archivio dati Profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzata:
 
 * Per **flussi di lavoro per dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o di diminuzione del 5% è stata raggiunta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
-* Per **acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
+* Per **acquisizione batch**, entro 15 minuti dalla corretta acquisizione di un batch nell’archivio profili, se viene raggiunta la soglia di aumento o di diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo è possibile visualizzare in anteprima l’ultimo processo di esempio riuscito, nonché elencare la distribuzione del profilo per set di dati e per spazio dei nomi dell’identità.
 
 Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche all’interno del [!UICONTROL Profili] sezione dell’interfaccia utente di Experienci Platform. Per informazioni su come accedere ai dati del profilo utilizzando l’interfaccia utente, visita il [[!DNL Profile] Guida all’interfaccia utente](../ui/user-guide.md).
 
@@ -102,7 +102,7 @@ La risposta include i dettagli dell’ultimo processo di esempio riuscito esegui
 | `numRowsToRead` | Numero totale di profili uniti nel campione. |
 | `sampleJobRunning` | Valore booleano che restituisce `true` quando è in corso un processo di esempio. Fornisce trasparenza nella latenza che si verifica quando un file batch viene caricato in quando viene effettivamente aggiunto all’archivio profili. |
 | `cosmosDocCount` | Numero totale di documenti in Cosmos. |
-| `totalFragmentCount` | Numero totale di frammenti di profilo nell’archivio profili. |
+| `totalFragmentCount` | Numero totale di frammenti di profilo nell’archivio Profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp dell’ultima acquisizione batch riuscita. |
 | `streamingDriven` | *Questo campo è stato dichiarato obsoleto e non contiene alcun significato per la risposta.* |
 | `totalRows` | Numero totale di profili uniti in Experienci Platform, noto anche come &quot;conteggio dei profili&quot;. |
@@ -549,8 +549,8 @@ In caso di esito positivo, la richiesta restituisce lo stato HTTP 200 (OK) e il 
 | Proprietà | Descrizione |
 |---|---|
 | `data` | Il `data` L&#39;oggetto contiene le informazioni restituite per il report dei profili non uniti. |
-| `totalNumberOfProfiles` | Numero totale di profili univoci nell’archivio profili. Equivale al conteggio del pubblico indirizzabile. Include profili noti e non uniti. |
-| `totalNumberOfEvents` | Numero totale di ExperienceEvents nell’archivio profili. |
+| `totalNumberOfProfiles` | Numero totale di profili univoci nell’archivio Profili. Equivale al conteggio del pubblico indirizzabile. Include profili noti e non uniti. |
+| `totalNumberOfEvents` | Il numero totale di ExperienceEvents nell’archivio dei profili. |
 | `unstitchedProfiles` | Oggetto contenente una suddivisione dei profili non uniti per periodo di tempo. Il rapporto dei profili non uniti fornisce un raggruppamento dei profili per periodi di tempo di 7, 30, 60, 90 e 120 giorni. |
 | `countOfProfiles` | Il conteggio dei profili non uniti per il periodo di tempo o il conteggio dei profili non uniti per lo spazio dei nomi. |
 | `eventsAssociated` | Il numero di ExperienceEvents per l’intervallo di tempo o il numero di eventi per lo spazio dei nomi. |
@@ -593,5 +593,5 @@ Questo rapporto fornisce le seguenti informazioni:
 
 ## Passaggi successivi
 
-Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint di stima e anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo sulle definizioni dei segmenti. Queste informazioni sono utili per isolare il pubblico previsto. Per ulteriori informazioni sull’utilizzo delle anteprime e delle stime tramite l’API di segmentazione, visita il [guida all’anteprima e stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio Profili ed eseguire più rapporti sui dati, puoi anche utilizzare gli endpoint di stima e anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo sulle definizioni dei segmenti. Queste informazioni sono utili per isolare il pubblico previsto. Per ulteriori informazioni sull’utilizzo delle anteprime e delle stime tramite l’API di segmentazione, visita il [guida all’anteprima e stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
 

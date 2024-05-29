@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente del servizio di segmentazione
 description: Scopri come creare e gestire tipi di pubblico e definizioni di segmenti nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ Per ulteriori informazioni, visita [guida della dashboard di audiences](../../da
 
 ![Viene visualizzato il dashboard del pubblico. Mostra vari widget, tra cui la dimensione del pubblico, i profili per identità, la sovrapposizione delle identità e la tendenza di modifica della dimensione del pubblico.](../../dashboards/images/segments/dashboard-overview.png)
 
-## Sfogliare {#browse}
+## Sfoglia {#browse}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
@@ -55,12 +55,12 @@ Per ulteriori informazioni, visita [guida della dashboard di audiences](../../da
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Metodo di valutazione"
->abstract="I metodi di valutazione per i tipi di pubblico includono batch, streaming e Edge."
+>abstract="I metodi di valutazione per i tipi di pubblico includono batch, streaming e edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="Aggiungi tutti i tipi di pubblico alla pianificazione"
->abstract="Abilita questa opzione per includere tutti i tipi di pubblico valutati utilizzando la segmentazione in batch nell’aggiornamento pianificato giornaliero. Disabilita questa opzione per rimuovere tutti i tipi di pubblico dall’aggiornamento pianificato."
+>abstract="Abilita questa opzione per includere tutti i tipi di pubblico valutati utilizzando la segmentazione in batch nell’aggiornamento giornaliero pianificato. Disattiva per rimuovere tutti i tipi di pubblico dall’aggiornamento pianificato."
 
 Seleziona la **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutti i tipi di pubblico per la tua organizzazione. Questa vista elenca informazioni sui tipi di pubblico, tra cui il conteggio dei profili, l’origine, la data di creazione, la data dell’ultima modifica, i tag e il raggruppamento.
 
@@ -114,7 +114,7 @@ Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico
 | Campo | Descrizione |
 | ----- | ----------- |
 | [!UICONTROL Nome] | Il nome del pubblico. |
-| [!UICONTROL Conteggio dei profili] | Il numero totale di profili idonei per il pubblico. |
+| [!UICONTROL Conteggio profili] | Il numero totale di profili idonei per il pubblico. |
 | [!UICONTROL Origin] | L’origine del pubblico. Indica da dove proviene il pubblico. I valori possibili includono Servizio di segmentazione, Caricamento personalizzato, Composizione del pubblico e Audience Manager. |
 | [!UICONTROL Stato del ciclo di vita] | Stato del pubblico. I valori possibili per questo campo includono `Draft`, `Inactive`, e `Published`. Ulteriori informazioni sugli stati del ciclo di vita, compreso cosa significano i diversi stati e come spostare i tipi di pubblico in diversi stati del ciclo di vita, leggi [sezione sullo stato del ciclo di vita nelle domande frequenti sulla segmentazione](../faq.md#lifecycle-status). |
 | [!UICONTROL Frequenza di aggiornamento] | Valore che indica la frequenza con cui vengono aggiornati i dati del pubblico. I valori possibili per questo campo includono [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Bordo], e [!UICONTROL Non pianificato]. |
@@ -125,7 +125,7 @@ Viene visualizzato il grafico a torta, con una suddivisione dei tipi di pubblico
 | [!UICONTROL Descrizione] | Descrizione del pubblico. |
 | [!UICONTROL Creato da] | Nome della persona che ha creato il pubblico. |
 | [!UICONTROL Etichette di accesso] | Le etichette di accesso per il pubblico. Le etichette di accesso consentono di categorizzare set di dati e campi in base ai criteri di utilizzo applicabili a tali dati. Queste etichette possono essere applicate in qualsiasi momento, fornendo flessibilità nella scelta di come gestire i dati. Per ulteriori informazioni sulle etichette di accesso, consulta la documentazione su [gestione delle etichette](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Suddividi] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
+| [!UICONTROL Raggruppamento] | Il raggruppamento dello stato del profilo per il pubblico. Di seguito è riportata una descrizione più dettagliata del raggruppamento dello stato del profilo. |
 
 Se è selezionato il raggruppamento, la visualizzazione mostra un grafico a barre che illustra la percentuale di profili che appartengono a ciascuno dei seguenti stati di profilo calcolati: [!UICONTROL Realizzato], [!UICONTROL Esistente], e [!UICONTROL Uscita]. Inoltre, la suddivisione mostrata nella [!UICONTROL Sfoglia] Questa è la suddivisione più accurata dello stato di definizione del segmento. Se questo numero è diverso da quello riportato sulla [!UICONTROL Panoramica] , è necessario utilizzare i numeri della scheda [!UICONTROL Sfoglia] come fonte corretta di informazioni, poiché il [!UICONTROL Panoramica] i numeri di tabulazione vengono aggiornati solo una volta al giorno.
 
@@ -278,7 +278,7 @@ Selezione **[!UICONTROL Modifica proprietà]** consente di modificare i dettagli
 
 Il **[!UICONTROL Totale pubblico]** mostra il numero totale di profili idonei per il pubblico.
 
-Le stime vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione di tipi di pubblico.
+Le stime vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno. Se nell’archivio Profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; per un numero di entità compreso tra 1 e 20 milioni, vengono utilizzate 1 milione di entità; e per più di 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime sono disponibili nella sezione [sezione generazione della stima](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione di tipi di pubblico.
 
 **Destinazioni attivate** {#activated-destinations}
 
@@ -294,13 +294,13 @@ Di seguito è riportato un campionamento dei profili idonei per il segmento, con
 
 Il modo in cui viene attivato il campionamento dei dati dipende dal metodo di acquisizione.
 
-Per l’acquisizione batch, l’archivio profili viene analizzato automaticamente ogni quindici minuti per verificare se un nuovo batch è stato correttamente acquisito dall’ultima esecuzione del processo di campionamento. In questo caso, l’archivio profili viene successivamente analizzato per verificare se è stata registrata una modifica di almeno il 5% nel numero di record. Se queste condizioni vengono soddisfatte, viene attivato un nuovo processo di campionamento.
+Per l’acquisizione batch, l’archivio profili viene analizzato automaticamente ogni quindici minuti per verificare se un nuovo batch è stato correttamente acquisito dall’esecuzione dell’ultimo processo di campionamento. In questo caso, l’archivio Profili viene successivamente analizzato per verificare se è stata registrata una modifica di almeno il 5% nel numero di record. Se queste condizioni vengono soddisfatte, viene attivato un nuovo processo di campionamento.
 
 Per l’acquisizione in streaming, l’archivio profili viene analizzato automaticamente ogni ora per verificare se si è verificata una modifica di almeno il 5% nel numero di record. Se questa condizione viene soddisfatta, viene attivato un nuovo processo di campionamento.
 
 La dimensione del campione della scansione dipende dal numero complessivo di entità nell’archivio profili. Queste dimensioni di esempio sono rappresentate nella tabella seguente:
 
-| Entità nell’archivio profili | Dimensione campione |
+| Entità nell&#39;archivio profili | Dimensione campione |
 | ------------------------- | ----------- |
 | Meno di 1 milione | Set di dati completo |
 | Da 1 a 20 milioni | 1 milione |

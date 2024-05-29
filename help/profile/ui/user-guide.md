@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Profil
 >
 >Se la tua organizzazione non utilizza ancora Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il [!UICONTROL Profili] dashboard non visibile. Al contrario, [!UICONTROL Panoramica] Questa scheda mostra collegamenti e documentazione utili per iniziare a utilizzare Real-Time Customer Profile.
 
-### Dashboard profili {#profile-dashboard}
+### Dashboard dei profili {#profile-dashboard}
 
 La dashboard dei profili delinea le metriche chiave relative ai dati di profilo della tua organizzazione.
 
@@ -52,7 +52,7 @@ Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ulti
 
 ![Vengono visualizzate ed evidenziate le metriche Profilo.](../images/user-guide/browse-metrics.png)
 
-### Conteggio dei profili {#profile-count}
+### Conteggio profili {#profile-count}
 
 Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experienci Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
 
@@ -64,7 +64,7 @@ Quando l’acquisizione di record in [!DNL Profile] store aumenta o diminuisce i
 
 ### [!UICONTROL Profili per spazio dei nomi] {#profiles-by-namespace}
 
-Il **[!UICONTROL Profili per spazio dei nomi]** Con la metrica vengono visualizzati il conteggio totale e il raggruppamento degli spazi dei nomi in tutti i profili uniti nell’archivio profili. Il numero totale di profili per spazio dei nomi (in altre parole, la somma dei valori mostrati per ciascuno spazio dei nomi) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi.
+Il **[!UICONTROL Profili per spazio dei nomi]** La metrica mostra il conteggio totale e il raggruppamento degli spazi dei nomi in tutti i profili uniti nell’archivio profili. Il numero totale di profili per spazio dei nomi (in altre parole, la somma dei valori mostrati per ciascuno spazio dei nomi) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente verranno associati più spazi dei nomi.
 
 #### Aggiornamento di [!UICONTROL Profili per spazio dei nomi] metrica
 
@@ -90,7 +90,7 @@ Per scegliere un criterio di unione da **[!UICONTROL Seleziona criterio di union
 
 ![Viene visualizzata una finestra di dialogo in cui è possibile selezionare il criterio di unione in base al quale filtrare.](../images/user-guide/select-merge-policy.png)
 
-I profili visualizzati rappresentano un campione di un massimo di 20 profili dall’archivio profili della tua organizzazione, dopo l’applicazione del criterio di unione selezionato. I profili di esempio per il criterio di unione selezionato vengono aggiornati quando vengono aggiunti nuovi dati all’archivio dei profili della tua organizzazione.
+I profili visualizzati rappresentano un campione di un massimo di 20 profili dall’archivio profili della tua organizzazione, dopo l’applicazione del criterio di unione selezionato. I profili di esempio per il criterio di unione selezionato vengono aggiornati quando vengono aggiunti nuovi dati all’archivio profili della tua organizzazione.
 
 Per visualizzare i dettagli di uno dei profili di esempio, seleziona la **[!UICONTROL ID profilo]**. Per ulteriori informazioni, consulta la sezione più avanti in questa guida su [visualizzazione dei dettagli profilo](#profile-detail).
 

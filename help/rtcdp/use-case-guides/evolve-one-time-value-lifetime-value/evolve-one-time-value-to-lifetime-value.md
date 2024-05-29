@@ -3,7 +3,7 @@ title: Valorizzazione del cliente una tantum in base al valore del ciclo di vita
 description: Scopri come creare campagne personalizzate per offrire i migliori prodotti o servizi complementari in base agli attributi, al comportamento e agli acquisti precedenti di un cliente specifico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Gli utenti tipo a cui stai eseguendo il targeting sono i visitatori non frequent
 Considera questi clienti che visitano le tue proprietà e acquistano occasionalmente i prodotti o i servizi che offri. Potresti creare campagne personalizzate che attraggano questi clienti in modo che il tuo marchio possa offrire loro un valore a lungo termine invece di un valore unico. Scopri come:
 
 * Raccolta e gestione dei dati
-* Creare tipi di pubblico
+* Crea tipi di pubblico
 * Crea percorsi per indirizzare questi tipi di pubblico in Adobe Journey Optimizer e attivarli in Real-Time CDP.
 
 ![Passo dopo passo Evoluzione del valore una tantum a valore del ciclo di vita panoramica visiva di alto livello.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
@@ -33,7 +33,7 @@ Considera questi clienti che visitano le tue proprietà e acquistano occasionalm
 
 Considerando che internamente hai definito un obiettivo e un obiettivo di business per aumentare la brand loyalty. Questo può tradursi nell’esecuzione di un caso d’uso per stimolare il coinvolgimento e la fedeltà dei clienti.
 
-Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due app di Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=it) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it). Di seguito sono elencati vari elementi di funzionalità e interfaccia utente delle due app che utilizzerai durante l’implementazione del caso d’uso.
+Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due app di Experience Platform [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=it). Di seguito sono elencati vari elementi di funzionalità e interfaccia utente delle due app che utilizzerai durante l’implementazione del caso d’uso.
 
 >[!TIP]
 >
@@ -46,8 +46,8 @@ Per ottenere questo risultato, la tecnologia necessaria è costituita dalle due 
    * [Tipi di pubblico](/help/segmentation/home.md)
    * [Destinazioni](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): progetta percorsi, imposta i trigger e crea i messaggi giusti per indirizzare i visitatori.
-   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=it)
-   * [Tipi di pubblico ed eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=it)
+   * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
+   * [Tipi di pubblico ed eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Percorsi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Architettura Real-Time CDP e Journey Optimizer
@@ -294,7 +294,7 @@ Non sono presenti [criteri di marketing](/help/data-governance/policies/overview
 * Limitare il targeting tra siti
 * Limita la combinazione di dati direttamente identificabili con dati anonimi
 
-### Creare tipi di pubblico {#create-audiences}
+### Crea tipi di pubblico {#create-audiences}
 
 Questo caso d’uso richiede la creazione di due tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio profili, al fine di distinguere un gruppo di persone commerciabile. In Adobe Experience Platform è possibile creare i tipi di pubblico in diversi modi:
 

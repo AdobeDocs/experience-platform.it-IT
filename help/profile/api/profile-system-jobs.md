@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform consente di eliminare un set di dati o un batch dall’archivio profili per rimuovere i dati Profilo cliente in tempo reale che non sono più necessari o che sono stati aggiunti per errore. A tal fine è necessario utilizzare l’API di profilo per creare un processo di sistema del profilo o eliminare una richiesta.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 3%
@@ -305,4 +305,4 @@ In caso di esito positivo, la richiesta di eliminazione restituisce lo stato HTT
 
 ## Passaggi successivi
 
-Ora che conosci i passaggi necessari per eliminare set di dati e batch da [!DNL Profile Store] entro [!DNL Experience Platform], puoi eliminare in modo sicuro i dati che sono stati aggiunti erroneamente o di cui la tua organizzazione non ha più bisogno. Tieni presente che una richiesta di cancellazione non può essere annullata, pertanto devi eliminare solo i dati che ritieni non necessari al momento e che non saranno necessari in futuro.
+Ora che conosci i passaggi necessari per eliminare set di dati e batch da [!DNL Profile store] entro [!DNL Experience Platform], puoi eliminare in modo sicuro i dati che sono stati aggiunti erroneamente o di cui la tua organizzazione non ha più bisogno. Tieni presente che una richiesta di cancellazione non può essere annullata, pertanto devi eliminare solo i dati che ritieni non necessari al momento e che non saranno necessari in futuro.

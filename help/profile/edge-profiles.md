@@ -2,7 +2,7 @@
 title: Profili Edge
 description: Scopri i profili edge, la terminologia correlata, le aree disponibili per i profili edge e i servizi disponibili per i profili edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Il servizio XPS (Express Profile Service) recupera i profili sui diversi bordi. 
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta [Panoramica di Edge Network](../web-sdk/home.md#edge-network).
+Dopo aver letto questa guida, avrai acquisito una conoscenza di base dei profili edge, comprese informazioni sulle aree geografiche e sui servizi disponibili per i profili edge. Per ulteriori informazioni su Adobe Experience Edge, consulta [Panoramica Edge Network](../web-sdk/home.md#edge-network).
 
 ## Appendice
 

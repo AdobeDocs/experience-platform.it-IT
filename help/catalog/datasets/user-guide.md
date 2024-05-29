@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente dei set di dati
 description: Scopri come eseguire azioni comuni quando si lavora con i set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -26,12 +26,12 @@ La presente guida utente richiede una buona conoscenza dei seguenti componenti d
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornisce un profilo consumer unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): assicurati la conformità a normative, restrizioni e criteri relativi all’utilizzo dei dati dei clienti.
 
-## Visualizza set di dati {#view-datasets}
+## Visualizzare i set di dati {#view-datasets}
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="Numeri negativi nelle attività sui set di dati"
->abstract="I numeri negativi nei record acquisiti indicano che un utente ha eliminato alcuni batch in un intervallo di tempo selezionato."
+>title="Numeri negativi nell’attività del set di dati"
+>abstract="Nei record acquisiti, i numeri negativi indicano che un utente ha eliminato determinati batch in un intervallo di tempo selezionato."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -262,7 +262,7 @@ Per creare un nuovo set di dati, inizia selezionando **[!UICONTROL Crea set di d
 
 Nella schermata successiva vengono presentate le due opzioni seguenti per la creazione di un nuovo set di dati:
 
-* [Crea set di dati dallo schema](#schema)
+* [Crea un set di dati dallo schema](#schema)
 * [Crea set di dati da file CSV](#csv)
 
 ### Creare un set di dati con uno schema esistente {#schema}
@@ -313,7 +313,7 @@ Se desideri eliminare il batch, seleziona **[!UICONTROL Elimina batch]** in alto
 
 >[!NOTE]
 >
->Se i dati acquisiti sono stati abilitati per il profilo ed elaborati, l’eliminazione di un batch non comporta l’eliminazione di tali dati dall’archivio profili.
+>Se i dati acquisiti sono stati abilitati per il profilo ed elaborati, l’eliminazione di un batch non comporta l’eliminazione di tali dati dall’archivio Profili.
 
 ![Il pulsante Elimina batch è evidenziato nella pagina dei dettagli del set di dati.](../images/datasets/user-guide/delete-batch.png)
 

@@ -5,7 +5,7 @@ title: Elaborazione delle richieste di privacy nel profilo cliente in tempo real
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere ai propri dati personali, rinunciarvi o cancellarli, come indicato da numerose normative sulla privacy. Questo documento descrive i concetti essenziali relativi all’elaborazione delle richieste di accesso a dati personali per Real-Time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Le sezioni seguenti descrivono come effettuare richieste di accesso a dati perso
 >Tieni presente che le richieste di accesso a dati personali vengono elaborate in modo asincrono in conformità ai requisiti normativi e che il tempo necessario per completarle può variare. Se si verificano modifiche nel [!DNL Profile] mentre una richiesta è ancora in elaborazione, non è garantito che anche tali record in ingresso vengano elaborati in tale richiesta. Solo i profili presenti nel data lake o nell’archivio profili al momento della richiesta del processo di privacy possono essere eliminati. Se acquisisci i dati del profilo relativi all’oggetto di una richiesta di eliminazione durante il processo di eliminazione, non è garantita l’eliminazione di tutti i frammenti di profilo.
 >È tua responsabilità essere a conoscenza di eventuali dati in arrivo in Platform o nel servizio profili al momento di una richiesta di cancellazione, in quanto tali dati verranno inseriti negli archivi record. Devi essere prudente nell’acquisire i dati che sono stati eliminati o che sono in corso di eliminazione.
 
-### Mediante l’API
+### Utilizzo dell’API
 
 Durante la creazione di richieste di lavoro nell’API, tutti gli ID forniti in `userIDs` deve utilizzare uno specifico `namespace` e `type`. Un valore valido [spazio dei nomi delle identità](#namespaces) riconosciuto da [!DNL Identity Service] deve essere fornito per `namespace` valore, mentre il `type` deve essere `standard` o `unregistered` (rispettivamente per spazi dei nomi standard e personalizzati).
 
@@ -178,7 +178,7 @@ In [!DNL Profile] archivio dati, i dati personali di un singolo cliente sono spe
 
 Ad esempio, considera una situazione in cui stai memorizzando i dati degli attributi del cliente in tre set di dati separati, che utilizzano identificatori diversi per associare tali dati ai singoli clienti:
 
-| Nome del set di dati | Campo di identità primaria | Attributi memorizzati |
+| Nome del set di dati | Campo identità primaria | Attributi memorizzati |
 | --- | --- | --- |
 | Set di dati 1 | `customer_id` | `address` |
 | Set di dati 2 | `email_id` | `firstName`, `lastName` |

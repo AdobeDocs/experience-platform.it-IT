@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Panoramica del servizio di segmentazione
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema della piattaforma.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
-ht-degree: 12%
+ht-degree: 2%
 
 ---
 
@@ -26,11 +26,11 @@ Devi comprendere i seguenti termini chiave usati in questo documento:
 
 ## Come funziona la segmentazione
 
-La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili, per distinguere un gruppo commerciabile di persone dalla base dei clienti. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto.
+La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio Profili per distinguere un gruppo commerciabile di persone dalla base clienti. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto.
 
 Una volta definito concettualmente il pubblico, questo viene incorporato [!DNL Experience Platform]. In genere, i tipi di pubblico vengono creati dall’addetto al marketing o dallo specialista del pubblico, anche se alcune organizzazioni preferiscono che vengano creati dal proprio reparto di marketing, in collaborazione con i propri analisti di dati. Dopo aver esaminato i dati inviati a [!DNL Platform], l’analista dati può creare il pubblico in due modi: creando una definizione di segmento selezionando i campi e i valori da utilizzare per creare le regole o le condizioni del pubblico o componendo un pubblico utilizzando la Composizione del pubblico.
 
-## Creare tipi di pubblico
+## Crea tipi di pubblico
 
 I tipi di pubblico possono essere creati in due modi diversi su Adobe Experience Platform: direttamente composti come tipi di pubblico o tramite definizioni di segmenti derivate da Platform.
 
@@ -57,15 +57,15 @@ Per informazioni sulla creazione di definizioni dei segmenti utilizzando l’API
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Metodi di valutazione"
->abstract="Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge."
+>abstract="Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione batch e segmentazione Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Valutazione in streaming"
->abstract="La segmentazione in streaming è un processo continuo di selezione di dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=it" text="Valutare gli eventi in tempo quasi reale con la segmentazione in streaming"
+>abstract="La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i tipi di pubblico in risposta all’attività dell’utente."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Valuta gli eventi in tempo quasi reale con la segmentazione in streaming"
 
-Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione in batch e segmentazione Edge.
+Platform supporta attualmente tre metodi di valutazione dei tipi di pubblico: segmentazione in streaming, segmentazione batch e segmentazione Edge.
 
 ### Segmentazione in streaming {#streaming}
 
@@ -73,14 +73,14 @@ La segmentazione in streaming è un processo continuo di selezione di dati che a
 
 Per ulteriori informazioni sulla segmentazione in streaming, consulta [documentazione sulla segmentazione in streaming](./api/streaming-segmentation.md).
 
-### Segmentazione in batch {#batch}
+### Segmentazione batch {#batch}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
->title="Valutazione in batch"
->abstract="In alternativa a un processo continuo di selezione dei dati, con la segmentazione in batch tutti i dati di profilo vengono valutati allo stesso tempo secondo le definizioni dei segmenti per produrre i segmenti di pubblico corrispondenti. Una volta creato, il pubblico viene salvato e memorizzato, in modo che tu possa esportarlo per l’uso."
+>title="Valutazione batch"
+>abstract="In alternativa a un processo di selezione dati continuo, la segmentazione batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre tipi di pubblico corrispondenti. Una volta creato, il pubblico viene salvato e memorizzato in modo da poterlo esportare per l’utilizzo."
 
-In alternativa a un processo continuo di selezione dei dati, con la segmentazione in batch tutti i dati di profilo vengono valutati allo stesso tempo secondo le definizioni dei segmenti per produrre i segmenti di pubblico corrispondenti. Una volta creato, il pubblico risultante viene salvato e memorizzato in modo da poterlo esportare per l’utilizzo.
+In alternativa a un processo di selezione dati continuo, la segmentazione batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre tipi di pubblico corrispondenti. Una volta creato, il pubblico risultante viene salvato e memorizzato in modo da poterlo esportare per l’utilizzo.
 
 I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se desideri valutare un pubblico batch su richiesta, puoi utilizzare un processo di segmentazione. Per ulteriori informazioni sui processi di segmentazione, leggi [documentazione sui processi di segmentazione](./api/segment-jobs.md).
 
@@ -89,10 +89,10 @@ I tipi di pubblico in batch vengono valutati automaticamente ogni 24 ore. Se des
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Valutazione Edge"
->abstract="La segmentazione Edge è la capacità di valutare all’istante i segmenti in Platform sulla reta Edge, per casi d’uso di personalizzazione sulla stessa pagina e sulla pagina successiva."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=it" text="Guida all’interfaccia utente per la segmentazione Edge"
+>abstract="La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente nell’Edge Network, abilitando casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Guida dell’interfaccia utente per la segmentazione Edge"
 
-La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente [sulla rete Edge](../web-sdk/home.md), abilitazione dei casi d’uso di personalizzazione della stessa pagina e della pagina successiva.
+La segmentazione Edge consente di valutare i segmenti in Platform istantaneamente [sull’Edge Network](../web-sdk/home.md), abilitazione dei casi d’uso di personalizzazione della stessa pagina e della pagina successiva.
 
 Per ulteriori informazioni sulla segmentazione Edge, leggi la sezione [Documentazione API](./api/edge-segmentation.md) o [Documentazione dell’interfaccia utente](./ui/edge-segmentation.md).
 

@@ -2,7 +2,7 @@
 title: Panoramica del profilo cliente in tempo reale
 description: Real-Time Customer Profile unisce i dati provenienti da varie origini e fornisce l’accesso a tali dati sotto forma di profili dei clienti individuali e di eventi delle serie temporali correlati. Questa funzione consente agli addetti al marketing di promuovere esperienze coordinate, coerenti e rilevanti con i propri tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -51,7 +51,7 @@ L’archivio dei profili utilizza un’infrastruttura Microsoft Azure Cosmos DB 
 
 Experience Platform fornisce una serie di guardrail per evitare la creazione di [Schemi Experience Data Model (XDM)](../xdm/home.md) che Real-Time Customer Profile non può supportare. Questo include limiti programmati che determineranno un deterioramento delle prestazioni e limiti rigidi che determineranno errori e interruzioni del sistema. Per ulteriori informazioni, tra cui un elenco di linee guida e casi d’uso di esempio, consulta [Guardrail del profilo](guardrails.md) documentazione.
 
-### Dashboard profili {#profile-dashboard}
+### Dashboard dei profili {#profile-dashboard}
 
 L’interfaccia utente di Experienci Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui dati del Profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per scoprire come accedere e utilizzare [!DNL Profile] nell&#39;interfaccia utente e informazioni dettagliate sulle metriche visualizzate nel dashboard, fai riferimento alla [Guida dell’interfaccia utente della dashboard del profilo](ui/profile-dashboard.md).
 

@@ -1,12 +1,12 @@
 ---
 title: Nuovo coinvolgimento intelligente
-description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente la clientela poco frequente.
+description: Offri esperienze coinvolgenti e connesse durante i momenti chiave della conversione, per coinvolgere nuovamente in modo intelligente i clienti non frequenti.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -46,7 +46,7 @@ Una volta completati i passaggi per implementare il caso d’uso, utilizzerai le
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=it) - Consente di offrire ai clienti esperienze connesse, contestuali e personalizzate.
    * [Attivatore evento o pubblico](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [Pubblico/Eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=it)
+   * [Pubblico/Eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Azioni percorso](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Come ottenere il caso d’uso {#achieve-use-case-instruction}
@@ -178,7 +178,7 @@ Il [Dettagli ID utente finale](/help/xdm/field-groups/event/enduserids.md) è ut
 
 +++
 
-+++Dettagli Commerce (Gruppo Di Campi)
++++Dettagli Commerce (gruppo di campi)
 
 Il [Dettagli Commerce](/help/xdm/field-groups/event/commerce-details.md) il gruppo di campi viene utilizzato per descrivere i dati commerciali, ad esempio le informazioni sul prodotto (SKU, nome, quantità) e le operazioni standard del carrello (ordine, pagamento, abbandono).
 
@@ -221,7 +221,7 @@ Il [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) La c
 
 +++
 
-+++Dettagli Commerce (Gruppo Di Campi)
++++Dettagli Commerce (gruppo di campi)
 
 Il [Dettagli Commerce](/help/xdm/field-groups/event/commerce-details.md) il gruppo di campi viene utilizzato per descrivere i dati commerciali, ad esempio le informazioni sul prodotto (SKU, nome, quantità) e le operazioni standard del carrello (ordine, pagamento, abbandono).
 
@@ -342,9 +342,9 @@ Non sono presenti [criteri di utilizzo dati](/help/data-governance/policies/over
 * Limitare il targeting tra siti
 * Limita la combinazione di dati direttamente identificabili con dati anonimi
 
-### Creare tipi di pubblico {#create-audience}
+### Crea tipi di pubblico {#create-audience}
 
-Gli scenari di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili, al fine di distinguere un gruppo di persone commerciabile dalla base dei clienti. I tipi di pubblico possono essere creati in più modi in [!DNL Adobe Experience Platform].
+Gli scenari di ricoinvolgimento utilizzano i tipi di pubblico per definire attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio profili, al fine di distinguere un gruppo di persone commerciabile dalla base clienti. I tipi di pubblico possono essere creati in più modi in [!DNL Adobe Experience Platform].
 
 Per ulteriori informazioni su come creare un pubblico, consulta la sezione [guida dell’interfaccia utente di audience service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -446,7 +446,7 @@ Lo scenario di navigazione dei prodotti abbandonati è incentrato sulla navigazi
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Eventi consente di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: Visualizzazioni prodotto
    * Schema: Transazioni digitali del cliente
@@ -571,7 +571,7 @@ Lo scenario del carrello abbandonato riguarda i prodotti che sono stati inseriti
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Eventi consente di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: aggiungi al carrello
    * Schema: Transazioni digitali del cliente
@@ -704,7 +704,7 @@ Lo scenario di conferma dell’ordine si concentra sugli acquisti di prodotti ef
 
 +++Eventi
 
-Gli eventi consentono di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Eventi consente di attivare i percorsi in modo unitario per inviare messaggi in tempo reale all’utente che entra nel percorso. Per ulteriori informazioni sugli eventi, consulta [guida generale agli eventi](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: Acquisti online
    * Schema: Transazioni digitali del cliente

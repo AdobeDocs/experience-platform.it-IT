@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell’API per l’acquisizione in batch
 description: L’API per l’acquisizione in batch di Adobe Experience Platform consente di acquisire i dati in Platform come file batch. I dati da acquisire possono essere i dati di profilo provenienti da un file flat in un sistema di gestione delle relazioni con i clienti (ad esempio un file Parquet) o i dati conformi a uno schema noto nel registro Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 4%

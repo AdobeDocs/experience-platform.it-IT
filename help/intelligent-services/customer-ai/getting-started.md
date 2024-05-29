@@ -5,10 +5,10 @@ feature: Customer AI
 title: Guida introduttiva di Customer AI
 description: Questa guida fornisce esempi di chiamate API per illustrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 11%
+source-wordcount: '570'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ Le guide per IA per l’analisi dei clienti richiedono una buona conoscenza dei 
 - [Nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md): questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in [!DNL Adobe Experience Platform].
 - [Creazione di schemi](../../xdm/tutorials/create-schema-ui.md): questo tutorial illustra i passaggi necessari per la creazione di uno schema utilizzando l’Editor di schema in Experienci Platform.
 - [Panoramica del profilo cliente in tempo reale](../../rtcdp/overview.md): basato su [!DNL Adobe Experience Platform], Adobe Real-time Customer Data Platform (Real-Time CDP) consente alle aziende di unire dati noti e sconosciuti per attivare profili cliente con decisioni intelligenti in tutto il percorso del cliente. Real-Time CDP combina più origini dati aziendali per creare profili unificati in tempo reale che possono essere utilizzati per fornire ai clienti esperienze personalizzate uno a uno su tutti i canali e i dispositivi.
-- [Panoramica del servizio di segmentazione](../../segmentation/home.md): la segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili, per distinguere un gruppo di persone commerciabile dalla base dei clienti. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto. Utilizzando segmenti diversi, puoi concentrarti sui vari tipi di pubblico, offrendo un’esperienza di marketing più personalizzata.
+- [Panoramica del servizio di segmentazione](../../segmentation/home.md): la segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio Profili per distinguere un gruppo commerciabile di persone dalla base cliente. Ad esempio, in una campagna e-mail denominata &quot;Hai dimenticato di acquistare le tue scarpe da ginnastica?&quot;, potresti desiderare un pubblico di tutti gli utenti che hanno cercato scarpe da corsa negli ultimi 30 giorni, ma che non hanno completato un acquisto. Utilizzando segmenti diversi, puoi concentrarti sui vari tipi di pubblico, offrendo un’esperienza di marketing più personalizzata.
 - [Guida utente di Segment Builder](../../segmentation/tutorials/create-a-segment.md): Platform consente di creare e accedere facilmente ai segmenti, nonché di utilizzare diversi blocchi predefiniti per caratterizzare ulteriormente i segmenti.
 
 ## Download dei punteggi di Customer AI

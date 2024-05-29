@@ -4,10 +4,10 @@ title: Endpoint API per anteprime e stime
 description: Man mano che vengono sviluppate le definizioni dei segmenti, puoi utilizzare gli strumenti di stima e anteprima disponibili in Adobe Experience Platform per visualizzare informazioni di riepilogo utili a isolare il pubblico previsto.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce 
 
 La dimensione del campione della scansione dipende dal numero complessivo di entità nell’archivio profili. Queste dimensioni di esempio sono rappresentate nella tabella seguente:
 
-| Entità nell’archivio profili | Dimensione campione |
+| Entità nell&#39;archivio profili | Dimensione campione |
 | ------------------------- | ----------- |
 | Meno di 1 milione | Set di dati completo |
 | Da 1 a 20 milioni | 1 milione |

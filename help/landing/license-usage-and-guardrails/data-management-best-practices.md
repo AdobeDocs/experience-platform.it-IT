@@ -1,11 +1,11 @@
 ---
 title: Best practice per l’adesione alle licenze di gestione dati
-description: Scopri le best practice da seguire e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
+description: Scopri le best practice e gli strumenti che puoi utilizzare per gestire al meglio i diritti alle licenze con Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 

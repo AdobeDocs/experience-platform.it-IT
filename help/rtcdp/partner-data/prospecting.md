@@ -1,12 +1,12 @@
 ---
 title: Coinvolgi e acquisisci nuovi clienti senza dipendere dai cookie di terze parti
-description: Scopri come coinvolgere e acquisire nuovi clienti attraverso possibili casi d’uso, senza affidarti a cookie di terze parti.
+description: Scopri come coinvolgere e acquisire nuovi clienti attraverso la ricerca di casi d’uso, senza affidarsi a cookie di terze parti.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -70,7 +70,7 @@ Man mano che completi i passaggi per implementare il caso d’uso, utilizzerai l
 * [Etichette di utilizzo dei dati](/help/data-governance/labels/overview.md)
 * [Set di dati](/help/catalog/datasets/overview.md)
 * [Origini](/help/sources/home.md)
-* [Profili potenziali](/help/profile/ui/prospect-profile.md)
+* [Profili potenziale cliente](/help/profile/ui/prospect-profile.md)
 * [Pubblico potenziale](/help/segmentation/ui/prospect-audience.md)
 * [Destinazioni](/help/destinations/home.md)
 
@@ -110,7 +110,7 @@ La classe del **[!UICONTROL Profilo individuale potenziale cliente XDM]** è pre
 
 ![Campi preconfigurati per la classe Profilo individuale potenziale cliente XDM.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Successivamente, devi selezionare l’identità partnerID creata in precedenza come identità primaria per lo schema. I record del profilo devono contenere un identificatore primario. Questo passaggio è necessario per garantire che i dati del potenziale cliente possano essere caricati nell’archivio dei profili e resi disponibili per la segmentazione e l’attivazione.
+Successivamente, devi selezionare l’identità partnerID creata in precedenza come identità primaria per lo schema. I record del profilo devono contenere un identificatore primario. Questo passaggio è necessario per garantire che i dati del prospect possano essere caricati nell’archivio profili e resi disponibili per la segmentazione e l’attivazione.
 
 >[!AVAILABILITY]
 >

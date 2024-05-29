@@ -2,16 +2,16 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2022
 description: Note sulla versione di Adobe Experience Platform di marzo 2022.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 18%
+source-wordcount: '1172'
+ht-degree: 11%
 
 ---
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 30 marzo 2022**
+**Data di rilascio: giovedì 30 marzo 2022**
 
 Nuove funzioni di Adobe Experience Platform:
 
@@ -77,15 +77,15 @@ Adobe Experience Platform offre più [!DNL dashboards] attraverso cui è possibi
 
 ### Dashboard dei profili
 
-Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio profili di Experienci Platform.
+Nel dashboard Profili viene visualizzata un’istantanea dei dati attributo (record) di cui dispone la tua organizzazione nell’archivio Profili di Experienci Platform.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
 | Widget profili non segmentati | Il widget fornisce il numero totale di tutti i profili non collegati a nessun segmento. Il numero generato è preciso all’ultima istantanea e rappresenta l’opportunità di attivazione del profilo nell’organizzazione. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
-| Widget tendenza profili non segmentati | Questo widget fornisce un grafico a linee illustrativo del numero di profili non collegati ad alcun segmento in un dato periodo di tempo. La tendenza può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
-| Widget Profili non segmentati per identità | Questo widget classifica il numero totale di profili non segmentati in base al loro identificatore univoco. I dati vengono visualizzati in un grafico a barre. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
+| Widget tendenza profili non segmentati | Questo widget fornisce un’illustrazione del grafico a linee per il numero di profili che non sono collegati a nessun segmento in un determinato periodo di tempo. La tendenza può essere visualizzata in periodi di 30 giorni, 90 giorni e 12 mesi. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
+| Widget Profili non segmentati per identità | Questo widget categorizza il numero totale di profili non segmentati in base al loro identificatore univoco. I dati vengono visualizzati in un grafico a barre. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
 | Widget per profili di identità singoli | Questo widget fornisce un conteggio dei profili della tua organizzazione che hanno un solo tipo di ID che crea la loro identità, tramite e-mail o ECID. Consulta la [documentazione sui widget standard dei profili](../../dashboards/guides/profiles.md#standard-widgets) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
@@ -94,13 +94,13 @@ Per ulteriori informazioni sulle dashboard dei profili, consulta [Panoramica del
 
 ### Dashboard di destinazione
 
-Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni abilitate dalla tua organizzazione in Experienci Platform.
+Nel dashboard Destinazioni viene visualizzata un’istantanea delle destinazioni attivate dalla tua organizzazione in Experience Platform.
 
 **Funzioni aggiornate**
 
 | Funzione | Descrizione |
 | --- | --- |
-| Widget conteggio destinazioni | Il widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e distribuito all’interno del sistema. Questo numero include sia le destinazioni attive che quelle inattive. Consulta la [documentazione widget standard destinazioni](../../dashboards/guides/destinations.md#standard-widgets) per ulteriori informazioni. |
+| Widget conteggio destinazioni | Il widget fornisce il numero totale di endpoint disponibili in cui un pubblico può essere attivato e distribuito all’interno del sistema. Questo numero include sia destinazioni attive che inattive. Consulta la [documentazione widget standard destinazioni](../../dashboards/guides/destinations.md#standard-widgets) per ulteriori informazioni. |
 
 {style="table-layout:auto"}
 
@@ -108,14 +108,14 @@ Per ulteriori informazioni sulle dashboard di Destinazioni in Platform, consulta
 
 ## Raccolta dati {#data-collection}
 
-Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli alla rete Edge di Adobe Experience Platform, per arricchirli, trasformarli e distribuirli a destinazioni Adobe o non Adobe.
+Platform fornisce una suite di tecnologie che consente di raccogliere i dati sull’esperienza del cliente lato client e inviarli all’Edge Network di Adobe Experience Platform dove possono essere arricchiti, trasformati e distribuiti a destinazioni Adobi o non Adobi.
 
 **Nuove funzioni**
 
 | Funzione | Descrizione |
 | --- | --- |
 | Impostazioni globali dello stream di dati | Ora puoi configurare diverse nuove impostazioni globali durante la configurazione di un flusso di dati: geolocalizzazione, cookie ID di prime parti e sincronizzazione ID di terze parti. Consulta la sezione su [configurazione di uno stream di dati](../../datastreams/overview.md#create) per ulteriori informazioni, consulta la guida all’interfaccia utente per gli stream di dati. |
-| [API del server di rete Edge](../../server-api/overview.md) | L’API server consente ai clienti di interagire con la rete Edge di Experienci Platform utilizzando un nuovo endpoint autenticato, per supportare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
+| [API server Edge Network](../../server-api/overview.md) | L’API server consente ai clienti di interagire con l’Edge Network di Experience Platform utilizzando un nuovo endpoint autenticato, per potenziare una varietà di casi di utilizzo di raccolta dati, personalizzazione, pubblicità e marketing. |
 
 Per ulteriori informazioni sulla raccolta dei dati in Platform, consulta la sezione [panoramica sulla raccolta dati](../../collection/home.md).
 

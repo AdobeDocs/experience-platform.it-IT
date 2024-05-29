@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Scadenze degli eventi esperienza
 description: Questo documento fornisce indicazioni generali sulla configurazione dei tempi di scadenza per singoli eventi esperienza all’interno di un set di dati di Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---

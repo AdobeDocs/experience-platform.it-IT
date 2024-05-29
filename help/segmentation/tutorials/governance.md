@@ -4,10 +4,10 @@ title: Applicare la conformità dell’utilizzo dati per un segmento di pubblico
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per applicare le definizioni dei segmenti di conformità per l’utilizzo dei dati utilizzando le API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 9%
+source-wordcount: '1348'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ Questo tutorial richiede una buona conoscenza dei seguenti componenti di [!DNL A
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire [!DNL Experience Data Model (XDM)] dati in [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e consente di accedere a tali dati in una presentazione unificata.
    - [Criteri di unione](../../profile/api/merge-policies.md): regole utilizzate da [!DNL Real-Time Customer Profile] per determinare quali dati possono essere uniti in una vista unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
-- [[!DNL Segmentation]](../home.md): Come [!DNL Real-Time Customer Profile] divide un ampio gruppo di individui contenuti nell’archivio profili in gruppi più piccoli che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
+- [[!DNL Segmentation]](../home.md): Come [!DNL Real-Time Customer Profile] divide un ampio gruppo di individui contenuti nell’archivio Profili in gruppi più piccoli che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 - [Governance dei dati](../../data-governance/home.md): la governance dei dati fornisce l’infrastruttura per l’etichettatura e l’applicazione dell’utilizzo dei dati, utilizzando i seguenti componenti:
    - [Etichette di utilizzo dati](../../data-governance/labels/user-guide.md): etichette utilizzate per descrivere set di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
    - [Criteri di utilizzo dati](../../data-governance/policies/overview.md): configurazioni che indicano quali azioni di marketing sono consentite nei dati classificati da particolari etichette di utilizzo dei dati.
@@ -32,11 +32,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive che è necessario conosce
 
 ### Lettura delle chiamate API di esempio
 
-Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere gli esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi.di [!DNL Experience Platform].
+Questo tutorial fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un codice JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere esempi di chiamate API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nel [!DNL Experience Platform] guida alla risoluzione dei problemi.
 
 ### Raccogliere i valori per le intestazioni richieste
 
-Per effettuare chiamate alle API di [!DNL Platform], devi prima completare il [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
+Per effettuare chiamate a [!DNL Platform] , devi prima completare le [tutorial sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando il tutorial sull’autenticazione si ottengono i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

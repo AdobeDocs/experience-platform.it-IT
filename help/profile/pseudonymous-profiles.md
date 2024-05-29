@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scadenza dati profilo pseudonimo
 description: Questo documento fornisce indicazioni generali sulla configurazione della scadenza dei dati per i profili pseudonimi in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
@@ -85,4 +85,4 @@ Per un caso d’uso tipico, puoi impostare la scadenza dei dati Experience Event
 ### In che modo la scadenza dei dati dei profili pseudonimi interagisce con i guardrail per i dati del servizio Identity?
 
 - Il servizio Identity [sistema di eliminazione &quot;first in, first out&quot;](../identity-service/guardrails.md) potrebbe eliminare gli ECID dal grafo delle identità, memorizzati in Identity Service.
-- Se questo comportamento di eliminazione fa sì che un profilo solo ECID venga memorizzato nel Profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà questo profilo dall’archivio profili.
+- Se questo comportamento di eliminazione determina la memorizzazione di un profilo solo ECID nel profilo cliente in tempo reale (archivio profili), la scadenza dei dati del profilo pseudonimo eliminerà tale profilo dall’archivio profili.

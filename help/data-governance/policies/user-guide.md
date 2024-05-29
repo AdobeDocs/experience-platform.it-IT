@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestire i criteri di utilizzo dei dati nell’interfaccia utente
 description: La governance dei dati di Adobe Experience Platform fornisce un’interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell’area di lavoro Criteri nell’interfaccia utente di Experienci Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 18%
+source-wordcount: '1768'
+ht-degree: 1%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 18%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="Integrare e applicare il consenso dei clienti nei dati di profilo"
->abstract="<h2>Descrizione</h2><p>Con Platform è possibile integrare i dati di consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se tali dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
+>title="Integrare e applicare il consenso dei clienti nei dati del profilo"
+>abstract="<h2>Descrizione</h2><p>Platform ti consente di integrare i dati sul consenso raccolti dai clienti nei rispettivi profili. Puoi quindi impostare i criteri di consenso per determinare se questi dati possono essere inclusi nei segmenti attivati per determinate destinazioni.</p>"
 
 Questo documento illustra come utilizzare **[!UICONTROL Criteri]** nell’interfaccia utente di Adobe Experience Platform per creare e gestire i criteri di utilizzo dei dati.
 
@@ -104,7 +104,7 @@ Il **[!UICONTROL Sfoglia]** viene visualizzata di nuovo la scheda, che ora elenc
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Istruzioni"
->abstract="<ul><li>Assicurati di acquisire i dati delle preferenze negli schemi di unione tramite il connettore di origine OneTrust o lo schema XDM standard per il consenso.</li><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nella barra di navigazione a sinistra, quindi seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#create-governance-policy">Crea criterio</a>.</li><li>Nella sezione <b>Se</b>, descrivi le condizioni o le azioni che attiveranno il controllo dei criteri.</li><li>Nella sezione <b>Allora</b>, inserisci gli attributi di consenso che devono essere presenti affinché un profilo sia incluso nell’azione che ha attivato il criterio.</li><li>Seleziona <b>Salva</b> per creare il criterio. Per abilitare il criterio, seleziona l’interruttore <b>Stato</b> nella barra a destra.</li><li>Experience Platform applica automaticamente i criteri di consenso abilitati quando attivi i segmenti sulle destinazioni e fornisce dettagli su come ogni criterio influisce sulle dimensioni del pubblico.</li><li>Per ulteriori informazioni su questa funzione, consulta la guida su come <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#consent-policy">creare i criteri di consenso</a>, in Experience League.</li></ul>"
+>abstract="<ul><li>Assicurati di acquisire i dati delle preferenze negli schemi di unione tramite il connettore di origine OneTrust o lo schema XDM standard per il consenso.</li><li>Seleziona <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=it">Criteri</a> nel menu di navigazione a sinistra, seleziona quindi <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">Crea criterio</a>.</li><li>Sotto <b>Se</b> descrivi le condizioni o le azioni che attiveranno il controllo dei criteri.</li><li>Sotto <b>Then</b> , immetti gli attributi di consenso che devono essere presenti affinché un profilo sia incluso nell’azione che ha attivato il criterio.</li><li>Seleziona <b>Salva</b> per creare il criterio. Per abilitare il criterio, seleziona la <b>Stato</b> attiva la barra a destra.</li><li>Experienci Platform applica automaticamente i criteri di consenso abilitati quando attivi segmenti nelle destinazioni e fornisce dettagli su come ogni criterio influisce sulle dimensioni del pubblico.</li><li>Per ulteriori informazioni su questa funzione, consulta la guida su <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=it#consent-policy">creazione di criteri di consenso</a> su Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -125,8 +125,8 @@ I criteri di consenso sono composti da due componenti logici:
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="Condizione “Se”"
->abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette per la governance dei dati o una combinazione di entrambe."
+>title="Condizione se"
+>abstract="Inizia definendo le condizioni che attiveranno il controllo dei criteri. Le condizioni possono includere l’esecuzione di determinate azioni di marketing, la presenza di determinate etichette di governance dei dati o una combinazione di entrambe."
 
 Sotto **[!UICONTROL Se]** , seleziona le azioni di marketing e/o le etichette di utilizzo dei dati che devono attivare questo criterio. Seleziona **[!UICONTROL Visualizza tutto]** e **[!UICONTROL Seleziona etichette]** per visualizzare rispettivamente l’elenco completo delle azioni di marketing e delle etichette disponibili.
 
@@ -138,20 +138,20 @@ Se selezioni più di una condizione, puoi utilizzare l’icona che appare tra di
 
 ![](../images/policies/and-or-selection.png)
 
-#### Selezionare attributi di consenso {#consent-attributes}
+#### Seleziona attributi di consenso {#consent-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Condizione “Allora”"
->abstract="Una volta definita la condizione “Se”, utilizza la sezione “Allora” per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili vengano inclusi nell’azione gestita da questo criterio."
+>title="Condizione Then"
+>abstract="Una volta definita la condizione &quot;If&quot;, utilizza la sezione &quot;Then&quot; per selezionare almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio."
 
-Sotto **[!UICONTROL Then]** , seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili vengano inclusi nell’azione gestita da questo criterio. Puoi scegliere una delle opzioni fornite dall’elenco, oppure seleziona **[!UICONTROL Visualizza tutto]** per scegliere l’attributo direttamente dallo schema di unione.
+Sotto **[!UICONTROL Then]** , seleziona almeno un attributo di consenso dallo schema di unione. Questo è l’attributo che deve essere presente affinché i profili possano essere inclusi nell’azione disciplinata da questo criterio. Puoi scegliere una delle opzioni fornite dall’elenco, oppure seleziona **[!UICONTROL Visualizza tutto]** per scegliere l’attributo direttamente dallo schema di unione.
 
 Quando selezioni l’attributo di consenso, scegli i valori per l’attributo che desideri che venga verificato da questo criterio.
 
 ![](../images/policies/select-schema-field.png)
 
-Dopo aver selezionato almeno un attributo di consenso, il **[!UICONTROL Proprietà dei criteri]** il pannello viene aggiornato per mostrare la stima del numero di profili consentiti in base a questo criterio, inclusa la percentuale dell’archivio profili totale. Questa stima viene aggiornata automaticamente quando si regola la configurazione dei criteri.
+Dopo aver selezionato almeno un attributo di consenso, il **[!UICONTROL Proprietà dei criteri]** Il pannello viene aggiornato per mostrare la stima del numero di profili consentiti in base a questo criterio, inclusa la percentuale dell’archivio profili totale. Questa stima viene aggiornata automaticamente quando si regola la configurazione dei criteri.
 
 ![](../images/policies/audience-preview.png)
 

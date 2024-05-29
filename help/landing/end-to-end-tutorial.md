@@ -3,7 +3,7 @@ keywords: Experience Platform;home;argomenti popolari;CJA;analisi percorso;anali
 title: Flusso di lavoro di esempio end-to-end di Adobe Experience Platform
 description: Scopri ad alto livello il flusso di lavoro end-to-end di base per Adobe Experience Platform.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 1%
@@ -56,7 +56,7 @@ Quando si caricano dati in un nuovo set di dati per la prima volta o quando si i
 
 ## Valutare i dati
 
-Dopo aver generato correttamente i profili dai dati acquisiti, puoi valutare i dati utilizzando la segmentazione. La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di singoli utenti dell’archivio dei profili, al fine di distinguere un gruppo commerciabile di persone dalla base dei clienti. Per ulteriori informazioni sulla segmentazione, consulta la sezione [panoramica del servizio di segmentazione](../segmentation/home.md).
+Dopo aver generato correttamente i profili dai dati acquisiti, puoi valutare i dati utilizzando la segmentazione. La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di singoli utenti dell’archivio Profili, al fine di distinguere un gruppo commerciabile di persone dalla base dei clienti. Per ulteriori informazioni sulla segmentazione, consulta la sezione [panoramica del servizio di segmentazione](../segmentation/home.md).
 
 ### Creare una definizione di segmento
 

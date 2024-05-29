@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida all’API per l’acquisizione in batch
 description: Questo documento fornisce una guida completa per gli sviluppatori che lavorano con le API di acquisizione batch per Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
@@ -519,7 +519,7 @@ Per acquisire i file CSV, devi creare una classe, uno schema e un set di dati ch
 >
 >I seguenti passaggi sono applicabili ai file di piccole dimensioni (256 MB o meno). Se si riscontra un timeout del gateway o si richiedono errori di dimensioni del corpo, sarà necessario passare al caricamento di file di grandi dimensioni.
 
-### Creare un set di dati
+### Crea un set di dati
 
 Dopo aver seguito le istruzioni precedenti per creare la classe e lo schema necessari, dovrai creare un set di dati che possa supportare CSV.
 
@@ -759,9 +759,9 @@ A volte può essere necessario aggiornare i dati nell’archivio profili della t
 Per applicare la patch a un batch è necessario quanto segue:
 
 - **Un set di dati abilitato per gli aggiornamenti di profili e attributi.** Questa operazione viene eseguita tramite tag di set di dati e richiede un `isUpsert:true` aggiunta al tag `unifiedProfile` array. Per i passaggi dettagliati che mostrano come creare un set di dati o configurare un set di dati esistente per l’upsert, segui l’esercitazione per [abilitazione di un set di dati per gli aggiornamenti del profilo](../../catalog/datasets/enable-upsert.md).
-- **Un file Parquet contenente i campi di cui applicare la patch e i campi di identità per il profilo.** Il formato dei dati per l’applicazione di patch a un batch è simile al normale processo di acquisizione batch. L’input richiesto è un file Parquet e, oltre ai campi da aggiornare, i dati caricati devono contenere i campi di identità in modo che corrispondano ai dati nell’archivio profili.
+- **Un file Parquet contenente i campi di cui applicare la patch e i campi di identità per il profilo.** Il formato dei dati per l’applicazione di patch a un batch è simile al normale processo di acquisizione batch. L’input richiesto è un file Parquet e, oltre ai campi da aggiornare, i dati caricati devono contenere i campi di identità in modo che corrispondano ai dati nell’archivio Profili.
 
-Dopo aver abilitato un set di dati per Profilo e upsert e un file Parquet contenente i campi a cui desideri applicare la patch e i campi di identità necessari, puoi seguire i passaggi per [acquisizione dei file Parquet](#ingest-parquet-files) al fine di completare la patch tramite l’acquisizione in batch.
+Dopo aver abilitato un set di dati per Profilo e upsert e un file Parquet contenente i campi a cui applicare la patch e i campi di identità necessari, puoi seguire i passaggi per [acquisizione dei file Parquet](#ingest-parquet-files) al fine di completare la patch tramite l’acquisizione in batch.
 
 ## Ripetere un batch
 
@@ -915,7 +915,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive per l’acquisizione di dati in Experience Platform tramite l’acquisizione batch.
+La sezione seguente contiene informazioni aggiuntive per l’acquisizione di dati in Experienci Platform tramite l’acquisizione batch.
 
 ### Trasformazione dei dati per l’acquisizione batch
 

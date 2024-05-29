@@ -4,7 +4,7 @@ description: Scopri come utilizzare le query SQL con Real-time Customer Data Pla
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -45,7 +45,7 @@ L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
 #### Caso di utilizzo del conteggio dei profili {#profile-count}
 
-Logica utilizzata per [!UICONTROL Conteggio profili] Il widget restituisce il numero totale di profili uniti nell’archivio profili al momento dello scatto dell’istantanea. Consulta la [[!UICONTROL Conteggio profili] documentazione widget](../guides/profiles.md#profile-count) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Conteggio profili] Il widget restituisce il numero totale di profili uniti all’interno dell’archivio profili al momento dello scatto dell’istantanea. Consulta la [[!UICONTROL Conteggio profili] documentazione widget](../guides/profiles.md#profile-count) per ulteriori informazioni.
 
 SQL che genera il codice [!UICONTROL Conteggio profili] Il widget è visibile nella sezione comprimibile sottostante.
 
@@ -98,7 +98,7 @@ L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
 #### Profili per caso di utilizzo dell’identità {#profiles-by-identity}
 
-Il [!UICONTROL Profili per identità] Il widget mostra il raggruppamento delle identità in tutti i profili uniti nel tuo archivio profili. Consulta la [[!UICONTROL Profili per identità] documentazione widget](../guides/profiles.md#profiles-by-identity) per ulteriori informazioni.
+Il [!UICONTROL Profili per identità] Il widget mostra il raggruppamento delle identità in tutti i profili uniti nell’archivio profili. Consulta la [[!UICONTROL Profili per identità] documentazione widget](../guides/profiles.md#profiles-by-identity) per ulteriori informazioni.
 
 SQL che genera il codice [!UICONTROL Profili per identità] Il widget è visibile nella sezione comprimibile sottostante.
 
@@ -291,7 +291,7 @@ L’immagine seguente contiene i campi di dati rilevanti in ogni set di dati.
 
 #### Profili per identità per un caso di utilizzo di pubblico {#audience-profiles-by-identity}
 
-Logica utilizzata nel [!UICONTROL Profili per identità] Il widget fornisce un raggruppamento di identità in tutti i profili uniti nel tuo archivio profili per un determinato pubblico. Consulta la [[!UICONTROL Profili per identità] documentazione widget](../guides/audiences.md#profiles-by-identity) per ulteriori informazioni.
+Logica utilizzata nel [!UICONTROL Profili per identità] Il widget fornisce un raggruppamento di identità in tutti i profili uniti nell’archivio profili per un determinato pubblico. Consulta la [[!UICONTROL Profili per identità] documentazione widget](../guides/audiences.md#profiles-by-identity) per ulteriori informazioni.
 
 SQL che genera il codice [!UICONTROL Profili per identità] Il widget è visibile nella sezione comprimibile sottostante.
 

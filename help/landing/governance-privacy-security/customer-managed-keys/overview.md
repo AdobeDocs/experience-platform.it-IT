@@ -2,10 +2,10 @@
 title: Chiavi gestite dal cliente in Adobe Experience Platform
 description: Scopri come impostare le tue chiavi di crittografia per i dati memorizzati in Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Questo documento fornisce una panoramica generale del processo di abilitazione d
 
 Per visualizzare e visitare il [!UICONTROL Crittografia] in Adobe Experience Platform, è necessario aver creato un ruolo e assegnato il [!UICONTROL Gestisci chiave gestita dal cliente] autorizzazione per quel ruolo. Qualsiasi utente che dispone di [!UICONTROL Gestisci chiave gestita dal cliente] L’autorizzazione può abilitare la CMK per la loro organizzazione.
 
-Per ulteriori informazioni sull’assegnazione di ruoli e autorizzazioni in Experienci Platform, consulta [configurare la documentazione sulle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=it).
+Per ulteriori informazioni sull’assegnazione di ruoli e autorizzazioni in Experienci Platform, consulta [configurare la documentazione sulle autorizzazioni](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Per abilitare la CMK, [!DNL Azure] L’insieme di credenziali delle chiavi deve essere configurato con le seguenti impostazioni:
 
@@ -66,7 +66,7 @@ Dopo aver rimosso l’accesso tramite chiave o disabilitato/eliminato la chiave 
 
 >[!NOTE]
 >
->Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[URL abbreviato di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=it#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Esistono due eccezioni specifiche per casi d’uso alla scadenza di sette giorni del set di dati su dati non primari (memorizzati nella cache/transitori). Per ulteriori informazioni su queste funzioni, consulta la relativa documentazione.<ul><li>[URL abbreviato di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[Proiezioni Edge](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## Passaggi successivi
 
