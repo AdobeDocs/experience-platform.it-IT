@@ -3,10 +3,10 @@ title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione tag Adobe Experience Platform Web SDK.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ Lo schema XDM utilizzato per l’editor è lo schema selezionato nel [!UICONTROL
 ![](assets/update-variable-set-property.png)
 
 Esistono alcune differenze tra l’editor nell’azione aggiorna variabile e l’editor nell’elemento dati dell’oggetto XDM. Innanzitutto, l’azione aggiorna variabile ha un elemento a livello principale etichettato &quot;xdm&quot;. Se fai clic su questo elemento, puoi specificare un elemento dati da utilizzare per impostare l’intero oggetto. In secondo luogo, l’azione aggiorna variabile dispone di caselle di controllo per cancellare i dati dall’oggetto xdm. Fai clic su una delle proprietà a sinistra, quindi seleziona la casella di controllo a destra per deselezionare il valore. Questo cancellerà il valore corrente prima di impostare qualsiasi valore sulla variabile.
+
+## Invia evento multimediale {#send-media-event}
+
+Invia un evento multimediale a Adobe Experience Platform e/o Adobe Analytics. Questa azione è utile quando tieni traccia degli eventi multimediali sul sito web. Seleziona un’istanza (se ne hai più di una). L&#39;azione richiede un `playerId` che rappresenta un identificatore univoco per una sessione multimediale tracciata. Richiede inoltre un **[!UICONTROL Qualità dell’esperienza]** e un `playhead` all’avvio di una sessione multimediale.
+
+![Immagine dell’interfaccia utente di Platform che mostra la schermata Invia evento multimediale.](assets/send-media-event.png)
+
+Il **[!UICONTROL Invia evento multimediale]** il tipo di azione supporta le seguenti proprietà:
+
+- **[!UICONTROL Istanza]**: l’istanza dell’SDK web che viene utilizzata.
+- **[!UICONTROL Tipo di evento multimediale]**: tipo di evento multimediale tracciato.
+- **[!UICONTROL ID lettore]**: identificatore univoco della sessione multimediale.
+- **[!UICONTROL Playhead]**: posizione corrente della riproduzione multimediale, in secondi.
+- **[!UICONTROL Dettagli della sessione multimediale]**: quando si invia un evento di inizio elemento multimediale, è necessario specificare i dettagli richiesti della sessione multimediale.
+- **[!UICONTROL Dettagli del capitolo]**: in questa sezione puoi specificare i dettagli del capitolo quando invii un evento multimediale di inizio capitolo.
+- **[!UICONTROL Dettagli pubblicitari]**: quando si invia una `AdBreakStart` , è necessario specificare i dettagli pubblicitari richiesti.
+- **[!UICONTROL Dettagli del pod di Advertising]**: dettagli sul pod pubblicitario quando si invia un `AdStart` evento.
+- **[!UICONTROL Dettagli errore]**: dettagli sull’errore di riproduzione che viene tracciato.
+- **[!UICONTROL Dettagli aggiornamento stato]**: stato del lettore in fase di aggiornamento.
+- **[!UICONTROL Metadati personalizzati]**: metadati personalizzati sull’evento multimediale che viene tracciato.
+- **[!UICONTROL Qualità dell’esperienza]**: qualità dei contenuti multimediali dei dati dell’esperienza che vengono tracciati.
+
+## Ottieni tracciamento Media Analytics {#get-media-analytics-tracker}
+
+Questa azione viene utilizzata per ottenere l’API legacy di Media Analytics. Quando si configura l’azione e viene fornito il nome di un oggetto, l’API legacy di Media Analytics verrà esportata nell’oggetto finestra in questione. Se non viene specificato alcun valore, verrà esportato in `window.Media` come fa la libreria Media JS corrente.
+
+![Immagine dell’interfaccia utente di Platform che mostra il tipo di azione Ottieni tracciatore di Media Analytics.](assets/get-media-analytics-tracker.png)
 
 ## Passaggi successivi {#next-steps}
 

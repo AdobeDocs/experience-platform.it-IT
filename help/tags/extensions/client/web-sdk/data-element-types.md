@@ -2,9 +2,9 @@
 title: Tipi di elementi dati nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di elementi dati forniti dall’estensione tag Adobe Experience Platform Web SDK.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -60,6 +60,12 @@ Tieni presente che quando apri alcuni campi dello schema, ad esempio `web.webPag
 ![Immagine dell’interfaccia utente Tag che mostra le opzioni degli elementi dati.](assets/variable-data-element.png)
 
 Dopo aver creato questo elemento dati, puoi utilizzare [Aggiorna variabile](./action-types.md#update-variable) per modificarlo. Quando è pronto, puoi includere questo elemento dati nel [Invia evento](./action-types.md#send-event) azione per inviare dati a un flusso di dati.
+
+## Media: qualità dell’esperienza {#quality-experience}
+
+A **[!UICONTROL Qualità dell’esperienza]** l’elemento dati è utile quando si inviano eventi multimediali in streaming a Adobe Experience Platform. Puoi aggiungere questo elemento durante la creazione di una sessione multimediale; i seguenti eventi multimediali conterranno dati aggiornati sulla qualità dell’esperienza.
+
+![Immagine dell’interfaccia utente che mostra la schermata Create Quality of Experience Data Element.](assets/qoe-data-element.png)
 
 ## Passaggi successivi {#next-steps}
 

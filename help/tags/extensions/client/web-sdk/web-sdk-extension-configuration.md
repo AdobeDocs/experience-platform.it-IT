@@ -2,16 +2,16 @@
 title: Configurare l’estensione tag Web SDK
 description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # Configurare l’estensione tag Web SDK
 
-Il [!DNL Web SDK] L’estensione tag invia i dati a Adobe Experience Cloud dalle proprietà web tramite Experienci Platform Edge Network.
+Il [!DNL Web SDK] l’estensione tag invia i dati a Adobe Experience Cloud dalle proprietà web tramite l’Edge Network di Experience Platform.
 
 L’estensione ti consente di inviare in streaming dati a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
@@ -47,7 +47,7 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 
 Questa sezione consente di selezionare gli stream di dati da utilizzare per ciascuno dei tre ambienti disponibili (produzione, staging e sviluppo).
 
-Quando una richiesta viene inviata alla rete Edge, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
+Quando viene inviata una richiesta all’Edge Network, viene utilizzato un ID dello stream di dati per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul tuo sito web.
 
 Consulta la guida su [flussi di dati](../../../../datastreams/overview.md) per scoprire come configurare un flusso di dati.
 
@@ -113,9 +113,24 @@ Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare 
 
 ![Immagine che mostra le impostazioni di raccolta dati dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati alla rete Edge.
+* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati all’Edge Network.
 * **[!UICONTROL Abilita raccolta dati di clic]**: Web SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata, ma può essere disabilitata utilizzando questa opzione. I collegamenti sono etichettati anche come collegamenti di download se contengono una delle espressioni di download elencate in [!UICONTROL Qualificatore collegamento di download] casella di testo. In questo Adobe vengono forniti alcuni qualificatori predefiniti per i collegamenti di download. Puoi modificarli in base alle tue esigenze.
 * **[!UICONTROL Dati contestuali raccolti automaticamente]**: per impostazione predefinita, Web SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se non desideri raccogliere questi dati o desideri solo raccogliere determinate categorie di dati, seleziona **[!UICONTROL Informazioni specifiche sul contesto]** e seleziona i dati che desideri raccogliere. Consulta [`context`](/help/web-sdk/commands/configure/context.md) per ulteriori informazioni.
+
+## Configurare le impostazioni della raccolta di file multimediali {#media-collection}
+
+La funzione di raccolta multimediale consente di raccogliere i dati relativi alle sessioni multimediali sul sito web.
+
+I dati raccolti possono includere informazioni su riproduzioni multimediali, pause, completamenti e altri eventi correlati. Una volta raccolti, puoi inviare questi dati a Adobe Experience Platform e/o Adobe Analytics, per generare rapporti. Questa funzione fornisce una soluzione completa per il tracciamento e la comprensione del comportamento di consumo dei contenuti multimediali sul sito web.
+
+![Immagine che mostra le impostazioni della raccolta multimediale dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/media-collection.png)
+
+
+* **[!UICONTROL Canale]**: nome del canale in cui si verifica la raccolta multimediale. Esempio: `Video channel`.
+* **[!UICONTROL Nome lettore]**: nome del lettore multimediale.
+* **[!UICONTROL Versione applicazione]**: versione dell’applicazione lettore multimediale.
+* **[!UICONTROL Intervallo ping principale]**: frequenza dei ping per il contenuto principale, in secondi. Il valore predefinito è `10`. I valori possono essere compresi tra `10` a `50` secondi.  Se non viene specificato alcun valore, viene utilizzato il valore predefinito quando si utilizza [sessioni tracciate automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Intervallo ping annuncio]**: frequenza dei ping per il contenuto dell’annuncio, in secondi. Il valore predefinito è `10`. I valori possono essere compresi tra `1` a `10` secondi. Se non viene specificato alcun valore, viene utilizzato il valore predefinito quando si utilizza [sessioni tracciate automaticamente](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurare gli override dello stream di dati {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Questo consente di attivare comportamenti diversi dello stream di dati rispetto 
 L’override della configurazione dello stream di dati è un processo costituito da due passaggi:
 
 1. Innanzitutto, devi definire gli override della configurazione dello stream di dati nella [pagina di configurazione dello stream di dati](/help/datastreams/configure.md).
-2. Quindi, devi inviare le sostituzioni a Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
+2. Quindi, devi inviare le sostituzioni all’Edge Network tramite un comando Web SDK o utilizzando l’estensione tag Web SDK.
 
 Visualizzare lo stream di dati [documentazione sulle sostituzioni di configurazione](/help/datastreams/overrides.md) per istruzioni dettagliate su come ignorare le configurazioni dello stream di dati.
 
@@ -140,6 +155,6 @@ Le sostituzioni dello stream di dati devono essere configurate in base all’amb
 
 ## Configurare le impostazioni avanzate
 
-Utilizza il **[!UICONTROL Percorso base perimetrale]** se è necessario modificare il percorso di base utilizzato per interagire con la rete Edge. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
+Utilizza il **[!UICONTROL Percorso base perimetrale]** se devi modificare il percorso di base utilizzato per interagire con l’Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
 
 ![Immagine che mostra le impostazioni avanzate utilizzando la pagina dell’estensione tag Web SDK.](assets/advanced-settings.png)

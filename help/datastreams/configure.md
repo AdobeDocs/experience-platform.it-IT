@@ -2,9 +2,9 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
+source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
 workflow-type: tm+mt
-source-wordcount: '2737'
+source-wordcount: '2738'
 ht-degree: 54%
 
 ---
@@ -101,7 +101,7 @@ Per visualizzare le opzioni di configurazione avanzate, seleziona **[!UICONTROL 
 | [!UICONTROL ID contenitore sincronizzazione ID di terze parti] | ID numerico del contenitore da utilizzare per la sincronizzazione dell’ID di terze parti. |
 | [!UICONTROL Override ID contenitore] | In questa sezione puoi definire altri ID contenitore di sincronizzazione ID di terze parti da utilizzare per sostituire quello predefinito. |
 | [!UICONTROL Tipo di accesso] | Definisce il tipo di autenticazione accettato dalla rete Edge per lo stream di dati. <ul><li>**[!UICONTROL Autenticazione mista]**: quando è selezionata questa opzione, la rete Edge accetta sia richieste autenticate che non autenticate. Seleziona questa opzione quando intendi utilizzare Web SDK o l’[SDK Mobile](https://developer.adobe.com/client-sdks/home/), insieme all’[API del server](../server-api/overview.md). </li><li>**[!UICONTROL Solo autenticate]**: quando è selezionata questa opzione, la rete Edge accetta solo richieste autenticate. Seleziona questa opzione quando intendi utilizzare solo l’API del server e desideri impedire l’elaborazione di richieste non autenticate da parte della rete Edge.</li></ul> |
-| [!UICONTROL Media Analytics] | Consente l’elaborazione dei dati di tracciamento dello streaming per l’integrazione con la rete Edge tramite SDK di Experience Platform o API Media Edge. Scopri Media Analytics da [documentazione](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=it). |
+| [!UICONTROL Media Analytics] | Consente l’elaborazione dei dati di tracciamento dello streaming per l’integrazione di Edge Network tramite SDK Experienci Platform o [API Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Scopri Media Analytics da [documentazione](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=it). |
 
 Da qui, se stai configurando uno stream di dati per Experience Platform, segui il tutorial sulla [Preparazione dei dati per la raccolta dati](./data-prep.md) per mappare i dati su uno schema di eventi di Platform prima di tornare a questa guida. Diversamente, seleziona **[!UICONTROL Salva]** e passa alla sezione successiva.
 
