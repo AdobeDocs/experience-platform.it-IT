@@ -3,9 +3,9 @@ title: Note sulla versione di Adobe Experience Platform Web SDK
 description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,16 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 >Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) pianifica di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
 >
 >Quando questa modifica viene implementata, Adobe interromperà il supporto per `demdex` cookie attualmente supportato nell’SDK per web.
+
+## Versione 2.20.0 - 21 maggio 2024
+
+**Nuove funzioni**
+
+* È stato aggiunto il supporto per [Raccolta di contenuti multimediali in streaming](../web-sdk/commands/configure/streamingmedia.md).
+
+**Correzioni e miglioramenti**
+
+* È stato corretto un bug a causa del quale il contenuto predefinito veniva nascosto dal frammento pre-hiding quando il consenso veniva negato.
 
 ## Versione 2.19.2 - 10 gennaio 2024
 
@@ -92,7 +102,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 **Correzioni e miglioramenti**
 
 * È stato risolto un problema relativo alle azioni del codice personalizzato del Compositore esperienza visivo di Adobe Target a causa del quale il codice veniva inserito in una posizione alternativa rispetto a con [!DNL at.js].
-* È stato risolto un problema a causa del quale, in alcuni casi, l’intestazione &quot;referer&quot; non veniva impostata correttamente nelle richieste inviate alla rete Edge.
+* È stato risolto un problema a causa del quale, in alcuni casi, l’intestazione &quot;referer&quot; non veniva impostata correttamente nelle richieste all’Edge Network.
 * È stato risolto un problema a causa del quale [user agent client hint](/help/web-sdk/use-cases/client-hints.md) le proprietà potrebbero essere impostate su un tipo errato.
 * È stato risolto un problema a causa del quale `placeContext.localTime` non corrisponde allo schema.
 
@@ -107,7 +117,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 * È stato aggiunto il supporto per [Migrazione completa pagina per pagina](home.md#migrating-to-web-sdk). Il profilo Adobe Target verrà ora mantenuto quando un visitatore si sposta tra le pagine at.js e Web SDK.
 * È stato aggiunto il supporto configurabile per [User-Agent Client Hints entropici elevati](/help/web-sdk/use-cases/client-hints.md).
-* È stato aggiunto il supporto per [`applyResponse`](/help/web-sdk/commands/applyresponse.md) comando. Questo abilita la personalizzazione ibrida tramite [API server di rete Edge](../server-api/overview.md).
+* È stato aggiunto il supporto per [`applyResponse`](/help/web-sdk/commands/applyresponse.md) comando. Questo abilita la personalizzazione ibrida tramite [API server Edge Network](../server-api/overview.md).
 * I collegamenti in modalità di controllo qualità ora funzionano su più pagine.
 
 **Correzioni e miglioramenti**
@@ -152,7 +162,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 * Sono stati ottimizzati gli eventi di modifica della visualizzazione per le applicazioni a pagina singola. La notifica di visualizzazione ora è inclusa nell’evento di modifica della visualizzazione quando vengono riprodotte esperienze personalizzate.
 * Avviso della console rimossa se non `eventType` è presente.
 * È stato risolto un problema a causa del quale `propositions` proprietà restituita solo da un `sendEvent` quando le esperienze sono state richieste o recuperate dalla cache. Il `propositions` La proprietà ora sarà sempre definita come un array.
-* È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito da Edge Network.
+* È stato risolto un problema che impediva la visualizzazione dei contenitori nascosti in caso di errore restituito dall’Edge Network.
 * È stato risolto un problema che impediva il conteggio degli eventi di interazione in Adobe Target. Questo problema è stato risolto aggiungendo il nome della visualizzazione al file XDM in web.webPageDetails.viewName.
 * Correggi i collegamenti interrotti alla documentazione nei messaggi della console.
 
@@ -164,7 +174,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 ## Versione 2.7.0 - 26 ottobre 2021
 
-* Esporre informazioni aggiuntive da Edge Network nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
+* Espone informazioni aggiuntive dall’Edge Network nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
 
 ## Versione 2.6.4 - 7 settembre 2021
 
@@ -202,7 +212,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 * Il [`getIdentity`](/help/web-sdk/commands/getidentity.md) ora restituisce l’ID dell’area edge insieme all’identità.
 * Gli avvisi e gli errori ricevuti dal server sono stati migliorati e vengono gestiti in modo più appropriato.
 * È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe per [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
-* Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Platform Edge Network. Se raccogli le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
+* Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Edge Network di Platform. Se raccogli le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 * Due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`, sono state aggiunte.
 * Correzione bug: gli eventi di notifica dell’interazione di personalizzazione contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
 * Correzione bug: se il primo evento inviato dall’SDK aveva `documentUnloading` imposta su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l’evento, causando un errore relativo a un’identità non stabilita.
