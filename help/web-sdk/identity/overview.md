@@ -2,9 +2,9 @@
 title: Dati di identità in Web SDK
 description: Scopri come recuperare e gestire gli ID Adobe Experience Cloud (ECID) utilizzando Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -19,20 +19,20 @@ Questo documento fornisce una panoramica su come gestire gli ECID utilizzando Pl
 
 Platform Web SDK assegna e tiene traccia degli ECID utilizzando i cookie, con diversi metodi disponibili per configurare la modalità di generazione di questi cookie.
 
-Quando un nuovo utente arriva sul sito web, Adobe Experience Cloud Identity Service tenta di impostare un cookie di identificazione del dispositivo per tale utente. Per i visitatori nuovi, viene generato un ECID che viene restituito nella prima risposta dalla rete Edge di Adobe Experience Platform. Per i visitatori ripetuti, l’ECID viene recuperato da `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e aggiunti al payload dalla rete Edge.
+Quando un nuovo utente arriva sul sito web, Adobe Experience Cloud Identity Service tenta di impostare un cookie di identificazione del dispositivo per tale utente. Per i visitatori nuovi, viene generato un ECID che viene restituito nella prima risposta dall’Edge Network di Adobe Experience Platform. Per i visitatori ripetuti, l’ECID viene recuperato da `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` e aggiunti al payload dall’Edge Network.
 
 Una volta impostato il cookie contenente l’ECID, ogni richiesta successiva generata dall’SDK web include un ECID codificato nel `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie.
 
-Quando si utilizzano i cookie per l’identificazione del dispositivo, è possibile interagire con la rete Edge in due modi:
+Quando si utilizzano i cookie per l’identificazione del dispositivo, è possibile interagire con l’Edge Network in due modi:
 
-1. Invia dati direttamente al dominio della rete Edge `adobedc.net`. Questo metodo è denominato [raccolta dati di terze parti](#third-party).
+1. Inviare dati direttamente al dominio Edge Network `adobedc.net`. Questo metodo è denominato [raccolta dati di terze parti](#third-party).
 1. Crea un CNAME sul tuo dominio che punti a `adobedc.net`. Questo metodo è denominato [raccolta dati di prime parti](#first-party).
 
 Come spiegato nelle sezioni seguenti, il metodo di raccolta dei dati che scegli di utilizzare ha un impatto diretto sulla durata dei cookie nei vari browser.
 
 ### Raccolta di dati di terze parti {#third-party}
 
-La raccolta di dati di terze parti comporta l’invio diretto dei dati al dominio della rete Edge `adobedc.net`.
+La raccolta di dati di terze parti comporta l’invio diretto di dati al dominio Edge Network `adobedc.net`.
 
 Negli ultimi anni, i browser web sono diventati sempre più restrittivi nella gestione dei cookie impostati da terze parti. Per impostazione predefinita, alcuni browser bloccano i cookie di terze parti. Se utilizzi cookie di terze parti per identificare i visitatori del sito, la durata di tali cookie è quasi sempre più breve di quella che sarebbe altrimenti disponibile utilizzando i cookie di prima parte. A volte, un cookie di terze parti scade entro appena sette giorni.
 
@@ -56,9 +56,36 @@ Se un utente finale visita il sito tre volte alla settimana e poi non vi ritorna
 
 Per tenere conto degli effetti delle durate dei cookie come descritto in precedenza, puoi invece scegliere di impostare e gestire gli identificatori dei tuoi dispositivi. Consulta la guida su [ID dispositivo di prime parti](./first-party-device-ids.md) per ulteriori informazioni.
 
-## Recupero dell’ECID e dell’area geografica per l’utente corrente
+## Recupera l’ECID e l’area geografica dell’utente corrente {#retrieve-ecid}
 
-Per recuperare l’ECID univoco per il visitatore corrente, utilizza `getIdentity` comando. Per i nuovi visitatori che non dispongono ancora di un ECID, questo comando genera un nuovo ECID. `getIdentity` restituisce anche l’ID di regione del visitatore.
+A seconda del caso d’uso, esistono due modi in cui puoi accedere al [!DNL ECID]:
+
+* [Recupera il [!DNL ECID] tramite Preparazione per la raccolta dati](#retrieve-ecid-data-prep): questo è il metodo consigliato da utilizzare.
+* [Recupera il [!DNL ECID] tramite `getIdentity()` comando](#retrieve-ecid-getidentity): utilizza questo metodo solo quando hai bisogno del [!DNL ECID] informazioni sul lato client.
+
+### Recupera il [!DNL ECID] tramite Preparazione per la raccolta dati {#retrieve-ecid-data-prep}
+
+Utilizzare [Preparazione per la raccolta dati](../../datastreams/data-prep.md) per mappare [!DNL ECID] a un [!DNL XDM] campo. Questo è il modo consigliato per accedere al [!DNL ECID].
+
+A questo scopo, imposta il campo di origine sul seguente percorso:
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+Quindi, imposta il campo di destinazione su un percorso XDM in cui il campo è di tipo `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### Recupera il [!DNL ECID] tramite `getIdentity()` comando {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>È necessario recuperare l’ECID solo tramite `getIdentity()` se è necessario il comando [!DNL ECID] sul lato client. Se desideri mappare solo l’ECID a un campo XDM, utilizza [Preparazione per la raccolta dati](#retrieve-ecid-data-prep) invece.
+
+Per recuperare l’ECID univoco per il visitatore corrente, utilizza `getIdentity` comando. Per i nuovi visitatori che non hanno un [!DNL ECID] tuttavia, questo comando genera un nuovo [!DNL ECID]. `getIdentity` restituisce anche l’ID di regione del visitatore.
 
 >[!NOTE]
 >
@@ -77,7 +104,7 @@ alloy("getIdentity")
   });
 ```
 
-## Utilizzo `identityMap`
+## Utilizzo di `identityMap`
 
 Utilizzo di un XDM [`identityMap` campo](../../xdm/schema/composition.md#identityMap), è possibile identificare un dispositivo/utente utilizzando più identità, impostarne lo stato di autenticazione e decidere quale identificatore è considerato quello principale. Se non è stato impostato alcun identificatore come `primary`, il valore predefinito è `ECID`.
 
