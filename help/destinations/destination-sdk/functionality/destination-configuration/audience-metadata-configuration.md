@@ -2,7 +2,7 @@
 description: Scopri come configurare le impostazioni dei metadati del pubblico per le destinazioni create con Destination SDK.
 title: Configurazione dei metadati del pubblico
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -57,7 +57,7 @@ Quando crei la configurazione dei metadati del pubblico, puoi utilizzare i param
 | `mapExperiencePlatformSegmentName` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere il nome del pubblico Experience Platform. |
 | `mapExperiencePlatformSegmentId` | Booleano | Indica se [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) il valore nel flusso di lavoro di attivazione della destinazione deve essere l’ID del pubblico Experience Platform. |
 | `mapUserInput` | Booleano | Attiva o disattiva l&#39;input dell&#39;utente per [[!UICONTROL ID mappatura]](../../../ui/activate-segment-streaming-destinations.md#scheduling) nel flusso di lavoro di attivazione della destinazione. Se impostato su `true`, `audienceTemplateId` non può essere presente. |
-| `audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per la tua destinazione. |
+| `audienceTemplateId` | Stringa | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per la tua destinazione. |
 
 {style="table-layout:auto"}
 

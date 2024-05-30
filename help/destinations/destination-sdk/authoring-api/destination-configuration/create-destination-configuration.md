@@ -2,7 +2,7 @@
 description: Scopri come strutturare una chiamata API per creare una configurazione di destinazione tramite Adobe Experience Platform Destination SDK.
 title: Creare una configurazione di destinazione
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione viene immesso dall’utente. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione è l’ID del pubblico Experience Platform. |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | Booleano | Controlla se l’ID di mappatura del pubblico nel flusso di lavoro di attivazione della destinazione è il nome Experience Platform del pubblico. |
-| `segmentMappingConfig.audienceTemplateId` | Booleano | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per questa destinazione. |
+| `segmentMappingConfig.audienceTemplateId` | Stringa | Il `instanceId` del [modello metadati pubblico](../../metadata-api/create-audience-template.md) utilizzato per questa destinazione. |
 | `schemaConfig.profileFields` | Array | Quando si aggiungono impostazioni predefinite `profileFields` come mostrato nella configurazione precedente, gli utenti avranno la possibilità di mappare gli attributi di Experience Platform agli attributi predefiniti sul lato della destinazione. |
 | `schemaConfig.profileRequired` | Booleano | Utilizzare `true` gli utenti devono essere in grado di mappare gli attributi del profilo da Experienci Platform ad attributi personalizzati sul lato della destinazione, come mostrato nella configurazione di esempio precedente. |
 | `schemaConfig.segmentRequired` | Booleano | Usa sempre `segmentRequired:true`. |
