@@ -5,7 +5,7 @@ feature: Customer AI
 title: Creare segmenti di clienti con punteggi previsti
 description: Al termine di un’esecuzione di previsione, i punteggi di propensione previsti vengono utilizzati automaticamente dai profili. L’arricchimento dei profili con i punteggi di IA per l’analisi dei clienti consente di creare segmenti di clienti per trovare tipi di pubblico in base ai loro punteggi di tendenza. Questa sezione descrive i passaggi da seguire per creare segmenti con il Generatore di segmenti.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -22,21 +22,21 @@ Al termine di un’esecuzione di previsione, i punteggi di propensione previsti 
 
 Nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra, quindi fai clic su **[!UICONTROL Crea segmento]**.
 
-![](../images/user-guide/segments.png)
+![](../images/user-guide/segments_new.png)
 
 Il **Generatore di segmenti** viene visualizzato. Da sinistra **[!UICONTROL Campi]** e sotto **[!UICONTROL Attributi]** , fare clic sulla cartella denominata **[!UICONTROL Profilo individuale XDM]** quindi fai clic sulla cartella con il namespace della tua organizzazione. La cartella denominata **[!UICONTROL IA per l’analisi dei clienti]** contiene i risultati delle esecuzioni delle previsioni e sono denominati in base all’istanza a cui appartengono i punteggi. Fai clic su una cartella di istanze per accedere ai risultati dell’istanza desiderata.
 
-![](../images/user-guide/results.png)
+![](../images/user-guide/results_new.png)
 
 Situato al centro del Generatore di segmenti, trascina e rilascia il file **[!UICONTROL Punteggio]** attributo su *area di lavoro generatore regole* per definire una regola.
 
 Sotto la mano destra *Proprietà segmento* , fornisci un nome per il segmento.
 
-![](../images/user-guide/properties.png)
+![](../images/user-guide/properties_new.png)
 
 Sopra la mano sinistra *Campi* , fare clic sul pulsante **ingranaggio** e seleziona un&#39;icona *Criterio di unione* dal menu a discesa. Clic **[!UICONTROL Salva]** per creare il segmento.
 
-![](../images/user-guide/merge_policy.png)
+![](../images/user-guide/merge_policy_new.png)
 
 ## Passaggi successivi
 
