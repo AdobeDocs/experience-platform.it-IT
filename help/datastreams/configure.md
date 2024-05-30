@@ -2,10 +2,10 @@
 title: Creare e configurare gli stream di dati
 description: Scopri come collegare l’integrazione Web SDK lato client con altri prodotti Adobe e destinazioni di terze parti.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 54%
+source-wordcount: '2753'
+ht-degree: 53%
 
 ---
 
@@ -175,7 +175,7 @@ Il servizio controlla se e in che modo i dati vengono inviati ad Adobe Experienc
 | [!UICONTROL Set di dati di evento] | **(Obbligatorio)** Seleziona il set di dati di Platform a cui verranno trasmessi in streaming i dati dell’evento cliente. Lo schema deve utilizzare la [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Per aggiungere altri set di dati, seleziona **[!UICONTROL Aggiungi set di dati di evento]**. |
 | [!UICONTROL Set di dati di profilo] | Seleziona il set di dati di Platform a cui verranno inviati i dati attributo del cliente. Lo schema deve utilizzare la [classe Profilo XDM individuale](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Abilita l’Offer decisioning per le implementazioni dell’SDK web. Consulta la guida su [offer decisioning di utilizzo con Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) per ulteriori dettagli sull’implementazione.<br><br>Per ulteriori informazioni sulle funzionalità di Offer Decisioning, consulta la [documentazione di Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=it). |
-| [!UICONTROL Segmentazione Edge] | Abilita [segmentazione Edge](../segmentation/ui/edge-segmentation.md) per questo flusso di dati. Quando l’SDK invia i dati tramite uno stream di dati abilitato per la segmentazione Edge, tutte le appartenenze al segmento aggiornate per il profilo in questione vengono inviate nuovamente nella risposta.<br><br>Questa opzione può essere utilizzata in combinazione con le [!UICONTROL destinazioni di personalizzazione], per [i casi d’uso di personalizzazione della pagina successiva](../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL Segmentazione Edge] | Abilita [segmentazione Edge](../segmentation/ui/edge-segmentation.md) per questo flusso di dati. Quando [SDK per web](../web-sdk/home.md) o [API server Edge Network](../server-api/overview.md) invia dati tramite un flusso di dati con la segmentazione edge abilitata, tutte le appartenenze aggiornate al pubblico per il profilo in questione vengono rimandate nella risposta.<br><br>È possibile utilizzare questa opzione in combinazione con **[!UICONTROL Destinazioni di personalizzazione]** per i casi di utilizzo di personalizzazione della stessa pagina e della pagina successiva tramite [destinazioni edge](../destinations/ui/activate-edge-personalization-destinations.md) o [!DNL Offer Decisioning]. |
 | [!UICONTROL Destinazioni di personalizzazione] | Quando viene abilitata dopo aver attivato la casella di controllo della [!UICONTROL segmentazione Edge], questa opzione consente allo stream di dati di connettersi alle destinazioni di personalizzazione, ad esempio la [Personalizzazione personalizzata](../destinations/catalog/personalization/custom-personalization.md).<br><br>Per i passaggi specifici sulla [configurazione delle destinazioni di personalizzazione](../destinations/ui/activate-edge-personalization-destinations.md), consulta la documentazione delle destinazioni. |
 | [!UICONTROL Adobe Journey Optimizer] | Abilita [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=it) per questo flusso di dati. <br><br> L’abilitazione di questa opzione consente allo stream di dati di restituire il contenuto personalizzato da campagne in entrata basate su web e su app in [!DNL Adobe Journey Optimizer]. Questa opzione richiede l’attivazione della [!UICONTROL segmentazione Edge]. Se [!UICONTROL Segmentazione Edge] è deselezionata, questa opzione è disattivata. |
 
