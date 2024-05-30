@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
    * [Attivare i dati nelle destinazioni basate su file utilizzando l’API del servizio Flow](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Connettersi alle destinazioni di streaming e attivare i dati utilizzando l’API del servizio Flow](./api/streaming-destinations.md)
    * [Connettersi a destinazioni di e-mail marketing basate su file e attivare i dati utilizzando l’API del servizio di flusso](./api/connect-activate-batch-destinations.md)
-   * [(Beta) Attiva i tipi di pubblico su destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
+   * [Attivare i tipi di pubblico su destinazioni batch tramite l’API di attivazione ad hoc](./api/ad-hoc-activation-api.md)
    * [Modifica destinazione](./api/edit-destination.md)
    * [Aggiornare i flussi di dati di destinazione](./api/update-destination-dataflows.md)
    * [Elimina account di destinazione](./api/delete-destination-account.md)
