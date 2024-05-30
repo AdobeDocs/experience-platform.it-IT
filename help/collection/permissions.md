@@ -2,10 +2,10 @@
 title: Gestione delle autorizzazioni per la raccolta dati in Experienci Platform
 description: Panoramica di alto livello su come gestire le autorizzazioni e controllare l’accesso alle funzioni di raccolta dati in Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 28%
+source-wordcount: '1338'
+ht-degree: 26%
 
 ---
 
@@ -34,8 +34,8 @@ Le autorizzazioni in Adobe Experience Platform includono l’accesso a flussi di
 | Sandbox | (N/D) | A seconda della [sandbox](../sandboxes/home.md) che sono state create nell’organizzazione, puoi controllare l’accesso a ciascuna di esse tramite questa categoria di autorizzazioni in Admin Console. |
 | Modellazione dati | Gestire gli schemi | Consente di visualizzare, creare e modificare [Schemi Experience Data Model (XDM)](../xdm/home.md). |
 | Modellazione dati | Visualizzare gli schemi | Consente l’accesso in sola lettura agli schemi. |
-| Gestione identità | Manage Identity Namespaces (Gestisci spazi dei nomi di identità) | Consente di visualizzare, creare e modificare [spazi dei nomi di identità](../identity-service/features/namespaces.md). |
-| Gestione identità | Visualizzare gli spazi dei nomi delle identità | Consente l’accesso in sola lettura agli spazi dei nomi delle identità. |
+| Identity Management | Gestire gli spazi dei nomi delle identità | Consente di visualizzare, creare e modificare [spazi dei nomi di identità](../identity-service/features/namespaces.md). |
+| Identity Management | Visualizzare gli spazi dei nomi delle identità | Consente l’accesso in sola lettura agli spazi dei nomi delle identità. |
 | Raccolta dati | Gestire gli stream di dati | Consente di visualizzare, creare e modificare [flussi di dati](../datastreams/overview.md). |
 | Raccolta dati | Visualizzare gli stream di dati | Consente l’accesso in sola lettura agli stream di dati. |
 
@@ -51,12 +51,12 @@ Le autorizzazioni in Raccolta dati di Adobe Experience Platform controllano l’
 | Piattaforme | Dispositivi mobili | Consente l’accesso a [proprietà mobili](../tags/ui/administration/companies-and-properties.md) quando combinato con altri diritti di proprietà. |
 | Piattaforme | Edge | Consente l’accesso a [Proprietà di Event Forwarding Edge](../tags/ui/event-forwarding/getting-started.md) quando combinato con altri diritti di proprietà. |
 | Proprietà | (N/D) | A seconda delle proprietà create nell’organizzazione, puoi controllare l’accesso a ciascuna di esse tramite questa categoria di autorizzazioni in Admin Console.<br><br>I diritti di proprietà assegnati a un utente si applicano solo alle proprietà a cui è stato concesso l’accesso tramite questa categoria di autorizzazioni. |
-| Diritti di proprietà | Approvazione | Consente di approvare una build della libreria come parte della [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
+| Diritti di proprietà | Approva | Consente di approvare una build della libreria come parte della [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Sviluppa | Consente di sviluppare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti di proprietà | Modifica proprietà | Consente di modificare la configurazione di base per le proprietà a cui un utente ha accesso. |
 | Diritti di proprietà | Gestisci ambienti | Consente di gestire [ambienti](../tags/ui/publishing/environments.md) per le proprietà a cui un utente ha accesso. |
 | Diritti di proprietà | Gestire le estensioni | Consente di gestire [estensioni](../tags/ui/managing-resources/extensions/overview.md) per le proprietà a cui un utente ha accesso. |
-| Diritti di proprietà | Pubblicazione | Consente di pubblicare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
+| Diritti di proprietà | Pubblica | Consente di pubblicare una build della libreria come parte del [flusso di pubblicazione](../tags/ui/publishing/publishing-flow.md). |
 | Diritti aziendali | Sviluppare estensioni | Consente di creare e modificare pacchetti di estensione di proprietà dell’organizzazione, incluse versioni private e richieste di versioni pubbliche. |
 | Diritti aziendali | Gestione configurazioni app | Questa autorizzazione è applicabile solo se disponi di una licenza per Adobe Journey Optimizer o di un’altra soluzione che consente l’accesso a messaggi mobili in-app e push. Questo consente di gestire le app conosciute da Adobe Experience Cloud insieme alle credenziali push necessarie per comunicare con il servizio Firebase Cloud Messaging e il servizio Apple Push Notification. |
 | Diritti aziendali | Gestisci proprietà | Consente di creare e gestire tag (proprietà web), inoltro eventi (proprietà edge) e proprietà mobili. |
@@ -78,7 +78,15 @@ Consulta le sottosezioni seguenti per i passaggi su come gestire le autorizzazio
 
 ### Gestire le autorizzazioni in Adobe Experience Platform {#manage-platform}
 
-Dalla sezione **[!UICONTROL Autorizzazioni]** in Adobe Experience Platform selezionare il ruolo che si desidera modificare.
+>[!NOTE]
+>
+>Per gestire le autorizzazioni per un ruolo, sono necessari i diritti di amministratore. Se non disponi dei privilegi di amministratore, contatta l’amministratore di sistema.
+
+Experience Cloud **[!UICONTROL Autorizzazioni]** consente di definire ruoli utente e criteri per gestire l’accesso a funzioni e oggetti all’interno di un’applicazione di prodotto.
+
+Da a [!UICONTROL Autorizzazioni], puoi creare e gestire i ruoli e assegnare le autorizzazioni per le risorse desiderate per tali ruoli.
+
+![Adobe Experience Cloud che evidenzia il prodotto Autorizzazioni.](./images/permissions/permissions-product.png)
 
 Per accedere alle funzionalità di raccolta dati, devi abilitare tutte le autorizzazioni in **[!UICONTROL Sandbox]**, **[!UICONTROL Modellazione dati]**, **[!UICONTROL Identity Management]**, e **[!UICONTROL Raccolta dati]** categorie.
 
