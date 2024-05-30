@@ -4,9 +4,9 @@ title: Modificare le connessioni di destinazione utilizzando l’API del servizi
 type: Tutorial
 description: Scopri come modificare vari componenti di una connessione di destinazione utilizzando l’API del servizio Flusso.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1605'
 ht-degree: 5%
 
 ---
@@ -54,7 +54,7 @@ Tutte le risorse in Experienci Platform, incluse quelle appartenenti a [!DNL Flo
 >
 >Se il `x-sandbox-name` non è specificata, le richieste vengono risolte in `prod` sandbox.
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
+Tutte le richieste che contengono un payload (`POST`, `PUT`, `PATCH`) richiede un’intestazione di tipo supporto aggiuntiva:
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ In caso di esito positivo, la risposta restituisce i dettagli correnti del fluss
 
 I componenti di una connessione di destinazione differiscono a seconda della destinazione. Ad esempio, per [!DNL Amazon S3] destinazioni, puoi aggiornare il bucket e il percorso in cui vengono esportati i file. Per [!DNL Pinterest] destinazioni, puoi aggiornare le tue [!DNL Pinterest Advertiser ID] e per [!DNL Google Customer Match] è possibile aggiornare [!DNL Pinterest Account ID].
 
-Per aggiornare i componenti di una connessione di destinazione, esegui una richiesta PATCH al `/targetConnections/{TARGET_CONNECTION_ID}` mentre fornisci l’ID di connessione di destinazione, la versione e i nuovi valori che desideri utilizzare. Ricorda che hai ottenuto l’ID di connessione di destinazione nel passaggio precedente, quando hai ispezionato un flusso di dati esistente nella destinazione desiderata.
+Per aggiornare i componenti di una connessione di destinazione, eseguire una `PATCH` richiesta al `/targetConnections/{TARGET_CONNECTION_ID}` mentre fornisci l’ID di connessione di destinazione, la versione e i nuovi valori che desideri utilizzare. Ricorda che hai ottenuto l’ID di connessione di destinazione nel passaggio precedente, quando hai ispezionato un flusso di dati esistente nella destinazione desiderata.
 
 >[!IMPORTANT]
 >
->Il `If-Match` L’intestazione è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione è la versione univoca della connessione di destinazione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
+>Il `If-Match` l&#39;intestazione è richiesta quando si crea un `PATCH` richiesta. Il valore di questa intestazione è la versione univoca della connessione di destinazione che desideri aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di destinazione e altre.
 >
 > Per ottenere la versione più recente del valore etag, esegui una richiesta di GET a `/targetConnections/{TARGET_CONNECTION_ID}` endpoint, dove `{TARGET_CONNECTION_ID}` è l’ID della connessione di destinazione che stai cercando di aggiornare.
+>
+> Assicurati di racchiudere il valore di `If-Match` tra virgolette doppie come negli esempi seguenti quando si crea `PATCH` richieste.
 
 Di seguito sono riportati alcuni esempi di aggiornamento dei parametri nella specifica di connessione di destinazione per diversi tipi di destinazioni. Tuttavia, la regola generale per aggiornare i parametri per qualsiasi destinazione è la seguente:
 
-Ottieni l’ID del flusso di dati della connessione > ottieni l’ID della connessione di destinazione > PATCH la connessione di destinazione con valori aggiornati per i parametri desiderati.
+Ottieni l’ID del flusso di dati della connessione > ottieni l’ID della connessione di destinazione > `PATCH` la connessione di destinazione con i valori aggiornati per i parametri desiderati.
 
 >[!BEGINSHADEBOX]
 
@@ -332,19 +334,21 @@ In caso di esito positivo, la risposta restituisce l’ID connessione di destina
 
 Modificare la connessione di base per aggiornare le credenziali di una destinazione. I componenti di una connessione di base differiscono a seconda della destinazione. Ad esempio, per [!DNL Amazon S3] destinazioni, puoi aggiornare la chiave di accesso e la chiave segreta alla tua [!DNL Amazon S3] posizione.
 
-Per aggiornare i componenti di una connessione di base, eseguire una richiesta PATCH al `/connections` mentre fornisci l’ID connessione di base, la versione e i nuovi valori che desideri utilizzare.
+Per aggiornare i componenti di una connessione di base, eseguire una `PATCH` richiesta al `/connections` mentre fornisci l’ID connessione di base, la versione e i nuovi valori che desideri utilizzare.
 
 Ricorda che hai ottenuto l’ID di connessione di base in un [passaggio precedente](#look-up-dataflow-details), quando hai ispezionato un flusso di dati esistente nella destinazione desiderata per il parametro `baseConnection`.
 
 >[!IMPORTANT]
 >
->Il `If-Match` L’intestazione è obbligatoria quando si effettua una richiesta PATCH. Il valore di questa intestazione corrisponde alla versione univoca della connessione di base che si desidera aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di base e altre.
+>Il `If-Match` l&#39;intestazione è richiesta quando si crea un `PATCH` richiesta. Il valore di questa intestazione corrisponde alla versione univoca della connessione di base che si desidera aggiornare. Il valore etag viene aggiornato a ogni aggiornamento riuscito di un’entità di flusso come flusso di dati, connessione di base e altre.
 >
 > Per ottenere la versione più recente del valore Etag, esegui una richiesta di GET a `/connections/{BASE_CONNECTION_ID}` endpoint, dove `{BASE_CONNECTION_ID}` è l’ID connessione di base che desideri aggiornare.
+>
+> Assicurati di racchiudere il valore di `If-Match` tra virgolette doppie come negli esempi seguenti quando si crea `PATCH` richieste.
 
 Di seguito sono riportati alcuni esempi di aggiornamento dei parametri nella specifica di connessione di base per diversi tipi di destinazioni. Tuttavia, la regola generale per aggiornare i parametri per qualsiasi destinazione è la seguente:
 
-Ottieni l’ID del flusso di dati della connessione > ottieni l’ID della connessione di base > PATCH la connessione di base con valori aggiornati per i parametri desiderati.
+Ottieni l’ID del flusso di dati della connessione > ottieni l’ID della connessione di base > `PATCH` connessione di base con valori aggiornati per i parametri desiderati.
 
 >[!BEGINSHADEBOX]
 
