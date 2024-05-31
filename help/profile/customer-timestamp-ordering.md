@@ -4,7 +4,7 @@ description: Scopri come aggiungere l’ordine delle marche temporali dei client
 badgePrivateBeta: label="Versione beta privata" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, l’ordine dei dati non è garantito per impostazione predefinita quando si acquisiscono i dati tramite l’acquisizione in streaming nell’archivio profili. Con l’ordine della marca temporale del cliente, puoi garantire che l’ultimo messaggio, in base alla marca temporale del cliente fornita, verrà mantenuto nell’archivio profili. Tutti i messaggi non aggiornati verranno quindi eliminati e **non** essere disponibile per l’utilizzo in servizi a valle che utilizzano dati di profilo come segmentazione e destinazioni. Di conseguenza, questo consente ai dati del profilo di essere coerenti e di rimanere sincronizzati con i sistemi di origine.
 
-Per abilitare l’ordinamento delle marche temporali dei clienti, utilizza `extSourceSystemAudit.lastUpdatedDate` campo all&#39;interno del [Tipo di dati Attributi di controllo del sistema di sorgente esterna](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) e contatta il tuo Adobe Technical Account Manager o Adobe Customer Care con le informazioni sulla sandbox e sui set di dati.
+Per abilitare l’ordinamento delle marche temporali dei clienti, utilizza `extSourceSystemAudit.lastUpdatedDate` campo all&#39;interno del [Gruppo di campi Attributi di controllo del sistema di sorgente esterna](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) e contatta il tuo Adobe Technical Account Manager o Adobe Customer Care con le informazioni sulla sandbox e sui set di dati.
 
 ## Vincoli
 
