@@ -4,9 +4,9 @@ description: Scopri come aggiungere l’ordine delle marche temporali dei client
 badgePrivateBeta: label="Versione beta privata" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Ordine timestamp cliente
 
-In Adobe Experience Platform, l’ordine dei dati non è garantito automaticamente al momento dell’acquisizione dei dati tramite acquisizione in streaming nell’archivio profili. Con l’ordine della marca temporale del cliente, puoi garantire che l’ultimo messaggio, in base alla marca temporale del cliente fornita, verrà mantenuto nell’archivio profili. Tutti i messaggi non aggiornati verranno quindi eliminati e **non** essere disponibile per l’utilizzo in servizi a valle che utilizzano dati di profilo come segmentazione e destinazioni. Di conseguenza, questo consente ai dati del profilo di essere coerenti e di rimanere sincronizzati con i sistemi di origine.
+In Adobe Experience Platform, l’ordine dei dati non è garantito per impostazione predefinita quando si acquisiscono i dati tramite l’acquisizione in streaming nell’archivio profili. Con l’ordine della marca temporale del cliente, puoi garantire che l’ultimo messaggio, in base alla marca temporale del cliente fornita, verrà mantenuto nell’archivio profili. Tutti i messaggi non aggiornati verranno quindi eliminati e **non** essere disponibile per l’utilizzo in servizi a valle che utilizzano dati di profilo come segmentazione e destinazioni. Di conseguenza, questo consente ai dati del profilo di essere coerenti e di rimanere sincronizzati con i sistemi di origine.
 
-Per abilitare l’ordinamento delle marche temporali dei clienti, utilizza `extSourceSystemAudit.lastUpdatedDate` campo all&#39;interno del [Tipo di dati Attributi di controllo del sistema di sorgente esterna](../xdm/data-types/external-source-system-audit-attributes.md) e contatta il tuo Adobe Technical Account Manager o Adobe Customer Care con le informazioni sulla sandbox e sui set di dati.
+Per abilitare l’ordinamento delle marche temporali dei clienti, utilizza `extSourceSystemAudit.lastUpdatedDate` campo all&#39;interno del [Tipo di dati Attributi di controllo del sistema di sorgente esterna](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) e contatta il tuo Adobe Technical Account Manager o Adobe Customer Care con le informazioni sulla sandbox e sui set di dati.
 
 ## Vincoli
 
@@ -30,7 +30,7 @@ Durante questa versione beta privata, quando si utilizza l’ordine con marca te
 - Il `extSourceSystemAudit.lastUpdatedDate` campo **deve** essere nel [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formato. Quando si utilizza il formato ISO 8601, **deve** essere come data/ora completa nel formato `yyyy-MM-ddTHH:mm:ss.sssZ` (ad esempio, `2028-11-13T15:06:49.001Z`).
 - Tutte le righe di dati acquisite **deve** contengono `extSourceSystemAudit.lastUpdatedDate` come gruppo di campi di livello superiore. Questo significa che questo campo **deve** non essere nidificato all’interno dello schema XDM. Se questo campo è mancante o in un formato non corretto, il record non valido **non** vengono acquisiti e viene inviato un messaggio di errore corrispondente.
 - Qualsiasi set di dati abilitato per l’ordine delle marche temporali dei clienti **deve** essere un nuovo set di dati senza dati precedentemente acquisiti.
-- Per un dato frammento di profilo, solo le righe che contengono una più recente `extSourceSystemAudit.lastUpdatedDate` verranno acquisiti. Se la riga non contiene un elemento più recente `extSourceSystemAudit.lastUpdatedDate`, la riga verrà eliminata.
+- Per un dato frammento di profilo, solo le righe che contengono una più recente `extSourceSystemAudit.lastUpdatedDate` verranno acquisiti. Righe che contengono un `extSourceSystemAudit.lastUpdatedDate` che è più vecchio o la stessa età verrà scartato.
 
 ## Consigli
 
