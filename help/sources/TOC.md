@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
-breadcrumb-title: Guida ai connettori di origini
-user-guide-description: Acquisisci dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
+breadcrumb-title: Guida ai connettori di sorgenti
+user-guide-description: Acquisire dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 10%
+source-wordcount: '1043'
+ht-degree: 24%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 10%
          - [Connettore Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
          - [Guida all’autenticazione di Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Spazi dei nomi e schemi B2B](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [Guida alla migrazione della mappatura ECID](connectors/adobe-applications/marketo/migration.md)
    - Pubblicità {#advertising}
       - [Connettore Google Ads](connectors/advertising/ads.md)
       - [Pinterest Ads](connectors/advertising/pinterest-ads.md)
@@ -55,7 +56,7 @@ ht-degree: 10%
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Oracle archiviazione oggetti](connectors/cloud-storage/oracle-object-storage.md)
+      - [Archiviazione di oggetti di Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
       - [Connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - Consenso e preferenze {#consent}
@@ -94,8 +95,8 @@ ht-degree: 10%
       - [Connettore Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Partner dati e identità {#data-partner}
       - [Acquisizione dei dati Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
-      - [Importazione dati di previsione Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
-      - [Risoluzione identità organizzazione Merkury](connectors/data-partners/merkury.md)
+      - [Importazione di dati potenziali Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Risoluzione Merkury Enterprise Identity](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [COMMERCE SAP](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -103,7 +104,7 @@ ht-degree: 10%
    - Sistema locale {#local-system}
       - [Connettore caricamento file locale](connectors/local-system/local-file-upload.md)
    - Automazione del marketing {#marketing-automation}
-      - [Braze correnti](connectors/marketing-automation/braze.md)
+      - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
@@ -112,7 +113,7 @@ ht-degree: 10%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Connettore Responsys Oracle](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
-      - [Marketing Cloud Salesforce](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
       - [Connettore quadrato](connectors/payments/square.md)
@@ -135,14 +136,14 @@ ht-degree: 10%
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [BLOB di Azure](tutorials/api/create/cloud-storage/blob.md)
-         - [Archiviazione Azure Data Lake Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
-         - [Hub eventi di Azure](tutorials/api/create/cloud-storage/eventhub.md)
+         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Hub eventi Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Archiviazione cloud Google](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle archiviazione oggetti](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Archiviazione di oggetti di Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - Consenso e preferenze {#consent}
          - [Integrazione OneTrust](tutorials/api/create/consent-and-preferences/onetrust.md)
@@ -155,24 +156,24 @@ ht-degree: 10%
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Customer success {#customer-success}
          - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
-         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [Service Cloud Salesforce](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Date Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure synapse di Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
+         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
-         - [BigQuery Google](tutorials/api/create/databases/bigquery.md)
+         - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
-         - [ Oracle](tutorials/api/create/databases/oracle.md)
+         - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Streaming Snowflake](tutorials/api/create/databases/snowflake-streaming.md)
@@ -189,15 +190,15 @@ ht-degree: 10%
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [Campagna MailChimp](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [Membri MailChimp](tutorials/api/create/marketing-automation/mailchimp-members.md)
-         - [Eloqua Oracle](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [Oracle Eloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
          - [Oracle attività NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle di entità NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Responsys Oracle](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
-         - [Marketing Cloud Salesforce](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-         - [Quadrato](tutorials/api/create/payments/square.md)
+         - [Square](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocoli {#protocols}
          - [OData generica](tutorials/api/create/protocols/odata.md)
@@ -226,11 +227,11 @@ ht-degree: 10%
       - [Raccogliere dati di pagamento](tutorials/api/collect/payments.md)
       - [Raccogliere dati di protocollo](tutorials/api/collect/protocols.md)
       - [Raccogliere dati in streaming](tutorials/api/collect/streaming.md)
-   - [Acquisizione su richiesta](tutorials/api/on-demand-ingestion.md)
+   - [Acquisizione on-demand](tutorials/api/on-demand-ingestion.md)
    - [Filtrare i dati a livello di origine](tutorials/api/filter.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna account](tutorials/api/update.md)
-   - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
+   - [Aggiorna flussi di dati](tutorials/api/update-dataflows.md)
    - [Riprova esecuzioni flusso di dati non riuscite](tutorials/api/retry-flows.md)
    - [Elimina account](tutorials/api/delete.md)
    - [Elimina flussi di dati](tutorials/api/delete-dataflows.md)
@@ -257,15 +258,15 @@ ht-degree: 10%
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
-         - [Archiviazione Azure Data Lake Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [BLOB di Azure](tutorials/ui/create/cloud-storage/blob.md)
-         - [Hub eventi di Azure](tutorials/ui/create/cloud-storage/eventhub.md)
+         - [Hub eventi Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Archiviazione file di Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Archiviazione cloud Google](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle archiviazione oggetti](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Archiviazione di oggetti di Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Consenso e preferenze {#consent}
@@ -279,25 +280,25 @@ ht-degree: 10%
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Customer Success {#customer-success}
          - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
-         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [Service Cloud Salesforce](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Database {#databases}
-         - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Hive Apache su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Date Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure synapse di Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Google BigQuery](tutorials/ui/create/databases/bigquery.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
-         - [ Oracle](tutorials/ui/create/databases/oracle.md)
+         - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
@@ -305,8 +306,8 @@ ht-degree: 10%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Partner dati e identità {#data-partner}
          - [Acquisizione dei dati Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
-         - [Importazione dati di previsione Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
-         - [Risoluzione identità organizzazione Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Importazione di dati potenziali Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Risoluzione Merkury Enterprise Identity](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [COMMERCE SAP](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -314,21 +315,21 @@ ht-degree: 10%
       - Sistema locale {#local-system}
          - [Caricamento di file locali](tutorials/ui/create/local-system/local-file-upload.md)
       - Automazione del marketing {#marketing-automation}
-         - [Braze correnti](tutorials/ui/create/marketing-automation/braze.md)
+         - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Campagne Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
-         - [Membri Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
-         - [Eloqua Oracle](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [Membri di Mailchimp](tutorials/ui/create/marketing-automation/mailchimp-members.md)
+         - [Oracle Eloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
          - [Oracle attività NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle di entità NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
-         - [Responsys Oracle](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
-         - [Marketing Cloud Salesforce](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamenti {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-         - [Quadrato](tutorials/ui/create/payments/square.md)
+         - [Square](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocoli {#protocols}
          - [OData generica](tutorials/ui/create/protocols/odata.md)
@@ -349,14 +350,14 @@ ht-degree: 10%
       - [Flusso di dati della connessione del protocollo](tutorials/ui/dataflow/protocols.md)
    - [Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente](tutorials/ui/templates.md)
    - [Filtrare gli oggetti di origine](tutorials/ui/filter.md)
-   - [Acquisizione su richiesta](tutorials/ui/on-demand-ingestion.md)
+   - [Acquisizione on-demand](tutorials/ui/on-demand-ingestion.md)
    - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
    - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
    - [Aggiorna account](tutorials/ui/update.md)
-   - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
+   - [Aggiorna flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Elimina flussi di dati](tutorials/ui/delete.md)
-   - [Iscriversi agli avvisi delle origini](tutorials/ui/alerts.md)
+   - [Iscriviti agli avvisi sulle origini](tutorials/ui/alerts.md)
    - [Salvare un flusso di dati come bozza](tutorials/ui/draft.md)
 - Origini self-service (SDK batch) {#sdk}
    - [Panoramica](sources-sdk/overview.md)
