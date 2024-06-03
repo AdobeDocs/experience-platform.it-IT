@@ -4,14 +4,19 @@ title: Esportare gli schemi XDM nell’interfaccia utente
 description: Scopri come esportare uno schema esistente in una sandbox o organizzazione diversa nell’interfaccia utente di Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
 
-# Esportare gli schemi XDM nell’interfaccia utente
+# Esportare gli schemi XDM nell’interfaccia utente {#export-xdm-schemas-in-the-UI}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_copyjsonstructure"
+>title="Copia struttura JSON"
+>abstract="Genera un payload di esportazione per lo schema scelto copiando la struttura JSON negli Appunti. Utilizzare questa funzione per esportare i dettagli di qualsiasi schema della raccolta schemi. Questo JSON esportato può quindi essere utilizzato per importare lo schema e tutte le risorse correlate in una sandbox o organizzazione diversa. In questo modo la condivisione e il riutilizzo degli schemi tra ambienti diversi diventano semplici ed efficienti."
 
 Tutte le risorse all’interno della Libreria schemi sono contenute in una sandbox specifica all’interno di un’organizzazione. In alcuni casi, potrebbe essere utile condividere risorse Experience Data Model (XDM) tra sandbox e organizzazioni.
 
@@ -40,6 +45,8 @@ Quindi, seleziona la **[!UICONTROL Copia JSON]** icona (![Copia icona](../images
 ![L’area di lavoro Schemi con una riga di schema e [!UICONTROL Copia in JSON] evidenziato.](../images/ui/export/copy-json.png)
 
 Questo copia un payload JSON negli Appunti, generato in base alla struttura dello schema. Per il &quot;[!DNL Loyalty Members]&quot; mostrato sopra, viene generato il seguente JSON:
+
++++Seleziona per espandere un esempio di payload JSON
 
 ```json
 [
@@ -203,6 +210,8 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 ]
 ```
 
++++
+
 Puoi copiare il payload anche selezionando [!UICONTROL Altro] in alto a destra nell’Editor di schema. Un menu a discesa fornisce due opzioni: [!UICONTROL Copia struttura JSON] e [!UICONTROL Elimina schema].
 
 >[!NOTE]
@@ -215,7 +224,7 @@ Il payload assume la forma di un array; ogni elemento dell’array è un oggetto
 
 Ogni istanza dell’ID tenant dell’organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda di dove importi lo schema nel passaggio successivo.
 
-## Importare la risorsa utilizzando l’API
+## Importare la risorsa utilizzando l’API {#import-resource-with-api}
 
 Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come payload per una richiesta POST al `/rpc/import` nell’API Schema Registry. Consulta la [importa guida dell’endpoint](../api/import.md) per informazioni dettagliate su come configurare la chiamata per inviare lo schema all’organizzazione e alla sandbox desiderate.
 

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Creare e modificare gli schemi nell’interfaccia utente
 description: Scopri le nozioni di base sulla creazione e la modifica degli schemi nell’interfaccia utente di Experienci Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3732'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Creare e modificare gli schemi nell’interfaccia utente
+# Creare e modificare gli schemi nell’interfaccia utente {#create-edit-schemas-in-ui}
 
 Questa guida fornisce una panoramica su come creare, modificare e gestire gli schemi Experience Data Model (XDM) per la tua organizzazione nell’interfaccia utente di Adobe Experience Platform.
 
@@ -281,12 +281,12 @@ Dopo aver applicato le modifiche, il nuovo campo viene visualizzato sotto lo spa
 
 ![Campo aggiunto all&#39;oggetto standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Abilitare uno schema per il profilo cliente in tempo reale {#profile}
+## Abilitare uno schema per Real-Time Customer Profile {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Abilitare uno schema per il profilo"
->abstract="Quando uno schema è abilitato per il profilo, tutti i set di dati creati da questo schema partecipano a Real-Time Customer Profile, che unisce i dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Una volta che uno schema viene utilizzato per acquisire dati nel profilo, non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione."
+>title="Abilita uno schema per il profilo"
+>abstract="Quando uno schema è abilitato per il profilo, tutti i set di dati creati da questo schema partecipano a Real-Time Customer Profile, che unisce dati provenienti da origini diverse per creare una visualizzazione completa di ciascun cliente. Uno schema utilizzato per acquisire i dati nel profilo non può essere disabilitato. Per ulteriori informazioni, consulta la documentazione."
 
 [Profilo cliente in tempo reale](../../../profile/home.md) unisce dati provenienti da origini diverse per creare una visualizzazione completa di ogni singolo cliente. Se desideri che i dati acquisiti da uno schema partecipino a questo processo, devi abilitare lo schema per l’utilizzo in [!DNL Profile].
 

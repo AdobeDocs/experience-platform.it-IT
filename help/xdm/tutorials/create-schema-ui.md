@@ -3,11 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;
 solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
-description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
+description: Questo tutorial illustra i passaggi necessari per la creazione di uno schema utilizzando l’Editor di schema in Experienci Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
+source-wordcount: '4813'
 ht-degree: 0%
 
 ---
@@ -353,11 +353,36 @@ Seleziona **[!UICONTROL Abilita]** per confermare la scelta. È possibile selezi
 
 ## Altre azioni {#more}
 
-Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema, se non è stato abilitato per Real-Time Customer Profile o se a esso sono associati set di dati. Seleziona [!UICONTROL Altro] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
-
-La funzionalità di copia della struttura JSON consente di visualizzare l’aspetto di un payload di esempio durante la creazione dello schema e delle pipeline di dati. È particolarmente utile nelle situazioni in cui sono presenti strutture complesse di mappa oggetto nello schema, ad esempio una mappa di identità.
+Nell’Editor di schema è inoltre possibile eseguire azioni rapide per copiare la struttura JSON dello schema o eliminare lo schema. Seleziona [!UICONTROL Altro] nella parte superiore della visualizzazione per visualizzare un elenco a discesa con azioni rapide.
 
 ![Editor di schema con il pulsante Altro evidenziato e le opzioni a discesa visualizzate.](../images/tutorials/create-schema/more-actions.png)
+
+### Eliminare uno schema {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Impossibile eliminare lo schema"
+>abstract="Impossibile eliminare lo schema perché è stato abilitato per Profilo e presenta set di dati associati."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Impossibile eliminare lo schema"
+>abstract="Impossibile eliminare lo schema perché è stato abilitato per il profilo."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Impossibile eliminare lo schema"
+>abstract="Impossibile eliminare lo schema perché presenta set di dati associati."
+
+Uno schema può essere eliminato all’interno dell’interfaccia utente dall’Editor di schema utilizzando [!UICONTROL Altro] e anche dai dettagli dello schema in [!UICONTROL Sfoglia] scheda. Esistono alcune condizioni che impediscono l’eliminazione di uno schema. Uno schema non può essere eliminato se:
+
+* Lo schema è abilitato per il profilo.
+* Lo schema è abilitato per Profilo e dispone di set di dati associati.
+* Lo schema ha set di dati associati ma non è abilitato per il profilo.
+
+### Copia struttura JSON {#copy-json-structure}
+
+Seleziona **[!UICONTROL Copia struttura JSON]** per generare un payload di esportazione per qualsiasi schema della raccolta schemi. Questa azione copia la struttura JSON negli Appunti. Il JSON esportato può quindi essere utilizzato per importare lo schema e tutte le risorse correlate in una sandbox o organizzazione diversa. In questo modo la condivisione e il riutilizzo degli schemi tra ambienti diversi diventano semplici ed efficienti.
 
 ## Passaggi successivi e risorse aggiuntive
 

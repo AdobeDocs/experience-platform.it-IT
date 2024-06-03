@@ -2,7 +2,7 @@
 title: Gruppo di campi dello schema di estensione completa Adobe Analytics ExperienceEvent
 description: Scopri il gruppo di campi schema Estensione completa Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 5%
@@ -37,7 +37,7 @@ Il gruppo di campi fornisce un singolo `_experience` oggetto a uno schema, che c
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` acquisisce dati personalizzati [dimensioni](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=it) tracciati da Analytics.
+`customDimensions` acquisisce dati personalizzati [dimensioni](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) tracciati da Analytics.
 
 ![campo customDimensions](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -77,7 +77,7 @@ Il gruppo di campi fornisce un singolo `_experience` oggetto a uno schema, che c
 
 ## Campi evento personalizzati {#events}
 
-Il gruppo di campi dell’estensione Analytics fornisce dieci campi oggetto che acquisiscono fino a 100 [metriche evento personalizzate](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=it) ciascuno, per un totale di 1000 per il gruppo di campi.
+Il gruppo di campi dell’estensione Analytics fornisce dieci campi oggetto che acquisiscono fino a 100 [metriche evento personalizzate](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) ciascuno, per un totale di 1000 per il gruppo di campi.
 
 Ogni oggetto evento di livello principale contiene i singoli oggetti evento per il rispettivo intervallo. Ad esempio: `event101to200` contiene gli eventi chiave da `event101` a `event200`.
 
