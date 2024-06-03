@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’acquisizione in streaming
 description: L’acquisizione in streaming per Adobe Experience Platform offre agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server a Experienci Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,11 @@ Una volta che hai la certezza che i dati sono puliti, puoi abilitare i set di da
 
 Per ulteriori informazioni sull’abilitazione di un set di dati per [!DNL Profile] e [!DNL Identity Service], leggi le [configurare una guida al set di dati](../../profile/tutorials/dataset-configuration.md).
 
-## Qual è la latenza prevista per l’acquisizione in streaming su [!DNL Platform]?
+## Qual è la latenza prevista per l’acquisizione in streaming su Experienci Platform?
+
+>[!IMPORTANT]
+>
+>I guardrail per l’acquisizione in streaming vengono calcolati a livello di organizzazione e non a livello di sandbox. Ciò significa che l’utilizzo dei dati per sandbox è associato al diritto totale all’utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere [guida alle best practice per la gestione dei dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
