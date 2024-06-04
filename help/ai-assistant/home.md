@@ -1,11 +1,9 @@
 ---
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le sue sfumature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -72,6 +70,13 @@ Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti
 * Sorgenti _(Al momento non è possibile rispondere alle domande relative ai conti)._
 
 Per le domande sulle informazioni operative, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Dovrai accedere a una sandbox per informazioni su dati specifici relativi agli oggetti.
+
+### Ambito della funzione {#feature-scope}
+
+Attualmente, l’ambito di AI Assistant è il seguente:
+
+* [Conoscenza del prodotto](./home.md#product-knowledge): AI Assistant può rispondere a domande sulla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
+* [Informazioni operative](./home.md#operational-insights): puoi chiedere all’Assistente AI informazioni approfondite operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
 
 ## Accesso alle funzioni {#feature-access}
 
