@@ -3,16 +3,20 @@ keywords: Experience Platform;identità;servizio identità;risoluzione dei probl
 title: Guardrail per il servizio Identity
 description: Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per i dati del servizio Identity, utili per ottimizzare l’utilizzo del grafico delle identità.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 0%
+source-wordcount: '1549'
+ht-degree: 1%
 
 ---
 
 # Guardrail per [!DNL Identity Service] dati
 
 Questo documento fornisce informazioni sui limiti di utilizzo e di tariffa per [!DNL Identity Service] dati per ottimizzare l’utilizzo del grafo delle identità. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 ## Introduzione
 

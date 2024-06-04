@@ -6,10 +6,10 @@ description: Adobe Experience Platform utilizza un modello di dati ibridi altame
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >I limiti descritti in questo documento rappresentano le modifiche abilitate da Real-time Customer Data Platform B2B Edition. Per un elenco completo dei limiti predefiniti per Real-Time CDP B2B Edition, combinare questi limiti con i limiti generali di Adobe Experience Platform descritti nel [guardrail per la documentazione dei dati di Real-Time Customer Profile](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B Edition consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale e profili account. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i tuoi dati per ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 

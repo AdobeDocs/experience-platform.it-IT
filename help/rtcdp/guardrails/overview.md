@@ -3,9 +3,9 @@ title: Guardrail Real-Time CDP
 description: Scopri i guardrail dei dati nei vari servizi e aree di Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Guardrail Real-Time CDP
 
 I guardrail sono soglie che forniscono indicazioni per l’utilizzo dei dati e del sistema, l’ottimizzazione delle prestazioni e la prevenzione di errori o risultati imprevisti in Real-Time CDP. I guardrail possono fare riferimento all’utilizzo o al consumo di dati e all’elaborazione in relazione alle licenze concesse.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 Inizia qui e segui i collegamenti riportati di seguito per comprendere tutti i guardrail nei vari servizi e aree di Real-Time CDP:
 

@@ -3,18 +3,22 @@ title: Guardrail predefiniti per dati e segmentazione del profilo cliente in tem
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione al fine di garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
+description: Scopri le prestazioni e i guardrail applicati dal sistema per i dati di profilo e la segmentazione per garantire un utilizzo ottimale delle funzionalità di Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 2%
+source-wordcount: '2457'
+ht-degree: 1%
 
 ---
 
 # Guardrail predefiniti per [!DNL Real-Time Customer Profile] dati e segmentazione
 
 Adobe Experience Platform consente di fornire esperienze cross-channel personalizzate basate su informazioni comportamentali e attributi del cliente sotto forma di profili cliente in tempo reale. Per supportare questo nuovo approccio ai profili, Experienci Platform utilizza un modello di dati ibridi altamente denormalizzati che differisce dal modello tradizionale di dati relazionali.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 Questo documento fornisce i limiti predefiniti di utilizzo e tasso per aiutarti a modellare i dati profilo per ottenere prestazioni di sistema ottimali. Durante l’esame dei seguenti guardrail, si presume che i dati siano stati modellati correttamente. In caso di domande su come modellare i dati, contatta il rappresentante del servizio clienti.
 
@@ -89,8 +93,8 @@ I seguenti guardrail si riferiscono alle dimensioni dei dati e forniscono i limi
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --------- | ----- | ---------- | ----------- |
-| Dimensione massima ExperienceEvent | 10KB | Guarddrail imposto dal sistema | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno ignorati. |
-| Dimensione massima record profilo | 100KB | Guarddrail imposto dal sistema | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, ma i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
+| Dimensione massima ExperienceEvent | 10 KB | Guarddrail imposto dal sistema | **La dimensione massima di un evento è 10 KB.** L’acquisizione continuerà, ma tutti gli eventi di dimensioni superiori a 10 KB verranno ignorati. |
+| Dimensione massima record profilo | 100 KB | Guarddrail imposto dal sistema | **La dimensione massima di un record di profilo è 100 KB.** L’acquisizione continuerà, ma i record di profilo di dimensioni superiori a 100 KB verranno eliminati. |
 | Dimensione massima del frammento di profilo | 50 MB | Guarddrail imposto dal sistema | **La dimensione massima di un singolo frammento di profilo è di 50 MB.** Segmentazione, esportazioni e ricerche potrebbero non riuscire per qualsiasi [frammento di profilo](#profile-fragments) superiore a 50 MB. |
 | Dimensione massima archiviazione profilo | 50 MB | Guardrail delle prestazioni | **La dimensione massima di un profilo memorizzato è di 50 MB.** Aggiunta di nuovi [frammenti di profilo](#profile-fragments) in un profilo superiore a 50 MB influirà sulle prestazioni del sistema. Ad esempio, un profilo potrebbe contenere un singolo frammento di 50 MB oppure più frammenti in più set di dati con una dimensione totale combinata di 50 MB. Il tentativo di memorizzare un profilo con un singolo frammento di dimensioni superiori a 50 MB o con più frammenti di dimensioni combinate superiori a 50 MB influisce sulle prestazioni del sistema. |
 | Numero di batch di profili o ExperienceEvent acquisiti al giorno | 90 | Guardrail delle prestazioni | **Il numero massimo di batch di profili o ExperienceEvent acquisiti al giorno è 90.** Ciò significa che il totale combinato di batch di profili ed ExperienceEvent acquisiti ogni giorno non può superare i 90. L&#39;acquisizione di batch aggiuntivi influisce sulle prestazioni del sistema. |
@@ -116,7 +120,7 @@ I guardrail descritti in questa sezione si riferiscono al numero e alla natura d
 | --------- | ----- | ---------- | ----------- |
 | Tipi di pubblico per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in totale, purché ci siano meno di 4000 tipi di pubblico in ogni singola sandbox. Sono inclusi i tipi di pubblico batch, in streaming e edge. Il tentativo di creare ulteriori tipi di pubblico può influire sulle prestazioni del sistema. Ulteriori informazioni su [creazione di tipi di pubblico](/help/segmentation/ui/segment-builder.md) tramite il generatore di segmenti. |
 | Pubblico Edge per sandbox | 150 | Guardrail delle prestazioni | Un’organizzazione può avere più di 150 tipi di pubblico Edge in totale, purché ci siano meno di 150 tipi di pubblico Edge in ogni singola sandbox. Il tentativo di creare un pubblico perimetrale aggiuntivo può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
-| Velocità effettiva Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione Edge supporta un valore massimo di 1500 eventi in entrata al secondo per l’accesso alla rete Edge di Adobe Experience Platform. La segmentazione Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo che è entrato nella rete Edge di Adobe Experience Platform. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
+| Velocità effettiva Edge in tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione Edge supporta un valore di picco di 1500 eventi in entrata al secondo per l’accesso all’Edge Network Adobe Experience Platform. La segmentazione Edge può richiedere fino a 350 millisecondi per elaborare un evento in entrata dopo che è entrato nell’Edge Network di Adobe Experience Platform. Ulteriori informazioni su [pubblico edge](/help/segmentation/ui/edge-segmentation.md). |
 | Tipi di pubblico in streaming per sandbox | 500 | Guardrail delle prestazioni | Un’organizzazione può avere più di 500 pubblici di streaming in totale, purché ci siano meno di 500 pubblici di streaming in ogni singola sandbox. Ciò include sia i tipi di pubblico in streaming che quelli edge. Il tentativo di creare ulteriori tipi di pubblico in streaming può influire sulle prestazioni del sistema. Ulteriori informazioni su [pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
 | Velocità effettiva in streaming su tutte le sandbox | 1500 RPS | Guardrail delle prestazioni | La segmentazione in streaming supporta un valore di picco di 1500 eventi in entrata al secondo. La segmentazione in streaming può richiedere fino a 5 minuti per qualificare un profilo per l’iscrizione al segmento. Ulteriori informazioni su [pubblico in streaming](/help/segmentation/ui/streaming-segmentation.md). |
 | Pubblico in batch per sandbox | 4000 | Guardrail delle prestazioni | Un’organizzazione può avere più di 4000 tipi di pubblico in batch in totale, purché ci siano meno di 4000 tipi di pubblico in batch in ogni singola sandbox. Il tentativo di creare un pubblico batch aggiuntivo può influire sulle prestazioni del sistema. |

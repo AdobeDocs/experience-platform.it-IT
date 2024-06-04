@@ -3,9 +3,9 @@ keywords: Experience Platform;query;servizio query;risoluzione dei problemi;guar
 title: Guardrail per Query Service
 description: In questo documento vengono fornite informazioni sui limiti di utilizzo per i dati di Query Service, utili per ottimizzare l’utilizzo delle query.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1181'
 ht-degree: 2%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 2%
 # Guardrail per Query Service
 
 I guardrail sono soglie che guidano l’utilizzo dei dati e del sistema, l’ottimizzazione delle prestazioni e la prevenzione di errori o risultati imprevisti in Adobe Experience Platform.
-
 In questo documento vengono indicati i limiti di utilizzo predefiniti per i dati di Query Service, che consentono di ottimizzare le prestazioni del sistema durante l’esecuzione di query sui dati in relazione ai diritti di licenza.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 ## Prerequisiti
 
@@ -73,7 +76,7 @@ Le tabelle seguenti forniscono i limiti di guardrail e le descrizioni consigliat
 | Utenti del servizio di query simultanee per batch non pianificato | <ul><li>Come specificato nella descrizione del prodotto dell’applicazione.</li><li>+5 (con ogni pacchetto aggiuntivo ad hoc per utenti di query acquistato)</li></ul> | Guarddrail imposto dal sistema | Per le query batch non pianificate (ad esempio le query CTAS/ITAS in modalità interattiva), questo definisce quanti utenti possono creare sessioni simultaneamente per una particolare organizzazione. Se viene superato il limite di concorrenza, l’utente riceve un’e-mail `Session Limit Reached` errore. |
 | Utenti di Query Service simultanei per batch pianificato | Nessun limite utente | N/D | Le query batch pianificate sono processi asincroni, quindi non esistono limitazioni per gli utenti. |
 | Ore di calcolo per l’elaborazione dei dati in batch | Come specificato nell&#39;ordine cliente SKU personalizzato di Adobe Experience Platform Intelligence Query del cliente | Guardrail delle prestazioni | Questo definisce la quantità di tempo computazionale nell’ambito per anno consentita a un cliente per l’esecuzione di query batch al fine di analizzare, elaborare e riscrivere i dati nel data lake. |
-| Concorrenza query | Supportati | N/D | Le query batch pianificate sono processi asincroni, pertanto sono supportate le query simultanee. |
+| Concorrenza query | Supportato | N/D | Le query batch pianificate sono processi asincroni, pertanto sono supportate le query simultanee. |
 | Connettore client e limite di output dei risultati | Connettore client<ul><li>Interfaccia utente Query (nessun limite superiore alle righe)</li><li>Client di terze parti (nessun limite superiore alle righe)</li><li>[!DNL PostgresSQL] client (nessun limite superiore alle righe)</li><li>API REST (nessun limite superiore alle righe)</li></ul> | Guarddrail imposto dal sistema | Il risultato di una query può essere reso disponibile utilizzando i metodi seguenti:<ul><li>Può essere memorizzato come set di dati derivati</li><li>Può essere inserito nei set di dati derivati esistenti</li></ul>Nota: non esiste alcun limite superiore al numero di conteggio dei record risultante dal risultato della query. |
 | Risultati restituiti tramite | Set di dati | N/D | Definisce il modo in cui i risultati vengono resi disponibili agli utenti. |
 

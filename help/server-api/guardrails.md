@@ -1,16 +1,16 @@
 ---
-title: Guardrail delle prestazioni per l’API del server di rete Edge
+title: Guardrail delle prestazioni per Edge Network Server API
 description: Scopri come utilizzare l’API server all’interno di guardrail di prestazioni ottimali.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
 
 
-# Guardrail delle prestazioni per l’API del server di rete Edge
+# Guardrail delle prestazioni per Edge Network Server API
 
 ## Panoramica {#overview}
 
@@ -18,14 +18,18 @@ I guardrail delle prestazioni definiscono i limiti di utilizzo relativi ai casi 
 
 Adobe non è responsabile del deterioramento delle prestazioni causato dal superamento dei limiti di utilizzo. I clienti che superano costantemente i guardrail delle prestazioni possono richiedere una capacità di elaborazione aggiuntiva per evitare il degrado delle prestazioni.
 
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
+
 ## Definizioni
 
-* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale di richieste elaborate da Experienci Platform Edge Network che non generano errori e si riferiscono solo alle API di Edge Network fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
+* **Disponibilità** viene calcolato per ogni intervallo di cinque minuti come percentuale di richieste elaborate dall’Edge Network Experienci Platform che non hanno esito negativo con errori e si riferiscono solo alle API Edge Network fornite. Se un tenant non ha effettuato richieste in un determinato intervallo di cinque minuti, tale intervallo viene considerato disponibile al 100%.
 * **Percentuale tempo di attività mensile** per una determinata regione viene calcolata come media della disponibilità per tutti gli intervalli di cinque minuti in un mese.
-* Un **a monte** è un servizio dietro la rete Edge, abilitato per uno stream di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
+* Un **a monte** è un servizio dietro l’Edge Network, abilitato per un flusso di dati specifico, ad esempio Adobe Server Side Forwarding, Adobe Edge Segmentation o Adobe Target.
 * A **unità di richiesta** corrisponde a un frammento di 8 KB di una richiesta e uno a monte configurato per uno stream di dati.
 * A **richiesta** è un singolo messaggio inviato da un’applicazione di proprietà del cliente al [!DNL Server API]. Una richiesta può contenere una o più unità di richiesta.
-* Un **errore** è qualsiasi richiesta non riuscita a causa di una rete Edge [errore del servizio interno](error-handling.md).
+* Un **errore** è qualsiasi richiesta che non riesce a causa di un Edge Network [errore del servizio interno](error-handling.md).
 
 ## Limiti del servizio
 

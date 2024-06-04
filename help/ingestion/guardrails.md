@@ -3,9 +3,9 @@ keywords: Experience Platform;risoluzione dei problemi;guardrail;linee guida;
 title: Guardrail per l’acquisizione dei dati
 description: Scopri i guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
+source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >I guardrail per l’acquisizione in batch e in streaming vengono calcolati a livello di organizzazione e non a livello di sandbox. Ciò significa che l’utilizzo dei dati per sandbox è associato al diritto totale all’utilizzo della licenza che corrisponde all’intera organizzazione. Inoltre, l’utilizzo dei dati nelle sandbox di sviluppo è limitato al 10% del totale dei profili. Per ulteriori informazioni sui diritti di utilizzo della licenza, leggere [guida alle best practice per la gestione dei dati](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 I guardrail sono soglie che forniscono indicazioni per l’utilizzo dei dati e del sistema, l’ottimizzazione delle prestazioni e la prevenzione di errori o risultati imprevisti in Adobe Experience Platform. I guardrail possono fare riferimento all’utilizzo o al consumo di dati e all’elaborazione in relazione alle licenze concesse.
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 Questo documento fornisce indicazioni sui guardrail per l’acquisizione dei dati in Adobe Experience Platform.
 

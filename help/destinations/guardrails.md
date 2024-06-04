@@ -6,14 +6,18 @@ product: experience platform
 type: Documentation
 description: Ulteriori informazioni sull’utilizzo predefinito dell’attivazione dei dati e sui limiti di tariffa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c425d1016bed80113b879a683114861d839b79eb
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 1%
+source-wordcount: '1685'
+ht-degree: 2%
 
 ---
 
 # Guardrail per l&#39;attivazione dei dati
+
+>[!IMPORTANT]
+>
+>Controllare i diritti di licenza nell&#39;ordine di vendita e i corrispondenti [Descrizione del prodotto](https://helpx.adobe.com/it/legal/product-descriptions.html) sui limiti di utilizzo effettivi oltre a questa pagina di guardrail.
 
 Questa pagina fornisce i limiti predefiniti di utilizzo e tasso relativi al comportamento di attivazione. Quando si esaminano i seguenti guardrail, si presume che siano presenti correttamente [connesso alle destinazioni](/help/destinations/ui/connect-destination.md).
 
