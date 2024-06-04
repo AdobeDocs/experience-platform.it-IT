@@ -4,9 +4,9 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
+source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2101'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,13 @@ ht-degree: 1%
 >abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. Nella panoramica della dashboard vengono visualizzate le metriche principali per i prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Scadenze set di dati"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenze dei dati dei profili pseudonimi"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_reduction"
+>title="Come ridurre l’utilizzo"
+>abstract="Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
+>additional-url="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Video sulle scadenze dei dati dei profili pseudonimi"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Documentazione sulle scadenze dei dati dei profili pseudonimi"
 
 Puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione tramite Adobe Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
