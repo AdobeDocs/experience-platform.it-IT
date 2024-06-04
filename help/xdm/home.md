@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica del sistema XDM
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), guidato da Adobe, è un tentativo di standardizzare i dati sull’esperienza del cliente e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 4%
+source-wordcount: '2101'
+ht-degree: 0%
 
 ---
 
@@ -53,7 +53,7 @@ Per ulteriori informazioni su come gestire e interagire con gli schemi in Platfo
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportamenti dei dati"
->abstract="I dati da utilizzare in Experience Platform sono raggruppati secondo tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un oggetto. Gli schemi di serie temporali acquisiscono uno snapshot del sistema al momento dell’esecuzione di un’azione. Gli schemi ad hoc acquisiscono campi di spazi dei nomi da utilizzare solo per un singolo set di dati. Per ulteriori informazioni sui comportamenti dei dati in Platform, consulta la documentazione."
+>abstract="I dati da utilizzare in Experienci Platform sono raggruppati in tre tipi di comportamento: record, serie temporali e ad hoc. Gli schemi di record forniscono informazioni sugli attributi di un soggetto, mentre gli schemi di serie temporali acquisiscono un’istantanea del sistema nel momento in cui è stata eseguita un’azione. Gli schemi ad hoc acquisiscono campi con namespace utilizzabili solo da un singolo set di dati. Consulta la documentazione per ulteriori informazioni sui comportamenti dei dati in Platform."
 
 I dati da utilizzare in Experienci Platform sono raggruppati in tre tipi di comportamento:
 
@@ -118,10 +118,6 @@ Consulta la sezione [Panoramica di Query Service](../query-service/home.md) per 
 Real-Time Customer Profile fornisce un profilo consumer centralizzato per una gestione mirata e personalizzata delle esperienze. Ogni profilo contiene dati aggregati in tutti i sistemi e include account con marca temporale utilizzabile di eventi che coinvolgono l’oggetto del profilo. Questi eventi possono essersi verificati in uno qualsiasi dei sistemi utilizzati con Experienci Platform.
 
 Real-Time Customer Profile utilizza dati in formato schema basati su [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent] e risponde alle query basate su tali dati.
-
->[!NOTE]
->
->Il profilo cliente in tempo reale esegue **non** supportare schemi basati su classi diverse da [!UICONTROL XDM ExperienceEvent] classe.
 
 Il sistema gestisce un’istanza di ciascun profilo cliente, unendo i dati in modo da formare un’unica fonte di verità per l’individuo. Questi dati unificati vengono rappresentati utilizzando quello che è noto come &quot;schema di unione&quot; (a volte indicato come &quot;visualizzazione unione&quot;). Uno schema di unione aggrega i campi di tutti gli schemi che implementano la stessa classe in un singolo schema. Durante la composizione di uno schema tramite l’interfaccia utente o l’API, puoi abilitare lo schema per l’utilizzo con Real-Time Customer Profile e assegnare i tag necessari per l’inclusione nell’unione. Lo schema con tag farà quindi parte della definizione dello schema da inviare al profilo.
 
