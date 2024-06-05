@@ -4,9 +4,9 @@ description: Scopri come utilizzare le query SQL con Real-time Customer Data Pla
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Il diagramma seguente mostra i campi di dati rilevanti in ciascun set di dati, i
 
 #### Il nuovo caso d’uso account per settore {#accounts-by-industry}
 
-Logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al loro numero di profili di account e alle loro dimensioni relative l’uno rispetto all’altro. Consulta la [[!UICONTROL Account per settore] documentazione widget](../guides/account-profiles.md#accounts-by-industry) per ulteriori informazioni.
+Logica utilizzata per [!UICONTROL Nuovi account per settore] insight restituisce i primi cinque settori in base al loro numero di profili di account e alle loro dimensioni relative l’uno rispetto all’altro. Consulta la [[!UICONTROL Nuovi account per settore] documentazione widget](../guides/account-profiles.md#accounts-by-industry) per ulteriori informazioni.
 
 >[!TIP]
 >
