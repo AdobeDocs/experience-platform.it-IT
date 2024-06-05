@@ -2,9 +2,9 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le sue sfumature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazio
 
 >[!IMPORTANT]
 >
->Prima di poter utilizzare l&#39;Assistente AI, è necessario accettare un contratto utente. Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
+>Devi accettare un [contratto utente](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) prima di poter utilizzare l’Assistente AI. Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
 
 +++Selezionare per visualizzare l&#39;interfaccia del contratto utente
 
