@@ -1,9 +1,10 @@
 ---
 title: Assistente AI in Adobe Experience Platform
 description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Leggi questa guida per scoprire come utilizzare l’Assistente IA nell’interfa
 
 Per avviare l&#39;Assistente IA, selezionare **[!UICONTROL Icona Assistente AI]** dall’intestazione superiore dell’interfaccia utente di Experienci Platform.
 
-![La pagina Home dell’Experience Platform, con l’icona Assistente AI selezionata e l’interfaccia Assistente AI aperta.](./images/ai-assistant.png)
+![La pagina Home dell’Experience Platform, con l’icona Assistente AI selezionata e l’interfaccia Assistente AI aperta.](./images/ai-assistant-full-icon.png)
 
 Viene visualizzata l’interfaccia di AI Assistant, che fornisce immediatamente le informazioni necessarie per iniziare. Puoi utilizzare le opzioni fornite in [!UICONTROL Idee per iniziare] per rispondere a domande e comandi quali:
 
@@ -86,9 +87,13 @@ Devi trovarti in una sandbox attiva affinché AI Assistant risponda in modo suff
 
 +++Seleziona per visualizzare un esempio di domanda di approfondimenti operativi
 
-Nell’esempio seguente, a AI Assistant viene richiesta la seguente query: **&quot;Mostra i flussi di dati creati con il codice sorgente di Amazon S3&quot;**, L’Assistente AI risponde quindi con una tabella in cui sono elencati i flussi di dati e gli ID corrispondenti. Per visualizzare l’intera tabella di dati, seleziona l’icona di espansione in alto a destra.
+Nell’esempio seguente, a AI Assistant viene richiesta la seguente query: **&quot;Mostra i flussi di dati creati con il codice sorgente di Amazon S3&quot;**.
 
-![Segui la domanda sulle informazioni operative.](./images/usage-data-question.png)
+![Una domanda sulle informazioni operative.](./images/op-insights-question.png)
+
+L’Assistente IA risponde quindi con una tabella in cui sono elencati i flussi di dati e gli ID corrispondenti. Per visualizzare l’intera tabella di dati, seleziona l’icona di espansione in alto a destra.
+
+![Una risposta di approfondimenti operativi](./images/op-insights-answer.png)
 
 Viene visualizzata una vista espansa della tabella, che fornisce un elenco più completo dei flussi di dati basati sui parametri della query.
 
@@ -96,9 +101,13 @@ Viene visualizzata una vista espansa della tabella, che fornisce un elenco più 
 
 Quando viene richiesta una domanda di approfondimenti operativi, l’Assistente AI spiega in che modo ha calcolato la risposta. Nell’esempio seguente, l’Assistente AI illustra i passaggi eseguiti per identificare i flussi di dati creati utilizzando [!DNL Amazon S3] sorgente.
 
-![Rispondi alla domanda sulle definizioni dei segmenti che illustra come l’Assistente AI ha calcolato la risposta.](./images/answer-explained.png)
+![Assistente AI che fornisce una spiegazione su come ha calcolato la risposta.](./images/answer-explained.png)
 
 Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assistente AI affinché esegua il rendering dei risultati in base ai filtri inclusi. Ad esempio, puoi chiedere all’Assistente AI di mostrare una tendenza del conteggio delle definizioni dei segmenti nell’ordine della data di creazione, rimuovere le definizioni dei segmenti con profili totali pari a zero e utilizzare i nomi dei mesi invece dei numeri interi durante la visualizzazione dei dati.
+
+**Nota:** Le risposte alle informazioni operative sono attualmente in versione beta. Seleziona l’icona di descrizione comando nell’interfaccia utente dell’Assistente AI per visualizzare l’avviso Beta e un collegamento alla documentazione.
+
+![Icona di descrizione dell&#39;Assistente AI selezionata.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assiste
 
 Nell’esempio seguente, a AI Assistant viene richiesto prima il numero totale di flussi di dati e quindi di elencare i 10 flussi di dati più recenti.
 
-![Esempio di multi-turn](./images/multi-turn.png)
+![Esempio di multi-turn](./images/multiturn.png)
+
+Per ripristinare, seleziona i puntini di sospensione (**`...`**) sull&#39;interfaccia dell&#39;Assistente AI e quindi selezionare **[!UICONTROL Avvia nuova conversazione]**. Questo informa l’Assistente AI che intendi modificare gli argomenti e può essere particolarmente utile quando si risolvono problemi relativi a query che hanno esito negativo o che fanno riferimento a informazioni errate.
+
+![I puntini di sospensione selezionati e l&#39;opzione Avvia nuova conversazione selezionata.](./images/reset.png)
+
++++
+
+### Utilizzare la funzionalità di individuazione {#use-discoverability}
+
+È possibile utilizzare la funzione di individuazione dell&#39;Assistente AI per visualizzare un elenco dei soggetti generali, raggruppati in entità, supportati dall&#39;Assistente AI.
+
++++Selezionare questa opzione per visualizzare un esempio di individuazione
+
+Per visualizzare il rilevamento, seleziona l’icona a forma di lampadina nell’intestazione superiore dell’interfaccia di AI Assistant.
+
+![La funzione di individuazione dell’Assistente AI.](./images/lightbulb.png)
+
+Quindi, seleziona una categoria e seleziona un prompt dall’elenco fornito. Puoi utilizzare questa funzione per avere un’idea migliore dei tipi di domande a cui l’Assistente AI può rispondere. Puoi anche aggiornare i prompt preesistenti con dettagli specifici relativi alla sandbox utilizzando testo libero o [completamento automatico](#use-auto-complete).
+
+![L’Assistente AI richiede l’individuazione.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ Puoi fornire un feedback sulla tua esperienza con l’Assistente AI utilizzando 
 Per fornire un feedback, seleziona Miniature in alto, Miniature in basso o un flag dopo aver ricevuto una risposta dall’Assistente AI, quindi inserisci il feedback nella casella di testo fornita.
 
 ![Opzione di feedback in Assistente IA.](./images/provide-feedback.png)
-
-Per ripristinare, seleziona i puntini di sospensione (**`...`**) sull&#39;interfaccia dell&#39;Assistente AI e quindi selezionare **[!UICONTROL Avvia nuova conversazione]**. Questo informa l’Assistente AI che intendi modificare gli argomenti e può essere particolarmente utile quando si risolvono problemi relativi a query che hanno esito negativo o che fanno riferimento a informazioni errate.
 
 +++Seleziona per visualizzare altri esempi
 

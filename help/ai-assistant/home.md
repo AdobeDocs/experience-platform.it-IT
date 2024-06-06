@@ -2,7 +2,7 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le sue sfumature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
+source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 1%
@@ -15,7 +15,7 @@ Leggi questo documento per scoprire di più sull’Assistente AI in Adobe Experi
 
 L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente AI per comprendere meglio la conoscenza del prodotto, risolvere i problemi o eseguire ricerche attraverso le informazioni e trovare informazioni operative. L’Assistente AI supporta Experienci Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
-![L’interfaccia di AI Assistant con la prima esperienza utente attivata.](./images/blank.png)
+![L’interfaccia di AI Assistant con la prima esperienza utente attivata.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
