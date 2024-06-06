@@ -2,9 +2,9 @@
 title: Panoramica dell’estensione API Meta Conversions
 description: Scopri l’estensione API Meta Conversions per l’inoltro di eventi in Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Il [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) ti consente di collegare i dati di marketing lato server a [!DNL Meta] tecnologie per ottimizzare il targeting degli annunci, ridurre i costi per azione e misurare i risultati. Gli eventi sono collegati a un [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID e vengono elaborati in modo simile agli eventi lato client.
 
-Utilizzo di [!DNL Meta Conversions API] , puoi sfruttare le funzionalità dell&#39;API nella tua [inoltro eventi](../../../ui/event-forwarding/overview.md) regole a cui inviare i dati [!DNL Meta] dalla rete Edge di Adobe Experience Platform. Questo documento illustra come installare l’estensione e utilizzarne le funzionalità in un inoltro di eventi [regola](../../../ui/managing-resources/rules.md).
+Utilizzo di [!DNL Meta Conversions API] , puoi sfruttare le funzionalità dell&#39;API nella tua [inoltro eventi](../../../ui/event-forwarding/overview.md) regole a cui inviare i dati [!DNL Meta] dall’Edge Network di Adobe Experience Platform. Questo documento illustra come installare l’estensione e utilizzarne le funzionalità in un inoltro di eventi [regola](../../../ui/managing-resources/rules.md).
 
 ## Demo
 
@@ -53,15 +53,15 @@ Al termine, seleziona **[!UICONTROL Salva]**
 
 L&#39;estensione è installata e ora puoi utilizzarne le funzionalità nelle regole di inoltro degli eventi.
 
-## Integrazione con Meta Business Extension (MBE) {#mbe}
+## Integrazione con l’estensione Facebook e Instagram {#facebook}
 
-Il miglioramento dell’integrazione con Meta Business Extensions (MBE) consente di eseguire rapidamente l’autenticazione nell’account Meta Business. Questo quindi compila automaticamente il tuo [!UICONTROL ID pixel] e l’API Meta Conversions [!UICONTROL Token di accesso], per semplificare l’installazione e la configurazione dell’API di conversione metadati.
+L’integrazione tramite l’estensione Facebook e Instagram consente di eseguire rapidamente l’autenticazione nell’account Meta Business. Questo quindi compila automaticamente il tuo [!UICONTROL ID pixel] e l’API Meta Conversions [!UICONTROL Token di accesso], per semplificare l’installazione e la configurazione dell’API di conversione metadati.
 
-Viene visualizzata una finestra di dialogo per l&#39;autenticazione in MBE durante l&#39;installazione di [!UICONTROL API di metaconversione] estensione.
+Viene visualizzata una finestra di dialogo per l’autenticazione in Facebook e Instagram durante l’installazione di [!UICONTROL API di metaconversione] estensione.
 
 ![Il [!UICONTROL Estensione API per metaconversione] evidenziazione della pagina di installazione [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-Una finestra di dialogo per l’autenticazione in MBE viene visualizzata anche nell’interfaccia utente del flusso di lavoro con avvio rapido nell’inoltro degli eventi.
+Una finestra di dialogo per l’autenticazione in Facebook e Instagram viene visualizzata anche nell’interfaccia utente del flusso di lavoro con avvio rapido nell’inoltro degli eventi.
 
 ![Evidenziazione dell’interfaccia utente del flusso di lavoro con avvio rapido [!UICONTROL Connetti a Meta].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -106,7 +106,7 @@ Al termine, seleziona **[!UICONTROL Mantieni modifiche]** per aggiungere l’azi
 
 Quando sei soddisfatto della regola, seleziona **[!UICONTROL Salva nella libreria]**. Infine, pubblica un nuovo inoltro di eventi [build](../../../ui/publishing/builds.md) per abilitare le modifiche apportate alla libreria.
 
-## Deduplicazione di eventi {#deduplication}
+## Deduplicazione degli eventi {#deduplication}
 
 Come indicato nella [sezione prerequisiti](#prerequisites), si consiglia di utilizzare entrambi i [!DNL Meta Pixel] estensione tag e [!DNL Conversions API] estensione di inoltro degli eventi per inviare gli stessi eventi dal client e dal server in una configurazione ridondante. Questo può aiutare a recuperare gli eventi che non sono stati rilevati da un’estensione o dall’altra.
 
@@ -129,7 +129,7 @@ Quando invii eventi condivisi, accertati di includere un ID evento e un nome con
 
 La funzione di avvio rapido consente di effettuare la configurazione con facilità ed efficienza con l’API Meta Conversions e le estensioni Meta Pixel. Questo strumento automatizza più passaggi eseguiti nei tag Adobe e nell’inoltro degli eventi, riducendo in modo significativo il tempo di configurazione.
 
-Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experienci Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e Experienci Platform Edge Network.
+Questa funzione installa e configura automaticamente sia l’API Meta Conversions che le estensioni Meta Pixel su un tag appena generato automaticamente e la proprietà di inoltro degli eventi con le regole e gli elementi dati necessari. Inoltre, installa e configura automaticamente Experienci Platform Web SDK e Datastream. Infine, la funzione di avvio rapido pubblica automaticamente la libreria nell’URL designato in un ambiente di sviluppo, consentendo la raccolta dei dati lato client e l’inoltro degli eventi lato server in tempo reale tramite l’inoltro degli eventi e un Edge Network di Experience Platform.
 
 Il video seguente fornisce un’introduzione alla funzione di avvio rapido.
 
