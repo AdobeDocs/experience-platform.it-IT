@@ -5,10 +5,10 @@ breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisire dati da diverse origini. Scopri come strutturare, etichettare e migliorare i dati già acquisiti.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 24%
+source-wordcount: '1046'
+ht-degree: 23%
 
 ---
 
@@ -350,6 +350,7 @@ ht-degree: 24%
       - [Flusso di dati della connessione del protocollo](tutorials/ui/dataflow/protocols.md)
    - [Creare un flusso di dati di origini utilizzando i modelli nell’interfaccia utente](tutorials/ui/templates.md)
    - [Filtrare gli oggetti di origine](tutorials/ui/filter.md)
+   - [Acquisire dati crittografati](tutorials/ui/encryped-ingestion.md)
    - [Acquisizione on-demand](tutorials/ui/on-demand-ingestion.md)
    - [Monitorare i flussi di dati batch](tutorials/ui/monitor.md)
    - [Monitorare i flussi di dati in streaming](tutorials/ui/monitor-streaming.md)
