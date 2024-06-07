@@ -3,9 +3,9 @@ title: Panoramica sull’inoltro degli eventi
 description: Scopri la funzione di inoltro degli eventi di Adobe Experience Platform, che consente di utilizzare la rete Edge di Platform per eseguire attività senza modificare l’implementazione del tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1178'
 ht-degree: 7%
 
 ---
@@ -112,6 +112,12 @@ Il [!UICONTROL Azioni] di una regola di inoltro degli eventi viene sempre esegui
 ## Segreti {#secrets}
 
 L’inoltro degli eventi consente di creare, gestire e archiviare segreti che possono essere utilizzati per l’autenticazione sui server a cui stai inviando i dati. Consulta la guida su [segreti](./secrets.md) sui diversi tipi di segreti disponibili e su come implementarli nell’interfaccia utente.
+
+## Panoramica video {#video}
+
+Il video seguente ha lo scopo di aiutarti a comprendere meglio l’inoltro degli eventi e le connessioni Real-Time CDP.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Passaggi successivi
 
