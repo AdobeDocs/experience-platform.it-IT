@@ -3,9 +3,9 @@ keywords: personalizzazione target; destinazione; destinazione experience platfo
 title: Connessione Adobe Target
 description: Adobe Target è un’applicazione che fornisce funzionalità di personalizzazione e sperimentazione basate sull’intelligenza artificiale in tempo reale per tutte le interazioni dei clienti in entrata tramite siti web, app mobili e altro ancora.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | Mese di rilascio | Tipo di aggiornamento | Descrizione |
 |---|---|---|
-| Aprile 2024 | Aggiornamento della funzionalità e della documentazione | Quando ti connetti alla destinazione di Target con utilizzando un ID dello stream di dati, ora *non è necessario* per abilitare necessariamente lo stream di dati per la segmentazione Edge. Ciò significa che la destinazione di Target funzionerà con i tipi di pubblico in batch e in streaming, anche se i casi d’uso che puoi eseguire sono diversi. Visualizzare la tabella in [parametri di connessione](#parameters) per ulteriori informazioni. |
+| Aprile 2024 | Aggiornamento della funzionalità e della documentazione | Quando ti connetti alla destinazione Target e utilizzi un ID dello stream di dati, ora *non è necessario* per abilitare necessariamente lo stream di dati per la segmentazione Edge. Ciò significa che la destinazione di Target funzionerà con i tipi di pubblico in batch e in streaming, anche se i casi d’uso che puoi eseguire sono diversi. Visualizzare la tabella in [parametri di connessione](#parameters) per ulteriori informazioni. |
 | Gennaio 2024 | Aggiornamento della funzionalità e della documentazione | Ora puoi condividere i tipi di pubblico e gli attributi del profilo con la connessione Adobe Target per la sandbox di produzione predefinita e altre sandbox non predefinite. |
 | Giugno 2023 | Aggiornamento della funzionalità e della documentazione | A partire da giugno 2023, quando configuri una nuova connessione di destinazione Adobe Target, puoi selezionare l’area di lavoro di Adobe Target a cui desideri condividere i tipi di pubblico. Consulta la sezione [parametri di connessione](#parameters) per ulteriori informazioni. Inoltre, consulta il tutorial sulla [configurazione delle aree di lavoro](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) in Adobe Target per ulteriori informazioni sulle aree di lavoro. |
 | Maggio 2023 | Aggiornamento della funzionalità e della documentazione | A partire da maggio 2023, la **[!UICONTROL Adobe Target]** supporto di connessione [personalizzazione basata su attributi](../../ui/activate-edge-personalization-destinations.md#map-attributes) ed è generalmente disponibile per tutti i clienti. |
@@ -62,9 +62,9 @@ Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinaz
 
 >[!IMPORTANT]
 >
->I tipi di pubblico che attiverai in questa destinazione devono utilizzare [Criterio di unione Attivo su Edge](../../../segmentation/ui/segment-builder.md#merge-policies). Il [!DNL Active-On-Edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../../segmentation/ui/edge-segmentation.md) e sono disponibili per i casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.
-> Se mappi tipi di pubblico che utilizzano un criterio di unione diverso su destinazioni edge, tali tipi di pubblico non verranno valutati.
-> Segui le istruzioni su [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), e assicurati di abilitare **[!UICONTROL Criterio di unione Attivo su Edge]** attivare/disattivare.
+>Durante l’attivazione *casi d’uso di tipi di pubblico edge per la personalizzazione della stessa pagina e della pagina successiva*, il pubblico *deve* utilizza un [criterio di unione attivo-su-spigolo](../../../segmentation/ui/segment-builder.md#merge-policies). Il [!DNL active-on-edge] criterio di unione per garantire che i tipi di pubblico vengano valutati costantemente [sul bordo](../../../segmentation/ui/edge-segmentation.md) e sono disponibili per casi di utilizzo di personalizzazione in tempo reale e nella pagina successiva.  Ulteriori informazioni [tutti i casi d’uso disponibili](#parameter), in base al tipo di implementazione.
+>Se mappi i tipi di pubblico edge che utilizzano un criterio di unione diverso sulle destinazioni di Adobe Target, tali tipi di pubblico non verranno valutati per i casi d’uso in tempo reale e nella pagina successiva.
+>Segui le istruzioni su [creazione di un criterio di unione](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), e assicurati di abilitare **[!UICONTROL Criterio di unione Attivo su Edge]** attivare/disattivare.
 
 
 | Origine pubblico | Supportato | Descrizione |
