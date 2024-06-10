@@ -5,10 +5,10 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 3%
+source-wordcount: '1224'
+ht-degree: 4%
 
 ---
 
@@ -216,6 +216,7 @@ ht-degree: 3%
    * [Panoramica](./destination-sdk/overview.md)
    * [Prerequisiti per l’integrazione](./destination-sdk/integration-prerequisites.md)
    * [Guida introduttiva a Destination SDK](./destination-sdk/getting-started.md)
+   * [Glossario](/help/destinations/destination-sdk/glossary.md)
    * Funzionalità {#functionality}
       * [Opzioni di configurazione](./destination-sdk/functionality/configuration-options.md)
       * Componenti del server di destinazione {#destination-server}

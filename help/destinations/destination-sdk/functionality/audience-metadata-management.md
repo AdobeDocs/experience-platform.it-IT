@@ -2,9 +2,9 @@
 description: Utilizza i modelli di metadati del pubblico per creare, aggiornare o eliminare in modo programmatico i tipi di pubblico nella tua destinazione. Adobe fornisce un modello estensibile di metadati per il pubblico, che puoi configurare in base alle specifiche della tua API di marketing. Dopo aver definito, testato e inviato il modello, questo verrà utilizzato da Adobe per strutturare le chiamate API alla destinazione.
 title: Gestione dei metadati del pubblico
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ In alcuni esempi, i campi macro come `{{authData.accessToken}}` o `{{segment.nam
 
 Trova descrizioni di tutti i parametri nel modello in [Creare un modello di pubblico](../metadata-api/create-audience-template.md) Riferimento API.
 
-## Macro utilizzate nei modelli di metadati del pubblico
+## Macro utilizzate nei modelli di metadati del pubblico {#macros}
 
 Per trasmettere informazioni quali ID pubblico, token di accesso, messaggi di errore e altro ancora tra Experienci Platform e l’API, i modelli di pubblico includono macro che è possibile utilizzare. Di seguito è riportata una descrizione delle macro utilizzate nei tre esempi di configurazione riportati in questa pagina:
 

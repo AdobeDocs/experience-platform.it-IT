@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK è un set di API di configurazione che ti consente di configurare i modelli di integrazione delle destinazioni, ad Experience Platform per fornire dati di pubblico e profilo all’endpoint o alla posizione di archiviazione, in base ai formati di dati e autenticazione scelti. Le configurazioni sono memorizzate in Experienci Platform e possono essere recuperate tramite API per ulteriori aggiornamenti.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: 9c59f6edd51c61c1fe2ff69e0adea49e6efb8745
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,88 @@ Adobe Experience Platform Destination SDK è una suite di API di configurazione 
 La documentazione di Destination SDK fornisce istruzioni sull’utilizzo del Adobe Experience Platform Destination SDK per configurare, testare e rilasciare un’integrazione di destinazione prodotta con Adobe Experience Platform e per far sì che la destinazione diventi parte del catalogo delle destinazioni in continua crescita. Utilizzando Destination SDK, puoi anche creare una destinazione privata personalizzata per esportare dati personalizzati in base alle tue esigenze.
 
 ![Schermata dall’interfaccia utente di Experienci Platform che mostra il catalogo delle destinazioni.](assets/destinations-catalog-overview.png)
+
+## Guida rapida: esplorare le informazioni essenziali {#quick-start}
+
+Consulta la documentazione nei collegamenti riportati di seguito per iniziare rapidamente a configurare e inviare la destinazione tramite Destination SDK.
+
+>[!BEGINSHADEBOX]
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>Pagine di configurazione</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Spiegazione di tutte le opzioni di configurazione</a></li>
+                <li> Configurazione del server di destinazione - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">specifiche del server</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">specifiche modelli</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Campi dati del cliente e altri componenti di configurazione della destinazione</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Modellazione e macro</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Guide</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/overview.md#process">Processo di integrazione di alto livello</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurare una destinazione di streaming</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configurare una destinazione basata su file</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md">Configurare una destinazione per esportare i profili di prospect</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/submit-destination.md">Invia destinazione per la pubblicazione</a></li>
+            </ul>
+        </td>
+                <td>
+            <p><b>Riferimenti API</b></p>
+            <ul>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-servers-and-templates">Riferimento API per endpoint server di destinazione</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-configurations">Riferimento API per l’endpoint di destinazione</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Audience-metadata-templates">Riferimento API per i metadati del pubblico</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-testing">Riferimento API del test</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-publishing">Riferimento API per la pubblicazione della destinazione</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>Configurare una destinazione di streaming - Scheda di riferimento rapido</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Configurare una guida end-to-end per la destinazione di streaming</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">Comprendere la trasformazione dei dati tramite i modelli di Pebble</a> e <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">visualizzare le funzioni di modello supportate</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Comprendere i criteri di aggregazione dei dati</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Esempio di configurazione live</a></li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Verifica la destinazione di streaming</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Configurare una destinazione basata su file - Scheda di riferimento rapido</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">Configurare una guida end-to-end per una destinazione basata su file</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">Configurare i formati di file per i file esportati</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Esempio di configurazione live per una destinazione Amazon S3</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">Configurazione batch</a> per la pianificazione dell'esportazione e la denominazione dei file</li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">Test della destinazione basata su file</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>Altre informazioni essenziali</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">Ottenere le credenziali di autenticazione richieste per utilizzare l’API</a></li>
+                <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">Prerequisiti per l’integrazione</a></li>
+                <li><a href="/help/destinations/destination-sdk/glossary.md">Glossario dei termini di Destination SDK</a></li>                
+                <li><a href="/help/destinations/destination-sdk/functionality/rate-limiting-retry-policy.md">Limiti di frequenza e criteri per nuovi tentativi</a></li>
+                <li><a href="/help/destinations/destination-sdk/docs-framework/self-service-template.md">Modello self-service per documentare la destinazione</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+>[!ENDSHADEBOX]
 
 ## Integrazioni prodotte e personalizzate {#productized-custom-integrations}
 
