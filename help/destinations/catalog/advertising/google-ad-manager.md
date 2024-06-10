@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
 workflow-type: tm+mt
 source-wordcount: '1119'
-ht-degree: 4%
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
 | Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
@@ -83,7 +83,7 @@ L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la p
 1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere un Adobe come DMP (Data Management Platform) collegato.
 2. In [!DNL Google Ad Manager] , vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]**, e abilita **[!UICONTROL Accesso API]** cursore.
 
-## Connettersi alla destinazione {#connect}
+## Connetti alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -96,7 +96,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="Aggiungi ID pubblico al nome del pubblico"
->abstract="Seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager includa l’ID del pubblico da Experience Platform, come riportato di seguito: `Audience Name (Audience ID)`"
+>abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager includa l&#39;ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -118,7 +118,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attivare tipi di pubblico in questa destinazione {#activate}
+## Attiva il pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 
