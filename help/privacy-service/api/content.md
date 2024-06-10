@@ -3,11 +3,10 @@ title: Endpoint API contenuto
 description: Scopri come recuperare i dati di accesso utilizzando l’API Privacy Service.
 role: Developer
 badgePrivateBeta: label="Versione beta privata" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: c527771e051d39032642afae33945a45e5183a5f
+exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
+source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '696'
 ht-degree: 1%
 
 ---
@@ -18,15 +17,13 @@ ht-degree: 1%
 >
 >Il `/content` l’endpoint è attualmente in versione beta e la tua organizzazione potrebbe non averne ancora accesso. La funzionalità e la documentazione sono soggette a modifiche.
 
-<!-- Q) Should this be called 'access information' or 'customer content'? -->
-
-Maggiore sicurezza per il recupero di &quot;informazioni di accesso&quot; (informazioni a cui un soggetto con privacy può legittimamente richiedere l’accesso). L’URL di download fornito nella risposta a un `/jobs/{JOB_ID}` La richiesta GET ora punta a un endpoint del servizio Adobe. Puoi quindi effettuare una richiesta GET a `/jobs/:JOB_ID/content` per restituire i dati dei clienti in formato JSON. Questo metodo di accesso implementa più livelli di autenticazione e controllo degli accessi per migliorare la sicurezza.
+Utilizza il `/content` endpoint da recuperare in modo sicuro *informazioni di accesso* (le informazioni a cui un soggetto che si occupa di privacy può legittimamente richiedere l’accesso) per i tuoi clienti. L’URL di download fornito nella risposta a un `/jobs/{JOB_ID}` La richiesta GET punta a un endpoint del servizio Adobe. Puoi quindi effettuare una richiesta GET a `/jobs/:JOB_ID/content` per restituire i dati dei clienti in formato JSON. Questo metodo di accesso implementa più livelli di autenticazione e controllo degli accessi per migliorare la sicurezza.
 
 Prima di utilizzare questa guida, consultare [guida introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste presentate nella chiamata API di esempio di seguito.
 
 >[!TIP]
 >
->Se al momento non conosci l’ID processo per le informazioni di accesso necessarie, chiama il `/jobs`e utilizzare parametri di query aggiuntivi per filtrare i risultati. Un elenco completo dei parametri di query disponibili è disponibile nella sezione [guida dell’endpoint &quot;privacy jobs&quot;](./privacy-jobs.md).
+>Se al momento non conosci l’ID processo per le informazioni di accesso necessarie, chiama il `/jobs` e utilizzare parametri di query aggiuntivi per filtrare i risultati. Un elenco completo dei parametri di query disponibili è disponibile nella sezione [guida dell’endpoint &quot;privacy jobs&quot;](./privacy-jobs.md).
 
 ## Recuperare le informazioni sul processo di privacy
 
@@ -81,7 +78,7 @@ In caso di esito positivo, la risposta restituisce i dettagli del processo speci
         "processedDate":"04/12/2024 04:08 PM GMT",
         "productStatusResponse":{"status":"submitted"
         }}],
-    "downloadUrl":"https://platform-stage.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
+    "downloadUrl":"https://platform.adobe.io/data/core/privacy/jobs/dbe3a6a6-f8e6-11ee-a365-8d1d6df81cc5/content",
     "regulation":"gdpr"
 }
 ```
@@ -144,10 +141,3 @@ curl -X GET \
 
 La risposta è un file zip (*.zip). Le informazioni vengono generalmente restituite in formato JSON, anche se questo non può essere garantito. I dati estratti possono essere restituiti in qualsiasi formato.
 
-<!-- ## Constraints {#constraints}
-
-During this private beta, the following constraints apply when using the `/content` endpoint:
-
-- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
-- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
-- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->
