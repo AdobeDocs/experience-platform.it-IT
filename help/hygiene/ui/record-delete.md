@@ -3,10 +3,10 @@ title: Elimina record
 description: Scopri come eliminare i record nell’interfaccia utente di Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 8%
+source-wordcount: '1567'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Utilizza il [[!UICONTROL Ciclo di vita dei dati] workspace](./overview.md) per e
 
 ## Prerequisiti {#prerequisites}
 
-L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experienci Platform. In particolare, è necessario conoscere i valori di identità primari delle entità di cui si desidera eliminare i record, a seconda del set di dati (o dei set di dati) da cui li si sta eliminando.
+L’eliminazione dei record richiede una buona conoscenza del funzionamento dei campi di identità in Experienci Platform. In particolare, devi conoscere i valori dello spazio dei nomi delle identità delle entità di cui desideri eliminare i record, a seconda del set di dati (o dei set di dati) da cui li stai eliminando.
 
 Per ulteriori informazioni sulle identità in Platform, consulta la seguente documentazione:
 
@@ -43,13 +43,13 @@ Viene visualizzato il flusso di lavoro per la creazione delle richieste. Per imp
 
 >[!IMPORTANT]
 > 
->Come parte delle modifiche in corso per migliorare l’efficienza e rendere le operazioni sui set di dati meno costose, le organizzazioni che sono state spostate nel formato Delta possono eliminare i dati dal servizio Identity, dal profilo cliente in tempo reale e dal data lake. Questo tipo di utente viene definito delta-migrato. Gli utenti delle organizzazioni con migrazione differita possono scegliere di eliminare i record da un singolo set di dati o da tutti. Gli utenti di organizzazioni che non sono state sottoposte a migrazione delta non possono scegliere di eliminare record da un singolo set di dati o da tutti, come illustrato nell’immagine seguente. In questo caso, continua con [fornisci identità](#provide-identities) sezione della guida.
+>Per migliorare l’efficienza e ridurre i costi delle operazioni relative ai set di dati, le organizzazioni che sono state spostate nel formato Delta possono eliminare i dati dal servizio Identity, dal profilo cliente in tempo reale e dal data lake. Questo tipo di utente viene definito delta-migrato. Gli utenti delle organizzazioni con migrazione differita possono scegliere di eliminare i record da un singolo set di dati o da tutti. Gli utenti di organizzazioni che non sono stati sottoposti a migrazione delta non possono eliminare selettivamente i record da un singolo set di dati o da tutti i set di dati, come illustrato nell’immagine seguente. In questo caso, continua con [Fornisci identità](#provide-identities) sezione della guida.
 
 ![Il flusso di lavoro di creazione delle richieste con [!UICONTROL Elimina record] opzione selezionata ed evidenziata.](../images/ui/record-delete/delete-record.png)
 
 ## Seleziona set di dati {#select-dataset}
 
-Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. Se questa opzione non è disponibile, passare alla [fornisci identità](#provide-identities) sezione della guida.
+Il passaggio successivo consiste nel determinare se eliminare record da un singolo set di dati o da tutti i set di dati. Se questa opzione non è disponibile, passare alla [Fornisci identità](#provide-identities) sezione della guida.
 
 Sotto **[!UICONTROL Dettagli record]** , utilizza il pulsante di opzione per selezionare tra un set di dati specifico e tutti i set di dati. Se si sceglie **[!UICONTROL Seleziona set di dati]**, procedere alla selezione dell&#39;icona del database (![Icona del database](../images/ui/record-delete/database-icon.png)) per aprire una finestra di dialogo che fornisce un elenco dei set di dati disponibili. Seleziona il set di dati desiderato dall’elenco seguito da **[!UICONTROL Fine]**.
 
@@ -63,34 +63,34 @@ Se desideri eliminare record da tutti i set di dati, seleziona **[!UICONTROL Tut
 >
 >Selezione del **[!UICONTROL Tutti i set di dati]** potrebbe richiedere più tempo e non consentire l&#39;eliminazione accurata dei record.
 
-## Fornire identità {#provide-identities}
+## Fornisci identità {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identità primaria"
->abstract="Un’identità primaria è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo di identità primaria per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per l’identità primaria del record, ad esempio `email` per gli indirizzi e-mail e `ecid` per gli Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
+>title="Spazio dei nomi identità"
+>abstract="Uno spazio dei nomi di identità è un attributo che lega un record al profilo di un consumatore in Experienci Platform. Il campo dello spazio dei nomi dell’identità per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo o lo spazio dei nomi per lo spazio dei nomi dell&#39;identità del record, ad esempio `email` per gli indirizzi e-mail e `ecid` ad Experience Cloud, gli ID. Per ulteriori informazioni, consulta la guida dell’interfaccia utente del ciclo di vita dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Valore identità"
->abstract="In questa colonna è necessario fornire il valore per l’identità primaria del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di identità primaria è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
+>title="Valore dell’identità primaria"
+>abstract="In questa colonna è necessario fornire il valore per lo spazio dei nomi dell&#39;identità del record, che deve corrispondere al tipo di identità specificato nella colonna sinistra. Se il tipo di spazio dei nomi identità è `email`, il valore deve essere l’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
 
-Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al **identità primaria** campo definito dallo schema del set di dati.
+Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al **spazio dei nomi delle identità** campo definito dallo schema del set di dati.
 
-Come tutti i campi di identità in Platform, un’identità primaria è composta da due elementi: **tipo** (talvolta denominati spazi dei nomi delle identità) e **valore**. Il tipo di identità fornisce contesto sul modo in cui il campo identifica un record (ad esempio un indirizzo e-mail) e il valore rappresenta l’identità specifica di un record per quel tipo (ad esempio, `jdoe@example.com` per `email` tipo di identità). I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
+Come tutti i campi di identità in Platform, uno spazio dei nomi dell’identità è composto da due elementi: **tipo** (talvolta denominati spazi dei nomi delle identità) e **valore**. Il tipo di identità fornisce contesto su come il campo identifica un record (ad esempio un indirizzo e-mail). Il valore rappresenta l’identità specifica di un record per quel tipo (ad esempio, `jdoe@example.com` per `email` tipo di identità). I campi più comuni utilizzati come identità includono informazioni sull’account, ID dispositivo e ID cookie.
 
 >[!TIP]
 >
->Se non conosci l’identità primaria di un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** Workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. L’identità primaria viene visualizzata insieme al nome e alla descrizione dello schema.
+>Se non conosci lo spazio dei nomi delle identità per un particolare set di dati, puoi trovarlo nell’interfaccia utente di Platform. In **[!UICONTROL Set di dati]** Workspace, seleziona il set di dati in questione dall’elenco. Nella pagina dei dettagli del set di dati, passa il cursore sul nome dello schema del set di dati nella barra a destra. Lo spazio dei nomi dell’identità viene visualizzato insieme al nome e alla descrizione dello schema.
 >
 >![Il dashboard Set di dati con un set di dati selezionato e una finestra di dialogo schema aperta dal pannello dei dettagli del set di dati. Viene evidenziato l’ID primario del set di dati.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere una sola identità primaria. Se elimini da tutti i set di dati, puoi includere più tipi di identità in quanto set di dati diversi possono avere identità primarie diverse.
+Se elimini record da un singolo set di dati, tutte le identità fornite devono avere lo stesso tipo, in quanto un set di dati può avere un solo spazio dei nomi delle identità. Se elimini da tutti i set di dati, puoi includere più tipi di identità in quanto set di dati diversi possono avere identità primarie diverse.
 
 Esistono due opzioni per fornire le identità quando si eliminano i record:
 
 * [Caricare un file JSON](#upload-json)
-* [Immetti manualmente i valori di identità](#manual-identity)
+* [Immetti manualmente i valori di identità primaria](#manual-identity)
 
 ### Caricare un file JSON {#upload-json}
 
@@ -116,7 +116,7 @@ Il file JSON deve essere formattato come un array di oggetti, ogni oggetto che r
 | Proprietà | Descrizione |
 | --- | --- |
 | `namespaceCode` | Il tipo di identità. |
-| `value` | Il valore di identità come indicato dal tipo. |
+| `value` | Il valore dell’identità primaria come indicato dal tipo. |
 
 Una volta caricato il file, puoi continuare con [invia la richiesta](#submit).
 
@@ -126,7 +126,7 @@ Per immettere manualmente le identità, seleziona **[!UICONTROL Aggiungi identit
 
 ![Il flusso di lavoro di creazione delle richieste con [!UICONTROL Aggiungi identità] opzione evidenziata.](../images/ui/record-delete/add-identity.png)
 
-Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL Identità primaria]**, utilizza il menu a discesa per selezionare il tipo di identità. Sotto **[!UICONTROL Valore identità]**, fornisci il valore di identità primaria del record.
+Vengono visualizzati i controlli che consentono di immettere le identità una alla volta. Sotto **[!UICONTROL spazio dei nomi delle identità]**, utilizza il menu a discesa per selezionare il tipo di identità. Sotto **[!UICONTROL Valore identità primaria]**, fornisci il valore dello spazio dei nomi dell’identità per il record.
 
 ![Il flusso di lavoro per la creazione di richieste con un campo di identità aggiunto manualmente.](../images/ui/record-delete/identity-added.png)
 
