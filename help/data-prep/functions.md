@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funzioni di mappatura della preparazione dati
 description: Questo documento introduce le funzioni di mappatura utilizzate con la preparazione dati.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
+source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
 workflow-type: tm+mt
-source-wordcount: '5792'
-ht-degree: 2%
+source-wordcount: '5805'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +25,13 @@ Se un nome di campo non segue questa convenzione, il nome del campo deve essere 
 >
 >Quando si interagisce con le gerarchie, se un attributo figlio ha un punto (`.`), è necessario utilizzare una barra rovesciata (`\`) per eliminare i caratteri speciali. Per ulteriori informazioni, consulta la guida su [escape di caratteri speciali](home.md#escape-special-characters).
 
-Inoltre, se il nome di un campo è **qualsiasi** tra le seguenti parole chiave riservate, deve essere racchiuso con `${}`:
+Se il nome di un campo è **qualsiasi** tra le seguenti parole chiave riservate, deve essere racchiuso con `${}{}`:
 
 ```console
-new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return, _errors, do, function, empty, size
 ```
+
+Inoltre, le parole chiave riservate includono anche una delle funzioni di mappatura elencate in questa pagina.
 
 È possibile accedere ai dati all’interno dei sottocampi utilizzando la notazione del punto. Ad esempio, se è stato `name` oggetto, per accedere al `firstName` campo, utilizza `name.firstName`.
 
@@ -45,7 +47,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| concat | Concatena le stringhe specificate. | <ul><li>STRING: le stringhe che verranno concatenate.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Ciao, &quot;, &quot;ci&quot;, &quot;!&quot;) | `"Hi, there!"` |
+| concatena | Concatena le stringhe specificate. | <ul><li>STRING: le stringhe che verranno concatenate.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Ciao, &quot;, &quot;ci&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | esplodere | Divide la stringa in base a un regex e restituisce un array di parti. Facoltativamente, può includere regex per dividere la stringa. Per impostazione predefinita, la suddivisione viene risolta in &quot;,&quot;. I delimitatori seguenti **bisogno** da evitare con `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Se si includono più caratteri come delimitatore, il delimitatore verrà considerato come un delimitatore con più caratteri. | <ul><li>STRINGA: **Obbligatorio** Stringa da dividere.</li><li>REGEX: *Facoltativo* Espressione regolare che può essere utilizzata per dividere la stringa.</li></ul> | esplodi(STRING, REGEX) | esplodi(&quot;Salve!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
 | instr | Restituisce la posizione o l&#39;indice di una sottostringa. | <ul><li>INPUT: **Obbligatorio** Stringa in cui viene eseguita la ricerca.</li><li>SOTTOSTRINGA: **Obbligatorio** Sottostringa da cercare all&#39;interno della stringa.</li><li>POSIZIONE_INIZIALE: *Facoltativo* La posizione da cui iniziare a cercare nella stringa.</li><li>OCCORRENZA: *Facoltativo* L’ennesima occorrenza da cercare dalla posizione iniziale. Per impostazione predefinita, è 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | sostituto | Sostituisce la stringa di ricerca se presente nella stringa originale. | <ul><li>INPUT: **Obbligatorio** Stringa di input.</li><li>TO_FIND: **Obbligatorio** Stringa da cercare all’interno dell’input.</li><li>DA_SOSTITUIRE: **Obbligatorio** Stringa che sostituirà il valore all’interno di &quot;TO_FIND&quot;.</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;Questo è un test di sostituzione della stringa&quot; |
@@ -61,7 +63,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | ltrim | Rimuove lo spazio vuoto dall&#39;inizio della stringa. | <ul><li>STRINGA: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | ltrim(STRING) | ltrim(&quot;ciao&quot;) | &quot;ciao&quot; |
 | rtrim | Rimuove lo spazio vuoto dalla fine della stringa. | <ul><li>STRINGA: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | rtrim(STRING) | rtrim(&quot;hello&quot;) | &quot;ciao&quot; |
 | trim | Rimuove lo spazio vuoto dall&#39;inizio e dalla fine della stringa. | <ul><li>STRINGA: **Obbligatorio** Stringa da cui rimuovere lo spazio vuoto.</li></ul> | trim(STRING) | trim(&quot; hello &quot;) | &quot;ciao&quot; |
-| è uguale a | Confronta due stringhe per verificare se sono uguali. Questa funzione distingue tra maiuscole e minuscole. | <ul><li>STRINGA1: **Obbligatorio** La prima stringa che si desidera confrontare.</li><li>STRINGA2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| uguale a | Confronta due stringhe per verificare se sono uguali. Questa funzione distingue tra maiuscole e minuscole. | <ul><li>STRINGA1: **Obbligatorio** La prima stringa che si desidera confrontare.</li><li>STRINGA2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Confronta due stringhe per verificare se sono uguali. Questa funzione è **non** distinzione tra maiuscole e minuscole. | <ul><li>STRINGA1: **Obbligatorio** La prima stringa che si desidera confrontare.</li><li>STRINGA2: **Obbligatorio** Seconda stringa da confrontare.</li></ul> | STRINGA1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
@@ -169,7 +171,7 @@ Per informazioni sulla funzione di copia dell&#39;oggetto, vedere la sezione [so
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Restituisce il primo oggetto non nullo in una matrice specificata. | <ul><li>INPUT: **Obbligatorio** Matrice di cui trovare il primo oggetto non Null.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | primo | Recupera il primo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare il primo elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| ultimo | Recupera l’ultimo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare l’ultimo elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | 3&quot; |
+| ultime/i | Recupera l’ultimo elemento dell’array specificato. | <ul><li>INPUT: **Obbligatorio** L’array di cui desideri trovare l’ultimo elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | 3&quot; |
 | add_to_array | Aggiunge elementi alla fine dell&#39;array. | <ul><li>ARRAY: **Obbligatorio** Matrice a cui si stanno aggiungendo elementi.</li><li>VALORI: gli elementi che desideri aggiungere alla matrice.</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | add_to_array&#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
 | join_array | Combina gli array tra loro. | <ul><li>ARRAY: **Obbligatorio** Matrice a cui si stanno aggiungendo elementi.</li><li>VALORI: gli array che si desidera aggiungere all’array principale.</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [d&#39;, e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prende un elenco di input e lo converte in un array. | <ul><li>INCLUDE_NULLS: **Obbligatorio** Valore booleano per indicare se includere o meno valori Null nella matrice di risposta.</li><li>VALORI: **Obbligatorio** Elementi da convertire in un array.</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
@@ -275,7 +277,7 @@ Per ulteriori informazioni sui valori dei campi dispositivo, leggi [elenco dei v
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Estrae il nome del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | Estrae la versione principale del sistema operativo dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version_major | Estrae la versione principale del sistema operativo dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | Estrae la versione del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
 | ua_os_name_version | Estrae il nome e la versione del sistema operativo dalla stringa agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
 | ua_agent_version | Estrae la versione dell’agente dalla stringa dell’agente utente. | <ul><li>USER_AGENT: **Obbligatorio** Stringa dell’agente utente.</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
