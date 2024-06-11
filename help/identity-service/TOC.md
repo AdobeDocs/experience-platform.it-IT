@@ -1,24 +1,24 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Guida di Platform Identity Service
-user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
+breadcrumb-title: Guida al servizio Platform Identity
+user-guide-description: Collega le identità dei clienti tra dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 28%
+source-wordcount: '126'
+ht-degree: 18%
 
 ---
 
 
 # Adobe Experience Platform Identity Service {#identity}
 
-- [Panoramica del servizio Identity](home.md)
+- [Panoramica di Identity Service](home.md)
 - [Servizio Identity e Real-Time Customer Profile](identity-and-profile.md)
 - Funzioni {#features}
-   - [Spazio dei nomi dell’identità](./features/namespaces.md)
+   - [Spazio dei nomi identità](./features/namespaces.md)
    - [Logica di collegamento dell’identità](./features/identity-linking-logic.md)
    - [Visualizzatore del grafico delle identità](./features/identity-graph-viewer.md)
    - [Eliminazioni nel servizio Identity](./features/deletion.md)
@@ -40,7 +40,8 @@ ht-degree: 28%
 - [Regole di collegamento del grafo delle identità] {#identity-graph-linking-rules}
    - [Panoramica delle funzioni](./identity-graph-linking-rules/overview.md)
    - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+   - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
    - [Scenari di esempio](./identity-graph-linking-rules/example-scenarios.md)
 - [Elaborazione della richiesta di accesso a dati personali](privacy.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

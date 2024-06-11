@@ -3,24 +3,30 @@ title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 hide: true
 hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1570'
 ht-degree: 1%
 
 ---
 
 # Algoritmo di ottimizzazione identità
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->L’algoritmo di ottimizzazione delle identità è in Alpha. La funzione e la documentazione sono soggette a modifiche.
+>Questa funzione non è ancora disponibile; il programma beta per le regole di collegamento del grafo delle identità dovrebbe iniziare a luglio per le sandbox di sviluppo. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione.
 
-L’algoritmo di ottimizzazione delle identità è una regola che garantisce che un grafico delle identità sia rappresentativo di una singola persona e, pertanto, impedisce l’unione indesiderata di identità sul Profilo cliente in tempo reale.
+L’algoritmo di ottimizzazione delle identità è un algoritmo grafico sul servizio Identity che garantisce che un grafico delle identità sia rappresentativo di una singola persona e, pertanto, impedisce l’unione indesiderata di identità sul profilo cliente in tempo reale.
 
-## Parametri di input
+## Parametri di input {#input-parameters}
+
+Leggi questa sezione per informazioni sugli spazi dei nomi univoci e sulla priorità dello spazio dei nomi. Questi due concetti fungono da parametri di input richiesti dall’algoritmo di ottimizzazione delle identità.
+
+### Spazio dei nomi univoco {#unique-namespace}
+
+Uno spazio dei nomi univoco determina i collegamenti che vengono rimossi in caso di compressione del grafico.
 
 Un singolo profilo unito e il grafico delle identità corrispondente devono rappresentare un singolo individuo (entità persona). Un singolo individuo è solitamente rappresentato dagli ID CRM e/o dagli ID di accesso. L’aspettativa è che non ci siano due individui (ID del sistema di gestione delle relazioni con i clienti) uniti in un singolo profilo o grafico.
 
@@ -29,17 +35,44 @@ Un singolo profilo unito e il grafico delle identità corrispondente devono rapp
 * ID CRM spazio dei nomi = univoco
 * Spazio dei nomi e-mail = univoco
 
-Uno spazio dei nomi che dichiari univoco verrà configurato automaticamente in modo da avere un limite massimo di uno all’interno di un dato grafico delle identità. Ad esempio, se dichiari univoco uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti, un grafo delle identità può avere una sola identità contenente uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti.
+Uno spazio dei nomi che dichiari univoco verrà configurato automaticamente in modo da avere un limite massimo di uno all’interno di un dato grafico delle identità. Ad esempio, se dichiari univoco uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti, un grafo delle identità può avere una sola identità contenente uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti. Se non dichiari uno spazio dei nomi univoco, il grafico può contenere più di un’identità con tale spazio dei nomi.
 
 >[!NOTE]
 >
->* Attualmente, l’algoritmo supporta solo l’uso di un singolo identificatore di accesso (un namespace di accesso). Al momento non sono supportati più identificatori di accesso (più spazi dei nomi di identità utilizzati per accedere), grafici di entità familiari e strutture di grafo gerarchiche.
+>* Al momento non è supportata la rappresentazione di entità familiari (&quot;grafici delle famiglie&quot;).
 >
 >* Tutti gli spazi dei nomi che sono identificatori di persona e che vengono utilizzati nella sandbox per generare grafici di identità devono essere contrassegnati come spazi dei nomi univoci. In caso contrario, potrebbero verificarsi risultati di collegamento indesiderati.
 
-## Processo
+### Priorità dello spazio dei nomi {#namespace-priority}
 
-Al momento dell’acquisizione di nuove identità, Identity Service controlla se le nuove identità e i corrispondenti spazi dei nomi superano i limiti configurati. Se i limiti non vengono superati, l’acquisizione di nuove identità procederà e tali identità saranno collegate al grafico. Tuttavia, se i limiti vengono superati, l’algoritmo di ottimizzazione delle identità aggiornerà il grafico in modo tale che venga rispettata la marca temporale più recente e che vengano rimossi i collegamenti meno recenti con gli spazi dei nomi di priorità inferiore.
+La priorità dello spazio dei nomi determina il modo in cui l’algoritmo di ottimizzazione delle identità rimuove i collegamenti.
+
+Gli spazi dei nomi in Identity Service hanno un ordine di importanza relativo implicito. Consideriamo un grafico strutturato come una piramide. Vi sono un nodo sul livello superiore, due nodi sul livello intermedio e quattro nodi sul livello inferiore. La priorità dello spazio dei nomi deve riflettere questo ordine relativo per garantire che un’entità persona sia rappresentata correttamente.
+
+Per informazioni approfondite sulla priorità dello spazio dei nomi e sulle sue funzionalità e utilizzi completi, leggi [guida alla priorità namespace](./namespace-priority.md).
+
+![livelli di grafico e priorità dello spazio dei nomi](../images/namespace-priority/graph-layers.png)
+
+## Processo {#process}
+
+
+Al momento dell’acquisizione di nuove identità, Identity Service controlla se le nuove identità e i corrispondenti spazi dei nomi aderiscono a configurazioni univoche dello spazio dei nomi. Se si seguono le configurazioni, l’acquisizione procede e le nuove identità sono collegate al grafico. Tuttavia, se non si seguono le configurazioni, l’algoritmo di ottimizzazione delle identità:
+
+
+* Acquisisci l’evento più recente tenendo conto della priorità dello spazio dei nomi.
+* Rimuove il collegamento che unirebbe due entità persona dal livello grafico appropriato.
+
+## Dettagli dell’algoritmo di ottimizzazione delle identità
+
+Quando il vincolo dello spazio dei nomi univoco viene violato, l’algoritmo di ottimizzazione dell’identità &quot;riprodurrà&quot; i collegamenti e ricostruirà il grafico da zero.
+
+* I collegamenti sono ordinati in base al seguente ordine:
+   * Ultimo evento.
+   * Marca temporale per somma della priorità dello spazio dei nomi (somma inferiore = ordine più elevato).
+* Il grafico verrà ristabilito in base all’ordine indicato sopra. Se l’aggiunta del collegamento viola il vincolo del limite (ad esempio, il grafico contiene due o più identità con uno spazio dei nomi univoco), i collegamenti vengono rimossi.
+* Il grafico risultante sarà quindi conforme al vincolo dello spazio dei nomi univoco configurato.
+
+![Un diagramma che visualizza l’algoritmo di ottimizzazione delle identità.](../images/ido.png)
 
 ## Scenari di esempio per l’algoritmo di ottimizzazione delle identità
 
@@ -53,27 +86,27 @@ Per dispositivo condiviso si intende un dispositivo utilizzato da più utenti. A
 
 >[!TAB Esempio uno]
 
-| Namespace | Limite |
+| Namespace | Spazio dei nomi univoco |
 | --- | --- |
-| ID CRM | 1 |
-| E-mail | 1 |
-| ECID | N/D |
+| ID CRM | Sì |
+| E-mail | Sì |
+| ECID | No |
 
-In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei nomi univoci. A `timestamp=0`, viene acquisito un set di dati del record CRM e crea due grafici diversi a causa della configurazione del limite. Ogni grafico contiene un ID CRM e uno spazio dei nomi e-mail.
+In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei nomi univoci. A `timestamp=0`, viene acquisito un set di dati del record CRM e crea due grafici diversi a causa della configurazione univoca dello spazio dei nomi. Ogni grafico contiene un ID CRM e uno spazio dei nomi e-mail.
 
 * `timestamp=1`: Jane accede al tuo sito web di e-commerce utilizzando un laptop. Jane è rappresentata dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web sul suo laptop che utilizza è rappresentato da un ECID.
 * `timestamp=2`: John accede al tuo sito web di e-commerce utilizzando lo stesso laptop. John è rappresentato dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web che ha usato è già rappresentato da un ECID. Poiché lo stesso ECID è collegato a due grafici diversi, Identity Service è in grado di sapere che questo dispositivo (laptop) è condiviso.
-* Tuttavia, a causa della configurazione del limite che imposta un massimo di uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti e uno spazio dei nomi e-mail per grafico, l’algoritmo di ottimizzazione dell’identità divide il grafico in due.
+* Tuttavia, a causa della configurazione univoca dello spazio dei nomi che imposta un massimo di uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti e di uno spazio dei nomi e-mail per grafico, l’algoritmo di ottimizzazione dell’identità divide il grafico in due.
    * Infine, poiché John è l&#39;ultimo utente autenticato, l&#39;ECID che rappresenta il laptop, rimane collegato al suo grafo invece di quello di Jane.
 
 ![caso dispositivo condiviso 1](../images/identity-settings/shared-device-case-one.png)
 
 >[!TAB Esempio due]
 
-| Namespace | Limite |
+| Namespace | Spazio dei nomi univoco |
 | --- | --- |
-| ID CRM | 1 |
-| ECID | N/D |
+| ID CRM | Sì |
+| ECID | No |
 
 In questo esempio, lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti è designato come spazio dei nomi univoco.
 
@@ -91,11 +124,11 @@ In questo esempio, lo spazio dei nomi dell’ID del sistema di gestione delle re
 
 In alcuni casi, un utente potrebbe immettere valori non validi per i propri numeri di telefono e/o e-mail.
 
-| Namespace | Limite |
+| Namespace | Spazio dei nomi univoco |
 | --- | --- |
-| ID CRM | 1 |
-| E-mail | 1 |
-| ECID | N/D |
+| ID CRM | Sì |
+| E-mail | Sì |
+| ECID | No |
 
 In questo esempio, l’ID del sistema di gestione delle relazioni con i clienti e gli spazi dei nomi e-mail sono designati come univoci. Considera lo scenario in cui Jane e John si sono iscritti al tuo sito web di e-commerce utilizzando un valore e-mail errato (ad esempio, test<span>@test.com).
 
@@ -103,7 +136,7 @@ In questo esempio, l’ID del sistema di gestione delle relazioni con i clienti 
 * `timestamp=2`: John accede al tuo sito web di e-commerce utilizzando Google Chrome sul suo iPhone, stabilendo il suo ID CRM (informazioni di accesso) e ECID (browser).
 * `timestamp=3`: l’ingegnere dati acquisisce il record CRM di Jane, il che fa sì che il suo ID CRM venga collegato all’e-mail errata.
 * `timestamp=4`: il tuo ingegnere dati acquisisce il record CRM di John, il che fa sì che il suo ID CRM venga collegato all’e-mail errata.
-   * Questa diventa quindi una violazione dei limiti configurati in quanto crea un singolo grafico con due spazi dei nomi ID del sistema di gestione delle relazioni con i clienti.
+   * Questo diventa quindi una violazione della configurazione dello spazio dei nomi univoco, in quanto crea un singolo grafico con due spazi dei nomi ID del sistema di gestione delle relazioni con i clienti.
    * Di conseguenza, l’algoritmo di ottimizzazione dell’identità elimina il collegamento precedente, che in questo caso è il collegamento tra l’identità di Jane con lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti e l’identità con il test<span>@test.
 
 Con l’algoritmo di ottimizzazione dell’identità, i valori di identità errati, come e-mail o numeri di telefono falsi, non vengono propagati attraverso diversi grafici di identità.
