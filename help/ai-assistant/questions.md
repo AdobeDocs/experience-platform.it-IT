@@ -1,9 +1,10 @@
 ---
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ Le domande di esempio seguenti sono raggruppate per obiettivi che è possibile r
 
 Le domande seguenti sono raggruppate per oggetti dati e sono classificate come [approfondimenti operativi](./home.md#operational-insights) o [conoscenza del prodotto](./home.md#product-knowledge).
 
-| Oggetto | Descrizione |
-| --- | --- |
-| Tipi di pubblico - Informazioni operative | <ul><li>Quali tipi di pubblico utilizzano altri tipi di pubblico?</li><li>Qual è la distribuzione del numero di profili tra i tipi di pubblico?</li><li>Mostra i tipi di pubblico modificati per ultimi prima di {RELATIVE_DATE}.</li><li>Quali tipi di pubblico hanno 0 profili?</li><li>È {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} utilizzato in altri tipi di pubblico?</li></ul> |
-| Attributi - Informazioni operative | <ul><li>Quali tipi di pubblico hanno l’attributo XDM {ATTRIBUTE_PATH} nella loro definizione del segmento?</li><li>Quanti attributi dello schema XDM non vengono utilizzati in alcun pubblico?</li><li>Quali schemi hanno l’attributo XDM {ATTRIBUTE_PATH} in loro?</li><li>Quali attributi XDM vengono attivati?</li><li>Quali attributi XDM vengono utilizzati in tipi di pubblico con più di 10 profili</li></ul> |
-| Flussi di dati - Informazioni operative | <ul><li>A quali flussi di dati contribuisce {DATASET_NAME} set di dati?</li><li>Quali flussi di dati di origine non vengono utilizzati o non contengono più dati in arrivo?</li><li> |
-| Set di dati: informazioni operative | <ul><li>Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?</li><li>Quale connettore di origine è associato a {DATASET_NAME} set di dati></li><li>Quali set di dati vengono utilizzati in ogni pubblico?</li><li>Quali schemi non vengono utilizzati in alcun set di dati?</li><li>Quanti set di dati ho?</li></ul> |
-| Destinazioni: approfondimenti operativi | <ul><li>Quali destinazioni sono in uno stato attivo?</li><li>Su quali account di destinazione è attivato 0 pubblico?</li><li> |
-| Percorsi - Informazioni operative | <ul><li>Quanti percorsi ho?</li><li>Percorsi creati in {RELATIVE_DATE} (ad esempio, ultima settimana) oppure {RELATIVE_DATE} (ad esempio prima/dopo/in una data specifica)?</li><li>Mostra l&#39;elenco dei percorsi modificati in {RELATIVE_DATE} (ad esempio, ultima settimana) oppure {RELATIVE_DATE} (ad esempio prima/dopo/in una data specifica)?</li><li>Elencare i percorsi che ho.</li><li>Elencare i tipi di pubblico utilizzati nei percorsi live.</li></ul> |
-| Schemi - Informazioni operative | <ul><li>Quali campi dello schema hanno contribuito più al pubblico?</li><li>Quanti schemi sono abilitati per i profili?</li><li>Elenca tutti gli schemi modificati nell&#39;ultima settimana.</li><li>Quali schemi non vengono utilizzati in alcun set di dati?</li><li>Elenca tutti gli schemi creati nell&#39;ultima settimana.</li></ul> |
-| Sorgenti: approfondimenti operativi | <ul><li>Quali origini sono in uno stato attivo?</li><li>Quale connettore di origine è associato al set di dati {DATASET_NAME}?</li><li>Quale connettore di origine ha il maggior numero di account associati?</li><li>Mostra i flussi di dati e i connettori di origine associati.</li></ul> |
-| Apprendimento mirato - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer) | <ul><li>Cosa può aiutare l’Assistente AI con?</li><li>Cosa sono i tipi di pubblico simili?</li><li>In che modo i gruppi di utenti sono correlati ai ruoli?</li><li>Quando dovrei usare un tipo di dati rispetto a un gruppo di campi?</li><li>Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?</li><li>Come viene calcolata la ricchezza del profilo?</li></ul> |
-| Risoluzione dei problemi - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer) | <ul><li>Cosa può aiutare l’Assistente AI con?</li><li>Posso eliminare uno schema abilitato per il profilo dopo l’acquisizione dei dati?</li><li>Perché non posso eliminare un pubblico?</li><li>Quanto tempo ci vuole per valutare i tipi di pubblico e per rendere disponibili i risultati per il targeting?</li></ul> |
-
-{style="table-layout:auto"}
+* **Tipi di pubblico - Informazioni operative**
+   * Quali tipi di pubblico utilizzano altri tipi di pubblico?
+   * Qual è la distribuzione del numero di profili tra i tipi di pubblico?
+   * Mostra i tipi di pubblico che sono stati modificati l’ultima volta prima {RELATIVE_DATE}.
+   * Quali tipi di pubblico hanno 0 profili?
+   * È {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} utilizzato in altri tipi di pubblico?
+* **Attributi - Informazioni operative**
+   * Quali tipi di pubblico hanno l’attributo xdm {ATTRIBUTE_PATH} nella loro definizione del segmento?
+   * Quanti attributi dello schema XDM non vengono utilizzati in alcun pubblico?
+   * Quali schemi hanno l’attributo xdm {ATTRIBUTE_PATH} in loro?
+   * Quali attributi XDM vengono attivati?
+   * Quali attributi XDM vengono utilizzati in tipi di pubblico con più di 10 profili?
+* **Flussi di dati - Informazioni operative**
+   * A quali flussi di dati contribuisce {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} set di dati?
+   * Quali flussi di dati di origine non vengono utilizzati o non contengono più dati in arrivo?
+   * Elencare i flussi di dati di origine disponibili.
+   * Quali flussi di dati sono configurati per ciascun connettore di origine?
+* **Set di dati: informazioni operative**
+   * Quanti set di dati sono stati acquisiti utilizzando lo stesso schema?
+   * Quale connettore di origine è associato a {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} set di dati?
+   * Quali set di dati vengono utilizzati in ogni pubblico?
+   * Quali schemi non vengono utilizzati in alcun set di dati?
+   * Quanti set di dati ho?
+* **Destinazioni: approfondimenti operativi**
+   * Quali destinazioni sono in uno stato attivo?
+   * Su quali account di destinazione è attivato 0 pubblico?
+   * Quanti tipi di pubblico vengono attivati per ogni destinazione?
+   * Quali destinazioni hanno il maggior numero di tipi di pubblico attivati?
+* **Percorsi - Informazioni operative**
+   * Quanti percorsi ho?
+   * Percorsi creati in {RELATIVE_DATE} (ad esempio, l’ultima settimana) oppure {RELATIVE_DATE} (ad esempio prima/dopo/in una data specifica)?
+   * Mostra l&#39;elenco dei percorsi modificati in {RELATIVE_DATE} (ad esempio, l’ultima settimana) oppure {RELATIVE_DATE} (ad esempio prima/dopo/in una data specifica)?
+   * Elencare i percorsi live che ho.
+   * Elencare i tipi di pubblico utilizzati nei percorsi live.
+* **Sorgenti: approfondimenti operativi**
+   * Quali origini sono in uno stato attivo?
+   * Quale connettore di origine è associato al set di dati {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * Quale connettore di origine ha il maggior numero di account associati?
+   * Mostra i flussi di dati e i connettori di origine associati.
+* **Apprendimento mirato - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer)**
+   * Cosa sono i tipi di pubblico simili?
+   * In che modo i gruppi di utenti sono correlati ai ruoli?
+   * Quando dovrei usare un tipo di dati rispetto a un gruppo di campi?
+   * Qual è la differenza tra un&#39;identità e una chiave primaria o esterna?
+   * Come viene calcolata la ricchezza del profilo?
+* **Risoluzione dei problemi - Conoscenza del prodotto (Real-Time CDP e Journey Optimizer)**
+   * Cosa può aiutare l’Assistente AI con?
+   * Posso eliminare uno schema abilitato per il profilo dopo l’acquisizione dei dati?
+   * Perché non posso eliminare un pubblico?
+   * Quanto tempo ci vuole affinché i tipi di pubblico vengano valutati e i risultati siano disponibili per il targeting?
 
 ## Formulazione delle domande {#phrasing-your-questions}
 

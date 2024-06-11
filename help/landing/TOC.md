@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experienci Platform consente di offrire esperienze personalizzate ai clienti in tempo reale con guide, documentazione e tutorial.
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '279'
 ht-degree: 14%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 14%
    * [Guida all’interfaccia utente Flussi di lavoro](workflows.md)
    * [Supporto di browser e lingue](browser-language-support.md)
    * [Sondaggio di auto-identificazione](self-identification.md)
-   * [Assistente IA](ai-assistant.md)
 * API EXPERIENCI PLATFORM {#platform-apis}
    * [Guida introduttiva alle API di Platform](api-guide.md)
    * [Autenticazione e accesso alle API di Platform](api-authentication.md)
