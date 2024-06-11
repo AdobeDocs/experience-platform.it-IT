@@ -2,10 +2,10 @@
 description: Scopri come configurare le identità di destinazione supportate per le destinazioni create con Destination SDK.
 title: Configurazione dello spazio dei nomi dell’identità
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 4%
+source-wordcount: '918'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 4%
 
 In questo Experience Platform vengono utilizzati gli spazi dei nomi delle identità per descrivere il tipo di identità specifiche. Ad esempio, uno spazio dei nomi delle identità denominato `Email` identifica un valore come `name@email.com` come indirizzo e-mail.
 
-Durante la creazione di destinazioni in tempo reale (streaming) tramite Destination SDK, oltre a [configurazione di uno schema partner](schema-configuration.md) affinché gli utenti possano mappare gli attributi e le identità del profilo a, devi anche definire gli spazi dei nomi delle identità supportati dalla piattaforma di destinazione. Ad esempio, se la piattaforma di destinazione accetta e-mail con hash e [!DNL IDFA], è necessario definire queste due identità come [descritti più avanti in questo documento](#supported-parameters).
+A seconda del tipo di destinazione creato (in streaming o basata su file), tieni presente i seguenti requisiti di spazio dei nomi delle identità:
 
-Quando si attivano tipi di pubblico su destinazioni di streaming, gli utenti devono mappare anche le identità di destinazione, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+* Durante la creazione di destinazioni in tempo reale (streaming) tramite Destination SDK, oltre a [configurazione di uno schema partner](schema-configuration.md) in cui gli utenti possono mappare gli attributi e le identità del profilo, è necessario definire anche *almeno uno* spazi dei nomi di identità supportati dalla piattaforma di destinazione. Ad esempio, se la piattaforma di destinazione accetta e-mail con hash e [!DNL IDFA], è necessario definire queste due identità come [descritti più avanti in questo documento](#supported-parameters).
 
-Quando si crea una destinazione basata su file tramite Destination SDK, la configurazione degli spazi dei nomi di identità è facoltativa.
+  >[!IMPORTANT]
+  >
+  >Quando si attivano tipi di pubblico su destinazioni di streaming, gli utenti devono anche mappare _almeno un&#39;identità di destinazione_, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+
+* Quando si creano destinazioni basate su file tramite Destination SDK, la configurazione degli spazi dei nomi di identità è _facoltativo_.
 
 Per ulteriori informazioni sugli spazi dei nomi delle identità in Experienci Platform, consulta [documentazione sugli spazi dei nomi di identità](../../../../identity-service/features/namespaces.md).
 
@@ -114,7 +118,7 @@ La configurazione seguente abilita il [Applica trasformazione](../../../ui/activ
    }
 ```
 
-Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione.
+Seleziona questa opzione quando utilizzi campi sorgente senza hash, per fare in modo che Adobe Experience Platform li inserisca automaticamente nell&#39;hashing al momento dell&#39;attivazione.
 
 Quando mappi gli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla **Applica trasformazione** opzione per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi sorgente all’attivazione.
 

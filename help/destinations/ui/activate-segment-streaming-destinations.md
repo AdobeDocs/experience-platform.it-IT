@@ -3,10 +3,10 @@ title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 7%
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -62,6 +62,10 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 >[!IMPORTANT]
 >
 >Questo passaggio si applica solo ad alcune destinazioni di streaming del pubblico. Se nella destinazione non è presente un **[!UICONTROL Mappatura]** passaggio, vai a [pianificazione del pubblico](#scheduling).
+>
+>Quando attivi i tipi di pubblico nelle destinazioni di streaming, devi anche mappare *almeno uno spazio dei nomi delle identità di destinazione*, oltre agli attributi del profilo di destinazione. In caso contrario, i tipi di pubblico non verranno attivati nella piattaforma di destinazione.
+> ![Immagine del passaggio di mappatura che mostra una mappatura obbligatoria dello spazio dei nomi delle identità.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Alcune destinazioni di streaming del pubblico richiedono la selezione di attributi di origine o spazi dei nomi di identità da mappare come identità di destinazione nella destinazione.
 
@@ -87,12 +91,12 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 1. Per aggiungere altre mappature, ripetere i passaggi da 1 a 5.
 
-### Applicar trasformazione {#apply-transformation}
+### Applica trasformazione {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Applicar trasformazione"
->abstract="Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione."
+>title="Applica trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi sorgente senza hash, per fare in modo che Adobe Experience Platform li inserisca automaticamente nell&#39;hashing al momento dell&#39;attivazione."
 
 Quando mappi gli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla **Applica trasformazione** opzione per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi sorgente all’attivazione.
 
@@ -129,7 +133,7 @@ Per visualizzare tutti i tipi di pubblico attivati nella destinazione, utilizza 
 
 1. Seleziona **[!UICONTROL Successivo]** per passare al [!UICONTROL Revisione] pagina.
 
-## Revisione {#review}
+## Controlla {#review}
 
 Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
@@ -137,7 +141,7 @@ Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepil
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se la tua organizzazione ha acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili sono inclusi nell’attivazione in seguito a tali criteri. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
