@@ -2,9 +2,9 @@
 title: Dashboard dei profili account
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale puoi visualizzare informazioni importanti sui profili dell’account B2B della tua organizzazione.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -169,6 +169,14 @@ Il menu a discesa all’interno del widget consente di selezionare il modello di
 >I filtri per l’intervallo di date globale non si applicano agli approfondimenti di valutazione predittiva. I widget con punteggio predittivo analizzano i dati in base al modello di punteggio dell’account selezionato nel menu a discesa.
 
 ![Widget dei fattori influenti principali con punteggio predittivo.](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Errore nell’operazione di caricamento dati {#errors}
+
+Se viene visualizzato un widget *[!UICONTROL Impossibile caricare. Riprova.]* questo perché non ci sono dati disponibili per l’entità B2B. Ad esempio, il widget visualizzato di seguito [!UICONTROL Nuove opportunità per ruolo persona], mostra il messaggio &quot;[!UICONTROL Impossibile caricare. Riprova.]&quot; poiché questa sandbox non dispone di dati di opportunità disponibili.
+
+![Errore Impossibile caricare l’informazione approfondita.](../images/account-profiles/unable-to-load.png)
+
+Per risolvere il problema, è necessario acquisire dati di entità B2B, ad esempio *persona dell’opportunità* nella sandbox. Dopo 48 ore, i dati vengono riflessi nei widget.
 
 ## Passaggi successivi
 

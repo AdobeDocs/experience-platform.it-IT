@@ -5,7 +5,7 @@ title: Creare uno schema tramite l’Editor di schema
 type: Tutorial
 description: Questo tutorial illustra i passaggi necessari per la creazione di uno schema utilizzando l’Editor di schema in Experienci Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 0%
@@ -49,10 +49,6 @@ Per iniziare a comporre uno schema, seleziona **[!UICONTROL Crea schema]** nell&
 Il [!UICONTROL Crea schema] viene visualizzato workflow. Scegliere quindi una classe base per lo schema. Puoi scegliere tra le classi principali di [!UICONTROL Profilo individuale XDM] e [!UICONTROL XDM ExperienceEvent], o [!UICONTROL Altro] se queste classi non sono adatte ai tuoi scopi. Il [!UICONTROL Altro] l&#39;opzione classi consente di: [crea una nuova classe](#create-new-class) oppure scegliere tra altre classi preesistenti.
 
 Consulta la [Profilo individuale XDM](../classes/individual-profile.md) e [XDM ExperienceEvent](../classes/experienceevent.md) per ulteriori informazioni su queste classi. Ai fini del presente tutorial, seleziona **[!UICONTROL Profilo individuale XDM]** seguito da **[!UICONTROL Successivo]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 

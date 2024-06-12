@@ -5,9 +5,9 @@ description: Tramite l’utilizzo dei profili di account, Adobe Real-time Custom
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Per ulteriori informazioni sulla modalità di creazione dei profili account come
 
 Seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nella barra di navigazione a sinistra per visualizzare la panoramica dei profili dell’account. Sotto [!UICONTROL Panoramica] , il dashboard mostra un grafico o un grafico che mostra i widget in un singolo punto di ingresso.
 
-![Scheda Panoramica con i widget](images/b2b-account-profile-overview.png)
+![La scheda Panoramica dei profili account con i profili nella barra di navigazione a sinistra ed Panoramica evidenziati.](images/b2b-account-profile-overview.png)
 
 Consulta la documentazione su [[!UICONTROL Profili account]](../../dashboards/guides/account-profiles.md) dashboard per ulteriori informazioni. Consulta la documentazione su [Edizione B2B del modello dati di Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) per ulteriori informazioni su come utilizzare i modelli dati insights per creare grafici personalizzati per le dashboard,
 
@@ -38,7 +38,7 @@ Consulta la documentazione su [[!UICONTROL Profili account]](../../dashboards/gu
 
 Per configurare la corrispondenza lead-account, seleziona **[!UICONTROL Profili]** in [!UICONTROL Account] nel menu di navigazione a sinistra. Il giorno **[!UICONTROL Panoramica]** , seleziona **[!UICONTROL Impostazioni]** in alto a destra.
 
-![Seleziona impostazioni](images/b2b-configuring-accounts-profile.png)
+![La scheda Panoramica dei profili account con Impostazione evidenziata.](images/b2b-configuring-accounts-profile.png)
 
 Il **[!UICONTROL Impostazioni account]** viene visualizzata una finestra di dialogo. Da qui, seleziona la **[!UICONTROL Abilita corrispondenza lead-account]** per abilitare la funzione. Utilizza il menu a discesa per selezionare **[!UICONTROL Giornaliero]** per **[!UICONTROL Cadenza corrispondente]** impostazione. Infine, seleziona la **[!UICONTROL Criteri di corrispondenza]** opzioni seguite da **[!UICONTROL Salva]** per confermare le impostazioni e tornare al **[!UICONTROL Profili account]** schermo.
 
