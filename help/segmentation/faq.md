@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: b41a60942460e22556714699975f9eb281d76335
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4060'
 ht-degree: 0%
 
 ---
@@ -128,9 +128,9 @@ Il grafico seguente spiega i diversi stati del ciclo di vita, cosa rappresentano
 
 | Stato | Definizione | Visibile in Audience Portal? | Visibile nelle destinazioni? | Influisce sui limiti di segmentazione? | Impatto sui tipi di pubblico basati su file | Impatto sulla valutazione del pubblico | Utilizzabile all’interno di altri tipi di pubblico? | Modificabile |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Può essere valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
+| Bozza | Un pubblico in **Bozza** state è un pubblico che è ancora in fase di sviluppo e non è ancora pronto per essere utilizzato in altri servizi. | Sì, ma può essere nascosto. | No | Sì | Può essere importato o aggiornato durante il processo di ottimizzazione. | Valutato per ottenere conteggi di pubblicazione precisi. | Sì, ma non è consigliabile utilizzarlo. | Sì |
 | Pubblicato | Un pubblico in **Pubblicato** state è un pubblico pronto per l’uso in tutti i servizi a valle. | Sì | Sì | Sì | Può essere importato o aggiornato. | Valutato utilizzando la segmentazione batch, in streaming o edge. | Sì | Sì |
-| Non attivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | Sì | Sì |
+| Non attivo | Un pubblico in **Inattivo** lo stato è un pubblico che al momento non è in uso. Esiste ancora in Platform, ma **non** essere utilizzabile fino a quando non viene contrassegnato come bozza o pubblicato. | No, ma può essere visualizzato. | No | No | Non più aggiornato. | Non più valutato o aggiornato da Platform. | No | Sì |
 | Eliminato | Un pubblico in **Eliminato** state è un pubblico che è stato eliminato. L’effettiva eliminazione dei dati potrebbe richiedere alcuni minuti. | No | No | No | I dati sottostanti vengono eliminati. | Al termine dell’eliminazione non viene eseguita alcuna valutazione o esecuzione dei dati. | No | No |
 
 ### In quali stati posso modificare i tipi di pubblico in?
@@ -223,7 +223,7 @@ Per spostare il pubblico principale allo stato inattivo o eliminato, tutti i rel
 
 ### Posso fare riferimento a un pubblico che si trova in uno stato del ciclo di vita diverso?
 
-Sì! Se il pubblico è attualmente in stato di bozza, puoi fare riferimento a tipi di pubblico in stato pubblicato o inattivo. Tuttavia, per pubblicare questo pubblico, **deve** pubblica gli altri tipi di pubblico principali.
+Sì! Se il pubblico è attualmente in stato di bozza, puoi fare riferimento a tipi di pubblico in stato bozza o pubblicato. Tuttavia, per pubblicare questo pubblico, **deve** pubblica gli altri tipi di pubblico principali.
 
 ## Inventario del pubblico
 
