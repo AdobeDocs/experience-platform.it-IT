@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Risoluzione dei problemi relativi alle origini
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini in Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Di seguito è riportato un elenco di risposte alle domande più frequenti sulle 
 
 ### È necessario apportare modifiche alle impostazioni di sicurezza della rete per abilitare le origini?
 
-Potrebbe essere necessario inserire nell&#39;elenco Consentiti alcuni indirizzi IP per abilitare le sorgenti. Per ulteriori informazioni, consulta la documentazione sul connettore di origine specifico.
+Inserire nell&#39;elenco Consentiti Per abilitare le sorgenti, potrebbe essere necessario alcuni indirizzi IP. Per ulteriori informazioni, consulta la documentazione sul connettore di origine specifico.
 
 ### Quali tipi di autenticazione sono supportati dalle origini?
 
@@ -47,7 +47,7 @@ Di seguito è riportato un elenco di vincoli che è necessario tenere conto dei 
 - Non sono consentiti i seguenti nomi di file: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (.) e due caratteri punto (..).
 - Il numero massimo di file per batch è 1500, con una dimensione batch massima di 100 GB.
 - Il numero massimo di proprietà o campi per riga è 10.000.
-- Il numero massimo di batch che possono essere inviati per utente al minuto è 138.
+- Il numero massimo di batch inviabili per utente al minuto è 2000.
 
 ### Quali tipi di dati sono supportati?
 
