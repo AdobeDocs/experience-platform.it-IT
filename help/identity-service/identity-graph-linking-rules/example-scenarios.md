@@ -1,22 +1,20 @@
 ---
 title: Scenari Di Esempio Per La Configurazione Delle Impostazioni Delle Identità
 description: Scopri alcuni scenari di esempio per la configurazione delle impostazioni delle identità.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # Scenari di esempio per la configurazione delle regole di collegamento del grafico delle identità
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Le regole di collegamento del grafo delle identità sono attualmente in Alpha. La funzione e la documentazione sono soggette a modifiche.
+>Questa funzione non è ancora disponibile; il programma beta per le regole di collegamento del grafo delle identità dovrebbe iniziare a luglio per le sandbox di sviluppo. Contatta il team del tuo account di Adobe per informazioni sui criteri di partecipazione.
 
 Questo documento illustra alcuni scenari di esempio da considerare durante la configurazione delle regole di collegamento del grafico delle identità.
 
