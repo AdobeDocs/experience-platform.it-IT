@@ -3,10 +3,10 @@ title: Endpoint API di Audiences
 description: Utilizza l’endpoint "audiences" nell’API del servizio di segmentazione di Adobe Experience Platform per creare, gestire e aggiornare in modo programmatico i tipi di pubblico per la tua organizzazione.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ La richiesta seguente recupera gli ultimi due tipi di pubblico creati nell’org
 +++Richiesta di esempio per recuperare un elenco di tipi di pubblico.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
