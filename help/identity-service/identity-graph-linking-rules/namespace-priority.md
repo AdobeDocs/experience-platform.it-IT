@@ -2,9 +2,10 @@
 title: Priorità dello spazio dei nomi
 description: Scopri la priorità dello spazio dei nomi in Identity Service.
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -50,9 +51,9 @@ Gli spazi dei nomi delle persone sono relativamente immutabili rispetto ai dispo
 
 Un altro modo per affrontare questo argomento è attraverso la cardinalità. Per una determinata entità persona, quante identità verranno create? Nella maggior parte dei casi, una persona avrà un ID CRM, una manciata di identificatori di dispositivi hardware (i ripristini IDFA/GAID non dovrebbero accadere spesso) e ancora più cookie (un individuo potrebbe immaginabilmente lanciare su più dispositivi, utilizzare la modalità in incognito, o reimpostare i cookie in qualsiasi momento). Generalmente, **la cardinalità inferiore indica uno spazio dei nomi con un valore più alto**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Convalidare le impostazioni di priorità dello spazio dei nomi
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Una volta acquisita un’idea di come assegnare la priorità agli spazi dei nomi, puoi utilizzare lo strumento Simulazione grafico per verificare vari scenari di compressione dei grafici e assicurarti che le configurazioni di priorità restituiscano i risultati attesi. Per ulteriori informazioni, consulta la guida sull’utilizzo di [Strumento Simulazione grafico](./graph-simulation.md).
 
 ## Configurare la priorità dello spazio dei nomi
 

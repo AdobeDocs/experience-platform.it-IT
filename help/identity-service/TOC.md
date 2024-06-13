@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio Platform Identity
 user-guide-description: Collega le identità dei clienti tra dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 18%
+source-wordcount: '129'
+ht-degree: 17%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 18%
       - [Algoritmo di ottimizzazione identità](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
       - [Scenari di esempio](./identity-graph-linking-rules/example-scenarios.md)
+      - [Interfaccia utente simulazione grafico](./identity-graph-linking-rules/graph-simulation.md)
    - [Panoramica di ECID](./features/ecid.md)
 - [Guida all’implementazione](implementation.md)
 - [Guardrail per i dati di identità](guardrails.md)
