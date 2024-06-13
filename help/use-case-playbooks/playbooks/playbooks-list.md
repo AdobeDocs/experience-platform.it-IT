@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Playbook di casi d’uso disponibili per Real-time Customer Data Platform e Adobe Journey Optimizer.
 description: Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # Playbook di casi d’uso disponibili
 
 Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi scoprire e utilizzare in Real-time Customer Data Platform e Adobe Journey Optimizer.
 
 ## Playbook di casi d’uso in Journey Optimizer {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Playbook disponibili"
+>abstract="Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer."
 
 | Nome playbook | Descrizione |
 | ------------- |  ----------- |
