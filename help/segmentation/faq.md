@@ -2,9 +2,9 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Sì, è necessario prestare attenzione ad alcune avvertenze che si verificano qu
 In questo momento, **deve** verifica manualmente se il pubblico viene utilizzato a valle in Adobe Journey Optimizer, in quanto questo stato non è attualmente controllato automaticamente.
 
 Inoltre, puoi **deve** controlla manualmente se il pubblico viene utilizzato come componente di un pubblico basato sull’account, poiché anche questo stato non viene attualmente controllato automaticamente.
+
+### Cosa succede quando copio un pubblico? {#copy}
+
+Quando copi un pubblico, il nuovo pubblico sarà in stato di bozza e manterrà le stesse cartelle, gli stessi tag e le stesse etichette applicati al pubblico originale.
 
 ### L’utilizzo di un pubblico come pubblico secondario influisce sulle transizioni dello stato del ciclo di vita?
 
