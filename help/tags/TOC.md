@@ -1,15 +1,15 @@
 ---
 audience: user
-user-guide-title: Guida dei tag
+user-guide-title: Aiuto sui tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 45%
+source-wordcount: '765'
+ht-degree: 44%
 
 ---
 
@@ -251,6 +251,8 @@ ht-degree: 45%
          * [Panoramica](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] API per eventi web {#tiktok}
          * [Panoramica](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Panoramica](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] API Eventi {#zendesk}
          * [Panoramica](./extensions/server/zendesk/overview.md)
 * Sviluppo delle estensioni {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 45%
 * [Domande frequenti](./faq.md)
 * [Aggiornamenti terminologici](./term-updates.md)
 * [Supporto obsoleto per Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
 
