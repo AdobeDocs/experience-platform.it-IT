@@ -1,7 +1,8 @@
 ---
 title: appendIdentityToUrl
 description: Distribuisci esperienze personalizzate in modo più preciso tra app, web e tra domini diversi.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
@@ -18,7 +19,7 @@ La stringa di query generata e aggiunta all’URL è `adobe_mc`. Se l’SDK web 
 >
 >Se non è stato fornito il consenso, l’URL di questo metodo viene restituito invariato. Questo comando viene eseguito immediatamente, senza attendere un aggiornamento del consenso.
 
-## Aggiungere identità all’URL utilizzando l’estensione Web SDK
+## Aggiungere identità all’URL utilizzando l’estensione Web SDK {#extension}
 
 L’aggiunta di un’identità a un URL viene eseguita come azione all’interno di una regola nell’interfaccia dei tag di Adobe Experience Platform Data Collection.
 
