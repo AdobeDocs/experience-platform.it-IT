@@ -3,18 +3,16 @@ title: Panoramica dell’estensione API per le conversioni in tempo reale di Tra
 description: Scopri l’estensione API Trade Desk Real-time Conversions per l’inoltro di eventi in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] panoramica dell’estensione
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) consente di inviare eventi a [!DNL The Trade Desk] per sfruttare il retargeting e l’attribuzione.
-
-È possibile utilizzare [!DNL The Trade Desk Real-Time Conversions API] per inviare dati dall’Edge Network di Adobe Experience Platform a [!DNL The Trade Desk] utilizzando le funzionalità dell&#39;API nella [inoltro eventi](../../../ui/event-forwarding/overview.md) regole.
+È possibile utilizzare [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) per inviare dati dall’Edge Network di Adobe Experience Platform a [!DNL The Trade Desk] utilizzando le funzionalità dell&#39;API nella [inoltro eventi](../../../ui/event-forwarding/overview.md) regole.
 
 Utilizzo di [!DNL The Trade Desk Real-Time Conversions API] , puoi sfruttare le funzionalità dell&#39;API nella tua [inoltro eventi](../../../ui/event-forwarding/overview.md) regole a cui inviare i dati [!DNL The Trade Desk] dall’Edge Network di Adobe Experience Platform.
 
@@ -91,7 +89,8 @@ Consulta la sezione [!DNL The Trade Desk] documentazione per gli sviluppatori di
 
 **[!UICONTROL Parametri di richiesta oggetto]**
 
-Leggi la sezione seguente per informazioni sui parametri di richiesta in formato JSON come Elementi, Privacy ed Elaborazione dati.
+Oggetto JSON contenente ulteriori informazioni. Puoi utilizzare un set ridotto di input di valore chiave o fornire JSON non elaborato. Inoltre, è possibile recuperare dati dinamici da un elemento dati selezionando i dischi (![Icona disco](../../../images/extensions/server/tradedesk/disk-icon.png)) a destra.
+
 
 ![Il [!DNL Object Request Parameters] sezione che mostra i campi disponibili.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ Consulta la sezione [Evento conversioni in tempo reale](https://partner.thetrade
 
 **[!UICONTROL Sostituzioni configurazione]**
 
->NOTA
+>[!NOTE]
 >
 >Il [!UICONTROL Sostituzioni configurazione] consentono di impostare un valore diverso [!DNL Advertiser ID] e/o [!DNL Merchant ID] su ogni regola.
 
 | Input | Descrizione |
 | --- | --- |
-| ID inserzionista | L’ID inserzionista che desideri escludere dall’ID inserzionista fornito nella configurazione dell’estensione. |
-| ID esercente | L’ID esercente che desideri sostituire con l’ID esercente fornito nella configurazione dell’estensione. |
+| ID inserzionista | Identificatore univoco dell&#39;inserzionista a cui è associato l&#39;evento. È possibile fornire un ID inserzionista diverso per sostituire l’ID fornito nella configurazione dell’estensione. |
+| ID esercente | L’identificatore univoco fornito da ciascun esercente [!DNL The Trade Desk] durante la procedura di onboarding. È possibile fornire un ID esercente diverso per sostituire l’ID fornito nella configurazione dell’estensione. |
 
 ![Il [!DNL Configuration Overrides] sezione che mostra i campi disponibili.](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
