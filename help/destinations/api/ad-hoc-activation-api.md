@@ -5,10 +5,10 @@ title: Attivare i tipi di pubblico su destinazioni batch tramite l’API di atti
 description: Questo articolo illustra il flusso di lavoro end-to-end per l’attivazione dei tipi di pubblico tramite l’API di attivazione ad hoc, inclusi i processi di segmentazione che si verificano prima dell’attivazione.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 1%
+source-wordcount: '1612'
+ht-degree: 0%
 
 ---
 
@@ -84,7 +84,7 @@ Le risorse di Experienci Platform possono essere isolate in specifiche sandbox v
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
-* Content-Type: `application/json`
+* Tipo di contenuto: `application/json`
 
 ## Passaggio 3: creare un flusso di attivazione nell’interfaccia utente di Platform {#activation-flow}
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Gli ID delle istanze di destinazione a cui desideri attivare i tipi di pubblico. Puoi ottenere questi ID dall’interfaccia utente di Platform, passando a **[!UICONTROL Destinazioni]** > **[!UICONTROL Sfoglia]** e facendo clic sulla riga di destinazione desiderata per visualizzare l’ID di destinazione nella barra a destra. Per ulteriori informazioni, leggere [documentazione di destination workspace](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Gli ID dei tipi di pubblico che desideri attivare nella destinazione selezionata. Puoi utilizzare l’API ad hoc per esportare i tipi di pubblico generati da Platform e quelli esterni (caricamento personalizzato). Quando attivi un pubblico esterno, utilizza l’ID generato dal sistema invece dell’ID del pubblico. Puoi trovare l’ID generato dal sistema nella vista di riepilogo del pubblico nell’interfaccia utente dei tipi di pubblico. <br> ![Visualizzazione dell’ID del pubblico che non deve essere selezionato.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Visualizzazione dell’ID del pubblico che non deve essere selezionato."){width="100" zoomable="yes"} <br> ![Visualizzazione dell’ID del pubblico generato dal sistema che deve essere utilizzato.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Visualizzazione dell’ID del pubblico generato dal sistema che deve essere utilizzato."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Richiesta con ID esportazione (da rendere obsoleto) {#request-deprecated}
+### Richiesta con ID esportazione {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Tipo di richiesta obsoleto**. Questo tipo di esempio descrive il tipo di richiesta per l’API versione 1. Nella versione 2 dell’API di attivazione ad hoc, non è necessario includere l’ID del processo di esportazione dell’audience più recente.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
