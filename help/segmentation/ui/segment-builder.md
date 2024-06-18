@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente di Segment Builder
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro avanzata che consente di interagire con gli elementi dati del profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio le tessere trascinate utilizzate per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '3633'
-ht-degree: 0%
+source-wordcount: '3743'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campi"
->abstract="I tre tipi di campo che compongono una definizione di segmento sono attributi, eventi e tipi di pubblico. Gli attributi consentono di utilizzare gli attributi del profilo che appartengono alla classe Profilo individuale XDM, gli eventi consentono di creare un pubblico in base ad azioni o eventi che si svolgono utilizzando elementi dati ExperienceEvent XDM e i tipi di pubblico consentono di utilizzare i tipi di pubblico importati da origini esterne."
+>abstract="I tre tipi di campi che compongono una definizione di segmento sono attributi, eventi e pubblico. Gli attributi consentono di utilizzare gli attributi di profilo che appartengono alla classe XDM Profilo individuale; gli eventi consentono di creare un pubblico basato su azioni o eventi che hanno luogo utilizzando gli elementi di dati XDM ExperienceEvent; i tipi di pubblico consentono di utilizzare tipi di pubblico importati da origini esterne."
 
 Gli elementi di base per le definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
@@ -114,6 +114,14 @@ Puoi passare il cursore del mouse sull’ⓘ accanto a un pubblico per visualizz
 Puoi anche cercare i tipi di pubblico utilizzando la barra di ricerca, che utilizza [Sintassi di ricerca di Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Il giorno **[!UICONTROL Tipi di pubblico]** , selezionando una cartella di livello superiore viene visualizzata la barra di ricerca, che consente di eseguire ricerche all&#39;interno di tale cartella. I risultati della ricerca iniziano a essere compilati solo dopo l&#39;immissione di parole intere. Ad esempio, per trovare un pubblico denominato `Online Shoppers`, inizia a digitare &quot;Online&quot; nella barra di ricerca. Dopo aver digitato la parola &quot;Online&quot; completamente, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
 
 ## Area di lavoro del generatore di regole {#rule-builder-canvas}
+
+>[!IMPORTANT]
+>
+>A partire dalla versione di giugno 2024, i vincoli di tempo &quot;Questo mese&quot; e &quot;Quest’anno&quot; rappresentano rispettivamente &quot;mese corrente&quot; e &quot;anno corrente&quot;. Ad esempio, se hai creato un pubblico il 18 luglio cercando &quot;tutti i clienti il cui compleanno cade in questo mese&quot;, il pubblico riceverà tutti i clienti il cui compleanno cade dal 1° luglio al 31 luglio. Il 1° agosto, questo pubblico riceverebbe tutti i clienti che compiono gli anni dal 1° al 31 agosto.
+>
+>In precedenza, &quot;This month&quot; (Questo mese) e &quot;this year&quot; (Quest’anno) rappresentavano rispettivamente 30 giorni e 365 giorni, che non sono stati contabilizzati per mesi con 31 giorni e anni bisestili.
+>
+>Per aggiornare la logica dei tipi di pubblico, salva di nuovo quelli creati in precedenza.
 
 Una definizione di segmento è una raccolta di regole utilizzate per descrivere le caratteristiche o il comportamento chiave di un pubblico target. Queste regole vengono create utilizzando l’area di lavoro del generatore di regole, situata al centro di [!DNL Segment Builder].
 
@@ -232,7 +240,7 @@ Dopo aver selezionato **[!UICONTROL Annulla wrapping contenitore]** il contenito
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Criteri di unione"
->abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito oppure puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
+>abstract="Un criterio di unione consente l’unione di set di dati diversi per formare il profilo. Platform ha fornito un criterio di unione predefinito, in alternativa puoi crearne uno nuovo in Profili. Scegli un criterio di unione che corrisponda allo scopo di marketing per questo pubblico."
 
 [!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizza per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare un profilo.
 
@@ -242,18 +250,18 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ![Il selettore dei criteri di unione viene evidenziato. Questo consente di scegliere quale criterio di unione selezionare per la definizione del segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà di definizione del segmento {#segment-properties}
+## Proprietà della definizione di segmento {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Proprietà di definizione del segmento"
->abstract="La sezione delle proprietà di definizione del segmento visualizza una stima delle dimensioni della definizione del segmento risultante, visualizzando il numero di profili qualificati rispetto al numero totale di profili. Ciò ti consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso."
+>title="Proprietà della definizione di segmento"
+>abstract="Nella sezione Proprietà della definizione di segmento viene visualizzata una stima della dimensione del segmento risultante, con il numero di profili qualificati rispetto al numero totale di profili. Questo consente di regolare la definizione del segmento in base alle tue esigenze prima di creare il pubblico stesso."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="Aggiorna stime"
->abstract="Puoi aggiornare le stime della definizione del segmento per visualizzare immediatamente un’anteprima del numero di profili idonei per la definizione del segmento proposta. Le stime del pubblico vengono generate utilizzando una dimensione campione dei dati di campionamento di quel giorno."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
+>title="Aggiornare le stime"
+>abstract="Puoi aggiornare le stime della definizione di segmento per visualizzare subito un’anteprima del numero di profili idonei per la definizione di segmento proposta. Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=it#estimate-and-preview-an-audience" text="Stimare e visualizzare in anteprima un pubblico"
 
 Durante la creazione di una definizione di segmento, il **[!UICONTROL Proprietà del pubblico]** nella sezione a destra dell’area di lavoro viene visualizzata una stima delle dimensioni della definizione del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
