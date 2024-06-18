@@ -4,10 +4,10 @@ type: Tutorial
 description: Scopri come utilizzare i campi calcolati per esportare array in file di schema flat da Real-Time CDP a destinazioni di archiviazione cloud.
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1477'
+ht-degree: 5%
 
 ---
 
@@ -31,9 +31,13 @@ Ottieni informazioni complete sui campi calcolati: cosa sono e perché sono impo
 * [Guida e panoramica dell’interfaccia utente](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Funzioni di preparazione dati](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->Non tutte le funzioni elencate sopra sono supportate *durante l’esportazione di campi nelle destinazioni di archiviazione cloud* utilizzo della funzionalità campi calcolati. Consulta la [sezione funzioni supportate](#supported-functions) per ulteriori informazioni, consulta.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Array e altri tipi di oggetti in Platform {#arrays-strings-other-objects}
 
@@ -86,7 +90,9 @@ Quando è pronto, seleziona **[!UICONTROL Successivo]** per procedere al passagg
 
 ## Funzioni supportate {#supported-functions}
 
-Nella versione beta dei campi calcolati e nel supporto degli array per le destinazioni sono supportate solo le seguenti funzioni:
+Tutti i documenti [Funzioni di preparazione dati](/help/data-prep/functions.md) sono supportate quando si attivano i dati in destinazioni basate su file.
+
+Tuttavia, attualmente vengono fornite descrizioni estese dei casi d’uso e informazioni sull’output di esempio solo per le seguenti funzioni nella versione beta dei campi calcolati e per il supporto degli array per le destinazioni:
 
 * `join`
 * `coalesce`
@@ -111,9 +117,9 @@ Utilizza il `join` funzione per concatenare gli elementi di un array in una stri
 Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando un `join('_',loyalty.loyaltyID)` sintassi:
 
 * `"organizations": ["Marketing","Sales,"Finance"]` array
-* `person.name.firstName` string
-* `person.name.lastName` string
-* `personalEmail.address` string
+* `person.name.firstName` stringa
+* `person.name.lastName` stringa
+* `personalEmail.address` stringa
 
 ![Esempio di mappatura che include la funzione di join.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
 
@@ -159,9 +165,9 @@ Utilizza il `coalesce` funzione per accedere ed esportare il primo elemento non 
 Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura utilizzando un `coalesce(subscriptions.hasPromotion)` sintassi per restituire il primo `true` di `false` valore nell’array:
 
 * `"subscriptions.hasPromotion": [null, true, null, false, true]` array
-* `person.name.firstName` string
-* `person.name.lastName` string
-* `personalEmail.address` string
+* `person.name.firstName` stringa
+* `person.name.lastName` stringa
+* `personalEmail.address` stringa
 
 ![Esempio di mappatura che include la funzione coalesce.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
 
@@ -179,7 +185,7 @@ Utilizza il `size_of` per indicare quanti elementi esistono in un array. Ad esem
 Ad esempio, puoi combinare i seguenti campi XDM come mostrato nella schermata di mappatura.
 
 * `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array che indica cinque diversi tempi di acquisto da parte del cliente
-* `personalEmail.address` string
+* `personalEmail.address` stringa
 
 ![Esempio di mappatura che include la funzione size_of.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
 
