@@ -1,11 +1,11 @@
 ---
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
-description: Scopri l’Assistente IA, le sue sfumature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
+description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 1%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 {style="table-layout:auto"}
 
-### Informazioni operative {#operational-insights}
+### Insight operativi {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,14 +69,18 @@ Le informazioni operative si riferiscono alle risposte che l’Assistente AI gen
 
 Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti domini:
 
-* Attributi
-* Tipi di pubblico
-* Flussi di dati
-* Set di dati
-* Destinazioni _Al momento non è possibile rispondere ad alcune domande relative agli account e al flusso di dati._
-* Percorsi
-* Schemi _Al momento non è possibile rispondere alle domande relative ai gruppi di campi._
-* Sorgenti _(Al momento non è possibile rispondere alle domande relative ai conti)._
+| Dominio | Metadati supportati |
+| --- | --- |
+| Attributi | <ul><li>Ricerche per nome attributo</li><li>Attributo: relazione schema</li><li>Attributo: relazione set di dati</li><li>Attributo: relazione pubblico</li><li>Attributo - relazione di destinazione</li><li>Attributi non utilizzati</li></ul> |
+| Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerche per definizione pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Regole InSegment</li><li>Ricerche per nome</li><li>Ricerche per nome e ID |
+| Flussi di dati | <ul><li>Conteggi dei flussi di dati</li><li>Stato del flusso di dati</li><li>Flusso di dati: relazione set di dati</li><li>Flusso di dati - relazione di origine</li></ul> |
+| Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Ricerche per nome </li><li>Ricerche per nome e ID</li></ul> |
+| Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> |
+| Percorsi | <ul><li>Conteggi</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> |
+| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Tipo di classe schema</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li></ul> |
+| Origini | <ul><li>Conteggi account</li><li>Stato dell’account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore sorgente - relazione flusso di dati</li><li>Account di origine - relazione flusso di dati</li></ul> |
+
+{style="table-layout:auto"}
 
 Per le domande sulle informazioni operative, le risposte potrebbero non riflettere lo stato corrente dell’interfaccia utente. I dati che supportano queste domande vengono aggiornati una volta ogni 24 ore. Ad esempio, le modifiche apportate dagli utenti in Real-Time CDP durante il giorno vengono sincronizzate con gli archivi dati di notte e quindi diventano disponibili per le domande degli utenti di mattina. Dovrai accedere a una sandbox per informazioni su dati specifici relativi agli oggetti.
 

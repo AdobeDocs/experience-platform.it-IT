@@ -2,9 +2,9 @@
 title: Assistente AI in Adobe Experience Platform
 description: Scopri come utilizzare l’Assistente AI per navigare e comprendere i concetti di Experienci Platform e Real-time Customer Data Platform e le informazioni sull’utilizzo degli oggetti.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Guida all’interfaccia utente di Assistente IA
 
 Leggi questa guida per scoprire come utilizzare l’Assistente IA nell’interfaccia utente di Adobe Experience Platform.
+
+Il video seguente ha lo scopo di illustrare l’Assistente per l’intelligenza artificiale.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Accedere all’Assistente AI nell’interfaccia utente di Experienci Platform
 
@@ -81,7 +85,7 @@ L’Assistente IA aggiorna l’interfaccia e fornisce i collegamenti alla docume
 
 +++
 
-### Informazioni operative {#operational-insights}
+### Insight operativi {#operational-insights}
 
 Devi trovarti in una sandbox attiva affinché AI Assistant risponda in modo sufficiente a una domanda sulle informazioni operative.
 
@@ -111,6 +115,22 @@ Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assiste
 
 +++
 
+### Verificare le risposte di Operational Insights {#verify-responses}
+
+È possibile verificare ogni risposta relativa alle domande di approfondimenti operativi utilizzando una query SQL fornita dall’Assistente AI.
+
++++Seleziona per visualizzare un esempio di verifica delle risposte di approfondimenti operativi
+
+Dopo aver ricevuto una risposta a una domanda di approfondimenti operativi, seleziona **[!UICONTROL Mostra origini]** e quindi seleziona **[!UICONTROL Visualizza query di origine]**.
+
+![visualizza query di origine](./images/view-source-query.png)
+
+Quando viene eseguita una query con una domanda di approfondimenti operativi, l’Assistente AI fornisce una query SQL che può essere utilizzata per verificare il processo impiegato per calcolare la risposta. Questa query di origine è solo a scopo di verifica e non è supportata in Query Service.
+
+![esempio di query di origine](./images/source-query.png)
+
++++
+
 ### Usa completamento automatico {#use-auto-complete}
 
 È possibile utilizzare la funzione di completamento automatico per ricevere un elenco di oggetti dati esistenti nella sandbox. I consigli di completamento automatico sono disponibili per i seguenti domini: pubblico, schemi, set di dati, origini e destinazioni.
@@ -132,6 +152,14 @@ Puoi anche fornire filtri e modifiche alle domande, nonché istruire l’Assiste
 Nell’esempio seguente, a AI Assistant viene richiesto prima il numero totale di flussi di dati e quindi di elencare i 10 flussi di dati più recenti.
 
 ![Esempio di multi-turn](./images/multiturn.png)
+
++++
+
+### Avvia una nuova conversazione
+
+È possibile modificare gli argomenti con l&#39;Assistente AI reimpostando e avviando una nuova conversazione.
+
++++Seleziona per visualizzare un esempio di reimpostazione della conversazione
 
 Per ripristinare, seleziona i puntini di sospensione (**`...`**) sull&#39;interfaccia dell&#39;Assistente AI e quindi selezionare **[!UICONTROL Avvia nuova conversazione]**. Questo informa l’Assistente AI che intendi modificare gli argomenti e può essere particolarmente utile quando si risolvono problemi relativi a query che hanno esito negativo o che fanno riferimento a informazioni errate.
 
