@@ -1,10 +1,11 @@
 ---
 title: Note sulla versione di Adobe Experience Platform, giugno 2024
 description: Note sulla versione di Adobe Experience Platform di giugno 2024.
-source-git-commit: 03a88554e8b7793d8e91bc867ce67a00f620b622
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 21%
+source-wordcount: '1195'
+ht-degree: 20%
 
 ---
 
@@ -71,6 +72,7 @@ Per ulteriori informazioni sulla preparazione dati, consulta [Panoramica sulla p
 | ----------- | ----------- |
 | Miglioramento dell’API di esportazione ad hoc per esportare pubblici esterni | Ora puoi utilizzare l’API di esportazione ad hoc per esportare i tipi di pubblico esterni (caricamento personalizzato). [Ulteriori informazioni](/help/destinations/api/ad-hoc-activation-api.md) . |
 | (Beta) Funzioni aggiuntive supportate nella fase beta del supporto dell&#39;array di esportazione | In precedenza, quando si attivavano i tipi di pubblico su destinazioni basate su file e si selezionava Usa campo calcolato, era limitato all’utilizzo di un sottoinsieme dei tipi di pubblico disponibili tramite la preparazione dati. Tale limite è stato ora rimosso e i clienti hanno accesso a tutte le funzioni disponibili tramite la preparazione dati quando esportano tipi di pubblico in destinazioni basate su file. [Ulteriori informazioni](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| Mostra solo i campi con dati nel passaggio di mappatura | Quando mappi gli attributi del profilo alle destinazioni, ora puoi alternare tra tutti gli attributi del profilo o solo quelli che contengono dati. Per impostazione predefinita, vengono visualizzati solo i campi con i dati. Consulta le guide all’attivazione per [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) e [streaming](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinazioni per ulteriori dettagli. |
 
 {style="table-layout:auto"}
 
@@ -117,4 +119,3 @@ Per ulteriori informazioni su [!DNL Use Case Playbooks], leggi le seguenti pagin
 - Ottieni un elenco di tutti [playbook disponibili](/help/use-case-playbooks/playbooks/playbooks-list.md), raggruppati per prodotto (Real-Time CDP o Journey Optimizer).
 - Scopri cosa [autorizzazioni](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sono necessari per utilizzare i playbook e le risorse che creano.
 - Comprendere la [funzionalità di riconoscimento dei dati](/help/use-case-playbooks/playbooks/data-awareness.md) che consente di duplicare le risorse generate in altri ambienti sandbox.
-
