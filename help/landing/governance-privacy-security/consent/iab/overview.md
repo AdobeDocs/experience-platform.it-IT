@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 in Experienci Platform
 description: Scopri come configurare le operazioni sui dati e gli schemi per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Questa guida richiede anche una buona conoscenza dei seguenti servizi di Platfor
 * [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](/help/profile/home.md): utilizza [!DNL Identity Service] per creare in tempo reale profili cliente dettagliati dai set di dati. [!DNL Real-Time Customer Profile] estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
-   * [Comandi di consenso SDK](/help/web-sdk/consent/supporting-consent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
+   * [Comandi di consenso SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere [!DNL Real-Time Customer Profile] dati in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 
 Oltre ai servizi di Platform elencati sopra, dovresti avere familiarità con [destinazioni](/help/data-governance/home.md) e il loro ruolo nell&#39;ecosistema della piattaforma.

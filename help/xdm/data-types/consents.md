@@ -3,7 +3,7 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Tipo di dati Consensi e preferenze
 description: Il tipo di dati Consenso per la privacy, la personalizzazione e le preferenze di marketing ha lo scopo di supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP, Consent Management Platforms) e da altre origini dalle operazioni sui dati.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 0%
@@ -267,7 +267,7 @@ Guarda il tutorial su [creazione di uno schema nell’interfaccia utente](https:
 
 ## Gestione delle modifiche di consenso e preferenze
 
-Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e immediatamente applicate utilizzando [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
+Quando un cliente modifica i propri consensi o preferenze sul sito web, queste modifiche devono essere raccolte e immediatamente applicate utilizzando [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). Se un cliente rinuncia alla raccolta dei dati, tutta la raccolta dei dati deve cessare immediatamente. Se un cliente rinuncia alla personalizzazione, significa che non dovrebbe essere presente alcuna personalizzazione nella pagina successiva in cui visita.
 
 ## Appendice {#appendix}
 

@@ -3,16 +3,16 @@ title: Supporto IAB TCF 2.0 nell’SDK per web di Adobe Experience Platform
 description: Scopri come supportare le preferenze di consenso IAB TCF 2.0 utilizzando Adobe Experience Platform Web SDK
 keywords: consenso;setConsent;Gruppo campi privacy profilo;Gruppo campi privacy evento esperienza;Gruppo campi privacy;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Supporto IAB TCF 2.0 nell’SDK per web di Adobe Experience Platform
 
-Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida illustra i requisiti per supportare IAB TCF 2.0 tramite Adobe Experience Platform Web SDK tramite l’integrazione con Adobe Real-time Customer Data Platform, Audienci Manager, Experience Events, Adobe Analytics ed Edge Network.
+Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida illustra i requisiti per supportare IAB TCF 2.0 tramite Adobe Experience Platform Web SDK tramite l’integrazione con Adobe Real-time Customer Data Platform, Audienci Manager, Experience Events, Adobe Analytics e Edge Network.
 
 Sono inoltre disponibili le seguenti guide per scoprire come integrare IAB TCF 2.0 con e senza tag.
 
@@ -69,16 +69,16 @@ Ad esempio, se un cliente non rientra nella giurisdizione del Regolamento genera
 
 ### Impostazione del consenso in caso di modifiche
 
-Adobe Experience Platform Web SDK dispone di un `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi Adobe utilizzando IAB TCF 2.0. Se esegui l’integrazione con Real-Time CDP, questo aggiorna il profilo del cliente. Se esegui l’integrazione con Audienci Manager, le informazioni del cliente vengono aggiornate. Una chiamata a questo indirizzo imposta anche un cookie con una preferenza di consenso &quot;tutto o niente&quot; che controlla se è consentito inviare eventi di esperienza futuri. Questa azione deve essere chiamata ogni volta che cambia il consenso. Al caricamento futuro delle pagine, il cookie di consenso della rete Edge verrà letto per determinare se è possibile inviare eventi esperienza e impostare un cookie di identità.
+Adobe Experience Platform Web SDK dispone di un `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi Adobe utilizzando IAB TCF 2.0. Se esegui l’integrazione con Real-Time CDP, questo aggiorna il profilo del cliente. Se esegui l’integrazione con Audienci Manager, le informazioni del cliente vengono aggiornate. Una chiamata a questo indirizzo imposta anche un cookie con una preferenza di consenso &quot;tutto o niente&quot; che controlla se è consentito inviare eventi di esperienza futuri. Questa azione deve essere chiamata ogni volta che cambia il consenso. Al caricamento futuro della pagina, il cookie di consenso dell’Edge Network verrà letto per determinare se è possibile inviare eventi esperienza e impostare un cookie di identità.
 
-Analogamente all’integrazione IAB TCF 2.0 di Audienci Manager, la rete Edge fornisce il consenso quando un cliente ha fornito il proprio consenso esplicito alle seguenti finalità:
+Simile all’integrazione IAB TCF 2.0 di Audienci Manager, l’Edge Network fornisce il consenso quando un cliente ha fornito il proprio consenso esplicito alle seguenti finalità:
 
 - **Scopo 1:** Memorizzare e/o accedere alle informazioni su un dispositivo
 - **Scopo 10:** Sviluppo e miglioramento dei prodotti
 - **Uso speciale 1:** Garantire la sicurezza, prevenire le frodi ed eseguire il debug. (In base alle normative IAB TCF, questo è sempre consentito)
 - **Adobe autorizzazione fornitore:** Consenso per Adobe (fornitore 565)
 
-Per ulteriori informazioni su `setConsent` , leggi la documentazione su [Consenso di supporto](../../consent/supporting-consent.md).
+Per ulteriori informazioni su `setConsent` , leggi la documentazione dedicata di Web SDK su [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Aggiunta di consenso agli eventi esperienza
 

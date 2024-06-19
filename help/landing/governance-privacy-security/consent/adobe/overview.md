@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elaborazione del consenso in Adobe Experience Platform
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Questa guida richiede una buona conoscenza dei vari servizi Experienci Platform 
 * [Servizio Adobe Experience Platform Identity](/help/identity-service/home.md): risolve la sfida fondamentale posta dalla frammentazione dei dati sull’esperienza del cliente, collegando le identità tra dispositivi e sistemi.
 * [Profilo cliente in tempo reale](/help/profile/home.md): utilizza [!DNL Identity Service] funzionalità per creare in tempo reale profili cliente dettagliati dai set di dati. Real-Time Customer Profile estrae dati dal Data Lake e mantiene i profili dei clienti nel proprio archivio dati separato.
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): libreria JavaScript lato client che consente di integrare vari servizi Platform nel sito web rivolto al cliente.
-   * [Comandi di consenso SDK](/help/web-sdk/consent/supporting-consent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
+   * [Comandi di consenso SDK](../../../../web-sdk/commands/setconsent.md): panoramica del caso d’uso dei comandi SDK relativi al consenso mostrati in questa guida.
 * [Servizio di segmentazione di Adobe Experience Platform](/help/segmentation/home.md): consente di dividere i dati del Profilo cliente in tempo reale in gruppi di individui che condividono caratteristiche simili e rispondono in modo simile alle strategie di marketing.
 
 ## Riepilogo del flusso di elaborazione del consenso {#summary}
@@ -51,7 +51,7 @@ Nell’attuale versione del supporto per l’elaborazione del consenso in Platfo
 >
 >Per ulteriori informazioni sulla struttura dei campi di consenso XDM menzionati in precedenza, consulta la guida sulla [[!UICONTROL Consensi e preferenze] tipo di dati](/help/xdm/data-types/consents.md).
 
-Una volta configurato il sistema, Platform Web SDK interpreta il valore del consenso per la raccolta dati per l’utente corrente per determinare se i dati devono essere inviati alla rete Edge di Adobe Experience Platform, eliminati dal client o memorizzati finché l’autorizzazione per la raccolta dati non viene impostata su sì o no.
+Una volta configurato il sistema, Platform Web SDK interpreta il valore del consenso per la raccolta dati per l’utente corrente per determinare se i dati devono essere inviati all’Edge Network di Adobe Experience Platform, eliminati dal client o memorizzati finché l’autorizzazione per la raccolta dati non viene impostata su sì o no.
 
 ## Determinare come generare i dati sul consenso dei clienti all’interno della CMP {#consent-data}
 
