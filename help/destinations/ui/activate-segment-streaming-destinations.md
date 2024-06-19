@@ -3,10 +3,10 @@ title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 6%
 
 ---
 
@@ -79,7 +79,9 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 1. In **[!UICONTROL Seleziona campo di origine]** , utilizza la **[!UICONTROL Seleziona attributi]** o **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** opzioni per passare tra le due categorie di campi sorgente disponibili. Dal menu [!DNL XDM] attributi del profilo e spazi dei nomi di identità, seleziona quelli che desideri mappare sulla destinazione, quindi scegli **[!UICONTROL Seleziona]**.
 
-   ![Seleziona la pagina del campo sorgente che mostra diversi campi sorgente disponibili.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   Utilizza il **[!UICONTROL Mostra solo campi con dati]** attiva per visualizzare solo i campi dello schema compilati con valori. Per impostazione predefinita, vengono visualizzati solo i campi schema compilati.
+
+   ![Seleziona la pagina del campo sorgente che mostra diversi campi sorgente disponibili.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Seleziona il pulsante a destra del **[!UICONTROL Campo di destinazione]** voce.
 
@@ -91,12 +93,12 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
 1. Per aggiungere altre mappature, ripetere i passaggi da 1 a 5.
 
-### Applica trasformazione {#apply-transformation}
+### Applicar trasformazione {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="Applica trasformazione"
->abstract="Seleziona questa opzione quando utilizzi campi sorgente senza hash, per fare in modo che Adobe Experience Platform li inserisca automaticamente nell&#39;hashing al momento dell&#39;attivazione."
+>title="Applicar trasformazione"
+>abstract="Seleziona questa opzione quando utilizzi campi di origine senza hash per fare in modo che Adobe Experience Platform ne esegua automaticamente l’hashing all’attivazione."
 
 Quando mappi gli attributi di origine senza hash agli attributi di destinazione per i quali la destinazione prevede l&#39;hashing (ad esempio: `email_lc_sha256` o `phone_sha256`), controlla **Applica trasformazione** opzione per fare in modo che Adobe Experience Platform esegua automaticamente l’hash degli attributi sorgente all’attivazione.
 
@@ -141,7 +143,7 @@ Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepil
 
 ### Valutazione dei criteri di consenso {#consent-policy-evaluation}
 
-Se la tua organizzazione ha acquistato **Schermo sanitario Adobe** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili sono inclusi nell’attivazione in seguito a tali criteri. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
+Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privacy &amp; Security Shield**, seleziona **[!UICONTROL Visualizza i criteri di consenso applicabili]** per vedere quali criteri di consenso vengono applicati e quanti profili vengono inclusi di conseguenza nell’attivazione. Ulteriori informazioni [valutazione dei criteri di consenso](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) per ulteriori informazioni.
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
