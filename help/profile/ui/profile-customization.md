@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;interfaccia
 title: Personalizzazione dei dettagli del profilo nell’interfaccia utente
 description: Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati Real-Time Customer Profile vengono visualizzati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,11 @@ Il **[!UICONTROL Attributi selezionati]** sezione sul lato destro della finestra
 
 ![Vengono evidenziati gli attributi che attualmente compongono gli attributi della scheda.](../images/profile-customization/select-before.png)
 
-Puoi selezionare uno qualsiasi dei campi schema di unione disponibili per personalizzare gli attributi della scheda che stai modificando. I campi selezionati vengono visualizzati con un segno di spunta accanto e vengono aggiunti automaticamente all&#39;elenco degli attributi selezionati. Dopo aver aggiunto tutti gli attributi che desideri visualizzare sulla scheda, scegli **[!UICONTROL Seleziona]** per tornare al **[!UICONTROL Modifica widget]** schermo.
+Puoi selezionare uno qualsiasi dei campi schema di unione disponibili per personalizzare gli attributi della scheda che stai modificando. Quando selezioni i campi, puoi scegliere di visualizzare il nome del percorso del file o il nome visualizzato. Per passare da una visualizzazione all&#39;altra, selezionare la **[!UICONTROL Mostra nomi visualizzati]** attivare/disattivare.
+
+![Il [!UICONTROL Mostra nomi visualizzati] L’opzione è evidenziata nella pagina dei dettagli del profilo.](../images/profile-customization/show-display-names.png)
+
+I campi selezionati vengono visualizzati con un segno di spunta accanto e vengono aggiunti automaticamente all&#39;elenco degli attributi selezionati. Dopo aver aggiunto tutti gli attributi che desideri visualizzare sulla scheda, scegli **[!UICONTROL Seleziona]** per tornare al **[!UICONTROL Modifica widget]** schermo.
 
 ![Vengono evidenziati i nuovi attributi aggiunti.](../images/profile-customization/select-after.png)
 
@@ -70,7 +74,7 @@ Dopo il salvataggio, si ritorna al **[!UICONTROL Dettaglio]** in cui sono visibi
 
 ## Aggiungi una nuova scheda {#add-a-new-card}
 
-Per personalizzare ulteriormente l’aspetto dei profili in Experience Platform, puoi scegliere di aggiungere nuove schede al dashboard e selezionare gli attributi che desideri visualizzare su tali schede. Per iniziare, seleziona **[!UICONTROL Modifica dashboard]** il **[!UICONTROL Dettaglio]** scheda.
+Per personalizzare ulteriormente l’aspetto dei profili in Experienci Platform, puoi scegliere di aggiungere nuove schede al dashboard e selezionare gli attributi che desideri visualizzare su tali schede. Per iniziare, seleziona **[!UICONTROL Modifica dashboard]** il **[!UICONTROL Dettaglio]** scheda.
 
 ![Viene evidenziato il pulsante Personalizza dettagli profilo.](../images/profile-customization/customize-profile-details.png)
 
@@ -106,4 +110,4 @@ Se in qualsiasi momento decidi di ripristinare le schede predefinite che sono st
 
 ## Passaggi successivi
 
-Seguendo questo documento, ora dovresti essere in grado di aggiornare la vista profilo per la tua organizzazione, tra cui l’aggiunta e la rimozione di schede, la modifica dei dettagli e degli attributi delle schede e il riordinamento e ridimensionamento delle schede. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile] nell’interfaccia utente di Experience Platform, consulta la sezione [[!DNL Profile] guida utente](user-guide.md).
+Seguendo questo documento, ora dovresti essere in grado di aggiornare la vista profilo per la tua organizzazione, aggiungendo e rimuovendo schede, modificando i dettagli e gli attributi della scheda e riordinando e ridimensionando le schede. Per ulteriori informazioni sull&#39;utilizzo di [!DNL Profile] nell’interfaccia utente di Experienci Platform, consulta la sezione [[!DNL Profile] guida utente](user-guide.md).

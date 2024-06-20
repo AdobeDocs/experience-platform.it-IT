@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’interfaccia utente di Real-Time Customer Profile
 description: Real-Time Customer Profile crea una visualizzazione olistica di ciascuno dei singoli clienti, combinando dati provenienti da più canali tra cui dati online, offline, del sistema CRM e di terze parti. Questo documento funge da guida per l’interazione con Real-Time Customer Profile nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Nell’interfaccia utente di Experienci Platform, seleziona **[!UICONTROL Profil
 >
 >Se la tua organizzazione non utilizza ancora Platform e non dispone ancora di set di dati di profilo attivi o criteri di unione creati, il [!UICONTROL Profili] dashboard non visibile. Al contrario, [!UICONTROL Panoramica] Questa scheda mostra collegamenti e documentazione utili per iniziare a utilizzare Real-Time Customer Profile.
 
-### Dashboard dei profili {#profile-dashboard}
+### Dashboard profili {#profile-dashboard}
 
 La dashboard dei profili delinea le metriche chiave relative ai dati di profilo della tua organizzazione.
 
@@ -52,7 +52,7 @@ Oltre a queste metriche, questa sezione fornisce una data e un’ora dell’ulti
 
 ![Vengono visualizzate ed evidenziate le metriche Profilo.](../images/user-guide/browse-metrics.png)
 
-### Conteggio profili {#profile-count}
+### Conteggio dei profili {#profile-count}
 
 Nel conteggio dei profili viene visualizzato il numero totale di profili di cui dispone l’organizzazione in Experienci Platform, dopo che il criterio di unione predefinito dell’organizzazione ha unito i frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, la tua organizzazione può avere più frammenti di profilo correlati a un singolo cliente che interagisce con il tuo marchio su canali diversi, ma questi frammenti verrebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di &quot;1&quot; profilo perché sono tutti correlati alla stessa persona.
 
@@ -132,9 +132,13 @@ Dopo aver selezionato un **[!UICONTROL ID profilo]**, il **[!UICONTROL Dettaglio
 
 I campi predefiniti visualizzati possono anche essere modificati a livello di organizzazione per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, incluse le istruzioni dettagliate per l’aggiunta e la rimozione di attributi e il ridimensionamento dei pannelli del dashboard, leggi [guida alla personalizzazione dei dettagli del profilo](profile-customization.md).
 
-![Viene evidenziata la scheda Dettagli. Vengono visualizzati i dettagli del profilo.](../images/user-guide/profile-detail.png)
+![Viene evidenziata la scheda Dettagli. Vengono visualizzati i dettagli del profilo.](../images/user-guide/profile-detail-row-name.png)
 
-Puoi visualizzare ulteriori informazioni relative al singolo profilo cliente selezionando un’altra delle schede disponibili. Queste schede includono attributi, eventi e la scheda Appartenenza al pubblico che mostra i tipi di pubblico per i quali il profilo è attualmente qualificato.
+Puoi anche scegliere di visualizzare o meno i nomi degli attributi come nomi visualizzati e i relativi nomi dei percorsi dei campi. Per passare da una visualizzazione all&#39;altra, selezionare la **[!UICONTROL Mostra nomi visualizzati]** attivare/disattivare.
+
+![L&#39;opzione Mostra nomi visualizzati è evidenziata e i nomi visualizzati sono visualizzati sotto gli attributi.](../images/user-guide/profile-detail.png)
+
+Per visualizzare informazioni aggiuntive relative al singolo profilo cliente, seleziona una delle altre schede disponibili. Queste schede includono attributi, eventi e la scheda Appartenenza al pubblico che mostra i tipi di pubblico per i quali il profilo è attualmente qualificato.
 
 ### Scheda Attributi
 
