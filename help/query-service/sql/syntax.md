@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL in Query Service
 description: Questo documento descrive e spiega la sintassi SQL supportata da Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 2%
 
 ---
@@ -104,20 +104,34 @@ Questa clausola può essere utilizzata per leggere in modo incrementale i dati s
 #### Esempio
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+Nella tabella seguente viene illustrato il significato di ogni opzione di sintassi all&#39;interno della clausola SNAPSHOT.
+
+| Sintassi | Significato |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | Legge i dati a partire dall&#39;ID snapshot specificato (esclusivo). |
+| `AS OF end_snapshot_id` | Legge i dati così come si trovavano nell’ID snapshot specificato (incluso). |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Legge i dati tra gli ID snapshot iniziale e finale specificati. È esclusivo del `start_snapshot_id` e compreso il `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | Legge i dati dall&#39;inizio (prima del primo snapshot) all&#39;ID snapshot iniziale specificato (incluso). Questo restituisce solo le righe in `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | Legge i dati subito dopo il valore specificato `end-snapshot_id` alla fine del set di dati (escluso l’ID dell’istantanea). Ciò significa che se `end_snapshot_id` è l’ultimo snapshot nel set di dati, la query restituirà zero righe perché non sono presenti snapshot oltre all’ultimo snapshot. |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Legge i dati a partire dall&#39;ID snapshot specificato da `table_to_be_queried` e si unisce ai dati di `table_to_be_joined` com&#39;era in `your_chosen_snapshot_id`. Il join si basa sugli ID corrispondenti delle colonne ID delle due tabelle unite in join. |
 
 A `SNAPSHOT` La clausola funziona con un alias di tabella o di tabella ma non sopra una sottoquery o vista. A `SNAPSHOT` la clausola funziona ovunque un `SELECT` può essere applicata a una tabella.
 
@@ -128,8 +142,6 @@ Inoltre, puoi utilizzare `HEAD` e `TAIL` come valori di offset speciali per le c
 >Se si esegue una query tra due ID snapshot, possono verificarsi i due scenari seguenti se lo snapshot iniziale è scaduto e il flag di comportamento di fallback facoltativo (`resolve_fallback_snapshot_on_failure`) è impostato:
 >
 >- Se è impostato il flag di comportamento di fallback facoltativo, Query Service sceglie lo snapshot disponibile più recente, lo imposta come snapshot iniziale e restituisce i dati tra lo snapshot disponibile più recente e quello finale specificato. Questi dati sono **inclusivo** della prima istantanea disponibile.
->
->- Se il flag di comportamento di fallback facoltativo non è impostato, viene restituito un errore.
 
 ### clausola WHERE
 
@@ -186,7 +198,7 @@ La sintassi seguente definisce un `CREATE TABLE AS SELECT` Query (CTAS):
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ----- | ----- |
 | `schema` | Titolo dello schema XDM. Utilizzare questa clausola solo se si desidera utilizzare uno schema XDM esistente per il nuovo set di dati creato dalla query CTAS. |
 | `rowvalidation` | (Facoltativo) Specifica se l’utente desidera la convalida a livello di riga di ogni nuovo batch acquisito per il set di dati appena creato. Il valore predefinito è `true`. |
@@ -215,7 +227,7 @@ Il `INSERT INTO` Il comando è definito come segue:
 INSERT INTO table_name select_query
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ----- | ----- |
 | `table_name` | Nome della tabella in cui si desidera inserire la query. |
 | `select_query` | A `SELECT` dichiarazione. La sintassi del `SELECT` La query si trova in [Sezione SELECT queries](#select-queries). |
@@ -262,7 +274,7 @@ Il `DROP TABLE` Il comando elimina una tabella esistente e la directory associat
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se la tabella **non** esiste. |
 
@@ -282,7 +294,7 @@ Il `DROP DATABASE` elimina il database da un&#39;istanza.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se il database **non** esiste. |
 
@@ -294,7 +306,7 @@ Il `DROP SCHEMA` elimina uno schema esistente.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se questo parametro è specificato e lo schema non **non** esiste, non viene generata alcuna eccezione. |
 | `RESTRICT` | Il valore predefinito per la modalità. Se specificato, lo schema viene eliminato solo se **non** contiene qualsiasi tabella. |
@@ -308,7 +320,7 @@ La sintassi seguente definisce un `CREATE VIEW` per un set di dati. Questo set d
 CREATE VIEW view_name AS select_query
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `view_name` | Nome della visualizzazione da creare. |
 | `select_query` | A `SELECT` dichiarazione. La sintassi del `SELECT` La query si trova in [Sezione SELECT queries](#select-queries). |
@@ -330,7 +342,7 @@ CREATE VIEW db_name.schema_name.view_name AS select_query
 CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `db_name` | Nome del database. |
 | `schema_name` | Nome dello schema. |
@@ -369,7 +381,7 @@ La sintassi seguente definisce un `DROP VIEW` query:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `IF EXISTS` | Se specificato, non viene generata alcuna eccezione se la visualizzazione **non** esiste. |
 | `view_name` | Nome della visualizzazione da eliminare. |
@@ -686,7 +698,7 @@ select inline(productListItems) from source_dataset limit 10;
 
 I valori ricavati dal `source_dataset` vengono utilizzati per popolare la tabella di destinazione.
 
-| SKU | _experience | quantità | priceTotal |
+| SKU (Stock Keeping Unit) | _experience | quantità | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |          |              |
@@ -705,7 +717,7 @@ Il `SET` Il comando imposta una proprietà e restituisce il valore di una propri
 SET property_key = property_value
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `property_key` | Nome della proprietà che si desidera elencare o modificare. |
 | `property_value` | Il valore con cui si desidera impostare la proprietà. |
@@ -855,7 +867,7 @@ Il `DECLARE` consente di creare un cursore che può essere utilizzato per recupe
 DECLARE name CURSOR FOR query
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `name` | Nome del cursore da creare. |
 | `query` | A `SELECT` o `VALUES` comando che fornisce le righe che devono essere restituite dal cursore. |
@@ -870,7 +882,7 @@ Se il `PREPARE` l&#39;istruzione che ha creato l&#39;istruzione ha specificato a
 EXECUTE name [ ( parameter ) ]
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `name` | Nome dell&#39;istruzione preparata da eseguire. |
 | `parameter` | Valore effettivo di un parametro per l&#39;istruzione preparata. Deve essere un&#39;espressione che restituisce un valore compatibile con il tipo di dati di questo parametro, come determinato al momento della creazione dell&#39;istruzione preparata. Se sono presenti più parametri per l&#39;istruzione preparata, vengono separati da virgole. |
@@ -889,7 +901,7 @@ Per definire il formato della risposta, utilizza `FORMAT` parola chiave con `EXP
 EXPLAIN FORMAT { TEXT | JSON } statement
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `FORMAT` | Utilizza il `FORMAT` per specificare il formato di output. Le opzioni disponibili sono `TEXT` o `JSON`. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il valore predefinito di questo parametro è `TEXT`. |
 | `statement` | Qualsiasi `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, o `CREATE MATERIALIZED VIEW AS` di cui si desidera visualizzare il piano di esecuzione. |
@@ -921,7 +933,7 @@ Il `FETCH` recupera le righe utilizzando un cursore creato in precedenza.
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `num_of_rows` | Numero di righe da recuperare. |
 | `cursor_name` | Nome del cursore da cui si stanno recuperando le informazioni. |
@@ -938,7 +950,7 @@ Facoltativamente, puoi specificare un elenco di tipi di dati dei parametri. Se i
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `name` | Nome dell&#39;istruzione preparata. |
 | `data_type` | I tipi di dati dei parametri dell&#39;istruzione preparata. Se il tipo di dati di un parametro non è elencato, è possibile dedurlo dal contesto. Se devi aggiungere più tipi di dati, puoi aggiungerli in un elenco separato da virgole. |
@@ -976,9 +988,9 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 Ulteriori informazioni sui parametri di query SELECT standard sono disponibili nella sezione [Sezione query SELECT](#select-queries). In questa sezione sono elencati solo i parametri esclusivi di `SELECT INTO` comando.
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
-| `TEMPORARY` oppure `TEMP` | Un parametro facoltativo. Se il parametro è specificato, la tabella creata è una tabella temporanea. |
+| `TEMPORARY` o `TEMP` | Un parametro facoltativo. Se il parametro è specificato, la tabella creata è una tabella temporanea. |
 | `UNLOGGED` | Un parametro facoltativo. Se si specifica il parametro, la tabella creata è una tabella non registrata. Ulteriori informazioni sulle tabelle non registrate sono disponibili nella sezione [[!DNL PostgreSQL] documentazione](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nome della tabella da creare. |
 
@@ -999,7 +1011,7 @@ SHOW name
 SHOW ALL
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `name` | Nome del parametro di runtime di cui si desidera ottenere informazioni. I valori possibili per il parametro runtime includono i seguenti:<br>`SERVER_VERSION`: questo parametro mostra il numero di versione del server.<br>`SERVER_ENCODING`: questo parametro mostra la codifica del set di caratteri lato server.<br>`LC_COLLATE`: questo parametro mostra l&#39;impostazione delle impostazioni internazionali del database per le regole di confronto (ordinamento del testo).<br>`LC_CTYPE`: questo parametro mostra l&#39;impostazione delle impostazioni internazionali del database per la classificazione dei caratteri.<br>`IS_SUPERUSER`: questo parametro mostra se il ruolo corrente dispone di privilegi di utente avanzato. |
 | `ALL` | Mostra i valori di tutti i parametri di configurazione con le relative descrizioni. |
@@ -1029,7 +1041,7 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `query` | La query da copiare. |
 | `format_name` | Formato in cui copiare la query. Il `format_name` può essere uno di `parquet`, `csv`, o `json`. Per impostazione predefinita, il valore è `parquet`. |
@@ -1086,7 +1098,7 @@ ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
 ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
 | `column_name` | Nome della colonna a cui si sta aggiungendo un vincolo. |
@@ -1172,7 +1184,7 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 **Parametri**
 
-| Parametri | Descrizione |
+| Elemento “parameters” | Descrizione |
 | ------ | ------ |
 | `table_name` | Nome della tabella che si sta modificando. |
 | `column_name` | Nome della colonna che si desidera aggiungere. |
