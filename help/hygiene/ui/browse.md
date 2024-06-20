@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -75,7 +75,7 @@ I seguenti filtri si applicano alle richieste di scadenza dei set di dati:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Risposta per eliminazione dei record"
->abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia per il ciclo di vita dei dati."
+>abstract="Quando un processo di eliminazione di record riceve una risposta dal sistema, questi messaggi vengono visualizzati nella sezione **[!UICONTROL Risultato]**. Se si verifica un problema durante l’elaborazione di un ordine di lavoro, tutti i messaggi di errore pertinenti vengono visualizzati in questa sezione per aiutarti a risolvere il problema. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
 Selezionare l&#39;ID di un ordine di lavoro elencato per visualizzarne i dettagli.
 

@@ -6,7 +6,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -63,17 +63,17 @@ Se desideri eliminare record da tutti i set di dati, seleziona **[!UICONTROL Tut
 >
 >Selezione del **[!UICONTROL Tutti i set di dati]** potrebbe richiedere più tempo e non consentire l&#39;eliminazione accurata dei record.
 
-## Fornisci identità {#provide-identities}
+## Fornire identità {#provide-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Spazio dei nomi identità"
->abstract="Uno spazio dei nomi di identità è un attributo che lega un record al profilo di un consumatore in Experienci Platform. Il campo dello spazio dei nomi dell’identità per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo o lo spazio dei nomi per lo spazio dei nomi dell&#39;identità del record, ad esempio `email` per gli indirizzi e-mail e `ecid` ad Experience Cloud, gli ID. Per ulteriori informazioni, consulta la guida dell’interfaccia utente del ciclo di vita dei dati."
+>abstract="Uno spazio dei nomi identità è un attributo che collega un record al profilo di un consumatore in Experience Platform. Il campo spazio dei nomi identità per un set di dati è definito dallo schema su cui si basa il set di dati. In questa colonna è necessario specificare il tipo (o spazio dei nomi) per lo spazio dei nomi identità del record, ad esempio `email` per gli indirizzi e-mail e `ecid` per gli Experience Cloud ID. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Valore dell’identità primaria"
->abstract="In questa colonna è necessario fornire il valore per lo spazio dei nomi dell&#39;identità del record, che deve corrispondere al tipo di identità specificato nella colonna sinistra. Se il tipo di spazio dei nomi identità è `email`, il valore deve essere l’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida Data Lifecycle UI."
+>abstract="In questa colonna è necessario specificare il valore per lo spazio dei nomi identità del record, che deve corrispondere al tipo di identità specificato nella colonna a sinistra. Se il tipo di spazio dei nomi identità è `email`, il valore deve corrispondere all’indirizzo e-mail del record. Per ulteriori informazioni, consulta la guida all’interfaccia utente del ciclo di vita dei dati."
 
 Quando si eliminano i record, è necessario fornire informazioni sull&#39;identità in modo che il sistema possa determinare quali record devono essere eliminati. Per qualsiasi set di dati in Platform, i record vengono eliminati in base al **spazio dei nomi delle identità** campo definito dallo schema del set di dati.
 

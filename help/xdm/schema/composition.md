@@ -7,7 +7,7 @@ exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
 source-wordcount: '4293'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -53,7 +53,7 @@ Sia gli schemi di record che quelli di serie temporali contengono una mappa di i
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identità negli schemi"
->abstract="Le identità sono campi chiave all’interno di uno schema che possono essere utilizzati per identificare un oggetto, ad esempio un indirizzo e-mail o un ID marketing. Questi campi vengono utilizzati per creare il grafico delle identità per ogni individuo e per creare i profili dei clienti. Consulta la documentazione per ulteriori informazioni sulle identità negli schemi."
+>abstract="Le identità sono campi chiave di uno schema che possono essere utilizzati per identificare un soggetto, ad esempio un indirizzo e-mail o un ID di marketing. Questi campi vengono utilizzati per creare il grafo delle identità per ogni singolo utente e generare profili cliente. Per ulteriori informazioni sulle identità negli schemi, consulta la documentazione."
 
 Gli schemi vengono utilizzati per acquisire i dati in Experienci Platform. Questi dati possono essere utilizzati in più servizi per creare una singola vista unificata di una singola entità. Pertanto, durante la progettazione di schemi per le identità dei clienti, è importante considerare quali campi possono essere utilizzati per identificare un soggetto, indipendentemente da dove possono provenire i dati.
 
@@ -170,12 +170,12 @@ Gli schemi vengono composti utilizzando la seguente formula:
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Ogni schema è basato su una singola classe. La classe definisce il comportamento dello schema e le proprietà comuni che tutti gli schemi basati su tale classe devono contenere. Per ulteriori informazioni sulle modalità di coinvolgimento delle classi nella composizione dello schema, consulta la documentazione."
+>abstract="Ogni schema è basato su una singola classe. La classe definisce il comportamento dello schema e le proprietà comuni che tutti gli schemi basati su tale classe devono contenere. Per ulteriori informazioni sul ruolo delle classi nella composizione dello schema, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_industries"
 >title="Tipo di settore"
->abstract="Se selezioni un settore rilevante per la tua azienda, il modello di apprendimento automatico può fornire una migliore organizzazione dei dati mappando in modo più accurato i campi sorgente con gruppi di campi standard in linea con gli standard di settore. In questo modo l’integrazione dei dati è personalizzata in base alle esigenze specifiche del settore e consente di ottenere informazioni sui dati più precise e rilevanti."
+>abstract="Se selezioni un settore rilevante per la tua azienda, il modello di machine learning può fornire una migliore organizzazione dei dati mappando in modo più accurato i campi sorgente con gruppi di campi standard in linea con gli standard di settore. In questo modo l’integrazione dei dati è personalizzata in base alle esigenze specifiche del settore e consente di ottenere informazioni sui dati più precise e rilevanti."
 
 La composizione di uno schema inizia assegnando una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il minor numero di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
@@ -194,12 +194,12 @@ Per l’elenco più aggiornato delle classi XDM standard disponibili, consulta [
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Gruppo di campi"
->abstract="I gruppi di campi sono componenti riutilizzabili che consentono di estendere gli schemi con attributi aggiuntivi. La maggior parte dei gruppi di campi è compatibile solo con determinate classi. È possibile utilizzare i gruppi di campi standard definiti dall&#39;Adobe oppure definire manualmente gruppi di campi personalizzati. Per ulteriori informazioni sul modo in cui i gruppi di campi vengono coinvolti nella composizione dello schema, consulta la documentazione."
+>abstract="I gruppi di campi sono componenti riutilizzabili che consentono di estendere gli schemi con attributi aggiuntivi. La maggior parte dei gruppi di campi è compatibile solo con determinate classi. È possibile utilizzare i gruppi di campi standard definiti da Adobe oppure definire manualmente gruppi di campi personalizzati. Per ulteriori informazioni sul ruolo dei gruppi di campi nella composizione dello schema, consulta la documentazione."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
->title="Gruppo di campi obbligatorio"
->abstract="Questo gruppo di campi è obbligatorio per l’origine in uso. Per questo motivo, non è possibile eliminarla dallo schema."
+>title="Gruppo di campi richiesto"
+>abstract="Questo gruppo di campi è richiesto dall’origine in uso. Per questo motivo, non è possibile eliminarlo dallo schema."
 
 Un gruppo di campi è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni come i dati personali, le preferenze di hotel o l’indirizzo. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile.
 

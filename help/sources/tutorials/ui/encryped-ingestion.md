@@ -3,10 +3,11 @@ title: Acquisire dati crittografati nell’area di lavoro dell’interfaccia ute
 description: Scopri come acquisire i dati crittografati nell’area di lavoro dell’interfaccia utente delle origini.
 hide: true
 hidefromtoc: true
-source-git-commit: f2a0a9b84dfd3c1d32c8049148d38ef4d2ec822e
+exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
+source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 7%
+ht-degree: 54%
 
 ---
 
@@ -22,16 +23,16 @@ Leggi questa guida per scoprire come acquisire dati crittografati in Adobe Exper
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_isFileEncrypted"
->title="Il fie è criptato?"
->abstract="Seleziona questa opzione se acquisisci un file già crittografato."
+>title="Il file è crittografato?"
+>abstract="Seleziona questo pulsante di attivazione/disattivazione se acquisisci un file già crittografato."
 
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_sampleFile"
->title="Seleziona file di esempio"
+>title="Selezionare file di esempio"
 >abstract="Per creare una mappatura, è necessario acquisire un file di esempio durante l’acquisizione di dati crittografati."
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_createCustomKey"
->title="Crea chiave personalizzata"
->abstract="Facoltativamente, puoi creare una coppia di chiavi per la verifica dei segni e una chiave personalizzata per i dati crittografati."
+>title="Creare una chiave personalizzata"
+>abstract="Facoltativamente, puoi creare una coppia di chiavi per la verifica di accesso e una chiave personalizzata per i dati crittografati."
