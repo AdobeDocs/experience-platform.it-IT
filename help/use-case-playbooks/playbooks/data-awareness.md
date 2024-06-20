@@ -4,14 +4,14 @@ title: Panoramica della consapevolezza dei dati nei playbook dei casi d’uso
 description: Scopri come accelerare il time-to-value copiando le risorse generate nella sandbox end inspirational in altre sandbox.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Pubblicare risorse generate dal playbook in altre sandbox {#publish-to-other-sandboxes}
+# Risorse generate dal playbook Publish in altre sandbox {#publish-to-other-sandboxes}
 
 I playbook per casi d’uso sono modelli di marketing progettati per generare risorse come tipi di pubblico, schemi o percorsi per i casi d’uso di marketing comuni. Puoi testare le risorse create dai playbook nella sandbox ispiratrice e, quando sei pronto, puoi importare le risorse in altre sandbox di sviluppo per ulteriori test con i dati disponibili in tali sandbox. Una volta superato il test, puoi spostare le risorse dalle sandbox di sviluppo a quelle di produzione.
 
@@ -19,7 +19,7 @@ Tuttavia, in alcuni casi, è possibile che siano già stati impostati schemi, ca
 
 ## Prerequisiti {#prerequisites}
 
-Prima di leggere questa esercitazione, sfoglia [modelli di playbook per casi d’uso disponibili](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) e [creare un’istanza](/help/use-case-playbooks/playbooks/create-share-reuse.md) di un playbook preferito.
+Prima di leggere questa esercitazione, sfoglia [modelli di playbook per casi d’uso disponibili](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) e [creare un’istanza](/help/use-case-playbooks/playbooks/create-share-reuse.md) di un playbook preferito.
 
 La creazione di un’istanza genera un set di risorse come percorsi, segmenti, schemi e messaggi nella sandbox ispiratrice. Continua a leggere per scoprire come copiare queste risorse in altre sandbox.
 
@@ -29,11 +29,11 @@ La creazione di un’istanza genera un set di risorse come percorsi, segmenti, s
 >
 > Puoi importare i pacchetti solo in altre sandbox di sviluppo. Dopo aver apportato tutte le modifiche o gli aggiornamenti necessari, puoi importare le risorse o i pacchetti da tali sandbox di sviluppo in produzione. Non è possibile importare direttamente dalle sandbox di Playbook di casi d’uso in produzione.
 
-1. Per importare oggetti dalla sandbox di ispirazione in un’altra sandbox, individua l’istanza desiderata di un playbook con casi d’uso e seleziona **[!UICONTROL Pubblica in un’altra sandbox]** per esportare gli artefatti come pacchetto.
+1. Per importare oggetti dalla sandbox di ispirazione in un’altra sandbox, individua l’istanza desiderata di un playbook con casi d’uso e seleziona **[!UICONTROL Publish in un’altra sandbox]** per esportare gli artefatti come pacchetto.
 
    ![GIF che mostra le diverse istanze del caso d’uso](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Dopo aver selezionato **[!UICONTROL Pubblica in un’altra sandbox]** viene visualizzato un modale. Inserisci il nome e la descrizione facoltativa e seleziona **[!UICONTROL Crea]**. Questo passaggio raggruppa le risorse generate in un pacchetto che può essere importato in una sandbox diversa.
+2. Dopo aver selezionato **[!UICONTROL Publish in un’altra sandbox]** viene visualizzato un modale. Inserisci il nome e la descrizione facoltativa e seleziona **[!UICONTROL Crea]**. Questo passaggio raggruppa le risorse generate in un pacchetto che può essere importato in una sandbox diversa.
 
    ![Una finestra modale per la creazione di un pacchetto](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

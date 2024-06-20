@@ -4,9 +4,9 @@ title: Introduzione ai playbook con casi d’uso
 description: Scopri come iniziare a utilizzare la funzionalità Playbook di casi d’uso.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Introduzione
 
-Scopri come impostare l’account per Use Case Playbook, progettato per Real-time Customer Data Platform e Adobe Journey Optimizer. I tre passaggi principali di configurazione sono:
+Scopri come impostare l’account per Use Case Playbook, progettato per Real-time Customer Data Platform e Adobe Journey Optimizer se non è configurato automaticamente. I tre passaggi principali di configurazione sono:
 
 * Creare una sandbox
 * Configurare le autorizzazioni utente
@@ -75,7 +75,7 @@ Per creare e gestire le destinazioni, utilizza le autorizzazioni Destinazioni; *
 
 **Autorizzazioni per i percorsi**
 
-Per creare e gestire i percorsi, utilizza le autorizzazioni Percorsi; **[!UICONTROL Gestisci Percorsi]**, **[!UICONTROL Visualizza Percorsi]**, **[!UICONTROL Visualizza rapporto Percorsi]**, **[!UICONTROL Gestisci Percorsi]**, **[!UICONTROL Eventi]**, **[!UICONTROL Origini dati e azioni]**, **[!UICONTROL Visualizza Percorsi]**, **[!UICONTROL Eventi]**, **[!UICONTROL Origini dati e azioni, Pubblica Percorsi]**.
+Per creare e gestire i percorsi, utilizza le autorizzazioni Percorsi; **[!UICONTROL Gestisci Percorsi]**, **[!UICONTROL Visualizza Percorsi]**, **[!UICONTROL Visualizza rapporto Percorsi]**, **[!UICONTROL Gestisci Percorsi]**, **[!UICONTROL Eventi]**, **[!UICONTROL Origini dati e azioni]**, **[!UICONTROL Visualizza Percorsi]**, **[!UICONTROL Eventi]**, **[!UICONTROL Origini dati e azioni, Percorsi Publish]**.
 
 L’immagine seguente mostra un’istantanea delle autorizzazioni consigliate agli utenti per visualizzare, creare e gestire i playbook e le risorse generate dai playbook.
 
@@ -113,4 +113,4 @@ Leggi la documentazione su [come impostare le superfici di canale push](https://
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver seguito tutti i passaggi descritti in questo documento, dovresti aver creato una sandbox di sviluppo con i playbook Use Case disponibili nel menu di navigazione a sinistra. Ora sai anche come concedere ai membri del gruppo le autorizzazioni necessarie per visualizzare e gestire i playbook e generare risorse. Come passaggio successivo, leggi come [scopri il playbook giusto](/help/use-case-playbooks/playbooks/discover.md) per te e poi [crea istanze da esso](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Dopo aver seguito tutti i passaggi descritti in questo documento, dovresti aver creato una sandbox di sviluppo con i playbook Use Case disponibili nel menu di navigazione a sinistra. Ora sai anche come concedere ai membri del gruppo le autorizzazioni necessarie per visualizzare e gestire i playbook e generare risorse. Come passaggio successivo, leggi come [scegli il playbook giusto](/help/use-case-playbooks/playbooks/choose.md) per te e poi [crea istanze da esso](/help/use-case-playbooks/playbooks/create-share-reuse.md).

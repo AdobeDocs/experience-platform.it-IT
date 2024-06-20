@@ -4,10 +4,10 @@ title: Creare, condividere e riutilizzare le istanze del playbook
 description: Scopri come creare, condividere e riutilizzare le istanze del playbook per eseguire il caso d’uso di marketing.
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 83%
+source-wordcount: '785'
+ht-degree: 81%
 
 ---
 
@@ -22,7 +22,7 @@ Per utilizzare un playbook, passa a **[!UICONTROL Playbook per casi d’uso] > [
 >title="Creare un’istanza"
 >abstract="Generare un elenco di risorse come percorsi, tipi di pubblico, schemi o destinazioni da utilizzare in scenari di percorso o di attivazione."
 
-Prima di creare un’istanza del playbook, esplora i playbook disponibili per [trovare il playbook adatto a te](/help/use-case-playbooks/playbooks/discover.md). Quando sei pronto a procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche.
+Prima di creare un’istanza del playbook, esplora i playbook disponibili per [scegli il playbook giusto](/help/use-case-playbooks/playbooks/choose.md). Quando sei pronto a procedere con un playbook e creare un’istanza, seleziona **[!UICONTROL Crea istanza]** per procedere con il playbook e generare risorse tecniche.
 
 ![Crea un’istanza di un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 

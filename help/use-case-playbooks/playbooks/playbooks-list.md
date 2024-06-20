@@ -4,9 +4,9 @@ title: Playbook di casi d’uso disponibili per Real-time Customer Data Platform
 description: Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 
 ## Passaggi successivi
 
-Ora che conosci i playbook disponibili, leggi [guida all’individuazione](/help/use-case-playbooks/playbooks/discover.md) per capire come iniziare a utilizzare i playbook nell’interfaccia utente di.
+Ora che conosci i playbook disponibili, leggi questo [guida](/help/use-case-playbooks/playbooks/choose.md) per capire come iniziare a utilizzare i playbook e scegliere quello giusto nell’interfaccia utente.
