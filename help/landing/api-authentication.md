@@ -4,17 +4,17 @@ title: Autenticazione e accesso alle API Experienci Platform
 type: Tutorial
 description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 9%
+source-wordcount: '2149'
+ht-degree: 3%
 
 ---
 
 
 # Autenticazione e accesso alle API di Experience Platform
 
-Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform. Al termine di questa esercitazione, avrai generato o raccolto le seguenti credenziali, necessarie come intestazioni in tutte le chiamate API di Platform:
+Questo documento fornisce un tutorial dettagliato per accedere a un account sviluppatore Adobe Experience Platform per effettuare chiamate alle API Experienci Platform. Al termine di questa esercitazione, avrai generato o raccolto le seguenti credenziali, necessarie come intestazioni in tutte le chiamate API di Platform:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -50,7 +50,7 @@ Prima di creare integrazioni su Adobe Developer Console, il tuo account deve dis
 
 ### Accesso per sviluppatori {#gain-developer-access}
 
-Contatta un [!DNL Admin Console] per aggiungerti come sviluppatore a un profilo di prodotto di Experience Platform utilizzando [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulta la [!DNL Admin Console] documentazione per istruzioni specifiche su come [gestire l’accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/it/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Contatta un [!DNL Admin Console] per aggiungerti come sviluppatore a un profilo di prodotto di Experience Platform utilizzando [[!DNL Admin Console]](https://adminconsole.adobe.com/). Consulta la [!DNL Admin Console] documentazione per istruzioni specifiche su come [gestire l’accesso degli sviluppatori per i profili di prodotto](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Una volta che ti è stato assegnato come sviluppatore, puoi iniziare a creare integrazioni in [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline da app e servizi esterni alle API Adobe.
 
@@ -88,15 +88,15 @@ Viene visualizzata la schermata **[!UICONTROL Add an API]** (Aggiungi un’API).
 >
 >Seleziona la **[!UICONTROL Visualizza documenti]** per passare in una finestra del browser separata al [Documentazione di riferimento dell’API Experienci Platform](https://developer.adobe.com/experience-platform-apis/).
 
-### Seleziona il tipo di autenticazione server-to-server OAuth {#select-oauth-server-to-server}
+### Seleziona la [!UICONTROL OAuth Server-to-Server] tipo di autenticazione {#select-oauth-server-to-server}
 
-Quindi, seleziona il tipo di autenticazione per generare token di accesso e accedere all’API Experienci Platform.
+Quindi, seleziona la [!UICONTROL OAuth Server-to-Server] tipo di autenticazione per generare token di accesso e accedere all’API Experienci Platform.
 
 >[!IMPORTANT]
 >
->Seleziona la **[!UICONTROL OAuth Server-to-Server]** poiché questo sarà l’unico metodo supportato per andare avanti. Il **[!UICONTROL Account di servizio (JWT)]** è obsoleto. Anche se le integrazioni che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo metodo server-to-server OAuth prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](#jwt).
+>Il **[!UICONTROL OAuth Server-to-Server]** Il metodo è l’unico metodo di generazione di token supportato per il futuro. Precedentemente supportati **[!UICONTROL Account di servizio (JWT)]** Il metodo è obsoleto e non può essere selezionato per le nuove integrazioni. Anche se le integrazioni esistenti che utilizzano il metodo di autenticazione JWT continueranno a funzionare fino al 1° gennaio 2025, Adobe consiglia vivamente di migrare le integrazioni esistenti al nuovo [!UICONTROL OAuth Server-to-Server] prima di tale data. Ulteriori informazioni nella sezione [!BADGE Obsoleto]{type=negative}[Generare un token web JSON (JWT)](#jwt).
 
-![Seleziona Experienci Platform API.](./images/api-authentication/oauth-authentication-method.png)
+![Seleziona il metodo di autenticazione server-to-server OAuth per l’API Experienci Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Selezionare i profili di prodotto per l’integrazione {#select-product-profiles}
 
@@ -154,7 +154,7 @@ Puoi inoltre utilizzare un ambiente e una raccolta Postman per generare i token 
 
 >[!WARNING]
 >
-Il metodo JWT per generare i token di accesso è stato dichiarato obsoleto. Tutte le nuove integrazioni devono essere create utilizzando [Metodo di autenticazione server-to-server OAuth](#select-oauth-server-to-server). Adobe consiglia inoltre di migrare le integrazioni esistenti al metodo OAuth. Leggi la seguente documentazione importante:
+Il metodo JWT per generare i token di accesso è stato dichiarato obsoleto. Tutte le nuove integrazioni devono essere create utilizzando [Metodo di autenticazione server-to-server OAuth](#select-oauth-server-to-server). Per continuare a funzionare, Adobe richiede anche la migrazione delle integrazioni esistenti al metodo OAuth entro il 1° gennaio 2025. Leggi la seguente documentazione importante:
 > 
 * [Guida alla migrazione per le applicazioni da JWT a OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guida all’implementazione per applicazioni nuove e precedenti con OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
