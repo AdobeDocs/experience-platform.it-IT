@@ -4,10 +4,10 @@ title: Dashboard utilizzo licenze
 description: Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 7%
 
 ---
 
@@ -16,21 +16,14 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Dashboard utilizzo licenze"
->abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. Nella panoramica della dashboard vengono visualizzate le metriche principali per i prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
+>abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Dashboard utilizzo licenze"
->abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. Nella panoramica della dashboard vengono visualizzate le metriche principali per i prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzata una suddivisione delle metriche per ciascun prodotto all’interno di sandbox specifiche."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Scadenze set di dati"
+>abstract="La dashboard utilizzo licenze offre informazioni approfondite sui prodotti Adobe Experience Platform acquistati. La panoramica della dashboard mostra le metriche principali dei prodotti, incluso l’utilizzo da parte dell’utente per ciascuna metrica principale e l’importo della licenza contrattuale. Nell’area di lavoro dei dettagli viene visualizzato un raggruppamento delle metriche per ciascun prodotto all’interno di sandbox specifiche."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=it" text="Scadenze dei set di dati"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Scadenze dei dati dei profili pseudonimi"
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_reduction"
->title="Come ridurre l’utilizzo"
->abstract="Per ridurre l’utilizzo, puoi configurare le scadenze dei dati di set di dati o profili pseudonimi per sandbox e set di dati."
->additional-url="https://experienceleague.adobe.com/it/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Video sulle scadenze dei dati dei profili pseudonimi"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=it" text="Documentazione sulle scadenze dei dati dei profili pseudonimi"
 
 Puoi visualizzare informazioni importanti sull’utilizzo delle licenze della tua organizzazione tramite Adobe Experience Platform [!UICONTROL Utilizzo licenze] dashboard. Le informazioni visualizzate qui vengono acquisite durante un’istantanea giornaliera dell’istanza Platform.
 
