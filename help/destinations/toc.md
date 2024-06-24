@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Guida alle destinazioni
-user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro ancora.
+user-guide-description: Attiva i dati, noti e non, per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e altro.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 4%
+source-wordcount: '1227'
+ht-degree: 6%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 4%
       * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
       * [Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
       * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
-      * [(Beta) Utilizzare i campi calcolati per esportare le matrici in file di schema flat](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta) Utilizzare i campi calcolati per esportare array in file di schema piatto](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
    * [Elimina account di destinazione](./ui/delete-destination-account.md)
@@ -141,6 +141,7 @@ ht-degree: 4%
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni di Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Estensione Audienci Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partner dati e identità {#data-partner}
       * [Eliminazione di Acxiom Prospect](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Miglioramento dei dati Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
