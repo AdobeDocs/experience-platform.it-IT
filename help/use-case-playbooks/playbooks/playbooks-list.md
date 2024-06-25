@@ -7,7 +7,7 @@ exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '776'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ Leggi questa pagina per una panoramica di tutti i playbook disponibili che puoi 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
 >title="Playbook disponibili"
->abstract="Elenco di tutti i playbook in Real-time Customer Data Platform e Adobe Journey Optimizer."
+>abstract="Elenco di tutti i playbook in Real-Time Customer Data Platform e Adobe Journey Optimizer."
 
 | Nome playbook | Descrizione |
 | ------------- |  ----------- |
