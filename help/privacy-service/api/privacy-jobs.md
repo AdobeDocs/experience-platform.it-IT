@@ -5,9 +5,9 @@ title: Endpoint API per processi di privacy
 description: Scopri come gestire i processi sulla privacy per le applicazioni Experience Cloud utilizzando l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
+source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulta la panoramica su [normative supportate](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
+| `{REGULATION}` | Tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Nota: viene utilizzato anche per le richieste relative a **ccpa** regolamenti.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulta la panoramica su [normative supportate](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `100` e il massimo è `1000`. Se si supera il valore massimo, l’API restituisce un errore 400 codici. |
 | `{status}` | Il comportamento predefinito consiste nell’includere tutti gli stati. Se si specifica un tipo di stato, la richiesta restituisce solo i processi di privacy che corrispondono a tale tipo di stato. I valori accettati includono: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -165,7 +165,6 @@ curl -X POST \
     "include": ["Analytics", "AudienceManager","profileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "mergePolicyId": 124,
     "regulation": "ccpa"
 }'
@@ -178,7 +177,6 @@ curl -X POST \
 | `include` **(Obbligatorio)** | Array di prodotti di Adobe da includere nell’elaborazione. Se questo valore manca o è vuoto, la richiesta verrà rifiutata. Includi solo i prodotti con cui l’organizzazione ha un’integrazione. Consulta la sezione su [valori prodotti accettati](appendix.md) per ulteriori informazioni, consulta l’appendice. |
 | `expandIDs` | Proprietà facoltativa che, se impostata su `true`, rappresenta un’ottimizzazione per l’elaborazione degli ID nelle applicazioni (attualmente supportato solo da [!DNL Analytics]). Se omesso, il valore predefinito è `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l’elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
-| `analyticsDeleteMethod` | Proprietà facoltativa che specifica come Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: tutti i dati a cui fa riferimento la raccolta specificata di ID utente vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso. Si tratta del comportamento predefinito.</li><li>`purge`: tutti i dati vengono rimossi completamente.</li></ul> |
 | `mergePolicyId` | Quando si eseguono richieste di privacy per Real-Time Customer Profile (`profileService`), puoi facoltativamente fornire l’ID della specifica [criterio di unione](../../profile/merge-policies/overview.md) che desideri utilizzare per l’unione di ID. Specificando un criterio di unione, le richieste di privacy possono includere informazioni sul pubblico quando si restituiscono dati su un cliente. È possibile specificare un solo criterio di unione per richiesta. Se non viene fornito alcun criterio di unione, le informazioni di segmentazione non vengono incluse nella risposta. |
 | `regulation` **(Obbligatorio)** | Il regolamento per il lavoro sulla privacy. Sono accettati i seguenti valori: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>Consulta la panoramica su [normative supportate](../regulations/overview.md) per ulteriori informazioni sulle normative sulla privacy rappresentate dai valori di cui sopra. |
 
