@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -45,9 +45,9 @@ ht-degree: 6%
       * [Attiva i tipi di pubblico nelle destinazioni curate in base agli identificatori LiveRamp](./ui/activate-curated-destinations.md)
       * [Attiva i tipi di pubblico potenziali nelle destinazioni](./ui/activate-prospect-audiences.md)
       * [Attivare il pubblico dell’account nelle destinazioni](./ui/activate-account-audiences.md)
-      * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experienci Platform](./ui/export-file-now.md)
-      * [Esportare i set di dati utilizzando l’interfaccia utente di Experienci Platform](./ui/export-datasets.md)
-      * [(Beta) Utilizza l’attributo XDM dell’ora dell’ultima qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
+      * [(Beta) Esportare file on-demand in destinazioni batch utilizzando l’interfaccia utente di Experience Platform](./ui/export-file-now.md)
+      * [Esportare i set di dati utilizzando l’interfaccia utente di Experience Platform](./ui/export-datasets.md)
+      * [(Beta) Utilizza l’ultimo attributo XDM del tempo di qualifica nelle nuove destinazioni di archiviazione cloud beta](./ui/activate-last-qualification-time.md)
       * [(Beta) Utilizzare i campi calcolati per esportare array in file di schema piatto](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Visualizzare i dettagli della destinazione](./ui/destination-details-page.md)
    * [Aggiorna account di destinazione](./ui/update-accounts.md)
@@ -65,16 +65,16 @@ ht-degree: 6%
       * [Connessione Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [Connessione Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform di condivisione del pubblico](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * Destinazioni annunci{#advertising}
-      * [Panoramica sulle destinazioni Advertising](./catalog/advertising/overview.md)
+   * Destinazioni di Advertising{#advertising}
+      * [Panoramica sulle destinazioni di Advertising](./catalog/advertising/overview.md)
       * [Connessione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Estensione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Connessione Amazon Ads (Beta)](./catalog/advertising/amazon-ads.md)
+      * [(Beta) Connessione Amazon Ads](./catalog/advertising/amazon-ads.md)
       * [Estensione tag di conversione per inserzionista Awin](./catalog/advertising/awin-conversiontag.md)
       * [Estensione Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Estensione UET (Universal Event Tracking) di Bing Ads](./catalog/advertising/bing-ads.md)
       * [Estensione ramo](./catalog/advertising/branch.md)
-      * [Connessione (Beta) Criteo](./catalog/advertising/criteo.md)
+      * [(Beta) Connessione critica](./catalog/advertising/criteo.md)
       * [Estensione DoubleClick Floodlight (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Estensione facebook Pixel](./catalog/advertising/facebook-pixel.md)
       * [Estensione OneTag lampeggiante](./catalog/advertising/flashtalking.md)
@@ -140,11 +140,13 @@ ht-degree: 6%
       * [Connessione Zendesk](catalog/crm/zendesk.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni di Data Management Platform (DMP)](./catalog/data-management/overview.md)
-      * [Estensione Audienci Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Estensione Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partner dati e identità {#data-partner}
       * [Eliminazione di Acxiom Prospect](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Miglioramento dei dati Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Connessioni Enterprise di Merkury](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Identità dell’azienda Merkury](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * Destinazioni eCommerce {#ecommerce}
       * [COMMERCE SAP](./catalog/ecommerce/sap-commerce.md)
    * Destinazioni e-mail {#email}
@@ -174,8 +176,8 @@ ht-degree: 6%
       * [Connessione di brasatura](./catalog/mobile-engagement/braze.md)
       * [Connessione di linea](./catalog/mobile-engagement/line.md)
       * [Connessione moenging](./catalog/mobile-engagement/moengage.md)
-   * Destinazioni di personalizzazione {#personalization}
-      * [Panoramica delle destinazioni di personalizzazione](./catalog/personalization/overview.md)
+   * Destinazioni Personalization {#personalization}
+      * [Panoramica sulle destinazioni di Personalization](./catalog/personalization/overview.md)
       * [(Disponibilità limitata) Audience Analysis](./catalog/personalization/audience-analysis.md)
       * [Connessione Adobe Commerce](./catalog/personalization/adobe-commerce.md)
       * [Connessione Adobe Target](./catalog/personalization/adobe-target-connection.md)
