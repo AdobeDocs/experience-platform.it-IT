@@ -5,10 +5,10 @@ breadcrumb-title: Guida di Experience Data Model (XDM)
 user-guide-description: Scopri una panoramica del sistema Experience Data Model (XDM) in Experience Platform e come utilizzare i gruppi di campi per classi e schemi per standardizzare i dati dell’esperienza.
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 14%
+source-wordcount: '633'
+ht-degree: 45%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 14%
       * [Panoramica](./schema/industries/overview.md)
       * [Vendita al dettaglio](./schema/industries/retail.md)
       * [Servizi finanziari](./schema/industries/financial.md)
-      * [Healthcare](./schema/industries/healthcare.md)
+      * [Assistenza sanitaria](./schema/industries/healthcare.md)
       * [Telecomunicazioni](./schema/industries/telecom.md)
       * [Viaggi e ospitalità](./schema/industries/travel-hospitality.md)
    * [Dizionario campo XDM](schema/field-dictionary.md)
@@ -35,8 +35,8 @@ ht-degree: 14%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicinale](./classes/medication.md)
    * [Pagatore](./classes/payer.md)
-   * [Pianificare](./classes/plan.md)
-   * [Criterio](./classes/policy.md)
+   * [Piano](./classes/plan.md)
+   * [Polizza](./classes/policy.md)
    * [Prodotto](./classes/product.md)
    * [Potenziale cliente](./classes/prospect.md)
    * [Provider](./classes/provider.md)
@@ -61,9 +61,9 @@ ht-degree: 14%
       * [Dettagli di contatto personali](./field-groups/profile/personal-contact-details.md)
       * [Arricchimento dei partner di profilo (esempio)](./field-groups/profile/profile-partner-enrichment.md)
       * [Dettagli sull’iscrizione al segmento](./field-groups/profile/segmentation.md)
-      * [Abbonamento Telecom](./field-groups/profile/telecom-subscription.md)
-      * [Dettagli contatto di lavoro](./field-groups/profile/work-contact-details.md)
-      * [Componenti della persona aziendale XDM](./field-groups/profile/business-person-components.md)
+      * [Abbonamento a un servizio di telecomunicazioni](./field-groups/profile/telecom-subscription.md)
+      * [Dettagli del contatto di lavoro](./field-groups/profile/work-contact-details.md)
+      * [Componenti della persona aziendale di XDM](./field-groups/profile/business-person-components.md)
       * [Dettagli persona aziendale XDM](./field-groups/profile/business-person-details.md)
    * Profilo potenziale individuale XDM {#prospect-profile}
       * [Dettagli prospect partner (esempio)](./field-groups/prospect-profile/partner-prospect-details.md)
@@ -71,17 +71,17 @@ ht-degree: 14%
       * [Estensione completa Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Dettagli pubblicitari](./field-groups/event/advertising-details.md)
       * [Dettagli applicazione](./field-groups/event/application-details.md)
-      * [Trasferimenti saldo](./field-groups/event/balance-transfers.md)
+      * [Trasferimenti del saldo](./field-groups/event/balance-transfers.md)
       * [Rilevamento bot](./field-groups/event/bot-detection-information.md)
       * [Dettagli di marketing della campagna](./field-groups/event/campaign-marketing-details.md)
-      * [Azioni carta](./field-groups/event/card-actions.md)
-      * [Dettagli canale](./field-groups/event/channel-details.md)
-      * [Dettagli Commerce](./field-groups/event/commerce-details.md)
-      * [Dettagli versamento](./field-groups/event/deposit-details.md)
+      * [Azioni della carta](./field-groups/event/card-actions.md)
+      * [Dettagli del canale](./field-groups/event/channel-details.md)
+      * [Dettagli commerciali](./field-groups/event/commerce-details.md)
+      * [Dettagli del versamento](./field-groups/event/deposit-details.md)
       * [Dettagli sulla permuta dei dispositivi](./field-groups/event/device-trade-in-details.md)
       * [Prenotazione ristorante](./field-groups/event/dining-reservation.md)
-      * [Dettagli ID utente finale](./field-groups/event/enduserids.md)
-      * [Dettagli dell’ambiente](./field-groups/event/environment-details.md)
+      * [Dettagli dell’ID dell’utente finale](./field-groups/event/enduserids.md)
+      * [Dettagli sull’ambiente](./field-groups/event/environment-details.md)
       * [Prenotazione del volo](./field-groups/event/flight-reservation.md)
       * [Consenso IAB TCF 2.0](./field-groups/event/iab.md)
       * [Prenotazione alloggio](./field-groups/event/lodging-reservation.md)
@@ -89,8 +89,8 @@ ht-degree: 14%
       * [Dettagli richiesta preventivo](./field-groups/event/quote-request-details.md)
       * [Dettagli prenotazione](./field-groups/event/reservation-details.md)
       * [Dettagli Sitetool](./field-groups/event/sitetool-details.md)
-      * [Ricerca nel sito di supporto](./field-groups/event/support-site-search.md)
-      * [Dettagli aggiornamento](./field-groups/event/upgrade-details.md)
+      * [Ricerca nel sito di assistenza](./field-groups/event/support-site-search.md)
+      * [Dettagli di aggiornamento](./field-groups/event/upgrade-details.md)
       * [Dettagli della vendita in upselling](./field-groups/event/upsell-details.md)
       * [Dettagli web](./field-groups/event/web-details.md)
    * Campagna aziendale XDM {#b2b-campaign}
@@ -102,21 +102,23 @@ ht-degree: 14%
    * Piano {#plan}
       * [Dettagli piano sanitario](./field-groups/plan/healthcare-plan-details.md)
    * Prodotto {#product}
-      * [Catalogo prodotti](./field-groups/product/product-catalog.md)
+      * [Catalogo dei prodotti](./field-groups/product/product-catalog.md)
       * [Categoria di prodotto](./field-groups/product/product-category.md)
    * Provider {#provider}
       * [Fornitore di servizi sanitari](./field-groups/provider/healthcare-provider.md)
+   * Condiviso {#shared}
+      * [Dettagli sul controllo del sistema di sorgente esterna](./field-groups/shared/external-source-system-audit-details.md)
    * [Aggiornamenti dei nomi dei gruppi di campi](./field-groups/name-updates.md)
 * Tipi di dati {#data-types}
    * [Dettagli account](./data-types/account-details.md)
    * [Interruzione annuncio](./data-types/ad-break.md)
    * [Indirizzo](./data-types/address.md)
-   * [Insieme Advertising Details](./data-types/advertising-details-collection.md)
-   * [Rapporti sui dettagli sulla pubblicità](./data-types/advertising-details-reporting.md)
-   * [Raccolta dettagli Advertising Pod](./data-types/advertising-pod-details-collection.md)
-   * [Reporting sui dettagli dei pod pubblicitari](./data-types/advertising-pod-details-reporting.md)
+   * [Raccolta dettagli Advertising](./data-types/advertising-details-collection.md)
+   * [Rapporti sui dettagli di Advertising](./data-types/advertising-details-reporting.md)
+   * [Raccolta dettagli pod Advertising](./data-types/advertising-pod-details-collection.md)
+   * [Rapporti sui dettagli dei pod di Advertising](./data-types/advertising-pod-details-reporting.md)
    * [Applicazione](./data-types/application.md)
-   * [Origine B2B](./data-types/b2b-source.md)
+   * [Sorgente B2B](./data-types/b2b-source.md)
    * [Beacon](./data-types/beacon.md)
    * [Dettagli browser](./data-types/browser-details.md)
    * [Carrello](./data-types/cart.md)
@@ -134,11 +136,11 @@ ht-degree: 14%
    * [Indirizzo e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
    * [Raccolta dettagli errore](./data-types/error-details-collection.md)
-   * [Canale esperienza](./data-types/experience-channel.md)
+   * [Canale dell’esperienza](./data-types/experience-channel.md)
    * [Attributi di controllo del sistema di sorgente esterna](./data-types/external-source-system-audit-attributes.md)
    * [Conto finanziario](./data-types/financial-account.md)
    * [Campo di consenso generico](./data-types/consent-field.md)
-   * [Campo preferenza di marketing generica con abbonamenti](./data-types/marketing-field-subscriptions.md)
+   * [Campo di preferenza marketing generica con abbonamenti](./data-types/marketing-field-subscriptions.md)
    * [Campo preferenza di marketing generica](./data-types/marketing-field.md)
    * [Campo preferenza di personalizzazione generica](./data-types/personalization-field.md)
    * [Cerchio geografico](./data-types/geo-circle.md)
@@ -180,11 +182,11 @@ ht-degree: 14%
    * [Reporting sui dettagli della sessione](./data-types/session-details-reporting.md)
    * [Spedizione](./data-types/shipping.md)
    * [Abbonamento](./data-types/subscription.md)
-   * [Abbonamento Telecom](./data-types/telecom-subscription.md)
+   * [Abbonamento a un servizio di telecomunicazioni](./data-types/telecom-subscription.md)
    * [Transazione](./data-types/transaction.md)
    * [Informazioni Web](./data-types/web-information.md)
    * [Interazione web](./data-types/web-interaction.md)
-   * [Dettagli pagina web](./data-types/webpage-details.md)
+   * [Dettagli della pagina web](./data-types/webpage-details.md)
 * [!UICONTROL Schemi] UI {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplora risorse XDM](./ui/explore.md)
@@ -238,4 +240,4 @@ ht-degree: 14%
    * [Creare uno schema ad hoc](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)
