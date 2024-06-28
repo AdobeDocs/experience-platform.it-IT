@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Aiuto sui tag
+user-guide-title: Guida dei tag
 breadcrumb-title: Tag
 user-guide-description: Scopri come distribuire e gestire i tag di analisi, marketing e pubblicità per migliorare le esperienze dei clienti.
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 44%
 
 ---
@@ -142,7 +142,7 @@ ht-degree: 44%
          * [Panoramica](./extensions/client/brightcove/overview.md)
          * [Note sulla versione](./extensions/client/brightcove/release-notes.md)
       * [MetricheTracciamentoChiamate](https://exchange.adobe.com/apps/ec/107695)
-      * [Identificatore origine canale](https://exchange.adobe.com/apps/ec/101412)
+      * [Identificatore Source del canale](https://exchange.adobe.com/apps/ec/101412)
       * [Esperienze Cheetah](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * Plugin comuni di Analytics {#plugins}
@@ -231,7 +231,7 @@ ht-degree: 44%
          * [Panoramica](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [Panoramica](./extensions/server/linkedin/overview.md)
-      * [!DNL Mailchimp] Bordo {#mailchimp}
+      * [!DNL Mailchimp] Edge {#mailchimp}
          * [Panoramica](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Panoramica](./extensions/server/meta/overview.md)
@@ -299,6 +299,7 @@ ht-degree: 44%
       * [Regole](./api/endpoints/rules.md)
       * [Componenti della regola](./api/endpoints/rule-components.md)
       * [Pacchetti di estensione](./api/endpoints/extension-packages.md)
+      * [Autorizzazioni di utilizzo del pacchetto di estensione](./api/endpoints/extension-package-usage-authorizations.md)
       * [Estensioni](./api/endpoints/extensions.md)
       * [Librerie](./api/endpoints/libraries.md)
       * [Build](./api/endpoints/builds.md)
