@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati, noti e non, per campagne di marketing cro
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 6%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 6%
       * [Estensione tag linkedIn Insight](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connessione di onboarding](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connessione di distribuzione](./catalog/advertising/liveramp-distribution.md)
-      * [Connessione in tempo reale Magnite Streaming](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Batch Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Connessione in tempo reale Magnite Streaming](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Connessione Microsoft Bing](./catalog/advertising/bing.md)
       * [Estensione per il tracciamento delle conversioni di pinterest](./catalog/advertising/pinterest-extension.md)
       * [Connessione a elenco clienti pinterest](./catalog/advertising/pinterest.md)
