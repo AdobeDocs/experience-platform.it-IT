@@ -77,9 +77,11 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 ## Tipo e frequenza di esportazione
 
 Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, consulta la tabella seguente.
-|**Pubblico**|**Supportato**|**Origine descrizione**|\
-|—|—|—|\
-✓ |Servizio di segmentazione|Pubblico generato tramite l’Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| Caricamenti personalizzati|X|Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experienci Platform da file CSV.
+
+|**Pubblico**|**Supportato**|**Origine descrizione**|
+|---|---|---|
+|Servizio di segmentazione|✓|Pubblico generato tramite l’Experience Platform [[Servizio di segmentazione]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+|Caricamenti personalizzati|X|Tipi di pubblico [[importato]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experienci Platform da file CSV.|
 
 {style="table-layout:auto"}
 
