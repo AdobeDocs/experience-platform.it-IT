@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
-breadcrumb-title: Guida al servizio Platform Identity
-user-guide-description: Collega le identità dei clienti tra dispositivi e sistemi per offrire esperienze digitali personalizzate.
+breadcrumb-title: Guida di Platform Identity Service
+user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
+source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 17%
+source-wordcount: '137'
+ht-degree: 29%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 17%
       - [Priorità dello spazio dei nomi](./identity-graph-linking-rules/namespace-priority.md)
       - [Scenari di esempio](./identity-graph-linking-rules/example-scenarios.md)
       - [Interfaccia utente simulazione grafico](./identity-graph-linking-rules/graph-simulation.md)
+      - [Guida alla configurazione delle regole di collegamento del grafico delle identità](./identity-graph-linking-rules/configuration.md)
+      - [Impostazioni identità](./identity-graph-linking-rules/identity-settings-ui.md)
    - [Panoramica di ECID](./features/ecid.md)
 - [Guida all’implementazione](implementation.md)
 - [Guardrail per i dati di identità](guardrails.md)
