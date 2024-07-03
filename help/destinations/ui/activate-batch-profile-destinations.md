@@ -3,9 +3,9 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 11%
 
 ---
@@ -63,8 +63,8 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experienci Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Caselle di controllo visualizzate quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
@@ -86,7 +86,7 @@ Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 [!DNL Adobe Experience Platform] esporta i dati per le destinazioni di e-mail marketing e archiviazione cloud come [tipi di file diversi](#supported-file-formats-export). In **[!UICONTROL Pianificazione]** , puoi configurare la pianificazione e i nomi dei file per ogni pubblico da esportare.
 
-Experienci Platform imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Puoi modificare la pianificazione predefinita in base alle tue esigenze, selezionando l’icona a forma di matita accanto a ogni pianificazione e definendo una pianificazione personalizzata.
+Experience Platform imposta automaticamente una pianificazione predefinita per ogni esportazione di file. Puoi modificare la pianificazione predefinita in base alle tue esigenze, selezionando l’icona a forma di matita accanto a ogni pianificazione e definendo una pianificazione personalizzata.
 
 ![Il controllo Modifica pianificazione è evidenziato nel passaggio Pianificazione.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
@@ -131,7 +131,7 @@ Seleziona **[!UICONTROL Esporta file completi]** per attivare l’esportazione d
 
    >[!NOTE]
    >
-   >Il **[!UICONTROL Dopo la valutazione del segmento]** L’opzione descritta di seguito è disponibile solo per alcuni clienti Beta.
+   >Il **[!UICONTROL Dopo la valutazione del segmento]** L&#39;opzione descritta di seguito è disponibile solo per alcuni clienti Beta.
 
    Utilizza il **[!UICONTROL Dopo la valutazione del segmento]** opzione per eseguire il processo di attivazione subito dopo il completamento del processo di segmentazione batch giornaliero di Platform. Questa opzione assicura che, durante l’esecuzione del processo di attivazione, i profili più aggiornati vengano esportati nella destinazione.
 
@@ -210,7 +210,7 @@ Il nome di destinazione e l’ID del pubblico non possono essere rimossi dai nom
 | **[!UICONTROL Testo personalizzato]** | Qualsiasi testo personalizzato che si desidera aggiungere ai nomi dei file. |
 | **[!UICONTROL ID destinazione]** | ID del flusso di dati di destinazione utilizzato per esportare il pubblico. |
 | **[!UICONTROL Nome destinazione]** | Il nome del flusso di dati di destinazione utilizzato per esportare il pubblico. |
-| **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experienci Platform. |
+| **[!UICONTROL Nome organizzazione]** | Il nome della tua organizzazione in Experience Platform. |
 | **[!UICONTROL Nome sandbox]** | ID della sandbox utilizzato per esportare il pubblico. |
 
 {style="table-layout:auto"}
@@ -231,7 +231,7 @@ In questo passaggio, devi selezionare gli attributi del profilo che desideri agg
 
    ![Aggiungi nuovo controllo campo evidenziato nel flusso di lavoro di mappatura.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. Selezionare la freccia a destra della **[!UICONTROL Campo di origine]** voce.
+1. Selezionare la freccia a destra della **[!UICONTROL Campo Source]** voce.
 
    ![Seleziona il controllo campo sorgente evidenziato nel flusso di lavoro di mappatura.](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -434,7 +434,7 @@ L’Adobe consiglia di selezionare uno spazio dei nomi dell’identità come [!D
 
 ### [!BADGE Beta]{type=Informative} Esporta array tramite campi calcolati {#export-arrays-calculated-fields}
 
-Alcuni clienti beta possono esportare gli oggetti array da Experienci Platform a destinazioni di archiviazione cloud. Ulteriori informazioni su [esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contatta il rappresentante del tuo Adobe per accedere alla funzionalità.
+Alcuni clienti beta possono esportare gli oggetti array da Experience Platform a destinazioni di archiviazione cloud. Ulteriori informazioni su [esportazione di array e campi calcolati](/help/destinations/ui/export-arrays-calculated-fields.md) e contatta il rappresentante del tuo Adobe per accedere alla funzionalità.
 
 ### Limitazioni note {#known-limitations}
 
@@ -442,13 +442,22 @@ Il nuovo **[!UICONTROL Mappatura]** La pagina presenta le seguenti limitazioni n
 
 #### Impossibile selezionare l’attributo di appartenenza del pubblico tramite il flusso di lavoro di mappatura
 
-A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.status` nel campo schema, come illustrato di seguito.
+A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È invece necessario incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 
 ![Registrazione schermata che mostra la soluzione alternativa per l’iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.status` è selezionato:
-* Se il `segmentMembership.status` è selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nell&#39;istantanea completa iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
-* Se il `segmentMembership.status` non è selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
+
+>[!NOTE]
+>
+Per le destinazioni dell’archiviazione cloud, i seguenti attributi vengono aggiunti alla mappatura per impostazione predefinita:
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.seg_namespace.seg_id.status` è selezionato:
+
+* Se il `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nell&#39;istantanea completa iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
+* Se il `segmentMembership.seg_namespace.seg_id.status` non è selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
 Ulteriori informazioni su [comportamento di esportazione del profilo per destinazioni basate su file](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -460,7 +469,7 @@ La selezione degli spazi dei nomi delle identità per l’esportazione, come ill
 
 Come soluzione alternativa temporanea, se devi aggiungere spazi dei nomi di identità ai file esportati durante la versione beta, puoi effettuare le seguenti operazioni:
 * Utilizza le destinazioni dell’archiviazione cloud legacy per i flussi di dati in cui desideri includere spazi dei nomi di identità nelle esportazioni
-* Carica le identità come attributi in Experienci Platform, quindi esportale nelle destinazioni dell’archiviazione cloud.
+* Carica le identità come attributi in Experience Platform, quindi esportale nelle destinazioni dell’archiviazione cloud.
 
 ## Seleziona attributi profilo {#select-attributes}
 
@@ -488,19 +497,19 @@ Per le destinazioni basate su profili, devi selezionare gli attributi del profil
 
 >[!NOTE]
 >
-Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform compila la selezione con quattro attributi consigliati e comunemente utilizzati dallo schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Immagine che mostra gli attributi consigliati precompilati nel passaggio di mappatura del flusso di lavoro di attivazione del pubblico.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.status` alle esportazioni di file. È necessario invece incollare manualmente il valore `xdm: segmentMembership.status` nel campo schema, come illustrato di seguito.
+A causa di una limitazione nota, al momento non è possibile utilizzare **[!UICONTROL Seleziona campo]** finestra da aggiungere `segmentMembership.seg_namespace.seg_id.status` alle esportazioni di file. È necessario invece incollare manualmente il valore `xdm: segmentMembership.seg_namespace.seg_id.status` nel campo schema, come illustrato di seguito.
 >
 ![Registrazione schermata che mostra la soluzione alternativa per l’iscrizione al pubblico nel passaggio di mappatura del flusso di lavoro di attivazione.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.status` è selezionato:
-* Se il `segmentMembership.status` è selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
-* Se il `segmentMembership.status` non è selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
+Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembership.seg_namespace.seg_id.status` è selezionato:
+* Se il `segmentMembership.seg_namespace.seg_id.status` è selezionato, i file esportati includono **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e **[!UICONTROL Attivo]** e **[!UICONTROL Scaduto]** membri nelle esportazioni incrementali successive.
+* Se il `segmentMembership.seg_namespace.seg_id.status` non è selezionato, i file esportati includono solo **[!UICONTROL Attivo]** membri nello snapshot completo iniziale e nelle esportazioni incrementali successive.
 
 ## Selezionare attributi di arricchimento {#select-enrichment-attributes}
 
@@ -514,7 +523,7 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 >
 Questo passaggio viene visualizzato solo se hai selezionato **[!UICONTROL Caricamento personalizzato]** tipi di pubblico durante [selezione del pubblico](#select-audiences) passaggio.
 
-Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experienci Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
+Gli attributi di arricchimento corrispondono ai tipi di pubblico caricati personalizzati acquisiti in Experience Platform come **[!UICONTROL Caricamenti personalizzati]**. In questo passaggio puoi selezionare gli attributi da esportare nella destinazione per ogni pubblico esterno selezionato.
 
 ![Immagine dell’interfaccia utente che mostra il passaggio di selezione degli attributi di arricchimento.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
@@ -552,7 +561,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
 ![Esempio di violazione dei criteri dei dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 
