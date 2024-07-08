@@ -2,9 +2,9 @@
 title: Panoramica di Advanced Data Lifecycle Management
 description: Advanced Data Lifecycle Management consente di gestire il ciclo di vita dei dati aggiornando o eliminando record obsoleti o imprecisi.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,10 @@ Adobe Experience Platform fornisce un solido set di strumenti per gestire operaz
 
 Queste attività possono essere eseguite utilizzando [[!UICONTROL Ciclo di vita dei dati] Area di lavoro interfaccia utente](#ui) o [API di igiene dei dati](#api). Quando viene eseguito un processo del ciclo di vita dei dati, il sistema fornisce aggiornamenti di trasparenza in ogni fase del processo. Consulta la sezione su [tempistiche e trasparenza](#timelines-and-transparency) per ulteriori informazioni su come ogni tipo di processo viene rappresentato nel sistema.
 
+>[!NOTE]
+>
+>Advanced Data Lifecycle Management supporta l&#39;eliminazione dei set di dati tramite [endpoint di scadenza del set di dati](./api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite [endpoint ordine di lavoro](./api/workorder.md). Puoi anche gestire [scadenze dei set di dati](./ui/dataset-expiration.md) e [eliminazioni di record](./ui/record-delete.md) tramite l’interfaccia utente di Platform. Per ulteriori informazioni, consulta la documentazione collegata. Il ciclo di vita dei dati non supporta l’eliminazione in batch.
+
 ## [!UICONTROL Ciclo di vita dei dati] Area di lavoro interfaccia utente {#ui}
 
 Il [!UICONTROL Ciclo di vita dei dati] Workspace nell’interfaccia utente di Platform consente di configurare e pianificare le operazioni del ciclo di vita dei dati, garantendo che i record vengano mantenuti come previsto.
@@ -42,7 +46,7 @@ Il [!UICONTROL Ciclo di vita dei dati] L’interfaccia utente è basata sull’A
 
 Quando si verifica una [richiesta di scadenza del set di dati](./ui/dataset-expiration.md) viene creato:
 
-| Ambiente di staging | Ora dopo la scadenza pianificata | Descrizione |
+| Fase | Ora dopo la scadenza pianificata | Descrizione |
 | --- | --- | --- |
 | Richiesta inviata | 0 ore | Un amministratore di dati o un analista della privacy invia una richiesta affinché un set di dati scada in un determinato momento. La richiesta è visibile in [!UICONTROL Interfaccia utente del ciclo di vita dei dati] dopo l’invio, rimane in sospeso fino alla scadenza pianificata, dopo la quale la richiesta verrà eseguita. |
 | Set di dati eliminato | 1 ora | Il set di dati viene eliminato da [pagina inventario set di dati](../catalog/datasets/user-guide.md) nell’interfaccia utente. I dati all’interno del data lake vengono eliminati solo in modo non permanente e rimangono tali fino alla fine del processo, dopo di che verranno eliminati in modo definitivo. |

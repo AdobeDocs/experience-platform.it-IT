@@ -1,18 +1,18 @@
 ---
-title: Endpoint API di scadenza set di dati
-description: L’endpoint /ttl nell’API di igiene dei dati consente di pianificare in modo programmatico le scadenze dei set di dati in Adobe Experience Platform.
+title: Endpoint API scadenza set di dati
+description: L'endpoint /ttl nell'API Data Hygiene consente di programmare a livello di codice le scadenze dei set di dati in Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2217'
 ht-degree: 2%
 
 ---
 
-# Endpoint di scadenza del set di dati
+# Endpoint scadenza set di dati
 
-Il `/ttl` L’endpoint nell’API di igiene dei dati consente di pianificare le date di scadenza dei set di dati in Adobe Experience Platform.
+L&#39;endpoint `/ttl` nell&#39;API di igiene dei dati consente di programmare le date di scadenza dei set di dati in Adobe Experience Platform.
 
 La scadenza di un set di dati è solo un’operazione di eliminazione ritardata nel tempo. Il set di dati non è protetto nel frattempo, pertanto può essere cancellato con altri mezzi prima che sia raggiunta la sua scadenza.
 
@@ -22,11 +22,17 @@ La scadenza di un set di dati è solo un’operazione di eliminazione ritardata 
 
 In qualsiasi momento, prima che l’eliminazione del set di dati venga effettivamente avviata, puoi annullare la scadenza o modificarne l’ora di attivazione. Dopo aver annullato la scadenza di un set di dati, puoi riaprirlo impostando una nuova scadenza.
 
-Una volta avviata l’eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing`e non può essere ulteriormente modificata. Il set di dati può essere recuperato per un massimo di sette giorni, ma solo tramite un processo manuale avviato tramite una richiesta di servizio Adobe. Durante l’esecuzione della richiesta, il data lake, Identity Service e Real-Time Customer Profile avviano processi separati per rimuovere i contenuti del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come `completed`.
+Una volta avviata l’eliminazione del set di dati, il relativo processo di scadenza verrà contrassegnato come `executing`e non può essere ulteriormente modificata. Il set di dati stesso può essere recuperabile per un massimo di sette giorni, ma solo attraverso un processo manuale avviato tramite un servizio Adobe Systems richiesta. Man mano che il richiesta viene eseguito, il data lake, il servizio Identity e il profilo cliente in tempo reale avviano processi separati per rimuovere il contenuto del set di dati dai rispettivi servizi. Una volta eliminati i dati da tutti e tre i servizi, la scadenza viene contrassegnata come `completed`.
 
 >[!WARNING]
 >
 >Se un set di dati è impostato per la scadenza, è necessario modificare manualmente i flussi di dati che potrebbero acquisire dati in tale set di dati in modo che i flussi di lavoro a valle non vengano influenzati negativamente.
+
+Advanced Data Lifecycle Management supporta l&#39;eliminazione dei set di dati attraverso l&#39;endpoint di scadenza del set di dati e l&#39;eliminazione degli ID (dati a livello di riga) tramite le identità primarie [endpoint ordine di lavoro](./workorder.md). Puoi anche gestire [scadenze dei set di dati](../ui/dataset-expiration.md) e [eliminazioni di record](../ui/record-delete.md) tramite l’interfaccia utente di Platform. Per ulteriori informazioni, consulta la documentazione collegata.
+
+>[!NOTE]
+>
+>Il ciclo di vita dei dati non supporta l’eliminazione in batch.
 
 ## Introduzione
 
@@ -117,7 +123,7 @@ GET /ttl/{DATASET_EXPIRATION_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{DATASET_ID}` | ID del set di dati di cui desideri cercare la scadenza. |
-| `{DATASET_EXPIRATION_ID}` | ID della scadenza del set di dati. |
+| `{DATASET_EXPIRATION_ID}` | ID della scadenza del dataset. |
 
 {style="table-layout:auto"}
 
@@ -166,15 +172,15 @@ In caso di esito positivo, la risposta restituisce i dettagli della scadenza del
 | `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
 | `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
 | `displayName` | Nome visualizzato della richiesta di scadenza. |
-| `description` | Descrizione della richiesta di scadenza. |
+| `description` | Descrizione della scadenza richiesta. |
 
 {style="table-layout:auto"}
 
-### Tag di scadenza del catalogo
+### Tag di scadenza catalogo
 
-Quando si utilizza [API catalogo](../../catalog/api/getting-started.md) per cercare i dettagli del set di dati, se il set di dati ha una scadenza attiva verrà elencato in `tags.adobe/hygiene/ttl`.
+Quando si utilizza l&#39;API](../../catalog/api/getting-started.md) Catalog [per cercare i dettagli del set di dati, se il set di dati ha una scadenza attiva, verrà elencato in `tags.adobe/hygiene/ttl`.
 
-Il seguente JSON rappresenta una risposta troncata per i dettagli di un set di dati dal catalogo, che un valore di scadenza di `32503680000000`. Il valore del tag codifica la scadenza come numero intero di millisecondi dall’inizio dell’epoca Unix.
+Il codice JSON seguente rappresenta una risposta troncata per i dettagli di un dataset da Catalog, il cui valore di scadenza è `32503680000000`. Il valore del tag codifica la scadenza come numero intero di millisecondi dall’inizio dell’epoca Unix.
 
 ```json
 {
@@ -334,10 +340,10 @@ In caso di esito positivo, la risposta restituisce il nuovo stato della scadenza
 | Proprietà | Descrizione |
 | --- | --- |
 | `ttlId` | ID della scadenza del set di dati. |
-| `datasetId` | ID del set di dati a cui si applica questa scadenza. |
-| `imsOrg` | ID organizzazione. |
+| `datasetId` | ID del set di dati a cui si riferisce questa scadenza. |
+| `imsOrg` | L&#39;ID della tua organizzazione. |
 | `status` | Lo stato corrente della scadenza del set di dati. |
-| `expiry` | La data e l’ora pianificate in cui il set di dati verrà eliminato. |
+| `expiry` | Data e ora pianificate in cui il set di dati verrà eliminato. |
 | `updatedAt` | Timestamp dell’ultimo aggiornamento della scadenza. |
 | `updatedBy` | L’ultimo utente che ha aggiornato la scadenza. |
 
@@ -351,7 +357,7 @@ Per annullare la scadenza di un set di dati, devi eseguire una richiesta DELETE.
 
 >[!NOTE]
 >
->Solo le scadenze dei set di dati con stato `pending` può essere annullato. Se si tenta di annullare una scadenza già annullata o eseguita, viene restituito un errore HTTP 404.
+>È possibile annullare solo le scadenze dei set di dati con stato di `pending` . Se si tenta di annullare una scadenza eseguita o già annullata, viene restituito un errore HTTP 404.
 
 **Formato API**
 
@@ -483,17 +489,17 @@ La tabella seguente illustra i parametri di query disponibili quando [elenco sca
 | `createdFromDate` | Corrisponde alle scadenze create all’ora indicata o successivamente. | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | Corrisponde alle scadenze create entro l’ora indicata o prima di essa. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
 | `datasetId` | Corrisponde alle scadenze che si applicano a un set di dati specifico. | `datasetId=62b3925ff20f8e1b990a7434` |
-| `datasetName` | Corrisponde a scadenze il cui nome del set di dati contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `datasetName=Acme` |
+| `datasetName` | Corrisponde a scadenze il cui nome del set di dati contiene la stringa di ricerca fornita. La corrispondenza non fa distinzione tra maiuscole e minuscole. | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
-| `displayName` | Corrisponde a scadenze il cui nome visualizzato contiene la stringa di ricerca fornita. La corrispondenza non distingue tra maiuscole e minuscole. | `displayName=License Expiry` |
+| `displayName` | Corrisponde alle scadenze il cui nome visualizzato contiene la stringa di ricerca specificata. La corrispondenza non fa distinzione tra maiuscole e minuscole. | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtra i risultati in base a una data di esecuzione esatta, una data di fine per l’esecuzione o una data di inizio per l’esecuzione. Vengono utilizzati per recuperare dati o record associati all&#39;esecuzione di un&#39;operazione in una data specifica, prima di una data specifica o dopo una data specifica. | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Corrisponde alle scadenze che devono essere eseguite, o che sono già state eseguite, durante l’intervallo specificato. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Un numero intero compreso tra 1 e 100 che indica il numero massimo di scadenze da restituire. Impostazione predefinita: 25. | `limit=50` |
-| `orderBy` | Il `orderBy` Il parametro query specifica l’ordinamento dei risultati restituiti dall’API. Utilizzalo per disporre i dati in base a uno o più campi, in ordine crescente (ASC) o decrescente (DESC). Utilizzare il prefisso + o - per indicare rispettivamente ASC e DESC. Sono accettati i seguenti valori: `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orderBy` | Il `orderBy` Il parametro query specifica l’ordinamento dei risultati restituiti dall’API. Utilizzarlo per disporre i dati in base a uno o più campi, in ordine crescente (ASC) o decrescente (DESC). Usa il prefisso + o - per indicare rispettivamente ASC, DESC. Sono accettati i seguenti valori: `displayName`, `description`, , `datasetName`, `id`, `updatedAt``updatedBy``expiry``status`. | `-datasetName` |
 | `orgId` | Corrisponde alle scadenze dei set di dati il cui ID organizzazione corrisponde a quello del parametro. Questo valore viene impostato automaticamente su quello del `x-gw-ims-org-id` e viene ignorato a meno che la richiesta non fornisca un token di servizio. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Numero intero che indica la pagina di scadenze da restituire. | `page=3` |
 | `sandboxName` | Corrisponde alle scadenze del set di dati il cui nome di sandbox corrisponde esattamente all’argomento. Viene impostato automaticamente sul nome della sandbox nel campo `x-sandbox-name` intestazione. Utilizzare `sandboxName=*` per includere le scadenze dei set di dati da tutte le sandbox. | `sandboxName=dev1` |
-| `search` | Corrisponde a scadenze in cui la stringa specificata corrisponde esattamente all’ID scadenza o è **contenuto** in uno di questi campi:<br><ul><li>author</li><li>nome visualizzato</li><li>descrizione</li><li>nome visualizzato</li><li>nome set di dati</li></ul> | `search=TESTING` |
+| `search` | Corrisponde a scadenze in cui la stringa specificata corrisponde esattamente all’ID scadenza o è **contenuto** in uno di questi campi:<br><ul><li>autore</li><li>nome visualizzato</li><li>descrizione</li><li>Nome visualizzato</li><li>nome set di dati</li></ul> | `search=TESTING` |
 | `status` | Elenco di stati separato da virgole. Se inclusa, la risposta corrisponde alle scadenze del set di dati il cui stato corrente è tra quelli elencati. | `status=pending,cancelled` |
 | `ttlId` | Corrisponde alla richiesta di scadenza con l’ID specificato. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Mi piace `createdDate` / `createdFromDate` / `createdToDate`, ma corrisponde all’ora di aggiornamento della scadenza di un set di dati invece dell’ora di creazione.<br><br>Una scadenza viene considerata aggiornata a ogni modifica, anche quando viene creata, annullata o eseguita. | `updatedDate=2022-01-01` |

@@ -2,10 +2,10 @@
 title: Scadenze automatizzate del set di dati
 description: Scopri come pianificare la scadenza di un set di dati nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 21%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +26,13 @@ Questo documento illustra come pianificare e automatizzare le scadenze dei set d
 
 >[!NOTE]
 >
->La scadenza del set di dati non elimina attualmente i dati dalla rete Edge di Adobe Experience Platform. Tuttavia, non è possibile che i dati rimangano all’interno della rete Edge dopo la scadenza del set di dati. Questo perché il contratto di licenza del servizio di 15 giorni per la scadenza del set di dati si sovrappone al periodo di 14 giorni in cui i dati esistono all’interno della rete Edge prima di essere eliminati.
+>La scadenza del set di dati non elimina attualmente i dati dall’Edge Network di Adobe Experience Platform. Tuttavia, non è possibile che i dati rimangano all’interno dell’Edge Network dopo la scadenza del set di dati. Questo perché il contratto di licenza del servizio di 15 giorni per la scadenza del set di dati si sovrappone al periodo di 14 giorni in cui i dati esistono all’interno dell’Edge Network prima di essere eliminati.
+
+Advanced Data Lifecycle Management supporta l&#39;eliminazione dei set di dati tramite [endpoint di scadenza del set di dati](../api/dataset-expiration.md) e le eliminazioni degli ID (dati a livello di riga) utilizzando le identità primarie tramite [endpoint ordine di lavoro](../api/workorder.md). Puoi anche gestire le scadenze dei set di dati e [eliminazioni di record](./record-delete.md) tramite l’interfaccia utente di Platform. Per ulteriori informazioni, consulta la documentazione collegata.
+
+>[!NOTE]
+>
+>Il ciclo di vita dei dati non supporta l’eliminazione in batch.
 
 ## Pianificare la scadenza di un set di dati {#schedule-dataset-expiration}
 
@@ -39,7 +45,7 @@ Per creare una richiesta, seleziona **[!UICONTROL Crea richiesta]** dalla pagina
 
 >[!IMPORTANT]
 >
-Gli utenti di Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics hanno 20 ordini di lavoro con scadenza set di dati pianificati in sospeso. Gli utenti di Healthcare Shield e Privacy and Security Shield hanno 50 ordini di lavoro in attesa di scadenza del set di dati pianificati. Ciò significa che puoi pianificare l’eliminazione di 20 o 50 set di dati in qualsiasi momento.<br>Ad esempio, se hai 20 scadenze pianificate per un set di dati e un set di dati deve essere eliminato domani, non puoi impostarne altre fino a dopo l’eliminazione.
+>Gli utenti di Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics hanno 20 ordini di lavoro con scadenza set di dati pianificati in sospeso. Gli utenti di Healthcare Shield e Privacy and Security Shield hanno 50 ordini di lavoro in attesa di scadenza del set di dati pianificati. Ciò significa che puoi pianificare l’eliminazione di 20 o 50 set di dati in qualsiasi momento.<br>Ad esempio, se hai 20 scadenze pianificate per un set di dati e un set di dati deve essere eliminato domani, non puoi impostarne altre fino a dopo l’eliminazione.
 
 ![Il [!UICONTROL Ciclo di vita dei dati] workspace con [!UICONTROL Crea richiesta] evidenziato.](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +65,7 @@ Avanti, sotto **[!UICONTROL Dettagli set di dati]**, selezionare l&#39;icona del
 
 >[!NOTE]
 >
-Vengono visualizzati solo i set di dati appartenenti alla sandbox corrente.
+>Vengono visualizzati solo i set di dati appartenenti alla sandbox corrente.
 
 ### Inviare la richiesta {#submit-request}
 
@@ -73,7 +79,7 @@ Dopo l&#39;invio della richiesta, viene creato un ordine di lavoro che viene vis
 
 >[!NOTE]
 >
-Consulta la sezione panoramica su [tempistiche e trasparenza](../home.md#dataset-expiration-transparency) per informazioni dettagliate su come vengono elaborate le scadenze dei set di dati una volta eseguite.
+>Consulta la sezione panoramica su [tempistiche e trasparenza](../home.md#dataset-expiration-transparency) per informazioni dettagliate su come vengono elaborate le scadenze dei set di dati una volta eseguite.
 
 ## Modificare o annullare la scadenza di un set di dati {#edit-or-cancel}
 
@@ -83,6 +89,6 @@ Nella pagina dei dettagli della scadenza del set di dati, la barra a destra most
 
 ## Passaggi successivi
 
-Questo documento illustra come pianificare le scadenze dei set di dati nell’interfaccia utente di Experienci Platform. Per informazioni su come eseguire altre attività di minimizzazione dei dati nell’interfaccia utente, consulta [panoramica dell’interfaccia utente del ciclo di vita dei dati](./overview.md).
+Questo documento illustra come pianificare le scadenze dei set di dati nell’interfaccia utente di Experience Platform. Per informazioni su come eseguire altre attività di minimizzazione dei dati nell’interfaccia utente, consulta [panoramica dell’interfaccia utente del ciclo di vita dei dati](./overview.md).
 
 Per informazioni su come pianificare le scadenze dei set di dati utilizzando l’API di igiene dei dati, consulta [guida dell’endpoint &quot;dataset expiration&quot;](../api/dataset-expiration.md).
