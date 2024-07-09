@@ -4,10 +4,10 @@ type: Tutorial
 description: Scopri come attivare i dati sul pubblico disponibili in Adobe Experience Platform inviando tipi di pubblico a destinazioni basate su profili di streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 0%
+source-wordcount: '764'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ Questo articolo spiega il flusso di lavoro necessario per attivare i dati sul pu
 Il presente articolo si applica alle tre destinazioni seguenti:
 
 * [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Hub eventi Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 * [Destinazione API HTTP](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Prerequisiti {#prerequisites}
@@ -57,8 +57,8 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experienci Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [Documentazione di Audience Portal](../../segmentation/ui/audience-portal.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Immagine che evidenzia la selezione delle caselle di controllo nel passaggio Seleziona pubblico del flusso di lavoro di attivazione.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -81,7 +81,7 @@ In **[!UICONTROL Mappatura]** fase, seleziona gli attributi del profilo che desi
 
 1. Per aggiungere altri campi, ripeti i passaggi da 1 a 3, quindi seleziona **[!UICONTROL Successivo]**.
 
-## Revisione {#review}
+## Controlla {#review}
 
 Il giorno **[!UICONTROL Revisione]** pagina, è possibile visualizzare un riepilogo della selezione. Seleziona **[!UICONTROL Annulla]** per interrompere il flusso, **[!UICONTROL Indietro]** per modificare le impostazioni, oppure **[!UICONTROL Fine]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
 ![violazione dei criteri per i dati](../assets/common/data-policy-violation.png)
 

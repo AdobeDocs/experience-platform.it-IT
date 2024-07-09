@@ -4,7 +4,7 @@ description: Scopri come creare e utilizzare i tipi di pubblico dell’account p
 badgeB2B: label="Edizione B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Edizione B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 27%
@@ -41,9 +41,9 @@ Il [!UICONTROL Sfoglia] viene visualizzata una pagina con un elenco di tutti i t
 
 Questa vista elenca informazioni sul pubblico, tra cui nome, conteggio dei profili, origine, stato del ciclo di vita, data di creazione e data dell’ultimo aggiornamento.
 
-Puoi anche utilizzare la funzionalità di ricerca e filtro per cercare e ordinare rapidamente tipi di pubblico specifici per l’account. Ulteriori informazioni su questa funzione sono disponibili nella [guida all’interfaccia utente di segmentazione](./overview.md#manage-audiences).
+Puoi anche utilizzare la funzionalità di ricerca e filtro per cercare e ordinare rapidamente tipi di pubblico specifici per l’account. Ulteriori informazioni su questa funzione sono disponibili nella [Panoramica di Audience Portal](./audience-portal.md#manage-audiences).
 
-## Creare un pubblico {#create}
+## Crea pubblico {#create}
 
 >[!NOTE]
 >

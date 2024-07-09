@@ -4,7 +4,7 @@ title: Creare una definizione di segmento utilizzando l’API del servizio di se
 type: Tutorial
 description: Segui questa esercitazione per scoprire come sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 Questo documento fornisce un’esercitazione per sviluppare, testare, visualizzare in anteprima e salvare una definizione di segmento utilizzando [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Per informazioni su come creare definizioni dei segmenti utilizzando l’interfaccia utente, consulta la sezione [Guida al Generatore di segmenti](../ui/overview.md).
+Per informazioni su come creare definizioni dei segmenti utilizzando l’interfaccia utente, consulta la sezione [Guida al Generatore di segmenti](../ui/segment-builder.md).
 
 ## Introduzione
 
@@ -63,7 +63,7 @@ Per una spiegazione dettagliata su come definire una definizione di segmento, le
 
 Quando sviluppi la definizione del segmento, puoi utilizzare gli strumenti di stima e anteprima in [!DNL Real-Time Customer Profile] per visualizzare informazioni di riepilogo utili per isolare il pubblico previsto. Le stime forniscono informazioni statistiche su una definizione di segmento, ad esempio la dimensione del pubblico prevista e l’intervallo di affidabilità. Le anteprime forniscono elenchi impaginati di profili idonei per la definizione di un segmento, consentendo di confrontare i risultati rispetto a quelli previsti.
 
-Stimando e visualizzando in anteprima il pubblico, puoi testare e ottimizzare i predicati PQL fino a quando non producono un risultato desiderato, che può quindi essere utilizzato in una definizione di segmento aggiornata.
+Stimando e visualizzando in anteprima il pubblico, puoi testare e ottimizzare i predicati di PQL fino a quando non producono un risultato desiderato, che può quindi essere utilizzato in una definizione di segmento aggiornata.
 
 Per visualizzare in anteprima o stimare la definizione del segmento sono necessari due passaggi:
 

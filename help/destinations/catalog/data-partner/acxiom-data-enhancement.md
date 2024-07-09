@@ -3,7 +3,8 @@ title: Miglioramento dei dati Acxiom
 description: Utilizza questo connettore per attivare profili di Adobe di prime parti in Real-Time CDP in Acxiom per l’arricchimento dei dati e l’utilizzo tra i canali di marketing. Puoi quindi utilizzare l’origine Acxiom per importare i profili con dati migliorati e lavorarci in Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 2%
@@ -53,10 +54,10 @@ Il cliente utilizzerà quindi il [Acquisizione dei dati Acxiom](/help/sources/co
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | x | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | x | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -84,7 +85,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-Per accedere al bucket in Experienci Platform, devi fornire valori validi per le seguenti credenziali:
+Per accedere al bucket in Experience Platform, devi fornire valori validi per le seguenti credenziali:
 
 | Credenziali | Descrizione |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -143,16 +144,16 @@ La corretta elaborazione dei file sul lato Acxiom richiede elementi di nome e in
 
 I suggerimenti di mappatura sono forniti nella tabella seguente, in cui sono elencati gli attributi sul lato di destinazione utilizzati dall’elaborazione Acxiom a cui i clienti possono mappare gli attributi del profilo. Considera questi elementi come suggerimenti, in quanto non tutti gli elementi sono necessari e i valori sorgente dipenderanno dalle esigenze dell’account.
 
-| Campo di destinazione | Descrizione origine |
+| Campo di destinazione | Descrizione Source |
 |--------------|-------------------------------------------------------------|
-| name | Il `person.name.fullName` valore in Experienci Platform. |
-| firstName | Il `person.name.firstName` valore in Experienci Platform. |
-| lastName | Il `person.name.lastName` valore in Experienci Platform. |
-| address1 | Il `mailingAddress.street1` valore in Experienci Platform. |
-| address2 | Il `mailingAddress.street2` valore in Experienci Platform. |
-| città | Il `mailingAddress.city` valore in Experienci Platform. |
-| Stato | Il `mailingAddress.state` valore in Experienci Platform. |
-| zip | Il `mailingAddress.postalCode` valore in Experienci Platform. |
+| name | Il `person.name.fullName` valore in Experience Platform. |
+| firstName | Il `person.name.firstName` valore in Experience Platform. |
+| lastName | Il `person.name.lastName` valore in Experience Platform. |
+| address1 | Il `mailingAddress.street1` valore in Experience Platform. |
+| address2 | Il `mailingAddress.street2` valore in Experience Platform. |
+| città | Il `mailingAddress.city` valore in Experience Platform. |
+| Stato | Il `mailingAddress.state` valore in Experience Platform. |
+| zip | Il `mailingAddress.postalCode` valore in Experience Platform. |
 
 >[!NOTE]
 >
@@ -164,7 +165,7 @@ Per verificare se i dati sono stati esportati correttamente, controlla [!DNL Ama
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per esportare i dati del profilo da Experienci Platform al tuo [!DNL Acxiom] posizione S3 gestita. Successivamente, devi contattare il rappresentante di Adobe con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per esportare i dati del profilo da Experience Platform al tuo [!DNL Acxiom] posizione S3 gestita. Successivamente, devi contattare il rappresentante di Adobe con il nome dell’account, i nomi dei file e il percorso del bucket, in modo da poter configurare l’elaborazione.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

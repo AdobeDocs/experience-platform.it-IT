@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida utente;guida interfaccia utente;guida interfaccia utente piattaforma;introduzione a piattaforma;dashboard;
 solution: Experience Platform
-title: Panoramica dell’interfaccia utente di Experienci Platform
+title: Panoramica dell’interfaccia utente di Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Il **[!UICONTROL Segmenti recenti]** In questa sezione sono elencate le cinque d
 
 Il **[!UICONTROL Destinazioni recenti]** In questa sezione sono elencate le cinque destinazioni create più di recente all’interno dell’organizzazione. Questo elenco viene aggiornato ogni volta che viene creata una nuova destinazione. È possibile selezionare una destinazione dall&#39;elenco per visualizzare ulteriori informazioni sulla destinazione specificata oppure selezionare **[!UICONTROL Visualizza tutto]** per visualizzare un elenco di tutte le destinazioni create. Ulteriori informazioni sulle destinazioni sono disponibili nella sezione [panoramica sulle destinazioni](../destinations/home.md).
 
-### Apprendimento consigliato
+### Risorse di apprendimento consigliate
 
 Il **[!UICONTROL Apprendimento consigliato]** Questa sezione fornisce collegamenti a documentazione utile per iniziare a utilizzare Adobe Experience Platform.
 
@@ -75,7 +75,7 @@ Selezionando il selettore si apre un menu a discesa contenente le organizzazioni
 
 ### Cambiare applicazioni
 
-L’elemento successivo a destra della navigazione superiore è il **commutatore applicazione**, rappresentato dal ![commutatore applicazione](./images/user-guide/app-switcher-icon.png) icona. Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, ad esempio Experienci Platform, Analytics, Assets e altre.
+L’elemento successivo a destra della navigazione superiore è il **commutatore applicazione**, rappresentato dal ![commutatore applicazione](./images/user-guide/app-switcher-icon.png) icona. Quando selezioni questa icona, puoi passare da un’applicazione Adobe a cui la tua organizzazione ha accesso, come Experience Platform, Analytics, Assets e altre.
 
 ### Aiuto
 
@@ -129,7 +129,7 @@ Il **[!UICONTROL Destinazioni]** Questa sezione ti consente di creare, aggiornar
 
 Il **[!UICONTROL Profili]** Questa sezione ti consente di sfogliare i profili dei clienti, visualizzare le metriche dei profili, creare e gestire criteri di unione e visualizzare gli schemi di unione. Per ulteriori informazioni sull&#39;utilizzo di [!UICONTROL Profili] , leggi la sezione [[!DNL Profile] guida utente](../profile/ui/user-guide.md). Ulteriori informazioni su Real-Time Customer Profile sono disponibili nella sezione [Panoramica del profilo cliente in tempo reale](../profile/home.md).
 
-Il **[!UICONTROL Segmenti]** consente di creare e gestire le definizioni dei segmenti. Per ulteriori informazioni sull&#39;utilizzo di [!UICONTROL Segmenti] , leggi la sezione [guida utente alla segmentazione](../segmentation/ui/overview.md). Ulteriori informazioni sul servizio di segmentazione sono disponibili nella sezione [Panoramica del servizio di segmentazione](../segmentation/home.md).
+Il **[!UICONTROL Tipi di pubblico]** consente di creare e gestire le definizioni dei segmenti. Per ulteriori informazioni sull&#39;utilizzo di [!UICONTROL Tipi di pubblico] , leggi la sezione [guida utente alla segmentazione](../segmentation/ui/overview.md). Ulteriori informazioni sul servizio di segmentazione sono disponibili nella sezione [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
 Il **[!UICONTROL Identità]** consente di creare e gestire gli spazi dei nomi di identità. Per ulteriori informazioni su [!UICONTROL Identità] , incluse informazioni sugli spazi dei nomi delle identità e su come utilizzare le identità nell’interfaccia utente di Platform, consulta [panoramica dello spazio dei nomi delle identità](../identity-service/features/namespaces.md).
 
@@ -159,7 +159,7 @@ Il **[!UICONTROL Monitorare]** consente di monitorare l’acquisizione in batch 
 
 ### [!UICONTROL Decisioning]
 
-Adobe Journey Optimizer è un servizio applicativo basato su Experienci Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l’utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività] visita il [Documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
+Adobe Journey Optimizer è un servizio applicativo basato su Experience Platform. Consente di utilizzare tecnologie decisionali potenti per offrire ai clienti l’offerta e l’esperienza migliore al momento giusto, in tutti i punti di contatto. Per ulteriori informazioni su Journey Optimizer, incluso l’utilizzo di [!UICONTROL Offerte] e [!UICONTROL Attività] visita il [Documentazione di Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=it).
 
 ### [!UICONTROL Amministrazione]
 

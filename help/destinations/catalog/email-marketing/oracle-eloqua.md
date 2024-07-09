@@ -3,10 +3,10 @@ keywords: e-mail;E-mail;Destinazioni e-mail;oracle eloqua;oracle
 title: (File) Oracle di connessione Eloqua
 description: Oracle Eloqua è una piattaforma SaaS (software as a service) per l’automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing B2B e le organizzazioni a gestire campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '717'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -20,10 +20,10 @@ Per inviare dati sul pubblico a [!DNL Oracle Eloqua], devi prima [connettere la 
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 

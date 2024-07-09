@@ -2,7 +2,7 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di settembre 2023 per Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 24%
@@ -17,7 +17,7 @@ Nuove funzioni di Adobe Experience Platform:
 
 - [Attributi calcolati](#computed-attributes)
 
-Aggiornamenti alle funzioni esistenti in Experienci Platform:
+Aggiornamenti alle funzioni esistenti in Experience Platform:
 
 - [Avvisi](#alerts)
 - [Dashboard](#dashboards)
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulla governance dei dati, consulta la [panoramica su
 
 ## Igiene dei dati {#hygiene}
 
-Experienci Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando [!UICONTROL Ciclo di vita dei dati] nell’interfaccia utente o tramite le chiamate all’API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Utilizza queste funzionalità per garantire che le informazioni vengano utilizzate come previsto, aggiornate quando è necessario correggere i dati errati e eliminate quando i criteri organizzativi lo ritengono necessario.
+Experience Platform fornisce una suite di funzionalità di igiene dei dati che consente di gestire i dati memorizzati tramite l’eliminazione programmatica di record e set di dati consumer. Utilizzando [!UICONTROL Ciclo di vita dei dati] nell’interfaccia utente o tramite le chiamate all’API di igiene dei dati, puoi gestire in modo efficace gli archivi di dati. Utilizza queste funzionalità per garantire che le informazioni vengano utilizzate come previsto, aggiornate quando è necessario correggere i dati errati e eliminate quando i criteri organizzativi lo ritengono necessario.
 
 **Nuove funzioni**
 
@@ -116,7 +116,7 @@ Per ulteriori informazioni sulle funzionalità di igiene dei dati di Platform, c
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nuova | Attiva i tipi di pubblico per i quali è stato effettuato l’onboarding in precedenza [!DNL LiveRamp] per gli editori premium su dispositivi mobili, web, display e TV collegati. <br> Dopo aver effettuato l’onboarding dei tipi di pubblico in [!DNL LiveRamp] account tramite [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md) connessione, utilizza il nuovo [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) per attivare i tipi di pubblico nelle destinazioni a valle. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuova | [[!DNL HubSpot]](https://www.hubspot.com) è una piattaforma CRM con tutti i software, le integrazioni e le risorse necessarie per collegare marketing, vendite, content management e servizio clienti. Ti consente di collegare dati, team e clienti su un’unica piattaforma di gestione delle relazioni con i clienti. |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Aggiornata | È stato aggiunto il supporto per [!DNL Dynamics 365] prefissi di campi personalizzati per campi personalizzati non creati nella soluzione predefinita in [!DNL Dynamics 365]. Un nuovo campo di input, **[!UICONTROL Prefisso di personalizzazione]**, è stato aggiunto nel [Inserisci i dettagli della destinazione](#destination-details) passaggio. |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Aggiornata | La destinazione Tipi di pubblico di Experience Cloud è ora generalmente disponibile. Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audienci Manager e Adobe Analytics. È necessaria una licenza Audienci Manager per inviare tipi di pubblico ad Adobe Analytics. |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Aggiornata | La destinazione Tipi di pubblico di Experience Cloud è ora generalmente disponibile. Utilizza questa destinazione per attivare i tipi di pubblico da Real-Time CDP ad Audience Manager e Adobe Analytics. È necessaria una licenza Audience Manager per inviare tipi di pubblico ad Adobe Analytics. |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ Add these to release notes as they go out
 
 | Funzionalità | Descrizione |
 | ----------- | ----------- |
-| Esportazioni di dati in Real-Time CDP | Il [esportazione di set di dati](../../destinations/ui/export-datasets.md) funzionalità è ora generalmente disponibile. Consulta [quali set di dati puoi esportare in base all’app Experienci Platform](../../destinations/ui/export-datasets.md#datasets-to-export) hai acquistato e controlla [guardrail per l’esportazione dei set di dati](/help/destinations/guardrails.md#dataset-exports). |
+| Esportazioni di dati in Real-Time CDP | Il [esportazione di set di dati](../../destinations/ui/export-datasets.md) funzionalità è ora generalmente disponibile. Consulta [quali set di dati puoi esportare in base all’app Experience Platform](../../destinations/ui/export-datasets.md#datasets-to-export) hai acquistato e controlla [guardrail per l’esportazione dei set di dati](/help/destinations/guardrails.md#dataset-exports). |
 | (Beta) Supporto per l&#39;esportazione di oggetti di tipo array | Esporta array di valori primitivi (valori stringa, int o booleani) come file di schema flat nelle destinazioni di archiviazione cloud. Ulteriori informazioni sulle funzionalità in [documentazione](../../destinations/ui/export-arrays-calculated-fields.md). |
 | Selettori dinamici a discesa nella Destination SDK | Durante la creazione di una destinazione tramite Destination SDK, ora puoi utilizzare [selettori a discesa dinamici](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) per popolare i campi di un selettore a discesa con i valori recuperati da un’API. |
 
@@ -190,7 +190,7 @@ Adobe Experience Platform Identity Service offre una panoramica completa della c
 
 | Funzione | Descrizione |
 | --- | --- |
-| Miglioramenti dell’interfaccia utente di Identity Service | Utilizza lo strumento di creazione dello spazio dei nomi personalizzato migliorato nell’interfaccia utente di Experienci Platform per gestire meglio gli spazi dei nomi personalizzati e i corrispondenti tipi di identità. L’interfaccia utente avanzata del servizio Identity offre: <ul><li>Esperienza contestuale: suggerimenti visivi, chiarezza e contesto per definire lo spazio dei nomi e i tipi di identità.</li><li>Precisione: è stata migliorata la gestione degli errori, senza più nomi di identità duplicati.</li><li>Discoverability: accesso alla documentazione da una finestra di dialogo interna al prodotto.</li></ul> Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati](../../identity-service/features/namespaces.md#create-namespaces). |
+| Miglioramenti dell’interfaccia utente di Identity Service | Utilizza lo strumento di creazione dello spazio dei nomi personalizzato migliorato nell’interfaccia utente di Experience Platform per gestire meglio gli spazi dei nomi personalizzati e i corrispondenti tipi di identità. L’interfaccia utente avanzata del servizio Identity offre: <ul><li>Esperienza contestuale: suggerimenti visivi, chiarezza e contesto per definire lo spazio dei nomi e i tipi di identità.</li><li>Precisione: è stata migliorata la gestione degli errori, senza più nomi di identità duplicati.</li><li>Discoverability: accesso alla documentazione da una finestra di dialogo interna al prodotto.</li></ul> Per ulteriori informazioni, consulta la guida su [creazione di spazi dei nomi personalizzati](../../identity-service/features/namespaces.md#create-namespaces). |
 | Modifiche ai limiti del grafo delle identità | Il limite del grafico delle identità è cambiato da 150 a 50. Quando una nuova identità viene acquisita in un grafico completo, l’identità meno recente in base alla marca temporale e al tipo di identità dell’acquisizione viene eliminata. Ai tipi di identità dei cookie viene assegnata una priorità per l’eliminazione. Contatta il team dell’account Adobe per richiedere una modifica nel tipo di identità se la sandbox di produzione contiene: <ul><li>uno spazio dei nomi personalizzato in cui gli identificatori della persona (come gli ID del sistema di gestione delle relazioni con i clienti) sono configurati come tipo di identità cookie/dispositivo.</li><li>uno spazio dei nomi personalizzato in cui gli identificatori cookie/dispositivo sono configurati come tipo di identità tra dispositivi.</li></ul> Queste richieste verranno elaborate manualmente da Adobe Engineering. Per ulteriori informazioni, leggere [guardrail per i dati del servizio Identity](../../identity-service/guardrails.md) e guida su [best practice per l’adesione alle licenze di gestione dati](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
@@ -199,7 +199,7 @@ Per ulteriori informazioni sul servizio Identity, consulta [Panoramica del servi
 
 ## Servizio query {#query-service}
 
-Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisci i risultati della query come nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-time Customer Profile.
+Il Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform.[!DNL Data Lake] Puoi unire qualsiasi set di dati da [!DNL Data Lake] e acquisisce i risultati della query sotto forma di nuovo set di dati da utilizzare nel reporting, in Data Science Workspace o per l’acquisizione in Real-Time Customer Profile.
 
 **Funzioni aggiornate**
 
@@ -220,7 +220,7 @@ Per ulteriori informazioni sul Servizio query, consulta la [Panoramica sul servi
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Colonne personalizzabili | Ora puoi personalizzare il layout di Audience Portal con colonne ridimensionabili. Per ulteriori informazioni su questa funzione, leggere [guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md#customize). |
+| Colonne personalizzabili | Ora puoi personalizzare il layout di Audience Portal con colonne ridimensionabili. Per ulteriori informazioni su questa funzione, leggere [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
 | Aggiorna raggruppamento frequenza | Ora puoi visualizzare un raggruppamento delle frequenze di aggiornamento dei tipi di pubblico nell’organizzazione. Per ulteriori informazioni su questa funzione, leggere [guida all’interfaccia utente di segmentazione](../../segmentation/ui/overview.md#browse). |
 
 Per ulteriori informazioni sul servizio di segmentazione, consulta [Panoramica del servizio di segmentazione](../../segmentation/home.md).

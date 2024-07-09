@@ -2,13 +2,13 @@
 title: Connessione PubMatic
 description: PubMatic massimizza il valore del cliente offrendo la catena di fornitura del futuro del marketing digitale programmatico. PubMatic Connect combina tecnologia di piattaforma e servizio dedicato per migliorare il modo in cui l’inventario e i dati vengono assemblati e scambiati.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
-
 
 # Destinazione PubMatic Connect {#pubmatic-connect}
 
@@ -40,7 +40,7 @@ Parla con il tuo [!DNL PubMatic] Account Manager per assicurarti che il tuo acco
 
 | Identità di destinazione | Descrizione | Considerazioni |
 | --------------- | ------ | --- |
-| GAID | Google Advertising ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
+| GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l&#39;identità di origine è uno spazio dei nomi personalizzato. |
 
@@ -50,10 +50,10 @@ Parla con il tuo [!DNL PubMatic] Account Manager per assicurarti che il tuo acco
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 | --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -63,8 +63,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 | --- | --- | --- |
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione PubMatic Connect. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experienci Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione PubMatic Connect. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del segmento, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 - **[!UICONTROL ID partner dati]**: l’ID del partner dati configurato nel [!DNL PubMatic] per questa integrazione.
 - **[!UICONTROL Codice paese predefinito]**: codice paese predefinito da applicare a tutte le identità, se nel profilo non ne è fornita alcuna.
 - **[!UICONTROL ID account]**: il tuo [!DNL PubMatic Connect] ID account.
-- **[!UICONTROL Tipo di account]**: il tipo di account del [!DNL PubMatic] account della piattaforma. Parla con il tuo [!DNL PubMatic] account manager in caso di domande su cui scegliere. Opzioni disponibili:
+- **[!UICONTROL Tipo di account]**: il tipo di account del [!DNL PubMatic] account della piattaforma. Parla con il tuo [!DNL PubMatic] account manager in caso di domande su cui scegliere. Le opzioni disponibili sono:
    - [!UICONTROL EDITORE]
    - [!UICONTROL DEMAND_PARTNER]
    - [!UICONTROL ACQUIRENTE]

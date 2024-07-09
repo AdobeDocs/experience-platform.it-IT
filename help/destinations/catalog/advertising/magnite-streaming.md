@@ -4,7 +4,7 @@ description: Utilizza questa destinazione per fornire Adobi di pubblico CDP alla
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c61907768f6d3cfdae3d07291bb25ff4a5229a89
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 2%
@@ -63,7 +63,7 @@ Questa sezione descrive il tipo di pubblico che puoi esportare in questa destina
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experience Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;argomenti popolari;controllo degli accessi;co
 title: Panoramica sul controllo degli accessi basato su attributi
 description: Questo documento fornisce informazioni sul controllo degli accessi basato su attributi in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 13%
 
 ---
@@ -23,7 +23,7 @@ Utilizza questa funzionalità per etichettare i campi dello schema Experience Da
 
 >[!IMPORTANT]
 >
->Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experienci Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
+>Il controllo dell’accesso basato su attributi non deve essere confuso con le funzionalità di governance dei dati di Experience Platform, che consentono di utilizzare etichette e criteri per controllare il modo in cui i dati vengono utilizzati in Platform, anziché gli utenti dell’organizzazione che vi hanno accesso. Consulta la [panoramica sulla governance dei dati](../../data-governance/home.md) per ulteriori informazioni.
 
 Tramite il controllo dell’accesso basato su attributi, gli amministratori dell’organizzazione possono controllare l’accesso degli utenti ai dati personali sensibili (SPD), alle informazioni personali (PII) e ai tipi di dati personalizzati in tutti i flussi di lavoro e le risorse di Platform. Gli amministratori possono definire ruoli utente con accesso solo a campi e dati specifici che corrispondono a tali campi.
 
@@ -44,7 +44,7 @@ Il controllo dell’accesso basato su attributi include i seguenti componenti:
 | Criteri | I criteri sono dichiarazioni che riuniscono alcuni attributi al fine di definire azioni ammissibili e non ammissibili. I criteri possono essere locali o globali e possono ignorare altri criteri. |
 | Risorsa | Una risorsa è la risorsa o l&#39;oggetto a cui un soggetto può o non può accedere. Le risorse possono essere segmenti o campi schema. |
 | Ruoli | I ruoli consentono di classificare i tipi di utenti che interagiscono con l’istanza Platform e sono elementi fondamentali nei criteri di controllo degli accessi. In un ambiente di controllo degli accessi basato su ruoli, il provisioning degli accessi utente è raggruppato in base a responsabilità e esigenze comuni. Un ruolo dispone di un determinato set di autorizzazioni e i membri dell’organizzazione possono essere assegnati a uno o più ruoli, a seconda dell’ambito di accesso di visualizzazione o scrittura necessario. |
-| Oggetto | Un oggetto è l’utente che richiede l’accesso a una risorsa per eseguire un’azione. |
+| Argomento | Un oggetto è l’utente che richiede l’accesso a una risorsa per eseguire un’azione. |
 | Gruppi di utenti | I gruppi di utenti sono utenti multipli che sono stati raggruppati e hanno l’accesso per eseguire le stesse funzioni. |
 
 ## Autorizzazioni
@@ -98,7 +98,7 @@ In qualità di amministratore, puoi utilizzare funzionalità di controllo dell�
 >
 >In sintesi, considera le seguenti implicazioni quando utilizzi le destinazioni e il controllo degli accessi basato su attributi:
 >
->* Puoi attivare solo i segmenti per i quali disponi dell’autorizzazione di accesso e visualizzazione in [vista di navigazione dei segmenti](/help/segmentation/ui/overview.md#browse) e [seleziona passaggio segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del workflow di attivazione.
+>* Puoi attivare solo i tipi di pubblico per i quali disponi dell’autorizzazione di accesso e visualizzazione [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) e [seleziona passaggio segmento](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) del workflow di attivazione.
 >* In [passaggio di mappatura del flusso di lavoro di attivazione](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), è possibile visualizzare e selezionare per l&#39;attivazione solo i campi per i quali si dispone dell&#39;autorizzazione di accesso.
 >* Quando desideri attivare altri segmenti in una destinazione esistente in cui non hai accesso a tutti i campi mappati per l’esportazione, il flusso di lavoro di attivazione viene bloccato automaticamente.
 

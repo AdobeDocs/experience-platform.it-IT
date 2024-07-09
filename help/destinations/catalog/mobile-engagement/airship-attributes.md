@@ -3,7 +3,7 @@ keywords: attributi dirigibile;destinazione dirigibile
 title: Connessione attributi dirigibili
 description: Trasmettere facilmente i dati del pubblico Adobe a Airship come attributi del pubblico per il targeting all'interno di Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 2%
@@ -39,10 +39,10 @@ Prima di poter inviare i tipi di pubblico a [!DNL Airship], è necessario:
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -124,13 +124,13 @@ Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubb
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
-[!DNL Airship] gli attributi possono essere impostati su un canale, che rappresenta un’istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail nel tuo **[!UICONTROL Attributi sorgente]** e mappare su [!DNL Airship] utente con nome nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
+[!DNL Airship] gli attributi possono essere impostati su un canale, che rappresenta un’istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail nel tuo **[!UICONTROL Attributi Source]** e mappare su [!DNL Airship] utente con nome nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
 
 ![Mappatura utente denominato](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Per gli identificatori che devono essere mappati su un canale, ovvero un dispositivo, mappa sul canale appropriato in base alla sorgente. Le immagini seguenti mostrano come vengono create due mappature:
 
-* IDFA iOS Advertising ID per un [!DNL Airship] Canale iOS
+* IDFA iOS Advertising ID in un [!DNL Airship] Canale iOS
 * Adobe `fullName` attribuire a [!DNL Airship] Attributo &quot;Nome completo&quot;
 
 >[!NOTE]

@@ -1,9 +1,10 @@
 ---
-title: Acxiom Prospect-Suppression
+title: Soppressione di potenziali clienti di Acxiom
 description: Esporta i tipi di pubblico di prime parti nella destinazione Acxiom, per consentire ad Acxiom di eliminare i clienti noti o convertiti. Quindi utilizza il connettore di origine Acxiom per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
 ht-degree: 2%
@@ -55,10 +56,10 @@ Il servizio di Acxiom cerca il file, lo recupera e lo utilizza insieme a criteri
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | x | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | x | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +87,7 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
-Per accedere al bucket in Experienci Platform, devi fornire valori validi per le seguenti credenziali:
+Per accedere al bucket in Experience Platform, devi fornire valori validi per le seguenti credenziali:
 
 | Credenziali | Descrizione |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -143,16 +144,16 @@ Letto [Attivare i dati del pubblico nelle destinazioni di esportazione del profi
 
 L’elaborazione richiede elementi di nome e indirizzo, mentre non tutti sono necessari, purché il più possibile contribuisca ad una corrispondenza corretta.  I suggerimenti di mappatura sono forniti nella tabella seguente, in cui sono elencati gli attributi sul lato di destinazione utilizzati dall’elaborazione Acxiom a cui i clienti possono mappare gli attributi del profilo.  Questo dovrebbe essere trattato come un suggerimento, in quanto non tutti gli elementi sono necessari e i valori sorgente dipenderanno dalle esigenze dell’account.
 
-| Campo di destinazione | Descrizione origine |
+| Campo di destinazione | Descrizione Source |
 |--------------|-------------------------------------------------------------|
-| name | Il `person.name.fullName` valore in Experienci Platform. |
-| firstName | Il `person.name.firstName` valore in Experienci Platform. |
-| lastName | Il `person.name.lastName` valore in Experienci Platform. |
-| address1 | Il `mailingAddress.street1` valore in Experienci Platform. |
-| address2 | Il `mailingAddress.street2` valore in Experienci Platform. |
-| città | Il `mailingAddress.city` valore in Experienci Platform. |
-| Stato | Il `mailingAddress.state` valore in Experienci Platform. |
-| zip | Il `mailingAddress.postalCode` valore in Experienci Platform. |
+| name | Il `person.name.fullName` valore in Experience Platform. |
+| firstName | Il `person.name.firstName` valore in Experience Platform. |
+| lastName | Il `person.name.lastName` valore in Experience Platform. |
+| address1 | Il `mailingAddress.street1` valore in Experience Platform. |
+| address2 | Il `mailingAddress.street2` valore in Experience Platform. |
+| città | Il `mailingAddress.city` valore in Experience Platform. |
+| Stato | Il `mailingAddress.state` valore in Experience Platform. |
+| zip | Il `mailingAddress.postalCode` valore in Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -172,7 +173,7 @@ Per verificare se i dati sono stati esportati correttamente, controlla [!DNL Ama
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato correttamente un flusso di dati per esportare dati batch da Experienci Platform al tuo [!DNL Acxiom] posizione S3 gestita. Per configurare l’elaborazione, contatta il rappresentante Acxiom con il nome dell’account, il nome del file e il percorso del bucket.
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per esportare dati batch da Experience Platform al tuo [!DNL Acxiom] posizione S3 gestita. Per configurare l’elaborazione, contatta il rappresentante Acxiom con il nome dell’account, il nome del file e il percorso del bucket.
 
 ## Utilizzo dei dati e governance {#data-usage-governance}
 

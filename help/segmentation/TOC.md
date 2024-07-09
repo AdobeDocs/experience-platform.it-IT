@@ -5,10 +5,10 @@ breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea tipi di pubblico dai dati del profilo cliente in tempo reale utilizzando definizioni di segmenti generate da Adobe Experience Platform o da origini esterne.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 35%
+source-wordcount: '185'
+ht-degree: 43%
 
 ---
 
@@ -25,18 +25,19 @@ ht-degree: 35%
    - [Segmentazione Edge](api/edge-segmentation.md)
    - [Processi di esportazione](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
-   - [Schedules](api/schedules.md)
+   - [Pianificazioni](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
-   - [Processi segmento](api/segment-jobs.md)
+   - [Segmenta processi](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
    - [Segmentazione in streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
    - [Panoramica](ui/overview.md)
    - [Dashboard del pubblico](ui/audience-dashboard.md)
+   - [Audience Portal](ui/audience-portal.md)
    - [Composizione del pubblico](ui/audience-composition.md)
-   - [Generatore di segmenti](ui/segment-builder.md)
+   - [Segment Builder](ui/segment-builder.md)
    - [Pubblico dell’account](ui/account-audiences.md)
-   - [Tipi di pubblico simili](ui/lookalike-audiences.md)
+   - [Tipi di pubblico per similarità](ui/lookalike-audiences.md)
    - [Pubblico potenziale](ui/prospect-audience.md)
    - [Segmentazione Edge](ui/edge-segmentation.md)
    - [Segmentazione in streaming](ui/streaming-segmentation.md)
@@ -48,7 +49,7 @@ ht-degree: 35%
       - [Risoluzione dei problemi](ui/segment-match/troubleshooting.md)
 - [Rispetto del consenso](consents.md)
 - [Segmentazione di più entità](multi-entity-segmentation.md)
-- Lingua query profilo {#pql}
+- Profile Query Language {#pql}
    - [Panoramica](pql/overview.md)
    - [Funzioni booleane](pql/boolean-functions.md)
    - [Funzioni di confronto](pql/comparison-functions.md)
@@ -63,7 +64,7 @@ ht-degree: 35%
    - [Quantificatori logici](pql/logical-quantifiers.md)
    - [Funzioni varie](pql/misc-functions.md)
 - Tutorial {#tutorials}
-   - [Creare un segmento](tutorials/create-a-segment.md)
+   - [Crea un segmento](tutorials/create-a-segment.md)
    - [Creare un segmento (video)](video/create-segment.md)
    - [Creare un segmento dinamico (video)](video/create-a-dynamic-segment.md)
    - [Creare un segmento con più entità (video)](video/create-multi-entity-segments.md)
@@ -73,4 +74,4 @@ ht-degree: 35%
    - [Applicazione della conformità all’utilizzo dei dati per i segmenti](tutorials/governance.md)
 - [Domande frequenti](./faq.md)
 - [Riferimento API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Note sulla versione della piattaforma](https://experienceleague.adobe.com/it/docs/experience-platform/release-notes/latest)

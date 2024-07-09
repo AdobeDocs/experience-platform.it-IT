@@ -2,13 +2,13 @@
 title: Connessione PX Gainsight
 description: Utilizza la destinazione Gainsight PX per inviare informazioni sulla segmentazione alla piattaforma Gainsight PX.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
-
 
 # Connessione PX Gainsight {#gainsight-px}
 
@@ -48,10 +48,10 @@ Gainsight PX supporta l’attivazione delle identità descritte nella tabella se
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
+| Origine pubblico | Supportato | Descrizione |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -61,8 +61,8 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 |---|---|---|
-| Tipo di esportazione | **[!UICONTROL Esportazione del segmento]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Gainsight PX] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo di esportazione | **[!UICONTROL Esportazione segmento]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL Gainsight PX] destinazione. |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 

@@ -4,9 +4,9 @@ title: Valutare e accedere ai risultati dei segmenti
 type: Tutorial
 description: Segui questo tutorial per scoprire come valutare le definizioni dei segmenti e accedere ai risultati della segmentazione utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1594'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 [Valutazione programmata](#scheduled-evaluation) (nota anche come &quot;segmentazione pianificata&quot;) consente di creare una pianificazione ricorrente per l’esecuzione di un processo di esportazione in un momento specifico, mentre [valutazione on-demand](#on-demand-evaluation) implica la creazione di un processo di segmentazione per generare immediatamente il pubblico. Di seguito sono descritti i passaggi per ciascuno di essi.
 
-Se non hai ancora completato [creare una definizione del segmento utilizzando l’API di segmentazione](./create-a-segment.md) esercitazione o ha creato una definizione di segmento utilizzando [Generatore di segmenti](../ui/overview.md), esegui questa operazione prima di procedere con questa esercitazione.
+Se non hai ancora completato [creare una definizione del segmento utilizzando l’API di segmentazione](./create-a-segment.md) esercitazione o ha creato una definizione di segmento utilizzando [Generatore di segmenti](../ui/segment-builder.md), esegui questa operazione prima di procedere con questa esercitazione.
 
 ## Valutazione programmata {#scheduled-evaluation}
 

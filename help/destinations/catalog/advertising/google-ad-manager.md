@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Connessione Google Ad Manager
 description: Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e nelle app mobili.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1119'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -42,10 +42,10 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audienci Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come [!DNL Device ID]. Un ID dispositivo numerico di 38 cifre che Audience Manager associa a ogni dispositivo con cui interagisce. | Google utilizza [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) per eseguire il targeting degli utenti in California e l’ID cookie di Google per tutti gli altri utenti. |
 | [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per il targeting degli utenti al di fuori della California. |
-| RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
-| DOMESTICA | ID Microsoft Advertising. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
+| RIDA | ID Roku per Advertising. Questo ID identifica in modo univoco i dispositivi Roku. |  |
+| DOMESTICA | MICROSOFT ADVERTISING ID Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
 | ID Amazon Fire TV | Questo ID identifica in modo univoco i televisori Amazon Fire. |  |
 
 {style="table-layout:auto"}
@@ -55,9 +55,9 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager] destina
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -68,13 +68,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico nella destinazione Google. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Prerequisiti {#prerequisites}
 
-Se desideri creare la prima destinazione con [!DNL Google Ad Manager] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audienci Manager o altre applicazioni), contatta la consulenza o l&#39;assistenza clienti Adobe per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Google] le integrazioni in Audienci Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
+Se desideri creare la prima destinazione con [!DNL Google Ad Manager] e non hanno abilitato [Funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID Experience Cloud in passato (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevi impostato [!DNL Google] le integrazioni in Audience Manager, le sincronizzazioni ID configurate vengono trasferite a Platform.
 
 ### Inserimento nell’elenco Consentiti {#allow-listing}
 
@@ -83,7 +83,7 @@ L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la p
 1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere un Adobe come DMP (Data Management Platform) collegato.
 2. In [!DNL Google Ad Manager] , vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]**, e abilita **[!UICONTROL Accesso API]** cursore.
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -95,8 +95,8 @@ Per connettersi a questa destinazione, seguire i passaggi descritti in [esercita
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="Aggiungi ID pubblico al nome del pubblico"
->abstract="Seleziona questa opzione affinché il nome del pubblico in Google Ad Manager includa l&#39;ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
+>title="Aggiungi ID del pubblico al nome del pubblico"
+>abstract="Seleziona questa opzione per fare in modo che il nome del pubblico in Google Ad Manager includa l’ID del pubblico da Experience Platform, come riportato di seguito: `Audience Name (Audience ID)`"
 
 Mentre [configurazione](../../ui/connect-destination.md) in questa destinazione, è necessario fornire le seguenti informazioni:
 
@@ -118,7 +118,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

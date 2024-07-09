@@ -2,9 +2,9 @@
 title: Note sulla versione di Adobe Experience Platform - Marzo 2024
 description: Note sulla versione di Adobe Experience Platform di marzo 2024.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 >
 >Utilizza il [Glossario di Adobe Experience Platform](/help/landing/glossary.md) per acquisire familiarità con la terminologia utilizzata in Real-time Customer Data Platform e Adobe Experience Platform. Se non riesci a trovare un termine specifico che stai cercando, utilizza le opzioni di feedback nella pagina per richiedere che nuovi termini vengano aggiunti al glossario.
 
-Aggiornamenti alle funzioni esistenti in Experienci Platform:
+Aggiornamenti alle funzioni esistenti in Experience Platform:
 
 - [Servizio catalogo](#catalog-service)
 - [Raccolta dati](#data-collection)
@@ -29,7 +29,7 @@ Aggiornamenti alle funzioni esistenti in Experienci Platform:
 
 ## Servizio catalogo {#catalog-service}
 
-Catalog Service è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experienci Platform vengono memorizzati nel data lake come file e directory, Catalog contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca e monitoraggio.
+Catalog Service è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel data lake come file e directory, Catalog contiene i metadati e le descrizioni di tali file e directory a scopo di ricerca e monitoraggio.
 
 | Funzione | Descrizione |
 | --- | --- |
@@ -75,8 +75,8 @@ Per ulteriori informazioni sulla raccolta dei dati, consulta [panoramica sulla r
 
 | Destinazione | Tipo | Descrizione |
 | ----------- | --------- | ----------- |
-| [(Beta) Connessione di Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nuova | Utilizza questo connettore per attivare profili di prime parti da Real-Time CDP ad Acxiom per l’arricchimento dei dati e l’utilizzo tra i canali di marketing. Puoi quindi utilizzare l’origine Acxiom per importare i profili con dati migliorati e lavorarci in Real-Time CDP. |
-| [(Beta) Connessione di eliminazione di Acxiom Prospect](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nuova | Esporta i tipi di pubblico di prime parti nella destinazione Acxiom, per consentire ad Acxiom di eliminare i clienti noti o convertiti. Quindi, utilizza [Importazione dati di ricerca di Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connettore di origine per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi. |
+| [(Beta) Connessione Acxiom Data Enhancement](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nuova | Utilizza questo connettore per attivare profili di prime parti da Real-Time CDP ad Acxiom per l’arricchimento dei dati e l’utilizzo tra i canali di marketing. Puoi quindi utilizzare l’origine Acxiom per importare i profili con dati migliorati e lavorarci in Real-Time CDP. |
+| [(Beta) Connessione Acxiom Prospect Suppression](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nuova | Esporta i tipi di pubblico di prime parti nella destinazione Acxiom, per consentire ad Acxiom di eliminare i clienti noti o convertiti. Quindi, utilizza [Importazione dati di ricerca di Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connettore di origine per acquisire e attivare gli elenchi di potenziali clienti da Acxiom, con i clienti noti o convertiti rimossi. |
 | [Connessione Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Aggiornamento | Durante l’esportazione dei dati nella destinazione Amazon Ads, ora è possibile indirizzare i dati all’DSP di Amazon o al Marketing Cloud Amazon (nuovo). |
 | [Connessione di onboarding LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Aggiornamento | La destinazione di onboarding LiveRamp ora supporta le consegne in Europa e Australia [!DNL LiveRamp] [!DNL SFTP] istanze. Anche la dimensione massima del file esportato è stata aumentata a 10 milioni di righe (rispetto ai 5 milioni precedenti). |
 
@@ -98,7 +98,7 @@ XDM è una specifica open-source che fornisce strutture e definizioni comuni (sc
 
 | Funzione | Descrizione |
 | --- | --- |
-| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experienci Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi mappa nell’interfaccia utente di Platform. Ora puoi creare campi mappa nell’Editor schema per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona &quot;Mappa&quot; dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campi. I tipi di valore di mappa supportati sono string e integer.<br>![Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati.](../2024/assets/march/maps.png "Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati."){width="100" zoomable="yes"}<br> Per scoprire come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
+| Supporto del tipo di dati per la mappa dell’interfaccia utente di Experience Platform | Personalizza ulteriormente la struttura dati Experience Data Model (XDM) definendo i campi mappa nell’interfaccia utente di Platform. Ora puoi creare campi mappa nell’Editor schema per modellare strutture di dati flessibili o archiviare in modo efficiente coppie chiave-valore. Seleziona &quot;Mappa&quot; dal menu a discesa Tipo quando definisci un nuovo campo per configurare i sottocampi e assegnarli ai gruppi di campi. I tipi di valore di mappa supportati sono string e integer.<br>![Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati.](../2024/assets/march/maps.png "Editor schemi con i campi Tipo e Tipo di valore mappa evidenziati."){width="100" zoomable="yes"}<br> Per scoprire come [definire i campi mappa nell’interfaccia utente](../../xdm/ui/fields/map.md), consulta la guida dell’interfaccia utente. |
 
 {style="table-layout:auto"}
 
@@ -112,7 +112,7 @@ Per ulteriori informazioni su XDM in Platform, consulta la [Panoramica sul siste
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Azioni in blocco | L’inventario del pubblico ora supporta azioni in blocco. Utilizzando le azioni collettive, puoi selezionare rapidamente più tipi di pubblico per spostarli in una cartella, applicarvi i tag, applicare le etichette di accesso o eliminarli. <br> ![Azioni in blocco nell’area di lavoro dell’interfaccia utente Tipi di pubblico.](../2024/assets/march/bulk-actions.png "Azioni in blocco nell’area di lavoro dell’interfaccia utente Tipi di pubblico."){width="100" zoomable="yes"} <br>Per ulteriori informazioni su questa funzione, leggere [Guida dell’interfaccia utente di Segmentation Service](../../segmentation/ui/overview.md#bulk-actions). |
+| Azioni in blocco | L’inventario del pubblico ora supporta azioni in blocco. Utilizzando le azioni collettive, puoi selezionare rapidamente più tipi di pubblico per spostarli in una cartella, applicarvi i tag, applicare le etichette di accesso o eliminarli. <br> ![Azioni in blocco nell’area di lavoro dell’interfaccia utente Tipi di pubblico.](../2024/assets/march/bulk-actions.png "Azioni in blocco nell’area di lavoro dell’interfaccia utente Tipi di pubblico."){width="100" zoomable="yes"} <br>Per ulteriori informazioni su questa funzione, leggere [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
@@ -127,8 +127,8 @@ Experience Platform fornisce un’API RESTful e un’interfaccia utente interatt
 | Funzione | Tipo | Descrizione |
 | --- | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nuova | Utilizza il [[!DNL Acxiom Data Ingestion] sorgente](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) per acquisire [!DNL Acxiom] Real-time Customer Data Platform e arricchire i profili di prime parti. Quindi, puoi utilizzare il [!DNL Acxiom]: profili di prime parti arricchiti per migliorare i tipi di pubblico e attivarli tra i canali di marketing. <br> ![Origine di acquisizione dati Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nuova origine di acquisizione dati Acxiom."){width="100" zoomable="yes"} <br> Leggi le [[!DNL Acxiom Data Ingestion] panoramica](../../sources/connectors/data-partners/acxiom-data-ingestion.md) per informazioni su come iniziare. |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nuova | Utilizza il [[!DNL Stripe] sorgente](../../sources/connectors/payments/stripe.md) acquisire in Experienci Platform i dati acquisiti durante il flusso di acquisto dai clienti. Una volta acquisiti, puoi utilizzare questi dati per creare offerte personalizzate e sfruttare informazioni aziendali più approfondite. <br> ![La sorgente Stripe.](../2024/assets/march/stripe.png "Nuova origine Stripe."){width="100" zoomable="yes"} <br> Leggi le [[!DNL Stripe] panoramica](../../sources/connectors/payments/stripe.md) per informazioni su come iniziare. |
-| Supporto dell’interfaccia utente per [!DNL Snowflake Streaming] | Nuova | Ora puoi utilizzare la [[!DNL Snowflake Streaming] sorgente](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) nell’interfaccia utente di Experienci Platform, per eseguire lo streaming dei dati dal [!DNL Snowflake] database. <br> ![Origine di streaming di Snowflake.](../2024/assets/march/snowflake-streaming.png "Nuova origine Streaking Snowflake."){width="100" zoomable="yes"} <br> Leggi le [[!DNL Snowflake Streaming] panoramica](../../sources/connectors/databases/snowflake-streaming.md) per informazioni su come iniziare. |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nuova | Utilizza il [[!DNL Stripe] sorgente](../../sources/connectors/payments/stripe.md) acquisire in Experience Platform i dati acquisiti durante il flusso di acquisto dai clienti. Una volta acquisiti, puoi utilizzare questi dati per creare offerte personalizzate e sfruttare informazioni aziendali più approfondite. <br> ![La sorgente Stripe.](../2024/assets/march/stripe.png "Nuova origine Stripe."){width="100" zoomable="yes"} <br> Leggi le [[!DNL Stripe] panoramica](../../sources/connectors/payments/stripe.md) per informazioni su come iniziare. |
+| Supporto dell’interfaccia utente per [!DNL Snowflake Streaming] | Nuova | Ora puoi utilizzare la [[!DNL Snowflake Streaming] sorgente](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) nell’interfaccia utente di Experience Platform, per eseguire lo streaming dei dati dal [!DNL Snowflake] database. <br> ![Origine di streaming di Snowflake.](../2024/assets/march/snowflake-streaming.png "Nuova origine Streaking Snowflake."){width="100" zoomable="yes"} <br> Leggi le [[!DNL Snowflake Streaming] panoramica](../../sources/connectors/databases/snowflake-streaming.md) per informazioni su come iniziare. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ description: Utilizza questa destinazione per fornire Adobi di pubblico CDP alla
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 0e6d95e2f68d97805af439d91b4a53230eaf773f
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 1%
@@ -77,7 +77,7 @@ La destinazione Magnite Streaming: Batch può ricevere *qualsiasi* origini di id
 | Origine pubblico | Supportato | Descrizione |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experience Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 

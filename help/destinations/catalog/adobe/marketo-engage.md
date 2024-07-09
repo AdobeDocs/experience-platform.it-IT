@@ -1,8 +1,8 @@
 ---
 title: Destinazione Marketo Engage
-description: Marketi Engage è l'unica soluzione end-to-end di gestione della customer experience (CXM) per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
+description: Marketo Engage è l'unica soluzione end-to-end di gestione della customer experience (CXM) per il marketing, la pubblicità, l'analisi e il commerce. Consente di automatizzare e gestire le attività, dalla gestione dei lead CRM al coinvolgimento dei clienti, fino all’attribuzione dei ricavi e al marketing basato sull’account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 1%
@@ -49,16 +49,16 @@ La destinazione consente agli addetti al marketing di inviare i tipi di pubblico
 
 ### Attributi supportati {#supported-attributes}
 
-È possibile mappare gli attributi da Experienci Platform a qualsiasi attributo a cui la tua organizzazione ha accesso in Marketo. In Marketo, puoi utilizzare [Descrizione della richiesta API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) per recuperare i campi attributo a cui la tua organizzazione ha accesso.
+È possibile mappare gli attributi da Experience Platform a qualsiasi attributo a cui la tua organizzazione ha accesso in Marketo. In Marketo, puoi utilizzare [Descrizione della richiesta API](https://developers.marketo.com/rest-api/lead-database/leads/#describe) per recuperare i campi attributo a cui la tua organizzazione ha accesso.
 
 ## Tipi di pubblico supportati {#supported-audiences}
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -69,7 +69,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (e-mail, ECID) utilizzati in [!DNL Marketo Engage] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Il video seguente illustra anche i passaggi per configurare una destinazione Mar
 >
 >Il video non riflette completamente la funzionalità corrente. Per le informazioni più aggiornate, consulta la guida collegata in precedenza. Le seguenti parti del video sono obsolete:
 > 
->* La scheda di destinazione da utilizzare nell’interfaccia utente di Experienci Platform è **[!UICONTROL Marketo V2]**.
+>* La scheda di destinazione da utilizzare nell’interfaccia utente di Experience Platform è **[!UICONTROL Marketo V2]**.
 >* Il video non mostra il nuovo **[!UICONTROL Creazione di persona]** campo del selettore nel flusso di lavoro connetti a destinazione.
 >* Le due limitazioni indicate nel video non sono più applicabili. Ora puoi mappare molti altri campi dell’attributo del profilo, oltre alle informazioni sull’iscrizione al pubblico supportate al momento della registrazione del video. Puoi anche esportare i membri del pubblico in Marketo che non esistono ancora negli elenchi statici di Marketo e verranno aggiunti agli elenchi.
 >* In **[!UICONTROL Passaggio Pianificazione pubblico]** del flusso di lavoro di attivazione, in Marketo V1, era necessario aggiungere manualmente una **[!UICONTROL ID mappatura]** per esportare correttamente i dati in Marketo. Questo passaggio manuale non è più richiesto in Marketo V2.

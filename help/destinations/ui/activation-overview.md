@@ -4,7 +4,7 @@ title: Panoramica di Activation
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform per vari tipi di destinazioni.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 1%
@@ -52,7 +52,7 @@ Segui i passaggi seguenti per attivare i dati nelle destinazioni da **[!UICONTRO
 
 ### Attiva i tipi di pubblico dalla pagina dei dettagli del pubblico {#activate-audience-details}
 
-Puoi attivare i tipi di pubblico nelle destinazioni dalla pagina dei dettagli del pubblico. Consulta [Dettagli del pubblico](../../segmentation/ui/overview.md#audience-details) per ulteriori informazioni.
+Puoi attivare i tipi di pubblico nelle destinazioni dalla pagina dei dettagli del pubblico. Consulta [Dettagli del pubblico](../../segmentation/ui/audience-portal.md#audience-details) per ulteriori informazioni.
 
 A seconda della destinazione selezionata, segui i passaggi descritti negli articoli seguenti per completare il flusso di lavoro di attivazione:
 

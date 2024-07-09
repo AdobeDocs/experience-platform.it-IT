@@ -2,7 +2,7 @@
 title: Connessione Amazon S3
 description: Crea una connessione in uscita allo storage Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV da Adobe Experience Platform nei bucket S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 17%
@@ -34,10 +34,10 @@ ht-degree: 17%
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ![Il tipo di esportazione basato su profilo Amazon S3 è evidenziato nella UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Esportare i set di dati {#export-datasets}
+## Esporta set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 
@@ -89,7 +89,7 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 #### Autenticazione chiave di accesso e chiave segreta
 
-Utilizza questo metodo di autenticazione quando vuoi inserire la chiave di accesso e la chiave segreta di Amazon S3 per consentire ad Experienci Platform di esportare dati nelle proprietà di Amazon S3.
+Utilizza questo metodo di autenticazione quando vuoi inserire la chiave di accesso e la chiave segreta di Amazon S3 per consentire ad Experience Platform di esportare dati nelle proprietà di Amazon S3.
 
 ![Immagine dei campi obbligatori quando si seleziona l’autenticazione con chiave di accesso e chiave segreta.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
@@ -107,7 +107,7 @@ Utilizza questo metodo di autenticazione quando vuoi inserire la chiave di acces
 
 ![Immagine dei campi obbligatori quando si seleziona l’autenticazione per il ruolo assunto.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experienci Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato su ruolo.
+Utilizza questo tipo di autenticazione se preferisci non condividere le chiavi dell’account e le chiavi segrete con Adobe. Al contrario, Experience Platform si connette alla posizione Amazon S3 utilizzando l’accesso basato su ruolo.
 
 A questo scopo, devi creare nella console AWS un utente che si presume sia, ad Adobe, con [autorizzazioni richieste a destra](#required-s3-permission) per scrivere nei bucket Amazon S3. Creare un **[!UICONTROL Entità attendibile]** in AWS con l’account Adobe **[!UICONTROL 670664943635]**. Per ulteriori informazioni, consulta [Documentazione di AWS sulla creazione di ruoli](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
@@ -134,7 +134,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Nome bucket]**: immetti il nome del [!DNL Amazon S3] bucket da utilizzare per questa destinazione.
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella di destinazione che ospiterà i file esportati.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto contenente informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto viene denominato utilizzando il formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti:
    * `flowRunId`: Il [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.
    * `scheduledTime`: ora in UTC in cui è stato esportato il file.
@@ -186,6 +186,6 @@ Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pr
 
 Per verificare se i dati sono stati esportati correttamente, controlla [!DNL Amazon S3] e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
-## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Consulta la sezione [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allow-list.md) articolo per aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.
+Consulta la sezione [Indirizzo IP inserisco nell&#39;elenco Consentiti](ip-address-allow-list.md) articolo per aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.

@@ -3,7 +3,7 @@ title: LiveRamp - Connessione di onboarding
 description: Scopri come utilizzare il connettore LiveRamp per integrare i tipi di pubblico da Adobe Real-time Customer Data Platform a LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 3%
@@ -24,7 +24,7 @@ In qualità di esperto di marketing, voglio inviare tipi di pubblico da Adobe Ex
 
 Il [!DNL LiveRamp - Onboarding] connessione esporta file tramite [SFTP di LiveRamp](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html) archiviazione.
 
-Prima di poter inviare dati da Experienci Platform a [!DNL LiveRamp - Onboarding], è necessario [!DNL LiveRamp] credenziali. Contatta il tuo [!DNL LiveRamp] per ottenere le credenziali, se non le si dispone già.
+Prima di poter inviare dati da Experience Platform a [!DNL LiveRamp - Onboarding], è necessario [!DNL LiveRamp] credenziali. Contatta il tuo [!DNL LiveRamp] per ottenere le credenziali, se non le si dispone già.
 
 ## Identità supportate {#supported-identities}
 
@@ -36,10 +36,10 @@ In [passaggio di mappatura](#map) del flusso di lavoro di attivazione, devi defi
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati in [!DNL LiveRamp - Onboarding] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experienci Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
+| Frequenza di esportazione | **[!UICONTROL Batch giornaliero]** | Poiché i profili vengono aggiornati in Experience Platform in base alla valutazione del pubblico, i profili (identità) vengono aggiornati una volta al giorno a valle della piattaforma di destinazione. Ulteriori informazioni su [destinazioni basate su file batch](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -111,7 +111,7 @@ Per configurare i dettagli per la destinazione, compila i campi obbligatori e fa
 * **[!UICONTROL Regione]**: area geografica per l’istanza dell’archiviazione SFTP LiveRamp.
 * **[!UICONTROL Percorso cartella]**: percorso di [!DNL LiveRamp] `uploads` sottocartella che ospiterà i file esportati. Il `uploads` il prefisso viene aggiunto automaticamente al percorso della cartella. [!DNL LiveRamp] consiglia di creare una sottocartella dedicata per le consegne da Adobe Real-Time CDP per mantenere i file separati da tutti gli altri feed esistenti e garantire il corretto funzionamento di tutta l’automazione.
    * Ad esempio, se desideri esportare i file in `uploads/my_export_folder`, digitare `my_export_folder` nel **[!UICONTROL Percorso cartella]** campo.
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati. Le opzioni disponibili sono **[!UICONTROL GZIP]** o **[!UICONTROL Nessuno]**.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati. Le opzioni disponibili sono **[!UICONTROL GZIP]** o **[!UICONTROL Nessuno]**.
 
 ### Abilita avvisi {#enable-alerts}
 
@@ -185,7 +185,7 @@ Dopo aver aggiunto tutte le mappature desiderate, seleziona **[!UICONTROL Succes
 
 I dati vengono esportati in [!DNL LiveRamp - Onboarding] percorso di archiviazione configurato come file CSV.
 
-I file esportati hanno una dimensione massima di 10 milioni di righe. Experienci Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite di file singolo, contatta il tuo [!DNL LiveRamp] e chiedere loro di configurare l’acquisizione batch per te.
+I file esportati hanno una dimensione massima di 10 milioni di righe. Experience Platform genera più file per consegna se il pubblico selezionato supera i 10 milioni di righe. Se prevedi di superare il limite di file singolo, contatta il tuo [!DNL LiveRamp] e chiedere loro di configurare l’acquisizione batch per te.
 
 Durante l&#39;esportazione di file in [!DNL LiveRamp - Onboarding] di destinazione, Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md).
 
@@ -211,7 +211,7 @@ I profili inclusi nei file esportati possono corrispondere a uno dei seguenti st
 * `Expired`: il profilo non è più qualificato per il pubblico, ma lo è già stato in passato.
 * `""`(stringa vuota): il profilo non è mai qualificato per il pubblico.
 
-Ad esempio, un file CSV esportato con `email` , due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md), e uno [importato](../../../segmentation/ui/overview.md#importing-an-audience) pubblico esterno, potrebbe presentarsi così:
+Ad esempio, un file CSV esportato con `email` , due tipi di pubblico provenienti dall&#39;Experience Platform [Servizio di segmentazione](../../../segmentation/home.md), e uno [importato](../../../segmentation/ui/audience-portal.md#import-audience) pubblico esterno, potrebbe presentarsi così:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Nell’esempio precedente, il `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/overview.md#importing-an-audience).
+Nell’esempio precedente, il `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrivono i tipi di pubblico provenienti dal servizio di segmentazione, mentre `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descrive un pubblico importato in Platform come [caricamento personalizzato](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Poiché Platform genera un file CSV per ogni [ID criterio di unione](../../../profile/merge-policies/overview.md), genera anche un flusso di dati separato eseguito per ogni ID del criterio di unione.
 

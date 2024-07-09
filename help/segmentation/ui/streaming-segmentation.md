@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guida dell’interfaccia utente Segmentazione streaming
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione quasi in tempo reale concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione dei segmenti ora avviene quando i dati arrivano in Platform, riducendo la necessità di pianificare ed eseguire processi di segmentazione. Con questa funzionalità, la maggior parte delle regole del segmento ora possono essere valutate quando i dati vengono passati in Platform, il che significa che l’iscrizione al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Segmentazione in streaming su [!DNL Adobe Experience Platform] consente ai clien
 
 >[!NOTE]
 >
->Affinché la segmentazione in streaming funzioni, devi abilitare la segmentazione pianificata per l’organizzazione. Per informazioni dettagliate sull’abilitazione della segmentazione pianificata, consulta [la sezione segmentazione in streaming nella guida utente Segmentazione](./overview.md#scheduled-segmentation).
+>Affinché la segmentazione in streaming funzioni, devi abilitare la segmentazione pianificata per l’organizzazione. Per informazioni dettagliate sull’abilitazione della segmentazione pianificata, consulta [Panoramica di Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Una query verrà valutata automaticamente con segmentazione in streaming se soddisfa uno dei seguenti criteri:
 
@@ -75,7 +75,7 @@ Sotto è riportato un grafico a linee che mostra il numero di nuovi tipi di pubb
 >
 >Una definizione di segmento è considerata qualificata se passa da non avere stato a realizzata o se passa da uscita a realizzata. Una definizione di segmento è considerata non qualificata se passa da realizzata a uscita.
 >
->Ulteriori informazioni su questi stati sono disponibili nella tabella di stato all&#39;interno di [panoramica sulla segmentazione](./overview.md#browse).
+>Ulteriori informazioni su questi stati sono disponibili nella tabella di stato all&#39;interno di [Panoramica di Audience Portal](./audience-portal.md#customize).
 
 ![Viene evidenziata la scheda Profiles over time (Profili nel tempo), che mostra un grafico a linee dei profili nel tempo.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

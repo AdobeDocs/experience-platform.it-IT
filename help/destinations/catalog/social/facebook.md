@@ -3,7 +3,7 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting, la personalizzazione e l’eliminazione del pubblico in base alle e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 7%
@@ -42,7 +42,7 @@ Successivamente, può utilizzare i propri dati offline, inclusi gli ID di iscriz
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | Google Advertising ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
+| GAID | GOOGLE ADVERTISING ID | Seleziona l’identità di destinazione GAID quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per inserzionisti | Selezionare l&#39;identità di destinazione IDFA quando l&#39;identità di origine è uno spazio dei nomi IDFA. |
 | phone_sha256 | Numeri di telefono con hash con algoritmo SHA256 | I numeri di telefono con hash SHA256 e testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per i numeri di telefono con testo normale e con hash. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
 | email_lc_sha256 | Indirizzi e-mail con hash con algoritmo SHA256 | Adobe Experience Platform supporta sia gli indirizzi di posta elettronica in testo normale che quelli con hash SHA256. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza gli spazi dei nomi appropriati rispettivamente per gli indirizzi e-mail in testo normale e con hash. Quando il campo sorgente contiene attributi senza hash, seleziona la **[!UICONTROL Applica trasformazione]** opzione, per avere [!DNL Platform] esegui automaticamente l’hash dei dati all’attivazione. |
@@ -52,10 +52,10 @@ Successivamente, può utilizzare i propri dati offline, inclusi gli ID di iscriz
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Facebook. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ Prima di poter inviare i tipi di pubblico a [!DNL Facebook], assicurati di soddi
 
 * Il tuo [!DNL Facebook] l&#39;account utente deve avere accesso completo al [!DNL Facebook Business Account] proprietario dell’account dell’annuncio che stai utilizzando.
 * Il tuo [!DNL Facebook] l&#39;account utente deve avere **[!DNL Manage campaigns]** Autorizzazione abilitata per l’account annuncio che intendi utilizzare.
-* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Utilizza `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
+* Il **Adobe Experience Cloud** l&#39;account aziendale deve essere aggiunto come partner pubblicitario nel tuo [!DNL Facebook Ad Account]. Utilizzare `business ID=206617933627973`. Consulta [Aggiunta di partner a Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook per ulteriori dettagli.
   >[!IMPORTANT]
   >
   > Durante la configurazione delle autorizzazioni per Adobe Experience Cloud, devi abilitare **Gestire le campagne** autorizzazione. L’autorizzazione è necessaria per [!DNL Adobe Experience Platform] integrazione.
@@ -106,7 +106,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 Puoi eseguire l’hashing degli indirizzi e-mail prima di acquisirli in Adobe Experience Platform, oppure utilizzare gli indirizzi e-mail in chiaro nell’Experience Platform e disporre di [!DNL Platform] esegui l’hashing durante l’attivazione.
 
-Per informazioni sull’acquisizione degli indirizzi e-mail in Experienci Platform, consulta la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la sezione [panoramica dell’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i seguenti requisiti:
 
@@ -143,7 +143,7 @@ Il video seguente illustra anche i passaggi per configurare una [!DNL Facebook] 
 
 >[!NOTE]
 >
->L’interfaccia utente di Experienci Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
+>L’interfaccia utente di Experience Platform viene aggiornata frequentemente e potrebbe essere cambiata dopo la registrazione del video. Per informazioni aggiornate, fare riferimento al [esercitazione sulla configurazione della destinazione](../../ui/connect-destination.md).
 
 ### Autenticarsi nella destinazione {#authenticate}
 

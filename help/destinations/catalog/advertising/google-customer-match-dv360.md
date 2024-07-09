@@ -1,14 +1,14 @@
 ---
 title: Customer Match Google + Display e connessione Video 360
-description: Con il connettore di destinazione Google Customer Match + Display & Video 360, puoi utilizzare i dati online e offline di Experienci Platform per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
+description: Con il connettore di destinazione Google Customer Match + Display & Video 360, puoi utilizzare i dati online e offline di Experience Platform per raggiungere e coinvolgere nuovamente i clienti nelle proprietà possedute e gestite da Google, come Search, Shopping, Gmail e YouTube.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 7a9312a3722e205de3d11e17f6f079709b20237c
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1935'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Google Customer Match + Display & Video 360] connessione
 
@@ -56,7 +56,7 @@ Un marchio di abbigliamento sportivo vuole raggiungere i clienti esistenti attra
 
 Un&#39;importante azienda tecnologica ha lanciato un nuovo telefono. Per promuovere questo nuovo modello di telefono, sono alla ricerca di far conoscere le nuove caratteristiche e funzionalità del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
 
-Per promuovere la versione, caricano in Experienci Platform gli indirizzi e-mail dal proprio database CRM, utilizzando gli indirizzi e-mail come identificatori. I tipi di pubblico vengono creati in base ai clienti che possiedono modelli di telefono meno recenti. Quindi i tipi di pubblico vengono inviati a [!DNL Google Customer Match], in modo che l’azienda possa eseguire il targeting dei clienti attuali, dei clienti che possiedono modelli di telefono precedenti e di clienti simili su [!DNL Google Display & Video 360] proprietà quali [!DNL Search], [!DNL YouTube], [!DNL Gmail]e [!DNL Google Display Network].
+Per promuovere la versione, caricano in Experience Platform gli indirizzi e-mail dal proprio database CRM, utilizzando gli indirizzi e-mail come identificatori. I tipi di pubblico vengono creati in base ai clienti che possiedono modelli di telefono meno recenti. Quindi i tipi di pubblico vengono inviati a [!DNL Google Customer Match], in modo che l’azienda possa eseguire il targeting dei clienti attuali, dei clienti che possiedono modelli di telefono precedenti e di clienti simili su [!DNL Google Display & Video 360] proprietà quali [!DNL Search], [!DNL YouTube], [!DNL Gmail]e [!DNL Google Display Network].
 
 ## Identità supportate {#supported-identities}
 
@@ -82,9 +82,9 @@ Per promuovere la versione, caricano in Experienci Platform gli indirizzi e-mail
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori (nome, numero di telefono e altri) utilizzati in [!DNL Google Customer Match] destinazione. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -140,7 +140,7 @@ Per ulteriori informazioni sui requisiti di hashing di Google e altre restrizion
 * [[!DNL Customer Match] con ID di dispositivi mobili](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
 
-Per informazioni sull’acquisizione degli indirizzi e-mail in Experienci Platform, consulta la sezione [panoramica dell’acquisizione batch](../../../ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](../../../ingestion/streaming-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la sezione [panoramica dell’acquisizione batch](../../../ingestion/batch-ingestion/overview.md) e [panoramica sull’acquisizione in streaming](../../../ingestion/streaming-ingestion/overview.md).
 
 Se scegli di eseguire l’hash degli indirizzi e-mail da solo, assicurati di soddisfare i requisiti di Google, descritti nei collegamenti riportati sopra.
 
@@ -159,7 +159,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -184,7 +184,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

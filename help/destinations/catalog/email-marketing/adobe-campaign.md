@@ -1,12 +1,12 @@
 ---
 keywords: e-mail;e-mail;destinazioni e-mail;adobe campaign;campaign
 title: Connessione Adobe Campaign
-description: Adobe Campaign è un insieme di soluzioni che ti aiutano a personalizzare e distribuire campagne su tutti i canali online e offline.
+description: Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '906'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -22,10 +22,10 @@ Per inviare i dati sul pubblico ad Adobe Campaign, devi prima [connettere la des
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+| ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -40,11 +40,11 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 {style="table-layout:auto"}
 
-## Indirizzo IP inserito nell&#39;elenco Consentiti {#allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#allow-list}
 
-Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, Adobe consiglia di aggiungere determinati intervalli IP al tuo inserisco nell&#39;elenco Consentiti di.
+Quando configuri le destinazioni di e-mail marketing con l’archiviazione SFTP, l’Adobe inserii nell&#39;elenco Consentiti consiglia di aggiungere determinati intervalli IP al tuo.
 
-Fai riferimento a [INSERISCO NELL&#39;ELENCO CONSENTITI di indirizzi IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere IP di Adobe al tuo inserisco nell&#39;elenco Consentiti di.
+Fai riferimento a [INSERIRE NELL&#39;ELENCO CONSENTITI Indirizzo IP per le destinazioni SFTP](../cloud-storage/ip-address-allow-list.md) se devi aggiungere IP di Adobe al tuo inserisco nell&#39;elenco Consentiti di.
 
 ## Connettersi alla destinazione {#connect}
 

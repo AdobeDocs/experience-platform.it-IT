@@ -3,7 +3,7 @@ keywords: mobile; braze; messaggistica;
 title: Connessione di brasatura
 description: Braze è una piattaforma completa per il coinvolgimento dei clienti che offre esperienze pertinenti e memorabili tra i clienti e i marchi che amano.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -48,10 +48,10 @@ In qualità di addetto al marketing, voglio indirizzare l’attività agli utent
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura dei campi.[!DNL Adobe Experience Platform] i tipi di pubblico vengono esportati in [!DNL Braze] sotto `AdobeExperiencePlatformSegments` attributo. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -115,14 +115,14 @@ In [!UICONTROL Mappatura] passaggio, fai clic su **[!UICONTROL Aggiungi nuova ma
 
 ![Mappatura per aggiunta destinazione brasatura](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-In [!UICONTROL Campo di origine] , fare clic sul pulsante freccia accanto al campo vuoto.
+In [!UICONTROL Campo Source] , fare clic sul pulsante freccia accanto al campo vuoto.
 
-![Mappatura origine destinazione brasatura](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Mappatura Source destinazione Braze](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 In [!UICONTROL Seleziona campo di origine] è possibile scegliere tra due categorie di campi XDM:
 * [!UICONTROL Seleziona attributi]: utilizza questa opzione per mappare un campo specifico dallo schema XDM a un [!DNL Braze] attributo.
 
-![Attributo origine mappatura destinazione brasatura](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Attributo Source mappatura destinazione brasatura](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Seleziona lo spazio dei nomi dell’identità]: utilizza questa opzione per mappare una [!DNL Platform] spazio dei nomi delle identità in un [!DNL Braze] spazio dei nomi.
 

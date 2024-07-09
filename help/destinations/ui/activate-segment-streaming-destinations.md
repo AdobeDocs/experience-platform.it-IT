@@ -3,7 +3,7 @@ title: Attivare i dati sul pubblico nelle destinazioni di streaming
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform mappandoli su destinazioni di streaming.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 6%
@@ -51,8 +51,8 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
-* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experienci Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experienci Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Diversi tipi di pubblico sono stati evidenziati nel passaggio Seleziona tipi di pubblico.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -73,7 +73,7 @@ Alcune destinazioni di streaming del pubblico richiedono la selezione di attribu
 
    ![Aggiungi nuovo controllo di mappatura evidenziato.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. Selezionare la freccia a destra della **[!UICONTROL Campo di origine]** voce.
+1. Selezionare la freccia a destra della **[!UICONTROL Campo Source]** voce.
 
    ![Selezionare il controllo campo sorgente evidenziato.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
@@ -147,7 +147,7 @@ Se l’organizzazione ha acquistato **Adobe Healthcare Shield** o **Adobe Privac
 
 ### Controlli dei criteri di utilizzo dei dati {#data-usage-policy-checks}
 
-In **[!UICONTROL Revisione]** step, Experienci Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
+In **[!UICONTROL Revisione]** step, Experience Platform controlla anche eventuali violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di una policy. Non puoi completare il flusso di lavoro di attivazione del pubblico finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, vedere [violazioni dei criteri di utilizzo dei dati](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) nella sezione documentazione sulla governance dei dati.
 
 ![Esempio di violazione dei criteri per i dati visualizzato nel flusso di lavoro di attivazione.](../assets/common/data-policy-violation.png)
 

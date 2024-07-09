@@ -3,7 +3,7 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e moni
 
 Per visualizzare ulteriori dettagli su una destinazione esistente, segui la procedura riportata di seguito.
 
-1. Accedi a [Interfaccia utente Experienci Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare le destinazioni esistenti.
+1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare le destinazioni esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
@@ -78,7 +78,7 @@ Il [!UICONTROL Il flusso di dati viene eseguito] fornisce i dati delle metriche 
 
 >[!NOTE]
 >
->* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experienci Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
+>* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
 >* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinazioni, vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
 
 ![Visualizzazione esecuzioni flusso di dati](../assets/ui/details-page/dataflow-runs.png)
@@ -89,7 +89,7 @@ Esiste una differenza nella durata visualizzata del flusso di dati eseguito tra 
 
 ### Destinazioni di streaming {#streaming}
 
-Mentre il **[!UICONTROL Durata di elaborazione]** indicato per la maggior parte delle esecuzioni di flussi di dati in streaming è di circa quattro ore, come mostrato nell’immagine seguente, il tempo di elaborazione effettivo per qualsiasi esecuzione di flussi di dati è molto più breve. Le finestre di esecuzione del flusso di dati rimangono aperte più a lungo nel caso in cui Experienci Platform debba riprovare a effettuare chiamate alla destinazione e assicurarsi inoltre di non perdere dati in arrivo tardivo per la stessa finestra temporale.
+Mentre il **[!UICONTROL Durata di elaborazione]** indicato per la maggior parte delle esecuzioni di flussi di dati in streaming è di circa quattro ore, come mostrato nell’immagine seguente, il tempo di elaborazione effettivo per qualsiasi esecuzione di flussi di dati è molto più breve. Le finestre di esecuzione del flusso di dati rimangono aperte più a lungo nel caso in cui Experience Platform debba riprovare a effettuare chiamate alla destinazione e assicurarsi inoltre di non perdere dati in arrivo tardivo per la stessa finestra temporale.
 
 ![Immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione di streaming.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
@@ -139,4 +139,4 @@ Per modificare la pianificazione di attivazione esistente di più tipi di pubbli
 
 >[!NOTE]
 >
-Per informazioni dettagliate sull’esplorazione della pagina dei dettagli di un pubblico, consulta [Panoramica sulla segmentazione dell’interfaccia utente](../../segmentation/ui/overview.md#segment-details).
+Per informazioni dettagliate sull’esplorazione della pagina dei dettagli di un pubblico, consulta [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).

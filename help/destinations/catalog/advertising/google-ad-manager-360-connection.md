@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] connessione
 description: Google Ad Manager 360 è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci sui loro siti web, tramite video e app mobili.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Per ulteriori dettagli sul funzionamento degli identificatori forniti da Publish
 
 >[!IMPORTANT]
 >
->Questa destinazione è attualmente in versione beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Google Ad Manager 360] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL organization ID].
+>Questa destinazione è attualmente in Beta ed è disponibile solo per un numero limitato di clienti. Per richiedere l’accesso a [!DNL Google Ad Manager 360] connessione, contatta il tuo rappresentante di Adobe e fornisci [!DNL organization ID].
 
 Il [!DNL Google Ad Manager 360] esportazioni di destinazione [!DNL CSV] file nel tuo [!DNL Google Cloud Storage] secchio. Dopo aver esportato [!DNL CSV] file, è necessario importarli nel file [!DNL Google Ad Manager 360] account.
 
@@ -52,9 +52,9 @@ Tieni presente i seguenti dettagli specifici di [!DNL Google Ad Manager 360] des
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -77,13 +77,13 @@ L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la p
 
 >[!NOTE]
 >
->L&#39;eccezione a questa regola è per esistente [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audienci Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
+>L&#39;eccezione a questa regola è per esistente [Audience Manager](https://docs.adobe.com/content/help/it-IT/experience-cloud/user-guides/home.translate.html) clienti. Se hai già creato una connessione a questa destinazione Google in Audience Manager, non è necessario ripetere nuovamente la procedura di inserimento nell’elenco Consentiti e puoi procedere ai passaggi successivi.
 
 1. Segui i passaggi descritti in [Documentazione di Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=en) per aggiungere un Adobe come DMP (Data Management Platform) collegato.
 2. In [!DNL Google Ad Manager] , vai a **[!UICONTROL Amministratore]** > **[!UICONTROL Impostazioni globali]** > **[!UICONTROL Impostazioni di rete]**, e abilita **[!UICONTROL Accesso API]** cursore.
 
 
-## Connetti alla destinazione {#connect}
+## Connettersi alla destinazione {#connect}
 
 >[!IMPORTANT]
 > 
@@ -91,7 +91,7 @@ L’inserimento nell’elenco Consentiti è obbligatorio prima di impostare la p
 
 Per connettersi a questa destinazione, seguire i passaggi descritti in [esercitazione sulla configurazione della destinazione](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). Nel flusso di lavoro di configurazione della destinazione, compila i campi elencati nelle due sezioni seguenti.
 
-### Autentica nella destinazione {#authenticate}
+### Autenticarsi nella destinazione {#authenticate}
 
 Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!UICONTROL Connetti alla destinazione]**.
 
@@ -100,12 +100,12 @@ Per autenticare nella destinazione, compila i campi obbligatori e seleziona **[!
 
 Per ulteriori informazioni su questi valori, vedere [Chiavi HMAC di Google Cloud Storage](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guida. Per i passaggi su come generare il proprio ID chiave di accesso e la propria chiave di accesso segreta, consulta [[!DNL Google Cloud Storage] panoramica dell’origine](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
-### Inserisci i dettagli della destinazione {#destination-details}
+### Inserire i dettagli della destinazione {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Aggiungi ID pubblico al nome del pubblico"
->abstract="Seleziona questa opzione affinché il nome del pubblico in questa destinazione includa l’ID del pubblico di un Experience Platform, come segue: `Audience Name (Audience ID)`"
+>title="Aggiungi ID del pubblico al nome del pubblico"
+>abstract="Seleziona questa opzione per fare in modo che il nome del pubblico in questa destinazione includa l’ID del pubblico da Experience Platform, come riportato di seguito: `Audience Name (Audience ID)`"
 
 Per configurare i dettagli per la destinazione, compila i campi obbligatori e facoltativi seguenti. Un asterisco accanto a un campo nell’interfaccia utente indica che il campo è obbligatorio.
 
@@ -125,7 +125,7 @@ Puoi abilitare gli avvisi per ricevere notifiche sullo stato del flusso di dati 
 
 Una volta completate le informazioni sulla connessione di destinazione, seleziona **[!UICONTROL Successivo]**.
 
-## Attiva il pubblico in questa destinazione {#activate}
+## Attivare tipi di pubblico in questa destinazione {#activate}
 
 >[!IMPORTANT]
 > 

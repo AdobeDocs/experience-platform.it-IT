@@ -3,10 +3,10 @@ title: Pubblico potenziale
 description: Scopri come creare e utilizzare i tipi di pubblico potenziali per eseguire il targeting di clienti sconosciuti utilizzando informazioni di terze parti.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '395'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ Questa vista elenca informazioni sul pubblico, tra cui il nome, il conteggio dei
 
 Puoi aggiungere altri campi a questa visualizzazione selezionando ![icona attributo filtro](../images/ui/prospect-audience/filter-attribute.png). Questi campi aggiuntivi includono la frequenza di aggiornamento e l’ultimo aggiornato da.
 
-Ulteriori informazioni sulla pagina Sfoglia, incluse informazioni dettagliate sui campi elencati, sono disponibili nella sezione [Sfoglia sezione della guida dell’interfaccia utente Segmentazione](./overview.md#browse).
+Ulteriori informazioni sulla pagina Sfoglia, incluse informazioni dettagliate sui campi elencati, sono disponibili nella sezione [Panoramica di Audience Portal](./audience-portal.md#list).
 
 ## Dettagli del pubblico {#details}
 
@@ -40,9 +40,9 @@ Viene visualizzata la pagina dei dettagli del pubblico potenziale. Vengono visua
 
 ![Viene visualizzata la pagina dei dettagli del pubblico potenziale.](../images/ui/prospect-audience/audience-details.png)
 
-Per ulteriori informazioni sulla pagina dei dettagli del pubblico, consulta [sezione dei dettagli del pubblico nella guida dell’interfaccia utente Segmentazione](./overview.md).
+Per ulteriori informazioni sulla pagina dei dettagli del pubblico, consulta [sezione dei dettagli del pubblico nella panoramica di Audience Portal](./audience-portal.md#audience-details).
 
-## Creare un pubblico {#create}
+## Crea pubblico {#create}
 
 Per creare un pubblico potenziale, nella [!UICONTROL Sfoglia] pagina, seleziona **[!UICONTROL Creare un pubblico]**.
 
@@ -56,7 +56,7 @@ Per ulteriori informazioni sull’utilizzo del Generatore di segmenti, consulta 
 
 ## Casi d’uso consigliati {#use-cases}
 
-Per scoprire come utilizzare la funzionalità dei tipi di pubblico potenziali in Experienci Platform in combinazione con altre funzionalità di Platform, leggi la seguente documentazione sul caso d’uso:
+Per scoprire come utilizzare la funzionalità dei tipi di pubblico potenziali in Experience Platform in combinazione con altre funzionalità di Platform, leggi la seguente documentazione sul caso d’uso:
 
 - [Coinvolgi e acquisisci nuovi clienti tramite la funzionalità di ricerca di potenziali clienti](../../rtcdp/partner-data/prospecting.md)
 

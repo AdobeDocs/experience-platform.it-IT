@@ -3,10 +3,10 @@ title: Connessione HubSpot
 description: La destinazione HubSpot consente di gestire i record dei contatti nell’account HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -22,17 +22,17 @@ Istruzioni per l’autenticazione [!DNL HubSpot] sono riportati di seguito, nell
 
 Per aiutarti a capire meglio come e quando utilizzare il [!DNL HubSpot] destinazione: ecco un caso d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-[!DNL HubSpot] I contatti memorizzano informazioni sulle persone che interagiscono con la tua azienda. Il tuo team utilizza i contatti esistenti in [!DNL HubSpot] per generare il pubblico Experienci Platform. Dopo aver inviato questi tipi di pubblico a [!DNL HubSpot], le loro informazioni vengono aggiornate e a ogni contatto viene assegnata una proprietà il cui valore è il nome del pubblico che indica a quale pubblico appartiene il contatto.
+[!DNL HubSpot] I contatti memorizzano informazioni sulle persone che interagiscono con la tua azienda. Il tuo team utilizza i contatti esistenti in [!DNL HubSpot] per generare il pubblico Experience Platform. Dopo aver inviato questi tipi di pubblico a [!DNL HubSpot], le loro informazioni vengono aggiornate e a ogni contatto viene assegnata una proprietà il cui valore è il nome del pubblico che indica a quale pubblico appartiene il contatto.
 
 ## Prerequisiti {#prerequisites}
 
-Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experienci Platform e [!DNL HubSpot] e per le informazioni che è necessario raccogliere prima di lavorare con [!DNL HubSpot] destinazione.
+Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL HubSpot] e per le informazioni che è necessario raccogliere prima di lavorare con [!DNL HubSpot] destinazione.
 
 ### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati in [!DNL HubSpot] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
+Prima di attivare i dati in [!DNL HubSpot] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
 
-Consulta la documentazione di Experienci Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
+Consulta la documentazione di Experience Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
 
 ### Prerequisiti per [!DNL HubSpot] destinazione {#prerequisites-destination}
 
@@ -79,8 +79,8 @@ Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generat
 Questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
 | Tipo di pubblico | Descrizione |
----------|----------|
-| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+|---------|----------|
+| Caricamenti personalizzati | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -91,7 +91,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Inoltre, viene creata una nuova proprietà in [!DNL HubSpot] l’utilizzo del nome e del valore del pubblico avviene con il corrispondente stato del pubblico da Platform, per ciascuno dei tipi di pubblico selezionati.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ Il `Email` identity è una mappatura obbligatoria per questa destinazione. Segui
 1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli la **[!UICONTROL Seleziona attributi]** e seleziona `email`.
    ![Schermata dell’interfaccia utente di Platform che seleziona le e-mail come attributo di destinazione da mappare come identità.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | Sì |
 
@@ -172,7 +172,7 @@ Per aggiungere altri attributi che desideri aggiornare tra lo schema del profilo
 
 Alcune mappature disponibili tra lo schema del profilo XDM e [!DNL Hubspot] sono mostrati di seguito:
 
-| Campo di origine | Campo di destinazione |
+| Campo origine | Campo di destinazione |
 | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstname` |
 | `xdm: person.name.lastName` | `Attribute: lastname` |

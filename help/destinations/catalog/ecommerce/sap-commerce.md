@@ -1,11 +1,12 @@
 ---
 title: Connessione SAP Commerce
-description: Utilizza il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nel tuo account SAP.
+description: Utilizzare il connettore di destinazione SAP Commerce per aggiornare i record dei clienti nell'account SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 2%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -21,17 +22,17 @@ Istruzioni per l’autenticazione [!DNL SAP Commerce] sono riportati di seguito,
 
 Per aiutarti a capire meglio come e quando utilizzare il [!DNL SAP Commerce] destinazione: ecco un caso d’uso di esempio che i clienti di Adobe Experience Platform possono risolvere utilizzando questa destinazione.
 
-[!DNL SAP Commerce] I clienti memorizzano informazioni su individui o entità organizzative che interagiscono con la tua azienda. Il tuo team utilizza i clienti esistenti in [!DNL SAP Commerce] per generare il pubblico Experienci Platform. Dopo aver inviato questi tipi di pubblico a [!DNL SAP Commerce], le loro informazioni vengono aggiornate e a ciascun cliente viene assegnata una proprietà il cui valore è il nome del pubblico che indica a quale pubblico appartiene il cliente.
+[!DNL SAP Commerce] I clienti memorizzano informazioni su individui o entità organizzative che interagiscono con la tua azienda. Il tuo team utilizza i clienti esistenti in [!DNL SAP Commerce] per generare il pubblico Experience Platform. Dopo aver inviato questi tipi di pubblico a [!DNL SAP Commerce], le loro informazioni vengono aggiornate e a ciascun cliente viene assegnata una proprietà il cui valore è il nome del pubblico che indica a quale pubblico appartiene il cliente.
 
 ## Prerequisiti {#prerequisites}
 
-Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experienci Platform e [!DNL SAP Commerce] e per le informazioni che è necessario raccogliere prima di lavorare con [!DNL SAP Commerce] destinazione.
+Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL SAP Commerce] e per le informazioni che è necessario raccogliere prima di lavorare con [!DNL SAP Commerce] destinazione.
 
 ### Experience Platform prerequisiti {#prerequisites-in-experience-platform}
 
-Prima di attivare i dati in [!DNL SAP Commerce] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=it), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
+Prima di attivare i dati in [!DNL SAP Commerce] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
 
-Consulta la documentazione di Experienci Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
+Consulta la documentazione di Experience Platform per [Gruppo di campi schema Dettagli appartenenza pubblico](/help/xdm/field-groups/profile/segmentation.md) per informazioni sugli stati del pubblico.
 
 ### Prerequisiti per [!DNL SAP Commerce] destinazione {#prerequisites-destination}
 
@@ -43,7 +44,7 @@ Per esportare i dati da Platform al tuo [!DNL SAP Commerce] account, è necessar
 
 #### Generare una chiave di servizio {#prerequisites-service-key}
 
-* Il [!DNL SAP Commerce] service key consente di accedere al [!DNL SAP Subscription Billing] API tramite Experienci Platform. Consulta la sezione [!DNL SAP Commerce] [creare una chiave di servizio con ID client e segreto client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) per creare una chiave di servizio. [!DNL SAP Commerce] richiede quanto segue:
+* Il [!DNL SAP Commerce] service key consente di accedere al [!DNL SAP Subscription Billing] API tramite Experience Platform. Consulta la sezione [!DNL SAP Commerce] [creare una chiave di servizio con ID client e segreto client](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) per creare una chiave di servizio. [!DNL SAP Commerce] richiede quanto segue:
    * ID client
    * Segreto client
    * URL. Il pattern dell’URL è il seguente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Questo valore verrà utilizzato in seguito per ottenere i valori per `Region` e `Endpoint`.
@@ -118,10 +119,10 @@ Questa destinazione supporta l’attivazione di tutti i tipi di pubblico generat
 
 Questa destinazione supporta anche l’attivazione dei tipi di pubblico descritti nella tabella seguente.
 
-| Tipo di pubblico | Descrizione |
----------|----------|
+| Tipo di pubblico | Supportato | Descrizione |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -132,7 +133,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL SAP Commerce] l’attributo aggiuntivo viene aggiornato con il relativo stato di pubblico da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | <ul><li>Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Quando un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -200,7 +201,7 @@ Il `customerNumberSAP` identity è una mappatura obbligatoria per questa destina
 1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli la **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona la `customerNumber` identità.
    ![Schermata dell’interfaccia utente di Platform che seleziona le e-mail come attributo di destinazione da mappare come identità.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `IdentityMap: customerNumberSAP` | `Identity: customerNumber` | Sì |
 
@@ -229,14 +230,14 @@ Le mappature di attributi obbligatorie dipendono dal **[!UICONTROL Tipo di clien
 
 >[!TAB Cliente singolo]
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `xdm: person.lastName` | `Attribute: lastName` | Sì |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sì |
 
 >[!TAB Cliente aziendale]
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `xdm: b2b.companyName` | `Attribute: company` | Sì |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sì |
@@ -251,7 +252,7 @@ Puoi quindi aggiungere altre mappature tra lo schema di profilo XDM e il [!DNL S
 
 >[!TAB Cliente singolo]
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `xdm: person.name.firstName` | `Attribute: firstName` | No |
 | `xdm: workAddress.street1` | `Attribute: street` | No |
@@ -262,7 +263,7 @@ Di seguito è riportato un esempio con mappature di attributi obbligatorie e fac
 
 >[!TAB Cliente aziendale]
 
-| Campo di origine | Campo di destinazione | Obbligatorio |
+| Campo origine | Campo di destinazione | Obbligatorio |
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |

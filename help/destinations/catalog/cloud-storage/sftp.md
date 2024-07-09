@@ -2,7 +2,7 @@
 title: Connessione SFTP
 description: Crea una connessione in uscita al server SFTP per esportare periodicamente file di dati delimitati da Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 8%
@@ -26,7 +26,7 @@ Crea una connessione in uscita al server SFTP per esportare periodicamente file 
 
 >[!IMPORTANT]
 >
-> Sebbene Experienci Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
+> Sebbene Experience Platform supporti le esportazioni di dati ai server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione dei dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
 ## Connessione a SFTP tramite API o interfaccia utente {#connect-api-or-ui}
 
@@ -37,10 +37,10 @@ Crea una connessione in uscita al server SFTP per esportare periodicamente file 
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 ![Il tipo di esportazione basato su profilo SFTP è evidenziato nel catalogo delle destinazioni.](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Esportare i set di dati {#export-datasets}
+## Esporta set di dati {#export-datasets}
 
 Questa destinazione supporta le esportazioni di set di dati. Per informazioni complete su come impostare le esportazioni dei set di dati, consulta le esercitazioni:
 
@@ -121,11 +121,11 @@ Dopo aver stabilito la connessione di autenticazione alla posizione SFTP, fornis
 
 ![Campi dei dettagli della destinazione SFTP.](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL Nome]**: immetti un nome che ti aiuti a identificare questa destinazione nell’interfaccia utente di Experienci Platform;
+* **[!UICONTROL Nome]**: immetti un nome che ti aiuti a identificare questa destinazione nell’interfaccia utente di Experience Platform;
 * **[!UICONTROL Descrizione]**: inserire una descrizione per questa destinazione;
 * **[!UICONTROL Percorso cartella]**: immetti il percorso della cartella nel percorso SFTP in cui verranno esportati i file.
 * **[!UICONTROL Tipo di file]**: seleziona l’Experience Platform di formato da utilizzare per i file esportati. Quando si seleziona [!UICONTROL CSV] , è inoltre possibile [configurare le opzioni di formattazione del file](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experienci Platform deve utilizzare per i file esportati.
+* **[!UICONTROL Formato di compressione]**: seleziona il tipo di compressione che Experience Platform deve utilizzare per i file esportati.
 * **[!UICONTROL Includi file manifesto]**: attiva questa opzione se desideri che le esportazioni includano un file JSON manifesto contenente informazioni sulla posizione di esportazione, sulle dimensioni di esportazione e altro ancora. Il manifesto viene denominato utilizzando il formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Visualizza un [file manifesto di esempio](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Il file manifesto include i campi seguenti:
    * `flowRunId`: Il [esecuzione del flusso di dati](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) che ha generato il file esportato.
    * `scheduledTime`: ora in UTC in cui è stato esportato il file.
@@ -146,6 +146,6 @@ Consulta [Attivare i dati del pubblico nelle destinazioni di esportazione del pr
 
 Per verificare se i dati sono stati esportati correttamente, controlla l’archiviazione SFTP e assicurati che i file esportati contengano le popolazioni di profilo previste.
 
-## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allow-list}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allow-list}
 
-Consulta la sezione [Indirizzo IP inserito nell&#39;elenco Consentiti](ip-address-allow-list.md) articolo per aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.
+Consulta la sezione [Indirizzo IP inserisco nell&#39;elenco Consentiti](ip-address-allow-list.md) articolo per aggiungere IP di Adobe a un inserisco nell&#39;elenco Consentiti di.

@@ -3,7 +3,7 @@ keywords: etichetta dirigibile;destinazione dirigibile
 title: Connessione tag dirigibili
 description: Trasmetti facilmente i dati del pubblico Adobe a Airship come tag del pubblico per il targeting all’interno di Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 2%
@@ -40,10 +40,10 @@ Prima di poter inviare il pubblico Adobe Experience Platform a [!DNL Airship], �
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Esportazione pubblico]** | Stai esportando tutti i membri di un pubblico con gli identificatori utilizzati nella destinazione Tag dirigibili. |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Consulta [Attiva i dati del pubblico nelle destinazioni di esportazione del pubb
 
 ## Considerazioni sulla mappatura {#mapping-considerations}
 
-[!DNL Airship] i tag possono essere impostati su un canale, che rappresenta un’istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail nel tuo **[!UICONTROL Attributi sorgente]** e mappare su [!DNL Airship] utente con nome nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
+[!DNL Airship] i tag possono essere impostati su un canale, che rappresenta un’istanza del dispositivo, ad esempio iPhone, oppure su un utente con nome, che mappa tutti i dispositivi di un utente su un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, seleziona il campo e-mail nel tuo **[!UICONTROL Attributi Source]** e mappare su [!DNL Airship] utente con nome nella colonna di destra in **[!UICONTROL Identità di destinazione]**, come illustrato di seguito.
 
 ![Mappatura utente denominato](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

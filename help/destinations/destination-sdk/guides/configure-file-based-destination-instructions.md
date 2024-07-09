@@ -2,10 +2,10 @@
 description: Questa pagina elenca e descrive i passaggi necessari per configurare una destinazione basata su file utilizzando Destination SDK.
 title: Utilizzare Destination SDK per configurare una destinazione basata su file
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -407,7 +407,7 @@ A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
    * [Autenticazione Amazon S3](../functionality/destination-configuration/customer-authentication.md#s3)
    * [BLOB di Azure](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Archiviazione Azure Data Lake](../functionality/destination-configuration/customer-authentication.md#adls)
-   * [Archiviazione cloud Google](../functionality/destination-configuration/customer-authentication.md#gcs)
+   * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [Autenticazione SFTP con chiave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticazione SFTP con password](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
@@ -418,12 +418,12 @@ A seconda che tu specifichi `"authenticationRule": "CUSTOMER_AUTHENTICATION"` o 
 
 Dopo aver impostato la destinazione utilizzando gli endpoint di configurazione nei passaggi precedenti, puoi utilizzare [strumento di test di destinazione](../testing-api/batch-destinations/file-based-destination-testing-overview.md) per testare l’integrazione tra Adobe Experience Platform e la tua destinazione.
 
-Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experienci Platform per creare tipi di pubblico, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experienci Platform, consulta le due risorse seguenti:
+Come parte del processo di test della destinazione, devi utilizzare l’interfaccia utente di Experience Platform per creare tipi di pubblico, che attiverai nella destinazione. Per istruzioni su come creare un pubblico in Experience Platform, consulta le due risorse seguenti:
 
-* [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/overview.md#create-segment)
+* [Creare un pubblico - pagina della documentazione](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Creazione di un pubblico - procedura dettagliata per i video](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Passaggio 6: pubblicare la destinazione {#publish-destination}
+## Passaggio 6: Publish la tua destinazione {#publish-destination}
 
 >[!NOTE]
 >

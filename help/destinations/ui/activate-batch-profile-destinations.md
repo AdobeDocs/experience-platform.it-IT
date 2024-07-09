@@ -3,7 +3,7 @@ title: Attivare i tipi di pubblico per le destinazioni di esportazione dei profi
 type: Tutorial
 description: Scopri come attivare i tipi di pubblico disponibili in Adobe Experience Platform inviandoli a destinazioni basate su profili in batch.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 11%
@@ -64,7 +64,7 @@ Per selezionare i tipi di pubblico da attivare nella destinazione, utilizza le c
 Puoi scegliere tra più tipi di pubblico, a seconda della loro origine:
 
 * **[!UICONTROL Servizio di segmentazione]**: tipi di pubblico generati all’interno di Experience Platform dal servizio di segmentazione. Consulta la [documentazione sulla segmentazione](../../segmentation/ui/overview.md) per ulteriori dettagli.
-* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Caricamento personalizzato]**: tipi di pubblico generati al di fuori di Experience Platform e caricati in Platform come file CSV. Per ulteriori informazioni sui tipi di pubblico esterni, consulta la documentazione su [importazione di un pubblico](../../segmentation/ui/audience-portal.md#import-audience).
 * Altri tipi di pubblico, derivanti da altre soluzioni di Adobe, quali [!DNL Audience Manager].
 
 ![Caselle di controllo visualizzate quando si selezionano uno o più tipi di pubblico da attivare.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)

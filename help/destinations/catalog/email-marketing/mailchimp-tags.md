@@ -2,7 +2,8 @@
 title: Tag Mailchimp
 description: La destinazione Mailchimp Tags ti consente di esportare i dati del tuo account e attivarli all’interno di Mailchimp per interagire con i contatti.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -15,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Mailchimp Tags] utilizza [audience](https://mailchimp.com/help/getting-started-audience/) e [tag](https://mailchimp.com/help/getting-started-tags/) per gestire le informazioni di contatto. I tag sono etichette che consentono di organizzare i contatti e di etichettarli per la categorizzazione interna in [!DNL Mailchimp].
 
-Confrontato con [!DNL Mailchimp Interest Categories] che utilizzeresti per ordinare i tuoi contatti in base ai loro interessi e preferenze, [!DNL Mailchimp Tags] ha lo scopo di gestire gli abbonamenti ad argomenti di interesse per i tuoi contatti. *Experienci Platform dispone anche di una connessione per [!DNL Mailchimp Interest Categories], è possibile visualizzarlo in [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) pagina.*
+Confrontato con [!DNL Mailchimp Interest Categories] che utilizzeresti per ordinare i tuoi contatti in base ai loro interessi e preferenze, [!DNL Mailchimp Tags] ha lo scopo di gestire gli abbonamenti ad argomenti di interesse per i tuoi contatti. *Experience Platform dispone anche di una connessione per [!DNL Mailchimp Interest Categories], è possibile visualizzarlo in [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md) pagina.*
 
 Questo [!DNL Adobe Experience Platform] [destinazione](/help/destinations/home.md) sfrutta [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) endpoint. È possibile **aggiungi nuovi contatti** o **aggiorna i tag di esistenti [!DNL Mailchimp] contatti** all&#39;interno di un [!DNL Mailchimp] dopo averli attivati all’interno di un nuovo pubblico. [!DNL Mailchimp Tags] utilizza i nomi del pubblico selezionati da Platform come nomi di tag in [!DNL Mailchimp].
 
@@ -29,9 +30,9 @@ Il reparto vendite di un’organizzazione desidera trasmettere una campagna di m
 
 ## Prerequisiti {#prerequisites}
 
-Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experienci Platform e [!DNL Mailchimp] e per le informazioni da raccogliere prima di lavorare con [!DNL Mailchimp Tags] destinazione.
+Consulta le sezioni seguenti per eventuali prerequisiti da impostare in Experience Platform e [!DNL Mailchimp] e per le informazioni da raccogliere prima di lavorare con [!DNL Mailchimp Tags] destinazione.
 
-### Prerequisiti in Experienci Platform {#prerequisites-in-experience-platform}
+### Prerequisiti in Experience Platform {#prerequisites-in-experience-platform}
 
 Prima di attivare i dati in [!DNL Mailchimp Tags] destinazione, è necessario disporre di un [schema](/help/xdm/schema/composition.md), a [set di dati](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en), e [audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creato in [!DNL Experience Platform].
 
@@ -85,10 +86,10 @@ Consulta la sezione [!DNL Mailchimp] [limiti di tariffa](https://mailchimp.com/d
 
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -99,7 +100,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | <ul><li>Stai esportando tutti i membri di un pubblico, insieme ai campi di schema desiderati *ad esempio: indirizzo e-mail, numero di telefono, cognome*, in base alla mappatura del campo.</li><li> Per ogni pubblico selezionato in Platform, la [!DNL Mailchimp Tags] Lo stato del segmento viene aggiornato con lo stato del pubblico da Platform.</li></ul> |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -167,13 +168,13 @@ Per mappare correttamente i campi XDM su [!DNL Mailchimp Tags] campi di destinaz
 1. In **[!UICONTROL Mappatura]** passaggio, seleziona **[!UICONTROL Aggiungi nuova mappatura]**. Viene visualizzata una nuova riga di mappatura.
 1. In **[!UICONTROL Seleziona campo di origine]** finestra, scegli **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona la `Email` spazio dei nomi dell’identità.
 
-   ![Schermata dell’interfaccia utente di Platform con il campo Sorgente come E-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Schermata dell’interfaccia utente di Platform con il campo Source e-mail dallo spazio dei nomi delle identità.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. In **[!UICONTROL Seleziona campo di destinazione]** finestra, scegli **[!UICONTROL Seleziona lo spazio dei nomi dell’identità]** e seleziona la `Email` spazio dei nomi dell’identità.
 
    ![Schermata dell’interfaccia utente di Platform con il campo Target come E-mail dallo spazio dei nomi dell’identità.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Le mappature tra lo schema del profilo XDM e [!DNL Mailchimp Tags] sarà il seguente: | Campo di origine | Campo di destinazione | Obbligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sì |
+   Le mappature tra lo schema del profilo XDM e [!DNL Mailchimp Tags] sarà il seguente: | Campo Source | Campo di destinazione | Obbligatorio | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Sì |
 
    Di seguito è riportato un esempio con le mappature completate:
    ![Esempio di schermata dell’interfaccia utente di Platform che mostra le mappature dei campi.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

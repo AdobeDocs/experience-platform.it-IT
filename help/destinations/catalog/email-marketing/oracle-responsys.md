@@ -3,7 +3,7 @@ keywords: e-mail;E-mail;Destinazioni e-mail;Destinazione oracle responsys
 title: Connessione Responsys Oracle
 description: Responsys è uno strumento di e-mail marketing aziendale per campagne di marketing cross-channel offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social network.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 3%
@@ -22,10 +22,10 @@ Per inviare dati sul pubblico a [!DNL Oracle Responsys], devi prima [connettersi
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 

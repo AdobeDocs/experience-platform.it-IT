@@ -3,7 +3,7 @@ title: Zeta Marketing Platform
 description: Zeta Marketing Platform (ZMP) è un sistema basato su cloud che consente di acquisire, crescere e mantenere i clienti in modo più efficiente, grazie all’intelligenza (dati proprietari e AI).
 hide: true
 hidefromtoc: true
-source-git-commit: bf553371316d9d9cb368fc4d1be14196201ef680
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Zeta Marketing Platform (ZMP) è un sistema basato su cloud che consente di acquisire, crescere e mantenere i clienti in modo più efficiente, grazie all’intelligenza (dati proprietari e AI). Per ulteriori informazioni, consulta [Zeta Global](https://zetaglobal.com/).
 
-Con il connettore Zeta Marketing Platform disponibile in Adobe Experience Platform, puoi sincronizzare facilmente i tipi di pubblico da Experienci Platform a ZMP.
+Con il connettore Zeta Marketing Platform disponibile in Adobe Experience Platform, puoi sincronizzare facilmente i tipi di pubblico da Experience Platform a ZMP.
 
 >[!IMPORTANT]
 >
@@ -62,9 +62,9 @@ Un inserzionista mira a indirizzare gli utenti all’interno di tipi di pubblico
 Questa sezione descrive il tipo di pubblico che puoi esportare in questa destinazione.
 
 | Origine pubblico | Supportato | Descrizione |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | X | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione dei segmenti, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -138,11 +138,11 @@ Selezione dei campi di destinazione:
 
 ## Dati esportati / Convalida esportazione dati {#exported-data}
 
-In caso di esito positivo dell’attivazione del pubblico da Experienci Platform a Zeta Marketing Platform, viene aggiornato l’elenco dei clienti target in ZMP. Il conteggio e i profili di esempio nell’elenco dei clienti di destinazione saranno pari al numero di identità attivate correttamente.
+In caso di esito positivo dell’attivazione del pubblico da Experience Platform a Zeta Marketing Platform, viene aggiornato l’elenco dei clienti target in ZMP. Il conteggio e i profili di esempio nell’elenco dei clienti di destinazione saranno pari al numero di identità attivate correttamente.
 
 ![Elenco clienti in ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
-Ogni membro del pubblico attivato da Experienci Platform sarà visibile anche in **Tipi di pubblico** > **Persone** nello ZMP. Potrai anche visualizzare **Elenco clienti** un segmento a cui appartiene un profilo nella vista Cliente singolo, come illustrato di seguito.
+Ogni membro del pubblico attivato da Experience Platform sarà visibile anche in **Tipi di pubblico** > **Persone** nello ZMP. Potrai anche visualizzare **Elenco clienti** un segmento a cui appartiene un profilo nella vista Cliente singolo, come illustrato di seguito.
 
 ![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
 

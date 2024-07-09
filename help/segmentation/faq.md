@@ -2,7 +2,7 @@
 title: Domande frequenti sui tipi di pubblico
 description: Trova le risposte alle domande più frequenti su tipi di pubblico e altri concetti correlati alla segmentazione.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 0%
@@ -175,7 +175,7 @@ Quando un pubblico si trova nello stato pubblicato, **non può** riporta il pubb
 
 ### Come si mette un pubblico nello stato pubblicato?
 
-Per i tipi di pubblico creati con il Generatore di segmenti o la Composizione del pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Pubblica]&quot; nelle rispettive interfacce utente.
+Per i tipi di pubblico creati con il Generatore di segmenti o la Composizione del pubblico, puoi impostare il pubblico sullo stato pubblicato selezionando &quot;[!UICONTROL Publish]&quot; nelle rispettive interfacce utente.
 
 I tipi di pubblico creati esternamente vengono automaticamente impostati su pubblicato.
 
@@ -189,7 +189,7 @@ Per rendere inattivo un pubblico pubblicato, apri il menu Azioni rapide in Audie
 >
 >Lo stato &quot;ripubblicato&quot; è lo stesso dello stato pubblicato per il comportamento del pubblico.
 
-Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Pubblica].
+Puoi ripubblicare un pubblico selezionando un pubblico che si trova nello stato inattivo, aprendo il menu Azioni rapide in Audience Portal e selezionando [!UICONTROL Publish].
 
 ### Come posso impostare un pubblico come eliminato?
 
@@ -239,11 +239,11 @@ No, non è vero. Se disponi delle autorizzazioni di modifica per i tipi di pubbl
 
 ### Esiste un limite al numero di cartelle che è possibile creare?
 
-No, non esiste alcun limite al numero di cartelle che è possibile creare. Per ulteriori informazioni sulle cartelle, leggere [sezione audience inventory](./ui/overview.md#folders) della panoramica dell’interfaccia utente del servizio di segmentazione.
+No, non esiste alcun limite al numero di cartelle che è possibile creare. Per ulteriori informazioni sulle cartelle, leggere [sezione audience inventory](./ui/audience-portal.md#folders) della panoramica dell’interfaccia utente del servizio di segmentazione.
 
 ### Esiste un limite al numero di tag che possono essere aggiunti a un pubblico?
 
-No, non esiste alcun limite al numero di tag che possono essere aggiunti a un pubblico. Per ulteriori informazioni sui tag, consulta [sezione audience inventory](./ui/overview.md#tags) della panoramica dell’interfaccia utente del servizio di segmentazione.
+No, non esiste alcun limite al numero di tag che possono essere aggiunti a un pubblico. Per ulteriori informazioni sui tag, consulta [sezione audience inventory](./ui/audience-portal.md#tags) della panoramica dell’interfaccia utente del servizio di segmentazione.
 
 ### Esiste un limite al numero di tag che è possibile creare?
 
@@ -251,7 +251,7 @@ No, non esiste alcun limite al numero di tag che è possibile creare. Tuttavia, 
 
 ### Quando si cerca un pubblico per nome o per tag in una cartella principale, è possibile eseguire ricerche anche nelle cartelle secondarie correlate?
 
-No, questo comportamento non è supportato. Tuttavia, puoi modificare la visualizzazione dell’inventario del pubblico in modo da esaminare **Tutti i tipi di pubblico**, quindi esegui la ricerca in tutte le cartelle. Per ulteriori informazioni sull’utilizzo della ricerca nell’inventario del pubblico, consulta la sezione [sezione di ricerca](./ui/overview.md#search) della panoramica dell’interfaccia utente del servizio di segmentazione.
+No, questo comportamento non è supportato. Tuttavia, puoi modificare la visualizzazione dell’inventario del pubblico in modo da esaminare **Tutti i tipi di pubblico**, quindi esegui la ricerca in tutte le cartelle. Per ulteriori informazioni sull’utilizzo della ricerca nell’inventario del pubblico, consulta la sezione [sezione di ricerca](./ui/audience-portal.md#search) della panoramica dell’interfaccia utente del servizio di segmentazione.
 
 ### È possibile assegnare automaticamente un pubblico a una cartella al momento della creazione?
 

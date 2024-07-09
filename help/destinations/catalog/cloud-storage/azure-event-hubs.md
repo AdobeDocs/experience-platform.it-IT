@@ -1,10 +1,10 @@
 ---
 keywords: Destinazione hub eventi di Azure;hub eventi di Azure;azure eventub
 title: Connessione Azure Event Hubs
-description: Creare una connessione in uscita in tempo reale al [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati da Experienci Platform.
+description: Creare una connessione in uscita in tempo reale al [!DNL Azure Event Hubs] archiviazione per lo streaming dei dati da Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 5%
@@ -29,7 +29,7 @@ Puoi creare una connessione in uscita in tempo reale al tuo [!DNL Azure Event Hu
 
 ![AWS Kinesis nell’interfaccia utente](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Casi di utilizzo {#use-cases}
+## Casi d’uso {#use-cases}
 
 Utilizzando destinazioni di streaming come [!DNL Azure Event Hubs], puoi inserire facilmente eventi di segmentazione di alto valore e attributi di profilo associati nei sistemi preferiti.
 
@@ -39,10 +39,10 @@ Ad esempio, un potenziale cliente ha scaricato un white paper che li qualifica c
 
 Questa sezione descrive quali tipi di pubblico puoi esportare in questa destinazione.
 
-| Origine pubblico | Supportati | Descrizione |
----------|----------|----------|
+| Origine pubblico | Supportato | Descrizione |
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Tipi di pubblico generati dall’Experience Platform [Servizio di segmentazione](../../../segmentation/home.md). |
-| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/overview.md#import-audience) in Experienci Platform da file CSV. |
+| Caricamenti personalizzati | ✓ | Tipi di pubblico [importato](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform da file CSV. |
 
 {style="table-layout:auto"}
 
@@ -53,13 +53,13 @@ Per informazioni sul tipo e sulla frequenza di esportazione della destinazione, 
 | Elemento | Tipo | Note |
 ---------|----------|---------|
 | Tipo di esportazione | **[!UICONTROL Basato su profilo]** | Stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata seleziona attributi profilo del [flusso di lavoro di attivazione della destinazione](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experienci Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequenza di esportazione | **[!UICONTROL Streaming]** | Le destinazioni di streaming sono connessioni &quot;sempre attive&quot; basate su API. Non appena un profilo viene aggiornato in Experience Platform in base alla valutazione del pubblico, il connettore invia l’aggiornamento a valle alla piattaforma di destinazione. Ulteriori informazioni su [destinazioni di streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## Indirizzo IP inserito nell&#39;elenco Consentiti {#ip-address-allowlist}
+## Indirizzo IP inserisco nell&#39;elenco Consentiti {#ip-address-allowlist}
 
-Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experienci Platform fornisce un elenco di IP statici che è possibile inserire nell&#39;elenco Consentiti per l interfaccia [!DNL Azure Event Hubs] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
+Per soddisfare i requisiti di sicurezza e conformità dei clienti, Experience Platform inserire nell&#39;elenco Consentiti fornisce un elenco di IP statici che puoi per [!DNL Azure Event Hubs] destinazione. Fai riferimento a [ELENCO CONSENTITI di indirizzo IP per destinazioni di streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) inserire nell&#39;elenco Consentiti per l’elenco completo degli IP da.
 
 ## Connettersi alla destinazione {#connect}
 
@@ -161,7 +161,7 @@ Dal punto di vista degli attributi di profilo, eventuali modifiche ai quattro at
 
 ## Recupero dati storici {#historical-data-backfill}
 
-Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experienci Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
+Quando aggiungi un nuovo pubblico a una destinazione esistente o quando crei una nuova destinazione e mappi i tipi di pubblico a essa, Experience Platform esporta i dati storici di qualificazione del pubblico nella destinazione. Profili qualificati per il pubblico *prima di* il pubblico aggiunto alla destinazione viene esportato nella destinazione entro circa un&#39;ora.
 
 ## Dati esportati {#exported-data}
 
@@ -263,9 +263,9 @@ Di seguito sono riportati ulteriori esempi di dati esportati, a seconda delle im
 
 ## Limiti e criteri per nuovi tentativi {#limits-retry-policy}
 
-Nel 95% del tempo, Experienci Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
+Nel 95% del tempo, Experience Platform tenta di offrire una latenza di velocità effettiva inferiore a 10 minuti per i messaggi inviati correttamente con una frequenza inferiore a 10.000 richieste al secondo per ogni flusso di dati a una destinazione HTTP.
 
-In caso di richieste non riuscite alla destinazione API HTTP, Experienci Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
+In caso di richieste non riuscite alla destinazione API HTTP, Experience Platform memorizza le richieste non riuscite e tenta di inviarle all’endpoint due volte.
 
 >[!MORELIKETHIS]
 >
