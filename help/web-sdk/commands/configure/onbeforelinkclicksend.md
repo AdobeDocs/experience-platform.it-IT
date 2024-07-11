@@ -1,24 +1,30 @@
 ---
 title: onBeforeLinkClickSend
 description: Callback eseguito immediatamente prima dell'invio dei dati di tracciamento dei collegamenti.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeLinkClickSend`
+
+>[!IMPORTANT]
+>
+>Questo callback è obsoleto. Utilizzare [`filterClickDetails`](clickcollection.md) invece.
 
 Il `onBeforeLinkClickSend` callback consente di registrare una funzione JavaScript che può modificare i dati di tracciamento dei collegamenti inviati immediatamente prima che tali dati vengano inviati ad Adobe. Questo callback consente di manipolare `xdm` o `data` , inclusa la possibilità di aggiungere, modificare o rimuovere elementi. Puoi anche annullare completamente l’invio di dati in modo condizionale, ad esempio con il traffico bot lato client rilevato. È supportato dall’SDK web 2.15.0 o versione successiva.
 
-Questo callback viene eseguito solo quando [`clickCollectionEnabled`](clickcollectionenabled.md) è abilitato. Se `clickCollectionEnabled` è disabilitato, il callback non viene eseguito. Se entrambi `onBeforeEventSend` e `onBeforeLinkClickSend` contengono funzioni registrate, `onBeforeLinkClickSend` viene eseguita per prima. Una volta `onBeforeLinkClickSend` al termine della funzione, il `onBeforeEventSend` viene quindi eseguita.
+Questo callback viene eseguito solo quando [`clickCollectionEnabled`](clickcollectionenabled.md) è abilitato e [`filterClickDetails`](clickcollection.md) non contiene una funzione registrata. Se `clickCollectionEnabled` è disabilitato o se `filterClickDetails` contiene una funzione registrata, quindi il callback non viene eseguito. Se `onBeforeEventSend` e `onBeforeLinkClickSend` entrambi contengono funzioni registrate, `onBeforeLinkClickSend` viene eseguito per primo.
 
 >[!WARNING]
 >
 >Questo callback consente l’utilizzo di codice personalizzato. Se un codice incluso nel callback genera un&#39;eccezione non rilevata, l&#39;elaborazione per l&#39;evento si interrompe. I dati non vengono inviati ad Adobe.
 
-## Prima del collegamento, fai clic su Invia callback utilizzando l’estensione tag Web SDK
+## Configurare prima del collegamento fai clic su Invia callback utilizzando l’estensione tag Web SDK {#tag-extension}
 
 Seleziona la **[!UICONTROL Fornisci su prima del collegamento clic evento invia codice di callback]** quando [configurazione dell’estensione tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Questo pulsante apre una finestra modale in cui puoi inserire il codice desiderato.
 
@@ -31,19 +37,15 @@ Seleziona la **[!UICONTROL Fornisci su prima del collegamento clic evento invia 
 1. Questo pulsante apre una finestra modale con un editor di codice. Inserisci il codice desiderato, quindi fai clic su **[!UICONTROL Salva]** per chiudere la finestra modale.
 1. Clic **[!UICONTROL Salva]** in impostazioni estensione, pubblica le modifiche.
 
-Nell’editor di codice puoi aggiungere, modificare o rimuovere elementi all’interno di `content` oggetto. Questo oggetto contiene il payload inviato all’Adobe. Non è necessario definire `content` oggetto o racchiudere qualsiasi codice all&#39;interno di una funzione. Qualsiasi variabile definita al di fuori di `content` possono essere utilizzati, ma non sono inclusi nel payload inviato ad Adobe.
+Nell’editor di codice puoi accedere alle seguenti variabili:
 
->[!TIP]
->
->Gli oggetti `content.xdm`, `content.data`, e `content.clickedElement` sono sempre definiti in questo contesto, pertanto non è necessario verificarne l’esistenza. Alcune variabili all’interno di questi oggetti dipendono dall’implementazione e dal livello dati. L’Adobe consiglia di verificare la presenza di valori non definiti all’interno di questi oggetti per evitare errori JavaScript.
+* **`content.clickedElement`**: elemento DOM su cui è stato fatto clic.
+* **`content.xdm`**: payload XDM per l’evento.
+* **`content.data`**: payload dell’oggetto dati per l’evento.
+* **`return true`**: chiude immediatamente il callback con i valori della variabile corrente. Il `onBeforeEventSend` callback eseguito se contiene una funzione registrata.
+* **`return false`**: chiudi immediatamente il callback e interrompi l’invio di dati all’Adobe. Il `onBeforeEventSend` callback non eseguito.
 
-Ad esempio, supponiamo di voler eseguire le seguenti azioni:
-
-* Modifica l&#39;URL della pagina corrente
-* Acquisire l’elemento su cui è stato fatto clic in un eVar di Adobe Analytics
-* Cambia il tipo di collegamento da &quot;altro&quot; a &quot;scarica&quot;
-
-Il codice equivalente all’interno della finestra modale è il seguente:
+Qualsiasi variabile definita al di fuori di `content` possono essere utilizzati, ma non sono inclusi nel payload inviato ad Adobe.
 
 ```js
 // Set an already existing value to something else
@@ -63,26 +65,26 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-Simile a [`onBeforeEventSend`](onbeforeeventsend.md), è possibile `return true` per completare immediatamente la funzione, oppure `return false` per annullare immediatamente l’invio dei dati. Se annulli l’invio di dati in `onBeforeLinkClickSend` quando entrambi `onBeforeEventSend` e `onBeforeLinkClickSend` contengono funzioni registrate, `onBeforeEventSend` La funzione non viene eseguita.
+Simile a [`onBeforeEventSend`](onbeforeeventsend.md), è possibile `return true` per completare immediatamente la funzione, oppure `return false` per interrompere l’invio di dati ad Adobe. Se interrompi l’invio di dati in `onBeforeLinkClickSend` quando entrambi `onBeforeEventSend` e `onBeforeLinkClickSend` contengono funzioni registrate, `onBeforeEventSend` La funzione non viene eseguita.
 
-## Prima del collegamento, fai clic su Invia callback utilizzando la libreria JavaScript dell’SDK per web
+## Configurare su prima del collegamento fare clic su Invia callback utilizzando la libreria JavaScript dell&#39;SDK Web {#library}
 
 Registra il `onBeforeLinkClickSend` callback durante l&#39;esecuzione di `configure` comando. È possibile modificare il `content` nome variabile a qualsiasi valore desiderato modificando la variabile di parametro all&#39;interno della funzione in linea.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
     
-    // Return true to immediately complete the function
+    // Return true to complete the function immediately
     if (sendImmediate == true) {
       return true;
     }
     
-    // Return false to immediately cancel sending data
+    // Return false to cancel sending data immediately
     if(myBotDetector.isABot()){
       return false;
     }
@@ -99,8 +101,8 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": lastChanceLinkLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: lastChanceLinkLogic
 });    
 ```

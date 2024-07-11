@@ -6,9 +6,9 @@ breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 14f9c2240d1a650cc267bd997ea35d7923f71b2b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '225'
 ht-degree: 22%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 22%
    * configura {#configure}
       * [Panoramica](commands/configure/overview.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
+      * [clickCollection](commands/configure/clickcollection.md)
       * [contesto](commands/configure/context.md)
       * [debugEnabled](commands/configure/debugenabled.md)
       * [defaultConsent](commands/configure/defaultconsent.md)
@@ -56,12 +57,12 @@ ht-degree: 22%
    * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
    * [Configurare le sostituzioni dello stream di dati](commands/datastream-overrides.md)
    * [Risposte ai comandi](commands/command-responses.md)
-   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identità {#identity}
    * [Panoramica](identity/overview.md)
@@ -71,7 +72,7 @@ ht-degree: 22%
 * Personalizzazione {#personalization}
    * [Gestire gli eventi di visualizzazione](personalization/display-events.md)
    * [Rendering di contenuti personalizzati](personalization/rendering-personalization-content.md)
-   * [Personalizzazione tramite implementazione ibrida](personalization/hybrid-personalization.md)
+   * [Personalization tramite implementazione ibrida](personalization/hybrid-personalization.md)
    * [Gestisci visualizzazione momentanea di altri contenuti](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Panoramica](personalization/adobe-target/target-overview.md)

@@ -1,11 +1,11 @@
 ---
 title: Configurare l’estensione tag Web SDK
-description: Scopri come configurare l’estensione tag Experienci Platform Web SDK nell’interfaccia utente Tag.
+description: Scopri come configurare l’estensione tag Experience Platform Web SDK nell’interfaccia utente Tag.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -39,7 +39,7 @@ Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe
 
 ![Immagine che mostra le impostazioni generali dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL Nome]**: l’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza viene impostato automaticamente su `alloy`. Tuttavia, puoi modificare il nome dell’istanza con qualsiasi nome di oggetto JavaScript valido.
+* **[!UICONTROL Nome]**: l’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una configurazione di tag. Il nome dell&#39;istanza viene impostato automaticamente su `alloy`. È tuttavia possibile modificare il nome dell&#39;istanza in qualsiasi nome di oggetto JavaScript valido.
 * **[!UICONTROL ID organizzazione IMS]**: ID dell’organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
 * **[!UICONTROL Dominio Edge]**: dominio da cui l’estensione invia e riceve i dati. L’Adobe consiglia di utilizzare un dominio di prima parte (CNAME) per questa estensione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=it).
 
@@ -111,11 +111,29 @@ Quando si utilizza il frammento pre-hiding, l&#39;Adobe consiglia di utilizzare 
 
 ## Configurare le impostazioni di raccolta dati {#data-collection}
 
-![Immagine che mostra le impostazioni di raccolta dati dell’estensione tag Web SDK nell’interfaccia utente Tag](assets/web-sdk-ext-collection.png)
+Gestisci le impostazioni di configurazione della raccolta dati. Impostazioni simili nella libreria JavaScript sono disponibili utilizzando [`configure`](/help/web-sdk/commands/configure/overview.md) comando.
 
-* **[!UICONTROL Funzione callback]**: la funzione di callback fornita nell’estensione è denominata anche [`onBeforeEventSend` funzione](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria. Questa funzione consente di modificare gli eventi a livello globale prima che vengano inviati all’Edge Network.
-* **[!UICONTROL Abilita raccolta dati di clic]**: Web SDK può raccogliere automaticamente le informazioni sul clic del collegamento. Per impostazione predefinita, questa funzione è abilitata, ma può essere disabilitata utilizzando questa opzione. I collegamenti sono etichettati anche come collegamenti di download se contengono una delle espressioni di download elencate in [!UICONTROL Qualificatore collegamento di download] casella di testo. In questo Adobe vengono forniti alcuni qualificatori predefiniti per i collegamenti di download. Puoi modificarli in base alle tue esigenze.
-* **[!UICONTROL Dati contestuali raccolti automaticamente]**: per impostazione predefinita, Web SDK raccoglie alcuni dati contestuali relativi a dispositivo, web, ambiente e contesto del luogo. Se non desideri raccogliere questi dati o desideri solo raccogliere determinate categorie di dati, seleziona **[!UICONTROL Informazioni specifiche sul contesto]** e seleziona i dati che desideri raccogliere. Consulta [`context`](/help/web-sdk/commands/configure/context.md) per ulteriori informazioni.
+![Immagine che mostra le impostazioni di raccolta dati dell’estensione tag Web SDK nell’interfaccia utente Tag.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL Il prima del callback di invio dell&#39;evento]**: funzione di callback per valutare e modificare il payload inviato a Adobe. Utilizza il `content` variabile all&#39;interno della funzione di callback per modificare il payload. Questo callback è l’equivalente del tag [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) nella libreria JavaScript.
+* **[!UICONTROL Raccogliere clic sui collegamenti interni]**: casella di controllo che abilita la raccolta di dati di tracciamento dei collegamenti interni al sito o alla proprietà. Quando si attiva questa casella di controllo, vengono visualizzate le opzioni di raggruppamento degli eventi:
+   * **[!UICONTROL Nessun raggruppamento di eventi]**: i dati di tracciamento dei collegamenti vengono inviati all’Adobe in eventi separati. I clic sui collegamenti inviati in eventi separati possono aumentare l’utilizzo contrattuale dei dati inviati a Adobe Experience Platform.
+   * **[!UICONTROL Raggruppamento di eventi tramite l’archiviazione delle sessioni]**: archivia i dati di tracciamento dei collegamenti nell’archiviazione della sessione fino all’evento della pagina successivo. Nella pagina seguente, i dati di tracciamento dei collegamenti e i dati di visualizzazione della pagina memorizzati vengono inviati ad Adobe contemporaneamente. L’Adobe consiglia di abilitare questa impostazione durante il tracciamento dei collegamenti interni.
+   * **[!UICONTROL Raggruppamento di eventi tramite oggetto locale]**: archivia i dati di tracciamento dei collegamenti in un oggetto locale fino all’evento della pagina successivo. Se un visitatore passa a una nuova pagina, i dati di tracciamento dei collegamenti andranno persi. Questa impostazione è particolarmente utile nel contesto delle applicazioni a pagina singola.
+* **[!UICONTROL Raccogli clic sui collegamenti esterni]**: casella di controllo che abilita la raccolta di collegamenti esterni.
+* **[!UICONTROL Raccogliere i clic sui collegamenti di download]**: casella di controllo che abilita la raccolta di collegamenti per il download.
+* **[!UICONTROL Qualificatore collegamento di download]**: espressione regolare che qualifica un URL di collegamento come collegamento di download.
+* **[!UICONTROL Proprietà clic filtro]**: funzione di callback per valutare e modificare le proprietà relative ai clic prima della raccolta. Questa funzione viene eseguita prima del [!UICONTROL Il prima del callback di invio dell&#39;evento].
+* **Impostazioni di contesto**: raccoglie automaticamente le informazioni sul visitatore, compilando automaticamente specifici campi XDM. Puoi scegliere **[!UICONTROL Tutte le informazioni di contesto predefinite]** o **[!UICONTROL Informazioni specifiche sul contesto]**. Equivale al tag [`context`](/help/web-sdk/commands/configure/context.md) nella libreria JavaScript.
+   * **[!UICONTROL Web]**: raccoglie informazioni sulla pagina corrente.
+   * **[!UICONTROL Dispositivo]**: raccoglie informazioni sul dispositivo dell’utente.
+   * **[!UICONTROL Ambiente]**: raccoglie informazioni sul browser dell’utente.
+   * **[!UICONTROL Contesto del luogo]**: raccoglie informazioni sulla posizione dell&#39;utente.
+   * **[!UICONTROL Hint user-agent ad alta entropia]**: raccoglie informazioni più dettagliate sul dispositivo dell’utente.
+
+>[!TIP]
+>
+Il **[!UICONTROL Prima del collegamento, fai clic su Invia]** è un callback obsoleto visibile solo per le proprietà per le quali è già configurato. Equivale al tag [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) nella libreria JavaScript. Utilizza il **[!UICONTROL Proprietà clic filtro]** callback per filtrare o regolare i dati di clic, oppure utilizzare **[!UICONTROL Il prima del callback di invio dell&#39;evento]** per filtrare o regolare il payload complessivo inviato ad Adobe. Se entrambi i **[!UICONTROL Proprietà clic filtro]** callback e **[!UICONTROL Prima del collegamento, fai clic su Invia]** sono impostati, solo il **[!UICONTROL Proprietà clic filtro]** il callback viene eseguito.
 
 ## Configurare le impostazioni della raccolta di file multimediali {#media-collection}
 
@@ -155,6 +173,6 @@ Le sostituzioni dello stream di dati devono essere configurate in base all’amb
 
 ## Configurare le impostazioni avanzate
 
-Utilizza il **[!UICONTROL Percorso base perimetrale]** se devi modificare il percorso di base utilizzato per interagire con l’Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
+Utilizza il **[!UICONTROL Percorso base Edge]** se devi modificare il percorso di base utilizzato per interagire con l’Edge Network. Questo non dovrebbe richiedere l’aggiornamento, ma nel caso in cui partecipi a una versione beta o alpha, Adobe potrebbe chiederti di modificare questo campo.
 
 ![Immagine che mostra le impostazioni avanzate utilizzando la pagina dell’estensione tag Web SDK.](assets/advanced-settings.png)
