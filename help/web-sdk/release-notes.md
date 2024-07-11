@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione di Adobe Experience Platform Web SDK
-description: Note aggiornate sulla versione di Adobe Experience Platform Web SDK.
+description: Note sulla versione più recente di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;note sulla versione;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
@@ -18,7 +18,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 >[!IMPORTANT]
 >
->Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) pianifica di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
+>Google [ha annunciato](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) prevede di interrompere il supporto di Chrome per i cookie di terze parti nella seconda metà del 2024. Di conseguenza, i cookie di terze parti non saranno più supportati in nessuno dei principali browser.
 >
 >Quando questa modifica viene implementata, Adobe interromperà il supporto per `demdex` cookie attualmente supportato nell’SDK per web.
 
@@ -97,7 +97,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 ## Versione 2.14.0 - 25 gennaio 2023
 
-* (Beta) È stato aggiunto il supporto per superfici e proposte Adobe Journey Optimizer.
+* (Beta) È stato aggiunto il supporto per le superfici e le proposte Adobe Journey Optimizer.
 
 **Correzioni e miglioramenti**
 
@@ -174,7 +174,7 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 
 ## Versione 2.7.0 - 26 ottobre 2021
 
-* Espone informazioni aggiuntive dall’Edge Network nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di una versione beta.
+* Espone informazioni aggiuntive dall’Edge Network nel valore restituito da `sendEvent`, tra cui `inferences` e `destinations`. Il formato di queste proprietà potrebbe cambiare in quanto queste funzioni vengono attualmente implementate come parte di un Beta.
 
 ## Versione 2.6.4 - 7 settembre 2021
 
@@ -214,14 +214,14 @@ Per le ultime note sulla versione dell’estensione tag Web SDK, consulta [Note 
 * È stato aggiunto il supporto per lo standard Consent 2.0 di Adobe per [`setConsent`](/help/web-sdk/commands/setconsent.md) comando.
 * Le preferenze di consenso, quando ricevute, vengono sottoposte a hashing e memorizzate nell’archiviazione locale per un’integrazione ottimizzata tra CMP, Platform Web SDK e Edge Network di Platform. Se raccogli le preferenze di consenso, ti invitiamo ora a chiamare `setConsent` a ogni caricamento di pagina.
 * Due [hook di monitoraggio](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` e `onCommandRejected`, sono state aggiunte.
-* Correzione bug: gli eventi di notifica dell’interazione di personalizzazione contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
+* Correzione bug: gli eventi di notifica dell’interazione Personalization contenevano informazioni duplicate sulla stessa attività quando un utente passava a una nuova vista di app a pagina singola, tornava alla vista originale e faceva clic su un elemento idoneo per la conversione.
 * Correzione bug: se il primo evento inviato dall’SDK aveva `documentUnloading` imposta su `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) verrebbe utilizzato per inviare l’evento, causando un errore relativo a un’identità non stabilita.
 
 ## Versione 2.3.0 - novembre 2020
 
 * È stato aggiunto il supporto nonce per consentire criteri di sicurezza dei contenuti più severi.
 * È stato aggiunto il supporto alla personalizzazione per le applicazioni a pagina singola.
-* È stata migliorata la compatibilità con altri codici JavaScript su pagina che potrebbero essere in sovrascrittura `window.console` API.
+* È stata migliorata la compatibilità con altro codice JavaScript su pagina che potrebbe essere in sovrascrittura `window.console` API.
 * Correzione bug: `sendBeacon` non veniva utilizzato quando `documentUnloading` è stato impostato su `true` o quando i clic dei collegamenti venivano tracciati automaticamente.
 * Correzione bug: se l’elemento di ancoraggio conteneva contenuto HTML, non veniva tracciato automaticamente alcun collegamento.
 * Correzione bug: alcuni errori del browser contenenti un valore di sola lettura `message` proprietà non sono state gestite in modo appropriato, causando un errore diverso esposto al cliente.
