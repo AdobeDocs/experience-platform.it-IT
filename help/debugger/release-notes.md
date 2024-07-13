@@ -1,24 +1,37 @@
 ---
-title: Note sulla versione di Adobi Experience Platform Debugger
+title: Note sulla versione di Adobe Experience Platform Debugger
 description: Note aggiornate sulla versione di Adobe Experience Platform Debugger.
 keywords: debugger;estensione Experience Platform Debugger;chrome;estensione;note sulla versione
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 3%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
-# Note sulla versione di Adobi Experience Platform Debugger
+# Note sulla versione di Adobe Experience Platform Debugger
+
+## Versione 1.6.0 - 11 luglio 2024
+
+### Nuove funzioni
+
+* Consente agli utenti di acconsentire o rinunciare alla raccolta di dati tecnici e personali.
+
+### Correzioni e miglioramenti
+
+* Correggi l&#39;iniezione di script di Firefox e il collegamento dell&#39;informativa sulla privacy.
+* Acquisire le richieste Analytics mancanti.
+* Correggi gli arresti anomali sulle pagine con molti messaggi complessi della console.
+* Aggiorna l’Adobe Experience Platform Debugger a un’estensione Manifest v3.
 
 ## Versione 1.5.4 - 19 dicembre 2023
 
 ### Correzioni e miglioramenti
 
 * È stato risolto un problema che impediva il mantenimento delle impostazioni.
-* È stato risolto un problema che causava l’arresto anomalo del debugger durante la visualizzazione degli hit post-elaborati di Analytics.
+* È stato risolto un problema che causava l’arresto anomalo del debugger durante la visualizzazione degli hit elaborati da Analytics Post.
 
 ## Versione 1.5.3 - 6 dicembre 2023
 
@@ -47,7 +60,7 @@ ht-degree: 3%
 
 * Sono stati risolti dei problemi a causa dei quali gli eventi di Analytics venivano ignorati o duplicati.
 * È stato risolto un problema che causava il superamento della dimensione massima di archiviazione dello stato.
-* È stato risolto un problema a causa del quale la ricerca dei registri Edge non filtrava gli eventi.
+* È stato risolto un problema che impediva alla ricerca dei registri di Edge di filtrare gli eventi.
 
 ## Versione 1.5.0 - 19 ottobre 2023
 
@@ -62,7 +75,7 @@ ht-degree: 3%
 * È stato risolto un problema che impediva la visualizzazione di Target Trace.
 * È stato corretto il pulsante Invia feedback.
 * È stato risolto il problema relativo all’ID dello stream di dati mancante nel riepilogo dell’SDK web per la versione ≥2.18.0.
-* È stato risolto un problema che impediva la ricerca dei registri Edge.
+* È stato risolto un problema che impediva la ricerca dei registri di Edge.
 * È stata aggiunta una nota sui profili aggiuntivi per alcuni tipi di account.
 
 ## Versione 1.4.1 - 1 novembre 2022
@@ -112,7 +125,7 @@ ht-degree: 3%
 
 ## Versione 1.1.0 - 5 ottobre 2021
 
-* Visualizzazione debug remoto: organizza gli eventi di debug remoto in un diagramma di flusso visivo nella sezione Adobe Experience Platform Web SDK > Transazioni Edge.
+* Visualizzazione debug remoto: organizza gli eventi di debug remoto in un grafico di flusso visivo nella sezione Adobe Experience Platform Web SDK > Transazioni di Edge.
 * Richiedi che l’organizzazione Adobe Experience Platform Web SDK utilizzata nella pagina corrisponda a quella registrata all’avvio di una nuova sessione di debug remoto.
 * Mostra solo le transazioni edge per la scheda connessa. I registri di traccia di Target sono ancora disponibili nella sezione Registri > Edge.
 * Consenti la sostituzione della configurazione ID flusso di dati separata per ogni istanza di Adobe Experience Platform Web SDK sulla pagina. Attiva/disattiva l’opzione Aggiungi debug abilitato.
@@ -120,4 +133,4 @@ ht-degree: 3%
 
 ## Versione 1.0.0 del 5 maggio 2021
 
-* Prima versione principale di Experienci Platform Debugger. Destinato a sostituire il Experience Cloud Debugger.
+* Prima versione principale di Experience Platform Debugger. Destinato a sostituire il Experience Cloud Debugger.
