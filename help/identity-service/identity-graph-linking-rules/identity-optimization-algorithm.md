@@ -3,7 +3,7 @@ title: Algoritmo di ottimizzazione identità
 description: Scopri l’algoritmo di ottimizzazione delle identità in Identity Service.
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 1%
@@ -47,15 +47,13 @@ La priorità dello spazio dei nomi determina il modo in cui l’algoritmo di ott
 
 Gli spazi dei nomi in Identity Service hanno un ordine di importanza relativo implicito. Consideriamo un grafico strutturato come una piramide. Vi sono un nodo sul livello superiore, due nodi sul livello intermedio e quattro nodi sul livello inferiore. La priorità dello spazio dei nomi deve riflettere questo ordine relativo per garantire che un’entità persona sia rappresentata correttamente.
 
-Per informazioni approfondite sulla priorità dello spazio dei nomi e sulle sue funzionalità e utilizzi completi, leggi [guida alla priorità namespace](./namespace-priority.md).
+Per informazioni approfondite sulla priorità dello spazio dei nomi e sulle relative funzionalità e utilizzi completi, leggere la [guida sulla priorità dello spazio dei nomi](./namespace-priority.md).
 
-![livelli di grafico e priorità dello spazio dei nomi](../images/namespace-priority/graph-layers.png)
+![livelli del grafico e priorità dello spazio dei nomi](../images/namespace-priority/graph-layers.png)
 
 ## Processo {#process}
 
-
 Al momento dell’acquisizione di nuove identità, Identity Service controlla se le nuove identità e i corrispondenti spazi dei nomi aderiscono a configurazioni univoche dello spazio dei nomi. Se si seguono le configurazioni, l’acquisizione procede e le nuove identità sono collegate al grafico. Tuttavia, se non si seguono le configurazioni, l’algoritmo di ottimizzazione delle identità:
-
 
 * Acquisisci l’evento più recente tenendo conto della priorità dello spazio dei nomi.
 * Rimuove il collegamento che unirebbe due entità persona dal livello grafico appropriato.
@@ -70,7 +68,7 @@ Quando il vincolo dello spazio dei nomi univoco viene violato, l’algoritmo di 
 * Il grafico verrà ristabilito in base all’ordine indicato sopra. Se l’aggiunta del collegamento viola il vincolo del limite (ad esempio, il grafico contiene due o più identità con uno spazio dei nomi univoco), i collegamenti vengono rimossi.
 * Il grafico risultante sarà quindi conforme al vincolo dello spazio dei nomi univoco configurato.
 
-![Un diagramma che visualizza l’algoritmo di ottimizzazione delle identità.](../images/ido.png)
+![Diagramma che visualizza l&#39;algoritmo di ottimizzazione delle identità.](../images/ido.png)
 
 ## Scenari di esempio per l’algoritmo di ottimizzazione delle identità
 
@@ -90,14 +88,14 @@ Per dispositivo condiviso si intende un dispositivo utilizzato da più utenti. A
 | E-mail | Sì |
 | ECID | No |
 
-In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei nomi univoci. A `timestamp=0`, viene acquisito un set di dati del record CRM e crea due grafici diversi a causa della configurazione univoca dello spazio dei nomi. Ogni grafico contiene un ID CRM e uno spazio dei nomi e-mail.
+In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei nomi univoci. In `timestamp=0`, viene acquisito un set di dati del record CRM e vengono creati due grafici diversi a causa della configurazione univoca dello spazio dei nomi. Ogni grafico contiene un ID CRM e uno spazio dei nomi e-mail.
 
-* `timestamp=1`: Jane accede al tuo sito web di e-commerce utilizzando un laptop. Jane è rappresentata dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web sul suo laptop che utilizza è rappresentato da un ECID.
-* `timestamp=2`: John accede al tuo sito web di e-commerce utilizzando lo stesso laptop. John è rappresentato dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web che ha usato è già rappresentato da un ECID. Poiché lo stesso ECID è collegato a due grafici diversi, Identity Service è in grado di sapere che questo dispositivo (laptop) è condiviso.
+* `timestamp=1`: Jane accede al tuo sito Web di e-commerce utilizzando un laptop. Jane è rappresentata dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web sul suo laptop che utilizza è rappresentato da un ECID.
+* `timestamp=2`: John accede al tuo sito Web di e-commerce utilizzando lo stesso laptop. John è rappresentato dal suo ID CRM e dal suo indirizzo e-mail, mentre il browser web che ha usato è già rappresentato da un ECID. Poiché lo stesso ECID è collegato a due grafici diversi, Identity Service è in grado di sapere che questo dispositivo (laptop) è condiviso.
 * Tuttavia, a causa della configurazione univoca dello spazio dei nomi che imposta un massimo di uno spazio dei nomi ID del sistema di gestione delle relazioni con i clienti e di uno spazio dei nomi e-mail per grafico, l’algoritmo di ottimizzazione dell’identità divide il grafico in due.
    * Infine, poiché John è l&#39;ultimo utente autenticato, l&#39;ECID che rappresenta il laptop, rimane collegato al suo grafo invece di quello di Jane.
 
-![caso dispositivo condiviso 1](../images/identity-settings/shared-device-case-one.png)
+![caso dispositivo condiviso uno](../images/identity-settings/shared-device-case-one.png)
 
 >[!TAB Esempio due]
 
@@ -108,10 +106,10 @@ In questo esempio, sia l’ID CRM che l’E-mail sono designati come spazi dei n
 
 In questo esempio, lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti è designato come spazio dei nomi univoco.
 
-* `timestamp=1`: Jane accede al tuo sito web di e-commerce utilizzando un laptop. È rappresentata dal suo ID CRM, e il browser web sul laptop è rappresentato dall’ECID.
-* `timestamp=2`: John accede al tuo sito web di e-commerce utilizzando lo stesso laptop. È rappresentato dal suo ID CRM e il browser web che utilizza è rappresentato dallo stesso ECID.
+* `timestamp=1`: Jane accede al tuo sito Web di e-commerce utilizzando un laptop. È rappresentata dal suo ID CRM, e il browser web sul laptop è rappresentato dall’ECID.
+* `timestamp=2`: John accede al tuo sito Web di e-commerce utilizzando lo stesso laptop. È rappresentato dal suo ID CRM e il browser web che utilizza è rappresentato dallo stesso ECID.
    * Questo evento collega due ID CRM indipendenti allo stesso ECID, che supera il limite configurato di un ID CRM.
-   * Di conseguenza, l’algoritmo di ottimizzazione dell’identità rimuove il collegamento precedente, che in questo caso è l’ID CRM di Jane che era collegato in `timestamp=1`.
+   * Di conseguenza, l&#39;algoritmo di ottimizzazione delle identità rimuove il collegamento precedente, che in questo caso è l&#39;ID CRM di Jane, collegato in `timestamp=1`.
    * Tuttavia, anche se l’ID CRM di Jane non esisterà più come grafico sul servizio Identity, persisterà ancora come profilo sul profilo cliente in tempo reale. Questo perché un grafo di identità deve contenere almeno due identità collegate e, a seguito della rimozione dei collegamenti, l’ID del sistema di gestione delle relazioni con i clienti di Jane non ha più un’altra identità a cui collegarsi.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
@@ -128,32 +126,32 @@ In alcuni casi, un utente potrebbe immettere valori non validi per i propri nume
 | E-mail | Sì |
 | ECID | No |
 
-In questo esempio, l’ID del sistema di gestione delle relazioni con i clienti e gli spazi dei nomi e-mail sono designati come univoci. Considera lo scenario in cui Jane e John si sono iscritti al tuo sito web di e-commerce utilizzando un valore e-mail errato (ad esempio, test<span>@test.com).
+In questo esempio, l’ID del sistema di gestione delle relazioni con i clienti e gli spazi dei nomi e-mail sono designati come univoci. Considera lo scenario in cui Jane e John si sono iscritti al tuo sito Web di e-commerce utilizzando un valore di e-mail non valido (ad esempio, test<span>@test.com).
 
-* `timestamp=1`: Jane accede al tuo sito web di e-commerce utilizzando Safari sul suo iPhone, stabilendo il suo ID di gestione delle relazioni con i clienti (informazioni di accesso) e il suo ECID (browser).
+* `timestamp=1`: Jane accede al tuo sito Web di e-commerce utilizzando Safari sul suo iPhone, stabilendo il suo ID CRM (informazioni di accesso) e il suo ECID (browser).
 * `timestamp=2`: John accede al tuo sito web di e-commerce utilizzando Google Chrome sul suo iPhone, stabilendo il suo ID CRM (informazioni di accesso) e ECID (browser).
-* `timestamp=3`: l’ingegnere dati acquisisce il record CRM di Jane, il che fa sì che il suo ID CRM venga collegato all’e-mail errata.
-* `timestamp=4`: il tuo ingegnere dati acquisisce il record CRM di John, il che fa sì che il suo ID CRM venga collegato all’e-mail errata.
+* `timestamp=3`: l&#39;ingegnere dati acquisisce il record CRM di Jane, il che fa sì che il suo ID CRM venga collegato all&#39;e-mail errata.
+* `timestamp=4`: l&#39;ingegnere dati acquisisce il record CRM di John, il che fa sì che il suo ID CRM venga collegato all&#39;e-mail errata.
    * Questo diventa quindi una violazione della configurazione dello spazio dei nomi univoco, in quanto crea un singolo grafico con due spazi dei nomi ID del sistema di gestione delle relazioni con i clienti.
-   * Di conseguenza, l’algoritmo di ottimizzazione dell’identità elimina il collegamento precedente, che in questo caso è il collegamento tra l’identità di Jane con lo spazio dei nomi dell’ID del sistema di gestione delle relazioni con i clienti e l’identità con il test<span>@test.
+   * Di conseguenza, l&#39;algoritmo di ottimizzazione delle identità elimina il collegamento precedente, che in questo caso è il collegamento tra l&#39;identità di Jane con lo spazio dei nomi ID CRM e l&#39;identità con il test<span>@test.
 
 Con l’algoritmo di ottimizzazione dell’identità, i valori di identità errati, come e-mail o numeri di telefono falsi, non vengono propagati attraverso diversi grafici di identità.
 
-![bad-email](../images/identity-settings/bad-email.png)
+![e-mail non valida](../images/identity-settings/bad-email.png)
 
 ### Associazione evento anonimo
 
-Gli ECID memorizzano gli eventi non autenticati (anonimi), mentre l&#39;ID del sistema di gestione delle relazioni con i clienti memorizza gli eventi autenticati. Nel caso di dispositivi condivisi, l’ECID (portatore di eventi non autenticati) viene associato al **ultimo utente autenticato**.
+Gli ECID memorizzano gli eventi non autenticati (anonimi), mentre l&#39;ID del sistema di gestione delle relazioni con i clienti memorizza gli eventi autenticati. Nel caso di dispositivi condivisi, l&#39;ECID (portatore di eventi non autenticati) viene associato all&#39;**ultimo utente autenticato**.
 
 Per comprendere meglio il funzionamento dell’associazione anonima degli eventi, consulta il diagramma seguente:
 
 * Kevin e Nora condividono un tablet.
-   * `timestamp=1`: Kevin accede a un sito web di e-commerce utilizzando il suo account, stabilendo in tal modo il suo ID CRM (informazioni di accesso) e un ECID (browser). Al momento dell&#39;accesso, Kevin è ora considerato l&#39;ultimo utente autenticato.
-   * `timestamp=2`: Nora accede a un sito web di e-commerce utilizzando il suo account, stabilendo in tal modo il suo ID di gestione delle relazioni con i clienti (informazioni di accesso) e lo stesso ECID. Al momento dell’accesso, Nora è considerato l’ultimo utente autenticato.
-   * `timestamp=3`: Kevin utilizza il tablet per navigare nel sito web di e-commerce, ma non accede con il suo account. L&#39;attività di navigazione di Kevin viene quindi memorizzata nell&#39;ECID, che a sua volta è associata a Nora perché è l&#39;ultimo utente autenticato. A questo punto, Nora è la proprietaria degli eventi anonimi.
+   * `timestamp=1`: Kevin accede a un sito Web di e-commerce utilizzando il suo account, stabilendo in tal modo il suo ID CRM (informazioni di accesso) e un ECID (browser). Al momento dell&#39;accesso, Kevin è ora considerato l&#39;ultimo utente autenticato.
+   * `timestamp=2`: Nora accede a un sito Web di e-commerce utilizzando il suo account, stabilendo in tal modo il suo ID CRM (informazioni di accesso) e lo stesso ECID. Al momento dell’accesso, Nora è considerato l’ultimo utente autenticato.
+   * `timestamp=3`: Kevin utilizza il tablet per sfogliare il sito Web di e-commerce, ma non accede con il proprio account. L&#39;attività di navigazione di Kevin viene quindi memorizzata nell&#39;ECID, che a sua volta è associata a Nora perché è l&#39;ultimo utente autenticato. A questo punto, Nora è la proprietaria degli eventi anonimi.
       * Fino a quando Kevin non effettua di nuovo l’accesso, il profilo unito di Nora verrà associato a tutti gli eventi non autenticati memorizzati nell’ECID (dove gli eventi sono dove ECID è l’identità primaria).
    * `timestamp=4`: Kevin accede per la seconda volta. A questo punto, diventa di nuovo l’ultimo utente autenticato e ora è anche il proprietario degli eventi non autenticati:
-      * Prima del primo accesso prima di `timestamp=1`; e
+      * Prima dell&#39;accesso iniziale prima di `timestamp=1`; e
       * Tutte le attività che lui o Nora hanno svolto durante la navigazione anonima tra il primo e il secondo accesso di Kevin.
 
 ![anon-event-association](../images/identity-settings/anon-event-association.png)
