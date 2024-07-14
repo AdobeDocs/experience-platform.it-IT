@@ -3,9 +3,9 @@ keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli
 title: Visualizzare i dettagli della destinazione
 description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i tipi di pubblico mappati sulla destinazione e i controlli per modificare l’attivazione e abilitare e disabilitare il flusso di dati.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -18,27 +18,31 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e moni
 
 >[!NOTE]
 >
->La pagina dei dettagli delle destinazioni fa parte della sezione [!UICONTROL Destinazioni] area di lavoro in [!DNL Platform] [!DNL UI]. Consulta la [[!UICONTROL Destinazioni] panoramica di workspace](./destinations-workspace.md) per ulteriori informazioni.
+>La pagina dei dettagli delle destinazioni fa parte dell&#39;area di lavoro [!UICONTROL Destinazioni] in [!DNL Platform] [!DNL UI]. Per ulteriori informazioni, consulta la panoramica dell&#39;area di lavoro [[!UICONTROL Destinazioni]](./destinations-workspace.md).
 
 ## Visualizzare i dettagli della destinazione {#view-details}
 
-Per visualizzare ulteriori dettagli su una destinazione esistente, segui la procedura riportata di seguito.
+Per visualizzare ulteriori dettagli su una destinazione esistente, segui la procedura riportata di seguito. Puoi trovare l’ID di destinazione di una destinazione, l’utente che ha creato la destinazione, quando è stata creata e altre informazioni.
 
-1. Accedi a [Interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall’intestazione in alto per visualizzare le destinazioni esistenti.
+1. Accedi a [interfaccia utente Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinazioni]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Sfoglia]** dall&#39;intestazione superiore per visualizzare le destinazioni esistenti.
 
    ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
-1. Seleziona l’icona del filtro ![Icona filtro](../assets/ui/details-page/filter.png) in alto a sinistra per avviare il pannello ordina. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
+1. Seleziona l&#39;icona del filtro ![Icona filtro](../assets/ui/details-page/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello Ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
    ![Filtra destinazioni](../assets/ui/details-page/filter-destinations.png)
 
-1. Seleziona il nome della destinazione da visualizzare.
+1. Seleziona la riga della destinazione per la quale desideri visualizzare ulteriori informazioni. Viene visualizzata una barra a destra con informazioni sulla destinazione, tra cui l’ID di destinazione, l’utente che ha creato la connessione di destinazione e altre informazioni.
+
+   ![ID destinazione nella barra a destra](../assets/ui/details-page/right-rail-info-including-destination-id.png)
+
+1. In alternativa, è possibile visualizzare altre informazioni sulla destinazione selezionando *il nome della destinazione* che si desidera visualizzare.
 
    ![Seleziona destinazione](../assets/ui/details-page/destination-select.png)
 
-1. Viene visualizzata la pagina dei dettagli della destinazione, con i controlli disponibili.
+1. La pagina dei dettagli della destinazione viene visualizzata nella barra a destra, con i controlli disponibili.
 
-   ![Dettagli della destinazione](../assets/ui/details-page/destination-details.png)
+   ![Dettagli destinazione](../assets/ui/details-page/destination-details.png)
 
 ## Barra a destra {#right-rail}
 
@@ -50,38 +54,38 @@ La tabella che segue riporta i controlli e i dettagli forniti dalla barra a dest
 
 | Elemento barra a destra | Descrizione |
 | --- | --- |
-| [!UICONTROL Attiva tipi di pubblico] | Selezionare questo controllo per modificare i tipi di pubblico mappati alla destinazione, aggiornare le pianificazioni di esportazione o aggiungere e rimuovere gli attributi e le identità mappati. Consulta le guide su [attivazione dei dati sul pubblico nelle destinazioni di streaming del pubblico](./activate-segment-streaming-destinations.md), [attivazione dei dati sul pubblico in destinazioni basate su profili batch](./activate-batch-profile-destinations.md), e [attivazione dei dati sul pubblico per lo streaming di destinazioni basate su profili](./activate-streaming-profile-destinations.md) per ulteriori informazioni. |
+| [!UICONTROL Attiva pubblico] | Selezionare questo controllo per modificare i tipi di pubblico mappati alla destinazione, aggiornare le pianificazioni di esportazione o aggiungere e rimuovere gli attributi e le identità mappati. Per ulteriori informazioni, consulta le guide su [attivazione dei dati sul pubblico nelle destinazioni di streaming del pubblico](./activate-segment-streaming-destinations.md), [attivazione dei dati sul pubblico nelle destinazioni basate su profili batch](./activate-batch-profile-destinations.md) e [attivazione dei dati sul pubblico nelle destinazioni basate su profili di streaming](./activate-streaming-profile-destinations.md). |
 | [!UICONTROL Elimina] | Consente di eliminare questo flusso di dati e di annullare la mappatura dei tipi di pubblico precedentemente attivati, se presenti. |
 | [!UICONTROL Nome destinazione] | Questo campo può essere modificato per aggiornare il nome della destinazione. |
 | [!UICONTROL Descrizione] | Questo campo può essere modificato per aggiornare o aggiungere una descrizione facoltativa alla destinazione. |
-| [!UICONTROL Destinazione] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Consulta la [catalogo delle destinazioni](../catalog/overview.md) per ulteriori informazioni. |
+| [!UICONTROL Destinazione] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Per ulteriori informazioni, vedere il [catalogo delle destinazioni](../catalog/overview.md). |
 | [!UICONTROL Stato] | Indica se la destinazione è abilitata o disabilitata. |
 | [!UICONTROL Azioni di marketing] | Indica le azioni di marketing (casi di utilizzo) che si applicano a questa destinazione a scopo di governance dei dati. |
-| [!UICONTROL Categoria] | Indica il tipo di destinazione. Consulta la [catalogo delle destinazioni](../catalog/overview.md) per ulteriori informazioni. |
+| [!UICONTROL Categoria] | Indica il tipo di destinazione. Per ulteriori informazioni, vedere il [catalogo delle destinazioni](../catalog/overview.md). |
 | [!UICONTROL Tipo di connessione] | Indica il modulo tramite il quale i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono [!UICONTROL Cookie] e [!UICONTROL Basato su profilo]. |
 | [!UICONTROL Frequenza] | Indica la frequenza con cui i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono [!UICONTROL Streaming] e [!UICONTROL Batch]. |
-| [!UICONTROL Identità] | Rappresenta lo spazio dei nomi delle identità accettato dalla destinazione, ad esempio `GAID`, `IDFA`, o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, vedi [panoramica dello spazio dei nomi delle identità](../../identity-service/features/namespaces.md). |
+| [!UICONTROL Identità] | Rappresenta lo spazio dei nomi dell&#39;identità accettato dalla destinazione, ad esempio `GAID`, `IDFA` o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, vedere la [panoramica dello spazio dei nomi di identità](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Creato da] | Indica l&#39;utente che ha creato la destinazione. |
 | [!UICONTROL Creato] | Indica il datetime UTC al momento della creazione della destinazione. |
 
 {style="table-layout:auto"}
 
-## [!UICONTROL Abilitato]/[!UICONTROL Disabilitato] attivare/disattivare {#enabled-disabled-toggle}
+## Attivazione/disattivazione di [!UICONTROL Enabled]/[!UICONTROL Disabled] {#enabled-disabled-toggle}
 
-È possibile utilizzare **[!UICONTROL Abilitato]/[!UICONTROL Disabilitato]** attiva per avviare e mettere in pausa tutte le esportazioni di dati nella destinazione.
+Puoi utilizzare l&#39;interruttore **[!UICONTROL Enabled]/[!UICONTROL Disabled]** per avviare e mettere in pausa tutte le esportazioni di dati nella destinazione.
 
-![Attiva o disattiva il flusso di dati](../assets/ui/details-page/enable-disable.png)
+![Attiva o disattiva flusso di dati](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Il flusso di dati viene eseguito] {#dataflow-runs}
 
-Il [!UICONTROL Il flusso di dati viene eseguito] fornisce i dati delle metriche sul flusso di dati eseguito su destinazioni in batch e in streaming. Fai riferimento a [Monitorare i flussi di dati](monitor-dataflows.md) per dettagli e definizioni di metriche.
+La scheda [!UICONTROL Esecuzioni flusso di dati] fornisce dati metrici sul flusso di dati eseguito su destinazioni batch e di streaming. Per informazioni dettagliate e definizioni delle metriche, consultare [Flussi dati di monitoraggio](monitor-dataflows.md).
 
 >[!NOTE]
 >
->* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni in Experience Platform *eccetto* il [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico di Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinazioni.
->* Per [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hub eventi di Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), e [API HTTP](/help/destinations/catalog/streaming/http-destination.md) destinazioni, vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
+>* La funzionalità di monitoraggio delle destinazioni è attualmente supportata per tutte le destinazioni nell&#39;Experience Platform *eccetto* le destinazioni [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalizzazione personalizzata](/help/destinations/catalog/personalization/custom-personalization.md) e [Tipi di pubblico Experienci Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
+>* Per le destinazioni [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [HTTP API](/help/destinations/catalog/streaming/http-destination.md), vengono stimate le metriche relative alle identità escluse, non riuscite e attivate. Volumi più elevati di dati di attivazione consentono una maggiore precisione delle metriche.
 
-![Visualizzazione esecuzioni flusso di dati](../assets/ui/details-page/dataflow-runs.png)
+![Il flusso di dati esegue la visualizzazione](../assets/ui/details-page/dataflow-runs.png)
 
 ### Durata esecuzioni flusso di dati {#dataflow-runs-duration}
 
@@ -89,31 +93,31 @@ Esiste una differenza nella durata visualizzata del flusso di dati eseguito tra 
 
 ### Destinazioni di streaming {#streaming}
 
-Mentre il **[!UICONTROL Durata di elaborazione]** indicato per la maggior parte delle esecuzioni di flussi di dati in streaming è di circa quattro ore, come mostrato nell’immagine seguente, il tempo di elaborazione effettivo per qualsiasi esecuzione di flussi di dati è molto più breve. Le finestre di esecuzione del flusso di dati rimangono aperte più a lungo nel caso in cui Experience Platform debba riprovare a effettuare chiamate alla destinazione e assicurarsi inoltre di non perdere dati in arrivo tardivo per la stessa finestra temporale.
+Mentre la **[!UICONTROL durata elaborazione]** indicata per la maggior parte delle esecuzioni di flussi di dati è di circa quattro ore, come mostrato nell&#39;immagine seguente, il tempo di elaborazione effettivo per qualsiasi esecuzione di flussi di dati è molto più breve. Le finestre di esecuzione del flusso di dati rimangono aperte più a lungo nel caso in cui Experience Platform debba riprovare a effettuare chiamate alla destinazione e assicurarsi inoltre di non perdere dati in arrivo tardivo per la stessa finestra temporale.
 
-![Immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione di streaming.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+![L&#39;immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione di streaming.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-Per ulteriori informazioni, consulta [il flusso di dati viene eseguito sulle destinazioni di streaming](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nella documentazione di monitoraggio.
+Per ulteriori informazioni, consulta le informazioni su [il flusso di dati viene eseguito su destinazioni di streaming](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) nella documentazione di monitoraggio.
 
 ### Destinazioni basate su file {#file-based}
 
-Per eseguire il flusso di dati su destinazioni basate su file, il **[!UICONTROL Durata di elaborazione]** dipende dalle dimensioni dei dati esportati e dal caricamento del sistema. Inoltre, il flusso di dati viene eseguito su destinazioni basate su file e viene suddiviso per pubblico.
+Per l&#39;esecuzione del flusso di dati in destinazioni basate su file, la **[!UICONTROL durata elaborazione]** dipende dalle dimensioni dei dati esportati e dal caricamento del sistema. Inoltre, il flusso di dati viene eseguito su destinazioni basate su file e viene suddiviso per pubblico.
 
-![Immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione basata su file.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+![L&#39;immagine del flusso di dati esegue la pagina con la colonna Tempo di elaborazione evidenziata per una destinazione basata su file.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-Per ulteriori informazioni, consulta [il flusso di dati viene eseguito su destinazioni batch (basate su file)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) nella documentazione di monitoraggio.
+Per ulteriori informazioni, leggere le informazioni su [il flusso di dati viene eseguito su destinazioni batch (basate su file)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) nella documentazione di monitoraggio.
 
-## [!UICONTROL Dati di attivazione] {#activation-data}
+## [!UICONTROL Dati attivazione] {#activation-data}
 
-Il [!UICONTROL Dati di attivazione] Nella scheda viene visualizzato un elenco dei tipi di pubblico mappati sulla destinazione, che include la data di inizio e la data di fine (se applicabili) e altre informazioni rilevanti per l’esportazione dei dati, come il tipo, la pianificazione e la frequenza dell’esportazione. Per visualizzare i dettagli di un particolare pubblico, selezionane il nome dall’elenco.
+Nella scheda [!UICONTROL Dati attivazione] viene visualizzato un elenco dei tipi di pubblico mappati sulla destinazione, inclusa la data di inizio e di fine (se applicabile) e altre informazioni rilevanti per l&#39;esportazione dei dati, come tipo di esportazione, pianificazione e frequenza. Per visualizzare i dettagli di un particolare pubblico, selezionane il nome dall’elenco.
 
 >[!TIP]
 >
->Per visualizzare e modificare i dettagli degli attributi e delle identità mappati a una destinazione, seleziona **[!UICONTROL Attiva tipi di pubblico]** nel [barra a destra](#right-rail).
+>Per visualizzare e modificare i dettagli sugli attributi e le identità mappate a una destinazione, seleziona **[!UICONTROL Attiva pubblico]** nella [barra a destra](#right-rail).
 
-![Destinazione batch della visualizzazione dati di attivazione](../assets/ui/details-page/activation-data-batch.png)
+![Destinazione batch visualizzazione dati attivazione](../assets/ui/details-page/activation-data-batch.png)
 
-![Destinazione streaming visualizzazione dati di attivazione](../assets/ui/details-page/activation-data-streaming.png)
+![Destinazione streaming visualizzazione dati attivazione](../assets/ui/details-page/activation-data-streaming.png)
 
 ### [!BADGE Beta]{type=Informative} Rimuovi più tipi di pubblico dai flussi di attivazione {#bulk-remove}
 
@@ -121,22 +125,22 @@ Il [!UICONTROL Dati di attivazione] Nella scheda viene visualizzato un elenco de
 >
 Questa funzione è in versione beta ed è disponibile solo per alcuni clienti. Per richiedere l’accesso a questa funzione, contatta il rappresentante del tuo Adobe.
 
-Per rimuovere più tipi di pubblico dai flussi di attivazione esistenti, seleziona i tipi di pubblico e quindi fai clic su **[!UICONTROL Rimuovi tipi di pubblico]**.
+Per rimuovere più tipi di pubblico dai flussi di attivazione esistenti, selezionare i tipi di pubblico, quindi selezionare **[!UICONTROL Rimuovi tipi di pubblico]**.
 
-![Nella schermata dei dati di attivazione è evidenziata l’opzione Rimuovi tipi di pubblico.](../assets/ui/details-page/bulk-remove-audiences.png)
+![Nella schermata dei dati di attivazione è evidenziata l&#39;opzione Rimuovi tipi di pubblico.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### Esportare più file on-demand in destinazioni batch {#bulk-export}
 
-È possibile [esportazione di più file on-demand](../ui/export-file-now.md) dal **[!UICONTROL Dati di attivazione]** pagina. A questo scopo, seleziona i tipi di pubblico per i quali desideri esportare i file on-demand e fai clic su **[!UICONTROL Esporta subito il file]** per attivare un’esportazione una tantum che distribuirà un file per ogni pubblico selezionato alla destinazione batch.
+Puoi [esportare più file on-demand](../ui/export-file-now.md) dalla pagina **[!UICONTROL Dati attivazione]**. A questo scopo, seleziona i tipi di pubblico per i quali desideri esportare i file su richiesta e seleziona il controllo **[!UICONTROL Esporta file ora]** per attivare un&#39;esportazione una tantum che distribuirà un file per ogni pubblico selezionato nella destinazione batch.
 
-![Immagine che evidenzia il pulsante Export file now (Esporta file ora).](../assets/ui/details-page/bulk-export-file-now.png)
+![Immagine che evidenzia il pulsante Esporta ora file.](../assets/ui/details-page/bulk-export-file-now.png)
 
 ### Modificare i programmi di attivazione per più tipi di pubblico esportati in destinazioni batch {#bulk-edit-schedule}
 
-Per modificare la pianificazione di attivazione esistente di più tipi di pubblico contemporaneamente, seleziona i tipi di pubblico desiderati, quindi seleziona **[!UICONTROL Modifica pianificazione]**. Per informazioni dettagliate su come definire o modificare una pianificazione di esportazione, leggere [pianificare l’esportazione del pubblico](../ui/activate-batch-profile-destinations.md#scheduling) sezione.
+Per modificare la pianificazione di attivazione esistente di più tipi di pubblico contemporaneamente, selezionare i tipi di pubblico desiderati, quindi selezionare **[!UICONTROL Modifica pianificazione]**. Per informazioni dettagliate su come definire o modificare una pianificazione di esportazione, consulta la sezione [Pianifica esportazione pubblico](../ui/activate-batch-profile-destinations.md#scheduling).
 
-![Schermata Dati di attivazione che evidenzia l’opzione per modificare i programmi di attivazione per più tipi di pubblico.](../assets/ui/details-page/bulk-edit-schedule.png)
+![La schermata dei dati di attivazione evidenzia l&#39;opzione per modificare le pianificazioni di attivazione per più tipi di pubblico.](../assets/ui/details-page/bulk-edit-schedule.png)
 
 >[!NOTE]
 >
-Per informazioni dettagliate sull’esplorazione della pagina dei dettagli di un pubblico, consulta [Panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un pubblico, consulta la [panoramica di Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
