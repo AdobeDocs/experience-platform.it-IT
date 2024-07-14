@@ -2,10 +2,10 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
+source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 6%
+source-wordcount: '928'
+ht-degree: 7%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 6%
 
 Leggi questo documento per scoprire di più sull’Assistente AI in Adobe Experience Platform.
 
-L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente AI per comprendere meglio la conoscenza del prodotto, risolvere i problemi o eseguire ricerche attraverso le informazioni e trovare informazioni operative. L’Assistente AI supporta Experienci Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazione che puoi utilizzare per accelerare i flussi di lavoro nelle applicazioni Adobe. È possibile utilizzare l’Assistente AI per comprendere meglio la conoscenza del prodotto, risolvere i problemi o eseguire ricerche attraverso le informazioni e trovare informazioni operative. L’Assistente AI supporta Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
-![L’interfaccia di AI Assistant con la prima esperienza utente attivata.](./images/ai-assistant-full.png)
+![È stata attivata l&#39;interfaccia dell&#39;Assistente di intelligenza artificiale con la prima esperienza utente.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->Devi accettare un [contratto utente](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) prima di poter utilizzare l’Assistente AI. Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
+>Prima di poter utilizzare l&#39;Assistente IA devi accettare un [contratto utente](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html). Il contratto utente contiene anche il contratto beta pubblico. In questo modo è possibile utilizzare funzioni dell’Assistente AI aggiuntive durante il rollout in una capacità beta.
 
 +++Selezionare per visualizzare l&#39;interfaccia del contratto utente
 
-![La prima pagina del contratto utente.](./images/user-agreement-1.png)
+![Prima pagina del contratto utente.](./images/user-agreement-1.png)
 
 ![Ultima pagina del contratto utente.](./images/user-agreement-2.png)
 
@@ -33,9 +33,9 @@ L’Assistente AI in Adobe Experience Platform è un’esperienza di conversazio
 
 L&#39;Assistente AI risponde alle domande inviate eseguendo una query su un database e quindi traducendo i dati dal database in una risposta leggibile.
 
-Questa rappresentazione interna dei dati sottostanti è nota anche come **[!DNL Knowledge Graph]** - un web completo di concetti, dati e metadati per una determinata risposta.
+Questa rappresentazione interna dei dati sottostanti è nota anche come **[!DNL Knowledge Graph]**: un Web completo di concetti, dati e metadati per una determinata risposta.
 
-Il [!DNL Knowledge Graph] è costituito da sottografi a cui viene fatto riferimento ogni volta che vengono inviate query:
+[!DNL Knowledge Graph] è costituito da sottografi a cui si fa riferimento ogni volta che vengono inviate query:
 
 * Informazioni operative sul cliente.
 * Informazioni operative sui clienti nei vari meta-store.
@@ -59,7 +59,7 @@ Per conoscenza del prodotto si intendono i concetti e gli argomenti basati sulla
 
 >[!IMPORTANT]
 >
->Le risposte di Operational Insights sono in versione beta. Chiunque abbia accesso a **Visualizza informazioni operative** L’autorizzazione avrà accesso alle risposte di Operational Insights.
+>Le risposte di Operational Insights sono in versione beta. Chiunque abbia accesso all&#39;autorizzazione **Visualizza informazioni operative** avrà accesso alle risposte alle informazioni operative.
 
 Le informazioni operative si riferiscono alle risposte che l’Assistente AI genera sugli oggetti di metadati (attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini), inclusi i conteggi, le ricerche e l’impatto sulla derivazione. Non esamina alcun dato all’interno della sandbox.
 
@@ -69,16 +69,16 @@ Le informazioni operative si riferiscono alle risposte che l’Assistente AI gen
 
 Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti domini:
 
-| Dominio | Metadati supportati |
-| --- | --- |
-| Attributi | <ul><li>Ricerche per nome attributo</li><li>Attributo: relazione schema</li><li>Attributo: relazione set di dati</li><li>Attributo: relazione pubblico</li><li>Attributo - relazione di destinazione</li><li>Attributi non utilizzati</li></ul> |
-| Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerche per definizione pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Regole InSegment</li><li>Ricerche per nome</li><li>Ricerche per nome e ID |
-| Flussi di dati | <ul><li>Conteggi dei flussi di dati</li><li>Stato del flusso di dati</li><li>Flusso di dati: relazione set di dati</li><li>Flusso di dati - relazione di origine</li></ul> |
-| Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Ricerche per nome </li><li>Ricerche per nome e ID</li></ul> |
-| Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> |
-| Percorsi | <ul><li>Conteggi</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> |
-| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Tipo di classe schema</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li></ul> |
-| Origini | <ul><li>Conteggi account</li><li>Stato dell’account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore sorgente - relazione flusso di dati</li><li>Account di origine - relazione flusso di dati</li></ul> |
+| Dominio | Metadati supportati | Metadati non supportati |
+| --- | --- | --- |
+| Attributi | <ul><li>Ricerche per nome attributo</li><li>Attributo: relazione schema</li><li>Attributo: relazione set di dati</li><li>Attributo: relazione pubblico</li><li>Attributo - relazione di destinazione</li></ul> | <ul><li>Classe attributo</li><li>Audit</li><li>Stato obsoleto</li><li>Etichette</li><li>Valore memorizzato negli attributi</li></ul> |
+| Tipi di pubblico | <ul><li>Conteggio del pubblico</li><li>Tipo di pubblico (in streaming o in batch)</li><li>Date di creazione/modifica</li><li>Stato attivazione</li><li>Conteggio dei profili</li><li>Pubblico duplicato</li><li>Ricerche per definizione pubblico</li><li>Pubblico - relazione attributo</li><li>Pubblico: relazione tra set di dati</li><li>Pubblico - relazione destinazione</li><li>Regole InSegment</li><li>Ricerche per nome</li><li>Ricerche per nome e ID | <ul><li>Sovrapposizioni di pubblico</li><li>Attivazione pubblico</li><li>Pubblico - Relazioni con la campagna</li><li>Audit</li><li>Crea/modifica</li><li>Etichette</li><li>Tendenze di qualificazione dei profili</li></ul> |
+| Flussi di dati | <ul><li>Conteggi dei flussi di dati</li><li>Stato del flusso di dati</li><li>Flusso di dati: relazione set di dati</li><li>Flusso di dati - relazione di origine</li></ul> | <ul><li>Creazione/modifica</li><li>Relazioni flusso di dati-batch</li><li>Acquisisci conteggio profili</li></ul> |
+| Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Ricerche per nome </li><li>Ricerche per nome e ID</li></ul> | <ul><li>Audit</li><li>Creato da</li><li>Set di dati: relazione batch</li><li>Creazione/modifica del set di dati</li><li>Dimensione set di dati</li><li>Numero di profili</li><li>Numero di righe</li><li>Ricerche di valore</li></ul> |
+| Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> | <ul><li>Configurazione account</li><li>Informazioni sulle credenziali dell&#39;account</li><li>Profili univoci attivati</li></ul> |
+| Percorsi | <ul><li>Conteggi</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> | <ul><li>Attributi - Relazioni percorso</li><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Eventi</li><li>Percorso - set di dati</li><li>Percorso - schema</li><li>Offerte</li><li>Tendenze di qualificazione dei profili</li><li>Eventi passaggio</li></ul> |
+| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Tipo di classe schema</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazio dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
+| Origini | <ul><li>Conteggi account</li><li>Stato dell’account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore Source - relazione flusso di dati</li><li>Account Source - relazione flusso di dati</li></ul> | <ul><li>Informazioni sulle credenziali dell’account</li><li>Configurazione account</li><li>Metriche di acquisizione dei dati</li><li>Numero di profili</li><li>Source - relazioni batch</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -88,8 +88,8 @@ Per le domande sulle informazioni operative, le risposte potrebbero non riflette
 
 Attualmente, l’ambito di AI Assistant è il seguente:
 
-* [Conoscenza del prodotto](./home.md#product-knowledge): AI Assistant può rispondere a domande sulla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
-* [Informazioni operative](./home.md#operational-insights): puoi chiedere all’Assistente AI informazioni approfondite operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
+* [Conoscenza del prodotto](./home.md#product-knowledge): l&#39;Assistente all&#39;intelligenza artificiale può rispondere alle domande relative alla conoscenza del prodotto, ad Experience Platform, Real-time Customer Data Platform e Adobe Journey Optimizer. Puoi anche approfondire gli argomenti della conoscenza del prodotto per il Customer Journey Analytics, ma solo tramite l’interfaccia utente del Customer Journey Analytics.
+* [Informazioni operative](./home.md#operational-insights): puoi chiedere all&#39;Assistente AI domande sulle informazioni operative sui seguenti oggetti dati: attributi, tipi di pubblico, flussi di dati, set di dati, destinazioni, percorsi, schemi e origini.
 
 ## Passaggi successivi
 
