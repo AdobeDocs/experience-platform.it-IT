@@ -2,9 +2,9 @@
 title: Guida alle domande per l’Assistente AI
 description: Leggi questo documento per scoprire alcune domande di esempio che puoi utilizzare quando esegui una query sull’Assistente AI.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -85,30 +85,6 @@ Le domande seguenti sono raggruppate per oggetti dati e sono classificate come [
    * Perché non posso eliminare un pubblico?
    * Quanto tempo ci vuole affinché i tipi di pubblico vengano valutati e i risultati siano disponibili per il targeting?
 
-+++Seleziona questa opzione per visualizzare un elenco aggiuntivo di prompt suggeriti
-
-* Posso eliminare uno schema abilitato per il profilo dopo l’acquisizione dei dati?
-* In che modo i gruppi di utenti sono correlati ai ruoli?
-* Quando dovrei usare un tipo di dati rispetto a un gruppo di campi?&quot;
-* Qual è la differenza tra un’identità e una chiave primaria o esterna?&quot;
-* Quanto tempo ci vuole per valutare i segmenti e rendere disponibili i risultati per il targeting?
-* Come viene calcolata la ricchezza del profilo?&quot;
-* Dimmi alcuni casi d’uso comuni per Real-Time CDP.
-* Perché non posso eliminare un segmento?
-* Quale tipo di modifiche è possibile apportare dopo che uno schema è stato abilitato per il profilo?
-* Perché non posso accedere alle dashboard in AEP?
-* Quanti segmenti utilizzano l&#39;attributo xdm {FIELD_PATH}
-* Sono presenti segmenti utilizzati in altri segmenti?
-* Quali campi dello schema {SCHEMA_NAME} contengono {STRING}?
-* Quali tipi di pubblico hanno l&#39;attributo xdm {FULL_ATTRIBUTE_PATH} nella definizione del segmento?
-* Quali schemi contengono l&#39;attributo xdm {FULL_ATTRIBUTE_PATH}?
-* Quali flussi di dati di origine non vengono utilizzati o non contengono più dati in arrivo?
-* Elencare i percorsi live che ho.
-* Elencare i tipi di pubblico utilizzati nei percorsi live.
-* Quali origini sono in uno stato attivo?
-
-+++
-
 ## Formulazione delle domande {#phrasing-your-questions}
 
 Per ottenere una risposta il più accurata possibile, è necessario formulare le domande all’Assistente IA con chiarezza e contesto. Consulta il seguente elenco di suggerimenti per indicazioni su come porre una domanda chiara con il contesto:
@@ -147,7 +123,7 @@ Di seguito è riportato un elenco di esempi di domande non attualmente supportat
 
 ### Insight operativi
 
-* Quanti profili in questa sandbox [soddisfano un criterio specifico, ad esempio &quot;vivono in California&quot;]?
+* Quanti profili in questa sandbox vivono in California? (**Nota**: per domande simili, devi fornire un criterio specifico per fornire un contesto sufficiente per la richiesta; in questo caso, il criterio specifico è &quot;live in California&quot;).
 * Quali sono i segmenti in cui si trova questo profilo {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Quanti profili nel set di dati hanno un messaggio e-mail?
 * Quale set di dati rappresenta il numero massimo di profili in questa sandbox?

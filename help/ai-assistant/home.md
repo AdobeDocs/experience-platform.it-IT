@@ -2,9 +2,9 @@
 title: Panoramica dell’Assistente AI in Adobe Experience Platform
 description: Scopri l’Assistente IA, le relative sfaccettature e i casi di utilizzo, e come utilizzarlo per accelerare il flusso di lavoro con Adobe Experience Platform e Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 7%
 
 ---
@@ -77,7 +77,7 @@ Puoi porre domande all’Assistente AI sulle informazioni operative nei seguenti
 | Set di dati | <ul><li>Conteggio set di dati</li><li>Stato abilitazione profilo</li><li>Data di creazione/modifica</li><li>Set di dati: relazione schema</li><li>Set di dati: relazione pubblico</li><li>Set di dati: relazione attributo</li><li>Set di dati: relazione flusso di dati</li><li>Ricerche per nome </li><li>Ricerche per nome e ID</li></ul> | <ul><li>Audit</li><li>Creato da</li><li>Set di dati: relazione batch</li><li>Creazione/modifica del set di dati</li><li>Dimensione set di dati</li><li>Numero di profili</li><li>Numero di righe</li><li>Ricerche di valore</li></ul> |
 | Destinazioni | <ul><li>Conteggi di destinazione configurati</li><li>Destinazione - Relazione pubblico</li><li>Relazione attributo di destinazione</li></ul> | <ul><li>Configurazione account</li><li>Informazioni sulle credenziali dell&#39;account</li><li>Profili univoci attivati</li></ul> |
 | Percorsi | <ul><li>Conteggi</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li><li>Stato del percorso</li><li>Stato attivato (pubblico vs. eventi)</li><li>Date di creazione/modifica</li><li>Frequenza ricorrente</li></ul> | <ul><li>Attributi - Relazioni percorso</li><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Eventi</li><li>Percorso - set di dati</li><li>Percorso - schema</li><li>Offerte</li><li>Tendenze di qualificazione dei profili</li><li>Eventi passaggio</li></ul> |
-| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Tipo di classe schema</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazio dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
+| Schemi | <ul><li>Conteggi schema</li><li>Data di creazione/modifica</li><li>Schema - relazione attributo</li><li>Schema: relazione tra set di dati</li><li>Schema: relazione pubblico</li><li>Stato abilitazione profilo</li><li>Ricerche per nome</li><li>Ricerche per nome e ID</li></ul> | <ul><li>Audit</li><li>Creazione/modifica</li><li>Creato da</li><li>Gruppi di campi</li><li>Identità</li><li>Spazio dei nomi delle identità</li><li>Etichette</li><li>Numero di profili</li></ul> |
 | Origini | <ul><li>Conteggi account</li><li>Stato dell’account</li><li>Flussi di dati attivi/inattivi per ogni account</li><li>Connettore Source - relazione flusso di dati</li><li>Account Source - relazione flusso di dati</li></ul> | <ul><li>Informazioni sulle credenziali dell’account</li><li>Configurazione account</li><li>Metriche di acquisizione dei dati</li><li>Numero di profili</li><li>Source - relazioni batch</li></ul> |
 
 {style="table-layout:auto"}
